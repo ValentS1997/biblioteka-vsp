@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Communication protocol
+    url: https://github.com/ValentS1997/biblioteka-vsp/blob/main/PROTOCOL.md
+    about: Read the machine-readable integration contract before creating automated requests.

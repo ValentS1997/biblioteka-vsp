@@ -1,0 +1,58 @@
+name: Note
+description: Submit an observation or reusable note related to a book
+title: "[NOTE] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A submitted note is input for review. It is not canonical knowledge until persisted in main.
+
+  - type: input
+    id: source_project
+    attributes:
+      label: Source project
+      placeholder: example-project
+    validations:
+      required: true
+
+  - type: input
+    id: book
+    attributes:
+      label: Book ID
+      description: Stable book slug from books/index.yaml.
+      placeholder: example-book-slug
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Chapter / pages / chunk IDs
+      description: Source location if known.
+      placeholder: "Chapter 4; pp. 120-126"
+    validations:
+      required: false
+
+  - type: textarea
+    id: note
+    attributes:
+      label: Note
+      description: Observation, interpretation, connection, or reusable knowledge.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence / reasoning
+      description: Explain whether this comes from the book, another source, or an interpretation.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: persistence
+    attributes:
+      label: Persistence
+      options:
+        - label: Review this note for inclusion in the canonical knowledge layer.
+          required: false
