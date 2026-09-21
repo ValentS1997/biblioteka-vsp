@@ -1,0 +1,44 @@
+name: Correction
+description: Propose a correction to existing metadata, notes, RAG references, or diagrams
+title: "[CORRECTION] "
+body:
+  - type: input
+    id: source_project
+    attributes:
+      label: Source project
+      placeholder: example-project
+    validations:
+      required: true
+
+  - type: input
+    id: target
+    attributes:
+      label: Target
+      description: Book ID and preferably repository path, note, chunk ID, or diagram being corrected.
+      placeholder: "example-book-slug / books/example-book-slug/notes/..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: Current statement / state
+      description: Quote or describe the specific content believed to be incorrect.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed correction
+      description: State the corrected version without inventing unknown data.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Give page/chunk references or other verifiable evidence.
+    validations:
+      required: true
