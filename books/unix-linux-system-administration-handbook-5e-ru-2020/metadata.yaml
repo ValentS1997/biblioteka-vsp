@@ -1,0 +1,60 @@
+schema: biblioteka-vsp/book/v1
+
+id: unix-linux-system-administration-handbook-5e-ru-2020
+title: "Unix и Linux: руководство системного администратора"
+original_title: "UNIX and Linux System Administration Handbook"
+edition:
+  number: 5
+  language: ru
+  publisher: "ООО \"Диалектика\""
+  publication_year: 2020
+  publication_pages: 1168
+
+authors:
+  - "Эви Немет"
+  - "Гарт Снайдер"
+  - "Трент Хейн"
+  - "Бен Уэйли"
+  - "Дэн Макин"
+
+contributors:
+  - "Джеймс Гарнетт"
+  - "Фабрицио Бранка"
+  - "Адриан Муат"
+
+isbn:
+  russian_edition: "978-5-907144-10-1"
+  original_edition: "978-0-13-427755-4"
+
+source:
+  canonical_path: "source/book.pdf"
+  expected_sha256: "4c1872cfa8d8d28b91b7c72db1eea7a1e1f50e6c045b7e7e4cd2089127da51ff"
+  expected_size_bytes: 35463093
+  source_pdf_pages: 1168
+  text_layer: "embedded OCR"
+  repository_access: private
+  storage: "Git LFS"
+  upload_status: "[BLOCKED: binary source upload capability]"
+  lawful_access_attested_by_user: "[Needs confirmation]"
+  ownership_category: "[Needs confirmation]"
+  physical_copy: "[Needs confirmation]"
+  license: "all rights reserved"
+  redistribution_permission: "[Needs confirmation]"
+  upload_commit: null
+
+rag:
+  scope: full_book
+  build_script: "../../../scripts/build_book_rag.py"
+  manifest: "rag/manifest.yaml"
+  text: "rag/text.md"
+  chunks: "rag/chunks.jsonl"
+  status: BLOCKED
+  generated_commit: null
+  workflow_run_id: null
+
+reading:
+  progress: "reading/progress.yaml"
+  journal: "reading/journal.md"
+  status: completed
+  started: "2026-05"
+  completed: "2026-09-21"
