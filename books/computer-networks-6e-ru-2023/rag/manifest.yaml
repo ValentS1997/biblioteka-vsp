@@ -1,0 +1,42 @@
+schema: biblioteka-vsp/rag/v1
+book_id: computer-networks-6e-ru-2023
+
+source:
+  path: source/book.pdf
+  sha256: 67dc11d4bdadd4e02d012545f3bafaed63bbab89cd47626dcac28528ddd6bf3d
+  pdf_pages: 994
+
+extraction:
+  engine: PyMuPDF
+  engine_version: "1.28.2"
+  page_coordinate_system: source_pdf_1_indexed
+  text_layer: embedded_OCR
+  normalization:
+    - remove_NUL
+    - remove_soft_hyphen_marker
+    - normalize_line_endings
+    - trim_trailing_horizontal_whitespace
+
+chunking:
+  scope: per_pdf_page
+  target_chars: 4000
+  overlap_chars: 350
+  id_pattern: "<book-slug>:p<pdf-page-4d>:c<chunk-2d>"
+
+statistics:
+  pages_with_text: 992
+  blank_pages: 2
+  blank_page_numbers: [1, 994]
+  extracted_characters: 2844500
+  chunks: 1005
+
+validation:
+  chunk_ids_unique: true
+  source_checksum_verified: true
+  full_pdf_page_range_processed: true
+  status: READY_WITH_KNOWN_LIMITATIONS
+
+known_limitations:
+  - "The PDF uses an embedded OCR text layer; recognition errors present in the source OCR may remain in extracted text."
+  - "Images, equations, tables and diagrams are not independently encoded as multimodal RAG objects; use pdf_page provenance to inspect the source page when visual context matters."
+  - "Publisher advertisement and cover pages are part of the source PDF and remain page-addressable even when they are not core book content."
