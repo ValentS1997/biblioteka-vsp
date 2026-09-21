@@ -10,7 +10,7 @@ Protocol ID: `biblioteka-vsp/v1`
 
 Внешние проекты могут:
 
-- читать индекс, metadata, RAG manifests, notes и diagrams;
+- читать индекс, metadata, RAG manifests, reading state, notes и diagrams;
 - создавать вопросы, заметки и предложения исправлений через GitHub Issues/API;
 - ссылаться на конкретную книгу, главу, страницу, chunk или файл.
 
@@ -33,11 +33,14 @@ books/index.yaml
   → books/<book-id>/metadata.yaml
   → books/<book-id>/rag/manifest.yaml
   → books/<book-id>/rag/chunks.jsonl
+  → books/<book-id>/reading/progress.yaml
   → books/<book-id>/notes/
   → books/<book-id>/diagrams/
 ```
 
 Если файл или слой ещё не создан, это означает `[Not available]`, а не отсутствие знания в исходной книге.
+
+RAG для книги строится целиком при ingest. Поэтому полнота `rag/` не должна интерпретироваться как полнота человеческого чтения или обсуждения. Для этого существует отдельный `reading/` state.
 
 ## 3. Write interface
 
@@ -140,7 +143,41 @@ Issue после persistence должен содержать ссылку на �
 
 Issue сам по себе не изменяет каноническое знание.
 
-## 8. Stable identifiers
+## 8. Reading state and scope
+
+Reading state является отдельным слоем и не ограничивает техническую полноту RAG.
+
+Рекомендуемый формат:
+
+```yaml
+status: reading
+current_page: 101
+current_chapter: "[Needs confirmation]"
+
+last_session:
+  pages: "80-101"
+  date: 2026-09-22
+```
+
+Семантика:
+
+- `current_page` — последняя подтверждённо прочитанная страница;
+- `current_chapter` — текущая глава, только если она подтверждена;
+- `last_session.pages` — фактический диапазон последней сессии;
+- `journal.md` — краткие checkpoints, вопросы и ссылки на знания, созданные в ходе чтения.
+
+Для совместного чтения действует default reading boundary: без явного запроса пользователя не использовать материал после `current_page` для объяснений, выводов, подсказок или спойлеров.
+
+Это правило не запрещает:
+
+- заранее построить RAG по всей книге;
+- выполнять технические проверки полноты RAG;
+- отвечать внешнему проекту по материалу всей книги, если его запрос не помечен как reading-bounded;
+- использовать более поздние главы после явного запроса пользователя.
+
+Автоматические интеграции не должны выводить reading progress из полноты RAG.
+
+## 9. Stable identifiers
 
 Предпочтительный ID книги — стабильный `book-slug`.
 
@@ -158,7 +195,7 @@ linux-networking:p0120:c03
 
 Изменение модели embeddings не должно изменять идентификатор исходного chunk без изменения самого chunking.
 
-## 9. Security boundary
+## 10. Security boundary
 
 Не помещать в Issues, notes или metadata:
 
@@ -172,7 +209,7 @@ linux-networking:p0120:c03
 
 PDF и иные source-файлы не должны автоматически публиковаться за пределами private repository без проверки прав/лицензии.
 
-## 10. Versioning
+## 11. Versioning
 
 Несовместимые изменения контракта требуют новой версии протокола, например:
 
