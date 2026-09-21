@@ -1,0 +1,50 @@
+schema: biblioteka-vsp/book/v1
+
+id: computer-networks-6e-ru-2023
+title: "Компьютерные сети"
+original_title: "Computer Networks"
+edition:
+  number: 6
+  language: ru
+  publisher: "Питер"
+  publication_year: 2023
+  publication_pages: 992
+
+authors:
+  - "Эндрю Таненбаум"
+  - "Ник Фимстер"
+  - "Дэвид Уэзеролл"
+
+isbn:
+  russian_edition: "978-5-4461-1766-6"
+  original_edition: "978-0-13-676405-2"
+
+source:
+  canonical_path: "source/book.pdf"
+  expected_sha256: "67dc11d4bdadd4e02d012545f3bafaed63bbab89cd47626dcac28528ddd6bf3d"
+  expected_size_bytes: 132007784
+  source_pdf_pages: 994
+  text_layer: "embedded OCR"
+  repository_access: private
+  storage: "Git LFS"
+  upload_status: "PENDING_LFS_UPLOAD"
+  lawful_access_attested_by_user: true
+  ownership_category: "[Needs confirmation]"
+  physical_copy: "[Needs confirmation]"
+  license: "all rights reserved"
+  redistribution_permission: "[Needs confirmation]"
+
+rag:
+  scope: full_book
+  build_script: "../../../scripts/build_book_rag.py"
+  manifest: "rag/manifest.yaml"
+  text: "rag/text.md"
+  chunks: "rag/chunks.jsonl"
+  status: "PENDING_SOURCE_LFS_UPLOAD"
+
+reading:
+  progress: "reading/progress.yaml"
+  journal: "reading/journal.md"
+  status: completed
+  started: "2025-06"
+  completed: "2026-04"
