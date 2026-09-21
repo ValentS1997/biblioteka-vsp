@@ -1,0 +1,42 @@
+schema: biblioteka-vsp/rag/v1
+book_id: unix-linux-system-administration-handbook-5e-ru-2020
+
+source:
+  path: source/book.pdf
+  sha256: 4c1872cfa8d8d28b91b7c72db1eea7a1e1f50e6c045b7e7e4cd2089127da51ff
+  pdf_pages: 1168
+
+extraction:
+  engine: PyMuPDF
+  engine_version: "1.28.2"
+  page_coordinate_system: source_pdf_1_indexed
+  text_layer: embedded_OCR
+  normalization:
+    - remove_NUL
+    - remove_soft_hyphen_marker
+    - normalize_line_endings
+    - trim_trailing_horizontal_whitespace
+
+chunking:
+  scope: per_pdf_page
+  target_chars: 4000
+  overlap_chars: 350
+  id_pattern: "<book-slug>:p<pdf-page-4d>:c<chunk-2d>"
+
+statistics:
+  pages_with_text: 1155
+  blank_pages: 13
+  blank_page_numbers: [1, 43, 103, 397, 477, 499, 517, 595, 731, 805, 845, 847, 1168]
+  extracted_characters: 3540412
+  chunks: 1167
+
+validation:
+  chunk_ids_unique: true
+  source_checksum_verified: true
+  full_pdf_page_range_processed: true
+  status: READY_WITH_KNOWN_LIMITATIONS
+
+known_limitations:
+  - "The PDF uses an embedded OCR text layer; recognition errors present in the source OCR may remain in extracted text."
+  - "Images, equations, tables and diagrams are not independently encoded as multimodal RAG objects; use pdf_page provenance to inspect the source page when visual context matters."
+  - "Publisher advertisement and cover pages are part of the source PDF and remain page-addressable even when they are not core book content."
