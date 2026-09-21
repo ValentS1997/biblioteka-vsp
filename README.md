@@ -9,6 +9,7 @@
 - исходный PDF как неизменяемый источник;
 - metadata и provenance;
 - воспроизводимый слой подготовки под RAG;
+- состояние фактического чтения;
 - заметки, вопросы, выводы и глоссарий;
 - диаграммы и схемы;
 - историю изменений через Git.
@@ -29,6 +30,9 @@ books/
     │   ├── manifest.yaml
     │   ├── text.md
     │   └── chunks.jsonl
+    ├── reading/
+    │   ├── progress.yaml
+    │   └── journal.md
     ├── notes/
     │   ├── glossary.md
     │   ├── questions/
@@ -40,21 +44,61 @@ books/
 
 ## Жизненный цикл книги
 
+Технический ingest выполняется сразу для всей книги:
+
 ```text
 PDF
   ↓
 Git / source provenance
   ↓
-text extraction + normalization
+full-text extraction + normalization
   ↓
-RAG chunks + manifest
+full-book RAG chunks + manifest
   ↓
-обсуждение и обучение
+book is RAG-ready
+```
+
+После этого чтение и обучение идут независимо, в фактическом темпе чтения:
+
+```text
+reading session
+  ↓
+reading/progress.yaml
+  ↓
+reading/journal.md
+  ↓
+discussion / verification
   ↓
 notes / glossary / Q&A / diagrams
   ↓
 reviewed commit
 ```
+
+RAG readiness и reading progress — разные состояния. Наличие всей книги в RAG не означает, что вся книга уже прочитана или обсуждена.
+
+## Reading state
+
+`reading/progress.yaml` хранит последний подтверждённый прогресс чтения. Пример:
+
+```yaml
+status: reading
+current_page: 101
+current_chapter: "[Needs confirmation]"
+
+last_session:
+  pages: "80-101"
+  date: 2026-09-22
+```
+
+`reading/journal.md` хранит компактные checkpoints по сессиям:
+
+- что реально прочитано;
+- какие вопросы возникли;
+- какие понятия были разобраны;
+- что осталось непроверенным или неясным;
+- ссылки на созданные notes/diagrams.
+
+По умолчанию обсуждение книги ограничивается уже прочитанным диапазоном и ранее обсуждённым материалом. Материал после `current_page` не используется для объяснений, выводов или подсказок без явного запроса пользователя. Это ограничение относится к совместному чтению, а не к технической доступности полного RAG.
 
 ## Интеграция с другими проектами
 
@@ -64,6 +108,7 @@ reviewed commit
 books/index.yaml
   → books/<book-slug>/metadata.yaml
   → books/<book-slug>/rag/manifest.yaml
+  → reading/progress.yaml
   → notes / diagrams
 ```
 
