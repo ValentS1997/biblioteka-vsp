@@ -1,0 +1,73 @@
+name: Question
+description: Ask a question about a book, chapter, page, concept, or library knowledge
+title: "[QUESTION] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for questions. For automated integrations, see PROTOCOL.md and protocol biblioteka-vsp/v1.
+
+  - type: input
+    id: source_project
+    attributes:
+      label: Source project
+      description: Project or system that is asking the question.
+      placeholder: example-project
+    validations:
+      required: true
+
+  - type: input
+    id: book
+    attributes:
+      label: Book ID
+      description: Stable book slug from books/index.yaml. Leave empty only for cross-library questions.
+      placeholder: example-book-slug
+    validations:
+      required: false
+
+  - type: input
+    id: location
+    attributes:
+      label: Chapter / pages / chunk IDs
+      description: Known location in the source. Do not guess missing values.
+      placeholder: "Chapter 4; pp. 120-126; example-book:p0120:c03"
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What the calling project already knows and why the answer is needed.
+    validations:
+      required: false
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: State the question precisely.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: response
+    attributes:
+      label: Preferred response
+      options:
+        - explanation
+        - summary
+        - comparison
+        - evidence
+        - diagram
+        - rag-reference
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: persistence
+    attributes:
+      label: Persistence
+      options:
+        - label: Persist the reviewed answer in the knowledge layer if it is reusable.
+          required: false
