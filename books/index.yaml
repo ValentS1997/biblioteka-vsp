@@ -2,4 +2,21 @@ schema: biblioteka-vsp/books/v1
 protocol: biblioteka-vsp/v1
 updated: 2026-09-22
 
-books: []
+books:
+  - id: computer-networks-6e-ru-2023
+    title: "Компьютерные сети"
+    authors:
+      - "Эндрю Таненбаум"
+      - "Ник Фимстер"
+      - "Дэвид Уэзеролл"
+    language: ru
+    edition: 6
+    publication_year: 2023
+    isbn: "978-5-4461-1766-6"
+    paths:
+      metadata: books/computer-networks-6e-ru-2023/metadata.yaml
+      source: books/computer-networks-6e-ru-2023/source/book.pdf
+      rag_manifest: books/computer-networks-6e-ru-2023/rag/manifest.yaml
+      reading_progress: books/computer-networks-6e-ru-2023/reading/progress.yaml
+      notes: books/computer-networks-6e-ru-2023/notes/
+      diagrams: books/computer-networks-6e-ru-2023/diagrams/

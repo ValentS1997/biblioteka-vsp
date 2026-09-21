@@ -1,0 +1,53 @@
+schema: biblioteka-vsp/book/v1
+
+id: computer-networks-6e-ru-2023
+title: "Компьютерные сети"
+original_title: "Computer Networks"
+edition:
+  number: 6
+  language: ru
+  publisher: "Питер"
+  publication_year: 2023
+  publication_pages: 992
+
+authors:
+  - "Эндрю Таненбаум"
+  - "Ник Фимстер"
+  - "Дэвид Уэзеролл"
+
+isbn:
+  russian_edition: "978-5-4461-1766-6"
+  original_edition: "978-0-13-676405-2"
+
+source:
+  canonical_path: "source/book.pdf"
+  expected_sha256: "67dc11d4bdadd4e02d012545f3bafaed63bbab89cd47626dcac28528ddd6bf3d"
+  expected_size_bytes: 132007784
+  source_pdf_pages: 994
+  text_layer: "embedded OCR"
+  repository_access: private
+  storage: "Git LFS"
+  upload_status: READY
+  lawful_access_attested_by_user: true
+  ownership_category: "[Needs confirmation]"
+  physical_copy: "[Needs confirmation]"
+  license: "all rights reserved"
+  redistribution_permission: "[Needs confirmation]"
+  upload_commit: "b0970d010af90f87ad8f2ecfa706d66caf663b13"
+
+rag:
+  scope: full_book
+  build_script: "../../../scripts/build_book_rag.py"
+  manifest: "rag/manifest.yaml"
+  text: "rag/text.md"
+  chunks: "rag/chunks.jsonl"
+  status: READY_WITH_KNOWN_LIMITATIONS
+  generated_commit: "9c63e8275c9a6d9403c6341c8ee2852b0f986dbb"
+  workflow_run_id: 35652361453
+
+reading:
+  progress: "reading/progress.yaml"
+  journal: "reading/journal.md"
+  status: completed
+  started: "2025-06"
+  completed: "2026-04"
