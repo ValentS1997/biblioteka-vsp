@@ -1,0 +1,2 @@
+# Large binary book sources are stored through Git LFS.
+books/**/source/*.pdf filter=lfs diff=lfs merge=lfs -text
