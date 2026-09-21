@@ -34,13 +34,13 @@ source:
   text_layer: "embedded OCR"
   repository_access: private
   storage: "Git LFS"
-  upload_status: "[BLOCKED: binary source upload capability]"
+  upload_status: READY
   lawful_access_attested_by_user: "[Needs confirmation]"
   ownership_category: "[Needs confirmation]"
   physical_copy: "[Needs confirmation]"
   license: "all rights reserved"
   redistribution_permission: "[Needs confirmation]"
-  upload_commit: null
+  upload_commit: "a0771ea74691cfb72d63edc7eb4200eb8820f524"
 
 rag:
   scope: full_book
@@ -48,9 +48,9 @@ rag:
   manifest: "rag/manifest.yaml"
   text: "rag/text.md"
   chunks: "rag/chunks.jsonl"
-  status: BLOCKED
-  generated_commit: null
-  workflow_run_id: null
+  status: READY_WITH_KNOWN_LIMITATIONS
+  generated_commit: "a004a39a5f9f3cc1e1a586f32ad5d462ebb438fe"
+  workflow_run_id: 35656214418
 
 reading:
   progress: "reading/progress.yaml"
