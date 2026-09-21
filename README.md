@@ -100,6 +100,27 @@ last_session:
 
 По умолчанию обсуждение книги ограничивается уже прочитанным диапазоном и ранее обсуждённым материалом. Материал после `current_page` не используется для объяснений, выводов или подсказок без явного запроса пользователя. Это ограничение относится к совместному чтению, а не к технической доступности полного RAG.
 
+
+## Source PDF storage
+
+PDF is the canonical source artifact and must not be recompressed or rewritten without changing provenance.
+
+PDF files under `books/**/source/` are tracked through Git LFS. Each book records the expected SHA-256 of its source. The RAG build verifies that checksum before generating canonical retrieval artifacts.
+
+## RAG automation
+
+When `books/<book-slug>/source/book.pdf` is pushed to a non-`main` ingest branch, the `Build book RAG` workflow:
+
+1. checks out the Git LFS object;
+2. verifies SHA-256;
+3. extracts the embedded text layer page by page;
+4. generates `rag/text.md`;
+5. generates page-traceable `rag/chunks.jsonl`;
+6. writes `rag/manifest.yaml`;
+7. commits generated artifacts back to the same ingest branch.
+
+The workflow does not write directly to `main`.
+
 ## Интеграция с другими проектами
 
 Чтение:
