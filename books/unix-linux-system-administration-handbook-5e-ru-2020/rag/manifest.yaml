@@ -44,8 +44,8 @@ statistics:
   extracted_characters: 3540412
   chunks: 1167
   retrieval_chunk_files: 1167
-  search_index_shards: 15470
-  search_index_max_shard_bytes: 93918
+  search_index_shards: 8622
+  search_index_max_shard_bytes: 257003
 
 validation:
   chunk_ids_unique: true
