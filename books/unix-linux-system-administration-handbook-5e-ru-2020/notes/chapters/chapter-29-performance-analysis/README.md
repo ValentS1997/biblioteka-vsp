@@ -2,11 +2,14 @@
 
 Практические заметки по главе 29 книги «UNIX и Linux: руководство системного администратора», 5-е издание.
 
+![Глава 29 — визуальная шпаргалка](visual-cheatsheet.svg)
+
 Содержимое:
 
 - [commands.md](commands.md) — таблица команд и назначение.
 - [cheatsheet.md](cheatsheet.md) — operational-шпаргалка диагностики.
 - [diagram.md](diagram.md) — Mermaid-диаграмма процесса поиска bottleneck.
+- [visual-cheatsheet.svg](visual-cheatsheet.svg) — визуальная шпаргалка главы.
 
 ## Scope
 

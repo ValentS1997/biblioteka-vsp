@@ -2,6 +2,8 @@
 
 Практические заметки по главе 1 книги «Unix и Linux: руководство системного администратора», 5-е издание.
 
+![Глава 1 — визуальная шпаргалка](visual-cheatsheet.svg)
+
 ## Идентификация
 
 - Book ID: `unix-linux-system-administration-handbook-5e-ru-2020`
@@ -26,6 +28,7 @@
 - [commands.md](commands.md) — команды и инструменты, явно подтвержденные RAG главы.
 - [cheatsheet.md](cheatsheet.md) — operational-шпаргалка: документация, поиск ПО, установка и безопасный install flow.
 - [diagram.md](diagram.md) — Mermaid-схема базового рабочего цикла администратора по темам главы.
+- [visual-cheatsheet.svg](visual-cheatsheet.svg) — визуальная шпаргалка главы.
 
 ## Краткий анализ главы
 

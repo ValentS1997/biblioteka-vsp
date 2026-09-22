@@ -2,6 +2,8 @@
 
 Практические заметки по главе 2 книги «Unix и Linux: руководство системного администратора», 5-е издание.
 
+![Глава 2 — визуальная шпаргалка](visual-cheatsheet.svg)
+
 ## Идентификация
 
 - Book ID: `unix-linux-system-administration-handbook-5e-ru-2020`
@@ -27,6 +29,7 @@
 - [commands.md](commands.md) — команды прошивки/загрузчика, systemd, FreeBSD rc, shutdown и recovery.
 - [cheatsheet.md](cheatsheet.md) — operational-шпаргалка по локализации boot/service failure.
 - [diagram.md](diagram.md) — Mermaid flowchart по цепочке загрузки и восстановлению.
+- [visual-cheatsheet.svg](visual-cheatsheet.svg) — визуальная шпаргалка главы.
 
 ## Карта главы
 
