@@ -7,4 +7,5 @@ Reviewed chapter-level notes are stored here. Historical notes are not reconstru
 - [Chapter 3 — Access control and superuser privileges](chapter-03-access-control-and-superuser-privileges/README.md)
 - [Chapter 4 — Process management](chapter-04-process-management/README.md)
 - [Chapter 5 — Filesystem](chapter-05-filesystem/README.md)
+- [Chapter 6 — Installation and software management](chapter-06-installation-and-software-management/README.md)
 - [Chapter 29 — Performance analysis](chapter-29-performance-analysis/README.md)
