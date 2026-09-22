@@ -15,6 +15,7 @@
 - [visual-cheatsheet.svg](visual-cheatsheet.svg) — компактная визуальная шпаргалка главы.
 - [summary.md](summary.md) — краткое резюме главы из заключительного раздела книги.
 - [review-questions.md](review-questions.md) — контрольные вопросы и задачи из конца главы.
+- [review-answers.md](review-answers.md) — RAG-grounded ответы и решения к контрольным вопросам; не официальный ключ издательства.
 
 ## Scope
 
