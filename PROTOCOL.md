@@ -32,7 +32,8 @@ books/index.yaml
 books/index.yaml
   → books/<book-id>/metadata.yaml
   → books/<book-id>/rag/manifest.yaml
-  → books/<book-id>/rag/chunks.jsonl
+  → RAG-RETRIEVAL.yaml
+  → books/<book-id>/rag/chunks/**/*.md
   → books/<book-id>/reading/progress.yaml
   → books/<book-id>/notes/
   → books/<book-id>/diagrams/
@@ -41,6 +42,8 @@ books/index.yaml
 Если файл или слой ещё не создан, это означает `[Not available]`, а не отсутствие знания в исходной книге.
 
 RAG для книги строится целиком при ingest. Поэтому полнота `rag/` не должна интерпретироваться как полнота человеческого чтения или обсуждения. Для этого существует отдельный `reading/` state.
+
+Для интерактивного retrieval canonical query unit — отдельный небольшой файл под `rag/chunks/`. Файлы `rag/text.md` и `rag/chunks.jsonl` остаются bulk/reproducibility artifacts и не должны загружаться целиком для ответа на обычный книжный вопрос.
 
 ## 3. Write interface
 
@@ -218,3 +221,41 @@ biblioteka-vsp/v2
 ```
 
 Добавление необязательных полей, не меняющее существующую семантику, допускается в рамках `v1`.
+
+
+## 12. Bounded RAG-only retrieval
+
+Machine-readable contract: `RAG-RETRIEVAL.yaml`.
+
+Цель режима `rag_only` — отвечать по 1–3 релевантным chunk без загрузки полного корпуса книги в tool/model context.
+
+Обязательный порядок:
+
+```text
+question
+  → GitHub code search over addressable rag/chunks/
+  → candidate chunk paths
+  → fetch best 1-3 chunk files
+  → answer + provenance
+```
+
+Ограничения:
+
+- максимум 3 fetched chunk-файла на обычный вопрос;
+- один retrieval chunk должен быть небольшим адресуемым текстовым файлом;
+- `rag/text.md` и `rag/chunks.jsonl` запрещены как fallback для обычного question retrieval;
+- raw blob большого corpus-файла также запрещён;
+- внешний web search запрещён, если пользователь запросил `RAG-only` / `только RAG`;
+- при retrieval miss допускается ограниченное число узких lexical retries;
+- после miss агент возвращает `RAG_MISS`, а не расширяет источник до web/model memory/full blob.
+
+Provenance ответа должен включать:
+
+```text
+book_id
+chunk_id
+pdf_page
+chunk_path
+```
+
+Важно: это protocol-level contract для агентов. Он не является сетевым firewall платформы. Если вызывающей среде требуется технически гарантированная блокировка внешних источников, она должна ограничить доступные инструменты отдельно.
