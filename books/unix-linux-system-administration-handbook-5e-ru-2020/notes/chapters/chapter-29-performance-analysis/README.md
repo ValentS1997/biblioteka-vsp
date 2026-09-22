@@ -4,12 +4,15 @@
 
 ![Глава 29 — визуальная шпаргалка](visual-cheatsheet.svg)
 
+![Глава 29 — подробная шпаргалка](visual-cheatsheet-detailed.svg)
+
 Содержимое:
 
 - [commands.md](commands.md) — таблица команд и назначение.
 - [cheatsheet.md](cheatsheet.md) — operational-шпаргалка диагностики.
 - [diagram.md](diagram.md) — Mermaid-диаграмма процесса поиска bottleneck.
-- [visual-cheatsheet.svg](visual-cheatsheet.svg) — визуальная шпаргалка главы.
+- [visual-cheatsheet.svg](visual-cheatsheet.svg) — компактная визуальная шпаргалка главы.
+- [visual-cheatsheet-detailed.svg](visual-cheatsheet-detailed.svg) — подробная визуальная шпаргалка по предоставленному макету.
 
 ## Scope
 
