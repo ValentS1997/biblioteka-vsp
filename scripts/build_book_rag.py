@@ -19,7 +19,7 @@ TARGET_CHARS = 4000
 OVERLAP_CHARS = 350
 RETRIEVAL_TOP_K_MAX = 3
 SEARCH_KEY_CHARS = 4
-SEARCH_PREFIX_CHARS = 3
+SEARCH_PREFIX_CHARS = 4
 SEARCH_POSTINGS_MAX = 32
 SEARCH_SHARD_MAX_BYTES = 262144
 
@@ -107,8 +107,8 @@ def lexical_tokens(text: str) -> list[str]:
     normalized = text.lower().replace("ё", "е")
     return [
         token
-        for token in re.findall(r"[^\W_]+", normalized, flags=re.UNICODE)
-        if len(token) >= 2
+        for token in re.findall(r"[0-9a-zа-я]+", normalized, flags=re.IGNORECASE)
+        if 2 <= len(token) <= 64
     ]
 
 
