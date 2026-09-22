@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" role="img" aria-labelledby="title desc">
+<title id="title">OSI, TCP/IP и модель Таненбаума</title>
+<desc id="desc">Сводная шпаргалка по уровням, протоколам, командам и примерам.</desc>
+<rect width="1600" height="1200" fill="#f7f8fa"/>
+<rect width="1600" height="110" fill="#17202a"/>
+<text x="55" y="48" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="36" font-weight="700" fill="#fff">OSI ↔ TCP/IP ↔ Таненбаум</text>
+<text x="55" y="82" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#d6e4f0">Уровень → функция → протоколы → команды → практический пример</text>
+
+<text x="60" y="145" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#566573">OSI</text>
+<text x="235" y="145" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#566573">TCP/IP</text>
+<text x="430" y="145" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#566573">Таненбаум</text>
+<text x="625" y="145" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#566573">Функция / protocols / commands / пример</text>
+
+<g font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif">
+<rect x="45" y="165" width="1510" height="112" rx="14" fill="#eaf2f8" stroke="#85c1e9"/>
+<text x="65" y="198" font-size="21" font-weight="700" fill="#1b4f72">7 Application</text>
+<text x="235" y="198" font-size="19" font-weight="700">Application</text><text x="430" y="198" font-size="19" font-weight="700">Application</text>
+<text x="625" y="195" font-size="18">Сервисы и прикладные протоколы · HTTP/HTTPS · DNS · DHCP · SMTP/IMAP · SSH · RTP/SIP</text>
+<text x="625" y="225" font-size="17" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">curl · wget · dig · nslookup · host · ssh · telnet</text>
+<text x="625" y="253" font-size="17" fill="#566573">Пример: открыть сайт, спросить DNS-запись, подключиться по SSH</text>
+
+<rect x="45" y="289" width="1510" height="100" rx="14" fill="#f4ecf7" stroke="#c39bd3"/>
+<text x="65" y="322" font-size="21" font-weight="700" fill="#6c3483">6 Presentation</text>
+<text x="235" y="322" font-size="18" font-weight="700">Application</text><text x="430" y="322" font-size="18" font-weight="700">Application</text>
+<text x="625" y="319" font-size="18">Форматы, кодировки, шифрование, сериализация · TLS/SSL · MIME · JSON · UTF-8 · ASN.1</text>
+<text x="625" y="348" font-size="17" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">openssl s_client · openssl x509 · file</text>
+<text x="625" y="374" font-size="17" fill="#566573">Пример: HTTPS-соединение и проверка сертификата</text>
+
+<rect x="45" y="401" width="1510" height="100" rx="14" fill="#fef9e7" stroke="#f7dc6f"/>
+<text x="65" y="434" font-size="21" font-weight="700" fill="#7d6608">5 Session</text>
+<text x="235" y="434" font-size="18" font-weight="700">Application</text><text x="430" y="434" font-size="18" font-weight="700">Application</text>
+<text x="625" y="431" font-size="18">Управление логикой сеанса · RPC · NetBIOS session · SIP session · TLS session reuse</text>
+<text x="625" y="460" font-size="17" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">ssh -v · openssl s_client · telnet</text>
+<text x="625" y="486" font-size="17" fill="#566573">Пример: установить/поддерживать прикладную сессию</text>
+
+<rect x="45" y="513" width="1510" height="112" rx="14" fill="#e8f6f3" stroke="#73c6b6"/>
+<text x="65" y="546" font-size="21" font-weight="700" fill="#117864">4 Transport</text>
+<text x="235" y="546" font-size="19" font-weight="700">Transport</text><text x="430" y="546" font-size="19" font-weight="700">Transport</text>
+<text x="625" y="543" font-size="18">End-to-end, ports, reliability, segmentation, flow/congestion control · TCP · UDP · QUIC*</text>
+<text x="625" y="573" font-size="17" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">ss · netstat · nc · telnet · iperf3</text>
+<text x="625" y="600" font-size="17" fill="#566573">Пример: TCP handshake, UDP DNS, throughput test</text>
+
+<rect x="45" y="637" width="1510" height="112" rx="14" fill="#fbeee6" stroke="#f0b27a"/>
+<text x="65" y="670" font-size="21" font-weight="700" fill="#a04000">3 Network</text>
+<text x="235" y="670" font-size="19" font-weight="700">Internet</text><text x="430" y="670" font-size="19" font-weight="700">Network</text>
+<text x="625" y="667" font-size="18">IP addressing + routing · IPv4/IPv6 · ICMP · IPsec · OSPF · BGP · RIP · MPLS*</text>
+<text x="625" y="697" font-size="17" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">ip addr · ip route · ping · traceroute · tracepath</text>
+<text x="625" y="724" font-size="17" fill="#566573">Пример: пакет проходит через несколько маршрутизаторов</text>
+
+<rect x="45" y="761" width="1510" height="112" rx="14" fill="#ebf5fb" stroke="#76d7c4"/>
+<text x="65" y="794" font-size="21" font-weight="700" fill="#0e6251">2 Data Link</text>
+<text x="235" y="794" font-size="18" font-weight="700">Link / Access</text><text x="430" y="794" font-size="19" font-weight="700">Data Link</text>
+<text x="625" y="791" font-size="18">Frames + local delivery · Ethernet 802.3 · PPP · HDLC · VLAN 802.1Q · LLC</text>
+<text x="625" y="821" font-size="17" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">ip link · ethtool · bridge · tcpdump -e</text>
+<text x="625" y="848" font-size="17" fill="#566573">Пример: Ethernet frame внутри LAN</text>
+
+<rect x="45" y="885" width="1510" height="112" rx="14" fill="#fff4e6" stroke="#f5b041"/>
+<text x="65" y="918" font-size="21" font-weight="700" fill="#9c640c">2a MAC</text>
+<text x="235" y="918" font-size="18" font-weight="700">Link / Access</text><text x="430" y="918" font-size="19" font-weight="700">MAC</text>
+<text x="625" y="915" font-size="18">Shared-medium access + MAC addressing · 802.11 · CSMA/CD · CSMA/CA · BLE MAC</text>
+<text x="625" y="945" font-size="17" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">ip link · iw · iwconfig · arp -a · bridge fdb show</text>
+<text x="625" y="972" font-size="17" fill="#566573">Пример: Wi-Fi станция получает доступ к радиоэфиру</text>
+
+<rect x="45" y="1009" width="1510" height="112" rx="14" fill="#f2f3f4" stroke="#aab7b8"/>
+<text x="65" y="1042" font-size="21" font-weight="700" fill="#424949">1 Physical</text>
+<text x="235" y="1042" font-size="18" font-weight="700">Link / Access</text><text x="430" y="1042" font-size="19" font-weight="700">Physical</text>
+<text x="625" y="1039" font-size="18">Bits/signals/media · UTP · fiber · DSL · DOCSIS · Ethernet PHY · radio PHY · OFDM</text>
+<text x="625" y="1069" font-size="17" font-family="ui-monospace,SFMono-Regular,Consolas,monospace">ethtool · iw · nmcli · dmesg</text>
+<text x="625" y="1096" font-size="17" fill="#566573">Пример: link down, слабый Wi-Fi signal, cable/PHY problem</text>
+</g>
+
+<text x="55" y="1160" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="16" fill="#566573">* QUIC и MPLS — пограничные случаи для учебных моделей. Commands — практический cross-model reference, не chapter-RAG command list.</text>
+</svg>

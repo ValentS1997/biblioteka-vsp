@@ -45,3 +45,7 @@ computer-networks-6e-ru-2023:p0120:c01
 ```
 
 The embedded OCR text layer is used as the extraction source. Visual material remains available through the source PDF and page provenance; diagrams/images are not separately encoded as multimodal RAG objects by the v1 pipeline.
+## Cross-model reference
+
+- [OSI ↔ TCP/IP ↔ Таненбаум](notes/network-models-reference.md) — сводная таблица уровней, протоколов, команд и примеров + визуальная шпаргалка.
+
