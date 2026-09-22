@@ -16,4 +16,5 @@ Reviewed chapter-level notes are stored here. Historical notes are not reconstru
 - [Chapter 12 — Printing](chapter-12-printing/README.md)
 - [Chapter 13 — TCP/IP networks](chapter-13-tcp-ip-networks/README.md)
 - [Chapter 14 — Network hardware](chapter-14-network-hardware/README.md)
+- [Chapter 15 — IP routing](chapter-15-ip-routing/README.md)
 - [Chapter 29 — Performance analysis](chapter-29-performance-analysis/README.md)
