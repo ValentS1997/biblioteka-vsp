@@ -121,6 +121,24 @@ When `books/<book-slug>/source/book.pdf` is pushed to a non-`main` ingest branch
 
 The workflow does not write directly to `main`.
 
+## Retrieval architecture
+
+Для обычного вопроса по книге retrieval выполняется по небольшим адресуемым chunk-файлам:
+
+```text
+question
+  → GitHub code search
+  → books/<book-slug>/rag/chunks/**/*.md
+  → fetch best 1-3 chunks
+  → answer + provenance
+```
+
+`rag/text.md` и `rag/chunks.jsonl` остаются bulk/reproducibility artifacts. Они не являются query interface и не должны загружаться целиком для обычного ответа.
+
+Machine-readable ограничения режима `RAG-only` находятся в [RAG-RETRIEVAL.yaml](RAG-RETRIEVAL.yaml). В этом режиме запрещён fallback на внешний web и на большие corpus blobs; retrieval miss должен оставаться retrieval miss.
+
+GitHub code search в этой архитектуре является lexical retrieval. Это не vector-semantic search, поэтому агент может выполнить небольшое число узких вариантов запроса, но не должен расширять source boundary.
+
 ## Интеграция с другими проектами
 
 Чтение:
