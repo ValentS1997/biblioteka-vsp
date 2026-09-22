@@ -10,3 +10,4 @@ Reviewed chapter-level notes are stored here. Historical notes are not reconstru
 - [Chapter 6 — Transport layer](chapter-06-transport-layer/README.md)
 - [Chapter 7 — Application layer](chapter-07-application-layer/README.md)
 - [Chapter 8 — Network security](chapter-08-network-security/README.md)
+- [Chapter 9 — Further reading and bibliography](chapter-09-further-reading-and-bibliography/README.md)
