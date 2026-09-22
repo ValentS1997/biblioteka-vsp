@@ -2,6 +2,8 @@
 
 Практические заметки по главе 2 книги «Компьютерные сети», 6-е издание.
 
+![Глава 2 — подробная шпаргалка](visual-cheatsheet-detailed.svg)
+
 ![Глава 2 — визуальная шпаргалка](visual-cheatsheet.svg)
 
 Содержимое:
@@ -9,7 +11,8 @@
 - [commands.md](commands.md) — таблица CLI-команд; для этой главы подтвержденных CLI-вызовов не найдено.
 - [cheatsheet.md](cheatsheet.md) — шпаргалка для локализации ограничений физического канала.
 - [diagram.md](diagram.md) — Mermaid-диаграмма диагностической декомпозиции по логике главы.
-- [visual-cheatsheet.svg](visual-cheatsheet.svg) — визуальная шпаргалка главы.
+- [visual-cheatsheet-detailed.svg](visual-cheatsheet-detailed.svg) — итоговая визуальная шпаргалка всей главы.
+- [visual-cheatsheet.svg](visual-cheatsheet.svg) — компактная визуальная шпаргалка главы.
 
 ## Scope
 

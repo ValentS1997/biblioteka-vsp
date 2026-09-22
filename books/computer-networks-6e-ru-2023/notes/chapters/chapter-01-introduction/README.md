@@ -2,6 +2,8 @@
 
 Практические заметки по главе 1 книги «Компьютерные сети», 6-е издание.
 
+![Глава 1 — подробная шпаргалка](visual-cheatsheet-detailed.svg)
+
 ![Глава 1 — визуальная шпаргалка](visual-cheatsheet.svg)
 
 Содержимое:
@@ -9,7 +11,8 @@
 - [commands.md](commands.md) — команды и наблюдательные инструменты, явно подтвержденные RAG.
 - [cheatsheet.md](cheatsheet.md) — шпаргалка для первичной декомпозиции сетевой задачи по понятиям главы.
 - [diagram.md](diagram.md) — Mermaid-схема, отделяющая логику главы от диагностических ветвей, которых в источнике нет.
-- [visual-cheatsheet.svg](visual-cheatsheet.svg) — визуальная шпаргалка главы.
+- [visual-cheatsheet-detailed.svg](visual-cheatsheet-detailed.svg) — итоговая визуальная шпаргалка всей главы.
+- [visual-cheatsheet.svg](visual-cheatsheet.svg) — компактная визуальная шпаргалка главы.
 
 ## Scope
 
