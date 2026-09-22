@@ -12,4 +12,5 @@ Reviewed chapter-level notes are stored here. Historical notes are not reconstru
 - [Chapter 8 — User account management](chapter-08-user-account-management/README.md)
 - [Chapter 9 — Cloud computing](chapter-09-cloud-computing/README.md)
 - [Chapter 10 — Logging](chapter-10-logging/README.md)
+- [Chapter 11 — Drivers and kernel](chapter-11-drivers-and-kernel/README.md)
 - [Chapter 29 — Performance analysis](chapter-29-performance-analysis/README.md)
