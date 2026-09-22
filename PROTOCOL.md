@@ -233,7 +233,7 @@ Machine-readable contract: `RAG-RETRIEVAL.yaml`.
 
 ```text
 question
-  → GitHub code search over addressable rag/chunks/
+  → deterministic lexical shard(s) under rag/search-index/
   → candidate chunk paths
   → fetch best 1-3 chunk files
   → answer + provenance
@@ -246,8 +246,9 @@ question
 - `rag/text.md` и `rag/chunks.jsonl` запрещены как fallback для обычного question retrieval;
 - raw blob большого corpus-файла также запрещён;
 - внешний web search запрещён, если пользователь запросил `RAG-only` / `только RAG`;
-- при retrieval miss допускается ограниченное число узких lexical retries;
-- после miss агент возвращает `RAG_MISS`, а не расширяет источник до web/model memory/full blob.
+- retrieval не зависит от GitHub code-search indexing;
+- агент выбирает максимум 3 информативных токена и читает максимум 3 deterministic search shards;
+- при retrieval miss агент возвращает `RAG_MISS`, а не расширяет источник до web/model memory/full blob.
 
 Provenance ответа должен включать:
 

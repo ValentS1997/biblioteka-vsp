@@ -116,8 +116,10 @@ When `books/<book-slug>/source/book.pdf` is pushed to a non-`main` ingest branch
 3. extracts the embedded text layer page by page;
 4. generates `rag/text.md`;
 5. generates page-traceable `rag/chunks.jsonl`;
-6. writes `rag/manifest.yaml`;
-7. commits generated artifacts back to the same ingest branch.
+6. generates addressable `rag/chunks/**/*.md`;
+7. generates deterministic `rag/search-index/**/*.json`;
+8. writes `rag/manifest.yaml`;
+9. commits generated artifacts back to the same ingest branch.
 
 The workflow does not write directly to `main`.
 
@@ -127,7 +129,8 @@ The workflow does not write directly to `main`.
 
 ```text
 question
-  → GitHub code search
+  → books/<book-slug>/rag/search-index/<deterministic-shard>.json
+  → candidate chunk IDs/paths
   → books/<book-slug>/rag/chunks/**/*.md
   → fetch best 1-3 chunks
   → answer + provenance
@@ -137,7 +140,7 @@ question
 
 Machine-readable ограничения режима `RAG-only` находятся в [RAG-RETRIEVAL.yaml](RAG-RETRIEVAL.yaml). В этом режиме запрещён fallback на внешний web и на большие corpus blobs; retrieval miss должен оставаться retrieval miss.
 
-GitHub code search в этой архитектуре является lexical retrieval. Это не vector-semantic search, поэтому агент может выполнить небольшое число узких вариантов запроса, но не должен расширять source boundary.
+Retrieval использует собственный детерминированный lexical index и не зависит от наличия GitHub code-search index для private repository. Это не vector-semantic search: агент выбирает до трёх информативных токенов, получает до трёх небольших index-shards и затем читает только 1–3 candidate chunks.
 
 ## Интеграция с другими проектами
 
