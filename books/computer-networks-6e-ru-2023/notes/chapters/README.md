@@ -8,3 +8,4 @@ Reviewed chapter-level notes are stored here. Historical notes are not reconstru
 - [Chapter 4 — Media access control sublayer](chapter-04-media-access-control-sublayer/README.md)
 - [Chapter 5 — Network layer](chapter-05-network-layer/README.md)
 - [Chapter 6 — Transport layer](chapter-06-transport-layer/README.md)
+- [Chapter 7 — Application layer](chapter-07-application-layer/README.md)
