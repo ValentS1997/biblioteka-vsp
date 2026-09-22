@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 2 — Физический уровень: визуальная шпаргалка</title>
+  <desc id="desc">Среды передачи, baseline физического канала, пределы Найквиста и Шеннона, модуляция, мультиплексирование и технологии доступа.</desc>
+  <rect width="1600" height="900" fill="#f7f8fa"/>
+  <rect x="0" y="0" width="1600" height="112" fill="#17202a"/>
+  <text x="60" y="50" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="36" font-weight="700" fill="#ffffff">Глава 2 — Физический уровень</text>
+  <text x="60" y="86" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">Биты → сигналы → реальная среда → физические ограничения канала</text>
+
+  <rect x="50" y="145" width="470" height="290" rx="18" fill="#ffffff" stroke="#c9d2dc" stroke-width="2"/>
+  <text x="80" y="185" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#17202a">1. Определи среду</text>
+  <text x="80" y="228" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">
+    <tspan x="80" dy="0">• витая пара / коаксиальный кабель;</tspan>
+    <tspan x="80" dy="31">• оптоволокно;</tspan>
+    <tspan x="80" dy="31">• радио / микроволны;</tspan>
+    <tspan x="80" dy="31">• инфракрасный / видимый диапазон;</tspan>
+    <tspan x="80" dy="31">• спутниковый канал.</tspan>
+  </text>
+
+  <rect x="565" y="145" width="470" height="290" rx="18" fill="#ffffff" stroke="#c9d2dc" stroke-width="2"/>
+  <text x="595" y="185" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#17202a">2. Сними baseline</text>
+  <text x="595" y="228" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="595" dy="0">Среда · технология доступа · расстояние</tspan>
+    <tspan x="595" dy="30">Bandwidth (Гц) · data rate (бит/с) · SNR</tspan>
+    <tspan x="595" dy="30">Duplex · shared/dedicated · задержка</tspan>
+    <tspan x="595" dy="30">Ошибки / помехи</tspan>
+    <tspan x="595" dy="42" font-weight="700">Не смешивать Гц и бит/с.</tspan>
+  </text>
+
+  <rect x="1080" y="145" width="470" height="290" rx="18" fill="#eef6ff" stroke="#5dade2" stroke-width="3"/>
+  <text x="1110" y="185" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#1b4f72">3. Фундаментальные пределы</text>
+  <text x="1110" y="235" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">Найквист — идеальный канал:</text>
+  <text x="1110" y="276" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="24" font-weight="700" fill="#17202a">Rmax = 2 B log₂(V)</text>
+  <text x="1110" y="329" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">Шеннон — зашумленный канал:</text>
+  <text x="1110" y="370" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="24" font-weight="700" fill="#17202a">Rmax = B log₂(1 + S/N)</text>
+  <text x="1110" y="410" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#566573">Неизвестные B, V, S/N → [Needs confirmation]</text>
+
+  <rect x="50" y="475" width="470" height="285" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="80" y="515" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#196f3d">4. Сигнал и совместное использование</text>
+  <text x="80" y="560" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="80" dy="0">• baseband или passband;</tspan>
+    <tspan x="80" dy="31">• амплитуда / частота / фаза;</tspan>
+    <tspan x="80" dy="31">• TDM — время;</tspan>
+    <tspan x="80" dy="31">• FDM — частота;</tspan>
+    <tspan x="80" dy="31">• WDM — длина волны;</tspan>
+    <tspan x="80" dy="31">• кодовое разделение.</tspan>
+  </text>
+
+  <rect x="565" y="475" width="470" height="285" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+  <text x="595" y="515" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#9c640c">5. Технология доступа</text>
+  <text x="595" y="558" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="595" dy="0">ADSL — шлейф, расстояние, SNR;</tspan>
+    <tspan x="595" dy="31">HFC/DOCSIS — разделяемая полоса;</tspan>
+    <tspan x="595" dy="31">сотовая сеть — частоты, соты, handoff;</tspan>
+    <tspan x="595" dy="31">спутник — орбита, покрытие, задержка;</tspan>
+    <tspan x="595" dy="31">оптоволокно — большая полоса и малое затухание.</tspan>
+  </text>
+
+  <rect x="1080" y="475" width="470" height="285" rx="18" fill="#ffffff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="1110" y="515" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#6c3483">6. Порядок анализа</text>
+  <text x="1110" y="558" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1110" dy="0">Среда</tspan>
+    <tspan x="1110" dy="31">→ bandwidth / SNR / distance / interference</tspan>
+    <tspan x="1110" dy="31">→ modulation / multiplexing</tspan>
+    <tspan x="1110" dy="31">→ access technology</tspan>
+    <tspan x="1110" dy="31">→ сравнить наблюдаемое с физическим пределом</tspan>
+    <tspan x="1110" dy="42" font-weight="700">Универсального modifying action в главе нет.</tspan>
+  </text>
+
+  <text x="60" y="835" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#566573">Provenance: RAG p0122:c01–p0242:c01 · CLI-команды для operational runbook не подтверждены</text>
+</svg>

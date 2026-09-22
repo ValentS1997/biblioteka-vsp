@@ -2,11 +2,14 @@
 
 Практические заметки по главе 3 книги «Компьютерные сети», 6-е издание.
 
+![Глава 3 — визуальная шпаргалка](visual-cheatsheet.svg)
+
 Содержимое:
 
 - [commands.md](commands.md) — operational-команды, подтвержденные RAG; точные shell-команды в этой главе не выделены.
 - [cheatsheet.md](cheatsheet.md) — шпаргалка для локализации проблем framing/error control/flow control/sliding window.
 - [diagram.md](diagram.md) — Mermaid-диаграмма диагностической декомпозиции по логике главы.
+- [visual-cheatsheet.svg](visual-cheatsheet.svg) — визуальная шпаргалка главы.
 
 ## Scope
 

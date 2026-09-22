@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 3 — Канальный уровень: визуальная шпаргалка</title>
+  <desc id="desc">Диагностика framing, integrity, delivery semantics, flow control и sliding window на канальном уровне.</desc>
+  <rect width="1600" height="900" fill="#f7f8fa"/>
+  <rect x="0" y="0" width="1600" height="112" fill="#17202a"/>
+  <text x="60" y="50" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="36" font-weight="700" fill="#ffffff">Глава 3 — Канальный уровень</text>
+  <text x="60" y="86" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">Биты → фреймы → контроль ошибок → подтверждения → flow control → sliding window</text>
+
+  <rect x="50" y="145" width="470" height="285" rx="18" fill="#ffffff" stroke="#5dade2" stroke-width="2"/>
+  <text x="80" y="185" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#1b4f72">1. FRAMING</text>
+  <text x="80" y="226" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="80" dy="0">Границы фрейма должны восстанавливаться.</tspan>
+    <tspan x="80" dy="35">Методы:</tspan>
+    <tspan x="80" dy="30">• byte count;</tspan>
+    <tspan x="80" dy="30">• flag bytes + byte stuffing;</tspan>
+    <tspan x="80" dy="30">• flag bits + bit stuffing;</tspan>
+    <tspan x="80" dy="30">• зарезервированные сигналы физического уровня.</tspan>
+  </text>
+
+  <rect x="565" y="145" width="470" height="285" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="595" y="185" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#196f3d">2. INTEGRITY</text>
+  <text x="595" y="226" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="595" dy="0">Выяснить механизм контроля:</tspan>
+    <tspan x="595" dy="35">• parity;</tspan>
+    <tspan x="595" dy="30">• checksum;</tspan>
+    <tspan x="595" dy="30">• CRC;</tspan>
+    <tspan x="595" dy="30">• FEC / корректирующие коды.</tspan>
+    <tspan x="595" dy="38">CRC failure = повреждение, не автоматически потеря.</tspan>
+  </text>
+
+  <rect x="1080" y="145" width="470" height="285" rx="18" fill="#fffaf0" stroke="#f5b041" stroke-width="2"/>
+  <text x="1110" y="185" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#9c640c">3. DELIVERY SEMANTICS</text>
+  <text x="1110" y="226" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1110" dy="0">Проверить ACK/NAK, timeout и sequence number.</tspan>
+    <tspan x="1110" dy="35">Потеряться может data frame или ACK.</tspan>
+    <tspan x="1110" dy="31">Sequence number отличает новый фрейм от дубликата.</tspan>
+    <tspan x="1110" dy="31">Короткий timeout → лишние retransmissions.</tspan>
+    <tspan x="1110" dy="31">Длинный timeout → медленное восстановление.</tspan>
+  </text>
+
+  <rect x="50" y="470" width="470" height="285" rx="18" fill="#ffffff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="80" y="510" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#6c3483">4. FLOW CONTROL</text>
+  <text x="80" y="552" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="80" dy="0">Если sender быстрее receiver:</tspan>
+    <tspan x="80" dy="34">• receiver сообщает состояние / разрешение;</tspan>
+    <tspan x="80" dy="31">• протокол определяет, когда можно послать следующий фрейм;</tspan>
+    <tspan x="80" dy="31">• цель — не допустить потери из-за переполнения.</tspan>
+    <tspan x="80" dy="42">Глава рассматривает feedback-based flow control.</tspan>
+  </text>
+
+  <rect x="565" y="470" width="470" height="285" rx="18" fill="#ffffff" stroke="#ec7063" stroke-width="2"/>
+  <text x="595" y="510" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#922b21">5. SLIDING WINDOW</text>
+  <text x="595" y="552" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="595" dy="0">Проверить sender/receiver windows и sequence space.</tspan>
+    <tspan x="595" dy="34">Stop-and-wait: один неподтвержденный фрейм.</tspan>
+    <tspan x="595" dy="31">Go-Back-N: повтор последовательности после ошибки.</tspan>
+    <tspan x="595" dy="31">Selective Repeat: буферизация и выборочный повтор.</tspan>
+    <tspan x="595" dy="42">Большая задержка → окно помогает держать канал занятым.</tspan>
+  </text>
+
+  <rect x="1080" y="470" width="470" height="285" rx="18" fill="#ffffff" stroke="#c9d2dc" stroke-width="2"/>
+  <text x="1110" y="510" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#17202a">6. ГРАНИЦЫ АНАЛИЗА</text>
+  <text x="1110" y="552" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1110" dy="0">Искажение битов / SNR / среда → глава 2.</tspan>
+    <tspan x="1110" dy="34">Конкуренция за Ethernet/Wi-Fi среду → глава 4.</tspan>
+    <tspan x="1110" dy="34">Framing / error / ACK / window → глава 3.</tspan>
+    <tspan x="1110" dy="44" font-weight="700">Универсального modifying action нет.</tspan>
+    <tspan x="1110" dy="34">Параметры реализации → [Needs confirmation].</tspan>
+  </text>
+
+  <text x="60" y="835" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#566573">Provenance: RAG p0243:c01–p0312:c01 · учебные generator/verifier/alter не являются production runbook</text>
+</svg>
