@@ -25,6 +25,9 @@ chunking:
 
 retrieval:
   mode: addressable_small_chunks
+  discovery: deterministic_lexical_shards
+  search_index_manifest: rag/search-index/manifest.json
+  search_index_path_pattern: "rag/search-index/<shard>.json"
   search_scope: rag/chunks/
   chunk_index: rag/chunk-index.jsonl
   top_k_max: 3
@@ -41,11 +44,14 @@ statistics:
   extracted_characters: 2844500
   chunks: 1005
   retrieval_chunk_files: 1005
+  search_index_shards: 13909
+  search_index_max_shard_bytes: 75098
 
 validation:
   chunk_ids_unique: true
   retrieval_paths_unique: true
   retrieval_chunk_count_matches: true
+  search_index_bounded: true
   source_checksum_verified: true
   full_pdf_page_range_processed: true
   status: READY_WITH_KNOWN_LIMITATIONS
@@ -54,4 +60,4 @@ known_limitations:
   - "The PDF uses an embedded OCR text layer; recognition errors present in the source OCR may remain in extracted text."
   - "Images, equations, tables and diagrams are not independently encoded as multimodal RAG objects; use pdf_page provenance to inspect the source page when visual context matters."
   - "Publisher advertisement and cover pages are part of the source PDF and remain page-addressable even when they are not core book content."
-  - "GitHub code search is lexical retrieval, not a vector-semantic index; agents may retry with a small number of query variants but must not fall back to bulk blobs in RAG-only mode."
+  - "The deterministic lexical index is prefix-based retrieval, not semantic vector search; use up to three informative query tokens and preserve RAG_MISS on unsupported questions."
