@@ -23,15 +23,29 @@ chunking:
   overlap_chars: 350
   id_pattern: "<book-slug>:p<pdf-page-4d>:c<chunk-2d>"
 
+retrieval:
+  mode: addressable_small_chunks
+  search_scope: rag/chunks/
+  chunk_index: rag/chunk-index.jsonl
+  top_k_max: 3
+  chunk_file_pattern: "rag/chunks/p####-p####/p####-c##.md"
+  bulk_files:
+    - rag/text.md
+    - rag/chunks.jsonl
+  bulk_files_for_query_retrieval: false
+
 statistics:
   pages_with_text: 992
   blank_pages: 2
   blank_page_numbers: [1, 994]
   extracted_characters: 2844500
   chunks: 1005
+  retrieval_chunk_files: 1005
 
 validation:
   chunk_ids_unique: true
+  retrieval_paths_unique: true
+  retrieval_chunk_count_matches: true
   source_checksum_verified: true
   full_pdf_page_range_processed: true
   status: READY_WITH_KNOWN_LIMITATIONS
@@ -40,3 +54,4 @@ known_limitations:
   - "The PDF uses an embedded OCR text layer; recognition errors present in the source OCR may remain in extracted text."
   - "Images, equations, tables and diagrams are not independently encoded as multimodal RAG objects; use pdf_page provenance to inspect the source page when visual context matters."
   - "Publisher advertisement and cover pages are part of the source PDF and remain page-addressable even when they are not core book content."
+  - "GitHub code search is lexical retrieval, not a vector-semantic index; agents may retry with a small number of query variants but must not fall back to bulk blobs in RAG-only mode."
