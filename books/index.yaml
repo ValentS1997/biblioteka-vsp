@@ -17,6 +17,8 @@ books:
       metadata: books/computer-networks-6e-ru-2023/metadata.yaml
       source: books/computer-networks-6e-ru-2023/source/book.pdf
       rag_manifest: books/computer-networks-6e-ru-2023/rag/manifest.yaml
+      rag_chunks: books/computer-networks-6e-ru-2023/rag/chunks/
+      rag_chunk_index: books/computer-networks-6e-ru-2023/rag/chunk-index.jsonl
       reading_progress: books/computer-networks-6e-ru-2023/reading/progress.yaml
       notes: books/computer-networks-6e-ru-2023/notes/
       diagrams: books/computer-networks-6e-ru-2023/diagrams/
@@ -37,6 +39,8 @@ books:
       metadata: books/unix-linux-system-administration-handbook-5e-ru-2020/metadata.yaml
       source: books/unix-linux-system-administration-handbook-5e-ru-2020/source/book.pdf
       rag_manifest: books/unix-linux-system-administration-handbook-5e-ru-2020/rag/manifest.yaml
+      rag_chunks: books/unix-linux-system-administration-handbook-5e-ru-2020/rag/chunks/
+      rag_chunk_index: books/unix-linux-system-administration-handbook-5e-ru-2020/rag/chunk-index.jsonl
       reading_progress: books/unix-linux-system-administration-handbook-5e-ru-2020/reading/progress.yaml
       notes: books/unix-linux-system-administration-handbook-5e-ru-2020/notes/
       diagrams: books/unix-linux-system-administration-handbook-5e-ru-2020/diagrams/
