@@ -13,6 +13,8 @@
 - [diagram.md](diagram.md) — Mermaid-схема, отделяющая логику главы от диагностических ветвей, которых в источнике нет.
 - [visual-cheatsheet-detailed.svg](visual-cheatsheet-detailed.svg) — итоговая визуальная шпаргалка всей главы.
 - [visual-cheatsheet.svg](visual-cheatsheet.svg) — компактная визуальная шпаргалка главы.
+- [summary.md](summary.md) — краткое резюме главы из заключительного раздела книги.
+- [review-questions.md](review-questions.md) — контрольные вопросы и задачи из конца главы.
 
 ## Scope
 
