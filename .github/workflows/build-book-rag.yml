@@ -80,4 +80,10 @@ jobs:
           fi
 
           git commit -m "chore(rag): build addressable retrieval chunks"
+
+          # The ingest branch may receive documentation/protocol commits while
+          # this job is generating thousands of chunk files. Rebase the generated
+          # commit onto the current remote branch before publishing it.
+          git fetch origin "${GITHUB_REF_NAME}"
+          git rebase "origin/${GITHUB_REF_NAME}"
           git push origin "HEAD:${GITHUB_REF_NAME}"
