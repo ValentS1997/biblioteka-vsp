@@ -44,14 +44,14 @@ retrieval:
       yo_to_e: true
       min_token_chars: 2
       retrieval_key_chars: 4
-      shard_prefix_chars: 3
+      shard_prefix_chars: 4
 
     query_strategy:
       - select at most 3 informative lexical tokens from the user question
       - normalize each token
       - if token length is greater than 4, retrieval key is first 4 characters
-      - if retrieval key length is at least 3, shard is first 3 characters
-      - if retrieval key length is below 3, shard path is _short/<token>.json
+      - if retrieval key length is at least 4, shard is first 4 characters
+      - if retrieval key length is below 4, shard path is _short/<token>.json
       - fetch only unique required search-index shards
       - rank candidate chunks by number of matched retrieval keys, then summed tf
       - fetch best 1-3 candidate chunk files
