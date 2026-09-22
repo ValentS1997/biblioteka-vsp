@@ -20,3 +20,23 @@ books:
       reading_progress: books/computer-networks-6e-ru-2023/reading/progress.yaml
       notes: books/computer-networks-6e-ru-2023/notes/
       diagrams: books/computer-networks-6e-ru-2023/diagrams/
+
+  - id: unix-linux-system-administration-handbook-5e-ru-2020
+    title: "Unix и Linux: руководство системного администратора"
+    authors:
+      - "Эви Немет"
+      - "Гарт Снайдер"
+      - "Трент Хейн"
+      - "Бен Уэйли"
+      - "Дэн Макин"
+    language: ru
+    edition: 5
+    publication_year: 2020
+    isbn: "978-5-907144-10-1"
+    paths:
+      metadata: books/unix-linux-system-administration-handbook-5e-ru-2020/metadata.yaml
+      source: books/unix-linux-system-administration-handbook-5e-ru-2020/source/book.pdf
+      rag_manifest: books/unix-linux-system-administration-handbook-5e-ru-2020/rag/manifest.yaml
+      reading_progress: books/unix-linux-system-administration-handbook-5e-ru-2020/reading/progress.yaml
+      notes: books/unix-linux-system-administration-handbook-5e-ru-2020/notes/
+      diagrams: books/unix-linux-system-administration-handbook-5e-ru-2020/diagrams/
