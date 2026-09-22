@@ -16,9 +16,9 @@ flowchart TD
     J -->|Да| K[vmstat + /proc/meminfo]
     K --> L{Постоянный swap-out so?}
     L -->|Да| M[Проверить рабочий набор и достаточность RAM]
-    L -->|Нет| N[Перейти к I/O]
+    L -->|Нет| N{Дисковый I/O bottleneck?}
 
-    J -->|Нет| N{Дисковый I/O bottleneck?}
+    J -->|Нет| N
     N -->|Да| O[iostat / lsof / fuser]
     O --> P[fio только для контролируемого benchmark]
 
