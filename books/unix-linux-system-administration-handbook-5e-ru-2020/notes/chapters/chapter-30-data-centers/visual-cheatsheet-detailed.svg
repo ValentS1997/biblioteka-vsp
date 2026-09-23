@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1060" viewBox="0 0 1600 1060">
+<rect width="1600" height="1060" fill="#f4f7fb"/>
+<rect x="12" y="12" width="1576" height="74" rx="14" fill="#26384d"/>
+<text x="800" y="43" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">Глава 30. Центры обработки данных — подробная итоговая шпаргалка</text>
+<text x="800" y="68" font-family="Arial, sans-serif" font-size="16" fill="#dce8f4" text-anchor="middle">rack layout • electrical capacity • UPS and generator • cooling • PUE • environment • tiers • physical security</text>
+
+<rect x="14" y="104" width="382" height="278" rx="12" fill="#f7fbff" stroke="#5b98cf" stroke-width="2"/>
+<text x="32" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#173d64">1. Facility stack</text>
+<text x="36" y="164" font-family="Arial, sans-serif" font-size="12.6" fill="#19324a">
+<tspan x="36" dy="0">Secure physical location.</tspan>
+<tspan x="36" dy="19">Racks, compute, storage and networking.</tspan>
+<tspan x="36" dy="19">Primary and backup power.</tspan>
+<tspan x="36" dy="19">Cooling and environmental control.</tspan>
+<tspan x="36" dy="19">Internal/external connectivity.</tspan>
+<tspan x="36" dy="19">Operations staff and procedures.</tspan>
+</text>
+
+<rect x="408" y="104" width="382" height="278" rx="12" fill="#f6fff8" stroke="#58ad79" stroke-width="2"/>
+<text x="426" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#18572f">2. Rack and power discipline</text>
+<text x="430" y="164" font-family="Arial, sans-serif" font-size="12.4" fill="#19324a">
+<tspan x="430" dy="0">Use standard racks and traceable cable paths.</tspan>
+<tspan x="430" dy="19">Plan power by rack class and density.</tspan>
+<tspan x="430" dy="19">Measure actual draw, not only nameplate max.</tspan>
+<tspan x="430" dy="24">UPS bridges short outages.</tspan>
+<tspan x="430" dy="19">Generator supports longer outages.</tspan>
+</text>
+
+<rect x="802" y="104" width="382" height="278" rx="12" fill="#fff9f4" stroke="#d49a4c" stroke-width="2"/>
+<text x="820" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#714500">3. Power calculations</text>
+<text x="824" y="164" font-family="Arial, sans-serif" font-size="12.4" fill="#19324a">
+<tspan x="824" dy="0">Chapter approximation: kVA ≈ kW / 0.85.</tspan>
+<tspan x="824" dy="19">PUE = facility power / IT equipment power.</tspan>
+<tspan x="824" dy="24">PUE describes facility overhead.</tspan>
+<tspan x="824" dy="19">It does not directly measure server efficiency.</tspan>
+<tspan x="824" dy="24">Real design values require measurement.</tspan>
+</text>
+
+<rect x="1196" y="104" width="390" height="278" rx="12" fill="#fff7fb" stroke="#cf6d99" stroke-width="2"/>
+<text x="1214" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#842044">4. Backup power operations</text>
+<text x="1218" y="164" font-family="Arial, sans-serif" font-size="12.4" fill="#19324a">
+<tspan x="1218" dy="0">Test UPS and generator path periodically.</tspan>
+<tspan x="1218" dy="19">Chapter: 6-month test cycle.</tspan>
+<tspan x="1218" dy="19">Chapter: annual maintenance minimum.</tspan>
+<tspan x="1218" dy="24">Verify transfer, alarms and return to normal.</tspan>
+<tspan x="1218" dy="19">Current site/vendor rules need confirmation.</tspan>
+</text>
+
+<rect x="14" y="398" width="502" height="286" rx="12" fill="#f7f7ff" stroke="#8179d6" stroke-width="2"/>
+<text x="32" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#474092">5. Cooling and airflow</text>
+<text x="36" y="458" font-family="Arial, sans-serif" font-size="12.4" fill="#19324a">
+<tspan x="36" dy="0">Heat load = building + electronics + lighting + people.</tspan>
+<tspan x="36" dy="19">Electronics: watts × 3.412 = BTUH.</tspan>
+<tspan x="36" dy="19">Cooling tons = BTUH / 12000.</tspan>
+<tspan x="36" dy="24">Use deliberate cold-intake and hot-exhaust aisles.</tspan>
+<tspan x="36" dy="19">Verify with temperature measurements.</tspan>
+</text>
+
+<rect x="528" y="398" width="502" height="286" rx="12" fill="#f5fff7" stroke="#58ad79" stroke-width="2"/>
+<text x="546" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#18572f">6. Environment monitoring</text>
+<text x="550" y="458" font-family="Arial, sans-serif" font-size="12.4" fill="#19324a">
+<tspan x="550" dy="0">Chapter cites 18–27 °C intake temperature.</tspan>
+<tspan x="550" dy="19">Chapter cites 8–60% humidity.</tspan>
+<tspan x="550" dy="24">Too dry → static risk.</tspan>
+<tspan x="550" dy="19">Too humid → condensation/corrosion risk.</tspan>
+<tspan x="550" dy="24">Remote sensors should alert absent staff.</tspan>
+</text>
+
+<rect x="1042" y="398" width="544" height="286" rx="12" fill="#fffdf3" stroke="#d5ad37" stroke-width="2"/>
+<text x="1060" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#714500">7. Reliability tiers</text>
+<text x="1064" y="458" font-family="Arial, sans-serif" font-size="12.4" fill="#19324a">
+<tspan x="1064" dy="0">N = required capacity.</tspan>
+<tspan x="1064" dy="19">N+1 = one spare component.</tspan>
+<tspan x="1064" dy="19">2N = duplicate capacity.</tspan>
+<tspan x="1064" dy="24">Higher resilience needs separated failure domains.</tspan>
+<tspan x="1064" dy="19">Redundancy cannot compensate for bad operations.</tspan>
+</text>
+
+<rect x="14" y="700" width="760" height="250" rx="12" fill="#f4fbff" stroke="#6d9fc8" stroke-width="2"/>
+<text x="32" y="730" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#174d70">8. Physical defense in depth</text>
+<text x="36" y="760" font-family="Arial, sans-serif" font-size="12.5" fill="#19324a">
+<tspan x="36" dy="0">Assess natural and industrial location risks.</tspan>
+<tspan x="36" dy="19">Layer perimeter, facility, rack/cage and surveillance.</tspan>
+<tspan x="36" dy="19">Verify visitor identity, authorization and purpose.</tspan>
+<tspan x="36" dy="24">Shared facilities need rack-level MFA access controls.</tspan>
+<tspan x="36" dy="19">Least physical privilege mirrors least system privilege.</tspan>
+</text>
+
+<rect x="786" y="700" width="800" height="250" rx="12" fill="#fff8f2" stroke="#d17e4f" stroke-width="2"/>
+<text x="804" y="730" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#7b3e1e">9. Operational acceptance</text>
+<text x="808" y="760" font-family="Arial, sans-serif" font-size="12.5" fill="#19324a">
+<tspan x="808" dy="0">Cables are traceable and racks serviceable.</tspan>
+<tspan x="808" dy="19">Actual rack power can be measured.</tspan>
+<tspan x="808" dy="19">Backup power is tested, not assumed.</tspan>
+<tspan x="808" dy="19">Cooling load and airflow are verified.</tspan>
+<tspan x="808" dy="19">Environment and access controls are monitored/auditable.</tspan>
+<tspan x="808" dy="24">Electrical, fire and HVAC compliance needs qualified review.</tspan>
+</text>
+
+<rect x="14" y="978" width="1572" height="58" rx="10" fill="#26384d"/>
+<text x="800" y="1002" font-family="Arial, sans-serif" font-size="15.5" font-weight="700" fill="#ffffff" text-anchor="middle">Core: physical capacity and redundancy must be measured and tested, not inferred from labels or diagrams.</text>
+<text x="800" y="1026" font-family="Arial, sans-serif" font-size="14.5" fill="#dce8f4" text-anchor="middle">Cloud abstraction does not eliminate power, cooling, location or physical-access failure domains.</text>
+</svg>

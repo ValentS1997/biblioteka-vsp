@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#f4f7fb"/>
+<rect x="16" y="16" width="1568" height="76" rx="14" fill="#26384d"/>
+<text x="800" y="48" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff" text-anchor="middle">Глава 30. Центры обработки данных</text>
+<text x="800" y="74" font-family="Arial, sans-serif" font-size="17" fill="#dce8f4" text-anchor="middle">racks • power • cooling • environment • reliability • physical security</text>
+
+<rect x="24" y="116" width="500" height="300" rx="14" fill="#f7fbff" stroke="#5b98cf" stroke-width="2"/>
+<text x="44" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#173d64">Physical reliability stack</text>
+<text x="48" y="184" font-family="Arial, sans-serif" font-size="16.5" fill="#19324a">
+<tspan x="48" dy="0">Rack and traceable cabling</tspan>
+<tspan x="48" dy="27">Primary and backup power</tspan>
+<tspan x="48" dy="27">Cooling and environment</tspan>
+<tspan x="48" dy="27">Network connectivity</tspan>
+<tspan x="48" dy="27">Staff and physical security</tspan>
+</text>
+
+<rect x="548" y="116" width="500" height="300" rx="14" fill="#f6fff8" stroke="#58ad79" stroke-width="2"/>
+<text x="568" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#18572f">Power planning</text>
+<text x="572" y="184" font-family="Arial, sans-serif" font-size="16.5" fill="#19324a">
+<tspan x="572" dy="0">Plan per rack, not only per floor area.</tspan>
+<tspan x="572" dy="27">Measure actual consumption.</tspan>
+<tspan x="572" dy="27">UPS bridges short outages.</tspan>
+<tspan x="572" dy="27">Generator covers longer outages.</tspan>
+<tspan x="572" dy="27">Test backup power periodically.</tspan>
+</text>
+
+<rect x="1072" y="116" width="504" height="300" rx="14" fill="#fff9f4" stroke="#d49a4c" stroke-width="2"/>
+<text x="1092" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#714500">Cooling model</text>
+<text x="1096" y="184" font-family="Arial, sans-serif" font-size="16.5" fill="#19324a">
+<tspan x="1096" dy="0">Watts × 3.412 = BTUH</tspan>
+<tspan x="1096" dy="27">BTUH / 12000 = cooling tons</tspan>
+<tspan x="1096" dy="27">Separate hot and cold aisles.</tspan>
+<tspan x="1096" dy="27">Monitor intake temperature and humidity.</tspan>
+</text>
+
+<rect x="24" y="444" width="500" height="316" rx="14" fill="#fff7fb" stroke="#cf6d99" stroke-width="2"/>
+<text x="44" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#842044">Efficiency and measurement</text>
+<text x="48" y="512" font-family="Arial, sans-serif" font-size="16.5" fill="#19324a">
+<tspan x="48" dy="0">PUE = facility power / IT power</tspan>
+<tspan x="48" dy="27">Lower PUE = less facility overhead.</tspan>
+<tspan x="48" dy="27">PUE is not server efficiency.</tspan>
+<tspan x="48" dy="34">Chapter-era target values are not universal.</tspan>
+</text>
+
+<rect x="548" y="444" width="500" height="316" rx="14" fill="#f7f7ff" stroke="#8179d6" stroke-width="2"/>
+<text x="568" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#474092">Reliability vocabulary</text>
+<text x="572" y="512" font-family="Arial, sans-serif" font-size="17" fill="#19324a">
+<tspan x="572" dy="0">N = required capacity</tspan>
+<tspan x="572" dy="27">N+1 = one spare unit</tspan>
+<tspan x="572" dy="27">2N = duplicated capacity</tspan>
+<tspan x="572" dy="34">Redundancy must survive real failure domains.</tspan>
+</text>
+
+<rect x="1072" y="444" width="504" height="316" rx="14" fill="#f4fbff" stroke="#6d9fc8" stroke-width="2"/>
+<text x="1092" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#174d70">Physical security</text>
+<text x="1096" y="512" font-family="Arial, sans-serif" font-size="16.5" fill="#19324a">
+<tspan x="1096" dy="0">Site risk → perimeter → facility access</tspan>
+<tspan x="1096" dy="27">→ rack/cage access → surveillance</tspan>
+<tspan x="1096" dy="34">Verify identity, authorization and purpose.</tspan>
+<tspan x="1096" dy="27">Shared facilities need rack-level controls.</tspan>
+</text>
+
+<rect x="24" y="790" width="1552" height="78" rx="12" fill="#26384d"/>
+<text x="800" y="822" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Core: measure physical load, test redundancy, monitor environment, control access.</text>
+<text x="800" y="849" font-family="Arial, sans-serif" font-size="16" fill="#dce8f4" text-anchor="middle">Software reliability cannot exceed the physical infrastructure it depends on.</text>
+</svg>
