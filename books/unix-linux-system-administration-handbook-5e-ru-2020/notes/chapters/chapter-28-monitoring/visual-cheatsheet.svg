@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#f4f7fb"/>
+<rect x="16" y="16" width="1568" height="76" rx="14" fill="#26384d"/>
+<text x="800" y="48" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff" text-anchor="middle">Глава 28. Мониторинг</text>
+<text x="800" y="74" font-family="Arial, sans-serif" font-size="17" fill="#dce8f4" text-anchor="middle">collect → store → evaluate → alert → investigate → improve</text>
+
+<rect x="24" y="116" width="500" height="300" rx="14" fill="#f7fbff" stroke="#5b98cf" stroke-width="2"/>
+<text x="44" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#173d64">Signals and data</text>
+<text x="48" y="184" font-family="Arial, sans-serif" font-size="17" fill="#19324a">
+<tspan x="48" dy="0">Real-time metrics</tspan>
+<tspan x="48" dy="27">Events and logs</tspan>
+<tspan x="48" dy="27">Historical time-series trends</tspan>
+<tspan x="48" dy="34">Collect only data with a useful purpose.</tspan>
+</text>
+
+<rect x="548" y="116" width="500" height="300" rx="14" fill="#f6fff8" stroke="#58ad79" stroke-width="2"/>
+<text x="568" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#18572f">Actionable monitoring</text>
+<text x="572" y="184" font-family="Arial, sans-serif" font-size="17" fill="#19324a">
+<tspan x="572" dy="0">Alert → owner → action → escalation.</tspan>
+<tspan x="572" dy="27">Remove false positives and noise.</tspan>
+<tspan x="572" dy="27">Keep runbooks for routine recovery.</tspan>
+<tspan x="572" dy="34">Monitor the monitoring platform itself.</tspan>
+</text>
+
+<rect x="1072" y="116" width="504" height="300" rx="14" fill="#fff9f4" stroke="#d49a4c" stroke-width="2"/>
+<text x="1092" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#714500">Coverage layers</text>
+<text x="1096" y="184" font-family="Arial, sans-serif" font-size="17" fill="#19324a">
+<tspan x="1096" dy="0">Network → ICMP / SNMP</tspan>
+<tspan x="1096" dy="27">System → sar / collectd / tracing</tspan>
+<tspan x="1096" dy="27">Application → logs and business metrics</tspan>
+<tspan x="1096" dy="27">Security → FIM / HIDS / NIDS</tspan>
+</text>
+
+<rect x="24" y="444" width="500" height="316" rx="14" fill="#fff7fb" stroke="#cf6d99" stroke-width="2"/>
+<text x="44" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#842044">Time-series model</text>
+<text x="48" y="512" font-family="Arial, sans-serif" font-size="17" fill="#19324a">
+<tspan x="48" dy="0">High resolution for fresh data.</tspan>
+<tspan x="48" dy="27">Roll up older data.</tspan>
+<tspan x="48" dy="27">Aggregation must match metric semantics.</tspan>
+<tspan x="48" dy="34">Retention examples are not universal policy.</tspan>
+</text>
+
+<rect x="548" y="444" width="500" height="316" rx="14" fill="#f7f7ff" stroke="#8179d6" stroke-width="2"/>
+<text x="568" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#474092">Tooling examples</text>
+<text x="572" y="512" font-family="Arial, sans-serif" font-size="16.5" fill="#19324a">
+<tspan x="572" dy="0">StatsD → generic metric transport</tspan>
+<tspan x="572" dy="26">Graphite / Prometheus / InfluxDB / Munin</tspan>
+<tspan x="572" dy="26">Grafana → visualization</tspan>
+<tspan x="572" dy="26">collectd → continuous system collection</tspan>
+<tspan x="572" dy="26">Net-SNMP → low-level device queries</tspan>
+</text>
+
+<rect x="1072" y="444" width="504" height="316" rx="14" fill="#f4fbff" stroke="#6d9fc8" stroke-width="2"/>
+<text x="1092" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#174d70">Production gate</text>
+<text x="1096" y="512" font-family="Arial, sans-serif" font-size="17" fill="#19324a">
+<tspan x="1096" dy="0">Dependencies known.</tspan>
+<tspan x="1096" dy="27">Meaningful metrics collected.</tspan>
+<tspan x="1096" dy="27">Alerts routed to responders.</tspan>
+<tspan x="1096" dy="27">Runbook exists.</tspan>
+<tspan x="1096" dy="34">No monitoring → no production.</tspan>
+</text>
+
+<rect x="24" y="790" width="1552" height="78" rx="12" fill="#26384d"/>
+<text x="800" y="822" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Core: telemetry must lead to understanding or action; otherwise it is noise.</text>
+<text x="800" y="849" font-family="Arial, sans-serif" font-size="16" fill="#dce8f4" text-anchor="middle">Missed failures expand coverage. False alerts are fixed, not ignored.</text>
+</svg>

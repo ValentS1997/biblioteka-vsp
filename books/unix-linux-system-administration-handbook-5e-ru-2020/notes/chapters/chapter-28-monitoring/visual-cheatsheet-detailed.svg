@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1060" viewBox="0 0 1600 1060">
+<rect width="1600" height="1060" fill="#f4f7fb"/>
+<rect x="12" y="12" width="1576" height="74" rx="14" fill="#26384d"/>
+<text x="800" y="43" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">Глава 28. Мониторинг — подробная итоговая шпаргалка</text>
+<text x="800" y="68" font-family="Arial, sans-serif" font-size="16" fill="#dce8f4" text-anchor="middle">culture • telemetry • time series • alerts • network • systems • applications • security • SNMP</text>
+
+<rect x="14" y="104" width="382" height="278" rx="12" fill="#f7fbff" stroke="#5b98cf" stroke-width="2"/>
+<text x="32" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#173d64">1. Monitoring pipeline</text>
+<text x="36" y="164" font-family="Arial, sans-serif" font-size="12.5" fill="#19324a">
+<tspan x="36" dy="0">Collect raw telemetry.</tspan>
+<tspan x="36" dy="19">Normalize and retain data.</tspan>
+<tspan x="36" dy="19">Evaluate rules, thresholds and history.</tspan>
+<tspan x="36" dy="19">Alert, automate or retain for analysis.</tspan>
+<tspan x="36" dy="24">Use incidents to improve coverage.</tspan>
+</text>
+
+<rect x="408" y="104" width="382" height="278" rx="12" fill="#f6fff8" stroke="#58ad79" stroke-width="2"/>
+<text x="426" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#18572f">2. Data model</text>
+<text x="430" y="164" font-family="Arial, sans-serif" font-size="12.5" fill="#19324a">
+<tspan x="430" dy="0">Real-time metrics → thresholds/ranges.</tspan>
+<tspan x="430" dy="19">Events → logs and state changes.</tspan>
+<tspan x="430" dy="19">Historical trends → time-series context.</tspan>
+<tspan x="430" dy="24">High resolution fresh; roll up old data.</tspan>
+<tspan x="430" dy="19">Aggregation must fit metric semantics.</tspan>
+</text>
+
+<rect x="802" y="104" width="382" height="278" rx="12" fill="#fff9f4" stroke="#d49a4c" stroke-width="2"/>
+<text x="820" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#714500">3. Alerting culture</text>
+<text x="824" y="164" font-family="Arial, sans-serif" font-size="12.5" fill="#19324a">
+<tspan x="824" dy="0">Every alert should enable an action.</tspan>
+<tspan x="824" dy="19">Define owner and escalation.</tspan>
+<tspan x="824" dy="19">Fix false positives instead of ignoring them.</tspan>
+<tspan x="824" dy="24">Reserve 24x7 pages for true urgency.</tspan>
+<tspan x="824" dy="19">Rotate on-call to reduce burnout.</tspan>
+</text>
+
+<rect x="1196" y="104" width="390" height="278" rx="12" fill="#fff7fb" stroke="#cf6d99" stroke-width="2"/>
+<text x="1214" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#842044">4. Platforms</text>
+<text x="1218" y="164" font-family="Arial, sans-serif" font-size="12.2" fill="#19324a">
+<tspan x="1218" dy="0">Threshold: Nagios, Icinga, Sensu.</tspan>
+<tspan x="1218" dy="19">Time series: Graphite, Prometheus, InfluxDB, Munin.</tspan>
+<tspan x="1218" dy="19">Visualization: Grafana, Graphite UI.</tspan>
+<tspan x="1218" dy="24">Choose for sources, UI, cost, reports, integration.</tspan>
+<tspan x="1218" dy="19">Publication-era product status may be dated.</tspan>
+</text>
+
+<rect x="14" y="398" width="502" height="286" rx="12" fill="#f7f7ff" stroke="#8179d6" stroke-width="2"/>
+<text x="32" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#474092">5. Collection and systems</text>
+<text x="36" y="458" font-family="Arial, sans-serif" font-size="12.4" fill="#19324a">
+<tspan x="36" dy="0">StatsD transports generic metrics to a backend.</tspan>
+<tspan x="36" dy="19">Parse command output only with stable semantics.</tspan>
+<tspan x="36" dy="19">df, du, free, iostat, lsof, mpstat, vmstat, sar.</tspan>
+<tspan x="36" dy="19">collectd supports continuous daemon-based collection.</tspan>
+<tspan x="36" dy="24">sysdig and dtrace provide deeper kernel/process tracing.</tspan>
+</text>
+
+<rect x="528" y="398" width="502" height="286" rx="12" fill="#f5fff7" stroke="#58ad79" stroke-width="2"/>
+<text x="546" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#18572f">6. Network and applications</text>
+<text x="550" y="458" font-family="Arial, sans-serif" font-size="12.4" fill="#19324a">
+<tspan x="550" dy="0">Ping proves path and IP-stack response, not app health.</tspan>
+<tspan x="550" dy="19">Evaluate packet-loss trend, not one missed probe.</tspan>
+<tspan x="550" dy="19">Application metrics require developer/business input.</tspan>
+<tspan x="550" dy="19">Logs can become events, rates, alerts and reports.</tspan>
+<tspan x="550" dy="24">Useful business metrics may be above OS/network layers.</tspan>
+</text>
+
+<rect x="1042" y="398" width="544" height="286" rx="12" fill="#fffdf3" stroke="#d5ad37" stroke-width="2"/>
+<text x="1060" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#714500">7. Security and SNMP</text>
+<text x="1064" y="458" font-family="Arial, sans-serif" font-size="12.4" fill="#19324a">
+<tspan x="1064" dy="0">FIM: trusted baseline → current state → compare.</tspan>
+<tspan x="1064" dy="19">HIDS and NIDS are detection layers, not complete security.</tspan>
+<tspan x="1064" dy="19">SNMP model: MIB → OID → get/get-next/set/trap.</tspan>
+<tspan x="1064" dy="19">Prefer SNMP for specialized/network devices.</tspan>
+<tspan x="1064" dy="24">snmpset changes state and needs rollback planning.</tspan>
+</text>
+
+<rect x="14" y="700" width="760" height="250" rx="12" fill="#f4fbff" stroke="#6d9fc8" stroke-width="2"/>
+<text x="32" y="730" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#174d70">8. Operational discipline</text>
+<text x="36" y="760" font-family="Arial, sans-serif" font-size="12.5" fill="#19324a">
+<tspan x="36" dy="0">Monitor hardware signals and every HA member.</tspan>
+<tspan x="36" dy="19">Historical data supports RCA, planning and lifecycle work.</tspan>
+<tspan x="36" dy="19">Keep documented runbooks for restart/reset/repair.</tspan>
+<tspan x="36" dy="24">Monitor the monitoring platform with an independent check.</tspan>
+<tspan x="36" dy="19">Every missed failure becomes a new monitoring requirement.</tspan>
+</text>
+
+<rect x="786" y="700" width="800" height="250" rx="12" fill="#fff8f2" stroke="#d17e4f" stroke-width="2"/>
+<text x="804" y="730" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#7b3e1e">9. Production readiness</text>
+<text x="808" y="760" font-family="Arial, sans-serif" font-size="12.5" fill="#19324a">
+<tspan x="808" dy="0">Dependencies and owners identified.</tspan>
+<tspan x="808" dy="19">Meaningful metrics/events collected and retained.</tspan>
+<tspan x="808" dy="19">Dashboards or query paths exist.</tspan>
+<tspan x="808" dy="19">Alerts have owners, escalation and runbooks.</tspan>
+<tspan x="808" dy="24">No server or service enters production before monitoring.</tspan>
+</text>
+
+<rect x="14" y="978" width="1572" height="58" rx="10" fill="#26384d"/>
+<text x="800" y="1002" font-family="Arial, sans-serif" font-size="15.5" font-weight="700" fill="#ffffff" text-anchor="middle">Core: data is useful only when it supports understanding, action or planning.</text>
+<text x="800" y="1026" font-family="Arial, sans-serif" font-size="14.5" fill="#dce8f4" text-anchor="middle">Production without monitoring is an operational defect, not a temporary convenience.</text>
+</svg>
