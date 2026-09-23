@@ -414,31 +414,27 @@ show running
 show config
 ~~~
 
-Use before configuration.
-
-Compare running vs stored config before changing state.
+These are the chapter's inspection commands. The source does not define a mandatory pre-change checklist.
 
 ## 29. Cisco config flow
 
 ~~~text
 ssh <router>
   ↓
-show current state
+show interfaces / show running / show config
   ↓
 enable
   ↓
 config term
   ↓
-select interface/config context
+interface ... / ip address ...
   ↓
-make one change
+Ctrl+Z
   ↓
-verify
-  ↓
-write mem
+if the change succeeded → write mem
 ~~~
 
-Do not persist first and troubleshoot later.
+The chapter does not define the exact acceptance-test sequence: `[Needs confirmation]`.
 
 ## 30. Interface address change
 
@@ -449,14 +445,9 @@ interface Ethernet0
 ip address 192.225.40.253 255.255.255.0
 ~~~
 
-High risk over remote access.
+This command changes the selected interface address. The chapter recommends a meaningful hostname to reduce wrong-router mistakes, but does not provide a recovery procedure for an unsuccessful address change.
 
-Before change:
-- verify device hostname;
-- verify target interface;
-- verify address/mask;
-- know management route;
-- have physical/console fallback.
+Exact pre-change recovery checks and rollback: `[Needs confirmation]`.
 
 ## 31. Router naming
 
@@ -508,15 +499,17 @@ This turns interactive router state into auditable configuration history.
 
 ## 35. Troubleshooting model
 
+Derived only from chapter concepts and commands; this is not presented by the source as a formal runbook:
+
 ~~~text
 1. inspect routing table
-2. identify expected specific/default route
-3. verify next hop is directly reachable
-4. inspect protocol/daemon if route should be dynamic
-5. compare running vs persistent config
-6. verify path after one change
-7. persist only after acceptance
+2. identify specific/default route and gateway
+3. inspect routing daemon/protocol when the route is dynamic
+4. inspect Cisco running/stored configuration where applicable
+5. persist Cisco configuration only if the change succeeded
 ~~~
+
+Exact end-to-end verification procedure: `[Needs confirmation]`.
 
 ## 36. Failure interpretation
 
@@ -554,20 +547,17 @@ Unexpected path:
 metric/policy selected different route
 ~~~
 
-## 37. Acceptance criteria
+## 37. Acceptance boundary
 
-After routing change:
-- routing table contains intended prefix/default;
-- next hop is reachable on connected network;
-- IPv4/IPv6 domains are checked separately where relevant;
-- dynamic route source/protocol is understood;
-- no unintended route loop appears;
-- end-to-end path is verified;
-- management access is preserved;
-- running config matches intended state;
-- persistent config is written only after success;
-- prior router configuration is backed up;
-- rollback command is documented or marked `[Needs confirmation]`.
+The chapter provides inspection commands and says to use `write mem` after the configuration change has succeeded, but it does not define a complete acceptance checklist.
+
+Source-supported observations:
+- routing table can be inspected with `netstat -rn` / `ip route`;
+- Cisco running/stored configuration can be inspected with `show running` / `show config`;
+- a hostname helps identify the router;
+- configuration backups can be copied with `scp` / `tftp`;
+- exact end-to-end acceptance test: `[Needs confirmation]`;
+- exact rollback/restore command: `[Needs confirmation]`.
 
 ## 38. Source gap
 

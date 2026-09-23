@@ -7,25 +7,25 @@
 | `netstat -rn` | Показать routing table numeric form | destinations, gateways, flags, interfaces | read-only |
 | `ip route` | Показать Linux routing table | default route, connected prefixes, source/interface | read-only |
 | `route` | Manual route-table command referenced by chapter | exact intended static route and resulting table | depends on subcommand |
-| `routed -q` | Passive RIP mode: accept route updates without advertising own | daemon receives updates and does not broadcast its own | state-changing / daemon |
-| `vtysh` | Connect to Quagga daemon CLI on Linux | intended daemon/router context | interactive control-plane |
-| `quaggaadm` | Connect to Quagga daemon CLI on Solaris, as named by chapter | intended daemon/router context | interactive control-plane |
-| `enable` | Enter privileged mode in Quagga/Cisco-style CLI | prompt changes to privileged mode; correct device | privilege-changing |
-| `config term` | Enter configuration mode | prompt indicates config mode; correct device/context | state-changing gateway |
-| `write` | Save Quagga daemon configuration | intended config file updated after verification | state-changing / persistent |
-| `ssh acme-gw.acme.com` | Cisco IOS user access example | correct router identity and expected prompt | interactive / remote access |
+| `routed -q` | Passive RIP mode: accept route updates without advertising own | daemon receives updates and does not broadcast its own; learned routes enter kernel table | state-changing |
+| `vtysh` | Connect to Quagga daemon CLI on Linux | intended daemon/router context; connection alone does not alter config | read-only |
+| `quaggaadm` | Connect to Quagga daemon CLI on Solaris, as named by chapter | intended daemon/router context; connection alone does not alter config | read-only |
+| `enable` | Enter privileged mode in Quagga/Cisco-style CLI | prompt changes to privileged mode; correct device | state-changing |
+| `config term` | Enter configuration mode | prompt indicates config mode; later config commands can modify live state | state-changing |
+| `write` | Save Quagga daemon configuration | intended daemon configuration file is written | state-changing |
+| `ssh acme-gw.acme.com` | Cisco IOS user access example | correct router identity and expected prompt | read-only |
 | `show interfaces` | Cisco: inspect interfaces | interface list/state before change | read-only |
 | `show ?` | Cisco: display help/options for show command | available inspection commands | read-only |
 | `show running` | Cisco: display running/dynamic configuration | current live configuration | read-only |
-| `show config` | Cisco: display stored/nonvolatile configuration in chapter terminology | compare stored vs running configuration | read-only |
-| `enable` | Cisco: enter privileged EXEC mode | "#" prompt and correct router identity | privilege-changing |
-| `config term` | Cisco: enter configuration terminal mode | "(config)#" prompt | state-changing gateway |
-| `interface Ethernet0` | Cisco: select interface configuration context | correct target interface | state-changing context |
-| `ip address 192.225.40.253 255.255.255.0` | Cisco example: change interface IPv4 address | address/mask and management reachability | state-changing / lockout-risk |
-| `write mem` | Persist Cisco running configuration after successful change | saved config matches verified running state | state-changing / persistent |
+| `show config` | Cisco: display stored/nonvolatile configuration in chapter terminology | stored configuration | read-only |
+| `enable` | Cisco: enter privileged EXEC mode | `#` prompt and correct router identity | state-changing |
+| `config term` | Cisco: enter configuration terminal mode | `(config)#` prompt; later commands can modify live state | state-changing |
+| `interface Ethernet0` | Cisco: select interface configuration context | correct target interface | state-changing |
+| `ip address 192.225.40.253 255.255.255.0` | Cisco example: change interface IPv4 address | target interface and address/mask; exact success criteria `[Needs confirmation]` | state-changing |
+| `write mem` | Persist Cisco configuration after the change has succeeded | source says to save after success; exact acceptance checks `[Needs confirmation]` | state-changing |
 | `hostname <name>` | Set Cisco router hostname | prompt/device identity is unambiguous | state-changing |
-| `scp` | Transfer router configuration for backup/editing | backup file is complete and stored safely | read-only or state-changing by direction |
-| `tftp` | Transfer router configuration for backup in chapter workflow | backup copy is retrievable | read-only or state-changing by direction |
+| `scp` | Copy router configuration for backup/editing in the chapter workflow | backup copy exists on another system; direction matters | read-only |
+| `tftp` | Copy router configuration for backup | backup copy exists on another system | read-only |
 
 ## Read-only baseline
 
@@ -44,15 +44,12 @@ show running
 show config
 ~~~
 
-Before any route/control-plane change capture:
+The chapter provides these inspection points; using them as a pre-change baseline is a derived operational arrangement, not a quoted mandatory checklist:
 
-- current routing table;
-- current default route;
-- directly connected networks;
-- current router identity;
-- running configuration;
-- persistent configuration;
-- management path.
+- routing table (`netstat -rn`, `ip route`);
+- current router identity (hostname/prompt);
+- running configuration (`show running`);
+- stored configuration (`show config`).
 
 ## Route interpretation
 
@@ -159,37 +156,16 @@ Enters a mode where configuration commands modify live state.
 
 Can immediately break remote access if applied to the management-facing interface.
 
-Required checks:
-- correct router;
-- correct interface;
-- correct address/mask;
-- recovery/console path;
-- expected route changes.
-
-Rollback exact command: `[Needs confirmation]`.
+Source-supported checks are limited to identifying the correct router (hostname/prompt) and selecting the intended interface/address syntax. Exact pre-change recovery checks and rollback command: `[Needs confirmation]`.
 
 ### write mem
 
-Persists already-running state. Do not run until:
-- route table is correct;
-- required interfaces are reachable;
-- end-to-end path works;
-- no unintended route loss occurred.
+Persists the configuration. The chapter says to run it after the configuration change has succeeded. The exact acceptance-test sequence is `[Needs confirmation]`.
 
 ## Backup / rollback
 
 Chapter recommends backup copies of router configuration and version tracking.
 
-Rollback principle:
+The chapter recommends backup copies of router configuration and version tracking, but it does not supply a restoration workflow.
 
-~~~text
-capture config
-  ↓
-make one controlled change
-  ↓
-verify
-  ├─ success → persist
-  └─ failure → restore prior config
-~~~
-
-Exact Cisco/Quagga restoration command is not supplied by chapter: `[Needs confirmation]`.
+Exact Cisco/Quagga rollback procedure and restoration command: `[Needs confirmation]`.

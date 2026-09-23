@@ -16,6 +16,7 @@
 - External sources: запрещены
 - Model memory: запрещена
 - Прямой доступ к `source/book.pdf`: не использовался
+- Unknown data policy: отсутствующие данные помечаются `[Needs confirmation]`; пропущенные RAG-чанки не реконструируются
 
 ## Provenance
 
@@ -73,7 +74,7 @@ Autonomous system отделяет internal routing от inter-domain routing. R
 
 Для UNIX/Linux chapter считает software routing useful for test/auxiliary networks but prefers dedicated routers for production. `routed -q` is passive RIP reception. Quagga uses `zebra` as coordination point between kernel route table and protocol daemons `ripd`, `ripngd`, `ospfd`, `ospf6d`, `bgpd`.
 
-Cisco IOS workflow: inspect first with `show` commands, confirm device identity, then `enable`, `config term`, make one controlled change, verify live routing/connectivity, and only then persist with `write mem`. Chapter explicitly recommends configuration backup via `scp` or `tftp`, SSH instead of Telnet, CLI access controls, physical security and versioned config tracking via RANCID.
+Cisco IOS section presents `show interfaces`, `show running` and `show config` for inspection; `enable` and `config term` for privileged/configuration modes; interface configuration syntax; and `write mem` to persist after the change has succeeded. The chapter does not define a complete acceptance-test sequence or exact rollback command. It explicitly recommends configuration backup via `scp` or `tftp`, SSH instead of Telnet, CLI access controls, physical security and versioned config tracking via RANCID.
 
 ## Основной принцип
 
@@ -85,9 +86,15 @@ Control plane:
 
 `config + kernel table + peer updates → routing daemon/protocol → route calculation → kernel table → advertisement`
 
-Safe change:
+Source-supported operational boundary:
 
-`inspect → identify route source → one controlled change → verify route table → verify end-to-end path → persist only after success → keep backup`
+`route/config inspection → configuration if needed → persist only if the change succeeded`
+
+Exact acceptance-test sequence: `[Needs confirmation]`
+
+Exact rollback procedure/command: `[Needs confirmation]`
+
+Configuration backup is explicitly supported by the chapter (`scp`/`tftp`; NVRAM/removable storage where available).
 
 ## Риски
 
@@ -99,8 +106,7 @@ Safe change:
 - IPv4/IPv6 assumptions mixed together;
 - dynamic routing deployed where a static default is enough;
 - wrong-router configuration;
-- remote management-interface change without recovery path;
-- unverified running config persisted;
+- unsuccessful configuration persisted;
 - missing configuration backup/version history.
 
 ## OCR note
