@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#f4f7fb"/>
+<rect x="16" y="16" width="1568" height="76" rx="14" fill="#26384d"/>
+<text x="800" y="48" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff" text-anchor="middle">Глава 32. Краткая история системного администрирования</text>
+<text x="800" y="74" font-family="Arial, sans-serif" font-size="17" fill="#dce8f4" text-anchor="middle">operator → UNIX administrator → multi-platform → cloud/fleet → distributed systems</text>
+
+<rect x="24" y="116" width="500" height="300" rx="14" fill="#f7fbff" stroke="#5b98cf" stroke-width="2"/>
+<text x="44" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#173d64">1952–1969</text>
+<text x="48" y="184" font-family="Arial, sans-serif" font-size="16.5" fill="#19324a">
+<tspan x="48" dy="0">Single-purpose systems → operators</tspan>
+<tspan x="48" dy="27">Peer groups share migration knowledge</tspan>
+<tspan x="48" dy="27">Time-sharing creates shared interactive systems</tspan>
+<tspan x="48" dy="34">Role expands beyond one machine/task</tspan>
+</text>
+
+<rect x="548" y="116" width="500" height="300" rx="14" fill="#f6fff8" stroke="#58ad79" stroke-width="2"/>
+<text x="568" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#18572f">1969–1990</text>
+<text x="572" y="184" font-family="Arial, sans-serif" font-size="16.5" fill="#19324a">
+<tspan x="572" dy="0">UNIX grows from a small interactive system</tspan>
+<tspan x="572" dy="27">Pipes enable composition</tspan>
+<tspan x="572" dy="27">BSD, TCP/IP sockets, SunOS, System V</tspan>
+<tspan x="572" dy="34">Universities help form the sysadmin profession</tspan>
+</text>
+
+<rect x="1072" y="116" width="504" height="300" rx="14" fill="#fff9f4" stroke="#d49a4c" stroke-width="2"/>
+<text x="1092" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#714500">UNIX philosophy</text>
+<text x="1096" y="184" font-family="Arial, sans-serif" font-size="16.5" fill="#19324a">
+<tspan x="1096" dy="0">One program → one task well</tspan>
+<tspan x="1096" dy="27">Programs → work together</tspan>
+<tspan x="1096" dy="27">Text streams → common interface</tspan>
+<tspan x="1096" dy="34">Composition is the larger capability</tspan>
+</text>
+
+<rect x="24" y="444" width="500" height="316" rx="14" fill="#fff7fb" stroke="#cf6d99" stroke-width="2"/>
+<text x="44" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#842044">Profession matures</text>
+<text x="48" y="512" font-family="Arial, sans-serif" font-size="16.5" fill="#19324a">
+<tspan x="48" dy="0">Admins become multi-skill generalists</tspan>
+<tspan x="48" dy="27">Tools, standards, procedures emerge</tspan>
+<tspan x="48" dy="27">Documentation and training become essential</tspan>
+<tspan x="48" dy="34">Communities become operational infrastructure</tspan>
+</text>
+
+<rect x="548" y="444" width="500" height="316" rx="14" fill="#f7f7ff" stroke="#8179d6" stroke-width="2"/>
+<text x="568" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#474092">1991–2009</text>
+<text x="572" y="512" font-family="Arial, sans-serif" font-size="16.5" fill="#19324a">
+<tspan x="572" dy="0">Commodity PCs expand deployment options</tspan>
+<tspan x="572" dy="27">Linux emerges and grows</tspan>
+<tspan x="572" dy="27">Windows becomes a major server platform</tspan>
+<tspan x="572" dy="34">Mixed-platform operations replace rivalry</tspan>
+</text>
+
+<rect x="1072" y="444" width="504" height="316" rx="14" fill="#f4fbff" stroke="#6d9fc8" stroke-width="2"/>
+<text x="1092" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#174d70">2010–publication era</text>
+<text x="1096" y="512" font-family="Arial, sans-serif" font-size="16.5" fill="#19324a">
+<tspan x="1096" dy="0">Virtualization and cloud change scale</tspan>
+<tspan x="1096" dy="27">APIs + automation manage fleets</tspan>
+<tspan x="1096" dy="27">Monitoring and DevOps become core skills</tspan>
+<tspan x="1096" dy="34">IoT extends the management surface</tspan>
+</text>
+
+<rect x="24" y="790" width="1552" height="78" rx="12" fill="#26384d"/>
+<text x="800" y="822" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Core: platforms change; reliability, troubleshooting, users and shared knowledge remain.</text>
+<text x="800" y="849" font-family="Arial, sans-serif" font-size="16" fill="#dce8f4" text-anchor="middle">Historical market/TCO/IoT claims are publication-era context, not current verification.</text>
+</svg>

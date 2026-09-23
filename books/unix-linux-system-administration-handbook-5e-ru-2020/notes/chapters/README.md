@@ -33,3 +33,4 @@ Reviewed chapter-level notes are stored here. Historical notes are not reconstru
 - [Chapter 29 — Performance analysis](chapter-29-performance-analysis/README.md)
 - [Chapter 30 — Data centers](chapter-30-data-centers/README.md)
 - [Chapter 31 — Methodology, policy and strategies](chapter-31-methodology-policy-and-strategies/README.md)
+- [Chapter 32 — Brief history of system administration](chapter-32-brief-history-of-system-administration/README.md)
