@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#f4f7fb"/>
+<rect x="16" y="16" width="1568" height="76" rx="14" fill="#213a59"/>
+<text x="800" y="49" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff" text-anchor="middle">Глава 17. Система единого входа</text>
+<text x="800" y="75" font-family="Arial, sans-serif" font-size="17" fill="#dce8f5" text-anchor="middle">LDAP / Active Directory → sssd → NSS + PAM • Kerberos • operational checks • risks</text>
+
+<rect x="24" y="116" width="500" height="300" rx="14" fill="#f7fbff" stroke="#5a98cf" stroke-width="2"/>
+<text x="44" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#173d64">SSO architecture</text>
+<text x="48" y="184" font-family="Arial, sans-serif" font-size="17" fill="#19324a">
+<tspan x="48" dy="0">Identity store → LDAP / Active Directory</tspan>
+<tspan x="48" dy="26">Authentication → LDAP or Kerberos</tspan>
+<tspan x="48" dy="26">sssd aggregates providers</tspan>
+<tspan x="48" dy="26">NSS → user/group lookup</tspan>
+<tspan x="48" dy="26">PAM → auth/account/session/password</tspan>
+<tspan x="48" dy="32">DNS + synchronized time are critical</tspan>
+<tspan x="48" dy="26">for Kerberos-based environments.</tspan>
+</text>
+
+<rect x="548" y="116" width="500" height="300" rx="14" fill="#f6fff8" stroke="#58ad79" stroke-width="2"/>
+<text x="568" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#18572f">LDAP model</text>
+<text x="572" y="184" font-family="Arial, sans-serif" font-size="16.5" fill="#19324a">
+<tspan x="572" dy="0">entry = named attributes + values</tspan>
+<tspan x="572" dy="25">DN = unique distinguished name</tspan>
+<tspan x="572" dy="25">objectClass = schema</tspan>
+<tspan x="572" dy="25">LDIF = text interchange format</tspan>
+<tspan x="572" dy="31">OpenLDAP: slapd</tspan>
+<tspan x="572" dy="25">389 Directory Server: alternative</tspan>
+<tspan x="572" dy="25">ldapsearch → read-only query/debug</tspan>
+</text>
+
+<rect x="1072" y="116" width="504" height="300" rx="14" fill="#fff9f4" stroke="#d49a4c" stroke-width="2"/>
+<text x="1092" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#714500">Kerberos / AD</text>
+<text x="1096" y="184" font-family="Arial, sans-serif" font-size="16.5" fill="#19324a">
+<tspan x="1096" dy="0">Linux: realm join → realm list</tspan>
+<tspan x="1096" dy="25">FreeBSD: krb5.conf → kinit → klist</tspan>
+<tspan x="1096" dy="25">→ net ads join</tspan>
+<tspan x="1096" dy="31">kinit gets a ticket</tspan>
+<tspan x="1096" dy="25">klist verifies ticket cache</tspan>
+<tspan x="1096" dy="25">kdestroy removes local ticket</tspan>
+<tspan x="1096" dy="25">Join rollback: [Needs confirmation]</tspan>
+</text>
+
+<rect x="24" y="444" width="500" height="316" rx="14" fill="#fff7fb" stroke="#cf6d99" stroke-width="2"/>
+<text x="44" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#842044">sssd + NSS</text>
+<text x="48" y="512" font-family="Arial, sans-serif" font-size="16.5" fill="#19324a">
+<tspan x="48" dy="0">sssd: identity + auth + account mapping</tspan>
+<tspan x="48" dy="25">LDAP path must be encrypted.</tspan>
+<tspan x="48" dy="25">Example validates server certificate.</tspan>
+<tspan x="48" dy="31">nsswitch.conf:</tspan>
+<tspan x="48" dy="25">passwd: files sss</tspan>
+<tspan x="48" dy="25">group:  files sss</tspan>
+<tspan x="48" dy="25">shadow: files sss</tspan>
+<tspan x="48" dy="31">Verify: getent passwd</tspan>
+</text>
+
+<rect x="548" y="444" width="500" height="316" rx="14" fill="#f7f7ff" stroke="#8179d6" stroke-width="2"/>
+<text x="568" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#474092">PAM control flow</text>
+<text x="572" y="512" font-family="Arial, sans-serif" font-size="16.2" fill="#19324a">
+<tspan x="572" dy="0">Types: auth / account / session / password</tspan>
+<tspan x="572" dy="25">Order of modules matters.</tspan>
+<tspan x="572" dy="31">required → eventual failure</tspan>
+<tspan x="572" dy="25">requisite → immediate failure</tspan>
+<tspan x="572" dy="25">sufficient → success can stop stack</tspan>
+<tspan x="572" dy="31">pam_unix2 + pam_sss in example</tspan>
+<tspan x="572" dy="25">Bad PAM edits can deny login.</tspan>
+</text>
+
+<rect x="1072" y="444" width="504" height="316" rx="14" fill="#f4fbff" stroke="#6d9fc8" stroke-width="2"/>
+<text x="1092" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#174d70">Legacy / risk</text>
+<text x="1096" y="512" font-family="Arial, sans-serif" font-size="16.1" fill="#19324a">
+<tspan x="1096" dy="0">NIS: chapter advises against new systems.</tspan>
+<tspan x="1096" dy="31">rsync example copies:</tspan>
+<tspan x="1096" dy="25">/etc/passwd + /etc/shadow via ssh</tspan>
+<tspan x="1096" dy="25">and changes remote authentication state.</tspan>
+<tspan x="1096" dy="31">Passwordless SSH requirement is called</tspan>
+<tspan x="1096" dy="25">a security-policy violation.</tspan>
+<tspan x="1096" dy="31">General rollback: [Needs confirmation]</tspan>
+</text>
+
+<rect x="24" y="790" width="1552" height="78" rx="12" fill="#213a59"/>
+<text x="800" y="822" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Operational order: verify identity/auth provider first, then sssd, then NSS, then PAM.</text>
+<text x="800" y="849" font-family="Arial, sans-serif" font-size="16" fill="#dce8f5" text-anchor="middle">Do not start troubleshooting by editing PAM before DNS, time, LDAP/Kerberos and directory lookup are verified.</text>
+</svg>
