@@ -135,7 +135,7 @@ def render():
     return "\n".join(lines)
 
 def main():
-    ap = argumentParser()
+    ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true")
     args = ap.parse_args()
     out = render()
