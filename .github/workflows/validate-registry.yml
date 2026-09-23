@@ -1,0 +1,44 @@
+name: Validate registry
+
+on:
+  pull_request:
+    paths:
+      - "registry/**"
+      - "books/index.yaml"
+      - "books/*/reading/progress.yaml"
+      - "books/*/rag/manifest.yaml"
+      - "scripts/validate_registry.py"
+      - "scripts/generate_registry_readme.py"
+      - ".github/workflows/validate-registry.yml"
+  push:
+    branches-ignore:
+      - main
+    paths:
+      - "registry/**"
+      - "books/index.yaml"
+      - "books/*/reading/progress.yaml"
+      - "books/*/rag/manifest.yaml"
+      - "scripts/validate_registry.py"
+      - "scripts/generate_registry_readme.py"
+      - ".github/workflows/validate-registry.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate-registry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check PyYAML jsonschema
+      - name: Validate canonical registry
+        run: python scripts/validate_registry.py
+      - name: Check generated README
+        run: python scripts/generate_registry_readme.py --check
