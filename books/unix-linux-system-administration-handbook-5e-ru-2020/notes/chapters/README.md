@@ -27,4 +27,5 @@ Reviewed chapter-level notes are stored here. Historical notes are not reconstru
 - [Chapter 23 — Configuration management](chapter-23-configuration-management/README.md)
 - [Chapter 24 — Virtualization](chapter-24-virtualization/README.md)
 - [Chapter 25 — Containers](chapter-25-containers/README.md)
+- [Chapter 26 — Continuous integration and delivery](chapter-26-continuous-integration-and-delivery/README.md)
 - [Chapter 29 — Performance analysis](chapter-29-performance-analysis/README.md)

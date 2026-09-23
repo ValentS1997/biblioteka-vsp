@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1060" viewBox="0 0 1600 1060">
+<rect width="1600" height="1060" fill="#f4f7fb"/>
+<rect x="12" y="12" width="1576" height="74" rx="14" fill="#26384d"/>
+<text x="800" y="43" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">Глава 26. CI/CD — подробная итоговая шпаргалка</text>
+<text x="800" y="68" font-family="Arial, sans-serif" font-size="16" fill="#dce8f4" text-anchor="middle">principles • artifacts • tests • environments • Jenkins • Packer • Terraform • deployment • containers</text>
+
+<rect x="14" y="104" width="382" height="278" rx="12" fill="#f7fbff" stroke="#5b98cf" stroke-width="2"/>
+<text x="32" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#173d64">1. Core definitions</text>
+<text x="36" y="164" font-family="Arial, sans-serif" font-size="12.6" fill="#19324a">
+<tspan x="36" dy="0">CI: frequent integration + auto build/test.</tspan>
+<tspan x="36" dy="19">Delivery: auto deploy to non-production.</tspan>
+<tspan x="36" dy="19">Deployment: auto deploy to production.</tspan>
+<tspan x="36" dy="24">Continuous deployment is optional.</tspan>
+<tspan x="36" dy="19">Human approval can remain a policy gate.</tspan>
+</text>
+
+<rect x="408" y="104" width="382" height="278" rx="12" fill="#f6fff8" stroke="#58ad79" stroke-width="2"/>
+<text x="426" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#18572f">2. Source and artifact discipline</text>
+<text x="430" y="164" font-family="Arial, sans-serif" font-size="12.5" fill="#19324a">
+<tspan x="430" dy="0">VCS is the only source of truth.</tspan>
+<tspan x="430" dy="19">Track app, infra, config and pipeline code.</tspan>
+<tspan x="430" dy="24">Build artifact exactly once.</tspan>
+<tspan x="430" dy="19">Promote same artifact through environments.</tspan>
+<tspan x="430" dy="24">No hidden manual state.</tspan>
+</text>
+
+<rect x="802" y="104" width="382" height="278" rx="12" fill="#fff9f4" stroke="#d49a4c" stroke-width="2"/>
+<text x="820" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#714500">3. Testing gates</text>
+<text x="824" y="164" font-family="Arial, sans-serif" font-size="12.4" fill="#19324a">
+<tspan x="824" dy="0">Static • unit • integration • acceptance.</tspan>
+<tspan x="824" dy="19">Performance • infrastructure tests.</tspan>
+<tspan x="824" dy="24">Parallelize where dependencies allow.</tspan>
+<tspan x="824" dy="19">Failed test stops downstream stages.</tspan>
+<tspan x="824" dy="24">Broken pipeline is highest priority.</tspan>
+</text>
+
+<rect x="1196" y="104" width="390" height="278" rx="12" fill="#fff7fb" stroke="#cf6d99" stroke-width="2"/>
+<text x="1214" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#842044">4. Environment parity</text>
+<text x="1218" y="164" font-family="Arial, sans-serif" font-size="12.4" fill="#19324a">
+<tspan x="1218" dy="0">Development → staging → production.</tspan>
+<tspan x="1218" dy="19">Keep topology/config as similar as feasible.</tspan>
+<tspan x="1218" dy="19">Environment-specific values are explicit.</tspan>
+<tspan x="1218" dy="24">Production-like data should be representative.</tspan>
+<tspan x="1218" dy="19">Sensitive copied data must be anonymized.</tspan>
+</text>
+
+<rect x="14" y="398" width="502" height="286" rx="12" fill="#f7f7ff" stroke="#8179d6" stroke-width="2"/>
+<text x="32" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#474092">5. Deployment models</text>
+<text x="36" y="458" font-family="Arial, sans-serif" font-size="12.5" fill="#19324a">
+<tspan x="36" dy="0">Immutable: create replacement systems.</tspan>
+<tspan x="36" dy="19">Blue-green: test standby, then switch.</tspan>
+<tspan x="36" dy="19">Rolling: update systems one at a time.</tspan>
+<tspan x="36" dy="19">Canary: send small traffic share first.</tspan>
+<tspan x="36" dy="24">Canary needs accurate telemetry.</tspan>
+<tspan x="36" dy="19">Feature flags separate deploy from activation.</tspan>
+</text>
+
+<rect x="528" y="398" width="502" height="286" rx="12" fill="#f5fff7" stroke="#58ad79" stroke-width="2"/>
+<text x="546" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#18572f">6. Jenkins architecture</text>
+<text x="550" y="458" font-family="Arial, sans-serif" font-size="12.4" fill="#19324a">
+<tspan x="550" dy="0">Jenkins coordinates VCS, builds, tests, deploy.</tspan>
+<tspan x="550" dy="19">Jenkinsfile makes pipeline version-controlled.</tspan>
+<tspan x="550" dy="24">Coordinator tracks projects and state.</tspan>
+<tspan x="550" dy="19">Agents execute actual build steps.</tspan>
+<tspan x="550" dy="19">Agents can be disposable containers/VMs/cloud.</tspan>
+<tspan x="550" dy="24">Triggers: polling, schedule, webhook.</tspan>
+</text>
+
+<rect x="1042" y="398" width="544" height="286" rx="12" fill="#fffdf3" stroke="#d5ad37" stroke-width="2"/>
+<text x="1060" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#714500">7. UlsahGo demonstration</text>
+<text x="1064" y="458" font-family="Arial, sans-serif" font-size="12.3" fill="#19324a">
+<tspan x="1064" dy="0">GitHub commit → Jenkins checkout.</tspan>
+<tspan x="1064" dy="19">go test → go build.</tspan>
+<tspan x="1064" dy="19">Packer creates DigitalOcean image.</tspan>
+<tspan x="1064" dy="19">Terraform creates temporary test droplet.</tspan>
+<tspan x="1064" dy="19">curl verifies HTTP 200 and 404 behavior.</tspan>
+<tspan x="1064" dy="19">Test droplet destroyed, same image promoted.</tspan>
+</text>
+
+<rect x="14" y="700" width="760" height="250" rx="12" fill="#f4fbff" stroke="#6d9fc8" stroke-width="2"/>
+<text x="32" y="730" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#174d70">8. Secrets and infrastructure safety</text>
+<text x="36" y="760" font-family="Arial, sans-serif" font-size="12.5" fill="#19324a">
+<tspan x="36" dy="0">Hardcoded cloud API token in repository is an anti-pattern.</tspan>
+<tspan x="36" dy="19">Jenkins Credentials Store supplies secret values to stages.</tspan>
+<tspan x="36" dy="24">Terraform apply creates cloud resources.</tspan>
+<tspan x="36" dy="19">terraform destroy -force is destructive.</tspan>
+<tspan x="36" dy="19">Verify directory/state before destroy.</tspan>
+<tspan x="36" dy="24">Recreate from versioned config; exact restore needs confirmation.</tspan>
+</text>
+
+<rect x="786" y="700" width="800" height="250" rx="12" fill="#fff8f2" stroke="#d17e4f" stroke-width="2"/>
+<text x="804" y="730" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#7b3e1e">9. Containers simplify CI/CD</text>
+<text x="808" y="760" font-family="Arial, sans-serif" font-size="12.5" fill="#19324a">
+<tspan x="808" dy="0">Run CI/CD system or agents in containers.</tspan>
+<tspan x="808" dy="19">Use short-lived build/test containers.</tspan>
+<tspan x="808" dy="19">Keep build image separate from runtime image.</tspan>
+<tspan x="808" dy="24">Runtime image can be the deployment artifact.</tspan>
+<tspan x="808" dy="19">Push image to registry, deploy via orchestrator.</tspan>
+<tspan x="808" dy="24">Fast image lifecycle improves rollback speed.</tspan>
+</text>
+
+<rect x="14" y="978" width="1572" height="58" rx="10" fill="#26384d"/>
+<text x="800" y="1002" font-family="Arial, sans-serif" font-size="15.5" font-weight="700" fill="#ffffff" text-anchor="middle">Core: one versioned source, one artifact, automated gates, explicit secrets, reproducible environments, observable promotion.</text>
+<text x="800" y="1026" font-family="Arial, sans-serif" font-size="14.5" fill="#dce8f4" text-anchor="middle">Do not bypass failed tests or rebuild between environments; production receives the artifact already proven by the pipeline.</text>
+</svg>
