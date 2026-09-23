@@ -1,0 +1,21 @@
+schema: biblioteka-vsp/reading/v1
+book_id: ai-engineering-chip-huyen-ru
+
+status: in_progress
+scope: full_book
+
+started:
+  month: "[Needs confirmation]"
+  exact_date: "[Needs confirmation]"
+
+completed: null
+current_page: "[Needs confirmation]"
+current_chapter: "[Needs confirmation]"
+
+paired_reading:
+  book_id: designing-machine-learning-systems-chip-huyen-ru
+  relation: read_together
+
+notes:
+  - "User explicitly confirmed that reading has started."
+  - "Read in pair with «Проектирование систем машинного обучения»."
