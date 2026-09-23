@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1060" viewBox="0 0 1600 1060">
+<rect width="1600" height="1060" fill="#f4f7fb"/>
+<rect x="12" y="12" width="1576" height="74" rx="14" fill="#26384d"/>
+<text x="800" y="43" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">Глава 22. SMB / Samba — подробная итоговая шпаргалка</text>
+<text x="800" y="68" font-family="Arial, sans-serif" font-size="16" fill="#dce8f4" text-anchor="middle">Architecture • local/AD auth • shares • project permissions • clients • security • troubleshooting • charset</text>
+
+<rect x="14" y="104" width="382" height="278" rx="12" fill="#f7fbff" stroke="#5b98cf" stroke-width="2"/>
+<text x="32" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#173d64">1. Samba model</text>
+<text x="36" y="164" font-family="Arial, sans-serif" font-size="12.7" fill="#19324a">
+<tspan x="36" dy="0">SMB provides cross-platform file sharing.</tspan>
+<tspan x="36" dy="19">smbd → file service, auth, locking.</tspan>
+<tspan x="36" dy="19">nmbd → name/service announcement.</tspan>
+<tspan x="36" dy="24">Samba runs as userspace processes.</tspan>
+<tspan x="36" dy="19">After auth, access executes as user identity.</tspan>
+<tspan x="36" dy="24">UNIX permissions remain in effect.</tspan>
+<tspan x="36" dy="19">CIFS is treated as obsolete terminology.</tspan>
+</text>
+
+<rect x="408" y="104" width="382" height="278" rx="12" fill="#f6fff8" stroke="#58ad79" stroke-width="2"/>
+<text x="426" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#18572f">2. Local authentication</text>
+<text x="430" y="164" font-family="Arial, sans-serif" font-size="12.6" fill="#19324a">
+<tspan x="430" dy="0">security = user</tspan>
+<tspan x="430" dy="19">UNIX account must exist first.</tspan>
+<tspan x="430" dy="24">smbpasswd -a user → SMB password hash.</tspan>
+<tspan x="430" dy="19">smbpasswd → current user password change.</tspan>
+<tspan x="430" dy="24">UNIX account and SMB password records</tspan>
+<tspan x="430" dy="19">are distinct lifecycle objects.</tspan>
+<tspan x="430" dy="24">Verify authentication before share tuning.</tspan>
+</text>
+
+<rect x="802" y="104" width="382" height="278" rx="12" fill="#fff9f4" stroke="#d49a4c" stroke-width="2"/>
+<text x="820" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#714500">3. AD authentication</text>
+<text x="824" y="164" font-family="Arial, sans-serif" font-size="12.5" fill="#19324a">
+<tspan x="824" dy="0">security = ads</tspan>
+<tspan x="824" dy="19">realm = AD domain</tspan>
+<tspan x="824" dy="19">dedicated keytab file = FILE:...</tspan>
+<tspan x="824" dy="19">kerberos method = dedicated keytab</tspan>
+<tspan x="824" dy="24">Depends on sssd / NSS/PAM / Kerberos.</tspan>
+<tspan x="824" dy="24">Keytab is a security-sensitive artifact.</tspan>
+<tspan x="824" dy="19">Creation/rotation commands: [Needs confirmation]</tspan>
+</text>
+
+<rect x="1196" y="104" width="390" height="278" rx="12" fill="#fff7fb" stroke="#cf6d99" stroke-width="2"/>
+<text x="1214" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#842044">4. Share policy</text>
+<text x="1218" y="164" font-family="Arial, sans-serif" font-size="12.5" fill="#19324a">
+<tspan x="1218" dy="0">[share] → path + read only.</tspan>
+<tspan x="1218" dy="19">[homes] → valid users = %S.</tspan>
+<tspan x="1218" dy="19">Project → valid users = @group.</tspan>
+<tspan x="1218" dy="24">force group + masks + setgid inheritance.</tspan>
+<tspan x="1218" dy="19">guest ok = no in project example.</tspan>
+<tspan x="1218" dy="24">Share policy does not override UNIX denial.</tspan>
+<tspan x="1218" dy="19">Both layers must permit access.</tspan>
+</text>
+
+<rect x="14" y="398" width="502" height="286" rx="12" fill="#f7f7ff" stroke="#8179d6" stroke-width="2"/>
+<text x="32" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#474092">5. Client access</text>
+<text x="36" y="458" font-family="Consolas, monospace" font-size="12.4" fill="#19324a">
+<tspan x="36" dy="0">testparm -v</tspan>
+<tspan x="36" dy="19">smbclient -L //server -U user</tspan>
+<tspan x="36" dy="19">smbclient //server/share -U user</tspan>
+<tspan x="36" dy="24">Linux: mount -t cifs -o username=user ...</tspan>
+<tspan x="36" dy="19">FreeBSD: mount -t smbfs //user@server/share ...</tspan>
+<tspan x="36" dy="24">uid/gid/fmask/dmask adjust client representation.</tspan>
+<tspan x="36" dy="24">Browse/auth test before mount.</tspan>
+</text>
+
+<rect x="528" y="398" width="502" height="286" rx="12" fill="#f5fff7" stroke="#58ad79" stroke-width="2"/>
+<text x="546" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#18572f">6. Network security</text>
+<text x="550" y="458" font-family="Arial, sans-serif" font-size="12.5" fill="#19324a">
+<tspan x="550" dy="0">hosts allow → explicit source boundary.</tspan>
+<tspan x="550" dy="19">hosts deny → deny takes precedence.</tspan>
+<tspan x="550" dy="24">UDP: 137–139.</tspan>
+<tspan x="550" dy="19">TCP: 137, 139, 445.</tspan>
+<tspan x="550" dy="24">Chapter recommends blocking external access.</tspan>
+<tspan x="550" dy="19">Password auth is protected, file data is not</tspan>
+<tspan x="550" dy="19">encrypted in the described configuration.</tspan>
+</text>
+
+<rect x="1042" y="398" width="544" height="286" rx="12" fill="#fffdf3" stroke="#d5ad37" stroke-width="2"/>
+<text x="1060" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#714500">7. Runtime troubleshooting</text>
+<text x="1064" y="458" font-family="Arial, sans-serif" font-size="12.4" fill="#19324a">
+<tspan x="1064" dy="0">smbstatus → users / shares / locks / PID.</tspan>
+<tspan x="1064" dy="19">Resolve offending lock on client first.</tspan>
+<tspan x="1064" dy="24">Logs → authentication and service errors.</tspan>
+<tspan x="1064" dy="19">smbcontrol → temporary runtime debug.</tspan>
+<tspan x="1064" dy="24">High verbosity consumes resources.</tspan>
+<tspan x="1064" dy="19">Above level 100, encrypted passwords may log.</tspan>
+<tspan x="1064" dy="24">Restore previous debug level after test.</tspan>
+</text>
+
+<rect x="14" y="700" width="760" height="250" rx="12" fill="#f4fbff" stroke="#6d9fc8" stroke-width="2"/>
+<text x="32" y="730" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#174d70">8. Project share permission chain</text>
+<text x="36" y="760" font-family="Arial, sans-serif" font-size="12.6" fill="#19324a">
+<tspan x="36" dy="0">valid users = @eng</tspan>
+<tspan x="36" dy="19">→ force group = eng</tspan>
+<tspan x="36" dy="19">→ create mask = 0660</tspan>
+<tspan x="36" dy="19">→ directory mask = 2770 / force directory mode = 2000</tspan>
+<tspan x="36" dy="24">Filesystem root:</tspan>
+<tspan x="36" dy="19">chown root:eng /home/eng</tspan>
+<tspan x="36" dy="19">chmod u=rwx,g=rwxs,o= /home/eng</tspan>
+<tspan x="36" dy="24">Acceptance: new objects inherit intended project group access.</tspan>
+</text>
+
+<rect x="786" y="700" width="800" height="250" rx="12" fill="#fff8f2" stroke="#d17e4f" stroke-width="2"/>
+<text x="804" y="730" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#7b3e1e">9. Operational flow / risks</text>
+<text x="808" y="760" font-family="Arial, sans-serif" font-size="12.5" fill="#19324a">
+<tspan x="808" dy="0">testparm → smbclient -L → share login → mount.</tspan>
+<tspan x="808" dy="19">Then verify read/write + UNIX owner/group/mode.</tspan>
+<tspan x="808" dy="24">Incident: smbstatus → locks/session → logs → temporary debug.</tspan>
+<tspan x="808" dy="24">Risks:</tspan>
+<tspan x="808" dy="19">broad shares • external exposure • wrong masks/group</tspan>
+<tspan x="808" dy="19">high debug leakage • client breakage from killing smbd</tspan>
+<tspan x="808" dy="19">charset mismatch • unrecorded config/permission baseline</tspan>
+<tspan x="808" dy="24">Rollback without baseline: [Needs confirmation]</tspan>
+</text>
+
+<rect x="14" y="978" width="1572" height="58" rx="10" fill="#26384d"/>
+<text x="800" y="1002" font-family="Arial, sans-serif" font-size="15.5" font-weight="700" fill="#ffffff" text-anchor="middle">Core: Samba authorization is the intersection of authentication, smb.conf share rules, UNIX filesystem permissions and network scope.</text>
+<text x="800" y="1026" font-family="Arial, sans-serif" font-size="14.5" fill="#dce8f4" text-anchor="middle">Troubleshoot from effective config and share visibility toward runtime sessions/locks; increase debug only temporarily.</text>
+</svg>
