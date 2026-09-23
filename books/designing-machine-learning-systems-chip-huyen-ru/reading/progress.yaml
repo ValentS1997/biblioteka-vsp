@@ -1,0 +1,17 @@
+schema: biblioteka-vsp/reading/v1
+book_id: designing-machine-learning-systems-chip-huyen-ru
+
+status: planned
+scope: full_book
+
+started: null
+completed: null
+current_page: null
+current_chapter: null
+
+paired_reading:
+  book_id: ai-engineering-chip-huyen-ru
+  relation: read_together
+
+notes:
+  - "User requested this book to be read in pair with «AI-инженерия»."
