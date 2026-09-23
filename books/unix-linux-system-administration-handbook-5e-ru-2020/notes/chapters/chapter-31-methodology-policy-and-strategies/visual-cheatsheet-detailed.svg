@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1060" viewBox="0 0 1600 1060">
+<rect width="1600" height="1060" fill="#f4f7fb"/>
+<rect x="12" y="12" width="1576" height="74" rx="14" fill="#26384d"/>
+<text x="800" y="43" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">Глава 31. Методология, политика и стратегии — подробная итоговая шпаргалка</text>
+<text x="800" y="68" font-family="Arial, sans-serif" font-size="16" fill="#dce8f4" text-anchor="middle">CLAMS • ownership • ticketing • documentation • IaC • environment promotion • DR • policy • SLA • compliance</text>
+
+<rect x="14" y="104" width="382" height="278" rx="12" fill="#f7fbff" stroke="#5b98cf" stroke-width="2"/>
+<text x="32" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#173d64">1. DevOps / CLAMS</text>
+<text x="36" y="164" font-family="Arial, sans-serif" font-size="12.5" fill="#19324a">
+<tspan x="36" dy="0">Culture → shared responsibility.</tspan>
+<tspan x="36" dy="19">Lean → incremental progress.</tspan>
+<tspan x="36" dy="19">Automation → repeatable change.</tspan>
+<tspan x="36" dy="19">Measurement → visible outcomes.</tspan>
+<tspan x="36" dy="19">Sharing → reduce knowledge silos.</tspan>
+<tspan x="36" dy="24">DevOps is methodology, not one tool/role.</tspan>
+</text>
+
+<rect x="408" y="104" width="382" height="278" rx="12" fill="#f6fff8" stroke="#58ad79" stroke-width="2"/>
+<text x="426" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#18572f">2. Automation discipline</text>
+<text x="430" y="164" font-family="Arial, sans-serif" font-size="12.5" fill="#19324a">
+<tspan x="430" dy="0">Repeated more than twice → automate candidate.</tspan>
+<tspan x="430" dy="19">Not understood → do not automate.</tspan>
+<tspan x="430" dy="24">Provisioning, config, promotion, testing, patching.</tspan>
+<tspan x="430" dy="19">Choose tool after defining the process/problem.</tspan>
+<tspan x="430" dy="24">Version and measure automated change.</tspan>
+</text>
+
+<rect x="802" y="104" width="382" height="278" rx="12" fill="#fff9f4" stroke="#d49a4c" stroke-width="2"/>
+<text x="820" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#714500">3. Tickets and ownership</text>
+<text x="824" y="164" font-family="Arial, sans-serif" font-size="12.5" fill="#19324a">
+<tspan x="824" dy="0">One common workflow across IT disciplines.</tspan>
+<tspan x="824" dy="19">Acknowledge request, then human review.</tspan>
+<tspan x="824" dy="19">Exactly one owner/coordinator per task.</tspan>
+<tspan x="824" dy="24">Prioritize, resolve and retain history.</tspan>
+<tspan x="824" dy="19">Ownership is not blame.</tspan>
+</text>
+
+<rect x="1196" y="104" width="390" height="278" rx="12" fill="#fff7fb" stroke="#cf6d99" stroke-width="2"/>
+<text x="1214" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#842044">4. Documentation / IaC</text>
+<text x="1218" y="164" font-family="Arial, sans-serif" font-size="12.4" fill="#19324a">
+<tspan x="1218" dy="0">Short, focused and searchable documentation.</tspan>
+<tspan x="1218" dy="19">Protect docs while keeping them discoverable.</tspan>
+<tspan x="1218" dy="19">Define one authoritative source of truth.</tspan>
+<tspan x="1218" dy="24">IaC keeps desired state and change history together.</tspan>
+<tspan x="1218" dy="19">Avoid manually duplicated facts.</tspan>
+</text>
+
+<rect x="14" y="398" width="502" height="286" rx="12" fill="#f7f7ff" stroke="#8179d6" stroke-width="2"/>
+<text x="32" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#474092">5. Environment / promotion model</text>
+<text x="36" y="458" font-family="Arial, sans-serif" font-size="12.4" fill="#19324a">
+<tspan x="36" dy="0">Separate development, test and production.</tspan>
+<tspan x="36" dy="19">Keep environments as identical as practical.</tspan>
+<tspan x="36" dy="19">Track configuration changes like application code.</tspan>
+<tspan x="36" dy="24">Validate the same change in lower environments first.</tspan>
+<tspan x="36" dy="19">Prefer automated tracked production change.</tspan>
+</text>
+
+<rect x="528" y="398" width="502" height="286" rx="12" fill="#f5fff7" stroke="#58ad79" stroke-width="2"/>
+<text x="546" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#18572f">6. Disaster recovery</text>
+<text x="550" y="458" font-family="Arial, sans-serif" font-size="12.4" fill="#19324a">
+<tspan x="550" dy="0">Inventory assets, threats and consequences.</tspan>
+<tspan x="550" dy="19">Prioritize services and define recovery sequence.</tspan>
+<tspan x="550" dy="19">Replication/failover is not backup.</tspan>
+<tspan x="550" dy="19">Keep contacts/procedures/backups available offline.</tspan>
+<tspan x="550" dy="24">Assign a recovery leader and exercise the plan.</tspan>
+</text>
+
+<rect x="1042" y="398" width="544" height="286" rx="12" fill="#fffdf3" stroke="#d5ad37" stroke-width="2"/>
+<text x="1060" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#714500">7. Policy / procedure / SLA</text>
+<text x="1064" y="458" font-family="Arial, sans-serif" font-size="12.4" fill="#19324a">
+<tspan x="1064" dy="0">Policy states required behavior.</tspan>
+<tspan x="1064" dy="19">Procedure states implementation steps.</tspan>
+<tspan x="1064" dy="19">SLA states service scope and expectations.</tspan>
+<tspan x="1064" dy="24">Targets must be measurable with available telemetry.</tspan>
+<tspan x="1064" dy="19">Policies need consistent enforcement.</tspan>
+</text>
+
+<rect x="14" y="700" width="760" height="250" rx="12" fill="#f4fbff" stroke="#6d9fc8" stroke-width="2"/>
+<text x="32" y="730" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#174d70">8. SLA / queue metrics</text>
+<text x="36" y="760" font-family="Arial, sans-serif" font-size="12.5" fill="#19324a">
+<tspan x="36" dy="0">Queue factors: organizational impact, security, contract, users, deadline.</tspan>
+<tspan x="36" dy="19">Chapter simplified order: many users → one user → enhancement.</tspan>
+<tspan x="36" dy="24">Metrics: uptime, resolved tickets, mean resolution time,</tspan>
+<tspan x="36" dy="19">SLA objectives met, projects on time/budget, security process adherence.</tspan>
+<tspan x="36" dy="24">Environment-specific severity targets need confirmation.</tspan>
+</text>
+
+<rect x="786" y="700" width="800" height="250" rx="12" fill="#fff8f2" stroke="#d17e4f" stroke-width="2"/>
+<text x="804" y="730" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#7b3e1e">9. Compliance / legal boundary</text>
+<text x="808" y="760" font-family="Arial, sans-serif" font-size="12.5" fill="#19324a">
+<tspan x="808" dy="0">Chapter surveys NIST, ISO, PCI, SOX, HIPAA and other frameworks/laws.</tspan>
+<tspan x="808" dy="19">Descriptions are publication-era and largely U.S.-centric.</tspan>
+<tspan x="808" dy="19">Current version, jurisdiction and applicability must be verified.</tspan>
+<tspan x="808" dy="24">Document policy/licensing concerns and management direction in writing.</tspan>
+<tspan x="808" dy="19">Do not treat chapter text as current legal advice.</tspan>
+</text>
+
+<rect x="14" y="978" width="1572" height="58" rx="10" fill="#26384d"/>
+<text x="800" y="1002" font-family="Arial, sans-serif" font-size="15.5" font-weight="700" fill="#ffffff" text-anchor="middle">Core: operations succeed when people, process, documentation, automation and measurement reinforce one another.</text>
+<text x="800" y="1026" font-family="Arial, sans-serif" font-size="14.5" fill="#dce8f4" text-anchor="middle">Traceability and shared ownership matter more than tool branding.</text>
+</svg>

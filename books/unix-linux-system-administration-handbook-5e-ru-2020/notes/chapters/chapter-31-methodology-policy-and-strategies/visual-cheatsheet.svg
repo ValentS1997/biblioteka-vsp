@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#f4f7fb"/>
+<rect x="16" y="16" width="1568" height="76" rx="14" fill="#26384d"/>
+<text x="800" y="48" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff" text-anchor="middle">Глава 31. Методология, политика и стратегии</text>
+<text x="800" y="74" font-family="Arial, sans-serif" font-size="17" fill="#dce8f4" text-anchor="middle">DevOps • tickets • documentation • IaC • environments • DR • policy • SLA • compliance</text>
+
+<rect x="24" y="116" width="500" height="300" rx="14" fill="#f7fbff" stroke="#5b98cf" stroke-width="2"/>
+<text x="44" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#173d64">CLAMS</text>
+<text x="48" y="184" font-family="Arial, sans-serif" font-size="17" fill="#19324a">
+<tspan x="48" dy="0">Culture</tspan>
+<tspan x="48" dy="27">Lean</tspan>
+<tspan x="48" dy="27">Automation</tspan>
+<tspan x="48" dy="27">Measurement</tspan>
+<tspan x="48" dy="27">Sharing</tspan>
+</text>
+
+<rect x="548" y="116" width="500" height="300" rx="14" fill="#f6fff8" stroke="#58ad79" stroke-width="2"/>
+<text x="568" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#18572f">Work and ownership</text>
+<text x="572" y="184" font-family="Arial, sans-serif" font-size="16.5" fill="#19324a">
+<tspan x="572" dy="0">One ticket → one clear owner.</tspan>
+<tspan x="572" dy="27">Acknowledge with a human response.</tspan>
+<tspan x="572" dy="27">Prioritize, resolve, retain searchable history.</tspan>
+<tspan x="572" dy="34">Ownership is coordination, not blame.</tspan>
+</text>
+
+<rect x="1072" y="116" width="504" height="300" rx="14" fill="#fff9f4" stroke="#d49a4c" stroke-width="2"/>
+<text x="1092" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#714500">Documentation and IaC</text>
+<text x="1096" y="184" font-family="Arial, sans-serif" font-size="16.5" fill="#19324a">
+<tspan x="1096" dy="0">Short, searchable, protected documentation.</tspan>
+<tspan x="1096" dy="27">One authoritative source of truth.</tspan>
+<tspan x="1096" dy="27">Version configuration and infrastructure.</tspan>
+<tspan x="1096" dy="34">Avoid manually duplicated state.</tspan>
+</text>
+
+<rect x="24" y="444" width="500" height="316" rx="14" fill="#fff7fb" stroke="#cf6d99" stroke-width="2"/>
+<text x="44" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#842044">Change flow</text>
+<text x="48" y="512" font-family="Arial, sans-serif" font-size="16.5" fill="#19324a">
+<tspan x="48" dy="0">Versioned change</tspan>
+<tspan x="48" dy="27">→ development</tspan>
+<tspan x="48" dy="27">→ test</tspan>
+<tspan x="48" dy="27">→ production</tspan>
+<tspan x="48" dy="34">Prefer tracked automation over direct changes.</tspan>
+</text>
+
+<rect x="548" y="444" width="500" height="316" rx="14" fill="#f7f7ff" stroke="#8179d6" stroke-width="2"/>
+<text x="568" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#474092">Disaster recovery</text>
+<text x="572" y="512" font-family="Arial, sans-serif" font-size="16.5" fill="#19324a">
+<tspan x="572" dy="0">Assets → threats → consequences → priorities.</tspan>
+<tspan x="572" dy="27">Replication is not backup.</tspan>
+<tspan x="572" dy="27">Keep offline recovery data and contacts.</tspan>
+<tspan x="572" dy="34">Name a leader and exercise the plan.</tspan>
+</text>
+
+<rect x="1072" y="444" width="504" height="316" rx="14" fill="#f4fbff" stroke="#6d9fc8" stroke-width="2"/>
+<text x="1092" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#174d70">Governance</text>
+<text x="1096" y="512" font-family="Arial, sans-serif" font-size="16.5" fill="#19324a">
+<tspan x="1096" dy="0">Policy = what is required.</tspan>
+<tspan x="1096" dy="27">Procedure = how it is done.</tspan>
+<tspan x="1096" dy="27">SLA = service scope + measurable expectations.</tspan>
+<tspan x="1096" dy="34">Current legal/compliance rules need verification.</tspan>
+</text>
+
+<rect x="24" y="790" width="1552" height="78" rx="12" fill="#26384d"/>
+<text x="800" y="822" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Core: shared ownership + traceable change + measurable service + documented recovery/governance.</text>
+<text x="800" y="849" font-family="Arial, sans-serif" font-size="16" fill="#dce8f4" text-anchor="middle">Tools support the operating model; they do not replace it.</text>
+</svg>
