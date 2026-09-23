@@ -17,4 +17,5 @@ Reviewed chapter-level notes are stored here. Historical notes are not reconstru
 - [Chapter 13 — TCP/IP networks](chapter-13-tcp-ip-networks/README.md)
 - [Chapter 14 — Network hardware](chapter-14-network-hardware/README.md)
 - [Chapter 15 — IP routing](chapter-15-ip-routing/README.md)
+- [Chapter 16 — DNS: Domain Name System](chapter-16-dns/README.md)
 - [Chapter 29 — Performance analysis](chapter-29-performance-analysis/README.md)

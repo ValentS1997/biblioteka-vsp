@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#f4f7fb"/>
+<rect x="16" y="16" width="1568" height="76" rx="14" fill="#163a5f"/>
+<text x="800" y="49" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#fff" text-anchor="middle">Глава 16. DNS: система доменных имен</text>
+<text x="800" y="75" font-family="Arial, sans-serif" font-size="17" fill="#d8e7f4" text-anchor="middle">resolver → recursion → delegation → authoritative data • BIND • updates • security • debugging</text>
+
+<rect x="24" y="116" width="500" height="300" rx="14" fill="#f7fbff" stroke="#5aa0d6" stroke-width="2"/>
+<text x="44" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#123d68">Resolution path</text>
+<text x="48" y="184" font-family="Arial, sans-serif" font-size="17" fill="#17324d">
+<tspan x="48" dy="0">application → resolver</tspan><tspan x="48" dy="25">→ nsswitch.conf source policy</tspan><tspan x="48" dy="25">→ recursive server from resolv.conf</tspan><tspan x="48" dy="25">→ cache or root → TLD → authoritative</tspan><tspan x="48" dy="25">→ answer / referral / error</tspan><tspan x="48" dy="30">TTL controls cache lifetime.</tspan><tspan x="48" dy="25">FQDN ends with "." in DNS syntax.</tspan>
+</text>
+
+<rect x="548" y="116" width="500" height="300" rx="14" fill="#f6fff8" stroke="#5db67b" stroke-width="2"/>
+<text x="568" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#185b31">Records / server roles</text>
+<text x="572" y="184" font-family="Arial, sans-serif" font-size="16.5" fill="#17324d">
+<tspan x="572" dy="0">SOA / NS → zone + delegation</tspan><tspan x="572" dy="24">A / AAAA → addresses • PTR → reverse</tspan><tspan x="572" dy="24">MX → mail • CNAME → alias • SRV → service</tspan><tspan x="572" dy="24">TXT → arbitrary/supporting metadata</tspan><tspan x="572" dy="30">master / slave / caching / recursive</tspan><tspan x="572" dy="24">authoritative and recursive are separate roles</tspan><tspan x="572" dy="24">public authoritative server: no open recursion</tspan>
+</text>
+
+<rect x="1072" y="116" width="504" height="300" rx="14" fill="#fff9f4" stroke="#d89a47" stroke-width="2"/>
+<text x="1092" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#704300">BIND model</text>
+<text x="1096" y="184" font-family="Arial, sans-serif" font-size="16.5" fill="#17324d">
+<tspan x="1096" dy="0">named.conf = role / policy / ACL / view</tspan><tspan x="1096" dy="24">zone files = DNS data</tspan><tspan x="1096" dy="24">named = DNS daemon</tspan><tspan x="1096" dy="24">rndc = live control channel</tspan><tspan x="1096" dy="30">Split DNS:</tspan><tspan x="1096" dy="24">internal view → recursion yes</tspan><tspan x="1096" dy="24">external view → public data / recursion no</tspan><tspan x="1096" dy="24">restricted views must come first</tspan>
+</text>
+
+<rect x="24" y="444" width="500" height="316" rx="14" fill="#fff7fb" stroke="#d86a9a" stroke-width="2"/>
+<text x="44" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#8b1b4b">Change workflows</text>
+<text x="48" y="512" font-family="Arial, sans-serif" font-size="16.5" fill="#17324d">
+<tspan x="48" dy="0">Static master zone:</tspan><tspan x="48" dy="24">edit → increment SOA serial → rndc reload</tspan><tspan x="48" dy="24">→ dig @master / @slave</tspan><tspan x="48" dy="30">Dynamic zone manual edit:</tspan><tspan x="48" dy="24">rndc freeze → edit → rndc thaw</tspan><tspan x="48" dy="30">AXFR = full transfer • IXFR = incremental</tspan><tspan x="48" dy="24">Do not edit slave-maintained files.</tspan>
+</text>
+
+<rect x="548" y="444" width="500" height="316" rx="14" fill="#f7f7ff" stroke="#8378df" stroke-width="2"/>
+<text x="568" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#463d96">Security</text>
+<text x="572" y="512" font-family="Arial, sans-serif" font-size="16.2" fill="#17324d">
+<tspan x="572" dy="0">Restrict allow-recursion / allow-transfer.</tspan><tspan x="572" dy="24">Dynamic updates: authenticate; prefer TSIG.</tspan><tspan x="572" dy="24">TSIG = shared-secret server interaction.</tspan><tspan x="572" dy="30">DNSSEC:</tspan><tspan x="572" dy="24">ZSK + KSK • DNSKEY + DS</tspan><tspan x="572" dy="24">RRSIG • NSEC/NSEC3 • chain of trust</tspan><tspan x="572" dy="24">Expired signatures can break validation.</tspan>
+</text>
+
+<rect x="1072" y="444" width="504" height="316" rx="14" fill="#f4fbff" stroke="#6ba2ca" stroke-width="2"/>
+<text x="1092" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#174c70">Read-only / debug</text>
+<text x="1096" y="512" font-family="Consolas, monospace" font-size="15.5" fill="#17324d">
+<tspan x="1096" dy="0">dig @server name type</tspan><tspan x="1096" dy="24">dig +trace name / dig -x address</tspan><tspan x="1096" dy="24">dig +norecurse @server zone NS</tspan><tspan x="1096" dy="24">drill -T / delv / rndc status</tspan><tspan x="1096" dy="30">rndc trace/querylog → high-volume debug</tspan><tspan x="1096" dy="24">lame delegation: query each NS directly</tspan><tspan x="1096" dy="24">Universal rollback: [Needs confirmation]</tspan>
+</text>
+
+<rect x="24" y="790" width="1552" height="78" rx="12" fill="#163a5f"/>
+<text x="800" y="822" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#fff" text-anchor="middle">Core: policy in named.conf, data in zone files, SOA serial drives propagation, rndc controls live named.</text>
+<text x="800" y="849" font-family="Arial, sans-serif" font-size="16" fill="#d8e7f4" text-anchor="middle">Verify with direct DNS queries and logs; freeze dynamic zones before manual edits.</text>
+</svg>

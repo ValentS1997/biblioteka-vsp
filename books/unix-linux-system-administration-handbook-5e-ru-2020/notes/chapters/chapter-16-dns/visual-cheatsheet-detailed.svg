@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1060" viewBox="0 0 1600 1060">
+<rect width="1600" height="1060" fill="#f4f7fb"/>
+<rect x="12" y="12" width="1576" height="74" rx="14" fill="#163a5f"/>
+<text x="800" y="43" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#fff" text-anchor="middle">Глава 16. DNS — подробная итоговая шпаргалка</text>
+<text x="800" y="68" font-family="Arial, sans-serif" font-size="16" fill="#d8e7f4" text-anchor="middle">Architecture • namespace • records • BIND • zone lifecycle • split DNS • security/DNSSEC • debugging</text>
+
+<rect x="14" y="104" width="382" height="278" rx="12" fill="#f7fbff" stroke="#5aa0d6" stroke-width="2"/>
+<text x="32" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#123d68">1. Resolution architecture</text>
+<text x="36" y="164" font-family="Arial, sans-serif" font-size="12.8" fill="#17324d">
+<tspan x="36" dy="0">query = name + RR type</tspan><tspan x="36" dy="19">resolver → recursive server</tspan><tspan x="36" dy="19">cache miss → root → TLD → delegation</tspan><tspan x="36" dy="19">→ authoritative server → answer</tspan><tspan x="36" dy="24">resolv.conf: search + nameserver</tspan><tspan x="36" dy="19">nsswitch.conf: files vs dns order</tspan><tspan x="36" dy="24">NXDOMAIN = no name</tspan><tspan x="36" dy="19">SERVFAIL = server/validation failure context</tspan>
+</text>
+
+<rect x="408" y="104" width="382" height="278" rx="12" fill="#f6fff8" stroke="#5db67b" stroke-width="2"/>
+<text x="426" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#185b31">2. Namespace / delegation</text>
+<text x="430" y="164" font-family="Arial, sans-serif" font-size="12.7" fill="#17324d">
+<tspan x="430" dy="0">root = "." • FQDN ends with "."</tspan><tspan x="430" dy="19">forward: name → address/data</tspan><tspan x="430" dy="19">reverse IPv4: in-addr.arpa → PTR</tspan><tspan x="430" dy="24">delegation assigns child-zone authority</tspan><tspan x="430" dy="19">recursive server follows referrals</tspan><tspan x="430" dy="19">nonrecursive server returns referral</tspan><tspan x="430" dy="24">TTL controls cache lifetime</tspan><tspan x="430" dy="19">short TTL → more load / faster change uptake</tspan>
+</text>
+
+<rect x="802" y="104" width="382" height="278" rx="12" fill="#fff9f4" stroke="#d89a47" stroke-width="2"/>
+<text x="820" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#704300">3. Resource records</text>
+<text x="824" y="164" font-family="Arial, sans-serif" font-size="12.7" fill="#17324d">
+<tspan x="824" dy="0">SOA → zone definition / serial</tspan><tspan x="824" dy="19">NS → name servers / delegation</tspan><tspan x="824" dy="19">A / AAAA → IPv4 / IPv6</tspan><tspan x="824" dy="19">PTR → reverse mapping</tspan><tspan x="824" dy="19">MX → mail routing</tspan><tspan x="824" dy="19">CNAME → alias • SRV → service</tspan><tspan x="824" dy="19">TXT → text/supporting metadata</tspan><tspan x="824" dy="24">DNSSEC: DS DNSKEY RRSIG NSEC NSEC3</tspan>
+</text>
+
+<rect x="1196" y="104" width="390" height="278" rx="12" fill="#fff7fb" stroke="#d86a9a" stroke-width="2"/>
+<text x="1214" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#8b1b4b">4. BIND configuration</text>
+<text x="1218" y="164" font-family="Arial, sans-serif" font-size="12.6" fill="#17324d">
+<tspan x="1218" dy="0">named = server daemon</tspan><tspan x="1218" dy="19">named.conf = policy / roles / zones</tspan><tspan x="1218" dy="19">zone files = DNS data</tspan><tspan x="1218" dy="19">rndc = live control</tspan><tspan x="1218" dy="24">named.conf statements:</tspan><tspan x="1218" dy="19">include • options • acl • key • server</tspan><tspan x="1218" dy="19">masters • logging • zone • controls • view</tspan><tspan x="1218" dy="24">Zone parser: $ORIGIN $INCLUDE $TTL</tspan>
+</text>
+
+<rect x="14" y="398" width="502" height="286" rx="12" fill="#f7f7ff" stroke="#8378df" stroke-width="2"/>
+<text x="32" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#463d96">5. Zone lifecycle / updates</text>
+<text x="36" y="458" font-family="Arial, sans-serif" font-size="12.6" fill="#17324d">
+<tspan x="36" dy="0">Static master:</tspan><tspan x="36" dy="19">edit → increment SOA serial → rndc reload</tspan><tspan x="36" dy="19">→ verify with dig @master / @slave</tspan><tspan x="36" dy="24">Transfer: AXFR full • IXFR incremental • TCP/53</tspan><tspan x="36" dy="24">Dynamic zone:</tspan><tspan x="36" dy="19">journal zone.jnl keeps changes</tspan><tspan x="36" dy="19">manual edit requires rndc freeze</tspan><tspan x="36" dy="19">edit → rndc thaw → updates resume</tspan><tspan x="36" dy="24">nsupdate -k ... → authenticated dynamic change</tspan>
+</text>
+
+<rect x="528" y="398" width="502" height="286" rx="12" fill="#f5fff7" stroke="#58b879" stroke-width="2"/>
+<text x="546" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#185b31">6. Split DNS / access control</text>
+<text x="550" y="458" font-family="Arial, sans-serif" font-size="12.6" fill="#17324d">
+<tspan x="550" dy="0">view selects DNS data by client/destination.</tspan><tspan x="550" dy="19">Order matters: restricted view first.</tspan><tspan x="550" dy="24">internal:</tspan><tspan x="550" dy="19">private data • recursion yes</tspan><tspan x="550" dy="24">external:</tspan><tspan x="550" dy="19">public data • recursion no</tspan><tspan x="550" dy="24">Security controls:</tspan><tspan x="550" dy="19">allow-query • allow-recursion • allow-transfer</tspan><tspan x="550" dy="19">allow-update • update-policy • blackhole</tspan>
+</text>
+
+<rect x="1042" y="398" width="544" height="286" rx="12" fill="#fffdf3" stroke="#d5ad37" stroke-width="2"/>
+<text x="1060" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#704300">7. TSIG / DNSSEC</text>
+<text x="1064" y="458" font-family="Arial, sans-serif" font-size="12.6" fill="#17324d">
+<tspan x="1064" dy="0">TSIG: shared secret; protects transfers/updates.</tspan><tspan x="1064" dy="24">DNSSEC:</tspan><tspan x="1064" dy="19">ZSK signs RRsets • KSK anchors/signs keys</tspan><tspan x="1064" dy="19">DNSKEY publishes key • parent DS links trust</tspan><tspan x="1064" dy="19">RRSIG = signature • NSEC/NSEC3 = denial proof</tspan><tspan x="1064" dy="24">dnssec-keygen → key files</tspan><tspan x="1064" dy="19">dnssec-signzone → signed zone</tspan><tspan x="1064" dy="19">expired signatures can break validating clients</tspan>
+</text>
+
+<rect x="14" y="700" width="760" height="250" rx="12" fill="#f4fbff" stroke="#6ba2ca" stroke-width="2"/>
+<text x="32" y="730" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#174c70">8. Query / debugging toolkit</text>
+<text x="36" y="760" font-family="Consolas, monospace" font-size="12.8" fill="#17324d">
+<tspan x="36" dy="0">dig name type                 → query RR</tspan><tspan x="36" dy="19">dig @server name type         → inspect one server</tspan><tspan x="36" dy="19">dig +trace name / drill -T    → delegation chain</tspan><tspan x="36" dy="19">dig -x address                → reverse lookup</tspan><tspan x="36" dy="19">dig +norecurse @server zone NS→ exact server knowledge</tspan><tspan x="36" dy="19">rndc status                   → daemon status</tspan><tspan x="36" dy="19">rndc trace / notrace          → debug level on/off</tspan><tspan x="36" dy="19">rndc querylog                 → high-volume query log toggle</tspan>
+</text>
+
+<rect x="786" y="700" width="800" height="250" rx="12" fill="#fff8f2" stroke="#d17e4f" stroke-width="2"/>
+<text x="804" y="730" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#7b3e1e">9. Failure patterns / boundaries</text>
+<text x="808" y="760" font-family="Arial, sans-serif" font-size="12.7" fill="#17324d">
+<tspan x="808" dy="0">No final dot → unintended relative name.</tspan><tspan x="808" dy="19">SOA serial unchanged → slaves do not learn change.</tspan><tspan x="808" dy="19">Open resolver → resource abuse / amplification.</tspan><tspan x="808" dy="19">Unrestricted AXFR → zone data exposure.</tspan><tspan x="808" dy="19">Dynamic zone edited live → unsafe/inconsistent workflow.</tspan><tspan x="808" dy="19">Lame delegation → slow/failing resolution.</tspan><tspan x="808" dy="19">Debug/query logs → rapid disk growth.</tspan><tspan x="808" dy="19">Universal rollback beyond freeze/thaw: [Needs confirmation]</tspan>
+</text>
+
+<rect x="14" y="978" width="1572" height="58" rx="10" fill="#163a5f"/>
+<text x="800" y="1002" font-family="Arial, sans-serif" font-size="15.5" font-weight="700" fill="#fff" text-anchor="middle">Operational core: authoritative data must be correct, versioned by SOA serial, access-limited, and verified by querying the servers that should serve it.</text>
+<text x="800" y="1026" font-family="Arial, sans-serif" font-size="14.5" fill="#d8e7f4" text-anchor="middle">Client resolution and BIND control are separate layers; DNSSEC adds authenticity and a parent-linked chain of trust.</text>
+</svg>
