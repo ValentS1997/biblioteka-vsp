@@ -20,4 +20,5 @@ Reviewed chapter-level notes are stored here. Historical notes are not reconstru
 - [Chapter 16 — DNS: Domain Name System](chapter-16-dns/README.md)
 - [Chapter 17 — Single sign-on](chapter-17-single-sign-on/README.md)
 - [Chapter 18 — Email](chapter-18-email/README.md)
+- [Chapter 19 — Web hosting](chapter-19-web-hosting/README.md)
 - [Chapter 29 — Performance analysis](chapter-29-performance-analysis/README.md)

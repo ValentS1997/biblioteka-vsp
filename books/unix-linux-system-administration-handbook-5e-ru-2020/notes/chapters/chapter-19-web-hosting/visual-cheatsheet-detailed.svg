@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1060" viewBox="0 0 1600 1060">
+<rect width="1600" height="1060" fill="#f4f7fb"/>
+<rect x="12" y="12" width="1576" height="74" rx="14" fill="#203a56"/>
+<text x="800" y="43" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">Глава 19. Веб-хостинг — подробная итоговая шпаргалка</text>
+<text x="800" y="68" font-family="Arial, sans-serif" font-size="16" fill="#dce8f4" text-anchor="middle">HTTP • URL • TLS/SNI • proxies • caching/CDN • cloud hosting • Apache • NGINX • HAProxy</text>
+
+<rect x="14" y="104" width="382" height="278" rx="12" fill="#f7fbff" stroke="#5b98cf" stroke-width="2"/>
+<text x="32" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#173d64">1. HTTP transaction</text>
+<text x="36" y="164" font-family="Arial, sans-serif" font-size="12.7" fill="#19324a">
+<tspan x="36" dy="0">request: method + path + version</tspan>
+<tspan x="36" dy="19">headers → blank line → optional body</tspan>
+<tspan x="36" dy="19">response: version + status + headers + body</tspan>
+<tspan x="36" dy="24">GET/HEAD/POST/PUT/DELETE/OPTIONS</tspan>
+<tspan x="36" dy="19">2xx success • 3xx redirect/action</tspan>
+<tspan x="36" dy="19">4xx client/request • 5xx server/runtime</tspan>
+<tspan x="36" dy="24">Host is required for HTTP/1.1 vhosts.</tspan>
+</text>
+
+<rect x="408" y="104" width="382" height="278" rx="12" fill="#f6fff8" stroke="#58ad79" stroke-width="2"/>
+<text x="426" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#18572f">2. URL / TLS / SNI</text>
+<text x="430" y="164" font-family="Arial, sans-serif" font-size="12.7" fill="#19324a">
+<tspan x="430" dy="0">http default 80 • https default 443</tspan>
+<tspan x="430" dy="19">Do not place secrets in URL/query.</tspan>
+<tspan x="430" dy="19">Basic Auth only over HTTPS.</tspan>
+<tspan x="430" dy="24">TLS protects HTTP transport.</tspan>
+<tspan x="430" dy="19">SNI sends hostname during TLS setup</tspan>
+<tspan x="430" dy="19">before the HTTP Host header exists.</tspan>
+<tspan x="430" dy="24">HTTP/2: binary framing + multiplexing.</tspan>
+</text>
+
+<rect x="802" y="104" width="382" height="278" rx="12" fill="#fff9f4" stroke="#d49a4c" stroke-width="2"/>
+<text x="820" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#714500">3. Web application stack</text>
+<text x="824" y="164" font-family="Arial, sans-serif" font-size="12.7" fill="#19324a">
+<tspan x="824" dy="0">WAF → load balancer → cache</tspan>
+<tspan x="824" dy="19">→ web server → app server → database</tspan>
+<tspan x="824" dy="24">Proxy = HTTP intermediary.</tspan>
+<tspan x="824" dy="19">Components may combine roles.</tspan>
+<tspan x="824" dy="24">Availability requires redundancy.</tspan>
+<tspan x="824" dy="19">Load balancer removes unhealthy nodes.</tspan>
+<tspan x="824" dy="19">Avoid a single load-balancer SPOF.</tspan>
+</text>
+
+<rect x="1196" y="104" width="390" height="278" rx="12" fill="#fff7fb" stroke="#cf6d99" stroke-width="2"/>
+<text x="1214" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#842044">4. Cache / CDN</text>
+<text x="1218" y="164" font-family="Arial, sans-serif" font-size="12.6" fill="#19324a">
+<tspan x="1218" dy="0">browser • forward proxy • reverse proxy • CDN</tspan>
+<tspan x="1218" dy="19">Cache-Control • ETag • Expires affect caching.</tspan>
+<tspan x="1218" dy="24">Stale data:</tspan>
+<tspan x="1218" dy="19">query origin, then each cache layer directly.</tspan>
+<tspan x="1218" dy="24">CDN edge nodes cache near users.</tspan>
+<tspan x="1218" dy="19">DNS directs clients toward an edge node.</tspan>
+<tspan x="1218" dy="24">Static assets are natural cache candidates.</tspan>
+</text>
+
+<rect x="14" y="398" width="502" height="286" rx="12" fill="#f7f7ff" stroke="#8179d6" stroke-width="2"/>
+<text x="32" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#474092">5. Cloud web hosting</text>
+<text x="36" y="458" font-family="Arial, sans-serif" font-size="12.6" fill="#19324a">
+<tspan x="36" dy="0">Build: more control, more OS/patch/failure work.</tspan>
+<tspan x="36" dy="19">Managed service: less work, less flexibility.</tspan>
+<tspan x="36" dy="24">PaaS hides much infrastructure management.</tspan>
+<tspan x="36" dy="19">Static hosting avoids running an OS for files.</tspan>
+<tspan x="36" dy="24">Serverless example:</tspan>
+<tspan x="36" dy="19">CDN/static + API gateway + function + DB</tspan>
+<tspan x="36" dy="24">Provider services change operational ownership.</tspan>
+</text>
+
+<rect x="528" y="398" width="502" height="286" rx="12" fill="#f5fff7" stroke="#58ad79" stroke-width="2"/>
+<text x="546" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#18572f">6. Apache httpd</text>
+<text x="550" y="458" font-family="Consolas, monospace" font-size="12.5" fill="#19324a">
+<tspan x="550" dy="0">httpd -t                    → syntax</tspan>
+<tspan x="550" dy="19">apachectl status            → state</tspan>
+<tspan x="550" dy="19">apachectl graceful          → controlled reload</tspan>
+<tspan x="550" dy="24">VirtualHost + Include + modules</tspan>
+<tspan x="550" dy="19">htpasswd → Basic Auth file</tspan>
+<tspan x="550" dy="24">TLS key: restrict permissions.</tspan>
+<tspan x="550" dy="19">Logs: useful, but disk-growth risk.</tspan>
+</text>
+
+<rect x="1042" y="398" width="544" height="286" rx="12" fill="#fffdf3" stroke="#d5ad37" stroke-width="2"/>
+<text x="1060" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#714500">7. NGINX</text>
+<text x="1064" y="458" font-family="Arial, sans-serif" font-size="12.5" fill="#19324a">
+<tspan x="1064" dy="0">Event-driven master + worker architecture.</tspan>
+<tspan x="1064" dy="19">main → events / http → server → location</tspan>
+<tspan x="1064" dy="19">listen + server_name select vhost.</tspan>
+<tspan x="1064" dy="19">proxy_pass forwards to another server/upstream.</tspan>
+<tspan x="1064" dy="24">nginx -t before configuration activation.</tspan>
+<tspan x="1064" dy="19">upstream groups provide load balancing.</tspan>
+<tspan x="1064" dy="19">Health checks can inspect status/header/body.</tspan>
+</text>
+
+<rect x="14" y="700" width="760" height="250" rx="12" fill="#f4fbff" stroke="#6d9fc8" stroke-width="2"/>
+<text x="32" y="730" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#174d70">8. HAProxy</text>
+<text x="36" y="760" font-family="Arial, sans-serif" font-size="12.7" fill="#19324a">
+<tspan x="36" dy="0">frontend → client-facing addresses/ports/policy</tspan>
+<tspan x="36" dy="19">backend → server pool</tspan>
+<tspan x="36" dy="19">HTTP health checks remove failed backend and keep probing.</tspan>
+<tspan x="36" dy="19">Stats endpoint shows server state.</tspan>
+<tspan x="36" dy="19">Sticky cookie keeps a client on one backend when required.</tspan>
+<tspan x="36" dy="19">TLS termination can offload crypto and centralize key handling.</tspan>
+<tspan x="36" dy="24">PEM bundle with private key requires strict ownership/mode.</tspan>
+</text>
+
+<rect x="786" y="700" width="800" height="250" rx="12" fill="#fff8f2" stroke="#d17e4f" stroke-width="2"/>
+<text x="804" y="730" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#7b3e1e">9. Diagnostic and risk model</text>
+<text x="808" y="760" font-family="Arial, sans-serif" font-size="12.7" fill="#19324a">
+<tspan x="808" dy="0">curl/status/headers → DNS/direct-IP → TLS/SNI</tspan>
+<tspan x="808" dy="19">→ LB health → cache/origin → server syntax/logs → app/backend</tspan>
+<tspan x="808" dy="24">Risks:</tspan>
+<tspan x="808" dy="19">secrets in URLs • Basic Auth without HTTPS • weak TLS</tspan>
+<tspan x="808" dy="19">private-key exposure • stale cache • log disk exhaustion</tspan>
+<tspan x="808" dy="19">single-server/SPOF design • shallow health checks</tspan>
+<tspan x="808" dy="24">Universal rollback: [Needs confirmation]</tspan>
+</text>
+
+<rect x="14" y="978" width="1572" height="58" rx="10" fill="#203a56"/>
+<text x="800" y="1002" font-family="Arial, sans-serif" font-size="15.5" font-weight="700" fill="#ffffff" text-anchor="middle">Operational core: observe the HTTP path first, validate config syntax second, then make one controlled layer-specific change.</text>
+<text x="800" y="1026" font-family="Arial, sans-serif" font-size="14.5" fill="#dce8f4" text-anchor="middle">Availability and security emerge from the whole chain: DNS, TLS, proxy, cache, web server, application and backend.</text>
+</svg>
