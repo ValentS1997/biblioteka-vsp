@@ -1,6 +1,6 @@
 schema: biblioteka-vsp/books/v1
 protocol: biblioteka-vsp/v1
-updated: 2026-09-22
+updated: 2026-09-24
 
 books:
   - id: computer-networks-6e-ru-2023
@@ -46,3 +46,35 @@ books:
       reading_progress: books/unix-linux-system-administration-handbook-5e-ru-2020/reading/progress.yaml
       notes: books/unix-linux-system-administration-handbook-5e-ru-2020/notes/
       diagrams: books/unix-linux-system-administration-handbook-5e-ru-2020/diagrams/
+
+- id: information-security-grodzensky-ru
+    title: "Информационная безопасность: учебное пособие"
+    authors:
+      - "Яков Сергеевич Гродзенский"
+    language: ru
+    paths:
+      reading_progress: books/information-security-grodzensky-ru/reading/progress.yaml
+
+  - id: mama-ya-timlid-ru
+    title: "Мама, я тимлид! Практические советы по руководству IT-командой"
+    authors:
+      - "Марина Перескокова"
+    language: ru
+    paths:
+      reading_progress: books/mama-ya-timlid-ru/reading/progress.yaml
+
+  - id: ai-engineering-chip-huyen-ru
+    title: "AI-инженерия. Построение приложений с использованием базовых моделей"
+    authors:
+      - "Чип Хьюен"
+    language: ru
+    paths:
+      reading_progress: books/ai-engineering-chip-huyen-ru/reading/progress.yaml
+
+  - id: designing-machine-learning-systems-chip-huyen-ru
+    title: "Проектирование систем машинного обучения"
+    authors:
+      - "Чип Хьюен"
+    language: ru
+    paths:
+      reading_progress: books/designing-machine-learning-systems-chip-huyen-ru/reading/progress.yaml
