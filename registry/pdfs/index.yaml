@@ -1,0 +1,98 @@
+schema: "biblioteka-vsp/registry-pdfs/v1"
+updated: "2026-09-24"
+
+storage:
+  directory: "registry/pdfs/"
+  git_lfs: true
+  binary_files_in_git: false
+  note: "Metadata is committed; binary transfer still requires a Git LFS-capable upload path."
+
+summary:
+  uploaded_files_received: 11
+  total_size_bytes: 132003006
+  verified_registry_matches: 8
+  needs_confirmation: 3
+
+files:
+  - inventory_number: "0001"
+    match_status: "verified"
+    canonical_path: "registry/pdfs/0001-kubernetes-v-deystvii.pdf"
+    source_filename: "Kubernetes в действии. Лукша.pdf"
+    size_bytes: 11315420
+    sha256: "0d50f167ed86088d0cc65d15e27f1ab397e7c0a0c8de4db3801b50439f24266f"
+
+  - inventory_number: "0005"
+    match_status: "verified"
+    canonical_path: "registry/pdfs/0005-sovremennye-operacionnye-sistemy-4e.pdf"
+    source_filename: "Современные операционные системы. Таненбаун,Бос.pdf"
+    size_bytes: 14229645
+    sha256: "57b4906fe976351be3cc7ba692bdcee069036667b5f1d042517aea04d37a3bbd"
+
+  - inventory_number: "0007"
+    match_status: "verified"
+    canonical_path: "registry/pdfs/0007-unix-linux-sysadmin-handbook-5e.pdf"
+    source_filename: "Unix и Linux руководство системного администратора. Немет.pdf"
+    size_bytes: 35463093
+    sha256: "4c1872cfa8d8d28b91b7c72db1eea7a1e1f50e6c045b7e7e4cd2089127da51ff"
+
+  - inventory_number: "0008"
+    match_status: "verified"
+    canonical_path: "registry/pdfs/0008-sql-pocket-guide-4e.pdf"
+    source_filename: "SQL. Pocket guide. Жао.pdf"
+    size_bytes: 3237669
+    sha256: "d2f6ccf4bae2ca1376e7818749f5482c1e358ce8aecccb2bb86b9f54173a1591"
+
+  - inventory_number: "0010"
+    match_status: "verified"
+    canonical_path: "registry/pdfs/0010-rag-i-generativnyy-ii.pdf"
+    source_filename: "RAG и генеративный ИИ. Ротман.pdf"
+    size_bytes: 8937745
+    sha256: "9a2928c7e1e8047f8374d8d196cfac5527a4cffffe81810f5173cc5cbacae332"
+
+  - inventory_number: "0027"
+    match_status: "verified"
+    canonical_path: "registry/pdfs/0027-a-byte-of-python-ru.pdf"
+    source_filename: "Byte of Python. Сваруп, Смолдяр.pdf"
+    size_bytes: 974463
+    sha256: "ac1abb7761fccb914988a583b4362c1760bafc3489c34f3f1fdb4ba45a0d7db5"
+
+  - inventory_number: "0029"
+    match_status: "verified"
+    canonical_path: "registry/pdfs/0029-ai-inzheneriya.pdf"
+    source_filename: "AI-инженерия. Построение приложений с использовани. Хьюен.pdf"
+    size_bytes: 12519374
+    sha256: "850c365211ba0e3d68a8ff8e7d7d48fb95188e24228270d11c0ec954c2062fba"
+
+  - inventory_number: "0043"
+    match_status: "verified"
+    canonical_path: "registry/pdfs/0043-osnovy-go.pdf"
+    source_filename: "Основы+Go.pdf"
+    size_bytes: 11753275
+    sha256: "4053ecbf84c72e4f03756add8a03874e4caf928a5c3ed69b6a06ef06f21d60cd"
+
+  - inventory_number: "0015"
+    match_status: "needs_confirmation"
+    canonical_path: "registry/pdfs/_unverified/linux-go-tsilyurik.pdf"
+    source_filename: "Linux и Go. Эффективное низкоуровневое программирование. Цилюрик.pdf"
+    observed_pdf_title: "Linux: эффективная многопроцессорность. Используем Go"
+    reason: "PDF title does not match registry item 0015 title."
+    size_bytes: 2092569
+    sha256: "df8db4893a8ddd656fcaaed7933b1bd639d32bd6cd18547a3b1d103bef7afdd2"
+
+  - inventory_number: "0009"
+    match_status: "needs_confirmation"
+    canonical_path: "registry/pdfs/_unverified/raspredelennye-sistemy-burns.pdf"
+    source_filename: "Распределенные системы. Паттерны проектирования. Бёрнс.pdf"
+    observed_pdf_title: "Распределенные системы. Паттерны проектирования"
+    reason: "PDF is the 2019 edition; registry item 0009 describes a different 2nd edition/title."
+    size_bytes: 4346628
+    sha256: "d4529f6267d0fe16d411c912a1ecc7ab4924530c376103ce5f16067aca337aa5"
+
+  - inventory_number: "0026"
+    match_status: "needs_confirmation"
+    canonical_path: "registry/pdfs/_unverified/osnovy-etichnogo-hakinga-chumilin.pdf"
+    source_filename: "Основы этичного хакинга Чумилин А.В.pdf"
+    observed_pdf_author: "Чумилин А. В."
+    reason: "PDF author surname differs from registry item 0026 (Чумычин)."
+    size_bytes: 27133125
+    sha256: "80047d7ba9b3799f4ff9b4197cce7ee2e2e9da86bdf7a8bea11b805707507b25"
