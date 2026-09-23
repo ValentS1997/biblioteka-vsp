@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#f4f7fb"/>
+<rect x="16" y="16" width="1568" height="76" rx="14" fill="#26384d"/>
+<text x="800" y="48" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff" text-anchor="middle">Глава 25. Контейнеры</text>
+<text x="800" y="74" font-family="Arial, sans-serif" font-size="17" fill="#dce8f4" text-anchor="middle">images • dockerd • lifecycle • volumes • networks • security • orchestration</text>
+
+<rect x="24" y="116" width="500" height="300" rx="14" fill="#f7fbff" stroke="#5b98cf" stroke-width="2"/>
+<text x="44" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#173d64">Container model</text>
+<text x="48" y="184" font-family="Arial, sans-serif" font-size="16" fill="#19324a">
+<tspan x="48" dy="0">Shared host kernel.</tspan>
+<tspan x="48" dy="25">Namespaces isolate views.</tspan>
+<tspan x="48" dy="25">cgroups limit resources.</tspan>
+<tspan x="48" dy="25">Capabilities + seccomp limit kernel access.</tspan>
+<tspan x="48" dy="31">Image layers are read-only.</tspan>
+<tspan x="48" dy="25">Container adds writable layer.</tspan>
+</text>
+
+<rect x="548" y="116" width="500" height="300" rx="14" fill="#f6fff8" stroke="#58ad79" stroke-width="2"/>
+<text x="568" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#18572f">Docker lifecycle</text>
+<text x="572" y="184" font-family="Consolas, monospace" font-size="15.5" fill="#19324a">
+<tspan x="572" dy="0">docker pull / images</tspan>
+<tspan x="572" dy="25">docker run / ps / inspect</tspan>
+<tspan x="572" dy="25">docker logs / exec</tspan>
+<tspan x="572" dy="25">docker stop / start</tspan>
+<tspan x="572" dy="25">docker rm / rmi</tspan>
+<tspan x="572" dy="31">PID 1 exit = container exit.</tspan>
+</text>
+
+<rect x="1072" y="116" width="504" height="300" rx="14" fill="#fff9f4" stroke="#d49a4c" stroke-width="2"/>
+<text x="1092" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#714500">Security boundary</text>
+<text x="1096" y="184" font-family="Arial, sans-serif" font-size="16" fill="#19324a">
+<tspan x="1096" dy="0">dockerd access is root-equivalent.</tspan>
+<tspan x="1096" dy="25">Remote daemon → TLS.</tspan>
+<tspan x="1096" dy="25">Run app as unprivileged USER.</tspan>
+<tspan x="1096" dy="25">Drop capabilities; avoid privileged mode.</tspan>
+<tspan x="1096" dy="31">Use trusted/signed images.</tspan>
+</text>
+
+<rect x="24" y="444" width="500" height="316" rx="14" fill="#fff7fb" stroke="#cf6d99" stroke-width="2"/>
+<text x="44" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#842044">Storage / network</text>
+<text x="48" y="512" font-family="Arial, sans-serif" font-size="16" fill="#19324a">
+<tspan x="48" dy="0">Volumes persist beyond container.</tspan>
+<tspan x="48" dy="25">Bind mount exposes host path.</tspan>
+<tspan x="48" dy="31">Networks: bridge • host • none</tspan>
+<tspan x="48" dy="25">bridge → docker0 + veth</tspan>
+<tspan x="48" dy="25">host mode reduces isolation.</tspan>
+</text>
+
+<rect x="548" y="444" width="500" height="316" rx="14" fill="#f7f7ff" stroke="#8179d6" stroke-width="2"/>
+<text x="568" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#474092">Immutable operations</text>
+<text x="572" y="512" font-family="Arial, sans-serif" font-size="16" fill="#19324a">
+<tspan x="572" dy="0">Dockerfile is image source of truth.</tspan>
+<tspan x="572" dy="25">Build new image instead of hand patching.</tspan>
+<tspan x="572" dy="25">Replace containers, do not maintain them.</tspan>
+<tspan x="572" dy="31">Logs → STDOUT / STDERR.</tspan>
+<tspan x="572" dy="25">Prune only after inventory.</tspan>
+</text>
+
+<rect x="1072" y="444" width="504" height="316" rx="14" fill="#f4fbff" stroke="#6d9fc8" stroke-width="2"/>
+<text x="1092" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#174d70">Cluster layer</text>
+<text x="1096" y="512" font-family="Arial, sans-serif" font-size="16" fill="#19324a">
+<tspan x="1096" dy="0">Scheduler places containers on nodes.</tspan>
+<tspan x="1096" dy="25">Health + service discovery + routing.</tspan>
+<tspan x="1096" dy="31">Kubernetes</tspan>
+<tspan x="1096" dy="25">Mesos / Marathon</tspan>
+<tspan x="1096" dy="25">Docker Swarm</tspan>
+<tspan x="1096" dy="25">AWS ECS</tspan>
+</text>
+
+<rect x="24" y="790" width="1552" height="78" rx="12" fill="#26384d"/>
+<text x="800" y="822" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Core: build immutable images, externalize persistent data, protect dockerd, observe logs, then orchestrate.</text>
+<text x="800" y="849" font-family="Arial, sans-serif" font-size="16" fill="#dce8f4" text-anchor="middle">Chapter context: Docker 1.13.1; version-specific syntax outside this source requires confirmation.</text>
+</svg>

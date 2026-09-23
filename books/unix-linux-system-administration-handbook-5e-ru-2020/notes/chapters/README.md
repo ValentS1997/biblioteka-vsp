@@ -26,4 +26,5 @@ Reviewed chapter-level notes are stored here. Historical notes are not reconstru
 - [Chapter 22 — SMB filesystem](chapter-22-smb/README.md)
 - [Chapter 23 — Configuration management](chapter-23-configuration-management/README.md)
 - [Chapter 24 — Virtualization](chapter-24-virtualization/README.md)
+- [Chapter 25 — Containers](chapter-25-containers/README.md)
 - [Chapter 29 — Performance analysis](chapter-29-performance-analysis/README.md)
