@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#f4f7fb"/>
+<rect x="16" y="16" width="1568" height="76" rx="14" fill="#26384d"/>
+<text x="800" y="49" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff" text-anchor="middle">Глава 20. Дисковая память</text>
+<text x="800" y="75" font-family="Arial, sans-serif" font-size="17" fill="#dce8f4" text-anchor="middle">device → GPT → LVM/RAID/pool → filesystem → mount → monitor → backup</text>
+
+<rect x="24" y="116" width="500" height="300" rx="14" fill="#f7fbff" stroke="#5b98cf" stroke-width="2"/>
+<text x="44" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#173d64">Rule zero: identify device</text>
+<text x="48" y="184" font-family="Consolas, monospace" font-size="16" fill="#19324a">
+<tspan x="48" dy="0">lsblk</tspan>
+<tspan x="48" dy="25">lsblk -o +MODEL,SERIAL</tspan>
+<tspan x="48" dy="25">geom disk list</tspan>
+<tspan x="48" dy="25">hdparm -I / camcontrol devlist</tspan>
+<tspan x="48" dy="32">Never trust transient /dev names.</tspan>
+<tspan x="48" dy="25">Use LABEL / UUID / GPT labels.</tspan>
+<tspan x="48" dy="25">Wrong disk + mkfs = catastrophe.</tspan>
+</text>
+
+<rect x="548" y="116" width="500" height="300" rx="14" fill="#f6fff8" stroke="#58ad79" stroke-width="2"/>
+<text x="568" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#18572f">LVM / RAID</text>
+<text x="572" y="184" font-family="Arial, sans-serif" font-size="16.2" fill="#19324a">
+<tspan x="572" dy="0">LVM: PV → VG → LV → filesystem</tspan>
+<tspan x="572" dy="25">Grow: LV first, filesystem second.</tspan>
+<tspan x="572" dy="25">Snapshots need reserved space.</tspan>
+<tspan x="572" dy="31">RAID 0 = performance, no redundancy</tspan>
+<tspan x="572" dy="25">RAID 1 = mirror • RAID 5/6 = parity</tspan>
+<tspan x="572" dy="25">mdadm → /proc/mdstat → monitoring</tspan>
+<tspan x="572" dy="25">RAID is not backup.</tspan>
+</text>
+
+<rect x="1072" y="116" width="504" height="300" rx="14" fill="#fff9f4" stroke="#d49a4c" stroke-width="2"/>
+<text x="1092" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#714500">Traditional filesystems</text>
+<text x="1096" y="184" font-family="Arial, sans-serif" font-size="16.2" fill="#19324a">
+<tspan x="1096" dy="0">UFS • ext4 • XFS</tspan>
+<tspan x="1096" dy="25">journaling → crash consistency</tspan>
+<tspan x="1096" dy="25">fsck → check/repair</tspan>
+<tspan x="1096" dy="25">mount / umount / fstab</tspan>
+<tspan x="1096" dy="31">Stable IDs in fstab.</tspan>
+<tspan x="1096" dy="25">mkswap / swapon for swap.</tspan>
+<tspan x="1096" dy="25">Verify with mount/df.</tspan>
+</text>
+
+<rect x="24" y="444" width="500" height="316" rx="14" fill="#fff7fb" stroke="#cf6d99" stroke-width="2"/>
+<text x="44" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#842044">ZFS</text>
+<text x="48" y="512" font-family="Consolas, monospace" font-size="15.5" fill="#19324a">
+<tspan x="48" dy="0">zpool list / status</tspan>
+<tspan x="48" dy="24">zfs list -r / zfs get all</tspan>
+<tspan x="48" dy="24">zfs snapshot / rollback / clone</tspan>
+<tspan x="48" dy="31">pool → vdev → dataset/zvol</tspan>
+<tspan x="48" dy="24">COW + checksums + properties</tspan>
+<tspan x="48" dy="24">destroy is destructive.</tspan>
+<tspan x="48" dy="24">Topology changes are constrained.</tspan>
+</text>
+
+<rect x="548" y="444" width="500" height="316" rx="14" fill="#f7f7ff" stroke="#8179d6" stroke-width="2"/>
+<text x="568" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#474092">Btrfs</text>
+<text x="572" y="512" font-family="Arial, sans-serif" font-size="16.1" fill="#19324a">
+<tspan x="572" dy="0">COW + checksums + integrated RAID</tspan>
+<tspan x="572" dy="25">device add → filesystem usage</tspan>
+<tspan x="572" dy="25">balance redistributes extents</tspan>
+<tspan x="572" dy="25">online RAID profile conversion</tspan>
+<tspan x="572" dy="31">subvolume → snapshot</tspan>
+<tspan x="572" dy="25">snapshots writable by default</tspan>
+<tspan x="572" dy="25">-r → read-only snapshot</tspan>
+</text>
+
+<rect x="1072" y="444" width="504" height="316" rx="14" fill="#f4fbff" stroke="#6d9fc8" stroke-width="2"/>
+<text x="1092" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#174d70">Backup / risk</text>
+<text x="1096" y="512" font-family="Arial, sans-serif" font-size="16.0" fill="#19324a">
+<tspan x="1096" dy="0">Replication does not stop bad data replication.</tspan>
+<tspan x="1096" dy="25">Backup must survive compromise/deletion.</tspan>
+<tspan x="1096" dy="25">Define retention, encryption, owners.</tspan>
+<tspan x="1096" dy="25">Test restore regularly.</tspan>
+<tspan x="1096" dy="31">Secure erase is irreversible.</tspan>
+<tspan x="1096" dy="25">Rebuild/balance can be heavy I/O.</tspan>
+<tspan x="1096" dy="25">Rollback: [Needs confirmation]</tspan>
+</text>
+
+<rect x="24" y="790" width="1552" height="78" rx="12" fill="#26384d"/>
+<text x="800" y="822" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Operational core: read-only discovery first, one storage-layer change at a time, verification after every layer.</text>
+<text x="800" y="849" font-family="Arial, sans-serif" font-size="16" fill="#dce8f4" text-anchor="middle">Availability mechanisms reduce hardware downtime; independent tested backups protect data.</text>
+</svg>
