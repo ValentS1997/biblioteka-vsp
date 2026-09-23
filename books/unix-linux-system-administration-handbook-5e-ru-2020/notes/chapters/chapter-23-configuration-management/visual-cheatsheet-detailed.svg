@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1060" viewBox="0 0 1600 1060">
+<rect width="1600" height="1060" fill="#f4f7fb"/>
+<rect x="12" y="12" width="1576" height="74" rx="14" fill="#26384d"/>
+<text x="800" y="43" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#fff" text-anchor="middle">Глава 23. Управление конфигурацией — итоговая шпаргалка</text>
+<text x="800" y="68" font-family="Arial, sans-serif" font-size="16" fill="#dce8f4" text-anchor="middle">CM concepts • idempotency • Ansible • Salt • secrets • targeting • environments • recommendations</text>
+
+<rect x="14" y="104" width="382" height="278" rx="12" fill="#f7fbff" stroke="#5b98cf" stroke-width="2"/>
+<text x="32" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#173d64">1. Desired state</text>
+<text x="36" y="164" font-family="Arial, sans-serif" font-size="12.6" fill="#19324a">
+<tspan x="36" dy="0">Replace snowflakes with reproducible code.</tspan>
+<tspan x="36" dy="19">VCS = history + rollback baseline + documentation.</tspan>
+<tspan x="36" dy="24">Declarative intent over procedural scripts.</tspan>
+<tspan x="36" dy="19">Operations should be idempotent.</tspan>
+<tspan x="36" dy="24">Changed state must be observable.</tspan>
+<tspan x="36" dy="19">Manual unmanaged edits break the model.</tspan>
+</text>
+
+<rect x="408" y="104" width="382" height="278" rx="12" fill="#f6fff8" stroke="#58ad79" stroke-width="2"/>
+<text x="426" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#18572f">2. Common CM primitives</text>
+<text x="430" y="164" font-family="Arial, sans-serif" font-size="12.6" fill="#19324a">
+<tspan x="430" dy="0">operations / modules / states</tspan>
+<tspan x="430" dy="19">parameters + variables</tspan>
+<tspan x="430" dy="19">facts / grains</tspan>
+<tspan x="430" dy="19">handlers / change reactions</tspan>
+<tspan x="430" dy="19">dependencies</tspan>
+<tspan x="430" dy="19">packages / repositories</tspan>
+<tspan x="430" dy="19">environments + client registration</tspan>
+</text>
+
+<rect x="802" y="104" width="382" height="278" rx="12" fill="#fff9f4" stroke="#d49a4c" stroke-width="2"/>
+<text x="820" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#714500">3. Ansible model</text>
+<text x="824" y="164" font-family="Arial, sans-serif" font-size="12.4" fill="#19324a">
+<tspan x="824" dy="0">No client daemon; SSH + Python.</tspan>
+<tspan x="824" dy="19">inventory → hosts/groups</tspan>
+<tspan x="824" dy="19">playbook → plays → tasks</tspan>
+<tspan x="824" dy="19">roles package reusable behavior.</tspan>
+<tspan x="824" dy="24">Jinja/YAML parameterize config.</tspan>
+<tspan x="824" dy="19">Tags narrow debug/run scope.</tspan>
+<tspan x="824" dy="19">ansible-playbook applies configuration.</tspan>
+</text>
+
+<rect x="1196" y="104" width="390" height="278" rx="12" fill="#fff7fb" stroke="#cf6d99" stroke-width="2"/>
+<text x="1214" y="134" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#842044">4. Ansible security</text>
+<text x="1218" y="164" font-family="Arial, sans-serif" font-size="12.3" fill="#19324a">
+<tspan x="1218" dy="0">Separate SSH and privilege credentials.</tspan>
+<tspan x="1218" dy="19">Protect private keys with passphrases.</tspan>
+<tspan x="1218" dy="19">Do not keep private keys in config repo.</tspan>
+<tspan x="1218" dy="24">Vault encrypts YAML/INI secrets.</tspan>
+<tspan x="1218" dy="19">--ask-vault-pass is interactive.</tspan>
+<tspan x="1218" dy="19">password-file mode lowers security.</tspan>
+</text>
+
+<rect x="14" y="398" width="502" height="286" rx="12" fill="#f7f7ff" stroke="#8179d6" stroke-width="2"/>
+<text x="32" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#474092">5. Salt architecture</text>
+<text x="36" y="458" font-family="Arial, sans-serif" font-size="12.5" fill="#19324a">
+<tspan x="36" dy="0">salt-master ↔ salt-minion</tspan>
+<tspan x="36" dy="19">Master TCP ports: 4505 / 4506.</tspan>
+<tspan x="36" dy="24">Minion registration requires approval.</tspan>
+<tspan x="36" dy="19">grains = minion facts</tspan>
+<tspan x="36" dy="19">pillar = master-generated host data</tspan>
+<tspan x="36" dy="24">top.sls binds targets to configuration.</tspan>
+</text>
+
+<rect x="528" y="398" width="502" height="286" rx="12" fill="#f5fff7" stroke="#58ad79" stroke-width="2"/>
+<text x="546" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#18572f">6. Salt execution</text>
+<text x="550" y="458" font-family="Arial, sans-serif" font-size="12.5" fill="#19324a">
+<tspan x="550" dy="0">state functions → idempotent state</tspan>
+<tspan x="550" dy="19">execution functions → actions</tspan>
+<tspan x="550" dy="24">state.apply → highstate</tspan>
+<tspan x="550" dy="19">state.apply file → targeted state</tspan>
+<tspan x="550" dy="19">state.highstate → full highstate</tspan>
+<tspan x="550" dy="24">Targeting can use ID, grains, pillar, IP.</tspan>
+</text>
+
+<rect x="1042" y="398" width="544" height="286" rx="12" fill="#fffdf3" stroke="#d5ad37" stroke-width="2"/>
+<text x="1060" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#714500">7. Ansible vs Salt</text>
+<text x="1064" y="458" font-family="Arial, sans-serif" font-size="12.3" fill="#19324a">
+<tspan x="1064" dy="0">Ansible: agentless, easier initial deployment.</tspan>
+<tspan x="1064" dy="19">Ansible: flexible security, slower fan-out.</tspan>
+<tspan x="1064" dy="24">Salt: fast, master/minion, easier scaling.</tspan>
+<tspan x="1064" dy="19">Salt: master security is critical.</tspan>
+<tspan x="1064" dy="24">Both: large module ecosystems + Python extension.</tspan>
+<tspan x="1064" dy="19">Choose for environment, not feature-count alone.</tspan>
+</text>
+
+<rect x="14" y="700" width="760" height="250" rx="12" fill="#f4fbff" stroke="#6d9fc8" stroke-width="2"/>
+<text x="32" y="730" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#174d70">8. Repository and rollout discipline</text>
+<text x="36" y="760" font-family="Arial, sans-serif" font-size="12.5" fill="#19324a">
+<tspan x="36" dy="0">One authoritative version-controlled configuration base.</tspan>
+<tspan x="36" dy="19">Plan hierarchy and ownership before scale.</tspan>
+<tspan x="36" dy="19">Each file should have a clear purpose.</tspan>
+<tspan x="36" dy="24">Review third-party roles/formulas.</tspan>
+<tspan x="36" dy="19">Test in representative non-production environment.</tspan>
+<tspan x="36" dy="19">Roll out in stages; do not bypass CM manually.</tspan>
+</text>
+
+<rect x="786" y="700" width="800" height="250" rx="12" fill="#fff8f2" stroke="#d17e4f" stroke-width="2"/>
+<text x="804" y="730" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#7b3e1e">9. Risk and rollback</text>
+<text x="808" y="760" font-family="Arial, sans-serif" font-size="12.5" fill="#19324a">
+<tspan x="808" dy="0">Secrets in plaintext Git history are a persistent risk.</tspan>
+<tspan x="808" dy="19">Control/master host concentrates privilege.</tspan>
+<tspan x="808" dy="19">Raw shell may hide side effects and non-idempotency.</tspan>
+<tspan x="808" dy="19">Manual drift makes managed state unreliable.</tspan>
+<tspan x="808" dy="24">Rollback: known-good Git revision → re-apply → verify.</tspan>
+<tspan x="808" dy="19">Without baseline: [Needs confirmation]</tspan>
+</text>
+
+<rect x="14" y="978" width="1572" height="58" rx="10" fill="#26384d"/>
+<text x="800" y="1002" font-family="Arial, sans-serif" font-size="15.5" font-weight="700" fill="#fff" text-anchor="middle">Core: configuration management succeeds when code, credentials, testing, targeting and rollout are governed as one system.</text>
+<text x="800" y="1026" font-family="Arial, sans-serif" font-size="14.5" fill="#dce8f4" text-anchor="middle">Automation without versioned baseline and operational discipline only makes drift and failure faster.</text>
+</svg>

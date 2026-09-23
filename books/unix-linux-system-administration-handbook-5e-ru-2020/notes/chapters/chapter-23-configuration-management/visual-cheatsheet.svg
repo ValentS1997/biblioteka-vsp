@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#f4f7fb"/>
+<rect x="16" y="16" width="1568" height="76" rx="14" fill="#26384d"/>
+<text x="800" y="48" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#fff" text-anchor="middle">Глава 23. Управление конфигурацией</text>
+<text x="800" y="74" font-family="Arial, sans-serif" font-size="17" fill="#dce8f4" text-anchor="middle">desired state • idempotency • Ansible • Salt • security • staged rollout</text>
+
+<rect x="24" y="116" width="500" height="300" rx="14" fill="#f7fbff" stroke="#5b98cf" stroke-width="2"/>
+<text x="44" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#173d64">Core model</text>
+<text x="48" y="184" font-family="Arial, sans-serif" font-size="16" fill="#19324a">
+<tspan x="48" dy="0">Desired state lives in code.</tspan>
+<tspan x="48" dy="25">Version control gives history and baseline.</tspan>
+<tspan x="48" dy="25">Operations should be idempotent.</tspan>
+<tspan x="48" dy="25">Facts/variables parameterize behavior.</tspan>
+<tspan x="48" dy="31">No manual snowflake drift.</tspan>
+<tspan x="48" dy="25">Test before production.</tspan>
+</text>
+
+<rect x="548" y="116" width="500" height="300" rx="14" fill="#f6fff8" stroke="#58ad79" stroke-width="2"/>
+<text x="568" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#18572f">Ansible</text>
+<text x="572" y="184" font-family="Arial, sans-serif" font-size="16" fill="#19324a">
+<tspan x="572" dy="0">Agentless: SSH + Python.</tspan>
+<tspan x="572" dy="25">inventory → playbook → tasks/roles</tspan>
+<tspan x="572" dy="25">Jinja + YAML.</tspan>
+<tspan x="572" dy="31">ansible-playbook example.yml</tspan>
+<tspan x="572" dy="25">Vault protects config secrets.</tspan>
+<tspan x="572" dy="25">SSH and sudo credentials are separate boundaries.</tspan>
+</text>
+
+<rect x="1072" y="116" width="504" height="300" rx="14" fill="#fff9f4" stroke="#d49a4c" stroke-width="2"/>
+<text x="1092" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#714500">Salt</text>
+<text x="1096" y="184" font-family="Arial, sans-serif" font-size="16" fill="#19324a">
+<tspan x="1096" dy="0">master ↔ minion</tspan>
+<tspan x="1096" dy="25">TCP 4505/4506 on master.</tspan>
+<tspan x="1096" dy="25">grains = host facts</tspan>
+<tspan x="1096" dy="25">pillar = master-side variables</tspan>
+<tspan x="1096" dy="31">top.sls → state bindings</tspan>
+<tspan x="1096" dy="25">state.apply / state.highstate</tspan>
+</text>
+
+<rect x="24" y="444" width="500" height="316" rx="14" fill="#fff7fb" stroke="#cf6d99" stroke-width="2"/>
+<text x="44" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#842044">Security</text>
+<text x="48" y="512" font-family="Arial, sans-serif" font-size="16" fill="#19324a">
+<tspan x="48" dy="0">CM node has broad administrative reach.</tspan>
+<tspan x="48" dy="25">Harden it as a high-value target.</tspan>
+<tspan x="48" dy="25">Never commit plaintext secrets.</tspan>
+<tspan x="48" dy="25">Do not store private SSH keys in repo.</tspan>
+<tspan x="48" dy="31">Approve Salt minions explicitly.</tspan>
+<tspan x="48" dy="25">Scope credentials by trust zone.</tspan>
+</text>
+
+<rect x="548" y="444" width="500" height="316" rx="14" fill="#f7f7ff" stroke="#8179d6" stroke-width="2"/>
+<text x="568" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#474092">Safe rollout</text>
+<text x="572" y="512" font-family="Arial, sans-serif" font-size="16" fill="#19324a">
+<tspan x="572" dy="0">change → review → representative test</tspan>
+<tspan x="572" dy="25">→ limited apply → inspect results</tspan>
+<tspan x="572" dy="25">→ staged expansion</tspan>
+<tspan x="572" dy="31">Keep known-good Git revision.</tspan>
+<tspan x="572" dy="25">Third-party content requires review.</tspan>
+<tspan x="572" dy="25">Do not first-test in production.</tspan>
+</text>
+
+<rect x="1072" y="444" width="504" height="316" rx="14" fill="#f4fbff" stroke="#6d9fc8" stroke-width="2"/>
+<text x="1092" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#174d70">Operational boundaries</text>
+<text x="1096" y="512" font-family="Arial, sans-serif" font-size="16" fill="#19324a">
+<tspan x="1096" dy="0">CM manages machine state.</tspan>
+<tspan x="1096" dy="25">Deployment orchestration is distinct.</tspan>
+<tspan x="1096" dy="25">Raw shell may hide side effects.</tspan>
+<tspan x="1096" dy="25">Manual bypass creates drift.</tspan>
+<tspan x="1096" dy="31">Rollback = known-good revision + re-apply.</tspan>
+<tspan x="1096" dy="25">No baseline: [Needs confirmation]</tspan>
+</text>
+
+<rect x="24" y="790" width="1552" height="78" rx="12" fill="#26384d"/>
+<text x="800" y="822" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#fff" text-anchor="middle">Core: configuration management is a process discipline around desired state, not merely a remote command runner.</text>
+<text x="800" y="849" font-family="Arial, sans-serif" font-size="16" fill="#dce8f4" text-anchor="middle">Versioned baseline + test + scoped apply + verification + staged rollout.</text>
+</svg>
