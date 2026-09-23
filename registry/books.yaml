@@ -302,3 +302,98 @@ verification_sources:
     checked: "Авторы; переводчик"
     basis: "Фото пользователя + ДМК Пресс"
     source_url: "https://www.dmkpress.com/catalog/computer/os/978-6-01810-341-4/"
+electronic_holdings:
+  source: "user-provided ls -la listing"
+  observed_date: "2026-09-24"
+  file_count: 21
+  matched_unambiguous: 16
+  needs_confirmation: 3
+  unregistered: 2
+  files:
+    - filename: "AI-инженерия. Построение приложений с использовани. Хьюен.pdf"
+      format: "pdf"
+      match_status: "matched"
+      inventory_numbers: ["0029"]
+    - filename: "Byte of Python. Сваруп, Смолдяр.pdf"
+      format: "pdf"
+      match_status: "matched"
+      inventory_numbers: ["0027"]
+    - filename: "Kubernetes в действии. Лукша.pdf"
+      format: "pdf"
+      match_status: "matched"
+      inventory_numbers: ["0001"]
+    - filename: "Linux и Go. Эффективное низкоуровневое программирование. Цилюрик.pdf"
+      format: "pdf"
+      match_status: "matched"
+      inventory_numbers: ["0015"]
+    - filename: "RAG и генеративный ИИ. Ротман.pdf"
+      format: "pdf"
+      match_status: "matched"
+      inventory_numbers: ["0010"]
+    - filename: "SQL. Pocket guide. Жао.pdf"
+      format: "pdf"
+      match_status: "matched"
+      inventory_numbers: ["0008"]
+    - filename: "Unix и Linux руководство системного администратора. Немет.pdf"
+      format: "pdf"
+      match_status: "matched"
+      inventory_numbers: ["0007"]
+    - filename: "Архитектура компьютера (6-е издание). Таненбаум.pdf"
+      format: "pdf"
+      match_status: "matched"
+      inventory_numbers: ["0006"]
+    - filename: "Высоконагруженные приложения.  Программирование, масштабирование, поддержка. Клеппман.pdf"
+      format: "pdf"
+      match_status: "matched"
+      inventory_numbers: ["0035"]
+    - filename: "Изучаем Python. Программирование игр, визуализация данных, веб-приложения. Мэтиз.epub"
+      format: "epub"
+      match_status: "matched"
+      inventory_numbers: ["0018"]
+    - filename: "Информационная безопасность. Гродзенский.pdf"
+      format: "pdf"
+      match_status: "matched"
+      inventory_numbers: ["0016"]
+    - filename: "Как оценить риски в кибербезопасности. Лучшие инструменты и практики. Хаббард.epub"
+      format: "epub"
+      match_status: "matched"
+      inventory_numbers: ["0023"]
+    - filename: "Командная строка Linux.Лучшие практики. Барретт.pdf"
+      format: "pdf"
+      match_status: "unregistered"
+      inventory_numbers: []
+    - filename: "Командная строка Linux. Полное руководство. Шоттс.pdf"
+      format: "pdf"
+      match_status: "unregistered"
+      inventory_numbers: []
+    - filename: " Компьютерные сети. Принципы, технологии, протоколы. Олиферы.pdf"
+      format: "pdf"
+      match_status: "ambiguous"
+      inventory_numbers: ["0002", "0003"]
+      note: "В имени файла не указано издание; нельзя однозначно выбрать между 0002 и 0003."
+    - filename: "Компьютерные сети. Таненбаум, Фимстер, Уэзерполл.pdf"
+      format: "pdf"
+      match_status: "matched"
+      inventory_numbers: ["0004"]
+    - filename: "Мама, я тимлид! Практические советы по руководству IT-командой. Перескокова.epub"
+      format: "epub"
+      match_status: "matched"
+      inventory_numbers: ["0022"]
+    - filename: "Основы+Go.pdf"
+      format: "pdf"
+      match_status: "matched"
+      inventory_numbers: ["0043"]
+    - filename: "Основы этичного хакинга Чумилин А.В.pdf"
+      format: "pdf"
+      match_status: "needs_confirmation"
+      inventory_numbers: ["0026"]
+      note: "Название совпадает, но фамилия автора в имени файла «Чумилин», в реестре — «Чумычин»."
+    - filename: "Распределенные системы. Паттерны проектирования. Бёрнс.pdf"
+      format: "pdf"
+      match_status: "needs_confirmation"
+      inventory_numbers: ["0009"]
+      note: "Автор совпадает, но название/издание не совпадает с записью 0009 (2-е изд.)."
+    - filename: "Современные операционные системы. Таненбаун,Бос.pdf"
+      format: "pdf"
+      match_status: "matched"
+      inventory_numbers: ["0005"]
