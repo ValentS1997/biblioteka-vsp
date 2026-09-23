@@ -1,0 +1,154 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import argparse, sys, yaml
+
+ROOT = Path(__file__).resolve().parents[1]
+REGISTRY = ROOT / "registry/books.yaml"
+INDEX = ROOT / "books/index.yaml"
+OUTPUT = ROOT / "registry/README.md"
+
+def y(path):
+    return yaml.safe_load(path.read_text(encoding="utf-8"))
+
+def esc(v):
+    return str(v).replace("|", "\\|").replace("\n", " ")
+
+def read_label(status):
+    return {"completed": "Да", "in_progress": "В процессе"}.get(status, "—")
+
+def rag_label(m):
+    if not m:
+        return "—"
+    status = ((m.get("validation") or {}).get("status") or "")
+    return "Да" if status.startswith("READY") else "⚠️"
+
+def render():
+    reg, idx = y(REGISTRY), y(INDEX)
+    idx_by_id = {b["id"]: b for b in idx.get("books", [])}
+    holdings = reg["electronic_holdings"]["files"]
+
+    electronic = {}
+    for h in holdings:
+        for inv in h.get("inventory_numbers", []):
+            electronic.setdefault(inv, []).append(h)
+
+    def elabel(inv):
+        items = electronic.get(inv, [])
+        if not items:
+            return "—"
+        fmts, uncertain = [], False
+        for h in items:
+            f = str(h.get("format", "")).upper()
+            if f and f not in fmts:
+                fmts.append(f)
+            uncertain |= h.get("match_status") != "matched"
+        label = "/".join(fmts) or "—"
+        return f"⚠️ {label}" if uncertain and label != "—" else label
+
+    progress, rags = {}, {}
+    for kid, item in idx_by_id.items():
+        paths = item.get("paths") or {}
+        if paths.get("reading_progress") and (ROOT / paths["reading_progress"]).is_file():
+            progress[kid] = y(ROOT / paths["reading_progress"])
+        if paths.get("rag_manifest") and (ROOT / paths["rag_manifest"]).is_file():
+            rags[kid] = y(ROOT / paths["rag_manifest"])
+
+    books = sorted(reg["books"], key=lambda b: b["number"])
+    lines = [
+        "<!-- GENERATED FILE. DO NOT EDIT MANUALLY. -->",
+        "<!-- Source: registry/books.yaml + books/index.yaml + per-book reading/RAG manifests -->",
+        "",
+        "# Реестр библиотеки",
+        "",
+        "Канонический human-readable view. Архитектурный контракт: [`ARCHITECTURE.md`](./ARCHITECTURE.md).",
+        "",
+        f"> **{len(books)} инвентарных книг** · инвентарные номера `0001–0046` · **{reg['electronic_holdings']['file_count']} электронный файл** · актуально на `{reg['updated']}`",
+        "",
+        "## Реестр книг",
+        "",
+        "Обозначения: `Эл.` — известная электронная версия; `Прочитано` — derived из `books/<knowledge-id>/reading/progress.yaml`; `RAG` — derived из `books/<knowledge-id>/rag/manifest.yaml`.",
+        "",
+        "| № | Инв. № | Название | Кратко | Направление | Автор(ы) | Перевод / редактура | Эл. | Прочитано | RAG |",
+        "|---:|:------:|---|---|---|---|---|:---:|:---:|:---:|",
+    ]
+
+    reverse = {}
+    completed = active = rag_ready = 0
+    for b in books:
+        inv, kid = b["inventory_number"], b.get("knowledge_id")
+        if kid:
+            reverse[kid] = inv
+        p = progress.get(kid) if kid else None
+        rd = read_label((p or {}).get("status"))
+        if rd == "Да": completed += 1
+        if rd == "В процессе": active += 1
+        rg = rag_label(rags.get(kid) if kid else None)
+        if rg == "Да": rag_ready += 1
+        lines.append(
+            f"| {b['number']} | `{inv}` | **{esc(b['title'])}** | {esc(b['summary_short'])} | "
+            f"{esc(b['direction'])} | {esc(b['authors_raw'])} | {esc(b['translators_editors_raw'])} | "
+            f"{elabel(inv)} | {rd} | {rg} |"
+        )
+
+    pairs = set()
+    for kid, p in progress.items():
+        pair = p.get("paired_reading")
+        if isinstance(pair, dict) and pair.get("book_id") in idx_by_id:
+            pairs.add(tuple(sorted((kid, pair["book_id"]))))
+    if pairs:
+        lines += ["", "## Связки чтения", ""]
+        for a, b in sorted(pairs):
+            lines.append(
+                f"- `{reverse.get(a, '[Needs confirmation]')}` **{esc(idx_by_id[a].get('title', a))}** ↔ "
+                f"`{reverse.get(b, '[Needs confirmation]')}` **{esc(idx_by_id[b].get('title', b))}** — читать в паре."
+            )
+
+    unregistered = [h for h in holdings if h.get("match_status") == "unregistered"]
+    if unregistered:
+        lines += ["", "## Электронные книги без инвентарного номера", "", "| Файл | Формат | Инв. № |", "|---|:---:|:---:|"]
+        for h in unregistered:
+            lines.append(f"| `{esc(h['filename'])}` | {str(h['format']).upper()} | [Needs confirmation] |")
+
+    uncertain = [h for h in holdings if h.get("match_status") in {"ambiguous", "needs_confirmation"}]
+    if uncertain:
+        lines += ["", "## Неоднозначные сопоставления", "", "| Позиция | Статус | Причина |", "|---|:---:|---|"]
+        for h in uncertain:
+            refs = " / ".join(f"`{x}`" for x in h.get("inventory_numbers", [])) or "—"
+            lines.append(f"| {refs} | ⚠️ {str(h['format']).upper()} | {esc(h.get('note', '[Needs confirmation]'))} |")
+
+    src, eh = reg["source"], reg["electronic_holdings"]
+    lines += [
+        "", "## Контроль", "", "| Параметр | Значение |", "|---|---:|",
+        f"| Инвентарных книг | **{len(books)}** |",
+        f"| Knowledge mappings | **{sum(1 for b in books if b.get('knowledge_id'))}** |",
+        f"| Электронных файлов | **{eh['file_count']}** |",
+        f"| Однозначно сопоставлено | **{eh['matched_unambiguous']}** |",
+        f"| Требует подтверждения | **{eh['needs_confirmation']}** |",
+        f"| Вне inventory | **{eh['unregistered']}** |",
+        f"| Прочитано | **{completed}** |",
+        f"| В процессе | **{active}** |",
+        f"| RAG READY | **{rag_ready}** |",
+        f"| SHA-256 Excel snapshot | `{src['sha256']}` |",
+        f"| Размер Excel snapshot | `{src['size_bytes']} bytes` |",
+        "", "README генерируется автоматически. Для изменения статусов правьте только canonical sources.", ""
+    ]
+    return "\n".join(lines)
+
+def main():
+    ap = argumentParser()
+    ap.add_argument("--check", action="store_true")
+    args = ap.parse_args()
+    out = render()
+    if args.check:
+        current = OUTPUT.read_text(encoding="utf-8") if OUTPUT.exists() else ""
+        if current != out:
+            print("registry/README.md is stale; run: python scripts/generate_registry_readme.py", file=sys.stderr)
+            return 1
+        print("registry/README.md is up to date")
+        return 0
+    OUTPUT.write_text(out, encoding="utf-8")
+    print("wrote registry/README.md")
+    return 0
+
+if __name__ == "__main__":
+    raise SystemExit(main())
