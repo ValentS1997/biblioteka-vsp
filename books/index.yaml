@@ -47,7 +47,7 @@ books:
       notes: books/unix-linux-system-administration-handbook-5e-ru-2020/notes/
       diagrams: books/unix-linux-system-administration-handbook-5e-ru-2020/diagrams/
 
-- id: information-security-grodzensky-ru
+  - id: information-security-grodzensky-ru
     title: "Информационная безопасность: учебное пособие"
     authors:
       - "Яков Сергеевич Гродзенский"
