@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#f4f7fb"/>
+<rect x="16" y="16" width="1568" height="76" rx="14" fill="#26384d"/>
+<text x="800" y="48" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff" text-anchor="middle">Глава 21. Сетевая файловая система NFS</text>
+<text x="800" y="74" font-family="Arial, sans-serif" font-size="17" fill="#dce8f4" text-anchor="middle">export policy → security → mount semantics → nfsstat → automount</text>
+
+<rect x="24" y="116" width="500" height="300" rx="14" fill="#f7fbff" stroke="#5b98cf" stroke-width="2"/>
+<text x="44" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#173d64">Versions / architecture</text>
+<text x="48" y="184" font-family="Arial, sans-serif" font-size="16" fill="#19324a">
+<tspan x="48" dy="0">v2/v3: stateless-oriented</tspan>
+<tspan x="48" dy="25">mountd + nfsd; lockd/statd</tspan>
+<tspan x="48" dy="25">v3: UDP or TCP</tspan>
+<tspan x="48" dy="31">v4: stateful • TCP • port 2049</tspan>
+<tspan x="48" dy="25">integrated locking</tspan>
+<tspan x="48" dy="25">single exported pseudofilesystem</tspan>
+<tspan x="48" dy="25">identity mapping for attributes</tspan>
+</text>
+
+<rect x="548" y="116" width="500" height="300" rx="14" fill="#f6fff8" stroke="#58ad79" stroke-width="2"/>
+<text x="568" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#18572f">Server / exports</text>
+<text x="572" y="184" font-family="Consolas, monospace" font-size="15.5" fill="#19324a">
+<tspan x="572" dy="0">Linux: /etc/exports</tspan>
+<tspan x="572" dy="24">exportfs -a → exportfs -v</tspan>
+<tspan x="572" dy="31">FreeBSD: /etc/exports</tspan>
+<tspan x="572" dy="24">service nfsd restart</tspan>
+<tspan x="572" dy="24">service mountd reload</tspan>
+<tspan x="572" dy="31">Explicit clients + explicit access.</tspan>
+<tspan x="572" dy="24">Avoid no_root_squash / async blindly.</tspan>
+</text>
+
+<rect x="1072" y="116" width="504" height="300" rx="14" fill="#fff9f4" stroke="#d49a4c" stroke-width="2"/>
+<text x="1092" y="150" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#714500">Security</text>
+<text x="1096" y="184" font-family="Arial, sans-serif" font-size="16" fill="#19324a">
+<tspan x="1096" dy="0">AUTH_SYS trusts client UID/GID.</tspan>
+<tspan x="1096" dy="25">root_squash reduces remote root.</tspan>
+<tspan x="1096" dy="31">RPCSEC_GSS + Kerberos:</tspan>
+<tspan x="1096" dy="25">krb5 = authentication</tspan>
+<tspan x="1096" dy="25">krb5i = + integrity</tspan>
+<tspan x="1096" dy="25">krb5p = + confidentiality</tspan>
+<tspan x="1096" dy="25">Filter network access.</tspan>
+</text>
+
+<rect x="24" y="444" width="500" height="316" rx="14" fill="#fff7fb" stroke="#cf6d99" stroke-width="2"/>
+<text x="44" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#842044">Client mount</text>
+<text x="48" y="512" font-family="Consolas, monospace" font-size="15.2" fill="#19324a">
+<tspan x="48" dy="0">showmount -e server  (v2/v3)</tspan>
+<tspan x="48" dy="24">mount ... server:/path /mnt</tspan>
+<tspan x="48" dy="24">mount ... server:/ /mnt  (v4)</tspan>
+<tspan x="48" dy="31">hard → wait for server</tspan>
+<tspan x="48" dy="24">soft → return errors</tspan>
+<tspan x="48" dy="24">bg / intr / sec / nfsvers</tspan>
+<tspan x="48" dy="24">df → verify mount</tspan>
+</text>
+
+<rect x="548" y="444" width="500" height="316" rx="14" fill="#f7f7ff" stroke="#8179d6" stroke-width="2"/>
+<text x="568" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#474092">Observe before tuning</text>
+<text x="572" y="512" font-family="Arial, sans-serif" font-size="16" fill="#19324a">
+<tspan x="572" dy="0">nfsstat -s → server</tspan>
+<tspan x="572" dy="25">nfsstat -c → client</tspan>
+<tspan x="572" dy="25">netstat → network evidence</tspan>
+<tspan x="572" dy="25">ps / uptime → nfsd thread effects</tspan>
+<tspan x="572" dy="31">rsize / wsize / timeo are tuning.</tspan>
+<tspan x="572" dy="25">Change only from measured evidence.</tspan>
+<tspan x="572" dy="25">Keep previous values for rollback.</tspan>
+</text>
+
+<rect x="1072" y="444" width="504" height="316" rx="14" fill="#f4fbff" stroke="#6d9fc8" stroke-width="2"/>
+<text x="1092" y="478" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#174d70">Automount</text>
+<text x="1096" y="512" font-family="Arial, sans-serif" font-size="16" fill="#19324a">
+<tspan x="1096" dy="0">autofs mounts on access.</tspan>
+<tspan x="1096" dy="25">indirect • direct • master maps</tspan>
+<tspan x="1096" dy="25">automount -L → dry-run</tspan>
+<tspan x="1096" dy="25">automount -v → verbose apply</tspan>
+<tspan x="1096" dy="31">Replicated sources: read-only.</tspan>
+<tspan x="1096" dy="25">Automount does not sync writes.</tspan>
+<tspan x="1096" dy="25">Persist only after manual mount works.</tspan>
+</text>
+
+<rect x="24" y="790" width="1552" height="78" rx="12" fill="#26384d"/>
+<text x="800" y="822" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Core: verify export scope and security first; then mount behavior; then runtime statistics; only then automate.</text>
+<text x="800" y="849" font-family="Arial, sans-serif" font-size="16" fill="#dce8f4" text-anchor="middle">NFSv4 identity mapping changes names/ownership representation; it does not replace authentication.</text>
+</svg>
