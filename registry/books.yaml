@@ -1,4 +1,4 @@
-schema: "biblioteka-vsp/registry/v1"
+schema: "biblioteka-vsp/registry/v2"
 updated: "2026-09-24"
 
 source:
@@ -38,6 +38,7 @@ books:
     direction: "Сети"
   - number: 4
     inventory_number: "0004"
+    knowledge_id: "computer-networks-6e-ru-2023"
     title: "Компьютерные сети. 6-е изд."
     authors_raw: "Эндрю С. Таненбаум; Ник Фимстер; Дэвид Уэзеролл"
     translators_editors_raw: "Е. П. Матвеев; И. А. Пальти; С. В. Черников"
@@ -59,6 +60,7 @@ books:
     direction: "Computer Architecture"
   - number: 7
     inventory_number: "0007"
+    knowledge_id: "unix-linux-system-administration-handbook-5e-ru-2020"
     title: "UNIX и Linux. Руководство системного администратора. 5-е изд."
     authors_raw: "Эви Немет; Гарт Снайдер; Трент Р. Хейн; Бэн Уэйли; Дэн Макин"
     translators_editors_raw: "Д. А. Клюшин"
@@ -122,6 +124,7 @@ books:
     direction: "Go / Linux"
   - number: 16
     inventory_number: "0016"
+    knowledge_id: "information-security-grodzensky-ru"
     title: "Информационная безопасность: учебное пособие"
     authors_raw: "Яков Сергеевич Гродзенский"
     translators_editors_raw: "не требуется, оригинал на русском"
@@ -164,6 +167,7 @@ books:
     direction: "Engineering Management"
   - number: 22
     inventory_number: "0022"
+    knowledge_id: "mama-ya-timlid-ru"
     title: "Мама, я тимлид! Практические советы по руководству IT-командой"
     authors_raw: "Марина Перескокова"
     translators_editors_raw: "не требуется, оригинал на русском"
@@ -213,6 +217,7 @@ books:
     direction: "1C Development"
   - number: 29
     inventory_number: "0029"
+    knowledge_id: "ai-engineering-chip-huyen-ru"
     title: "AI-инженерия. Построение приложений с использованием базовых моделей"
     authors_raw: "Чип Хьюен"
     translators_editors_raw: "Ю. Талагаева"
@@ -227,6 +232,7 @@ books:
     direction: "1C Development"
   - number: 31
     inventory_number: "0031"
+    knowledge_id: "designing-machine-learning-systems-chip-huyen-ru"
     title: "Проектирование систем машинного обучения"
     authors_raw: "Чип Хьюен"
     translators_editors_raw: "--"
@@ -395,16 +401,6 @@ verification_sources:
     basis: "Фото пользователя + ДМК Пресс"
     source_url: "https://www.dmkpress.com/catalog/computer/os/978-6-01810-341-4/"
 
-reading_rag_status:
-  source: "user-confirmed"
-  updated: "2026-09-24"
-  read_inventory_numbers: ["0004", "0007", "0016", "0022"]
-  in_progress_inventory_numbers: ["0029"]
-  rag_created_inventory_numbers: ["0004", "0007"]
-  reading_pairs:
-    - inventory_numbers: ["0029", "0031"]
-      relation: "read_together"
-      note: "AI-инженерию читать в паре с «Проектированием систем машинного обучения»."
 
 electronic_holdings:
   source: "user-provided ls -la listing"
