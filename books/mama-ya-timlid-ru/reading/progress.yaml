@@ -1,0 +1,23 @@
+schema: biblioteka-vsp/reading/v1
+book_id: mama-ya-timlid-ru
+
+status: completed
+scope: full_book
+
+started:
+  month: "[Needs confirmation]"
+  exact_date: "[Needs confirmation]"
+
+completed:
+  month: "[Needs confirmation]"
+  exact_date: "[Needs confirmation]"
+
+current_page: null
+current_chapter: null
+
+reading_boundary:
+  mode: full_book_available
+  reason: "User explicitly confirmed that the book was completed."
+
+notes:
+  - "Historical reading dates were not provided."
