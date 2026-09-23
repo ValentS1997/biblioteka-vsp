@@ -398,8 +398,13 @@ verification_sources:
 reading_rag_status:
   source: "user-confirmed"
   updated: "2026-09-24"
-  read_inventory_numbers: ["0004", "0007"]
+  read_inventory_numbers: ["0004", "0007", "0016", "0022"]
+  in_progress_inventory_numbers: ["0029"]
   rag_created_inventory_numbers: ["0004", "0007"]
+  reading_pairs:
+    - inventory_numbers: ["0029", "0031"]
+      relation: "read_together"
+      note: "AI-инженерию читать в паре с «Проектированием систем машинного обучения»."
 
 electronic_holdings:
   source: "user-provided ls -la listing"
