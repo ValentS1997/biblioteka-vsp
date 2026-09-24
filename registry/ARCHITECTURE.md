@@ -1,6 +1,6 @@
 # Registry architecture v2
 
-Status: experimental. This contract exists only in the `registry-architecture-hardening-v1` branch until explicitly accepted.
+Status: accepted. This is the canonical registry architecture for `main` as of 2026-09-24.
 
 ## Canonical sources
 
@@ -54,4 +54,4 @@ The validator checks schema conformance, inventory uniqueness/count, holding ref
 
 ## Rollback
 
-This implementation is isolated from `main`. Full rollback is to discard the branch. Optional `knowledge_id` fields can be removed without changing inventory numbers.
+Promotion rollback point: `098d02443d022c078b8ba78bd646fb4979b5b688` (pre-v2 `main`). Optional `knowledge_id` fields can be removed without changing inventory numbers. CI/generator tooling can be disabled independently without mutating inventory numbers.
