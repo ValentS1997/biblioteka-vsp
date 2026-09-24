@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1400" viewBox="0 0 1800 1400" role="img" aria-labelledby="title desc">
+  <title id="title">VSP reading map — Infrastructure / Technical Operations → DevOps/SRE</title>
+  <desc id="desc">Career-oriented reading map derived from biblioteka-vsp registry on 2026-09-24.</desc>
+  <defs>
+    <style>
+      .bg { fill:#ffffff; }
+      .title { font:700 42px Arial, sans-serif; fill:#111827; }
+      .section { font:700 27px Arial, sans-serif; fill:#111827; }
+      .box-title { font:700 22px Arial, sans-serif; fill:#111827; }
+      .box-text { font:400 19px Arial, sans-serif; fill:#374151; }
+      .small { font:400 18px Arial, sans-serif; fill:#374151; }
+      .tiny { font:400 16px Arial, sans-serif; fill:#4b5563; }
+      .done { fill:#f3f4f6; stroke:#6b7280; stroke-width:2; }
+      .core { fill:#e8f0fe; stroke:#3559a8; stroke-width:2.5; }
+      .next { fill:#f7f7f8; stroke:#6b7280; stroke-width:2; }
+      .branch { fill:#fafafa; stroke:#9ca3af; stroke-width:2; }
+      .note { fill:#fff7ed; stroke:#c2410c; stroke-width:2; }
+      .arrow { stroke:#374151; stroke-width:3; fill:none; marker-end:url(#arrow); }
+      .dash { stroke:#9ca3af; stroke-width:2; stroke-dasharray:7 7; fill:none; }
+      .muted { fill:#6b7280; }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L12,6 L0,12 z" fill="#374151"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1800" height="1400"/>
+  <text x="60" y="70" class="title">Карта чтения VSP → Infrastructure / Technical Operations → DevOps/SRE</text>
+  <text x="60" y="105" class="small">Источник: registry/books.yaml · актуально на 2026-09-24 · основной маршрут не включает hobby/side-track литературу</text>
+
+  <!-- Completed base -->
+  <text x="60" y="160" class="section">Уже закрытая база</text>
+  <g>
+    <rect x="60" y="190" rx="16" ry="16" width="500" height="105" class="done"/>
+    <text x="85" y="228" class="box-title">0004 · Компьютерные сети</text>
+    <text x="85" y="262" class="box-text">Таненбаум / Фимстер / Уэзеролл · прочитано</text>
+  </g>
+  <g>
+    <rect x="590" y="190" rx="16" ry="16" width="560" height="105" class="done"/>
+    <text x="615" y="228" class="box-title">0007 · UNIX и Linux</text>
+    <text x="615" y="262" class="box-text">Руководство системного администратора · прочитано</text>
+  </g>
+  <g>
+    <rect x="1180" y="190" rx="16" ry="16" width="500" height="105" class="done"/>
+    <text x="1205" y="228" class="box-title">0016 · Информационная безопасность</text>
+    <text x="1205" y="262" class="box-text">Базовый security-фундамент · прочитано</text>
+  </g>
+
+  <!-- Stage 1 -->
+  <text x="60" y="350" class="section">1. Сейчас — инженерная глубина + инструменты</text>
+  <g>
+    <rect x="60" y="385" rx="18" ry="18" width="470" height="125" class="core"/>
+    <text x="85" y="425" class="box-title">0034 · Внутреннее устройство Linux</text>
+    <text x="85" y="458" class="box-text">MAIN · процессы, память, загрузка, FS, устройства, сеть</text>
+    <text x="85" y="486" class="small">Цель: перейти от администрирования к пониманию internals.</text>
+  </g>
+  <g>
+    <rect x="590" y="385" rx="18" ry="18" width="420" height="125" class="next"/>
+    <text x="615" y="425" class="box-title">0032 · Идиомы bash</text>
+    <text x="615" y="458" class="box-text">PRACTICE · надёжные shell-сценарии</text>
+    <text x="615" y="486" class="small">Применять сразу в рабочих/лабораторных задачах.</text>
+  </g>
+  <g>
+    <rect x="1070" y="385" rx="18" ry="18" width="430" height="125" class="next"/>
+    <text x="1095" y="425" class="box-title">0019 · Профессиональная работа с Git</text>
+    <text x="1095" y="458" class="box-text">PRACTICE · история, ветки, merge, командный процесс</text>
+    <text x="1095" y="486" class="small">Нужен как базовый инженерный инструмент.</text>
+  </g>
+  <path d="M530 448 H590" class="arrow"/>
+  <path d="M1010 448 H1070" class="arrow"/>
+
+  <!-- Stage 2 -->
+  <text x="60" y="575" class="section">2. Infrastructure Engineer — Linux / сети / эксплуатация / observability</text>
+  <g>
+    <rect x="60" y="610" rx="18" ry="18" width="380" height="125" class="core"/>
+    <text x="85" y="650" class="box-title">0045 · Сети Linux</text>
+    <text x="85" y="683" class="box-text">Сетевой стек Linux и сетевые приложения</text>
+    <text x="85" y="711" class="small">Связывает networking-фундамент с Linux internals.</text>
+  </g>
+  <g>
+    <rect x="480" y="610" rx="18" ry="18" width="380" height="125" class="next"/>
+    <text x="505" y="650" class="box-title">0005 · Современные ОС</text>
+    <text x="505" y="683" class="box-text">Теория по необходимости, не блокирующий prerequisite</text>
+    <text x="505" y="711" class="small">Процессы, память, FS, I/O, виртуализация.</text>
+  </g>
+  <g>
+    <rect x="900" y="610" rx="18" ry="18" width="410" height="125" class="core"/>
+    <text x="925" y="650" class="box-title">0011 · Современное системное администрирование</text>
+    <text x="925" y="683" class="box-text">Operations / automation / эксплуатационные практики</text>
+    <text x="925" y="711" class="small">Переход к воспроизводимой инфраструктуре.</text>
+  </g>
+  <g>
+    <rect x="1350" y="595" rx="18" ry="18" width="390" height="155" class="core"/>
+    <text x="1375" y="635" class="box-title">0046 · Prometheus</text>
+    <text x="1375" y="668" class="box-text">Основной observability / SRE-трек</text>
+    <text x="1375" y="699" class="small">Метрики → PromQL → exporters → alerts.</text>
+    <text x="1375" y="727" class="small">0020 Zabbix — по рабочему стеку.</text>
+  </g>
+  <path d="M440 672 H480" class="arrow"/>
+  <path d="M860 672 H900" class="arrow"/>
+  <path d="M1310 672 H1350" class="arrow"/>
+
+  <!-- Stage 3 -->
+  <text x="60" y="815" class="section">3. DevOps/SRE слой — containers → orchestration → distributed systems</text>
+  <g>
+    <rect x="60" y="850" rx="18" ry="18" width="300" height="115" class="next"/>
+    <text x="85" y="892" class="box-title">0014 · Docker</text>
+    <text x="85" y="925" class="box-text">Images · containers · networks · storage</text>
+  </g>
+  <g>
+    <rect x="400" y="850" rx="18" ry="18" width="300" height="115" class="core"/>
+    <text x="425" y="892" class="box-title">0001 · Kubernetes в действии</text>
+    <text x="425" y="925" class="box-text">Объекты · сервисы · приложения</text>
+  </g>
+  <g>
+    <rect x="740" y="850" rx="18" ry="18" width="330" height="115" class="next"/>
+    <text x="765" y="892" class="box-title">0033 · Kubernetes</text>
+    <text x="765" y="925" class="box-text">Развёртывание и эксплуатация кластеров</text>
+  </g>
+  <g>
+    <rect x="1110" y="850" rx="18" ry="18" width="340" height="115" class="core"/>
+    <text x="1135" y="892" class="box-title">0035 · Высоконагруженные приложения</text>
+    <text x="1135" y="925" class="box-text">Data-intensive / distributed systems</text>
+  </g>
+  <g>
+    <rect x="1490" y="850" rx="18" ry="18" width="250" height="115" class="next"/>
+    <text x="1515" y="892" class="box-title">0009 · Distributed Systems</text>
+    <text x="1515" y="925" class="box-text">K8s patterns</text>
+  </g>
+  <path d="M360 907 H400" class="arrow"/>
+  <path d="M700 907 H740" class="arrow"/>
+  <path d="M1070 907 H1110" class="arrow"/>
+  <path d="M1450 907 H1490" class="arrow"/>
+
+  <!-- Parallel tracks -->
+  <text x="60" y="1030" class="section">Параллельные ветки — не блокируют основной маршрут</text>
+  <g>
+    <rect x="60" y="1065" rx="16" ry="16" width="390" height="175" class="branch"/>
+    <text x="85" y="1104" class="box-title">Automation / coding</text>
+    <text x="85" y="1137" class="box-text">0018 Python — если база уже есть</text>
+    <text x="85" y="1167" class="box-text">0027 Byte of Python — если база слабая</text>
+    <text x="85" y="1197" class="box-text">0043 Go → 0015 Linux и Go</text>
+  </g>
+  <g>
+    <rect x="485" y="1065" rx="16" ry="16" width="390" height="175" class="branch"/>
+    <text x="510" y="1104" class="box-title">Security</text>
+    <text x="510" y="1137" class="box-text">0013 Zero Trust</text>
+    <text x="510" y="1167" class="box-text">0023 Cyber Risk</text>
+    <text x="510" y="1197" class="box-text">0012 / 0026 Pentest — при отдельной цели</text>
+  </g>
+  <g>
+    <rect x="910" y="1065" rx="16" ry="16" width="390" height="175" class="branch"/>
+    <text x="935" y="1104" class="box-title">AI — отдельный трек</text>
+    <text x="935" y="1137" class="box-text">0029 AI-инженерия — в процессе</text>
+    <text x="935" y="1167" class="box-text">↔ 0031 ML Systems</text>
+    <text x="935" y="1197" class="box-text">→ 0010 RAG</text>
+  </g>
+  <g>
+    <rect x="1335" y="1065" rx="16" ry="16" width="405" height="175" class="branch"/>
+    <text x="1360" y="1104" class="box-title">Management — позже</text>
+    <text x="1360" y="1137" class="box-text">0044 Kanban</text>
+    <text x="1360" y="1167" class="box-text">0042 Business Processes</text>
+    <text x="1360" y="1197" class="box-text">0021 Как пасти котов</text>
+  </g>
+
+  <!-- Reference / defer -->
+  <text x="60" y="1295" class="section">Справочники / выборочное чтение</text>
+  <text x="60" y="1332" class="small">0002/0003 Олиферы · 0006 Архитектура компьютера · 0008 SQL pocket · 0025 Debian</text>
+  <text x="60" y="1370" class="tiny">Низкий карьерный приоритет сейчас: 0024 базовое администрирование; 0028/0030 1С; 0036–0041 hobby/engineering. Читать по интересу, не вместо core-track.</text>
+</svg>
