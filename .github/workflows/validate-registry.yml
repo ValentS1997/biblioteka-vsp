@@ -11,8 +11,6 @@ on:
       - "scripts/generate_registry_readme.py"
       - ".github/workflows/validate-registry.yml"
   push:
-    branches-ignore:
-      - main
     paths:
       - "registry/**"
       - "books/index.yaml"
