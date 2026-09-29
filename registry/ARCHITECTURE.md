@@ -30,6 +30,8 @@ Schema v2 stores no reading/RAG status in `registry/books.yaml`.
 
 The generated README derives reading from `reading_progress` and RAG from `rag_manifest` in the linked `books/index.yaml` entry. A knowledge entry may exist without RAG.
 
+Chapter-analysis readiness is a separate computed capability. A reading-only knowledge entry is valid but is not eligible for RAG-dependent chapter analysis until the book-level onboarding/readiness contract passes. Readiness is not persisted in `registry/books.yaml`; see `docs/BOOK-LIFECYCLE.md` and `templates/book-readiness-v1.0.yaml`.
+
 ## Taxonomy
 
 `direction` remains display-only. Schema v2 permits optional normalized `domains`, `topics`, and `level`. Migration is incremental.

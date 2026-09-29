@@ -44,18 +44,24 @@ books/
 
 ## Жизненный цикл книги
 
-Технический ingest выполняется сразу для всей книги:
+Inventory, reading и RAG — независимые capabilities. Книга может быть
+reading-only и оставаться валидной без RAG.
+
+Когда требуется RAG-dependent работа (например, chapter artifacts), выполняется
+одноразовый book onboarding:
 
 ```text
-PDF
+BIBLIOTEKA-VSP-BOOK-ONBOARDING v1.0
   ↓
-Git / source provenance
+canonical source + provenance
   ↓
 full-text extraction + normalization
   ↓
-full-book RAG chunks + manifest
+full-book RAG + addressable retrieval
   ↓
-book is RAG-ready
+BIBLIOTEKA-VSP-BOOK-READINESS v1.0
+  ↓
+READY_FOR_CHAPTER_ANALYSIS
 ```
 
 После этого чтение и обучение идут независимо, в фактическом темпе чтения:
@@ -74,7 +80,20 @@ notes / glossary / Q&A / diagrams
 reviewed commit
 ```
 
-RAG readiness и reading progress — разные состояния. Наличие всей книги в RAG не означает, что вся книга уже прочитана или обсуждена.
+RAG readiness и reading progress — разные состояния. Наличие всей книги в RAG не означает, что вся книга уже прочитана или обсуждена. И наоборот, `status: in_progress` не означает, что RAG или chapter analysis готовы.
+
+Канонические контракты:
+
+- [Book onboarding v1.0](templates/book-onboarding-v1.0.yaml)
+- [Book readiness v1.0](templates/book-readiness-v1.0.yaml)
+- [Chapter artifacts v1.4](templates/chapter-artifact-collection-v1.4.yaml)
+- [Book lifecycle matrix](docs/BOOK-LIFECYCLE.md)
+
+Readiness вычисляется, а не хранится как новый canonical status:
+
+```bash
+python scripts/check_book_readiness.py --book-id <book_id> --capability chapter-analysis
+```
 
 ## Reading state
 
@@ -195,4 +214,6 @@ source:
 
 ## Текущее состояние
 
-Bootstrap-структура создана. Каталог книг пока пуст.
+Registry/knowledge lifecycle используется в рабочем режиме. Репозиторий
+поддерживает одновременно reading-only и RAG-ready книги; chapter-level RAG
+разрешён только после capability-specific readiness check.
