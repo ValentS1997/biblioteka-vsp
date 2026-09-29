@@ -8,7 +8,7 @@ on:
       - "templates/chapter-artifact-collection-v1.4.yaml"
       - "scripts/check_book_readiness.py"
       - "scripts/build_book_rag.py"
-      - "tests/test_book_readiness.py"
+      - "tests/**"
       - "docs/BOOK-LIFECYCLE.md"
       - "books/index.yaml"
       - "books/*/metadata.yaml"
@@ -25,7 +25,7 @@ on:
       - "templates/chapter-artifact-collection-v1.4.yaml"
       - "scripts/check_book_readiness.py"
       - "scripts/build_book_rag.py"
-      - "tests/test_book_readiness.py"
+      - "tests/**"
       - "docs/BOOK-LIFECYCLE.md"
       - "books/index.yaml"
       - "books/*/metadata.yaml"
@@ -52,11 +52,11 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install dependency
-        run: python -m pip install --disable-pip-version-check PyYAML
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check PyYAML "PyMuPDF>=1.24,<2"
 
-      - name: Run readiness unit tests
-        run: python -m unittest tests.test_book_readiness
+      - name: Run unit/integration tests
+        run: python -m unittest discover -s tests -p 'test_*.py'
 
       - name: Verify existing RAG-ready books
         run: |
