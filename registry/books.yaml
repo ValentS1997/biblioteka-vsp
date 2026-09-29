@@ -1,5 +1,5 @@
 schema: "biblioteka-vsp/registry/v2"
-updated: "2026-09-24"
+updated: "2026-09-30"
 
 source:
   file: "registry/reestr_knig_0046.xlsx"
@@ -254,6 +254,7 @@ books:
     direction: "Kubernetes / Containers"
   - number: 34
     inventory_number: "0034"
+    knowledge_id: "how-linux-works-3e-ru-2022"
     title: "Внутреннее устройство Linux. 3-е изд."
     authors_raw: "Брайан Уорд"
     translators_editors_raw: "С. Черников; научный редактор Н. Ланцунцевич"
@@ -403,10 +404,10 @@ verification_sources:
 
 
 electronic_holdings:
-  source: "user-provided ls -la listing"
-  observed_date: "2026-09-24"
-  file_count: 21
-  matched_unambiguous: 16
+  source: "user-provided local file inventory + uploaded file confirmation"
+  observed_date: "2026-09-30"
+  file_count: 22
+  matched_unambiguous: 17
   needs_confirmation: 3
   unregistered: 2
   files:
@@ -497,3 +498,7 @@ electronic_holdings:
       format: "pdf"
       match_status: "matched"
       inventory_numbers: ["0005"]
+    - filename: "Внутреннее устройство Linux [3-е издание].pdf"
+      format: "pdf"
+      match_status: "matched"
+      inventory_numbers: ["0034"]

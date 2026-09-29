@@ -1,6 +1,6 @@
 schema: biblioteka-vsp/books/v1
 protocol: biblioteka-vsp/v1
-updated: 2026-09-24
+updated: 2026-09-30
 
 books:
   - id: computer-networks-6e-ru-2023
@@ -78,3 +78,14 @@ books:
     language: ru
     paths:
       reading_progress: books/designing-machine-learning-systems-chip-huyen-ru/reading/progress.yaml
+
+  - id: how-linux-works-3e-ru-2022
+    title: "Внутреннее устройство Linux"
+    authors:
+      - "Брайан Уорд"
+    language: ru
+    edition: 3
+    publication_year: 2022
+    isbn: "978-5-4461-3946-0"
+    paths:
+      reading_progress: books/how-linux-works-3e-ru-2022/reading/progress.yaml
