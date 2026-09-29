@@ -1,0 +1,82 @@
+name: Validate book readiness
+
+on:
+  pull_request:
+    paths:
+      - "templates/book-onboarding-v1.0.yaml"
+      - "templates/book-readiness-v1.0.yaml"
+      - "templates/chapter-artifact-collection-v1.4.yaml"
+      - "scripts/check_book_readiness.py"
+      - "scripts/build_book_rag.py"
+      - "tests/test_book_readiness.py"
+      - "docs/BOOK-LIFECYCLE.md"
+      - "books/index.yaml"
+      - "books/*/metadata.yaml"
+      - "books/*/source/SHA256"
+      - "books/*/rag/manifest.yaml"
+      - "books/*/rag/chunk-index.jsonl"
+      - "books/*/rag/chunks/**"
+      - "books/*/rag/search-index/**"
+      - ".github/workflows/validate-book-readiness.yml"
+  push:
+    paths:
+      - "templates/book-onboarding-v1.0.yaml"
+      - "templates/book-readiness-v1.0.yaml"
+      - "templates/chapter-artifact-collection-v1.4.yaml"
+      - "scripts/check_book_readiness.py"
+      - "scripts/build_book_rag.py"
+      - "tests/test_book_readiness.py"
+      - "docs/BOOK-LIFECYCLE.md"
+      - "books/index.yaml"
+      - "books/*/metadata.yaml"
+      - "books/*/source/SHA256"
+      - "books/*/rag/manifest.yaml"
+      - "books/*/rag/chunk-index.jsonl"
+      - "books/*/rag/chunks/**"
+      - "books/*/rag/search-index/**"
+      - ".github/workflows/validate-book-readiness.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate-book-readiness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependency
+        run: python -m pip install --disable-pip-version-check PyYAML
+
+      - name: Run readiness unit tests
+        run: python -m unittest tests.test_book_readiness
+
+      - name: Verify existing RAG-ready books
+        run: |
+          python scripts/check_book_readiness.py \
+            --book-id computer-networks-6e-ru-2023 \
+            --capability chapter-analysis
+          python scripts/check_book_readiness.py \
+            --book-id unix-linux-system-administration-handbook-5e-ru-2020 \
+            --capability chapter-analysis
+
+      - name: Verify reading-only book remains valid but chapter-blocked
+        shell: bash
+        run: |
+          set +e
+          python scripts/check_book_readiness.py \
+            --book-id how-linux-works-3e-ru-2022 \
+            --capability chapter-analysis > /tmp/how-linux-works-readiness.yaml
+          rc=$?
+          set -e
+
+          cat /tmp/how-linux-works-readiness.yaml
+          test "$rc" -eq 1
+          grep -q '^status: BLOCKED$' /tmp/how-linux-works-readiness.yaml
