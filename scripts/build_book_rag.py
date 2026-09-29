@@ -331,6 +331,8 @@ def build(book_dir: Path) -> dict:
     book_id = book_dir.name
     source_sha = sha256_file(source)
     expected = expected_sha(book_dir)
+    checksum_expected_present = expected is not None
+    checksum_matched_expected = bool(expected and source_sha == expected)
     if expected and source_sha != expected:
         raise RuntimeError(
             f"Source checksum mismatch: expected {expected}, got {source_sha}"
@@ -435,7 +437,7 @@ extraction:
   engine: PyMuPDF
   engine_version: "{fitz_version}"
   page_coordinate_system: source_pdf_1_indexed
-  text_layer: embedded_OCR
+  text_layer: unclassified_extractable_pdf_text
   normalization:
     - remove_NUL
     - remove_soft_hyphen_marker
@@ -477,12 +479,16 @@ validation:
   retrieval_paths_unique: {str(paths_unique).lower()}
   retrieval_chunk_count_matches: {str(len(index_records) == len(chunk_records)).lower()}
   search_index_bounded: {str(search_index["max_shard_bytes"] <= SEARCH_SHARD_MAX_BYTES).lower()}
-  source_checksum_verified: true
+  source_checksum_computed: true
+  source_checksum_expected_present: {str(checksum_expected_present).lower()}
+  source_checksum_matched_expected: {str(checksum_matched_expected).lower()}
+  source_checksum_verified: {str(checksum_matched_expected).lower()}
   full_pdf_page_range_processed: true
   status: READY_WITH_KNOWN_LIMITATIONS
 
 known_limitations:
-  - "The PDF uses an embedded OCR text layer; recognition errors present in the source OCR may remain in extracted text."
+  - "The extractor reads the PDF text layer but does not classify native text versus OCR; text_layer therefore does not assert OCR origin."
+  - "Recognition/extraction errors already present in the PDF text layer may remain in extracted text."
   - "Images, equations, tables and diagrams are not independently encoded as multimodal RAG objects; use pdf_page provenance to inspect the source page when visual context matters."
   - "Publisher advertisement and cover pages are part of the source PDF and remain page-addressable even when they are not core book content."
   - "The deterministic lexical index is prefix-based retrieval, not semantic vector search; use up to three informative query tokens and preserve RAG_MISS on unsupported questions."
@@ -501,6 +507,8 @@ known_limitations:
     return {
         "book_id": book_id,
         "source_sha256": source_sha,
+        "source_checksum_expected_present": checksum_expected_present,
+        "source_checksum_matched_expected": checksum_matched_expected,
         "pdf_pages": pdf_pages,
         "pages_with_text": pdf_pages - len(blank_pages),
         "blank_pages": blank_pages,
