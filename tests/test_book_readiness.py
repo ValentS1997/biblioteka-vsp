@@ -25,14 +25,14 @@ class ReadinessTests(unittest.TestCase):
         module.ROOT = self.root
         module.INDEX = self.root / "books" / "index.yaml"
         module.CHAPTER_TEMPLATE = (
-            self.root / "templates" / "chapter-artifact-collection-v1.4.yaml"
+            self.root / "templates" / "chapter-artifact-collection-v1.5.yaml"
         )
         module.CHAPTER_TEMPLATE.write_text(
             yaml.safe_dump(
                 {
                     "template": {
                         "id": "BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION",
-                        "version": "1.4",
+                        "version": "1.5",
                         "status": "ACCEPTED",
                     }
                 },
