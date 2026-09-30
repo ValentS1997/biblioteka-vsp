@@ -68,8 +68,18 @@ books:
     authors:
       - "Чип Хьюен"
     language: ru
+    publication_year: 2025
+    isbn: "978-601-12-4595-1"
     paths:
+      metadata: books/ai-engineering-chip-huyen-ru/metadata.yaml
+      source: books/ai-engineering-chip-huyen-ru/source/book.pdf
+      rag_manifest: books/ai-engineering-chip-huyen-ru/rag/manifest.yaml
+      rag_chunks: books/ai-engineering-chip-huyen-ru/rag/chunks/
+      rag_chunk_index: books/ai-engineering-chip-huyen-ru/rag/chunk-index.jsonl
+      rag_search_index: books/ai-engineering-chip-huyen-ru/rag/search-index/
       reading_progress: books/ai-engineering-chip-huyen-ru/reading/progress.yaml
+      notes: books/ai-engineering-chip-huyen-ru/notes/
+      diagrams: books/ai-engineering-chip-huyen-ru/diagrams/
 
   - id: designing-machine-learning-systems-chip-huyen-ru
     title: "Проектирование систем машинного обучения"
