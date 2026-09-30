@@ -1,0 +1,51 @@
+schema: biblioteka-vsp/book/v1
+
+id: how-linux-works-3e-ru-2022
+title: "Внутреннее устройство Linux"
+original_title: "How Linux Works, 3rd Edition: What Every Superuser Should Know"
+edition:
+  number: 3
+  language: ru
+  publisher: "Питер"
+  publication_year: 2022
+  publication_pages: 480
+
+authors:
+  - "Брайан Уорд"
+
+isbn:
+  russian_edition: "978-5-4461-3946-0"
+  original_edition: "978-1-7185-0040-2"
+
+source:
+  canonical_path: "source/book.pdf"
+  expected_sha256: "60bb698fc2ff849a9814f099c12ca56e8f40c11b0518436f3ce3c44e96152df9"
+  expected_size_bytes: 8120657
+  source_pdf_pages: 480
+  text_layer: "[Needs confirmation]"
+  repository_access: private
+  storage: "Git LFS"
+  upload_status: "PENDING_GIT_LFS_BINARY_UPLOAD"
+  lawful_access_attested_by_user: "[Needs confirmation]"
+  ownership_category: "[Needs confirmation]"
+  physical_copy: "[Needs confirmation]"
+  license: "all rights reserved"
+  redistribution_permission: "[Needs confirmation]"
+  upload_commit: "[Needs confirmation]"
+
+rag:
+  scope: full_book
+  build_script: "../../../scripts/build_book_rag.py"
+  manifest: "rag/manifest.yaml"
+  text: "rag/text.md"
+  chunks: "rag/chunks.jsonl"
+  status: "PENDING_SOURCE_INGEST"
+  generated_commit: "[Needs confirmation]"
+  workflow_run_id: "[Needs confirmation]"
+
+reading:
+  progress: "reading/progress.yaml"
+  journal: "reading/journal.md"
+  status: in_progress
+  started: "2026-09-30"
+  completed: null

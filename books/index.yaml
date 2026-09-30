@@ -88,4 +88,12 @@ books:
     publication_year: 2022
     isbn: "978-5-4461-3946-0"
     paths:
+      metadata: books/how-linux-works-3e-ru-2022/metadata.yaml
+      source: books/how-linux-works-3e-ru-2022/source/book.pdf
+      rag_manifest: books/how-linux-works-3e-ru-2022/rag/manifest.yaml
+      rag_chunks: books/how-linux-works-3e-ru-2022/rag/chunks/
+      rag_chunk_index: books/how-linux-works-3e-ru-2022/rag/chunk-index.jsonl
+      rag_search_index: books/how-linux-works-3e-ru-2022/rag/search-index/
       reading_progress: books/how-linux-works-3e-ru-2022/reading/progress.yaml
+      notes: books/how-linux-works-3e-ru-2022/notes/
+      diagrams: books/how-linux-works-3e-ru-2022/diagrams/
