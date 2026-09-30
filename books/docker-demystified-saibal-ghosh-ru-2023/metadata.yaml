@@ -28,12 +28,13 @@ source:
   text_layer: "embedded text layer"
   repository_access: private
   storage: "Git LFS"
-  upload_status: PENDING
+  upload_status: READY
   lawful_access_attested_by_user: "[Needs confirmation]"
   ownership_category: "[Needs confirmation]"
   physical_copy: "[Needs confirmation]"
   license: "all rights reserved"
   redistribution_permission: "[Needs confirmation]"
+  upload_commit: "d0f5ff809c047cd3a0923c0ee6bc1d6be4155211"
 
 rag:
   scope: full_book
@@ -41,7 +42,9 @@ rag:
   manifest: "rag/manifest.yaml"
   text: "rag/text.md"
   chunks: "rag/chunks.jsonl"
-  status: PENDING_SOURCE_INGEST
+  status: READY_WITH_KNOWN_LIMITATIONS
+  generated_commit: "b4fcce8e79f89f8cf547510793ef9cce69e8ccab"
+  workflow_run_id: 36690993586
 
 reading:
   progress: "reading/progress.yaml"
