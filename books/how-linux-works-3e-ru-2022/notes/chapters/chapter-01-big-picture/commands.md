@@ -35,6 +35,6 @@ shell process
 
 ## Operational boundary
 
-Глава не подтверждает команды вроде <code>ps</code>, <code>top</code>, <code>free</code>, <code>strace</code>, <code>dmesg</code> и т. п.; поэтому они намеренно отсутствуют.
+Дополнительные знакомые Linux-команды из внешнего знания намеренно не добавлялись: файл ограничен элементами, явно подтверждёнными RAG главы.
 
 State-changing административных команд в главе 1 нет. Для <code>fork()</code> и <code>exec()</code> rollback как системного механизма в источнике не описан: <code>[Needs confirmation]</code>.
