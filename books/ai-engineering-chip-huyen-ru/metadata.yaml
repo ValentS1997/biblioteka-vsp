@@ -28,13 +28,13 @@ source:
   text_layer: "unclassified_extractable_pdf_text"
   repository_access: private
   storage: "Git LFS"
-  upload_status: "PENDING_GIT_LFS_UPLOAD"
+  upload_status: "VERIFIED_GIT_LFS_AVAILABLE"
   lawful_access_attested_by_user: "[Needs confirmation]"
   ownership_category: "[Needs confirmation]"
   physical_copy: "[Needs confirmation]"
   license: "all rights reserved"
   redistribution_permission: "[Needs confirmation]"
-  upload_commit: null
+  upload_commit: "cf2e2b56d2be5a33dfa669c1e41b397f54f380d4"
 
 rag:
   scope: full_book
@@ -42,9 +42,9 @@ rag:
   manifest: "rag/manifest.yaml"
   text: "rag/text.md"
   chunks: "rag/chunks.jsonl"
-  status: "BLOCKED_SOURCE_NOT_INGESTED"
-  generated_commit: null
-  workflow_run_id: null
+  status: "READY_WITH_KNOWN_LIMITATIONS"
+  generated_commit: "ae19cf58b9fee154724092443be20c4237668568"
+  workflow_run_id: 36715477131
 
 reading:
   progress: "reading/progress.yaml"
