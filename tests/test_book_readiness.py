@@ -143,6 +143,106 @@ class ReadinessTests(unittest.TestCase):
             "{}\n", encoding="utf-8"
         )
 
+    def write_ready_epub_book(self):
+        sha = "c" * 64
+        book = self.root / "books" / "test-book"
+        (book / "source").mkdir(parents=True)
+        (book / "rag" / "chunks" / "s0001-s0100").mkdir(parents=True)
+        (book / "rag" / "search-index").mkdir(parents=True)
+
+        paths = {
+            "metadata": "books/test-book/metadata.yaml",
+            "source": "books/test-book/source/book.epub",
+            "rag_manifest": "books/test-book/rag/manifest.yaml",
+            "rag_chunks": "books/test-book/rag/chunks/",
+            "rag_chunk_index": "books/test-book/rag/chunk-index.jsonl",
+            "rag_search_index": "books/test-book/rag/search-index/",
+        }
+        self.write_index(paths)
+        (book / "metadata.yaml").write_text(
+            yaml.safe_dump(
+                {
+                    "id": "test-book",
+                    "title": "Test EPUB",
+                    "source": {"expected_sha256": sha},
+                },
+                sort_keys=False,
+            ),
+            encoding="utf-8",
+        )
+        (book / "source" / "book.epub").write_text("git-lfs-pointer", encoding="utf-8")
+        (book / "source" / "SHA256").write_text(f"{sha}  book.epub\n", encoding="utf-8")
+        (book / "rag" / "manifest.yaml").write_text(
+            yaml.safe_dump(
+                {
+                    "book_id": "test-book",
+                    "source": {"path": "source/book.epub", "format": "epub", "sha256": sha},
+                    "validation": {"status": "READY_WITH_KNOWN_LIMITATIONS"},
+                },
+                sort_keys=False,
+            ),
+            encoding="utf-8",
+        )
+
+        chunk_id = "test-book:s0001:c01"
+        rel = "rag/chunks/s0001-s0100/s0001-c01.md"
+        source_unit = {"kind": "epub_spine_item", "index": 1, "href": "OEBPS/ch1.xhtml"}
+        (book / rel).write_text(
+            "---\n"
+            "schema: biblioteka-vsp/chunk/v2\n"
+            f"chunk_id: {chunk_id}\n"
+            "book_id: test-book\n"
+            "source_format: epub\n"
+            "source_seq: 1\n"
+            "source_unit: {kind: epub_spine_item, index: 1, href: OEBPS/ch1.xhtml}\n"
+            "chunk_in_unit: 1\n"
+            "source_path: source/book.epub\n"
+            f"source_sha256: {sha}\n"
+            "---\n\n"
+            "пример проверочного содержимого retrieval epub\n",
+            encoding="utf-8",
+        )
+        record = {
+            "chunk_id": chunk_id,
+            "book_id": "test-book",
+            "source_format": "epub",
+            "source_seq": 1,
+            "source_unit": source_unit,
+            "chunk_in_unit": 1,
+            "path": rel,
+            "source_path": "source/book.epub",
+            "source_sha256": sha,
+        }
+        (book / "rag" / "chunk-index.jsonl").write_text(
+            json.dumps(record, ensure_ascii=False) + "\n",
+            encoding="utf-8",
+        )
+        shard = {
+            "exact_terms": {
+                "пример": {
+                    "chunk_id": chunk_id,
+                    "path": rel,
+                    "source_seq": 1,
+                    "source_unit": source_unit,
+                    "tf": 1,
+                }
+            },
+            "keys": {},
+        }
+        (book / "rag" / "search-index" / "при.json").write_text(
+            json.dumps(shard, ensure_ascii=False),
+            encoding="utf-8",
+        )
+        (book / "rag" / "search-index" / "manifest.json").write_text(
+            "{}\n", encoding="utf-8"
+        )
+
+    def test_epub_ready_book(self):
+        self.write_ready_epub_book()
+        result = module.compute_readiness("test-book")
+        self.assertEqual("READY", result["status"])
+        self.assertEqual([], result["failed_checks"])
+
     def test_full_ready_book(self):
         self.write_ready_book()
         result = module.compute_readiness("test-book")
