@@ -1,0 +1,54 @@
+schema: biblioteka-vsp/book/v1
+
+id: ai-engineering-chip-huyen-ru
+title: "AI-инженерия. Построение приложений с использованием базовых моделей"
+original_title: "AI Engineering: Building Applications with Foundation Models"
+
+edition:
+  language: ru
+  publisher: "Спринт Бук"
+  publication_year: 2025
+  publication_pages: 560
+
+authors:
+  - "Чип Хьюен"
+
+translators:
+  - "Ю. Талагаева"
+
+isbn:
+  russian_edition: "978-601-12-4595-1"
+  original_edition: "978-1098166304"
+
+source:
+  canonical_path: "source/book.pdf"
+  expected_sha256: "850c365211ba0e3d68a8ff8e7d7d48fb95188e24228270d11c0ec954c2062fba"
+  expected_size_bytes: 12519374
+  source_pdf_pages: 560
+  text_layer: "unclassified_extractable_pdf_text"
+  repository_access: private
+  storage: "Git LFS"
+  upload_status: "VERIFIED_GIT_LFS_AVAILABLE"
+  lawful_access_attested_by_user: "[Needs confirmation]"
+  ownership_category: "[Needs confirmation]"
+  physical_copy: "[Needs confirmation]"
+  license: "all rights reserved"
+  redistribution_permission: "[Needs confirmation]"
+  upload_commit: "cf2e2b56d2be5a33dfa669c1e41b397f54f380d4"
+
+rag:
+  scope: full_book
+  build_script: "../../../scripts/build_book_rag.py"
+  manifest: "rag/manifest.yaml"
+  text: "rag/text.md"
+  chunks: "rag/chunks.jsonl"
+  status: "READY_WITH_KNOWN_LIMITATIONS"
+  generated_commit: "ae19cf58b9fee154724092443be20c4237668568"
+  workflow_run_id: 36715477131
+
+reading:
+  progress: "reading/progress.yaml"
+  journal: "reading/journal.md"
+  status: in_progress
+  started: "[Needs confirmation]"
+  completed: null
