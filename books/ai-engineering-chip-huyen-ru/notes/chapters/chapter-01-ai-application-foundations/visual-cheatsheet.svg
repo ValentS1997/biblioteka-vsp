@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 1 — Основы создания AI-приложений</title>
+  <desc id="desc">Компактная шпаргалка: происхождение AI-инженерии, планирование, метрики и три уровня стека.</desc>
+  <rect width="1600" height="900" fill="#f6f8fb"/>
+  <rect width="1600" height="110" fill="#17202a"/>
+  <text x="56" y="48" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#ffffff">Глава 1 — Основы создания AI-приложений</text>
+  <text x="56" y="83" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">Базовые модели → продукт → измерение → адаптация</text>
+
+  <rect x="50" y="145" width="470" height="260" rx="18" fill="#ffffff" stroke="#5dade2" stroke-width="2"/>
+  <text x="78" y="187" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#1b4f72">От моделей к AI-инженерии</text>
+  <text x="78" y="226" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="78" dy="0">Языковые модели → LLM → базовые модели</tspan>
+    <tspan x="78" dy="31">Больше модальностей и задач.</tspan>
+    <tspan x="78" dy="31">Model-as-a-service и API снижают барьер.</tspan>
+    <tspan x="78" dy="40" font-weight="700">AI engineering = приложения на готовых</tspan>
+    <tspan x="78" dy="28" font-weight="700">базовых моделях.</tspan>
+  </text>
+
+  <rect x="565" y="145" width="470" height="260" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="593" y="187" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#196f3d">До разработки</text>
+  <text x="593" y="226" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="593" dy="0">1. Зачем строить?</tspan>
+    <tspan x="593" dy="31">2. Build or buy?</tspan>
+    <tspan x="593" dy="31">3. Роль AI и человека?</tspan>
+    <tspan x="593" dy="31">4. Что защищает продукт?</tspan>
+    <tspan x="593" dy="31">5. Каков порог полезности?</tspan>
+  </text>
+
+  <rect x="1080" y="145" width="470" height="260" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1108" y="187" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#9c640c">Что измерять</text>
+  <text x="1108" y="226" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1108" dy="0">• business impact</tspan>
+    <tspan x="1108" dy="31">• quality</tspan>
+    <tspan x="1108" dy="31">• latency: TTFT / TPOT / total</tspan>
+    <tspan x="1108" dy="31">• cost per request</tspan>
+    <tspan x="1108" dy="31">• user feedback</tspan>
+  </text>
+
+  <rect x="50" y="450" width="470" height="270" rx="18" fill="#ffffff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="78" y="492" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#6c3483">Последняя миля</text>
+  <text x="78" y="532" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="78" dy="0">Демо можно собрать быстро.</tspan>
+    <tspan x="78" dy="31">Production-quality может занять месяцы.</tspan>
+    <tspan x="78" dy="31">Baseline готовой модели измеряется первым.</tspan>
+    <tspan x="78" dy="31">Цели могут измениться после оценки.</tspan>
+    <tspan x="78" dy="40" font-weight="700">Не путать впечатляющее демо с готовностью.</tspan>
+  </text>
+
+  <rect x="565" y="450" width="470" height="270" rx="18" fill="#ffffff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="593" y="492" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#21618c">Три уровня стека</text>
+  <text x="593" y="532" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="593" dy="0">Application: evaluation, prompts, context, UI</tspan>
+    <tspan x="593" dy="31">Model: training, data, inference optimization</tspan>
+    <tspan x="593" dy="31">Infrastructure: serving, data, compute, monitoring</tspan>
+    <tspan x="593" dy="43" font-weight="700">Начинать сверху и спускаться по необходимости.</tspan>
+  </text>
+
+  <rect x="1080" y="450" width="470" height="270" rx="18" fill="#ffffff" stroke="#ec7063" stroke-width="2"/>
+  <text x="1108" y="492" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#922b21">AI engineering vs ML engineering</text>
+  <text x="1108" y="532" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1108" dy="0">Меньше моделирования с нуля.</tspan>
+    <tspan x="1108" dy="31">Больше адаптации готовых моделей.</tspan>
+    <tspan x="1108" dy="31">Inference optimization важнее.</tspan>
+    <tspan x="1108" dy="31">Открытые outputs сложнее оценивать.</tspan>
+    <tspan x="1108" dy="31">Evaluation становится центральной задачей.</tspan>
+  </text>
+
+  <rect x="50" y="775" width="1500" height="72" rx="14" fill="#17202a"/>
+  <text x="78" y="820" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#ffffff">Принцип: сначала доказать полезность приложения, затем усложнять адаптацию модели и инфраструктуру.</text>
+</svg>
