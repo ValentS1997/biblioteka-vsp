@@ -14,6 +14,7 @@ Canonical process and entrypoint templates.
 | Responsibility | Template | Version |
 |---|---|---:|
 | Git execution / local-exception policy | [git-execution-policy-v1.0.yaml](git-execution-policy-v1.0.yaml) | 1.0 |
+| Optional one-shot preload of many future PDF/EPUB LFS objects | [source-vault-batch-stage-v1.0.yaml](source-vault-batch-stage-v1.0.yaml) | 1.0 |
 | One-time book source/RAG preparation | [book-onboarding-v1.2.yaml](book-onboarding-v1.2.yaml) | 1.2 |
 | Read-only chapter-analysis readiness gate | [book-readiness-v1.2.yaml](book-readiness-v1.2.yaml) | 1.2 |
 | Chapter artifact production | [chapter-artifact-collection-v1.6.yaml](chapter-artifact-collection-v1.6.yaml) | 1.6 |
@@ -67,3 +68,19 @@ BOOK-READINESS v1.2
 Older accepted versions remain in the repository for reproducibility. New book
 and chapter work uses the versions listed above or a later explicitly ACCEPTED
 successor.
+
+## Optional source-vault preload
+
+If many future books are already available locally, use the source-vault batch stage once instead of repeating one local Git/LFS upload per book.
+
+```text
+local PDF/EPUB batch
+  ↓ one justified local LFS upload
+source-vault/<batch>
+  ↓ later, remotely
+promote existing LFS pointer into books/<book_id>/source/book.<ext>
+  ↓
+BOOK-ONBOARDING / RAG / readiness
+```
+
+The vault does not register books and does not trigger RAG. It only preloads immutable source candidates so subsequent book onboarding can stay remote-first.
