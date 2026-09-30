@@ -12,7 +12,7 @@ source:
 
 scope:
   purpose: "Physical/private library inventory; independent from the RAG-ready books index."
-  book_count: 45
+  book_count: 46
 
 books:
   - number: 1
@@ -108,6 +108,14 @@ books:
     translators_editors_raw: "--"
     summary_short: "Построение Zero Trust-систем с акцентом на идентичность, доступ и недоверенные сети."
     direction: "Security / Zero Trust"
+  - number: 14
+    inventory_number: "0014"
+    knowledge_id: "docker-demystified-saibal-ghosh-ru-2023"
+    title: "Docker без секретов: разработка и развертывание приложений с помощью Docker"
+    authors_raw: "Сайбал Гош"
+    translators_editors_raw: "М. Попович"
+    summary_short: "Работа с Docker: образы, контейнеры, хранение, сети и развёртывание приложений."
+    direction: "Docker / Containers"
   - number: 15
     inventory_number: "0015"
     title: "Linux и Go. Эффективное низкоуровневое программирование"
@@ -399,8 +407,8 @@ verification_sources:
 electronic_holdings:
   source: "user-provided local file inventory + uploaded file confirmation"
   observed_date: "2026-09-30"
-  file_count: 22
-  matched_unambiguous: 17
+  file_count: 23
+  matched_unambiguous: 18
   needs_confirmation: 3
   unregistered: 2
   files:
@@ -412,6 +420,10 @@ electronic_holdings:
       format: "pdf"
       match_status: "matched"
       inventory_numbers: ["0027"]
+    - filename: "Docker без секретов.pdf"
+      format: "pdf"
+      match_status: "matched"
+      inventory_numbers: ["0014"]
     - filename: "Kubernetes в действии. Лукша.pdf"
       format: "pdf"
       match_status: "matched"
