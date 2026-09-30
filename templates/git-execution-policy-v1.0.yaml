@@ -1,0 +1,144 @@
+schema_version: "1.0"
+
+template:
+  id: "BIBLIOTEKA-VSP-GIT-EXECUTION-POLICY"
+  version: "1.0"
+  type: "git_execution_policy"
+  status: "ACCEPTED"
+  purpose: >-
+    Make GitHub connector/API and repository automation the default execution
+    path for biblioteka-vsp work. User-local Git is a last-resort exception
+    that must be narrowly scoped, technically justified and immediately handed
+    back to the remote workflow after the blocker is cleared.
+
+execution_order:
+  preferred:
+    - priority: 1
+      method: "GitHub connector/API"
+      examples:
+        - "read repository files and refs"
+        - "create/update/delete text files"
+        - "create branches"
+        - "open/update/merge pull requests"
+        - "inspect commits, workflow runs, jobs and logs"
+      rule: "Use this whenever the required operation is representable by the available connector."
+
+    - priority: 2
+      method: "Repository-native automation / GitHub Actions"
+      examples:
+        - "build full-book RAG"
+        - "run tests and validators"
+        - "generate deterministic derived artifacts"
+      rule: >-
+        Prefer an existing or deliberately added repository workflow over asking
+        the user to run repository scripts locally.
+
+    - priority: 3
+      method: "Other remote execution with repository access"
+      rule: >-
+        Use only when available and when it avoids user-local Git while preserving
+        repository provenance, authentication boundaries and rollback.
+
+    - priority: 4
+      method: "User-local Git"
+      status: "exception_only"
+      rule: >-
+        Use only when priorities 1-3 cannot perform a required operation and the
+        blocker is demonstrated, not merely assumed.
+
+local_git_exception_policy:
+  default_allowed: false
+
+  valid_reason_codes:
+    - code: "GIT_LFS_BINARY_UPLOAD_REQUIRED"
+      meaning: >-
+        The exact source binary must be uploaded as a real Git LFS object and
+        the available GitHub connector/API cannot upload that binary/LFS object.
+
+    - code: "REMOTE_EXECUTION_CAPABILITY_MISSING"
+      meaning: >-
+        A required Git/repository operation cannot be represented by the
+        connector/API and no repository-native or other remote executor is
+        available.
+
+    - code: "REMOTE_AUTH_SCOPE_INSUFFICIENT"
+      meaning: >-
+        The connected GitHub integration lacks a required permission and no
+        safer remote authorization path is currently available.
+
+    - code: "REMOTE_RECOVERY_CAPABILITY_MISSING"
+      meaning: >-
+        A repository recovery operation requires Git semantics unavailable in
+        the current connector/API and cannot be safely expressed as ordinary
+        file/ref/PR operations.
+
+  invalid_justifications:
+    - "local Git is faster"
+    - "local Git is familiar"
+    - "this is easier in a shell"
+    - "the agent prefers command-line Git"
+    - "a local clone already exists"
+    - "use local Git just in case"
+
+  required_exception_record:
+    - "reason_code"
+    - "blocked operation"
+    - "remote methods checked"
+    - "verified evidence that remote execution is insufficient"
+    - "minimal local scope"
+    - "exact commands or actions required"
+    - "expected result"
+    - "verification after the local step"
+    - "rollback/recovery"
+    - "resume_point back to remote execution"
+
+  scope_rule: >-
+    A local exception authorizes only the minimum operation needed to clear the
+    blocker. It does not authorize moving the remainder of the workflow local.
+
+  ephemeral_clone_rule: >-
+    If a local clone is needed only for an exception such as Git LFS source
+    upload, prefer a temporary/minimal clone and remove it after the verified
+    push unless the user explicitly wants to keep it.
+
+  handback_rule: >-
+    Immediately after the exceptional local operation is verified on GitHub,
+    resume all branch/PR/CI/readiness/chapter work through the GitHub
+    connector/API and repository automation.
+
+git_safety:
+  direct_main: false
+  force_push: false
+  silent_binary_replacement: false
+  opaque_multi_change_commands: false
+
+  before_mutation:
+    - "verify repository"
+    - "verify target branch/ref"
+    - "verify current remote state"
+
+  after_mutation:
+    - "read back changed canonical artifact/ref from GitHub"
+    - "verify CI/checks when applicable"
+    - "record commit/PR evidence"
+
+user_interaction:
+  principle: >-
+    Do not ask the user to perform Git work that the agent can perform safely
+    through GitHub tools.
+
+  local_action_request_format:
+    required:
+      - "why this cannot be completed remotely"
+      - "one narrowly scoped requested action"
+      - "copy-paste commands when appropriate"
+      - "what output/evidence to return"
+      - "what the agent will continue automatically afterwards"
+
+acceptance_criteria:
+  - "Routine repository work is performed remotely by the agent."
+  - "Local Git is never chosen for convenience."
+  - "Every local Git request has a valid reason_code and evidence."
+  - "Local exceptions are minimal and temporary."
+  - "Workflow returns to remote execution immediately after the exception."
+  - "No direct-main or force-push path is introduced."
