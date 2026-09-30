@@ -1,0 +1,155 @@
+schema_version: "1.1"
+
+template:
+  id: "BIBLIOTEKA-VSP-BOOK-BRANCH-BOOTSTRAP"
+  version: "1.1"
+  type: "book_branch_bootstrap"
+  status: "ACCEPTED"
+  purpose: >-
+    Canonical bootstrap for a new biblioteka-vsp book branch/chat whose purpose
+    includes RAG-grounded chapter analysis and reusable chapter artifacts.
+
+user_contract:
+  minimal_intent_examples:
+    - "Ветка новой книги для RAG и шпор."
+    - "Будем разбирать главы как Немет."
+    - "Добавь/подготовь эту книгу для biblioteka-vsp RAG workflow."
+
+inputs:
+  book:
+    book_id: "[Needs confirmation]"
+    title: "[Needs confirmation]"
+    edition: "[Needs confirmation]"
+  source:
+    electronic_copy_available: "[Needs confirmation]"
+    source_file_identity: "[Needs confirmation]"
+  reading:
+    start_reading: "[Derived from user intent]"
+    started_date: "[Needs confirmation]"
+  desired_use:
+    rag_required: true
+    chapter_analysis_required: true
+    chapter_artifacts_required: true
+
+contracts:
+  onboarding:
+    id: "BIBLIOTEKA-VSP-BOOK-ONBOARDING"
+    version: "1.1"
+    path: "templates/book-onboarding-v1.1.yaml"
+  readiness:
+    id: "BIBLIOTEKA-VSP-BOOK-READINESS"
+    version: "1.1"
+    path: "templates/book-readiness-v1.1.yaml"
+  chapter_request:
+    id: "BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST"
+    version: "1.1"
+    path: "templates/chapter-analysis-request-v1.1.yaml"
+  chapter_artifacts:
+    id: "BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION"
+    version: "1.5"
+    path: "templates/chapter-artifact-collection-v1.5.yaml"
+
+git_execution:
+  policy:
+    id: "BIBLIOTEKA-VSP-GIT-EXECUTION-POLICY"
+    version: "1.0"
+    path: "templates/git-execution-policy-v1.0.yaml"
+  default_mode: "github_connector_and_repository_automation"
+  local_git_default_allowed: false
+  rule: >-
+    The agent owns routine GitHub work. User-local Git is permitted only as a
+    narrowly scoped, evidence-backed exception defined by the Git execution policy.
+
+source_policy:
+  mode: "rag_only"
+  external_sources_allowed: false
+  model_memory_allowed_for_book_content: false
+  source_pdf_direct_access_for_chapter_content: false
+  unknown_data_policy: "[Needs confirmation]"
+  rag_miss_policy: "preserve_RAG_MISS"
+
+branch_initialization_workflow:
+  - step: 1
+    action: "Resolve book identity and current registry/knowledge/reading state."
+    type: "read-only"
+
+  - step: 2
+    action: "Run capability preflight for chapter-analysis."
+    type: "read-only"
+    command: >-
+      python scripts/check_book_readiness.py --book-id <book_id>
+      --capability chapter-analysis
+
+  - step: 3
+    when: "readiness == READY"
+    action: "Declare READY_FOR_CHAPTER_ANALYSIS."
+    type: "read-only"
+
+  - step: 4
+    when: "readiness == BLOCKED and RAG-dependent intent is explicit"
+    action: >-
+      Execute BIBLIOTEKA-VSP-BOOK-ONBOARDING v1.1 using available source and
+      repository permissions. Do not delegate avoidable infrastructure work
+      back to the user.
+    type: "state-changing"
+
+  - step: 5
+    action: "Re-run readiness after onboarding."
+    type: "read-only"
+
+  - step: 6
+    when: "readiness == READY"
+    action: >-
+      Tell the user that normal chapter work may continue with the short command
+      'Анализ главы N'.
+    type: "read-only"
+
+  - step: 7
+    when: "readiness != READY"
+    action: >-
+      Return CHAPTER_ANALYSIS_BLOCKED with exact failed prerequisite(s),
+      verified evidence and next action. Do not claim the branch is ready.
+    type: "read-only"
+
+forbidden_inferences:
+  - "reading_active => rag_ready"
+  - "reading_active => chapter_analysis_ready"
+  - "electronic_holding_known => canonical_source_ready"
+  - "rag_manifest_exists => retrieval_ready"
+  - "book_registered => chapter_analysis_ready"
+
+state_reporting:
+  required_capabilities:
+    - "inventory_registered"
+    - "electronic_holding_known"
+    - "knowledge_registered"
+    - "reading_active"
+    - "metadata_ready"
+    - "canonical_source_ready"
+    - "source_provenance_verified"
+    - "rag_ready"
+    - "retrieval_ready"
+    - "chapter_analysis_ready"
+
+ready_output:
+  status: "READY_FOR_CHAPTER_ANALYSIS"
+  allowed_next_user_command: "Анализ главы N"
+
+blocked_output:
+  status: "CHAPTER_ANALYSIS_BLOCKED"
+  required:
+    - "failed prerequisite"
+    - "verified evidence"
+    - "next action"
+    - "read-only or state-changing classification"
+    - "rollback when modification is proposed"
+
+acceptance_criteria:
+  - "No READY claim is made before readiness passes."
+  - "Reading-only state remains valid but does not imply chapter readiness."
+  - "Explicit RAG/chapter intent triggers onboarding when prerequisites are missing."
+  - "After successful onboarding, normal chapter work requires no repeated book-level setup."
+  - "The active chapter artifact contract is v1.5."
+  - "Routine branch/PR/CI/repository work is performed remotely through GitHub tools."
+  - "Any user-local Git request has a valid exception reason and minimal scope."
+  - "All unknown or unsupported facts remain explicit."
