@@ -6,16 +6,16 @@ Canonical process and entrypoint templates.
 
 | Use case | Template | Version |
 |---|---|---:|
-| Start a new book branch for RAG + chapter cheatsheets | [book-branch-bootstrap-v1.1.yaml](book-branch-bootstrap-v1.1.yaml) | 1.1 |
-| Start analysis of one chapter | [chapter-analysis-request-v1.1.yaml](chapter-analysis-request-v1.1.yaml) | 1.1 |
+| Start a new book branch for RAG + chapter cheatsheets | [book-branch-bootstrap-v1.2.yaml](book-branch-bootstrap-v1.2.yaml) | 1.1 |
+| Start analysis of one chapter | [chapter-analysis-request-v1.2.yaml](chapter-analysis-request-v1.2.yaml) | 1.1 |
 
 ## Current process contracts
 
 | Responsibility | Template | Version |
 |---|---|---:|
 | Git execution / local-exception policy | [git-execution-policy-v1.0.yaml](git-execution-policy-v1.0.yaml) | 1.0 |
-| One-time book source/RAG preparation | [book-onboarding-v1.1.yaml](book-onboarding-v1.1.yaml) | 1.1 |
-| Read-only chapter-analysis readiness gate | [book-readiness-v1.1.yaml](book-readiness-v1.1.yaml) | 1.1 |
+| One-time book source/RAG preparation | [book-onboarding-v1.2.yaml](book-onboarding-v1.2.yaml) | 1.1 |
+| Read-only chapter-analysis readiness gate | [book-readiness-v1.2.yaml](book-readiness-v1.2.yaml) | 1.1 |
 | Chapter artifact production | [chapter-artifact-collection-v1.5.yaml](chapter-artifact-collection-v1.5.yaml) | 1.5 |
 
 ## Git execution rule
@@ -47,17 +47,17 @@ to GitHub tools.
 ```text
 New book branch
   ↓
-BOOK-BRANCH-BOOTSTRAP v1.1
+BOOK-BRANCH-BOOTSTRAP v1.2
   ↓
-BOOK-READINESS v1.1
+BOOK-READINESS v1.2
   ├─ READY ──────────────────────────────┐
-  └─ BLOCKED → BOOK-ONBOARDING v1.1 → readiness
+  └─ BLOCKED → BOOK-ONBOARDING v1.2 → readiness
                                         ↓
                               READY_FOR_CHAPTER_ANALYSIS
                                         ↓
                                   "Анализ главы N"
                                         ↓
-                          CHAPTER-ANALYSIS-REQUEST v1.1
+                          CHAPTER-ANALYSIS-REQUEST v1.2
                                         ↓
                      CHAPTER-ARTIFACT-COLLECTION v1.5
 ```
