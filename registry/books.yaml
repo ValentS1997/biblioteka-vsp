@@ -12,7 +12,7 @@ source:
 
 scope:
   purpose: "Physical/private library inventory; independent from the RAG-ready books index."
-  book_count: 46
+  book_count: 45
 
 books:
   - number: 1
@@ -108,13 +108,6 @@ books:
     translators_editors_raw: "--"
     summary_short: "Построение Zero Trust-систем с акцентом на идентичность, доступ и недоверенные сети."
     direction: "Security / Zero Trust"
-  - number: 14
-    inventory_number: "0014"
-    title: "Docker без секретов: разработка и развертывание приложений с помощью Docker"
-    authors_raw: "Сайбал Гош"
-    translators_editors_raw: "М. Попович"
-    summary_short: "Работа с Docker: образы, контейнеры, хранение, сети и развёртывание приложений."
-    direction: "Docker / Containers"
   - number: 15
     inventory_number: "0015"
     title: "Linux и Go. Эффективное низкоуровневое программирование"
