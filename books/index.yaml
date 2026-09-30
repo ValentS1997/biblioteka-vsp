@@ -100,10 +100,6 @@ books:
     paths:
       metadata: books/docker-demystified-saibal-ghosh-ru-2023/metadata.yaml
       source: books/docker-demystified-saibal-ghosh-ru-2023/source/book.pdf
-      rag_manifest: books/docker-demystified-saibal-ghosh-ru-2023/rag/manifest.yaml
-      rag_chunks: books/docker-demystified-saibal-ghosh-ru-2023/rag/chunks/
-      rag_chunk_index: books/docker-demystified-saibal-ghosh-ru-2023/rag/chunk-index.jsonl
-      rag_search_index: books/docker-demystified-saibal-ghosh-ru-2023/rag/search-index/
       reading_progress: books/docker-demystified-saibal-ghosh-ru-2023/reading/progress.yaml
       notes: books/docker-demystified-saibal-ghosh-ru-2023/notes/
       diagrams: books/docker-demystified-saibal-ghosh-ru-2023/diagrams/
