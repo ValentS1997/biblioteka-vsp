@@ -60,7 +60,9 @@ checks:
     source: "metadata.yaml id"
   canonical_source_exists:
     source: "books/index.yaml paths.source"
-    canonical_paths:\n      - "source/book.pdf"\n      - "source/book.epub"
+    canonical_paths:
+      - "source/book.pdf"
+      - "source/book.epub"
   source_checksum_record_exists:
     source: "books/<book_id>/source/SHA256"
   metadata_expected_sha256_exists:
@@ -68,7 +70,7 @@ checks:
   source_provenance_consistent:
     rule: >-
       source/SHA256, metadata source.expected_sha256 and RAG manifest
-      source.sha256 must agree after RAG build.
+      source.sha256 must agree after RAG build for the declared PDF or EPUB source.
   rag_manifest_exists:
     source: "books/index.yaml paths.rag_manifest"
   rag_manifest_book_id_matches:
@@ -89,7 +91,7 @@ checks:
       Deterministically select a valid addressable chunk from chunk-index,
       derive an informative token from its text, resolve the lexical shard,
       confirm the shard references a valid chunk, and verify book_id/chunk_id/
-      pdf_page/source_sha256/path consistency. This tests retrieval plumbing,
+      source-unit/source_sha256/path consistency. This tests retrieval plumbing,
       not semantic ranking quality.
   chapter_template_available:
     source: "templates/chapter-artifact-collection-v1.5.yaml"
