@@ -62,17 +62,3 @@ jobs:
           python scripts/check_book_readiness.py \
             --book-id unix-linux-system-administration-handbook-5e-ru-2020 \
             --capability chapter-analysis
-
-      - name: Verify reading-only book remains valid but chapter-blocked
-        shell: bash
-        run: |
-          set +e
-          python scripts/check_book_readiness.py \
-            --book-id how-linux-works-3e-ru-2022 \
-            --capability chapter-analysis > /tmp/how-linux-works-readiness.yaml
-          rc=$?
-          set -e
-
-          cat /tmp/how-linux-works-readiness.yaml
-          test "$rc" -eq 1
-          grep -q '^status: BLOCKED$' /tmp/how-linux-works-readiness.yaml

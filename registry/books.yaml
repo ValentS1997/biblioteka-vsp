@@ -12,7 +12,7 @@ source:
 
 scope:
   purpose: "Physical/private library inventory; independent from the RAG-ready books index."
-  book_count: 45
+  book_count: 44
 
 books:
   - number: 1
@@ -245,14 +245,6 @@ books:
     translators_editors_raw: "--"
     summary_short: "Развёртывание и эксплуатация Kubernetes в локальных, облачных и гибридных средах."
     direction: "Kubernetes / Containers"
-  - number: 34
-    inventory_number: "0034"
-    knowledge_id: "how-linux-works-3e-ru-2022"
-    title: "Внутреннее устройство Linux. 3-е изд."
-    authors_raw: "Брайан Уорд"
-    translators_editors_raw: "С. Черников; научный редактор Н. Ланцунцевич"
-    summary_short: "Внутреннее устройство Linux: загрузка, ядро, процессы, память, устройства, файловые системы и сети."
-    direction: "Linux Internals"
   - number: 35
     inventory_number: "0035"
     title: "Высоконагруженные приложения: программирование, масштабирование, поддержка"
@@ -399,8 +391,8 @@ verification_sources:
 electronic_holdings:
   source: "user-provided local file inventory + uploaded file confirmation"
   observed_date: "2026-09-30"
-  file_count: 22
-  matched_unambiguous: 17
+  file_count: 21
+  matched_unambiguous: 16
   needs_confirmation: 3
   unregistered: 2
   files:
@@ -491,7 +483,3 @@ electronic_holdings:
       format: "pdf"
       match_status: "matched"
       inventory_numbers: ["0005"]
-    - filename: "Внутреннее устройство Linux [3-е издание].pdf"
-      format: "pdf"
-      match_status: "matched"
-      inventory_numbers: ["0034"]

@@ -50,12 +50,6 @@
   <!-- Stage 1 -->
   <text x="60" y="350" class="section">1. Сейчас — инженерная глубина + инструменты</text>
   <g>
-    <rect x="60" y="385" rx="18" ry="18" width="470" height="125" class="core"/>
-    <text x="85" y="425" class="box-title">0034 · Внутреннее устройство Linux</text>
-    <text x="85" y="458" class="box-text">MAIN · процессы, память, загрузка, FS, устройства, сеть</text>
-    <text x="85" y="486" class="small">Цель: перейти от администрирования к пониманию internals.</text>
-  </g>
-  <g>
     <rect x="590" y="385" rx="18" ry="18" width="420" height="125" class="next"/>
     <text x="615" y="425" class="box-title">0032 · Идиомы bash</text>
     <text x="615" y="458" class="box-text">PRACTICE · надёжные shell-сценарии</text>
@@ -67,7 +61,6 @@
     <text x="1095" y="458" class="box-text">PRACTICE · история, ветки, merge, командный процесс</text>
     <text x="1095" y="486" class="small">Нужен как базовый инженерный инструмент.</text>
   </g>
-  <path d="M530 448 H590" class="arrow"/>
   <path d="M1010 448 H1070" class="arrow"/>
 
   <!-- Stage 2 -->
