@@ -106,7 +106,8 @@ metadata_minimum_before_rag:
     - "source.storage"
     - "source.upload_status"
   non_blocking_unknowns:
-    - "source.source_pdf_pages"\n    - "source.epub_spine_items"
+    - "source.source_pdf_pages"
+    - "source.epub_spine_items"
     - "source.text_layer"
     - "source.ownership_category"
     - "source.physical_copy"
@@ -150,7 +151,8 @@ workflow:
       - "Unknown metadata remains [Needs confirmation]."
       - "Do not fabricate checksums."
       - "Do not fabricate PDF page counts or EPUB spine counts."
-      - "Do not classify native text vs OCR without an explicit detector."\n      - "Canonical source formats are PDF and EPUB; exactly one declared source is allowed per book."
+      - "Do not classify native text vs OCR without an explicit detector."
+      - "Canonical source formats are PDF and EPUB; exactly one declared source is allowed per book."
       - "Do not infer legal provenance."
 
   - step: 5
