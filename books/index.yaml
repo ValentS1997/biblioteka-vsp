@@ -125,3 +125,21 @@ books:
       reading_progress: books/docker-demystified-saibal-ghosh-ru-2023/reading/progress.yaml
       notes: books/docker-demystified-saibal-ghosh-ru-2023/notes/
       diagrams: books/docker-demystified-saibal-ghosh-ru-2023/diagrams/
+
+  - id: python-crash-course-3e-ru-2024
+    title: "Изучаем Python: программирование игр, визуализация данных, веб-приложения. 3-е изд."
+    authors:
+      - "Эрик Мэтиз"
+    language: ru
+    edition: 3
+    publication_year: 2024
+    isbn: "9785446141128"
+    paths:
+      metadata: books/python-crash-course-3e-ru-2024/metadata.yaml
+      source: books/python-crash-course-3e-ru-2024/source/book.epub
+      rag_manifest: books/python-crash-course-3e-ru-2024/rag/manifest.yaml
+      rag_chunks: books/python-crash-course-3e-ru-2024/rag/chunks/
+      rag_chunk_index: books/python-crash-course-3e-ru-2024/rag/chunk-index.jsonl
+      rag_search_index: books/python-crash-course-3e-ru-2024/rag/search-index/
+      notes: books/python-crash-course-3e-ru-2024/notes/
+      diagrams: books/python-crash-course-3e-ru-2024/diagrams/

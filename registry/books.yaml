@@ -140,6 +140,7 @@ books:
     direction: "Assembly / x86"
   - number: 18
     inventory_number: "0018"
+    knowledge_id: "python-crash-course-3e-ru-2024"
     title: "Изучаем Python: программирование игр, визуализация данных, веб-приложения. 3-е изд."
     authors_raw: "Эрик Мэтиз"
     translators_editors_raw: "Е. Матвеев"
