@@ -1,0 +1,83 @@
+schema_version: "1.0"
+
+template:
+  id: "BIBLIOTEKA-VSP-SOURCE-VAULT-BATCH-STAGE"
+  version: "1.0"
+  type: "source_vault_batch_stage"
+  status: "ACCEPTED"
+  purpose: >-
+    Pre-stage many future book PDF/EPUB binaries into Git LFS once so later
+    per-book onboarding can promote an existing LFS object remotely without
+    repeated user-local Git uploads.
+
+scope:
+  repository: "ValentS1997/biblioteka-vsp"
+  branch_pattern: "source-vault/<immutable-batch-name>"
+  vault_root: "source-vault/"
+  canonical_book_state_created: false
+  registry_state_created: false
+  rag_build_triggered: false
+
+git_execution:
+  policy:
+    id: "BIBLIOTEKA-VSP-GIT-EXECUTION-POLICY"
+    version: "1.0"
+  reason_code: "GIT_LFS_BINARY_UPLOAD_REQUIRED"
+  exception_scope: >-
+    One batch operation uploads only source binaries and their content-addressed
+    LFS pointers/manifest. All later book metadata, branches, PRs, CI, RAG and
+    readiness remain remote-first.
+
+inputs:
+  local_source_directory: "[Required]"
+  supported_extensions:
+    - "pdf"
+    - "epub"
+  scan_mode: "top-level files only"
+  branch: "source-vault/<immutable-batch-name>"
+
+storage:
+  object_path_pattern: "source-vault/objects/<sha256>.<ext>"
+  manifest_path: "source-vault/manifest.yaml"
+  identity:
+    algorithm: "SHA-256"
+    property: >-
+      Git LFS object oid sha256 equals the SHA-256 of the exact source binary.
+  duplicate_policy: "content-addressed deduplication"
+
+local_helper:
+  path: "scripts/stage_source_vault.py"
+  example: >-
+    python scripts/stage_source_vault.py
+    --source-dir "/home/vspadmin/Загрузки"
+    --branch "source-vault/2026-09-30-rag-books"
+    --push
+
+promotion:
+  execution: "GitHub connector/API"
+  steps:
+    - "Read source-vault/manifest.yaml from the selected vault branch."
+    - "Resolve the intended source record by verified filename/SHA/book identity."
+    - "Read the LFS pointer at vault_path."
+    - "Create/reuse the per-book ingest branch remotely."
+    - "Create books/<book_id>/source/book.pdf or book.epub with the same LFS pointer."
+    - "Create source/SHA256 and metadata provenance from the manifest record."
+    - "Verify GitHub Actions checkout can materialize the real LFS object."
+    - "Continue normal BOOK-ONBOARDING/RAG/readiness remotely."
+
+rules:
+  - "A vault object is a source candidate, not a canonical book source."
+  - "Do not create registry/knowledge entries merely because a binary is in the vault."
+  - "Do not infer book_id from filename without verification."
+  - "Do not modify/recompress the source binary."
+  - "Do not merge the source-vault branch to main."
+  - "Keep the vault branch available while any staged object may be promoted."
+  - "After successful batch push, routine work returns to GitHub tools."
+  - "If a source already exists in a vault branch with matching SHA-256, do not upload it again."
+
+acceptance_criteria:
+  - "Every staged PDF/EPUB is tracked by Git LFS."
+  - "Manifest records original_name, extension, SHA-256, size and vault_path."
+  - "No book becomes canonical or RAG-ready merely from staging."
+  - "Future per-book source promotion requires no local binary upload."
+  - "Local Git interaction is amortized across the batch and ends after verified push."
