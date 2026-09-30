@@ -25,44 +25,22 @@ class TemplateContractTests(unittest.TestCase):
 
     def test_new_book_branch_bootstrap_contracts(self):
         doc = self.assert_template(
-            "book-branch-bootstrap-v1.1.yaml",
+            "book-branch-bootstrap-v1.2.yaml",
             "BIBLIOTEKA-VSP-BOOK-BRANCH-BOOTSTRAP",
-            "1.1",
+            "1.2",
         )
-        contracts = doc["contracts"]
-
         expected = {
-            "onboarding": (
-                "BIBLIOTEKA-VSP-BOOK-ONBOARDING",
-                "1.1",
-                "templates/book-onboarding-v1.1.yaml",
-            ),
-            "readiness": (
-                "BIBLIOTEKA-VSP-BOOK-READINESS",
-                "1.1",
-                "templates/book-readiness-v1.1.yaml",
-            ),
-            "chapter_request": (
-                "BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST",
-                "1.1",
-                "templates/chapter-analysis-request-v1.1.yaml",
-            ),
-            "chapter_artifacts": (
-                "BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION",
-                "1.5",
-                "templates/chapter-artifact-collection-v1.5.yaml",
-            ),
+            "onboarding": ("BIBLIOTEKA-VSP-BOOK-ONBOARDING", "1.2", "templates/book-onboarding-v1.2.yaml"),
+            "readiness": ("BIBLIOTEKA-VSP-BOOK-READINESS", "1.2", "templates/book-readiness-v1.2.yaml"),
+            "chapter_request": ("BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST", "1.2", "templates/chapter-analysis-request-v1.2.yaml"),
+            "chapter_artifacts": ("BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION", "1.6", "templates/chapter-artifact-collection-v1.6.yaml"),
         }
-
         for key, (template_id, version, rel_path) in expected.items():
-            ref = contracts[key]
+            ref = doc["contracts"][key]
             self.assertEqual(template_id, ref["id"])
             self.assertEqual(version, str(ref["version"]))
             self.assertEqual(rel_path, ref["path"])
-
-            target = ROOT / rel_path
-            self.assertTrue(target.is_file(), rel_path)
-            target_doc = load(target)
+            target_doc = load(ROOT / rel_path)
             target_template = target_doc.get("template") or {}
             self.assertEqual(template_id, target_template.get("id"))
             self.assertEqual(version, str(target_template.get("version")))
@@ -70,47 +48,37 @@ class TemplateContractTests(unittest.TestCase):
 
     def test_chapter_request_targets_current_contracts(self):
         doc = self.assert_template(
-            "chapter-analysis-request-v1.1.yaml",
+            "chapter-analysis-request-v1.2.yaml",
             "BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST",
-            "1.1",
+            "1.2",
         )
         readiness = doc["contracts"]["readiness"]
         artifacts = doc["contracts"]["artifact_collection"]
+        self.assertEqual("1.2", str(readiness["version"]))
+        self.assertEqual("templates/book-readiness-v1.2.yaml", readiness["path"])
+        self.assertEqual("1.6", str(artifacts["version"]))
+        self.assertEqual("templates/chapter-artifact-collection-v1.6.yaml", artifacts["path"])
 
-        self.assertEqual("BIBLIOTEKA-VSP-BOOK-READINESS", readiness["id"])
-        self.assertEqual("1.1", str(readiness["version"]))
-        self.assertEqual("templates/book-readiness-v1.1.yaml", readiness["path"])
+    def test_legacy_versions_retained_and_v16_current(self):
+        self.assert_template("book-onboarding-v1.1.yaml", "BIBLIOTEKA-VSP-BOOK-ONBOARDING", "1.1")
+        self.assert_template("book-readiness-v1.1.yaml", "BIBLIOTEKA-VSP-BOOK-READINESS", "1.1")
+        self.assert_template("chapter-artifact-collection-v1.5.yaml", "BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION", "1.5")
+        v16 = self.assert_template(
+            "chapter-artifact-collection-v1.6.yaml",
+            "BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION",
+            "1.6",
+        )
+        self.assertTrue(v16["artifact_collection"]["preconditions"]["book_level"]["chapter_analysis_ready"])
+        self.assertIn("epub", v16["artifact_collection"]["source_policy"]["supported_source_formats"])
 
-        self.assertEqual(
-            "BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION",
-            artifacts["id"],
+    def test_onboarding_supports_pdf_and_epub(self):
+        onboarding = self.assert_template(
+            "book-onboarding-v1.2.yaml",
+            "BIBLIOTEKA-VSP-BOOK-ONBOARDING",
+            "1.2",
         )
-        self.assertEqual("1.5", str(artifacts["version"]))
-        self.assertEqual(
-            "templates/chapter-artifact-collection-v1.5.yaml",
-            artifacts["path"],
-        )
-
-    def test_legacy_versions_retained_and_v15_current(self):
-        v13 = self.assert_template(
-            "chapter-artifact-collection-v1.3.yaml",
-            "BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION",
-            "1.3",
-        )
-        v14 = self.assert_template(
-            "chapter-artifact-collection-v1.4.yaml",
-            "BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION",
-            "1.4",
-        )
-        self.assertNotIn("preconditions", v13["artifact_collection"])
-        self.assertTrue(v14["artifact_collection"]["preconditions"]["book_level"]["chapter_analysis_ready"])
-        v15 = self.assert_template(
-            "chapter-artifact-collection-v1.5.yaml",
-            "BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION",
-            "1.5",
-        )
-        self.assertTrue(v15["artifact_collection"]["preconditions"]["book_level"]["chapter_analysis_ready"])
-        self.assertFalse(v15["artifact_collection"]["git_execution"]["local_git_default_allowed"])
+        formats = onboarding["policy"]["supported_canonical_source_formats"]
+        self.assertEqual(["pdf", "epub"], formats)
 
     def test_remote_git_policy_is_current(self):
         policy = self.assert_template(

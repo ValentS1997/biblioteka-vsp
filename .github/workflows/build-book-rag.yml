@@ -6,8 +6,15 @@ on:
       - main
     paths:
       - "books/**/source/book.pdf"
+      - "books/**/source/book.epub"
       - "scripts/build_book_rag.py"
       - ".github/workflows/build-book-rag.yml"
+  workflow_dispatch:
+    inputs:
+      book_id:
+        description: "Optional book id to rebuild explicitly"
+        required: false
+        type: string
 
 permissions:
   contents: write
@@ -35,15 +42,29 @@ jobs:
       - name: Detect books to rebuild
         id: detect
         shell: bash
+        env:
+          REQUESTED_BOOK_ID: ${{ inputs.book_id }}
         run: |
           set -euo pipefail
+          : > /tmp/rag-sources.txt
 
-          CHANGED="$(git show --pretty="" --name-only "$GITHUB_SHA")"
+          if [ "${GITHUB_EVENT_NAME}" = "workflow_dispatch" ] && [ -n "${REQUESTED_BOOK_ID:-}" ]; then
+            for candidate in \
+              "books/${REQUESTED_BOOK_ID}/source/book.pdf" \
+              "books/${REQUESTED_BOOK_ID}/source/book.epub"; do
+              if [ -f "$candidate" ]; then
+                printf '%s\n' "$candidate" >> /tmp/rag-sources.txt
+              fi
+            done
+          elif [ "${GITHUB_EVENT_NAME}" = "push" ]; then
+            git show --pretty="" --name-only "$GITHUB_SHA" \
+              | grep -E '^books/[^/]+/source/book\.(pdf|epub)$' \
+              | sort -u > /tmp/rag-sources.txt || true
+          fi
 
-          if grep -Eq '^(scripts/build_book_rag.py|\.github/workflows/build-book-rag\.yml)$' <<<"$CHANGED"; then
-            find books -mindepth 3 -maxdepth 3 -path '*/source/book.pdf' -type f | sort > /tmp/rag-sources.txt
-          else
-            grep -E '^books/[^/]+/source/book\.pdf$' <<<"$CHANGED" | sort -u > /tmp/rag-sources.txt || true
+          if [ "$(wc -l < /tmp/rag-sources.txt)" -gt 1 ] && [ "${GITHUB_EVENT_NAME}" = "workflow_dispatch" ]; then
+            echo "More than one supported canonical source exists for ${REQUESTED_BOOK_ID}." >&2
+            exit 1
           fi
 
           echo "Sources selected:"
@@ -55,13 +76,13 @@ jobs:
           set -euo pipefail
 
           if [ ! -s /tmp/rag-sources.txt ]; then
-            echo "No canonical book source PDF selected."
+            echo "No changed canonical PDF/EPUB source selected."
             exit 0
           fi
 
           while IFS= read -r source; do
-            book_dir="${source%/source/book.pdf}"
-            echo "Building RAG for $book_dir"
+            book_dir="$(dirname "$(dirname "$source")")"
+            echo "Building RAG for $book_dir from $source"
             python scripts/build_book_rag.py --book-dir "$book_dir"
           done < /tmp/rag-sources.txt
 
@@ -87,8 +108,6 @@ jobs:
 
           git commit -m "chore(rag): build addressable retrieval chunks"
 
-          # The ingest branch may move while this job is generating artifacts.
-          # Publish with a bounded optimistic retry: fetch -> rebase -> push.
           for attempt in 1 2 3 4 5; do
             git fetch origin "${GITHUB_REF_NAME}"
             git rebase "origin/${GITHUB_REF_NAME}"

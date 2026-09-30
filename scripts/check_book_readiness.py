@@ -14,16 +14,17 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 INDEX = ROOT / "books" / "index.yaml"
-CHAPTER_TEMPLATE = ROOT / "templates" / "chapter-artifact-collection-v1.5.yaml"
+CHAPTER_TEMPLATE = ROOT / "templates" / "chapter-artifact-collection-v1.6.yaml"
 
 READY_RE = re.compile(r"^READY")
 TOKEN_RE = re.compile(r"[0-9a-zа-я]+", flags=re.IGNORECASE)
+SUPPORTED_SOURCE_NAMES = {"book.pdf", "book.epub"}
 
 NEXT_ACTIONS = {
     "BOOK_NOT_REGISTERED": "register the book in books/index.yaml",
     "METADATA_MISSING": "create and declare books/<book_id>/metadata.yaml",
     "METADATA_ID_MISMATCH": "make metadata.yaml id match book_id",
-    "CANONICAL_SOURCE_MISSING": "ingest and declare books/<book_id>/source/book.pdf",
+    "CANONICAL_SOURCE_MISSING": "ingest and declare books/<book_id>/source/book.pdf or books/<book_id>/source/book.epub",
     "SOURCE_CHECKSUM_RECORD_MISSING": "create source/SHA256 for the canonical source",
     "SOURCE_PROVENANCE_INCOMPLETE": "make metadata expected_sha256, source/SHA256 and RAG source.sha256 consistent",
     "RAG_MANIFEST_MISSING": "build full-book RAG on an ingest branch",
@@ -34,7 +35,7 @@ NEXT_ACTIONS = {
     "ADDRESSABLE_CHUNKS_MISSING": "generate addressable rag/chunks files",
     "RETRIEVAL_INDEX_MISSING": "generate rag/search-index including manifest.json",
     "RETRIEVAL_INTEGRITY_FAILED": "repair/rebuild deterministic retrieval artifacts and rerun the smoke test",
-    "CHAPTER_TEMPLATE_MISSING": "install an ACCEPTED BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.4 template",
+    "CHAPTER_TEMPLATE_MISSING": "install an ACCEPTED BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.6 template",
 }
 
 
@@ -137,12 +138,25 @@ def load_chunk_index(path: Path) -> list[dict[str, Any]]:
     return records
 
 
+def source_locator(record: dict[str, Any]) -> tuple[str, Any, str] | None:
+    unit_type = record.get("source_unit_type")
+    unit = record.get("source_unit")
+    locator = record.get("source_locator")
+    if unit_type is not None and unit is not None and locator is not None:
+        return str(unit_type), unit, str(locator)
+    pdf_page = record.get("pdf_page")
+    if pdf_page is not None:
+        return "pdf_page", pdf_page, str(pdf_page)
+    return None
+
+
 def retrieval_integrity_smoke_test(
     *,
     book_dir: Path,
     book_id: str,
     chunk_index_path: Path,
     search_index_dir: Path,
+    expected_source_path: str,
     expected_source_sha: str,
 ) -> tuple[bool, str]:
     records = load_chunk_index(chunk_index_path)
@@ -152,7 +166,6 @@ def retrieval_integrity_smoke_test(
     seed_path_value = seed.get("path")
     if not isinstance(seed_path_value, str):
         return False, "first chunk-index record has no path"
-
     seed_path = book_dir / seed_path_value
     if not seed_path.is_file():
         return False, f"seed chunk missing: {seed_path_value}"
@@ -168,7 +181,6 @@ def retrieval_integrity_smoke_test(
         shard_path = search_index_dir / shard_rel
         if not shard_path.is_file():
             continue
-
         try:
             shard = json.loads(shard_path.read_text(encoding="utf-8"))
         except Exception as exc:
@@ -179,33 +191,36 @@ def retrieval_integrity_smoke_test(
         posting = (shard.get("exact_terms") or {}).get(token)
         if not isinstance(posting, dict):
             continue
-
         chunk_id = str(posting.get("chunk_id"))
         indexed = by_id.get(chunk_id)
         if not indexed:
             return False, f"search posting references unknown chunk_id {chunk_id}"
-
         rel_path = posting.get("path")
         if not isinstance(rel_path, str) or rel_path != indexed.get("path"):
             return False, f"path mismatch for {chunk_id}"
-
         chunk_path = book_dir / rel_path
         if not chunk_path.is_file():
             return False, f"retrieved chunk missing: {rel_path}"
 
         meta, body = read_chunk(chunk_path)
+        locators = [source_locator(meta), source_locator(posting), source_locator(indexed)]
+        locator_ok = all(locator is not None for locator in locators) and len(set(locators)) == 1
         checks = {
             "book_id": meta.get("book_id") == book_id,
             "chunk_id": meta.get("chunk_id") == chunk_id,
-            "pdf_page": meta.get("pdf_page") == posting.get("pdf_page") == indexed.get("pdf_page"),
-            "source_sha256": str(meta.get("source_sha256", "")).lower() == expected_source_sha,
+            "source_locator": locator_ok,
+            "source_path": meta.get("source_path") == indexed.get("source_path") == expected_source_path,
+            "source_sha256": (
+                str(meta.get("source_sha256", "")).lower()
+                == str(indexed.get("source_sha256", "")).lower()
+                == expected_source_sha
+            ),
             "token": token in lexical_tokens(body),
         }
         if not all(checks.values()):
             failed = ",".join(name for name, ok in checks.items() if not ok)
             return False, f"retrieved chunk provenance mismatch: {failed}"
-
-        return True, f"token={token} shard={shard_rel} chunk={chunk_id}"
+        return True, f"token={token} shard={shard_rel} chunk={chunk_id} locator={locators[0]}"
 
     return False, "no seed token resolved through exact_terms in deterministic search index"
 
@@ -232,32 +247,23 @@ def build_output(book_id: str, checks: list[dict[str, Any]]) -> dict[str, Any]:
 def compute_readiness(book_id: str) -> dict[str, Any]:
     if not INDEX.is_file():
         raise RepositoryError("books/index.yaml is missing")
-
     index = load_yaml(INDEX)
     books = index.get("books") or []
     matches = [book for book in books if isinstance(book, dict) and book.get("id") == book_id]
-
     if len(matches) > 1:
         raise RepositoryError(f"duplicate book id in books/index.yaml: {book_id}")
 
     checks: list[dict[str, Any]] = [
         result_check("book_id_resolved", bool(book_id), True, bool(book_id), "CLI --book-id"),
     ]
-
     if not matches:
-        checks.append(
-            result_check(
-                "knowledge_registered", False, True, False,
-                "books/index.yaml", "BOOK_NOT_REGISTERED"
-            )
-        )
+        checks.append(result_check("knowledge_registered", False, True, False, "books/index.yaml", "BOOK_NOT_REGISTERED"))
         return build_output(book_id, checks)
 
     book = matches[0]
     paths = book.get("paths") or {}
     if not isinstance(paths, dict):
         raise RepositoryError(f"paths is not a mapping for {book_id}")
-
     checks.append(result_check("knowledge_registered", True, True, True, "books/index.yaml"))
     book_dir = ROOT / "books" / book_id
 
@@ -266,36 +272,35 @@ def compute_readiness(book_id: str) -> dict[str, Any]:
     metadata_exists = bool(metadata_path and metadata_path.is_file())
     checks.append(result_check(
         "metadata_exists", metadata_exists, True, metadata_exists,
-        str(metadata_rel or "[undeclared]"),
-        None if metadata_exists else "METADATA_MISSING",
+        str(metadata_rel or "[undeclared]"), None if metadata_exists else "METADATA_MISSING",
     ))
     metadata: dict[str, Any] = load_yaml(metadata_path) if metadata_exists and metadata_path else {}
     metadata_id_ok = metadata_exists and metadata.get("id") == book_id
     checks.append(result_check(
         "metadata_id_matches", metadata_id_ok, book_id, metadata.get("id"),
-        str(metadata_rel or "[undeclared]"),
-        None if metadata_id_ok else "METADATA_ID_MISMATCH",
+        str(metadata_rel or "[undeclared]"), None if metadata_id_ok else "METADATA_ID_MISMATCH",
     ))
 
     source_rel = paths.get("source")
     source_path = ROOT / source_rel if isinstance(source_rel, str) else None
-    canonical_source_exists = bool(
+    canonical_name_ok = bool(
         source_path
-        and source_path.as_posix().endswith(f"books/{book_id}/source/book.pdf")
-        and source_path.is_file()
+        and source_path.parent == book_dir / "source"
+        and source_path.name in SUPPORTED_SOURCE_NAMES
     )
+    canonical_source_exists = bool(canonical_name_ok and source_path and source_path.is_file())
     checks.append(result_check(
-        "canonical_source_exists", canonical_source_exists, True, canonical_source_exists,
-        str(source_rel or "[undeclared]"),
-        None if canonical_source_exists else "CANONICAL_SOURCE_MISSING",
+        "canonical_source_exists", canonical_source_exists,
+        "declared source/book.pdf or source/book.epub exists",
+        {"declared": source_rel, "exists": bool(source_path and source_path.is_file()), "supported_name": canonical_name_ok},
+        str(source_rel or "[undeclared]"), None if canonical_source_exists else "CANONICAL_SOURCE_MISSING",
     ))
 
     sha_path = source_path.parent / "SHA256" if source_path else book_dir / "source" / "SHA256"
     source_sha = read_sha_record(sha_path) if sha_path.is_file() else None
     checks.append(result_check(
         "source_checksum_record_exists", source_sha is not None, True, source_sha is not None,
-        str(sha_path.relative_to(ROOT)),
-        None if source_sha is not None else "SOURCE_CHECKSUM_RECORD_MISSING",
+        str(sha_path.relative_to(ROOT)), None if source_sha is not None else "SOURCE_CHECKSUM_RECORD_MISSING",
     ))
 
     metadata_source = metadata.get("source") or {}
@@ -313,16 +318,13 @@ def compute_readiness(book_id: str) -> dict[str, Any]:
     manifest_exists = bool(manifest_path and manifest_path.is_file())
     checks.append(result_check(
         "rag_manifest_exists", manifest_exists, True, manifest_exists,
-        str(manifest_rel or "[undeclared]"),
-        None if manifest_exists else "RAG_MANIFEST_MISSING",
+        str(manifest_rel or "[undeclared]"), None if manifest_exists else "RAG_MANIFEST_MISSING",
     ))
     manifest: dict[str, Any] = load_yaml(manifest_path) if manifest_exists and manifest_path else {}
-
     manifest_id_ok = manifest_exists and manifest.get("book_id") == book_id
     checks.append(result_check(
         "rag_manifest_book_id_matches", manifest_id_ok, book_id, manifest.get("book_id"),
-        str(manifest_rel or "[undeclared]"),
-        None if manifest_id_ok else "RAG_ID_MISMATCH",
+        str(manifest_rel or "[undeclared]"), None if manifest_id_ok else "RAG_ID_MISMATCH",
     ))
 
     manifest_source = manifest.get("source") or {}
@@ -332,7 +334,7 @@ def compute_readiness(book_id: str) -> dict[str, Any]:
     expected_manifest_source_path = (
         source_path.relative_to(book_dir).as_posix()
         if source_path and source_path.is_relative_to(book_dir)
-        else "source/book.pdf"
+        else str(Path("source") / (source_path.name if source_path else "book.[pdf|epub]"))
     )
     manifest_source_ok = bool(
         manifest_exists
@@ -344,14 +346,10 @@ def compute_readiness(book_id: str) -> dict[str, Any]:
         "rag_manifest_source_matches", manifest_source_ok,
         {"path": expected_manifest_source_path, "sha256": source_sha},
         {"path": manifest_source.get("path"), "sha256": manifest_sha},
-        str(manifest_rel or "[undeclared]"),
-        None if manifest_source_ok else "RAG_SOURCE_MISMATCH",
+        str(manifest_rel or "[undeclared]"), None if manifest_source_ok else "RAG_SOURCE_MISMATCH",
     ))
 
-    provenance_ok = bool(
-        source_sha and metadata_sha_ok and manifest_sha
-        and source_sha == metadata_sha == manifest_sha
-    )
+    provenance_ok = bool(source_sha and metadata_sha_ok and manifest_sha and source_sha == metadata_sha == manifest_sha)
     checks.append(result_check(
         "source_provenance_consistent", provenance_ok,
         "source/SHA256 == metadata expected_sha256 == RAG source.sha256",
@@ -364,8 +362,7 @@ def compute_readiness(book_id: str) -> dict[str, Any]:
     rag_ready = bool(isinstance(validation_status, str) and READY_RE.match(validation_status))
     checks.append(result_check(
         "rag_validation_ready", rag_ready, "^READY", validation_status,
-        str(manifest_rel or "[undeclared]"),
-        None if rag_ready else "RAG_VALIDATION_NOT_READY",
+        str(manifest_rel or "[undeclared]"), None if rag_ready else "RAG_VALIDATION_NOT_READY",
     ))
 
     chunk_index_rel = paths.get("rag_chunk_index")
@@ -373,8 +370,7 @@ def compute_readiness(book_id: str) -> dict[str, Any]:
     chunk_index_exists = bool(chunk_index_path and chunk_index_path.is_file())
     checks.append(result_check(
         "chunk_index_exists", chunk_index_exists, True, chunk_index_exists,
-        str(chunk_index_rel or "[undeclared]"),
-        None if chunk_index_exists else "CHUNK_INDEX_MISSING",
+        str(chunk_index_rel or "[undeclared]"), None if chunk_index_exists else "CHUNK_INDEX_MISSING",
     ))
 
     chunks_rel = paths.get("rag_chunks")
@@ -382,8 +378,7 @@ def compute_readiness(book_id: str) -> dict[str, Any]:
     chunks_exist = bool(chunks_path and chunks_path.is_dir() and any(chunks_path.rglob("*.md")))
     checks.append(result_check(
         "addressable_chunks_exist", chunks_exist, True, chunks_exist,
-        str(chunks_rel or "[undeclared]"),
-        None if chunks_exist else "ADDRESSABLE_CHUNKS_MISSING",
+        str(chunks_rel or "[undeclared]"), None if chunks_exist else "ADDRESSABLE_CHUNKS_MISSING",
     ))
 
     search_rel = paths.get("rag_search_index")
@@ -398,18 +393,21 @@ def compute_readiness(book_id: str) -> dict[str, Any]:
 
     smoke_ok = False
     smoke_evidence = "prerequisites missing"
-    if chunk_index_exists and chunks_exist and search_exists and source_sha and search_dir and chunk_index_path:
+    if (
+        chunk_index_exists and chunks_exist and search_exists and source_sha
+        and search_dir and chunk_index_path and canonical_source_exists
+    ):
         smoke_ok, smoke_evidence = retrieval_integrity_smoke_test(
             book_dir=book_dir,
             book_id=book_id,
             chunk_index_path=chunk_index_path,
             search_index_dir=search_dir,
+            expected_source_path=expected_manifest_source_path,
             expected_source_sha=source_sha,
         )
     checks.append(result_check(
         "retrieval_integrity_smoke_test_passed", smoke_ok, True, smoke_ok,
-        smoke_evidence,
-        None if smoke_ok else "RETRIEVAL_INTEGRITY_FAILED",
+        smoke_evidence, None if smoke_ok else "RETRIEVAL_INTEGRITY_FAILED",
     ))
 
     chapter_template_ok = False
@@ -420,11 +418,11 @@ def compute_readiness(book_id: str) -> dict[str, Any]:
         chapter_template_ok = bool(
             isinstance(template, dict)
             and template.get("id") == "BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION"
-            and str(template.get("version")) == "1.5"
+            and str(template.get("version")) == "1.6"
             and template.get("status") == "ACCEPTED"
         )
     checks.append(result_check(
-        "chapter_template_available", chapter_template_ok, "ACCEPTED v1.5",
+        "chapter_template_available", chapter_template_ok, "ACCEPTED v1.6",
         chapter_template_ok, template_evidence,
         None if chapter_template_ok else "CHAPTER_TEMPLATE_MISSING",
     ))
@@ -437,7 +435,6 @@ def main() -> int:
     parser.add_argument("--book-id", required=True)
     parser.add_argument("--capability", default="chapter-analysis")
     args = parser.parse_args()
-
     if args.capability != "chapter-analysis":
         print(yaml.safe_dump({
             "schema": "biblioteka-vsp/readiness-result/v1",
@@ -447,7 +444,6 @@ def main() -> int:
             "error": "unsupported capability",
         }, allow_unicode=True, sort_keys=False), end="")
         return 2
-
     try:
         output = compute_readiness(args.book_id)
     except RepositoryError as exc:
@@ -459,7 +455,6 @@ def main() -> int:
             "error": str(exc),
         }, allow_unicode=True, sort_keys=False), end="")
         return 2
-
     print(yaml.safe_dump(output, allow_unicode=True, sort_keys=False), end="")
     return 0 if output["status"] == "READY" else 1
 
