@@ -1,0 +1,67 @@
+schema: biblioteka-vsp/rag/v1
+book_id: ai-engineering-chip-huyen-ru
+
+source:
+  path: source/book.pdf
+  sha256: 850c365211ba0e3d68a8ff8e7d7d48fb95188e24228270d11c0ec954c2062fba
+  pdf_pages: 560
+
+extraction:
+  engine: PyMuPDF
+  engine_version: "1.28.2"
+  page_coordinate_system: source_pdf_1_indexed
+  text_layer: unclassified_extractable_pdf_text
+  normalization:
+    - remove_NUL
+    - remove_soft_hyphen_marker
+    - normalize_line_endings
+    - trim_trailing_horizontal_whitespace
+
+chunking:
+  scope: per_pdf_page
+  target_chars: 4000
+  overlap_chars: 350
+  id_pattern: "<book-slug>:p<pdf-page-4d>:c<chunk-2d>"
+
+retrieval:
+  mode: addressable_small_chunks
+  discovery: deterministic_lexical_shards
+  search_index_manifest: rag/search-index/manifest.json
+  search_index_path_pattern: "rag/search-index/<shard>.json"
+  search_scope: rag/chunks/
+  chunk_index: rag/chunk-index.jsonl
+  top_k_max: 3
+  chunk_file_pattern: "rag/chunks/p####-p####/p####-c##.md"
+  bulk_files:
+    - rag/text.md
+    - rag/chunks.jsonl
+  bulk_files_for_query_retrieval: false
+
+statistics:
+  pages_with_text: 558
+  blank_pages: 2
+  blank_page_numbers: [1, 559]
+  extracted_characters: 1276953
+  chunks: 562
+  retrieval_chunk_files: 562
+  search_index_shards: 4188
+  search_index_max_shard_bytes: 146589
+
+validation:
+  chunk_ids_unique: true
+  retrieval_paths_unique: true
+  retrieval_chunk_count_matches: true
+  search_index_bounded: true
+  source_checksum_computed: true
+  source_checksum_expected_present: true
+  source_checksum_matched_expected: true
+  source_checksum_verified: true
+  full_pdf_page_range_processed: true
+  status: READY_WITH_KNOWN_LIMITATIONS
+
+known_limitations:
+  - "The extractor reads the PDF text layer but does not classify native text versus OCR; text_layer therefore does not assert OCR origin."
+  - "Recognition/extraction errors already present in the PDF text layer may remain in extracted text."
+  - "Images, equations, tables and diagrams are not independently encoded as multimodal RAG objects; use pdf_page provenance to inspect the source page when visual context matters."
+  - "Publisher advertisement and cover pages are part of the source PDF and remain page-addressable even when they are not core book content."
+  - "The deterministic lexical index is prefix-based retrieval, not semantic vector search; use up to three informative query tokens and preserve RAG_MISS on unsupported questions."
