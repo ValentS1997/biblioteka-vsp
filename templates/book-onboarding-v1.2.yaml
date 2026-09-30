@@ -6,8 +6,8 @@ template:
   type: "book_onboarding"
   status: "ACCEPTED"
   purpose: >-
-    Canonical one-time process for preparing a biblioteka-vsp book for
-    RAG-dependent workflows without making RAG mandatory for inventory or
+    Canonical one-time process for preparing a biblioteka-vsp PDF or EPUB book
+    for RAG-dependent workflows without making RAG mandatory for inventory or
     reading-only use cases.
 
 policy:
@@ -40,7 +40,7 @@ triggers:
     - "Book is present in inventory."
     - "Electronic holding is known."
     - "Reading status is in_progress."
-    - "A PDF was merely mentioned or attached without RAG-dependent intent."
+    - "A PDF or EPUB was merely mentioned or attached without RAG-dependent intent."
 
 inputs:
   book_identity:
@@ -51,6 +51,7 @@ inputs:
   source:
     electronic_copy_available: "[Needs confirmation]"
     source_file_identity: "[Needs confirmation]"
+    source_format: "pdf | epub | [Needs confirmation]"
     canonical_destination: "books/<book_id>/source/book.<pdf|epub>"
   desired_use:
     reading_tracking: "[Derived from user intent]"
@@ -130,7 +131,7 @@ workflow:
       - "books/index.yaml entry"
       - "reading/progress.yaml"
       - "metadata.yaml"
-      - "source/book.pdf"
+      - "source/book.pdf or source/book.epub"
       - "source/SHA256"
       - "rag/manifest.yaml"
       - "rag/chunk-index.jsonl"
@@ -170,15 +171,15 @@ workflow:
     local_exception:
       reason_code: "GIT_LFS_BINARY_UPLOAD_REQUIRED"
       allowed_only_when: >-
-        Available GitHub/remote tooling cannot upload the exact PDF as a real
+        Available GitHub/remote tooling cannot upload the exact canonical PDF/EPUB as a real
         Git LFS object.
-      scope: "upload canonical PDF/LFS object and push the minimal source commit only"
+      scope: "upload canonical PDF/EPUB LFS object and push the minimal source commit only"
       handback: >-
         After GitHub confirms the source commit/LFS object, continue RAG, PR,
         CI and readiness remotely.
     rollback: >-
-      Revert the source-ingest commit. Never silently replace source/book.pdf
-      without updating provenance.
+      Revert the source-ingest commit. Never silently replace the declared canonical
+      source without updating provenance.
 
   - step: 6
     name: "Build full-book RAG"
@@ -189,7 +190,7 @@ workflow:
       - "rag/manifest.yaml exists"
       - "manifest book_id matches"
       - "manifest source.sha256 matches source/SHA256"
-      - "full source page range processed"
+      - "full declared source range processed"
       - "addressable chunks and deterministic search index generated"
 
   - step: 7
@@ -202,7 +203,7 @@ workflow:
   - step: 8
     name: "Compute chapter-analysis readiness"
     type: "read-only"
-    contract: "BIBLIOTEKA-VSP-BOOK-READINESS v1.0"
+    contract: "BIBLIOTEKA-VSP-BOOK-READINESS v1.2"
     allowed:
       - "READY"
       - "BLOCKED"
