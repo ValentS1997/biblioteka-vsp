@@ -82,10 +82,13 @@ reviewed commit
 
 RAG readiness и reading progress — разные состояния. Наличие всей книги в RAG не означает, что вся книга уже прочитана или обсуждена. И наоборот, `status: in_progress` не означает, что RAG или chapter analysis готовы.
 
-Канонические контракты:
+Канонические шаблоны и контракты:
 
+- [Templates index](templates/README.md)
+- [New book branch bootstrap v1.0](templates/book-branch-bootstrap-v1.0.yaml)
 - [Book onboarding v1.0](templates/book-onboarding-v1.0.yaml)
 - [Book readiness v1.0](templates/book-readiness-v1.0.yaml)
+- [Chapter analysis request v1.0](templates/chapter-analysis-request-v1.0.yaml)
 - [Chapter artifacts v1.4](templates/chapter-artifact-collection-v1.4.yaml)
 - [Book lifecycle matrix](docs/BOOK-LIFECYCLE.md)
 

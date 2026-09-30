@@ -34,6 +34,25 @@ There is no single persisted global READY flag. Chapter readiness is computed.
 
 A supplied PDF is not by itself equal to canonical repository ingest.
 
+## Canonical entrypoints
+
+New RAG/chapter book branch:
+
+```text
+BIBLIOTEKA-VSP-BOOK-BRANCH-BOOTSTRAP v1.0
+```
+
+Normal chapter command:
+
+```text
+"Анализ главы N"
+  ↓
+BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST v1.0
+```
+
+The entrypoint templates orchestrate the contracts below; they do not duplicate
+book/RAG/chapter implementation logic.
+
 ## Contracts
 
 One-time book preparation:
@@ -108,6 +127,8 @@ provenance consistency. It is not a semantic-quality benchmark.
 ## New-book flow
 
 ```text
+BOOK-BRANCH-BOOTSTRAP v1.0
+        ↓
 Inventory / reading
         ↓
 capability preflight
@@ -124,9 +145,11 @@ BOOK-READINESS v1.0
         ↓
 READY
         ↓
-Chapter loop v1.4
-        ↓
 "Анализ главы N"
+        ↓
+CHAPTER-ANALYSIS-REQUEST v1.0
+        ↓
+CHAPTER-ARTIFACT-COLLECTION v1.4
 ```
 
 ## Git discipline

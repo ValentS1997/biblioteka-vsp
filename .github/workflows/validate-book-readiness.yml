@@ -3,9 +3,7 @@ name: Validate book readiness
 on:
   pull_request:
     paths:
-      - "templates/book-onboarding-v1.0.yaml"
-      - "templates/book-readiness-v1.0.yaml"
-      - "templates/chapter-artifact-collection-v1.4.yaml"
+      - "templates/**"
       - "scripts/check_book_readiness.py"
       - "scripts/build_book_rag.py"
       - "tests/**"
@@ -20,9 +18,7 @@ on:
       - ".github/workflows/validate-book-readiness.yml"
   push:
     paths:
-      - "templates/book-onboarding-v1.0.yaml"
-      - "templates/book-readiness-v1.0.yaml"
-      - "templates/chapter-artifact-collection-v1.4.yaml"
+      - "templates/**"
       - "scripts/check_book_readiness.py"
       - "scripts/build_book_rag.py"
       - "tests/**"
