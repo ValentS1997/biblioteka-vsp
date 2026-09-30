@@ -6,7 +6,7 @@
 
 Для каждой книги репозиторий хранит:
 
-- исходный PDF как неизменяемый источник;
+- исходный PDF или EPUB как неизменяемый канонический источник;
 - metadata и provenance;
 - воспроизводимый слой подготовки под RAG;
 - состояние фактического чтения;
@@ -24,7 +24,7 @@ books/
 └── <book-slug>/
     ├── README.md
     ├── source/
-    │   └── book.pdf
+    │   └── book.pdf | book.epub
     ├── metadata.yaml
     ├── rag/
     │   ├── manifest.yaml
@@ -51,7 +51,7 @@ reading-only и оставаться валидной без RAG.
 одноразовый book onboarding:
 
 ```text
-BIBLIOTEKA-VSP-BOOK-ONBOARDING v1.1
+BIBLIOTEKA-VSP-BOOK-ONBOARDING v1.2
   ↓
 canonical source + provenance
   ↓
@@ -59,7 +59,7 @@ full-text extraction + normalization
   ↓
 full-book RAG + addressable retrieval
   ↓
-BIBLIOTEKA-VSP-BOOK-READINESS v1.1
+BIBLIOTEKA-VSP-BOOK-READINESS v1.2
   ↓
 READY_FOR_CHAPTER_ANALYSIS
 ```
@@ -86,11 +86,11 @@ RAG readiness и reading progress — разные состояния. Нали�
 
 - [Templates index](templates/README.md)
 - [Git execution policy v1.0](templates/git-execution-policy-v1.0.yaml)
-- [New book branch bootstrap v1.1](templates/book-branch-bootstrap-v1.1.yaml)
-- [Book onboarding v1.1](templates/book-onboarding-v1.1.yaml)
-- [Book readiness v1.1](templates/book-readiness-v1.1.yaml)
-- [Chapter analysis request v1.1](templates/chapter-analysis-request-v1.1.yaml)
-- [Chapter artifacts v1.5](templates/chapter-artifact-collection-v1.5.yaml)
+- [New book branch bootstrap v1.2](templates/book-branch-bootstrap-v1.2.yaml)
+- [Book onboarding v1.2](templates/book-onboarding-v1.2.yaml)
+- [Book readiness v1.2](templates/book-readiness-v1.2.yaml)
+- [Chapter analysis request v1.2](templates/chapter-analysis-request-v1.2.yaml)
+- [Chapter artifacts v1.6](templates/chapter-artifact-collection-v1.6.yaml)
 - [Book lifecycle matrix](docs/BOOK-LIFECYCLE.md)
 
 Readiness вычисляется, а не хранится как новый canonical status:
@@ -136,29 +136,31 @@ are insufficient, limit the local scope, define verification/rollback and state
 where the workflow resumes remotely.
 
 For book ingest the expected exception is `GIT_LFS_BINARY_UPLOAD_REQUIRED`:
-the available connector cannot upload the exact PDF as a real Git LFS object.
+the available connector cannot upload the exact canonical PDF/EPUB source as a real Git LFS object.
 Only that minimal source upload may fall back to local Git; subsequent
 RAG/PR/CI/readiness returns to GitHub tools.
 
-## Source PDF storage
+## Canonical source storage
 
-PDF is the canonical source artifact and must not be recompressed or rewritten without changing provenance.
+PDF and EPUB are supported canonical source artifacts. The uploaded format is preserved; EPUB is not silently converted to PDF and PDF is not silently converted to EPUB.
 
-PDF files under `books/**/source/` are tracked through Git LFS. Each book records the expected SHA-256 of its source. The RAG build verifies that checksum before generating canonical retrieval artifacts.
+Supported source files under `books/**/source/` are tracked through Git LFS. Each book records the expected SHA-256 of the exact canonical source. The RAG build verifies that checksum before generating canonical retrieval artifacts.
 
 ## RAG automation
 
-When `books/<book-slug>/source/book.pdf` is pushed to a non-`main` ingest branch, the `Build book RAG` workflow:
+When `books/<book-slug>/source/book.pdf` or `book.epub` is pushed to a non-`main` ingest branch, the `Build book RAG` workflow:
 
 1. checks out the Git LFS object;
 2. verifies SHA-256;
-3. extracts the embedded text layer page by page;
+3. extracts deterministic source units: PDF pages or EPUB spine/XHTML items;
 4. generates `rag/text.md`;
-5. generates page-traceable `rag/chunks.jsonl`;
+5. generates source-traceable `rag/chunks.jsonl`;
 6. generates addressable `rag/chunks/**/*.md`;
 7. generates deterministic `rag/search-index/**/*.json`;
 8. writes `rag/manifest.yaml`;
 9. commits generated artifacts back to the same ingest branch.
+
+PDF provenance remains page-based. EPUB provenance uses 1-indexed spine items plus XHTML ZIP-member locators; these are not treated as printed/PDF page numbers.
 
 The workflow does not write directly to `main`.
 
