@@ -1,0 +1,3 @@
+# Chapter artifacts
+
+Use `BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST v1.0` and `BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.4` after book readiness passes.
