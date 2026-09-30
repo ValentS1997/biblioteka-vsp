@@ -15,10 +15,9 @@ import os
 import shutil
 import subprocess
 import sys
-from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Iterable
+from typing import Iterable, NamedTuple
 
 SUPPORTED_EXTENSIONS = {".pdf", ".epub"}
 VAULT_ROOT = Path("source-vault")
@@ -30,8 +29,7 @@ class StageError(RuntimeError):
     pass
 
 
-@dataclass(frozen=True)
-class SourceRecord:
+class SourceRecord(NamedTuple):
     original_name: str
     extension: str
     sha256: str
