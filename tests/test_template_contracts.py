@@ -25,27 +25,27 @@ class TemplateContractTests(unittest.TestCase):
 
     def test_new_book_branch_bootstrap_contracts(self):
         doc = self.assert_template(
-            "book-branch-bootstrap-v1.1.yaml",
+            "book-branch-bootstrap-v1.2.yaml",
             "BIBLIOTEKA-VSP-BOOK-BRANCH-BOOTSTRAP",
-            "1.1",
+            "1.2",
         )
         contracts = doc["contracts"]
 
         expected = {
             "onboarding": (
                 "BIBLIOTEKA-VSP-BOOK-ONBOARDING",
-                "1.1",
-                "templates/book-onboarding-v1.1.yaml",
+                "1.2",
+                "templates/book-onboarding-v1.2.yaml",
             ),
             "readiness": (
                 "BIBLIOTEKA-VSP-BOOK-READINESS",
-                "1.1",
-                "templates/book-readiness-v1.1.yaml",
+                "1.2",
+                "templates/book-readiness-v1.2.yaml",
             ),
             "chapter_request": (
                 "BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST",
-                "1.1",
-                "templates/chapter-analysis-request-v1.1.yaml",
+                "1.2",
+                "templates/chapter-analysis-request-v1.2.yaml",
             ),
             "chapter_artifacts": (
                 "BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION",
@@ -70,16 +70,16 @@ class TemplateContractTests(unittest.TestCase):
 
     def test_chapter_request_targets_current_contracts(self):
         doc = self.assert_template(
-            "chapter-analysis-request-v1.1.yaml",
+            "chapter-analysis-request-v1.2.yaml",
             "BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST",
-            "1.1",
+            "1.2",
         )
         readiness = doc["contracts"]["readiness"]
         artifacts = doc["contracts"]["artifact_collection"]
 
         self.assertEqual("BIBLIOTEKA-VSP-BOOK-READINESS", readiness["id"])
-        self.assertEqual("1.1", str(readiness["version"]))
-        self.assertEqual("templates/book-readiness-v1.1.yaml", readiness["path"])
+        self.assertEqual("1.2", str(readiness["version"]))
+        self.assertEqual("templates/book-readiness-v1.2.yaml", readiness["path"])
 
         self.assertEqual(
             "BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION",
