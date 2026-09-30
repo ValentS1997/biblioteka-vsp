@@ -30,15 +30,23 @@ Verified uploaded source candidate:
 - size: `6363868` bytes
 - format: EPUB
 
-Current source state: `BLOCKED_GIT_LFS_BINARY_UPLOAD_REQUIRED`.
+Current source state: `VERIFIED_GIT_LFS_AVAILABLE`.
 
-The available GitHub connector can create normal Git blobs but cannot upload the real Git LFS binary object. No fake LFS pointer or normal large Git blob is committed.
+- upload commit: `3b2f092270121bd62d544a917350c69393e57fb4`
+- GitHub Actions successfully fetched the real LFS object during workflow run `36751428867`
+- RAG build computed the same SHA-256 as the uploaded EPUB
 
 ## RAG
 
 RAG scope: full book.
 
-Current status: `BLOCKED` until the exact EPUB is available as `source/book.epub` through Git LFS.
+Validation status: `READY_WITH_KNOWN_LIMITATIONS`.
+
+- EPUB spine items: `36`
+- spine items with text: `35`
+- addressable chunks: `293`
+- deterministic search-index shards: `2243`
+- generated commit: `4cb9aa4341ddd06cb2e5d28a0c84394869957c61`
 
 Canonical readiness command:
 
