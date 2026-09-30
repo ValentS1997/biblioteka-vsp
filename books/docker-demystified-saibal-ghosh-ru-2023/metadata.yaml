@@ -1,0 +1,51 @@
+schema: biblioteka-vsp/book/v1
+
+id: docker-demystified-saibal-ghosh-ru-2023
+title: "Docker без секретов: разработка и развертывание приложений с помощью Docker"
+original_title: "Docker Demystified. Learn How to Develop and Deploy Applications Using Docker"
+edition:
+  number: "[Needs confirmation]"
+  language: ru
+  publisher: "БХВ-Петербург"
+  publication_year: 2023
+  publication_pages: 224
+
+authors:
+  - "Сайбал Гош"
+
+translators:
+  - "М. Попович"
+
+isbn:
+  russian_edition: "978-5-9775-1196-4"
+  original_edition: "978-93-89845-87-7"
+
+source:
+  canonical_path: "source/book.pdf"
+  expected_sha256: "7a52f7d947347a470790c7d384390f60bf49fe5426827f5829a75757b50faaa8"
+  expected_size_bytes: 47409934
+  source_pdf_pages: 215
+  text_layer: "[Needs confirmation]"
+  repository_access: public
+  storage: "Git LFS"
+  upload_status: PENDING
+  lawful_access_attested_by_user: "[Needs confirmation]"
+  ownership_category: "[Needs confirmation]"
+  physical_copy: "[Needs confirmation]"
+  license: "all rights reserved"
+  redistribution_permission: "[Needs confirmation]"
+
+rag:
+  scope: full_book
+  build_script: "../../../scripts/build_book_rag.py"
+  manifest: "rag/manifest.yaml"
+  text: "rag/text.md"
+  chunks: "rag/chunks.jsonl"
+  status: PENDING_SOURCE_INGEST
+
+reading:
+  progress: "reading/progress.yaml"
+  journal: "reading/journal.md"
+  status: planned
+  started: null
+  completed: null
