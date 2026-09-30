@@ -1,6 +1,5 @@
-# Chapter artifacts
+# Chapter notes
 
-No chapter artifacts have been accepted yet.
+Reviewed chapter-level notes are stored here. Historical notes are not reconstructed retroactively without evidence.
 
-Book-level readiness must be `READY` before running
-`BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.4`.
+- [Chapter 1 — Общая картина](chapter-01-big-picture/README.md)
