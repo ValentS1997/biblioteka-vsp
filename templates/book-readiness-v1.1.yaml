@@ -1,0 +1,157 @@
+schema_version: "1.1"
+
+template:
+  id: "BIBLIOTEKA-VSP-BOOK-READINESS"
+  version: "1.1"
+  type: "book_readiness"
+  status: "ACCEPTED"
+  purpose: >-
+    Read-only capability gate for determining whether one book may enter the
+    canonical chapter-analysis workflow.
+
+git_execution:
+  policy:
+    id: "BIBLIOTEKA-VSP-GIT-EXECUTION-POLICY"
+    version: "1.0"
+    path: "templates/git-execution-policy-v1.0.yaml"
+  preferred_execution: "GitHub connector/API evidence + repository CI"
+  local_git_required: false
+  rule: >-
+    Readiness is a read-only repository capability check. Do not require a
+    user-local clone merely to compute readiness.
+
+policy:
+  computed_not_persisted: true
+  canonical_status_store_created: false
+  reading_requires_rag: false
+  capability: "chapter-analysis"
+  success_status: "READY"
+  failure_status: "BLOCKED"
+  malformed_status: "ERROR"
+
+chapter_analysis_ready_rule:
+  all_required:
+    - "book_id_resolved"
+    - "knowledge_registered"
+    - "metadata_exists"
+    - "metadata_id_matches"
+    - "canonical_source_exists"
+    - "source_checksum_record_exists"
+    - "metadata_expected_sha256_exists"
+    - "source_provenance_consistent"
+    - "rag_manifest_exists"
+    - "rag_manifest_book_id_matches"
+    - "rag_manifest_source_matches"
+    - "rag_validation_ready"
+    - "chunk_index_exists"
+    - "addressable_chunks_exist"
+    - "retrieval_index_manifest_exists"
+    - "retrieval_integrity_smoke_test_passed"
+    - "chapter_template_available"
+
+checks:
+  book_id_resolved:
+    source: "CLI/request"
+  knowledge_registered:
+    source: "books/index.yaml"
+  metadata_exists:
+    source: "books/index.yaml paths.metadata"
+  metadata_id_matches:
+    source: "metadata.yaml id"
+  canonical_source_exists:
+    source: "books/index.yaml paths.source"
+    canonical_suffix: "source/book.pdf"
+  source_checksum_record_exists:
+    source: "books/<book_id>/source/SHA256"
+  metadata_expected_sha256_exists:
+    source: "metadata.yaml source.expected_sha256"
+  source_provenance_consistent:
+    rule: >-
+      source/SHA256, metadata source.expected_sha256 and RAG manifest
+      source.sha256 must agree after RAG build.
+  rag_manifest_exists:
+    source: "books/index.yaml paths.rag_manifest"
+  rag_manifest_book_id_matches:
+    source: "rag/manifest.yaml book_id"
+  rag_manifest_source_matches:
+    source: "rag/manifest.yaml source.path + source.sha256"
+  rag_validation_ready:
+    source: "rag/manifest.yaml validation.status"
+    accepted_status_pattern: "^READY"
+  chunk_index_exists:
+    source: "books/index.yaml paths.rag_chunk_index"
+  addressable_chunks_exist:
+    source: "books/index.yaml paths.rag_chunks"
+  retrieval_index_manifest_exists:
+    source: "books/index.yaml paths.rag_search_index + manifest.json"
+  retrieval_integrity_smoke_test_passed:
+    method: >-
+      Deterministically select a valid addressable chunk from chunk-index,
+      derive an informative token from its text, resolve the lexical shard,
+      confirm the shard references a valid chunk, and verify book_id/chunk_id/
+      pdf_page/source_sha256/path consistency. This tests retrieval plumbing,
+      not semantic ranking quality.
+  chapter_template_available:
+    source: "templates/chapter-artifact-collection-v1.5.yaml"
+    required_template_id: "BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION"
+    required_status: "ACCEPTED"
+    required_version: "1.5"
+
+failure_model:
+  top_level_status: "BLOCKED"
+  reason_codes:
+    - "BOOK_NOT_REGISTERED"
+    - "METADATA_MISSING"
+    - "METADATA_ID_MISMATCH"
+    - "CANONICAL_SOURCE_MISSING"
+    - "SOURCE_CHECKSUM_RECORD_MISSING"
+    - "SOURCE_PROVENANCE_INCOMPLETE"
+    - "RAG_MANIFEST_MISSING"
+    - "RAG_ID_MISMATCH"
+    - "RAG_SOURCE_MISMATCH"
+    - "RAG_VALIDATION_NOT_READY"
+    - "CHUNK_INDEX_MISSING"
+    - "ADDRESSABLE_CHUNKS_MISSING"
+    - "RETRIEVAL_INDEX_MISSING"
+    - "RETRIEVAL_INTEGRITY_FAILED"
+    - "CHAPTER_TEMPLATE_MISSING"
+  rule: >-
+    Do not create a second lifecycle state machine. Keep one top-level BLOCKED
+    state and report exact failed checks/reason codes.
+
+output:
+  schema: "biblioteka-vsp/readiness-result/v1"
+  fields:
+    - "book_id"
+    - "capability"
+    - "status"
+    - "checks"
+    - "failed_checks"
+  blocked_check_fields:
+    - "id"
+    - "reason_code"
+    - "expected"
+    - "actual"
+    - "evidence"
+    - "next_action"
+
+implementation_reference:
+  command: >-
+    python scripts/check_book_readiness.py --book-id <book_id>
+    --capability chapter-analysis
+  rule: >-
+    This command defines the deterministic implementation. When the agent has
+    GitHub repository access, prefer remote repository evidence and CI over
+    asking the user to execute it locally.
+  exit_codes:
+    0: "READY"
+    1: "BLOCKED"
+    2: "malformed repository/configuration or unsupported invocation"
+
+acceptance_criteria:
+  - "Result is derived from canonical artifacts and is not a new source of truth."
+  - "Reading-only knowledge entries may return BLOCKED while remaining registry-valid."
+  - "Existing RAG-ready books can pass without rebuild when current artifacts satisfy the contract."
+  - "A BLOCKED result identifies exact prerequisites and next actions."
+  - "No external web or model-memory fallback is used."
+  - "Readiness does not require user-local Git when GitHub evidence is available."
