@@ -51,7 +51,7 @@ reading-only и оставаться валидной без RAG.
 одноразовый book onboarding:
 
 ```text
-BIBLIOTEKA-VSP-BOOK-ONBOARDING v1.0
+BIBLIOTEKA-VSP-BOOK-ONBOARDING v1.1
   ↓
 canonical source + provenance
   ↓
@@ -59,7 +59,7 @@ full-text extraction + normalization
   ↓
 full-book RAG + addressable retrieval
   ↓
-BIBLIOTEKA-VSP-BOOK-READINESS v1.0
+BIBLIOTEKA-VSP-BOOK-READINESS v1.1
   ↓
 READY_FOR_CHAPTER_ANALYSIS
 ```
@@ -85,11 +85,12 @@ RAG readiness и reading progress — разные состояния. Нали�
 Канонические шаблоны и контракты:
 
 - [Templates index](templates/README.md)
-- [New book branch bootstrap v1.0](templates/book-branch-bootstrap-v1.0.yaml)
-- [Book onboarding v1.0](templates/book-onboarding-v1.0.yaml)
-- [Book readiness v1.0](templates/book-readiness-v1.0.yaml)
-- [Chapter analysis request v1.0](templates/chapter-analysis-request-v1.0.yaml)
-- [Chapter artifacts v1.4](templates/chapter-artifact-collection-v1.4.yaml)
+- [Git execution policy v1.0](templates/git-execution-policy-v1.0.yaml)
+- [New book branch bootstrap v1.1](templates/book-branch-bootstrap-v1.1.yaml)
+- [Book onboarding v1.1](templates/book-onboarding-v1.1.yaml)
+- [Book readiness v1.1](templates/book-readiness-v1.1.yaml)
+- [Chapter analysis request v1.1](templates/chapter-analysis-request-v1.1.yaml)
+- [Chapter artifacts v1.5](templates/chapter-artifact-collection-v1.5.yaml)
 - [Book lifecycle matrix](docs/BOOK-LIFECYCLE.md)
 
 Readiness вычисляется, а не хранится как новый canonical status:
@@ -122,6 +123,22 @@ last_session:
 
 По умолчанию обсуждение книги ограничивается уже прочитанным диапазоном и ранее обсуждённым материалом. Материал после `current_page` не используется для объяснений, выводов или подсказок без явного запроса пользователя. Это ограничение относится к совместному чтению, а не к технической доступности полного RAG.
 
+
+## Git execution policy
+
+Routine Git work is remote-first and agent-owned. Branch creation, text-file
+changes, PRs, merges, CI inspection and repository read-back should be performed
+through GitHub connector/API or repository automation when available.
+
+User-local Git is exception-only. It must not be requested for convenience.
+Every local request must identify a valid reason code, prove why remote methods
+are insufficient, limit the local scope, define verification/rollback and state
+where the workflow resumes remotely.
+
+For book ingest the expected exception is `GIT_LFS_BINARY_UPLOAD_REQUIRED`:
+the available connector cannot upload the exact PDF as a real Git LFS object.
+Only that minimal source upload may fall back to local Git; subsequent
+RAG/PR/CI/readiness returns to GitHub tools.
 
 ## Source PDF storage
 

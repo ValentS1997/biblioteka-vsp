@@ -39,7 +39,7 @@ A supplied PDF is not by itself equal to canonical repository ingest.
 New RAG/chapter book branch:
 
 ```text
-BIBLIOTEKA-VSP-BOOK-BRANCH-BOOTSTRAP v1.0
+BIBLIOTEKA-VSP-BOOK-BRANCH-BOOTSTRAP v1.1
 ```
 
 Normal chapter command:
@@ -47,7 +47,7 @@ Normal chapter command:
 ```text
 "Анализ главы N"
   ↓
-BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST v1.0
+BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST v1.1
 ```
 
 The entrypoint templates orchestrate the contracts below; they do not duplicate
@@ -58,7 +58,7 @@ book/RAG/chapter implementation logic.
 One-time book preparation:
 
 ```text
-BIBLIOTEKA-VSP-BOOK-ONBOARDING v1.0
+BIBLIOTEKA-VSP-BOOK-ONBOARDING v1.1
     ↓
 canonical source + provenance
     ↓
@@ -70,9 +70,9 @@ retrieval integrity
 Read-only gate:
 
 ```text
-BIBLIOTEKA-VSP-BOOK-READINESS v1.0
+BIBLIOTEKA-VSP-BOOK-READINESS v1.1
     ↓ READY
-BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.4
+BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.5
 ```
 
 The accepted v1.3 chapter template remains immutable for reproducibility.
@@ -152,9 +152,25 @@ CHAPTER-ANALYSIS-REQUEST v1.0
 CHAPTER-ARTIFACT-COLLECTION v1.4
 ```
 
-## Git discipline
+## Git execution discipline
 
-Book source ingest and generated RAG use a non-main ingest branch.
-The RAG workflow writes generated artifacts back to that branch.
-Merge only after readiness succeeds. Never force-push or silently replace
-`source/book.pdf`.
+The default execution path is remote and agent-owned:
+
+1. GitHub connector/API for branch/ref/file/PR/merge/read-back operations.
+2. Repository-native GitHub Actions for build/test/validation work.
+3. Other safe remote execution when available.
+4. User-local Git only as a justified exception.
+
+Local Git is never requested because it is faster, familiar or convenient. A
+local exception must follow `BIBLIOTEKA-VSP-GIT-EXECUTION-POLICY v1.0` and
+must record the reason code, blocked remote operation, evidence, minimal local
+scope, verification, rollback and remote resume point.
+
+The expected book-ingest exception is `GIT_LFS_BINARY_UPLOAD_REQUIRED`: the
+exact PDF must be stored as a real Git LFS object while the available connector
+cannot upload the binary LFS object. In that case only the minimal source upload
+is local; after GitHub confirms it, RAG/PR/CI/readiness return to remote tools.
+
+Book source ingest and generated RAG use a non-main ingest branch. The RAG
+workflow writes generated artifacts back to that branch. Merge only after
+readiness succeeds. Never force-push or silently replace `source/book.pdf`.

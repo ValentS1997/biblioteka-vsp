@@ -54,11 +54,33 @@ jobs:
       - name: Run unit/integration tests
         run: python -m unittest discover -s tests -p 'test_*.py'
 
-      - name: Verify existing RAG-ready books
+      - name: Verify all declared RAG-onboarded books
         run: |
-          python scripts/check_book_readiness.py \
-            --book-id computer-networks-6e-ru-2023 \
-            --capability chapter-analysis
-          python scripts/check_book_readiness.py \
-            --book-id unix-linux-system-administration-handbook-5e-ru-2020 \
-            --capability chapter-analysis
+          python - <<'PY'
+          import subprocess
+          from pathlib import Path
+          import yaml
+
+          data = yaml.safe_load(Path("books/index.yaml").read_text(encoding="utf-8"))
+          checked = 0
+          for book in data.get("books", []):
+              paths = book.get("paths") or {}
+              if not paths.get("rag_manifest"):
+                  continue
+              subprocess.run(
+                  [
+                      "python",
+                      "scripts/check_book_readiness.py",
+                      "--book-id",
+                      book["id"],
+                      "--capability",
+                      "chapter-analysis",
+                  ],
+                  check=True,
+              )
+              checked += 1
+
+          if checked == 0:
+              raise SystemExit("No RAG-onboarded books were validated")
+          print(f"Validated {checked} RAG-onboarded book(s)")
+          PY
