@@ -48,3 +48,7 @@ Full PDF range processed: 560 pages; 558 pages contain extractable text; 562 add
 Canonical readiness command:
 
 `python scripts/check_book_readiness.py --book-id ai-engineering-chip-huyen-ru --capability chapter-analysis`
+
+## Chapter artifacts
+
+- [Глава 1 — Основы создания AI-приложений с использованием базовых моделей](notes/chapters/chapter-01-ai-application-foundations/README.md)

@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 1 — Основы создания AI-приложений: подробная шпаргалка</title>
+  <desc id="desc">Подробная визуальная карта главы 1: происхождение AI-инженерии, сценарии, планирование, метрики, адаптация и стек.</desc>
+  <rect width="1600" height="1200" fill="#f7f8fa"/>
+  <rect width="1600" height="112" fill="#17202a"/>
+  <text x="58" y="49" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#ffffff">Глава 1 — Основы создания AI-приложений</text>
+  <text x="58" y="84" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#d6e4f0">Модели · сценарии · planning · metrics · adaptation · stack · iteration</text>
+
+  <rect x="50" y="145" width="470" height="235" rx="18" fill="#ffffff" stroke="#5dade2" stroke-width="2"/>
+  <text x="78" y="185" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#1b4f72">1. Эволюция</text>
+  <text x="78" y="223" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="78" dy="0">Языковые модели → LLM.</tspan>
+    <tspan x="78" dy="28">Больше модальностей → базовые модели.</tspan>
+    <tspan x="78" dy="28">Мультимодальность расширяет классы задач.</tspan>
+    <tspan x="78" dy="37">Доступность моделей создаёт слой приложений.</tspan>
+  </text>
+
+  <rect x="565" y="145" width="470" height="235" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="593" y="185" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#196f3d">2. Почему растёт AI engineering</text>
+  <text x="593" y="223" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="593" dy="0">• многоцелевые способности моделей</tspan>
+    <tspan x="593" dy="28">• рост инвестиций</tspan>
+    <tspan x="593" dy="28">• низкий барьер входа</tspan>
+    <tspan x="593" dy="37">Model-as-a-service и API уменьшают</tspan>
+    <tspan x="593" dy="28">необходимость строить модель с нуля.</tspan>
+  </text>
+
+  <rect x="1080" y="145" width="470" height="235" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1108" y="185" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#9c640c">3. Сценарии</text>
+  <text x="1108" y="223" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="1108" dy="0">Код · изображения/видео · тексты · образование</tspan>
+    <tspan x="1108" dy="28">Боты · сбор информации · организация данных</tspan>
+    <tspan x="1108" dy="28">Автоматизация рабочих процессов</tspan>
+    <tspan x="1108" dy="37">Агенты используют внешние инструменты.</tspan>
+  </text>
+
+  <rect x="50" y="410" width="720" height="285" rx="18" fill="#ffffff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="78" y="450" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#6c3483">4. Планирование: сначала продуктовый смысл</text>
+  <text x="78" y="488" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="78" dy="0">Почему строить: риск, возможность, исследование.</tspan>
+    <tspan x="78" dy="28">Build or buy: готовый продукт может быть дешевле и быстрее.</tspan>
+    <tspan x="78" dy="28">Роль AI: critical/add-on · reactive/proactive · dynamic/static.</tspan>
+    <tspan x="78" dy="28">Роль человека: suggestions → escalation → direct automation.</tspan>
+    <tspan x="78" dy="28">Moat: technology · data · distribution.</tspan>
+    <tspan x="78" dy="37" font-weight="700">Низкий барьер создания = низкий барьер копирования.</tspan>
+  </text>
+
+  <rect x="810" y="410" width="740" height="285" rx="18" fill="#ffffff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="838" y="450" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#21618c">5. Ожидания и «последняя миля»</text>
+  <text x="838" y="488" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="838" dy="0">Success начинается с business impact.</tspan>
+    <tspan x="838" dy="28">Utility threshold: минимальная полезность до релиза.</tspan>
+    <tspan x="838" dy="28">Quality · TTFT · TPOT · total latency · cost.</tspan>
+    <tspan x="838" dy="28">Сначала оценить существующую модель как baseline.</tspan>
+    <tspan x="838" dy="28">Раннее демо может переоценить близость production.</tspan>
+    <tspan x="838" dy="37" font-weight="700">0→60 может быть легко; последние проценты — дорого.</tspan>
+  </text>
+
+  <rect x="50" y="725" width="470" height="260" rx="18" fill="#ffffff" stroke="#ec7063" stroke-width="2"/>
+  <text x="78" y="765" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#922b21">6. Адаптация модели</text>
+  <text x="78" y="803" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="78" dy="0">Prompt/context methods: веса не меняются.</tspan>
+    <tspan x="78" dy="28">Fine-tuning: веса модели обновляются.</tspan>
+    <tspan x="78" dy="28">Prompting проще и требует меньше данных.</tspan>
+    <tspan x="78" dy="28">Fine-tuning сложнее, но может улучшить</tspan>
+    <tspan x="78" dy="28">качество, latency и compute cost.</tspan>
+  </text>
+
+  <rect x="565" y="725" width="470" height="260" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+  <text x="593" y="765" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#9c640c">7. Три уровня стека</text>
+  <text x="593" y="803" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="593" dy="0">Application: evaluation, prompts/context, UI.</tspan>
+    <tspan x="593" dy="28">Model: training, data, inference optimization.</tspan>
+    <tspan x="593" dy="28">Infrastructure: serving, data, compute, monitoring.</tspan>
+    <tspan x="593" dy="38" font-weight="700">Стартовать сверху, спускаться по необходимости.</tspan>
+  </text>
+
+  <rect x="1080" y="725" width="470" height="260" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="1108" y="765" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#196f3d">8. Что меняется относительно ML</text>
+  <text x="1108" y="803" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="1108" dy="0">Меньше model-building, больше adaptation.</tspan>
+    <tspan x="1108" dy="28">Крупные модели → сильнее latency/compute pressure.</tspan>
+    <tspan x="1108" dy="28">Open-ended outputs → evaluation сложнее.</tspan>
+    <tspan x="1108" dy="28">Application layer становится главным полем</tspan>
+    <tspan x="1108" dy="28">дифференциации продуктов.</tspan>
+  </text>
+
+  <rect x="50" y="1018" width="720" height="112" rx="16" fill="#ffffff" stroke="#5dade2" stroke-width="2"/>
+  <text x="78" y="1055" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#1b4f72">9. Maintenance</text>
+  <text x="78" y="1087" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="16" fill="#273746">
+    <tspan x="78" dy="0">Модели, цены, API, suppliers и regulation меняются → нужны versioning, evaluation и повторные измерения.</tspan>
+  </text>
+
+  <rect x="810" y="1018" width="740" height="112" rx="16" fill="#17202a"/>
+  <text x="838" y="1055" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#ffffff">Рабочая последовательность</text>
+  <text x="838" y="1088" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="16" fill="#d6e4f0">business case → baseline → utility threshold → app → measure → adapt → remeasure</text>
+
+  <text x="50" y="1170" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="15" fill="#566573">Provenance: RAG p0025:c01–p0077:c01 · PDF/printed pages 25–77 · source SHA-256 850c3652…62fba</text>
+</svg>
