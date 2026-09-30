@@ -1,3 +1,7 @@
 # Large binary book sources are stored through Git LFS.
 books/**/source/*.pdf filter=lfs diff=lfs merge=lfs -text
 books/**/source/*.epub filter=lfs diff=lfs merge=lfs -text
+
+# Pre-stage future book sources once; promotion to books/<id>/source/ reuses the same LFS object.
+source-vault/objects/*.pdf filter=lfs diff=lfs merge=lfs -text
+source-vault/objects/*.epub filter=lfs diff=lfs merge=lfs -text
