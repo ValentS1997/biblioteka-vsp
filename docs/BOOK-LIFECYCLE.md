@@ -14,7 +14,7 @@ chapter-analysis capabilities. These states are intentionally independent.
 | Knowledge registered | `books/index.yaml` | No |
 | Reading active | `books/<id>/reading/progress.yaml` | No |
 | Metadata ready | declared `metadata.yaml` exists and matches book_id | No |
-| Canonical source ready | declared `source/book.pdf` exists | No |
+| Canonical source ready | declared `source/book.pdf` or `source/book.epub` exists | No |
 | Source provenance verified | `source/SHA256`, metadata expected SHA and RAG source SHA agree | No |
 | RAG ready | manifest exists and `validation.status` starts with `READY` | No |
 | Retrieval ready | addressable chunks + deterministic search index + integrity smoke test | No |
@@ -39,7 +39,7 @@ A supplied PDF is not by itself equal to canonical repository ingest.
 New RAG/chapter book branch:
 
 ```text
-BIBLIOTEKA-VSP-BOOK-BRANCH-BOOTSTRAP v1.1
+BIBLIOTEKA-VSP-BOOK-BRANCH-BOOTSTRAP v1.2
 ```
 
 Normal chapter command:
@@ -47,7 +47,7 @@ Normal chapter command:
 ```text
 "Анализ главы N"
   ↓
-BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST v1.1
+BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST v1.2
 ```
 
 The entrypoint templates orchestrate the contracts below; they do not duplicate
@@ -58,7 +58,7 @@ book/RAG/chapter implementation logic.
 One-time book preparation:
 
 ```text
-BIBLIOTEKA-VSP-BOOK-ONBOARDING v1.1
+BIBLIOTEKA-VSP-BOOK-ONBOARDING v1.2
     ↓
 canonical source + provenance
     ↓
@@ -70,7 +70,7 @@ retrieval integrity
 Read-only gate:
 
 ```text
-BIBLIOTEKA-VSP-BOOK-READINESS v1.1
+BIBLIOTEKA-VSP-BOOK-READINESS v1.2
     ↓ READY
 BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.5
 ```
@@ -173,4 +173,4 @@ is local; after GitHub confirms it, RAG/PR/CI/readiness return to remote tools.
 
 Book source ingest and generated RAG use a non-main ingest branch. The RAG
 workflow writes generated artifacts back to that branch. Merge only after
-readiness succeeds. Never force-push or silently replace `source/book.pdf`.
+readiness succeeds. Never force-push or silently replace the declared canonical source.
