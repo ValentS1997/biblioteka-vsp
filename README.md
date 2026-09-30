@@ -6,7 +6,7 @@
 
 Для каждой книги репозиторий хранит:
 
-- исходный PDF как неизменяемый источник;
+- канонический PDF или EPUB как неизменяемый источник;
 - metadata и provenance;
 - воспроизводимый слой подготовки под RAG;
 - состояние фактического чтения;
@@ -24,7 +24,7 @@ books/
 └── <book-slug>/
     ├── README.md
     ├── source/
-    │   └── book.pdf
+    │   └── book.pdf | book.epub
     ├── metadata.yaml
     ├── rag/
     │   ├── manifest.yaml
@@ -51,7 +51,7 @@ reading-only и оставаться валидной без RAG.
 одноразовый book onboarding:
 
 ```text
-BIBLIOTEKA-VSP-BOOK-ONBOARDING v1.1
+BIBLIOTEKA-VSP-BOOK-ONBOARDING v1.2
   ↓
 canonical source + provenance
   ↓
@@ -59,7 +59,7 @@ full-text extraction + normalization
   ↓
 full-book RAG + addressable retrieval
   ↓
-BIBLIOTEKA-VSP-BOOK-READINESS v1.1
+BIBLIOTEKA-VSP-BOOK-READINESS v1.2
   ↓
 READY_FOR_CHAPTER_ANALYSIS
 ```
@@ -86,10 +86,10 @@ RAG readiness и reading progress — разные состояния. Нали�
 
 - [Templates index](templates/README.md)
 - [Git execution policy v1.0](templates/git-execution-policy-v1.0.yaml)
-- [New book branch bootstrap v1.1](templates/book-branch-bootstrap-v1.1.yaml)
-- [Book onboarding v1.1](templates/book-onboarding-v1.1.yaml)
-- [Book readiness v1.1](templates/book-readiness-v1.1.yaml)
-- [Chapter analysis request v1.1](templates/chapter-analysis-request-v1.1.yaml)
+- [New book branch bootstrap v1.1](templates/book-branch-bootstrap-v1.2.yaml)
+- [Book onboarding v1.1](templates/book-onboarding-v1.2.yaml)
+- [Book readiness v1.1](templates/book-readiness-v1.2.yaml)
+- [Chapter analysis request v1.1](templates/chapter-analysis-request-v1.2.yaml)
 - [Chapter artifacts v1.5](templates/chapter-artifact-collection-v1.5.yaml)
 - [Book lifecycle matrix](docs/BOOK-LIFECYCLE.md)
 
@@ -136,11 +136,11 @@ are insufficient, limit the local scope, define verification/rollback and state
 where the workflow resumes remotely.
 
 For book ingest the expected exception is `GIT_LFS_BINARY_UPLOAD_REQUIRED`:
-the available connector cannot upload the exact PDF as a real Git LFS object.
+the available connector cannot upload the exact PDF/EPUB as a real Git LFS object.
 Only that minimal source upload may fall back to local Git; subsequent
 RAG/PR/CI/readiness returns to GitHub tools.
 
-## Source PDF storage
+## Canonical source storage
 
 PDF is the canonical source artifact and must not be recompressed or rewritten without changing provenance.
 
@@ -148,11 +148,11 @@ PDF files under `books/**/source/` are tracked through Git LFS. Each book record
 
 ## RAG automation
 
-When `books/<book-slug>/source/book.pdf` is pushed to a non-`main` ingest branch, the `Build book RAG` workflow:
+When `books/<book-slug>/source/book.pdf` or `book.epub` is pushed to a non-`main` ingest branch, the `Build book RAG` workflow:
 
 1. checks out the Git LFS object;
 2. verifies SHA-256;
-3. extracts the embedded text layer page by page;
+3. extracts PDF text page-by-page or EPUB XHTML in spine order;
 4. generates `rag/text.md`;
 5. generates page-traceable `rag/chunks.jsonl`;
 6. generates addressable `rag/chunks/**/*.md`;
