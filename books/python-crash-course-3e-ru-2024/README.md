@@ -51,3 +51,7 @@ Validation status: `READY_WITH_KNOWN_LIMITATIONS`.
 Canonical readiness command:
 
 `python scripts/check_book_readiness.py --book-id python-crash-course-3e-ru-2024 --capability chapter-analysis`
+
+## Chapter artifacts
+
+- [Глава 1 — Первые шаги](notes/chapters/chapter-01-first-steps/README.md)
