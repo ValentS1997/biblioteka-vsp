@@ -31,12 +31,23 @@ Expected source identity:
 
 The source PDF must be ingested through Git LFS. Do not substitute, recompress, optimize, or rewrite the PDF without updating the provenance record.
 
-## Current readiness
+## RAG and chapter readiness
 
-The book-level scaffold and source identity are prepared, but chapter analysis remains blocked until the canonical Git LFS source is present, full-book RAG is generated, retrieval integrity passes, and the readiness validator returns `READY`.
+Canonical source ingest is complete and full-book RAG has been generated.
 
-After readiness becomes `READY`, the normal chapter entrypoint is:
+Verified RAG state:
+
+- validation: `READY_WITH_KNOWN_LIMITATIONS`
+- PDF pages processed: `215/215`
+- addressable chunks: `221`
+- deterministic search-index shards: `4023`
+- source SHA-256 matches `source/SHA256`
+- retrieval plumbing smoke test passed
+
+The normal chapter entrypoint is:
 
 ```text
 Анализ главы N
 ```
+
+Reading progress remains independent from technical ingest and is currently `planned`.
