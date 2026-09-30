@@ -23,7 +23,7 @@ NEXT_ACTIONS = {
     "BOOK_NOT_REGISTERED": "register the book in books/index.yaml",
     "METADATA_MISSING": "create and declare books/<book_id>/metadata.yaml",
     "METADATA_ID_MISMATCH": "make metadata.yaml id match book_id",
-    "CANONICAL_SOURCE_MISSING": "ingest and declare books/<book_id>/source/book.pdf",
+    "CANONICAL_SOURCE_MISSING": "ingest and declare books/<book_id>/source/book.pdf or source/book.epub",
     "SOURCE_CHECKSUM_RECORD_MISSING": "create source/SHA256 for the canonical source",
     "SOURCE_PROVENANCE_INCOMPLETE": "make metadata expected_sha256, source/SHA256 and RAG source.sha256 consistent",
     "RAG_MANIFEST_MISSING": "build full-book RAG on an ingest branch",
@@ -194,10 +194,20 @@ def retrieval_integrity_smoke_test(
             return False, f"retrieved chunk missing: {rel_path}"
 
         meta, body = read_chunk(chunk_path)
+        source_unit_ok = True
+        if "source_unit" in indexed or "source_unit" in posting or "source_unit" in meta:
+            source_unit_ok = (
+                meta.get("source_unit") == posting.get("source_unit") == indexed.get("source_unit")
+            )
+        else:
+            source_unit_ok = (
+                meta.get("pdf_page") == posting.get("pdf_page") == indexed.get("pdf_page")
+            )
+
         checks = {
             "book_id": meta.get("book_id") == book_id,
             "chunk_id": meta.get("chunk_id") == chunk_id,
-            "pdf_page": meta.get("pdf_page") == posting.get("pdf_page") == indexed.get("pdf_page"),
+            "source_unit": source_unit_ok,
             "source_sha256": str(meta.get("source_sha256", "")).lower() == expected_source_sha,
             "token": token in lexical_tokens(body),
         }
@@ -281,7 +291,8 @@ def compute_readiness(book_id: str) -> dict[str, Any]:
     source_path = ROOT / source_rel if isinstance(source_rel, str) else None
     canonical_source_exists = bool(
         source_path
-        and source_path.as_posix().endswith(f"books/{book_id}/source/book.pdf")
+        and source_path.parent == book_dir / "source"
+        and source_path.name in {"book.pdf", "book.epub"}
         and source_path.is_file()
     )
     checks.append(result_check(
@@ -332,7 +343,7 @@ def compute_readiness(book_id: str) -> dict[str, Any]:
     expected_manifest_source_path = (
         source_path.relative_to(book_dir).as_posix()
         if source_path and source_path.is_relative_to(book_dir)
-        else "source/book.pdf"
+        else "[undeclared]"
     )
     manifest_source_ok = bool(
         manifest_exists
