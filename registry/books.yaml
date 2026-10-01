@@ -17,6 +17,7 @@ scope:
 books:
   - number: 1
     inventory_number: "0001"
+    knowledge_id: "kubernetes-in-action-marko-luksa-ru"
     title: "Kubernetes в действии"
     authors_raw: "Марко Лукша / Marko Luksa"
     translators_editors_raw: "А. В. Логунов"
