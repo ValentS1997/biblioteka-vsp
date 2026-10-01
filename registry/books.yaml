@@ -84,6 +84,7 @@ books:
     direction: "Distributed Systems"
   - number: 10
     inventory_number: "0010"
+    knowledge_id: "rag-generative-ai-denis-rothman-ru"
     title: "RAG и генеративный ИИ. Создаем собственные RAG-пайплайны с помощью LlamaIndex, Deep Lake и Pinecone"
     authors_raw: "Дэнис Ротман"
     translators_editors_raw: "Д. Брайт"
