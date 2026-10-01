@@ -69,7 +69,15 @@ books:
       - "Марина Перескокова"
     language: ru
     paths:
+      metadata: books/mama-ya-timlid-ru/metadata.yaml
+      source: books/mama-ya-timlid-ru/source/book.epub
+      rag_manifest: books/mama-ya-timlid-ru/rag/manifest.yaml
+      rag_chunks: books/mama-ya-timlid-ru/rag/chunks/
+      rag_chunk_index: books/mama-ya-timlid-ru/rag/chunk-index.jsonl
+      rag_search_index: books/mama-ya-timlid-ru/rag/search-index/
       reading_progress: books/mama-ya-timlid-ru/reading/progress.yaml
+      notes: books/mama-ya-timlid-ru/notes/
+      diagrams: books/mama-ya-timlid-ru/diagrams/
 
   - id: ai-engineering-chip-huyen-ru
     title: "AI-инженерия. Построение приложений с использованием базовых моделей"
