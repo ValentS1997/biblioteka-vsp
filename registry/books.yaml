@@ -120,6 +120,7 @@ books:
     direction: "Docker / Containers"
   - number: 15
     inventory_number: "0015"
+    knowledge_id: "linux-go-low-level-programming-tsilyurik-ru"
     title: "Linux и Go. Эффективное низкоуровневое программирование"
     authors_raw: "Олег Иванович Цилюрик"
     translators_editors_raw: "оригинал на русском"
