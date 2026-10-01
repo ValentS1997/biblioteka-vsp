@@ -197,3 +197,19 @@ books:
       notes: books/a-byte-of-python-swaroop-chitlur-ru/notes/
       diagrams: books/a-byte-of-python-swaroop-chitlur-ru/diagrams/
 
+
+  - id: linux-go-low-level-programming-tsilyurik-ru
+    title: "Linux и Go. Эффективное низкоуровневое программирование"
+    authors:
+      - "Олег Иванович Цилюрик"
+    language: ru
+    paths:
+      metadata: books/linux-go-low-level-programming-tsilyurik-ru/metadata.yaml
+      source: books/linux-go-low-level-programming-tsilyurik-ru/source/book.pdf
+      rag_manifest: books/linux-go-low-level-programming-tsilyurik-ru/rag/manifest.yaml
+      rag_chunks: books/linux-go-low-level-programming-tsilyurik-ru/rag/chunks/
+      rag_chunk_index: books/linux-go-low-level-programming-tsilyurik-ru/rag/chunk-index.jsonl
+      rag_search_index: books/linux-go-low-level-programming-tsilyurik-ru/rag/search-index/
+      reading_progress: books/linux-go-low-level-programming-tsilyurik-ru/reading/progress.yaml
+      notes: books/linux-go-low-level-programming-tsilyurik-ru/notes/
+      diagrams: books/linux-go-low-level-programming-tsilyurik-ru/diagrams/
