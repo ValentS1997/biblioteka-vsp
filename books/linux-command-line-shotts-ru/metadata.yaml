@@ -1,0 +1,54 @@
+schema: biblioteka-vsp/book/v1
+
+id: linux-command-line-shotts-ru
+title: "Командная строка Linux. Полное руководство"
+
+edition:
+  number: 2
+  language: ru
+  publisher: "Питер"
+  publication_year: 2020
+  publication_pages: 544
+
+authors:
+  - "Уильям Шоттс"
+
+isbn:
+  russian_edition: "978-5-4461-1430-6"
+  original_edition: "978-1-59327-952-3"
+
+source:
+  canonical_path: "source/book.pdf"
+  format: pdf
+  expected_sha256: "fbffc67eb70a105c4e9909375a692a471ebccd0c897497a266b249a83d5a803c"
+  expected_size_bytes: 5533194
+  source_pdf_pages: 544
+  text_layer: "unclassified_extractable_pdf_text"
+  repository_access: private
+  storage: "Git LFS"
+  upload_status: "VERIFIED_GIT_LFS_AVAILABLE"
+  source_vault_branch: "source-vault/2026-09-30-rag-books"
+  source_vault_path: "source-vault/objects/fbffc67eb70a105c4e9909375a692a471ebccd0c897497a266b249a83d5a803c.pdf"
+  upload_commit: "d23b0c55abc6b7093c8e16fab458b7eea5a0e51e"
+  lawful_access_attested_by_user: "[Needs confirmation]"
+  ownership_category: "[Needs confirmation]"
+  physical_copy: "[Needs confirmation]"
+  license: "[Needs confirmation]"
+  redistribution_permission: "[Needs confirmation]"
+
+rag:
+  scope: full_book
+  build_script: "../../../scripts/build_book_rag.py"
+  manifest: "rag/manifest.yaml"
+  text: "rag/text.md"
+  chunks: "rag/chunks.jsonl"
+  status: "READY_WITH_KNOWN_LIMITATIONS"
+  generated_commit: "e013d25f7847794c1f2d5edf3ad0d199a0682031"
+  workflow_run_id: 36857577057
+
+reading:
+  progress: "reading/progress.yaml"
+  journal: "reading/journal.md"
+  status: planned
+  started: null
+  completed: null
