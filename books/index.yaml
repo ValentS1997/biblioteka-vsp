@@ -334,3 +334,18 @@ books:
       reading_progress: books/linux-command-line-best-practices-barrett-ru/reading/progress.yaml
       notes: books/linux-command-line-best-practices-barrett-ru/notes/
       diagrams: books/linux-command-line-best-practices-barrett-ru/diagrams/
+
+  - id: ethical-hacking-basics-ru
+    title: "Основы этичного хакинга"
+    authors:
+      - "[Needs confirmation]"
+    language: ru
+    paths:
+      metadata: books/ethical-hacking-basics-ru/metadata.yaml
+      source: books/ethical-hacking-basics-ru/source/book.pdf
+      rag_manifest: books/ethical-hacking-basics-ru/rag/manifest.yaml
+      rag_chunks: books/ethical-hacking-basics-ru/rag/chunks/
+      rag_chunk_index: books/ethical-hacking-basics-ru/rag/chunk-index.jsonl
+      rag_search_index: books/ethical-hacking-basics-ru/rag/search-index/
+      notes: books/ethical-hacking-basics-ru/notes/
+      diagrams: books/ethical-hacking-basics-ru/diagrams/
