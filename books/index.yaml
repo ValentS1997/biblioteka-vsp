@@ -293,8 +293,11 @@ books:
   - id: linux-command-line-shotts-ru
     title: "Командная строка Linux. Полное руководство"
     authors:
-      - "Шоттс"
+      - "Уильям Шоттс"
     language: ru
+    edition: 2
+    publication_year: 2020
+    isbn: "978-5-4461-1430-6"
     paths:
       metadata: books/linux-command-line-shotts-ru/metadata.yaml
       source: books/linux-command-line-shotts-ru/source/book.pdf
