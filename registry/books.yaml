@@ -481,10 +481,12 @@ electronic_holdings:
       format: "pdf"
       match_status: "unregistered"
       inventory_numbers: []
+      knowledge_id: "linux-command-line-best-practices-barrett-ru"
     - filename: "Командная строка Linux. Полное руководство. Шоттс.pdf"
       format: "pdf"
       match_status: "unregistered"
       inventory_numbers: []
+      knowledge_id: "linux-command-line-shotts-ru"
     - filename: " Компьютерные сети. Принципы, технологии, протоколы. Олиферы.pdf"
       format: "pdf"
       match_status: "matched"
