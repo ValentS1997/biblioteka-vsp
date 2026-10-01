@@ -338,7 +338,7 @@ books:
   - id: ethical-hacking-basics-ru
     title: "Основы этичного хакинга"
     authors:
-      - "[Needs confirmation]"
+      - "А. В. Чумилин"
     language: ru
     paths:
       metadata: books/ethical-hacking-basics-ru/metadata.yaml
