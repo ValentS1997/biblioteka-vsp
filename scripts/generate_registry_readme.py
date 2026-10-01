@@ -16,6 +16,19 @@ def esc(v):
 def read_label(status):
     return {"completed": "Да", "in_progress": "В процессе"}.get(status, "—")
 
+def reading_date_label(value):
+    if not isinstance(value, dict):
+        return "—"
+    exact = value.get("exact_date")
+    month = value.get("month")
+    if exact and exact != "[Needs confirmation]":
+        return str(exact)
+    if month and month != "[Needs confirmation]":
+        return str(month)
+    if exact == "[Needs confirmation]" or month == "[Needs confirmation]":
+        return "[Needs confirmation]"
+    return "—"
+
 def rag_label(m):
     if not m:
         return "—"
@@ -66,10 +79,10 @@ def render():
         "",
         "## Реестр книг",
         "",
-        "Обозначения: `Эл.` — известная электронная версия; `Прочитано` — derived из `books/<knowledge-id>/reading/progress.yaml`; `RAG` — derived из `books/<knowledge-id>/rag/manifest.yaml`.",
+        "Обозначения: `Эл.` — известная электронная версия; `Прочитано`, `Начал читать` и `Закончил читать` — derived из `books/<knowledge-id>/reading/progress.yaml`; `Есть RAG` — derived из `books/<knowledge-id>/rag/manifest.yaml`.",
         "",
-        "| № | Инв. № | Название | Кратко | Направление | Автор(ы) | Перевод / редактура | Эл. | Прочитано | RAG |",
-        "|---:|:------:|---|---|---|---|---|:---:|:---:|:---:|",
+        "| № | Инв. № | Название | Кратко | Направление | Автор(ы) | Перевод / редактура | Эл. | Прочитано | Начал читать | Закончил читать | Есть RAG |",
+        "|---:|:------:|---|---|---|---|---|:---:|:---:|:---:|:---:|:---:|",
     ]
 
     reverse = {}
@@ -82,12 +95,14 @@ def render():
         rd = read_label((p or {}).get("status"))
         if rd == "Да": completed += 1
         if rd == "В процессе": active += 1
+        started = reading_date_label((p or {}).get("started")) if p else "—"
+        finished = reading_date_label((p or {}).get("completed")) if p else "—"
         rg = rag_label(rags.get(kid) if kid else None)
         if rg == "Да": rag_ready += 1
         lines.append(
             f"| {b['number']} | `{inv}` | **{esc(b['title'])}** | {esc(b['summary_short'])} | "
             f"{esc(b['direction'])} | {esc(b['authors_raw'])} | {esc(b['translators_editors_raw'])} | "
-            f"{elabel(inv)} | {rd} | {rg} |"
+            f"{elabel(inv)} | {rd} | {started} | {finished} | {rg} |"
         )
 
     pairs = set()
