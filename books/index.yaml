@@ -272,3 +272,20 @@ books:
       notes: books/vysokonagruzhennye-prilozheniya-martin-kleppmann-ru/notes/
       diagrams: books/vysokonagruzhennye-prilozheniya-martin-kleppmann-ru/diagrams/
 
+
+  - id: cybersecurity-risk-hubbard-seiersen-ru
+    title: "Как оценить риски в кибербезопасности: лучшие инструменты и практики"
+    authors:
+      - "Дуглас У. Хаббард"
+      - "Ричард Сирсен"
+    language: ru
+    paths:
+      metadata: books/cybersecurity-risk-hubbard-seiersen-ru/metadata.yaml
+      source: books/cybersecurity-risk-hubbard-seiersen-ru/source/book.epub
+      rag_manifest: books/cybersecurity-risk-hubbard-seiersen-ru/rag/manifest.yaml
+      rag_chunks: books/cybersecurity-risk-hubbard-seiersen-ru/rag/chunks/
+      rag_chunk_index: books/cybersecurity-risk-hubbard-seiersen-ru/rag/chunk-index.jsonl
+      rag_search_index: books/cybersecurity-risk-hubbard-seiersen-ru/rag/search-index/
+      reading_progress: books/cybersecurity-risk-hubbard-seiersen-ru/reading/progress.yaml
+      notes: books/cybersecurity-risk-hubbard-seiersen-ru/notes/
+      diagrams: books/cybersecurity-risk-hubbard-seiersen-ru/diagrams/

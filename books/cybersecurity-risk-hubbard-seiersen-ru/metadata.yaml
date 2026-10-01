@@ -1,0 +1,59 @@
+schema: biblioteka-vsp/book/v1
+
+id: cybersecurity-risk-hubbard-seiersen-ru
+title: "Как оценить риски в кибербезопасности: лучшие инструменты и практики"
+
+edition:
+  number: "[Needs confirmation]"
+  language: ru
+  publisher: "[Needs confirmation]"
+  publication_year: "[Needs confirmation]"
+  publication_pages: "[Needs confirmation]"
+
+authors:
+  - "Дуглас У. Хаббард"
+  - "Ричард Сирсен"
+
+translators_editors:
+  - "М. А. Райтман"
+
+isbn:
+  russian_edition: "[Needs confirmation]"
+  original_edition: "[Needs confirmation]"
+
+source:
+  canonical_path: "source/book.epub"
+  format: epub
+  expected_sha256: "43b5ec48fec54cf506d05b62975c8772978fc4fbbe2a97c97643d8c6ad054481"
+  expected_size_bytes: 4285253
+  source_unit_count: 48
+  epub_spine_items: 48
+  text_layer: "xhtml_text"
+  repository_access: private
+  storage: "Git LFS"
+  upload_status: "VERIFIED_GIT_LFS_AVAILABLE"
+  source_vault_branch: "source-vault/2026-09-30-rag-books"
+  source_vault_path: "source-vault/objects/43b5ec48fec54cf506d05b62975c8772978fc4fbbe2a97c97643d8c6ad054481.epub"
+  lawful_access_attested_by_user: "[Needs confirmation]"
+  ownership_category: "[Needs confirmation]"
+  physical_copy: "[Needs confirmation]"
+  license: "[Needs confirmation]"
+  redistribution_permission: "[Needs confirmation]"
+  upload_commit: "0d49f339246479cab2c5074a5ea588f1b4268a0f"
+
+rag:
+  scope: full_book
+  build_script: "../../../scripts/build_book_rag.py"
+  manifest: "rag/manifest.yaml"
+  text: "rag/text.md"
+  chunks: "rag/chunks.jsonl"
+  status: "READY_WITH_KNOWN_LIMITATIONS"
+  generated_commit: "e4eb68c660cfba73d0a27744a6edbf90c1fecc19"
+  workflow_run_id: 36855363777
+
+reading:
+  progress: "reading/progress.yaml"
+  journal: "reading/journal.md"
+  status: planned
+  started: null
+  completed: null

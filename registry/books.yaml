@@ -182,6 +182,7 @@ books:
     direction: "Team Lead / Management"
   - number: 23
     inventory_number: "0023"
+    knowledge_id: "cybersecurity-risk-hubbard-seiersen-ru"
     title: "Как оценить риски в кибербезопасности: лучшие инструменты и практики"
     authors_raw: "Дуглас У. Хаббард; Ричард Сирсен"
     translators_editors_raw: "М. А. Райтман"
