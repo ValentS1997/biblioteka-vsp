@@ -355,6 +355,8 @@ books:
     authors:
       - "Станислав Андреевич Чернышев"
     language: ru
+    publication_year: 2026
+    isbn: "978-5-4461-4571-3"
     paths:
       metadata: books/go-basics-chernyshev-ru/metadata.yaml
       source: books/go-basics-chernyshev-ru/source/book.pdf
