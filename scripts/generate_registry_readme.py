@@ -83,8 +83,6 @@ def render():
         "Канонический human-readable view. Архитектурный контракт: [`ARCHITECTURE.md`](./ARCHITECTURE.md).",
         "",
         f"> **{len(books)} инвентарных книг** · инвентарные номера `0001–0046` · **{reg['electronic_holdings']['file_count']} электронный файл** · актуально на `{reg['updated']}`",
-        "",
-        "Обозначения: `Эл.` — известная электронная версия; `Прочитано`, `Начал читать` и `Закончил читать` — derived из `books/<knowledge-id>/reading/progress.yaml`; `Есть RAG` — derived из `books/<knowledge-id>/rag/manifest.yaml`.",
     ]
 
     reverse = {}
@@ -145,6 +143,8 @@ def render():
 
     lines += [
         "", "## Реестр книг", "",
+        "Обозначения: `Эл.` — известная электронная версия; `Прочитано`, `Начал читать` и `Закончил читать` — derived из `books/<knowledge-id>/reading/progress.yaml`; `Есть RAG` — derived из `books/<knowledge-id>/rag/manifest.yaml`.",
+        "",
         "| № | Инв. № | Название | Начал читать | Закончил читать | Есть RAG | Прочитано | Эл. | Кратко | Направление | Автор(ы) | Перевод / редактура |",
         "|---:|:------:|---|:---:|:---:|:---:|:---:|:---:|---|---|---|---|",
     ]
