@@ -66,24 +66,27 @@
 
 ## Электронные книги без инвентарного номера
 
-| Файл | Формат | Инв. № |
-|---|:---:|:---:|
-| `Командная строка Linux.Лучшие практики. Барретт.pdf` | PDF | [Needs confirmation] |
-| `Командная строка Linux. Полное руководство. Шоттс.pdf` | PDF | [Needs confirmation] |
+| Файл | Формат | Knowledge ID | Инв. № |
+|---|:---:|---|:---:|
+| `Командная строка Linux.Лучшие практики. Барретт.pdf` | PDF | `linux-command-line-best-practices-barrett-ru` | [Needs confirmation] |
+| `Командная строка Linux. Полное руководство. Шоттс.pdf` | PDF | `linux-command-line-shotts-ru` | [Needs confirmation] |
 
 ## Контроль
 
 | Параметр | Значение |
 |---|---:|
 | Инвентарных книг | **46** |
-| Knowledge mappings | **21** |
+| Inventory → knowledge mappings | **21** |
+| Knowledge entries всего | **23** |
+| Knowledge entries без inventory | **2** |
 | Электронных файлов | **23** |
 | Однозначно сопоставлено | **21** |
 | Требует подтверждения | **0** |
 | Вне inventory | **2** |
 | Прочитано | **4** |
 | В процессе | **2** |
-| RAG READY | **20** |
+| RAG READY (inventory-linked) | **20** |
+| RAG READY (knowledge total) | **22** |
 | SHA-256 Excel snapshot | `b97daed242dae9eeefd46317c2ca7665d1655b85189068b8a5f24f99a5f5aef2` |
 | Размер Excel snapshot | `12087 bytes` |
 
