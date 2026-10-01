@@ -367,7 +367,7 @@ books:
       notes: books/go-basics-chernyshev-ru/notes/
       diagrams: books/go-basics-chernyshev-ru/diagrams/
 
-- id: distributed-systems-patterns-brendan-burns-ru
+  - id: distributed-systems-patterns-brendan-burns-ru
     title: "Распределенные системы. Паттерны проектирования"
     authors:
       - "Брендан Бёрнс"
