@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 1 — Контейнеризация и Docker: подробная шпаргалка</title>
+  <desc id="desc">Подробная карта главы: эволюция инфраструктуры, контейнерная модель, Docker Engine, Registry, микросервисы, CI/CD и безопасность.</desc>
+  <rect width="1800" height="1200" fill="#f6f8fb"/>
+  <rect x="0" y="0" width="1800" height="112" fill="#17202a"/>
+  <text x="58" y="50" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="38" font-weight="700" fill="#ffffff">Глава 1 — Контейнеризация и Docker</text>
+  <text x="58" y="86" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">Подробная карта концепций главы 1</text>
+
+  <rect x="45" y="145" width="535" height="290" rx="18" fill="#ffffff" stroke="#5dade2" stroke-width="2"/>
+  <text x="75" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#1b4f72">1. От серверов к контейнерам</text>
+  <text x="75" y="232" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">Physical servers: запас мощности, низкая утилизация.</tspan>
+    <tspan x="75" dy="31">Virtualization: лучшее использование hardware.</tspan>
+    <tspan x="75" dy="31">Но каждая VM несёт отдельную OS.</tspan>
+    <tspan x="75" dy="31">Containerization: virtualization at OS level.</tspan>
+    <tspan x="75" dy="31">Контейнеры используют одно ядро хоста.</tspan>
+    <tspan x="75" dy="31">Результат: легче, быстрее, плотнее размещение.</tspan>
+  </text>
+
+  <rect x="630" y="145" width="535" height="290" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="660" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#196f3d">2. Контейнерная единица</text>
+  <text x="660" y="232" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="660" dy="0">Application</tspan>
+    <tspan x="660" dy="31">+ configuration</tspan>
+    <tspan x="660" dy="31">+ libraries</tspan>
+    <tspan x="660" dy="31">+ runtime dependencies</tspan>
+    <tspan x="660" dy="31">= переносимый контейнер</tspan>
+    <tspan x="660" dy="31">Одинаковая runtime-среда между средами.</tspan>
+  </text>
+
+  <rect x="1215" y="145" width="540" height="290" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1245" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#9c640c">3. Docker Engine</text>
+  <text x="1245" y="232" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1245" dy="0">Client / CLI</tspan>
+    <tspan x="1245" dy="31">↓ REST API / Unix socket / network</tspan>
+    <tspan x="1245" dy="31">Docker daemon</tspan>
+    <tspan x="1245" dy="31">↓ создаёт и управляет объектами:</tspan>
+    <tspan x="1245" dy="31">containers · images · networks</tspan>
+    <tspan x="1245" dy="31">storage · volumes</tspan>
+  </text>
+
+  <rect x="45" y="475" width="535" height="300" rx="18" fill="#ffffff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="75" y="518" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#6c3483">4. Registry и CI/CD</text>
+  <text x="75" y="562" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">Registry хранит и доставляет images по tags.</tspan>
+    <tspan x="75" dy="31">Docker Hub — облачный image repository.</tspan>
+    <tspan x="75" dy="31">push → отправка образа.</tspan>
+    <tspan x="75" dy="31">pull ← получение образа.</tspan>
+    <tspan x="75" dy="31">VCS change → CI build → image → registry.</tspan>
+    <tspan x="75" dy="31">Registry notification → дальнейший deploy.</tspan>
+  </text>
+
+  <rect x="630" y="475" width="535" height="300" rx="18" fill="#ffffff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="660" y="518" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#21618c">5. Микросервисы</text>
+  <text x="660" y="562" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="660" dy="0">Чёткие границы компонентов.</tspan>
+    <tspan x="660" dy="31">Каждый сервис работает независимо.</tspan>
+    <tspan x="660" dy="31">Можно отдельно deploy / update / scale.</tspan>
+    <tspan x="660" dy="31">Контейнер даёт сервису изоляцию.</tspan>
+    <tspan x="660" dy="31">Язык реализации не является ключевой границей.</tspan>
+    <tspan x="660" dy="31">Swarm: clustering + orchestration.</tspan>
+  </text>
+
+  <rect x="1215" y="475" width="540" height="300" rx="18" fill="#ffffff" stroke="#ec7063" stroke-width="2"/>
+  <text x="1245" y="518" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#922b21">6. Security boundaries</text>
+  <text x="1245" y="562" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1245" dy="0">namespaces → process isolation</tspan>
+    <tspan x="1245" dy="31">cgroups → resource limits / metrics</tspan>
+    <tspan x="1245" dy="31">network isolation → separate infrastructure</tspan>
+    <tspan x="1245" dy="31">daemon access → trusted users only</tspan>
+    <tspan x="1245" dy="31">capabilities → least privilege</tspan>
+    <tspan x="1245" dy="31">DCT → signed images only</tspan>
+  </text>
+
+  <rect x="45" y="815" width="840" height="250" rx="18" fill="#ffffff" stroke="#48c9b0" stroke-width="2"/>
+  <text x="75" y="858" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#117864">7. Что контейнеризация решает по модели главы</text>
+  <text x="75" y="902" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">• меньше overhead, чем у VM с отдельной гостевой OS;</tspan>
+    <tspan x="75" dy="31">• быстрый старт / остановка;</tspan>
+    <tspan x="75" dy="31">• одинаковая runtime-среда между development/test/production;</tspan>
+    <tspan x="75" dy="31">• удобная единица для CI/CD и микросервисов;</tspan>
+    <tspan x="75" dy="31">• независимое масштабирование сервисов.</tspan>
+  </text>
+
+  <rect x="930" y="815" width="825" height="250" rx="18" fill="#ffffff" stroke="#e67e22" stroke-width="2"/>
+  <text x="960" y="858" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#a04000">8. Что глава не даёт</text>
+  <text x="960" y="902" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="960" dy="0">• почти нет готовых shell-команд;</tspan>
+    <tspan x="960" dy="31">• нет законченного troubleshooting workflow;</tspan>
+    <tspan x="960" dy="31">• push/pull названы без полного shell-синтаксиса;</tspan>
+    <tspan x="960" dy="31">• practical container/image work начинается в главе 2;</tspan>
+    <tspan x="960" dy="31">• продуктовые факты не актуализировались внешними источниками.</tspan>
+  </text>
+
+  <rect x="45" y="1105" width="1710" height="62" rx="14" fill="#17202a"/>
+  <text x="76" y="1145" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#ffffff">Главная цепочка: package runtime → isolate container → Docker Engine → Registry/CI-CD → microservices/orchestration → security controls.</text>
+</svg>
