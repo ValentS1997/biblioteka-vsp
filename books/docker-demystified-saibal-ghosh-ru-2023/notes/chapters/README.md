@@ -1,3 +1,5 @@
 # Chapter artifacts
 
-Chapter artifacts are created only after book-level chapter-analysis readiness is READY.
+Reviewed RAG-grounded chapter materials are stored here.
+
+- [Chapter 1 — Контейнеризация и Docker](chapter-01-containerization-and-docker/README.md)
