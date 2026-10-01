@@ -185,10 +185,10 @@ def retrieval_key(token: str) -> str:
     return token if len(token) <= SEARCH_KEY_CHARS else token[:SEARCH_KEY_CHARS]
 
 
-def search_shard_for_key(key: str) -> str:
-    if len(key) < SEARCH_PREFIX_CHARS:
+def search_shard_for_key(key: str, prefix_chars: int = SEARCH_PREFIX_CHARS) -> str:
+    if len(key) < prefix_chars:
         return f"_short/{key}"
-    return key[:SEARCH_PREFIX_CHARS]
+    return key[:prefix_chars]
 
 
 def pdf_units(source: Path) -> tuple[list[dict], dict]:
@@ -309,134 +309,149 @@ def build_lexical_search_index(
     index_records: list[dict],
 ) -> dict:
     search_dir = book_dir / "rag" / "search-index"
-    if search_dir.exists():
-        shutil.rmtree(search_dir)
-    search_dir.mkdir(parents=True, exist_ok=True)
-
     path_by_chunk = {record["chunk_id"]: record["path"] for record in index_records}
-    key_postings: dict[str, dict[str, dict[str, dict]]] = defaultdict(lambda: defaultdict(dict))
-    exact_terms: dict[str, dict[str, dict[str, dict]]] = defaultdict(lambda: defaultdict(dict))
 
-    for record in chunk_records:
-        chunk_id = record["chunk_id"]
-        chunk_path = path_by_chunk[chunk_id]
-        term_counts = Counter(lexical_tokens(record["text"]))
-        key_counts: Counter[str] = Counter()
+    last_oversized: tuple[str, int] | None = None
+    for prefix_chars in range(SEARCH_PREFIX_CHARS, SEARCH_KEY_CHARS + 1):
+        if search_dir.exists():
+            shutil.rmtree(search_dir)
+        search_dir.mkdir(parents=True, exist_ok=True)
 
-        for term, tf in term_counts.items():
-            key = retrieval_key(term)
-            shard = search_shard_for_key(key)
-            key_counts[key] += tf
-            base = {
-                "chunk_id": chunk_id,
-                "path": chunk_path,
-                "source_unit": record["source_unit"],
-                "source_unit_type": record["source_unit_type"],
-                "source_locator": record["source_locator"],
-                "tf": tf,
+        key_postings: dict[str, dict[str, dict[str, dict]]] = defaultdict(lambda: defaultdict(dict))
+        exact_terms: dict[str, dict[str, dict[str, dict]]] = defaultdict(lambda: defaultdict(dict))
+
+        for record in chunk_records:
+            chunk_id = record["chunk_id"]
+            chunk_path = path_by_chunk[chunk_id]
+            term_counts = Counter(lexical_tokens(record["text"]))
+            key_counts: Counter[str] = Counter()
+
+            for term, tf in term_counts.items():
+                key = retrieval_key(term)
+                shard = search_shard_for_key(key, prefix_chars)
+                key_counts[key] += tf
+                base = {
+                    "chunk_id": chunk_id,
+                    "path": chunk_path,
+                    "source_unit": record["source_unit"],
+                    "source_unit_type": record["source_unit_type"],
+                    "source_locator": record["source_locator"],
+                    "tf": tf,
+                }
+                if record.get("pdf_page") is not None:
+                    base["pdf_page"] = record["pdf_page"]
+                previous = exact_terms[shard][term].get(chunk_id)
+                if previous is None or tf > previous["tf"]:
+                    exact_terms[shard][term][chunk_id] = base
+
+            for key, tf in key_counts.items():
+                shard = search_shard_for_key(key, prefix_chars)
+                base = {
+                    "chunk_id": chunk_id,
+                    "path": chunk_path,
+                    "source_unit": record["source_unit"],
+                    "source_unit_type": record["source_unit_type"],
+                    "source_locator": record["source_locator"],
+                    "tf": tf,
+                }
+                if record.get("pdf_page") is not None:
+                    base["pdf_page"] = record["pdf_page"]
+                key_postings[shard][key][chunk_id] = base
+
+        shard_paths: list[Path] = []
+        max_shard_bytes = 0
+        max_shard_path = None
+        oversized: tuple[str, int] | None = None
+        all_shards = sorted(set(key_postings) | set(exact_terms))
+        for shard in all_shards:
+            keys_payload = {}
+            for key, postings_by_chunk in sorted(key_postings[shard].items()):
+                postings = sorted(
+                    postings_by_chunk.values(),
+                    key=lambda item: (-item["tf"], item["source_unit"], item["chunk_id"]),
+                )[:SEARCH_POSTINGS_MAX]
+                keys_payload[key] = postings
+
+            exact_payload = {}
+            for term, postings_by_chunk in sorted(exact_terms[shard].items()):
+                best = min(
+                    postings_by_chunk.values(),
+                    key=lambda item: (-item["tf"], item["source_unit"], item["chunk_id"]),
+                )
+                exact_payload[term] = best
+
+            payload = {
+                "schema": "biblioteka-vsp/search-shard/v2",
+                "book_id": book_id,
+                "shard": shard,
+                "normalization": {
+                    "lowercase": True,
+                    "yo_to_e": True,
+                    "min_token_chars": 2,
+                    "retrieval_key_chars": SEARCH_KEY_CHARS,
+                    "shard_prefix_chars": prefix_chars,
+                },
+                "keys": keys_payload,
+                "exact_terms": exact_payload,
             }
-            if record.get("pdf_page") is not None:
-                base["pdf_page"] = record["pdf_page"]
-            previous = exact_terms[shard][term].get(chunk_id)
-            if previous is None or tf > previous["tf"]:
-                exact_terms[shard][term][chunk_id] = base
+            rel_path = Path("rag") / "search-index" / f"{shard}.json"
+            abs_path = book_dir / rel_path
+            abs_path.parent.mkdir(parents=True, exist_ok=True)
+            encoded = json.dumps(payload, ensure_ascii=False, separators=(",", ":"), sort_keys=True)
+            abs_path.write_text(encoded + "\n", encoding="utf-8")
+            shard_paths.append(rel_path)
+            size = len((encoded + "\n").encode("utf-8"))
+            if size > max_shard_bytes:
+                max_shard_bytes = size
+                max_shard_path = rel_path.as_posix()
+            if size > SEARCH_SHARD_MAX_BYTES and oversized is None:
+                oversized = (rel_path.as_posix(), size)
 
-        for key, tf in key_counts.items():
-            shard = search_shard_for_key(key)
-            base = {
-                "chunk_id": chunk_id,
-                "path": chunk_path,
-                "source_unit": record["source_unit"],
-                "source_unit_type": record["source_unit_type"],
-                "source_locator": record["source_locator"],
-                "tf": tf,
-            }
-            if record.get("pdf_page") is not None:
-                base["pdf_page"] = record["pdf_page"]
-            key_postings[shard][key][chunk_id] = base
+        if oversized is not None:
+            last_oversized = oversized
+            continue
 
-    shard_paths: list[Path] = []
-    max_shard_bytes = 0
-    max_shard_path = None
-    all_shards = sorted(set(key_postings) | set(exact_terms))
-    for shard in all_shards:
-        keys_payload = {}
-        for key, postings_by_chunk in sorted(key_postings[shard].items()):
-            postings = sorted(
-                postings_by_chunk.values(),
-                key=lambda item: (-item["tf"], item["source_unit"], item["chunk_id"]),
-            )[:SEARCH_POSTINGS_MAX]
-            keys_payload[key] = postings
-
-        exact_payload = {}
-        for term, postings_by_chunk in sorted(exact_terms[shard].items()):
-            best = min(
-                postings_by_chunk.values(),
-                key=lambda item: (-item["tf"], item["source_unit"], item["chunk_id"]),
-            )
-            exact_payload[term] = best
-
-        payload = {
-            "schema": "biblioteka-vsp/search-shard/v2",
+        manifest = {
+            "schema": "biblioteka-vsp/search-index/v2",
             "book_id": book_id,
-            "shard": shard,
+            "mode": "deterministic_lexical_shards",
             "normalization": {
                 "lowercase": True,
                 "yo_to_e": True,
                 "min_token_chars": 2,
                 "retrieval_key_chars": SEARCH_KEY_CHARS,
-                "shard_prefix_chars": SEARCH_PREFIX_CHARS,
+                "shard_prefix_chars": prefix_chars,
             },
-            "keys": keys_payload,
-            "exact_terms": exact_payload,
+            "lookup": {
+                "token_to_key": f"normalized token; first {SEARCH_KEY_CHARS} characters when longer",
+                "key_to_shard": f"first {prefix_chars} characters; tokens shorter than {prefix_chars} use _short/<token>.json",
+                "path_pattern": "rag/search-index/<shard>.json",
+                "postings_per_key_max": SEARCH_POSTINGS_MAX,
+            },
+            "statistics": {
+                "shards": len(shard_paths),
+                "max_shard_bytes": max_shard_bytes,
+                "max_shard_path": max_shard_path,
+            },
         }
-        rel_path = Path("rag") / "search-index" / f"{shard}.json"
-        abs_path = book_dir / rel_path
-        abs_path.parent.mkdir(parents=True, exist_ok=True)
-        encoded = json.dumps(payload, ensure_ascii=False, separators=(",", ":"), sort_keys=True)
-        abs_path.write_text(encoded + "\n", encoding="utf-8")
-        shard_paths.append(rel_path)
-        size = len((encoded + "\n").encode("utf-8"))
-        if size > max_shard_bytes:
-            max_shard_bytes = size
-            max_shard_path = rel_path.as_posix()
-        if size > SEARCH_SHARD_MAX_BYTES:
-            raise RuntimeError(f"Search shard exceeds {SEARCH_SHARD_MAX_BYTES} bytes: {rel_path} = {size}")
-
-    manifest = {
-        "schema": "biblioteka-vsp/search-index/v2",
-        "book_id": book_id,
-        "mode": "deterministic_lexical_shards",
-        "normalization": {
-            "lowercase": True,
-            "yo_to_e": True,
-            "min_token_chars": 2,
-            "retrieval_key_chars": SEARCH_KEY_CHARS,
-            "shard_prefix_chars": SEARCH_PREFIX_CHARS,
-        },
-        "lookup": {
-            "token_to_key": f"normalized token; first {SEARCH_KEY_CHARS} characters when longer",
-            "key_to_shard": f"first {SEARCH_PREFIX_CHARS} characters; tokens shorter than {SEARCH_PREFIX_CHARS} use _short/<token>.json",
-            "path_pattern": "rag/search-index/<shard>.json",
-            "postings_per_key_max": SEARCH_POSTINGS_MAX,
-        },
-        "statistics": {
+        manifest_path = search_dir / "manifest.json"
+        manifest_path.write_text(
+            json.dumps(manifest, ensure_ascii=False, separators=(",", ":"), sort_keys=True) + "\n",
+            encoding="utf-8",
+        )
+        return {
             "shards": len(shard_paths),
             "max_shard_bytes": max_shard_bytes,
             "max_shard_path": max_shard_path,
-        },
-    }
-    manifest_path = search_dir / "manifest.json"
-    manifest_path.write_text(
-        json.dumps(manifest, ensure_ascii=False, separators=(",", ":"), sort_keys=True) + "\n",
-        encoding="utf-8",
+            "manifest_path": str(manifest_path),
+            "shard_prefix_chars": prefix_chars,
+        }
+
+    path, size = last_oversized or ("[unknown]", 0)
+    raise RuntimeError(
+        f"Search shard exceeds {SEARCH_SHARD_MAX_BYTES} bytes even with "
+        f"{SEARCH_KEY_CHARS}-character sharding: {path} = {size}"
     )
-    return {
-        "shards": len(shard_paths),
-        "max_shard_bytes": max_shard_bytes,
-        "max_shard_path": max_shard_path,
-        "manifest_path": str(manifest_path),
-    }
 
 
 def write_retrieval_chunk(

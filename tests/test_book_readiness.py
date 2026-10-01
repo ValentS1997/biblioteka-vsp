@@ -156,6 +156,21 @@ class ReadinessTests(unittest.TestCase):
         result = module.compute_readiness("test-book")
         self.assertEqual("READY", result["status"])
 
+    def test_manifest_declared_four_char_shards_are_ready(self):
+        self.write_ready_book("pdf")
+        search_dir = self.root / "books" / "test-book" / "rag" / "search-index"
+        legacy_shard = search_dir / "при.json"
+        adaptive_shard = search_dir / "прим.json"
+        adaptive_shard.write_text(legacy_shard.read_text(encoding="utf-8"), encoding="utf-8")
+        legacy_shard.unlink()
+        (search_dir / "manifest.json").write_text(
+            json.dumps({"normalization": {"shard_prefix_chars": 4}}, ensure_ascii=False) + "\n",
+            encoding="utf-8",
+        )
+        result = module.compute_readiness("test-book")
+        self.assertEqual("READY", result["status"])
+        self.assertEqual([], result["failed_checks"])
+
     def test_full_ready_epub_book(self):
         self.write_ready_book("epub")
         result = module.compute_readiness("test-book")
