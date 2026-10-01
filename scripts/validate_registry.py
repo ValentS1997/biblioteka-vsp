@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from pathlib import Path
-import json, sys, yaml
+import hashlib, json, sys, yaml
 from jsonschema import Draft202012Validator
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -23,7 +23,32 @@ def main():
     if "reading_rag_status" in reg:
         errors.append("legacy reading_rag_status is forbidden in registry v2")
 
+    source = reg.get("source") or {}
+    source_rel = source.get("file")
+    if source_rel:
+        source_path = ROOT / source_rel
+        if not source_path.is_file():
+            errors.append(f"V11 registry source snapshot missing: {source_rel}")
+        else:
+            actual_size = source_path.stat().st_size
+            if source.get("size_bytes") != actual_size:
+                errors.append(
+                    f"V12 registry source snapshot size mismatch: "
+                    f"expected {source.get('size_bytes')}, got {actual_size}"
+                )
+            actual_sha = hashlib.sha256(source_path.read_bytes()).hexdigest()
+            if source.get("sha256") != actual_sha:
+                errors.append(
+                    f"V13 registry source snapshot SHA-256 mismatch: "
+                    f"expected {source.get('sha256')}, got {actual_sha}"
+                )
+
     books = reg.get("books") or []
+    numbers = [b.get("number") for b in books]
+    number_dup = sorted({x for x in numbers if numbers.count(x) > 1})
+    if number_dup:
+        errors.append(f"V15 duplicate book number: {number_dup}")
+
     inv = [b.get("inventory_number") for b in books]
     invset = set(inv)
     dup = sorted({x for x in inv if inv.count(x) > 1})
@@ -42,7 +67,29 @@ def main():
     if kd:
         errors.append(f"V07 conflicting knowledge_id mappings: {kd}")
 
-    holdings = (reg.get("electronic_holdings") or {}).get("files") or []
+    eh = reg.get("electronic_holdings") or {}
+    holdings = eh.get("files") or []
+    actual_matched = sum(1 for h in holdings if h.get("match_status") == "matched")
+    actual_needs_confirmation = sum(
+        1 for h in holdings
+        if h.get("match_status") in {"ambiguous", "needs_confirmation"}
+    )
+    actual_unregistered = sum(
+        1 for h in holdings if h.get("match_status") == "unregistered"
+    )
+    declared_counts = {
+        "file_count": len(holdings),
+        "matched_unambiguous": actual_matched,
+        "needs_confirmation": actual_needs_confirmation,
+        "unregistered": actual_unregistered,
+    }
+    for field, actual in declared_counts.items():
+        if eh.get(field) != actual:
+            errors.append(
+                f"V14 electronic_holdings.{field} mismatch: "
+                f"expected {eh.get(field)}, actual {actual}"
+            )
+
     inv_by_number = {b.get("inventory_number"): b for b in books}
     for i, h in enumerate(holdings):
         refs = h.get("inventory_numbers") or []
