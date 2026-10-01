@@ -1,6 +1,6 @@
 schema: biblioteka-vsp/books/v1
 protocol: biblioteka-vsp/v1
-updated: 2026-09-30
+updated: 2026-10-01
 
 books:
   - id: computer-networks-6e-ru-2023
@@ -212,3 +212,20 @@ books:
       reading_progress: books/rag-generative-ai-denis-rothman-ru/reading/progress.yaml
       notes: books/rag-generative-ai-denis-rothman-ru/notes/
       diagrams: books/rag-generative-ai-denis-rothman-ru/diagrams/
+
+  - id: sql-pocket-guide-alice-zhao-4e-ru
+    title: "SQL. Карманный справочник"
+    authors:
+      - "Элис Жао"
+    language: ru
+    edition: 4
+    paths:
+      metadata: books/sql-pocket-guide-alice-zhao-4e-ru/metadata.yaml
+      source: books/sql-pocket-guide-alice-zhao-4e-ru/source/book.pdf
+      rag_manifest: books/sql-pocket-guide-alice-zhao-4e-ru/rag/manifest.yaml
+      rag_chunks: books/sql-pocket-guide-alice-zhao-4e-ru/rag/chunks/
+      rag_chunk_index: books/sql-pocket-guide-alice-zhao-4e-ru/rag/chunk-index.jsonl
+      rag_search_index: books/sql-pocket-guide-alice-zhao-4e-ru/rag/search-index/
+      reading_progress: books/sql-pocket-guide-alice-zhao-4e-ru/reading/progress.yaml
+      notes: books/sql-pocket-guide-alice-zhao-4e-ru/notes/
+      diagrams: books/sql-pocket-guide-alice-zhao-4e-ru/diagrams/
