@@ -55,6 +55,7 @@ books:
     direction: "ОС"
   - number: 6
     inventory_number: "0006"
+    knowledge_id: "computer-architecture-tanenbaum-austin-6e-ru"
     title: "Архитектура компьютера. 6-е изд."
     authors_raw: "Эндрю С. Таненбаум; Тодд Остин"
     translators_editors_raw: "Е. Матвеев"
