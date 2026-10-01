@@ -100,8 +100,8 @@ def retrieval_key(token: str) -> str:
     return token if len(token) <= 4 else token[:4]
 
 
-def search_shard_for_key(key: str) -> str:
-    return f"_short/{key}" if len(key) < 3 else key[:3]
+def search_shard_for_key(key: str, prefix_chars: int) -> str:
+    return f"_short/{key}" if len(key) < prefix_chars else key[:prefix_chars]
 
 
 def read_chunk(path: Path) -> tuple[dict[str, Any], str]:
@@ -158,6 +158,7 @@ def retrieval_integrity_smoke_test(
     search_index_dir: Path,
     expected_source_path: str,
     expected_source_sha: str,
+    search_prefix_chars: int,
 ) -> tuple[bool, str]:
     records = load_chunk_index(chunk_index_path)
     by_id = {str(record.get("chunk_id")): record for record in records}
@@ -177,7 +178,7 @@ def retrieval_integrity_smoke_test(
 
     for token in tokens:
         key = retrieval_key(token)
-        shard_rel = f"{search_shard_for_key(key)}.json"
+        shard_rel = f"{search_shard_for_key(key, search_prefix_chars)}.json"
         shard_path = search_index_dir / shard_rel
         if not shard_path.is_file():
             continue
@@ -391,11 +392,29 @@ def compute_readiness(book_id: str) -> dict[str, Any]:
         None if search_exists else "RETRIEVAL_INDEX_MISSING",
     ))
 
+    search_prefix_chars: int | None = None
+    if search_exists and search_manifest:
+        try:
+            search_manifest_data = json.loads(search_manifest.read_text(encoding="utf-8"))
+        except Exception as exc:
+            raise RepositoryError(
+                f"invalid search index manifest {search_manifest.relative_to(ROOT)}: {exc}"
+            ) from exc
+        normalization = search_manifest_data.get("normalization") or {}
+        prefix_value = normalization.get("shard_prefix_chars") if isinstance(normalization, dict) else None
+        if isinstance(prefix_value, int) and 1 <= prefix_value <= 4:
+            search_prefix_chars = prefix_value
+        else:
+            raise RepositoryError(
+                f"invalid shard_prefix_chars in {search_manifest.relative_to(ROOT)}: {prefix_value!r}"
+            )
+
     smoke_ok = False
     smoke_evidence = "prerequisites missing"
     if (
         chunk_index_exists and chunks_exist and search_exists and source_sha
         and search_dir and chunk_index_path and canonical_source_exists
+        and search_prefix_chars is not None
     ):
         smoke_ok, smoke_evidence = retrieval_integrity_smoke_test(
             book_dir=book_dir,
@@ -404,6 +423,7 @@ def compute_readiness(book_id: str) -> dict[str, Any]:
             search_index_dir=search_dir,
             expected_source_path=expected_manifest_source_path,
             expected_source_sha=source_sha,
+            search_prefix_chars=search_prefix_chars,
         )
     checks.append(result_check(
         "retrieval_integrity_smoke_test_passed", smoke_ok, True, smoke_ok,
