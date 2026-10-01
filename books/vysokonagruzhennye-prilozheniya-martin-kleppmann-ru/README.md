@@ -33,13 +33,17 @@ Verified source-vault candidate:
 - source-vault branch: `source-vault/2026-09-30-rag-books`
 - source-vault path: `source-vault/objects/495e75f185c758a8223ca25b0fb35a8e6db693b06fb78c102e624a01ff852685.pdf`
 
-The source-vault manifest and Git LFS pointer OID/size match. Canonical-branch LFS materialization will be verified by the RAG workflow after promotion.
+The source-vault manifest and Git LFS pointer OID/size match. The RAG workflow materialized the canonical source successfully and recomputed the same SHA-256. Canonical source promotion commit: `c77f2ba74954466939fb2a214fbff3073d2b4075`.
+
+Verified PDF pages: `640`.
 
 ## RAG
 
 RAG scope: full book.
 
-Build status: pending source promotion/workflow execution.
+Generated commit: `e4f94f633162999fad333e3c026484af5669b9a8`.
+
+Validation status: `READY_WITH_KNOWN_LIMITATIONS`.
 
 Canonical readiness command:
 
