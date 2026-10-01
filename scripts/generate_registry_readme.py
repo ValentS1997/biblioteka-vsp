@@ -81,8 +81,8 @@ def render():
         "",
         "Обозначения: `Эл.` — известная электронная версия; `Прочитано`, `Начал читать` и `Закончил читать` — derived из `books/<knowledge-id>/reading/progress.yaml`; `Есть RAG` — derived из `books/<knowledge-id>/rag/manifest.yaml`.",
         "",
-        "| № | Инв. № | Название | Кратко | Направление | Автор(ы) | Перевод / редактура | Эл. | Прочитано | Начал читать | Закончил читать | Есть RAG |",
-        "|---:|:------:|---|---|---|---|---|:---:|:---:|:---:|:---:|:---:|",
+        "| № | Инв. № | Название | Начал читать | Закончил читать | Есть RAG | Прочитано | Эл. | Кратко | Направление | Автор(ы) | Перевод / редактура |",
+        "|---:|:------:|---|:---:|:---:|:---:|:---:|:---:|---|---|---|---|",
     ]
 
     reverse = {}
@@ -100,9 +100,10 @@ def render():
         rg = rag_label(rags.get(kid) if kid else None)
         if rg == "Да": rag_ready += 1
         lines.append(
-            f"| {b['number']} | `{inv}` | **{esc(b['title'])}** | {esc(b['summary_short'])} | "
-            f"{esc(b['direction'])} | {esc(b['authors_raw'])} | {esc(b['translators_editors_raw'])} | "
-            f"{elabel(inv)} | {rd} | {started} | {finished} | {rg} |"
+            f"| {b['number']} | `{inv}` | **{esc(b['title'])}** | "
+            f"{started} | {finished} | {rg} | {rd} | {elabel(inv)} | "
+            f"{esc(b['summary_short'])} | {esc(b['direction'])} | "
+            f"{esc(b['authors_raw'])} | {esc(b['translators_editors_raw'])} |"
         )
 
     pairs = set()
