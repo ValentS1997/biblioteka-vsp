@@ -53,7 +53,15 @@ books:
       - "Яков Сергеевич Гродзенский"
     language: ru
     paths:
+      metadata: books/information-security-grodzensky-ru/metadata.yaml
+      source: books/information-security-grodzensky-ru/source/book.pdf
+      rag_manifest: books/information-security-grodzensky-ru/rag/manifest.yaml
+      rag_chunks: books/information-security-grodzensky-ru/rag/chunks/
+      rag_chunk_index: books/information-security-grodzensky-ru/rag/chunk-index.jsonl
+      rag_search_index: books/information-security-grodzensky-ru/rag/search-index/
       reading_progress: books/information-security-grodzensky-ru/reading/progress.yaml
+      notes: books/information-security-grodzensky-ru/notes/
+      diagrams: books/information-security-grodzensky-ru/diagrams/
 
   - id: mama-ya-timlid-ru
     title: "Мама, я тимлид! Практические советы по руководству IT-командой"
