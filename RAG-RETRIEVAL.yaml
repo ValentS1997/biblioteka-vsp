@@ -44,7 +44,7 @@ retrieval:
       yo_to_e: true
       min_token_chars: 2
       retrieval_key_chars: 4
-      shard_prefix_chars: "read from rag/search-index/manifest.json normalization.shard_prefix_chars (3 or 4)"
+      shard_prefix_chars: "read from rag/search-index/manifest.json normalization.shard_prefix_chars; legacy default: 3; supported: 3 or 4"
     query_strategy:
       - select at most 3 informative lexical tokens from the user question
       - normalize each token
