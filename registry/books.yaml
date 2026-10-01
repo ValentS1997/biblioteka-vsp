@@ -329,6 +329,7 @@ books:
     direction: "Business Processes"
   - number: 43
     inventory_number: "0043"
+    knowledge_id: "go-basics-chernyshev-ru"
     title: "Основы Go"
     authors_raw: "Станислав Андреевич Чернышев"
     translators_editors_raw: "не требуется, оригинал на русском"
