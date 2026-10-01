@@ -48,6 +48,7 @@ books:
     direction: "Сети"
   - number: 5
     inventory_number: "0005"
+    knowledge_id: "modern-operating-systems-tanenbaum-bos-4e-ru"
     title: "Современные операционные системы. 4-е изд."
     authors_raw: "Эндрю С. Таненбаум; Херберт Бос"
     translators_editors_raw: "А. Леонтьева; М. Малышева; Н. Вильчинский"
