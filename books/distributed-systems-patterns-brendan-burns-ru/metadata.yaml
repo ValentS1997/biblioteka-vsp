@@ -29,7 +29,7 @@ source:
   upload_status: "SOURCE_VAULT_POINTER_VERIFIED"
   source_vault_branch: "source-vault/2026-09-30-rag-books"
   source_vault_path: "source-vault/objects/d4529f6267d0fe16d411c912a1ecc7ab4924530c376103ce5f16067aca337aa5.pdf"
-  upload_commit: "[Needs confirmation]"
+  upload_commit: "d1fbdd32a2040c08f8901e4f926b335b7d666843"
   lawful_access_attested_by_user: "[Needs confirmation]"
   ownership_category: "[Needs confirmation]"
   physical_copy: "[Needs confirmation]"
