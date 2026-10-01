@@ -1,0 +1,53 @@
+schema: biblioteka-vsp/book/v1
+
+id: computer-networks-olifer-6e-ru-2020
+title: "Компьютерные сети. Принципы, технологии, протоколы: Юбилейное издание"
+
+edition:
+  language: ru
+  number: 6
+  publisher: "Питер"
+  publication_year: 2020
+
+authors:
+  - "Виктор Олифер"
+  - "Наталья Олифер"
+
+translators: []
+
+isbn:
+  russian_edition: "978-5-4461-1426-9"
+
+source:
+  canonical_path: "source/book.pdf"
+  format: pdf
+  expected_sha256: "e35305daf978f3d14239683d657caa18c92ab6e979626fda22d2f1fa9cc2a5d9"
+  expected_size_bytes: 99924702
+  source_unit_count: 1010
+  source_pdf_pages: 1010
+  text_layer: "unclassified_extractable_pdf_text"
+  repository_access: private
+  storage: "Git LFS"
+  upload_status: "VERIFIED_GIT_LFS_AVAILABLE"
+  source_vault_branch: "source-vault/2026-09-30-rag-books"
+  source_vault_path: "source-vault/objects/e35305daf978f3d14239683d657caa18c92ab6e979626fda22d2f1fa9cc2a5d9.pdf"
+  lawful_access_attested_by_user: "[Needs confirmation]"
+  ownership_category: "[Needs confirmation]"
+  physical_copy: "[Needs confirmation]"
+  license: "[Needs confirmation]"
+  redistribution_permission: "[Needs confirmation]"
+
+rag:
+  scope: full_book
+  build_script: "../../../scripts/build_book_rag.py"
+  manifest: "rag/manifest.yaml"
+  text: "rag/text.md"
+  chunks: "rag/chunks.jsonl"
+  status: "PENDING_BUILD"
+
+reading:
+  progress: "reading/progress.yaml"
+  journal: "reading/journal.md"
+  status: planned
+  started: null
+  completed: null
