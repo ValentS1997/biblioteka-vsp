@@ -270,6 +270,7 @@ books:
     direction: "Linux Internals"
   - number: 35
     inventory_number: "0035"
+    knowledge_id: "vysokonagruzhennye-prilozheniya-martin-kleppmann-ru"
     title: "Высоконагруженные приложения: программирование, масштабирование, поддержка"
     authors_raw: "Мартин Клеппман"
     translators_editors_raw: "И. Пальти; А. Тумаркин"
