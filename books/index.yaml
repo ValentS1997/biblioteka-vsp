@@ -143,3 +143,19 @@ books:
       rag_search_index: books/python-crash-course-3e-ru-2024/rag/search-index/
       notes: books/python-crash-course-3e-ru-2024/notes/
       diagrams: books/python-crash-course-3e-ru-2024/diagrams/
+
+  - id: kubernetes-in-action-marko-luksa-ru
+    title: "Kubernetes в действии"
+    authors:
+      - "Марко Лукша"
+    language: ru
+    paths:
+      metadata: books/kubernetes-in-action-marko-luksa-ru/metadata.yaml
+      source: books/kubernetes-in-action-marko-luksa-ru/source/book.pdf
+      rag_manifest: books/kubernetes-in-action-marko-luksa-ru/rag/manifest.yaml
+      rag_chunks: books/kubernetes-in-action-marko-luksa-ru/rag/chunks/
+      rag_chunk_index: books/kubernetes-in-action-marko-luksa-ru/rag/chunk-index.jsonl
+      rag_search_index: books/kubernetes-in-action-marko-luksa-ru/rag/search-index/
+      reading_progress: books/kubernetes-in-action-marko-luksa-ru/reading/progress.yaml
+      notes: books/kubernetes-in-action-marko-luksa-ru/notes/
+      diagrams: books/kubernetes-in-action-marko-luksa-ru/diagrams/
