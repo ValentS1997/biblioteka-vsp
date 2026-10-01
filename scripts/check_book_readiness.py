@@ -402,7 +402,11 @@ def compute_readiness(book_id: str) -> dict[str, Any]:
             ) from exc
         normalization = search_manifest_data.get("normalization") or {}
         prefix_value = normalization.get("shard_prefix_chars") if isinstance(normalization, dict) else None
-        if isinstance(prefix_value, int) and 1 <= prefix_value <= 4:
+        if prefix_value is None:
+            # Backward compatibility: v1 and early synthetic/test manifests predate
+            # explicit shard_prefix_chars and used the repository-wide 3-char routing rule.
+            search_prefix_chars = 3
+        elif isinstance(prefix_value, int) and 1 <= prefix_value <= 4:
             search_prefix_chars = prefix_value
         else:
             raise RepositoryError(
