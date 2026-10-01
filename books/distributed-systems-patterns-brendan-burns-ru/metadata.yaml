@@ -6,34 +6,34 @@ title: "Распределенные системы. Паттерны проек
 edition:
   number: "[Needs confirmation]"
   language: ru
-  publisher: "[Needs confirmation]"
-  publication_year: "[Needs confirmation]"
-  publication_pages: "[Needs confirmation]"
+  publisher: "Питер"
+  publication_year: 2019
+  publication_pages: 224
 
 authors:
   - "Брендан Бёрнс"
 
 isbn:
-  russian_edition: "[Needs confirmation]"
-  original_edition: "[Needs confirmation]"
+  russian_edition: "978-5-4461-0950-0"
+  original_edition: "978-1491983645"
 
 source:
   canonical_path: "source/book.pdf"
   format: pdf
   expected_sha256: "d4529f6267d0fe16d411c912a1ecc7ab4924530c376103ce5f16067aca337aa5"
   expected_size_bytes: 4346628
-  source_pdf_pages: "[Needs confirmation]"
-  text_layer: "[Needs confirmation]"
+  source_pdf_pages: 224
+  text_layer: "unclassified_extractable_pdf_text"
   repository_access: private
   storage: "Git LFS"
-  upload_status: "SOURCE_VAULT_POINTER_VERIFIED"
+  upload_status: "VERIFIED_GIT_LFS_AVAILABLE"
   source_vault_branch: "source-vault/2026-09-30-rag-books"
   source_vault_path: "source-vault/objects/d4529f6267d0fe16d411c912a1ecc7ab4924530c376103ce5f16067aca337aa5.pdf"
   upload_commit: "d1fbdd32a2040c08f8901e4f926b335b7d666843"
   lawful_access_attested_by_user: "[Needs confirmation]"
   ownership_category: "[Needs confirmation]"
   physical_copy: "[Needs confirmation]"
-  license: "[Needs confirmation]"
+  license: "all rights reserved"
   redistribution_permission: "[Needs confirmation]"
 
 rag:
@@ -42,7 +42,9 @@ rag:
   manifest: "rag/manifest.yaml"
   text: "rag/text.md"
   chunks: "rag/chunks.jsonl"
-  status: "PENDING_BUILD"
+  status: "READY_WITH_KNOWN_LIMITATIONS"
+  generated_commit: "46e5237859bd185160f01b545f5df5efaf208829"
+  workflow_run_id: 36880906690
 
 reading:
   status: not_activated
