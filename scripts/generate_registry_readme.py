@@ -105,9 +105,18 @@ def render():
 
     unregistered = [h for h in holdings if h.get("match_status") == "unregistered"]
     if unregistered:
-        lines += ["", "## Электронные книги без инвентарного номера", "", "| Файл | Формат | Инв. № |", "|---|:---:|:---:|"]
+        lines += [
+            "", "## Электронные книги без инвентарного номера", "",
+            "| Файл | Формат | Knowledge ID | Инв. № |",
+            "|---|:---:|---|:---:|",
+        ]
         for h in unregistered:
-            lines.append(f"| `{esc(h['filename'])}` | {str(h['format']).upper()} | [Needs confirmation] |")
+            kid = h.get("knowledge_id")
+            kid_label = f"`{esc(kid)}`" if kid else "[Needs confirmation]"
+            lines.append(
+                f"| `{esc(h['filename'])}` | {str(h['format']).upper()} | "
+                f"{kid_label} | [Needs confirmation] |"
+            )
 
     uncertain = [h for h in holdings if h.get("match_status") in {"ambiguous", "needs_confirmation"}]
     if uncertain:
@@ -117,17 +126,24 @@ def render():
             lines.append(f"| {refs} | ⚠️ {str(h['format']).upper()} | {esc(h.get('note', '[Needs confirmation]'))} |")
 
     src, eh = reg["source"], reg["electronic_holdings"]
+    inventory_knowledge_mappings = sum(1 for b in books if b.get("knowledge_id"))
+    knowledge_entries = len(idx_by_id)
+    knowledge_without_inventory = len(set(idx_by_id) - set(reverse))
+    knowledge_rag_ready = sum(1 for m in rags.values() if rag_label(m) == "Да")
     lines += [
         "", "## Контроль", "", "| Параметр | Значение |", "|---|---:|",
         f"| Инвентарных книг | **{len(books)}** |",
-        f"| Knowledge mappings | **{sum(1 for b in books if b.get('knowledge_id'))}** |",
+        f"| Inventory → knowledge mappings | **{inventory_knowledge_mappings}** |",
+        f"| Knowledge entries всего | **{knowledge_entries}** |",
+        f"| Knowledge entries без inventory | **{knowledge_without_inventory}** |",
         f"| Электронных файлов | **{eh['file_count']}** |",
         f"| Однозначно сопоставлено | **{eh['matched_unambiguous']}** |",
         f"| Требует подтверждения | **{eh['needs_confirmation']}** |",
         f"| Вне inventory | **{eh['unregistered']}** |",
         f"| Прочитано | **{completed}** |",
         f"| В процессе | **{active}** |",
-        f"| RAG READY | **{rag_ready}** |",
+        f"| RAG READY (inventory-linked) | **{rag_ready}** |",
+        f"| RAG READY (knowledge total) | **{knowledge_rag_ready}** |",
         f"| SHA-256 Excel snapshot | `{src['sha256']}` |",
         f"| Размер Excel snapshot | `{src['size_bytes']} bytes` |",
         "", "README генерируется автоматически. Для изменения статусов правьте только canonical sources.", ""
