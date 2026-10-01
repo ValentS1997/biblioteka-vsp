@@ -207,6 +207,7 @@ books:
     direction: "Security / Pentest"
   - number: 27
     inventory_number: "0027"
+    knowledge_id: "a-byte-of-python-swaroop-chitlur-ru"
     title: "A Byte of Python / Укус Питона"
     authors_raw: "Swaroop Chitlur / Swaroop C. H."
     translators_editors_raw: "Владимир Смоляр"

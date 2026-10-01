@@ -1,0 +1,53 @@
+schema: biblioteka-vsp/book/v1
+
+id: a-byte-of-python-swaroop-chitlur-ru
+title: "A Byte of Python / Укус Питона"
+
+edition:
+  language: ru
+  publisher: "[Needs confirmation]"
+  publication_year: "[Needs confirmation]"
+  publication_pages: "[Needs confirmation]"
+
+authors:
+  - "Swaroop Chitlur"
+  - "Swaroop C. H."
+
+translators:
+  - "Владимир Смоляр"
+
+source:
+  canonical_path: "source/book.pdf"
+  format: pdf
+  expected_sha256: "ac1abb7761fccb914988a583b4362c1760bafc3489c34f3f1fdb4ba45a0d7db5"
+  expected_size_bytes: 974463
+  source_pdf_pages: 160
+  text_layer: "unclassified_extractable_pdf_text"
+  repository_access: private
+  storage: "Git LFS"
+  upload_status: "VERIFIED_GIT_LFS_AVAILABLE"
+  source_vault_branch: "source-vault/2026-09-30-rag-books"
+  source_vault_path: "source-vault/objects/ac1abb7761fccb914988a583b4362c1760bafc3489c34f3f1fdb4ba45a0d7db5.pdf"
+  upload_commit: "084d8b9e734b302bc76feb3eda33258f59f76a5f"
+  lawful_access_attested_by_user: "[Needs confirmation]"
+  ownership_category: "[Needs confirmation]"
+  physical_copy: "[Needs confirmation]"
+  license: "[Needs confirmation]"
+  redistribution_permission: "[Needs confirmation]"
+
+rag:
+  scope: full_book
+  build_script: "../../../scripts/build_book_rag.py"
+  manifest: "rag/manifest.yaml"
+  text: "rag/text.md"
+  chunks: "rag/chunks.jsonl"
+  status: "READY_WITH_KNOWN_LIMITATIONS"
+  generated_commit: "2839b61b066af196862086c4eb782a59f7d4fb5b"
+  workflow_run_id: "36827587513"
+
+reading:
+  progress: "reading/progress.yaml"
+  journal: "reading/journal.md"
+  status: planned
+  started: null
+  completed: null

@@ -179,3 +179,21 @@ books:
       reading_progress: books/computer-networks-olifer-6e-ru-2020/reading/progress.yaml
       notes: books/computer-networks-olifer-6e-ru-2020/notes/
       diagrams: books/computer-networks-olifer-6e-ru-2020/diagrams/
+
+  - id: a-byte-of-python-swaroop-chitlur-ru
+    title: "A Byte of Python / Укус Питона"
+    authors:
+      - "Swaroop Chitlur"
+      - "Swaroop C. H."
+    language: ru
+    paths:
+      metadata: books/a-byte-of-python-swaroop-chitlur-ru/metadata.yaml
+      source: books/a-byte-of-python-swaroop-chitlur-ru/source/book.pdf
+      rag_manifest: books/a-byte-of-python-swaroop-chitlur-ru/rag/manifest.yaml
+      rag_chunks: books/a-byte-of-python-swaroop-chitlur-ru/rag/chunks/
+      rag_chunk_index: books/a-byte-of-python-swaroop-chitlur-ru/rag/chunk-index.jsonl
+      rag_search_index: books/a-byte-of-python-swaroop-chitlur-ru/rag/search-index/
+      reading_progress: books/a-byte-of-python-swaroop-chitlur-ru/reading/progress.yaml
+      notes: books/a-byte-of-python-swaroop-chitlur-ru/notes/
+      diagrams: books/a-byte-of-python-swaroop-chitlur-ru/diagrams/
+
