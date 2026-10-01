@@ -34,7 +34,21 @@ The source-vault manifest and Git LFS pointer OID/size match.
 
 RAG scope: full book.
 
-Current bootstrap state: source promotion and RAG build pending.
+Validation status: `READY_WITH_KNOWN_LIMITATIONS`.
+
+Verified by RAG build:
+
+- EPUB spine items: `16`
+- spine items with text: `16`
+- blank spine items: `0`
+- extracted text model: `xhtml_text`
+- addressable chunks: `81`
+- deterministic search-index shards: `1302`
+- source promotion commit: `d031e3c931c4af59f88501130d78394eb2553c19`
+- generated RAG commit: `c9a11ee08f11481f087b4958e4b8db3083c32ca6`
+- workflow run: `36871287917`
+
+GitHub Actions materialized the real LFS object and recomputed the expected SHA-256 successfully.
 
 Canonical readiness command:
 
