@@ -70,6 +70,7 @@ books:
     direction: "Linux / SysAdmin"
   - number: 8
     inventory_number: "0008"
+    knowledge_id: "sql-pocket-guide-alice-zhao-4e-ru"
     title: "SQL. Карманный справочник. 4-е изд.: MySQL, Oracle, PostgreSQL, SQL Server, SQLite"
     authors_raw: "Элис Жао / Alice Zhao"
     translators_editors_raw: "В. Дмитрущенков"
