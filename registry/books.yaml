@@ -79,7 +79,8 @@ books:
     direction: "SQL / Databases"
   - number: 9
     inventory_number: "0009"
-    title: "Распределенные системы. Паттерны и парадигмы для масштабируемых и надежных систем на основе Kubernetes. 2-е изд."
+    knowledge_id: "distributed-systems-patterns-brendan-burns-ru"
+    title: "Распределенные системы. Паттерны проектирования"
     authors_raw: "Брендан Бёрнс"
     translators_editors_raw: "переводчик не указан в найденной карточке"
     summary_short: "Паттерны построения масштабируемых и надёжных распределённых систем в Kubernetes-средах."
@@ -419,8 +420,8 @@ electronic_holdings:
   source: "user-provided local file inventory + uploaded file confirmation"
   observed_date: "2026-09-30"
   file_count: 23
-  matched_unambiguous: 20
-  needs_confirmation: 1
+  matched_unambiguous: 21
+  needs_confirmation: 0
   unregistered: 2
   files:
     - filename: "AI-инженерия. Построение приложений с использовани. Хьюен.pdf"
@@ -506,9 +507,9 @@ electronic_holdings:
       inventory_numbers: ["0026"]
     - filename: "Распределенные системы. Паттерны проектирования. Бёрнс.pdf"
       format: "pdf"
-      match_status: "needs_confirmation"
+      match_status: "matched"
       inventory_numbers: ["0009"]
-      note: "Автор совпадает, но название/издание не совпадает с записью 0009 (2-е изд.)."
+      note: "Сопоставление подтверждено по canonical source PDF: Брендан Бёрнс, «Распределенные системы. Паттерны проектирования», Питер, 2019, ISBN 978-5-4461-0950-0; номер издания в источнике не указан."
     - filename: "Современные операционные системы. Таненбаун,Бос.pdf"
       format: "pdf"
       match_status: "matched"

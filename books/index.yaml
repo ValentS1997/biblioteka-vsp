@@ -366,3 +366,20 @@ books:
       rag_search_index: books/go-basics-chernyshev-ru/rag/search-index/
       notes: books/go-basics-chernyshev-ru/notes/
       diagrams: books/go-basics-chernyshev-ru/diagrams/
+
+  - id: distributed-systems-patterns-brendan-burns-ru
+    title: "Распределенные системы. Паттерны проектирования"
+    authors:
+      - "Брендан Бёрнс"
+    language: ru
+    publication_year: 2019
+    isbn: "978-5-4461-0950-0"
+    paths:
+      metadata: books/distributed-systems-patterns-brendan-burns-ru/metadata.yaml
+      source: books/distributed-systems-patterns-brendan-burns-ru/source/book.pdf
+      rag_manifest: books/distributed-systems-patterns-brendan-burns-ru/rag/manifest.yaml
+      rag_chunks: books/distributed-systems-patterns-brendan-burns-ru/rag/chunks/
+      rag_chunk_index: books/distributed-systems-patterns-brendan-burns-ru/rag/chunk-index.jsonl
+      rag_search_index: books/distributed-systems-patterns-brendan-burns-ru/rag/search-index/
+      notes: books/distributed-systems-patterns-brendan-burns-ru/notes/
+      diagrams: books/distributed-systems-patterns-brendan-burns-ru/diagrams/
