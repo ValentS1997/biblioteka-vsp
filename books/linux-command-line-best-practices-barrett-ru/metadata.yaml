@@ -1,34 +1,35 @@
 schema: biblioteka-vsp/book/v1
 
 id: linux-command-line-best-practices-barrett-ru
-title: "Командная строка Linux. Лучшие практики"
+title: "Linux. Командная строка. Лучшие практики"
+original_title: "Efficient Linux at the Command Line"
 
 edition:
   language: ru
-  publisher: "[Needs confirmation]"
-  publication_year: "[Needs confirmation]"
-  publication_pages: "[Needs confirmation]"
+  publisher: "Питер"
+  publication_year: 2023
+  publication_pages: 256
 
 authors:
-  - "Барретт"
+  - "Дэниел Джей Барретт"
 
 isbn:
-  russian_edition: "[Needs confirmation]"
-  original_edition: "[Needs confirmation]"
+  russian_edition: "978-5-4461-2300-1"
+  original_edition: "978-1098113407"
 
 source:
   canonical_path: "source/book.pdf"
   format: pdf
   expected_sha256: "9b8097a33de84324dd17ad33ea142f7817c5ee96b10c2b8482d7f9ca36cc698f"
   expected_size_bytes: 4907828
-  source_pdf_pages: "[Needs confirmation]"
-  text_layer: "[Needs confirmation]"
+  source_pdf_pages: 252
+  text_layer: "unclassified_extractable_pdf_text"
   repository_access: private
   storage: "Git LFS"
-  upload_status: "PENDING_SOURCE_VAULT_PROMOTION"
+  upload_status: "VERIFIED_GIT_LFS_AVAILABLE"
   source_vault_branch: "source-vault/2026-09-30-rag-books"
   source_vault_path: "source-vault/objects/9b8097a33de84324dd17ad33ea142f7817c5ee96b10c2b8482d7f9ca36cc698f.pdf"
-  upload_commit: "[Needs confirmation]"
+  upload_commit: "05732ee07579ee6a8859dd6b260f0cbf6c8daf0c"
   lawful_access_attested_by_user: "[Needs confirmation]"
   ownership_category: "[Needs confirmation]"
   physical_copy: "[Needs confirmation]"
@@ -41,9 +42,9 @@ rag:
   manifest: "rag/manifest.yaml"
   text: "rag/text.md"
   chunks: "rag/chunks.jsonl"
-  status: "PENDING"
-  generated_commit: "[Needs confirmation]"
-  workflow_run_id: "[Needs confirmation]"
+  status: "READY_WITH_KNOWN_LIMITATIONS"
+  generated_commit: "4702f569507f8bf924cb2107fe21d6cbc98dec18"
+  workflow_run_id: 36868093384
 
 reading:
   progress: "reading/progress.yaml"
