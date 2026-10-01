@@ -1,0 +1,55 @@
+schema: biblioteka-vsp/book/v1
+
+id: mama-ya-timlid-ru
+title: "Мама, я тимлид! Практические советы по руководству IT-командой"
+
+edition:
+  number: "[Needs confirmation]"
+  language: ru
+  publisher: "[Needs confirmation]"
+  publication_year: "[Needs confirmation]"
+  publication_pages: "[Needs confirmation]"
+
+authors:
+  - "Марина Перескокова"
+
+translators_editors:
+  - "не требуется, оригинал на русском"
+
+isbn:
+  russian_edition: "[Needs confirmation]"
+  original_edition: "[Not applicable]"
+
+source:
+  canonical_path: "source/book.epub"
+  format: epub
+  expected_sha256: "f02343c1718bae4029e820efbd2420904f599712eb64ba9db1ce47f43381792f"
+  expected_size_bytes: 1976472
+  source_unit_count: "[Needs confirmation]"
+  epub_spine_items: "[Needs confirmation]"
+  text_layer: "[Needs confirmation]"
+  repository_access: private
+  storage: "Git LFS"
+  upload_status: "SOURCE_VAULT_POINTER_VERIFIED"
+  source_vault_branch: "source-vault/2026-09-30-rag-books"
+  source_vault_path: "source-vault/objects/f02343c1718bae4029e820efbd2420904f599712eb64ba9db1ce47f43381792f.epub"
+  lawful_access_attested_by_user: "[Needs confirmation]"
+  ownership_category: "[Needs confirmation]"
+  physical_copy: "[Needs confirmation]"
+  license: "[Needs confirmation]"
+  redistribution_permission: "[Needs confirmation]"
+
+rag:
+  scope: full_book
+  build_script: "../../../scripts/build_book_rag.py"
+  manifest: "rag/manifest.yaml"
+  text: "rag/text.md"
+  chunks: "rag/chunks.jsonl"
+  status: "PENDING"
+
+reading:
+  progress: "reading/progress.yaml"
+  journal: "reading/journal.md"
+  status: completed
+  started: "[Needs confirmation]"
+  completed: "[Needs confirmation]"
