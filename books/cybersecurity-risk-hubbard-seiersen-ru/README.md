@@ -35,13 +35,24 @@ Verified source-vault candidate:
 
 The source-vault manifest and Git LFS pointer OID/size match.
 
-EPUB spine count and text-layer characteristics: [Needs confirmation] until RAG build verification.
+Verified by RAG build:
+
+- EPUB spine items: `48`
+- spine items with text: `47`
+- extracted text model: `xhtml_text`
+- GitHub Actions materialized the real LFS object and recomputed the expected SHA-256
+- source promotion commit: `0d49f339246479cab2c5074a5ea588f1b4268a0f`
 
 ## RAG
 
 RAG scope: full book.
 
-Current status: `PENDING_BUILD`.
+Validation status: `READY_WITH_KNOWN_LIMITATIONS`.
+
+- addressable chunks: `195`
+- deterministic search-index shards: `2317`
+- generated commit: `e4eb68c660cfba73d0a27744a6edbf90c1fecc19`
+- workflow run: `36855363777`
 
 Canonical readiness command:
 
