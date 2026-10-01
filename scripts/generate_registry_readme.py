@@ -58,6 +58,13 @@ def render():
         label = "/".join(fmts) or "—"
         return f"⚠️ {label}" if uncertain and label != "—" else label
 
+    def has_pdf(inv):
+        return any(
+            str(h.get("format", "")).lower() == "pdf"
+            and h.get("match_status") == "matched"
+            for h in electronic.get(inv, [])
+        )
+
     progress, rags = {}, {}
     for kid, item in idx_by_id.items():
         paths = item.get("paths") or {}
@@ -76,17 +83,72 @@ def render():
         "Канонический human-readable view. Архитектурный контракт: [`ARCHITECTURE.md`](./ARCHITECTURE.md).",
         "",
         f"> **{len(books)} инвентарных книг** · инвентарные номера `0001–0046` · **{reg['electronic_holdings']['file_count']} электронный файл** · актуально на `{reg['updated']}`",
-        "",
-        "## Реестр книг",
-        "",
+    ]
+
+    reverse = {}
+    completed = active = rag_ready = 0
+
+    reading_now = []
+    reading_completed = []
+    pdf_needed = []
+
+    for b in books:
+        inv, kid = b["inventory_number"], b.get("knowledge_id")
+        p = progress.get(kid) if kid else None
+        status = (p or {}).get("status")
+        started = reading_date_label((p or {}).get("started")) if p else "—"
+        finished = reading_date_label((p or {}).get("completed")) if p else "—"
+        rg = rag_label(rags.get(kid) if kid else None)
+
+        if status == "in_progress":
+            reading_now.append((inv, b["title"], started, rg))
+        elif status == "completed":
+            reading_completed.append((inv, b["title"], started, finished, rg))
+
+        if not has_pdf(inv):
+            pdf_needed.append((inv, b["title"], elabel(inv)))
+
+    if reading_now:
+        lines += [
+            "", "## Сейчас читаю", "",
+            "| Инв. № | Название | Начал читать | Есть RAG |",
+            "|:---:|---|:---:|:---:|",
+        ]
+        for inv, title, started, rg in reading_now:
+            lines.append(f"| `{inv}` | **{esc(title)}** | {started} | {rg} |")
+
+    if reading_completed:
+        lines += [
+            "", "## Прочитано", "",
+            "| Инв. № | Название | Начал читать | Закончил читать | Есть RAG |",
+            "|:---:|---|:---:|:---:|:---:|",
+        ]
+        for inv, title, started, finished, rg in reading_completed:
+            lines.append(
+                f"| `{inv}` | **{esc(title)}** | {started} | {finished} | {rg} |"
+            )
+
+    if pdf_needed:
+        lines += [
+            "", "## Нужен PDF", "",
+            "Книги inventory, для которых нет однозначно сопоставленного electronic holding формата PDF.",
+            "",
+            "| Инв. № | Название | Известная электронная версия |",
+            "|:---:|---|:---:|",
+        ]
+        for inv, title, electronic_label in pdf_needed:
+            lines.append(
+                f"| `{inv}` | **{esc(title)}** | {electronic_label} |"
+            )
+
+    lines += [
+        "", "## Реестр книг", "",
         "Обозначения: `Эл.` — известная электронная версия; `Прочитано`, `Начал читать` и `Закончил читать` — derived из `books/<knowledge-id>/reading/progress.yaml`; `Есть RAG` — derived из `books/<knowledge-id>/rag/manifest.yaml`.",
         "",
         "| № | Инв. № | Название | Начал читать | Закончил читать | Есть RAG | Прочитано | Эл. | Кратко | Направление | Автор(ы) | Перевод / редактура |",
         "|---:|:------:|---|:---:|:---:|:---:|:---:|:---:|---|---|---|---|",
     ]
 
-    reverse = {}
-    completed = active = rag_ready = 0
     for b in books:
         inv, kid = b["inventory_number"], b.get("knowledge_id")
         if kid:
