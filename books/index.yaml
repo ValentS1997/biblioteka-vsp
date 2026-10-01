@@ -289,3 +289,19 @@ books:
       reading_progress: books/cybersecurity-risk-hubbard-seiersen-ru/reading/progress.yaml
       notes: books/cybersecurity-risk-hubbard-seiersen-ru/notes/
       diagrams: books/cybersecurity-risk-hubbard-seiersen-ru/diagrams/
+
+  - id: linux-command-line-shotts-ru
+    title: "Командная строка Linux. Полное руководство"
+    authors:
+      - "Шоттс"
+    language: ru
+    paths:
+      metadata: books/linux-command-line-shotts-ru/metadata.yaml
+      source: books/linux-command-line-shotts-ru/source/book.pdf
+      rag_manifest: books/linux-command-line-shotts-ru/rag/manifest.yaml
+      rag_chunks: books/linux-command-line-shotts-ru/rag/chunks/
+      rag_chunk_index: books/linux-command-line-shotts-ru/rag/chunk-index.jsonl
+      rag_search_index: books/linux-command-line-shotts-ru/rag/search-index/
+      reading_progress: books/linux-command-line-shotts-ru/reading/progress.yaml
+      notes: books/linux-command-line-shotts-ru/notes/
+      diagrams: books/linux-command-line-shotts-ru/diagrams/
