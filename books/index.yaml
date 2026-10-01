@@ -197,3 +197,18 @@ books:
       notes: books/a-byte-of-python-swaroop-chitlur-ru/notes/
       diagrams: books/a-byte-of-python-swaroop-chitlur-ru/diagrams/
 
+  - id: rag-generative-ai-denis-rothman-ru
+    title: "RAG и генеративный ИИ. Создаем собственные RAG-пайплайны с помощью LlamaIndex, Deep Lake и Pinecone"
+    authors:
+      - "Дэнис Ротман"
+    language: ru
+    paths:
+      metadata: books/rag-generative-ai-denis-rothman-ru/metadata.yaml
+      source: books/rag-generative-ai-denis-rothman-ru/source/book.pdf
+      rag_manifest: books/rag-generative-ai-denis-rothman-ru/rag/manifest.yaml
+      rag_chunks: books/rag-generative-ai-denis-rothman-ru/rag/chunks/
+      rag_chunk_index: books/rag-generative-ai-denis-rothman-ru/rag/chunk-index.jsonl
+      rag_search_index: books/rag-generative-ai-denis-rothman-ru/rag/search-index/
+      reading_progress: books/rag-generative-ai-denis-rothman-ru/reading/progress.yaml
+      notes: books/rag-generative-ai-denis-rothman-ru/notes/
+      diagrams: books/rag-generative-ai-denis-rothman-ru/diagrams/
