@@ -1,5 +1,5 @@
 schema: "biblioteka-vsp/registry/v2"
-updated: "2026-09-30"
+updated: "2026-10-01"
 
 source:
   file: "registry/reestr_knig_0046.xlsx"
@@ -25,6 +25,7 @@ books:
     direction: "Kubernetes / Containers"
   - number: 2
     inventory_number: "0002"
+    knowledge_id: "computer-networks-olifer-6e-ru-2020"
     title: "Компьютерные сети. Принципы, технологии, протоколы: Юбилейное издание"
     authors_raw: "Виктор Григорьевич Олифер; Наталья Алексеевна Олифер"
     translators_editors_raw: "оригинал на русском"
@@ -410,8 +411,8 @@ electronic_holdings:
   source: "user-provided local file inventory + uploaded file confirmation"
   observed_date: "2026-09-30"
   file_count: 23
-  matched_unambiguous: 18
-  needs_confirmation: 3
+  matched_unambiguous: 19
+  needs_confirmation: 2
   unregistered: 2
   files:
     - filename: "AI-инженерия. Построение приложений с использовани. Хьюен.pdf"
@@ -476,9 +477,9 @@ electronic_holdings:
       inventory_numbers: []
     - filename: " Компьютерные сети. Принципы, технологии, протоколы. Олиферы.pdf"
       format: "pdf"
-      match_status: "ambiguous"
-      inventory_numbers: ["0002", "0003"]
-      note: "В имени файла не указано издание; нельзя однозначно выбрать между 0002 и 0003."
+      match_status: "matched"
+      inventory_numbers: ["0002"]
+      note: "Издание подтверждено по библиографической странице exact source PDF: юбилейное (6-е), Питер, 2020, ISBN 978-5-4461-1426-9."
     - filename: "Компьютерные сети. Таненбаум, Фимстер, Уэзерполл.pdf"
       format: "pdf"
       match_status: "matched"
