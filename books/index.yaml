@@ -229,3 +229,21 @@ books:
       reading_progress: books/sql-pocket-guide-alice-zhao-4e-ru/reading/progress.yaml
       notes: books/sql-pocket-guide-alice-zhao-4e-ru/notes/
       diagrams: books/sql-pocket-guide-alice-zhao-4e-ru/diagrams/
+
+  - id: computer-architecture-tanenbaum-austin-6e-ru
+    title: "Архитектура компьютера"
+    authors:
+      - "Эндрю С. Таненбаум"
+      - "Тодд Остин"
+    language: ru
+    edition: 6
+    paths:
+      metadata: books/computer-architecture-tanenbaum-austin-6e-ru/metadata.yaml
+      source: books/computer-architecture-tanenbaum-austin-6e-ru/source/book.pdf
+      rag_manifest: books/computer-architecture-tanenbaum-austin-6e-ru/rag/manifest.yaml
+      rag_chunks: books/computer-architecture-tanenbaum-austin-6e-ru/rag/chunks/
+      rag_chunk_index: books/computer-architecture-tanenbaum-austin-6e-ru/rag/chunk-index.jsonl
+      rag_search_index: books/computer-architecture-tanenbaum-austin-6e-ru/rag/search-index/
+      reading_progress: books/computer-architecture-tanenbaum-austin-6e-ru/reading/progress.yaml
+      notes: books/computer-architecture-tanenbaum-austin-6e-ru/notes/
+      diagrams: books/computer-architecture-tanenbaum-austin-6e-ru/diagrams/
