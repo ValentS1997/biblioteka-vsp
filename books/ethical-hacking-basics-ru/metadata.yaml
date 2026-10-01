@@ -11,7 +11,7 @@ edition:
   publication_pages: "[Needs confirmation]"
 
 authors:
-  - "[Needs confirmation]"
+  - "А. В. Чумилин"
 
 isbn:
   russian_edition: "[Needs confirmation]"
@@ -22,14 +22,14 @@ source:
   format: pdf
   expected_sha256: "80047d7ba9b3799f4ff9b4197cce7ee2e2e9da86bdf7a8bea11b805707507b25"
   expected_size_bytes: 27133125
-  source_pdf_pages: "[Needs confirmation]"
-  text_layer: "[Needs confirmation]"
+  source_pdf_pages: 349
+  text_layer: "unclassified_extractable_pdf_text"
   repository_access: private
   storage: "Git LFS"
   upload_status: "VERIFIED_GIT_LFS_AVAILABLE"
   source_vault_branch: "source-vault/2026-09-30-rag-books"
   source_vault_path: "source-vault/objects/80047d7ba9b3799f4ff9b4197cce7ee2e2e9da86bdf7a8bea11b805707507b25.pdf"
-  upload_commit: "[Needs confirmation]"
+  upload_commit: "4f31342ae6cd5e2e914ecf4180d3a36a8ec9445f"
   lawful_access_attested_by_user: "[Needs confirmation]"
   ownership_category: "[Needs confirmation]"
   physical_copy: "[Needs confirmation]"
@@ -42,9 +42,9 @@ rag:
   manifest: "rag/manifest.yaml"
   text: "rag/text.md"
   chunks: "rag/chunks.jsonl"
-  status: "PENDING"
-  generated_commit: "[Needs confirmation]"
-  workflow_run_id: "[Needs confirmation]"
+  status: "READY_WITH_KNOWN_LIMITATIONS"
+  generated_commit: "7bd76a24836836ef857f4bb43160138cea829e79"
+  workflow_run_id: 36874481066
 
 reading:
   status: not_activated
