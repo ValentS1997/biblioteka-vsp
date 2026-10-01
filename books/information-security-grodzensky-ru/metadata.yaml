@@ -1,0 +1,50 @@
+schema: biblioteka-vsp/book/v1
+
+id: information-security-grodzensky-ru
+title: "Информационная безопасность: учебное пособие"
+
+edition:
+  number: "[Needs confirmation]"
+  language: ru
+  publisher: "[Needs confirmation]"
+  publication_year: "[Needs confirmation]"
+  publication_pages: "[Needs confirmation]"
+
+authors:
+  - "Яков Сергеевич Гродзенский"
+
+isbn:
+  russian_edition: "[Needs confirmation]"
+  original_edition: "[Needs confirmation]"
+
+source:
+  canonical_path: "source/book.pdf"
+  format: pdf
+  expected_sha256: "4e4cf1d98c35c3d131d1aad21c5c7cd7da3c2548ef5e12dc75e27b4460a90c2f"
+  expected_size_bytes: 1360924
+  source_pdf_pages: "[Needs confirmation]"
+  text_layer: "[Needs confirmation]"
+  repository_access: private
+  storage: "Git LFS"
+  upload_status: "PRESTAGED_SOURCE_VAULT_POINTER_VERIFIED"
+  source_vault_branch: "source-vault/2026-09-30-rag-books"
+  source_vault_path: "source-vault/objects/4e4cf1d98c35c3d131d1aad21c5c7cd7da3c2548ef5e12dc75e27b4460a90c2f.pdf"
+  lawful_access_attested_by_user: "[Needs confirmation]"
+  ownership_category: "[Needs confirmation]"
+  physical_copy: "[Needs confirmation]"
+  license: "[Needs confirmation]"
+  redistribution_permission: "[Needs confirmation]"
+
+rag:
+  scope: full_book
+  build_script: "../../../scripts/build_book_rag.py"
+  manifest: "rag/manifest.yaml"
+  text: "rag/text.md"
+  chunks: "rag/chunks.jsonl"
+  status: "BUILD_PENDING"
+
+reading:
+  progress: "reading/progress.yaml"
+  status: completed
+  started: "[Needs confirmation]"
+  completed: "[Needs confirmation]"
