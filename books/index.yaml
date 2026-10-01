@@ -383,3 +383,20 @@ books:
       rag_search_index: books/distributed-systems-patterns-brendan-burns-ru/rag/search-index/
       notes: books/distributed-systems-patterns-brendan-burns-ru/notes/
       diagrams: books/distributed-systems-patterns-brendan-burns-ru/diagrams/
+
+  - id: modern-operating-systems-tanenbaum-bos-4e-ru
+    title: "Современные операционные системы"
+    authors:
+      - "Эндрю С. Таненбаум"
+      - "Херберт Бос"
+    language: ru
+    edition: 4
+    paths:
+      metadata: books/modern-operating-systems-tanenbaum-bos-4e-ru/metadata.yaml
+      source: books/modern-operating-systems-tanenbaum-bos-4e-ru/source/book.pdf
+      rag_manifest: books/modern-operating-systems-tanenbaum-bos-4e-ru/rag/manifest.yaml
+      rag_chunks: books/modern-operating-systems-tanenbaum-bos-4e-ru/rag/chunks/
+      rag_chunk_index: books/modern-operating-systems-tanenbaum-bos-4e-ru/rag/chunk-index.jsonl
+      rag_search_index: books/modern-operating-systems-tanenbaum-bos-4e-ru/rag/search-index/
+      notes: books/modern-operating-systems-tanenbaum-bos-4e-ru/notes/
+      diagrams: books/modern-operating-systems-tanenbaum-bos-4e-ru/diagrams/
