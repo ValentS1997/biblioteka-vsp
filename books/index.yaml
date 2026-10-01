@@ -308,3 +308,19 @@ books:
       reading_progress: books/linux-command-line-shotts-ru/reading/progress.yaml
       notes: books/linux-command-line-shotts-ru/notes/
       diagrams: books/linux-command-line-shotts-ru/diagrams/
+
+  - id: linux-command-line-best-practices-barrett-ru
+    title: "Командная строка Linux. Лучшие практики"
+    authors:
+      - "Барретт"
+    language: ru
+    paths:
+      metadata: books/linux-command-line-best-practices-barrett-ru/metadata.yaml
+      source: books/linux-command-line-best-practices-barrett-ru/source/book.pdf
+      rag_manifest: books/linux-command-line-best-practices-barrett-ru/rag/manifest.yaml
+      rag_chunks: books/linux-command-line-best-practices-barrett-ru/rag/chunks/
+      rag_chunk_index: books/linux-command-line-best-practices-barrett-ru/rag/chunk-index.jsonl
+      rag_search_index: books/linux-command-line-best-practices-barrett-ru/rag/search-index/
+      reading_progress: books/linux-command-line-best-practices-barrett-ru/reading/progress.yaml
+      notes: books/linux-command-line-best-practices-barrett-ru/notes/
+      diagrams: books/linux-command-line-best-practices-barrett-ru/diagrams/
