@@ -1,0 +1,69 @@
+schema: biblioteka-vsp/rag/v2
+book_id: go-basics-chernyshev-ru
+
+source:
+  path: source/book.pdf
+  format: pdf
+  sha256: 4053ecbf84c72e4f03756add8a03874e4caf928a5c3ed69b6a06ef06f21d60cd
+  pdf_pages: 513
+
+extraction:
+  engine: PyMuPDF
+  engine_version: "1.28.2"
+  unit_coordinate_system: source_pdf_1_indexed
+  content_model: unclassified_extractable_pdf_text
+  normalization:
+    - remove_NUL
+    - remove_soft_hyphen_marker
+    - normalize_line_endings
+    - trim_trailing_horizontal_whitespace
+
+chunking:
+  scope: per_source_unit
+  source_unit_type: pdf_page
+  target_chars: 4000
+  overlap_chars: 350
+  id_pattern: "<book-slug>:p<source-unit-4d>:c<chunk-2d>"
+
+retrieval:
+  mode: addressable_small_chunks
+  discovery: deterministic_lexical_shards
+  search_index_manifest: rag/search-index/manifest.json
+  search_index_path_pattern: "rag/search-index/<shard>.json"
+  search_scope: rag/chunks/
+  chunk_index: rag/chunk-index.jsonl
+  top_k_max: 3
+  chunk_file_pattern: "rag/chunks/p####-p####/p####-c##.md"
+  bulk_files:
+    - rag/text.md
+    - rag/chunks.jsonl
+  bulk_files_for_query_retrieval: false
+
+statistics:
+  source_units_with_text: 512
+  blank_source_units: 1
+  blank_source_unit_numbers: [1]
+  extracted_characters: 932986
+  chunks: 518
+  retrieval_chunk_files: 518
+  search_index_shards: 2569
+  search_index_max_shard_bytes: 123366
+
+validation:
+  chunk_ids_unique: true
+  retrieval_paths_unique: true
+  retrieval_chunk_count_matches: true
+  search_index_bounded: true
+  source_checksum_computed: true
+  source_checksum_expected_present: true
+  source_checksum_matched_expected: true
+  source_checksum_verified: true
+  full_source_unit_range_processed: true
+  status: READY_WITH_KNOWN_LIMITATIONS
+
+known_limitations:
+  - "The extractor reads the PDF text layer but does not classify native text versus OCR; content_model therefore does not assert OCR origin."
+  - "Recognition/extraction errors already present in the PDF text layer may remain in extracted text."
+  - "PDF page provenance is available for source inspection when visual context matters."
+  - "Images, equations, tables and diagrams are not independently encoded as multimodal RAG objects."
+  - "The deterministic lexical index is prefix-based retrieval, not semantic vector search; use up to three informative query tokens and preserve RAG_MISS on unsupported questions."
