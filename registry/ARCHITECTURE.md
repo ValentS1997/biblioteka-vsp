@@ -61,7 +61,7 @@ python -m pip install PyYAML jsonschema
 python scripts/validate_registry.py
 ```
 
-The validator checks schema conformance, inventory uniqueness/count, holding references, inventory/holding knowledge mappings, per-book reading/RAG references, and forbids the legacy duplicated `reading_rag_status` block.
+The validator checks schema conformance, inventory uniqueness/count, source snapshot SHA-256/size, electronic-holdings summary counters/references, inventory/holding knowledge mappings, per-book reading/RAG references, and forbids the legacy duplicated `reading_rag_status` block.
 
 ## Rollback
 
