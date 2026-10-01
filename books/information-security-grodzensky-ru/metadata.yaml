@@ -22,13 +22,14 @@ source:
   format: pdf
   expected_sha256: "4e4cf1d98c35c3d131d1aad21c5c7cd7da3c2548ef5e12dc75e27b4460a90c2f"
   expected_size_bytes: 1360924
-  source_pdf_pages: "[Needs confirmation]"
-  text_layer: "[Needs confirmation]"
+  source_pdf_pages: 142
+  text_layer: "unclassified_extractable_pdf_text"
   repository_access: private
   storage: "Git LFS"
-  upload_status: "PRESTAGED_SOURCE_VAULT_POINTER_VERIFIED"
+  upload_status: "VERIFIED_GIT_LFS_AVAILABLE"
   source_vault_branch: "source-vault/2026-09-30-rag-books"
   source_vault_path: "source-vault/objects/4e4cf1d98c35c3d131d1aad21c5c7cd7da3c2548ef5e12dc75e27b4460a90c2f.pdf"
+  upload_commit: "d026c7a7b9f724772bb5358c5b5f5c93cdcd9f7e"
   lawful_access_attested_by_user: "[Needs confirmation]"
   ownership_category: "[Needs confirmation]"
   physical_copy: "[Needs confirmation]"
@@ -41,7 +42,9 @@ rag:
   manifest: "rag/manifest.yaml"
   text: "rag/text.md"
   chunks: "rag/chunks.jsonl"
-  status: "BUILD_PENDING"
+  status: "READY_WITH_KNOWN_LIMITATIONS"
+  generated_commit: "5c7a34faad06bd7f4e3e329d5ba7ff18561f9b05"
+  workflow_run_id: 36853916619
 
 reading:
   progress: "reading/progress.yaml"
