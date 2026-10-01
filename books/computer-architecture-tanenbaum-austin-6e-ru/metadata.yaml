@@ -38,7 +38,7 @@ source:
   physical_copy: "[Needs confirmation]"
   license: "[Needs confirmation]"
   redistribution_permission: "[Needs confirmation]"
-  upload_commit: "[Needs confirmation]"
+  upload_commit: "011841f6dc6cf3bb730017f2b57615dd64caddb8"
 
 rag:
   scope: full_book
