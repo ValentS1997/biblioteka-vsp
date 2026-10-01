@@ -204,8 +204,9 @@ books:
     direction: "Linux / Debian"
   - number: 26
     inventory_number: "0026"
+    knowledge_id: "ethical-hacking-basics-ru"
     title: "Основы этичного хакинга"
-    authors_raw: "А. В. Чумычин"
+    authors_raw: "А. В. Чумилин"
     translators_editors_raw: "не требуется, оригинал на русском"
     summary_short: "Основы этичного хакинга и методологии тестирования защищённости информационных систем."
     direction: "Security / Pentest"
@@ -417,8 +418,8 @@ electronic_holdings:
   source: "user-provided local file inventory + uploaded file confirmation"
   observed_date: "2026-09-30"
   file_count: 23
-  matched_unambiguous: 19
-  needs_confirmation: 2
+  matched_unambiguous: 20
+  needs_confirmation: 1
   unregistered: 2
   files:
     - filename: "AI-инженерия. Построение приложений с использовани. Хьюен.pdf"
@@ -500,9 +501,8 @@ electronic_holdings:
       inventory_numbers: ["0043"]
     - filename: "Основы этичного хакинга Чумилин А.В.pdf"
       format: "pdf"
-      match_status: "needs_confirmation"
+      match_status: "matched"
       inventory_numbers: ["0026"]
-      note: "Название совпадает, но фамилия автора в имени файла «Чумилин», в реестре — «Чумычин»."
     - filename: "Распределенные системы. Паттерны проектирования. Бёрнс.pdf"
       format: "pdf"
       match_status: "needs_confirmation"
