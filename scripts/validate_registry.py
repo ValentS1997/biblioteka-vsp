@@ -43,6 +43,7 @@ def main():
         errors.append(f"V07 conflicting knowledge_id mappings: {kd}")
 
     holdings = (reg.get("electronic_holdings") or {}).get("files") or []
+    inv_by_number = {b.get("inventory_number"): b for b in books}
     for i, h in enumerate(holdings):
         refs = h.get("inventory_numbers") or []
         missing = sorted(set(refs) - invset)
@@ -52,6 +53,23 @@ def main():
             errors.append(f"V04 matched holding has no inventory: {h.get('filename')}")
         if h.get("match_status") == "unregistered" and refs:
             errors.append(f"V05 unregistered holding has inventory: {h.get('filename')}")
+
+        holding_kid = h.get("knowledge_id")
+        if holding_kid and holding_kid not in index_by_id:
+            errors.append(
+                f"V09 holdings[{i}] dangling knowledge_id {holding_kid!r}: {h.get('filename')}"
+            )
+        if holding_kid and refs:
+            linked_inventory_kids = {
+                (inv_by_number.get(inv) or {}).get("knowledge_id")
+                for inv in refs
+                if (inv_by_number.get(inv) or {}).get("knowledge_id")
+            }
+            if linked_inventory_kids and holding_kid not in linked_inventory_kids:
+                errors.append(
+                    f"V10 holding knowledge_id {holding_kid!r} conflicts with inventory mapping "
+                    f"{sorted(linked_inventory_kids)}: {h.get('filename')}"
+                )
 
     for kid, item in index_by_id.items():
         paths = item.get("paths") or {}
