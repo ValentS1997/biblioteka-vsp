@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="830" viewBox="0 0 1200 830">
+  <rect width="1200" height="830" fill="white"/>
+  <text x="60" y="70" font-family="sans-serif" font-size="34" font-weight="700">Глава 7. Целеполагание</text>
+  <text x="60" y="110" font-family="sans-serif" font-size="18">Цель нужно не только поставить — ее нужно постоянно удерживать в фокусе</text>
+
+  <rect x="60" y="150" width="510" height="190" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="85" y="190" font-family="sans-serif" font-size="23" font-weight="700">Фокус</text>
+  <text x="85" y="225" font-family="sans-serif" font-size="17">• одна понятная цель этапа</text>
+  <text x="85" y="255" font-family="sans-serif" font-size="17">• критерий готовности</text>
+  <text x="85" y="285" font-family="sans-serif" font-size="17">• нужная планка качества</text>
+  <text x="85" y="315" font-family="sans-serif" font-size="17">• второстепенное не вытесняет главное</text>
+
+  <rect x="630" y="150" width="510" height="190" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="655" y="190" font-family="sans-serif" font-size="23" font-weight="700">Смысл</text>
+  <text x="655" y="225" font-family="sans-serif" font-size="17">• бизнес-результат</text>
+  <text x="655" y="255" font-family="sans-serif" font-size="17">• качество</text>
+  <text x="655" y="285" font-family="sans-serif" font-size="17">• польза пользователю</text>
+  <text x="655" y="315" font-family="sans-serif" font-size="17">• развитие / признание / публикация</text>
+
+  <rect x="60" y="375" width="510" height="205" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="85" y="415" font-family="sans-serif" font-size="23" font-weight="700">Коммуникация</text>
+  <text x="85" y="450" font-family="sans-serif" font-size="17">• повторять цель и контекст</text>
+  <text x="85" y="480" font-family="sans-serif" font-size="17">• важные новости — не только в чате</text>
+  <text x="85" y="510" font-family="sans-serif" font-size="17">• демо промежуточного результата</text>
+  <text x="85" y="540" font-family="sans-serif" font-size="17">• короткий письменный итог</text>
+
+  <rect x="630" y="375" width="510" height="205" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="655" y="415" font-family="sans-serif" font-size="23" font-weight="700">Вовлеченность</text>
+  <text x="655" y="450" font-family="sans-serif" font-size="17">• показать пользователей и проблемы</text>
+  <text x="655" y="480" font-family="sans-serif" font-size="17">• объединять разные роли</text>
+  <text x="655" y="510" font-family="sans-serif" font-size="17">• давать влиять на решения</text>
+  <text x="655" y="540" font-family="sans-serif" font-size="17">• общий результат важнее локальной задачи</text>
+
+  <rect x="60" y="620" width="1080" height="115" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="85" y="662" font-family="sans-serif" font-size="23" font-weight="700">Контрольный вопрос</text>
+  <text x="85" y="700" font-family="sans-serif" font-size="18">Если спросить любого участника «что сейчас главное и что считается готово?» — ответ должен быть понятным и близким у всех.</text>
+
+  <text x="60" y="790" font-family="sans-serif" font-size="16">Provenance: EPUB spine 10 · OPS/ch1-9.xhtml · RAG e0010:c01–c04</text>
+</svg>
