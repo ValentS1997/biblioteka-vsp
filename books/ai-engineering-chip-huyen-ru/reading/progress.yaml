@@ -5,8 +5,8 @@ status: in_progress
 scope: full_book
 
 started:
-  month: "[Needs confirmation]"
-  exact_date: "[Needs confirmation]"
+  month: "2026-07"
+  exact_date: "2026-07-20"
 
 completed: null
 current_page: "[Needs confirmation]"
@@ -17,5 +17,5 @@ paired_reading:
   relation: read_together
 
 notes:
-  - "User explicitly confirmed that reading has started."
+  - "User explicitly confirmed that reading started on 2026-07-20."
   - "Read in pair with «Проектирование систем машинного обучения»."
