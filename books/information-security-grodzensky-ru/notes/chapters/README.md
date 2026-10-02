@@ -17,3 +17,4 @@ Reviewed chapter-level notes are stored here. Historical notes are not reconstru
 - [Chapter 13 — Информационная безопасность на производстве и в управлении качеством](chapter-13-industrial-control-security/README.md)
 - [Chapter 14 — Защита критической информационной инфраструктуры](chapter-14-critical-information-infrastructure/README.md)
 - [Chapter 15 — Оценка рисков информационной безопасности](chapter-15-information-security-risk-assessment/README.md)
+- [Chapter 16 — Стандарт ISO 27001 и способы его внедрения](chapter-16-iso-27001-isms/README.md)
