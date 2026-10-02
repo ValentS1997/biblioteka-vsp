@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="840" viewBox="0 0 1200 840">
+  <rect width="1200" height="840" fill="white"/>
+  <text x="60" y="70" font-family="sans-serif" font-size="34" font-weight="700">Глава 9. Работа с распределенной командой</text>
+  <text x="60" y="110" font-family="sans-serif" font-size="18">Удаленность требует компенсации потери контекста и живого контакта</text>
+
+  <rect x="60" y="150" width="510" height="190" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="85" y="190" font-family="sans-serif" font-size="23" font-weight="700">Риски</text>
+  <text x="85" y="225" font-family="sans-serif" font-size="17">• слабее вовлеченность</text>
+  <text x="85" y="255" font-family="sans-serif" font-size="17">• сложнее onboarding</text>
+  <text x="85" y="285" font-family="sans-serif" font-size="17">• хуже видны настроение и конфликты</text>
+  <text x="85" y="315" font-family="sans-serif" font-size="17">• больше двусмысленности в тексте</text>
+
+  <rect x="630" y="150" width="510" height="190" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="655" y="190" font-family="sans-serif" font-size="23" font-weight="700">Люди</text>
+  <text x="655" y="225" font-family="sans-serif" font-size="17">• самодисциплина</text>
+  <text x="655" y="255" font-family="sans-serif" font-size="17">• дружелюбие</text>
+  <text x="655" y="285" font-family="sans-serif" font-size="17">• сильная письменная коммуникация</text>
+  <text x="655" y="315" font-family="sans-serif" font-size="17">• умение отдыхать без внешнего режима</text>
+
+  <rect x="60" y="375" width="510" height="205" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="85" y="415" font-family="sans-serif" font-size="23" font-weight="700">Инфраструктура общения</text>
+  <text x="85" y="450" font-family="sans-serif" font-size="17">• всем одинаково слышно</text>
+  <text x="85" y="480" font-family="sans-serif" font-size="17">• общий материал доступен удаленно</text>
+  <text x="85" y="510" font-family="sans-serif" font-size="17">• важные решения фиксируются письменно</text>
+  <text x="85" y="540" font-family="sans-serif" font-size="17">• офисный контекст не остается локальным</text>
+
+  <rect x="630" y="375" width="510" height="205" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="655" y="415" font-family="sans-serif" font-size="23" font-weight="700">Связи</text>
+  <text x="655" y="450" font-family="sans-serif" font-size="17">• чаще контактировать с новичками</text>
+  <text x="655" y="480" font-family="sans-serif" font-size="17">• поддерживать неформальные встречи</text>
+  <text x="655" y="510" font-family="sans-serif" font-size="17">• использовать очные встречи для сложного</text>
+  <text x="655" y="540" font-family="sans-serif" font-size="17">• прояснять стиль письменного общения</text>
+
+  <rect x="60" y="620" width="1080" height="115" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="85" y="662" font-family="sans-serif" font-size="23" font-weight="700">Операционный критерий</text>
+  <text x="85" y="700" font-family="sans-serif" font-size="18">Удаленный сотрудник не должен получать меньше контекста, влияния и внимания только потому, что физически находится отдельно.</text>
+
+  <text x="60" y="800" font-family="sans-serif" font-size="16">Provenance: EPUB spine 12 · OPS/ch1-11.xhtml · RAG e0012:c01–c04</text>
+</svg>
