@@ -12,3 +12,4 @@ RAG-grounded chapter artifacts for `mama-ya-timlid-ru`.
 | 6 | [Забота как часть работы](chapter-06-zabota-kak-chast-raboty/) | RAG_GROUNDED | EPUB spine 9 · `OPS/ch1-8.xhtml` · `e0009:c01–c04` |
 | 7 | [Целеполагание](chapter-07-celepolaganie/) | RAG_GROUNDED | EPUB spine 10 · `OPS/ch1-9.xhtml` · `e0010:c01–c04` |
 | 8 | [Секреты творческой атмосферы](chapter-08-sekrety-tvorcheskoy-atmosfery/) | RAG_GROUNDED | EPUB spine 11 · `OPS/ch1-10.xhtml` · `e0011:c01–c05` |
+| 9 | [Работа с распределенной командой](chapter-09-rabota-s-raspredelennoy-komandoy/) | RAG_GROUNDED | EPUB spine 12 · `OPS/ch1-11.xhtml` · `e0012:c01–c04` |
