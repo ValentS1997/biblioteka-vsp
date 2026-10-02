@@ -66,3 +66,9 @@ Canonical readiness command:
 - [Глава 7. Целеполагание](notes/chapters/chapter-07-celepolaganie/) — `RAG_GROUNDED`; EPUB spine 10, `OPS/ch1-9.xhtml`, chunks `e0010:c01–c04`.
 - [Глава 8. Секреты творческой атмосферы](notes/chapters/chapter-08-sekrety-tvorcheskoy-atmosfery/) — `RAG_GROUNDED`; EPUB spine 11, `OPS/ch1-10.xhtml`, chunks `e0011:c01–c05`.
 - [Глава 9. Работа с распределенной командой](notes/chapters/chapter-09-rabota-s-raspredelennoy-komandoy/) — `RAG_GROUNDED`; EPUB spine 12, `OPS/ch1-11.xhtml`, chunks `e0012:c01–c04`.
+
+## Supplemental materials
+
+The numbered chapter sequence ends at chapter 9. Post-chapter source material is indexed separately:
+
+- [Supplemental materials](notes/supplements/) — beginner-manager checklist, author's reading list, bibliography/provenance.

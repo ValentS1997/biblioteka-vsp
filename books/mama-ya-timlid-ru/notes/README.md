@@ -17,3 +17,7 @@ See [chapters/README.md](chapters/README.md).
 - [Глава 7. Целеполагание](chapters/chapter-07-celepolaganie/) — `RAG_GROUNDED`.
 - [Глава 8. Секреты творческой атмосферы](chapters/chapter-08-sekrety-tvorcheskoy-atmosfery/) — `RAG_GROUNDED`.
 - [Глава 9. Работа с распределенной командой](chapters/chapter-09-rabota-s-raspredelennoy-komandoy/) — `RAG_GROUNDED`.
+
+## Supplemental materials
+
+- [Post-chapter materials](supplements/) — `RAG_GROUNDED`, intentionally not represented as chapter 10.
