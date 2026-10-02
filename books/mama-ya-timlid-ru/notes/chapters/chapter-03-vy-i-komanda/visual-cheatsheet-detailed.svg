@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1280" viewBox="0 0 1600 1280">
+  <rect width="1600" height="1280" fill="white"/>
+  <text x="60" y="70" font-family="sans-serif" font-size="38" font-weight="700">Глава 3. Вы и команда — подробная схема</text>
+  <text x="60" y="110" font-family="sans-serif" font-size="18">RAG-only · EPUB spine 5 · OPS/ch1-4.xhtml · e0005:c01–c11</text>
+
+  <rect x="60" y="150" width="1480" height="135" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="85" y="192" font-family="sans-serif" font-size="25" font-weight="700">1. Культура и горизонт</text>
+  <text x="85" y="230" font-family="sans-serif" font-size="18">Играть на стороне команды в интересах бизнеса; учитывать состояние людей и долгосрочную цену текучести.</text>
+  <text x="85" y="260" font-family="sans-serif" font-size="18">Стоимость ухода — не только вакансия: поиск, интервью, ожидание, onboarding, обучение и временное падение производительности.</text>
+
+  <rect x="60" y="315" width="710" height="265" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="85" y="357" font-family="sans-serif" font-size="25" font-weight="700">2. Делегирование</text>
+  <text x="85" y="395" font-family="sans-serif" font-size="17">Проверить исполнителя → срок → критерии → размер задачи.</text>
+  <text x="85" y="427" font-family="sans-serif" font-size="17">Если много вопросов: навык? постановка? страх ответственности? мотивация?</text>
+  <text x="85" y="459" font-family="sans-serif" font-size="17">Типовая задача: обучение может окупиться.</text>
+  <text x="85" y="491" font-family="sans-serif" font-size="17">Принять «достаточно хорошо», если базовые критерии соблюдены.</text>
+  <text x="85" y="523" font-family="sans-serif" font-size="17">Контролировать по логическим этапам, а не каждое действие.</text>
+  <text x="85" y="555" font-family="sans-serif" font-size="17">Цель — масштабировать работу команды, а не доказать личное превосходство.</text>
+
+  <rect x="830" y="315" width="710" height="265" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="855" y="357" font-family="sans-serif" font-size="25" font-weight="700">3. Передача ответственности</text>
+  <text x="855" y="395" font-family="sans-serif" font-size="17">Сотрудник принимает решения в оговоренной зоне.</text>
+  <text x="855" y="427" font-family="sans-serif" font-size="17">Полномочия обозначены публично.</text>
+  <text x="855" y="459" font-family="sans-serif" font-size="17">Другой способ работы допустим при соблюдении критериев.</text>
+  <text x="855" y="491" font-family="sans-serif" font-size="17">Успех и вклад публично признаются.</text>
+  <text x="855" y="523" font-family="sans-serif" font-size="17">Исправимые ошибки допустимы; критичные риски предотвращаются.</text>
+  <text x="855" y="555" font-family="sans-serif" font-size="17">Не подрывать авторитет назначенного ответственного публично.</text>
+
+  <rect x="60" y="610" width="710" height="240" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="85" y="652" font-family="sans-serif" font-size="25" font-weight="700">4. Микроменеджмент</text>
+  <text x="85" y="690" font-family="sans-serif" font-size="17">Постоянный мелкий контроль снижает производительность.</text>
+  <text x="85" y="722" font-family="sans-serif" font-size="17">Случайные вмешательства делают руководителя непредсказуемым.</text>
+  <text x="85" y="754" font-family="sans-serif" font-size="17">Личное одобрение каждого шага превращает руководителя в bottleneck.</text>
+  <text x="85" y="786" font-family="sans-serif" font-size="17">Следствие: меньше самостоятельности, признания и удовольствия от работы.</text>
+  <text x="85" y="818" font-family="sans-serif" font-size="17">Баланс: контроль направления без контроля каждой детали.</text>
+
+  <rect x="830" y="610" width="710" height="240" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="855" y="652" font-family="sans-serif" font-size="25" font-weight="700">5. Успех и провал</text>
+  <text x="855" y="690" font-family="sans-serif" font-size="17">Успех: праздновать и признавать вклад всех участников.</text>
+  <text x="855" y="722" font-family="sans-serif" font-size="17">Внешний провал: честно объяснить ситуацию и сохранить полезные результаты.</text>
+  <text x="855" y="754" font-family="sans-serif" font-size="17">Внутренний провал: разбор причин, рисков и организационных недочетов.</text>
+  <text x="855" y="786" font-family="sans-serif" font-size="17">Не перекладывать всю вину на исполнителя перед внешним руководством.</text>
+  <text x="855" y="818" font-family="sans-serif" font-size="17">Личную ответственность сотрудника разбирать в соответствующем круге.</text>
+
+  <rect x="60" y="880" width="710" height="245" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="85" y="922" font-family="sans-serif" font-size="25" font-weight="700">6. Защитная стена</text>
+  <text x="85" y="960" font-family="sans-serif" font-size="17">Не допускать прямого обхода непосредственного руководителя для критики.</text>
+  <text x="85" y="992" font-family="sans-serif" font-size="17">Фильтровать лишний негатив и внешние переговоры.</text>
+  <text x="85" y="1024" font-family="sans-serif" font-size="17">Учитывать неравенство статуса начальника и сотрудника в конфликте.</text>
+  <text x="85" y="1056" font-family="sans-serif" font-size="17">При чрезмерной загрузке — оценивать возможность отказа от новой работы.</text>
+  <text x="85" y="1088" font-family="sans-serif" font-size="17">Защита не означает скрывать информацию, необходимую для работы.</text>
+
+  <rect x="830" y="880" width="710" height="245" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="855" y="922" font-family="sans-serif" font-size="25" font-weight="700">7. Ресурсы и авторитет</text>
+  <text x="855" y="960" font-family="sans-serif" font-size="17">Узнать доступные поощрения: мероприятия, конференции, курсы, литература.</text>
+  <text x="855" y="992" font-family="sans-serif" font-size="17">Использовать доступные возможности для своей команды.</text>
+  <text x="855" y="1024" font-family="sans-serif" font-size="17">Авторитет строится на пользе, защите, справедливости и компетентности.</text>
+  <text x="855" y="1056" font-family="sans-serif" font-size="17">В начале полезно помогать руками или брать неприятную рутину.</text>
+  <text x="855" y="1088" font-family="sans-serif" font-size="17">Споры ожидаемы; решения нужно объяснять, но не обсуждать бесконечно.</text>
+
+  <rect x="60" y="1155" width="1480" height="80" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="85" y="1193" font-family="sans-serif" font-size="24" font-weight="700">Acceptance signal</text>
+  <text x="85" y="1223" font-family="sans-serif" font-size="18">Команда способна действовать без постоянного ручного управления, люди получают реальную ответственность и признание, а руководитель сохраняет границы и ответственность за систему.</text>
+</svg>
