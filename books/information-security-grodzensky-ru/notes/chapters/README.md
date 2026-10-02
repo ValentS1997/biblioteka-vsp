@@ -10,3 +10,4 @@ Reviewed chapter-level notes are stored here. Historical notes are not reconstru
 - [Chapter 6 — Криптографическая защита информации](chapter-06-cryptographic-protection/README.md)
 - [Chapter 7 — Организационно-технические и правовые основы использования в информационных системах электронного документооборота и электронной подписи](chapter-07-electronic-document-signature-pki/README.md)
 - [Chapter 8 — Управление уязвимостями ИБ](chapter-08-vulnerability-management/README.md)
+- [Chapter 9 — Безопасность компьютерных сетей](chapter-09-network-security/README.md)
