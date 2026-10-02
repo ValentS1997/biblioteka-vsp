@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200">
+  <rect width="1600" height="1200" fill="#ffffff"/>
+  <text x="60" y="70" font-family="sans-serif" font-size="34" font-weight="700">Глава 16 — ISO 27001, СУИБ и непрерывное улучшение</text>
+  <text x="60" y="108" font-family="sans-serif" font-size="18">Source: information-security-grodzensky-ru · RAG p0103:c01–p0114:c01 · PDF 103–114</text>
+  <rect x="60" y="145" width="720" height="250" rx="18" fill="#eef2ff" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="188" font-family="sans-serif" font-size="27" font-weight="700">Context / Scope / Leadership</text>
+  <text x="90" y="230" font-family="sans-serif" font-size="20">Internal + external factors</text>
+  <text x="90" y="266" font-family="sans-serif" font-size="20">Interested parties + requirements</text>
+  <text x="90" y="302" font-family="sans-serif" font-size="20">Scope · owners · Policy · resources</text>
+  <text x="90" y="344" font-family="sans-serif" font-size="18">Top management provides authority and sponsorship</text>
+  <rect x="820" y="145" width="720" height="250" rx="18" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <text x="850" y="188" font-family="sans-serif" font-size="27" font-weight="700">Risk-based planning</text>
+  <text x="850" y="230" font-family="sans-serif" font-size="20">Risk assessment → owners → acceptable level</text>
+  <text x="850" y="266" font-family="sans-serif" font-size="20">Treatment plan → applicable controls</text>
+  <text x="850" y="302" font-family="sans-serif" font-size="20">Statement of Applicability</text>
+  <text x="850" y="344" font-family="sans-serif" font-size="18">Risk management drives security processes</text>
+  <rect x="60" y="435" width="720" height="250" rx="18" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="478" font-family="sans-serif" font-size="27" font-weight="700">Documentation &amp; operation</text>
+  <text x="90" y="520" font-family="sans-serif" font-size="20">Policy → manual → procedures → instructions → records</text>
+  <text x="90" y="556" font-family="sans-serif" font-size="20">Change management · unexpected events · outsourcing</text>
+  <text x="90" y="592" font-family="sans-serif" font-size="20">Competence · awareness · communication</text>
+  <text x="90" y="634" font-family="sans-serif" font-size="18">Documentation volume depends on organization context</text>
+  <rect x="820" y="435" width="720" height="250" rx="18" fill="#eef2ff" stroke="#334155" stroke-width="2"/>
+  <text x="850" y="478" font-family="sans-serif" font-size="27" font-weight="700">Check</text>
+  <text x="850" y="520" font-family="sans-serif" font-size="20">Metrics with target / threshold</text>
+  <text x="850" y="556" font-family="sans-serif" font-size="20">Independent internal audit</text>
+  <text x="850" y="592" font-family="sans-serif" font-size="20">Management review</text>
+  <text x="850" y="634" font-family="sans-serif" font-size="18">Results and management decisions are documented</text>
+  <rect x="60" y="725" width="1480" height="185" rx="18" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="768" font-family="sans-serif" font-size="27" font-weight="700">Improvement</text>
+  <text x="90" y="810" font-family="sans-serif" font-size="20">Correction = fix manifestation · corrective action = remove root cause</text>
+  <text x="90" y="848" font-family="sans-serif" font-size="20">8D + Ishikawa + 5M + Five Whys support structured problem solving</text>
+  <text x="90" y="882" font-family="sans-serif" font-size="18">Effectiveness of corrective actions must be checked</text>
+  <rect x="60" y="950" width="1480" height="185" rx="18" fill="#eef2ff" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="993" font-family="sans-serif" font-size="27" font-weight="700">PDCA</text>
+  <text x="90" y="1035" font-family="sans-serif" font-size="21">Plan → Do → Check → Act → Plan …</text>
+  <text x="90" y="1073" font-family="sans-serif" font-size="20">Goal: keep the ISMS aligned with business goals and changing threats.</text>
+  <text x="90" y="1110" font-family="sans-serif" font-size="18">No external ISO revision updates were added.</text>
+</svg>
