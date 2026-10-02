@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="860" viewBox="0 0 1200 860">
+  <rect width="1200" height="860" fill="white"/>
+  <text x="60" y="70" font-family="sans-serif" font-size="34" font-weight="700">Глава 5. Создаем слаженную команду</text>
+  <text x="60" y="110" font-family="sans-serif" font-size="18">Баланс сложности, состава, знаний, нагрузки и человеческих связей</text>
+
+  <rect x="60" y="150" width="510" height="190" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="85" y="190" font-family="sans-serif" font-size="23" font-weight="700">Задачи</text>
+  <text x="85" y="225" font-family="sans-serif" font-size="17">• не слишком легко</text>
+  <text x="85" y="255" font-family="sans-serif" font-size="17">• не слишком сложно</text>
+  <text x="85" y="285" font-family="sans-serif" font-size="17">• routine + «серая зона»</text>
+  <text x="85" y="315" font-family="sans-serif" font-size="17">• ограниченный WIP</text>
+
+  <rect x="630" y="150" width="510" height="190" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="655" y="190" font-family="sans-serif" font-size="23" font-weight="700">Состав</text>
+  <text x="655" y="225" font-family="sans-serif" font-size="17">• не только новички</text>
+  <text x="655" y="255" font-family="sans-serif" font-size="17">• не только конкурирующие «звезды»</text>
+  <text x="655" y="285" font-family="sans-serif" font-size="17">• стажеры только при onboarding capacity</text>
+  <text x="655" y="315" font-family="sans-serif" font-size="17">• рост команды поэтапно, если возможно</text>
+
+  <rect x="60" y="375" width="510" height="205" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="85" y="415" font-family="sans-serif" font-size="23" font-weight="700">Устойчивость знаний</text>
+  <text x="85" y="450" font-family="sans-serif" font-size="17">• контролировать bus factor</text>
+  <text x="85" y="480" font-family="sans-serif" font-size="17">• эксперт + дублер</text>
+  <text x="85" y="510" font-family="sans-serif" font-size="17">• review / документация / обсуждения</text>
+  <text x="85" y="540" font-family="sans-serif" font-size="17">• не превращать всех в поверхностных универсалов</text>
+
+  <rect x="630" y="375" width="510" height="205" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="655" y="415" font-family="sans-serif" font-size="23" font-weight="700">Люди</text>
+  <text x="655" y="450" font-family="sans-serif" font-size="17">• конфликтность оценивать по влиянию на команду</text>
+  <text x="655" y="480" font-family="sans-serif" font-size="17">• «звезды» требуют осознанного trade-off</text>
+  <text x="655" y="510" font-family="sans-serif" font-size="17">• не делать каждый срок аварийным</text>
+  <text x="655" y="540" font-family="sans-serif" font-size="17">• поддерживать неформальные связи</text>
+
+  <rect x="60" y="615" width="1080" height="145" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="85" y="655" font-family="sans-serif" font-size="23" font-weight="700">Операционный принцип</text>
+  <text x="85" y="690" font-family="sans-serif" font-size="17">Команда постоянно выходит из равновесия. Задача руководителя — замечать перекос раньше, чем он станет системной проблемой.</text>
+  <text x="85" y="725" font-family="sans-serif" font-size="17">Оптимизировать нужно результат всей системы, а не только производительность отдельного человека.</text>
+
+  <text x="60" y="820" font-family="sans-serif" font-size="16">Provenance: EPUB spine 8 · OPS/ch1-7.xhtml · RAG e0008:c01–c08</text>
+</svg>
