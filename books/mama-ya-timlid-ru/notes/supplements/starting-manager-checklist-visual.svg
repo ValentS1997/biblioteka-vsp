@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1180" viewBox="0 0 1400 1180">
+  <rect width="1400" height="1180" fill="white"/>
+  <text x="55" y="65" font-family="sans-serif" font-size="36" font-weight="700">Чек-лист начинающего руководителя</text>
+  <text x="55" y="105" font-family="sans-serif" font-size="18">Source: EPUB spine 13 · OPS/ch1-12.xhtml · RAG e0013:c01</text>
+
+  <rect x="55" y="145" width="620" height="205" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="80" y="185" font-family="sans-serif" font-size="23" font-weight="700">Люди и контекст</text>
+  <text x="80" y="225" font-family="sans-serif" font-size="17">☐ Назначить регулярные one-to-one</text>
+  <text x="80" y="258" font-family="sans-serif" font-size="17">☐ Проверить старые обещания сотрудникам</text>
+  <text x="80" y="291" font-family="sans-serif" font-size="17">☐ Собрать отзывы о сильных сторонах и проблемах</text>
+  <text x="80" y="324" font-family="sans-serif" font-size="17">☐ Найти людей вне команды с важным контекстом</text>
+
+  <rect x="725" y="145" width="620" height="205" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="750" y="185" font-family="sans-serif" font-size="23" font-weight="700">Компенсация и время</text>
+  <text x="750" y="225" font-family="sans-serif" font-size="17">☐ Разобраться с зарплатами и премиями</text>
+  <text x="750" y="258" font-family="sans-serif" font-size="17">☐ Проверить историю повышений и стаж людей</text>
+  <text x="750" y="291" font-family="sans-serif" font-size="17">☐ Зарезервировать 1/3–1/2 времени на управление</text>
+  <text x="750" y="324" font-family="sans-serif" font-size="17">☐ Предупредить о снижении личной output-емкости</text>
+
+  <rect x="55" y="390" width="620" height="205" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="80" y="430" font-family="sans-serif" font-size="23" font-weight="700">Команда и цели</text>
+  <text x="80" y="470" font-family="sans-serif" font-size="17">☐ Проверить вакансии и состояние найма</text>
+  <text x="80" y="503" font-family="sans-serif" font-size="17">☐ Уточнить цели команды</text>
+  <text x="80" y="536" font-family="sans-serif" font-size="17">☐ Уточнить ожидания от себя как руководителя</text>
+  <text x="80" y="569" font-family="sans-serif" font-size="17">☐ Проверить достижимость целей</text>
+
+  <rect x="725" y="390" width="620" height="205" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="750" y="430" font-family="sans-serif" font-size="23" font-weight="700">Уровень и рост</text>
+  <text x="750" y="470" font-family="sans-serif" font-size="17">☐ Оценить уровень каждого сотрудника</text>
+  <text x="750" y="503" font-family="sans-serif" font-size="17">☐ Сверить qualification ↔ compensation</text>
+  <text x="750" y="536" font-family="sans-serif" font-size="17">☐ Продумать карьерные перспективы</text>
+  <text x="750" y="569" font-family="sans-serif" font-size="17">☐ Найти задачи для навыков следующего уровня</text>
+
+  <rect x="55" y="635" width="1290" height="205" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="80" y="675" font-family="sans-serif" font-size="23" font-weight="700">Коммуникация</text>
+  <text x="80" y="715" font-family="sans-serif" font-size="17">☐ Есть ли неформальный канал?</text>
+  <text x="80" y="748" font-family="sans-serif" font-size="17">☐ Есть ли отдельный канал важных объявлений?</text>
+  <text x="80" y="781" font-family="sans-serif" font-size="17">☐ Есть ли удобный рабочий мессенджер/канал?</text>
+  <text x="735" y="715" font-family="sans-serif" font-size="17">☐ Начать регулярно общаться с командой вне task-status</text>
+  <text x="735" y="748" font-family="sans-serif" font-size="17">☐ Базовый пример источника: совместные обеды</text>
+  <text x="735" y="781" font-family="sans-serif" font-size="17">☐ Если формат невозможен — подобрать эквивалент</text>
+
+  <rect x="55" y="880" width="1290" height="190" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="80" y="920" font-family="sans-serif" font-size="23" font-weight="700">Первый acceptance check</text>
+  <text x="80" y="960" font-family="sans-serif" font-size="17">Можете ли вы уверенно объяснить: цели команды, ожидания от вас, состояние людей, найм, компенсацию,</text>
+  <text x="80" y="993" font-family="sans-serif" font-size="17">уровни и рост сотрудников, основные каналы коммуникации и собственную реальную capacity на управление?</text>
+  <text x="80" y="1038" font-family="sans-serif" font-size="16">Группировка блоков — только визуальная подача; в источнике чек-лист идет последовательным списком.</text>
+
+  <text x="55" y="1130" font-family="sans-serif" font-size="16">Not chapter 10 · Supplemental source material</text>
+</svg>
