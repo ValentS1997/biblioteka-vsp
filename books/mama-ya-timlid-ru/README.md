@@ -64,3 +64,4 @@ Canonical readiness command:
 - [Глава 5. Создаем слаженную команду](notes/chapters/chapter-05-sozdaem-slazhennuyu-komandu/) — `RAG_GROUNDED`; EPUB spine 8, `OPS/ch1-7.xhtml`, chunks `e0008:c01–c08`.
 - [Глава 6. Забота как часть работы](notes/chapters/chapter-06-zabota-kak-chast-raboty/) — `RAG_GROUNDED`; EPUB spine 9, `OPS/ch1-8.xhtml`, chunks `e0009:c01–c04`.
 - [Глава 7. Целеполагание](notes/chapters/chapter-07-celepolaganie/) — `RAG_GROUNDED`; EPUB spine 10, `OPS/ch1-9.xhtml`, chunks `e0010:c01–c04`.
+- [Глава 8. Секреты творческой атмосферы](notes/chapters/chapter-08-sekrety-tvorcheskoy-atmosfery/) — `RAG_GROUNDED`; EPUB spine 11, `OPS/ch1-10.xhtml`, chunks `e0011:c01–c05`.

@@ -15,3 +15,4 @@ See [chapters/README.md](chapters/README.md).
 - [Глава 5. Создаем слаженную команду](chapters/chapter-05-sozdaem-slazhennuyu-komandu/) — `RAG_GROUNDED`.
 - [Глава 6. Забота как часть работы](chapters/chapter-06-zabota-kak-chast-raboty/) — `RAG_GROUNDED`.
 - [Глава 7. Целеполагание](chapters/chapter-07-celepolaganie/) — `RAG_GROUNDED`.
+- [Глава 8. Секреты творческой атмосферы](chapters/chapter-08-sekrety-tvorcheskoy-atmosfery/) — `RAG_GROUNDED`.
