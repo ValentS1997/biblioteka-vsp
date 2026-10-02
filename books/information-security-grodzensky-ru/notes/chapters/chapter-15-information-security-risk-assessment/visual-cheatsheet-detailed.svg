@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200">
+  <rect width="1600" height="1200" fill="#ffffff"/>
+  <text x="60" y="70" font-family="sans-serif" font-size="34" font-weight="700">Глава 15 — активы, SLE/ARO/ALE и обработка рисков</text>
+  <text x="60" y="108" font-family="sans-serif" font-size="18">Source: information-security-grodzensky-ru · RAG p0097:c01–p0102:c01 · PDF 97–102</text>
+  <rect x="60" y="145" width="720" height="250" rx="18" fill="#eef2ff" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="188" font-family="sans-serif" font-size="27" font-weight="700">Risk scenario</text>
+  <text x="90" y="230" font-family="sans-serif" font-size="20">Asset + vulnerability + threat</text>
+  <text x="90" y="266" font-family="sans-serif" font-size="20">Impact on confidentiality / integrity / availability</text>
+  <text x="90" y="302" font-family="sans-serif" font-size="20">Owner is accountable for treatment</text>
+  <text x="90" y="344" font-family="sans-serif" font-size="18">Residual risk = remaining accepted level after controls</text>
+  <rect x="820" y="145" width="720" height="250" rx="18" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <text x="850" y="188" font-family="sans-serif" font-size="27" font-weight="700">Qualitative assessment</text>
+  <text x="850" y="230" font-family="sans-serif" font-size="20">Impact: low / medium / high</text>
+  <text x="850" y="266" font-family="sans-serif" font-size="20">Likelihood: likely / unlikely / extremely unlikely</text>
+  <text x="850" y="302" font-family="sans-serif" font-size="20">Matrix → prioritized risk level</text>
+  <text x="850" y="344" font-family="sans-serif" font-size="18">Simpler, but weaker for investment justification</text>
+  <rect x="60" y="435" width="720" height="250" rx="18" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="478" font-family="sans-serif" font-size="27" font-weight="700">Quantitative assessment</text>
+  <text x="90" y="520" font-family="sans-serif" font-size="20">SLE = Asset Value × Exposure Factor</text>
+  <text x="90" y="556" font-family="sans-serif" font-size="20">ARO = expected annual frequency</text>
+  <text x="90" y="592" font-family="sans-serif" font-size="20">ALE = SLE × ARO</text>
+  <text x="90" y="634" font-family="sans-serif" font-size="18">Expected annual loss can support control-cost decisions</text>
+  <rect x="820" y="435" width="720" height="250" rx="18" fill="#eef2ff" stroke="#334155" stroke-width="2"/>
+  <text x="850" y="478" font-family="sans-serif" font-size="27" font-weight="700">Treatment</text>
+  <text x="850" y="520" font-family="sans-serif" font-size="20">Reduce → lower likelihood/impact</text>
+  <text x="850" y="556" font-family="sans-serif" font-size="20">Avoid → remove scenario</text>
+  <text x="850" y="592" font-family="sans-serif" font-size="20">Transfer → insurance/contract</text>
+  <text x="850" y="628" font-family="sans-serif" font-size="20">Accept → consciously retain</text>
+  <rect x="60" y="725" width="1480" height="185" rx="18" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="768" font-family="sans-serif" font-size="27" font-weight="700">Risk governance</text>
+  <text x="90" y="810" font-family="sans-serif" font-size="20">Risk register · risk owner · residual risk · risk appetite</text>
+  <text x="90" y="848" font-family="sans-serif" font-size="20">No incident history does not prove zero probability if detection was weak.</text>
+  <text x="90" y="882" font-family="sans-serif" font-size="18">Treatment is prioritized by risk criticality.</text>
+  <rect x="60" y="950" width="1480" height="185" rx="18" fill="#eef2ff" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="993" font-family="sans-serif" font-size="27" font-weight="700">Automation &amp; standards in source</text>
+  <text x="90" y="1035" font-family="sans-serif" font-size="21">SGRC → models · workflow · treatment plans · trend analytics</text>
+  <text x="90" y="1073" font-family="sans-serif" font-size="20">OCTAVE · NIST SP800-30 · ISO/IEC 27005 · ISO 31000 are named.</text>
+  <text x="90" y="1110" font-family="sans-serif" font-size="18">No external version update or methodology normalization was added.</text>
+</svg>
