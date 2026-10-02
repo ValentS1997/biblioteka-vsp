@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200">
+  <rect width="1600" height="1200" fill="#ffffff"/>
+  <text x="60" y="70" font-family="sans-serif" font-size="36" font-weight="700">Глава 4 — борьба с угрозами несанкционированного доступа</text>
+  <text x="60" y="108" font-family="sans-serif" font-size="18">Source: information-security-grodzensky-ru · RAG p0030:c01–p0035:c01 · PDF 30–35</text>
+
+  <rect x="60" y="145" width="720" height="240" rx="18" fill="#eef2ff" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="188" font-family="sans-serif" font-size="27" font-weight="700">Access control</text>
+  <text x="90" y="230" font-family="sans-serif" font-size="20">DAC → ACL / владелец объекта</text>
+  <text x="90" y="266" font-family="sans-serif" font-size="20">MAC → метка конфиденциальности + допуск</text>
+  <text x="90" y="302" font-family="sans-serif" font-size="20">RBAC → права по роли сотрудника</text>
+  <text x="90" y="345" font-family="sans-serif" font-size="18">Источник рекомендует смешанную модель</text>
+
+  <rect x="820" y="145" width="720" height="240" rx="18" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <text x="850" y="188" font-family="sans-serif" font-size="27" font-weight="700">Identity & endpoint prevention</text>
+  <text x="850" y="230" font-family="sans-serif" font-size="20">IDM · PIM · парольная политика · 2FA</text>
+  <text x="850" y="266" font-family="sans-serif" font-size="20">Patch management · antivirus · EDR</text>
+  <text x="850" y="302" font-family="sans-serif" font-size="20">EMM · СКЗИ · Security Awareness</text>
+  <text x="850" y="345" font-family="sans-serif" font-size="18">Сегментация и NGFW дополняют превентивный слой</text>
+
+  <rect x="60" y="425" width="720" height="255" rx="18" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="468" font-family="sans-serif" font-size="27" font-weight="700">Detection & response</text>
+  <text x="90" y="510" font-family="sans-serif" font-size="20">SIEM → события и корреляция</text>
+  <text x="90" y="546" font-family="sans-serif" font-size="20">IDS / UEBA / DAG → обнаружение аномалий</text>
+  <text x="90" y="582" font-family="sans-serif" font-size="20">IRM → workflow реагирования</text>
+  <text x="90" y="618" font-family="sans-serif" font-size="20">SOC → постоянное выявление и response</text>
+  <text x="90" y="654" font-family="sans-serif" font-size="18">При позднем обнаружении требуется расследование</text>
+
+  <rect x="820" y="425" width="720" height="255" rx="18" fill="#eef2ff" stroke="#334155" stroke-width="2"/>
+  <text x="850" y="468" font-family="sans-serif" font-size="27" font-weight="700">Monitor vs blocking</text>
+  <text x="850" y="510" font-family="sans-serif" font-size="20">Mirror mode → копия трафика, анализ без блокировки</text>
+  <text x="850" y="546" font-family="sans-serif" font-size="20">Inline mode → блокировка по политике</text>
+  <text x="850" y="582" font-family="sans-serif" font-size="20">Перед blocking → тонкая настройка правил</text>
+  <text x="850" y="618" font-family="sans-serif" font-size="20">Риск: false positives и остановка работы</text>
+  <text x="850" y="654" font-family="sans-serif" font-size="18">DLP и МСЭ показаны как примеры обоих режимов</text>
+
+  <rect x="60" y="720" width="1480" height="190" rx="18" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="763" font-family="sans-serif" font-size="27" font-weight="700">Risk-oriented selection</text>
+  <text x="90" y="805" font-family="sans-serif" font-size="20">Активы → возможный ущерб → вероятность/статистика → остаточный риск</text>
+  <text x="90" y="843" font-family="sans-serif" font-size="20">GRC связывает: бизнес-процесс → ИС → аппаратное обеспечение</text>
+  <text x="90" y="878" font-family="sans-serif" font-size="18">Источники данных: CMDB и сканеры безопасности</text>
+
+  <rect x="60" y="950" width="1480" height="185" rx="18" fill="#eef2ff" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="993" font-family="sans-serif" font-size="27" font-weight="700">Operational sequence</text>
+  <text x="90" y="1035" font-family="sans-serif" font-size="21">Threat model → access model → prevention → detection → response → risk review</text>
+  <text x="90" y="1073" font-family="sans-serif" font-size="20">СВТ: программно-технические меры · АС: + организационные меры</text>
+  <text x="90" y="1110" font-family="sans-serif" font-size="18">Конкретные CLI-команды и vendor-specific конфигурации в главе отсутствуют.</text>
+</svg>
