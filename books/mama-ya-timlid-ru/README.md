@@ -53,3 +53,8 @@ GitHub Actions materialized the real LFS object and recomputed the expected SHA-
 Canonical readiness command:
 
 `python scripts/check_book_readiness.py --book-id mama-ya-timlid-ru --capability chapter-analysis`
+
+
+## Chapter artifacts
+
+- [Глава 1. Вы стали руководителем](notes/chapters/chapter-01-vy-stali-rukovoditelem/) — `RAG_GROUNDED`; EPUB spine 3, `OPS/ch1-2.xhtml`, chunks `e0003:c01–c08`.
