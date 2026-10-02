@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1160" viewBox="0 0 1600 1160">
+  <rect width="1600" height="1160" fill="white"/>
+  <text x="60" y="70" font-family="sans-serif" font-size="38" font-weight="700">Глава 6. Забота как часть работы — подробная схема</text>
+  <text x="60" y="110" font-family="sans-serif" font-size="18">RAG-only · EPUB spine 9 · OPS/ch1-8.xhtml · e0009:c01–c04</text>
+
+  <rect x="60" y="150" width="1480" height="190" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="85" y="192" font-family="sans-serif" font-size="25" font-weight="700">1. Забота = условия для работы, а не попытка прожить жизнь за сотрудника</text>
+  <text x="85" y="230" font-family="sans-serif" font-size="18">Проблемы людей отражаются на интеллектуальной работе, но руководитель не обязан решать все личные обстоятельства.</text>
+  <text x="85" y="264" font-family="sans-serif" font-size="18">Его зона — то, что связано с организацией: график, встречи, шум, переработки, коммуникация по выходным, бытовые условия.</text>
+  <text x="85" y="298" font-family="sans-serif" font-size="18">Источник отдельно подчеркивает необходимость оставлять время для жизни вне работы.</text>
+
+  <rect x="60" y="375" width="710" height="265" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="85" y="417" font-family="sans-serif" font-size="25" font-weight="700">2. Ownership вместо «не моя ответственность»</text>
+  <text x="85" y="455" font-family="sans-serif" font-size="17">Мелкие проблемы могут жить месяцами, если все ждут «специального человека».</text>
+  <text x="85" y="487" font-family="sans-serif" font-size="17">Руководитель может сам устранить препятствие или найти того, кто реально способен его решить.</text>
+  <text x="85" y="519" font-family="sans-serif" font-size="17">Пассивность увеличивает нагрузку на вышестоящее руководство.</text>
+  <text x="85" y="551" font-family="sans-serif" font-size="17">Ключевой критерий: команда получила решение или хотя бы конкретный следующий шаг.</text>
+  <text x="85" y="583" font-family="sans-serif" font-size="17">Ownership не означает делать вообще всё самому.</text>
+  <text x="85" y="615" font-family="sans-serif" font-size="17">Постоянную функцию после решения можно передать профильному владельцу.</text>
+
+  <rect x="830" y="375" width="710" height="265" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="855" y="417" font-family="sans-serif" font-size="25" font-weight="700">3. Физическая среда</text>
+  <text x="855" y="455" font-family="sans-serif" font-size="17">Шум — основной противник глубокой работы в описании автора.</text>
+  <text x="855" y="487" font-family="sans-serif" font-size="17">Предпочтение: небольшие комнаты на 6–10 человек, если инфраструктура позволяет.</text>
+  <text x="855" y="519" font-family="sans-serif" font-size="17">Полезно иметь место для быстрых обсуждений: доску и пространство вокруг нее.</text>
+  <text x="855" y="551" font-family="sans-serif" font-size="17">Свет, площадь и приватность рабочего места тоже влияют на комфорт.</text>
+  <text x="855" y="583" font-family="sans-serif" font-size="17">Рабочие столы в проходе и постоянный обзор экрана создают лишний дискомфорт.</text>
+  <text x="855" y="615" font-family="sans-serif" font-size="17">Новички не должны получать худшее место только из-за стажа.</text>
+
+  <rect x="60" y="675" width="1480" height="255" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="85" y="717" font-family="sans-serif" font-size="25" font-weight="700">4. Проверка управленческого решения</text>
+  <text x="85" y="755" font-family="sans-serif" font-size="18">До изменения: назвать конкретное препятствие и его влияние на работу.</text>
+  <text x="85" y="791" font-family="sans-serif" font-size="18">Изменение: минимально достаточная мера — расписание, правило, оборудование, рассадка или эскалация.</text>
+  <text x="85" y="827" font-family="sans-serif" font-size="18">После: проверить, стало ли людям реально проще работать.</text>
+  <text x="85" y="863" font-family="sans-serif" font-size="18">Если нет — откатить обратимое изменение или подобрать другой способ.</text>
+  <text x="85" y="899" font-family="sans-serif" font-size="18">Не закреплять неудобство как традицию только потому, что «так было всегда».</text>
+
+  <rect x="60" y="965" width="1480" height="135" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="85" y="1007" font-family="sans-serif" font-size="25" font-weight="700">Acceptance signal</text>
+  <text x="85" y="1045" font-family="sans-serif" font-size="18">Команда не тратит силы на явно устранимые организационные препятствия, переработка не стала нормой,</text>
+  <text x="85" y="1077" font-family="sans-serif" font-size="18">а руководитель способен доводить проблемы до решения даже тогда, когда формальный владелец не очевиден.</text>
+</svg>

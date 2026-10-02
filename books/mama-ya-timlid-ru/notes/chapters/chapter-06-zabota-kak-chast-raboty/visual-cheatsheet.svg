@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820">
+  <rect width="1200" height="820" fill="white"/>
+  <text x="60" y="70" font-family="sans-serif" font-size="34" font-weight="700">Глава 6. Забота как часть работы</text>
+  <text x="60" y="110" font-family="sans-serif" font-size="18">Условия работы — часть управленческой системы</text>
+
+  <rect x="60" y="150" width="510" height="185" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="85" y="190" font-family="sans-serif" font-size="23" font-weight="700">Здоровый режим</text>
+  <text x="85" y="225" font-family="sans-serif" font-size="17">• переработки не должны быть нормой</text>
+  <text x="85" y="255" font-family="sans-serif" font-size="17">• выходные ≠ скрытый рабочий день</text>
+  <text x="85" y="285" font-family="sans-serif" font-size="17">• учитывать разумные ограничения графика</text>
+  <text x="85" y="315" font-family="sans-serif" font-size="17">• бытовые условия влияют на качество работы</text>
+
+  <rect x="630" y="150" width="510" height="185" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="655" y="190" font-family="sans-serif" font-size="23" font-weight="700">Ownership</text>
+  <text x="655" y="225" font-family="sans-serif" font-size="17">• не прятаться за «не моя работа»</text>
+  <text x="655" y="255" font-family="sans-serif" font-size="17">• мелкую проблему — решить</text>
+  <text x="655" y="285" font-family="sans-serif" font-size="17">• сложную — эскалировать владельцу</text>
+  <text x="655" y="315" font-family="sans-serif" font-size="17">• довести до следующего понятного шага</text>
+
+  <rect x="60" y="370" width="1080" height="235" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="85" y="410" font-family="sans-serif" font-size="23" font-weight="700">Рабочее пространство</text>
+  <text x="85" y="450" font-family="sans-serif" font-size="17">Шум → мешает глубокой интеллектуальной работе.</text>
+  <text x="85" y="482" font-family="sans-serif" font-size="17">Если возможно: небольшие комнаты, естественный свет, достаточно пространства.</text>
+  <text x="85" y="514" font-family="sans-serif" font-size="17">Нужно место для спонтанных рабочих обсуждений.</text>
+  <text x="85" y="546" font-family="sans-serif" font-size="17">Не ставить людей в проходе или под постоянный публичный обзор.</text>
+  <text x="85" y="578" font-family="sans-serif" font-size="17">Новички не должны автоматически получать худшее место.</text>
+
+  <rect x="60" y="640" width="1080" height="95" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="85" y="680" font-family="sans-serif" font-size="22" font-weight="700">Операционный критерий</text>
+  <text x="85" y="713" font-family="sans-serif" font-size="17">Руководитель уменьшает организационные препятствия команды, а не пересылает их наверх без попытки решения.</text>
+
+  <text x="60" y="785" font-family="sans-serif" font-size="16">Provenance: EPUB spine 9 · OPS/ch1-8.xhtml · RAG e0009:c01–c04</text>
+</svg>

@@ -13,3 +13,4 @@ See [chapters/README.md](chapters/README.md).
 - [Глава 3. Вы и команда](chapters/chapter-03-vy-i-komanda/) — `RAG_GROUNDED`.
 - [Глава 4. Работа с индивидуальностью](chapters/chapter-04-rabota-s-individualnostyu/) — `RAG_GROUNDED`.
 - [Глава 5. Создаем слаженную команду](chapters/chapter-05-sozdaem-slazhennuyu-komandu/) — `RAG_GROUNDED`.
+- [Глава 6. Забота как часть работы](chapters/chapter-06-zabota-kak-chast-raboty/) — `RAG_GROUNDED`.
