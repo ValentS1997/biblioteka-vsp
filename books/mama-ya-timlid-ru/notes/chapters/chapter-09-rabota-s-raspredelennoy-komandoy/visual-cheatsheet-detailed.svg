@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1180" viewBox="0 0 1600 1180">
+  <rect width="1600" height="1180" fill="white"/>
+  <text x="60" y="70" font-family="sans-serif" font-size="38" font-weight="700">Глава 9. Работа с распределенной командой — подробная схема</text>
+  <text x="60" y="110" font-family="sans-serif" font-size="18">RAG-only · EPUB spine 12 · OPS/ch1-11.xhtml · e0012:c01–c04</text>
+
+  <rect x="60" y="150" width="1480" height="190" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="85" y="192" font-family="sans-serif" font-size="25" font-weight="700">1. Главный риск — не учитывать дополнительные сложности</text>
+  <text x="85" y="230" font-family="sans-serif" font-size="18">Удаленность усложняет вовлеченность, onboarding, чтение настроения, разрешение конфликтов и творческое взаимодействие.</text>
+  <text x="85" y="264" font-family="sans-serif" font-size="18">Короткий звонок дает намного меньше наблюдаемого контекста, чем совместный рабочий день.</text>
+  <text x="85" y="298" font-family="sans-serif" font-size="18">Если руководитель продолжает работать как в офисной команде, проблемы накапливаются незаметно.</text>
+
+  <rect x="60" y="375" width="710" height="250" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="85" y="417" font-family="sans-serif" font-size="25" font-weight="700">2. Состав и изоляция</text>
+  <text x="85" y="455" font-family="sans-serif" font-size="17">Стабильнее: все вместе или все распределены.</text>
+  <text x="85" y="487" font-family="sans-serif" font-size="17">Сложнее: большинство вместе, несколько людей отдельно.</text>
+  <text x="85" y="519" font-family="sans-serif" font-size="17">Одиночный удаленный сотрудник сильнее боится пропустить контекст и влияние.</text>
+  <text x="85" y="551" font-family="sans-serif" font-size="17">Локальная мини-группа уменьшает изоляцию и дает дополнительный канал наблюдения.</text>
+  <text x="85" y="583" font-family="sans-serif" font-size="17">Одиночный формат возможен, но требует дополнительного внимания руководителя.</text>
+
+  <rect x="830" y="375" width="710" height="250" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="855" y="417" font-family="sans-serif" font-size="25" font-weight="700">3. Кто лучше подходит для удаленной работы</text>
+  <text x="855" y="455" font-family="sans-serif" font-size="17">Доброжелательность уменьшает усиление конфликтов в текстовых каналах.</text>
+  <text x="855" y="487" font-family="sans-serif" font-size="17">Самодисциплина позволяет работать без внешнего офисного ритма.</text>
+  <text x="855" y="519" font-family="sans-serif" font-size="17">Баланс работы и отдыха снижает риск саморазгона до выгорания.</text>
+  <text x="855" y="551" font-family="sans-serif" font-size="17">Письменная ясность критична, потому что сложные вопросы часто уходят в текст.</text>
+  <text x="855" y="583" font-family="sans-serif" font-size="17">Эти признаки в книге описаны как практические наблюдения, а не формальная модель отбора.</text>
+
+  <rect x="60" y="660" width="710" height="250" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="85" y="702" font-family="sans-serif" font-size="25" font-weight="700">4. Технологии и письменный след</text>
+  <text x="85" y="740" font-family="sans-serif" font-size="17">Каждый участник должен одинаково хорошо слышать и видеть обсуждение.</text>
+  <text x="85" y="772" font-family="sans-serif" font-size="17">Физические доски и локальные артефакты требуют remote-эквивалента.</text>
+  <text x="85" y="804" font-family="sans-serif" font-size="17">Существенные решения нужно фиксировать письменно.</text>
+  <text x="85" y="836" font-family="sans-serif" font-size="17">В смешанной команде локальный разговор без записи создает две версии контекста.</text>
+  <text x="85" y="868" font-family="sans-serif" font-size="17">Для сложных вопросов автор предпочитает периодические личные встречи.</text>
+
+  <rect x="830" y="660" width="710" height="250" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="855" y="702" font-family="sans-serif" font-size="25" font-weight="700">5. Как сработаться</text>
+  <text x="855" y="740" font-family="sans-serif" font-size="17">Если возможно, познакомиться лично до длительной удаленной работы.</text>
+  <text x="855" y="772" font-family="sans-serif" font-size="17">Если нет — поддерживать неформальные online-встречи.</text>
+  <text x="855" y="804" font-family="sans-serif" font-size="17">Новичкам требуется больше личного контакта.</text>
+  <text x="855" y="836" font-family="sans-serif" font-size="17">Командировка полезна, когда в ней запланировано реальное взаимодействие.</text>
+  <text x="855" y="868" font-family="sans-serif" font-size="17">Письменный стиль руководителя стоит сделать предсказуемым и недвусмысленным.</text>
+
+  <rect x="60" y="945" width="1480" height="145" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="85" y="987" font-family="sans-serif" font-size="25" font-weight="700">Acceptance signal</text>
+  <text x="85" y="1025" font-family="sans-serif" font-size="18">Удаленные участники получают тот же важный контекст и возможность влиять на работу; встречи технически равноправны;</text>
+  <text x="85" y="1057" font-family="sans-serif" font-size="18">состояние людей проверяется отдельно от task status, а ключевые решения не исчезают в локальных разговорах.</text>
+</svg>
