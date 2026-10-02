@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1280" viewBox="0 0 1600 1280">
+  <rect width="1600" height="1280" fill="white"/>
+  <text x="60" y="70" font-family="sans-serif" font-size="38" font-weight="700">Глава 5. Создаем слаженную команду — подробная схема</text>
+  <text x="60" y="110" font-family="sans-serif" font-size="18">RAG-only · EPUB spine 8 · OPS/ch1-7.xhtml · e0008:c01–c08</text>
+
+  <rect x="60" y="150" width="710" height="230" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="85" y="192" font-family="sans-serif" font-size="25" font-weight="700">1. Сложность задачи</text>
+  <text x="85" y="230" font-family="sans-serif" font-size="17">Слишком легко → скука, застой, падение внимания.</text>
+  <text x="85" y="262" font-family="sans-serif" font-size="17">Слишком сложно → стресс, прокрастинация, выгорание.</text>
+  <text x="85" y="294" font-family="sans-serif" font-size="17">Рабочая модель главы: часть задачи знакома, часть находится в «серой зоне».</text>
+  <text x="85" y="326" font-family="sans-serif" font-size="17">Одна и та же задача имеет разную сложность для junior/middle/senior.</text>
+  <text x="85" y="358" font-family="sans-serif" font-size="17">Руководитель должен регулярно переставлять задачи вслед за ростом людей.</text>
+
+  <rect x="830" y="150" width="710" height="230" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="855" y="192" font-family="sans-serif" font-size="25" font-weight="700">2. Баланс состава</text>
+  <text x="855" y="230" font-family="sans-serif" font-size="17">Много новичков → высокий mentoring cost и больше ошибок.</text>
+  <text x="855" y="262" font-family="sans-serif" font-size="17">Много сильных → конкуренция и борьба за зоны влияния.</text>
+  <text x="855" y="294" font-family="sans-serif" font-size="17">Решение первой крайности: наставник / заместитель.</text>
+  <text x="855" y="326" font-family="sans-serif" font-size="17">Решение второй: ясные, по возможности непересекающиеся зоны ответственности.</text>
+  <text x="855" y="358" font-family="sans-serif" font-size="17">Баланс хрупок и требует постоянного пересмотра.</text>
+
+  <rect x="60" y="410" width="710" height="245" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="85" y="452" font-family="sans-serif" font-size="25" font-weight="700">3. Стажеры и рост команды</text>
+  <text x="85" y="490" font-family="sans-serif" font-size="17">Новый человек сначала снижает производительность.</text>
+  <text x="85" y="522" font-family="sans-serif" font-size="17">Нельзя брать стажеров без времени, наставников и подходящих задач.</text>
+  <text x="85" y="554" font-family="sans-serif" font-size="17">Можно брать при запасе времени, рутинных задачах и потребности растить наставника.</text>
+  <text x="85" y="586" font-family="sans-serif" font-size="17">Стажеры могут стать долгосрочным источником специалистов и руководителей.</text>
+  <text x="85" y="618" font-family="sans-serif" font-size="17">Массовый найм по возможности разбивать на этапы.</text>
+
+  <rect x="830" y="410" width="710" height="245" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="855" y="452" font-family="sans-serif" font-size="25" font-weight="700">4. Bus factor vs специализация</text>
+  <text x="855" y="490" font-family="sans-serif" font-size="17">Критичные знания не должны существовать только в голове одного человека.</text>
+  <text x="855" y="522" font-family="sans-serif" font-size="17">Обмен знаниями: review, документация, групповые обсуждения.</text>
+  <text x="855" y="554" font-family="sans-serif" font-size="17">Полный универсализм может сделать знания поверхностными.</text>
+  <text x="855" y="586" font-family="sans-serif" font-size="17">На сложных долгих проектах автор предпочитает специализацию.</text>
+  <text x="855" y="618" font-family="sans-serif" font-size="17">Рабочий компромисс: эксперт + дублер + гигиенический минимум обмена знаниями.</text>
+
+  <rect x="60" y="685" width="710" height="245" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="85" y="727" font-family="sans-serif" font-size="25" font-weight="700">5. Конфликты и «звезды»</text>
+  <text x="85" y="765" font-family="sans-serif" font-size="17">Хроническая конфликтность разрушает доверие и креативность.</text>
+  <text x="85" y="797" font-family="sans-serif" font-size="17">Оценивать нужно общий командный эффект, а не только личную продуктивность.</text>
+  <text x="85" y="829" font-family="sans-serif" font-size="17">Сильному сотруднику можно адаптировать среду, если его net effect положителен.</text>
+  <text x="85" y="861" font-family="sans-serif" font-size="17">Такая асимметрия прямо описана автором как субъективный trade-off.</text>
+  <text x="85" y="893" font-family="sans-serif" font-size="17">Если вред команде выше пользы, профессионализм сам по себе не спасает.</text>
+
+  <rect x="830" y="685" width="710" height="245" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="855" y="727" font-family="sans-serif" font-size="25" font-weight="700">6. Нагрузка и турбулентность</text>
+  <text x="855" y="765" font-family="sans-serif" font-size="17">Постоянный срок «вчера» разрушает качество и интерес к работе.</text>
+  <text x="855" y="797" font-family="sans-serif" font-size="17">Emergency допустим как исключение, а не как режим.</text>
+  <text x="855" y="829" font-family="sans-serif" font-size="17">Ограничение количества активных задач снижает стресс и рассеивание внимания.</text>
+  <text x="855" y="861" font-family="sans-serif" font-size="17">Руководитель выступает фильтром внешнего давления заказчиков.</text>
+  <text x="855" y="893" font-family="sans-serif" font-size="17">Баланс сроков и WIP лучше встраивать в процесс, а не оставлять на самодисциплину.</text>
+
+  <rect x="60" y="960" width="1480" height="220" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="85" y="1002" font-family="sans-serif" font-size="25" font-weight="700">7. Неформальные связи и team activities</text>
+  <text x="85" y="1040" font-family="sans-serif" font-size="17">Совместные обеды и неформальные чаты помогают людям видеть друг в друге людей, а не роли.</text>
+  <text x="85" y="1072" font-family="sans-serif" font-size="17">Неформальный контакт может смягчать последствия жестких рабочих обсуждений.</text>
+  <text x="85" y="1104" font-family="sans-serif" font-size="17">Искусственные тимбилдинги могут дать обратный эффект, если участникам некомфортно.</text>
+  <text x="85" y="1136" font-family="sans-serif" font-size="17">Источник предпочитает деятельность вокруг реальной общей темы: хакатон, конференция, книги, профессиональное обсуждение.</text>
+  <text x="85" y="1168" font-family="sans-serif" font-size="17">Руководитель должен участвовать в проектировании командного общения, потому что знает контекст лучше внешнего организатора.</text>
+
+  <rect x="60" y="1205" width="1480" height="45" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="85" y="1235" font-family="sans-serif" font-size="20" font-weight="700">Acceptance: команда устойчива, обучаема, не перегружена и не зависит критично от одного человека.</text>
+</svg>
