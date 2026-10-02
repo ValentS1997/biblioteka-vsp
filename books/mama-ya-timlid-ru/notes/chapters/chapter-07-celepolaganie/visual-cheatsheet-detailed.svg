@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1180" viewBox="0 0 1600 1180">
+  <rect width="1600" height="1180" fill="white"/>
+  <text x="60" y="70" font-family="sans-serif" font-size="38" font-weight="700">Глава 7. Целеполагание — подробная схема</text>
+  <text x="60" y="110" font-family="sans-serif" font-size="18">RAG-only · EPUB spine 10 · OPS/ch1-9.xhtml · e0010:c01–c04</text>
+
+  <rect x="60" y="150" width="1480" height="190" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="85" y="192" font-family="sans-serif" font-size="25" font-weight="700">1. Цель, качество, готовность</text>
+  <text x="85" y="230" font-family="sans-serif" font-size="18">Команда легко уходит в локально интересные задачи, если общая цель долго не проговаривается.</text>
+  <text x="85" y="264" font-family="sans-serif" font-size="18">Кроме срока нужно заранее договориться, что считается сделанной работой и где нижняя граница приемлемого качества.</text>
+  <text x="85" y="298" font-family="sans-serif" font-size="18">Иначе возможны две крайности: быстрый непригодный результат или избыточное «вылизывание» второстепенных деталей.</text>
+
+  <rect x="60" y="375" width="710" height="250" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="85" y="417" font-family="sans-serif" font-size="25" font-weight="700">2. Мотивирующий смысл</text>
+  <text x="85" y="455" font-family="sans-serif" font-size="17">Бизнес-цель не всегда мотивирует специалиста напрямую.</text>
+  <text x="85" y="487" font-family="sans-serif" font-size="17">Альтернативные смыслы из источника:</text>
+  <text x="105" y="519" font-family="sans-serif" font-size="17">• качество и профессиональная гордость;</text>
+  <text x="105" y="551" font-family="sans-serif" font-size="17">• помощь пользователю;</text>
+  <text x="105" y="583" font-family="sans-serif" font-size="17">• новая технология, статья, конференция, признание коллег.</text>
+  <text x="85" y="613" font-family="sans-serif" font-size="17">Цель бизнеса сохраняется, но объяснение подбирается под реальную мотивацию людей.</text>
+
+  <rect x="830" y="375" width="710" height="250" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="855" y="417" font-family="sans-serif" font-size="25" font-weight="700">3. Просветительская роль тимлида</text>
+  <text x="855" y="455" font-family="sans-serif" font-size="17">Информация искажается и забывается — контекст нужно повторять.</text>
+  <text x="855" y="487" font-family="sans-serif" font-size="17">Каналы: короткие презентации, рассылка, общая страница, отчеты.</text>
+  <text x="855" y="519" font-family="sans-serif" font-size="17">Ключевые новости не должны теряться в неформальном чате.</text>
+  <text x="855" y="551" font-family="sans-serif" font-size="17">Демо дает заказчикам видимость и команде ощущение результата.</text>
+  <text x="855" y="583" font-family="sans-serif" font-size="17">После синхронизации полезен краткий письменный итог.</text>
+  <text x="855" y="613" font-family="sans-serif" font-size="17">Удаленным коллегам нужен тот же смысловой контекст, что локальным.</text>
+
+  <rect x="60" y="660" width="1480" height="285" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="85" y="702" font-family="sans-serif" font-size="25" font-weight="700">4. Вовлеченность в конечный продукт</text>
+  <text x="85" y="740" font-family="sans-serif" font-size="18">Исполнитель, который понимает конечный результат, способен заметить проблемы вне формального чек-листа своей роли.</text>
+  <text x="85" y="776" font-family="sans-serif" font-size="18">Практики из главы: общение с пользователями, разбор обращений поддержки, совместные встречи разных ролей, статусные письма.</text>
+  <text x="85" y="812" font-family="sans-serif" font-size="18">Часть решений полезно принимать совместно, чтобы участники ощущали реальное влияние на продукт.</text>
+  <text x="85" y="848" font-family="sans-serif" font-size="18">Вовлеченный коллега может распространять энергию на остальных участников.</text>
+  <text x="85" y="884" font-family="sans-serif" font-size="18">Аутсорс допустим, если задача хорошо специфицируется или внешний исполнитель успевает глубоко войти в контекст.</text>
+  <text x="85" y="920" font-family="sans-serif" font-size="18">Плохой fit — когда стоимость погружения несоизмерима с временем выполнения задачи.</text>
+
+  <rect x="60" y="980" width="1480" height="135" rx="12" fill="#f6f6f6" stroke="#222"/>
+  <text x="85" y="1022" font-family="sans-serif" font-size="25" font-weight="700">Acceptance signal</text>
+  <text x="85" y="1060" font-family="sans-serif" font-size="18">Команда понимает общий результат, критерий готовности и текущий контекст; заказчики видят промежуточный прогресс;</text>
+  <text x="85" y="1092" font-family="sans-serif" font-size="18">участники разных ролей воспринимают проект как общий и предлагают улучшения за пределами узкой формальной задачи.</text>
+</svg>
