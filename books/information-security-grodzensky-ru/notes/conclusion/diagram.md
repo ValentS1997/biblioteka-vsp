@@ -1,5 +1,7 @@
 # Диаграмма: финальная модель книги
 
+Источник: `information-security-grodzensky-ru:p0115:c01`, PDF page 115.
+
 ```mermaid
 flowchart TD
     A["Угрозы ИБ"] --> B["Требования и законодательные ограничения"]
