@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200">
+  <rect width="1600" height="1200" fill="#ffffff"/>
+  <text x="60" y="70" font-family="sans-serif" font-size="34" font-weight="700">Глава 12 — restricted information, DLP и DAG</text>
+  <text x="60" y="108" font-family="sans-serif" font-size="18">Source: information-security-grodzensky-ru · RAG p0079:c01–p0085:c01 · PDF 79–85</text>
+  <rect x="60" y="145" width="720" height="250" rx="18" fill="#eef2ff" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="188" font-family="sans-serif" font-size="27" font-weight="700">Governance layer</text>
+  <text x="90" y="230" font-family="sans-serif" font-size="20">Classification · value · risk</text>
+  <text x="90" y="266" font-family="sans-serif" font-size="20">Awareness · NDA · organizational controls</text>
+  <text x="90" y="302" font-family="sans-serif" font-size="20">Access model · continuous protection control</text>
+  <text x="90" y="344" font-family="sans-serif" font-size="18">Legal wording preserved at source version</text>
+  <rect x="820" y="145" width="720" height="250" rx="18" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <text x="850" y="188" font-family="sans-serif" font-size="27" font-weight="700">DLP layer</text>
+  <text x="850" y="230" font-family="sans-serif" font-size="20">Gateway/network + endpoint/host</text>
+  <text x="850" y="266" font-family="sans-serif" font-size="20">Email · web · messengers · removable media · print</text>
+  <text x="850" y="302" font-family="sans-serif" font-size="20">Detect / block · UEBA context</text>
+  <text x="850" y="344" font-family="sans-serif" font-size="18">Blocking requires careful rule tuning</text>
+  <rect x="60" y="435" width="720" height="250" rx="18" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="478" font-family="sans-serif" font-size="27" font-weight="700">DAG layer</text>
+  <text x="90" y="520" font-family="sans-serif" font-size="20">Who has access?</text>
+  <text x="90" y="556" font-family="sans-serif" font-size="20">Who performed which actions?</text>
+  <text x="90" y="592" font-family="sans-serif" font-size="20">Sensitive-data discovery · access workflows</text>
+  <text x="90" y="634" font-family="sans-serif" font-size="18">Includes analysis of AD rights changes</text>
+  <rect x="820" y="435" width="720" height="250" rx="18" fill="#eef2ff" stroke="#334155" stroke-width="2"/>
+  <text x="850" y="478" font-family="sans-serif" font-size="27" font-weight="700">Labels</text>
+  <text x="850" y="520" font-family="sans-serif" font-size="20">Mandatory-access-control concept</text>
+  <text x="850" y="556" font-family="sans-serif" font-size="20">Label expresses sensitivity/class</text>
+  <text x="850" y="592" font-family="sans-serif" font-size="20">Read · edit · external-send decisions</text>
+  <text x="850" y="634" font-family="sans-serif" font-size="18">Policy follows the file in the source model</text>
+  <rect x="60" y="725" width="1480" height="185" rx="18" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="768" font-family="sans-serif" font-size="27" font-weight="700">Commercial-secret project</text>
+  <text x="90" y="810" font-family="sans-serif" font-size="20">Survey → asset register → CIA value → risk assessment → current controls</text>
+  <text x="90" y="848" font-family="sans-serif" font-size="20">Then: policy documents · lists · contract changes · access/logging/leak procedures</text>
+  <text x="90" y="882" font-family="sans-serif" font-size="18">DLP is presented as a technical control supporting the regime.</text>
+  <rect x="60" y="950" width="1480" height="185" rx="18" fill="#eef2ff" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="993" font-family="sans-serif" font-size="27" font-weight="700">Operational sequence</text>
+  <text x="90" y="1035" font-family="sans-serif" font-size="21">Classify → authorize → monitor → detect/block → audit → correct</text>
+  <text x="90" y="1073" font-family="sans-serif" font-size="20">DLP = movement/channels · DAG = access/actions · labels = object policy</text>
+  <text x="90" y="1110" font-family="sans-serif" font-size="18">No external legal updates or product-specific configuration were added.</text>
+</svg>
