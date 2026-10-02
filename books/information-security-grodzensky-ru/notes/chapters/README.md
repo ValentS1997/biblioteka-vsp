@@ -12,3 +12,4 @@ Reviewed chapter-level notes are stored here. Historical notes are not reconstru
 - [Chapter 8 — Управление уязвимостями ИБ](chapter-08-vulnerability-management/README.md)
 - [Chapter 9 — Безопасность компьютерных сетей](chapter-09-network-security/README.md)
 - [Chapter 10 — Безопасная разработка приложений в эпоху Agile](chapter-10-secure-development-agile/README.md)
+- [Chapter 11 — Безопасность информации на мобильных устройствах](chapter-11-mobile-device-security/README.md)

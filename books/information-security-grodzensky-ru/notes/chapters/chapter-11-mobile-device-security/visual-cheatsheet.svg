@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820">
+  <rect width="1200" height="820" fill="#ffffff"/>
+  <text x="60" y="70" font-family="sans-serif" font-size="34" font-weight="700">Глава 11 — безопасность мобильных устройств</text>
+  <text x="60" y="108" font-family="sans-serif" font-size="18">RAG: p0073:c01–p0078:c01 · PDF 73–78</text>
+
+  <rect x="60" y="150" width="1080" height="120" rx="18" fill="#eef2ff" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="192" font-family="sans-serif" font-size="26" font-weight="700">1. Ownership model</text>
+  <text x="90" y="230" font-family="sans-serif" font-size="21">BYOD — personal device · COPE — corporate device</text>
+
+  <rect x="60" y="305" width="1080" height="130" rx="18" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="347" font-family="sans-serif" font-size="26" font-weight="700">2. EMM control plane</text>
+  <text x="90" y="385" font-family="sans-serif" font-size="21">Policy server · proxy · app control · secure clients · VPN</text>
+  <text x="90" y="417" font-family="sans-serif" font-size="18">Container separates corporate and personal data</text>
+
+  <rect x="60" y="470" width="1080" height="130" rx="18" fill="#eef2ff" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="512" font-family="sans-serif" font-size="26" font-weight="700">3. Threat controls</text>
+  <text x="90" y="550" font-family="sans-serif" font-size="21">Phishing · jailbreak · malware · ransomware · loss/theft</text>
+  <text x="90" y="582" font-family="sans-serif" font-size="18">Policy can control apps, Wi-Fi, Bluetooth, NFC and permissions</text>
+
+  <rect x="60" y="635" width="1080" height="130" rx="18" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="677" font-family="sans-serif" font-size="26" font-weight="700">4. Protect data everywhere</text>
+  <text x="90" y="715" font-family="sans-serif" font-size="21">At rest: crypto-container · In transit: VPN / policy gateway</text>
+  <text x="90" y="747" font-family="sans-serif" font-size="18">Corporate data is outside the classic LAN perimeter</text>
+</svg>
