@@ -9,3 +9,4 @@ RAG-grounded chapter artifacts for `mama-ya-timlid-ru`.
 | 3 | [Вы и команда](chapter-03-vy-i-komanda/) | RAG_GROUNDED | EPUB spine 5 · `OPS/ch1-4.xhtml` · `e0005:c01–c11` |
 | 4 | [Работа с индивидуальностью](chapter-04-rabota-s-individualnostyu/) | RAG_GROUNDED | EPUB spine 6–7 · `OPS/ch1-5.xhtml` + `OPS/ch1-6.xhtml` · `e0006:c01–c12` + `e0007:c01–c13` |
 | 5 | [Создаем слаженную команду](chapter-05-sozdaem-slazhennuyu-komandu/) | RAG_GROUNDED | EPUB spine 8 · `OPS/ch1-7.xhtml` · `e0008:c01–c08` |
+| 6 | [Забота как часть работы](chapter-06-zabota-kak-chast-raboty/) | RAG_GROUNDED | EPUB spine 9 · `OPS/ch1-8.xhtml` · `e0009:c01–c04` |
