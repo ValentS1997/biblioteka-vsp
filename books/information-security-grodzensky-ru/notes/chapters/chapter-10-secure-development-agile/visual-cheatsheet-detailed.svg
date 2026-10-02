@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200">
+  <rect width="1600" height="1200" fill="#ffffff"/>
+  <text x="60" y="70" font-family="sans-serif" font-size="36" font-weight="700">Глава 10 — безопасная разработка приложений в эпоху Agile</text>
+  <text x="60" y="108" font-family="sans-serif" font-size="18">Source: information-security-grodzensky-ru · RAG p0067:c01–p0072:c01 · PDF 67–72</text>
+
+  <rect x="60" y="145" width="720" height="250" rx="18" fill="#eef2ff" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="188" font-family="sans-serif" font-size="27" font-weight="700">Code defects</text>
+  <text x="90" y="230" font-family="sans-serif" font-size="20">Buffer / stack overflow · memory leak</text>
+  <text x="90" y="266" font-family="sans-serif" font-size="20">Uninitialized variables · access-right errors</text>
+  <text x="90" y="302" font-family="sans-serif" font-size="20">Syntax / algorithmic errors</text>
+  <text x="90" y="344" font-family="sans-serif" font-size="18">Potential result: exploitable vulnerability</text>
+
+  <rect x="820" y="145" width="720" height="250" rx="18" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <text x="850" y="188" font-family="sans-serif" font-size="27" font-weight="700">SAST</text>
+  <text x="850" y="230" font-family="sans-serif" font-size="20">Source-code analysis without execution</text>
+  <text x="850" y="266" font-family="sans-serif" font-size="20">Lexical · semantic · syntactic · taint analysis</text>
+  <text x="850" y="302" font-family="sans-serif" font-size="20">Version-control integration</text>
+  <text x="850" y="344" font-family="sans-serif" font-size="18">Useful for structural/logical issues</text>
+
+  <rect x="60" y="435" width="720" height="250" rx="18" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="478" font-family="sans-serif" font-size="27" font-weight="700">DAST</text>
+  <text x="90" y="520" font-family="sans-serif" font-size="20">Analyze program during execution</text>
+  <text x="90" y="556" font-family="sans-serif" font-size="20">Observe runtime behavior / boundary failures</text>
+  <text x="90" y="592" font-family="sans-serif" font-size="20">Complements static analysis</text>
+  <text x="90" y="634" font-family="sans-serif" font-size="18">Coverage depends on executed paths</text>
+
+  <rect x="820" y="435" width="720" height="250" rx="18" fill="#eef2ff" stroke="#334155" stroke-width="2"/>
+  <text x="850" y="478" font-family="sans-serif" font-size="27" font-weight="700">Scanner quality</text>
+  <text x="850" y="520" font-family="sans-serif" font-size="20">False positive → false alarm</text>
+  <text x="850" y="556" font-family="sans-serif" font-size="20">False negative → missed real issue</text>
+  <text x="850" y="592" font-family="sans-serif" font-size="20">Criteria: languages · speed · VCS integration</text>
+  <text x="850" y="634" font-family="sans-serif" font-size="18">Execution graph visualization is also named</text>
+
+  <rect x="60" y="725" width="1480" height="185" rx="18" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="768" font-family="sans-serif" font-size="27" font-weight="700">Specialized application analysis</text>
+  <text x="90" y="810" font-family="sans-serif" font-size="20">ERP scanners → vulnerabilities · configuration · excessive rights / SoD</text>
+  <text x="90" y="848" font-family="sans-serif" font-size="20">Web scanners → static + dynamic analysis · possible WAF integration</text>
+  <text x="90" y="882" font-family="sans-serif" font-size="18">Browser developer tools provide limited supporting client-side inspection.</text>
+
+  <rect x="60" y="950" width="1480" height="185" rx="18" fill="#eef2ff" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="993" font-family="sans-serif" font-size="27" font-weight="700">Secure-development loop in source</text>
+  <text x="90" y="1035" font-family="sans-serif" font-size="21">Change → SAST/DAST → finding → triage → correction → retest</text>
+  <text x="90" y="1073" font-family="sans-serif" font-size="20">Agile cadence makes repeated in-process analysis more important.</text>
+  <text x="90" y="1110" font-family="sans-serif" font-size="18">No external DevSecOps tooling or CI/CD practices were added.</text>
+</svg>
