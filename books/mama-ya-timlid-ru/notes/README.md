@@ -11,3 +11,4 @@ See [chapters/README.md](chapters/README.md).
 - [Глава 1. Вы стали руководителем](chapters/chapter-01-vy-stali-rukovoditelem/) — `RAG_GROUNDED`.
 - [Глава 2. Вы и начальство](chapters/chapter-02-vy-i-nachalstvo/) — `RAG_GROUNDED`.
 - [Глава 3. Вы и команда](chapters/chapter-03-vy-i-komanda/) — `RAG_GROUNDED`.
+- [Глава 4. Работа с индивидуальностью](chapters/chapter-04-rabota-s-individualnostyu/) — `RAG_GROUNDED`.

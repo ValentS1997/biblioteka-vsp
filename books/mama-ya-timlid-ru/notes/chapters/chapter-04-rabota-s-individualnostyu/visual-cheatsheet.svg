@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="860" viewBox="0 0 1200 860">
+  <rect width="1200" height="860" fill="white"/>
+  <text x="60" y="70" font-family="sans-serif" font-size="34" font-weight="700">Глава 4. Работа с индивидуальностью</text>
+  <text x="60" y="110" font-family="sans-serif" font-size="18">Понимать человека → давать ясность → развивать → давать честный feedback</text>
+
+  <rect x="60" y="150" width="510" height="190" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="85" y="190" font-family="sans-serif" font-size="23" font-weight="700">One-to-one</text>
+  <text x="85" y="225" font-family="sans-serif" font-size="17">• состояние и проблемы</text>
+  <text x="85" y="255" font-family="sans-serif" font-size="17">• скука / сложность / выгорание</text>
+  <text x="85" y="285" font-family="sans-serif" font-size="17">• сильные стороны</text>
+  <text x="85" y="315" font-family="sans-serif" font-size="17">• личные и карьерные цели</text>
+
+  <rect x="630" y="150" width="510" height="190" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="655" y="190" font-family="sans-serif" font-size="23" font-weight="700">Прозрачность</text>
+  <text x="655" y="225" font-family="sans-serif" font-size="17">• текущий уровень</text>
+  <text x="655" y="255" font-family="sans-serif" font-size="17">• текущие ожидания</text>
+  <text x="655" y="285" font-family="sans-serif" font-size="17">• критерии следующего уровня</text>
+  <text x="655" y="315" font-family="sans-serif" font-size="17">• роль денег и других мотиваторов</text>
+
+  <rect x="60" y="375" width="510" height="205" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="85" y="415" font-family="sans-serif" font-size="23" font-weight="700">Feedback</text>
+  <text x="85" y="450" font-family="sans-serif" font-size="17">Похвала: заслуженная и конкретная.</text>
+  <text x="85" y="480" font-family="sans-serif" font-size="17">Критика: приватно, по фактам, не по личности.</text>
+  <text x="85" y="510" font-family="sans-serif" font-size="17">После критики: совместный план улучшения.</text>
+  <text x="85" y="540" font-family="sans-serif" font-size="17">Не скрывать проблему до момента увольнения.</text>
+
+  <rect x="630" y="375" width="510" height="205" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="655" y="415" font-family="sans-serif" font-size="23" font-weight="700">Рост и расставание</text>
+  <text x="655" y="450" font-family="sans-serif" font-size="17">• задачи «на вырост»</text>
+  <text x="655" y="480" font-family="sans-serif" font-size="17">• заранее думать о сильных сотрудниках</text>
+  <text x="655" y="510" font-family="sans-serif" font-size="17">• improvement period при проблемах</text>
+  <text x="655" y="540" font-family="sans-serif" font-size="17">• если цели расходятся — видеть это заранее</text>
+
+  <rect x="60" y="615" width="1080" height="155" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="85" y="655" font-family="sans-serif" font-size="23" font-weight="700">Будущий руководитель</text>
+  <text x="85" y="690" font-family="sans-serif" font-size="17">Наставник одного человека → проектная ответственность → временная лидерская роль → команда.</text>
+  <text x="85" y="723" font-family="sans-serif" font-size="17">После назначения: четкая зона полномочий и реальные решения без постоянного вмешательства сверху.</text>
+
+  <text x="60" y="825" font-family="sans-serif" font-size="16">Provenance: EPUB spine 6–7 · OPS/ch1-5.xhtml + OPS/ch1-6.xhtml · RAG e0006:c01–c12 + e0007:c01–c13</text>
+</svg>
