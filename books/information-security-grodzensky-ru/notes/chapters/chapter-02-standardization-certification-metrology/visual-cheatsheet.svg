@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820">
+  <rect width="1200" height="820" fill="#ffffff"/>
+  <text x="60" y="70" font-family="sans-serif" font-size="34" font-weight="700">Глава 2 — стандартизация, сертификация, метрология</text>
+  <text x="60" y="108" font-family="sans-serif" font-size="18">RAG: p0018:c01–p0023:c01 · PDF 18–23</text>
+
+  <rect x="60" y="150" width="1080" height="120" rx="18" fill="#eef2ff" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="192" font-family="sans-serif" font-size="26" font-weight="700">1. Требования</text>
+  <text x="90" y="230" font-family="sans-serif" font-size="21">Обязательные документы · национальные/отраслевые · международные стандарты</text>
+
+  <rect x="60" y="305" width="1080" height="120" rx="18" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="347" font-family="sans-serif" font-size="26" font-weight="700">2. Проверка соответствия</text>
+  <text x="90" y="385" font-family="sans-serif" font-size="21">Аудит → аттестация / сертификация → сертификат как подтверждение</text>
+
+  <rect x="60" y="460" width="1080" height="130" rx="18" fill="#eef2ff" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="502" font-family="sans-serif" font-size="26" font-weight="700">3. Стандарт ≠ спецификация</text>
+  <text x="90" y="540" font-family="sans-serif" font-size="21">Стандарт: требования и управление · Спецификация: конкретная реализация</text>
+  <text x="90" y="570" font-family="sans-serif" font-size="18">Примеры спецификаций из главы: IPsec · Kerberos · TLS</text>
+
+  <rect x="60" y="625" width="1080" height="130" rx="18" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="667" font-family="sans-serif" font-size="26" font-weight="700">4. Измеримость СМИБ</text>
+  <text x="90" y="705" font-family="sans-serif" font-size="21">KPI → измерение → факт vs план → корректировка</text>
+  <text x="90" y="737" font-family="sans-serif" font-size="18">Примеры: обучение · инциденты · уязвимости · параметры паролей</text>
+</svg>
