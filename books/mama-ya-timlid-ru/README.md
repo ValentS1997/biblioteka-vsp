@@ -59,3 +59,4 @@ Canonical readiness command:
 
 - [Глава 1. Вы стали руководителем](notes/chapters/chapter-01-vy-stali-rukovoditelem/) — `RAG_GROUNDED`; EPUB spine 3, `OPS/ch1-2.xhtml`, chunks `e0003:c01–c08`.
 - [Глава 2. Вы и начальство](notes/chapters/chapter-02-vy-i-nachalstvo/) — `RAG_GROUNDED`; EPUB spine 4, `OPS/ch1-3.xhtml`, chunks `e0004:c01–c04`.
+- [Глава 3. Вы и команда](notes/chapters/chapter-03-vy-i-komanda/) — `RAG_GROUNDED`; EPUB spine 5, `OPS/ch1-4.xhtml`, chunks `e0005:c01–c11`.
