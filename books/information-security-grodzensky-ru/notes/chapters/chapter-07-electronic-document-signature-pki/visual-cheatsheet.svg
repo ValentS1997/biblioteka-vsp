@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820">
+  <rect width="1200" height="820" fill="#ffffff"/>
+  <text x="60" y="70" font-family="sans-serif" font-size="34" font-weight="700">Глава 7 — ЭДО, электронная подпись и PKI</text>
+  <text x="60" y="108" font-family="sans-serif" font-size="18">RAG: p0049:c01–p0053:c01 · PDF 49–53</text>
+
+  <rect x="60" y="150" width="1080" height="120" rx="18" fill="#eef2ff" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="192" font-family="sans-serif" font-size="26" font-weight="700">1. Идентичность и подпись</text>
+  <text x="90" y="230" font-family="sans-serif" font-size="21">Цифровая личность → ключевая пара → электронная подпись</text>
+
+  <rect x="60" y="305" width="1080" height="130" rx="18" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="347" font-family="sans-serif" font-size="26" font-weight="700">2. Сертификат и PKI</text>
+  <text x="90" y="385" font-family="sans-serif" font-size="21">Открытый ключ · владелец · срок · CA · цифровая подпись</text>
+  <text x="90" y="417" font-family="sans-serif" font-size="18">PKI = централизованное управление ключами и сертификатами</text>
+
+  <rect x="60" y="470" width="1080" height="130" rx="18" fill="#eef2ff" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="512" font-family="sans-serif" font-size="26" font-weight="700">3. Виды ЭП</text>
+  <text x="90" y="550" font-family="sans-serif" font-size="21">Простая · усиленная → квалифицированная / неквалифицированная</text>
+  <text x="90" y="582" font-family="sans-serif" font-size="18">Qualified certificate → accredited CA</text>
+
+  <rect x="60" y="635" width="1080" height="130" rx="18" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="677" font-family="sans-serif" font-size="26" font-weight="700">4. Масштабирование</text>
+  <text x="90" y="715" font-family="sans-serif" font-size="21">Токены / smart cards → при росте количества → HSM</text>
+  <text x="90" y="747" font-family="sans-serif" font-size="18">УЦ: certification · registration · admin/user/conflict workstations</text>
+</svg>
