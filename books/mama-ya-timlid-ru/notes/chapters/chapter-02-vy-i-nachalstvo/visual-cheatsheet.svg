@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="790" viewBox="0 0 1200 790">
+  <rect width="1200" height="790" fill="white"/>
+  <text x="60" y="70" font-family="sans-serif" font-size="34" font-weight="700">Глава 2. Вы и начальство</text>
+  <text x="60" y="110" font-family="sans-serif" font-size="18">Коммуникация делает рабочий процесс управляемым</text>
+
+  <rect x="60" y="150" width="1080" height="155" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="85" y="190" font-family="sans-serif" font-size="24" font-weight="700">1. Риски: сообщать до срыва</text>
+  <text x="85" y="225" font-family="sans-serif" font-size="18">• Что изменилось и почему?</text>
+  <text x="85" y="255" font-family="sans-serif" font-size="18">• Какие последствия возможны?</text>
+  <text x="600" y="225" font-family="sans-serif" font-size="18">• Что можно сделать?</text>
+  <text x="600" y="255" font-family="sans-serif" font-size="18">• Нужны ресурсы / план Б / другое решение?</text>
+  <text x="85" y="285" font-family="sans-serif" font-size="18">Не молчать и не пытаться героически скрыть риск до последнего.</text>
+
+  <rect x="60" y="335" width="1080" height="155" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="85" y="375" font-family="sans-serif" font-size="24" font-weight="700">2. Думать в терминах бизнеса</text>
+  <text x="85" y="410" font-family="sans-serif" font-size="18">• Понимать, на чем компания зарабатывает и куда движется.</text>
+  <text x="85" y="440" font-family="sans-serif" font-size="18">• Объяснять технические проблемы через последствия для бизнеса.</text>
+  <text x="85" y="470" font-family="sans-serif" font-size="18">• Показывать ценность команды, даже если работа — legacy, поддержка или внутренние изменения.</text>
+
+  <rect x="60" y="520" width="1080" height="165" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="85" y="560" font-family="sans-serif" font-size="24" font-weight="700">3. Прояснять до конца</text>
+  <text x="85" y="595" font-family="sans-serif" font-size="18">Абстрактное: «подтяни процессы»</text>
+  <text x="85" y="625" font-family="sans-serif" font-size="18">↓ спросить: что именно не так? какие примеры? какого результата ждут?</text>
+  <text x="85" y="655" font-family="sans-serif" font-size="18">Конкретное ожидание лучше собственной догадки — даже если ответ неприятный.</text>
+
+  <text x="60" y="740" font-family="sans-serif" font-size="16">Provenance: EPUB spine 4 · OPS/ch1-3.xhtml · RAG e0004:c01–c04</text>
+</svg>

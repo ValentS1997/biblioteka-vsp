@@ -58,3 +58,4 @@ Canonical readiness command:
 ## Chapter artifacts
 
 - [Глава 1. Вы стали руководителем](notes/chapters/chapter-01-vy-stali-rukovoditelem/) — `RAG_GROUNDED`; EPUB spine 3, `OPS/ch1-2.xhtml`, chunks `e0003:c01–c08`.
+- [Глава 2. Вы и начальство](notes/chapters/chapter-02-vy-i-nachalstvo/) — `RAG_GROUNDED`; EPUB spine 4, `OPS/ch1-3.xhtml`, chunks `e0004:c01–c04`.
