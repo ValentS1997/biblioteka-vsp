@@ -1,8 +1,16 @@
 schema: biblioteka-vsp/reading/v1
 book_id: docker-demystified-saibal-ghosh-ru-2023
-status: planned
+
+status: in_progress
 scope: full_book
-started: null
+
+started:
+  month: "2026-10"
+  exact_date: "2026-10-02"
+
 completed: null
-current_page: null
-current_chapter: null
+current_page: "[Needs confirmation]"
+current_chapter: "[Needs confirmation]"
+
+notes:
+  - "User explicitly confirmed that reading started on 2026-10-02."
