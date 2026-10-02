@@ -9,3 +9,4 @@ Reviewed chapter-level notes are stored here. Historical notes are not reconstru
 - [Chapter 5 — Защита информации от утечки по техническим каналам](chapter-05-technical-leakage-channels/README.md)
 - [Chapter 6 — Криптографическая защита информации](chapter-06-cryptographic-protection/README.md)
 - [Chapter 7 — Организационно-технические и правовые основы использования в информационных системах электронного документооборота и электронной подписи](chapter-07-electronic-document-signature-pki/README.md)
+- [Chapter 8 — Управление уязвимостями ИБ](chapter-08-vulnerability-management/README.md)
