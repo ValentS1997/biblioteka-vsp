@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="840" viewBox="0 0 1200 840">
+  <rect width="1200" height="840" fill="white"/>
+  <text x="60" y="70" font-family="sans-serif" font-size="34" font-weight="700">Глава 8. Секреты творческой атмосферы</text>
+  <text x="60" y="110" font-family="sans-serif" font-size="18">Идеи появляются там, где есть доверие, право голоса и честная проверка</text>
+
+  <rect x="60" y="150" width="510" height="190" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="85" y="190" font-family="sans-serif" font-size="23" font-weight="700">Доверие</text>
+  <text x="85" y="225" font-family="sans-serif" font-size="17">• не спорить по кругу из недоверия</text>
+  <text x="85" y="255" font-family="sans-serif" font-size="17">• проверять идеи экспериментом</text>
+  <text x="85" y="285" font-family="sans-serif" font-size="17">• критиковать решение, не автора</text>
+  <text x="85" y="315" font-family="sans-serif" font-size="17">• уважение освобождает ресурс для креатива</text>
+
+  <rect x="630" y="150" width="510" height="190" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="655" y="190" font-family="sans-serif" font-size="23" font-weight="700">Право голоса</text>
+  <text x="655" y="225" font-family="sans-serif" font-size="17">• должность не определяет качество аргумента</text>
+  <text x="655" y="255" font-family="sans-serif" font-size="17">• junior может возразить senior</text>
+  <text x="655" y="285" font-family="sans-serif" font-size="17">• локальный эксперт должен быть услышан</text>
+  <text x="655" y="315" font-family="sans-serif" font-size="17">• менее громким нужно помогать войти в разговор</text>
+
+  <rect x="60" y="375" width="510" height="205" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="85" y="415" font-family="sans-serif" font-size="23" font-weight="700">Brainstorm</text>
+  <text x="85" y="450" font-family="sans-serif" font-size="17">• полезен для вариантов и вовлечения</text>
+  <text x="85" y="480" font-family="sans-serif" font-size="17">• громкий ≠ самый компетентный</text>
+  <text x="85" y="510" font-family="sans-serif" font-size="17">• спонтанное согласие ≠ правильность</text>
+  <text x="85" y="540" font-family="sans-serif" font-size="17">• финальный выбор требует отдельной проверки</text>
+
+  <rect x="630" y="375" width="510" height="205" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="655" y="415" font-family="sans-serif" font-size="23" font-weight="700">Люди с идеями</text>
+  <text x="655" y="450" font-family="sans-serif" font-size="17">• найти надежных собеседников</text>
+  <text x="655" y="480" font-family="sans-serif" font-size="17">• защищать их голос</text>
+  <text x="655" y="510" font-family="sans-serif" font-size="17">• мечтатели + системные критики</text>
+  <text x="655" y="540" font-family="sans-serif" font-size="17">• при застое менять формат или место</text>
+
+  <rect x="60" y="620" width="1080" height="115" rx="12" fill="#f4f4f4" stroke="#222"/>
+  <text x="85" y="662" font-family="sans-serif" font-size="23" font-weight="700">Операционный критерий</text>
+  <text x="85" y="700" font-family="sans-serif" font-size="18">Хорошая творческая среда не гарантирует правильную идею — она гарантирует, что сильная идея получит шанс быть услышанной и проверенной.</text>
+
+  <text x="60" y="800" font-family="sans-serif" font-size="16">Provenance: EPUB spine 11 · OPS/ch1-10.xhtml · RAG e0011:c01–c05</text>
+</svg>
