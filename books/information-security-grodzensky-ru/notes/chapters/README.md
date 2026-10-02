@@ -15,3 +15,4 @@ Reviewed chapter-level notes are stored here. Historical notes are not reconstru
 - [Chapter 11 — Безопасность информации на мобильных устройствах](chapter-11-mobile-device-security/README.md)
 - [Chapter 12 — Защита информации ограниченного доступа и предотвращение утечек информации](chapter-12-restricted-information-dlp-dag/README.md)
 - [Chapter 13 — Информационная безопасность на производстве и в управлении качеством](chapter-13-industrial-control-security/README.md)
+- [Chapter 14 — Защита критической информационной инфраструктуры](chapter-14-critical-information-infrastructure/README.md)

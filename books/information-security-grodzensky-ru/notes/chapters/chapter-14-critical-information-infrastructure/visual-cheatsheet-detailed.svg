@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200">
+  <rect width="1600" height="1200" fill="#ffffff"/>
+  <text x="60" y="70" font-family="sans-serif" font-size="34" font-weight="700">Глава 14 — КИИ: inventory, categorization, protection, reporting</text>
+  <text x="60" y="108" font-family="sans-serif" font-size="18">Source: information-security-grodzensky-ru · RAG p0092:c01–p0096:c01 · PDF 92–96</text>
+
+  <rect x="60" y="145" width="720" height="250" rx="18" fill="#eef2ff" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="188" font-family="sans-serif" font-size="27" font-weight="700">CII scope</text>
+  <text x="90" y="230" font-family="sans-serif" font-size="20">Information systems</text>
+  <text x="90" y="266" font-family="sans-serif" font-size="20">Telecommunication networks</text>
+  <text x="90" y="302" font-family="sans-serif" font-size="20">Automated control systems</text>
+  <text x="90" y="344" font-family="sans-serif" font-size="18">Plus telecom networks used for interaction</text>
+
+  <rect x="820" y="145" width="720" height="250" rx="18" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <text x="850" y="188" font-family="sans-serif" font-size="27" font-weight="700">Categorization</text>
+  <text x="850" y="230" font-family="sans-serif" font-size="20">Social · political · economic</text>
+  <text x="850" y="266" font-family="sans-serif" font-size="20">Environmental · defense/state-security impact</text>
+  <text x="850" y="302" font-family="sans-serif" font-size="20">Category 1 → highest impact</text>
+  <text x="850" y="344" font-family="sans-serif" font-size="18">No category → non-significant object in source terminology</text>
+
+  <rect x="60" y="435" width="720" height="250" rx="18" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="478" font-family="sans-serif" font-size="27" font-weight="700">Object inventory depth</text>
+  <text x="90" y="520" font-family="sans-serif" font-size="20">Architecture · telecom interaction</text>
+  <text x="90" y="556" font-family="sans-serif" font-size="20">Hardware · software · security controls</text>
+  <text x="90" y="592" font-family="sans-serif" font-size="20">Threats · attackers · incident consequences</text>
+  <text x="90" y="634" font-family="sans-serif" font-size="18">Category and applied controls are part of the record</text>
+
+  <rect x="820" y="435" width="720" height="250" rx="18" fill="#eef2ff" stroke="#334155" stroke-width="2"/>
+  <text x="850" y="478" font-family="sans-serif" font-size="27" font-weight="700">Regulatory chain in source</text>
+  <text x="850" y="520" font-family="sans-serif" font-size="20">187-FZ → CII framework</text>
+  <text x="850" y="556" font-family="sans-serif" font-size="20">PP No.127 → categorization</text>
+  <text x="850" y="592" font-family="sans-serif" font-size="20">Orders 235 / 236 / 239 → system, reporting, controls</text>
+  <text x="850" y="634" font-family="sans-serif" font-size="18">Current legal status not externally verified</text>
+
+  <rect x="60" y="725" width="1480" height="185" rx="18" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="768" font-family="sans-serif" font-size="27" font-weight="700">Incident layer</text>
+  <text x="90" y="810" font-family="sans-serif" font-size="20">SIEM / security staff / SOC → reporting portal → NCCC in source model</text>
+  <text x="90" y="848" font-family="sans-serif" font-size="20">GosSOPKA is the state attack detection/prevention/response system named by the book.</text>
+
+  <rect x="60" y="950" width="1480" height="185" rx="18" fill="#eef2ff" stroke="#334155" stroke-width="2"/>
+  <text x="90" y="993" font-family="sans-serif" font-size="27" font-weight="700">Operational sequence</text>
+  <text x="90" y="1035" font-family="sans-serif" font-size="21">Survey → inventory → categorize → threat model → implement controls → operate/report</text>
+  <text x="90" y="1073" font-family="sans-serif" font-size="20">The chapter treats categorization as the pivot between inventory and protection requirements.</text>
+  <text x="90" y="1110" font-family="sans-serif" font-size="18">No external legal update or current regulator workflow was added.</text>
+</svg>
