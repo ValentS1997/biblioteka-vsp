@@ -1,0 +1,65 @@
+schema_version: "1.0"
+
+translation:
+  id: "DYNAMIC-IR-RU-TRANSLATION-BOOTSTRAP"
+  status: "PLANNED"
+  book_id: "dynamic-incident-response-joshua-wright-en-2026"
+  source_language: "en"
+  target_language: "ru"
+
+preconditions:
+  chapter_analysis_ready: true
+  canonical_source_format: pdf
+  canonical_rag_required: true
+
+license:
+  primary_work: "CC BY 4.0"
+  attribution_required: true
+  license_link_required: true
+  indicate_changes_required: true
+  translated_work_label: "Неофициальный перевод / unofficial Russian translation"
+  third_party_boundary:
+    rule: >-
+      Do not assume that third-party text, graphics, images, tables, charts or
+      graphs inherit CC BY 4.0. Flag them THIRD_PARTY_REVIEW_REQUIRED unless
+      reuse/adaptation rights are independently verified.
+    fail_closed: true
+
+translation_policy:
+  semantic_fidelity_over_literalism: true
+  preserve_structure:
+    - "chapter numbering"
+    - "headings"
+    - "lists"
+    - "tables"
+    - "listing numbering"
+    - "figure numbering and references"
+    - "footnote/reference numbering"
+    - "admonition type"
+  preserve_verbatim:
+    - "shell commands"
+    - "code"
+    - "configuration keys"
+    - "file paths"
+    - "URLs"
+    - "CVE identifiers"
+    - "product names"
+    - "standards/framework identifiers"
+  glossary:
+    file: "glossary.yaml"
+    lock_recurring_terms: true
+    changes_require_note: true
+  uncertainty:
+    unsupported_or_ambiguous: "[Needs confirmation]"
+    no_model_memory_gap_fill: true
+
+outputs:
+  - "glossary.yaml"
+  - "STYLE-GUIDE.md"
+  - "ATTRIBUTION.md"
+
+acceptance:
+  - "license and third-party boundaries explicit"
+  - "terminology policy explicit"
+  - "source-provenance policy explicit"
+  - "no translation chapter starts before English RAG is READY"
