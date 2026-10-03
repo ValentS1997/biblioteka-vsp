@@ -3,7 +3,7 @@ schema_version: "1.0"
 book_id: "dynamic-incident-response-joshua-wright-en-2026"
 source_language: "en"
 target_language: "ru"
-status: "DRAFT"
+status: "BASELINE_LOCKED"
 
 policy:
   canonical_source: "English RAG"
@@ -12,5 +12,75 @@ policy:
   preserve_standard_identifiers: true
   preserve_commands_and_code: true
   unknown_translation_policy: "[Needs confirmation]"
+  locked_terms_change_requires_note: true
 
-terms: []
+terms:
+  - source: "incident response"
+    ru: "реагирование на инциденты"
+    lock: true
+    evidence: ["p0005-c01", "p0012-c01"]
+
+  - source: "Dynamic Approach to Incident Response"
+    ru: "динамический подход к реагированию на инциденты"
+    preserve_identifier: "DAIR"
+    lock: true
+    evidence: ["p0006-c01", "p0013-c01"]
+
+  - source: "incident"
+    ru: "инцидент"
+    lock: true
+    evidence: ["p0005-c01"]
+
+  - source: "event"
+    ru: "событие"
+    lock: true
+    evidence: ["p0005-c01"]
+
+  - source: "event of interest"
+    ru: "событие, представляющее интерес"
+    lock: true
+    evidence: ["p0005-c01"]
+
+  - source: "indicator of compromise"
+    ru: "индикатор компрометации"
+    preserve_identifier: "IoC"
+    lock: true
+    evidence: ["p0005-c01", "p0007-c01"]
+
+  - source: "verify and triage"
+    ru: "проверка и триаж"
+    lock: true
+    evidence: ["p0006-c01", "p0006-c02"]
+
+  - source: "Response Actions Loop"
+    ru: "цикл действий реагирования"
+    lock: true
+    evidence: ["p0006-c01", "p0006-c02"]
+
+  - source: "scope"
+    ru: "масштаб инцидента"
+    context_note: "As a noun in the DAIR model."
+    lock: true
+    evidence: ["p0006-c01"]
+
+  - source: "scoping"
+    ru: "определение масштаба инцидента"
+    lock: true
+    evidence: ["p0006-c01", "p0007-c01"]
+
+  - source: "containment"
+    ru: "сдерживание"
+    lock: true
+    evidence: ["p0007-c01"]
+
+  - source: "PICERL"
+    ru: "PICERL"
+    preserve_identifier: "PICERL"
+    lock: true
+    evidence: ["p0006-c01"]
+
+  - source: "NIST SP 800-61"
+    ru: "NIST SP 800-61"
+    preserve_identifier: "NIST SP 800-61"
+    lock: true
+    evidence: ["p0006-c01"]
