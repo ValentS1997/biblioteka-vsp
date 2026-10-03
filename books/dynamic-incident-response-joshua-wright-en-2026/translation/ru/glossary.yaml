@@ -1,0 +1,16 @@
+schema_version: "1.0"
+
+book_id: "dynamic-incident-response-joshua-wright-en-2026"
+source_language: "en"
+target_language: "ru"
+status: "DRAFT"
+
+policy:
+  canonical_source: "English RAG"
+  term_consistency_required: true
+  preserve_product_names: true
+  preserve_standard_identifiers: true
+  preserve_commands_and_code: true
+  unknown_translation_policy: "[Needs confirmation]"
+
+terms: []
