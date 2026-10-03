@@ -1,5 +1,5 @@
 schema: "biblioteka-vsp/registry/v2"
-updated: "2026-10-01"
+updated: "2026-10-03"
 
 source:
   file: "registry/reestr_knig_0046.xlsx"
@@ -419,11 +419,11 @@ verification_sources:
 
 electronic_holdings:
   source: "user-provided local file inventory + uploaded file confirmation"
-  observed_date: "2026-09-30"
-  file_count: 23
+  observed_date: "2026-10-03"
+  file_count: 24
   matched_unambiguous: 21
   needs_confirmation: 0
-  unregistered: 2
+  unregistered: 3
   files:
     - filename: "AI-инженерия. Построение приложений с использовани. Хьюен.pdf"
       format: "pdf"
@@ -437,6 +437,12 @@ electronic_holdings:
       format: "pdf"
       match_status: "matched"
       inventory_numbers: ["0014"]
+    - filename: "dynamicir.pdf"
+      format: "pdf"
+      match_status: "unregistered"
+      inventory_numbers: []
+      knowledge_id: "dynamic-incident-response-joshua-wright-en-2026"
+      note: "Official public PDF of Dynamic Incident Response: A Framework for Security Teams by Joshua Wright; source work is CC BY 4.0, with third-party materials excluded from that license."
     - filename: "Kubernetes в действии. Лукша.pdf"
       format: "pdf"
       match_status: "matched"
