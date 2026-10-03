@@ -37,7 +37,7 @@ source:
   text_layer: "unclassified_extractable_pdf_text"
   repository_access: public
   storage: "Git LFS"
-  upload_status: "BLOCKED_GIT_LFS_BINARY_UPLOAD_REQUIRED"
+  upload_status: "VERIFIED_GIT_LFS_AVAILABLE"
   official_page: "https://dynamicincidentresponse.com/"
   official_pdf_url: "https://dl.dynamicincidentresponse.com/dynamicir.pdf"
   lawful_access_attested_by_user: "official_public_download"
@@ -59,7 +59,7 @@ rag:
   manifest: "rag/manifest.yaml"
   text: "rag/text.md"
   chunks: "rag/chunks.jsonl"
-  status: "PENDING_CANONICAL_SOURCE"
+  status: "PENDING_BUILD"
 
 reading:
   progress: "reading/progress.yaml"
