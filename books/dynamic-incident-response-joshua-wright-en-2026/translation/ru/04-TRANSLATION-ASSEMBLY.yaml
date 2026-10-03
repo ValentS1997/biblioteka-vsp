@@ -1,0 +1,39 @@
+schema_version: "1.0"
+
+translation:
+  id: "DYNAMIC-IR-RU-TRANSLATION-ASSEMBLY"
+  status: "PLANNED"
+  book_id: "dynamic-incident-response-joshua-wright-en-2026"
+
+preconditions:
+  all_numbered_chapters_qa: "ACCEPTED"
+  glossary_status: "STABLE"
+  attribution_ready: true
+
+assembly:
+  ordered_source: "canonical chapter order"
+  output_markdown: "book.ru.md"
+  output_pdf: "book.ru.pdf"
+  pdf_generation: "separate deterministic artifact step"
+  include:
+    - "translation title page"
+    - "unofficial translation notice"
+    - "CC BY 4.0 attribution"
+    - "link to original work and license"
+    - "translator/change notice"
+    - "table of contents"
+    - "accepted chapter translations"
+    - "third-party review appendix when unresolved flags remain"
+  do_not_claim:
+    - "official SANS translation"
+    - "publisher-approved Russian edition"
+    - "rights over excluded third-party material"
+
+verification:
+  - "chapter order complete"
+  - "no duplicate/missing chapter"
+  - "cross-references internally consistent"
+  - "all accepted chapter hashes recorded"
+  - "license/attribution block present"
+
+terminal_status: "RU_TRANSLATION_READY"
