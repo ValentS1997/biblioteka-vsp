@@ -6,7 +6,7 @@ source_pdf_page_range: "49-60"
 rag_chunk_range:
   first: "dynamic-incident-response-joshua-wright-en-2026:p0049:c01"
   last: "dynamic-incident-response-joshua-wright-en-2026:p0060:c01"
-translation_status: "DRAFT_FOR_QA"
+translation_status: "ACCEPTED"
 license_notice: "Неофициальный русский перевод / unofficial Russian translation; original work CC BY 4.0. См. ../ATTRIBUTION.md."
 third_party_review_flags:
   - "Figure 7 visual asset: THIRD_PARTY_REVIEW_REQUIRED"
