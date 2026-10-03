@@ -2,7 +2,7 @@ schema_version: "1.0"
 
 translation:
   id: "DYNAMIC-IR-RU-TRANSLATION-BOOTSTRAP"
-  status: "PLANNED"
+  status: "ACCEPTED"
   book_id: "dynamic-incident-response-joshua-wright-en-2026"
   source_language: "en"
   target_language: "ru"
