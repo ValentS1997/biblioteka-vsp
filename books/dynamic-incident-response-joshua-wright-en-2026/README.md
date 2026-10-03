@@ -30,8 +30,8 @@ must therefore keep a separate third-party-content review boundary.
 - Knowledge registration: being created on this branch.
 - Inventory number: not assigned; this is currently an electronic-only holding.
 - Reading: not activated.
-- Canonical Git LFS source: `BLOCKED_GIT_LFS_BINARY_UPLOAD_REQUIRED`.
-- Full-book RAG: blocked until canonical Git LFS source is present.
+- Canonical Git LFS source: verified and available.
+- Full-book RAG: build pending/in progress.
 - Chapter-analysis readiness: pending RAG/readiness checks.
 - Russian translation: planned as a derived artifact; it does **not** replace
   the English canonical source.
