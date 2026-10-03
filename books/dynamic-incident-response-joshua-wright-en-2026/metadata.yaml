@@ -59,7 +59,7 @@ rag:
   manifest: "rag/manifest.yaml"
   text: "rag/text.md"
   chunks: "rag/chunks.jsonl"
-  status: "PENDING_BUILD"
+  status: "READY_WITH_KNOWN_LIMITATIONS"
 
 reading:
   progress: "reading/progress.yaml"
@@ -70,7 +70,7 @@ reading:
 
 translation:
   target_language: ru
-  status: planned
+  status: in_progress
   root: "translation/ru/"
   source_truth: "canonical English RAG"
   replaces_canonical_source: false

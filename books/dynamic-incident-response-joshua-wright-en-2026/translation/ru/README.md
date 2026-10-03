@@ -1,6 +1,6 @@
 # Неофициальный перевод на русский язык
 
-Статус: `PLANNED`
+Статус: `BOOTSTRAPPED`
 
 Канонический источник: английский PDF/RAG книги
 *Dynamic Incident Response: A Framework for Security Teams*.

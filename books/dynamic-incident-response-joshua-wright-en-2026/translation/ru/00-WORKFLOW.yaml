@@ -2,7 +2,7 @@ schema_version: "1.0"
 
 workflow:
   id: "DYNAMIC-IR-RU-TRANSLATION-WORKFLOW"
-  status: "PLANNED"
+  status: "IN_PROGRESS"
   book_id: "dynamic-incident-response-joshua-wright-en-2026"
   source_language: "en"
   target_language: "ru"
