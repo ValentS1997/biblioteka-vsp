@@ -1,0 +1,77 @@
+schema: biblioteka-vsp/book/v1
+
+id: dynamic-incident-response-joshua-wright-en-2026
+title: "Dynamic Incident Response: A Framework for Security Teams"
+
+edition:
+  number: 1
+  language: en
+  publisher: "SANS Institute"
+  publication_year: 2026
+  publication_pages: "[Needs confirmation]"
+
+authors:
+  - "Joshua Wright"
+
+contributors:
+  - name: "Ryan Chapman"
+    contribution: "Incident Response for Ransomware"
+  - name: "Megan Roddie-Fonseca"
+    contribution: "Incident Response for Cloud Systems"
+  - name: "Dean Parsons"
+    contribution: "Incident Response for Operational Technology"
+
+foreword_by:
+  - "John Strand"
+
+isbn:
+  paperback: "9798255618767"
+
+source:
+  canonical_path: "source/book.pdf"
+  format: pdf
+  original_name: "dynamicir.pdf"
+  expected_sha256: "f882f3fdfe4d2de2b8b295747b1579f7592c59cd46d5a3dc211ba8b777925164"
+  expected_size_bytes: 69370936
+  source_pdf_pages: 666
+  text_layer: "unclassified_extractable_pdf_text"
+  repository_access: public
+  storage: "Git LFS"
+  upload_status: "VERIFIED_GIT_LFS_AVAILABLE"
+  official_page: "https://dynamicincidentresponse.com/"
+  official_pdf_url: "https://dl.dynamicincidentresponse.com/dynamicir.pdf"
+  lawful_access_attested_by_user: "official_public_download"
+  ownership_category: "publicly licensed work"
+  physical_copy: false
+  license: "CC BY 4.0"
+  redistribution_permission: >-
+    Main SANS/Joshua Wright copyrightable content may be shared and adapted
+    under CC BY 4.0 with attribution, license link and indication of changes.
+    Third-party content embedded in the book is excluded from this license.
+  third_party_content_notice: >-
+    Third-party text, graphics, images, tables, charts and graphs remain the
+    property of their respective owners and require separate rights analysis
+    before redistribution or adaptation.
+
+rag:
+  scope: full_book
+  build_script: "../../../scripts/build_book_rag.py"
+  manifest: "rag/manifest.yaml"
+  text: "rag/text.md"
+  chunks: "rag/chunks.jsonl"
+  status: "PENDING_BUILD"
+
+reading:
+  progress: "reading/progress.yaml"
+  journal: "reading/journal.md"
+  status: planned
+  started: null
+  completed: null
+
+translation:
+  target_language: ru
+  status: planned
+  root: "translation/ru/"
+  source_truth: "canonical English RAG"
+  replaces_canonical_source: false
+  official_translation: false

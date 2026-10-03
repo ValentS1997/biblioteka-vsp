@@ -1,0 +1,14 @@
+schema: biblioteka-vsp/reading/v1
+book_id: dynamic-incident-response-joshua-wright-en-2026
+
+status: planned
+scope: full_book
+
+started: null
+completed: null
+current_page: null
+current_chapter: null
+
+notes:
+  - "Book added for RAG/chapter work and a planned Russian translation."
+  - "Reading start has not been explicitly confirmed by the user."

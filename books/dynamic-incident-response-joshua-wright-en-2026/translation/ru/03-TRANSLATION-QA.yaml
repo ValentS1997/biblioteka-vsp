@@ -1,0 +1,40 @@
+schema_version: "1.0"
+
+translation:
+  id: "DYNAMIC-IR-RU-TRANSLATION-QA"
+  status: "PLANNED"
+  book_id: "dynamic-incident-response-joshua-wright-en-2026"
+
+input:
+  translated_chapter: "[Required]"
+  canonical_rag_boundary: "[Required]"
+
+checks:
+  completeness:
+    - "all source headings represented"
+    - "all source prose blocks represented"
+    - "all tables/listings/captions represented or explicitly flagged"
+    - "footnotes/references preserved"
+  semantic_fidelity:
+    - "no reversed condition or causality"
+    - "security/IR terminology matches glossary"
+    - "modal verbs and uncertainty preserved"
+    - "metrics, numbers and identifiers preserved"
+  technical_integrity:
+    - "commands unchanged"
+    - "code unchanged"
+    - "paths/URLs/CVEs unchanged"
+    - "product and framework identifiers unchanged"
+  provenance:
+    - "chapter boundary matches canonical English RAG"
+    - "page/chunk provenance present"
+  licensing:
+    - "CC BY attribution present"
+    - "translation/adaptation indicated"
+    - "third-party exclusions flagged"
+
+failure_behavior:
+  status: "QA_BLOCKED"
+  rule: "Return exact mismatch list; do not silently repair without recording changes."
+
+success_status: "ACCEPTED"

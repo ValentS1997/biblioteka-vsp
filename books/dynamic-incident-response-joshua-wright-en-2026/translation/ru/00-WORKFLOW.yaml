@@ -1,0 +1,50 @@
+schema_version: "1.0"
+
+workflow:
+  id: "DYNAMIC-IR-RU-TRANSLATION-WORKFLOW"
+  status: "PLANNED"
+  book_id: "dynamic-incident-response-joshua-wright-en-2026"
+  source_language: "en"
+  target_language: "ru"
+
+source_truth:
+  canonical: "books/dynamic-incident-response-joshua-wright-en-2026/rag/"
+  rule: >-
+    Translation is grounded in canonical English RAG. The translated text is a
+    derived artifact and must never silently become the canonical source for
+    chapter analysis.
+
+preconditions:
+  - "BIBLIOTEKA-VSP-NEW-BOOK-BOOTSTRAP v1.4 completed"
+  - "BIBLIOTEKA-VSP-BOOK-READINESS v1.2 returns READY"
+  - "English canonical PDF and source SHA are verified"
+  - "Full-book English RAG and retrieval integrity are READY"
+
+yaml_order:
+  - order: 1
+    file: "01-TRANSLATION-BOOTSTRAP.yaml"
+    purpose: "Freeze license boundary, glossary rules, style and provenance."
+  - order: 2
+    file: "02-TRANSLATE-CHAPTER.yaml"
+    purpose: "Run once for each numbered chapter; produce source-grounded Russian translation."
+  - order: 3
+    file: "03-TRANSLATION-QA.yaml"
+    purpose: "Run after each translated chapter; validate completeness, semantics and technical fidelity."
+  - order: 4
+    file: "04-TRANSLATION-ASSEMBLY.yaml"
+    purpose: "Run only after all chapter translations are ACCEPTED."
+
+normal_chapter_study:
+  after_book_readiness: >-
+    "Анализ главы N" continues to use BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST
+    v1.2 and CHAPTER-ARTIFACT-COLLECTION v1.6 against canonical English RAG.
+  translation_role: "reader-facing derived aid, not source truth"
+
+terminal_state:
+  value: "RU_TRANSLATION_READY"
+  requires:
+    - "all numbered chapters translated"
+    - "all chapter QA statuses ACCEPTED"
+    - "attribution/license notice present"
+    - "third-party review flags resolved or explicitly retained"
+    - "assembled Russian artifact generated"

@@ -400,3 +400,22 @@ books:
       rag_search_index: books/modern-operating-systems-tanenbaum-bos-4e-ru/rag/search-index/
       notes: books/modern-operating-systems-tanenbaum-bos-4e-ru/notes/
       diagrams: books/modern-operating-systems-tanenbaum-bos-4e-ru/diagrams/
+
+  - id: dynamic-incident-response-joshua-wright-en-2026
+    title: "Dynamic Incident Response: A Framework for Security Teams"
+    authors:
+      - "Joshua Wright"
+    language: en
+    edition: 1
+    publication_year: 2026
+    isbn: "9798255618767"
+    paths:
+      metadata: books/dynamic-incident-response-joshua-wright-en-2026/metadata.yaml
+      source: books/dynamic-incident-response-joshua-wright-en-2026/source/book.pdf
+      rag_manifest: books/dynamic-incident-response-joshua-wright-en-2026/rag/manifest.yaml
+      rag_chunks: books/dynamic-incident-response-joshua-wright-en-2026/rag/chunks/
+      rag_chunk_index: books/dynamic-incident-response-joshua-wright-en-2026/rag/chunk-index.jsonl
+      rag_search_index: books/dynamic-incident-response-joshua-wright-en-2026/rag/search-index/
+      reading_progress: books/dynamic-incident-response-joshua-wright-en-2026/reading/progress.yaml
+      notes: books/dynamic-incident-response-joshua-wright-en-2026/notes/
+      diagrams: books/dynamic-incident-response-joshua-wright-en-2026/diagrams/

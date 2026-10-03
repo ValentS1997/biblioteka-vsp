@@ -1,0 +1,59 @@
+schema_version: "1.0"
+
+translation:
+  id: "DYNAMIC-IR-RU-TRANSLATE-CHAPTER"
+  status: "PLANNED"
+  book_id: "dynamic-incident-response-joshua-wright-en-2026"
+
+inputs:
+  chapter_number: "[Required]"
+  chapter_title: "[Resolve from canonical English RAG]"
+  chapter_boundary: "[Resolve from canonical English RAG]"
+
+source_policy:
+  mode: "rag_only"
+  source_language: en
+  target_language: ru
+  external_sources_allowed: false
+  model_memory_allowed_for_missing_content: false
+  provenance_required: true
+
+workflow:
+  - step: 1
+    action: "Resolve exact chapter boundary and source page/chunk range."
+  - step: 2
+    action: "Retrieve the minimum complete ordered chunk set for the chapter."
+  - step: 3
+    action: "Translate in source order without omission or added claims."
+  - step: 4
+    action: "Apply locked terminology from glossary.yaml."
+  - step: 5
+    action: "Preserve commands, code, paths, identifiers and technical literals."
+  - step: 6
+    action: >-
+      Translate author-owned captions/table prose when supported; flag any
+      third-party element as THIRD_PARTY_REVIEW_REQUIRED unless rights are verified.
+  - step: 7
+    action: "Record exact source provenance and translation notes."
+  - step: 8
+    action: "Write chapter artifact and mark status DRAFT_FOR_QA."
+
+output:
+  path_pattern: "chapters/chapter-<NN>-<slug>.md"
+  required_front_matter:
+    - "book_id"
+    - "chapter_number"
+    - "source_title"
+    - "source_pdf_page_range"
+    - "rag_chunk_range"
+    - "translation_status"
+    - "license_notice"
+    - "third_party_review_flags"
+
+quality_rules:
+  - "No summarization in place of translation."
+  - "No silent omission."
+  - "No invented explanation inside translated prose."
+  - "Translator notes are clearly separated from source translation."
+  - "Code blocks remain byte-faithful except normalized extraction artifacts that are explicitly documented."
+  - "Cross-references retain original numbering."

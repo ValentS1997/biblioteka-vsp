@@ -5,7 +5,7 @@
 
 Канонический human-readable view. Архитектурный контракт: [`ARCHITECTURE.md`](./ARCHITECTURE.md).
 
-> **46 инвентарных книг** · инвентарные номера `0001–0046` · **23 электронный файл** · актуально на `2026-10-01`
+> **46 инвентарных книг** · инвентарные номера `0001–0046` · **24 электронный файл** · актуально на `2026-10-03`
 
 ## Сейчас читаю
 
@@ -120,6 +120,7 @@
 
 | Файл | Формат | Knowledge ID | Инв. № |
 |---|:---:|---|:---:|
+| `dynamicir.pdf` | PDF | `dynamic-incident-response-joshua-wright-en-2026` | [Needs confirmation] |
 | `Командная строка Linux.Лучшие практики. Барретт.pdf` | PDF | `linux-command-line-best-practices-barrett-ru` | [Needs confirmation] |
 | `Командная строка Linux. Полное руководство. Шоттс.pdf` | PDF | `linux-command-line-shotts-ru` | [Needs confirmation] |
 
@@ -129,16 +130,16 @@
 |---|---:|
 | Инвентарных книг | **46** |
 | Inventory → knowledge mappings | **21** |
-| Knowledge entries всего | **23** |
-| Knowledge entries без inventory | **2** |
-| Электронных файлов | **23** |
+| Knowledge entries всего | **24** |
+| Knowledge entries без inventory | **3** |
+| Электронных файлов | **24** |
 | Однозначно сопоставлено | **21** |
 | Требует подтверждения | **0** |
-| Вне inventory | **2** |
+| Вне inventory | **3** |
 | Прочитано | **4** |
 | В процессе | **3** |
 | RAG READY (inventory-linked) | **20** |
-| RAG READY (knowledge total) | **22** |
+| RAG READY (knowledge total) | **23** |
 | SHA-256 Excel snapshot | `b97daed242dae9eeefd46317c2ca7665d1655b85189068b8a5f24f99a5f5aef2` |
 | Размер Excel snapshot | `12087 bytes` |
 
