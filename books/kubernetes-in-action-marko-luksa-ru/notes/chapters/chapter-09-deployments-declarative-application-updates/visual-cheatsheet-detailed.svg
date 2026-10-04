@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1420" viewBox="0 0 1600 1420">
+  <rect width="1600" height="1420" fill="#ffffff"/>
+  <style>.title{font:700 35px sans-serif;fill:#111827}.h1{font:700 23px sans-serif;fill:#111827}.h2{font:700 18px sans-serif;fill:#111827}.t{font:15px sans-serif;fill:#1f2937}.s{font:14px sans-serif;fill:#475569}.box{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}.blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}.green{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}.amber{fill:#fffbeb;stroke:#d97706;stroke-width:2;rx:14}.violet{fill:#f5f3ff;stroke:#7c3aed;stroke-width:2;rx:14}.red{fill:#fef2f2;stroke:#dc2626;stroke-width:2;rx:14}</style>
+  <text x="50" y="58" class="title">Kubernetes в действии · Глава 9 — declarative application updates</text>
+  <text x="50" y="88" class="s">RAG-only · p0316:c01–p0349:c01 · PDF 316–349 · Printed 315–348</text>
+
+  <text x="50" y="140" class="h1">1. Update control plane</text>
+  <rect x="50" y="170" width="720" height="235" class="amber"/>
+  <text x="70" y="205" class="h2">Old model: kubectl rolling-update</text>
+  <text x="70" y="238" class="t">client creates second ReplicationController</text>
+  <text x="70" y="268" class="t">client changes selectors/labels</text>
+  <text x="70" y="298" class="t">client scales old down and new up</text>
+  <text x="70" y="340" class="s">Source explicitly marks this model obsolete.</text>
+
+  <rect x="830" y="170" width="720" height="235" class="blue"/>
+  <text x="850" y="205" class="h2">Deployment model</text>
+  <text x="850" y="238" class="t">user declares desired Pod template</text>
+  <text x="850" y="268" class="t">controller creates ReplicaSet per template revision</text>
+  <text x="850" y="298" class="t">cluster performs rollout independently of kubectl session</text>
+  <text x="850" y="340" class="s">Revision history is represented by old ReplicaSets.</text>
+
+  <text x="50" y="470" class="h1">2. Rollout controls</text>
+  <rect x="50" y="500" width="470" height="250" class="green"/>
+  <text x="70" y="535" class="h2">Speed</text>
+  <text x="70" y="568" class="t">maxSurge → extra temporary Pods</text>
+  <text x="70" y="598" class="t">maxUnavailable → minimum availability</text>
+  <text x="70" y="628" class="t">absolute or percentage source model</text>
+  <text x="70" y="670" class="s">Values are interpreted relative to desired replicas.</text>
+
+  <rect x="565" y="500" width="470" height="250" class="violet"/>
+  <text x="585" y="535" class="h2">Revision lifecycle</text>
+  <text x="585" y="568" class="t">rollout status</text>
+  <text x="585" y="598" class="t">rollout history</text>
+  <text x="585" y="628" class="t">rollout undo / --to-revision</text>
+  <text x="585" y="670" class="s">Deleting old ReplicaSets removes rollback history.</text>
+
+  <rect x="1080" y="500" width="470" height="250" class="blue"/>
+  <text x="1100" y="535" class="h2">Pause / resume</text>
+  <text x="1100" y="568" class="t">set image → pause quickly</text>
+  <text x="1100" y="598" class="t">observe limited new-version traffic</text>
+  <text x="1100" y="628" class="t">resume or revert</text>
+  <text x="1100" y="670" class="s">Source uses this as canary-like demonstration.</text>
+
+  <text x="50" y="815" class="h1">3. Blocking a defective version</text>
+  <rect x="50" y="845" width="720" height="235" class="green"/>
+  <text x="70" y="880" class="h2">Safety gates</text>
+  <text x="70" y="913" class="t">readinessProbe</text>
+  <text x="70" y="943" class="t">minReadySeconds</text>
+  <text x="70" y="973" class="t">maxUnavailable: 0</text>
+  <text x="70" y="1015" class="s">New Pod must be healthy long enough before rollout advances.</text>
+
+  <rect x="830" y="845" width="720" height="235" class="red"/>
+  <text x="850" y="880" class="h2">Failure behavior</text>
+  <text x="850" y="913" class="t">v3 starts but readiness fails</text>
+  <text x="850" y="943" class="t">Service excludes bad Pod</text>
+  <text x="850" y="973" class="t">rollout stops and can hit ProgressDeadlineExceeded</text>
+  <text x="850" y="1015" class="s">Source resolves by explicit rollout undo.</text>
+
+  <text x="50" y="1145" class="h1">4. Operational boundaries</text>
+  <rect x="50" y="1175" width="1500" height="175" class="box"/>
+  <text x="75" y="1213" class="t">kubectl delete rc --all → destructive namespace-wide RC cleanup.</text>
+  <text x="75" y="1249" class="t">kubectl apply may also change replica count if replicas is present and differs from live state.</text>
+  <text x="75" y="1285" class="t">Recreate strategy deletes old Pods before new Pods exist → downtime.</text>
+  <text x="75" y="1321" class="s">Rollback requires preserved revision history; do not manually delete historical ReplicaSets.</text>
+
+  <text x="50" y="1390" class="s">Source-era API versions, --record behavior and rollout defaults preserved without modernization.</text>
+</svg>
