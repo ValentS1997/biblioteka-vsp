@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1420" viewBox="0 0 1600 1420">
+  <rect width="1600" height="1420" fill="#ffffff"/>
+  <style>.title{font:700 35px sans-serif;fill:#111827}.h1{font:700 23px sans-serif;fill:#111827}.h2{font:700 18px sans-serif;fill:#111827}.t{font:15px sans-serif;fill:#1f2937}.s{font:14px sans-serif;fill:#475569}.box{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}.blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}.green{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}.amber{fill:#fffbeb;stroke:#d97706;stroke-width:2;rx:14}.violet{fill:#f5f3ff;stroke:#7c3aed;stroke-width:2;rx:14}.red{fill:#fef2f2;stroke:#dc2626;stroke-width:2;rx:14}</style>
+  <text x="50" y="58" class="title">Kubernetes в действии · Глава 12 — API security</text>
+  <text x="50" y="88" class="s">RAG-only · p0425:c01–p0457:c01 · PDF 425–457 · Printed 424–456</text>
+
+  <text x="50" y="140" class="h1">1. Workload identity</text>
+  <rect x="50" y="170" width="720" height="235" class="blue"/>
+  <text x="70" y="205" class="h2">ServiceAccount</text>
+  <text x="70" y="238" class="t">namespaced workload identity</text>
+  <text x="70" y="268" class="t">default SA automatically used if none specified</text>
+  <text x="70" y="298" class="t">serviceAccountName selects custom identity</text>
+  <text x="70" y="340" class="s">Source-era model mounts SA token Secret into Pod.</text>
+
+  <rect x="830" y="170" width="720" height="235" class="red"/>
+  <text x="850" y="205" class="h2">Credential boundary</text>
+  <text x="850" y="238" class="t">token is JWT credential</text>
+  <text x="850" y="268" class="t">Secret read may expose privileged identity</text>
+  <text x="850" y="298" class="t">imagePullSecrets may be attached via ServiceAccount</text>
+  <text x="850" y="340" class="s">Do not publish literal token contents.</text>
+
+  <text x="50" y="470" class="h1">2. RBAC model</text>
+  <rect x="50" y="500" width="470" height="250" class="green"/>
+  <text x="70" y="535" class="h2">Role</text>
+  <text x="70" y="568" class="t">namespaced</text>
+  <text x="70" y="598" class="t">verbs + resources</text>
+  <text x="70" y="628" class="t">permissions for one namespace</text>
+
+  <rect x="565" y="500" width="470" height="250" class="violet"/>
+  <text x="585" y="535" class="h2">ClusterRole</text>
+  <text x="585" y="568" class="t">cluster-scoped permission object</text>
+  <text x="585" y="598" class="t">cluster resources / non-resource URLs</text>
+  <text x="585" y="628" class="t">or reusable namespaced permissions</text>
+
+  <rect x="1080" y="500" width="470" height="250" class="amber"/>
+  <text x="1100" y="535" class="h2">Bindings</text>
+  <text x="1100" y="568" class="t">RoleBinding → namespace scope</text>
+  <text x="1100" y="598" class="t">ClusterRoleBinding → cluster scope</text>
+  <text x="1100" y="628" class="t">subjects: users / groups / ServiceAccounts</text>
+
+  <text x="50" y="815" class="h1">3. Default privilege levels</text>
+  <rect x="50" y="845" width="350" height="235" class="green"/>
+  <text x="70" y="880" class="h2">view</text>
+  <text x="70" y="913" class="t">read most resources</text>
+  <text x="70" y="943" class="t">no Secrets</text>
+  <text x="70" y="973" class="t">no Roles/RoleBindings</text>
+
+  <rect x="435" y="845" width="350" height="235" class="blue"/>
+  <text x="455" y="880" class="h2">edit</text>
+  <text x="455" y="913" class="t">modify ordinary resources</text>
+  <text x="455" y="943" class="t">can work with Secrets</text>
+  <text x="455" y="973" class="t">no Role/RoleBinding management</text>
+
+  <rect x="820" y="845" width="350" height="235" class="amber"/>
+  <text x="840" y="880" class="h2">admin</text>
+  <text x="840" y="913" class="t">broad namespace control</text>
+  <text x="840" y="943" class="t">can manage RBAC in namespace</text>
+  <text x="840" y="973" class="t">source-stated exceptions remain</text>
+
+  <rect x="1205" y="845" width="345" height="235" class="red"/>
+  <text x="1225" y="880" class="h2">cluster-admin</text>
+  <text x="1225" y="913" class="t">full cluster control</text>
+  <text x="1225" y="943" class="t">critical privilege</text>
+  <text x="1225" y="973" class="t">avoid broad assignment</text>
+
+  <text x="50" y="1145" class="h1">4. Scope selection</text>
+  <rect x="50" y="1175" width="1500" height="175" class="box"/>
+  <text x="75" y="1213" class="t">Cluster resource / non-resource URL → ClusterRole + ClusterRoleBinding.</text>
+  <text x="75" y="1249" class="t">Namespaced resource everywhere → ClusterRole + ClusterRoleBinding.</text>
+  <text x="75" y="1285" class="t">Namespaced resource in one namespace → Role + RoleBinding OR ClusterRole + RoleBinding.</text>
+  <text x="75" y="1321" class="s">Source recommendation: separate workload identities and grant no more than required.</text>
+
+  <text x="50" y="1390" class="s">Source-era token/RBAC behavior preserved without external modernization.</text>
+</svg>
