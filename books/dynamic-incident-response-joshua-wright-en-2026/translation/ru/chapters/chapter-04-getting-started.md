@@ -13,7 +13,7 @@ third_party_review_flags:
   - "Figure 13 visual asset: THIRD_PARTY_REVIEW_REQUIRED"
   - "Figure 14 visual asset: THIRD_PARTY_REVIEW_REQUIRED"
   - "Figure 15 visual asset: THIRD_PARTY_REVIEW_REQUIRED"
-  - "CrowdStrike direct quotation in IOA sidebar: THIRD_PARTY_REVIEW_REQUIRED"
+  - "CrowdStrike direct quotation in IOA sidebar: THIRD_PARTY_REVIEW_REQUIRED"\n  - "FortiGuard advisory excerpt preceding Listing 26: THIRD_PARTY_REVIEW_REQUIRED"
 rag_gaps:
   - "MTTD equation is not present in extracted canonical RAG text layer: RAG_MISS"
   - "MTTR equation is not present in extracted canonical RAG text layer: RAG_MISS"
@@ -131,7 +131,7 @@ mysql> select object, event_type, user_agent from wp_wsal_occurrences WHERE aler
 Empty set (3.75 sec) ②
 ```
 
-① 40 592 неудачные попытки входа с `185.196.220.113`.  
+① 40 592 неудачных попыток входа с `185.196.220.113`.  
 ② Успешных входов с `185.196.220.113` не зарегистрировано.
 
 Первый SQL query обращается к таблице WordPress Security Audit Log (WSAL), выбирая события неудачного входа, группируя их по event type и client IP и сортируя по времени первой наблюдаемой неудачи. Каждая строка представляет одну или несколько неудачных попыток входа, и каждую из них можно рассматривать как EOI для расследования.
