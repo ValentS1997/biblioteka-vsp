@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1420" viewBox="0 0 1600 1420">
+  <rect width="1600" height="1420" fill="#ffffff"/>
+  <style>
+    .title{font:700 35px sans-serif;fill:#111827}.h1{font:700 23px sans-serif;fill:#111827}.h2{font:700 18px sans-serif;fill:#111827}
+    .t{font:15px sans-serif;fill:#1f2937}.s{font:14px sans-serif;fill:#475569}.box{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}
+    .blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}.green{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}
+    .amber{fill:#fffbeb;stroke:#d97706;stroke-width:2;rx:14}.violet{fill:#f5f3ff;stroke:#7c3aed;stroke-width:2;rx:14}
+    .red{fill:#fef2f2;stroke:#dc2626;stroke-width:2;rx:14}
+  </style>
+  <text x="50" y="58" class="title">Kubernetes в действии · Глава 6 — storage abstraction and lifecycle</text>
+  <text x="50" y="88" class="s">RAG-only · p0212:c01–p0248:c01 · PDF 212–248 · Printed 211–247</text>
+
+  <text x="50" y="140" class="h1">1. Pod volume types</text>
+  <rect x="50" y="170" width="470" height="240" class="blue"/>
+  <text x="70" y="205" class="h2">emptyDir</text><text x="70" y="238" class="t">Pod-scoped temporary storage</text><text x="70" y="268" class="t">shared by containers</text><text x="70" y="298" class="t">survives container restart</text><text x="70" y="328" class="t">deleted with Pod</text><text x="70" y="368" class="s">medium: Memory → tmpfs in source model</text>
+  <rect x="565" y="170" width="470" height="240" class="green"/>
+  <text x="585" y="205" class="h2">gitRepo + sidecar</text><text x="585" y="238" class="t">clone repository at Pod creation</text><text x="585" y="268" class="t">no ongoing sync</text><text x="585" y="298" class="t">sidecar can sync shared volume</text><text x="585" y="338" class="s">private repository auth not built into source gitRepo</text>
+  <rect x="1080" y="170" width="470" height="240" class="amber"/>
+  <text x="1100" y="205" class="h2">hostPath</text><text x="1100" y="238" class="t">mount worker-node path</text><text x="1100" y="268" class="t">useful for system Pods</text><text x="1100" y="298" class="t">data tied to node</text><text x="1100" y="338" class="s">not general portable app storage</text>
+
+  <text x="50" y="475" class="h1">2. Persistent storage abstraction</text>
+  <rect x="50" y="505" width="720" height="235" class="violet"/>
+  <text x="70" y="540" class="h2">PersistentVolume</text><text x="70" y="574" class="t">cluster-scoped resource</text><text x="70" y="604" class="t">capacity + accessModes</text><text x="70" y="634" class="t">reclaim policy + backend</text><text x="70" y="674" class="s">Admin/infrastructure side of storage contract.</text>
+  <rect x="830" y="505" width="720" height="235" class="green"/>
+  <text x="850" y="540" class="h2">PersistentVolumeClaim</text><text x="850" y="574" class="t">namespaced request</text><text x="850" y="604" class="t">capacity + accessModes + optional StorageClass</text><text x="850" y="634" class="t">Pod references claimName</text><text x="850" y="674" class="s">Application does not need concrete storage technology.</text>
+
+  <text x="50" y="805" class="h1">3. Reclaim and data lifecycle</text>
+  <rect x="50" y="835" width="470" height="245" class="green"/>
+  <text x="70" y="870" class="h2">Retain</text><text x="70" y="903" class="t">PVC deleted → PV Released</text><text x="70" y="933" class="t">data remains</text><text x="70" y="963" class="t">manual decision before reuse</text><text x="70" y="1005" class="s">Prevents silent cross-tenant data reuse.</text>
+  <rect x="565" y="835" width="470" height="245" class="amber"/>
+  <text x="585" y="870" class="h2">Recycle</text><text x="585" y="903" class="t">erase contents</text><text x="585" y="933" class="t">PV becomes available</text><text x="585" y="963" class="t">backend support varies</text><text x="585" y="1005" class="s">Source says GCE PD does not support Recycle.</text>
+  <rect x="1080" y="835" width="470" height="245" class="red"/>
+  <text x="1100" y="870" class="h2">Delete</text><text x="1100" y="903" class="t">PVC lifecycle can remove PV</text><text x="1100" y="933" class="t">underlying storage deleted</text><text x="1100" y="963" class="t">data destruction boundary</text><text x="1100" y="1005" class="s">Verify policy before deleting a claim.</text>
+
+  <text x="50" y="1145" class="h1">4. Dynamic provisioning</text>
+  <rect x="50" y="1175" width="1500" height="175" class="box"/>
+  <text x="75" y="1213" class="t">PVC → StorageClass → provisioner → physical storage + PV → Bound PVC</text>
+  <text x="75" y="1249" class="t">Omit storageClassName → default class may provision automatically.</text>
+  <text x="75" y="1285" class="t">Empty storageClassName → source technique to require a matching pre-provisioned PV.</text>
+  <text x="75" y="1321" class="s">RWO / ROX / RWX describe node-level simultaneous access, not Pod count.</text>
+  <text x="50" y="1390" class="s">Before any destructive storage action: verify binding, reclaim policy and intended fate of the underlying data.</text>
+</svg>
