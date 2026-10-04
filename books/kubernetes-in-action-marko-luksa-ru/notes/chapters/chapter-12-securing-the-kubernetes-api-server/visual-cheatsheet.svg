@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="930" viewBox="0 0 1200 930">
+  <rect width="1200" height="930" fill="#ffffff"/>
+  <style>.title{font:700 31px sans-serif;fill:#111827}.h{font:700 19px sans-serif;fill:#111827}.t{font:15px sans-serif;fill:#1f2937}.s{font:14px sans-serif;fill:#475569}.box{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}.blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}.green{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}.amber{fill:#fffbeb;stroke:#d97706;stroke-width:2;rx:14}.violet{fill:#f5f3ff;stroke:#7c3aed;stroke-width:2;rx:14}.red{fill:#fef2f2;stroke:#dc2626;stroke-width:2;rx:14}</style>
+  <text x="40" y="54" class="title">Глава 12 — ServiceAccount и RBAC</text>
+  <text x="40" y="82" class="s">RAG p0425:c01–p0457:c01 · PDF 425–457 · Printed 424–456</text>
+
+  <rect x="40" y="120" width="350" height="175" class="blue"/>
+  <text x="60" y="154" class="h">Authentication</text>
+  <text x="60" y="188" class="t">user / ServiceAccount</text>
+  <text x="60" y="218" class="t">groups</text>
+  <text x="60" y="248" class="t">token → identity</text>
+
+  <rect x="425" y="120" width="350" height="175" class="green"/>
+  <text x="445" y="154" class="h">Permissions</text>
+  <text x="445" y="188" class="t">Role / ClusterRole</text>
+  <text x="445" y="218" class="t">verbs + resources</text>
+  <text x="445" y="248" class="t">WHAT can be done</text>
+
+  <rect x="810" y="120" width="350" height="175" class="violet"/>
+  <text x="830" y="154" class="h">Bindings</text>
+  <text x="830" y="188" class="t">RoleBinding</text>
+  <text x="830" y="218" class="t">ClusterRoleBinding</text>
+  <text x="830" y="248" class="t">WHO + WHERE</text>
+
+  <text x="40" y="350" class="h">Scope rules</text>
+  <rect x="40" y="385" width="540" height="185" class="green"/>
+  <text x="60" y="420" class="h">Namespace-limited</text>
+  <text x="60" y="454" class="t">Role + RoleBinding</text>
+  <text x="60" y="484" class="t">ClusterRole + RoleBinding</text>
+  <text x="60" y="514" class="t">permissions apply only in binding namespace</text>
+
+  <rect x="620" y="385" width="540" height="185" class="amber"/>
+  <text x="640" y="420" class="h">Cluster-wide</text>
+  <text x="640" y="454" class="t">ClusterRole + ClusterRoleBinding</text>
+  <text x="640" y="484" class="t">all namespaces / cluster resources</text>
+  <text x="640" y="514" class="t">non-resource URLs</text>
+
+  <text x="40" y="635" class="h">Privilege boundary</text>
+  <rect x="40" y="670" width="1120" height="160" class="red"/>
+  <text x="65" y="707" class="t">ServiceAccount token is a credential; Secret read can enable identity theft.</text>
+  <text x="65" y="743" class="t">ClusterRoleBinding broadens scope. cluster-admin = critical full-cluster privilege.</text>
+  <text x="65" y="779" class="t">Source recommendation: separate ServiceAccounts + minimum permissions + minimum scope.</text>
+
+  <text x="40" y="885" class="s">Role/ClusterRole = WHAT. Binding = WHO + WHERE.</text>
+</svg>
