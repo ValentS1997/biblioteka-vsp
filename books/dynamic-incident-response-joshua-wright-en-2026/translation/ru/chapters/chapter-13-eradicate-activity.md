@@ -6,17 +6,17 @@ source_pdf_page_range: "300-404"
 rag_chunk_range:
   first: "dynamic-incident-response-joshua-wright-en-2026:p0300:c01"
   last: "dynamic-incident-response-joshua-wright-en-2026:p0404:c01"
-translation_status: "QA_BLOCKED"
+translation_status: "DRAFT_FOR_QA"
 license_notice: "Неофициальный русский перевод / unofficial Russian translation; original work CC BY 4.0. См. ../ATTRIBUTION.md."
 third_party_review_policy: "Figures, external quotations, product screenshots, and executable third-party/malicious payload material remain fail-closed where marked."
-known_rag_misses:
+source_repair:
   - range: "references [26]-[36]"
-    status: "RAG_MISS"
-    evidence: "p0403:c01 ends at [25]; p0404:c01 begins at [37]; repository code search returned no [26] entry."
+    status: "REPAIRED_FROM_OFFICIAL_HTML"
+    source: "https://dynamicincidentresponse.com/chapters/eradicate.html"
 translation_notes:
   - "Canonical English RAG is source of truth."
   - "Assembled from full-fidelity source-range segments."
-  - "Unknown bibliography metadata is not reconstructed from model memory or external sources."
+  - "Bibliography references [26]-[36] were restored into canonical RAG from the official book HTML after a PDF extraction gap was detected."
 ---
 
 # Глава 13. Искоренение угрозы
@@ -5017,27 +5017,27 @@ Debrief Step 8 consolidates these into prioritized organizational improvements r
 
 [25] Microsoft, "Tier model for partitioning administrative privileges," learn.microsoft.com/en-us/microsoft-identity-manager/pam/
 
-[26] RAG_MISS — bibliographic entry absent from canonical RAG boundary p0403:c01–p0404:c01. Reference number is used in chapter prose; metadata is not reconstructed from model memory or external sources.
+[26] Microsoft, "Planning for compromise," Windows Server AD DS security best practices, learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/security-best-practices/planning-for-compromise
 
-[27] RAG_MISS — bibliographic entry absent from canonical RAG boundary p0403:c01–p0404:c01. Reference number is used in chapter prose; metadata is not reconstructed from model memory or external sources.
+[27] Medin, Tim, "Kerberos 101," Red Siege, April 2020, www.redsiege.com/wp-content/uploads/2020/04/20200430-kerb101.pdf
 
-[28] RAG_MISS — bibliographic entry absent from canonical RAG boundary p0403:c01–p0404:c01. Reference number is used in chapter prose; metadata is not reconstructed from model memory or external sources.
+[28] Microsoft, "Security posture assessments - Accounts," Microsoft Defender for Identity, learn.microsoft.com/en-us/defender-for-identity/security-posture-assessments/accounts
 
-[29] RAG_MISS — bibliographic entry absent from canonical RAG boundary p0403:c01–p0404:c01. Reference number is used in chapter prose; metadata is not reconstructed from model memory or external sources.
+[29] Reddit r/cybersecurity, "Cached credentials and long-lived tokens," www.reddit.com/r/cybersecurity/comments/1gy6ynf/comment/lyosx5d/
 
-[30] RAG_MISS — bibliographic entry absent from canonical RAG boundary p0403:c01–p0404:c01. Reference number is used in chapter prose; metadata is not reconstructed from model memory or external sources.
+[30] CISA, "Known Exploited Vulnerabilities Catalog," www.cisa.gov/known-exploited-vulnerabilities-catalog
 
-[31] RAG_MISS — bibliographic entry absent from canonical RAG boundary p0403:c01–p0404:c01. Reference number is used in chapter prose; metadata is not reconstructed from model memory or external sources.
+[31] CVE-2025-64446, www.cve.org/CVERecord?id=CVE-2025-64446
 
-[32] RAG_MISS — bibliographic entry absent from canonical RAG boundary p0403:c01–p0404:c01. Reference number is used in chapter prose; metadata is not reconstructed from model memory or external sources.
+[32] Qi, Ryan et al., "WAFFLED: Exploiting Parsing Discrepancies to Bypass Web Application Firewalls," arXiv, March 2025, arxiv.org/abs/2503.10846
 
-[33] RAG_MISS — bibliographic entry absent from canonical RAG boundary p0403:c01–p0404:c01. Reference number is used in chapter prose; metadata is not reconstructed from model memory or external sources.
+[33] Prajapati, Pranav, "XSS: Bypassing Cloudflare WAF with a Simple Trick," Medium, 2025, medium.com/@pranavrp77/xss-bypassing-cloudflare-waf-with-a-simple-trick-12aff8ce87c7
 
-[34] RAG_MISS — bibliographic entry absent from canonical RAG boundary p0403:c01–p0404:c01. Reference number is used in chapter prose; metadata is not reconstructed from model memory or external sources.
+[34] SOCRadar, "Cloudflare Protection Bypass Vulnerability on Threat Actors' Radar," 2023, socradar.io/blog/cloudflare-protection-bypass-vulnerability-on-threat-actors-radar/
 
-[35] RAG_MISS — bibliographic entry absent from canonical RAG boundary p0403:c01–p0404:c01. Reference number is used in chapter prose; metadata is not reconstructed from model memory or external sources.
+[35] Claroty Team82, "JS-ON Security: Off - Abusing JSON-Based SQL to Bypass WAF," 2022, claroty.com/team82/research/js-on-security-off-abusing-json-based-sql-to-bypass-waf
 
-[36] RAG_MISS — bibliographic entry absent from canonical RAG boundary p0403:c01–p0404:c01. Reference number is used in chapter prose; metadata is not reconstructed from model memory or external sources.
+[36] CIS Benchmarks - Security Configuration Guides, www.cisecurity.org/cis-benchmarks
 
 [37] CISA, "#StopRansomware: Akira Ransomware," April 2024, www.cisa.gov/news-events/cybersecurity-advisories/aa24-109a
 
