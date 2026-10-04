@@ -1,0 +1,59 @@
+name: Build Dynamic IR Russian Book
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "books/dynamic-incident-response-joshua-wright-en-2026/translation/ru/**"
+      - "scripts/build_dynamic_ir_ru_book.py"
+      - ".github/workflows/build-dynamic-ir-ru-book.yml"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc libreoffice-writer fonts-liberation
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pyyaml python-docx
+
+      - name: Assemble and audit book
+        run: |
+          python scripts/build_dynamic_ir_ru_book.py             --repo-root .             --out-dir build/dynamic-ir-ru-book
+
+      - name: Convert DOCX to PDF
+        run: |
+          mkdir -p build/dynamic-ir-ru-book/pdf
+          libreoffice --headless             --convert-to pdf             --outdir build/dynamic-ir-ru-book/pdf             build/dynamic-ir-ru-book/dynamic-incident-response-ru-a4.docx
+          mv build/dynamic-ir-ru-book/pdf/dynamic-incident-response-ru-a4.pdf              build/dynamic-ir-ru-book/dynamic-incident-response-ru-a4.pdf
+
+      - name: Basic PDF verification
+        run: |
+          test -s build/dynamic-ir-ru-book/dynamic-incident-response-ru-a4.pdf
+          pdfinfo build/dynamic-ir-ru-book/dynamic-incident-response-ru-a4.pdf | tee build/dynamic-ir-ru-book/pdfinfo.txt
+          grep -q "^Pages:" build/dynamic-ir-ru-book/pdfinfo.txt
+
+      - name: Upload book artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dynamic-incident-response-ru-book
+          path: |
+            build/dynamic-ir-ru-book/dynamic-incident-response-ru-a4.pdf
+            build/dynamic-ir-ru-book/dynamic-incident-response-ru-a4.docx
+            build/dynamic-ir-ru-book/dynamic-incident-response-ru.md
+            build/dynamic-ir-ru-book/book-level-audit.json
+            build/dynamic-ir-ru-book/book-level-audit.md
+            build/dynamic-ir-ru-book/pdfinfo.txt
+          if-no-files-found: error
+          retention-days: 14
