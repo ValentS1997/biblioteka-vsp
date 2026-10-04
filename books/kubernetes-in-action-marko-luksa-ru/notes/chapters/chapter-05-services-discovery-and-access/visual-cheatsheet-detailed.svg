@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1420" viewBox="0 0 1600 1420">
+  <rect width="1600" height="1420" fill="#ffffff"/>
+  <style>
+    .title{font:700 35px sans-serif;fill:#111827}.h1{font:700 23px sans-serif;fill:#111827}
+    .h2{font:700 18px sans-serif;fill:#111827}.t{font:15px sans-serif;fill:#1f2937}.s{font:14px sans-serif;fill:#475569}
+    .box{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}.blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}
+    .green{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}.amber{fill:#fffbeb;stroke:#d97706;stroke-width:2;rx:14}
+    .violet{fill:#f5f3ff;stroke:#7c3aed;stroke-width:2;rx:14}.red{fill:#fef2f2;stroke:#dc2626;stroke-width:2;rx:14}
+  </style>
+  <text x="50" y="58" class="title">Kubernetes в действии · Глава 5 — Service routing and discovery</text>
+  <text x="50" y="88" class="s">RAG-only · p0168:c01–p0211:c01 · PDF 168–211 · Printed 167–210</text>
+  <text x="50" y="140" class="h1">1. Internal Service path</text>
+  <rect x="50" y="170" width="720" height="230" class="blue"/>
+  <text x="70" y="205" class="h2">Stable identity</text><text x="70" y="238" class="t">Service ClusterIP + Service port</text><text x="70" y="268" class="t">selector identifies candidate Pods</text><text x="70" y="298" class="t">Endpoints store actual Pod IP:targetPort</text><text x="70" y="328" class="t">proxy chooses one endpoint per connection</text><text x="70" y="365" class="s">ClusterIP is virtual; ping is not a valid health test.</text>
+  <rect x="830" y="170" width="720" height="230" class="green"/>
+  <text x="850" y="205" class="h2">Discovery</text><text x="850" y="238" class="t">ENV: SERVICE_HOST / SERVICE_PORT at Pod startup</text><text x="850" y="268" class="t">DNS: service.namespace.svc.cluster.local</text><text x="850" y="298" class="t">same namespace → short service name</text><text x="850" y="328" class="t">Headless → DNS returns Pod IPs</text><text x="850" y="365" class="s">DNS avoids ENV creation-order limitation.</text>
+  <text x="50" y="465" class="h1">2. Service variants and external access</text>
+  <rect x="50" y="495" width="350" height="235" class="amber"/>
+  <text x="70" y="530" class="h2">External backend</text><text x="70" y="563" class="t">Service without selector</text><text x="70" y="593" class="t">manual Endpoints</text><text x="70" y="623" class="t">or ExternalName CNAME</text><text x="70" y="665" class="s">Client keeps Kubernetes service identity.</text>
+  <rect x="430" y="495" width="350" height="235" class="blue"/>
+  <text x="450" y="530" class="h2">NodePort</text><text x="450" y="563" class="t">nodeIP:nodePort on every node</text><text x="450" y="593" class="t">traffic may land on remote-node Pod</text><text x="450" y="623" class="t">cloud firewall may need opening</text><text x="450" y="665" class="s">Source example exposes tcp:30123 broadly.</text>
+  <rect x="810" y="495" width="350" height="235" class="green"/>
+  <text x="830" y="530" class="h2">LoadBalancer</text><text x="830" y="563" class="t">cloud public IP</text><text x="830" y="593" class="t">extends NodePort</text><text x="830" y="623" class="t">externalTrafficPolicy: Local trade-offs</text><text x="830" y="665" class="s">Can preserve client IP / avoid extra hop.</text>
+  <rect x="1190" y="495" width="360" height="235" class="violet"/>
+  <text x="1210" y="530" class="h2">Ingress</text><text x="1210" y="563" class="t">HTTP host/path routing</text><text x="1210" y="593" class="t">one external entry → many Services</text><text x="1210" y="623" class="t">TLS termination via Secret</text><text x="1210" y="665" class="s">Requires an Ingress controller.</text>
+  <text x="50" y="800" class="h1">3. Readiness controls routing</text>
+  <rect x="50" y="830" width="720" height="225" class="green"/>
+  <text x="70" y="865" class="h2">Probe success</text><text x="70" y="900" class="t">Pod remains/enters Endpoints</text><text x="70" y="930" class="t">Service can send connections to Pod</text><text x="70" y="970" class="s">Types: Exec · HTTP GET · TCP socket</text>
+  <rect x="830" y="830" width="720" height="225" class="red"/>
+  <text x="850" y="865" class="h2">Probe failure</text><text x="850" y="900" class="t">Pod removed from Endpoints</text><text x="850" y="930" class="t">no Service traffic to that Pod</text><text x="850" y="970" class="s">Unlike liveness: container is not killed/restarted.</text>
+  <text x="50" y="1120" class="h1">4. Troubleshooting order</text>
+  <rect x="50" y="1150" width="1500" height="190" class="box"/>
+  <text x="75" y="1188" class="t">1. ClusterIP test from inside cluster</text><text x="75" y="1218" class="t">2. readiness → 3. Endpoints → 4. DNS vs ClusterIP → 5. Service port vs targetPort</text><text x="75" y="1248" class="t">6. direct Pod IP → 7. application listener / localhost binding</text><text x="75" y="1290" class="s">A Service object alone does not prove working backends; Endpoints are the decisive bridge.</text>
+  <text x="50" y="1390" class="s">Source-era Ingress/API/flags preserved. Firewall exposure and TLS private-key operations are state/security boundaries.</text>
+</svg>
