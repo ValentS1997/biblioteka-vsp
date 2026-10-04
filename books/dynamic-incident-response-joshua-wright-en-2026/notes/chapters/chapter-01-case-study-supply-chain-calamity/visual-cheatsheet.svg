@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#ffffff"/>
+  <style>
+    .title{font:700 34px Arial,sans-serif;fill:#1f3f6d}
+    .h{font:700 22px Arial,sans-serif;fill:#1f3f6d}
+    .t{font:18px Arial,sans-serif;fill:#20242a}
+    .s{font:16px Arial,sans-serif;fill:#38404a}
+    .box{fill:#f6f8fb;stroke:#8aa2c4;stroke-width:2;rx:14}
+    .warn{fill:#fff7e8;stroke:#c89b4a;stroke-width:2;rx:14}
+    .bad{fill:#fff0f0;stroke:#c56b6b;stroke-width:2;rx:14}
+    .good{fill:#eef8f0;stroke:#6d9d76;stroke-width:2;rx:14}
+    .a{stroke:#5e6d7c;stroke-width:3;fill:none;marker-end:url(#m)}
+  </style>
+  <defs>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#5e6d7c"/>
+    </marker>
+  </defs>
+
+  <text x="60" y="58" class="title">Глава 1 — локальный symptom ≠ весь incident</text>
+
+  <rect x="55" y="105" width="250" height="145" class="box"/>
+  <text x="80" y="140" class="h">1. Initial host</text>
+  <text x="80" y="175" class="t">Gilded SDK</text>
+  <text x="80" y="205" class="t">ms :8080</text>
+  <text x="80" y="232" class="t">ssupd :9150</text>
+
+  <rect x="355" y="105" width="280" height="145" class="warn"/>
+  <text x="380" y="140" class="h">2. Attacker capability</text>
+  <text x="380" y="175" class="t">Filesystem access</text>
+  <text x="380" y="205" class="t">Tor / SOCKS pivot</text>
+  <text x="380" y="232" class="t">Stolen credentials</text>
+
+  <rect x="685" y="105" width="235" height="145" class="bad"/>
+  <text x="710" y="140" class="h">3. Expansion</text>
+  <text x="710" y="175" class="t">SSH → dev hosts</text>
+  <text x="710" y="205" class="t">CI/CD credentials</text>
+  <text x="710" y="232" class="t">AWS / S3</text>
+
+  <rect x="970" y="105" width="175" height="145" class="bad"/>
+  <text x="995" y="140" class="h">4. Impact</text>
+  <text x="995" y="180" class="t">EC2 staging</text>
+  <text x="995" y="210" class="t">Exfiltration</text>
+
+  <path d="M305 177 L350 177" class="a"/>
+  <path d="M635 177 L680 177" class="a"/>
+  <path d="M920 177 L965 177" class="a"/>
+
+  <rect x="105" y="330" width="430" height="175" class="good"/>
+  <text x="130" y="370" class="h">Что Sam подтвердил</text>
+  <text x="130" y="407" class="t">✓ процессы отсутствуют</text>
+  <text x="130" y="437" class="t">✓ listeners отсутствуют</text>
+  <text x="130" y="467" class="t">✓ host persistence не найдена</text>
+
+  <rect x="665" y="330" width="430" height="175" class="bad"/>
+  <text x="690" y="370" class="h">Что осталось вне scope</text>
+  <text x="690" y="407" class="t">✗ SSH key use</text>
+  <text x="690" y="437" class="t">✗ AWS / CloudTrail activity</text>
+  <text x="690" y="467" class="t">✗ EC2 / stolen DB creds / other SDK installs</text>
+
+  <path d="M535 417 L660 417" class="a"/>
+
+  <rect x="175" y="570" width="850" height="82" class="warn"/>
+  <text x="215" y="608" class="h">Главный принцип</text>
+  <text x="215" y="637" class="t">Scope должен следовать за действиями, credentials и trust paths атакующего, а не за первым host.</text>
+</svg>
