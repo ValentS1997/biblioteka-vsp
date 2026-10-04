@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100">
+<rect width="1600" height="1100" fill="white"/>
+<text x="50" y="60" font-family="sans-serif" font-size="38" font-weight="700">Kubernetes в действии — сводная карта</text>
+<text x="50" y="100" font-family="sans-serif" font-size="19">18 глав + 4 приложения · source-grounded collection</text>
+
+<rect x="50" y="140" width="470" height="260" rx="18" fill="#f4f4f4" stroke="#222"/>
+<text x="80" y="185" font-family="sans-serif" font-size="27" font-weight="700">Desired state</text>
+<text x="80" y="235" font-family="monospace" font-size="20">API Server → etcd</text>
+<text x="80" y="275" font-family="monospace" font-size="20">Controllers → reconcile</text>
+<text x="80" y="315" font-family="monospace" font-size="20">Scheduler → Node</text>
+<text x="80" y="355" font-family="monospace" font-size="20">Kubelet → containers</text>
+
+<rect x="565" y="140" width="470" height="260" rx="18" fill="#f4f4f4" stroke="#222"/>
+<text x="595" y="185" font-family="sans-serif" font-size="27" font-weight="700">Workload contract</text>
+<text x="595" y="235" font-family="sans-serif" font-size="19">Pod is ephemeral</text>
+<text x="595" y="275" font-family="sans-serif" font-size="19">Readiness ≠ liveness</text>
+<text x="595" y="315" font-family="sans-serif" font-size="19">SIGTERM → graceful shutdown</text>
+<text x="595" y="355" font-family="sans-serif" font-size="19">Durable state → persistent storage</text>
+
+<rect x="1080" y="140" width="470" height="260" rx="18" fill="#f4f4f4" stroke="#222"/>
+<text x="1110" y="185" font-family="sans-serif" font-size="27" font-weight="700">Traffic & storage</text>
+<text x="1110" y="235" font-family="monospace" font-size="19">Service → Pod endpoints</text>
+<text x="1110" y="275" font-family="monospace" font-size="19">PVC → PV → backend</text>
+<text x="1110" y="315" font-family="monospace" font-size="19">StatefulSet → stable identity</text>
+<text x="1110" y="355" font-family="monospace" font-size="19">ConfigMap / Secret</text>
+
+<rect x="50" y="450" width="470" height="260" rx="18" fill="#f4f4f4" stroke="#222"/>
+<text x="80" y="495" font-family="sans-serif" font-size="27" font-weight="700">Security</text>
+<text x="80" y="545" font-family="monospace" font-size="19">AuthN → AuthZ → Admission</text>
+<text x="80" y="585" font-family="monospace" font-size="19">ServiceAccount + RBAC</text>
+<text x="80" y="625" font-family="sans-serif" font-size="19">least privilege</text>
+<text x="80" y="665" font-family="sans-serif" font-size="19">container/node isolation</text>
+
+<rect x="565" y="450" width="470" height="260" rx="18" fill="#f4f4f4" stroke="#222"/>
+<text x="595" y="495" font-family="sans-serif" font-size="27" font-weight="700">Capacity & placement</text>
+<text x="595" y="545" font-family="monospace" font-size="19">requests → scheduling</text>
+<text x="595" y="585" font-family="monospace" font-size="19">limits → runtime boundary</text>
+<text x="595" y="625" font-family="monospace" font-size="19">HPA / Cluster Autoscaler</text>
+<text x="595" y="665" font-family="monospace" font-size="19">taints + affinity + topology</text>
+
+<rect x="1080" y="450" width="470" height="260" rx="18" fill="#f4f4f4" stroke="#222"/>
+<text x="1110" y="495" font-family="sans-serif" font-size="27" font-weight="700">Delivery & extension</text>
+<text x="1110" y="545" font-family="monospace" font-size="19">Deployment → rollout</text>
+<text x="1110" y="585" font-family="monospace" font-size="19">readiness gates availability</text>
+<text x="1110" y="625" font-family="monospace" font-size="19">CRD → controller → resources</text>
+<text x="1110" y="665" font-family="monospace" font-size="19">API aggregation / Helm</text>
+
+<rect x="50" y="760" width="1500" height="240" rx="18" fill="#f4f4f4" stroke="#222"/>
+<text x="80" y="805" font-family="sans-serif" font-size="27" font-weight="700">Critical operational boundaries</text>
+<text x="80" y="855" font-family="sans-serif" font-size="19">• Проверяй kubectl context и owner/controller перед изменением.</text>
+<text x="80" y="895" font-family="sans-serif" font-size="19">• Force delete StatefulSet Pod только после подтвержденной остановки старого экземпляра.</text>
+<text x="80" y="935" font-family="sans-serif" font-size="19">• cluster-admin, privileged/host namespaces и Secret credentials — отдельные security boundaries.</text>
+<text x="80" y="975" font-family="sans-serif" font-size="19">• Source-era APIs/tools сохранены как материал книги; modern compatibility требует отдельной проверки.</text>
+</svg>
