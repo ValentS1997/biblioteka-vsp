@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="930" viewBox="0 0 1200 930">
+  <rect width="1200" height="930" fill="#ffffff"/>
+  <style>.title{font:700 31px sans-serif;fill:#111827}.h{font:700 19px sans-serif;fill:#111827}.t{font:15px sans-serif;fill:#1f2937}.s{font:14px sans-serif;fill:#475569}.box{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}.blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}.green{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}.amber{fill:#fffbeb;stroke:#d97706;stroke-width:2;rx:14}.violet{fill:#f5f3ff;stroke:#7c3aed;stroke-width:2;rx:14}.red{fill:#fef2f2;stroke:#dc2626;stroke-width:2;rx:14}</style>
+  <text x="40" y="54" class="title">Глава 8 — Downward API и Kubernetes API</text>
+  <text x="40" y="82" class="s">RAG p0288:c01–p0315:c01 · PDF 288–315 · Printed 287–314</text>
+  <rect x="40" y="120" width="350" height="175" class="blue"/>
+  <text x="60" y="154" class="h">Downward API</text><text x="60" y="188" class="t">fieldRef · resourceFieldRef</text><text x="60" y="218" class="t">env variables</text><text x="60" y="248" class="t">downwardAPI volume files</text>
+  <rect x="425" y="120" width="350" height="175" class="green"/>
+  <text x="445" y="154" class="h">Direct API</text><text x="445" y="188" class="t">CA verifies server</text><text x="445" y="218" class="t">Bearer token authenticates client</text><text x="445" y="248" class="t">RBAC authorizes actions</text>
+  <rect x="810" y="120" width="350" height="175" class="violet"/>
+  <text x="830" y="154" class="h">Ambassador</text><text x="830" y="188" class="t">main → localhost:8001</text><text x="830" y="218" class="t">kubectl proxy sidecar</text><text x="830" y="248" class="t">handles TLS/auth upstream</text>
+  <text x="40" y="350" class="h">Metadata paths</text>
+  <rect x="40" y="385" width="540" height="185" class="amber"/>
+  <text x="60" y="420" class="h">Environment</text><text x="60" y="454" class="t">name · namespace · Pod IP</text><text x="60" y="484" class="t">node · ServiceAccount</text><text x="60" y="514" class="t">CPU/memory request/limit</text>
+  <rect x="620" y="385" width="540" height="185" class="blue"/>
+  <text x="640" y="420" class="h">Volume</text><text x="640" y="454" class="t">same metadata as files</text><text x="640" y="484" class="t">labels · annotations</text><text x="640" y="514" class="t">mutable metadata can update</text>
+  <text x="40" y="635" class="h">Security boundary</text>
+  <rect x="40" y="670" width="1120" height="160" class="red"/>
+  <text x="65" y="707" class="t">ServiceAccount token is a credential; do not print or log it.</text>
+  <text x="65" y="743" class="t">cluster-admin for all ServiceAccounts = critical cluster-wide privilege escalation.</text>
+  <text x="65" y="779" class="t">Swagger UI can mutate/delete resources; read-only exploration is safer.</text>
+  <text x="40" y="885" class="s">Own metadata → Downward API. Cluster state → authenticated API.</text>
+</svg>
