@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="930" viewBox="0 0 1200 930">
+  <rect width="1200" height="930" fill="#ffffff"/>
+  <style>.title{font:700 31px sans-serif;fill:#111827}.h{font:700 19px sans-serif;fill:#111827}.t{font:15px sans-serif;fill:#1f2937}.s{font:14px sans-serif;fill:#475569}.box{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}.blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}.green{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}.amber{fill:#fffbeb;stroke:#d97706;stroke-width:2;rx:14}.violet{fill:#f5f3ff;stroke:#7c3aed;stroke-width:2;rx:14}.red{fill:#fef2f2;stroke:#dc2626;stroke-width:2;rx:14}</style>
+  <text x="40" y="54" class="title">Глава 11 — Внутреннее устройство Kubernetes</text>
+  <text x="40" y="82" class="s">RAG p0383:c01–p0424:c01 · PDF 383–424 · Printed 382–423</text>
+
+  <rect x="40" y="120" width="350" height="175" class="blue"/>
+  <text x="60" y="154" class="h">Control plane</text>
+  <text x="60" y="188" class="t">API server · scheduler</text>
+  <text x="60" y="218" class="t">controller manager</text>
+  <text x="60" y="248" class="t">etcd persistent state</text>
+
+  <rect x="425" y="120" width="350" height="175" class="green"/>
+  <text x="445" y="154" class="h">Worker node</text>
+  <text x="445" y="188" class="t">Kubelet</text>
+  <text x="445" y="218" class="t">container runtime</text>
+  <text x="445" y="248" class="t">kube-proxy + network</text>
+
+  <rect x="810" y="120" width="350" height="175" class="violet"/>
+  <text x="830" y="154" class="h">Coordination model</text>
+  <text x="830" y="188" class="t">API objects</text>
+  <text x="830" y="218" class="t">watch streams</text>
+  <text x="830" y="248" class="t">independent control loops</text>
+
+  <text x="40" y="350" class="h">Core flows</text>
+  <rect x="40" y="385" width="540" height="185" class="amber"/>
+  <text x="60" y="420" class="h">API request</text>
+  <text x="60" y="454" class="t">authentication → authorization</text>
+  <text x="60" y="484" class="t">→ admission → validation</text>
+  <text x="60" y="514" class="t">→ etcd persistence</text>
+
+  <rect x="620" y="385" width="540" height="185" class="green"/>
+  <text x="640" y="420" class="h">Deployment to containers</text>
+  <text x="640" y="454" class="t">Deployment → ReplicaSet → Pod</text>
+  <text x="640" y="484" class="t">scheduler assigns node</text>
+  <text x="640" y="514" class="t">Kubelet starts containers</text>
+
+  <text x="40" y="635" class="h">Networking and HA</text>
+  <rect x="40" y="670" width="1120" height="160" class="box"/>
+  <text x="65" y="707" class="t">Pod networking: pause namespaces → veth → bridge → routing/overlay/CNI.</text>
+  <text x="65" y="743" class="t">Service routing: kube-proxy watches Services/Endpoints and programs iptables.</text>
+  <text x="65" y="779" class="t">HA: etcd quorum + multiple API servers + leader election for scheduler/controllers.</text>
+
+  <text x="40" y="885" class="s">Architectural rule: components converge via API objects and watches, not direct orchestration chains.</text>
+</svg>

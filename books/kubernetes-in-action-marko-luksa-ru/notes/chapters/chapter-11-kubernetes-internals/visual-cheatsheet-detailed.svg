@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1420" viewBox="0 0 1600 1420">
+  <rect width="1600" height="1420" fill="#ffffff"/>
+  <style>.title{font:700 35px sans-serif;fill:#111827}.h1{font:700 23px sans-serif;fill:#111827}.h2{font:700 18px sans-serif;fill:#111827}.t{font:15px sans-serif;fill:#1f2937}.s{font:14px sans-serif;fill:#475569}.box{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}.blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}.green{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}.amber{fill:#fffbeb;stroke:#d97706;stroke-width:2;rx:14}.violet{fill:#f5f3ff;stroke:#7c3aed;stroke-width:2;rx:14}.red{fill:#fef2f2;stroke:#dc2626;stroke-width:2;rx:14}</style>
+  <text x="50" y="58" class="title">Kubernetes в действии · Глава 11 — internals</text>
+  <text x="50" y="88" class="s">RAG-only · p0383:c01–p0424:c01 · PDF 383–424 · Printed 382–423</text>
+
+  <text x="50" y="140" class="h1">1. Persistent state and API boundary</text>
+  <rect x="50" y="170" width="720" height="235" class="red"/>
+  <text x="70" y="205" class="h2">etcd</text>
+  <text x="70" y="238" class="t">authoritative persistent cluster state</text>
+  <text x="70" y="268" class="t">RAFT / quorum for clustered consistency</text>
+  <text x="70" y="298" class="t">API server is the Kubernetes client of etcd</text>
+  <text x="70" y="340" class="s">Direct etcd access bypasses normal API validation/security.</text>
+
+  <rect x="830" y="170" width="720" height="235" class="blue"/>
+  <text x="850" y="205" class="h2">API server pipeline</text>
+  <text x="850" y="238" class="t">authentication → authorization</text>
+  <text x="850" y="268" class="t">→ admission control → validation</text>
+  <text x="850" y="298" class="t">→ persistence + watch notifications</text>
+  <text x="850" y="340" class="s">Read-only request bypasses admission control in source model.</text>
+
+  <text x="50" y="470" class="h1">2. Watch-driven reconciliation</text>
+  <rect x="50" y="500" width="470" height="250" class="violet"/>
+  <text x="70" y="535" class="h2">Scheduler</text>
+  <text x="70" y="568" class="t">watches unscheduled Pods</text>
+  <text x="70" y="598" class="t">filters acceptable nodes</text>
+  <text x="70" y="628" class="t">prioritizes and assigns one node</text>
+  <text x="70" y="670" class="s">It updates Pod state; it does not start containers.</text>
+
+  <rect x="565" y="500" width="470" height="250" class="green"/>
+  <text x="585" y="535" class="h2">Controllers</text>
+  <text x="585" y="568" class="t">watch desired resources</text>
+  <text x="585" y="598" class="t">create/update dependent objects</text>
+  <text x="585" y="628" class="t">reconcile actual toward desired state</text>
+  <text x="585" y="670" class="s">Deployment → ReplicaSet → Pod is a chain of controllers.</text>
+
+  <rect x="1080" y="500" width="470" height="250" class="amber"/>
+  <text x="1100" y="535" class="h2">Kubelet</text>
+  <text x="1100" y="568" class="t">watches Pods assigned to its node</text>
+  <text x="1100" y="598" class="t">starts/restarts containers</text>
+  <text x="1100" y="628" class="t">also supports local static Pod manifests</text>
+  <text x="1100" y="670" class="s">Runs as a system component in source framing.</text>
+
+  <text x="50" y="815" class="h1">3. Pod/network/Service implementation</text>
+  <rect x="50" y="845" width="470" height="245" class="blue"/>
+  <text x="70" y="880" class="h2">Pod sandbox</text>
+  <text x="70" y="913" class="t">pause container holds Linux namespaces</text>
+  <text x="70" y="943" class="t">app containers join those namespaces</text>
+  <text x="70" y="973" class="t">app restarts keep Pod-level identity</text>
+
+  <rect x="565" y="845" width="470" height="245" class="green"/>
+  <text x="585" y="880" class="h2">Pod network</text>
+  <text x="585" y="913" class="t">eth0 ↔ veth ↔ node bridge</text>
+  <text x="585" y="943" class="t">cross-node routing/overlay/underlay</text>
+  <text x="585" y="973" class="t">CNI integrates network plugins</text>
+
+  <rect x="1080" y="845" width="470" height="245" class="violet"/>
+  <text x="1100" y="880" class="h2">Service</text>
+  <text x="1100" y="913" class="t">kube-proxy watches Service + Endpoints</text>
+  <text x="1100" y="943" class="t">programs iptables rules</text>
+  <text x="1100" y="973" class="t">kernel forwards to a backend Pod</text>
+
+  <text x="50" y="1155" class="h1">4. High availability</text>
+  <rect x="50" y="1185" width="1500" height="165" class="box"/>
+  <text x="75" y="1223" class="t">Applications: multiple replicas distributed across failure domains/nodes.</text>
+  <text x="75" y="1259" class="t">Control plane: replicated etcd + multiple active API servers.</text>
+  <text x="75" y="1295" class="t">Scheduler/controller-manager: multiple instances, one elected leader.</text>
+  <text x="75" y="1331" class="s">Source-era leader election uses API resources such as Endpoints annotations.</text>
+
+  <text x="50" y="1390" class="s">No explicit chapter exercises found; demo/inspection commands are not promoted into review questions.</text>
+</svg>
