@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1380" viewBox="0 0 1600 1380">
+  <rect width="1600" height="1380" fill="#ffffff"/>
+  <style>
+    .title{font:700 35px sans-serif;fill:#111827}.h1{font:700 23px sans-serif;fill:#111827}
+    .h2{font:700 18px sans-serif;fill:#111827}.t{font:15px sans-serif;fill:#1f2937}.s{font:14px sans-serif;fill:#475569}
+    .box{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}.blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}
+    .green{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}.amber{fill:#fffbeb;stroke:#d97706;stroke-width:2;rx:14}
+    .violet{fill:#f5f3ff;stroke:#7c3aed;stroke-width:2;rx:14}.red{fill:#fef2f2;stroke:#dc2626;stroke-width:2;rx:14}
+  </style>
+
+  <text x="50" y="58" class="title">Kubernetes в действии · Глава 4 — managed workload lifecycle</text>
+  <text x="50" y="88" class="s">RAG-only · p0127:c01–p0167:c01 · PDF 127–167 · Printed 126–166</text>
+
+  <text x="50" y="140" class="h1">1. Health vs availability</text>
+  <rect x="50" y="170" width="720" height="225" class="blue"/>
+  <text x="70" y="205" class="h2">Liveness probe</text>
+  <text x="70" y="238" class="t">HTTP GET → 2xx/3xx = success</text>
+  <text x="70" y="268" class="t">TCP socket → connection succeeds</text>
+  <text x="70" y="298" class="t">Exec → exit code 0</text>
+  <text x="70" y="340" class="t">Repeated failure → Kubelet kills container → new container instance</text>
+  <text x="70" y="370" class="s">This does not recreate a lost Pod on another node.</text>
+
+  <rect x="830" y="170" width="720" height="225" class="green"/>
+  <text x="850" y="205" class="h2">Controller reconciliation</text>
+  <text x="850" y="238" class="t">selector identifies managed Pods</text>
+  <text x="850" y="268" class="t">replicas defines desired count</text>
+  <text x="850" y="298" class="t">template defines future Pods</text>
+  <text x="850" y="340" class="t">actual &lt; desired → create · actual &gt; desired → delete</text>
+  <text x="850" y="370" class="s">A replacement is a new Pod, not the old instance moved.</text>
+
+  <text x="50" y="460" class="h1">2. ReplicationController → ReplicaSet</text>
+  <rect x="50" y="490" width="480" height="250" class="amber"/>
+  <text x="70" y="525" class="h2">ReplicationController</text>
+  <text x="70" y="558" class="t">kubectl get/describe rc</text>
+  <text x="70" y="588" class="t">kubectl scale rc ... --replicas=N</text>
+  <text x="70" y="618" class="t">kubectl edit rc</text>
+  <text x="70" y="648" class="t">label change can move Pod out of scope</text>
+  <text x="70" y="690" class="s">Template changes future Pods only.</text>
+
+  <rect x="560" y="490" width="480" height="250" class="violet"/>
+  <text x="580" y="525" class="h2">ReplicaSet</text>
+  <text x="580" y="558" class="t">same basic reconciliation behavior</text>
+  <text x="580" y="588" class="t">matchLabels</text>
+  <text x="580" y="618" class="t">matchExpressions</text>
+  <text x="580" y="648" class="t">In · NotIn · Exists · DoesNotExist</text>
+  <text x="580" y="690" class="s">Chapter recommends ReplicaSet over RC.</text>
+
+  <rect x="1070" y="490" width="480" height="250" class="red"/>
+  <text x="1090" y="525" class="h2">Failure injection lab</text>
+  <text x="1090" y="558" class="t">gcloud compute ssh &lt;node&gt;</text>
+  <text x="1090" y="588" class="t">sudo ifconfig eth0 down</text>
+  <text x="1090" y="618" class="t">node → NotReady · old Pod → Unknown</text>
+  <text x="1090" y="648" class="t">controller creates replacement</text>
+  <text x="1090" y="690" class="s">Recovery: gcloud compute instances reset &lt;node&gt;</text>
+
+  <text x="50" y="805" class="h1">3. Specialized controllers</text>
+  <rect x="50" y="835" width="470" height="250" class="blue"/>
+  <text x="70" y="870" class="h2">DaemonSet</text>
+  <text x="70" y="903" class="t">desired = one daemon Pod per matching node</text>
+  <text x="70" y="933" class="t">nodeSelector can restrict nodes</text>
+  <text x="70" y="963" class="t">node label change updates desired placement</text>
+  <text x="70" y="1005" class="s">No replica count field is needed.</text>
+
+  <rect x="565" y="835" width="470" height="250" class="green"/>
+  <text x="585" y="870" class="h2">Job</text>
+  <text x="585" y="903" class="t">finite work; success is terminal</text>
+  <text x="585" y="933" class="t">restartPolicy: OnFailure or Never</text>
+  <text x="585" y="963" class="t">completions + parallelism</text>
+  <text x="585" y="993" class="t">activeDeadlineSeconds + backoffLimit</text>
+  <text x="585" y="1023" class="s">Node failure can cause replacement until successful completion.</text>
+
+  <rect x="1080" y="835" width="470" height="250" class="violet"/>
+  <text x="1100" y="870" class="h2">CronJob</text>
+  <text x="1100" y="903" class="t">cron schedule → Job → Pod(s)</text>
+  <text x="1100" y="933" class="t">jobTemplate defines Job</text>
+  <text x="1100" y="963" class="t">startingDeadlineSeconds limits late start</text>
+  <text x="1100" y="1005" class="s">Duplicates/misses possible → idempotent work.</text>
+
+  <text x="50" y="1150" class="h1">4. Operational model</text>
+  <rect x="50" y="1180" width="1500" height="145" class="box"/>
+  <text x="75" y="1218" class="t">Observe actual → compare with desired → reconcile. Controller owns the desired relationship, not the lifetime identity of a specific Pod.</text>
+  <text x="75" y="1254" class="t">Scale = change desired count. Template edit = future instances. Selector edit = change managed set.</text>
+  <text x="75" y="1290" class="t">Choose controller by desired-state shape: N replicas / one per node / finite completion / scheduled finite completion.</text>
+
+  <text x="50" y="1360" class="s">Source-era API versions are preserved. Destructive and failure-injection actions require explicit scope and recovery.</text>
+</svg>

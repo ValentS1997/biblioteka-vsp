@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="920" viewBox="0 0 1200 920">
+  <rect width="1200" height="920" fill="#ffffff"/>
+  <style>
+    .title{font:700 31px sans-serif;fill:#111827}.h{font:700 19px sans-serif;fill:#111827}
+    .t{font:15px sans-serif;fill:#1f2937}.s{font:14px sans-serif;fill:#475569}
+    .box{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}
+    .blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}
+    .green{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}
+    .amber{fill:#fffbeb;stroke:#d97706;stroke-width:2;rx:14}
+    .violet{fill:#f5f3ff;stroke:#7c3aed;stroke-width:2;rx:14}
+    .arrow{stroke:#334155;stroke-width:2;marker-end:url(#a)}
+  </style>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+
+  <text x="40" y="54" class="title">Глава 4 — Controllers и managed Pods</text>
+  <text x="40" y="82" class="s">RAG p0127:c01–p0167:c01 · PDF 127–167 · Printed 126–166</text>
+
+  <rect x="40" y="120" width="340" height="170" class="blue"/>
+  <text x="60" y="154" class="h">Liveness</text>
+  <text x="60" y="188" class="t">HTTP GET · TCP · Exec</text>
+  <text x="60" y="218" class="t">repeated failure → new container</text>
+  <text x="60" y="248" class="t">initialDelaySeconds for startup</text>
+
+  <rect x="430" y="120" width="340" height="170" class="green"/>
+  <text x="450" y="154" class="h">Replica controller</text>
+  <text x="450" y="188" class="t">selector + replicas + template</text>
+  <text x="450" y="218" class="t">actual ↔ desired reconciliation</text>
+  <text x="450" y="248" class="t">replacement Pod, not moved Pod</text>
+
+  <rect x="820" y="120" width="340" height="170" class="violet"/>
+  <text x="840" y="154" class="h">ReplicaSet</text>
+  <text x="840" y="188" class="t">matchLabels</text>
+  <text x="840" y="218" class="t">matchExpressions</text>
+  <text x="840" y="248" class="t">In · NotIn · Exists · DoesNotExist</text>
+
+  <text x="40" y="345" class="h">Controller types</text>
+
+  <rect x="40" y="380" width="250" height="180" class="amber"/>
+  <text x="60" y="414" class="h">RC / ReplicaSet</text>
+  <text x="60" y="448" class="t">desired: N Pods</text>
+  <text x="60" y="478" class="t">scale replicas up/down</text>
+  <text x="60" y="508" class="s">any suitable nodes</text>
+
+  <rect x="330" y="380" width="250" height="180" class="blue"/>
+  <text x="350" y="414" class="h">DaemonSet</text>
+  <text x="350" y="448" class="t">one Pod / matching node</text>
+  <text x="350" y="478" class="t">nodeSelector optional</text>
+  <text x="350" y="508" class="s">system daemons</text>
+
+  <rect x="620" y="380" width="250" height="180" class="green"/>
+  <text x="640" y="414" class="h">Job</text>
+  <text x="640" y="448" class="t">finite successful work</text>
+  <text x="640" y="478" class="t">completions · parallelism</text>
+  <text x="640" y="508" class="s">OnFailure / Never</text>
+
+  <rect x="910" y="380" width="250" height="180" class="violet"/>
+  <text x="930" y="414" class="h">CronJob</text>
+  <text x="930" y="448" class="t">schedule → Job → Pods</text>
+  <text x="930" y="478" class="t">startingDeadlineSeconds</text>
+  <text x="930" y="508" class="s">idempotency required</text>
+
+  <text x="40" y="625" class="h">Reconciliation</text>
+  <rect x="40" y="660" width="1120" height="155" class="box"/>
+  <text x="65" y="700" class="t">desired state → observe actual state → create / delete / restart → converge</text>
+  <text x="65" y="738" class="t">node failure: managed Pod is replaced elsewhere; direct Pod has no controller to recreate it</text>
+  <text x="65" y="776" class="t">template change affects only future Pods; scaling changes desired replica count</text>
+
+  <text x="40" y="875" class="s">Risk: node-failure lab uses intentional network outage; destructive actions are not read-only diagnostics.</text>
+</svg>
