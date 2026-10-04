@@ -300,3 +300,57 @@ terms:
     ru: "проверка эффективности сдерживания"
     lock: true
     evidence: ["p0285-c01", "p0286-c01"]
+
+
+  - source: "short-form investigation"
+    ru: "краткое оперативное расследование"
+    context_note: "Focused, time-bounded investigation sufficient to inform immediate eradication actions."
+    lock: true
+    evidence: ["p0302-c01", "p0303-c01", "p0396-c01"]
+
+  - source: "long-form investigation"
+    ru: "углублённое расследование"
+    context_note: "Parallel deep-dive forensic track for comprehensive understanding, regulatory, legal, or organizational needs."
+    lock: true
+    evidence: ["p0302-c01", "p0304-c01"]
+
+  - source: "root cause analysis"
+    ru: "анализ первопричин"
+    lock: true
+    evidence: ["p0306-c01", "p0307-c01", "p0398-c01"]
+
+  - source: "fishbone diagram"
+    ru: "диаграмма Исикавы"
+    context_note: "Cause-and-effect diagram used to map multiple contributing factors."
+    lock: true
+    evidence: ["p0310-c01", "p0311-c01"]
+
+  - source: "differential analysis"
+    ru: "дифференциальный анализ"
+    context_note: "Comparison of current state against a known-good baseline to isolate changes."
+    lock: true
+    evidence: ["p0316-c01", "p0317-c01", "p0348-c01"]
+
+  - source: "persistence mechanism"
+    ru: "механизм закрепления"
+    context_note: "Artifact or configuration used to maintain attacker access across resets, reboots, or credential changes."
+    lock: true
+    evidence: ["p0353-c01", "p0354-c01"]
+
+  - source: "targeted removal"
+    ru: "точечное удаление"
+    context_note: "Eradication by removing known attacker artifacts instead of rebuilding the entire system."
+    lock: true
+    evidence: ["p0373-c01", "p0400-c01"]
+
+  - source: "compensating control"
+    ru: "компенсирующая мера контроля"
+    context_note: "Temporary risk-reduction control used when permanent remediation is not immediately feasible."
+    lock: true
+    evidence: ["p0377-c01", "p0378-c01", "p0401-c01"]
+
+  - source: "credential rotation"
+    ru: "ротация учётных данных"
+    context_note: "Replacement/invalidation of passwords, keys, tokens, and service credentials after compromise."
+    lock: true
+    evidence: ["p0352-c01", "p0369-c01", "p0372-c01"]
