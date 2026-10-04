@@ -11,7 +11,7 @@ import yaml
 from docx import Document
 from docx.enum.section import WD_SECTION
 from docx.enum.text import WD_BREAK, WD_ALIGN_PARAGRAPH
-from docx.oxml.ns import qn
+from docx.oxml import OxmlElement\nfrom docx.oxml.ns import qn
 from docx.shared import Mm, Pt
 
 BOOK_ID = "dynamic-incident-response-joshua-wright-en-2026"
@@ -216,9 +216,6 @@ def audit_and_assemble(repo_root: Path, out_dir: Path):
     if problems:
         raise SystemExit("Book-level audit BLOCKED:\n- " + "\n- ".join(problems))
 
-    attribution = attribution_path.read_text(encoding="utf-8")
-    _, attribution_body = split_frontmatter(attribution)
-
     glossary_path = tr_root / "glossary.yaml"
     glossary_md = ""
     if glossary_path.exists():
@@ -235,6 +232,14 @@ def audit_and_assemble(repo_root: Path, out_dir: Path):
                 lines.append(f"| {src} | {ru} | {note} |")
             glossary_md = "\n".join(lines) + "\n"
 
+    toc_lines = ["# Оглавление", ""]
+    for row in audit_rows:
+        toc_lines.append(f"- {row['title']}")
+    toc_lines.append("- Послесловие")
+    if glossary_md:
+        toc_lines.append("- Приложение. Глоссарий")
+    toc_md = "\n".join(toc_lines) + "\n"
+
     header = f"""---
 title: "{BOOK_TITLE_RU}"
 subtitle: "{BOOK_SUBTITLE_RU}"
@@ -243,18 +248,25 @@ date: "{YEAR}"
 lang: ru-RU
 ---
 
+{toc_md}
+
 # Сведения об издании
 
 **Оригинал:** *{ORIGINAL_TITLE}*  
 **Автор:** {AUTHOR}  
 **Издатель оригинала:** SANS Institute, {YEAR}  
 **Лицензия основного авторского материала:** {LICENSE}  
+**Лицензия:** https://creativecommons.org/licenses/by/4.0/
 
 Это **неофициальный русский перевод**. Он не является официальным изданием SANS Institute и не заявляет права на товарные знаки или сторонние материалы.
 
 ## Атрибуция и границы лицензии
 
-{normalize_body(attribution_body)}
+Рекомендуемая атрибуция оригинала: *Dynamic Incident Response: A Framework for Security Teams* by Joshua Wright, © 2026 The Escal Institute of Advanced Technologies, Inc. d/b/a SANS Institute, licensed under CC BY 4.0.
+
+Canonical source SHA-256: \`f882f3fdfe4d2de2b8b295747b1579f7592c59cd46d5a3dc211ba8b777925164\`.
+
+Сторонние тексты, графика, изображения, таблицы, charts/graphs и иные материалы не считаются автоматически покрытыми CC BY 4.0. Если отдельные права на перевод/адаптацию не подтверждены, такие элементы в этой сборке не воспроизводятся и сохраняются только в виде fail-closed текстовых пометок.
 
 ## Примечание к русскому изданию
 
@@ -283,9 +295,6 @@ def run_pandoc(md_path: Path, out_dir: Path):
         "--from", "markdown+yaml_metadata_block",
         "--to", "docx",
         "--reference-doc", str(ref),
-        "--toc",
-        "--toc-depth=2",
-        "--metadata", "toc-title=Оглавление",
         "--output", str(docx),
     ]
     subprocess.run(cmd, check=True)
