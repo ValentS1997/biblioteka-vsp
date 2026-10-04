@@ -43,9 +43,9 @@ terms:
 
   - source: "indicator of compromise"
     ru: "индикатор компрометации"
-    preserve_identifier: "IoC"
+    preserve_identifier: "IOC"
     lock: true
-    evidence: ["p0005-c01", "p0007-c01"]
+    evidence: ["p0005-c01", "p0007-c01", "p0066-c01", "p0067-c01"]
 
   - source: "verify and triage"
     ru: "проверка и триаж"
@@ -84,3 +84,22 @@ terms:
     preserve_identifier: "NIST SP 800-61"
     lock: true
     evidence: ["p0006-c01"]
+
+
+  - source: "indicator of attack"
+    ru: "индикатор атаки"
+    preserve_identifier: "IOA"
+    lock: true
+    evidence: ["p0068-c01", "p0069-c01"]
+
+  - source: "mean time to detect"
+    ru: "среднее время до обнаружения"
+    preserve_identifier: "MTTD"
+    lock: true
+    evidence: ["p0069-c01"]
+
+  - source: "mean time to respond"
+    ru: "среднее время реагирования"
+    preserve_identifier: "MTTR"
+    lock: true
+    evidence: ["p0069-c01", "p0070-c01"]
