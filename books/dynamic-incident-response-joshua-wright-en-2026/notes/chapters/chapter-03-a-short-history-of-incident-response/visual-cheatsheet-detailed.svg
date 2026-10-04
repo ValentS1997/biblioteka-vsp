@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="980" viewBox="0 0 1400 980">
+  <rect width="1400" height="980" fill="#ffffff"/>
+  <style>
+    .title{font:700 36px Arial,sans-serif;fill:#1f3f6d}
+    .h{font:700 20px Arial,sans-serif;fill:#1f3f6d}
+    .t{font:15px Arial,sans-serif;fill:#20242a}
+    .box{fill:#f6f8fb;stroke:#8aa2c4;stroke-width:2;rx:14}
+    .warn{fill:#fff7e8;stroke:#c89b4a;stroke-width:2;rx:14}
+    .good{fill:#eef8f0;stroke:#6d9d76;stroke-width:2;rx:14}
+    .a{stroke:#5e6d7c;stroke-width:3;fill:none;marker-end:url(#m)}
+  </style>
+  <defs><marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#5e6d7c"/></marker></defs>
+  <text x="50" y="55" class="title">Глава 3 — история IR: incidents → institutions → frameworks</text>
+
+  <text x="50" y="100" class="h">Early incidents</text>
+  <rect x="50" y="125" width="300" height="280" class="box"/>
+  <text x="75" y="160" class="t">1982 — The 414s</text>
+  <text x="75" y="192" class="t">1984 — CCC BTX Hack</text>
+  <text x="75" y="224" class="t">1986 — Cuckoo’s Egg / KGB</text>
+  <text x="75" y="256" class="t">1987 — Max Headroom</text>
+  <text x="75" y="288" class="t">1988 — Morris Worm</text>
+  <text x="75" y="320" class="t">1992 — Michelangelo</text>
+  <text x="75" y="352" class="t">1994 — Mitnick/Shimomura</text>
+  <text x="75" y="384" class="t">1998/1999 — Moonlight Maze / Melissa</text>
+
+  <text x="405" y="100" class="h">Institutional response</text>
+  <rect x="405" y="125" width="300" height="280" class="warn"/>
+  <text x="430" y="165" class="t">Morris Worm exposes:</text>
+  <text x="430" y="197" class="t">• no central coordination</text>
+  <text x="430" y="229" class="t">• patch distribution gap</text>
+  <text x="430" y="280" class="t">1988 — CERT</text>
+  <text x="430" y="312" class="t">1989 — CIAC</text>
+  <text x="430" y="344" class="t">1990 — Schultz methodology</text>
+  <text x="430" y="376" class="t">six identifiable stages</text>
+
+  <text x="760" y="100" class="h">Operationalization</text>
+  <rect x="760" y="125" width="300" height="280" class="good"/>
+  <text x="785" y="165" class="t">1996 — US Navy guide</text>
+  <text x="785" y="205" class="t">1998 — SANS Step-by-Step</text>
+  <text x="785" y="245" class="t">• numbered actions</text>
+  <text x="785" y="277" class="t">• Problem framing</text>
+  <text x="785" y="309" class="t">• Emergency Action Card</text>
+  <text x="785" y="341" class="t">• reusable forms</text>
+  <text x="785" y="373" class="t">generalist-friendly</text>
+
+  <text x="1110" y="100" class="h">Standardization</text>
+  <rect x="1110" y="125" width="240" height="280" class="box"/>
+  <text x="1135" y="165" class="t">2004 — NIST 800-61</text>
+  <text x="1135" y="205" class="t">2008 — Rev.1</text>
+  <text x="1135" y="245" class="t">2012 — Rev.2</text>
+  <text x="1135" y="285" class="t">4-phase lifecycle</text>
+  <text x="1135" y="335" class="t">2025 — Rev.3</text>
+  <text x="1135" y="367" class="t">CSF alignment</text>
+
+  <path d="M350 265 L400 265" class="a"/>
+  <path d="M705 265 L755 265" class="a"/>
+  <path d="M1060 265 L1105 265" class="a"/>
+
+  <rect x="120" y="500" width="530" height="270" class="good"/>
+  <text x="150" y="540" class="h">Strength inherited from history</text>
+  <text x="150" y="580" class="t">• structure instead of improvisation</text>
+  <text x="150" y="615" class="t">• coordination across responders</text>
+  <text x="150" y="650" class="t">• repeatable phases/actions</text>
+  <text x="150" y="685" class="t">• usable documentation</text>
+  <text x="150" y="720" class="t">• common language for teams</text>
+
+  <rect x="750" y="500" width="530" height="270" class="warn"/>
+  <text x="780" y="540" class="h">Modern pressure on old assumptions</text>
+  <text x="780" y="580" class="t">• cloud-distributed identity</text>
+  <text x="780" y="615" class="t">• SaaS / third-party dependencies</text>
+  <text x="780" y="650" class="t">• supply-chain compromises</text>
+  <text x="780" y="685" class="t">• AI-orchestrated tooling</text>
+  <text x="780" y="720" class="t">• adversaries adapt during response</text>
+
+  <rect x="160" y="845" width="1080" height="75" class="warn"/>
+  <text x="205" y="890" class="h">Вывод: сохранить дисциплину старых frameworks, но пересмотреть assumptions под современный threat landscape.</text>
+</svg>

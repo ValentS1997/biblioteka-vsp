@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#ffffff"/>
+  <style>
+    .title{font:700 34px Arial,sans-serif;fill:#1f3f6d}
+    .h{font:700 20px Arial,sans-serif;fill:#1f3f6d}
+    .t{font:17px Arial,sans-serif;fill:#20242a}
+    .box{fill:#f6f8fb;stroke:#8aa2c4;stroke-width:2;rx:14}
+    .warn{fill:#fff7e8;stroke:#c89b4a;stroke-width:2;rx:14}
+    .good{fill:#eef8f0;stroke:#6d9d76;stroke-width:2;rx:14}
+    .a{stroke:#5e6d7c;stroke-width:3;fill:none;marker-end:url(#m)}
+  </style>
+  <defs><marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#5e6d7c"/></marker></defs>
+  <text x="50" y="55" class="title">Глава 3 — как сформировались Incident Response models</text>
+
+  <rect x="55" y="115" width="210" height="120" class="warn"/>
+  <text x="80" y="150" class="h">Morris Worm</text>
+  <text x="80" y="183" class="t">1988</text>
+  <text x="80" y="213" class="t">coordination gap</text>
+
+  <rect x="315" y="115" width="200" height="120" class="box"/>
+  <text x="340" y="150" class="h">CERT</text>
+  <text x="340" y="183" class="t">1988</text>
+  <text x="340" y="213" class="t">central coordination</text>
+
+  <rect x="565" y="115" width="210" height="120" class="box"/>
+  <text x="590" y="150" class="h">CIAC</text>
+  <text x="590" y="183" class="t">1989 / 1990</text>
+  <text x="590" y="213" class="t">formal methodology</text>
+
+  <rect x="825" y="115" width="310" height="120" class="good"/>
+  <text x="850" y="150" class="h">SANS → NIST</text>
+  <text x="850" y="183" class="t">1998 → 2004 → 2025</text>
+  <text x="850" y="213" class="t">practical → standardized → CSF</text>
+
+  <path d="M265 175 L310 175" class="a"/>
+  <path d="M515 175 L560 175" class="a"/>
+  <path d="M775 175 L820 175" class="a"/>
+
+  <rect x="85" y="330" width="470" height="220" class="box"/>
+  <text x="110" y="368" class="h">Почему старые модели долговечны</text>
+  <text x="110" y="405" class="t">• дают structure</text>
+  <text x="110" y="438" class="t">• usable under pressure</text>
+  <text x="110" y="471" class="t">• formalize repeatable actions</text>
+  <text x="110" y="504" class="t">• create shared vocabulary</text>
+
+  <rect x="645" y="330" width="470" height="220" class="warn"/>
+  <text x="670" y="368" class="h">Почему их assumptions нужно пересматривать</text>
+  <text x="670" y="405" class="t">• cloud identities</text>
+  <text x="670" y="438" class="t">• third-party SaaS</text>
+  <text x="670" y="471" class="t">• supply-chain compromise</text>
+  <text x="670" y="504" class="t">• adaptive / AI-assisted attackers</text>
+
+  <text x="135" y="645" class="h">Главный принцип: framework отражает threat landscape эпохи, в которой он появился.</text>
+</svg>
