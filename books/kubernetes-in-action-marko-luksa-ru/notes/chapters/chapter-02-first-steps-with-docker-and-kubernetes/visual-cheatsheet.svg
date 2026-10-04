@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <rect width="1200" height="900" fill="#ffffff"/>
+  <style>
+    .title{font:700 32px sans-serif;fill:#111827}.h{font:700 20px sans-serif;fill:#111827}
+    .t{font:16px sans-serif;fill:#1f2937}.s{font:14px sans-serif;fill:#475569}
+    .box{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}
+    .blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}
+    .green{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}
+    .violet{fill:#f5f3ff;stroke:#7c3aed;stroke-width:2;rx:14}
+    .arrow{stroke:#334155;stroke-width:2;marker-end:url(#a)}
+  </style>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+
+  <text x="40" y="54" class="title">Глава 2 — Первые шаги с Docker и Kubernetes</text>
+  <text x="40" y="82" class="s">RAG p0062:c01–p0094:c01 · PDF 62–94 · Printed 61–93</text>
+
+  <rect x="40" y="120" width="250" height="135" class="box"/>
+  <text x="60" y="153" class="h">1. Application</text>
+  <text x="60" y="185" class="t">Node.js HTTP app</text>
+  <text x="60" y="215" class="t">Dockerfile</text>
+
+  <rect x="340" y="120" width="250" height="135" class="green"/>
+  <text x="360" y="153" class="h">2. Docker image</text>
+  <text x="360" y="185" class="t">docker build</text>
+  <text x="360" y="215" class="t">docker run + curl</text>
+
+  <rect x="640" y="120" width="250" height="135" class="green"/>
+  <text x="660" y="153" class="h">3. Registry</text>
+  <text x="660" y="185" class="t">tag · login · push</text>
+  <text x="660" y="215" class="t">worker can pull image</text>
+
+  <rect x="940" y="120" width="220" height="135" class="blue"/>
+  <text x="960" y="153" class="h">4. Cluster</text>
+  <text x="960" y="185" class="t">Minikube or GKE</text>
+  <text x="960" y="215" class="t">kubectl cluster-info</text>
+
+  <line x1="290" y1="188" x2="335" y2="188" class="arrow"/>
+  <line x1="590" y1="188" x2="635" y2="188" class="arrow"/>
+  <line x1="890" y1="188" x2="935" y2="188" class="arrow"/>
+
+  <text x="40" y="315" class="h">Kubernetes object flow</text>
+  <rect x="40" y="345" width="260" height="125" class="violet"/>
+  <text x="60" y="380" class="h">kubectl run</text>
+  <text x="60" y="412" class="t">ReplicationController</text>
+  <text x="60" y="440" class="s">desired replica count</text>
+
+  <rect x="470" y="345" width="260" height="125" class="blue"/>
+  <text x="490" y="380" class="h">Pods</text>
+  <text x="490" y="412" class="t">containerized app</text>
+  <text x="490" y="440" class="s">scheduled on worker nodes</text>
+
+  <rect x="900" y="345" width="260" height="125" class="green"/>
+  <text x="920" y="380" class="h">Service</text>
+  <text x="920" y="412" class="t">stable access</text>
+  <text x="920" y="440" class="s">load balances to Pods</text>
+
+  <line x1="300" y1="408" x2="465" y2="408" class="arrow"/>
+  <line x1="895" y1="408" x2="735" y2="408" class="arrow"/>
+
+  <text x="40" y="535" class="h">Core checks</text>
+  <rect x="40" y="565" width="1120" height="195" class="box"/>
+  <text x="65" y="602" class="t">Docker: images · ps · inspect · exec · curl localhost:8080</text>
+  <text x="65" y="638" class="t">Cluster: kubectl cluster-info · get nodes · describe node</text>
+  <text x="65" y="674" class="t">Workload: kubectl get pods · get rc · describe pod · get pods -o wide</text>
+  <text x="65" y="710" class="t">Service: kubectl get svc · curl &lt;external-ip&gt;:8080</text>
+  <text x="65" y="746" class="t">Scale: kubectl scale rc kubia --replicas=&lt;count&gt;</text>
+
+  <text x="40" y="825" class="s">Главный принцип: image переносит приложение; ReplicationController поддерживает Pods; Service отделяет clients от конкретных Pods.</text>
+</svg>

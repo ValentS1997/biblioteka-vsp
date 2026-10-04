@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1320" viewBox="0 0 1600 1320">
+  <rect width="1600" height="1320" fill="#ffffff"/>
+  <style>
+    .title{font:700 36px sans-serif;fill:#111827}.h1{font:700 24px sans-serif;fill:#111827}
+    .h2{font:700 18px sans-serif;fill:#111827}.t{font:16px sans-serif;fill:#1f2937}.s{font:14px sans-serif;fill:#475569}
+    .box{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}.blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}
+    .green{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}.amber{fill:#fffbeb;stroke:#d97706;stroke-width:2;rx:14}
+    .violet{fill:#f5f3ff;stroke:#7c3aed;stroke-width:2;rx:14}.arrow{stroke:#334155;stroke-width:2;marker-end:url(#a)}
+  </style>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+
+  <text x="50" y="58" class="title">Kubernetes в действии · Глава 2 — практический workflow</text>
+  <text x="50" y="88" class="s">RAG-only · p0062:c01–p0094:c01 · PDF 62–94 · Printed 61–93</text>
+
+  <text x="50" y="140" class="h1">1. Docker lifecycle</text>
+  <rect x="50" y="170" width="355" height="235" class="green"/>
+  <text x="70" y="205" class="h2">Build</text>
+  <text x="70" y="238" class="t">Dockerfile: FROM node:7</text>
+  <text x="70" y="268" class="t">ADD app.js /app.js</text>
+  <text x="70" y="298" class="t">ENTRYPOINT node app.js</text>
+  <text x="70" y="340" class="t">docker build -t kubia .</text>
+  <text x="70" y="370" class="s">Verify: docker images</text>
+
+  <rect x="455" y="170" width="355" height="235" class="green"/>
+  <text x="475" y="205" class="h2">Run / inspect</text>
+  <text x="475" y="238" class="t">docker run -p 8080:8080 -d</text>
+  <text x="475" y="268" class="t">curl localhost:8080</text>
+  <text x="475" y="298" class="t">docker ps · docker inspect</text>
+  <text x="475" y="328" class="t">docker exec -it ... bash</text>
+  <text x="475" y="358" class="t">ps aux · ls /</text>
+  <text x="475" y="388" class="s">Cleanup: docker stop → docker rm</text>
+
+  <rect x="860" y="170" width="355" height="235" class="green"/>
+  <text x="880" y="205" class="h2">Publish</text>
+  <text x="880" y="238" class="t">docker tag</text>
+  <text x="880" y="268" class="t">docker login</text>
+  <text x="880" y="298" class="t">docker push</text>
+  <text x="880" y="340" class="t">Registry makes image reachable</text>
+  <text x="880" y="370" class="s">Remote rollback: [Needs confirmation]</text>
+
+  <rect x="1265" y="170" width="285" height="235" class="amber"/>
+  <text x="1285" y="205" class="h2">Container model</text>
+  <text x="1285" y="238" class="t">isolated PID view</text>
+  <text x="1285" y="268" class="t">isolated filesystem</text>
+  <text x="1285" y="298" class="t">same process exists on host</text>
+  <text x="1285" y="340" class="s">Different PID inside/host</text>
+
+  <text x="50" y="470" class="h1">2. Cluster setup and checks</text>
+  <rect x="50" y="500" width="480" height="225" class="blue"/>
+  <text x="70" y="535" class="h2">Minikube</text>
+  <text x="70" y="568" class="t">minikube start</text>
+  <text x="70" y="598" class="t">kubectl cluster-info</text>
+  <text x="70" y="628" class="t">minikube ssh</text>
+  <text x="70" y="658" class="t">minikube service kubia-http</text>
+  <text x="70" y="688" class="t">minikube dashboard</text>
+
+  <rect x="575" y="500" width="480" height="225" class="blue"/>
+  <text x="595" y="535" class="h2">GKE</text>
+  <text x="595" y="568" class="t">create cluster: 3 nodes in source example</text>
+  <text x="595" y="598" class="t">kubectl get nodes</text>
+  <text x="595" y="628" class="t">kubectl describe node &lt;node&gt;</text>
+  <text x="595" y="658" class="t">gcloud compute ssh &lt;node&gt;</text>
+  <text x="595" y="688" class="s">Cluster deletion: [Needs confirmation]</text>
+
+  <rect x="1100" y="500" width="450" height="225" class="violet"/>
+  <text x="1120" y="535" class="h2">kubectl ergonomics</text>
+  <text x="1120" y="568" class="t">alias k=kubectl</text>
+  <text x="1120" y="598" class="t">kubectl completion bash</text>
+  <text x="1120" y="628" class="t">get / describe as primary inspection</text>
+  <text x="1120" y="670" class="s">Source-era CLI behavior preserved.</text>
+
+  <text x="50" y="790" class="h1">3. Kubernetes workload path</text>
+  <rect x="50" y="825" width="300" height="170" class="violet"/>
+  <text x="70" y="860" class="h2">kubectl run</text>
+  <text x="70" y="895" class="t">image + port</text>
+  <text x="70" y="925" class="t">source-era generator run/v1</text>
+  <text x="70" y="960" class="s">Creates ReplicationController</text>
+
+  <rect x="430" y="825" width="300" height="170" class="blue"/>
+  <text x="450" y="860" class="h2">ReplicationController</text>
+  <text x="450" y="895" class="t">desired replicas</text>
+  <text x="450" y="925" class="t">creates / maintains Pods</text>
+  <text x="450" y="960" class="s">Scale with kubectl scale rc</text>
+
+  <rect x="810" y="825" width="300" height="170" class="blue"/>
+  <text x="830" y="860" class="h2">Pods</text>
+  <text x="830" y="895" class="t">scheduled to worker nodes</text>
+  <text x="830" y="925" class="t">Kubelet → runtime → image</text>
+  <text x="830" y="960" class="s">Check: get pods -o wide</text>
+
+  <rect x="1190" y="825" width="360" height="170" class="green"/>
+  <text x="1210" y="860" class="h2">Service</text>
+  <text x="1210" y="895" class="t">kubectl expose rc ...</text>
+  <text x="1210" y="925" class="t">stable endpoint</text>
+  <text x="1210" y="955" class="t">distributes requests across Pods</text>
+
+  <line x1="350" y1="910" x2="425" y2="910" class="arrow"/>
+  <line x1="730" y1="910" x2="805" y2="910" class="arrow"/>
+  <line x1="1185" y1="910" x2="1115" y2="910" class="arrow"/>
+
+  <text x="50" y="1060" class="h1">4. Acceptance path</text>
+  <rect x="50" y="1090" width="1500" height="155" class="box"/>
+  <text x="75" y="1128" class="t">Image exists → local HTTP works → registry reachable → cluster-info works → nodes Ready → Pod Running</text>
+  <text x="75" y="1164" class="t">→ Service endpoint available → external HTTP works → scale replicas → RC/Pods converge → requests hit multiple Pods</text>
+  <text x="75" y="1205" class="s">Source includes one exercise: scale above 3 replicas and then return to the prior replica count.</text>
+
+  <text x="50" y="1290" class="s">Security boundary: real credentials and environment-specific identifiers are not reproduced; credential-exposing source output is redacted.</text>
+</svg>
