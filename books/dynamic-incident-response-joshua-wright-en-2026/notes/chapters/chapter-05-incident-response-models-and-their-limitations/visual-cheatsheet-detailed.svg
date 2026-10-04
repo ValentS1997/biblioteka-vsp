@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="980" viewBox="0 0 1400 980">
+<rect width="1400" height="980" fill="#ffffff"/>
+<text x="50" y="55" font-family="Arial" font-size="36" font-weight="700">Глава 5 — Models → Limitations → Requirements</text>
+
+<rect x="60" y="115" width="370" height="240" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="90" y="155" font-family="Arial" font-size="22" font-weight="700">PICERL</text>
+<text x="90" y="195" font-family="Arial" font-size="16">Preparation</text>
+<text x="90" y="225" font-family="Arial" font-size="16">Identification</text>
+<text x="90" y="255" font-family="Arial" font-size="16">Containment</text>
+<text x="90" y="285" font-family="Arial" font-size="16">Eradication → Recovery</text>
+<text x="90" y="315" font-family="Arial" font-size="16">Lessons Learned</text>
+
+<rect x="515" y="115" width="370" height="240" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="545" y="155" font-family="Arial" font-size="22" font-weight="700">NIST SP 800-61</text>
+<text x="545" y="195" font-family="Arial" font-size="16">Rev.2: Preparation</text>
+<text x="545" y="225" font-family="Arial" font-size="16">Detection &amp; Analysis</text>
+<text x="545" y="255" font-family="Arial" font-size="16">Contain / Eradicate / Recover</text>
+<text x="545" y="285" font-family="Arial" font-size="16">Post-Incident Activity</text>
+<text x="545" y="315" font-family="Arial" font-size="16">Rev.3: CSF-aligned integration</text>
+
+<rect x="970" y="115" width="370" height="240" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="1000" y="155" font-family="Arial" font-size="22" font-weight="700">Model variations</text>
+<text x="1000" y="195" font-family="Arial" font-size="16">Seven-step + retest</text>
+<text x="1000" y="225" font-family="Arial" font-size="16">Communication / documentation</text>
+<text x="1000" y="255" font-family="Arial" font-size="16">Circular models</text>
+<text x="1000" y="285" font-family="Arial" font-size="16">Different emphasis</text>
+<text x="1000" y="315" font-family="Arial" font-size="16">Same core limitations remain</text>
+
+<text x="50" y="430" font-family="Arial" font-size="24" font-weight="700">Common shortcomings</text>
+
+<rect x="50" y="465" width="250" height="150" rx="12" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="75" y="505" font-family="Arial" font-size="20" font-weight="700">1. Scoping</text>
+<text x="75" y="545" font-family="Arial" font-size="15">One affected host can hide</text>
+<text x="75" y="575" font-family="Arial" font-size="15">broader compromise.</text>
+
+<rect x="320" y="465" width="250" height="150" rx="12" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="345" y="505" font-family="Arial" font-size="20" font-weight="700">2. Iteration</text>
+<text x="345" y="545" font-family="Arial" font-size="15">Real evidence changes scope;</text>
+<text x="345" y="575" font-family="Arial" font-size="15">linear flow is insufficient.</text>
+
+<rect x="590" y="465" width="250" height="150" rx="12" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="615" y="505" font-family="Arial" font-size="20" font-weight="700">3. Prioritization</text>
+<text x="615" y="545" font-family="Arial" font-size="15">Resources are limited;</text>
+<text x="615" y="575" font-family="Arial" font-size="15">business priorities matter.</text>
+
+<rect x="860" y="465" width="250" height="150" rx="12" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="885" y="505" font-family="Arial" font-size="20" font-weight="700">4. Verification</text>
+<text x="885" y="545" font-family="Arial" font-size="15">Abnormal event may be</text>
+<text x="885" y="575" font-family="Arial" font-size="15">misconfig or performance issue.</text>
+
+<rect x="1130" y="465" width="220" height="150" rx="12" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="1155" y="505" font-family="Arial" font-size="20" font-weight="700">5. Root cause</text>
+<text x="1155" y="545" font-family="Arial" font-size="15">Fixing exploited symptom</text>
+<text x="1155" y="575" font-family="Arial" font-size="15">may not prevent recurrence.</text>
+
+<rect x="120" y="700" width="1160" height="190" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="155" y="742" font-family="Arial" font-size="22" font-weight="700">Requirements for a modern model</text>
+<text x="155" y="785" font-family="Arial" font-size="17">Verify the event → Scope the breadth → Prioritize resources</text>
+<text x="155" y="825" font-family="Arial" font-size="17">Iterate as new evidence appears → Analyze root cause</text>
+<text x="155" y="865" font-family="Arial" font-size="17">Align technical response with organizational objectives</text>
+
+<text x="415" y="950" font-family="Arial" font-size="24" font-weight="700">Next: Chapter 6 introduces DAIR.</text>
+</svg>
