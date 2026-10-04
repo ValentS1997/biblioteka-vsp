@@ -354,3 +354,40 @@ terms:
     context_note: "Replacement/invalidation of passwords, keys, tokens, and service credentials after compromise."
     lock: true
     evidence: ["p0352-c01", "p0369-c01", "p0372-c01"]
+
+
+  - source: "pre-restoration verification"
+    ru: "предварительная проверка перед восстановлением"
+    context_note: "Recovery gate confirming eradication findings, backup/rebuild integrity, and production readiness before restoration."
+    lock: true
+    evidence: ["p0406-c01", "p0407-c01", "p0428-c01"]
+
+  - source: "system owner acceptance"
+    ru: "приёмка владельцем системы"
+    context_note: "Formal business/operational validation and sign-off before production return."
+    lock: true
+    evidence: ["p0409-c01", "p0429-c01"]
+
+  - source: "enhanced monitoring"
+    ru: "усиленный мониторинг"
+    context_note: "Temporarily elevated logging and incident-specific detection during the post-recovery observation period."
+    lock: true
+    evidence: ["p0410-c01", "p0412-c01", "p0430-c01"]
+
+  - source: "phased recovery"
+    ru: "поэтапное восстановление"
+    context_note: "Incremental restoration with validation checkpoints between systems or groups."
+    lock: true
+    evidence: ["p0417-c01", "p0418-c01", "p0430-c01"]
+
+  - source: "coordinated recovery"
+    ru: "координированное восстановление"
+    context_note: "Parallel restoration of multiple interdependent systems within a planned recovery window."
+    lock: true
+    evidence: ["p0418-c01", "p0419-c01", "p0430-c01"]
+
+  - source: "containment action removal"
+    ru: "снятие мер сдерживания"
+    context_note: "Controlled removal or retention of temporary containment controls as systems return to production."
+    lock: true
+    evidence: ["p0415-c01", "p0416-c01", "p0431-c01"]
