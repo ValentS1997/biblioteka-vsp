@@ -28,8 +28,23 @@ def split_frontmatter(text: str):
         if end != -1:
             raw = text[4:end]
             body = text[end + 5:]
-            data = yaml.safe_load(raw) or {}
-            return data, body
+            try:
+                data = yaml.safe_load(raw) or {}
+                if isinstance(data, dict):
+                    return data, body
+            except yaml.YAMLError:
+                # Some historical chapter frontmatter contains malformed quoted notes.
+                # Assembly only needs a small set of scalar gate fields, so fall back
+                # to conservative line parsing instead of rejecting accepted body text.
+                data = {}
+                for key in ("translation_status", "qa_status", "chapter_number", "source_title"):
+                    m = re.search(rf"(?m)^\\s*{re.escape(key)}\\s*:\\s*(.+?)\\s*$", raw)
+                    if m:
+                        value = m.group(1).strip()
+                        if len(value) >= 2 and value[0] == value[-1] and value[0] in ("\\\"", "'"):
+                            value = value[1:-1]
+                        data[key] = value
+                return data, body
     return {}, text
 
 def chapter_num(path: Path) -> int:
