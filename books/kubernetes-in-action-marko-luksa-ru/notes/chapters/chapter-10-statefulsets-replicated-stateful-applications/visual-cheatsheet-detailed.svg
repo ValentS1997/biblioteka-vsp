@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1420" viewBox="0 0 1600 1420">
+  <rect width="1600" height="1420" fill="#ffffff"/>
+  <style>.title{font:700 35px sans-serif;fill:#111827}.h1{font:700 23px sans-serif;fill:#111827}.h2{font:700 18px sans-serif;fill:#111827}.t{font:15px sans-serif;fill:#1f2937}.s{font:14px sans-serif;fill:#475569}.box{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}.blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}.green{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}.amber{fill:#fffbeb;stroke:#d97706;stroke-width:2;rx:14}.violet{fill:#f5f3ff;stroke:#7c3aed;stroke-width:2;rx:14}.red{fill:#fef2f2;stroke:#dc2626;stroke-width:2;rx:14}</style>
+  <text x="50" y="58" class="title">Kubernetes в действии · Глава 10 — StatefulSet</text>
+  <text x="50" y="88" class="s">RAG-only · p0350:c01–p0382:c01 · PDF 350–382 · Printed 349–381</text>
+
+  <text x="50" y="140" class="h1">1. Stable identity and storage</text>
+  <rect x="50" y="170" width="720" height="235" class="blue"/>
+  <text x="70" y="205" class="h2">Ordinal identity</text>
+  <text x="70" y="238" class="t">StatefulSet kubia → kubia-0, kubia-1, kubia-2</text>
+  <text x="70" y="268" class="t">replacement keeps Pod name and hostname</text>
+  <text x="70" y="298" class="t">Pod may move to another worker node</text>
+  <text x="70" y="340" class="s">Identity belongs to ordinal, not physical node.</text>
+
+  <rect x="830" y="170" width="720" height="235" class="green"/>
+  <text x="850" y="205" class="h2">Per-Pod persistence</text>
+  <text x="850" y="238" class="t">volumeClaimTemplates stamps a PVC per ordinal</text>
+  <text x="850" y="268" class="t">data-kubia-0 → its own PV/storage</text>
+  <text x="850" y="298" class="t">PVC survives scale-down and is reattached on scale-up</text>
+  <text x="850" y="340" class="s">State follows stable Pod identity.</text>
+
+  <text x="50" y="470" class="h1">2. Network identity and peer discovery</text>
+  <rect x="50" y="500" width="720" height="240" class="violet"/>
+  <text x="70" y="535" class="h2">Governing headless Service</text>
+  <text x="70" y="568" class="t">clusterIP: None</text>
+  <text x="70" y="598" class="t">StatefulSet serviceName points to it</text>
+  <text x="70" y="628" class="t">Pod DNS identity remains stable</text>
+  <text x="70" y="670" class="s">No virtual load-balancing endpoint required for identity.</text>
+
+  <rect x="830" y="500" width="720" height="240" class="blue"/>
+  <text x="850" y="535" class="h2">DNS SRV discovery</text>
+  <text x="850" y="568" class="t">SRV query returns peer hostnames/ports</text>
+  <text x="850" y="598" class="t">additional A records provide Pod IPs</text>
+  <text x="850" y="628" class="t">application can discover peers without Kubernetes API</text>
+  <text x="850" y="670" class="s">SRV record order is not guaranteed.</text>
+
+  <text x="50" y="805" class="h1">3. Ordered lifecycle guarantees</text>
+  <rect x="50" y="835" width="470" height="245" class="green"/>
+  <text x="70" y="870" class="h2">Create / scale up</text>
+  <text x="70" y="903" class="t">lowest missing ordinal first</text>
+  <text x="70" y="933" class="t">wait until Ready</text>
+  <text x="70" y="963" class="t">then create next member</text>
+  <text x="70" y="1005" class="s">Avoids simultaneous startup races.</text>
+
+  <rect x="565" y="835" width="470" height="245" class="amber"/>
+  <text x="585" y="870" class="h2">Delete / scale down</text>
+  <text x="585" y="903" class="t">highest ordinal first</text>
+  <text x="585" y="933" class="t">wait for termination before next</text>
+  <text x="585" y="963" class="t">PVC is retained</text>
+  <text x="585" y="1005" class="s">State is intentionally not discarded.</text>
+
+  <rect x="1080" y="835" width="470" height="245" class="red"/>
+  <text x="1100" y="870" class="h2">At-most-one safety</text>
+  <text x="1100" y="903" class="t">unknown node state ≠ confirmed termination</text>
+  <text x="1100" y="933" class="t">replacement must wait</text>
+  <text x="1100" y="963" class="t">force-delete can break the guarantee</text>
+  <text x="1100" y="1005" class="s">Potential split-brain / shared-storage corruption.</text>
+
+  <text x="50" y="1145" class="h1">4. Failure exercise</text>
+  <rect x="50" y="1175" width="1500" height="175" class="box"/>
+  <text x="75" y="1213" class="t">sudo ifconfig eth0 down → node NotReady → Pod Unknown/Terminating.</text>
+  <text x="75" y="1249" class="t">Normal delete waits because Kubelet cannot confirm shutdown.</text>
+  <text x="75" y="1285" class="t">Force-delete only after old instance is known dead/fenced; then StatefulSet recreates same ordinal.</text>
+  <text x="75" y="1321" class="s">Source lab recovery: gcloud compute instances reset &lt;node-name&gt;</text>
+
+  <text x="50" y="1390" class="s">Source-era apps/v1beta1/update behavior preserved without external modernization.</text>
+</svg>
