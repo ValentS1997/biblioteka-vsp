@@ -59,6 +59,8 @@ def normalize_body(text: str) -> str:
         text,
         flags=re.MULTILINE,
     )
+    text = text.replace("THIRD_PARTY_REVIEW_REQUIRED", "материал третьей стороны не воспроизводится")
+    text = text.replace("RAG_MISS", "пропуск в извлечённом тексте источника")
     return text.strip() + "\n"
 
 def build_reference_docx(path: Path):
@@ -231,14 +233,21 @@ def audit_and_assemble(repo_root: Path, out_dir: Path):
         gd = yaml.safe_load(glossary_path.read_text(encoding="utf-8")) or {}
         entries = gd.get("entries") or gd.get("terms") or []
         if isinstance(entries, list) and entries:
-            lines = ["# Приложение. Глоссарий", "", "| English | Русский | Контекст |", "|---|---|---|"]
+            lines = ["# Приложение. Глоссарий", ""]
             for e in entries:
                 if not isinstance(e, dict):
                     continue
-                src = str(e.get("source", "")).replace("|", "\\|")
-                ru = str(e.get("ru", "")).replace("|", "\\|")
-                note = str(e.get("context_note", "")).replace("|", "\\|").replace("\n", " ")
-                lines.append(f"| {src} | {ru} | {note} |")
+                src = str(e.get("source", "")).strip()
+                ru = str(e.get("ru", "")).strip()
+                note = str(e.get("context_note", "")).replace("\n", " ").strip()
+                if not src:
+                    continue
+                item = f"- **{src}**"
+                if ru:
+                    item += f" — {ru}"
+                if note:
+                    item += f". {note}"
+                lines.append(item)
             glossary_md = "\n".join(lines) + "\n"
 
     toc_lines = ["# Оглавление", ""]
