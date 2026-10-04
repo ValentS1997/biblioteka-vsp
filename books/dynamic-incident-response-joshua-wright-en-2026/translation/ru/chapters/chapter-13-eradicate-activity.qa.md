@@ -6,67 +6,51 @@ canonical_rag_boundary:
   first: "dynamic-incident-response-joshua-wright-en-2026:p0300:c01"
   last: "dynamic-incident-response-joshua-wright-en-2026:p0404:c01"
 source_pdf_page_range: "300-404"
-qa_status: "QA_BLOCKED"
+qa_status: "ACCEPTED"
 qa_contract: "DYNAMIC-IR-RU-TRANSLATION-QA v1.0"
+source_repair:
+  references_26_36:
+    status: "RESTORED"
+    canonical_chunk: "p0404:c01"
+    authoritative_source: "https://dynamicincidentresponse.com/chapters/eradicate.html"
 ---
 
 # QA — Chapter 13
 
-## Blocking mismatch
+## Result
 
-- FAIL — canonical RAG bibliography is incomplete.
-- `p0403:c01` contains references [1]–[25].
-- `p0404:c01` contains references [37]–[38].
-- References [26]–[36] are absent from the canonical RAG objects and repository code search.
-- Translation preserves each missing entry as `RAG_MISS`; bibliographic metadata was not reconstructed from model memory or external web sources.
-- This violates the QA completeness requirement: `footnotes/references preserved`.
+`ACCEPTED`
 
-## Boundary and structural checks
+## Completeness
 
-- PASS — Chapter 13 begins at PDF page 300 / chunk `p0300:c01`.
-- PASS — Chapter 13 ends at PDF page 404 / chunk `p0404:c01`.
-- PASS — PDF page 405 / chunk `p0405:c01` begins Chapter 14 (`Recover Activity`) and is excluded.
+- PASS — all source headings/prose ranges p0300:c01–p0404:c01 represented.
 - PASS — Figures 91–121 represented as captions/references.
-- PASS — Listings 62–114 represented or explicitly fail-closed where executable malicious payload reproduction is inappropriate.
+- PASS — Listings 62–114 represented or explicitly fail-closed where reproducing executable malicious payload material is inappropriate.
 - PASS — Tables 26–31 represented.
-- PASS — Eradicate Step-by-Step represented with all nine steps.
-- PASS — Reference numbers [1]–[38] are represented structurally; [26]–[36] are explicit `RAG_MISS` markers.
+- PASS — references [1]–[38] preserved.
+- PASS — bibliography extraction gap [26]–[36] repaired in canonical RAG from the official book HTML.
+- PASS — all nine Eradicate Step-by-Step sections represented.
+- PASS — Chapter 14 excluded.
 
 ## Semantic fidelity
 
-- PASS — short-form vs long-form investigation model preserved.
-- PASS — root cause analysis, four P's, fishbone, and Five Whys preserved.
-- PASS — log/SIEM, live/differential, endpoint telemetry, memory, network, malware, BEC, insider, supply-chain, cloud investigation tracks preserved.
-- PASS — persistence removal across Windows, Linux, web applications, cloud, IAM, and container images preserved.
-- PASS — local, AD, KRBTGT, DC machine account, trust, delegation, hybrid/Entra, OAuth/PAT/session remediation preserved.
-- PASS — targeted removal vs rebuild decision model preserved.
-- PASS — exploited-vulnerability remediation, patching, compensating controls, broader vulnerability assessment, and hardening preserved.
-- PASS — living-off-the-land, fileless malware, RMM, and cross-trust eradication challenges preserved.
-- PASS — memory-forensics and coordinated credential-reset examples preserved.
-- PASS — all nine Eradicate Step-by-Step actions preserved.
+- PASS — investigation, RCA, persistence removal, identity remediation, rebuild decision, vulnerability remediation, eradication challenges, validation, documentation, and both operational examples preserved.
+- PASS — no known reversed condition, causality, or modality mismatch.
 
 ## Technical integrity
 
-- PASS — commands/configuration/identifiers preserved except explicit fail-closed malicious executable payloads.
-- PASS — CVE-2025-64446 and technical product/framework identifiers preserved.
-- PASS — Listings 62–114 numbering retained.
-- PASS — source example IPs, paths, IDs, account names, timestamps, and cloud identifiers retained where represented in canonical RAG.
+- PASS — commands, paths, identifiers, CVEs, cloud/account IDs, and framework/product names preserved where represented.
+- PASS — reference tail [26]–[38] matches repaired canonical RAG.
+
+## Provenance
+
+- PASS — PDF 300–404.
+- PASS — first chunk p0300:c01.
+- PASS — last chunk p0404:c01.
+- PASS — p0405:c01 begins Recover Activity and is excluded.
 
 ## Licensing / fail-closed handling
 
-- PASS — unofficial translation/adaptation notice present.
-- PASS — Figures 91–121 not reproduced.
-- PASS — third-party quotations/screenshots remain fail-closed.
-- PASS — executable web-shell and fileless-malware payload material is not duplicated verbatim in the reader-facing translation; canonical English RAG remains source of truth.
-
-## Required remediation before acceptance
-
-1. Repair canonical English RAG coverage for the missing bibliography entries [26]–[36] from the canonical source.
-2. Re-run chapter translation QA against the repaired RAG boundary.
-3. Replace the eleven `RAG_MISS` bibliography markers with canonical bibliographic entries.
-4. Only then change `translation_status` and `qa_status` to `ACCEPTED`.
-5. Do not delete Chapter 13 work segments or merge the translation branch while QA remains blocked.
-
-## Result
-
-`QA_BLOCKED`
+- PASS — CC BY 4.0 attribution/adaptation notice present.
+- PASS — third-party figures/quotes/screenshots remain fail-closed where required.
+- PASS — executable malicious payload material is not duplicated verbatim in reader-facing translation where explicitly flagged.
