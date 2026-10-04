@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="930" viewBox="0 0 1200 930">
+  <rect width="1200" height="930" fill="#ffffff"/>
+  <style>.title{font:700 31px sans-serif;fill:#111827}.h{font:700 19px sans-serif;fill:#111827}.t{font:15px sans-serif;fill:#1f2937}.s{font:14px sans-serif;fill:#475569}.box{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}.blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}.green{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}.amber{fill:#fffbeb;stroke:#d97706;stroke-width:2;rx:14}.violet{fill:#f5f3ff;stroke:#7c3aed;stroke-width:2;rx:14}.red{fill:#fef2f2;stroke:#dc2626;stroke-width:2;rx:14}</style>
+  <text x="40" y="54" class="title">Глава 10 — StatefulSet: identity, storage, ordering</text>
+  <text x="40" y="82" class="s">RAG p0350:c01–p0382:c01 · PDF 350–382 · Printed 349–381</text>
+
+  <rect x="40" y="120" width="350" height="175" class="blue"/>
+  <text x="60" y="154" class="h">Stable identity</text>
+  <text x="60" y="188" class="t">kubia-0 · kubia-1 · kubia-2</text>
+  <text x="60" y="218" class="t">stable hostname</text>
+  <text x="60" y="248" class="t">replacement keeps ordinal</text>
+
+  <rect x="425" y="120" width="350" height="175" class="green"/>
+  <text x="445" y="154" class="h">Dedicated storage</text>
+  <text x="445" y="188" class="t">volumeClaimTemplates</text>
+  <text x="445" y="218" class="t">one PVC per Pod</text>
+  <text x="445" y="248" class="t">PVC survives scale-down</text>
+
+  <rect x="810" y="120" width="350" height="175" class="violet"/>
+  <text x="830" y="154" class="h">Peer discovery</text>
+  <text x="830" y="188" class="t">headless Service</text>
+  <text x="830" y="218" class="t">DNS SRV records</text>
+  <text x="830" y="248" class="t">stable peer hostnames</text>
+
+  <text x="40" y="350" class="h">Ordered lifecycle</text>
+  <rect x="40" y="385" width="540" height="185" class="green"/>
+  <text x="60" y="420" class="h">Scale up</text>
+  <text x="60" y="454" class="t">create ordinal 0 → wait Ready</text>
+  <text x="60" y="484" class="t">then ordinal 1 → wait Ready</text>
+  <text x="60" y="514" class="t">continue sequentially</text>
+
+  <rect x="620" y="385" width="540" height="185" class="amber"/>
+  <text x="640" y="420" class="h">Scale down</text>
+  <text x="640" y="454" class="t">highest ordinal removed first</text>
+  <text x="640" y="484" class="t">wait full termination</text>
+  <text x="640" y="514" class="t">PVC remains for later reuse</text>
+
+  <text x="40" y="635" class="h">Failure safety</text>
+  <rect x="40" y="670" width="1120" height="160" class="red"/>
+  <text x="65" y="707" class="t">Node NotReady does not prove the old stateful process has stopped.</text>
+  <text x="65" y="743" class="t">Force-delete can create a replacement while old Pod still runs → duplicate identity/storage.</text>
+  <text x="65" y="779" class="t">Only force-delete after the old instance is known dead/fenced.</text>
+
+  <text x="40" y="885" class="s">Recovery in source lab: gcloud compute instances reset &lt;node-name&gt;</text>
+</svg>
