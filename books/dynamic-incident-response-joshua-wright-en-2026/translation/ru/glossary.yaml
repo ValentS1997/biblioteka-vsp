@@ -202,3 +202,27 @@ terms:
     ru: "сбор данных, ориентированный на задачи обнаружения"
     lock: true
     evidence: ["p0178-c01", "p0179-c01"]
+
+
+  - source: "response actions loop"
+    ru: "цикл действий реагирования"
+    context_note: "Core iterative DAIR cycle comprising scope, contain, eradicate, and recover."
+    lock: true
+    evidence: ["p0213-c01", "p0214-c01"]
+
+  - source: "iteration trigger"
+    ru: "триггер итерации"
+    context_note: "New information or changed conditions requiring another response-actions-loop cycle."
+    lock: true
+    evidence: ["p0215-c01", "p0216-c01"]
+
+  - source: "loop exit"
+    ru: "выход из цикла"
+    context_note: "Explicit attributed decision to conclude active response."
+    lock: true
+    evidence: ["p0218-c01", "p0222-c01"]
+
+  - source: "residual risk"
+    ru: "остаточный риск"
+    lock: true
+    evidence: ["p0218-c01", "p0222-c01"]
