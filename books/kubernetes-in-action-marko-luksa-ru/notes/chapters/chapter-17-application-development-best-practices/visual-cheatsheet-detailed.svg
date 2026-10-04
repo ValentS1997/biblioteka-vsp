@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1420" viewBox="0 0 1600 1420">
+  <rect width="1600" height="1420" fill="#ffffff"/>
+  <style>.title{font:700 35px sans-serif;fill:#111827}.h1{font:700 23px sans-serif;fill:#111827}.h2{font:700 18px sans-serif;fill:#111827}.t{font:15px sans-serif;fill:#1f2937}.s{font:14px sans-serif;fill:#475569}.box{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}.blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}.green{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}.amber{fill:#fffbeb;stroke:#d97706;stroke-width:2;rx:14}.violet{fill:#f5f3ff;stroke:#7c3aed;stroke-width:2;rx:14}.red{fill:#fef2f2;stroke:#dc2626;stroke-width:2;rx:14}</style>
+
+  <text x="50" y="58" class="title">Kubernetes в действии · Глава 17 — application practices</text>
+  <text x="50" y="88" class="s">RAG-only · p0575:c01–p0610:c01 · PDF 575–610 · Printed 574–609</text>
+
+  <text x="50" y="140" class="h1">1. Pod lifecycle assumptions</text>
+  <rect x="50" y="170" width="720" height="235" class="blue"/>
+  <text x="70" y="205" class="h2">Replaceability</text>
+  <text x="70" y="238" class="t">Pod recreation can change IP and node</text>
+  <text x="70" y="268" class="t">container restart creates new writable layer</text>
+  <text x="70" y="298" class="t">durable state belongs in volume/external storage</text>
+  <text x="70" y="340" class="s">StatefulSet preserves identity/state semantics, not Pod IP.</text>
+
+  <rect x="830" y="170" width="720" height="235" class="green"/>
+  <text x="850" y="205" class="h2">Startup</text>
+  <text x="850" y="238" class="t">init containers run sequentially before main containers</text>
+  <text x="850" y="268" class="t">readiness controls when Service traffic begins</text>
+  <text x="850" y="298" class="t">postStart runs after process start and may fail container</text>
+  <text x="850" y="340" class="s">Kubernetes does not guarantee cross-Pod startup order.</text>
+
+  <text x="50" y="470" class="h1">2. Graceful termination</text>
+  <rect x="50" y="500" width="470" height="250" class="violet"/>
+  <text x="70" y="535" class="h2">Container sequence</text>
+  <text x="70" y="568" class="t">preStop</text>
+  <text x="70" y="598" class="t">SIGTERM</text>
+  <text x="70" y="628" class="t">grace-period wait</text>
+  <text x="70" y="658" class="t">SIGKILL if still running</text>
+
+  <rect x="565" y="500" width="470" height="250" class="amber"/>
+  <text x="585" y="535" class="h2">Traffic race</text>
+  <text x="585" y="568" class="t">Kubelet shutdown starts independently</text>
+  <text x="585" y="598" class="t">Endpoints/controller/proxy updates propagate asynchronously</text>
+  <text x="585" y="628" class="t">old keep-alive connections may remain active</text>
+  <text x="585" y="670" class="s">SIGTERM can arrive before every router stops forwarding.</text>
+
+  <rect x="1080" y="500" width="470" height="250" class="red"/>
+  <text x="1100" y="535" class="h2">Force delete</text>
+  <text x="1100" y="568" class="t">API object may vanish before process stops</text>
+  <text x="1100" y="598" class="t">replacement can start immediately</text>
+  <text x="1100" y="628" class="t">StatefulSet duplicate identity/storage risk</text>
+  <text x="1100" y="670" class="s">Only after old instance is known dead/fenced.</text>
+
+  <text x="50" y="815" class="h1">3. Manageability and observability</text>
+  <rect x="50" y="845" width="470" height="245" class="green"/>
+  <text x="70" y="880" class="h2">Images + metadata</text>
+  <text x="70" y="913" class="t">versioned tags over mutable latest</text>
+  <text x="70" y="943" class="t">multi-dimensional labels</text>
+  <text x="70" y="973" class="t">annotations for owner/description/build</text>
+
+  <rect x="565" y="845" width="470" height="245" class="blue"/>
+  <text x="585" y="880" class="h2">Diagnostics</text>
+  <text x="585" y="913" class="t">terminationMessagePath</text>
+  <text x="585" y="943" class="t">stdout/stderr</text>
+  <text x="585" y="973" class="t">kubectl logs / describe / cp</text>
+
+  <rect x="1080" y="845" width="470" height="245" class="violet"/>
+  <text x="1100" y="880" class="h2">Central logging</text>
+  <text x="1100" y="913" class="t">FluentD agents collect node/container logs</text>
+  <text x="1100" y="943" class="t">Elasticsearch stores</text>
+  <text x="1100" y="973" class="t">Kibana visualizes</text>
+
+  <text x="50" y="1155" class="h1">4. Development and delivery</text>
+  <rect x="50" y="1185" width="1500" height="165" class="box"/>
+  <text x="75" y="1223" class="t">Develop locally when possible; use Minikube when Kubernetes behavior matters.</text>
+  <text x="75" y="1259" class="t">Keep manifests in version control and apply desired state declaratively.</text>
+  <text x="75" y="1295" class="t">Source-era Ksonnet/Jsonnet and CI/CD examples automate manifest/build/deployment flow.</text>
+  <text x="75" y="1331" class="s">No explicit chapter exercise block found; demonstrations are not promoted into review questions.</text>
+
+  <text x="50" y="1390" class="s">Source-era ecosystem preserved; external links were not followed.</text>
+</svg>
