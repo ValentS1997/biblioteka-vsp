@@ -1,0 +1,191 @@
+{
+  "book_id": "dynamic-incident-response-joshua-wright-en-2026",
+  "status": "ACCEPTED",
+  "chapters_expected": 20,
+  "chapters_found": 20,
+  "third_party_review_markers": 231,
+  "needs_confirmation_markers": 0,
+  "problems": [],
+  "chapters": [
+    {
+      "chapter": 1,
+      "file": "chapter-01-case-study-supply-chain-calamity.md",
+      "translation_status": "ACCEPTED",
+      "qa_status": "ACCEPTED",
+      "title": "Глава 1. Кейс: катастрофа в цепочке поставок",
+      "third_party_flags": 4,
+      "needs_confirmation": 0
+    },
+    {
+      "chapter": 2,
+      "file": "chapter-02-introduction.md",
+      "translation_status": "ACCEPTED",
+      "qa_status": "ACCEPTED",
+      "title": "Глава 2. Введение",
+      "third_party_flags": 0,
+      "needs_confirmation": 0
+    },
+    {
+      "chapter": 3,
+      "file": "chapter-03-a-short-history-of-incident-response.md",
+      "translation_status": "ACCEPTED",
+      "qa_status": "ACCEPTED",
+      "title": "Глава 3. Краткая история реагирования на инциденты",
+      "third_party_flags": 5,
+      "needs_confirmation": 0
+    },
+    {
+      "chapter": 4,
+      "file": "chapter-04-getting-started.md",
+      "translation_status": "ACCEPTED",
+      "qa_status": "ACCEPTED",
+      "title": "Глава 4. С чего начать",
+      "third_party_flags": 5,
+      "needs_confirmation": 0
+    },
+    {
+      "chapter": 5,
+      "file": "chapter-05-incident-response-models-and-their-limitations.md",
+      "translation_status": "ACCEPTED",
+      "qa_status": "ACCEPTED",
+      "title": "Глава 5. Модели реагирования на инциденты и их ограничения",
+      "third_party_flags": 8,
+      "needs_confirmation": 0
+    },
+    {
+      "chapter": 6,
+      "file": "chapter-06-a-dynamic-approach-to-incident-response.md",
+      "translation_status": "ACCEPTED",
+      "qa_status": "ACCEPTED",
+      "title": "Глава 6. Динамический подход к реагированию на инциденты",
+      "third_party_flags": 7,
+      "needs_confirmation": 0
+    },
+    {
+      "chapter": 7,
+      "file": "chapter-07-prepare-activity.md",
+      "translation_status": "ACCEPTED",
+      "qa_status": "ACCEPTED",
+      "title": "Глава 7. Подготовка",
+      "third_party_flags": 26,
+      "needs_confirmation": 0
+    },
+    {
+      "chapter": 8,
+      "file": "chapter-08-detect-activity.md",
+      "translation_status": "ACCEPTED",
+      "qa_status": "ACCEPTED",
+      "title": "Глава 8. Обнаружение",
+      "third_party_flags": 9,
+      "needs_confirmation": 0
+    },
+    {
+      "chapter": 9,
+      "file": "chapter-09-verify-and-triage-activities.md",
+      "translation_status": "ACCEPTED",
+      "qa_status": "ACCEPTED",
+      "title": "Глава 9. Проверка и триаж",
+      "third_party_flags": 12,
+      "needs_confirmation": 0
+    },
+    {
+      "chapter": 10,
+      "file": "chapter-10-response-actions-loop.md",
+      "translation_status": "ACCEPTED",
+      "qa_status": "ACCEPTED",
+      "title": "Глава 10. Цикл действий реагирования",
+      "third_party_flags": 3,
+      "needs_confirmation": 0
+    },
+    {
+      "chapter": 11,
+      "file": "chapter-11-scope-activity.md",
+      "translation_status": "ACCEPTED",
+      "qa_status": "ACCEPTED",
+      "title": "Глава 11. Определение масштаба",
+      "third_party_flags": 5,
+      "needs_confirmation": 0
+    },
+    {
+      "chapter": 12,
+      "file": "chapter-12-contain-activity.md",
+      "translation_status": "ACCEPTED",
+      "qa_status": "ACCEPTED",
+      "title": "Глава 12. Сдерживание",
+      "third_party_flags": 17,
+      "needs_confirmation": 0
+    },
+    {
+      "chapter": 13,
+      "file": "chapter-13-eradicate-activity.md",
+      "translation_status": "ACCEPTED",
+      "qa_status": "ACCEPTED",
+      "title": "Глава 13. Искоренение угрозы",
+      "third_party_flags": 43,
+      "needs_confirmation": 0
+    },
+    {
+      "chapter": 14,
+      "file": "chapter-14-recover-activity.md",
+      "translation_status": "ACCEPTED",
+      "qa_status": "ACCEPTED",
+      "title": "Глава 14. Восстановление",
+      "third_party_flags": 9,
+      "needs_confirmation": 0
+    },
+    {
+      "chapter": 15,
+      "file": "chapter-15-debrief-activity.md",
+      "translation_status": "ACCEPTED",
+      "qa_status": "ACCEPTED",
+      "title": "Глава 15. Разбор инцидента",
+      "third_party_flags": 15,
+      "needs_confirmation": 0
+    },
+    {
+      "chapter": 16,
+      "file": "chapter-16-accelerating-incident-response-with-ai.md",
+      "translation_status": "ACCEPTED",
+      "qa_status": "ACCEPTED",
+      "title": "Глава 16. Ускорение реагирования на инциденты с помощью ИИ",
+      "third_party_flags": 37,
+      "needs_confirmation": 0
+    },
+    {
+      "chapter": 17,
+      "file": "chapter-17-incident-response-for-ransomware.md",
+      "translation_status": "ACCEPTED",
+      "qa_status": "ACCEPTED",
+      "title": "Глава 17. Реагирование на инциденты с программами-вымогателями",
+      "third_party_flags": 7,
+      "needs_confirmation": 0
+    },
+    {
+      "chapter": 18,
+      "file": "chapter-18-incident-response-for-cloud-systems.md",
+      "translation_status": "ACCEPTED",
+      "qa_status": "ACCEPTED",
+      "title": "Глава 18. Реагирование на инциденты в облачных системах",
+      "third_party_flags": 9,
+      "needs_confirmation": 0
+    },
+    {
+      "chapter": 19,
+      "file": "chapter-19-incident-response-for-operational-technology.md",
+      "translation_status": "ACCEPTED",
+      "qa_status": "ACCEPTED",
+      "title": "Глава 19. Реагирование на инциденты в операционных технологиях",
+      "third_party_flags": 9,
+      "needs_confirmation": 0
+    },
+    {
+      "chapter": 20,
+      "file": "chapter-20-integrating-dair-with-nist-csf-2-0.md",
+      "translation_status": "ACCEPTED",
+      "qa_status": "ACCEPTED",
+      "title": "Глава 20. Интеграция DAIR с NIST CSF 2.0",
+      "third_party_flags": 1,
+      "needs_confirmation": 0
+    }
+  ]
+}

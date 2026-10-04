@@ -1,0 +1,19 @@
+Title:           Динамическое реагирование на инциденты
+Author:          Joshua Wright
+Creator:         Writer
+Producer:        LibreOffice 24.2
+CreationDate:    Sun Oct  4 18:59:27 2026 UTC
+Custom Metadata: no
+Metadata Stream: no
+Tagged:          yes
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           712
+Encrypted:       no
+Page size:       595.304 x 841.89 pts (A4)
+Page rot:        0
+File size:       5742821 bytes
+Optimized:       no
+PDF version:     1.7
