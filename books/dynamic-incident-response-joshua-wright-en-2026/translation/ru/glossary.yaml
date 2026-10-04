@@ -652,3 +652,70 @@ terms:
     lock: true
     evidence: ["p0635-c01"]
 
+  - source: "NIST Cybersecurity Framework 2.0"
+    ru: "NIST Cybersecurity Framework (CSF) 2.0"
+    preserve_identifier: "CSF 2.0"
+    context_note: "Six-function cybersecurity risk-management framework used in Chapter 20 for incident-response compliance mapping."
+    lock: true
+    evidence: ["p0637-c01", "p0638-c01"]
+
+  - source: "Govern"
+    ru: "Govern (GV)"
+    preserve_identifier: "GV"
+    context_note: "CSF 2.0 function covering organizational cybersecurity risk-management context, strategy, policy, authority, and oversight."
+    lock: true
+    evidence: ["p0638-c01", "p0642-c01", "p0643-c01"]
+
+  - source: "Identify"
+    ru: "Identify (ID)"
+    preserve_identifier: "ID"
+    context_note: "CSF 2.0 function covering awareness of assets, vulnerabilities, threats, impacts, and organizational context."
+    lock: true
+    evidence: ["p0638-c01", "p0641-c01"]
+
+  - source: "Protect"
+    ru: "Protect (PR)"
+    preserve_identifier: "PR"
+    context_note: "CSF 2.0 function covering safeguards and preparation that reduce cybersecurity risk before incidents occur."
+    lock: true
+    evidence: ["p0638-c01", "p0641-c01"]
+
+  - source: "Detect"
+    ru: "Detect (DE)"
+    preserve_identifier: "DE"
+    context_note: "CSF 2.0 function covering monitoring, alerting, finding, and analyzing cybersecurity attacks and compromises."
+    lock: true
+    evidence: ["p0638-c01", "p0641-c01", "p0645-c01"]
+
+  - source: "Respond"
+    ru: "Respond (RS)"
+    preserve_identifier: "RS"
+    context_note: "CSF 2.0 function covering analysis, containment, eradication, communications, and adaptive response activities."
+    lock: true
+    evidence: ["p0638-c01", "p0641-c01", "p0645-c01"]
+
+  - source: "Recover"
+    ru: "Recover (RC)"
+    preserve_identifier: "RC"
+    context_note: "CSF 2.0 function covering restoration, recovery validation, lessons learned, and resilience improvement."
+    lock: true
+    evidence: ["p0638-c01", "p0641-c01", "p0645-c01"]
+
+  - source: "compliance artifact"
+    ru: "артефакт соответствия требованиям"
+    context_note: "Documented evidence naturally produced by DAIR activities and used to demonstrate CSF capability existence, effectiveness, and improvement."
+    lock: true
+    evidence: ["p0643-c01", "p0644-c01", "p0647-c01"]
+
+  - source: "control effectiveness"
+    ru: "эффективность мер контроля"
+    context_note: "Demonstrated evidence that cybersecurity controls function as intended rather than merely existing on paper."
+    lock: true
+    evidence: ["p0644-c01", "p0645-c01"]
+
+  - source: "risk-aligned decision-making"
+    ru: "принятие решений с учетом риска"
+    context_note: "Incident decision process explicitly aligned with organizational risk tolerance, business impact, and enterprise risk-management strategy."
+    lock: true
+    evidence: ["p0642-c01", "p0646-c01", "p0647-c01"]
+
