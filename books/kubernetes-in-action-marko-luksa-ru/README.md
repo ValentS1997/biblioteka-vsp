@@ -47,3 +47,9 @@ Canonical readiness command:
 
 - [Chapter analyses](notes/chapters/README.md)
 - [Appendix analyses A–D](notes/appendices/README.md)
+
+## Final collection artifacts
+
+- [Final audit](notes/final-audit.md)
+- [Book-wide cheatsheet](notes/book-cheatsheet.md)
+- [Book-wide visual cheatsheet](notes/book-cheatsheet.svg)
