@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="930" viewBox="0 0 1200 930">
+  <rect width="1200" height="930" fill="#ffffff"/>
+  <style>
+    .title{font:700 31px sans-serif;fill:#111827}.h{font:700 19px sans-serif;fill:#111827}
+    .t{font:15px sans-serif;fill:#1f2937}.s{font:14px sans-serif;fill:#475569}
+    .box{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}
+    .blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}
+    .green{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}
+    .amber{fill:#fffbeb;stroke:#d97706;stroke-width:2;rx:14}
+    .violet{fill:#f5f3ff;stroke:#7c3aed;stroke-width:2;rx:14}
+  </style>
+  <text x="40" y="54" class="title">Глава 5 — Services, discovery и external access</text>
+  <text x="40" y="82" class="s">RAG p0168:c01–p0211:c01 · PDF 168–211 · Printed 167–210</text>
+  <rect x="40" y="120" width="350" height="175" class="blue"/>
+  <text x="60" y="154" class="h">Service</text><text x="60" y="188" class="t">stable IP + port</text><text x="60" y="218" class="t">selector → Endpoints</text><text x="60" y="248" class="t">ready Pods receive traffic</text>
+  <rect x="425" y="120" width="350" height="175" class="green"/>
+  <text x="445" y="154" class="h">Discovery</text><text x="445" y="188" class="t">environment variables</text><text x="445" y="218" class="t">cluster DNS / FQDN</text><text x="445" y="248" class="t">Headless DNS → Pod IPs</text>
+  <rect x="810" y="120" width="350" height="175" class="violet"/>
+  <text x="830" y="154" class="h">External access</text><text x="830" y="188" class="t">NodePort</text><text x="830" y="218" class="t">LoadBalancer</text><text x="830" y="248" class="t">Ingress HTTP/L7</text>
+  <text x="40" y="350" class="h">Traffic eligibility</text>
+  <rect x="40" y="385" width="540" height="180" class="green"/>
+  <text x="60" y="420" class="h">Readiness</text><text x="60" y="454" class="t">probe success → in Endpoints</text><text x="60" y="484" class="t">probe failure → out of Endpoints</text><text x="60" y="514" class="s">No container restart on readiness failure.</text>
+  <rect x="620" y="385" width="540" height="180" class="amber"/>
+  <text x="640" y="420" class="h">External service identity</text><text x="640" y="454" class="t">Service without selector + manual Endpoints</text><text x="640" y="484" class="t">ExternalName → DNS CNAME</text><text x="640" y="514" class="s">Stable client-facing name, replaceable backend.</text>
+  <text x="40" y="630" class="h">Troubleshooting</text>
+  <rect x="40" y="665" width="1120" height="160" class="box"/>
+  <text x="65" y="702" class="t">inside cluster? → readiness? → Endpoints? → DNS vs ClusterIP? → Service port?</text>
+  <text x="65" y="738" class="t">→ direct Pod IP? → application listens beyond localhost?</text>
+  <text x="65" y="778" class="t">Do not use ping to validate ClusterIP Service.</text>
+  <text x="40" y="885" class="s">Risk boundaries: public NodePort firewall, TLS private key/Secret, destructive Pod recreation.</text>
+</svg>
