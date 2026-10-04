@@ -226,3 +226,33 @@ terms:
     ru: "остаточный риск"
     lock: true
     evidence: ["p0218-c01", "p0222-c01"]
+
+
+  - source: "progressive scoping"
+    ru: "поэтапное определение масштаба"
+    context_note: "Scoping methodology: critical-asset prioritization, lateral expansion, environmental sweep."
+    lock: true
+    evidence: ["p0227-c01"]
+
+  - source: "enterprise-wide hunting"
+    ru: "поиск IOC по всей организации"
+    context_note: "IOC-driven sweep during a verified incident; distinct from standing threat-hunting in Detect."
+    lock: true
+    evidence: ["p0226-c01", "p0227-c01"]
+
+  - source: "timeline reconstruction"
+    ru: "реконструкция временной шкалы атаки"
+    lock: true
+    evidence: ["p0227-c01", "p0228-c01", "p0229-c01"]
+
+  - source: "patient zero"
+    ru: "нулевая система"
+    context_note: "First system compromised in the incident."
+    lock: true
+    evidence: ["p0227-c01", "p0241-c01"]
+
+  - source: "anti-forensic techniques"
+    ru: "антифорензик-техники"
+    context_note: "Techniques used to conceal activity or manipulate evidence."
+    lock: true
+    evidence: ["p0230-c01", "p0231-c01", "p0232-c01"]
