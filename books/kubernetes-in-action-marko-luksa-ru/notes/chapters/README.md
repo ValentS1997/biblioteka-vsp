@@ -12,3 +12,4 @@ Reviewed chapter-level notes are stored here.
 - [Chapter 8 — Доступ к метаданным и другим ресурсам](chapter-08-accessing-pod-metadata-and-other-resources/README.md)
 - [Chapter 9 — Развертывания: декларативное обновление приложений](chapter-09-deployments-declarative-application-updates/README.md)
 - [Chapter 10 — StatefulSet: реплицируемые приложения с внутренним состоянием](chapter-10-statefulsets-replicated-stateful-applications/README.md)
+- [Chapter 11 — Внутреннее устройство Kubernetes](chapter-11-kubernetes-internals/README.md)
