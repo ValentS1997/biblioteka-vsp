@@ -21,7 +21,7 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc libreoffice-writer fonts-liberation
+          sudo apt-get install -y pandoc libreoffice-writer fonts-liberation poppler-utils
 
       - name: Install Python dependencies
         run: |
