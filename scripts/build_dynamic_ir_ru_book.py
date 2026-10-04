@@ -98,6 +98,14 @@ def build_reference_docx(path: Path):
             st._element.rPr.rFonts.set(qn("w:eastAsia"), "Liberation Mono")
             st.font.size = Pt(8.5)
 
+    # Footer page number for printed A4 copies.
+    footer_p = sec.footer.paragraphs[0]
+    footer_p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    run = footer_p.add_run()
+    fld = OxmlElement("w:fldSimple")
+    fld.set(qn("w:instr"), "PAGE")
+    run._r.addnext(fld)
+
     # compact table style defaults via Normal font; pandoc handles grid borders.
     doc.save(path)
 
