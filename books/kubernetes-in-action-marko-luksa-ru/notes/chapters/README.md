@@ -15,3 +15,4 @@ Reviewed chapter-level notes are stored here.
 - [Chapter 11 — Внутреннее устройство Kubernetes](chapter-11-kubernetes-internals/README.md)
 - [Chapter 12 — Защита сервера API Kubernetes](chapter-12-securing-the-kubernetes-api-server/README.md)
 - [Chapter 13 — Защита узлов кластера и сети](chapter-13-securing-cluster-nodes-and-network/README.md)
+- [Chapter 14 — Управление вычислительными ресурсами модулей](chapter-14-managing-compute-resources/README.md)

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1420" viewBox="0 0 1600 1420">
+  <rect width="1600" height="1420" fill="#ffffff"/>
+  <style>.title{font:700 35px sans-serif;fill:#111827}.h1{font:700 23px sans-serif;fill:#111827}.h2{font:700 18px sans-serif;fill:#111827}.t{font:15px sans-serif;fill:#1f2937}.s{font:14px sans-serif;fill:#475569}.box{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}.blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}.green{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}.amber{fill:#fffbeb;stroke:#d97706;stroke-width:2;rx:14}.violet{fill:#f5f3ff;stroke:#7c3aed;stroke-width:2;rx:14}.red{fill:#fef2f2;stroke:#dc2626;stroke-width:2;rx:14}</style>
+
+  <text x="50" y="58" class="title">Kubernetes в действии · Глава 14 — compute resources</text>
+  <text x="50" y="88" class="s">RAG-only · p0492:c01–p0528:c01 · PDF 492–528 · Printed 491–527</text>
+
+  <text x="50" y="140" class="h1">1. Scheduling and runtime resources</text>
+  <rect x="50" y="170" width="720" height="235" class="blue"/>
+  <text x="70" y="205" class="h2">Requests</text>
+  <text x="70" y="238" class="t">scheduler compares requests to Node allocatable</text>
+  <text x="70" y="268" class="t">Pod request = sum of container requests</text>
+  <text x="70" y="298" class="t">CPU request also weights CPU time under contention</text>
+  <text x="70" y="340" class="s">Actual idle CPU does not erase scheduler reservations.</text>
+
+  <rect x="830" y="170" width="720" height="235" class="red"/>
+  <text x="850" y="205" class="h2">Limits</text>
+  <text x="850" y="238" class="t">CPU is compressible → process is throttled</text>
+  <text x="850" y="268" class="t">Memory is incompressible → process may be OOMKilled</text>
+  <text x="850" y="298" class="t">sum of limits may exceed node capacity</text>
+  <text x="850" y="340" class="s">Repeated OOM failure can surface as CrashLoopBackOff.</text>
+
+  <text x="50" y="470" class="h1">2. QoS and memory pressure</text>
+  <rect x="50" y="500" width="470" height="250" class="green"/>
+  <text x="70" y="535" class="h2">Guaranteed</text>
+  <text x="70" y="568" class="t">CPU + memory requests and limits</text>
+  <text x="70" y="598" class="t">for every container</text>
+  <text x="70" y="628" class="t">request equals limit</text>
+  <text x="70" y="670" class="s">Highest source QoS priority.</text>
+
+  <rect x="565" y="500" width="470" height="250" class="violet"/>
+  <text x="585" y="535" class="h2">Burstable</text>
+  <text x="585" y="568" class="t">all mixed configurations</text>
+  <text x="585" y="598" class="t">gets requested resources</text>
+  <text x="585" y="628" class="t">may use more up to limit</text>
+  <text x="585" y="670" class="s">OOM score still differentiates peers in same class.</text>
+
+  <rect x="1080" y="500" width="470" height="250" class="amber"/>
+  <text x="1100" y="535" class="h2">BestEffort</text>
+  <text x="1100" y="568" class="t">no requests</text>
+  <text x="1100" y="598" class="t">no limits</text>
+  <text x="1100" y="628" class="t">first source class under memory pressure</text>
+  <text x="1100" y="670" class="s">No guaranteed resource reservation.</text>
+
+  <text x="50" y="815" class="h1">3. Namespace governance</text>
+  <rect x="50" y="845" width="720" height="235" class="green"/>
+  <text x="70" y="880" class="h2">LimitRange</text>
+  <text x="70" y="913" class="t">per-object min/max</text>
+  <text x="70" y="943" class="t">defaultRequest + default limits</text>
+  <text x="70" y="973" class="t">can reject too-large Pod at admission</text>
+  <text x="70" y="1015" class="s">Does not cap total namespace consumption.</text>
+
+  <rect x="830" y="845" width="720" height="235" class="amber"/>
+  <text x="850" y="880" class="h2">ResourceQuota</text>
+  <text x="850" y="913" class="t">aggregate requests/limits</text>
+  <text x="850" y="943" class="t">storage and object-count quotas</text>
+  <text x="850" y="973" class="t">BestEffort / NotBestEffort / Terminating scopes</text>
+  <text x="850" y="1015" class="s">Often paired with LimitRange defaults in source.</text>
+
+  <text x="50" y="1145" class="h1">4. Observe and tune</text>
+  <rect x="50" y="1175" width="1500" height="175" class="box"/>
+  <text x="75" y="1213" class="t">cAdvisor gathers per-node/container metrics; Heapster aggregates them in source-era architecture.</text>
+  <text x="75" y="1249" class="t">kubectl top gives current consumption; InfluxDB/Grafana provide longer-term analysis in source.</text>
+  <text x="75" y="1285" class="t">Compare actual usage with requests/limits and adjust over time.</text>
+  <text x="75" y="1321" class="s">Source-era monitoring stack and container visibility behavior are preserved without modernization.</text>
+
+  <text x="50" y="1390" class="s">No explicit chapter exercise block found; demonstrations are not promoted into review questions.</text>
+</svg>
