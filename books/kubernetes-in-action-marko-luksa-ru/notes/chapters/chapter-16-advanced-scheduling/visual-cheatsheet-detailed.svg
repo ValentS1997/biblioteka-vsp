@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1420" viewBox="0 0 1600 1420">
+  <rect width="1600" height="1420" fill="#ffffff"/>
+  <style>.title{font:700 35px sans-serif;fill:#111827}.h1{font:700 23px sans-serif;fill:#111827}.h2{font:700 18px sans-serif;fill:#111827}.t{font:15px sans-serif;fill:#1f2937}.s{font:14px sans-serif;fill:#475569}.box{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}.blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}.green{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}.amber{fill:#fffbeb;stroke:#d97706;stroke-width:2;rx:14}.violet{fill:#f5f3ff;stroke:#7c3aed;stroke-width:2;rx:14}.red{fill:#fef2f2;stroke:#dc2626;stroke-width:2;rx:14}</style>
+
+  <text x="50" y="58" class="title">Kubernetes в действии · Глава 16 — advanced scheduling</text>
+  <text x="50" y="88" class="s">RAG-only · p0553:c01–p0574:c01 · PDF 553–574 · Printed 552–573</text>
+
+  <text x="50" y="140" class="h1">1. Node exclusion with taints</text>
+  <rect x="50" y="170" width="470" height="250" class="red"/>
+  <text x="70" y="205" class="h2">NoSchedule</text>
+  <text x="70" y="238" class="t">reject new Pods without toleration</text>
+  <text x="70" y="268" class="t">existing Pods stay</text>
+  <text x="70" y="310" class="s">Hard scheduling exclusion.</text>
+
+  <rect x="565" y="170" width="470" height="250" class="amber"/>
+  <text x="585" y="205" class="h2">PreferNoSchedule</text>
+  <text x="585" y="238" class="t">soft avoidance</text>
+  <text x="585" y="268" class="t">scheduler may still use node</text>
+  <text x="585" y="310" class="s">Preference, not invariant.</text>
+
+  <rect x="1080" y="170" width="470" height="250" class="violet"/>
+  <text x="1100" y="205" class="h2">NoExecute</text>
+  <text x="1100" y="238" class="t">reject new unsupported Pods</text>
+  <text x="1100" y="268" class="t">evict existing unsupported Pods</text>
+  <text x="1100" y="310" class="s">Highest source blast radius.</text>
+
+  <text x="50" y="485" class="h1">2. Node attraction</text>
+  <rect x="50" y="515" width="720" height="245" class="blue"/>
+  <text x="70" y="550" class="h2">required nodeAffinity</text>
+  <text x="70" y="583" class="t">node labels must match expression</text>
+  <text x="70" y="613" class="t">Pod stays Pending if no eligible node exists</text>
+  <text x="70" y="643" class="t">source-era IgnoredDuringExecution → no later eviction</text>
+  <text x="70" y="685" class="s">Use for actual placement constraints.</text>
+
+  <rect x="830" y="515" width="720" height="245" class="green"/>
+  <text x="850" y="550" class="h2">preferred nodeAffinity</text>
+  <text x="850" y="583" class="t">weighted preferences add to scheduler score</text>
+  <text x="850" y="613" class="t">other priority functions still contribute</text>
+  <text x="850" y="643" class="t">scheduler may select non-preferred node</text>
+  <text x="850" y="685" class="s">Better availability when ideal capacity is absent.</text>
+
+  <text x="50" y="825" class="h1">3. Pod-to-Pod topology</text>
+  <rect x="50" y="855" width="470" height="245" class="green"/>
+  <text x="70" y="890" class="h2">podAffinity</text>
+  <text x="70" y="923" class="t">find matching Pods by labels</text>
+  <text x="70" y="953" class="t">co-locate in topology domain</text>
+  <text x="70" y="983" class="t">hard or preferred form</text>
+
+  <rect x="565" y="855" width="470" height="245" class="amber"/>
+  <text x="585" y="890" class="h2">topologyKey</text>
+  <text x="585" y="923" class="t">hostname → same node</text>
+  <text x="585" y="953" class="t">zone / region → same failure domain</text>
+  <text x="585" y="983" class="t">custom label, e.g. rack</text>
+
+  <rect x="1080" y="855" width="470" height="245" class="violet"/>
+  <text x="1100" y="890" class="h2">podAntiAffinity</text>
+  <text x="1100" y="923" class="t">keep matching Pods apart</text>
+  <text x="1100" y="953" class="t">use for failure isolation</text>
+  <text x="1100" y="983" class="t">hard rule can exhaust domains</text>
+
+  <text x="50" y="1165" class="h1">4. Scheduling safety</text>
+  <rect x="50" y="1195" width="1500" height="155" class="box"/>
+  <text x="75" y="1233" class="t">Before tainting: know current Pods, effect, tolerations, and rollback.</text>
+  <text x="75" y="1269" class="t">Before hard affinity: confirm matching labels and enough topology capacity.</text>
+  <text x="75" y="1305" class="t">If violating ideal placement is acceptable, prefer preferredDuringScheduling... over requiredDuringScheduling....</text>
+
+  <text x="50" y="1390" class="s">No explicit exercise block found; p0565 scale-to-20 suggestion remains a demonstration.</text>
+</svg>
