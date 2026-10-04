@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="930" viewBox="0 0 1200 930">
+  <rect width="1200" height="930" fill="#ffffff"/>
+  <style>.title{font:700 31px sans-serif;fill:#111827}.h{font:700 19px sans-serif;fill:#111827}.t{font:15px sans-serif;fill:#1f2937}.s{font:14px sans-serif;fill:#475569}.box{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}.blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}.green{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}.amber{fill:#fffbeb;stroke:#d97706;stroke-width:2;rx:14}.violet{fill:#f5f3ff;stroke:#7c3aed;stroke-width:2;rx:14}.red{fill:#fef2f2;stroke:#dc2626;stroke-width:2;rx:14}</style>
+  <text x="40" y="54" class="title">Глава 7 — ConfigMap и Secret</text>
+  <text x="40" y="82" class="s">RAG p0249:c01–p0287:c01 · PDF 249–287 · Printed 248–286</text>
+  <rect x="40" y="120" width="350" height="175" class="blue"/>
+  <text x="60" y="154" class="h">Process config</text><text x="60" y="188" class="t">command · args</text><text x="60" y="218" class="t">environment variables</text><text x="60" y="248" class="t">no image rebuild required</text>
+  <rect x="425" y="120" width="350" height="175" class="green"/>
+  <text x="445" y="154" class="h">ConfigMap</text><text x="445" y="188" class="t">non-sensitive config</text><text x="445" y="218" class="t">env · envFrom · files</text><text x="445" y="248" class="t">atomic volume updates</text>
+  <rect x="810" y="120" width="350" height="175" class="red"/>
+  <text x="830" y="154" class="h">Secret</text><text x="830" y="188" class="t">sensitive data</text><text x="830" y="218" class="t">volume preferred by source</text><text x="830" y="248" class="t">Base64 ≠ encryption</text>
+  <text x="40" y="350" class="h">Delivery paths</text>
+  <rect x="40" y="385" width="540" height="185" class="violet"/>
+  <text x="60" y="420" class="h">ConfigMap</text><text x="60" y="454" class="t">configMapKeyRef → one env</text><text x="60" y="484" class="t">envFrom → many env</text><text x="60" y="514" class="t">configMap volume → files</text>
+  <rect x="620" y="385" width="540" height="185" class="amber"/>
+  <text x="640" y="420" class="h">Secret</text><text x="640" y="454" class="t">secret volume → decoded files</text><text x="640" y="484" class="t">secretKeyRef → env</text><text x="640" y="514" class="t">imagePullSecrets → private registry</text>
+  <text x="40" y="635" class="h">Operational caveats</text>
+  <rect x="40" y="670" width="1120" height="160" class="box"/>
+  <text x="65" y="707" class="t">ConfigMap update is eventual; application may require explicit reload.</text>
+  <text x="65" y="743" class="t">Source-era single-file/subPath mount does not update with ConfigMap changes.</text>
+  <text x="65" y="779" class="t">Secret env values can leak through logs/crash reports; volume is safer.</text>
+  <text x="40" y="885" class="s">Never commit real private keys or registry credentials into chapter artifacts.</text>
+</svg>
