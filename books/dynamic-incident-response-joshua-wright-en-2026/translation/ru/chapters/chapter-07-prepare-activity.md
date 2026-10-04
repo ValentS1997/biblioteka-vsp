@@ -210,3 +210,209 @@ Canonical source адаптирует идеи C4 software architecture model С
 - **Consistent:** сообщения по channels и во времени не противоречат друг другу; нужен single source of truth и approval workflow.
 - **Concise:** status updates должны сразу сообщать, что изменилось, каков impact и какое действие требуется.
 - **Converted:** сообщение адаптируется к аудитории; board, SOC и customers получают одинаковые факты в разной форме.
+
+
+Canonical source приводит пример неудачного сообщения во время ransomware incident: расплывчатое описание нескольких серверов, неподтверждённое утверждение о backups, отсутствие containment status, next steps и владельца executive notification. Такой update не соответствует C4.
+
+В C4-aligned варианте сообщение содержит точное число затронутых systems, подтверждённый status containment, явно помеченную незавершённую проверку backup integrity, владельца executive briefing и время следующего technical update.
+
+Эффективное применение C4 требует, чтобы все участники incident понимали требования к communication и значение четырёх характеристик.
+
+## КАНАЛЫ КОММУНИКАЦИИ
+
+Во время incident response team взаимодействует с team members, management, legal, public relations, system stakeholders и возможными external partners. Каналы должны быть secure и reliable.
+
+При выборе communication platform canonical source предлагает учитывать характеристики из Table 3.
+
+### Таблица 3. Требования к communication channel
+
+| Фактор | Требование |
+|---|---|
+| Authentication | Проверка identity участников с strong authentication, включая MFA. |
+| Confidentiality | Encryption, access-controlled channels и controls против unauthorized access. |
+| Mobility | Доступ с desktops/mobile devices при согласованной security posture и notification controls. |
+| Data Retention | Сохранение history для documentation, stakeholder awareness и legal/regulatory inquiries. |
+| Resilience and Availability | High availability и защита от outages/DoS во время incident. |
+| Access Logging | Запись identities и доступа для audit/accountability. |
+| Communication Clarity | Threaded messaging/channel organization для параллельных investigations. |
+| Data Provenance | Возможность установить, кто, когда и что опубликовал и редактировалось ли сообщение. |
+| Rich Information Sharing | Files, images, code snippets, text/voice/video/screen sharing. |
+
+Организация может использовать Slack или Microsoft Teams с дополнительными controls, например private channels. Однако должен существовать **secondary communication platform**, если primary platform скомпрометирована или недоступна. Возможные alternatives в source: Signal или Element.
+
+Backup communication channel нужно создать и протестировать заранее. Следует учитывать сценарий, в котором собственные containment actions нарушают communication: network isolation может отрезать cloud-based Slack/Teams.
+
+Backup platform должна использовать независимую authentication, отдельную от primary directory вроде Active Directory или Entra ID. Если attacker контролирует directory, он потенциально получает доступ и к любому communication platform, который аутентифицируется через неё.
+
+## КОНТАКТНАЯ ИНФОРМАЦИЯ
+
+В рамках preparation необходимо документировать контакты людей, участвующих в incident response. Canonical source приводит пример IRT Contact Information Template со следующими полями:
+
+- Incident Response Role;
+- Name;
+- Title;
+- Organization;
+- Department;
+- Email;
+- Alternate Email;
+- office/mobile phone;
+- Messaging Platform ID;
+- Alternate Messaging Platform ID;
+- Timezone;
+- Skills/Specializations;
+- Last Updated.
+
+Контактный документ должен быть доступен response team и stakeholders, поддерживаться актуальным и существовать как минимум в digital и paper formats.
+
+Помимо внутренних контактов, нужно поддерживать внешние:
+
+- law enforcement;
+- relevant regulatory bodies;
+- cyber insurance carrier/claims contacts;
+- incident response retainer providers;
+- legal counsel с cybersecurity expertise;
+- PR/crisis communications support;
+- industry ISACs;
+- vendor и cloud provider security contacts.
+
+Задержка с поиском law enforcement или legal counsel во время incident может иметь существенные последствия.
+
+## ВНЕШНИЕ КАНАЛЫ REPORTING
+
+Организация должна планировать не только outbound communication, но и inbound disclosures от security researchers, customers и partners. Исследователю должно быть понятно, куда сообщить о vulnerability или compromise.
+
+RFC 9116 решает эту задачу через machine-readable файл **security.txt**.[6]
+
+Организация публикует его по пути:
+
+`/.well-known/security.txt`
+
+Файл может содержать contact information, expiration date, encryption keys, disclosure policies, acknowledgement pages и preferred languages.
+
+### Listing 27. Microsoft security.txt Example
+
+`THIRD_PARTY_REVIEW_REQUIRED` — canonical source воспроизводит содержимое Microsoft `security.txt`; этот сторонний verbatim-фрагмент не переносится в производный перевод до отдельной проверки прав.
+
+Публикации `security.txt` недостаточно: указанный contact должен маршрутизироваться непосредственно в security team, а не в generic help desk или unmonitored inbox. Нужно документировать внутренний routing внешних disclosures к analysts.
+
+## REPORTING PROCEDURES
+
+Во время incident команда должна сообщать status разным stakeholders. Reporting procedures следует определить заранее.
+
+IR plan должен задавать:
+
+- purpose statement;
+- scope of reporting;
+- reporting requirements;
+- Service Level Agreement (SLA) для reporting.
+
+Частота зависит от impact. High-impact incident может требовать initial report в течение часа и daily updates; low-impact — weekly или bi-weekly.
+
+### Таблица 5. Пример Incident Reporting SLA
+
+| Impact | Описание | Initial report | Full report |
+|---|---|---:|---:|
+| Critical | Severe business disruption, data breach sensitive data или regulatory impact | ≤1 hour | ≤24 hours |
+| High | Significant operational disruption, targeted attack или critical infrastructure compromise | ≤2 hours | ≤48 hours |
+| Medium | Limited operational impact, detected malware или unauthorized access attempt | ≤4 hours | ≤72 hours |
+| Low | Minimal/no operational impact, routine security event или false positive | ≤2 days | ≤5 business days |
+
+Labels необходимо адаптировать к организации: low→critical, level 0→4, green→black и т. п.
+
+## EMERGENCY COMMUNICATION PLAN
+
+Emergency Communication Plan (ECP) регулирует внутреннее и публичное распространение информации об incident. Даже если broad messaging нужен не всегда, готовый plan помогает своевременно информировать правильную аудиторию и снижать риск misinformation.
+
+ECP должен включать:
+
+- **Notification triggers:** какие incident types требуют communication за пределы IRT.
+- **Approval workflows:** кто утверждает разные типы messages; external communication обычно требует executive/legal approval.
+- **Message templates:** templates для первых 24 часов common incident types, заранее reviewed legal/communications teams.
+- **Constituent audiences:** customers, partners, regulators, employees и другие группы.
+- **Distribution channels:** как messages доставляются каждой аудитории.
+- **Spokesperson designation:** кто имеет право говорить от имени организации и должен иметь media training.
+
+Source выделяет пять типовых communication categories:
+
+- ransomware;
+- denial-of-service (DoS);
+- generic cyber attack;
+- on-premises IT outage с неподтверждённой cybersecurity cause;
+- third-party issue.
+
+Templates можно комбинировать для hybrid cases. Это пример, а не исчерпывающая taxonomy.
+
+### Regulatory notification requirements
+
+Canonical source перечисляет common frameworks:
+
+- **GDPR:** notification supervisory authority within 72 hours of awareness of personal data breach; affected individuals — при high risk.
+- **HIPAA:** notification affected individuals, HHS и иногда media для breaches unsecured PHI.
+- **U.S. State Breach Notification Laws:** требования различаются по timing/content/recipients.
+- **SEC Cybersecurity Rules:** public companies disclose material cybersecurity incidents within four business days after materiality determination.
+- **PCI DSS:** suspected/confirmed breaches сообщаются acquiring bank и payment card brands; обычно требуется PCI Forensic Investigator (PFI).[7]
+- **NIS2:** significant incidents — early notification within 24 hours и full incident report within 72 hours.[8]
+- **DORA:** major ICT-related incidents — initial notification, intermediate reports и final report including root cause analysis.[9]
+- **CRA:** manufacturers digital products report actively exploited vulnerabilities и severe product-security incidents в ENISA и coordinating CSIRT; source описывает staged deadlines 24h, 72h, 14 days / one month; reporting obligations from September 2026 and full requirements from December 2027.[10]
+
+Список не исчерпывающий; applicable notification requirements должны быть reviewed legal counsel.
+
+### PowerSchool breach как communication example
+
+Canonical source рассматривает PowerSchool breach как пример последствий слабой ECP. В source указано:
+
+- attacker начал exfiltration 19 Dec 2024;
+- breach обнаружен 28 Dec 2024;
+- в late Dec PowerSchool выплатил приблизительно **$2.85 million** ransom и получил видео, предположительно подтверждающее deletion;
+- incomplete disclosure опубликовано 7 Jan 2025 — через 10 дней после detection;
+- public incident page — 13 Jan 2025;
+- notification emails affected individuals — late Jan;
+- CrowdStrike investigation 10 Mar 2025 выявило earlier unauthorized access ещё с Aug 2024;
+- 7 May 2025 attackers начали напрямую extort school districts, используя stolen data samples.
+
+Source указывает приблизительно **62 million students**, **9.5 million educators** и **6,505 U.S. school districts** как масштаб данных в основном breach.
+
+В данных присутствовали sensitive records, включая special education status, mental health information, custody alerts и medication schedules. Source связывает communication failures с отсутствием pre-built downstream notifications, coordinated messaging toolkits и прозрачного protocol для ransom decisions.[11]
+
+`THIRD_PARTY_REVIEW_REQUIRED` — прямая цитата North Carolina Superintendent Maurice Green о переходе штата на competitor Infinite Campus не воспроизводится и не переводится до отдельной проверки прав.
+
+Для организаций, управляющих данными от имени других, communication plan должен учитывать regulatory disclosure и потребности downstream stakeholders: comprehensive notification, coordinated messaging и accurate scoping compromised data.
+
+Все components — channels, contacts, external reporting, reporting procedures и ECP — должны существовать как единый governed incident communications plan с назначенным owner, annual review и validation на tabletop exercises.
+
+## СОЗДАНИЕ INCIDENT RESPONSE TEAM
+
+Incident Response Team (IRT) — основной организационный ресурс для detection, analysis и response security incidents. Team structure, roles и responsibilities следует определить в preparation.
+
+Варианты зависят от размера, ресурсов и risk profile:
+
+- incident response как дополнительная responsibility существующего IT/security staff;
+- dedicated IRT со specialized roles;
+- internal team + MSSP;
+- incident response retainer для external expertise.
+
+Нужно документировать primary/backup personnel, поддерживать contacts и escalation paths.
+
+### Virtual vs. dedicated teams
+
+**Virtual/soft IRT:** incident response — secondary responsibility участников.
+
+**Dedicated/hard IRT:** incident response — primary function.
+
+Возможна hybrid model: небольшая dedicated on-call group + wider virtual team.
+
+Virtual teams лучше используют ресурсы, но создают конфликт priorities. Поэтому нужны clear activation procedures, временно освобождающие members от normal duties при significant incidents. Такие reassignments следует pre-approve с management и документировать activation conditions/duration по severity.
+
+## ПЛАТФОРМА INCIDENT TRACKING
+
+Во время incident команда должна отслеживать progress, decisions и collected evidence. Centralized collaborative incident-tracking platform обычно эффективнее manual tracking.
+
+Платформа может поддерживать:
+
+- incident categorization/prioritization;
+- analyst assignment/activity tracking;
+- status reporting;
+- playbook execution tracking;
+- response documentation/evidence collection.
+
+Можно адаптировать существующие ticketing systems — JIRA, ServiceNow, Zendesk — если они поддерживают incident response process и доступны во время incident. Также возможны purpose-built incident management platforms.
