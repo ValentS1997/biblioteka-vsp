@@ -719,3 +719,15 @@ terms:
     lock: true
     evidence: ["p0642-c01", "p0646-c01", "p0647-c01"]
 
+  - source: "offline backup"
+    ru: "автономная резервная копия"
+    context_note: "Backup kept disconnected from the system during normal operation so ransomware on the primary system cannot encrypt or destroy it."
+    lock: true
+    evidence: ["p0649-c01", "p0650-c01"]
+
+  - source: "tabletop exercise"
+    ru: "настольное учение (tabletop exercise)"
+    context_note: "Discussion-based incident-response exercise used to test assumptions, roles, procedures, and decision-making before a real incident."
+    lock: true
+    evidence: ["p0650-c01"]
+
