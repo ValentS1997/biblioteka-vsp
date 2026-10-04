@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#ffffff"/>
+  <style>
+    .title{font:700 34px Arial,sans-serif;fill:#1f3f6d}
+    .h{font:700 22px Arial,sans-serif;fill:#1f3f6d}
+    .t{font:18px Arial,sans-serif;fill:#20242a}
+    .box{fill:#f6f8fb;stroke:#8aa2c4;stroke-width:2;rx:14}
+    .warn{fill:#fff7e8;stroke:#c89b4a;stroke-width:2;rx:14}
+    .good{fill:#eef8f0;stroke:#6d9d76;stroke-width:2;rx:14}
+    .a{stroke:#5e6d7c;stroke-width:3;fill:none;marker-end:url(#m)}
+  </style>
+  <defs><marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#5e6d7c"/></marker></defs>
+  <text x="55" y="58" class="title">Глава 2 — Incident Response: решения важнее инструментов</text>
+
+  <rect x="60" y="115" width="250" height="150" class="box"/>
+  <text x="85" y="150" class="h">Условия</text>
+  <text x="85" y="187" class="t">Неполная информация</text>
+  <text x="85" y="218" class="t">Давление времени</text>
+  <text x="85" y="249" class="t">Меняющийся attacker</text>
+
+  <rect x="365" y="115" width="300" height="150" class="warn"/>
+  <text x="390" y="150" class="h">Ключевые решения</text>
+  <text x="390" y="187" class="t">Verify / Triage / Scope</text>
+  <text x="390" y="218" class="t">Contain / Eradicate</text>
+  <text x="390" y="249" class="t">Recover / Communicate</text>
+
+  <rect x="720" y="115" width="420" height="150" class="good"/>
+  <text x="745" y="150" class="h">Что делает response сильным</text>
+  <text x="745" y="187" class="t">Judgment + coordination</text>
+  <text x="745" y="218" class="t">Iteration + lessons learned</text>
+  <text x="745" y="249" class="t">Metrics + continuous improvement</text>
+
+  <path d="M310 190 L360 190" class="a"/>
+  <path d="M665 190 L715 190" class="a"/>
+
+  <rect x="95" y="355" width="460" height="200" class="box"/>
+  <text x="120" y="392" class="h">Tools помогают, но не заменяют процесс</text>
+  <text x="120" y="430" class="t">Forensics platform</text>
+  <text x="120" y="460" class="t">Endpoint protection / Threat intelligence</text>
+  <text x="120" y="490" class="t">SIEM / XDR / SOAR</text>
+  <text x="120" y="520" class="t">Managed service provider</text>
+
+  <rect x="645" y="355" width="460" height="200" class="warn"/>
+  <text x="670" y="392" class="h">Главный риск</text>
+  <text x="670" y="430" class="t">Линейный process может создать</text>
+  <text x="670" y="460" class="t">ложную уверенность в closure,</text>
+  <text x="670" y="490" class="t">если scope и assumptions</text>
+  <text x="670" y="520" class="t">не пересматриваются.</text>
+
+  <text x="175" y="635" class="h">tools support → process structures → judgment decides → iteration corrects</text>
+</svg>
