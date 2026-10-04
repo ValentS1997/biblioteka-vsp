@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1420" viewBox="0 0 1600 1420">
+  <rect width="1600" height="1420" fill="#ffffff"/>
+  <style>.title{font:700 35px sans-serif;fill:#111827}.h1{font:700 23px sans-serif;fill:#111827}.h2{font:700 18px sans-serif;fill:#111827}.t{font:15px sans-serif;fill:#1f2937}.s{font:14px sans-serif;fill:#475569}.box{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}.blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}.green{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}.amber{fill:#fffbeb;stroke:#d97706;stroke-width:2;rx:14}.violet{fill:#f5f3ff;stroke:#7c3aed;stroke-width:2;rx:14}.red{fill:#fef2f2;stroke:#dc2626;stroke-width:2;rx:14}</style>
+  <text x="50" y="58" class="title">Kubernetes в действии · Глава 8 — metadata and API access</text>
+  <text x="50" y="88" class="s">RAG-only · p0288:c01–p0315:c01 · PDF 288–315 · Printed 287–314</text>
+
+  <text x="50" y="140" class="h1">1. Downward API</text>
+  <rect x="50" y="170" width="720" height="235" class="blue"/>
+  <text x="70" y="205" class="h2">Environment variables</text><text x="70" y="238" class="t">fieldRef → Pod metadata/spec/status</text><text x="70" y="268" class="t">resourceFieldRef → CPU/memory values</text><text x="70" y="298" class="t">divisor selects requested unit</text><text x="70" y="340" class="s">Static process environment after start.</text>
+  <rect x="830" y="170" width="720" height="235" class="green"/>
+  <text x="850" y="205" class="h2">downwardAPI volume</text><text x="850" y="238" class="t">metadata written as files</text><text x="850" y="268" class="t">labels + annotations available here</text><text x="850" y="298" class="t">mutable metadata can be refreshed</text><text x="850" y="340" class="s">resourceFieldRef requires containerName in volume.</text>
+
+  <text x="50" y="470" class="h1">2. API server access</text>
+  <rect x="50" y="500" width="470" height="250" class="violet"/>
+  <text x="70" y="535" class="h2">Local exploration</text><text x="70" y="568" class="t">kubectl cluster-info</text><text x="70" y="598" class="t">kubectl proxy</text><text x="70" y="628" class="t">curl localhost:8001/api...</text><text x="70" y="670" class="s">Proxy handles auth and server verification.</text>
+  <rect x="565" y="500" width="470" height="250" class="green"/>
+  <text x="585" y="535" class="h2">Direct from Pod</text><text x="585" y="568" class="t">Service: https://kubernetes</text><text x="585" y="598" class="t">ca.crt verifies API server</text><text x="585" y="628" class="t">token → Authorization: Bearer</text><text x="585" y="658" class="t">namespace file scopes resource path</text>
+  <rect x="1080" y="500" width="470" height="250" class="amber"/>
+  <text x="1100" y="535" class="h2">Ambassador</text><text x="1100" y="568" class="t">main uses HTTP localhost:8001</text><text x="1100" y="598" class="t">sidecar runs kubectl proxy</text><text x="1100" y="628" class="t">sidecar handles HTTPS/auth/CA</text><text x="1100" y="670" class="s">Trade-off: extra process/resources.</text>
+
+  <text x="50" y="815" class="h1">3. Authentication and authorization</text>
+  <rect x="50" y="845" width="720" height="225" class="green"/>
+  <text x="70" y="880" class="h2">Authentication</text><text x="70" y="913" class="t">ServiceAccount bearer token</text><text x="70" y="943" class="t">proves client identity</text><text x="70" y="985" class="s">Token is credential material.</text>
+  <rect x="830" y="845" width="720" height="225" class="red"/>
+  <text x="850" y="880" class="h2">Authorization</text><text x="850" y="913" class="t">RBAC controls permitted API actions</text><text x="850" y="943" class="t">source lab bypass grants cluster-admin to all ServiceAccounts</text><text x="850" y="985" class="s">Source explicitly forbids this in production.</text>
+
+  <text x="50" y="1135" class="h1">4. Higher-level API access</text>
+  <rect x="50" y="1165" width="1500" height="185" class="box"/>
+  <text x="75" y="1203" class="t">Few simple operations → HTTP client or ambassador.</text>
+  <text x="75" y="1239" class="t">Complex integrations → Kubernetes client library.</text>
+  <text x="75" y="1275" class="t">Source-era Swagger/OpenAPI → client generation, docs, interactive exploration.</text>
+  <text x="75" y="1311" class="s">Swagger UI is capable of create/patch/delete, not only GET exploration.</text>
+  <text x="50" y="1390" class="s">Source-era token mounting and Swagger behavior preserved without external modernization.</text>
+</svg>

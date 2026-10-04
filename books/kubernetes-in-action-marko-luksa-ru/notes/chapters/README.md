@@ -9,3 +9,4 @@ Reviewed chapter-level notes are stored here.
 - [Chapter 5 — Службы: discovery и доступ к модулям](chapter-05-services-discovery-and-access/README.md)
 - [Chapter 6 — Тома: подключение дискового хранилища](chapter-06-volumes-attaching-disk-storage/README.md)
 - [Chapter 7 — ConfigMap и Secret: настройка приложений](chapter-07-configmaps-and-secrets/README.md)
+- [Chapter 8 — Доступ к метаданным и другим ресурсам](chapter-08-accessing-pod-metadata-and-other-resources/README.md)
