@@ -538,3 +538,53 @@ terms:
     context_note: "Single coordination point between ransomware response teams and organizational decision makers, responsible for translating technical state into business-relevant updates."
     lock: true
     evidence: ["p0564-c01"]
+
+  - source: "control plane"
+    ru: "плоскость управления"
+    context_note: "Cloud management layer for IAM, administrative, and resource-management operations; English term may be retained in technical prose."
+    lock: true
+    evidence: ["p0587-c01", "p0597-c01", "p0599-c01"]
+
+  - source: "data plane"
+    ru: "плоскость данных"
+    context_note: "Cloud resource-operation layer covering object access, queries, workload/network activity, and other resource-level events; English term may be retained in technical prose."
+    lock: true
+    evidence: ["p0587-c01", "p0597-c01", "p0599-c01"]
+
+  - source: "shared responsibility model"
+    ru: "модель совместной ответственности"
+    context_note: "Cloud security responsibility split in which the customer remains responsible for enabling and configuring much of the visibility and access required for response."
+    lock: true
+    evidence: ["p0586-c01", "p0587-c01"]
+
+  - source: "break-glass account"
+    ru: "аварийная учётная запись (break-glass)"
+    context_note: "Emergency privileged account with securely stored credentials, audited use, and mandatory post-incident review."
+    lock: true
+    evidence: ["p0589-c01"]
+
+  - source: "session token"
+    ru: "токен сессии"
+    context_note: "Authenticated token that can retain access independently of the underlying password and may bypass new-login or MFA checks."
+    lock: true
+    evidence: ["p0596-c01", "p0597-c01", "p0603-c01", "p0611-c01"]
+
+  - source: "cloud-native detection"
+    ru: "облачное нативное обнаружение"
+    context_note: "Provider-native threat-detection capabilities such as GuardDuty, Defender for Cloud, and Security Command Center."
+    lock: true
+    evidence: ["p0589-c01", "p0590-c01", "p0591-c01", "p0592-c01"]
+
+  - source: "Object Lock"
+    ru: "Object Lock"
+    context_note: "Immutable cloud-storage retention control used for write-once-read-many evidence preservation."
+    lock: true
+    evidence: ["p0607-c01", "p0608-c01"]
+
+  - source: "Cloud Security Posture Management"
+    ru: "Cloud Security Posture Management (CSPM)"
+    preserve_identifier: "CSPM"
+    context_note: "Centralized multi-cloud visibility into misconfigurations, policy violations, permissions, and security posture."
+    lock: true
+    evidence: ["p0610-c01"]
+
