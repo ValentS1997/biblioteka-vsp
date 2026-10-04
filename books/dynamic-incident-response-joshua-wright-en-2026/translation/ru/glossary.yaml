@@ -434,3 +434,58 @@ terms:
     context_note: "Post-incident review culture focused on processes, systems, and systemic conditions rather than individual blame."
     lock: true
     evidence: ["p0458-c01", "p0468-c01"]
+
+
+  - source: "shadow AI"
+    ru: "теневой ИИ"
+    context_note: "Use of unapproved AI services with organizational data outside established governance and data-handling controls."
+    lock: true
+    evidence: ["p0472-c01"]
+
+  - source: "frontier model"
+    ru: "фронтирная модель"
+    context_note: "Commercial state-of-the-art general-purpose AI model offered by major model providers."
+    lock: true
+    evidence: ["p0473-c01", "p0474-c01"]
+
+  - source: "open-weight model"
+    ru: "модель с открытыми весами"
+    context_note: "AI model whose weights can be deployed under organizational control, locally or in organization-managed cloud infrastructure."
+    lock: true
+    evidence: ["p0475-c01", "p0476-c01"]
+
+  - source: "prompt injection"
+    ru: "инъекция в промпт"
+    context_note: "Attack technique that embeds malicious instructions into data or tool output processed by an AI model."
+    lock: true
+    evidence: ["p0523-c01"]
+
+  - source: "human in the loop"
+    ru: "человек в контуре принятия решений"
+    context_note: "Control model in which a human reviews or approves sensitive AI-generated actions before execution."
+    lock: true
+    evidence: ["p0526-c01", "p0535-c01"]
+
+  - source: "Model Context Protocol"
+    ru: "Model Context Protocol (MCP)"
+    context_note: "Standardized protocol for connecting AI models/clients to external tools and data sources."
+    lock: true
+    evidence: ["p0505-c01", "p0521-c01"]
+
+  - source: "ReAct agent"
+    ru: "ReAct-агент"
+    context_note: "Agent architecture that interleaves reasoning, external actions, and observations in iterative cycles."
+    lock: true
+    evidence: ["p0529-c01", "p0532-c01", "p0533-c01"]
+
+  - source: "inference constraint"
+    ru: "ограничение на вывод модели"
+    context_note: "Boundary that keeps evidentiary facts grounded in deterministic tool output while limiting unsupported model inference."
+    lock: true
+    evidence: ["p0535-c01"]
+
+  - source: "prompt library"
+    ru: "библиотека промптов"
+    context_note: "Versioned collection of reusable prompts and skill files for consistent team workflows."
+    lock: true
+    evidence: ["p0538-c01", "p0539-c01"]
