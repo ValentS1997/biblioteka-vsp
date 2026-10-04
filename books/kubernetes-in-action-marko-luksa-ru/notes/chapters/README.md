@@ -1,3 +1,5 @@
-# Chapter artifacts
+# Chapter notes
 
-Chapter artifacts are created only after book-level chapter-analysis readiness is READY.
+Reviewed chapter-level notes are stored here.
+
+- [Chapter 1 — Знакомство с Kubernetes](chapter-01-introducing-kubernetes/README.md)

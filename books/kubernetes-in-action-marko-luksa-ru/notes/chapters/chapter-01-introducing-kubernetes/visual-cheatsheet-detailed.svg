@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1260" viewBox="0 0 1600 1260">
+  <rect width="1600" height="1260" fill="#ffffff"/>
+  <style>
+    .title{font:700 36px sans-serif;fill:#111827}
+    .h1{font:700 24px sans-serif;fill:#111827}
+    .h2{font:700 18px sans-serif;fill:#111827}
+    .t{font:16px sans-serif;fill:#1f2937}
+    .s{font:14px sans-serif;fill:#475569}
+    .box{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}
+    .blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}
+    .green{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}
+    .amber{fill:#fffbeb;stroke:#d97706;stroke-width:2;rx:14}
+    .violet{fill:#f5f3ff;stroke:#7c3aed;stroke-width:2;rx:14}
+    .arrow{stroke:#334155;stroke-width:2;marker-end:url(#a)}
+  </style>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+
+  <text x="50" y="58" class="title">Kubernetes в действии · Глава 1 — подробная карта</text>
+  <text x="50" y="88" class="s">RAG-only · p0035:c01–p0061:c01 · PDF 35–61 · Printed 34–60</text>
+
+  <text x="50" y="140" class="h1">1. Откуда появляется задача оркестрации</text>
+  <rect x="50" y="165" width="360" height="185" class="box"/>
+  <text x="70" y="198" class="h2">Монолит</text>
+  <text x="70" y="228" class="t">• тесно связанные компоненты</text>
+  <text x="70" y="254" class="t">• общая выкладка при изменении</text>
+  <text x="70" y="280" class="t">• scale-up имеет предел</text>
+  <text x="70" y="306" class="t">• scale-out может требовать переделки</text>
+
+  <rect x="470" y="165" width="420" height="185" class="blue"/>
+  <text x="490" y="198" class="h2">Микросервисы</text>
+  <text x="490" y="228" class="t">• отдельные процессы и API</text>
+  <text x="490" y="254" class="t">• независимая разработка / deploy</text>
+  <text x="490" y="280" class="t">• независимое масштабирование</text>
+  <text x="490" y="306" class="t">• больше связей и placement-решений</text>
+
+  <rect x="950" y="165" width="600" height="185" class="amber"/>
+  <text x="970" y="198" class="h2">Эксплуатационная цена</text>
+  <text x="970" y="228" class="t">• конфликтующие зависимости и версии библиотек</text>
+  <text x="970" y="254" class="t">• dev/prod environment drift</text>
+  <text x="970" y="280" class="t">• ручное размещение и failover плохо масштабируются</text>
+  <text x="970" y="306" class="t">• DevOps требует более быстрого self-service deployment</text>
+
+  <line x1="410" y1="258" x2="465" y2="258" class="arrow"/>
+  <line x1="890" y1="258" x2="945" y2="258" class="arrow"/>
+
+  <text x="50" y="410" class="h1">2. Контейнерный слой</text>
+  <rect x="50" y="440" width="470" height="220" class="green"/>
+  <text x="70" y="474" class="h2">Контейнер vs VM</text>
+  <text x="70" y="504" class="t">VM: отдельное guest kernel + system processes</text>
+  <text x="70" y="532" class="t">Container: изолированный процесс на host kernel</text>
+  <text x="70" y="560" class="t">Контейнер легче и позволяет выше density</text>
+  <text x="70" y="588" class="t">Цена: общее ядро → меньшая изоляция, чем у VM</text>
+  <text x="70" y="616" class="s">Портируемость зависит от ядра и CPU architecture.</text>
+
+  <rect x="565" y="440" width="470" height="220" class="green"/>
+  <text x="585" y="474" class="h2">Linux mechanisms</text>
+  <text x="585" y="504" class="t">Namespaces → видимые ресурсы процесса</text>
+  <text x="585" y="532" class="t">mnt · pid · net · ipc · UTS · user</text>
+  <text x="585" y="560" class="t">cgroups → лимиты CPU / RAM / network</text>
+  <text x="585" y="588" class="t">Изоляцию обеспечивает kernel, не Docker сам по себе</text>
+
+  <rect x="1080" y="440" width="470" height="220" class="green"/>
+  <text x="1100" y="474" class="h2">Docker model</text>
+  <text x="1100" y="504" class="t">Image → приложение + filesystem + metadata</text>
+  <text x="1100" y="532" class="t">Registry → хранение и обмен images</text>
+  <text x="1100" y="560" class="t">Container → процесс, запущенный из image</text>
+  <text x="1100" y="588" class="t">Layers → повторное использование и copy-on-write</text>
+  <text x="1100" y="616" class="s">OCI/rkt показывают, что Kubernetes не привязан только к Docker.</text>
+
+  <text x="50" y="720" class="h1">3. Kubernetes как единая платформа</text>
+  <rect x="50" y="750" width="700" height="310" class="violet"/>
+  <text x="70" y="784" class="h2">Control plane</text>
+  <text x="70" y="818" class="t">API server — принимает взаимодействия и описание приложения</text>
+  <text x="70" y="848" class="t">Scheduler — назначает workload рабочим узлам</text>
+  <text x="70" y="878" class="t">Controller Manager — replication, node tracking, failure handling</text>
+  <text x="70" y="908" class="t">etcd — сохраняет конфигурацию/состояние кластера</text>
+  <text x="70" y="950" class="h2">Worker node</text>
+  <text x="70" y="982" class="t">Kubelet — agent, API communication, container management</text>
+  <text x="70" y="1012" class="t">Container runtime — pull image + start container</text>
+  <text x="70" y="1042" class="t">kube-proxy — service traffic/load balancing</text>
+
+  <rect x="805" y="750" width="745" height="310" class="blue"/>
+  <text x="825" y="784" class="h2">Application flow</text>
+  <text x="825" y="820" class="t">1. Упаковать application в one or more images</text>
+  <text x="825" y="850" class="t">2. Поместить images в registry</text>
+  <text x="825" y="880" class="t">3. Опубликовать application description в API server</text>
+  <text x="825" y="910" class="t">4. Scheduler выбирает рабочие узлы</text>
+  <text x="825" y="940" class="t">5. Kubelet поручает runtime получить image и запустить</text>
+  <text x="825" y="982" class="h2">После запуска</text>
+  <text x="825" y="1014" class="t">Desired replicas · restart failed instance · reschedule on node failure</text>
+  <text x="825" y="1044" class="t">Stable service IP · discovery via env/DNS · kube-proxy balances</text>
+
+  <text x="50" y="1120" class="h1">4. Эксплуатационный эффект</text>
+  <rect x="50" y="1145" width="1500" height="78" class="box"/>
+  <text x="75" y="1177" class="t">Self-service deployment · лучшее использование hardware · self-healing · автоматическое scaling · меньше infrastructure logic в приложении</text>
+  <text x="75" y="1206" class="s">Глава концептуальная: CLI-команды и конкретные rollback-процедуры не приводятся.</text>
+</svg>
