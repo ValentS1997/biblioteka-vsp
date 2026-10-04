@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1420" viewBox="0 0 1600 1420">
+  <rect width="1600" height="1420" fill="#ffffff"/>
+  <style>.title{font:700 35px sans-serif;fill:#111827}.h1{font:700 23px sans-serif;fill:#111827}.h2{font:700 18px sans-serif;fill:#111827}.t{font:15px sans-serif;fill:#1f2937}.s{font:14px sans-serif;fill:#475569}.box{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}.blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}.green{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}.amber{fill:#fffbeb;stroke:#d97706;stroke-width:2;rx:14}.violet{fill:#f5f3ff;stroke:#7c3aed;stroke-width:2;rx:14}.red{fill:#fef2f2;stroke:#dc2626;stroke-width:2;rx:14}</style>
+
+  <text x="50" y="58" class="title">Kubernetes в действии · Глава 15 — autoscaling</text>
+  <text x="50" y="88" class="s">RAG-only · p0529:c01–p0552:c01 · PDF 529–552 · Printed 528–551</text>
+
+  <text x="50" y="140" class="h1">1. Horizontal Pod Autoscaler</text>
+  <rect x="50" y="170" width="720" height="235" class="blue"/>
+  <text x="70" y="205" class="h2">Source control loop</text>
+  <text x="70" y="238" class="t">collect metrics → calculate replicas → update Scale</text>
+  <text x="70" y="268" class="t">target: Deployment / ReplicaSet / RC / StatefulSet</text>
+  <text x="70" y="298" class="t">CPU utilization is relative to CPU request</text>
+  <text x="70" y="340" class="s">Metrics arrive asynchronously through source-era cAdvisor/Heapster flow.</text>
+
+  <rect x="830" y="170" width="720" height="235" class="green"/>
+  <text x="850" y="205" class="h2">Replica decision</text>
+  <text x="850" y="238" class="t">single metric: observed total / target</text>
+  <text x="850" y="268" class="t">multiple metrics: calculate each independently</text>
+  <text x="850" y="298" class="t">choose highest required replica count</text>
+  <text x="850" y="340" class="s">Source example: 108% / 30% → 4 replicas.</text>
+
+  <text x="50" y="470" class="h1">2. Metric choice and vertical scaling</text>
+  <rect x="50" y="500" width="470" height="250" class="violet"/>
+  <text x="70" y="535" class="h2">Resource</text>
+  <text x="70" y="568" class="t">CPU utilization</text>
+  <text x="70" y="598" class="t">requires CPU requests</text>
+  <text x="70" y="628" class="t">target below saturation leaves headroom</text>
+
+  <rect x="565" y="500" width="470" height="250" class="green"/>
+  <text x="585" y="535" class="h2">Pods / Object</text>
+  <text x="585" y="568" class="t">Pods → per-Pod custom metric, e.g. QPS</text>
+  <text x="585" y="598" class="t">Object → metric of another object, e.g. Ingress</text>
+  <text x="585" y="628" class="t">good metric falls as replicas increase</text>
+
+  <rect x="1080" y="500" width="470" height="250" class="amber"/>
+  <text x="1100" y="535" class="h2">Vertical source-era state</text>
+  <text x="1100" y="568" class="t">running Pod requests cannot be changed</text>
+  <text x="1100" y="598" class="t">InitialResources experimental for new Pods</text>
+  <text x="1100" y="628" class="t">HPA cannot scale to zero in source model</text>
+
+  <text x="50" y="815" class="h1">3. Cluster Autoscaler</text>
+  <rect x="50" y="845" width="720" height="235" class="blue"/>
+  <text x="70" y="880" class="h2">Scale up</text>
+  <text x="70" y="913" class="t">scheduler cannot place Pod</text>
+  <text x="70" y="943" class="t">autoscaler finds node group that could fit it</text>
+  <text x="70" y="973" class="t">cloud provider adds node → Kubelet registers it</text>
+  <text x="70" y="1015" class="s">No point adding node type that still cannot fit the Pod.</text>
+
+  <rect x="830" y="845" width="720" height="235" class="amber"/>
+  <text x="850" y="880" class="h2">Scale down</text>
+  <text x="850" y="913" class="t">underutilized by requested CPU/memory</text>
+  <text x="850" y="943" class="t">skip unsafe nodes/workloads</text>
+  <text x="850" y="973" class="t">cordon-like state → evict → recreate elsewhere</text>
+  <text x="850" y="1015" class="s">Unmanaged/local-storage/system constraints may block removal.</text>
+
+  <text x="50" y="1145" class="h1">4. Voluntary disruption protection</text>
+  <rect x="50" y="1175" width="1500" height="175" class="box"/>
+  <text x="75" y="1213" class="t">PodDisruptionBudget minAvailable=3 constrains voluntary eviction.</text>
+  <text x="75" y="1249" class="t">Cluster Autoscaler and kubectl drain respect the PDB in source behavior.</text>
+  <text x="75" y="1285" class="t">Unexpected node failure is outside this protection boundary.</text>
+  <text x="75" y="1321" class="s">GKE autoscaling and drain operations change real capacity/workload placement and require review.</text>
+
+  <text x="50" y="1390" class="s">One explicit exercise: edit HPA targetAverageUtilization from 30 to 60.</text>
+</svg>

@@ -16,3 +16,4 @@ Reviewed chapter-level notes are stored here.
 - [Chapter 12 — Защита сервера API Kubernetes](chapter-12-securing-the-kubernetes-api-server/README.md)
 - [Chapter 13 — Защита узлов кластера и сети](chapter-13-securing-cluster-nodes-and-network/README.md)
 - [Chapter 14 — Управление вычислительными ресурсами модулей](chapter-14-managing-compute-resources/README.md)
+- [Chapter 15 — Автоматическое масштабирование модулей и узлов кластера](chapter-15-autoscaling-pods-and-cluster-nodes/README.md)
