@@ -256,3 +256,47 @@ terms:
     context_note: "Techniques used to conceal activity or manipulate evidence."
     lock: true
     evidence: ["p0230-c01", "p0231-c01", "p0232-c01"]
+
+
+  - source: "passive containment"
+    ru: "пассивное сдерживание"
+    lock: true
+    evidence: ["p0248-c01"]
+
+  - source: "active containment"
+    ru: "активное сдерживание"
+    lock: true
+    evidence: ["p0248-c01"]
+
+  - source: "adaptive containment"
+    ru: "адаптивное сдерживание"
+    lock: true
+    evidence: ["p0250-c01"]
+
+  - source: "deceptive containment"
+    ru: "обманное сдерживание"
+    context_note: "Containment using deception/decoy environments."
+    lock: true
+    evidence: ["p0250-c01", "p0293-c01"]
+
+  - source: "cloud security demarcation"
+    ru: "граница ответственности за безопасность облачного сервиса"
+    lock: true
+    evidence: ["p0268-c01", "p0269-c01"]
+
+  - source: "identity-first containment"
+    ru: "сдерживание с приоритетом идентификационных данных"
+    context_note: "Cloud/identity-centric containment prioritizing credentials, sessions, and tokens."
+    lock: true
+    evidence: ["p0269-c01", "p0270-c01"]
+
+  - source: "termination protection"
+    ru: "защита от удаления ресурса"
+    context_note: "Cloud resource deletion/termination protection used to preserve evidence."
+    lock: true
+    evidence: ["p0272-c01", "p0273-c01"]
+
+  - source: "containment validation"
+    ru: "проверка эффективности сдерживания"
+    lock: true
+    evidence: ["p0285-c01", "p0286-c01"]
