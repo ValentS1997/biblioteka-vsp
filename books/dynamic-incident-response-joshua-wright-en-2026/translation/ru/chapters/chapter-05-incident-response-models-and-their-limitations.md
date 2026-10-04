@@ -108,7 +108,7 @@ Revision 3 переходит от предписывающих incident-handlin
 
 Например, некоторые организации предлагают семишаговую модель, добавляя повторное тестирование после lessons learned.
 
-`THIRD_PARTY_REVIEW_REQUIRED` — в canonical source здесь приведена прямая цитата Applied Risk о семишаговом процессе `Prepare → Identify → Contain → Eradicate → Restore → Learn → Test and Repeat`. Цитата не переводится и не воспроизводится до отдельной проверки прав.
+`THIRD_PARTY_REVIEW_REQUIRED` — в canonical source здесь приведена прямая цитата Applied Risk, описывающая семишаговый процесс с дополнительным повторным тестированием. Цитата не переводится и не воспроизводится до отдельной проверки прав.
 
 ### Рисунок 20. Семишаговая модель incident response, Applied Risk BV (a DNV Company)
 
@@ -168,7 +168,7 @@ Verification неявно присутствует в Detection and Analysis NIS
 
 ### Отсутствие root cause analysis
 
-Понимание root cause incident важно для эффективного устранения будущих vulnerabilities. Без root cause организация может многократно реагировать на один и тот же тип incident или не устранить уязвимость, которая к нему привела.
+Понимание root cause инцидента важно для эффективного устранения будущих vulnerabilities. Без root cause организация может многократно реагировать на один и тот же тип incident или не устранить уязвимость, которая к нему привела.
 
 Например, если компрометация произошла из-за слабого пароля на критической системе, простая смена пароля устраняет непосредственно использованную vulnerability. Однако root cause analysis показывает необходимость рассмотреть и другие меры: password complexity policy, password auditing с использованием cracking tools, remote access controls для системы и другие связанные элементы.
 
