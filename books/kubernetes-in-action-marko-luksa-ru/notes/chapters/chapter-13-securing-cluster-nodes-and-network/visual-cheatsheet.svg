@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="930" viewBox="0 0 1200 930">
+  <rect width="1200" height="930" fill="#ffffff"/>
+  <style>.title{font:700 31px sans-serif;fill:#111827}.h{font:700 19px sans-serif;fill:#111827}.t{font:15px sans-serif;fill:#1f2937}.s{font:14px sans-serif;fill:#475569}.box{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}.blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}.green{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}.amber{fill:#fffbeb;stroke:#d97706;stroke-width:2;rx:14}.violet{fill:#f5f3ff;stroke:#7c3aed;stroke-width:2;rx:14}.red{fill:#fef2f2;stroke:#dc2626;stroke-width:2;rx:14}</style>
+  <text x="40" y="54" class="title">Глава 13 — Node security и NetworkPolicy</text>
+  <text x="40" y="82" class="s">RAG p0458:c01–p0491:c01 · PDF 458–491 · Printed 457–490</text>
+
+  <rect x="40" y="120" width="350" height="175" class="red"/>
+  <text x="60" y="154" class="h">Host exposure</text>
+  <text x="60" y="188" class="t">hostNetwork · hostPID · hostIPC</text>
+  <text x="60" y="218" class="t">hostPort</text>
+  <text x="60" y="248" class="t">weaker node isolation</text>
+
+  <rect x="425" y="120" width="350" height="175" class="blue"/>
+  <text x="445" y="154" class="h">securityContext</text>
+  <text x="445" y="188" class="t">runAsUser · runAsNonRoot</text>
+  <text x="445" y="218" class="t">capabilities</text>
+  <text x="445" y="248" class="t">readOnlyRootFilesystem</text>
+
+  <rect x="810" y="120" width="350" height="175" class="violet"/>
+  <text x="830" y="154" class="h">Admission policy</text>
+  <text x="830" y="188" class="t">PodSecurityPolicy</text>
+  <text x="830" y="218" class="t">RBAC verb: use</text>
+  <text x="830" y="248" class="t">allow / reject Pod</text>
+
+  <text x="40" y="350" class="h">Policy layers</text>
+  <rect x="40" y="385" width="540" height="185" class="green"/>
+  <text x="60" y="420" class="h">PSP controls</text>
+  <text x="60" y="454" class="t">UID/GID ranges · privileged</text>
+  <text x="60" y="484" class="t">capabilities · host namespaces</text>
+  <text x="60" y="514" class="t">volume types · read-only root FS</text>
+
+  <rect x="620" y="385" width="540" height="185" class="amber"/>
+  <text x="640" y="420" class="h">NetworkPolicy</text>
+  <text x="640" y="454" class="t">podSelector · namespaceSelector</text>
+  <text x="640" y="484" class="t">ipBlock</text>
+  <text x="640" y="514" class="t">ingress · egress</text>
+
+  <text x="40" y="635" class="h">Critical boundaries</text>
+  <rect x="40" y="670" width="1120" height="160" class="box"/>
+  <text x="65" y="707" class="t">privileged containers and powerful capabilities can affect the worker node.</text>
+  <text x="65" y="743" class="t">PSP/RBAC changes alter cluster admission/authorization state.</text>
+  <text x="65" y="779" class="t">NetworkPolicy can intentionally or accidentally cut workload connectivity.</text>
+
+  <text x="40" y="885" class="s">Source rule: minimize both privilege and network reachability.</text>
+</svg>

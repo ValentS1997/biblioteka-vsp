@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1420" viewBox="0 0 1600 1420">
+  <rect width="1600" height="1420" fill="#ffffff"/>
+  <style>.title{font:700 35px sans-serif;fill:#111827}.h1{font:700 23px sans-serif;fill:#111827}.h2{font:700 18px sans-serif;fill:#111827}.t{font:15px sans-serif;fill:#1f2937}.s{font:14px sans-serif;fill:#475569}.box{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}.blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}.green{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}.amber{fill:#fffbeb;stroke:#d97706;stroke-width:2;rx:14}.violet{fill:#f5f3ff;stroke:#7c3aed;stroke-width:2;rx:14}.red{fill:#fef2f2;stroke:#dc2626;stroke-width:2;rx:14}</style>
+  <text x="50" y="58" class="title">Kubernetes в действии · Глава 13 — securing nodes and network</text>
+  <text x="50" y="88" class="s">RAG-only · p0458:c01–p0491:c01 · PDF 458–491 · Printed 457–490</text>
+
+  <text x="50" y="140" class="h1">1. Runtime isolation</text>
+  <rect x="50" y="170" width="720" height="235" class="red"/>
+  <text x="70" y="205" class="h2">Host namespaces</text>
+  <text x="70" y="238" class="t">hostNetwork → worker network namespace</text>
+  <text x="70" y="268" class="t">hostPID → worker process namespace</text>
+  <text x="70" y="298" class="t">hostIPC → worker IPC namespace</text>
+  <text x="70" y="340" class="s">Use only when node-level visibility is required.</text>
+
+  <rect x="830" y="170" width="720" height="235" class="blue"/>
+  <text x="850" y="205" class="h2">Container securityContext</text>
+  <text x="850" y="238" class="t">runAsUser / runAsNonRoot</text>
+  <text x="850" y="268" class="t">privileged or selected capabilities</text>
+  <text x="850" y="298" class="t">readOnlyRootFilesystem</text>
+  <text x="850" y="340" class="s">fsGroup and supplementalGroups control shared-volume group access.</text>
+
+  <text x="50" y="470" class="h1">2. Source-era PodSecurityPolicy</text>
+  <rect x="50" y="500" width="470" height="250" class="green"/>
+  <text x="70" y="535" class="h2">Admission constraints</text>
+  <text x="70" y="568" class="t">host namespaces / host ports</text>
+  <text x="70" y="598" class="t">privileged / read-only root FS</text>
+  <text x="70" y="628" class="t">UID/GID / SELinux / volumes</text>
+  <text x="70" y="670" class="s">Applied on Pod create/update, not retroactively.</text>
+
+  <rect x="565" y="500" width="470" height="250" class="violet"/>
+  <text x="585" y="535" class="h2">Capabilities</text>
+  <text x="585" y="568" class="t">allowedCapabilities</text>
+  <text x="585" y="598" class="t">defaultAddCapabilities</text>
+  <text x="585" y="628" class="t">requiredDropCapabilities</text>
+  <text x="585" y="670" class="s">Source examples include SYS_TIME, CHOWN, SYS_ADMIN, SYS_MODULE.</text>
+
+  <rect x="1080" y="500" width="470" height="250" class="amber"/>
+  <text x="1100" y="535" class="h2">RBAC selection</text>
+  <text x="1100" y="568" class="t">ClusterRole verb: use</text>
+  <text x="1100" y="598" class="t">specific PSP resource name</text>
+  <text x="1100" y="628" class="t">ClusterRoleBinding → user/group</text>
+  <text x="1100" y="670" class="s">Alice default only; Bob default + privileged.</text>
+
+  <text x="50" y="815" class="h1">3. NetworkPolicy</text>
+  <rect x="50" y="845" width="470" height="245" class="green"/>
+  <text x="70" y="880" class="h2">Targets</text>
+  <text x="70" y="913" class="t">podSelector chooses protected Pods</text>
+  <text x="70" y="943" class="t">empty selector → all Pods in namespace</text>
+  <text x="70" y="973" class="t">plugin must support NetworkPolicy</text>
+
+  <rect x="565" y="845" width="470" height="245" class="blue"/>
+  <text x="585" y="880" class="h2">Allowed sources</text>
+  <text x="585" y="913" class="t">podSelector</text>
+  <text x="585" y="943" class="t">namespaceSelector</text>
+  <text x="585" y="973" class="t">ipBlock / CIDR</text>
+
+  <rect x="1080" y="845" width="470" height="245" class="violet"/>
+  <text x="1100" y="880" class="h2">Traffic direction</text>
+  <text x="1100" y="913" class="t">ingress → who may reach target</text>
+  <text x="1100" y="943" class="t">egress → where target may connect</text>
+  <text x="1100" y="973" class="t">ports may be constrained</text>
+
+  <text x="50" y="1155" class="h1">4. Safety model</text>
+  <rect x="50" y="1185" width="1500" height="165" class="box"/>
+  <text x="75" y="1223" class="t">Avoid host namespace sharing unless necessary.</text>
+  <text x="75" y="1259" class="t">Prefer narrow capabilities over privileged mode and drop capabilities not needed.</text>
+  <text x="75" y="1295" class="t">Admission policy limits what can run; NetworkPolicy limits what running Pods can reach.</text>
+  <text x="75" y="1331" class="s">Source explicitly warns that changing worker-node time through SYS_TIME can break the node.</text>
+
+  <text x="50" y="1390" class="s">Source-era PSP/API behavior preserved without external modernization.</text>
+</svg>
