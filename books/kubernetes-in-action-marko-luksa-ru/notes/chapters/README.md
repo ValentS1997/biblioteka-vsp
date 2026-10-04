@@ -19,3 +19,4 @@ Reviewed chapter-level notes are stored here.
 - [Chapter 15 — Автоматическое масштабирование модулей и узлов кластера](chapter-15-autoscaling-pods-and-cluster-nodes/README.md)
 - [Chapter 16 — Продвинутое назначение модулей узлам](chapter-16-advanced-scheduling/README.md)
 - [Chapter 17 — Рекомендации по разработке приложений](chapter-17-application-development-best-practices/README.md)
+- [Chapter 18 — Расширение системы Kubernetes](chapter-18-extending-kubernetes/README.md)
