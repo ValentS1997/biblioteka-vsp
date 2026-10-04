@@ -11,7 +11,8 @@ import yaml
 from docx import Document
 from docx.enum.section import WD_SECTION
 from docx.enum.text import WD_BREAK, WD_ALIGN_PARAGRAPH
-from docx.oxml import OxmlElement\nfrom docx.oxml.ns import qn
+from docx.oxml import OxmlElement
+from docx.oxml.ns import qn
 from docx.shared import Mm, Pt
 
 BOOK_ID = "dynamic-incident-response-joshua-wright-en-2026"
