@@ -70,8 +70,28 @@ reading:
 
 translation:
   target_language: ru
-  status: in_progress
+  status: completed
   root: "translation/ru/"
   source_truth: "canonical English RAG"
   replaces_canonical_source: false
   official_translation: false
+
+
+publication:
+  russian_a4:
+    status: generated
+    format_primary: pdf
+    pdf_path: "exports/dynamic-incident-response-ru-a4.pdf"
+    docx_path: "exports/dynamic-incident-response-ru-a4.docx"
+    audit_json: "exports/book-level-audit.json"
+    audit_markdown: "exports/book-level-audit.md"
+    pdfinfo: "exports/pdfinfo.txt"
+    build_workflow: ".github/workflows/build-dynamic-ir-ru-book.yml"
+    source_truth: "canonical English RAG"
+    content_scope:
+      - "Chapters 1-20"
+      - "Afterword"
+      - "Russian glossary appendix"
+    excluded:
+      - "Original English index because its pagination refers to the source edition"
+    replaces_canonical_source: false

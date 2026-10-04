@@ -9,6 +9,9 @@ on:
       - ".github/workflows/build-dynamic-ir-ru-book.yml"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,6 +20,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+          fetch-depth: 0
 
       - name: Install system dependencies
         run: |
@@ -30,19 +36,55 @@ jobs:
 
       - name: Assemble and audit book
         run: |
-          python scripts/build_dynamic_ir_ru_book.py             --repo-root .             --out-dir build/dynamic-ir-ru-book
+          python scripts/build_dynamic_ir_ru_book.py \
+            --repo-root . \
+            --out-dir build/dynamic-ir-ru-book
 
       - name: Convert DOCX to PDF
         run: |
           mkdir -p build/dynamic-ir-ru-book/pdf
-          libreoffice --headless             --convert-to pdf             --outdir build/dynamic-ir-ru-book/pdf             build/dynamic-ir-ru-book/dynamic-incident-response-ru-a4.docx
-          mv build/dynamic-ir-ru-book/pdf/dynamic-incident-response-ru-a4.pdf              build/dynamic-ir-ru-book/dynamic-incident-response-ru-a4.pdf
+          libreoffice --headless \
+            --convert-to pdf \
+            --outdir build/dynamic-ir-ru-book/pdf \
+            build/dynamic-ir-ru-book/dynamic-incident-response-ru-a4.docx
+          mv build/dynamic-ir-ru-book/pdf/dynamic-incident-response-ru-a4.pdf \
+            build/dynamic-ir-ru-book/dynamic-incident-response-ru-a4.pdf
 
       - name: Basic PDF verification
         run: |
           test -s build/dynamic-ir-ru-book/dynamic-incident-response-ru-a4.pdf
-          pdfinfo build/dynamic-ir-ru-book/dynamic-incident-response-ru-a4.pdf | tee build/dynamic-ir-ru-book/pdfinfo.txt
+          pdfinfo build/dynamic-ir-ru-book/dynamic-incident-response-ru-a4.pdf \
+            | tee build/dynamic-ir-ru-book/pdfinfo.txt
           grep -q "^Pages:" build/dynamic-ir-ru-book/pdfinfo.txt
+
+      - name: Persist publication artifacts in book registry
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        run: |
+          export_dir="books/dynamic-incident-response-joshua-wright-en-2026/exports"
+          mkdir -p "$export_dir"
+
+          cp build/dynamic-ir-ru-book/dynamic-incident-response-ru-a4.pdf \
+            "$export_dir/dynamic-incident-response-ru-a4.pdf"
+          cp build/dynamic-ir-ru-book/dynamic-incident-response-ru-a4.docx \
+            "$export_dir/dynamic-incident-response-ru-a4.docx"
+          cp build/dynamic-ir-ru-book/book-level-audit.json \
+            "$export_dir/book-level-audit.json"
+          cp build/dynamic-ir-ru-book/book-level-audit.md \
+            "$export_dir/book-level-audit.md"
+          cp build/dynamic-ir-ru-book/pdfinfo.txt \
+            "$export_dir/pdfinfo.txt"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$export_dir"
+
+          if git diff --cached --quiet; then
+            echo "Publication artifacts already match the generated build."
+            exit 0
+          fi
+
+          git commit -m "Publish Dynamic IR Russian book artifacts"
+          git push origin "HEAD:${{ github.head_ref }}"
 
       - name: Upload book artifacts
         uses: actions/upload-artifact@v4
