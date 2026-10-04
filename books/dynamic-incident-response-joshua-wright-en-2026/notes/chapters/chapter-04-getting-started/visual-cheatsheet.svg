@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect width="1200" height="720" fill="#ffffff"/>
+<text x="45" y="55" font-family="Arial" font-size="34" font-weight="700">Глава 4 — общий язык Incident Response</text>
+<rect x="50" y="115" width="180" height="105" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="75" y="150" font-family="Arial" font-size="20" font-weight="700">Event</text>
+<text x="75" y="185" font-family="Arial" font-size="17">observable</text>
+<rect x="280" y="115" width="180" height="105" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="305" y="150" font-family="Arial" font-size="20" font-weight="700">EOI</text>
+<text x="305" y="185" font-family="Arial" font-size="17">investigate</text>
+<rect x="510" y="115" width="210" height="105" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="535" y="150" font-family="Arial" font-size="20" font-weight="700">IOC / IOA</text>
+<text x="535" y="185" font-family="Arial" font-size="17">evidence / behavior</text>
+<rect x="770" y="115" width="180" height="105" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="795" y="150" font-family="Arial" font-size="20" font-weight="700">Incident</text>
+<text x="795" y="185" font-family="Arial" font-size="17">declared</text>
+<rect x="1000" y="115" width="150" height="105" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="1025" y="150" font-family="Arial" font-size="20" font-weight="700">Response</text>
+<text x="1025" y="185" font-family="Arial" font-size="17">action</text>
+<text x="110" y="360" font-family="Arial" font-size="22" font-weight="700">MTTD — how fast we detect</text>
+<text x="110" y="405" font-family="Arial" font-size="22" font-weight="700">MTTR — how fast we respond</text>
+<text x="110" y="450" font-family="Arial" font-size="22" font-weight="700">Quality score — how well we respond</text>
+<text x="110" y="540" font-family="Arial" font-size="20">Incident Response = technical</text>
+<text x="110" y="580" font-family="Arial" font-size="20">Incident Management = coordination</text>
+<text x="110" y="650" font-family="Arial" font-size="20" font-weight="700">Shared definitions keep triage, automation and metrics consistent.</text>
+</svg>

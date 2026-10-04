@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="980" viewBox="0 0 1400 980">
+<rect width="1400" height="980" fill="#ffffff"/>
+<text x="50" y="55" font-family="Arial" font-size="36" font-weight="700">Глава 4 — Vocabulary, evidence, metrics, roles</text>
+
+<rect x="50" y="120" width="260" height="150" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="75" y="160" font-family="Arial" font-size="22" font-weight="700">Event</text>
+<text x="75" y="200" font-family="Arial" font-size="16">Любое observable occurrence</text>
+<text x="75" y="230" font-family="Arial" font-size="16">log, ticket, user/engineer report</text>
+
+<rect x="370" y="120" width="260" height="150" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="395" y="160" font-family="Arial" font-size="22" font-weight="700">EOI</text>
+<text x="395" y="200" font-family="Arial" font-size="16">Требует investigation</text>
+<text x="395" y="230" font-family="Arial" font-size="16">Порог зависит от организации</text>
+
+<rect x="690" y="120" width="300" height="150" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="715" y="160" font-family="Arial" font-size="22" font-weight="700">IOC / IOA</text>
+<text x="715" y="200" font-family="Arial" font-size="16">Atomic / Computed / Behavioral</text>
+<text x="715" y="230" font-family="Arial" font-size="16">Evidence + behavior + context</text>
+
+<rect x="1050" y="120" width="300" height="150" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="1075" y="160" font-family="Arial" font-size="22" font-weight="700">Incident</text>
+<text x="1075" y="200" font-family="Arial" font-size="16">Harm / threat of harm</text>
+<text x="1075" y="230" font-family="Arial" font-size="16">Policy + risk decision</text>
+
+<rect x="80" y="360" width="380" height="220" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="105" y="400" font-family="Arial" font-size="22" font-weight="700">IOC classes</text>
+<text x="105" y="445" font-family="Arial" font-size="16">Atomic: filename, registry, URL, IP</text>
+<text x="105" y="480" font-family="Arial" font-size="16">Computed: hash, regex, derived pattern</text>
+<text x="105" y="515" font-family="Arial" font-size="16">Behavioral: TTP + sequence + baseline</text>
+<text x="105" y="550" font-family="Arial" font-size="16">IOA: behavior / intent-oriented view</text>
+
+<rect x="510" y="360" width="380" height="220" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="535" y="400" font-family="Arial" font-size="22" font-weight="700">Metrics</text>
+<text x="535" y="445" font-family="Arial" font-size="16">MTTD: occurrence → detection</text>
+<text x="535" y="480" font-family="Arial" font-size="16">MTTR: detection → resolution</text>
+<text x="535" y="515" font-family="Arial" font-size="16">P50 / P90 / type / severity</text>
+<text x="535" y="550" font-family="Arial" font-size="16">Consistency matters more than perfection</text>
+
+<rect x="940" y="360" width="380" height="220" rx="14" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="965" y="400" font-family="Arial" font-size="22" font-weight="700">Quality</text>
+<text x="965" y="445" font-family="Arial" font-size="16">Was analysis thorough?</text>
+<text x="965" y="480" font-family="Arial" font-size="16">Were related systems checked?</text>
+<text x="965" y="515" font-family="Arial" font-size="16">Was root cause documented?</text>
+<text x="965" y="550" font-family="Arial" font-size="16">Was ticket closed too early?</text>
+
+<rect x="150" y="680" width="500" height="180" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="180" y="720" font-family="Arial" font-size="22" font-weight="700">Incident Response</text>
+<text x="180" y="760" font-family="Arial" font-size="16">Technical: detect, analyze, contain</text>
+<text x="180" y="795" font-family="Arial" font-size="16">eradicate, recover, collect evidence</text>
+<text x="180" y="830" font-family="Arial" font-size="16">return to known-good state</text>
+
+<rect x="750" y="680" width="500" height="180" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="780" y="720" font-family="Arial" font-size="22" font-weight="700">Incident Management</text>
+<text x="780" y="760" font-family="Arial" font-size="16">Coordination, communication, governance</text>
+<text x="780" y="795" font-family="Arial" font-size="16">resources, escalation, compliance</text>
+<text x="780" y="830" font-family="Arial" font-size="16">stakeholders and remediation tracking</text>
+
+<text x="260" y="925" font-family="Arial" font-size="22" font-weight="700">Speed + quality + shared definitions = useful IR measurement.</text>
+</svg>

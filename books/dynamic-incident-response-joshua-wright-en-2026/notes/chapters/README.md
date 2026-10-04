@@ -9,3 +9,4 @@ Source truth для анализа: canonical English RAG. Русский пер
 - [Chapter 1 — Кейс: катастрофа в цепочке поставок](chapter-01-case-study-supply-chain-calamity/) — `ACCEPTED`
 - [Chapter 2 — Введение](chapter-02-introduction/) — `ACCEPTED`
 - [Chapter 3 — Краткая история реагирования на инциденты](chapter-03-a-short-history-of-incident-response/) — `ACCEPTED`
+- [Chapter 4 — С чего начать](chapter-04-getting-started/) — `ACCEPTED`
