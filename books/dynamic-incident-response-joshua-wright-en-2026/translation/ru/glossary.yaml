@@ -489,3 +489,52 @@ terms:
     context_note: "Versioned collection of reusable prompts and skill files for consistent team workflows."
     lock: true
     evidence: ["p0538-c01", "p0539-c01"]
+
+
+  - source: "human-operated ransomware"
+    ru: "управляемая человеком атака с программой-вымогателем"
+    context_note: "Hands-on-keyboard ransomware operation in which human operators actively reconnoiter, escalate privileges, move laterally, disable defenses, and time encryption."
+    lock: true
+    evidence: ["p0549-c01"]
+
+  - source: "ransomware as a service"
+    ru: "Ransomware as a Service (RaaS)"
+    context_note: "Operational model separating ransomware platform operators from affiliates that conduct intrusions and share ransom revenue."
+    lock: true
+    evidence: ["p0550-c01", "p0551-c01", "p0552-c01"]
+
+  - source: "multi-vector extortion"
+    ru: "многовекторное вымогательство"
+    context_note: "Extortion model combining encryption with data theft, leaks, DDoS, harassment, or other pressure channels."
+    lock: true
+    evidence: ["p0552-c01", "p0553-c01"]
+
+  - source: "initial access broker"
+    ru: "брокер первоначального доступа"
+    context_note: "Threat actor that compromises environments and sells established access to other criminal operators, including ransomware affiliates."
+    lock: true
+    evidence: ["p0548-c01"]
+
+  - source: "tier-0 asset"
+    ru: "актив уровня Tier 0"
+    context_note: "Identity, virtualization, backup, or administration system whose compromise can provide broad control across the environment."
+    lock: true
+    evidence: ["p0557-c01", "p0558-c01"]
+
+  - source: "immutable backup"
+    ru: "неизменяемая резервная копия"
+    context_note: "Backup protected by retention/immutability controls that prevent modification or deletion even after credential compromise."
+    lock: true
+    evidence: ["p0558-c01", "p0559-c01", "p0560-c01"]
+
+  - source: "victim identifier"
+    ru: "идентификатор жертвы"
+    context_note: "Ransom-note identifier that may grant access to an attacker negotiation portal and therefore requires confidential handling/redaction."
+    lock: true
+    evidence: ["p0561-c01", "p0562-c01"]
+
+  - source: "incident commander"
+    ru: "Incident Commander (IC), руководитель координации инцидента"
+    context_note: "Single coordination point between ransomware response teams and organizational decision makers, responsible for translating technical state into business-relevant updates."
+    lock: true
+    evidence: ["p0564-c01"]
