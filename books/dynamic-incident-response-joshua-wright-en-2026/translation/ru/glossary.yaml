@@ -588,3 +588,67 @@ terms:
     lock: true
     evidence: ["p0610-c01"]
 
+  - source: "Operational Technology"
+    ru: "операционные технологии (OT)"
+    preserve_identifier: "OT"
+    context_note: "Broad term covering industrial hardware and software that monitor or control physical devices, processes, and infrastructure."
+    lock: true
+    evidence: ["p0613-c01", "p0614-c01"]
+
+  - source: "Industrial Control Systems"
+    ru: "промышленные системы управления (ICS)"
+    preserve_identifier: "ICS"
+    context_note: "Established term for systems such as SCADA, DCS, and PLCs that monitor and control physical processes."
+    lock: true
+    evidence: ["p0614-c01"]
+
+  - source: "Purdue model"
+    ru: "модель Purdue"
+    preserve_identifier: "PERA"
+    context_note: "Hierarchical industrial network architecture model used for OT segmentation and trust-boundary analysis."
+    lock: true
+    evidence: ["p0615-c01", "p0616-c01"]
+
+  - source: "island mode"
+    ru: "островной режим (island mode)"
+    context_note: "Cyber-safe OT operating state in which the control network is deliberately isolated from external connectivity while local operations continue."
+    lock: true
+    evidence: ["p0630-c01", "p0633-c01"]
+
+  - source: "fighting through the attack"
+    ru: "поддержание управляемой работы во время атаки"
+    context_note: "OT response approach that preserves controlled operations, visibility, and process stability while investigation and containment proceed."
+    lock: true
+    evidence: ["p0624-c01"]
+
+  - source: "operator visibility"
+    ru: "видимость процесса для оператора"
+    context_note: "Ability of operators to observe alarms, state, trends, and control conditions through HMI and supervisory systems."
+    lock: true
+    evidence: ["p0614-c01", "p0618-c01", "p0626-c01", "p0632-c01"]
+
+  - source: "controller integrity"
+    ru: "целостность контроллера"
+    context_note: "Trust in controller logic, runtime values, firmware, I/O mappings, and approved configuration state."
+    lock: true
+    evidence: ["p0628-c01", "p0631-c01", "p0632-c01", "p0633-c01"]
+
+  - source: "protocol-aware monitoring"
+    ru: "мониторинг с учетом промышленных протоколов"
+    context_note: "OT network monitoring that interprets industrial protocol semantics to distinguish engineering activity from malicious control actions."
+    lock: true
+    evidence: ["p0627-c01", "p0629-c01", "p0635-c01"]
+
+  - source: "Safety Instrumented System"
+    ru: "система противоаварийной защиты (SIS)"
+    preserve_identifier: "SIS"
+    context_note: "Independent protective layer designed to move an industrial process to a safe state when hazardous conditions occur."
+    lock: true
+    evidence: ["p0620-c01", "p0623-c01"]
+
+  - source: "defensible control system network architecture"
+    ru: "защищаемая архитектура сети системы управления"
+    context_note: "Segmented OT architecture with explicit trust boundaries, industrial DMZs, visibility, logging, and deterministic communication controls."
+    lock: true
+    evidence: ["p0635-c01"]
+
