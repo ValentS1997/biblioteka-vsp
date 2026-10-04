@@ -59,9 +59,10 @@ terms:
 
   - source: "scope"
     ru: "масштаб инцидента"
-    context_note: "As a noun in the DAIR model."
+    context_note: "As a noun: масштаб инцидента. As the DAIR waypoint/action label: определение масштаба инцидента."
+    waypoint_ru: "определение масштаба инцидента"
     lock: true
-    evidence: ["p0006-c01"]
+    evidence: ["p0006-c01", "p0091-c01", "p0092-c01"]
 
   - source: "scoping"
     ru: "определение масштаба инцидента"
@@ -143,3 +144,22 @@ terms:
     context_note: "DAIR waypoint."
     lock: true
     evidence: ["p0087-c01"]
+
+
+  - source: "contain"
+    ru: "сдерживание"
+    context_note: "DAIR response action."
+    lock: true
+    evidence: ["p0092-c01"]
+
+  - source: "eradicate"
+    ru: "искоренение"
+    context_note: "DAIR response action."
+    lock: true
+    evidence: ["p0092-c01"]
+
+  - source: "recover"
+    ru: "восстановление"
+    context_note: "DAIR response action."
+    lock: true
+    evidence: ["p0092-c01"]
