@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1420" viewBox="0 0 1600 1420">
+  <rect width="1600" height="1420" fill="#ffffff"/>
+  <style>.title{font:700 35px sans-serif;fill:#111827}.h1{font:700 23px sans-serif;fill:#111827}.h2{font:700 18px sans-serif;fill:#111827}.t{font:15px sans-serif;fill:#1f2937}.s{font:14px sans-serif;fill:#475569}.box{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}.blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}.green{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}.amber{fill:#fffbeb;stroke:#d97706;stroke-width:2;rx:14}.violet{fill:#f5f3ff;stroke:#7c3aed;stroke-width:2;rx:14}.red{fill:#fef2f2;stroke:#dc2626;stroke-width:2;rx:14}</style>
+  <text x="50" y="58" class="title">Kubernetes в действии · Глава 7 — configuration and secrets</text>
+  <text x="50" y="88" class="s">RAG-only · p0249:c01–p0287:c01 · PDF 249–287 · Printed 248–286</text>
+  <text x="50" y="140" class="h1">1. Process configuration</text>
+  <rect x="50" y="170" width="720" height="225" class="blue"/>
+  <text x="70" y="205" class="h2">Image defaults → Pod overrides</text><text x="70" y="238" class="t">ENTRYPOINT ↔ command</text><text x="70" y="268" class="t">CMD ↔ args</text><text x="70" y="298" class="t">env variables per container</text><text x="70" y="340" class="s">command/args/env are not dynamically updated after Pod creation.</text>
+  <rect x="830" y="170" width="720" height="225" class="green"/>
+  <text x="850" y="205" class="h2">ConfigMap abstraction</text><text x="850" y="238" class="t">literal · file · directory · manifest</text><text x="850" y="268" class="t">configMapKeyRef · envFrom · volume</text><text x="850" y="298" class="t">same Pod spec can point to environment-specific ConfigMap</text><text x="850" y="340" class="s">Use for ordinary non-sensitive configuration.</text>
+  <text x="50" y="465" class="h1">2. ConfigMap file lifecycle</text>
+  <rect x="50" y="495" width="720" height="240" class="violet"/>
+  <text x="70" y="530" class="h2">Mounted volume update</text><text x="70" y="563" class="t">ConfigMap changes → new backing directory</text><text x="70" y="593" class="t">atomic symlink switch updates files</text><text x="70" y="623" class="t">application still needs reload support</text><text x="70" y="665" class="s">Propagation is eventual, not immediate.</text>
+  <rect x="830" y="495" width="720" height="240" class="amber"/>
+  <text x="850" y="530" class="h2">Caveat</text><text x="850" y="563" class="t">source-era single-file/subPath mount does not update</text><text x="850" y="593" class="t">Pods may temporarily observe different ConfigMap versions</text><text x="850" y="623" class="t">immutable-container expectations can be weakened</text><text x="850" y="665" class="s">Decide reload strategy explicitly.</text>
+  <text x="50" y="805" class="h1">3. Secret handling</text>
+  <rect x="50" y="835" width="470" height="250" class="red"/>
+  <text x="70" y="870" class="h2">Secret data</text><text x="70" y="903" class="t">Base64 in YAML</text><text x="70" y="933" class="t">stringData for write-time plain text</text><text x="70" y="963" class="t">decoded when delivered to app</text><text x="70" y="1005" class="s">Base64 is not encryption.</text>
+  <rect x="565" y="835" width="470" height="250" class="green"/>
+  <text x="585" y="870" class="h2">Delivery</text><text x="585" y="903" class="t">secret volume → files</text><text x="585" y="933" class="t">secretKeyRef → env</text><text x="585" y="963" class="t">source prefers volume for sensitive values</text><text x="585" y="1005" class="s">Env may appear in logs/reports or child processes.</text>
+  <rect x="1080" y="835" width="470" height="250" class="blue"/>
+  <text x="1100" y="870" class="h2">Private registry</text><text x="1100" y="903" class="t">docker-registry Secret</text><text x="1100" y="933" class="t">Pod spec.imagePullSecrets</text><text x="1100" y="963" class="t">Kubernetes authenticates image pull</text><text x="1100" y="1005" class="s">Credentials remain a security boundary.</text>
+  <text x="50" y="1150" class="h1">4. Selection rule</text>
+  <rect x="50" y="1180" width="1500" height="170" class="box"/>
+  <text x="75" y="1218" class="t">Non-sensitive reusable configuration → ConfigMap.</text>
+  <text x="75" y="1254" class="t">Sensitive key/certificate/password/token → Secret, preferably mounted as files.</text>
+  <text x="75" y="1290" class="t">Private image credentials → docker-registry Secret referenced by imagePullSecrets.</text>
+  <text x="75" y="1326" class="s">Do not mistake encoded output for confidentiality.</text>
+  <text x="50" y="1390" class="s">Source-era behavior preserved; no external modernization or inferred secret values.</text>
+</svg>
