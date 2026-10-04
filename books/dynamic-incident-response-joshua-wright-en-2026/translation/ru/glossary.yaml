@@ -391,3 +391,46 @@ terms:
     context_note: "Controlled removal or retention of temporary containment controls as systems return to production."
     lock: true
     evidence: ["p0415-c01", "p0416-c01", "p0431-c01"]
+
+
+  - source: "debrief activity"
+    ru: "разбор инцидента"
+    context_note: "Post-response activity that formally closes the active incident and converts response experience into organizational learning."
+    lock: true
+    evidence: ["p0434-c01", "p0435-c01"]
+
+  - source: "incident closure"
+    ru: "закрытие инцидента"
+    context_note: "Formal conclusion of active response, including temporary asset disposition, documentation consolidation, and metrics capture."
+    lock: true
+    evidence: ["p0435-c01"]
+
+  - source: "organizational learning"
+    ru: "организационное обучение"
+    context_note: "Conversion of incident experience into lasting process, control, training, and governance improvements."
+    lock: true
+    evidence: ["p0435-c01", "p0445-c01"]
+
+  - source: "after-action review"
+    ru: "разбор после инцидента"
+    context_note: "Structured review of expected versus actual response, causes of deviations, successful practices, and improvement actions."
+    lock: true
+    evidence: ["p0443-c01", "p0444-c01", "p0468-c01"]
+
+  - source: "incident summary report"
+    ru: "сводный отчёт об инциденте"
+    context_note: "Concise leadership-facing report focused on impact, metrics, risk, recommendations, and decisions required."
+    lock: true
+    evidence: ["p0448-c01", "p0449-c01"]
+
+  - source: "technical incident response report"
+    ru: "технический отчёт по реагированию на инцидент"
+    context_note: "Detailed technical record of scope, methodology, attacker activity, affected assets, response actions, evidence, and recommendations."
+    lock: true
+    evidence: ["p0451-c01", "p0452-c01"]
+
+  - source: "blameless postmortem"
+    ru: "разбор без поиска виноватых"
+    context_note: "Post-incident review culture focused on processes, systems, and systemic conditions rather than individual blame."
+    lock: true
+    evidence: ["p0458-c01", "p0468-c01"]
