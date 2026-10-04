@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1360" viewBox="0 0 1600 1360">
+  <rect width="1600" height="1360" fill="#ffffff"/>
+  <style>
+    .title{font:700 36px sans-serif;fill:#111827}.h1{font:700 24px sans-serif;fill:#111827}
+    .h2{font:700 18px sans-serif;fill:#111827}.t{font:16px sans-serif;fill:#1f2937}.s{font:14px sans-serif;fill:#475569}
+    .box{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}.blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}
+    .green{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}.amber{fill:#fffbeb;stroke:#d97706;stroke-width:2;rx:14}
+    .violet{fill:#f5f3ff;stroke:#7c3aed;stroke-width:2;rx:14}.red{fill:#fef2f2;stroke:#dc2626;stroke-width:2;rx:14}
+    .arrow{stroke:#334155;stroke-width:2;marker-end:url(#a)}
+  </style>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+
+  <text x="50" y="58" class="title">Kubernetes в действии · Глава 3 — Pod и resource organization</text>
+  <text x="50" y="88" class="s">RAG-only · p0095:c01–p0126:c01 · PDF 95–126 · Printed 94–125</text>
+
+  <text x="50" y="140" class="h1">1. Pod boundary</text>
+  <rect x="50" y="170" width="475" height="240" class="blue"/>
+  <text x="70" y="205" class="h2">One Pod</text>
+  <text x="70" y="238" class="t">• all containers on one worker node</text>
+  <text x="70" y="268" class="t">• shared Network / UTS / IPC namespaces</text>
+  <text x="70" y="298" class="t">• one IP and one port namespace</text>
+  <text x="70" y="328" class="t">• localhost works between Pod containers</text>
+  <text x="70" y="358" class="t">• filesystems isolated unless shared via Volume</text>
+  <text x="70" y="388" class="s">Pod never spans two worker nodes.</text>
+
+  <rect x="565" y="170" width="475" height="240" class="green"/>
+  <text x="585" y="205" class="h2">Grouping rule</text>
+  <text x="585" y="238" class="t">Same host required?</text>
+  <text x="585" y="268" class="t">One tightly coupled unit?</text>
+  <text x="585" y="298" class="t">Must scale together?</text>
+  <text x="585" y="340" class="t">If not → separate Pods</text>
+  <text x="585" y="370" class="s">Main + supporting side process is a valid pattern.</text>
+
+  <rect x="1080" y="170" width="470" height="240" class="blue"/>
+  <text x="1100" y="205" class="h2">Networking</text>
+  <text x="1100" y="238" class="t">Each Pod gets routable Pod IP</text>
+  <text x="1100" y="268" class="t">Inter-Pod network is flat in chapter model</text>
+  <text x="1100" y="298" class="t">No NAT between Pod identities</text>
+  <text x="1100" y="340" class="t">Port collision only inside same Pod</text>
+
+  <text x="50" y="475" class="h1">2. API object and operational inspection</text>
+  <rect x="50" y="505" width="720" height="235" class="violet"/>
+  <text x="70" y="540" class="h2">Object anatomy</text>
+  <text x="70" y="574" class="t">apiVersion · kind · metadata · spec</text>
+  <text x="70" y="604" class="t">status = read-only observed runtime state</text>
+  <text x="70" y="646" class="t">kubectl explain pods / pod.spec</text>
+  <text x="70" y="676" class="t">kubectl create -f manifest.yaml</text>
+  <text x="70" y="706" class="t">kubectl get po &lt;name&gt; -o yaml/json</text>
+
+  <rect x="830" y="505" width="720" height="235" class="violet"/>
+  <text x="850" y="540" class="h2">Debug path</text>
+  <text x="850" y="574" class="t">kubectl get pods</text>
+  <text x="850" y="604" class="t">kubectl logs &lt;pod&gt; [-c &lt;container&gt;]</text>
+  <text x="850" y="634" class="t">kubectl port-forward &lt;pod&gt; 8888:8080</text>
+  <text x="850" y="676" class="s">Pod-local logs disappear with Pod unless centralized logging exists.</text>
+
+  <text x="50" y="805" class="h1">3. Metadata, selection and scheduling</text>
+  <rect x="50" y="835" width="460" height="230" class="green"/>
+  <text x="70" y="870" class="h2">Labels</text>
+  <text x="70" y="904" class="t">short identifying key/value</text>
+  <text x="70" y="934" class="t">selectors: = != presence absence</text>
+  <text x="70" y="964" class="t">in / notin / multiple AND criteria</text>
+  <text x="70" y="1006" class="t">group and target resources</text>
+
+  <rect x="570" y="835" width="460" height="230" class="amber"/>
+  <text x="590" y="870" class="h2">Node labels</text>
+  <text x="590" y="904" class="t">classify hardware/capability</text>
+  <text x="590" y="934" class="t">example: gpu=true</text>
+  <text x="590" y="964" class="t">Pod spec.nodeSelector</text>
+  <text x="590" y="1006" class="t">prefer logical group over exact node</text>
+
+  <rect x="1090" y="835" width="460" height="230" class="blue"/>
+  <text x="1110" y="870" class="h2">Annotations / namespaces</text>
+  <text x="1110" y="904" class="t">annotation = larger non-selectable metadata</text>
+  <text x="1110" y="934" class="t">namespace = resource/name scope</text>
+  <text x="1110" y="964" class="t">same names may exist in different namespaces</text>
+  <text x="1110" y="1006" class="s">Namespace ≠ automatic network isolation.</text>
+
+  <text x="50" y="1130" class="h1">4. Destructive lifecycle</text>
+  <rect x="50" y="1160" width="1500" height="145" class="red"/>
+  <text x="75" y="1198" class="t">kubectl delete po &lt;name&gt; → SIGTERM → grace period → SIGKILL if needed</text>
+  <text x="75" y="1234" class="t">delete by selector / namespace / --all expands blast radius</text>
+  <text x="75" y="1270" class="t">Controller-managed Pod can be recreated immediately; deleting instance is not deleting desired state.</text>
+
+  <text x="50" y="1340" class="s">Source-era behavior preserved; YAML extraction artifacts are not silently rewritten into validated modern manifests.</text>
+</svg>
