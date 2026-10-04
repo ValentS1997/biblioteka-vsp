@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000">
+  <rect width="1400" height="1000" fill="#ffffff"/>
+  <style>
+    .title{font:700 36px Arial,sans-serif;fill:#1f3f6d}
+    .h{font:700 22px Arial,sans-serif;fill:#1f3f6d}
+    .t{font:17px Arial,sans-serif;fill:#20242a}
+    .s{font:15px Arial,sans-serif;fill:#39424d}
+    .box{fill:#f5f8fc;stroke:#8ba3c5;stroke-width:2;rx:14}
+    .warn{fill:#fff7e8;stroke:#c89b4a;stroke-width:2;rx:14}
+    .bad{fill:#fff0f0;stroke:#c56b6b;stroke-width:2;rx:14}
+    .good{fill:#eef8f0;stroke:#6d9d76;stroke-width:2;rx:14}
+    .a{stroke:#5e6d7c;stroke-width:3;fill:none;marker-end:url(#m)}
+    .dash{stroke:#9a6868;stroke-width:2;fill:none;stroke-dasharray:8 7;marker-end:url(#mr)}
+  </style>
+  <defs>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#5e6d7c"/>
+    </marker>
+    <marker id="mr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#9a6868"/>
+    </marker>
+  </defs>
+
+  <text x="55" y="55" class="title">Глава 1 — Supply-chain compromise и ошибка узкого scope</text>
+
+  <text x="55" y="100" class="h">Attack path</text>
+
+  <rect x="55" y="125" width="250" height="115" class="box"/>
+  <text x="78" y="158" class="h">Gilded Freight</text>
+  <text x="78" y="190" class="t">SDK installer modified</text>
+  <text x="78" y="217" class="s">supply-chain entry point</text>
+
+  <rect x="355" y="125" width="250" height="115" class="warn"/>
+  <text x="378" y="158" class="h">Jordan workstation</text>
+  <text x="378" y="190" class="t">ms → localhost:8080</text>
+  <text x="378" y="217" class="t">ssupd → 0.0.0.0:9150</text>
+
+  <rect x="655" y="125" width="270" height="115" class="bad"/>
+  <text x="678" y="158" class="h">Credential theft</text>
+  <text x="678" y="190" class="t">SSH key / known_hosts</text>
+  <text x="678" y="217" class="t">DB + AWS credentials</text>
+
+  <rect x="975" y="125" width="350" height="115" class="bad"/>
+  <text x="998" y="158" class="h">Expanded access</text>
+  <text x="998" y="190" class="t">dev hosts → CI/CD → AWS → S3</text>
+  <text x="998" y="217" class="t">EC2 staging → exfiltration</text>
+
+  <path d="M305 182 L350 182" class="a"/>
+  <path d="M605 182 L650 182" class="a"/>
+  <path d="M925 182 L970 182" class="a"/>
+
+  <text x="55" y="300" class="h">Local response path</text>
+
+  <rect x="55" y="325" width="260" height="160" class="good"/>
+  <text x="80" y="360" class="h">Jordan</text>
+  <text x="80" y="394" class="t">1. notices port conflict</text>
+  <text x="80" y="424" class="t">2. traces PID/PPID</text>
+  <text x="80" y="454" class="t">3. killall + remove SDK</text>
+
+  <rect x="370" y="325" width="310" height="160" class="good"/>
+  <text x="395" y="360" class="h">Sam: workstation checks</text>
+  <text x="395" y="394" class="t">processes/listeners absent</text>
+  <text x="395" y="424" class="t">historical logs reviewed</text>
+  <text x="395" y="454" class="t">persistence + malware scan clean</text>
+
+  <rect x="735" y="325" width="250" height="160" class="warn"/>
+  <text x="760" y="360" class="h">Interpretation</text>
+  <text x="760" y="394" class="t">"host clean"</text>
+  <text x="760" y="424" class="t">ошибочно становится</text>
+  <text x="760" y="454" class="t">"incident closed"</text>
+
+  <rect x="1040" y="325" width="285" height="160" class="bad"/>
+  <text x="1065" y="360" class="h">False closure</text>
+  <text x="1065" y="394" class="t">ticket resolved</text>
+  <text x="1065" y="424" class="t">while attacker access</text>
+  <text x="1065" y="454" class="t">persists elsewhere</text>
+
+  <path d="M315 405 L365 405" class="a"/>
+  <path d="M680 405 L730 405" class="a"/>
+  <path d="M985 405 L1035 405" class="a"/>
+
+  <text x="55" y="550" class="h">Missed scope branches named by the chapter</text>
+
+  <rect x="55" y="575" width="250" height="120" class="bad"/>
+  <text x="78" y="610" class="h">Other endpoints</text>
+  <text x="78" y="645" class="t">same Gilded SDK</text>
+  <text x="78" y="673" class="s">other developers?</text>
+
+  <rect x="355" y="575" width="250" height="120" class="bad"/>
+  <text x="378" y="610" class="h">SSH usage</text>
+  <text x="378" y="645" class="t">stolen key use</text>
+  <text x="378" y="673" class="s">internal hosts</text>
+
+  <rect x="655" y="575" width="270" height="120" class="bad"/>
+  <text x="678" y="610" class="h">Cloud activity</text>
+  <text x="678" y="645" class="t">Jordan AWS credentials</text>
+  <text x="678" y="673" class="s">CloudTrail / EC2 / S3</text>
+
+  <rect x="975" y="575" width="350" height="120" class="bad"/>
+  <text x="998" y="610" class="h">Residual access</text>
+  <text x="998" y="645" class="t">DB credential + attacker EC2</text>
+  <text x="998" y="673" class="s">stolen data already outside host</text>
+
+  <path d="M1168 485 C1168 520 180 520 180 570" class="dash"/>
+  <path d="M1168 485 C1168 535 480 535 480 570" class="dash"/>
+  <path d="M1168 485 C1168 550 790 550 790 570" class="dash"/>
+  <path d="M1168 485 L1168 570" class="dash"/>
+
+  <rect x="120" y="770" width="1160" height="150" class="warn"/>
+  <text x="155" y="812" class="h">Operational lesson</text>
+  <text x="155" y="850" class="t">Initial indicator → attacker capability → stolen credentials → trust paths → downstream systems → cloud/data impact.</text>
+  <text x="155" y="885" class="t">Не закрывать incident только потому, что исходный host больше не показывает activity.</text>
+</svg>
