@@ -163,3 +163,42 @@ terms:
     context_note: "DAIR response action."
     lock: true
     evidence: ["p0092-c01"]
+
+
+  - source: "signature-based detection"
+    ru: "обнаружение по сигнатурам"
+    lock: true
+    evidence: ["p0167-c01"]
+
+  - source: "behavioral detection"
+    ru: "поведенческое обнаружение"
+    lock: true
+    evidence: ["p0167-c01", "p0168-c01"]
+
+  - source: "machine learning detection"
+    ru: "обнаружение с использованием машинного обучения"
+    lock: true
+    evidence: ["p0168-c01", "p0169-c01"]
+
+  - source: "human-in-the-loop"
+    ru: "human-in-the-loop"
+    preserve_identifier: "HITL"
+    context_note: "Keep HITL identifier; describe in Russian prose as human review/decision authority."
+    lock: true
+    evidence: ["p0169-c01"]
+
+  - source: "active detection"
+    ru: "активное обнаружение"
+    context_note: "In Chapter 8, equivalent to threat hunting."
+    lock: true
+    evidence: ["p0170-c01"]
+
+  - source: "passive detection"
+    ru: "пассивное обнаружение"
+    lock: true
+    evidence: ["p0169-c01"]
+
+  - source: "detection-driven collection"
+    ru: "сбор данных, ориентированный на задачи обнаружения"
+    lock: true
+    evidence: ["p0178-c01", "p0179-c01"]
