@@ -2594,7 +2594,7 @@ Evaluate:
 - prepare rollback for firewall/topology changes;
 - establish communication channels.
 
-## Step 2. Implement Identity and Access Containment
+### Step 2. Implement Identity and Access Containment
 
 ### 1. Invalidate known-compromised credentials
 
@@ -2649,7 +2649,7 @@ Actions:
 - invalidate API tokens;
 - review browser extensions with broad permissions.
 
-## Step 3. Implement Network and Host Containment
+### Step 3. Implement Network and Host Containment
 
 ### 1. Network isolation
 
@@ -2684,7 +2684,7 @@ Actions:
 
 Coordinate disruptive actions with business owners.
 
-## Step 4. Implement Cloud-Specific Containment
+### Step 4. Implement Cloud-Specific Containment
 
 ### 1. Verify security demarcation
 
@@ -2727,7 +2727,7 @@ Coordinate disruptive actions with business owners.
 - replace function code with deny-and-log;
 - revoke IAM/service permissions.
 
-## Step 5. Address Remote Work and Modern Environment Challenges
+### Step 5. Address Remote Work and Modern Environment Challenges
 
 ### 1. Remote workers
 
@@ -2767,7 +2767,7 @@ Coordinate disruptive actions with business owners.
 - stop data synchronization;
 - contain at trust boundary where no direct system control exists.
 
-## Step 6. Collect and Preserve Evidence
+### Step 6. Collect and Preserve Evidence
 
 This step preserves volatile evidence.
 
@@ -2820,7 +2820,7 @@ Without alternate volatile-network evidence, collect active connections before i
 - app audit logs;
 - cloud audit logs before retention expiry.
 
-## Step 7. Validate Containment Effectiveness
+### Step 7. Validate Containment Effectiveness
 
 ### 1. Network validation
 
@@ -2856,7 +2856,7 @@ Without alternate volatile-network evidence, collect active connections before i
 - log difference;
 - verify attacker stopped rather than changed technique/infrastructure.
 
-## Step 8. Document Containment Actions and Communicate Status
+### Step 8. Document Containment Actions and Communicate Status
 
 ### 1. Decision documentation
 
