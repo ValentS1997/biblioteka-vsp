@@ -18,3 +18,4 @@ Source truth для анализа: canonical English RAG. Русский пер
 - [Chapter 10 — Цикл действий реагирования](chapter-10-response-actions-loop/) — `ACCEPTED`
 - [Chapter 11 — Определение масштаба](chapter-11-scope-activity/) — `ACCEPTED`
 - [Chapter 12 — Сдерживание](chapter-12-contain-activity/) — `ACCEPTED`
+- [Chapter 13 — Искоренение угрозы](chapter-13-eradicate-activity/) — `ACCEPTED`
