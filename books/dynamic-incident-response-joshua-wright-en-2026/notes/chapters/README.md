@@ -11,3 +11,4 @@ Source truth для анализа: canonical English RAG. Русский пер
 - [Chapter 3 — Краткая история реагирования на инциденты](chapter-03-a-short-history-of-incident-response/) — `ACCEPTED`
 - [Chapter 4 — С чего начать](chapter-04-getting-started/) — `ACCEPTED`
 - [Chapter 5 — Модели реагирования на инциденты и их ограничения](chapter-05-incident-response-models-and-their-limitations/) — `ACCEPTED`
+- [Chapter 6 — Динамический подход к реагированию на инциденты](chapter-06-a-dynamic-approach-to-incident-response/) — `ACCEPTED`
