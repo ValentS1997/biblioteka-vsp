@@ -9,3 +9,4 @@ Reviewed RAG-grounded chapter materials are stored here.
 - [Chapter 5 — Docker Swarm](chapter-05-docker-swarm/README.md)
 - [Chapter 6 — Сети Docker](chapter-06-docker-networks/README.md)
 - [Chapter 7 — Безопасность в Docker. Часть 1](chapter-07-docker-security-part-1/README.md)
+- [Chapter 8 — Безопасность в Docker. Часть 2](chapter-08-docker-security-part-2/README.md)
