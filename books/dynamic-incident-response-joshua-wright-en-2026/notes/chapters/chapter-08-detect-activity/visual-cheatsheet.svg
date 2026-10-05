@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect width="1200" height="720" fill="#ffffff"/>
+<text x="45" y="55" font-family="Arial" font-size="34" font-weight="700">Глава 8 — Detect Activity</text>
+
+<rect x="60" y="120" width="250" height="150" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="90" y="160" font-family="Arial" font-size="22" font-weight="700">Methodologies</text>
+<text x="90" y="200" font-family="Arial" font-size="17">Signature</text>
+<text x="90" y="230" font-family="Arial" font-size="17">Behavioral / ML / Hybrid</text>
+
+<rect x="350" y="120" width="250" height="150" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="380" y="160" font-family="Arial" font-size="22" font-weight="700">Data Sources</text>
+<text x="380" y="200" font-family="Arial" font-size="17">EDR / NDR / SIEM / SOAR</text>
+<text x="380" y="230" font-family="Arial" font-size="17">Cloud / Network / Logs</text>
+
+<rect x="640" y="120" width="250" height="150" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="670" y="160" font-family="Arial" font-size="22" font-weight="700">Humans</text>
+<text x="670" y="200" font-family="Arial" font-size="17">Employees / Admins</text>
+<text x="670" y="230" font-family="Arial" font-size="17">Researchers / Partners</text>
+
+<rect x="930" y="120" width="210" height="150" rx="14" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="960" y="160" font-family="Arial" font-size="22" font-weight="700">Challenges</text>
+<text x="960" y="200" font-family="Arial" font-size="17">Volume / Encryption</text>
+<text x="960" y="230" font-family="Arial" font-size="17">Evasion / Skills</text>
+
+<rect x="120" y="380" width="400" height="175" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="150" y="420" font-family="Arial" font-size="22" font-weight="700">Active Hunting</text>
+<text x="150" y="460" font-family="Arial" font-size="17">Pyramid of Pain</text>
+<text x="150" y="495" font-family="Arial" font-size="17">TTPs &gt; hashes/IPs for human effort</text>
+<text x="150" y="530" font-family="Arial" font-size="17">Document hypothesis and cadence</text>
+
+<rect x="680" y="380" width="400" height="175" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="710" y="420" font-family="Arial" font-size="22" font-weight="700">Detection Improvement</text>
+<text x="710" y="460" font-family="Arial" font-size="17">Tune rules / purple-team / CTI</text>
+<text x="710" y="495" font-family="Arial" font-size="17">Monitor log health / model drift</text>
+<text x="710" y="530" font-family="Arial" font-size="17">Feed EOI to Verify + Triage</text>
+
+<text x="240" y="650" font-family="Arial" font-size="24" font-weight="700">Detect is a continuous capability, not a one-time alert.</text>
+</svg>
