@@ -52,3 +52,4 @@ Canonical readiness command:
 ## Chapter artifacts
 
 - [Глава 1 — Основы создания AI-приложений с использованием базовых моделей](notes/chapters/chapter-01-ai-application-foundations/README.md)
+- [Глава 2 — Знакомство с базовыми моделями](notes/chapters/chapter-02-foundation-models/README.md)
