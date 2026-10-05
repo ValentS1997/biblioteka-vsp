@@ -13,18 +13,25 @@
 - Название: «Устройства»
 - Slug: <code>devices</code>
 - Source policy: <code>rag_only</code>
+- Request contract: `BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST v1.2`
+- Readiness contract: `BIBLIOTEKA-VSP-BOOK-READINESS v1.2`
+- Artifact contract: `BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.6`
 - External sources: запрещены
 - Model memory: запрещена
 - Прямой доступ к PDF: не использовался
 
 ## Provenance
 
-- RAG chunks: <code>p0079:c01</code>–<code>p0101:c01</code>
-- PDF pages: 79–101
-- Printed pages: 79–101
+- RAG chunk range: <code>p0079:c01</code>–<code>p0101:c01</code>
+- Source format: `pdf`
+- Source locator range: `pdf_page 79–101`
+- EPUB spine range: `Not applicable`
+- PDF page range: 79–101
+- Printed page range: 79–101
 - <code>p0079:c01</code> начинается заголовком главы 3 «Устройства».
 - Следующий чанк <code>p0102:c01</code> начинается главой 4 «Диски и файловые системы».
 - Chapter boundary verified: yes
+- Completion status: `ACCEPTED`
 - Source SHA-256: <code>60bb698fc2ff849a9814f099c12ca56e8f40c11b0518436f3ce3c44e96152df9</code>
 
 ## Содержимое
