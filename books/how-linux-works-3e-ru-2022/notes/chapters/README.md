@@ -7,3 +7,4 @@ Reviewed chapter-level notes are stored here. Historical notes are not reconstru
 - [Chapter 3 — Устройства](chapter-03-devices/README.md)
 - [Chapter 4 — Диски и файловые системы](chapter-04-disks-and-filesystems/README.md)
 - [Chapter 5 — Загрузка ядра Linux](chapter-05-linux-kernel-boot/README.md)
+- [Chapter 6 — Запуск пользовательского пространства](chapter-06-starting-user-space/README.md)
