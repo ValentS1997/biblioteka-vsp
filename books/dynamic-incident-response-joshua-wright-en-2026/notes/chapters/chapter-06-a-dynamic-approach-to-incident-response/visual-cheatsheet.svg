@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect width="1200" height="720" fill="#ffffff"/>
+<text x="45" y="55" font-family="Arial" font-size="34" font-weight="700">Глава 6 — DAIR на одной странице</text>
+
+<rect x="70" y="115" width="180" height="95" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="105" y="155" font-family="Arial" font-size="22" font-weight="700">Prepare</text>
+<text x="105" y="185" font-family="Arial" font-size="16">readiness</text>
+
+<rect x="300" y="115" width="180" height="95" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="340" y="155" font-family="Arial" font-size="22" font-weight="700">Detect</text>
+<text x="340" y="185" font-family="Arial" font-size="16">continuous</text>
+
+<rect x="530" y="115" width="220" height="95" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="560" y="155" font-family="Arial" font-size="22" font-weight="700">Verify + Triage</text>
+<text x="560" y="185" font-family="Arial" font-size="16">confirm + prioritize</text>
+
+<rect x="800" y="115" width="300" height="95" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="840" y="155" font-family="Arial" font-size="22" font-weight="700">Response Actions Loop</text>
+<text x="840" y="185" font-family="Arial" font-size="16">Scope / Contain / Eradicate / Recover</text>
+
+<text x="105" y="300" font-family="Arial" font-size="22" font-weight="700">Decision Makers influence the whole lifecycle</text>
+<text x="105" y="340" font-family="Arial" font-size="17">criticality • acceptable downtime • legal/regulatory • continuity • priorities</text>
+
+<rect x="110" y="410" width="430" height="170" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="140" y="450" font-family="Arial" font-size="22" font-weight="700">DAIR mindset</text>
+<text x="140" y="490" font-family="Arial" font-size="17">waypoints, outcomes, recurring actions</text>
+<text x="140" y="525" font-family="Arial" font-size="17">new evidence can reopen earlier work</text>
+<text x="140" y="560" font-family="Arial" font-size="17">iteration is expected, not failure</text>
+
+<rect x="660" y="410" width="430" height="170" rx="14" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="690" y="450" font-family="Arial" font-size="22" font-weight="700">Anti-pattern</text>
+<text x="690" y="490" font-family="Arial" font-size="17">technically correct ≠ organizationally correct</text>
+<text x="690" y="525" font-family="Arial" font-size="17">do not optimize security actions</text>
+<text x="690" y="560" font-family="Arial" font-size="17">without business context</text>
+
+<text x="315" y="660" font-family="Arial" font-size="24" font-weight="700">Observe → Verify → Prioritize → Scope → Act → Re-scope → Act again</text>
+</svg>
