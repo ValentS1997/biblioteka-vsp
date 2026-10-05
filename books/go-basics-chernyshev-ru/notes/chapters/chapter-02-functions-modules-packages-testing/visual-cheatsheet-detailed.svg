@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120">
+<rect width="1600" height="1120" fill="#f4f7fb"/>
+<rect x="12" y="12" width="1576" height="78" rx="14" fill="#26384d"/>
+<text x="800" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">Основы Go — глава 2: detailed map</text>
+<text x="800" y="72" font-family="Arial, sans-serif" font-size="15.5" fill="#dce8f4" text-anchor="middle">functions → abstractions → packages/modules → dependency management → tests → coverage/benchmarks → project v.1</text>
+<rect x="14" y="110" width="382" height="270" rx="12" fill="#f7fbff" stroke="#5b98cf" stroke-width="2"/>
+<text x="32" y="140" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#173d64">1. Function contracts</text>
+<text x="36" y="171" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="36" dy="0">Positional arguments.</tspan>
+<tspan x="36" dy="20">Single, multiple and named returns.</tspan>
+<tspan x="36" dy="20">Variadic argument behaves as a slice.</tspan>
+<tspan x="36" dy="20">Value = copy; pointer can mutate caller state.</tspan>
+<tspan x="36" dy="20">Explicit return is clearer than hidden pointer result.</tspan>
+</text>
+<rect x="408" y="110" width="382" height="270" rx="12" fill="#f6fff8" stroke="#58ad79" stroke-width="2"/>
+<text x="426" y="140" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#18572f">2. Functions as values</text>
+<text x="430" y="171" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="430" dy="0">Assign function to variable.</tspan>
+<tspan x="430" dy="20">Pass function into another function.</tspan>
+<tspan x="430" dy="20">Anonymous functions can be inline.</tspan>
+<tspan x="430" dy="20">Closures capture lexical-scope values.</tspan>
+<tspan x="430" dy="20">type can name complex signatures.</tspan>
+</text>
+<rect x="802" y="110" width="382" height="270" rx="12" fill="#fff9f4" stroke="#d49a4c" stroke-width="2"/>
+<text x="820" y="140" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#714500">3. Advanced flow</text>
+<text x="824" y="171" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="824" dy="0">Direct recursion: f → f.</tspan>
+<tspan x="824" dy="20">Indirect recursion: f → g → f.</tspan>
+<tspan x="824" dy="20">Exit condition is mandatory.</tspan>
+<tspan x="824" dy="20">Generator = goroutine + channel + lazy values.</tspan>
+<tspan x="824" dy="20">defer executes on exit, LIFO.</tspan>
+</text>
+<rect x="1196" y="110" width="390" height="270" rx="12" fill="#fff7fb" stroke="#cf6d99" stroke-width="2"/>
+<text x="1214" y="140" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#842044">4. Packages / modules</text>
+<text x="1218" y="171" font-family="Arial, sans-serif" font-size="12.7" fill="#19324a">
+<tspan x="1218" dy="0">main package = executable entry point.</tspan>
+<tspan x="1218" dy="20">Utility packages hold reusable code.</tspan>
+<tspan x="1218" dy="20">Uppercase identifier = exported.</tspan>
+<tspan x="1218" dy="20">Module groups packages + dependencies.</tspan>
+<tspan x="1218" dy="20">go.mod / go.sum define and verify dependency state.</tspan>
+</text>
+<rect x="14" y="398" width="502" height="290" rx="12" fill="#f7f7ff" stroke="#8179d6" stroke-width="2"/>
+<text x="32" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#474092">5. Dependency operations</text>
+<text x="36" y="459" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="36" dy="0">go mod init → module metadata.</tspan>
+<tspan x="36" dy="20">go get / download → external dependency.</tspan>
+<tspan x="36" dy="20">tidy → missing/unused requirements.</tspan>
+<tspan x="36" dy="20">vendor → project-local dependency copies.</tspan>
+<tspan x="36" dy="20">replace → local module mapping.</tspan>
+<tspan x="36" dy="20">Semver = MAJOR.MINOR.PATCH.</tspan>
+</text>
+<rect x="528" y="398" width="502" height="290" rx="12" fill="#f5fff7" stroke="#58ad79" stroke-width="2"/>
+<text x="546" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#18572f">6. Unit testing</text>
+<text x="550" y="459" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="550" dy="0">Built-in package: testing.</tspan>
+<tspan x="550" dy="20">TestXxx(t *testing.T).</tspan>
+<tspan x="550" dy="20">Compare actual vs expected.</tspan>
+<tspan x="550" dy="20">Use multiple values and boundary cases.</tspan>
+<tspan x="550" dy="20">Table-driven tests scale combinations.</tspan>
+<tspan x="550" dy="20">t.Run creates per-case subtests.</tspan>
+</text>
+<rect x="1042" y="398" width="544" height="290" rx="12" fill="#fffdf3" stroke="#d5ad37" stroke-width="2"/>
+<text x="1060" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#714500">7. Coverage / performance</text>
+<text x="1064" y="459" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="1064" dy="0">-cover → percentage.</tspan>
+<tspan x="1064" dy="20">coverprofile → coverage.out.</tspan>
+<tspan x="1064" dy="20">go tool cover → HTML visualization.</tspan>
+<tspan x="1064" dy="20">BenchmarkXxx(b *testing.B).</tspan>
+<tspan x="1064" dy="20">b.N controls repetitions.</tspan>
+<tspan x="1064" dy="20">-benchmem reports B/op and allocs/op.</tspan>
+</text>
+<rect x="14" y="706" width="760" height="278" rx="12" fill="#f4fbff" stroke="#6d9fc8" stroke-width="2"/>
+<text x="32" y="736" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#174d70">8. Testing strategy in chapter</text>
+<text x="36" y="768" font-family="Arial, sans-serif" font-size="12.7" fill="#19324a">
+<tspan x="36" dy="0">TDD: write test before implementation.</tspan>
+<tspan x="36" dy="20">Testing aims to catch defects during development.</tspan>
+<tspan x="36" dy="20">Small example moves tests into target package for coverage.</tspan>
+<tspan x="36" dy="20">As project complexity grows, source recommends separate test package.</tspan>
+<tspan x="36" dy="20">Faker supplies generated names, addresses and other test data.</tspan>
+</text>
+<rect x="786" y="706" width="800" height="278" rx="12" fill="#fff8f2" stroke="#d17e4f" stroke-width="2"/>
+<text x="804" y="736" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#7b3e1e">9. Tic-tac-toe v.1</text>
+<text x="808" y="768" font-family="Arial, sans-serif" font-size="12.7" fill="#19324a">
+<tspan x="808" dy="0">Previous version: almost all logic inside main.</tspan>
+<tspan x="808" dy="20">New package game owns package-level state.</tspan>
+<tspan x="808" dy="20">InitBoard and Play are exported entry points.</tspan>
+<tspan x="808" dy="20">Helpers split move, win, draw, print, switch and update logic.</tspan>
+<tspan x="808" dy="20">Refactoring is procedural: functions + shared package state.</tspan>
+<tspan x="808" dy="20">Exercises add restart, random first player, tests and board expansion.</tspan>
+</text>
+<rect x="14" y="1004" width="1572" height="88" rx="10" fill="#26384d"/>
+<text x="800" y="1031" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Acceptance: explain function contracts, package/module boundaries, dependency commands, testing patterns and project decomposition.</text>
+<text x="800" y="1058" font-family="Arial, sans-serif" font-size="14.5" fill="#dce8f4" text-anchor="middle">Source boundaries: no function overloading/default args • recursion needs exit • exported names are uppercase • tests need varied inputs.</text>
+<text x="800" y="1082" font-family="Arial, sans-serif" font-size="13.5" fill="#dce8f4" text-anchor="middle">RAG-only • PDF 101–152 • summary p0150–p0151 • questions p0151–p0152</text>
+</svg>
