@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect width="1200" height="720" fill="#ffffff"/>
+<text x="45" y="55" font-family="Arial" font-size="34" font-weight="700">Глава 14 — Recover Activity</text>
+
+<rect x="60" y="120" width="250" height="150" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="90" y="160" font-family="Arial" font-size="22" font-weight="700">Verify</text>
+<text x="90" y="200" font-family="Arial" font-size="17">root cause / persistence</text>
+<text x="90" y="235" font-family="Arial" font-size="17">backup / controls</text>
+
+<rect x="350" y="120" width="250" height="150" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="380" y="160" font-family="Arial" font-size="22" font-weight="700">Validate</text>
+<text x="380" y="200" font-family="Arial" font-size="17">functional + security</text>
+<text x="380" y="235" font-family="Arial" font-size="17">dependencies</text>
+
+<rect x="640" y="120" width="250" height="150" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="670" y="160" font-family="Arial" font-size="22" font-weight="700">Accept</text>
+<text x="670" y="200" font-family="Arial" font-size="17">system owner sign-off</text>
+<text x="670" y="235" font-family="Arial" font-size="17">known limitations</text>
+
+<rect x="930" y="120" width="210" height="150" rx="14" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="960" y="160" font-family="Arial" font-size="22" font-weight="700">Monitor</text>
+<text x="960" y="200" font-family="Arial" font-size="17">enhanced logging</text>
+<text x="960" y="235" font-family="Arial" font-size="17">detect recurrence</text>
+
+<rect x="110" y="390" width="430" height="180" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="140" y="430" font-family="Arial" font-size="22" font-weight="700">Recovery strategy</text>
+<text x="140" y="470" font-family="Arial" font-size="17">phased when confidence is limited</text>
+<text x="140" y="505" font-family="Arial" font-size="17">coordinated when systems are coupled</text>
+<text x="140" y="540" font-family="Arial" font-size="17">dependency order matters</text>
+
+<rect x="660" y="390" width="430" height="180" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="690" y="430" font-family="Arial" font-size="22" font-weight="700">Close recovery safely</text>
+<text x="690" y="470" font-family="Arial" font-size="17">remove containment incrementally</text>
+<text x="690" y="505" font-family="Arial" font-size="17">capture metrics and issues</text>
+<text x="690" y="540" font-family="Arial" font-size="17">handoff to Debrief</text>
+
+<text x="170" y="650" font-family="Arial" font-size="24" font-weight="700">Recovery = secure + functional + accepted + monitored production return.</text>
+</svg>
