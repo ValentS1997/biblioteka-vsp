@@ -6,5 +6,7 @@
 
 - [Глава 3. Объектно-ориентированное программирование в Go](./chapter-03-object-oriented-programming/) — `RAG_GROUNDED`, PDF 153–198.
 
+- [Глава 4. Обработка ошибок и паник в Go](./chapter-04-errors-and-panics/) — `RAG_GROUNDED`, PDF 199–212.
+
 Book-level readiness must be `READY` before running
 `BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.6`.
