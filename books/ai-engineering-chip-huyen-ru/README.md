@@ -54,3 +54,4 @@ Canonical readiness command:
 - [Глава 1 — Основы создания AI-приложений с использованием базовых моделей](notes/chapters/chapter-01-ai-application-foundations/README.md)
 - [Глава 2 — Знакомство с базовыми моделями](notes/chapters/chapter-02-foundation-models/README.md)
 - [Глава 3 — Методология оценки](notes/chapters/chapter-03-evaluation-methodology/README.md)
+- [Глава 4 — Оценка систем AI](notes/chapters/chapter-04-evaluating-ai-systems/README.md)
