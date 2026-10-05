@@ -101,12 +101,12 @@ chapter_analysis:
     contract_id: "BIBLIOTEKA-VSP-BOOK-READINESS"
     contract_version: "1.2"
     capability: "chapter-analysis"
-    status: "READY_CANDIDATE"
+    status: "READY"
     evidence:
       rag_manifest_status: "READY_WITH_KNOWN_LIMITATIONS"
       source_checksum_verified: true
       chapter_boundaries: "verified per chapter README"
-      ci_validation: "[Pending PR check]"
+      ci_validation: "PASS (PR #163 validate-book-readiness)"
   workflow:
     request:
       id: "BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST"
