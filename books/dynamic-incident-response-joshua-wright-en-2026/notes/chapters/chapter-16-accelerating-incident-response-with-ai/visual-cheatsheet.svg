@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect width="1200" height="720" fill="#fff"/>
+<text x="45" y="55" font-family="Arial" font-size="34" font-weight="700">Глава 16 — AI-assisted Incident Response</text>
+
+<rect x="60" y="120" width="250" height="150" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="90" y="160" font-family="Arial" font-size="22" font-weight="700">Data Policy</text>
+<text x="90" y="200" font-family="Arial" font-size="17">PII / credentials / evidence</text>
+<text x="90" y="235" font-family="Arial" font-size="17">sanitize before sharing</text>
+
+<rect x="350" y="120" width="250" height="150" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="380" y="160" font-family="Arial" font-size="22" font-weight="700">AI Analysis</text>
+<text x="380" y="200" font-family="Arial" font-size="17">code / logs / reports</text>
+<text x="380" y="235" font-family="Arial" font-size="17">playbooks / training</text>
+
+<rect x="640" y="120" width="250" height="150" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="670" y="160" font-family="Arial" font-size="22" font-weight="700">MCP / Agents</text>
+<text x="670" y="200" font-family="Arial" font-size="17">tool orchestration</text>
+<text x="670" y="235" font-family="Arial" font-size="17">external data/tools</text>
+
+<rect x="930" y="120" width="210" height="150" rx="14" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="960" y="160" font-family="Arial" font-size="22" font-weight="700">Verify</text>
+<text x="960" y="200" font-family="Arial" font-size="17">human judgment</text>
+<text x="960" y="235" font-family="Arial" font-size="17">audit trail</text>
+
+<rect x="100" y="390" width="460" height="180" rx="14" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="130" y="430" font-family="Arial" font-size="22" font-weight="700">Critical risks</text>
+<text x="130" y="470" font-family="Arial" font-size="17">hallucination • prompt injection</text>
+<text x="130" y="505" font-family="Arial" font-size="17">data leakage • excessive permissions</text>
+<text x="130" y="540" font-family="Arial" font-size="17">stale/incomplete model knowledge</text>
+
+<rect x="640" y="390" width="460" height="180" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="670" y="430" font-family="Arial" font-size="22" font-weight="700">Trust pattern</text>
+<text x="670" y="470" font-family="Arial" font-size="17">deterministic tools → structured facts</text>
+<text x="670" y="505" font-family="Arial" font-size="17">AI reasoning → analyst verification</text>
+<text x="670" y="540" font-family="Arial" font-size="17">HITL before state-changing action</text>
+
+<text x="170" y="650" font-family="Arial" font-size="24" font-weight="700">AI accelerates incident response; it does not replace evidence or accountability.</text>
+</svg>
