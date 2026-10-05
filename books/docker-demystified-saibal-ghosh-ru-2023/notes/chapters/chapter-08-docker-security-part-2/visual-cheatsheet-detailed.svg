@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 8 — Безопасность в Docker. Часть 2: подробная шпаргалка</title>
+  <desc id="desc">Подробная карта Docker Enterprise components, client authentication, vulnerability scanning and RBAC.</desc>
+  <rect width="1800" height="1200" fill="#f6f8fb"/>
+  <rect x="0" y="0" width="1800" height="112" fill="#17202a"/>
+  <text x="58" y="50" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="38" font-weight="700" fill="#ffffff">Глава 8 — Безопасность в Docker. Часть 2</text>
+  <text x="58" y="86" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">Docker EE → UCP/DTR → client certificates → CVE scanning → RBAC</text>
+
+  <rect x="45" y="145" width="535" height="290" rx="18" fill="#ffffff" stroke="#5dade2" stroke-width="2"/>
+  <text x="75" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#1b4f72">1. Enterprise stack</text>
+  <text x="75" y="232" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">Docker Engine Enterprise → runtime</tspan>
+    <tspan x="75" dy="31">UCP → centralized management</tspan>
+    <tspan x="75" dy="31">DTR → enterprise image registry</tspan>
+    <tspan x="75" dy="31">Source lab uses two Linux nodes</tspan>
+    <tspan x="75" dy="31">Historical 2019–2020 product context</tspan>
+  </text>
+
+  <rect x="630" y="145" width="535" height="290" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="660" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#196f3d">2. UCP installation</text>
+  <text x="660" y="232" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="660" dy="0">Source: 16 GB RAM / 4 vCPU</tspan>
+    <tspan x="660" dy="31">25–100 GB disk / static IP</tspan>
+    <tspan x="660" dy="31">Engine 19.03 / kernel ≥ 3.10</tspan>
+    <tspan x="660" dy="31">docker/ucp installer mounts docker.sock</tspan>
+    <tspan x="660" dy="31">Worker joins Swarm with generated token</tspan>
+  </text>
+
+  <rect x="1215" y="145" width="540" height="290" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1245" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#9c640c">3. DTR / trust boundary</text>
+  <text x="1245" y="232" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1245" dy="0">DTR installed and registered with UCP</tspan>
+    <tspan x="1245" dy="31">Stores private enterprise repositories</tspan>
+    <tspan x="1245" dy="31">Generated install commands contain secrets</tspan>
+    <tspan x="1245" dy="31">Source lab disables TLS verification</tspan>
+    <tspan x="1245" dy="31">Do not treat insecure lab flag as baseline</tspan>
+  </text>
+
+  <rect x="45" y="475" width="535" height="300" rx="18" fill="#ffffff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="75" y="518" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#6c3483">4. Client Bundle</text>
+  <text x="75" y="562" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">Client certificate + private/public key</tspan>
+    <tspan x="75" dy="31">Configures Docker CLI and Kubectl</tspan>
+    <tspan x="75" dy="31">DOCKER_HOST → UCP endpoint</tspan>
+    <tspan x="75" dy="31">DOCKER_CERT_PATH → TLS files</tspan>
+    <tspan x="75" dy="31">DOCKER_TLS_VERIFY → verify TLS</tspan>
+  </text>
+
+  <rect x="630" y="475" width="535" height="300" rx="18" fill="#ffffff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="660" y="518" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#21618c">5. Vulnerability scanning</text>
+  <text x="660" y="562" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="660" dy="0">Push image to DTR repository</tspan>
+    <tspan x="660" dy="31">DTR checks CVE database</tspan>
+    <tspan x="660" dy="31">Findings linked to layers/components</tspan>
+    <tspan x="660" dy="31">Online sync or offline TAR update</tspan>
+    <tspan x="660" dy="31">Manual scan or scan-on-push</tspan>
+  </text>
+
+  <rect x="1215" y="475" width="540" height="300" rx="18" fill="#ffffff" stroke="#ec7063" stroke-width="2"/>
+  <text x="1245" y="518" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#922b21">6. RBAC subjects</text>
+  <text x="1245" y="562" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1245" dy="0">User → individual identity</tspan>
+    <tspan x="1245" dy="31">Organization → user grouping</tspan>
+    <tspan x="1245" dy="31">Team → user subgroup in org model</tspan>
+    <tspan x="1245" dy="31">Source creates operations / operations_team</tspan>
+    <tspan x="1245" dy="31">User itops becomes grant subject</tspan>
+  </text>
+
+  <rect x="45" y="815" width="840" height="250" rx="18" fill="#ffffff" stroke="#48c9b0" stroke-width="2"/>
+  <text x="75" y="858" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#117864">7. RBAC permission model</text>
+  <text x="75" y="902" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">Subject + Role + Collection = Grant</tspan>
+    <tspan x="75" dy="31">View Only / Restricted Control</tspan>
+    <tspan x="75" dy="31">Scheduler / Full Control</tspan>
+    <tspan x="75" dy="31">Custom My_role + My_collection</tspan>
+    <tspan x="75" dy="31">Grant scopes permissions to resource set</tspan>
+  </text>
+
+  <rect x="930" y="815" width="825" height="250" rx="18" fill="#ffffff" stroke="#e67e22" stroke-width="2"/>
+  <text x="960" y="858" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#a04000">8. Operational boundary</text>
+  <text x="960" y="902" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="960" dy="0">Join tokens / keys / license URLs are sensitive.</tspan>
+    <tspan x="960" dy="31">Package removal and control-plane installs disrupt.</tspan>
+    <tspan x="960" dy="31">docker.sock mount grants deep host control.</tspan>
+    <tspan x="960" dy="31">Source-era versions are not current guidance.</tspan>
+    <tspan x="960" dy="31">Current deployment needs separate verification.</tspan>
+  </text>
+
+  <rect x="45" y="1105" width="1710" height="62" rx="14" fill="#17202a"/>
+  <text x="76" y="1145" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#ffffff">Mental model: UCP authenticates and authorizes operators; DTR controls image supply; RBAC binds identities to permissions over resource collections.</text>
+</svg>
