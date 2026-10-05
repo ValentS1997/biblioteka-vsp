@@ -41,7 +41,7 @@
 - `p0343:c01` завершает раздел 10.10 «Доменные сокеты Unix».
 - Следующий чанк `p0344:c01` начинается главой 11 «Сценарии оболочки».
 - Chapter boundary verified: yes
-- Completion status: `RAG_GROUNDED`
+- Completion status: `ACCEPTED`
 
 ## Содержимое
 
