@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1260" viewBox="0 0 1600 1260" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 3 — detailed indexed RAG map</title>
+  <desc id="desc">Подробная схема source provenance, Deep Lake dataset, index strategies, query parameters and evaluation.</desc>
+  <rect width="1600" height="1260" fill="#ffffff"/>
+  <style>
+    text { font-family: Arial, sans-serif; fill: #111; }
+    .h1 { font-size: 31px; font-weight: 700; }
+    .h2 { font-size: 20px; font-weight: 700; }
+    .body { font-size: 15px; }
+    .small { font-size: 13px; }
+    .box { fill: #f8f8f8; stroke: #222; stroke-width: 2; rx: 12; }
+    .arrow { stroke: #222; stroke-width: 3; fill: none; marker-end: url(#a); }
+    .dash { stroke: #555; stroke-width: 2; fill: none; stroke-dasharray: 8 6; marker-end: url(#a); }
+  </style>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#222"/>
+    </marker>
+  </defs>
+
+  <text x="55" y="55" class="h1">Глава 3. Indexed RAG — detailed map</text>
+  <text x="55" y="84" class="small">Source: addressable RAG p0080:c01–p0109:c01 · PDF 80–109</text>
+
+  <rect x="55" y="125" width="455" height="220" class="box"/>
+  <text x="80" y="162" class="h2">Component 1 — source preparation</text>
+  <text x="80" y="198" class="body">collect noisy / heterogeneous sources</text>
+  <text x="80" y="228" class="body">clean documents</text>
+  <text x="80" y="258" class="body">one source → one file</text>
+  <text x="80" y="288" class="body">SimpleDirectoryReader loads text + metadata</text>
+  <text x="80" y="318" class="body">goal: provenance to exact source file</text>
+
+  <rect x="570" y="125" width="455" height="220" class="box"/>
+  <text x="595" y="162" class="h2">Component 2 — Deep Lake</text>
+  <text x="595" y="198" class="body">text</text>
+  <text x="595" y="228" class="body">metadata</text>
+  <text x="595" y="258" class="body">embedding</text>
+  <text x="595" y="288" class="body">id</text>
+  <text x="595" y="318" class="body">automatic chunking / embedding integration</text>
+
+  <rect x="1085" y="125" width="455" height="220" class="box"/>
+  <text x="1110" y="162" class="h2">Component 3 — indexed RAG</text>
+  <text x="1110" y="198" class="body">build index</text>
+  <text x="1110" y="228" class="body">query with LLM</text>
+  <text x="1110" y="258" class="body">return answer + source nodes</text>
+  <text x="1110" y="288" class="body">rank / inspect provenance</text>
+  <text x="1110" y="318" class="body">measure quality + time</text>
+
+  <path d="M510 235 H570" class="arrow"/>
+  <path d="M1025 235 H1085" class="arrow"/>
+
+  <text x="55" y="410" class="h2">Index strategies</text>
+
+  <rect x="55" y="445" width="340" height="185" class="box"/>
+  <text x="80" y="482" class="h2">VectorStoreIndex</text>
+  <text x="80" y="518" class="body">embedding-based similarity</text>
+  <text x="80" y="548" class="body">new in-memory vector index in source flow</text>
+  <text x="80" y="578" class="body">source nodes expose score/text</text>
+
+  <rect x="430" y="445" width="340" height="185" class="box"/>
+  <text x="455" y="482" class="h2">TreeIndex</text>
+  <text x="455" y="518" class="body">hierarchical organization</text>
+  <text x="455" y="548" class="body">optimized traversal through nodes</text>
+
+  <rect x="805" y="445" width="340" height="185" class="box"/>
+  <text x="830" y="482" class="h2">ListIndex</text>
+  <text x="830" y="518" class="body">returned class: SummaryIndex</text>
+  <text x="830" y="548" class="body">source example slower than tree/vector</text>
+  <text x="830" y="578" class="small">not a universal conclusion</text>
+
+  <rect x="1180" y="445" width="360" height="185" class="box"/>
+  <text x="1205" y="482" class="h2">KeywordTableIndex</text>
+  <text x="1205" y="518" class="body">extract keywords</text>
+  <text x="1205" y="548" class="body">keyword → node/document IDs</text>
+
+  <text x="55" y="700" class="h2">Controlled comparison</text>
+
+  <rect x="55" y="735" width="470" height="190" class="box"/>
+  <text x="80" y="772" class="body">user_input:</text>
+  <text x="80" y="802" class="body">How do drones identify vehicles?</text>
+  <text x="80" y="842" class="body">k = 3</text>
+  <text x="80" y="872" class="body">temperature = 0.1</text>
+  <text x="80" y="902" class="body">num_output = 1024</text>
+
+  <rect x="565" y="735" width="470" height="190" class="box"/>
+  <text x="590" y="772" class="h2">Observed per strategy</text>
+  <text x="590" y="808" class="body">generated response</text>
+  <text x="590" y="838" class="body">source_nodes / scores</text>
+  <text x="590" y="868" class="body">query execution time</text>
+  <text x="590" y="898" class="body">semantic cosine similarity</text>
+
+  <rect x="1075" y="735" width="465" height="190" class="box"/>
+  <text x="1100" y="772" class="h2">Performance interpretation</text>
+  <text x="1100" y="808" class="body">quality indicator / elapsed time</text>
+  <text x="1100" y="838" class="body">comparative only</text>
+  <text x="1100" y="868" class="body">timing varies because of stochastic behavior</text>
+  <text x="1100" y="898" class="body">no universal winning index</text>
+
+  <text x="55" y="990" class="h2">Operational risks / source limitations</text>
+
+  <rect x="55" y="1025" width="720" height="170" class="box"/>
+  <text x="80" y="1062" class="body">overwrite=True replaces existing Deep Lake dataset.</text>
+  <text x="80" y="1092" class="body">Indexed structures require reindexing after data updates.</text>
+  <text x="80" y="1122" class="body">Numeric dataset positions can change after updates.</text>
+  <text x="80" y="1152" class="body">Formal rollback is not provided by the chapter.</text>
+
+  <rect x="825" y="1025" width="715" height="170" class="box"/>
+  <text x="850" y="1062" class="h2">Source inconsistencies</text>
+  <text x="850" y="1092" class="body">package: 0.1.6 vs 0.1.2</text>
+  <text x="850" y="1122" class="body">dataset path: drone_v2 vs one drone_v1 visualization URL</text>
+  <text x="850" y="1152" class="small">Preserved; not externally reconciled.</text>
+</svg>
