@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1240" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 2 — Знакомство с базовыми моделями: подробная шпаргалка</title>
+  <desc id="desc">Подробная визуальная карта главы 2: данные, трансформеры, масштаб, post-training, sampling, structured output и вероятностность.</desc>
+  <rect width="1600" height="1240" fill="#f7f8fa"/>
+  <rect width="1600" height="112" fill="#17202a"/>
+  <text x="58" y="49" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#ffffff">Глава 2 — Знакомство с базовыми моделями</text>
+  <text x="58" y="84" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#d6e4f0">data · transformer · scale · SFT/RLHF · sampling · structured output · uncertainty</text>
+
+  <rect x="50" y="145" width="470" height="240" rx="18" fill="#ffffff" stroke="#5dade2" stroke-width="2"/>
+  <text x="78" y="185" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#1b4f72">1. Training data</text>
+  <text x="78" y="223" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="78" dy="0">Model capability зависит от обучающих данных.</tspan>
+    <tspan x="78" dy="28">Quantity + quality + diversity.</tspan>
+    <tspan x="78" dy="28">Языки и домены представлены неравномерно.</tspan>
+    <tspan x="78" dy="28">Токенизация может менять latency и cost.</tspan>
+    <tspan x="78" dy="36" font-weight="700">Domain-specific task → нужны релевантные данные.</tspan>
+  </text>
+
+  <rect x="565" y="145" width="470" height="240" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="593" y="185" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#196f3d">2. Transformer</text>
+  <text x="593" y="223" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="593" dy="0">Attention учитывает важность input tokens.</tspan>
+    <tspan x="593" dy="28">Input tokens можно обрабатывать параллельно.</tspan>
+    <tspan x="593" dy="28">K/V/Q vectors растут с sequence length.</tspan>
+    <tspan x="593" dy="28">Context и memory становятся ограничениями.</tspan>
+    <tspan x="593" dy="36">Альтернативы существуют, transformer доминирует.</tspan>
+  </text>
+
+  <rect x="1080" y="145" width="470" height="240" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1108" y="185" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#9c640c">3. Scale</text>
+  <text x="1108" y="223" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="1108" dy="0">Parameters → learning capacity proxy.</tspan>
+    <tspan x="1108" dy="28">Training tokens → learned-data scale proxy.</tspan>
+    <tspan x="1108" dy="28">FLOP → training-compute proxy.</tspan>
+    <tspan x="1108" dy="28">Chinchilla: ~20 training tokens / parameter.</tspan>
+    <tspan x="1108" dy="36">Production may prefer a smaller model.</tspan>
+  </text>
+
+  <rect x="50" y="415" width="720" height="285" rx="18" fill="#ffffff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="78" y="455" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#6c3483">4. Post-training</text>
+  <text x="78" y="493" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="78" dy="0">Pretraining оптимизирует next-token prediction.</tspan>
+    <tspan x="78" dy="28">SFT: высококачественные demonstration pairs.</tspan>
+    <tspan x="78" dy="28">Preference finetuning: ответы под human preferences.</tspan>
+    <tspan x="78" dy="28">RLHF = reward model → optimize SFT/base model.</tspan>
+    <tspan x="78" dy="28">DPO и RLAIF — альтернативные подходы.</tspan>
+    <tspan x="78" dy="38" font-weight="700">Human preferences неоднозначны → alignment не абсолютен.</tspan>
+  </text>
+
+  <rect x="810" y="415" width="740" height="285" rx="18" fill="#ffffff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="838" y="455" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#21618c">5. Sampling</text>
+  <text x="838" y="493" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="838" dy="0">logits → softmax → probability distribution.</tspan>
+    <tspan x="838" dy="28">temperature: high = diverse; low = predictable.</tspan>
+    <tspan x="838" dy="28">top-k: fixed number of candidate tokens.</tspan>
+    <tspan x="838" dy="28">top-p: smallest set reaching cumulative probability p.</tspan>
+    <tspan x="838" dy="28">stop conditions reduce latency/cost.</tspan>
+    <tspan x="838" dy="38" font-weight="700">Sampling strategy materially changes application behavior.</tspan>
+  </text>
+
+  <rect x="50" y="730" width="470" height="250" rx="18" fill="#ffffff" stroke="#ec7063" stroke-width="2"/>
+  <text x="78" y="770" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#922b21">6. Inference-time compute</text>
+  <text x="78" y="808" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="78" dy="0">Generate multiple candidates.</tspan>
+    <tspan x="78" dy="28">Choose by probability / reward / verifier.</tspan>
+    <tspan x="78" dy="28">For exact-answer tasks: majority/self-consistency.</tspan>
+    <tspan x="78" dy="28">More samples can help, but compute/cost grow.</tspan>
+  </text>
+
+  <rect x="565" y="730" width="470" height="250" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+  <text x="593" y="770" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#9c640c">7. Structured output</text>
+  <text x="593" y="808" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="593" dy="0">prompt → regenerate/check → post-process</tspan>
+    <tspan x="593" dy="28">→ constrained sampling → fine-tuning.</tspan>
+    <tspan x="593" dy="28">JSON/YAML/regex/classes require validation.</tspan>
+    <tspan x="593" dy="28">Premature stop can break structure.</tspan>
+  </text>
+
+  <rect x="1080" y="730" width="470" height="250" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="1108" y="770" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#196f3d">8. Probabilistic behavior</text>
+  <text x="1108" y="808" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="1108" dy="0">Same input → different output.</tspan>
+    <tspan x="1108" dy="28">Small input change → large output change.</tspan>
+    <tspan x="1108" dy="28">Fixed settings/seed help, not guarantee.</tspan>
+    <tspan x="1108" dy="28">Hallucinations are deeper than sampling alone.</tspan>
+  </text>
+
+  <rect x="50" y="1015" width="1500" height="140" rx="16" fill="#17202a"/>
+  <text x="78" y="1055" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#ffffff">Operational reading of the chapter</text>
+  <text x="78" y="1090" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#d6e4f0">
+    <tspan x="78" dy="0">Problem → data fit → architecture/scale → post-training → sampling → structure → repeated evaluation.</tspan>
+    <tspan x="78" dy="29">Не считать parameter count или один удачный output достаточным доказательством качества.</tspan>
+  </text>
+
+  <text x="50" y="1200" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="15" fill="#566573">Provenance: RAG p0078:c01–p0145:c01 · PDF/printed pages 78–145 · source SHA-256 850c3652…62fba</text>
+</svg>
