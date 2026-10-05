@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120">
+<rect width="1600" height="1120" fill="#f4f7fb"/>
+<rect x="12" y="12" width="1576" height="78" rx="14" fill="#26384d"/>
+<text x="800" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">Основы Go — глава 1: detailed map</text>
+<text x="800" y="72" font-family="Arial, sans-serif" font-size="15.5" fill="#dce8f4" text-anchor="middle">environment → syntax/types → collections → operators/control → conversions/I/O → stdlib → tic-tac-toe</text>
+
+<rect x="14" y="110" width="382" height="270" rx="12" fill="#f7fbff" stroke="#5b98cf" stroke-width="2"/>
+<text x="32" y="140" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#173d64">1. Environment</text>
+<text x="36" y="171" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="36" dy="0">Go toolchain + VS Code/Go extension.</tspan>
+<tspan x="36" dy="20">go version checks installation.</tspan>
+<tspan x="36" dy="20">go mod init creates go.mod.</tspan>
+<tspan x="36" dy="20">package main + func main() = entry point.</tspan>
+<tspan x="36" dy="20">go run main.go executes the example.</tspan>
+</text>
+
+<rect x="408" y="110" width="382" height="270" rx="12" fill="#f6fff8" stroke="#58ad79" stroke-width="2"/>
+<text x="426" y="140" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#18572f">2. Variables / syntax</text>
+<text x="430" y="171" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="430" dy="0">var → declaration; := → short declaration.</tspan>
+<tspan x="430" dy="20">= changes an existing value.</tspan>
+<tspan x="430" dy="20">Names: meaningful mixedCaps/MixedCaps.</tspan>
+<tspan x="430" dy="20">// and /* */ comments explain intent.</tspan>
+<tspan x="430" dy="20">Opening { stays on the declaration line.</tspan>
+</text>
+
+<rect x="802" y="110" width="382" height="270" rx="12" fill="#fff9f4" stroke="#d49a4c" stroke-width="2"/>
+<text x="820" y="140" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#714500">3. Scalar types</text>
+<text x="824" y="171" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="824" dy="0">integers: signed / unsigned families.</tspan>
+<tspan x="824" dy="20">float32 / float64.</tspan>
+<tspan x="824" dy="20">complex64 / complex128.</tspan>
+<tspan x="824" dy="20">byte = uint8; rune = int32.</tspan>
+<tspan x="824" dy="20">string = read-only bytes; bool = true/false.</tspan>
+</text>
+
+<rect x="1196" y="110" width="390" height="270" rx="12" fill="#fff7fb" stroke="#cf6d99" stroke-width="2"/>
+<text x="1214" y="140" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#842044">4. Collections / pointers</text>
+<text x="1218" y="171" font-family="Arial, sans-serif" font-size="12.7" fill="#19324a">
+<tspan x="1218" dy="0">array: fixed length, assignment copies.</tspan>
+<tspan x="1218" dy="20">slice: ptr + len + cap, shared storage.</tspan>
+<tspan x="1218" dy="20">map: unique comparable key → value.</tspan>
+<tspan x="1218" dy="20">pointer: &amp; gets address, * dereferences.</tspan>
+<tspan x="1218" dy="20">nil is pointer zero value; new(T) allocates.</tspan>
+</text>
+
+<rect x="14" y="398" width="502" height="290" rx="12" fill="#f7f7ff" stroke="#8179d6" stroke-width="2"/>
+<text x="32" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#474092">5. Constants / operators</text>
+<text x="36" y="459" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="36" dy="0">const → immutable after declaration.</tspan>
+<tspan x="36" dy="20">iota → sequential constant generator.</tspan>
+<tspan x="36" dy="20">Operator groups: arithmetic, compare, logical,</tspan>
+<tspan x="36" dy="20">bitwise, assignment, unary, address/deref.</tspan>
+<tspan x="36" dy="24">Precedence: */% shifts/bitwise → +- → compare</tspan>
+<tspan x="36" dy="20">→ &amp;&amp; → ||. Parentheses override.</tspan>
+</text>
+
+<rect x="528" y="398" width="502" height="290" rx="12" fill="#f5fff7" stroke="#58ad79" stroke-width="2"/>
+<text x="546" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#18572f">6. Control flow</text>
+<text x="550" y="459" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="550" dy="0">if/else: else is optional.</tspan>
+<tspan x="550" dy="20">switch/case: default optional; fallthrough explicit.</tspan>
+<tspan x="550" dy="20">for is the only loop keyword.</tspan>
+<tspan x="550" dy="20">range iterates arrays/slices/maps/strings.</tspan>
+<tspan x="550" dy="20">break exits; continue advances iteration.</tspan>
+<tspan x="550" dy="20">goto exists but source warns against overuse.</tspan>
+</text>
+
+<rect x="1042" y="398" width="544" height="290" rx="12" fill="#fffdf3" stroke="#d5ad37" stroke-width="2"/>
+<text x="1060" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#714500">7. Conversion / I/O</text>
+<text x="1064" y="459" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="1064" dy="0">Numeric conversions are explicit.</tspan>
+<tspan x="1064" dy="20">Narrowing can truncate; fixed width can overflow.</tspan>
+<tspan x="1064" dy="20">strconv: Itoa/Atoi, FormatFloat/ParseFloat.</tspan>
+<tspan x="1064" dy="20">Input: fmt.Fscan, bufio.Scanner, os.Stdin.</tspan>
+<tspan x="1064" dy="20">Output: Print/Println/Printf/Sprintf.</tspan>
+<tspan x="1064" dy="20">UTF-8: use range/[]rune for characters.</tspan>
+</text>
+
+<rect x="14" y="706" width="760" height="278" rx="12" fill="#f4fbff" stroke="#6d9fc8" stroke-width="2"/>
+<text x="32" y="736" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#174d70">8. Standard-library helpers</text>
+<text x="36" y="768" font-family="Arial, sans-serif" font-size="12.7" fill="#19324a">
+<tspan x="36" dy="0">strings: trim, case conversion, split/fields, Builder.</tspan>
+<tspan x="36" dy="20">slices: iterate, clone, insert/delete, reverse, sort, search, compare.</tspan>
+<tspan x="36" dy="20">maps: clone, copy, filter, equality, keys, values.</tspan>
+<tspan x="36" dy="26">Key semantics:</tspan>
+<tspan x="36" dy="20">array assignment copies; slice assignment can alias backing storage.</tspan>
+<tspan x="36" dy="20">Independent slice copy: allocate destination + copy().</tspan>
+</text>
+
+<rect x="786" y="706" width="800" height="278" rx="12" fill="#fff8f2" stroke="#d17e4f" stroke-width="2"/>
+<text x="804" y="736" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#7b3e1e">9. Tic-tac-toe v.0</text>
+<text x="808" y="768" font-family="Arial, sans-serif" font-size="12.7" fill="#19324a">
+<tspan x="808" dy="0">Board size is validated in range 3..9.</tspan>
+<tspan x="808" dy="20">2D slice stores cells; iota-based enums store states.</tspan>
+<tspan x="808" dy="20">Input accepts row+column or q.</tspan>
+<tspan x="808" dy="20">Reject invalid coordinates and occupied cells.</tspan>
+<tspan x="808" dy="20">Check rows, columns, main and anti-diagonal.</tspan>
+<tspan x="808" dy="20">Set crossWin / noughtWin / draw / quit; switch player.</tspan>
+<tspan x="808" dy="26">Exercises: random first player; restart without exiting.</tspan>
+</text>
+
+<rect x="14" y="1004" width="1572" height="88" rx="10" fill="#26384d"/>
+<text x="800" y="1031" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Acceptance: explain types + collection semantics + control flow + explicit conversions + formatting, then connect them to the project.</text>
+<text x="800" y="1058" font-family="Arial, sans-serif" font-size="14.5" fill="#dce8f4" text-anchor="middle">Source warnings: slice aliasing • byte/rune confusion • narrowing/overflow • goto readability • infinite-loop termination.</text>
+<text x="800" y="1082" font-family="Arial, sans-serif" font-size="13.5" fill="#dce8f4" text-anchor="middle">RAG-only • PDF 16–100 • summary p0098 • questions p0099–p0100</text>
+</svg>
