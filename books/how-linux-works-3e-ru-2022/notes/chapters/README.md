@@ -11,3 +11,4 @@ Reviewed chapter-level notes are stored here. Historical notes are not reconstru
 - [Chapter 7 — Настройка системы: журналирование, системное время, пакетные задачи и пользователи](chapter-07-system-configuration-logging-time-jobs-users/README.md)
 - [Chapter 8 — Процессы и использование ресурсов](chapter-08-processes-and-resource-usage/README.md)
 - [Chapter 9 — Сеть и ее конфигурация](chapter-09-network-and-configuration/README.md)
+- [Chapter 10 — Сетевые приложения и службы](chapter-10-network-applications-and-services/README.md)
