@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 3 — Методология оценки</title>
+  <desc id="desc">Компактная шпаргалка: exact evaluation, similarity, AI judge, comparative ranking и evaluator drift.</desc>
+  <rect width="1600" height="900" fill="#f6f8fb"/>
+  <rect width="1600" height="110" fill="#17202a"/>
+  <text x="56" y="48" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#ffffff">Глава 3 — Методология оценки</text>
+  <text x="56" y="83" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">Failure mode → measurable signal → stable evaluator → interpretation</text>
+
+  <rect x="50" y="145" width="470" height="260" rx="18" fill="#ffffff" stroke="#5dade2" stroke-width="2"/>
+  <text x="78" y="187" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#1b4f72">Exact evaluation</text>
+  <text x="78" y="226" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="78" dy="0">Functional correctness — главный якорь.</tspan>
+    <tspan x="78" dy="31">Code: unit tests · pass@k.</tspan>
+    <tspan x="78" dy="31">Reference: exact / lexical / semantic.</tspan>
+    <tspan x="78" dy="40" font-weight="700">Если функцию можно проверить — проверяй функцию.</tspan>
+  </text>
+
+  <rect x="565" y="145" width="470" height="260" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="593" y="187" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#196f3d">Language metrics</text>
+  <text x="593" y="226" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="593" dy="0">cross-entropy · perplexity · BPC · BPB</tspan>
+    <tspan x="593" dy="31">Ниже PPL → текст предсказуемее для модели.</tspan>
+    <tspan x="593" dy="31">Полезно для LM quality, contamination, outliers.</tspan>
+    <tspan x="593" dy="31">Не равно прикладной полезности после post-training.</tspan>
+  </text>
+
+  <rect x="1080" y="145" width="470" height="260" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1108" y="187" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#9c640c">Similarity</text>
+  <text x="1108" y="226" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1108" dy="0">Lexical: BLEU · ROUGE · n-grams.</tspan>
+    <tspan x="1108" dy="31">Semantic: embeddings · cosine similarity.</tspan>
+    <tspan x="1108" dy="31">BERTScore · MoverScore.</tspan>
+    <tspan x="1108" dy="40" font-weight="700">Сходство не гарантирует functional correctness.</tspan>
+  </text>
+
+  <rect x="50" y="450" width="470" height="270" rx="18" fill="#ffffff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="78" y="492" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#6c3483">AI as judge</text>
+  <text x="78" y="532" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="78" dy="0">judge = model + prompt + sampling settings</tspan>
+    <tspan x="78" dy="31">Оценка single / reference / pairwise.</tspan>
+    <tspan x="78" dy="31">Быстро и дешево относительно humans.</tspan>
+    <tspan x="78" dy="31">Но вероятностно и не стандартизировано.</tspan>
+  </text>
+
+  <rect x="565" y="450" width="470" height="270" rx="18" fill="#ffffff" stroke="#ec7063" stroke-width="2"/>
+  <text x="593" y="492" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#922b21">Judge risks</text>
+  <text x="593" y="532" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="593" dy="0">inconsistency · self-bias · position bias</tspan>
+    <tspan x="593" dy="31">verbosity bias · cost · latency · privacy</tspan>
+    <tspan x="593" dy="31">Изменился judge → scores могут стать несопоставимы.</tspan>
+    <tspan x="593" dy="40" font-weight="700">Evaluator drift ≠ app improvement.</tspan>
+  </text>
+
+  <rect x="1080" y="450" width="470" height="270" rx="18" fill="#ffffff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="1108" y="492" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#21618c">Comparative evaluation</text>
+  <text x="1108" y="532" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1108" dy="0">Pairwise preference → win rate → ranking.</tspan>
+    <tspan x="1108" dy="31">Elo · Bradley–Terry · TrueSkill.</tspan>
+    <tspan x="1108" dy="31">Relative rank помогает выбрать кандидата.</tspan>
+    <tspan x="1108" dy="31">Но не говорит, «достаточно ли хорошо».</tspan>
+  </text>
+
+  <rect x="50" y="775" width="1500" height="72" rx="14" fill="#17202a"/>
+  <text x="78" y="820" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#ffffff">Принцип: сначала определяй сбой и измеряемый сигнал, потом выбирай evaluator.</text>
+</svg>
