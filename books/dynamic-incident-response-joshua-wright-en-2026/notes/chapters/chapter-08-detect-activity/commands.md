@@ -103,3 +103,15 @@ Potentially state-changing SOAR actions are mentioned conceptually:
 Source does not provide universal commands for them.
 
 Rollback: `[Needs confirmation]` per platform.
+## v1.6 command classification
+
+| Artifact | Classification | Effect | Verification | Rollback |
+|---|---|---|---|---|
+| Zeek processing | workload-generating | parses PCAP and writes Zeek logs | expected Zeek logs are produced | remove generated local analysis output if required |
+| RITA import/view | workload-generating | creates/reads local investigation database | database imports and renders expected analysis | remove local investigation DB if required |
+| DCR KQL text | [Needs confirmation] | query/filter logic; deployment context determines whether it becomes configuration | validate retained/discarded event classes against source intent | [Needs confirmation] |
+| TShark + jq | read-only against source evidence | extracts JA4 values and reads local JSON DB | fingerprint/result matches selected traffic | [Not applicable] |
+| Elasticsearch aggregation | read-only | aggregates existing events | validate index/time window and returned buckets | [Not applicable] |
+
+Conceptual SOAR quarantine/block/disable actions are state-changing, but no executable commands are supplied by the chapter; rollback is platform-specific and remains `[Needs confirmation]`.
+
