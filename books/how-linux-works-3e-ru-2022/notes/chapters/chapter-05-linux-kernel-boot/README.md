@@ -13,19 +13,26 @@
 - Название: «Загрузка ядра Linux»
 - Slug: `linux-kernel-boot`
 - Source policy: `rag_only`
+- Request contract: `BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST v1.2`
+- Readiness contract: `BIBLIOTEKA-VSP-BOOK-READINESS v1.2`
+- Artifact contract: `BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.6`
 - External sources: запрещены
 - Model memory: запрещена
 - Прямой доступ к PDF: не использовался
 
 ## Provenance
 
-- RAG chunks: `p0156:c01`–`p0175:c01`
-- PDF pages: 156–175
-- Printed pages: 156–175
+- RAG chunk range: `p0156:c01`–`p0175:c01`
+- Source format: `pdf`
+- Source locator range: `pdf_page 156–175`
+- EPUB spine range: `Not applicable`
+- PDF page range: 156–175
+- Printed page range: 156–175
 - Оглавление в `p0010:c01`–`p0011:c01` задаёт структуру главы 5.
 - `p0156:c01` начинается заголовком «5 Загрузка ядра Linux».
 - Следующий чанк `p0176:c01` начинается главой 6 «Запуск пользовательского пространства».
 - Chapter boundary verified: yes
+- Completion status: `ACCEPTED`
 - Source SHA-256: `60bb698fc2ff849a9814f099c12ca56e8f40c11b0518436f3ce3c44e96152df9`
 
 ## Содержимое
