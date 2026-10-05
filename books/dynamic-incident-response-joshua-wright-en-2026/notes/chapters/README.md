@@ -25,3 +25,4 @@ Source truth для анализа: canonical English RAG. Русский пер
 - [Chapter 17 — Реагирование на инциденты с программами-вымогателями](chapter-17-incident-response-for-ransomware/) — `ACCEPTED`
 - [Chapter 18 — Реагирование на инциденты в облачных системах](chapter-18-incident-response-for-cloud-systems/) — `ACCEPTED`
 - [Chapter 19 — Реагирование на инциденты в операционных технологиях](chapter-19-incident-response-for-operational-technology/) — `ACCEPTED`
+- [Chapter 20 — Интеграция DAIR с NIST CSF 2.0](chapter-20-integrating-dair-with-nist-csf-2-0/) — `ACCEPTED`
