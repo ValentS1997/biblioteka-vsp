@@ -18,6 +18,7 @@
 - Canonical RAG: `p0637:c01`–`p0648:c01`
 - PDF pages: 637–648
 - `p0649:c01` начинает Afterword.
+- Source format: PDF
 - Chapter boundary verified: yes
 
 ## Содержимое
