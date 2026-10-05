@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1280" viewBox="0 0 1600 1280" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 4 — detailed multimodal RAG map</title>
+  <desc id="desc">Подробная схема двух датасетов, label index, source image resolution, GPT-4o vision и evaluation.</desc>
+  <rect width="1600" height="1280" fill="#ffffff"/>
+  <style>
+    text { font-family: Arial, sans-serif; fill: #111; }
+    .h1 { font-size: 31px; font-weight: 700; }
+    .h2 { font-size: 20px; font-weight: 700; }
+    .body { font-size: 15px; }
+    .small { font-size: 13px; }
+    .box { fill: #f8f8f8; stroke: #222; stroke-width: 2; rx: 12; }
+    .arrow { stroke: #222; stroke-width: 3; fill: none; marker-end: url(#a); }
+    .dash { stroke: #555; stroke-width: 2; fill: none; stroke-dasharray: 8 6; marker-end: url(#a); }
+  </style>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#222"/>
+    </marker>
+  </defs>
+
+  <text x="55" y="55" class="h1">Глава 4. Multimodal RAG — detailed map</text>
+  <text x="55" y="84" class="small">Source: addressable RAG p0110:c01–p0135:c01 · PDF 110–135</text>
+
+  <rect x="55" y="125" width="470" height="210" class="box"/>
+  <text x="80" y="162" class="h2">Text branch</text>
+  <text x="80" y="198" class="body">Deep Lake drone text dataset</text>
+  <text x="80" y="228" class="body">VectorStoreIndex.from_documents()</text>
+  <text x="80" y="258" class="body">similarity_top_k=2</text>
+  <text x="80" y="288" class="body">temperature=0.1 · num_output=1024</text>
+  <text x="80" y="318" class="body">→ llm_response</text>
+
+  <rect x="1075" y="125" width="470" height="210" class="box"/>
+  <text x="1100" y="162" class="h2">Image branch</text>
+  <text x="1100" y="198" class="body">VisDrone read-only dataset</text>
+  <text x="1100" y="228" class="body">images + boxes + labels</text>
+  <text x="1100" y="258" class="body">labels converted to text documents</text>
+  <text x="1100" y="288" class="body">in-memory vector index</text>
+  <text x="1100" y="318" class="body">→ source_nodes</text>
+
+  <rect x="620" y="145" width="360" height="165" class="box"/>
+  <text x="645" y="182" class="h2">Shared user_input</text>
+  <text x="645" y="220" class="body">How do drones identify a truck?</text>
+  <text x="645" y="258" class="small">same baseline query for both branches</text>
+
+  <path d="M620 225 H525" class="arrow"/>
+  <path d="M980 225 H1075" class="arrow"/>
+
+  <text x="55" y="405" class="h2">Image-source resolution</text>
+
+  <rect x="55" y="440" width="325" height="180" class="box"/>
+  <text x="80" y="478" class="body">DataFrame</text>
+  <text x="80" y="508" class="body">image / boxes / labels / doc_id</text>
+
+  <rect x="440" y="440" width="325" height="180" class="box"/>
+  <text x="465" y="478" class="body">Query label index</text>
+  <text x="465" y="508" class="body">similarity_top_k=1</text>
+  <text x="465" y="538" class="body">response.source_nodes</text>
+
+  <rect x="825" y="440" width="325" height="180" class="box"/>
+  <text x="850" y="478" class="body">Extract unique keyword</text>
+  <text x="850" y="508" class="body">example: truck</text>
+
+  <rect x="1210" y="440" width="335" height="180" class="box"/>
+  <text x="1235" y="478" class="body">Resolve source image</text>
+  <text x="1235" y="508" class="body">draw matching boxes</text>
+  <text x="1235" y="538" class="body">save boxed_image.jpg</text>
+
+  <path d="M380 530 H440" class="arrow"/>
+  <path d="M765 530 H825" class="arrow"/>
+  <path d="M1150 530 H1210" class="arrow"/>
+
+  <text x="55" y="700" class="h2">Evaluation</text>
+
+  <rect x="55" y="735" width="455" height="190" class="box"/>
+  <text x="80" y="772" class="h2">Text</text>
+  <text x="80" y="808" class="body">user_input vs llm_response</text>
+  <text x="80" y="838" class="body">all-MiniLM-L6-v2</text>
+  <text x="80" y="868" class="body">cosine similarity</text>
+  <text x="80" y="898" class="small">source example: 0.691</text>
+
+  <rect x="570" y="735" width="455" height="190" class="box"/>
+  <text x="595" y="772" class="h2">Image</text>
+  <text x="595" y="808" class="body">boxed_image.jpg → base64</text>
+  <text x="595" y="838" class="body">GPT-4o image analysis</text>
+  <text x="595" y="868" class="body">target label vs description</text>
+  <text x="595" y="898" class="small">source example: 0.505</text>
+
+  <rect x="1085" y="735" width="460" height="190" class="box"/>
+  <text x="1110" y="772" class="h2">Combined</text>
+  <text x="1110" y="808" class="body">(text score + image score) / 2</text>
+  <text x="1110" y="838" class="body">source example: 0.598</text>
+  <text x="1110" y="878" class="body">human interpretation still required</text>
+
+  <text x="55" y="1000" class="h2">Source limitations / contradictions</text>
+
+  <rect x="55" y="1035" width="1490" height="170" class="box"/>
+  <text x="80" y="1072" class="body">1. p114 says dataset from chapter 2; p115 loads drone_v2 from chapter 3.</text>
+  <text x="80" y="1102" class="body">2. boxed_image.jpg is embedded as data:image/png;base64 in GPT-4o request.</text>
+  <text x="80" y="1132" class="body">3. prose says two multimodal accuracy indicators, but code averages one text + one multimodal score.</text>
+  <text x="80" y="1168" class="small">All preserved as source issues; not externally reconciled.</text>
+</svg>

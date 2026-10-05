@@ -41,7 +41,7 @@
 - `p0389:c01` завершает раздел 12.8 «Состояние совместного доступа к файлам в сети».
 - Следующий чанк `p0390:c01` начинается главой 13 «Пользовательское окружение».
 - Chapter boundary verified: yes
-- Completion status: `RAG_GROUNDED`
+- Completion status: `ACCEPTED`
 
 ## Содержимое
 
