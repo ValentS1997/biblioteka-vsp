@@ -54,6 +54,16 @@ python scripts/generate_registry_readme.py --check
 
 `registry/README.md` is generated and non-canonical. Manual status edits are overwritten/detected as stale.
 
+### Full registry table invariant
+
+The `## Реестр книг` table MUST always contain every inventory record from
+`registry/books.yaml` exactly as represented by the canonical inventory set.
+Derived views such as `Сейчас читаю`, `Прочитано`, `Нужен PDF`, RAG-related
+views, or any future filtered section MAY duplicate inventory entries, but MUST
+NOT remove or relocate them out of the full registry table.
+
+Generation MUST fail if `len(registry.books) != registry.scope.book_count`.
+
 ## Validation
 
 ```bash
