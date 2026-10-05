@@ -91,8 +91,8 @@ Repository CI is the authoritative executable check for:
 Current audit state before PR check:
 
 - manifest evidence: `READY_WITH_KNOWN_LIMITATIONS`
-- workflow readiness: `READY_CANDIDATE`
-- CI confirmation: `[Pending PR check]`
+- workflow readiness: `READY`
+- CI confirmation: `PASS` (PR #163 `validate-book-readiness`)
 
 After the readiness check passes, metadata may be promoted to `READY`.
 
@@ -110,9 +110,7 @@ This means:
 
 It does **not** claim that every historical Chapter 1–20 run originally recorded an explicit v1.2 invocation. Historical invocation provenance was not stored per chapter and is not reconstructed.
 
-## Acceptance target
-
-Final target after CI:
+## Acceptance result
 
 - readiness: `READY`
 - artifact contract: `VERIFIED`
