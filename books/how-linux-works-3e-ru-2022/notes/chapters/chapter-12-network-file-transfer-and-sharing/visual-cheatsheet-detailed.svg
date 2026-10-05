@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1120" role="img" aria-labelledby="title desc">
+<title id="title">Глава 12 — подробная шпаргалка</title>
+<desc id="desc">Detailed network file transfer and sharing summary: rsync, Samba/CIFS, SSHFS, NFS, cloud/FUSE, security and performance.</desc>
+<rect width="1600" height="1120" fill="#f7f8fa"/>
+<rect width="1600" height="112" fill="#17202a"/>
+<text x="60" y="49" font-family="system-ui,Arial,sans-serif" font-size="34" font-weight="700" fill="#fff">Глава 12 — Передача файлов по сети и доступ к ним</text>
+<text x="60" y="85" font-family="system-ui,Arial,sans-serif" font-size="19" fill="#d6e4f0">one-time transfer · rsync safety · file-sharing latency/security · Samba/CIFS · SSHFS · NFS · cloud/FUSE</text>
+
+<rect x="50" y="145" width="470" height="235" rx="18" fill="#fff" stroke="#5dade2" stroke-width="2"/>
+<text x="78" y="185" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#1b4f72">1. Transfer modes</text>
+<text x="78" y="223" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746">
+<tspan x="78">SimpleHTTPServer: quick one-way LAN access.</tspan>
+<tspan x="78" dy="29">scp -r: recursive copy.</tspan>
+<tspan x="78" dy="29">rsync: repeated synchronization.</tspan>
+<tspan x="78" dy="29">Mounted FS: ongoing remote access.</tspan>
+<tspan x="78" dy="29">Do not expose temporary HTTP server on untrusted network.</tspan>
+</text>
+
+<rect x="565" y="145" width="470" height="235" rx="18" fill="#fff" stroke="#7dcea0" stroke-width="2"/>
+<text x="593" y="185" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#196f3d">2. rsync safety</text>
+<text x="593" y="223" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746">
+<tspan x="593">-a copies hierarchy + metadata.</tspan>
+<tspan x="593" dy="29">-n previews without copying.</tspan>
+<tspan x="593" dy="29">dir and dir/ have different destination layout.</tspan>
+<tspan x="593" dy="29">--delete removes destination-only files.</tspan>
+<tspan x="593" dy="29">Dry-run before destructive synchronization.</tspan>
+</text>
+
+<rect x="1080" y="145" width="470" height="235" rx="18" fill="#fff" stroke="#f5b041" stroke-width="2"/>
+<text x="1108" y="185" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#9c640c">3. rsync controls</text>
+<text x="1108" y="223" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746">
+<tspan x="1108">exclude/include selects transfer set.</tspan>
+<tspan x="1108" dy="29">--checksum strengthens comparison.</tspan>
+<tspan x="1108" dy="29">--backup/update reduce overwrite risk.</tspan>
+<tspan x="1108" dy="29">-z trades CPU for network reduction.</tspan>
+<tspan x="1108" dy="29">--bwlimit protects uplink capacity.</tspan>
+</text>
+
+<rect x="50" y="410" width="720" height="280" rx="18" fill="#fff" stroke="#af7ac5" stroke-width="2"/>
+<text x="78" y="450" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#6c3483">4. Sharing economics + security</text>
+<text x="78" y="488" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746">
+<tspan x="78">Network storage centralizes access but adds latency.</tspan>
+<tspan x="78" dy="29">Sequential large files benefit from buffering/prefetch.</tspan>
+<tspan x="78" dy="29">Random/many-file workloads wait on network round trips.</tspan>
+<tspan x="78" dy="29">On untrusted paths require authentication/authorization.</tspan>
+<tspan x="78" dy="29">Also require encryption in transit.</tspan>
+<tspan x="78" dy="29">Protocol simplicity and security are often in tension.</tspan>
+</text>
+
+<rect x="810" y="410" width="740" height="280" rx="18" fill="#fff" stroke="#85c1e9" stroke-width="2"/>
+<text x="838" y="450" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#21618c">5. Samba / SMB / CIFS</text>
+<text x="838" y="488" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746">
+<tspan x="838">smb.conf defines global + share policy.</tspan>
+<tspan x="838" dy="29">interfaces/valid users/guest/writable bound exposure.</tspan>
+<tspan x="838" dy="29">smbpasswd manages Samba account state.</tspan>
+<tspan x="838" dy="29">unix password sync can affect Linux login password.</tspan>
+<tspan x="838" dy="29">smbclient discovers/transfers; CIFS mounts integrate shares.</tspan>
+<tspan x="838" dy="29">Source warns against guest read/write share.</tspan>
+</text>
+
+<rect x="50" y="720" width="470" height="250" rx="18" fill="#fff" stroke="#ec7063" stroke-width="2"/>
+<text x="78" y="760" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#922b21">6. SSHFS</text>
+<text x="78" y="798" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746">
+<tspan x="78">FUSE filesystem over SSH/SFTP.</tspan>
+<tspan x="78" dy="29">Minimal setup and works across untrusted networks.</tspan>
+<tspan x="78" dy="29">User mount keeps permissions/security simpler.</tspan>
+<tspan x="78" dy="29">Trade-off: crypto/translation/transport overhead.</tspan>
+<tspan x="78" dy="29">fusermount -u provides source rollback path.</tspan>
+</text>
+
+<rect x="565" y="720" width="470" height="250" rx="18" fill="#fff" stroke="#f5b041" stroke-width="2"/>
+<text x="593" y="760" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#9c640c">7. NFS</text>
+<text x="593" y="798" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746">
+<tspan x="593">Classic Unix network filesystem.</tspan>
+<tspan x="593" dy="29">Many versions and security options.</tspan>
+<tspan x="593" dy="29">Strong security often needs extra setup.</tspan>
+<tspan x="593" dy="29">Automount avoids hard boot dependencies.</tspan>
+<tspan x="593" dy="29">Server setup is intentionally out of scope.</tspan>
+</text>
+
+<rect x="1080" y="720" width="470" height="250" rx="18" fill="#fff" stroke="#7dcea0" stroke-width="2"/>
+<text x="1108" y="760" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#196f3d">8. Cloud / future direction</text>
+<text x="1108" y="798" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746">
+<tspan x="1108">Cloud storage reduces maintenance, not latency.</tspan>
+<tspan x="1108" dy="29">Many Linux clients use FUSE user-space daemons.</tspan>
+<tspan x="1108" dy="29">User space eases auth/encryption evolution.</tspan>
+<tspan x="1108" dy="29">Traditional kernel clients are less flexible.</tspan>
+<tspan x="1108" dy="29">No universal file-sharing standard fits all sites.</tspan>
+</text>
+
+<rect x="50" y="1005" width="1500" height="72" rx="14" fill="#17202a"/>
+<text x="76" y="1037" font-family="system-ui,Arial,sans-serif" font-size="20" font-weight="700" fill="#fff">Operational model: choose copy vs sync vs mounted sharing → dry-run/destructive check → evaluate latency + trust + outage behavior.</text>
+<text x="76" y="1064" font-family="system-ui,Arial,sans-serif" font-size="16" fill="#d6e4f0">Provenance: RAG p0368:c01–p0389:c01 · PDF/printed pages 368–389.</text>
+</svg>
