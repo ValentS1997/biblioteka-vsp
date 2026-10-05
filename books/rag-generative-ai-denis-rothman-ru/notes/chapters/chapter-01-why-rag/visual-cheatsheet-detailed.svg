@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1180" viewBox="0 0 1600 1180" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 1 — подробная визуальная шпаргалка RAG</title>
+  <desc id="desc">Подробная схема экосистемы D/G/E/T, выбора simple/advanced/modular retrieval и учебного Python flow.</desc>
+  <rect width="1600" height="1180" fill="#ffffff"/>
+  <style>
+    text { font-family: Arial, sans-serif; fill: #111; }
+    .h1 { font-size: 32px; font-weight: 700; }
+    .h2 { font-size: 21px; font-weight: 700; }
+    .body { font-size: 16px; }
+    .small { font-size: 13px; }
+    .box { fill: #f8f8f8; stroke: #222; stroke-width: 2; rx: 12; }
+    .arrow { stroke: #222; stroke-width: 3; fill: none; marker-end: url(#a); }
+    .dash { stroke: #555; stroke-width: 2; fill: none; stroke-dasharray: 8 6; marker-end: url(#a); }
+  </style>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#222"/>
+    </marker>
+  </defs>
+
+  <text x="60" y="55" class="h1">Глава 1. Почему именно RAG — detailed map</text>
+  <text x="60" y="85" class="small">Source: addressable RAG p0020:c01–p0051:c01 · PDF 20–51 · no external fallback</text>
+
+  <rect x="60" y="125" width="310" height="140" class="box"/>
+  <text x="85" y="160" class="h2">1. Ограничение LLM</text>
+  <text x="85" y="194" class="body">Параметрические знания ограничены</text>
+  <text x="85" y="220" class="body">обучением; неоднозначный input может</text>
+  <text x="85" y="246" class="body">дать неточный результат.</text>
+
+  <rect x="450" y="125" width="310" height="140" class="box"/>
+  <text x="475" y="160" class="h2">2. Retriever D</text>
+  <text x="475" y="194" class="body">D1 collect → D2 process → D3 store</text>
+  <text x="475" y="220" class="body">→ D4 retrieve</text>
+
+  <rect x="840" y="125" width="310" height="140" class="box"/>
+  <text x="865" y="160" class="h2">3. Generator G</text>
+  <text x="865" y="194" class="body">G1 input → G2 feedback → G3 prompt</text>
+  <text x="865" y="220" class="body">→ G4 generated response</text>
+
+  <rect x="1230" y="125" width="310" height="140" class="box"/>
+  <text x="1255" y="160" class="h2">4. Evaluation / Teacher</text>
+  <text x="1255" y="194" class="body">E1 metrics + E2 human feedback</text>
+  <text x="1255" y="220" class="body">T: pretrained / fine-tuned model</text>
+
+  <path d="M370 195 H450" class="arrow"/>
+  <path d="M760 195 H840" class="arrow"/>
+  <path d="M1150 195 H1230" class="arrow"/>
+
+  <text x="60" y="330" class="h2">RAG vs fine-tuning</text>
+  <rect x="60" y="355" width="700" height="145" class="box"/>
+  <text x="85" y="390" class="body">Parametric: знания представлены весами модели.</text>
+  <text x="85" y="420" class="body">Non-parametric: явные данные остаются доступными для запроса.</text>
+  <text x="85" y="450" class="body">Глава не считает подходы взаимоисключающими.</text>
+  <text x="85" y="480" class="body">Выбор зависит от статичности/динамичности и объема данных.</text>
+
+  <rect x="840" y="355" width="700" height="145" class="box"/>
+  <text x="865" y="390" class="body">RAG полезен для динамических внешних данных.</text>
+  <text x="865" y="420" class="body">Fine-tuning может применяться к более статическим знаниям.</text>
+  <text x="865" y="450" class="body">Слишком большой RAG dataset усложняет управление.</text>
+
+  <text x="60" y="560" class="h2">Retrieval strategy</text>
+
+  <rect x="60" y="590" width="430" height="170" class="box"/>
+  <text x="85" y="625" class="h2">Simple</text>
+  <text x="85" y="660" class="body">Keyword matching</text>
+  <text x="85" y="690" class="body">Score = число общих слов</text>
+  <text x="85" y="720" class="body">Учебный пример: db_records</text>
+
+  <rect x="585" y="590" width="430" height="170" class="box"/>
+  <text x="610" y="625" class="h2">Advanced</text>
+  <text x="610" y="660" class="body">Vector + indexed retrieval</text>
+  <text x="610" y="690" class="body">TF-IDF representations</text>
+  <text x="610" y="720" class="body">Cosine similarity</text>
+
+  <rect x="1110" y="590" width="430" height="170" class="box"/>
+  <text x="1135" y="625" class="h2">Modular</text>
+  <text x="1135" y="660" class="body">RetrievalComponent(method=...)</text>
+  <text x="1135" y="690" class="body">keyword / vector / indexed</text>
+  <text x="1135" y="720" class="body">Выбор по задаче проекта</text>
+
+  <path d="M490 675 H585" class="arrow"/>
+  <path d="M1015 675 H1110" class="arrow"/>
+
+  <text x="60" y="830" class="h2">Учебный execution flow</text>
+
+  <rect x="60" y="860" width="220" height="95" class="box"/>
+  <text x="85" y="895" class="body">query</text>
+  <text x="85" y="925" class="small">"define a rag store"</text>
+
+  <rect x="340" y="860" width="240" height="95" class="box"/>
+  <text x="365" y="895" class="body">retrieve()</text>
+  <text x="365" y="925" class="small">best matching record</text>
+
+  <rect x="640" y="860" width="240" height="95" class="box"/>
+  <text x="665" y="895" class="body">metrics</text>
+  <text x="665" y="925" class="small">cosine / enhanced</text>
+
+  <rect x="940" y="860" width="240" height="95" class="box"/>
+  <text x="965" y="895" class="body">augment input</text>
+  <text x="965" y="925" class="small">query + retrieved text</text>
+
+  <rect x="1240" y="860" width="300" height="95" class="box"/>
+  <text x="1265" y="895" class="body">GPT-4o generation</text>
+  <text x="1265" y="925" class="small">then evaluate result</text>
+
+  <path d="M280 908 H340" class="arrow"/>
+  <path d="M580 908 H640" class="arrow"/>
+  <path d="M880 908 H940" class="arrow"/>
+  <path d="M1180 908 H1240" class="arrow"/>
+
+  <rect x="60" y="1015" width="1480" height="110" class="box"/>
+  <text x="85" y="1050" class="h2">Operational boundary from the chapter</text>
+  <text x="85" y="1080" class="body">Метрики сами по себе недостаточны; human evaluation остается частью оценки.</text>
+  <text x="85" y="1107" class="body">Полноценная ingestion/vector-store реализация начинается в следующих главах; глава 1 использует подготовленный db_records.</text>
+</svg>
