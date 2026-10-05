@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 3 — Indexed RAG</title>
+  <desc id="desc">Компактная схема индексированной RAG с metadata, четырьмя индексами и сравнением метрик.</desc>
+  <rect width="1200" height="800" fill="#ffffff"/>
+  <style>
+    text { font-family: Arial, sans-serif; fill: #111; }
+    .h1 { font-size: 29px; font-weight: 700; }
+    .h2 { font-size: 20px; font-weight: 700; }
+    .body { font-size: 16px; }
+    .small { font-size: 13px; }
+    .box { fill: #f7f7f7; stroke: #222; stroke-width: 2; rx: 14; }
+    .arrow { stroke: #222; stroke-width: 3; fill: none; marker-end: url(#a); }
+  </style>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#222"/>
+    </marker>
+  </defs>
+
+  <text x="55" y="55" class="h1">Глава 3. Indexed RAG: LlamaIndex + Deep Lake + OpenAI</text>
+  <text x="55" y="86" class="small">RAG provenance: p0080:c01–p0109:c01 · PDF 80–109</text>
+
+  <rect x="55" y="140" width="280" height="170" class="box"/>
+  <text x="80" y="178" class="h2">Source + metadata</text>
+  <text x="80" y="215" class="body">separate source files</text>
+  <text x="80" y="245" class="body">file path / name / IDs</text>
+  <text x="80" y="275" class="body">traceability to source</text>
+
+  <rect x="460" y="140" width="280" height="170" class="box"/>
+  <text x="485" y="178" class="h2">Deep Lake</text>
+  <text x="485" y="215" class="body">text + metadata</text>
+  <text x="485" y="245" class="body">embedding + id</text>
+  <text x="485" y="275" class="body">automatic processing</text>
+
+  <rect x="865" y="140" width="280" height="170" class="box"/>
+  <text x="890" y="178" class="h2">Query engine</text>
+  <text x="890" y="215" class="body">answer + source_nodes</text>
+  <text x="890" y="245" class="body">scores + node text</text>
+
+  <path d="M335 225 H460" class="arrow"/>
+  <path d="M740 225 H865" class="arrow"/>
+
+  <rect x="55" y="390" width="240" height="150" class="box"/>
+  <text x="80" y="428" class="h2">Vector</text>
+  <text x="80" y="462" class="body">embedding similarity</text>
+
+  <rect x="335" y="390" width="240" height="150" class="box"/>
+  <text x="360" y="428" class="h2">Tree</text>
+  <text x="360" y="462" class="body">hierarchical nodes</text>
+
+  <rect x="615" y="390" width="240" height="150" class="box"/>
+  <text x="640" y="428" class="h2">List</text>
+  <text x="640" y="462" class="body">SummaryIndex</text>
+
+  <rect x="895" y="390" width="250" height="150" class="box"/>
+  <text x="920" y="428" class="h2">Keyword table</text>
+  <text x="920" y="462" class="body">keyword → document ID</text>
+
+  <rect x="175" y="620" width="850" height="115" class="box"/>
+  <text x="200" y="660" class="h2">Compare with same input + parameters</text>
+  <text x="200" y="695" class="body">semantic similarity + execution time + source provenance</text>
+  <text x="200" y="720" class="small">No universal winning index; source says test on the real project.</text>
+</svg>
