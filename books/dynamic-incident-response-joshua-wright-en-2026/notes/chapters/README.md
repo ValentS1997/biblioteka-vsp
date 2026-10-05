@@ -24,3 +24,4 @@ Source truth для анализа: canonical English RAG. Русский пер
 - [Chapter 16 — Ускорение реагирования на инциденты с помощью ИИ](chapter-16-accelerating-incident-response-with-ai/) — `ACCEPTED`
 - [Chapter 17 — Реагирование на инциденты с программами-вымогателями](chapter-17-incident-response-for-ransomware/) — `ACCEPTED`
 - [Chapter 18 — Реагирование на инциденты в облачных системах](chapter-18-incident-response-for-cloud-systems/) — `ACCEPTED`
+- [Chapter 19 — Реагирование на инциденты в операционных технологиях](chapter-19-incident-response-for-operational-technology/) — `ACCEPTED`
