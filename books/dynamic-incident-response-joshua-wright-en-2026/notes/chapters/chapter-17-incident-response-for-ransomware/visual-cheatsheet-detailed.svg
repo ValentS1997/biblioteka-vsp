@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000">
+<rect width="1400" height="1000" fill="#fff"/>
+<text x="50" y="60" font-family="Arial" font-size="36" font-weight="700">Chapter 17 — Ransomware DAIR map</text>
+
+<rect x="70" y="120" width="380" height="260" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="100" y="165" font-family="Arial" font-size="22" font-weight="700">Prepare</text>
+<text x="100" y="210" font-family="Arial" font-size="17">Tier-0 identity protection</text>
+<text x="100" y="245" font-family="Arial" font-size="17">3-2-1-1-0 backup architecture</text>
+<text x="100" y="280" font-family="Arial" font-size="17">Holding statement / CTI</text>
+<text x="100" y="315" font-family="Arial" font-size="17">Help desk / employee training</text>
+
+<rect x="510" y="120" width="380" height="260" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="540" y="165" font-family="Arial" font-size="22" font-weight="700">Verify / Scope</text>
+<text x="540" y="210" font-family="Arial" font-size="17">Attack type differentiation</text>
+<text x="540" y="245" font-family="Arial" font-size="17">All systems and identities</text>
+<text x="540" y="280" font-family="Arial" font-size="17">Lateral movement / persistence</text>
+<text x="540" y="315" font-family="Arial" font-size="17">Data exposure / timeline</text>
+
+<rect x="950" y="120" width="380" height="260" rx="14" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="980" y="165" font-family="Arial" font-size="22" font-weight="700">Eradicate / Decrypt</text>
+<text x="980" y="210" font-family="Arial" font-size="17">Remove attacker access</text>
+<text x="980" y="245" font-family="Arial" font-size="17">Close initial vector</text>
+<text x="980" y="280" font-family="Arial" font-size="17">Assess exfiltration</text>
+<text x="980" y="315" font-family="Arial" font-size="17">Test decryptors on copies</text>
+
+<rect x="120" y="500" width="500" height="220" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="150" y="545" font-family="Arial" font-size="22" font-weight="700">Recover</text>
+<text x="150" y="590" font-family="Arial" font-size="17">Known-clean restore point</text>
+<text x="150" y="625" font-family="Arial" font-size="17">Dependency-aware restoration</text>
+<text x="150" y="660" font-family="Arial" font-size="17">Watch for attacker return</text>
+
+<rect x="780" y="500" width="500" height="220" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="810" y="545" font-family="Arial" font-size="22" font-weight="700">Debrief / Long Tail</text>
+<text x="810" y="590" font-family="Arial" font-size="17">Backup survival / dwell time</text>
+<text x="810" y="625" font-family="Arial" font-size="17">Legal / regulatory / insurance</text>
+<text x="810" y="660" font-family="Arial" font-size="17">Stakeholder trust / future extortion</text>
+
+<rect x="190" y="830" width="1020" height="95" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="230" y="885" font-family="Arial" font-size="22" font-weight="700">Payment may restore options, but it does not prove cleanup, data deletion, or incident closure.</text>
+</svg>
