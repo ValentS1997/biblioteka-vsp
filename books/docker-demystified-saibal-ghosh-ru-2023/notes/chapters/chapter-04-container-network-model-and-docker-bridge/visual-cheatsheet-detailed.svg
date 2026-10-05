@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 4 — CNM и Docker bridge: подробная шпаргалка</title>
+  <desc id="desc">Подробная карта CNM, drivers, IPAM, namespaces, veth pair и Linux bridge/docker0.</desc>
+  <rect width="1800" height="1200" fill="#f6f8fb"/>
+  <rect x="0" y="0" width="1800" height="112" fill="#17202a"/>
+  <text x="58" y="50" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="38" font-weight="700" fill="#ffffff">Глава 4 — Container Network Model и Docker bridge</text>
+  <text x="58" y="86" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">Abstraction → drivers → Linux primitives → default bridge</text>
+
+  <rect x="45" y="145" width="535" height="290" rx="18" fill="#ffffff" stroke="#5dade2" stroke-width="2"/>
+  <text x="75" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#1b4f72">1. CNM objects</text>
+  <text x="75" y="232" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">Sandbox → full isolated network stack</tspan>
+    <tspan x="75" dy="31">Interfaces · routes · DNS · settings</tspan>
+    <tspan x="75" dy="31">Endpoint → sandbox connection to network</tspan>
+    <tspan x="75" dy="31">Network → communication domain</tspan>
+    <tspan x="75" dy="31">Endpoints on same network can communicate</tspan>
+  </text>
+
+  <rect x="630" y="145" width="535" height="290" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="660" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#196f3d">2. libnetwork / drivers</text>
+  <text x="660" y="232" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="660" dy="0">libnetwork = CNM implementation/library</tspan>
+    <tspan x="660" dy="31">Network driver = concrete network behavior</tspan>
+    <tspan x="660" dy="31">IPAM driver = subnet/IP allocation</tspan>
+    <tspan x="660" dy="31">Built-in drivers are part of Docker Engine</tspan>
+    <tspan x="660" dy="31">Third-party drivers plug into CNM</tspan>
+  </text>
+
+  <rect x="1215" y="145" width="540" height="290" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1245" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#9c640c">3. Driver set</text>
+  <text x="1245" y="232" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1245" dy="0">bridge → Linux bridge</tspan>
+    <tspan x="1245" dy="31">host → host network stack</tspan>
+    <tspan x="1245" dy="31">none → no external connectivity</tspan>
+    <tspan x="1245" dy="31">overlay → multi-host + VXLAN</tspan>
+    <tspan x="1245" dy="31">MACVLAN → Linux MACVLAN bridge</tspan>
+  </text>
+
+  <rect x="45" y="475" width="535" height="300" rx="18" fill="#ffffff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="75" y="518" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#6c3483">4. Namespace lab</text>
+  <text x="75" y="562" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">Create mynetspace + mynetspace1</tspan>
+    <tspan x="75" dy="31">Create veth0 ↔ veth1 pair</tspan>
+    <tspan x="75" dy="31">Move each endpoint into a namespace</tspan>
+    <tspan x="75" dy="31">Assign 10.0.0.15/24 and 10.0.0.16/24</tspan>
+    <tspan x="75" dy="31">Bring links UP</tspan>
+    <tspan x="75" dy="31">Verify with ping both directions</tspan>
+  </text>
+
+  <rect x="630" y="475" width="535" height="300" rx="18" fill="#ffffff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="660" y="518" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#21618c">5. veth properties</text>
+  <text x="660" y="562" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="660" dy="0">Virtual Ethernet comes as a pair.</tspan>
+    <tspan x="660" dy="31">Full-duplex point-to-point channel.</tspan>
+    <tspan x="660" dy="31">One end can live in each namespace.</tspan>
+    <tspan x="660" dy="31">After move, host namespace no longer lists them.</tspan>
+    <tspan x="660" dy="31">Direct pairwise topology does not scale well.</tspan>
+  </text>
+
+  <rect x="1215" y="475" width="540" height="300" rx="18" fill="#ffffff" stroke="#ec7063" stroke-width="2"/>
+  <text x="1245" y="518" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#922b21">6. Linux bridge</text>
+  <text x="1245" y="562" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1245" dy="0">Layer-2 virtual switch in Linux kernel.</tspan>
+    <tspan x="1245" dy="31">Namespaces attach via veth pairs.</tspan>
+    <tspan x="1245" dy="31">Avoids full mesh of point-to-point veth links.</tspan>
+    <tspan x="1245" dy="31">Connected namespaces communicate through bridge.</tspan>
+    <tspan x="1245" dy="31">Docker bridge driver builds on this concept.</tspan>
+  </text>
+
+  <rect x="45" y="815" width="840" height="250" rx="18" fill="#ffffff" stroke="#48c9b0" stroke-width="2"/>
+  <text x="75" y="858" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#117864">7. Docker default bridge</text>
+  <text x="75" y="902" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">Docker Engine creates default bridge on host.</tspan>
+    <tspan x="75" dy="31">Default name: docker0.</tspan>
+    <tspan x="75" dy="31">Container side: eth0.</tspan>
+    <tspan x="75" dy="31">Host side: veth* connected to docker0.</tspan>
+    <tspan x="75" dy="31">Built-in IPAM assigns container IP address.</tspan>
+  </text>
+
+  <rect x="930" y="815" width="825" height="250" rx="18" fill="#ffffff" stroke="#e67e22" stroke-width="2"/>
+  <text x="960" y="858" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#a04000">8. Operational boundary</text>
+  <text x="960" y="902" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="960" dy="0">Read-only: ip netns list, ip addr, ip ... show.</tspan>
+    <tspan x="960" dy="31">Modifying: netns add/del, link add/set, addr add.</tspan>
+    <tspan x="960" dy="31">Chapter workflow is an isolated lab.</tspan>
+    <tspan x="960" dy="31">No production rollout/rollback is specified.</tspan>
+    <tspan x="960" dy="31">Cleanup: delete created namespaces.</tspan>
+  </text>
+
+  <rect x="45" y="1105" width="1710" height="62" rx="14" fill="#17202a"/>
+  <text x="76" y="1145" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#ffffff">Mental model: CNM defines objects; libnetwork/drivers implement them; Linux namespaces + veth + bridge provide the underlying mechanics.</text>
+</svg>
