@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect width="1200" height="720" fill="#fff"/>
+<text x="45" y="55" font-family="Arial" font-size="34" font-weight="700">Глава 20 — DAIR + NIST CSF 2.0</text>
+
+<rect x="60" y="120" width="250" height="150" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="90" y="160" font-family="Arial" font-size="22" font-weight="700">Govern / Identify</text>
+<text x="90" y="200" font-family="Arial" font-size="17">Decision Makers</text>
+<text x="90" y="235" font-family="Arial" font-size="17">risk + authority</text>
+
+<rect x="350" y="120" width="250" height="150" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="380" y="160" font-family="Arial" font-size="22" font-weight="700">Protect / Detect</text>
+<text x="380" y="200" font-family="Arial" font-size="17">Prepare</text>
+<text x="380" y="235" font-family="Arial" font-size="17">Detect / Verify / Triage</text>
+
+<rect x="640" y="120" width="250" height="150" rx="14" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="670" y="160" font-family="Arial" font-size="22" font-weight="700">Respond</text>
+<text x="670" y="200" font-family="Arial" font-size="17">Scope / Contain</text>
+<text x="670" y="235" font-family="Arial" font-size="17">Eradicate / Recover</text>
+
+<rect x="930" y="120" width="210" height="150" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="960" y="160" font-family="Arial" font-size="22" font-weight="700">Recover</text>
+<text x="960" y="200" font-family="Arial" font-size="17">Recover + Debrief</text>
+<text x="960" y="235" font-family="Arial" font-size="17">improvement</text>
+
+<rect x="110" y="390" width="430" height="180" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="140" y="430" font-family="Arial" font-size="22" font-weight="700">Compliance evidence</text>
+<text x="140" y="470" font-family="Arial" font-size="17">actions + rationale</text>
+<text x="140" y="505" font-family="Arial" font-size="17">metrics + artifacts</text>
+<text x="140" y="540" font-family="Arial" font-size="17">control effectiveness</text>
+
+<rect x="660" y="390" width="430" height="180" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="690" y="430" font-family="Arial" font-size="22" font-weight="700">Iteration as evidence</text>
+<text x="690" y="470" font-family="Arial" font-size="17">new finding → new loop</text>
+<text x="690" y="505" font-family="Arial" font-size="17">additional remediation</text>
+<text x="690" y="540" font-family="Arial" font-size="17">documented adaptive response</text>
+
+<text x="170" y="650" font-family="Arial" font-size="24" font-weight="700">Effective IR should naturally produce the evidence needed for compliance.</text>
+</svg>
