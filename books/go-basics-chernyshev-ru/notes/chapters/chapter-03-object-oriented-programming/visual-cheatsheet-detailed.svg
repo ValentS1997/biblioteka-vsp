@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120">
+<rect width="1600" height="1120" fill="#f4f7fb"/>
+<rect x="12" y="12" width="1576" height="78" rx="14" fill="#26384d"/>
+<text x="800" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">Основы Go — глава 3: detailed map</text>
+<text x="800" y="72" font-family="Arial, sans-serif" font-size="15.5" fill="#dce8f4" text-anchor="middle">struct state → methods → constructor/encapsulation → composition → interfaces → generics → project v.2</text>
+<rect x="14" y="110" width="382" height="270" rx="12" fill="#f7fbff" stroke="#5b98cf" stroke-width="2"/>
+<text x="32" y="140" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#173d64">1. Struct</text>
+<text x="36" y="171" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="36" dy="0">Fields combine different data types.</tspan>
+<tspan x="36" dy="20">Use values, pointers, nested and anonymous fields.</tspan>
+<tspan x="36" dy="20">Equality requires same type + comparable fields.</tspan>
+<tspan x="36" dy="20">Uppercase names cross package boundary.</tspan>
+<tspan x="36" dy="20">Struct stores domain state.</tspan>
+</text>
+<rect x="408" y="110" width="382" height="270" rx="12" fill="#f6fff8" stroke="#58ad79" stroke-width="2"/>
+<text x="426" y="140" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#18572f">2. Methods</text>
+<text x="430" y="171" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="430" dy="0">Method = function bound to receiver.</tspan>
+<tspan x="430" dy="20">Value receiver works on copy.</tspan>
+<tspan x="430" dy="20">Pointer receiver mutates instance.</tspan>
+<tspan x="430" dy="20">Receiver type and method share package.</tspan>
+<tspan x="430" dy="20">Behavior joins state at named type.</tspan>
+</text>
+<rect x="802" y="110" width="382" height="270" rx="12" fill="#fff9f4" stroke="#d49a4c" stroke-width="2"/>
+<text x="820" y="140" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#714500">3. Creation / invariants</text>
+<text x="824" y="171" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="824" dy="0">New / NewType = constructor function.</tspan>
+<tspan x="824" dy="20">Can return value or pointer.</tspan>
+<tspan x="824" dy="20">Package is encapsulation boundary in source.</tspan>
+<tspan x="824" dy="20">Lowercase hides internals.</tspan>
+<tspan x="824" dy="20">Validation is needed to preserve invariants.</tspan>
+</text>
+<rect x="1196" y="110" width="390" height="270" rx="12" fill="#fff7fb" stroke="#cf6d99" stroke-width="2"/>
+<text x="1214" y="140" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#842044">4. Composition</text>
+<text x="1218" y="171" font-family="Arial, sans-serif" font-size="12.7" fill="#19324a">
+<tspan x="1218" dy="0">Embed anonymous base-like struct.</tspan>
+<tspan x="1218" dy="20">Outer type gains promoted methods.</tspan>
+<tspan x="1218" dy="20">Same-name outer method wins lookup.</tspan>
+<tspan x="1218" dy="20">Source frames composition as inheritance substitute.</tspan>
+<tspan x="1218" dy="20">Explicit embedded access remains possible.</tspan>
+</text>
+<rect x="14" y="398" width="502" height="290" rx="12" fill="#f7f7ff" stroke="#8179d6" stroke-width="2"/>
+<text x="32" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#474092">5. Interfaces</text>
+<text x="36" y="459" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="36" dy="0">Interface = method declarations without implementation.</tspan>
+<tspan x="36" dy="20">Concrete type satisfies method set implicitly.</tspan>
+<tspan x="36" dy="20">Use as argument, return, variable or slice element.</tspan>
+<tspan x="36" dy="20">Interface narrows visible behavior to method set.</tspan>
+<tspan x="36" dy="20">Runtime polymorphism selects concrete implementation.</tspan>
+</text>
+<rect x="528" y="398" width="502" height="290" rx="12" fill="#f5fff7" stroke="#58ad79" stroke-width="2"/>
+<text x="546" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#18572f">6. Interface mechanics</text>
+<text x="550" y="459" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="550" dy="0">interface{} can hold different concrete types.</tspan>
+<tspan x="550" dy="20">Assertion: value, ok := i.(T).</tspan>
+<tspan x="550" dy="20">Type switch selects by dynamic type.</tspan>
+<tspan x="550" dy="20">Interfaces may embed other interfaces.</tspan>
+<tspan x="550" dy="20">Interface field enables swappable components.</tspan>
+<tspan x="550" dy="20">Car example swaps IMotor implementations.</tspan>
+</text>
+<rect x="1042" y="398" width="544" height="290" rx="12" fill="#fffdf3" stroke="#d5ad37" stroke-width="2"/>
+<text x="1060" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#714500">7. Generics</text>
+<text x="1064" y="459" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="1064" dy="0">Type parameters reduce duplicate implementations.</tspan>
+<tspan x="1064" dy="20">any = unrestricted in source examples.</tspan>
+<tspan x="1064" dy="20">comparable = equality-capable type set.</tspan>
+<tspan x="1064" dy="20">Union constraints: int | float64 | string.</tspan>
+<tspan x="1064" dy="20">~int includes named types with int underlying type.</tspan>
+<tspan x="1064" dy="20">Generic functions and structs are demonstrated.</tspan>
+</text>
+<rect x="14" y="706" width="760" height="278" rx="12" fill="#f4fbff" stroke="#6d9fc8" stroke-width="2"/>
+<text x="32" y="736" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#174d70">8. Design boundaries from source</text>
+<text x="36" y="768" font-family="Arial, sans-serif" font-size="12.7" fill="#19324a">
+<tspan x="36" dy="0">Do not expose fields/methods that callers do not need.</tspan>
+<tspan x="36" dy="20">Do not put every structure method into one large interface.</tspan>
+<tspan x="36" dy="20">Hidden fields still require validation in mutating methods.</tspan>
+<tspan x="36" dy="20">Unchecked type assertion may fail at runtime.</tspan>
+<tspan x="36" dy="20">Generic constraints must match operations required by code.</tspan>
+</text>
+<rect x="786" y="706" width="800" height="278" rx="12" fill="#fff8f2" stroke="#d17e4f" stroke-width="2"/>
+<text x="804" y="736" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#7b3e1e">9. Tic-tac-toe v.2</text>
+<text x="808" y="768" font-family="Arial, sans-serif" font-size="12.7" fill="#19324a">
+<tspan x="808" dy="0">Board owns grid, moves, win/draw checks and rendering.</tspan>
+<tspan x="808" dy="20">Player owns current figure and turn switching.</tspan>
+<tspan x="808" dy="20">Game owns input, state and orchestration.</tspan>
+<tspan x="808" dy="20">main constructs Board + Player + Game then calls Play.</tspan>
+<tspan x="808" dy="20">Behavior from procedural v.1 is redistributed with minimal logic changes.</tspan>
+<tspan x="808" dy="20">Exercises: Z player, restart, tests, reset-board command.</tspan>
+</text>
+<rect x="14" y="1004" width="1572" height="88" rx="10" fill="#26384d"/>
+<text x="800" y="1031" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Acceptance: explain struct/method receiver semantics, package visibility, composition, interface mechanics and generic constraints.</text>
+<text x="800" y="1058" font-family="Arial, sans-serif" font-size="14.5" fill="#dce8f4" text-anchor="middle">Project acceptance: map responsibilities to Board / Player / Game and explain v.1 → v.2 refactoring.</text>
+<text x="800" y="1082" font-family="Arial, sans-serif" font-size="13.5" fill="#dce8f4" text-anchor="middle">RAG-only • PDF 153–198 • summary p0197 • questions p0197–p0198</text>
+</svg>
