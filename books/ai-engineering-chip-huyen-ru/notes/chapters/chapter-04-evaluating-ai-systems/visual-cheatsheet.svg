@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 4 — Оценка систем AI</title>
+  <desc id="desc">Компактная шпаргалка: evaluation-driven development, model selection, benchmarks и custom evaluation pipeline.</desc>
+  <rect width="1600" height="900" fill="#f6f8fb"/>
+  <rect width="1600" height="110" fill="#17202a"/>
+  <text x="56" y="48" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#ffffff">Глава 4 — Оценка систем AI</text>
+  <text x="56" y="83" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">Criteria first → shortlist → private eval → production monitoring</text>
+
+  <rect x="50" y="145" width="470" height="260" rx="18" fill="#ffffff" stroke="#5dade2" stroke-width="2"/>
+  <text x="78" y="187" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#1b4f72">Evaluation-driven development</text>
+  <text x="78" y="226" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="78" dy="0">Определи критерии до создания приложения.</tspan>
+    <tspan x="78" dy="31">Свяжи AI metrics с business outcome.</tspan>
+    <tspan x="78" dy="31">Задай utility threshold.</tspan>
+    <tspan x="78" dy="40" font-weight="700">Нельзя управлять тем, что нельзя оценить.</tspan>
+  </text>
+
+  <rect x="565" y="145" width="470" height="260" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="593" y="187" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#196f3d">Критерии</text>
+  <text x="593" y="226" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="593" dy="0">Domain capability</tspan>
+    <tspan x="593" dy="31">Generation quality / factuality / safety</tspan>
+    <tspan x="593" dy="31">Instruction following</tspan>
+    <tspan x="593" dy="31">Cost · latency · scale</tspan>
+  </text>
+
+  <rect x="1080" y="145" width="470" height="260" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1108" y="187" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#9c640c">Model selection</text>
+  <text x="1108" y="226" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1108" dy="0">1. Hard-filter</tspan>
+    <tspan x="1108" dy="31">2. Public benchmark shortlist</tspan>
+    <tspan x="1108" dy="31">3. Private application evaluation</tspan>
+    <tspan x="1108" dy="31">4. Production monitoring</tspan>
+  </text>
+
+  <rect x="50" y="450" width="470" height="270" rx="18" fill="#ffffff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="78" y="492" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#6c3483">Public benchmarks</text>
+  <text x="78" y="532" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="78" dy="0">Полезны для отсева плохих кандидатов.</tspan>
+    <tspan x="78" dy="31">Проверяй relevance · correlation · weights.</tspan>
+    <tspan x="78" dy="31">Учитывай saturation и contamination.</tspan>
+    <tspan x="78" dy="40" font-weight="700">Leaderboard rank ≠ application fit.</tspan>
+  </text>
+
+  <rect x="565" y="450" width="470" height="270" rx="18" fill="#ffffff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="593" y="492" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#21618c">Custom pipeline</text>
+  <text x="593" y="532" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="593" dy="0">Evaluate components + turns + tasks.</tspan>
+    <tspan x="593" dy="31">Rubric + scales + examples.</tspan>
+    <tspan x="593" dy="31">Representative data + slices.</tspan>
+    <tspan x="593" dy="31">Bootstrap / variance / correlation.</tspan>
+  </text>
+
+  <rect x="1080" y="450" width="470" height="270" rx="18" fill="#ffffff" stroke="#ec7063" stroke-width="2"/>
+  <text x="1108" y="492" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#922b21">Operational risks</text>
+  <text x="1108" y="532" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1108" dy="0">Aggregate score скрывает bad slices.</tspan>
+    <tspan x="1108" dy="31">Evaluator drift ломает comparability.</tspan>
+    <tspan x="1108" dy="31">Evaluation добавляет cost и latency.</tspan>
+    <tspan x="1108" dy="31">Логируй все changing variables.</tspan>
+  </text>
+
+  <rect x="50" y="775" width="1500" height="72" rx="14" fill="#17202a"/>
+  <text x="78" y="820" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#ffffff">Принцип: публичный benchmark выбирает shortlist; собственный pipeline принимает release decision.</text>
+</svg>

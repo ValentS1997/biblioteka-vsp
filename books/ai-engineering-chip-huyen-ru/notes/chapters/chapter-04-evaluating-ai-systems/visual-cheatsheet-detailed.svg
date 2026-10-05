@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1260" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 4 — Оценка систем AI: подробная шпаргалка</title>
+  <desc id="desc">Подробная визуальная карта главы 4: критерии, factuality/safety, model selection, API versus self-host, benchmarks и evaluation pipeline.</desc>
+  <rect width="1600" height="1260" fill="#f7f8fa"/>
+  <rect width="1600" height="112" fill="#17202a"/>
+  <text x="58" y="49" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#ffffff">Глава 4 — Оценка систем AI</text>
+  <text x="58" y="84" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#d6e4f0">criteria · factuality · safety · instruction following · selection · benchmarks · custom pipeline</text>
+
+  <rect x="50" y="145" width="470" height="245" rx="18" fill="#ffffff" stroke="#5dade2" stroke-width="2"/>
+  <text x="78" y="185" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#1b4f72">1. Evaluation first</text>
+  <text x="78" y="223" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="78" dy="0">Criteria определяются до разработки.</tspan>
+    <tspan x="78" dy="28">Business metric ↔ evaluation metric.</tspan>
+    <tspan x="78" dy="28">Utility threshold задает минимальную полезность.</tspan>
+    <tspan x="78" dy="36" font-weight="700">Развернуть без измеримости — эксплуатационный риск.</tspan>
+  </text>
+
+  <rect x="565" y="145" width="470" height="245" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="593" y="185" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#196f3d">2. Criteria taxonomy</text>
+  <text x="593" y="223" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="593" dy="0">Domain-specific capability.</tspan>
+    <tspan x="593" dy="28">Generation: fluency · coherence · factuality · safety.</tspan>
+    <tspan x="593" dy="28">Instruction following: format/content/style.</tspan>
+    <tspan x="593" dy="28">Cost · latency · scale.</tspan>
+  </text>
+
+  <rect x="1080" y="145" width="470" height="245" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1108" y="185" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#9c640c">3. Factuality &amp; safety</text>
+  <text x="1108" y="223" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="1108" dy="0">Local factuality: output vs context.</tspan>
+    <tspan x="1108" dy="28">Global factuality: output vs trusted facts.</tspan>
+    <tspan x="1108" dy="28">Methods: judge · self-check · search verification.</tspan>
+    <tspan x="1108" dy="28">Safety: toxicity · hate · violence · stereotypes · bias.</tspan>
+  </text>
+
+  <rect x="50" y="420" width="720" height="285" rx="18" fill="#ffffff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="78" y="460" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#6c3483">4. Model-selection workflow</text>
+  <text x="78" y="498" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="78" dy="0">Hard attributes: policy/licence/privacy/access/hardware constraints.</tspan>
+    <tspan x="78" dy="28">Soft attributes: quality/factuality/toxicity и оптимизируемые свойства.</tspan>
+    <tspan x="78" dy="28">1. Filter impossible candidates.</tspan>
+    <tspan x="78" dy="28">2. Public evidence → shortlist.</tspan>
+    <tspan x="78" dy="28">3. Private evaluation → quality/cost/latency trade-off.</tspan>
+    <tspan x="78" dy="28">4. Production monitoring → feedback → re-evaluate.</tspan>
+  </text>
+
+  <rect x="810" y="420" width="740" height="285" rx="18" fill="#ffffff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="838" y="460" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#21618c">5. API vs self-host</text>
+  <text x="838" y="498" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="838" dy="0">Compare: data privacy · provenance/copyright · performance.</tspan>
+    <tspan x="838" dy="28">Functionality · cost · finetuning/optimization.</tspan>
+    <tspan x="838" dy="28">Control/access/transparency · on-device deployment.</tspan>
+    <tspan x="838" dy="36">API: easier service/scale, less control.</tspan>
+    <tspan x="838" dy="28">Self-host: more control, more engineering responsibility.</tspan>
+  </text>
+
+  <rect x="50" y="735" width="470" height="260" rx="18" fill="#ffffff" stroke="#ec7063" stroke-width="2"/>
+  <text x="78" y="775" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#922b21">6. Public benchmarks</text>
+  <text x="78" y="813" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="78" dy="0">Coverage ограничен.</tspan>
+    <tspan x="78" dy="28">Aggregation/weights могут быть arbitrary.</tspan>
+    <tspan x="78" dy="28">Correlated tests переусиливают capability.</tspan>
+    <tspan x="78" dy="28">Contamination завышает scores.</tspan>
+    <tspan x="78" dy="36" font-weight="700">Использовать для shortlist, не acceptance.</tspan>
+  </text>
+
+  <rect x="565" y="735" width="470" height="260" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+  <text x="593" y="775" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#9c640c">7. Custom evaluation pipeline</text>
+  <text x="593" y="813" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="593" dy="0">Evaluate every component + task/turn.</tspan>
+    <tspan x="593" dy="28">Rubric: criteria + scale + examples.</tspan>
+    <tspan x="593" dy="28">Representative data + known failures + OOD.</tspan>
+    <tspan x="593" dy="28">Methods may be mixed by cost/quality.</tspan>
+    <tspan x="593" dy="36">Human evaluation remains a useful guide.</tspan>
+  </text>
+
+  <rect x="1080" y="735" width="470" height="260" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="1108" y="775" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#196f3d">8. Reliability of evaluation</text>
+  <text x="1108" y="813" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="1108" dy="0">Slices reveal hidden failures / Simpson's paradox.</tspan>
+    <tspan x="1108" dy="28">Bootstrap estimates result stability.</tspan>
+    <tspan x="1108" dy="28">Small score delta → larger sample needed.</tspan>
+    <tspan x="1108" dy="28">Check metric correlation, cost and latency.</tspan>
+    <tspan x="1108" dy="36">Track every changed evaluator variable.</tspan>
+  </text>
+
+  <rect x="50" y="1030" width="1500" height="150" rx="16" fill="#17202a"/>
+  <text x="78" y="1070" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#ffffff">Operational sequence</text>
+  <text x="78" y="1105" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#d6e4f0">
+    <tspan x="78" dy="0">business goal → criteria/rubric → hard-filter → public shortlist → private evaluation → release threshold</tspan>
+    <tspan x="78" dy="29">→ component/slice checks → production monitoring → iterate evaluator with experiment tracking</tspan>
+  </text>
+
+  <text x="50" y="1220" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="15" fill="#566573">Provenance: RAG p0193:c01–p0250:c01 · PDF/printed pages 193–250 · source SHA-256 850c3652…62fba</text>
+</svg>
