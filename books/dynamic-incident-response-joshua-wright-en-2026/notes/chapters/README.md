@@ -20,3 +20,4 @@ Source truth для анализа: canonical English RAG. Русский пер
 - [Chapter 12 — Сдерживание](chapter-12-contain-activity/) — `ACCEPTED`
 - [Chapter 13 — Искоренение угрозы](chapter-13-eradicate-activity/) — `ACCEPTED`
 - [Chapter 14 — Восстановление](chapter-14-recover-activity/) — `ACCEPTED`
+- [Chapter 15 — Разбор инцидента](chapter-15-debrief-activity/) — `ACCEPTED`
