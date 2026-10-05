@@ -13,19 +13,26 @@
 - Название: «Процессы и использование ресурсов»
 - Slug: `processes-and-resource-usage`
 - Source policy: `rag_only`
+- Request contract: `BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST v1.2`
+- Readiness contract: `BIBLIOTEKA-VSP-BOOK-READINESS v1.2`
+- Artifact contract: `BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.6`
 - External sources: запрещены
 - Model memory: запрещена
 - Прямой доступ к PDF: не использовался
 
 ## Provenance
 
-- RAG chunks: `p0244:c01`–`p0269:c01`
-- PDF pages: 244–269
-- Printed pages: 244–269
+- RAG chunk range: `p0244:c01`–`p0269:c01`
+- Source format: `pdf`
+- Source locator range: `pdf_page 244–269`
+- EPUB spine range: `Not applicable`
+- PDF page range: 244–269
+- Printed page range: 244–269
 - Оглавление в `p0012:c01`–`p0013:c01` задаёт структуру главы 8.
 - `p0244:c01` начинается заголовком главы 8 «Процессы и использование ресурсов».
 - Следующий чанк `p0270:c01` начинается главой 9 «Сеть и ее конфигурация».
 - Chapter boundary verified: yes
+- Completion status: `ACCEPTED`
 - Source SHA-256: `60bb698fc2ff849a9814f099c12ca56e8f40c11b0518436f3ce3c44e96152df9`
 
 ## Содержимое
