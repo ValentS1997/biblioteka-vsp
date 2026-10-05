@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1120" role="img" aria-labelledby="title desc">
+<title id="title">Глава 8 — подробная шпаргалка</title>
+<desc id="desc">Detailed processes, tracing, CPU, memory, I/O and cgroups summary.</desc>
+<rect width="1600" height="1120" fill="#f7f8fa"/>
+<rect width="1600" height="112" fill="#17202a"/>
+<text x="60" y="49" font-family="system-ui,Arial,sans-serif" font-size="34" font-weight="700" fill="#fff">Глава 8 — Процессы и использование ресурсов</text>
+<text x="60" y="85" font-family="system-ui,Arial,sans-serif" font-size="19" fill="#d6e4f0">process/thread · files/syscalls · CPU/load · pages/faults · vmstat · iostat/iotop/pidstat · cgroups v1/v2</text>
+
+<rect x="50" y="145" width="470" height="235" rx="18" fill="#fff" stroke="#5dade2" stroke-width="2"/>
+<text x="78" y="185" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#1b4f72">1. Process inspection</text>
+<text x="78" y="223" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="78">ps gives a point-in-time snapshot.</tspan><tspan x="78" dy="29">top updates and ranks active processes.</tspan><tspan x="78" dy="29">lsof maps processes to open files.</tspan><tspan x="78" dy="29">Filter by PID or directory to reduce noise.</tspan><tspan x="78" dy="29">Do not optimize without a measured problem.</tspan></text>
+
+<rect x="565" y="145" width="470" height="235" rx="18" fill="#fff" stroke="#7dcea0" stroke-width="2"/>
+<text x="593" y="185" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#196f3d">2. Tracing + threads</text>
+<text x="593" y="223" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="593">strace exposes system calls/return values.</tspan><tspan x="593" dy="29">ltrace exposes shared-library calls.</tspan><tspan x="593" dy="29">Thread has TID and is scheduled by kernel.</tspan><tspan x="593" dy="29">Threads share process resources.</tspan><tspan x="593" dy="29">ps m separates PID/TID views.</tspan></text>
+
+<rect x="1080" y="145" width="470" height="235" rx="18" fill="#fff" stroke="#f5b041" stroke-width="2"/>
+<text x="1108" y="185" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#9c640c">3. CPU</text>
+<text x="1108" y="223" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="1108">time: user · system · real</tspan><tspan x="1108" dy="29">nice range: -20 .. 20</tspan><tspan x="1108" dy="29">higher nice = lower priority</tspan><tspan x="1108" dy="29">load average counts runnable demand</tspan><tspan x="1108" dy="29">interpret load against CPU cores.</tspan></text>
+
+<rect x="50" y="410" width="720" height="280" rx="18" fill="#fff" stroke="#af7ac5" stroke-width="2"/>
+<text x="78" y="450" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#6c3483">4. Memory + vmstat</text>
+<text x="78" y="488" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="78">MMU translates virtual pages using kernel page tables.</tspan><tspan x="78" dy="29">Demand paging allocates/loads pages when needed.</tspan><tspan x="78" dy="29">Minor fault: page already in RAM, mapping work required.</tspan><tspan x="78" dy="29">Major fault: page must be loaded from slower storage/source.</tspan><tspan x="78" dy="29">vmstat combines procs, memory, swap, I/O, system and CPU.</tspan><tspan x="78" dy="29">In interval mode read current behavior from row 2 onward.</tspan></text>
+
+<rect x="810" y="410" width="740" height="280" rx="18" fill="#fff" stroke="#85c1e9" stroke-width="2"/>
+<text x="838" y="450" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#21618c">5. I/O + per-process history</text>
+<text x="838" y="488" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="838">iostat: transfers and read/write throughput per device.</tspan><tspan x="838" dy="29">-p ALL adds partitions.</tspan><tspan x="838" dy="29">iotop exposes active read/write and I/O priority.</tspan><tspan x="838" dy="29">iotop reports TID, not only PID.</tspan><tspan x="838" dy="29">pidstat produces repeated process statistics.</tspan><tspan x="838" dy="29">pidstat -r = memory; -d = disk.</tspan></text>
+
+<rect x="50" y="720" width="470" height="250" rx="18" fill="#fff" stroke="#ec7063" stroke-width="2"/>
+<text x="78" y="760" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#922b21">6. cgroups versions</text>
+<text x="78" y="798" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="78">v1: separate hierarchy per controller.</tspan><tspan x="78" dy="29">A process may belong to several groups.</tspan><tspan x="78" dy="29">v2: one cgroup per process.</tspan><tspan x="78" dy="29">Multiple controllers can be attached.</tspan><tspan x="78" dy="29">Chapter proceeds mainly with v2.</tspan></text>
+
+<rect x="565" y="720" width="470" height="250" rx="18" fill="#fff" stroke="#f5b041" stroke-width="2"/>
+<text x="593" y="760" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#9c640c">7. cgroup filesystem</text>
+<text x="593" y="798" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="593">/proc/PID/cgroup → membership</tspan><tspan x="593" dy="29">/sys/fs/cgroup → cgroup2 interface</tspan><tspan x="593" dy="29">cgroup.procs → members</tspan><tspan x="593" dy="29">pids.current/max · memory.max</tspan><tspan x="593" dy="29">cpu.stat → accumulated CPU usage</tspan></text>
+
+<rect x="1080" y="720" width="470" height="250" rx="18" fill="#fff" stroke="#7dcea0" stroke-width="2"/>
+<text x="1108" y="760" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#196f3d">8. State-change boundary</text>
+<text x="1108" y="798" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="1108">renice changes scheduling priority.</tspan><tspan x="1108" dy="29">write PID to cgroup.procs moves process.</tspan><tspan x="1108" dy="29">write pids.max changes task limit.</tspan><tspan x="1108" dy="29">Hierarchy/controller rules constrain children.</tspan><tspan x="1108" dy="29">Capture previous values before writes.</tspan></text>
+
+<rect x="50" y="1005" width="1500" height="72" rx="14" fill="#17202a"/>
+<text x="76" y="1037" font-family="system-ui,Arial,sans-serif" font-size="20" font-weight="700" fill="#fff">Operational model: measure first → identify resource/process → trace only as needed → change priority/limits only from verified baseline.</text>
+<text x="76" y="1064" font-family="system-ui,Arial,sans-serif" font-size="16" fill="#d6e4f0">Provenance: RAG p0244:c01–p0269:c01 · PDF/printed pages 244–269.</text>
+</svg>

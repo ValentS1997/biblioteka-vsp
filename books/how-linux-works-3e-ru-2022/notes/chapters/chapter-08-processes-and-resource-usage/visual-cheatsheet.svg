@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Глава 8 — Процессы и использование ресурсов</title>
+<desc id="desc">Processes, tracing, CPU, memory, I/O and cgroups.</desc>
+<rect width="1600" height="900" fill="#f6f8fb"/>
+<rect width="1600" height="108" fill="#17202a"/>
+<text x="56" y="48" font-family="system-ui,Arial,sans-serif" font-size="35" font-weight="700" fill="#fff">Глава 8 — Процессы и использование ресурсов</text>
+<text x="56" y="82" font-family="system-ui,Arial,sans-serif" font-size="20" fill="#d6e4f0">ps/top · lsof · strace/ltrace · CPU · memory · I/O · cgroups</text>
+
+<rect x="45" y="140" width="480" height="265" rx="18" fill="#fff" stroke="#5dade2" stroke-width="2"/>
+<text x="72" y="181" font-family="system-ui,Arial,sans-serif" font-size="24" font-weight="700" fill="#1b4f72">Process visibility</text>
+<text x="72" y="222" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="72">ps = snapshot · top = live view</tspan><tspan x="72" dy="31">lsof = process ↔ open file</tspan><tspan x="72" dy="31">strace = syscalls · ltrace = libraries</tspan><tspan x="72" dy="39" font-weight="700">Observe before tuning.</tspan></text>
+
+<rect x="560" y="140" width="480" height="265" rx="18" fill="#fff" stroke="#7dcea0" stroke-width="2"/>
+<text x="588" y="181" font-family="system-ui,Arial,sans-serif" font-size="24" font-weight="700" fill="#196f3d">CPU</text>
+<text x="588" y="222" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="588">user · system · real time</tspan><tspan x="588" dy="31">nice controls relative priority</tspan><tspan x="588" dy="31">load average needs CPU-core context</tspan><tspan x="588" dy="39">High load alone != failure.</tspan></text>
+
+<rect x="1075" y="140" width="480" height="265" rx="18" fill="#fff" stroke="#f5b041" stroke-width="2"/>
+<text x="1103" y="181" font-family="system-ui,Arial,sans-serif" font-size="24" font-weight="700" fill="#9c640c">Memory</text>
+<text x="1103" y="222" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="1103">virtual pages → MMU/page tables</tspan><tspan x="1103" dy="31">minor fault = mapping resolution</tspan><tspan x="1103" dy="31">major fault = slow page load</tspan><tspan x="1103" dy="39">vmstat exposes swap + pressure.</tspan></text>
+
+<rect x="45" y="445" width="480" height="280" rx="18" fill="#fff" stroke="#af7ac5" stroke-width="2"/>
+<text x="72" y="486" font-family="system-ui,Arial,sans-serif" font-size="24" font-weight="700" fill="#6c3483">I/O</text>
+<text x="72" y="527" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="72">iostat = device throughput</tspan><tspan x="72" dy="31">iotop = active I/O by TID/process</tspan><tspan x="72" dy="31">pidstat = repeated per-process stats</tspan><tspan x="72" dy="39">Correlate I/O with the owning process.</tspan></text>
+
+<rect x="560" y="445" width="480" height="280" rx="18" fill="#fff" stroke="#85c1e9" stroke-width="2"/>
+<text x="588" y="486" font-family="system-ui,Arial,sans-serif" font-size="24" font-weight="700" fill="#21618c">Threads</text>
+<text x="588" y="527" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="588">process = PID</tspan><tspan x="588" dy="31">thread = TID</tspan><tspan x="588" dy="31">threads share process resources</tspan><tspan x="588" dy="39">Scheduler runs threads individually.</tspan></text>
+
+<rect x="1075" y="445" width="480" height="280" rx="18" fill="#fff" stroke="#ec7063" stroke-width="2"/>
+<text x="1103" y="486" font-family="system-ui,Arial,sans-serif" font-size="24" font-weight="700" fill="#922b21">cgroups v2</text>
+<text x="1103" y="527" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="1103">one cgroup per process</tspan><tspan x="1103" dy="31">multiple controllers per group</tspan><tspan x="1103" dy="31">limits + accounting via pseudo-files</tspan><tspan x="1103" dy="39">Writes are state changes.</tspan></text>
+
+<rect x="45" y="775" width="1510" height="72" rx="14" fill="#17202a"/>
+<text x="74" y="819" font-family="system-ui,Arial,sans-serif" font-size="21" font-weight="700" fill="#fff">Workflow: symptom → resource → process/thread → focused tool → cgroup/accounting → only then change state.</text>
+</svg>
