@@ -2,6 +2,77 @@
 
 Цель: определить последний успешно достигнутый boot layer и только после этого менять configuration.
 
+## Symptom / problem framing
+
+Нужно определить последний успешно достигнутый boot layer и не менять boot configuration до локализации сбоя.
+
+Типовые границы:
+- firmware / BIOS / UEFI;
+- bootloader / GRUB;
+- kernel image и command line;
+- device/subsystem initialization;
+- root filesystem;
+- переход к PID 1.
+
+## Baseline / context
+
+Source-derived boot chain:
+
+~~~text
+firmware
+  ↓
+bootloader
+  ↓
+kernel image + command line
+  ↓
+kernel initialization
+  ↓
+root filesystem
+  ↓
+init / PID 1
+~~~
+
+GRUB root, Linux `root=` и root уже работающей системы — разные понятия.
+
+## Read-only checks
+
+~~~bash
+journalctl -k
+dmesg
+cat /proc/cmdline
+efibootmgr
+grub-mkconfig
+~~~
+
+Также источник использует `/sys/firmware/efi` и read-only GRUB commands `ls`, `ls -l`, `echo $root`, `set`.
+
+## Interpretation
+
+- нет kernel evidence → искать проблему на firmware/bootloader layer;
+- kernel есть, но root не достигнут → проверять command line/root/device path;
+- root достигнут, PID 1 не стартует → граница переходит к следующей главе;
+- UEFI/ESP и BIOS/MBR используют разные boot mechanisms;
+- generated `grub.cfg` не следует редактировать вручную.
+
+## Next action
+
+1. Определить boot mode.
+2. Подтвердить фактическую kernel command line.
+3. Проверить GRUB root/prefix и наличие kernel/initrd.
+4. Использовать временное GRUB menu edit для ограниченного эксперимента, если это достаточно.
+5. Persistent changes делать только после backup и с recovery path.
+
+## Modifying action
+
+Source-confirmed state-changing operations:
+- GRUB menu/runtime directives;
+- `grub-mkconfig -o ...`;
+- `grub-install ...`;
+- Secure Boot configuration как отдельная security boundary.
+
+Bootloader installation может сделать систему незагружаемой; без конкретного layout rollback остаётся `[Needs confirmation]`.
+
+
 ## Boot chain
 
 ```text
@@ -232,7 +303,7 @@ PID 1 started?
    └─ да → user-space startup, chapter 6+
 ```
 
-## Verification / acceptance
+## Verification / acceptance checks
 
 После изменения boot configuration должно быть подтверждено:
 - generated configuration содержит ожидаемый kernel/image/parameters;
