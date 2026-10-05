@@ -2,6 +2,85 @@
 
 Цель: локализовать нужный storage layer, собрать read-only evidence и только затем выполнять минимальное изменение.
 
+## Symptom / problem framing
+
+Нужно локализовать проблему в storage stack: block device, partition table, LVM, filesystem, swap или mount state.
+
+Типовые задачи:
+- проверить partition topology;
+- определить filesystem/UUID и mount options;
+- понять причину capacity/usage issue;
+- проверить filesystem перед repair;
+- проверить swap;
+- установить LVM mapping до изменения размеров или удаления.
+
+## Baseline / context
+
+Source-derived storage stack:
+
+~~~text
+block device
+  ↓
+partition table
+  ↓
+partition / PV
+  ↓
+VG / LV [optional]
+  ↓
+filesystem or swap
+  ↓
+mount point
+  ↓
+files/directories
+~~~
+
+Перед изменением сохранить read-only baseline и подтвердить target.
+
+## Read-only checks
+
+~~~bash
+parted -l
+fdisk -l
+journalctl -k
+blkid
+mount
+df
+du -s
+fsck -n DEVICE
+free
+pvs
+vgs
+lvs
+dmsetup info
+dmsetup table
+~~~
+
+При partition/filesystem работе дополнительно проверить, используется ли target и совпадает ли topology с ожидаемой.
+
+## Interpretation
+
+- partition table определяет границы block regions;
+- filesystem identity лучше подтверждать UUID/type, а не только device name;
+- mount state и mount options — отдельный слой;
+- LV size и filesystem size — разные состояния;
+- swap capacity относится к отдельному kernel pool;
+- `fsck` repair требует offline/read-only context в пределах правил главы.
+
+## Next action
+
+1. Определить точный storage layer.
+2. Подтвердить target device/partition/LV.
+3. Проверить usage/mount state.
+4. Выбрать минимальную операцию.
+5. После изменения повторить inventory и filesystem/mount checks.
+
+## Modifying action
+
+Source-confirmed state changes включают partition edit/reread, `mkfs`, mount/remount/unmount, `fsck` repair, swap activation/deactivation и LVM create/remove/resize operations.
+
+Destructive operations требуют backup/recovery; если обратный путь не подтверждён источником и текущим state, rollback остаётся `[Needs confirmation]`.
+
+
 ## Storage stack
 
 ```text
@@ -220,7 +299,7 @@ Link count = количество directory entries, указывающих на
 
 Block bitmap хранит состояние free/used blocks. fsck сравнивает directory/inode structure с allocation metadata и исправляет несогласованность.
 
-## Verification / acceptance
+## Verification / acceptance checks
 
 Перед завершением storage change подтвердить:
 - ожидаемую partition/LVM topology;
