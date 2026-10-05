@@ -187,9 +187,9 @@ PAM/user database changes считать security-critical.
 
 ## Rollback
 
-- `crontab -e`: restore previous saved crontab; direct automatic rollback not guaranteed.
+- `crontab -e`: rollback procedure `[Needs confirmation]` unless a previous crontab was explicitly saved.
 - `at` job: remove with `atrm` before execution.
-- timer unit: disable/remove local unit files and reload systemd configuration; exact commands depend on context.
-- `TZ` environment override: unset variable or start a clean shell.
+- timer unit change: rollback procedure `[Needs confirmation]` within the verified chapter source.
+- `TZ` environment override: one-command form ends with the command; rollback for an exported session value is `[Needs confirmation]` in this chapter.
 - timezone/PAM/user database changes: `[Needs confirmation]` without a verified backup/recovery path.
 - `loginctl enable-linger` reverse action is not provided by the source section used here: `[Needs confirmation]`.

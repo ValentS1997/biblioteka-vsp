@@ -25,20 +25,20 @@
 | `grep password.*unix /etc/pam.d/*` | Найти password rules с pam_unix | read-only | Не меняет state | Читает security config | Сопоставить generated/source files | N/A |
 | `passwd` / `passwd user` | Изменить password | state-changing | Меняет authentication data | Lockout/security impact | Проверить expected authentication | `[Needs confirmation]` |
 | `chfn` / `chsh` | Изменить account metadata/shell | state-changing | Меняет user account data | Invalid shell/profile impact | Проверить account entry/login shell | `[Needs confirmation]` |
-| `adduser` | Добавить user | state-changing | Создаёт account | UID/home/policy impact | Проверить account/files | `userdel` только если rollback scope verified |
-| `userdel` | Удалить user | state-changing | Удаляет account mapping | Data ownership/orphaning risk | Проверить intended account removal | `[Needs confirmation]` |
-| `vipw` | Locked edit `/etc/passwd` | state-changing | Редактирует critical user DB | Syntax/lockout risk | Проверить file syntax/account access | Restore backup created by tool/context |
-| `vipw -s` | Locked edit `/etc/shadow` | state-changing | Редактирует critical auth DB | High lockout/security risk | Проверить authentication | Restore backup/recovery path |
+| `adduser` | Добавить user | state-changing | Создаёт account | Scope зависит от local policy | Проверить account/files | `[Needs confirmation]` |
+| `userdel` | Удалить user | state-changing | Удаляет account mapping | Последствия для данных в главе не детализированы: `[Needs confirmation]` | Проверить intended account removal | `[Needs confirmation]` |
+| `vipw` | Locked edit `/etc/passwd` | state-changing | Редактирует user DB с locking/backup | Ошибка записи может нарушить account mapping | Проверить file syntax/account access | Backup создаётся tool; procedure восстановления `[Needs confirmation]` |
+| `vipw -s` | Locked edit `/etc/shadow` | state-changing | Редактирует shadow DB с locking/backup | Authentication behavior может измениться | Проверить authentication | Procedure восстановления `[Needs confirmation]` |
 | `hwclock --systohc --utc` | Записать system time в RTC как UTC | state-changing | Меняет hardware clock | Wrong system time propagates to RTC | Проверить time after operation | `[Needs confirmation]` |
-| `export TZ=...` | Session timezone override | state-changing in shell env | Меняет environment текущей shell | Может путать output/scripts | `date` | unset TZ / clean shell |
-| `crontab file` | Install user crontab | state-changing | Заменяет current user crontab | Schedule overwrite | `crontab -l` | Restore saved previous crontab |
-| `crontab -e` | Edit/install user crontab | state-changing | Меняет schedule | Incorrect job timing/commands | `crontab -l` + task result | Restore previous content |
+| `export TZ=...` | Session timezone override | state-changing in shell env | Меняет environment текущей shell | Меняет time representation в session | `date` | `[Needs confirmation]` для exported session value |
+| `crontab file` | Install user crontab | state-changing | Устанавливает file как current user crontab | Меняет scheduled jobs | `crontab -l` | `[Needs confirmation]` без отдельно сохранённого previous crontab |
+| `crontab -e` | Edit/install user crontab | state-changing | Меняет schedule | Ошибка может изменить timing/command | `crontab -l` + task result | `[Needs confirmation]` без separately saved previous content |
 | `crontab -r` | Remove user crontab | state-changing | Удаляет all user cron entries | High schedule loss risk | `crontab -l` should show none/error | Restore saved previous crontab |
 | `at 22:30` | Queue one-time job | state-changing | Добавляет future task | Command executes later | `atq` | `atrm` before execution |
 | `atrm` | Remove queued at job | state-changing | Cancels job | Wrong job ID | `atq` | Recreate job if needed |
 | `systemd-run --on-calendar=...` | Create transient timer/service | state-changing | Schedules transient unit | Wrong calendar may create recurring behavior | `systemctl list-timers` | `[Needs confirmation]` |
 | `loginctl enable-linger` | Keep user manager after logout | state-changing | Persistent user manager state | User services can continue without session | Verify timer survives logout | `[Needs confirmation]` |
-| PAM file edit | Change authentication policy | state-changing | Alters auth/account/session/password flow | System-wide lockout/security risk | Test intended and denied paths before losing recovery session | Restore known-good config from recovery session |
+| PAM file edit | Change authentication policy | state-changing | Alters auth/account/session/password flow | Generated files may be distribution-managed; source warns not to edit blindly | Проверить intended authentication behavior | Rollback procedure `[Needs confirmation]` |
 
 ## Cron format
 
