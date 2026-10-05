@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000">
+<rect width="1400" height="1000" fill="#fff"/>
+<text x="50" y="60" font-family="Arial" font-size="36" font-weight="700">Chapter 16 — AI / MCP / Agentic IR trust model</text>
+
+<rect x="70" y="120" width="380" height="260" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="100" y="165" font-family="Arial" font-size="22" font-weight="700">Foundational Use Cases</text>
+<text x="100" y="210" font-family="Arial" font-size="17">Code explanation / deobfuscation</text>
+<text x="100" y="245" font-family="Arial" font-size="17">Log analysis / anomaly triage</text>
+<text x="100" y="280" font-family="Arial" font-size="17">Query generation</text>
+<text x="100" y="315" font-family="Arial" font-size="17">Stakeholder translation</text>
+
+<rect x="510" y="120" width="380" height="260" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="540" y="165" font-family="Arial" font-size="22" font-weight="700">Intermediate Use Cases</text>
+<text x="540" y="210" font-family="Arial" font-size="17">DAIR playbooks</text>
+<text x="540" y="245" font-family="Arial" font-size="17">Incident reports</text>
+<text x="540" y="280" font-family="Arial" font-size="17">Tabletop scenarios</text>
+<text x="540" y="315" font-family="Arial" font-size="17">Twine interactive training</text>
+
+<rect x="950" y="120" width="380" height="260" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="980" y="165" font-family="Arial" font-size="22" font-weight="700">Advanced Integration</text>
+<text x="980" y="210" font-family="Arial" font-size="17">MCP-connected security tools</text>
+<text x="980" y="245" font-family="Arial" font-size="17">Natural-language hunting</text>
+<text x="980" y="280" font-family="Arial" font-size="17">Agentic multi-step workflows</text>
+<text x="980" y="315" font-family="Arial" font-size="17">Protocol SIFT / ReAct</text>
+
+<rect x="100" y="470" width="520" height="250" rx="14" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="130" y="515" font-family="Arial" font-size="22" font-weight="700">Risk Boundary</text>
+<text x="130" y="560" font-family="Arial" font-size="17">Sensitive incident data / Shadow AI</text>
+<text x="130" y="595" font-family="Arial" font-size="17">Hallucination / non-determinism</text>
+<text x="130" y="630" font-family="Arial" font-size="17">Prompt injection / MCP supply chain</text>
+<text x="130" y="665" font-family="Arial" font-size="17">Excessive tool permissions</text>
+
+<rect x="780" y="470" width="520" height="250" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="810" y="515" font-family="Arial" font-size="22" font-weight="700">Trust Controls</text>
+<text x="810" y="560" font-family="Arial" font-size="17">Deterministic parser/tool output</text>
+<text x="810" y="595" font-family="Arial" font-size="17">Inference constraint</text>
+<text x="810" y="630" font-family="Arial" font-size="17">Read-only default + least privilege</text>
+<text x="810" y="665" font-family="Arial" font-size="17">HITL + exact command preview + audit log</text>
+
+<rect x="190" y="830" width="1020" height="95" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="230" y="885" font-family="Arial" font-size="22" font-weight="700">Evidence → deterministic tools → structured facts → AI reasoning → human verification → controlled action.</text>
+</svg>
