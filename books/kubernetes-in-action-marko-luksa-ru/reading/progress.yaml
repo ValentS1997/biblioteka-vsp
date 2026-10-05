@@ -1,8 +1,25 @@
 schema: biblioteka-vsp/reading/v1
 book_id: kubernetes-in-action-marko-luksa-ru
-status: planned
+
+status: completed
 scope: full_book
-started: null
-completed: null
+
+started:
+  month: "[Needs confirmation]"
+  exact_date: "[Needs confirmation]"
+
+completed:
+  month: "[Needs confirmation]"
+  exact_date: "[Needs confirmation]"
+
 current_page: null
 current_chapter: null
+
+reading_boundary:
+  mode: full_book_available
+  reason: "User explicitly confirmed completion by advancing the book to final audit / closure state."
+
+notes:
+  - "Historical start and completion dates were not provided in the surviving branch context."
+  - "Exact historical per-session page ranges are not reconstructed."
+  - "Completion of the whole book is the authoritative reading-state fact."

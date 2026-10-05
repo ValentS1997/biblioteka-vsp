@@ -2,12 +2,14 @@ schema: biblioteka-vsp/book/v1
 
 id: kubernetes-in-action-marko-luksa-ru
 title: "Kubernetes в действии"
+original_title: "Kubernetes in Action"
 
 edition:
   language: ru
   number: "[Needs confirmation]"
-  publisher: "[Needs confirmation]"
-  publication_year: "[Needs confirmation]"
+  publisher: "ДМК Пресс"
+  publication_year: 2019
+  publication_pages: 672
 
 authors:
   - "Марко Лукша"
@@ -16,7 +18,8 @@ translators:
   - "А. В. Логунов"
 
 isbn:
-  russian_edition: "[Needs confirmation]"
+  russian_edition: "978-5-97060-642-1"
+  original_edition: "978-5-97060-657-5"
 
 source:
   canonical_path: "source/book.pdf"
@@ -35,7 +38,7 @@ source:
   lawful_access_attested_by_user: "[Needs confirmation]"
   ownership_category: "[Needs confirmation]"
   physical_copy: "[Needs confirmation]"
-  license: "[Needs confirmation]"
+  license: "all rights reserved"
   redistribution_permission: "[Needs confirmation]"
 
 rag:
@@ -51,6 +54,6 @@ rag:
 reading:
   progress: "reading/progress.yaml"
   journal: "reading/journal.md"
-  status: planned
-  started: null
-  completed: null
+  status: completed
+  started: "[Needs confirmation]"
+  completed: "[Needs confirmation]"
