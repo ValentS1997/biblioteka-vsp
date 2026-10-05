@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect width="1200" height="720" fill="#ffffff"/>
+<text x="45" y="55" font-family="Arial" font-size="34" font-weight="700">Глава 11 — Scope Activity</text>
+<rect x="60" y="120" width="260" height="150" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="90" y="160" font-family="Arial" font-size="22" font-weight="700">IOC Inventory</text>
+<text x="90" y="200" font-family="Arial" font-size="17">files / network / accounts</text>
+<text x="90" y="235" font-family="Arial" font-size="17">behavior / config / services</text>
+
+<rect x="365" y="120" width="260" height="150" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="395" y="160" font-family="Arial" font-size="22" font-weight="700">Search Broadly</text>
+<text x="395" y="200" font-family="Arial" font-size="17">SIEM / EDR / scans</text>
+<text x="395" y="235" font-family="Arial" font-size="17">cloud / network / scripts</text>
+
+<rect x="670" y="120" width="260" height="150" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="700" y="160" font-family="Arial" font-size="22" font-weight="700">Timeline</text>
+<text x="700" y="200" font-family="Arial" font-size="17">initial access / movement</text>
+<text x="700" y="235" font-family="Arial" font-size="17">persistence / exfiltration</text>
+
+<rect x="975" y="120" width="170" height="150" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="1000" y="160" font-family="Arial" font-size="22" font-weight="700">Handoff</text>
+<text x="1000" y="200" font-family="Arial" font-size="17">systems</text>
+<text x="1000" y="235" font-family="Arial" font-size="17">IOCs + timeline</text>
+
+<rect x="100" y="380" width="450" height="190" rx="14" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="130" y="420" font-family="Arial" font-size="22" font-weight="700">Scoping challenges</text>
+<text x="130" y="460" font-family="Arial" font-size="17">visibility gaps • anti-forensics</text>
+<text x="130" y="495" font-family="Arial" font-size="17">legacy/ICS • sampled flow</text>
+<text x="130" y="530" font-family="Arial" font-size="17">ephemeral cloud assets</text>
+
+<rect x="650" y="380" width="450" height="190" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="680" y="420" font-family="Arial" font-size="22" font-weight="700">Progressive scoping</text>
+<text x="680" y="460" font-family="Arial" font-size="17">critical assets</text>
+<text x="680" y="495" font-family="Arial" font-size="17">→ lateral expansion</text>
+<text x="680" y="530" font-family="Arial" font-size="17">→ environmental sweep</text>
+
+<text x="190" y="650" font-family="Arial" font-size="24" font-weight="700">Scope = определить реальную границу incident, а не только известные hosts.</text>
+</svg>
