@@ -4,5 +4,7 @@
 
 - [Глава 2. Функции, модули, пакеты и их тестирование](./chapter-02-functions-modules-packages-testing/) — `RAG_GROUNDED`, PDF 101–152.
 
+- [Глава 3. Объектно-ориентированное программирование в Go](./chapter-03-object-oriented-programming/) — `RAG_GROUNDED`, PDF 153–198.
+
 Book-level readiness must be `READY` before running
 `BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.6`.
