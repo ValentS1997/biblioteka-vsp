@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000">
+<rect width="1400" height="1000" fill="#ffffff"/>
+<text x="45" y="55" font-family="Arial" font-size="36" font-weight="700">Глава 9 — Verification and Triage capability map</text>
+
+<rect x="60" y="120" width="300" height="220" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="90" y="160" font-family="Arial" font-size="22" font-weight="700">Inputs from Detect</text>
+<text x="90" y="205" font-family="Arial" font-size="16">EOI / alert source</text>
+<text x="90" y="240" font-family="Arial" font-size="16">timestamps / assets</text>
+<text x="90" y="275" font-family="Arial" font-size="16">technical indicators</text>
+<text x="90" y="310" font-family="Arial" font-size="16">initial evidence references</text>
+
+<rect x="400" y="120" width="300" height="220" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="430" y="160" font-family="Arial" font-size="22" font-weight="700">Verification</text>
+<text x="430" y="205" font-family="Arial" font-size="16">Document incident</text>
+<text x="430" y="240" font-family="Arial" font-size="16">CTI enrichment</text>
+<text x="430" y="275" font-family="Arial" font-size="16">Initial risk assessment</text>
+<text x="430" y="310" font-family="Arial" font-size="16">Continue / Stop / Defer</text>
+
+<rect x="740" y="120" width="300" height="220" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="770" y="160" font-family="Arial" font-size="22" font-weight="700">Triage</text>
+<text x="770" y="205" font-family="Arial" font-size="16">Present facts clearly</text>
+<text x="770" y="240" font-family="Arial" font-size="16">Explain business impact</text>
+<text x="770" y="275" font-family="Arial" font-size="16">Recommend actions</text>
+<text x="770" y="310" font-family="Arial" font-size="16">Allocate resources</text>
+
+<rect x="1080" y="120" width="260" height="220" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="1110" y="160" font-family="Arial" font-size="22" font-weight="700">Decision Makers</text>
+<text x="1110" y="205" font-family="Arial" font-size="16">Managers / executives</text>
+<text x="1110" y="240" font-family="Arial" font-size="16">Data owners / Legal</text>
+<text x="1110" y="275" font-family="Arial" font-size="16">Business leaders</text>
+<text x="1110" y="310" font-family="Arial" font-size="16">Own response priorities</text>
+
+<rect x="90" y="460" width="370" height="240" rx="14" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="120" y="505" font-family="Arial" font-size="22" font-weight="700">Proving a negative</text>
+<text x="120" y="550" font-family="Arial" font-size="16">"Nothing found" is weak.</text>
+<text x="120" y="585" font-family="Arial" font-size="16">Document scope, tools, time window,</text>
+<text x="120" y="620" font-family="Arial" font-size="16">evidence checked and blind spots.</text>
+<text x="120" y="655" font-family="Arial" font-size="16">Defend the work, not absence alone.</text>
+
+<rect x="515" y="460" width="370" height="240" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="545" y="505" font-family="Arial" font-size="22" font-weight="700">CTI role</text>
+<text x="545" y="550" font-family="Arial" font-size="16">Enrich ambiguous indicators</text>
+<text x="545" y="585" font-family="Arial" font-size="16">Calibrate risk</text>
+<text x="545" y="620" font-family="Arial" font-size="16">Pivot to related indicators</text>
+<text x="545" y="655" font-family="Arial" font-size="16">Never use CTI as sole proof</text>
+
+<rect x="940" y="460" width="370" height="240" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="970" y="505" font-family="Arial" font-size="22" font-weight="700">Examples</text>
+<text x="970" y="550" font-family="Arial" font-size="16">WordPress → Continue</text>
+<text x="970" y="585" font-family="Arial" font-size="16">Unpaid Toll → Stop</text>
+<text x="970" y="620" font-family="Arial" font-size="16">S3 Bucket → Defer</text>
+<text x="970" y="655" font-family="Arial" font-size="16">Vendor breach → high-risk Triage</text>
+
+<rect x="180" y="815" width="1040" height="110" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="220" y="860" font-family="Arial" font-size="22" font-weight="700">Outcome</text>
+<text x="220" y="900" font-family="Arial" font-size="17">Only verified incidents consume broader response resources; triage aligns those resources with organizational impact.</text>
+</svg>
