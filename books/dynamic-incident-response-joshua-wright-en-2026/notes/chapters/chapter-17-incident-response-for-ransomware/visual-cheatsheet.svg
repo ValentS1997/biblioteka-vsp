@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect width="1200" height="720" fill="#fff"/>
+<text x="45" y="55" font-family="Arial" font-size="34" font-weight="700">Глава 17 — Ransomware Response</text>
+
+<rect x="60" y="120" width="250" height="150" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="90" y="160" font-family="Arial" font-size="22" font-weight="700">Prepare</text>
+<text x="90" y="200" font-family="Arial" font-size="17">identity / backups</text>
+<text x="90" y="235" font-family="Arial" font-size="17">comms / CTI / training</text>
+
+<rect x="350" y="120" width="250" height="150" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="380" y="160" font-family="Arial" font-size="22" font-weight="700">Scope</text>
+<text x="380" y="200" font-family="Arial" font-size="17">hosts / accounts / backups</text>
+<text x="380" y="235" font-family="Arial" font-size="17">exfiltration / timeline</text>
+
+<rect x="640" y="120" width="250" height="150" rx="14" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="670" y="160" font-family="Arial" font-size="22" font-weight="700">Eradicate</text>
+<text x="670" y="200" font-family="Arial" font-size="17">remove access / persistence</text>
+<text x="670" y="235" font-family="Arial" font-size="17">evaluate decryptors</text>
+
+<rect x="930" y="120" width="210" height="150" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="960" y="160" font-family="Arial" font-size="22" font-weight="700">Recover</text>
+<text x="960" y="200" font-family="Arial" font-size="17">clean restore</text>
+<text x="960" y="235" font-family="Arial" font-size="17">monitor return</text>
+
+<rect x="110" y="390" width="430" height="180" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="140" y="430" font-family="Arial" font-size="22" font-weight="700">Critical rules</text>
+<text x="140" y="470" font-family="Arial" font-size="17">encryption time ≠ initial compromise</text>
+<text x="140" y="505" font-family="Arial" font-size="17">decrypt ≠ clean system</text>
+<text x="140" y="540" font-family="Arial" font-size="17">payment ≠ proof of data deletion</text>
+
+<rect x="660" y="390" width="430" height="180" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="690" y="430" font-family="Arial" font-size="22" font-weight="700">Resilience</text>
+<text x="690" y="470" font-family="Arial" font-size="17">3-2-1-1-0 backups</text>
+<text x="690" y="505" font-family="Arial" font-size="17">Incident Commander</text>
+<text x="690" y="540" font-family="Arial" font-size="17">sustainable response staffing</text>
+
+<text x="135" y="650" font-family="Arial" font-size="24" font-weight="700">Ransomware response is a prolonged business crisis, not just malware cleanup.</text>
+</svg>
