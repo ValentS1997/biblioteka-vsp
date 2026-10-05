@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect width="1200" height="720" fill="#ffffff"/>
+<text x="45" y="55" font-family="Arial" font-size="34" font-weight="700">Глава 10 — Response Actions Loop</text>
+
+<rect x="80" y="140" width="220" height="110" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="125" y="185" font-family="Arial" font-size="22" font-weight="700">Scope</text>
+<text x="115" y="220" font-family="Arial" font-size="17">understand breadth</text>
+
+<rect x="355" y="140" width="220" height="110" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="395" y="185" font-family="Arial" font-size="22" font-weight="700">Contain</text>
+<text x="390" y="220" font-family="Arial" font-size="17">stop ongoing harm</text>
+
+<rect x="630" y="140" width="220" height="110" rx="14" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="665" y="185" font-family="Arial" font-size="22" font-weight="700">Eradicate</text>
+<text x="660" y="220" font-family="Arial" font-size="17">remove presence</text>
+
+<rect x="905" y="140" width="220" height="110" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="945" y="185" font-family="Arial" font-size="22" font-weight="700">Recover</text>
+<text x="945" y="220" font-family="Arial" font-size="17">restore operations</text>
+
+<rect x="110" y="360" width="430" height="170" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="140" y="405" font-family="Arial" font-size="22" font-weight="700">Iteration Triggers</text>
+<text x="140" y="445" font-family="Arial" font-size="17">new IOC • scope expansion</text>
+<text x="140" y="480" font-family="Arial" font-size="17">incomplete eradication</text>
+<text x="140" y="515" font-family="Arial" font-size="17">new evidence • business change</text>
+
+<rect x="660" y="360" width="430" height="170" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="690" y="405" font-family="Arial" font-size="22" font-weight="700">Loop Exit</text>
+<text x="690" y="445" font-family="Arial" font-size="17">technical indicators resolved</text>
+<text x="690" y="480" font-family="Arial" font-size="17">acceptable residual risk</text>
+<text x="690" y="515" font-family="Arial" font-size="17">documented decision maker sign-off</text>
+
+<text x="240" y="645" font-family="Arial" font-size="24" font-weight="700">Iteration is expected learning, not failed execution.</text>
+</svg>
