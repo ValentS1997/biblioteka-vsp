@@ -73,7 +73,15 @@ def render():
         if paths.get("rag_manifest") and (ROOT / paths["rag_manifest"]).is_file():
             rags[kid] = y(ROOT / paths["rag_manifest"])
 
-    books = sorted(reg["books"], key=lambda b: b["number"])
+    inventory_books = tuple(sorted(reg["books"], key=lambda b: b["number"]))
+    expected_inventory_count = reg["scope"]["book_count"]
+    if len(inventory_books) != expected_inventory_count:
+        raise ValueError(
+            "registry invariant failed: "
+            f"scope.book_count={expected_inventory_count}, "
+            f"inventory rows={len(inventory_books)}"
+        )
+
     lines = [
         "<!-- GENERATED FILE. DO NOT EDIT MANUALLY. -->",
         "<!-- Source: registry/books.yaml + books/index.yaml + per-book reading/RAG manifests -->",
@@ -82,7 +90,7 @@ def render():
         "",
         "Канонический human-readable view. Архитектурный контракт: [`ARCHITECTURE.md`](./ARCHITECTURE.md).",
         "",
-        f"> **{len(books)} инвентарных книг** · инвентарные номера `0001–0046` · **{reg['electronic_holdings']['file_count']} электронный файл** · актуально на `{reg['updated']}`",
+        f"> **{len(inventory_books)} инвентарных книг** · инвентарные номера `0001–0046` · **{reg['electronic_holdings']['file_count']} электронный файл** · актуально на `{reg['updated']}`",
     ]
 
     reverse = {}
@@ -92,7 +100,7 @@ def render():
     reading_completed = []
     pdf_needed = []
 
-    for b in books:
+    for b in inventory_books:
         inv, kid = b["inventory_number"], b.get("knowledge_id")
         p = progress.get(kid) if kid else None
         status = (p or {}).get("status")
@@ -143,13 +151,15 @@ def render():
 
     lines += [
         "", "## Реестр книг", "",
+        f"**Инвариант:** эта таблица всегда содержит весь inventory — {len(inventory_books)}/{expected_inventory_count} позиций. Дополнительные разделы выше и ниже являются только представлениями и не исключают книги из реестра.",
+        "",
         "Обозначения: `Эл.` — известная электронная версия; `Прочитано`, `Начал читать` и `Закончил читать` — derived из `books/<knowledge-id>/reading/progress.yaml`; `Есть RAG` — derived из `books/<knowledge-id>/rag/manifest.yaml`.",
         "",
         "| № | Инв. № | Название | Начал читать | Закончил читать | Есть RAG | Прочитано | Эл. | Кратко | Направление | Автор(ы) | Перевод / редактура |",
         "|---:|:------:|---|:---:|:---:|:---:|:---:|:---:|---|---|---|---|",
     ]
 
-    for b in books:
+    for b in inventory_books:
         inv, kid = b["inventory_number"], b.get("knowledge_id")
         if kid:
             reverse[kid] = inv
@@ -204,13 +214,13 @@ def render():
             lines.append(f"| {refs} | ⚠️ {str(h['format']).upper()} | {esc(h.get('note', '[Needs confirmation]'))} |")
 
     src, eh = reg["source"], reg["electronic_holdings"]
-    inventory_knowledge_mappings = sum(1 for b in books if b.get("knowledge_id"))
+    inventory_knowledge_mappings = sum(1 for b in inventory_books if b.get("knowledge_id"))
     knowledge_entries = len(idx_by_id)
     knowledge_without_inventory = len(set(idx_by_id) - set(reverse))
     knowledge_rag_ready = sum(1 for m in rags.values() if rag_label(m) == "Да")
     lines += [
         "", "## Контроль", "", "| Параметр | Значение |", "|---|---:|",
-        f"| Инвентарных книг | **{len(books)}** |",
+        f"| Инвентарных книг | **{len(inventory_books)}** |",
         f"| Inventory → knowledge mappings | **{inventory_knowledge_mappings}** |",
         f"| Knowledge entries всего | **{knowledge_entries}** |",
         f"| Knowledge entries без inventory | **{knowledge_without_inventory}** |",
