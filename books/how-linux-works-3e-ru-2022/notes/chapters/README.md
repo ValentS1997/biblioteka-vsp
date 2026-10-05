@@ -5,3 +5,4 @@ Reviewed chapter-level notes are stored here. Historical notes are not reconstru
 - [Chapter 1 — Общая картина](chapter-01-big-picture/README.md)
 - [Chapter 2 — Основные команды и иерархия каталогов](chapter-02-basic-commands-and-directory-hierarchy/README.md)
 - [Chapter 3 — Устройства](chapter-03-devices/README.md)
+- [Chapter 4 — Диски и файловые системы](chapter-04-disks-and-filesystems/README.md)
