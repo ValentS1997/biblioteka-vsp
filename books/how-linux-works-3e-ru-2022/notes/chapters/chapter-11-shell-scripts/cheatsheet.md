@@ -45,14 +45,9 @@ $?         last command return code
 
 ## Read-only checks
 
-### Inspect script and interpreter
+### Script/interpreter baseline
 
-```bash
-ls -l <script>
-head <script>
-```
-
-Source does not provide these exact diagnostic commands as a formal workflow, so only the permission/shebang concepts are canonical; use repository artifact examples as syntax reference.
+Source requires the script file to be readable and executable and places the interpreter selector in the first-line shebang. Exact read-only inspection commands are not prescribed in this chapter: `[Needs confirmation]`.
 
 ### Check return code immediately
 

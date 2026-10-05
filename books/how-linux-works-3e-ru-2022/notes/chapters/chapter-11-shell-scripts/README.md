@@ -41,7 +41,7 @@
 - `p0367:c01` завершает раздел 11.14 «Когда не стоит использовать сценарии оболочки».
 - Следующий чанк `p0368:c01` начинается главой 12 «Передача файлов по сети и доступ к ним».
 - Chapter boundary verified: yes
-- Completion status: `RAG_GROUNDED`
+- Completion status: `ACCEPTED`
 
 ## Содержимое
 
