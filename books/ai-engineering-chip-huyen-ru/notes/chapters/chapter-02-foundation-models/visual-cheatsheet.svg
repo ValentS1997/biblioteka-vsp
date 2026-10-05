@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 2 — Знакомство с базовыми моделями</title>
+  <desc id="desc">Компактная шпаргалка: данные, архитектура и масштаб, post-training, sampling и вероятностные риски.</desc>
+  <rect width="1600" height="900" fill="#f6f8fb"/>
+  <rect width="1600" height="110" fill="#17202a"/>
+  <text x="56" y="48" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#ffffff">Глава 2 — Знакомство с базовыми моделями</text>
+  <text x="56" y="83" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">Data → model design → post-training → sampling → output</text>
+
+  <rect x="50" y="145" width="470" height="260" rx="18" fill="#ffffff" stroke="#5dade2" stroke-width="2"/>
+  <text x="78" y="187" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#1b4f72">Training data</text>
+  <text x="78" y="226" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="78" dy="0">Качество · количество · разнообразие</tspan>
+    <tspan x="78" dy="31">Языки представлены неравномерно.</tspan>
+    <tspan x="78" dy="31">Domain-specific задачи требуют своих данных.</tspan>
+    <tspan x="78" dy="40" font-weight="700">Нет нужных данных → нет надежной способности.</tspan>
+  </text>
+
+  <rect x="565" y="145" width="470" height="260" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="593" y="187" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#196f3d">Architecture + scale</text>
+  <text x="593" y="226" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="593" dy="0">Transformer: attention, parallel processing.</tspan>
+    <tspan x="593" dy="31">Scale ≠ только parameters.</tspan>
+    <tspan x="593" dy="31">Смотреть: parameters · training tokens · FLOP.</tspan>
+    <tspan x="593" dy="31">MoE: total и active parameters различаются.</tspan>
+  </text>
+
+  <rect x="1080" y="145" width="470" height="260" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1108" y="187" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#9c640c">Post-training</text>
+  <text x="1108" y="226" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1108" dy="0">Pretraining: следующий token.</tspan>
+    <tspan x="1108" dy="31">SFT: демонстрационные request/answer.</tspan>
+    <tspan x="1108" dy="31">Preferences: RLHF · DPO · RLAIF.</tspan>
+    <tspan x="1108" dy="31">RLHF: reward model → optimization.</tspan>
+  </text>
+
+  <rect x="50" y="450" width="470" height="270" rx="18" fill="#ffffff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="78" y="492" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#6c3483">Sampling controls</text>
+  <text x="78" y="532" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="78" dy="0">logits → softmax → token probabilities</tspan>
+    <tspan x="78" dy="31">temperature: diversity / predictability</tspan>
+    <tspan x="78" dy="31">top-k: fixed candidate count</tspan>
+    <tspan x="78" dy="31">top-p: cumulative probability set</tspan>
+    <tspan x="78" dy="31">stop: latency/cost vs completeness</tspan>
+  </text>
+
+  <rect x="565" y="450" width="470" height="270" rx="18" fill="#ffffff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="593" y="492" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#21618c">Structured output</text>
+  <text x="593" y="532" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="593" dy="0">prompt</tspan>
+    <tspan x="593" dy="31">→ generate/check again</tspan>
+    <tspan x="593" dy="31">→ post-processing</tspan>
+    <tspan x="593" dy="31">→ constrained sampling</tspan>
+    <tspan x="593" dy="31">→ fine-tuning</tspan>
+  </text>
+
+  <rect x="1080" y="450" width="470" height="270" rx="18" fill="#ffffff" stroke="#ec7063" stroke-width="2"/>
+  <text x="1108" y="492" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#922b21">Probabilistic risks</text>
+  <text x="1108" y="532" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1108" dy="0">Один input может дать разные outputs.</tspan>
+    <tspan x="1108" dy="31">Малое изменение input → большой сдвиг output.</tspan>
+    <tspan x="1108" dy="31">Фиксация settings помогает, но не гарантирует.</tspan>
+    <tspan x="1108" dy="31">Галлюцинации требуют отдельного контроля.</tspan>
+  </text>
+
+  <rect x="50" y="775" width="1500" height="72" rx="14" fill="#17202a"/>
+  <text x="78" y="820" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#ffffff">Принцип: объясняй поведение модели всей цепочкой причин, а не только размером модели.</text>
+</svg>
