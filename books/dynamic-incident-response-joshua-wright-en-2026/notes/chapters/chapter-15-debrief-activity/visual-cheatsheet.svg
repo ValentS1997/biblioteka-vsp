@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect width="1200" height="720" fill="#ffffff"/>
+<text x="45" y="55" font-family="Arial" font-size="34" font-weight="700">Глава 15 — Debrief Activity</text>
+
+<rect x="70" y="120" width="250" height="150" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="100" y="160" font-family="Arial" font-size="22" font-weight="700">Close</text>
+<text x="100" y="200" font-family="Arial" font-size="17">assets / evidence</text>
+<text x="100" y="235" font-family="Arial" font-size="17">authoritative record</text>
+
+<rect x="360" y="120" width="250" height="150" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="390" y="160" font-family="Arial" font-size="22" font-weight="700">Measure</text>
+<text x="390" y="200" font-family="Arial" font-size="17">MTTD / MTTR / scope</text>
+<text x="390" y="235" font-family="Arial" font-size="17">cost / lifecycle</text>
+
+<rect x="650" y="120" width="250" height="150" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="680" y="160" font-family="Arial" font-size="22" font-weight="700">Learn</text>
+<text x="680" y="200" font-family="Arial" font-size="17">AAR / timeline</text>
+<text x="680" y="235" font-family="Arial" font-size="17">what worked / why</text>
+
+<rect x="940" y="120" width="190" height="150" rx="14" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="970" y="160" font-family="Arial" font-size="22" font-weight="700">Improve</text>
+<text x="970" y="200" font-family="Arial" font-size="17">owners / dates</text>
+<text x="970" y="235" font-family="Arial" font-size="17">follow-up</text>
+
+<rect x="110" y="390" width="430" height="180" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="140" y="430" font-family="Arial" font-size="22" font-weight="700">Reporting</text>
+<text x="140" y="470" font-family="Arial" font-size="17">Executive summary</text>
+<text x="140" y="505" font-family="Arial" font-size="17">Technical incident report</text>
+<text x="140" y="540" font-family="Arial" font-size="17">presentation + decisions</text>
+
+<rect x="660" y="390" width="430" height="180" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="690" y="430" font-family="Arial" font-size="22" font-weight="700">Recommendation horizons</text>
+<text x="690" y="470" font-family="Arial" font-size="17">Immediate</text>
+<text x="690" y="505" font-family="Arial" font-size="17">Short-term</text>
+<text x="690" y="540" font-family="Arial" font-size="17">Long-term</text>
+
+<text x="170" y="650" font-family="Arial" font-size="24" font-weight="700">Debrief is complete when lessons become owned, tracked change.</text>
+</svg>
