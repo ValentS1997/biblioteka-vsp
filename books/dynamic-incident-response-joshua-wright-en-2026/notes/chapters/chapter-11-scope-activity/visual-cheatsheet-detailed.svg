@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000">
+<rect width="1400" height="1000" fill="#ffffff"/>
+<text x="45" y="55" font-family="Arial" font-size="36" font-weight="700">Глава 11 — Scoping operating model</text>
+
+<rect x="60" y="115" width="360" height="230" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="90" y="155" font-family="Arial" font-size="22" font-weight="700">IOC Classes</text>
+<text x="90" y="200" font-family="Arial" font-size="16">File / Network</text>
+<text x="90" y="235" font-family="Arial" font-size="16">Process / Service</text>
+<text x="90" y="270" font-family="Arial" font-size="16">Registry / Configuration</text>
+<text x="90" y="305" font-family="Arial" font-size="16">Account / Behavioral</text>
+
+<rect x="520" y="115" width="360" height="230" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="550" y="155" font-family="Arial" font-size="22" font-weight="700">Scoping Methods</text>
+<text x="550" y="200" font-family="Arial" font-size="16">Enterprise-wide hunting</text>
+<text x="550" y="235" font-family="Arial" font-size="16">Critical asset prioritization</text>
+<text x="550" y="270" font-family="Arial" font-size="16">Lateral expansion</text>
+<text x="550" y="305" font-family="Arial" font-size="16">Environmental sweep</text>
+
+<rect x="980" y="115" width="360" height="230" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="1010" y="155" font-family="Arial" font-size="22" font-weight="700">Timeline Ownership</text>
+<text x="1010" y="200" font-family="Arial" font-size="16">Initial compromise</text>
+<text x="1010" y="235" font-family="Arial" font-size="16">Lateral movement</text>
+<text x="1010" y="270" font-family="Arial" font-size="16">Persistence deployment</text>
+<text x="1010" y="305" font-family="Arial" font-size="16">Sensitive data access/exfiltration</text>
+
+<rect x="80" y="445" width="390" height="250" rx="14" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="110" y="490" font-family="Arial" font-size="22" font-weight="700">Visibility Challenges</text>
+<text x="110" y="535" font-family="Arial" font-size="16">BYOD / shadow IT / legacy</text>
+<text x="110" y="570" font-family="Arial" font-size="16">IoT / ICS / limited logs</text>
+<text x="110" y="605" font-family="Arial" font-size="16">sampled flow</text>
+<text x="110" y="640" font-family="Arial" font-size="16">ephemeral cloud assets</text>
+
+<rect x="505" y="445" width="390" height="250" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="535" y="490" font-family="Arial" font-size="22" font-weight="700">Anti-Forensics</text>
+<text x="535" y="535" font-family="Arial" font-size="16">log deletion / flooding</text>
+<text x="535" y="570" font-family="Arial" font-size="16">timestomping</text>
+<text x="535" y="605" font-family="Arial" font-size="16">encryption / obfuscation</text>
+<text x="535" y="640" font-family="Arial" font-size="16">living off the land</text>
+
+<rect x="930" y="445" width="390" height="250" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="960" y="490" font-family="Arial" font-size="22" font-weight="700">Scope Outputs</text>
+<text x="960" y="535" font-family="Arial" font-size="16">Compromised system list</text>
+<text x="960" y="570" font-family="Arial" font-size="16">Canonical IOC inventory</text>
+<text x="960" y="605" font-family="Arial" font-size="16">Attack-progression timeline</text>
+<text x="960" y="640" font-family="Arial" font-size="16">Visibility gaps / open questions</text>
+
+<rect x="170" y="810" width="1060" height="110" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="210" y="855" font-family="Arial" font-size="22" font-weight="700">Feedback loop</text>
+<text x="210" y="895" font-family="Arial" font-size="17">Contain / Eradicate / Recover can reveal new evidence → return to Scope and refine boundaries.</text>
+</svg>
