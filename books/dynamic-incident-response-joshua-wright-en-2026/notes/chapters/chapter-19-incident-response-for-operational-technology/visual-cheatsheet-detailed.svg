@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000">
+<rect width="1400" height="1000" fill="#fff"/>
+<text x="50" y="60" font-family="Arial" font-size="36" font-weight="700">Chapter 19 — OT incident response capability map</text>
+
+<rect x="70" y="120" width="380" height="260" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="100" y="165" font-family="Arial" font-size="22" font-weight="700">Engineering Context</text>
+<text x="100" y="210" font-family="Arial" font-size="17">Asset role / process dependency</text>
+<text x="100" y="245" font-family="Arial" font-size="17">Industrial protocols</text>
+<text x="100" y="280" font-family="Arial" font-size="17">Vendor / lifecycle constraints</text>
+<text x="100" y="315" font-family="Arial" font-size="17">Safety and operator visibility</text>
+
+<rect x="510" y="120" width="380" height="260" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="540" y="165" font-family="Arial" font-size="22" font-weight="700">Evidence / Scope</text>
+<text x="540" y="210" font-family="Arial" font-size="17">Firewall / packet / flow</text>
+<text x="540" y="245" font-family="Arial" font-size="17">Protocol-aware analysis</text>
+<text x="540" y="280" font-family="Arial" font-size="17">HMI / historian / engineering WS</text>
+<text x="540" y="315" font-family="Arial" font-size="17">Controller logic and config</text>
+
+<rect x="950" y="120" width="380" height="260" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="980" y="165" font-family="Arial" font-size="22" font-weight="700">Contain / Eradicate</text>
+<text x="980" y="210" font-family="Arial" font-size="17">Selective restrictions</text>
+<text x="980" y="245" font-family="Arial" font-size="17">Island / manual operations</text>
+<text x="980" y="280" font-family="Arial" font-size="17">Remove access carefully</text>
+<text x="980" y="315" font-family="Arial" font-size="17">Validate known-good logic</text>
+
+<rect x="120" y="500" width="500" height="220" rx="14" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="150" y="545" font-family="Arial" font-size="22" font-weight="700">OT failure mode</text>
+<text x="150" y="590" font-family="Arial" font-size="17">Aggressive IT containment</text>
+<text x="150" y="625" font-family="Arial" font-size="17">→ loss of process visibility/control</text>
+<text x="150" y="660" font-family="Arial" font-size="17">→ higher operational/safety risk</text>
+
+<rect x="780" y="500" width="500" height="220" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="810" y="545" font-family="Arial" font-size="22" font-weight="700">Recovery / Improvement</text>
+<text x="810" y="590" font-family="Arial" font-size="17">Trusted project repositories</text>
+<text x="810" y="625" font-family="Arial" font-size="17">Physical walkthrough + startup sequence</text>
+<text x="810" y="660" font-family="Arial" font-size="17">Architecture / visibility / remote access</text>
+
+<rect x="190" y="830" width="1020" height="95" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="230" y="885" font-family="Arial" font-size="22" font-weight="700">Cybersecurity action is acceptable only when engineering confirms the physical process remains safe and controllable.</text>
+</svg>
