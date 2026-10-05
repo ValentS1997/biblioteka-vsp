@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000">
+<rect width="1400" height="1000" fill="#ffffff"/>
+<text x="45" y="55" font-family="Arial" font-size="36" font-weight="700">Глава 12 — Containment operating model</text>
+
+<rect x="55" y="115" width="300" height="220" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="85" y="155" font-family="Arial" font-size="22" font-weight="700">Strategy Selection</text>
+<text x="85" y="200" font-family="Arial" font-size="16">Passive: observe</text>
+<text x="85" y="235" font-family="Arial" font-size="16">Active: isolate/revoke/block</text>
+<text x="85" y="270" font-family="Arial" font-size="16">Adaptive: escalate progressively</text>
+<text x="85" y="305" font-family="Arial" font-size="16">Timing based on impact + evidence</text>
+
+<rect x="385" y="115" width="300" height="220" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="415" y="155" font-family="Arial" font-size="22" font-weight="700">Identity Layer</text>
+<text x="415" y="200" font-family="Arial" font-size="16">Credentials</text>
+<text x="415" y="235" font-family="Arial" font-size="16">Sessions</text>
+<text x="415" y="270" font-family="Arial" font-size="16">Refresh/offline tokens</text>
+<text x="415" y="305" font-family="Arial" font-size="16">Conditional access / SSO</text>
+
+<rect x="715" y="115" width="300" height="220" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="745" y="155" font-family="Arial" font-size="22" font-weight="700">Technical Layer</text>
+<text x="745" y="200" font-family="Arial" font-size="16">Network isolation / DNS</text>
+<text x="745" y="235" font-family="Arial" font-size="16">EDR / firewall / process</text>
+<text x="745" y="270" font-family="Arial" font-size="16">WAF / database controls</text>
+<text x="745" y="305" font-family="Arial" font-size="16">Cloud / SaaS / serverless</text>
+
+<rect x="1045" y="115" width="300" height="220" rx="14" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="1075" y="155" font-family="Arial" font-size="22" font-weight="700">Evidence Layer</text>
+<text x="1075" y="200" font-family="Arial" font-size="16">Memory</text>
+<text x="1075" y="235" font-family="Arial" font-size="16">Active connections</text>
+<text x="1075" y="270" font-family="Arial" font-size="16">Processes / logs</text>
+<text x="1075" y="305" font-family="Arial" font-size="16">Snapshots / configuration</text>
+
+<rect x="85" y="450" width="370" height="250" rx="14" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="115" y="495" font-family="Arial" font-size="22" font-weight="700">Failure modes</text>
+<text x="115" y="540" font-family="Arial" font-size="16">premature containment</text>
+<text x="115" y="575" font-family="Arial" font-size="16">delayed containment</text>
+<text x="115" y="610" font-family="Arial" font-size="16">session/token persistence</text>
+<text x="115" y="645" font-family="Arial" font-size="16">management plane compromised</text>
+
+<rect x="515" y="450" width="370" height="250" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="545" y="495" font-family="Arial" font-size="22" font-weight="700">Modern environments</text>
+<text x="545" y="540" font-family="Arial" font-size="16">Cloud identity-first</text>
+<text x="545" y="575" font-family="Arial" font-size="16">Remote worker endpoint-first</text>
+<text x="545" y="610" font-family="Arial" font-size="16">Partner breach: trust/data flow</text>
+<text x="545" y="645" font-family="Arial" font-size="16">Serverless: trigger/code/IAM</text>
+
+<rect x="945" y="450" width="370" height="250" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="975" y="495" font-family="Arial" font-size="22" font-weight="700">Validation</text>
+<text x="975" y="540" font-family="Arial" font-size="16">C2 remains stopped?</text>
+<text x="975" y="575" font-family="Arial" font-size="16">processes remain clean?</text>
+<text x="975" y="610" font-family="Arial" font-size="16">auth/log activity normal?</text>
+<text x="975" y="645" font-family="Arial" font-size="16">attacker shifted technique?</text>
+
+<rect x="170" y="815" width="1060" height="110" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="210" y="860" font-family="Arial" font-size="22" font-weight="700">Containment loop</text>
+<text x="210" y="900" font-family="Arial" font-size="17">choose strategy → act → preserve evidence → validate → adapt → hand off to eradication.</text>
+</svg>

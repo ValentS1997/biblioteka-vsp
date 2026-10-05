@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect width="1200" height="720" fill="#ffffff"/>
+<text x="45" y="55" font-family="Arial" font-size="34" font-weight="700">Глава 12 — Contain Activity</text>
+<rect x="60" y="115" width="250" height="150" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="90" y="155" font-family="Arial" font-size="22" font-weight="700">Strategy</text>
+<text x="90" y="195" font-family="Arial" font-size="17">Passive / Active</text>
+<text x="90" y="230" font-family="Arial" font-size="17">Adaptive</text>
+
+<rect x="350" y="115" width="250" height="150" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="380" y="155" font-family="Arial" font-size="22" font-weight="700">Identity</text>
+<text x="380" y="195" font-family="Arial" font-size="17">credentials / sessions</text>
+<text x="380" y="230" font-family="Arial" font-size="17">tokens / conditional access</text>
+
+<rect x="640" y="115" width="250" height="150" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="670" y="155" font-family="Arial" font-size="22" font-weight="700">Infrastructure</text>
+<text x="670" y="195" font-family="Arial" font-size="17">network / host / cloud</text>
+<text x="670" y="230" font-family="Arial" font-size="17">SaaS / serverless</text>
+
+<rect x="930" y="115" width="210" height="150" rx="14" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="960" y="155" font-family="Arial" font-size="22" font-weight="700">Evidence</text>
+<text x="960" y="195" font-family="Arial" font-size="17">memory / sessions</text>
+<text x="960" y="230" font-family="Arial" font-size="17">logs / snapshots</text>
+
+<rect x="110" y="390" width="430" height="180" rx="14" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="140" y="430" font-family="Arial" font-size="22" font-weight="700">Critical risk</text>
+<text x="140" y="470" font-family="Arial" font-size="17">password reset ≠ session kill</text>
+<text x="140" y="505" font-family="Arial" font-size="17">session kill ≠ token revoke</text>
+<text x="140" y="540" font-family="Arial" font-size="17">aggressive action can trigger attacker</text>
+
+<rect x="660" y="390" width="430" height="180" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="690" y="430" font-family="Arial" font-size="22" font-weight="700">Validation</text>
+<text x="690" y="470" font-family="Arial" font-size="17">network • process • logs</text>
+<text x="690" y="505" font-family="Arial" font-size="17">baseline comparison</text>
+<text x="690" y="540" font-family="Arial" font-size="17">adapt if attacker retains access</text>
+
+<text x="135" y="650" font-family="Arial" font-size="24" font-weight="700">Containment = reduce attacker freedom without losing evidence or control.</text>
+</svg>
