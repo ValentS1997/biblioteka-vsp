@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1120" role="img" aria-labelledby="title desc">
+<title id="title">Глава 6 — подробная шпаргалка</title>
+<desc id="desc">systemd lifecycle, dependencies, System V, shutdown, initramfs and rescue boot.</desc>
+<rect width="1600" height="1120" fill="#f7f8fa"/>
+<rect x="0" y="0" width="1600" height="112" fill="#17202a"/>
+<text x="60" y="49" font-family="system-ui,Arial,sans-serif" font-size="35" font-weight="700" fill="#ffffff">Глава 6 — Запуск пользовательского пространства</text>
+<text x="60" y="85" font-family="system-ui,Arial,sans-serif" font-size="20" fill="#d6e4f0">init/PID 1 · systemd · cgroups · dependencies · SysV · shutdown · initramfs · rescue</text>
+
+<rect x="50" y="145" width="470" height="235" rx="18" fill="#ffffff" stroke="#5dade2" stroke-width="2"/>
+<text x="78" y="185" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#1b4f72">1. PID 1 / init</text>
+<text x="78" y="223" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="78" dy="0">Kernel starts init after root is available.</tspan><tspan x="78" dy="29">init starts/stops essential services.</tspan><tspan x="78" dy="29">low-level → network → higher services</tspan><tspan x="78" dy="29">then login/UI/applications</tspan></text>
+
+<rect x="565" y="145" width="470" height="235" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+<text x="593" y="185" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#196f3d">2. Unit model</text>
+<text x="593" y="223" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="593" dy="0">service · target · socket · mount</tspan><tspan x="593" dy="29">Dependency graph, not fixed sequence.</tspan><tspan x="593" dy="29">Units activate as dependencies are ready.</tspan><tspan x="593" dy="29">Events can activate units later.</tspan></text>
+
+<rect x="1080" y="145" width="470" height="235" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+<text x="1108" y="185" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#9c640c">3. Config + lifecycle</text>
+<text x="1108" y="223" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="1108" dy="0">vendor: /usr/lib or /lib/systemd/system</tspan><tspan x="1108" dy="29">local: /etc/systemd/system</tspan><tspan x="1108" dy="29">status → PID/cgroup/journal</tspan><tspan x="1108" dy="29">start · stop · restart · reload</tspan></text>
+
+<rect x="50" y="410" width="720" height="280" rx="18" fill="#ffffff" stroke="#af7ac5" stroke-width="2"/>
+<text x="78" y="450" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#6c3483">4. Dependencies and readiness</text>
+<text x="78" y="488" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="78" dy="0">Requires = strict · Wants = best-effort activation</tspan><tspan x="78" dy="29">Requisite = already active · Conflicts = negative dependency</tspan><tspan x="78" dy="29">Before/After control ordering.</tspan><tspan x="78" dy="29">Enable creates persistent dependency links; it does not start unit.</tspan><tspan x="78" dy="29">Type=simple/forking/notify/dbus/oneshot/idle describes startup.</tspan><tspan x="78" dy="29">cgroups track process descendants.</tspan></text>
+
+<rect x="810" y="410" width="740" height="280" rx="18" fill="#ffffff" stroke="#85c1e9" stroke-width="2"/>
+<text x="838" y="450" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#21618c">5. Resource activation</text>
+<text x="838" y="488" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="838" dy="0">socket/path/device unit represents resource.</tspan><tspan x="838" dy="29">systemd can listen before service starts.</tspan><tspan x="838" dy="29">Incoming data may be buffered.</tspan><tspan x="838" dy="29">Service activates and takes control.</tspan><tspan x="838" dy="29">Accept=true can create per-connection instances.</tspan><tspan x="838" dy="29">This shortens critical boot dependencies.</tspan></text>
+
+<rect x="50" y="720" width="470" height="250" rx="18" fill="#ffffff" stroke="#ec7063" stroke-width="2"/>
+<text x="78" y="760" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#922b21">6. System V compatibility</text>
+<text x="78" y="798" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="78" dy="0">runlevel 0–6 · /etc/inittab</tspan><tspan x="78" dy="29">rcN.d links → init.d scripts</tspan><tspan x="78" dy="29">S = start · K = stop · number = order</tspan><tspan x="78" dy="29">telinit changes runlevel/config</tspan><tspan x="78" dy="29">systemd can wrap legacy scripts</tspan></text>
+
+<rect x="565" y="720" width="470" height="250" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+<text x="593" y="760" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#9c640c">7. Shutdown + initramfs</text>
+<text x="593" y="798" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="593" dy="0">shutdown manages termination/unmount.</tspan><tspan x="593" dy="29">root → read-only, sync, then halt/reboot.</tspan><tspan x="593" dy="29">initramfs = temporary early user space.</tspan><tspan x="593" dy="29">loads drivers needed to reach real root.</tspan><tspan x="593" dy="29">then switches to full init.</tspan></text>
+
+<rect x="1080" y="720" width="470" height="250" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+<text x="1108" y="760" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#196f3d">8. Recovery</text>
+<text x="1108" y="798" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="1108" dy="0">Live/rescue image is preferred.</tspan><tspan x="1108" dy="29">Repair FS/config and restore backups.</tspan><tspan x="1108" dy="29">System V: runlevel 1.</tspan><tspan x="1108" dy="29">systemd: rescue.target.</tspan><tspan x="1108" dy="29">Boot parameter -s requests single-user mode.</tspan></text>
+
+<rect x="50" y="1005" width="1500" height="72" rx="14" fill="#17202a"/>
+<text x="76" y="1037" font-family="system-ui,Arial,sans-serif" font-size="20" font-weight="700" fill="#ffffff">Operational rule: status + journal + dependencies/path evidence before changing local unit state.</text>
+<text x="76" y="1064" font-family="system-ui,Arial,sans-serif" font-size="16" fill="#d6e4f0">Provenance: RAG p0176:c01–p0207:c01 · PDF/printed pages 176–207.</text>
+</svg>
