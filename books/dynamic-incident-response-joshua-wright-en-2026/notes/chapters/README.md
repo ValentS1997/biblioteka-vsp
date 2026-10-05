@@ -14,3 +14,4 @@ Source truth для анализа: canonical English RAG. Русский пер
 - [Chapter 6 — Динамический подход к реагированию на инциденты](chapter-06-a-dynamic-approach-to-incident-response/) — `ACCEPTED`
 - [Chapter 7 — Подготовка](chapter-07-prepare-activity/) — `ACCEPTED`
 - [Chapter 8 — Обнаружение](chapter-08-detect-activity/) — `ACCEPTED`
+- [Chapter 9 — Проверка и триаж](chapter-09-verify-and-triage-activities/) — `ACCEPTED`
