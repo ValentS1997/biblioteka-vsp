@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 1 — Почему именно RAG</title>
+  <desc id="desc">Компактная схема: проблема LLM, retrieval, augmentation, generation, evaluation и три retrieval-конфигурации.</desc>
+  <rect width="1200" height="760" fill="#ffffff"/>
+  <style>
+    text { font-family: Arial, sans-serif; fill: #111; }
+    .h1 { font-size: 30px; font-weight: 700; }
+    .h2 { font-size: 20px; font-weight: 700; }
+    .body { font-size: 17px; }
+    .small { font-size: 14px; }
+    .box { fill: #f7f7f7; stroke: #222; stroke-width: 2; rx: 14; }
+    .arrow { stroke: #222; stroke-width: 3; fill: none; marker-end: url(#a); }
+  </style>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#222"/>
+    </marker>
+  </defs>
+
+  <text x="60" y="55" class="h1">Глава 1. Почему именно генерация с дополненной выборкой (RAG)</text>
+  <text x="60" y="88" class="small">RAG provenance: p0020:c01–p0051:c01 · PDF 20–51</text>
+
+  <rect x="70" y="140" width="240" height="130" class="box"/>
+  <text x="90" y="175" class="h2">Проблема</text>
+  <text x="90" y="208" class="body">LLM не знает все нужные</text>
+  <text x="90" y="234" class="body">факты и может отвечать</text>
+  <text x="90" y="260" class="body">неточно / неоднозначно.</text>
+
+  <rect x="390" y="140" width="260" height="130" class="box"/>
+  <text x="410" y="175" class="h2">Retriever</text>
+  <text x="410" y="208" class="body">Ищет релевантные</text>
+  <text x="410" y="234" class="body">внешние данные.</text>
+
+  <rect x="730" y="140" width="300" height="130" class="box"/>
+  <text x="750" y="175" class="h2">Augment + Generate</text>
+  <text x="750" y="208" class="body">input + найденный фрагмент</text>
+  <text x="750" y="234" class="body">→ генеративная модель</text>
+
+  <path d="M310 205 H390" class="arrow"/>
+  <path d="M650 205 H730" class="arrow"/>
+
+  <rect x="70" y="350" width="300" height="210" class="box"/>
+  <text x="90" y="385" class="h2">Simple RAG</text>
+  <text x="90" y="420" class="body">Keyword search</text>
+  <text x="90" y="450" class="body">Подходит для простого</text>
+  <text x="90" y="480" class="body">retrieval и хорошо</text>
+  <text x="90" y="510" class="body">структурированных данных.</text>
+
+  <rect x="450" y="350" width="300" height="210" class="box"/>
+  <text x="470" y="385" class="h2">Advanced RAG</text>
+  <text x="470" y="420" class="body">Vector / indexed search</text>
+  <text x="470" y="450" class="body">TF-IDF + cosine similarity</text>
+  <text x="470" y="480" class="body">для учебного примера.</text>
+
+  <rect x="830" y="350" width="300" height="210" class="box"/>
+  <text x="850" y="385" class="h2">Modular RAG</text>
+  <text x="850" y="420" class="body">keyword + vector + indexed</text>
+  <text x="850" y="450" class="body">в одном RetrievalComponent.</text>
+
+  <rect x="260" y="625" width="680" height="90" class="box"/>
+  <text x="285" y="660" class="h2">Evaluation</text>
+  <text x="285" y="690" class="body">Метрики важны, но глава требует учитывать human evaluation.</text>
+</svg>
