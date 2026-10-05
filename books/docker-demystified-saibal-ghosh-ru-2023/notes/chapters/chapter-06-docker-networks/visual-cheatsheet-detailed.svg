@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 6 — Сети Docker: подробная шпаргалка</title>
+  <desc id="desc">Подробная карта Docker networking: bridge, host, none, NAT, MACVLAN, overlay, docker_gwbridge and VXLAN.</desc>
+  <rect width="1800" height="1200" fill="#f6f8fb"/>
+  <rect x="0" y="0" width="1800" height="112" fill="#17202a"/>
+  <text x="58" y="50" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="38" font-weight="700" fill="#ffffff">Глава 6 — Сети Docker</text>
+  <text x="58" y="86" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">Namespaces → bridge/NAT → MACVLAN → overlay/VXLAN</text>
+
+  <rect x="45" y="145" width="535" height="290" rx="18" fill="#ffffff" stroke="#5dade2" stroke-width="2"/>
+  <text x="75" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#1b4f72">1. Default networks</text>
+  <text x="75" y="232" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">bridge → separate netns + docker0</tspan>
+    <tspan x="75" dy="31">host → share host network namespace</tspan>
+    <tspan x="75" dy="31">none → isolated from external network</tspan>
+    <tspan x="75" dy="31">Docker IPAM assigns bridge addresses</tspan>
+    <tspan x="75" dy="31">veth connects container to host bridge</tspan>
+  </text>
+
+  <rect x="630" y="145" width="535" height="290" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="660" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#196f3d">2. Namespace visibility</text>
+  <text x="660" y="232" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="660" dy="0">Docker netns: /var/run/docker/netns</tspan>
+    <tspan x="660" dy="31">Linux ip netns expects /var/run/netns</tspan>
+    <tspan x="660" dy="31">SandboxKey reveals actual namespace path</tspan>
+    <tspan x="660" dy="31">Source uses symlink to expose it to ip netns</tspan>
+    <tspan x="660" dy="31">Observe interfaces inside container and host</tspan>
+  </text>
+
+  <rect x="1215" y="145" width="540" height="290" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1245" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#9c640c">3. Bridge + NAT</text>
+  <text x="1245" y="232" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1245" dy="0">Default bridge: source communicates by IP</tspan>
+    <tspan x="1245" dy="31">User bridge: source resolves container names</tspan>
+    <tspan x="1245" dy="31">-P → random published host port</tspan>
+    <tspan x="1245" dy="31">-p → explicit host:container mapping</tspan>
+    <tspan x="1245" dy="31">iptables NAT shows POSTROUTING MASQUERADE</tspan>
+  </text>
+
+  <rect x="45" y="475" width="535" height="300" rx="18" fill="#ffffff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="75" y="518" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#6c3483">4. MACVLAN</text>
+  <text x="75" y="562" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">Container endpoint gets own MAC/IP</tspan>
+    <tspan x="75" dy="31">Parent interface must match subnet</tspan>
+    <tspan x="75" dy="31">Source requires promiscuous NIC</tspan>
+    <tspan x="75" dy="31">Bridge mode → eth0 parent</tspan>
+    <tspan x="75" dy="31">Trunk 802.1Q → eth1.50-style subinterface</tspan>
+    <tspan x="75" dy="31">Host↔container needs host MACVLAN link</tspan>
+  </text>
+
+  <rect x="630" y="475" width="535" height="300" rx="18" fill="#ffffff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="660" y="518" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#21618c">5. Swarm overlay objects</text>
+  <text x="660" y="562" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="660" dy="0">ingress → default overlay / swarm scope</tspan>
+    <tspan x="660" dy="31">docker_gwbridge → local bridge external path</tspan>
+    <tspan x="660" dy="31">ingress not manually attachable in source</tspan>
+    <tspan x="660" dy="31">custom overlay + --attachable for docker run</tspan>
+    <tspan x="660" dy="31">overlay netns appears when endpoint exists</tspan>
+  </text>
+
+  <rect x="1215" y="475" width="540" height="300" rx="18" fill="#ffffff" stroke="#ec7063" stroke-width="2"/>
+  <text x="1245" y="518" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#922b21">6. Overlay internals</text>
+  <text x="1245" y="562" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1245" dy="0">Container eth0 → veth → overlay netns</tspan>
+    <tspan x="1245" dy="31">br0 acts as virtual switch</tspan>
+    <tspan x="1245" dy="31">vxlan0 acts as VXLAN endpoint path</tspan>
+    <tspan x="1245" dy="31">Container eth1 → docker_gwbridge</tspan>
+    <tspan x="1245" dy="31">Overlay path handles east-west traffic</tspan>
+    <tspan x="1245" dy="31">gwbridge handles external connectivity</tspan>
+  </text>
+
+  <rect x="45" y="815" width="840" height="250" rx="18" fill="#ffffff" stroke="#48c9b0" stroke-width="2"/>
+  <text x="75" y="858" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#117864">7. VXLAN packet model</text>
+  <text x="75" y="902" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">Original L2 Ethernet frame</tspan>
+    <tspan x="75" dy="31">+ VXLAN header / VNI</tspan>
+    <tspan x="75" dy="31">+ outer UDP / IP / MAC</tspan>
+    <tspan x="75" dy="31">VTEP encapsulates and decapsulates</tspan>
+    <tspan x="75" dy="31">Source captures VXLAN on UDP port 4789</tspan>
+  </text>
+
+  <rect x="930" y="815" width="825" height="250" rx="18" fill="#ffffff" stroke="#e67e22" stroke-width="2"/>
+  <text x="960" y="858" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#a04000">8. Operational checks</text>
+  <text x="960" y="902" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="960" dy="0">docker network ls / inspect</tspan>
+    <tspan x="960" dy="31">ip addr / route / netns</tspan>
+    <tspan x="960" dy="31">iptables -t nat -L</tspan>
+    <tspan x="960" dy="31">nsenter into overlay network namespace</tspan>
+    <tspan x="960" dy="31">tcpdump UDP 4789 + ARP / ip neighbor</tspan>
+  </text>
+
+  <rect x="45" y="1105" width="1710" height="62" rx="14" fill="#17202a"/>
+  <text x="76" y="1145" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#ffffff">Mental model: Docker networking is Linux namespaces/veth/bridges locally, plus NAT for exposure and VXLAN to extend virtual L2 across hosts.</text>
+</svg>
