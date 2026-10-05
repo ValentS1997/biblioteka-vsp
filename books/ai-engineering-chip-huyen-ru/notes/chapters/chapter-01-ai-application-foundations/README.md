@@ -12,22 +12,29 @@
 - Глава: 1
 - Название: «Основы создания AI-приложений с использованием базовых моделей»
 - Slug: `ai-application-foundations`
+- Chapter-analysis request: `BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST v1.2`
+- Artifact collection: `BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.6`
+- Readiness contract: `BIBLIOTEKA-VSP-BOOK-READINESS v1.2`
 - Source policy: `rag_only`
 - External sources: запрещены
 - Model memory: запрещена
-- Прямой доступ к PDF: не использовался
-- Book-level readiness: `READY` на `main` до начала анализа
+- Прямой доступ к canonical source: не использовался
+- Book-level readiness: `READY` по canonical repository evidence до retrieval главы
 
 ## Provenance
 
 - RAG chunks: `p0025:c01`–`p0077:c01`
-- PDF pages: 25–77
-- Printed pages: 25–77
+- Source format: `pdf`
+- Source locator range: `PDF pages 25–77`
+- PDF page range: `25–77`
+- EPUB spine range: `[Not applicable]`
+- Printed page range: `25–77`
 - `p0006:c01` указывает начало главы 1 на странице 25 и начало главы 2 на странице 78.
 - `p0025:c01` начинается заголовком «ГЛАВА 1. Основы создания AI-приложений с использованием базовых моделей».
 - `p0078:c01` начинается заголовком «ГЛАВА 2. Знакомство с базовыми моделями».
 - В `chunk-index.jsonl` страницы 25–77 представлены по одному addressable chunk на страницу: `p0025:c01` … `p0077:c01`.
 - Chapter boundary verified: yes
+- Provenance normalized to `BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.6` without changing the verified chapter boundary or content scope.
 - Source SHA-256: `850c365211ba0e3d68a8ff8e7d7d48fb95188e24228270d11c0ec954c2062fba`
 
 ## Содержимое
