@@ -2,4 +2,10 @@
 
 Book ID: `kubernetes-in-action-marko-luksa-ru`
 
-Reading has not been started or confirmed yet.
+Status: completed.
+
+Completion is confirmed by the project checkpoint that advanced the book to final audit / closure state.
+
+Historical start and completion dates: [Needs confirmation].
+
+Per-session page ranges were not reconstructed.
