@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect width="1200" height="720" fill="#ffffff"/>
+<text x="45" y="55" font-family="Arial" font-size="34" font-weight="700">Глава 13 — Eradicate Activity</text>
+
+<rect x="60" y="120" width="260" height="160" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="90" y="160" font-family="Arial" font-size="22" font-weight="700">Investigate</text>
+<text x="90" y="200" font-family="Arial" font-size="17">short-form / long-form</text>
+<text x="90" y="235" font-family="Arial" font-size="17">logs / memory / network</text>
+
+<rect x="365" y="120" width="260" height="160" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="395" y="160" font-family="Arial" font-size="22" font-weight="700">Root Cause</text>
+<text x="395" y="200" font-family="Arial" font-size="17">Four P's / Fishbone</text>
+<text x="395" y="235" font-family="Arial" font-size="17">Five Whys</text>
+
+<rect x="670" y="120" width="260" height="160" rx="14" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="700" y="160" font-family="Arial" font-size="22" font-weight="700">Remove Access</text>
+<text x="700" y="200" font-family="Arial" font-size="17">persistence / accounts</text>
+<text x="700" y="235" font-family="Arial" font-size="17">tokens / trusts / keys</text>
+
+<rect x="975" y="120" width="170" height="160" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="1000" y="160" font-family="Arial" font-size="22" font-weight="700">Validate</text>
+<text x="1000" y="200" font-family="Arial" font-size="17">no access</text>
+<text x="1000" y="235" font-family="Arial" font-size="17">no persistence</text>
+
+<rect x="110" y="390" width="430" height="180" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="140" y="430" font-family="Arial" font-size="22" font-weight="700">Vulnerability Remediation</text>
+<text x="140" y="470" font-family="Arial" font-size="17">patch / harden / compensate</text>
+<text x="140" y="505" font-family="Arial" font-size="17">broader assessment</text>
+<text x="140" y="540" font-family="Arial" font-size="17">verify initial vector closed</text>
+
+<rect x="660" y="390" width="430" height="180" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="690" y="430" font-family="Arial" font-size="22" font-weight="700">Identity Remediation</text>
+<text x="690" y="470" font-family="Arial" font-size="17">privileged/service accounts</text>
+<text x="690" y="505" font-family="Arial" font-size="17">KRBTGT / DC / trusts</text>
+<text x="690" y="540" font-family="Arial" font-size="17">OAuth / PAT / API keys</text>
+
+<text x="190" y="650" font-family="Arial" font-size="24" font-weight="700">Eradication = remove access + persistence + root cause, then verify.</text>
+</svg>
