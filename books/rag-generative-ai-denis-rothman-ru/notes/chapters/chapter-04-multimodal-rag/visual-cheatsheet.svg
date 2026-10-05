@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 4 — Multimodal RAG</title>
+  <desc id="desc">Компактная схема текстового и image модулей мультимодальной RAG.</desc>
+  <rect width="1200" height="820" fill="#ffffff"/>
+  <style>
+    text { font-family: Arial, sans-serif; fill: #111; }
+    .h1 { font-size: 30px; font-weight: 700; }
+    .h2 { font-size: 20px; font-weight: 700; }
+    .body { font-size: 16px; }
+    .small { font-size: 13px; }
+    .box { fill: #f7f7f7; stroke: #222; stroke-width: 2; rx: 14; }
+    .arrow { stroke: #222; stroke-width: 3; fill: none; marker-end: url(#a); }
+  </style>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#222"/>
+    </marker>
+  </defs>
+
+  <text x="55" y="55" class="h1">Глава 4. Мультимодальная RAG</text>
+  <text x="55" y="86" class="small">RAG provenance: p0110:c01–p0135:c01 · PDF 110–135</text>
+
+  <rect x="55" y="140" width="320" height="175" class="box"/>
+  <text x="80" y="178" class="h2">Text module</text>
+  <text x="80" y="215" class="body">Deep Lake text dataset</text>
+  <text x="80" y="245" class="body">VectorStoreIndex</text>
+  <text x="80" y="275" class="body">LLM response</text>
+
+  <rect x="825" y="140" width="320" height="175" class="box"/>
+  <text x="850" y="178" class="h2">Image module</text>
+  <text x="850" y="215" class="body">VisDrone</text>
+  <text x="850" y="245" class="body">labels → index → source image</text>
+  <text x="850" y="275" class="body">bounding boxes</text>
+
+  <rect x="440" y="145" width="320" height="150" class="box"/>
+  <text x="465" y="183" class="h2">Shared user input</text>
+  <text x="465" y="220" class="body">one query drives both modules</text>
+
+  <path d="M440 220 H375" class="arrow"/>
+  <path d="M760 220 H825" class="arrow"/>
+
+  <rect x="390" y="390" width="420" height="145" class="box"/>
+  <text x="415" y="428" class="h2">Combined output</text>
+  <text x="415" y="465" class="body">text response + retrieved image</text>
+  <text x="415" y="495" class="body">with matching bounding boxes</text>
+
+  <path d="M215 315 V462 H390" class="arrow"/>
+  <path d="M985 315 V462 H810" class="arrow"/>
+
+  <rect x="135" y="630" width="405" height="130" class="box"/>
+  <text x="160" y="668" class="h2">Text evaluation</text>
+  <text x="160" y="705" class="body">SentenceTransformer + cosine</text>
+
+  <rect x="660" y="630" width="405" height="130" class="box"/>
+  <text x="685" y="668" class="h2">Image evaluation</text>
+  <text x="685" y="705" class="body">GPT-4o vision → text → cosine</text>
+</svg>

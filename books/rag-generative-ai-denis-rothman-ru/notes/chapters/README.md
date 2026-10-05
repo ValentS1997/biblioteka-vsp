@@ -6,5 +6,7 @@
 
 - [Глава 3. Реализация индексированной RAG с помощью LlamaIndex, Deep Lake и OpenAI](./chapter-03-indexed-rag-llamaindex-deeplake-openai/) — `RAG_GROUNDED`, PDF 80–109.
 
+- [Глава 4. Мультимодальная RAG](./chapter-04-multimodal-rag/) — `RAG_GROUNDED`, PDF 110–135.
+
 Book-level readiness must be `READY` before running
 `BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.6`.
