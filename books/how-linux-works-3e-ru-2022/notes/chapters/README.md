@@ -12,3 +12,4 @@ Reviewed chapter-level notes are stored here. Historical notes are not reconstru
 - [Chapter 8 — Процессы и использование ресурсов](chapter-08-processes-and-resource-usage/README.md)
 - [Chapter 9 — Сеть и ее конфигурация](chapter-09-network-and-configuration/README.md)
 - [Chapter 10 — Сетевые приложения и службы](chapter-10-network-applications-and-services/README.md)
+- [Chapter 11 — Сценарии оболочки](chapter-11-shell-scripts/README.md)
