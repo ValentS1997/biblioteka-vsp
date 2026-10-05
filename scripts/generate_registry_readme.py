@@ -35,6 +35,29 @@ def rag_label(m):
     status = ((m.get("validation") or {}).get("status") or "")
     return "Да" if status.startswith("READY") else "⚠️"
 
+def inventory_number_label(books):
+    values = [str(b["inventory_number"]) for b in books]
+    if not values:
+        return "—"
+    width = max(len(v) for v in values)
+    nums = [int(v) for v in values]
+    runs = []
+    start = prev = nums[0]
+    for value in nums[1:]:
+        if value == prev + 1:
+            prev = value
+            continue
+        runs.append((start, prev))
+        start = prev = value
+    runs.append((start, prev))
+    parts = []
+    for first, last in runs:
+        if first == last:
+            parts.append(f"{first:0{width}d}")
+        else:
+            parts.append(f"{first:0{width}d}–{last:0{width}d}")
+    return ", ".join(parts)
+
 def render():
     reg, idx = y(REGISTRY), y(INDEX)
     idx_by_id = {b["id"]: b for b in idx.get("books", [])}
@@ -90,7 +113,7 @@ def render():
         "",
         "Канонический human-readable view. Архитектурный контракт: [`ARCHITECTURE.md`](./ARCHITECTURE.md).",
         "",
-        f"> **{len(inventory_books)} инвентарных книг** · инвентарные номера `0001–0046` · **{reg['electronic_holdings']['file_count']} электронный файл** · актуально на `{reg['updated']}`",
+        f"> **{len(inventory_books)} инвентарных книг** · инвентарные номера `{inventory_number_label(inventory_books)}` · **{reg['electronic_holdings']['file_count']} электронный файл** · актуально на `{reg['updated']}`",
     ]
 
     reverse = {}

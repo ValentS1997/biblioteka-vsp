@@ -12,7 +12,7 @@ Status: accepted. This is the canonical registry architecture for `main` as of 2
 | RAG state | `books/<knowledge-id>/rag/manifest.yaml` |
 | Human-readable registry view | `registry/README.md` (generated, non-canonical) |
 
-`registry/reestr_knig_0046.xlsx` remains the source snapshot. It is not rewritten by schema v2 tooling.
+`registry/reestr_knig_0046.xlsx` remains the historical source snapshot. It is not rewritten by schema v2 tooling and may contain items later excluded from the canonical technical/professional inventory (for example, hobby acquisitions). `registry/books.yaml` is authoritative for current registry membership.
 
 ## Registry -> knowledge foreign keys
 

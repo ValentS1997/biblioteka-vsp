@@ -1,5 +1,5 @@
 schema: "biblioteka-vsp/registry/v2"
-updated: "2026-10-03"
+updated: "2026-10-05"
 
 source:
   file: "registry/reestr_knig_0046.xlsx"
@@ -11,8 +11,8 @@ source:
     verification: "Источники"
 
 scope:
-  purpose: "Physical/private library inventory; independent from the RAG-ready books index."
-  book_count: 46
+  purpose: "Canonical technical/professional library inventory for biblioteka-vsp knowledge/KFP lifecycle; hobby acquisitions excluded."
+  book_count: 40
 
 books:
   - number: 1
@@ -280,48 +280,6 @@ books:
     translators_editors_raw: "И. Пальти; А. Тумаркин"
     summary_short: "Архитектура data-intensive систем: хранение, репликация, партиционирование, транзакции и распределённость."
     direction: "Distributed Systems / Data"
-  - number: 36
-    inventory_number: "0036"
-    title: "Автономное выживание и медицина в экстремальных условиях"
-    authors_raw: "Игорь Молодан"
-    translators_editors_raw: "не требуется, оригинал на русском"
-    summary_short: "Практическое выживание и базовая медицинская помощь в автономных и экстремальных условиях."
-    direction: "Survival / Medicine"
-  - number: 37
-    inventory_number: "0037"
-    title: "Маткульт-привет! О математике с любовью"
-    authors_raw: "Алексей Владимирович Савватеев"
-    translators_editors_raw: "не требуется, оригинал на русском"
-    summary_short: "Популярное введение в математическое мышление, идеи и задачи современной математики."
-    direction: "Mathematics"
-  - number: 38
-    inventory_number: "0038"
-    title: "Занимательная электротехника"
-    authors_raw: "Владимир Владимирович Рюмин"
-    translators_editors_raw: "не требуется, оригинал на русском"
-    summary_short: "Доступное знакомство с основами электротехники, электрическими явлениями и практическими схемами."
-    direction: "Electrical Engineering"
-  - number: 39
-    inventory_number: "0039"
-    title: "Книга юного техника"
-    authors_raw: "Леонид Киселёв"
-    translators_editors_raw: "не требуется, оригинал на русском"
-    summary_short: "Практическое техническое творчество и базовые инженерные навыки для начинающего техника."
-    direction: "DIY / Engineering"
-  - number: 40
-    inventory_number: "0040"
-    title: "Электроника для начинающих. Самый простой пошаговый самоучитель. 3-е издание"
-    authors_raw: "Паоло Аливерти"
-    translators_editors_raw: "Ирина Владиславовна Потрясилова; редактор Светлана Александровна Александрова"
-    summary_short: "Основы электроники: компоненты, схемы, измерения и пошаговая сборка простых устройств."
-    direction: "Electronics"
-  - number: 41
-    inventory_number: "0041"
-    title: "Ремонт крупной бытовой техники. Просто о сложном"
-    authors_raw: "Д. И. Алексеев"
-    translators_editors_raw: "не требуется, оригинал на русском"
-    summary_short: "Диагностика неисправностей и практический ремонт крупной бытовой техники."
-    direction: "Appliance Repair"
   - number: 42
     inventory_number: "0042"
     title: "Руководство по улучшению бизнес-процессов"
@@ -360,36 +318,6 @@ books:
     direction: "Monitoring / Prometheus"
 
 verification_sources:
-  - inventory_number: "0036"
-    title: "Автономное выживание и медицина в экстремальных условиях"
-    checked: "Автор; русское издание"
-    basis: "Фото пользователя + Эксмо"
-    source_url: "https://eksmo.ru/book/avtonomnoe-vyzhivanie-i-meditsina-v-ekstremalnykh-usloviyakh-ITD933109/"
-  - inventory_number: "0037"
-    title: "Маткульт-привет! О математике с любовью"
-    checked: "Полное имя автора; русское издание"
-    basis: "Фото пользователя + Питер"
-    source_url: "https://www.piter.com/collection/nauchno-populyarnaya-literatura/product/o-matematike-s-lyubovyu-matkult-privet-2"
-  - inventory_number: "0038"
-    title: "Занимательная электротехника"
-    checked: "Полное имя автора; оригинал на русском"
-    basis: "Фото пользователя + РГБ"
-    source_url: "https://search.rsl.ru/ru/record/01009233982"
-  - inventory_number: "0039"
-    title: "Книга юного техника"
-    checked: "Название и автор по видимой обложке/корешку"
-    basis: "Фото пользователя"
-    source_url: null
-  - inventory_number: "0040"
-    title: "Электроника для начинающих. Самый простой пошаговый самоучитель. 3-е издание"
-    checked: "Автор; переводчик; редактор"
-    basis: "Фото пользователя + Эксмо"
-    source_url: "https://eksmo.ru/book/elektronika-dlya-nachinayushchikh-samyy-prostoy-poshagovyy-samouchitel-2-e-dopolnennoe-izdanie-ITD1400205/"
-  - inventory_number: "0041"
-    title: "Ремонт крупной бытовой техники. Просто о сложном"
-    checked: "Автор; русское издание"
-    basis: "Фото пользователя + Наука и Техника"
-    source_url: "https://nit.com.ru/product/remont-krupnoy-bytovoy-tehniki"
   - inventory_number: "0042"
     title: "Руководство по улучшению бизнес-процессов"
     checked: "Корпоративный автор; переводчик; редактор"
