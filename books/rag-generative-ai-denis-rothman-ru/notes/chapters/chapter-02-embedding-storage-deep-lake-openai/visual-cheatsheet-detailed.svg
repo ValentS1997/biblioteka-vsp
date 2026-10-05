@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1240" viewBox="0 0 1600 1240" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 2 — detailed RAG embedding pipeline</title>
+  <desc id="desc">Подробная source-grounded схема data preparation, embeddings, Deep Lake retrieval, GPT-4o и evaluation.</desc>
+  <rect width="1600" height="1240" fill="#ffffff"/>
+  <style>
+    text { font-family: Arial, sans-serif; fill: #111; }
+    .h1 { font-size: 31px; font-weight: 700; }
+    .h2 { font-size: 20px; font-weight: 700; }
+    .body { font-size: 15px; }
+    .small { font-size: 13px; }
+    .box { fill: #f8f8f8; stroke: #222; stroke-width: 2; rx: 12; }
+    .arrow { stroke: #222; stroke-width: 3; fill: none; marker-end: url(#a); }
+    .dash { stroke: #555; stroke-width: 2; fill: none; stroke-dasharray: 8 6; marker-end: url(#a); }
+  </style>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#222"/>
+    </marker>
+  </defs>
+
+  <text x="55" y="55" class="h1">Глава 2. Embeddings → Deep Lake → augmented generation</text>
+  <text x="55" y="84" class="small">Source: addressable RAG p0052:c01–p0079:c01 · PDF 52–79</text>
+
+  <rect x="55" y="125" width="465" height="220" class="box"/>
+  <text x="80" y="162" class="h2">Component 1 — Collection / preparation</text>
+  <text x="80" y="198" class="body">requests + BeautifulSoup + regex cleaning</text>
+  <text x="80" y="228" class="body">collect source documents</text>
+  <text x="80" y="258" class="body">remove selected sections / citation markers</text>
+  <text x="80" y="288" class="body">write prepared text → llm.txt</text>
+  <text x="80" y="318" class="body">verify first lines before handoff</text>
+
+  <rect x="570" y="125" width="465" height="220" class="box"/>
+  <text x="595" y="162" class="h2">Component 2 — Embeddings / storage</text>
+  <text x="595" y="198" class="body">read llm.txt</text>
+  <text x="595" y="228" class="body">chunk example: CHUNK_SIZE = 1000</text>
+  <text x="595" y="258" class="body">embedding_function(...)</text>
+  <text x="595" y="288" class="body">Deep Lake VectorStore.add(...)</text>
+  <text x="595" y="318" class="body">stores text + metadata + embedding + id</text>
+
+  <rect x="1085" y="125" width="465" height="220" class="box"/>
+  <text x="1110" y="162" class="h2">Component 3 — Retrieval / generation</text>
+  <text x="1110" y="198" class="body">user_prompt</text>
+  <text x="1110" y="228" class="body">vector_store.search(...)</text>
+  <text x="1110" y="258" class="body">select top score/text/source</text>
+  <text x="1110" y="288" class="body">augmented_input = prompt + top_text</text>
+  <text x="1110" y="318" class="body">GPT-4o → response</text>
+
+  <path d="M520 235 H570" class="arrow"/>
+  <path d="M1035 235 H1085" class="arrow"/>
+
+  <text x="55" y="405" class="h2">Environment / state-changing boundary</text>
+
+  <rect x="55" y="435" width="480" height="220" class="box"/>
+  <text x="80" y="470" class="body">Pinned packages:</text>
+  <text x="80" y="500" class="body">beautifulsoup4 4.12.3 · requests 2.31.0</text>
+  <text x="80" y="530" class="body">deeplake 3.9.18 · openai 1.40.3</text>
+  <text x="80" y="560" class="body">sentence-transformers later for evaluation</text>
+  <text x="80" y="600" class="small">Source discusses both pinning benefits and upgrade/conflict risks.</text>
+
+  <rect x="560" y="435" width="480" height="220" class="box"/>
+  <text x="585" y="470" class="body">Credentials:</text>
+  <text x="585" y="500" class="body">OPENAI_API_KEY</text>
+  <text x="585" y="530" class="body">ACTIVELOOP_TOKEN</text>
+  <text x="585" y="570" class="body">Loaded from files into process environment.</text>
+  <text x="585" y="600" class="small">No real secrets are stored in repository artifacts.</text>
+
+  <rect x="1065" y="435" width="485" height="220" class="box"/>
+  <text x="1090" y="470" class="body">DNS example:</text>
+  <text x="1090" y="500" class="body">/etc/resolv.conf → nameserver 8.8.8.8</text>
+  <text x="1090" y="540" class="body">This changes runtime network configuration.</text>
+  <text x="1090" y="580" class="body">Rollback is not supplied by the chapter.</text>
+
+  <text x="55" y="725" class="h2">Data / embedding traceability</text>
+
+  <rect x="55" y="755" width="700" height="170" class="box"/>
+  <text x="80" y="792" class="body">Raw/cleaned text → chunk → embedding</text>
+  <text x="80" y="824" class="body">Dataset keeps text + metadata + embedding + id.</text>
+  <text x="80" y="856" class="body">Source emphasizes that RAG data can be inspected and traced.</text>
+  <text x="80" y="888" class="small">Explicit code uses text-embedding-3-small.</text>
+
+  <rect x="845" y="755" width="705" height="170" class="box"/>
+  <text x="870" y="792" class="h2">Source contradiction</text>
+  <text x="870" y="824" class="body">Code: text-embedding-3-small</text>
+  <text x="870" y="856" class="body">Prose on p71: text-embedding-ada-002</text>
+  <text x="870" y="888" class="small">Not externally reconciled; contradiction preserved.</text>
+
+  <text x="55" y="995" class="h2">Evaluation flow</text>
+
+  <rect x="55" y="1025" width="330" height="125" class="box"/>
+  <text x="80" y="1062" class="body">generated response</text>
+  <text x="80" y="1092" class="body">vs user_prompt</text>
+  <text x="80" y="1122" class="small">source example: 0.396</text>
+
+  <rect x="465" y="1025" width="330" height="125" class="box"/>
+  <text x="490" y="1062" class="body">generated response</text>
+  <text x="490" y="1092" class="body">vs augmented_input</text>
+  <text x="490" y="1122" class="small">source example: 0.857</text>
+
+  <rect x="875" y="1025" width="330" height="125" class="box"/>
+  <text x="900" y="1062" class="body">SentenceTransformer</text>
+  <text x="900" y="1092" class="body">all-MiniLM-L6-v2</text>
+  <text x="900" y="1122" class="small">source example: 0.739</text>
+
+  <rect x="1285" y="1025" width="265" height="125" class="box"/>
+  <text x="1310" y="1062" class="body">Interpretation</text>
+  <text x="1310" y="1092" class="body">metric depends</text>
+  <text x="1310" y="1122" class="body">on project stage/task</text>
+
+  <path d="M385 1087 H465" class="arrow"/>
+  <path d="M795 1087 H875" class="arrow"/>
+  <path d="M1205 1087 H1285" class="arrow"/>
+</svg>
