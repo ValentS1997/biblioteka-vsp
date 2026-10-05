@@ -41,7 +41,7 @@
 - `p0319:c01` содержит раздел 9.28 «Выводы».
 - Следующий чанк `p0320:c01` начинается главой 10 «Сетевые приложения и службы».
 - Chapter boundary verified: yes
-- Completion status: `RAG_GROUNDED`
+- Completion status: `ACCEPTED`
 
 ## Содержимое
 
