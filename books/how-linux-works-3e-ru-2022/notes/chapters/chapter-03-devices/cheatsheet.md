@@ -2,6 +2,80 @@
 
 Цель: определить, какое физическое или виртуальное устройство стоит за именем в системе, связать <code>/dev</code> с sysfs/udev и только после этого выполнять любые изменения.
 
+## Symptom / problem framing
+
+Нужно установить, какое физическое или виртуальное устройство стоит за конкретным именем в системе, и не перепутать короткое device name с устойчивой identity.
+
+Типовые вопросы главы:
+- какой type/major/minor у device node;
+- какой sysfs path соответствует `/dev` node;
+- есть ли persistent symlink;
+- какие kernel/udev events сопровождают устройство;
+- безопасно ли выполнять state-changing action над выбранным target.
+
+## Baseline / context
+
+Source-derived chain:
+
+~~~text
+hardware
+  ↓
+kernel driver/subsystem
+  ↓
+sysfs
+  ↓
+devtmpfs + udev
+  ↓
+/dev node / persistent symlink
+  ↓
+user-space process
+~~~
+
+Короткие имена вроде `/dev/sdX` зависят от discovery order и не должны считаться постоянной hardware identity.
+
+## Read-only checks
+
+~~~bash
+ls -l /dev
+ls -l /dev/sda
+ls -l /sys/block
+udevadm info --query=all --name=/dev/sda
+ls -l /dev/disk/by-id
+udevadm monitor
+journalctl -k
+cat /proc/devices
+lsscsi
+lsscsi -g
+nvme list
+lsusb
+~~~
+
+Сначала подтвердить device node, sysfs path и persistent identity; только затем переходить к write operations.
+
+## Interpretation
+
+- type + major/minor связывают node с kernel device interface;
+- sysfs path отражает аппаратную иерархию;
+- udev attributes и symlinks добавляют user-space identity/configuration;
+- `KERNEL` и `UDEV` events показывают разные стадии обработки события;
+- persistent link предпочтительнее короткого `sdX` имени для устойчивой идентификации.
+
+## Next action
+
+Если identity ещё не подтверждена — продолжать read-only discovery.
+
+Если identity подтверждена — определить конкретный subsystem/driver и только затем выбирать state-changing operation, если она действительно требуется задачей.
+
+## Modifying action
+
+Source-confirmed state-changing examples:
+- учебный `dd`, пишущий в обычный файл;
+- `chvt`;
+- ручной `mknod`.
+
+Глава отдельно предупреждает о риске неверного `dd of=` и не даёт универсального write workflow для реального block device.
+
+
 ## 1. Начать с device node
 
 Read-only checks:
@@ -172,7 +246,7 @@ hardware
 
 USB mass storage использует SCSI commands внутри USB transport. SATA/ATA подключается к SCSI subsystem через <code>libata</code> и bridge logic.
 
-## Verification / acceptance
+## Verification / acceptance checks
 
 Для device investigation результат считается достаточным, если подтверждены:
 
