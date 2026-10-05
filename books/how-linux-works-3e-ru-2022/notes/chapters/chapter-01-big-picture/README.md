@@ -13,19 +13,26 @@
 - Название: «Общая картина»
 - Slug: <code>big-picture</code>
 - Source policy: <code>rag_only</code>
+- Request contract: `BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST v1.2`
+- Readiness contract: `BIBLIOTEKA-VSP-BOOK-READINESS v1.2`
+- Artifact contract: `BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.6`
 - External sources: запрещены
 - Model memory: запрещена
 - Прямой доступ к PDF: не использовался
 
 ## Provenance
 
-- RAG chunks: <code>p0028:c01</code>–<code>p0038:c01</code>
-- PDF pages: 28–38
-- Printed pages: 28–38
+- RAG chunk range: <code>p0028:c01</code>–<code>p0038:c01</code>
+- Source format: `pdf`
+- Source locator range: `pdf_page 28–38`
+- EPUB spine range: `Not applicable`
+- PDF page range: 28–38
+- Printed page range: 28–38
 - Оглавление в <code>p0006:c01</code> задаёт начало главы 1 на странице 28 и начало главы 2 на странице 39.
 - <code>p0028:c01</code> начинается заголовком «1 Общая картина».
 - Следующий чанк <code>p0039:c01</code> начинается главой 2 «Основные команды и иерархия каталогов».
 - Chapter boundary verified: yes
+- Completion status: `ACCEPTED`
 - Source SHA-256: <code>60bb698fc2ff849a9814f099c12ca56e8f40c11b0518436f3ce3c44e96152df9</code>
 
 ## Содержимое
