@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000">
+<rect width="1400" height="1000" fill="#ffffff"/>
+<text x="45" y="55" font-family="Arial" font-size="36" font-weight="700">Глава 10 — Iterative response operating model</text>
+
+<rect x="60" y="115" width="280" height="170" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="95" y="160" font-family="Arial" font-size="22" font-weight="700">Scope</text>
+<text x="95" y="205" font-family="Arial" font-size="16">systems / accounts / data</text>
+<text x="95" y="240" font-family="Arial" font-size="16">expand or contract boundaries</text>
+
+<rect x="380" y="115" width="280" height="170" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="415" y="160" font-family="Arial" font-size="22" font-weight="700">Contain</text>
+<text x="415" y="205" font-family="Arial" font-size="16">reduce attacker freedom</text>
+<text x="415" y="240" font-family="Arial" font-size="16">preserve business where possible</text>
+
+<rect x="700" y="115" width="280" height="170" rx="14" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="735" y="160" font-family="Arial" font-size="22" font-weight="700">Eradicate</text>
+<text x="735" y="205" font-family="Arial" font-size="16">remove known threat</text>
+<text x="735" y="240" font-family="Arial" font-size="16">verify persistence removal</text>
+
+<rect x="1020" y="115" width="280" height="170" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="1055" y="160" font-family="Arial" font-size="22" font-weight="700">Recover</text>
+<text x="1055" y="205" font-family="Arial" font-size="16">restore critical services</text>
+<text x="1055" y="240" font-family="Arial" font-size="16">address root causes</text>
+
+<rect x="80" y="400" width="380" height="260" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="110" y="445" font-family="Arial" font-size="22" font-weight="700">Iteration triggers</text>
+<text x="110" y="490" font-family="Arial" font-size="16">• new indicators</text>
+<text x="110" y="525" font-family="Arial" font-size="16">• scope expansion</text>
+<text x="110" y="560" font-family="Arial" font-size="16">• incomplete eradication</text>
+<text x="110" y="595" font-family="Arial" font-size="16">• evidence revelations</text>
+<text x="110" y="630" font-family="Arial" font-size="16">• business/regulatory change</text>
+
+<rect x="510" y="400" width="380" height="260" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="540" y="445" font-family="Arial" font-size="22" font-weight="700">Cross-loop control</text>
+<text x="540" y="490" font-family="Arial" font-size="16">decision documentation</text>
+<text x="540" y="525" font-family="Arial" font-size="16">impact assessment</text>
+<text x="540" y="560" font-family="Arial" font-size="16">stakeholder communication</text>
+<text x="540" y="595" font-family="Arial" font-size="16">shift handoff / continuity</text>
+<text x="540" y="630" font-family="Arial" font-size="16">cumulative incident narrative</text>
+
+<rect x="940" y="400" width="380" height="260" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="970" y="445" font-family="Arial" font-size="22" font-weight="700">Exit determination</text>
+<text x="970" y="490" font-family="Arial" font-size="16">no new IOC / no attacker activity</text>
+<text x="970" y="525" font-family="Arial" font-size="16">eradication verified</text>
+<text x="970" y="560" font-family="Arial" font-size="16">operations stable</text>
+<text x="970" y="595" font-family="Arial" font-size="16">acceptable residual risk</text>
+<text x="970" y="630" font-family="Arial" font-size="16">explicit documented decision</text>
+
+<rect x="170" y="790" width="1060" height="120" rx="14" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="210" y="835" font-family="Arial" font-size="22" font-weight="700">Practical constraint layer</text>
+<text x="210" y="875" font-family="Arial" font-size="17">fatigue • budget • tool limits • documentation burden • stakeholder patience</text>
+</svg>
