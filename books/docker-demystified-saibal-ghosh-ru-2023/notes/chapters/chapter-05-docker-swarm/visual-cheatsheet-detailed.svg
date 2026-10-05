@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 5 — Docker Swarm: подробная шпаргалка</title>
+  <desc id="desc">Подробная карта Swarm: roles, services/tasks, quorum, scaling, drain, autolock, overlay, routing mesh and ports.</desc>
+  <rect width="1800" height="1200" fill="#f6f8fb"/>
+  <rect x="0" y="0" width="1800" height="112" fill="#17202a"/>
+  <text x="58" y="50" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="38" font-weight="700" fill="#ffffff">Глава 5 — Docker Swarm</text>
+  <text x="58" y="86" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">Cluster roles → consensus → services → maintenance → security → networking</text>
+
+  <rect x="45" y="145" width="535" height="290" rx="18" fill="#ffffff" stroke="#5dade2" stroke-width="2"/>
+  <text x="75" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#1b4f72">1. Cluster roles</text>
+  <text x="75" y="232" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">Manager → orchestration / scheduling</tspan>
+    <tspan x="75" dy="31">Leader → active manager for changes</tspan>
+    <tspan x="75" dy="31">Workers → execute assigned tasks</tspan>
+    <tspan x="75" dy="31">Join tokens add workers/managers</tspan>
+    <tspan x="75" dy="31">Source ports: 2377, 7946, 4789</tspan>
+  </text>
+
+  <rect x="630" y="145" width="535" height="290" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="660" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#196f3d">2. Consensus / HA</text>
+  <text x="660" y="232" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="660" dy="0">Raft consensus named by source.</tspan>
+    <tspan x="660" dy="31">Odd manager count recommended.</tspan>
+    <tspan x="660" dy="31">Typical source recommendation: 3 or 5.</tspan>
+    <tspan x="660" dy="31">Failure tolerance ≈ (N-1)/2.</tspan>
+    <tspan x="660" dy="31">No quorum → no safe reconciliation.</tspan>
+  </text>
+
+  <rect x="1215" y="145" width="540" height="290" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1245" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#9c640c">3. Service model</text>
+  <text x="1245" y="232" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1245" dy="0">Service = desired application state</tspan>
+    <tspan x="1245" dy="31">Task/replica = scheduled execution</tspan>
+    <tspan x="1245" dy="31">Task maps to a container</tspan>
+    <tspan x="1245" dy="31">Failure → replacement task</tspan>
+    <tspan x="1245" dy="31">Scale changes desired replica count</tspan>
+  </text>
+
+  <rect x="45" y="475" width="535" height="300" rx="18" fill="#ffffff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="75" y="518" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#6c3483">4. Scheduling modes</text>
+  <text x="75" y="562" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">Replicated → N replicas selected by user</tspan>
+    <tspan x="75" dy="31">Global → one task per eligible node</tspan>
+    <tspan x="75" dy="31">New node → global task appears automatically</tspan>
+    <tspan x="75" dy="31">Manager may also run tasks in source examples</tspan>
+    <tspan x="75" dy="31">Service ps shows desired/current state</tspan>
+  </text>
+
+  <rect x="630" y="475" width="535" height="300" rx="18" fill="#ffffff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="660" y="518" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#21618c">5. Maintenance / DRAIN</text>
+  <text x="660" y="562" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="660" dy="0">ACTIVE → accepts new tasks</tspan>
+    <tspan x="660" dy="31">DRAIN → no new Swarm tasks</tspan>
+    <tspan x="660" dy="31">Existing service tasks move away</tspan>
+    <tspan x="660" dy="31">Standalone containers are not removed</tspan>
+    <tspan x="660" dy="31">Return ACTIVE ≠ immediate task return</tspan>
+  </text>
+
+  <rect x="1215" y="475" width="540" height="300" rx="18" fill="#ffffff" stroke="#ec7063" stroke-width="2"/>
+  <text x="1245" y="518" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#922b21">6. Autolock / security</text>
+  <text x="1245" y="562" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1245" dy="0">Enable autolock → unlock key generated</tspan>
+    <tspan x="1245" dy="31">Restart Docker → manager locked</tspan>
+    <tspan x="1245" dy="31">docker swarm unlock → key required</tspan>
+    <tspan x="1245" dy="31">Control traffic encrypted per source</tspan>
+    <tspan x="1245" dy="31">Keep join/unlock tokens secure</tspan>
+  </text>
+
+  <rect x="45" y="815" width="840" height="250" rx="18" fill="#ffffff" stroke="#48c9b0" stroke-width="2"/>
+  <text x="75" y="858" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#117864">7. Swarm networking</text>
+  <text x="75" y="902" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">docker_gwbridge → external connectivity</tspan>
+    <tspan x="75" dy="31">ingress → default Swarm overlay/routing path</tspan>
+    <tspan x="75" dy="31">Custom overlay networks for services</tspan>
+    <tspan x="75" dy="31">Published ports → routing mesh</tspan>
+    <tspan x="75" dy="31">DNSRR with external load balancer bypasses mesh</tspan>
+  </text>
+
+  <rect x="930" y="815" width="825" height="250" rx="18" fill="#ffffff" stroke="#e67e22" stroke-width="2"/>
+  <text x="960" y="858" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#a04000">8. Data plane / troubleshooting</text>
+  <text x="960" y="902" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="960" dy="0">Overlay task IPs inspected per node</tspan>
+    <tspan x="960" dy="31">ping/traceroute validate reachability</tspan>
+    <tspan x="960" dy="31">--opt encrypted adds overlay data encryption</tspan>
+    <tspan x="960" dy="31">Encryption has performance cost</tspan>
+    <tspan x="960" dy="31">Troubleshooting starts with service logs</tspan>
+  </text>
+
+  <rect x="45" y="1105" width="1710" height="62" rx="14" fill="#17202a"/>
+  <text x="76" y="1145" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#ffffff">Mental model: declare desired service state → managers reach consensus → scheduler places tasks → Swarm reconciles failures, scaling and maintenance.</text>
+</svg>
