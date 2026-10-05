@@ -13,19 +13,26 @@
 - Название: «Основные команды и иерархия каталогов»
 - Slug: <code>basic-commands-and-directory-hierarchy</code>
 - Source policy: <code>rag_only</code>
+- Request contract: `BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST v1.2`
+- Readiness contract: `BIBLIOTEKA-VSP-BOOK-READINESS v1.2`
+- Artifact contract: `BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.6`
 - External sources: запрещены
 - Model memory: запрещена
 - Прямой доступ к PDF: не использовался
 
 ## Provenance
 
-- RAG chunks: <code>p0039:c01</code>–<code>p0078:c01</code>
-- PDF pages: 39–78
-- Printed pages: 39–78
+- RAG chunk range: <code>p0039:c01</code>–<code>p0078:c01</code>
+- Source format: `pdf`
+- Source locator range: `pdf_page 39–78`
+- EPUB spine range: `Not applicable`
+- PDF page range: 39–78
+- Printed page range: 39–78
 - Оглавление в <code>p0006:c01</code>–<code>p0008:c01</code> задаёт границы и структуру главы.
 - <code>p0039:c01</code> начинается заголовком главы 2.
 - Следующий чанк <code>p0079:c01</code> начинается главой 3 «Устройства».
 - Chapter boundary verified: yes
+- Completion status: `ACCEPTED`
 - Source SHA-256: <code>60bb698fc2ff849a9814f099c12ca56e8f40c11b0518436f3ce3c44e96152df9</code>
 
 ## Содержимое
