@@ -13,19 +13,26 @@
 - Название: «Настройка системы: журналирование, системное время, пакетные задачи и пользователи»
 - Slug: `system-configuration-logging-time-jobs-users`
 - Source policy: `rag_only`
+- Request contract: `BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST v1.2`
+- Readiness contract: `BIBLIOTEKA-VSP-BOOK-READINESS v1.2`
+- Artifact contract: `BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.6`
 - External sources: запрещены
 - Model memory: запрещена
 - Прямой доступ к PDF: не использовался
 
 ## Provenance
 
-- RAG chunks: `p0208:c01`–`p0243:c01`
-- PDF pages: 208–243
-- Printed pages: 208–243
+- RAG chunk range: `p0208:c01`–`p0243:c01`
+- Source format: `pdf`
+- Source locator range: `pdf_page 208–243`
+- EPUB spine range: `Not applicable`
+- PDF page range: 208–243
+- Printed page range: 208–243
 - Оглавление в `p0011:c01`–`p0012:c01` задаёт структуру главы 7.
 - `p0208:c01` начинается заголовком главы 7.
 - Следующий чанк `p0244:c01` начинается главой 8 «Процессы и использование ресурсов».
 - Chapter boundary verified: yes
+- Completion status: `ACCEPTED`
 - Source SHA-256: `60bb698fc2ff849a9814f099c12ca56e8f40c11b0518436f3ce3c44e96152df9`
 
 ## Содержимое

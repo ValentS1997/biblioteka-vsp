@@ -2,6 +2,17 @@
 
 Таблица включает только команды и механизмы, явно подтверждённые RAG главы 2. Опасные варианты помечены отдельно.
 
+## v1.6 command contract normalization
+
+Для всех строк с типом `state-changing` применяется следующий контракт:
+
+- **Effect** — действие, явно указанное в колонке «Назначение» или в самой строке.
+- **Risk** — только source-supported ограничение/риск из строки или safety notes; если отдельный риск не дан, `[Needs confirmation]`.
+- **Verification** — только явно указанный source-supported check; если check не дан, `[Needs confirmation]`.
+- **Rollback** — только явно указанный обратный путь; если источник его не даёт, `[Needs confirmation]`.
+
+Этот блок является нормативной интерпретацией таблицы ниже для `BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.6`; недостающие поля не достраиваются из model knowledge.
+
 | Команда / инструмент | Назначение | Тип | Verification / risk / rollback |
 |---|---|---|---|
 | <code>echo ...</code> | Вывести аргументы в stdout | read-only | Проверить вывод |
