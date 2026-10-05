@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect width="1200" height="720" fill="#ffffff"/>
+<text x="45" y="55" font-family="Arial" font-size="34" font-weight="700">Глава 7 — Prepare Activity</text>
+
+<rect x="70" y="120" width="300" height="180" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="100" y="160" font-family="Arial" font-size="22" font-weight="700">1. Organization</text>
+<text x="100" y="200" font-family="Arial" font-size="17">policy / plan / playbooks</text>
+<text x="100" y="235" font-family="Arial" font-size="17">risk / communications</text>
+<text x="100" y="270" font-family="Arial" font-size="17">legal / insurance / reporting</text>
+
+<rect x="450" y="120" width="300" height="180" rx="14" fill="#fff7e8" stroke="#c89b4a"/>
+<text x="480" y="160" font-family="Arial" font-size="22" font-weight="700">2. IRT Capability</text>
+<text x="480" y="200" font-family="Arial" font-size="17">training / RACI / authority</text>
+<text x="480" y="235" font-family="Arial" font-size="17">tools / access / backups</text>
+<text x="480" y="270" font-family="Arial" font-size="17">tabletops / drills</text>
+
+<rect x="830" y="120" width="300" height="180" rx="14" fill="#eef8f0" stroke="#6d9d76"/>
+<text x="860" y="160" font-family="Arial" font-size="22" font-weight="700">3. Prevention &amp; Detection</text>
+<text x="860" y="200" font-family="Arial" font-size="17">CTI / patching / hardening</text>
+<text x="860" y="235" font-family="Arial" font-size="17">EDR / network / hunting</text>
+<text x="860" y="270" font-family="Arial" font-size="17">ASM / logging / simulation</text>
+
+<rect x="110" y="390" width="430" height="180" rx="14" fill="#fff0f0" stroke="#c56b6b"/>
+<text x="140" y="430" font-family="Arial" font-size="22" font-weight="700">Preparation failures</text>
+<text x="140" y="470" font-family="Arial" font-size="17">resource constraints</text>
+<text x="140" y="505" font-family="Arial" font-size="17">readiness erosion / drift</text>
+<text x="140" y="540" font-family="Arial" font-size="17">knowledge loss / value proof</text>
+
+<rect x="660" y="390" width="430" height="180" rx="14" fill="#f6f8fb" stroke="#8aa2c4"/>
+<text x="690" y="430" font-family="Arial" font-size="22" font-weight="700">Readiness equation</text>
+<text x="690" y="470" font-family="Arial" font-size="17">people + authority + access</text>
+<text x="690" y="505" font-family="Arial" font-size="17">communications + telemetry</text>
+<text x="690" y="540" font-family="Arial" font-size="17">inventory + practice</text>
+
+<text x="205" y="650" font-family="Arial" font-size="24" font-weight="700">Prepare is a capability system, not a document.</text>
+</svg>
