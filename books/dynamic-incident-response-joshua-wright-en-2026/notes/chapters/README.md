@@ -16,3 +16,4 @@ Source truth для анализа: canonical English RAG. Русский пер
 - [Chapter 8 — Обнаружение](chapter-08-detect-activity/) — `ACCEPTED`
 - [Chapter 9 — Проверка и триаж](chapter-09-verify-and-triage-activities/) — `ACCEPTED`
 - [Chapter 10 — Цикл действий реагирования](chapter-10-response-actions-loop/) — `ACCEPTED`
+- [Chapter 11 — Определение масштаба](chapter-11-scope-activity/) — `ACCEPTED`
