@@ -13,3 +13,4 @@ Source truth для анализа: canonical English RAG. Русский пер
 - [Chapter 5 — Модели реагирования на инциденты и их ограничения](chapter-05-incident-response-models-and-their-limitations/) — `ACCEPTED`
 - [Chapter 6 — Динамический подход к реагированию на инциденты](chapter-06-a-dynamic-approach-to-incident-response/) — `ACCEPTED`
 - [Chapter 7 — Подготовка](chapter-07-prepare-activity/) — `ACCEPTED`
+- [Chapter 8 — Обнаружение](chapter-08-detect-activity/) — `ACCEPTED`
