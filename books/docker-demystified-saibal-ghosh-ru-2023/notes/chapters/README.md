@@ -8,3 +8,4 @@ Reviewed RAG-grounded chapter materials are stored here.
 - [Chapter 4 — Модель Container Network и сетевой мост Docker](chapter-04-container-network-model-and-docker-bridge/README.md)
 - [Chapter 5 — Docker Swarm](chapter-05-docker-swarm/README.md)
 - [Chapter 6 — Сети Docker](chapter-06-docker-networks/README.md)
+- [Chapter 7 — Безопасность в Docker. Часть 1](chapter-07-docker-security-part-1/README.md)
