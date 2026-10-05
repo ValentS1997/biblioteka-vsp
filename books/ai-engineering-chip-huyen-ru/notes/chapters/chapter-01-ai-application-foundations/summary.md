@@ -2,7 +2,14 @@
 
 Source policy: `rag_only`.
 
-Provenance: `p0076:c01`–`p0077:c01`, PDF/printed pages 76–77.
+Provenance:
+
+- RAG chunks: `p0076:c01`–`p0077:c01`
+- Source format: `pdf`
+- Source locator range: `PDF pages 76–77`
+- PDF page range: `76–77`
+- EPUB spine range: `[Not applicable]`
+- Printed page range: `76–77`
 
 Ниже перенесён chapter-end раздел «Резюме» с исправлением переносов строк и очевидных разрывов слов; содержание не расширялось внешними источниками.
 
