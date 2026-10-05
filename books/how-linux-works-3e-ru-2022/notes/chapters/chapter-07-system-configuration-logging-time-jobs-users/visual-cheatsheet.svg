@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Глава 7 — Настройка системы</title>
+<desc id="desc">Logging, time, scheduled jobs, users and PAM.</desc>
+<rect width="1600" height="900" fill="#f6f8fb"/>
+<rect width="1600" height="108" fill="#17202a"/>
+<text x="56" y="48" font-family="system-ui,Arial,sans-serif" font-size="35" font-weight="700" fill="#fff">Глава 7 — Настройка системы</text>
+<text x="56" y="82" font-family="system-ui,Arial,sans-serif" font-size="20" fill="#d6e4f0">journald · time · cron/timers · users/groups · UID · PAM</text>
+
+<rect x="45" y="140" width="480" height="265" rx="18" fill="#fff" stroke="#5dade2" stroke-width="2"/>
+<text x="72" y="181" font-family="system-ui,Arial,sans-serif" font-size="24" font-weight="700" fill="#1b4f72">Logging</text>
+<text x="72" y="222" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="72">journalctl: time · unit · boot · priority</tspan><tspan x="72" dy="31">journald + syslog can coexist</tspan><tspan x="72" dy="31">file logs → logrotate</tspan><tspan x="72" dy="39" font-weight="700">Start troubleshooting from logs.</tspan></text>
+
+<rect x="560" y="140" width="480" height="265" rx="18" fill="#fff" stroke="#7dcea0" stroke-width="2"/>
+<text x="588" y="181" font-family="system-ui,Arial,sans-serif" font-size="24" font-weight="700" fill="#196f3d">Time + scheduler</text>
+<text x="588" y="222" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="588">system clock · RTC · UTC · timezone</tspan><tspan x="588" dy="31">cron for simple recurring jobs</tspan><tspan x="588" dy="31">systemd timers for dependencies/cgroups</tspan><tspan x="588" dy="31">at / systemd-run for one-shot tasks</tspan></text>
+
+<rect x="1075" y="140" width="480" height="265" rx="18" fill="#fff" stroke="#f5b041" stroke-width="2"/>
+<text x="1103" y="181" font-family="system-ui,Arial,sans-serif" font-size="24" font-weight="700" fill="#9c640c">Users / groups</text>
+<text x="1103" y="222" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="1103">/etc/passwd → UID/GID/home/shell</tspan><tspan x="1103" dy="31">/etc/shadow → auth/password data</tspan><tspan x="1103" dy="31">/etc/group → groups</tspan><tspan x="1103" dy="39" font-weight="700">Use management tools, not raw edits.</tspan></text>
+
+<rect x="45" y="445" width="480" height="280" rx="18" fill="#fff" stroke="#af7ac5" stroke-width="2"/>
+<text x="72" y="486" font-family="system-ui,Arial,sans-serif" font-size="24" font-weight="700" fill="#6c3483">Privilege model</text>
+<text x="72" y="527" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="72">RUID = original identity</tspan><tspan x="72" dy="31">EUID = effective permissions</tspan><tspan x="72" dy="31">setuid changes privilege context</tspan><tspan x="72" dy="39">Minimize setuid-root surface.</tspan></text>
+
+<rect x="560" y="445" width="480" height="280" rx="18" fill="#fff" stroke="#85c1e9" stroke-width="2"/>
+<text x="588" y="486" font-family="system-ui,Arial,sans-serif" font-size="24" font-weight="700" fill="#21618c">Access concepts</text>
+<text x="588" y="527" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="588">Identification → who?</tspan><tspan x="588" dy="31">Authentication → prove it</tspan><tspan x="588" dy="31">Authorization → allowed?</tspan><tspan x="588" dy="39">Keep these layers separate.</tspan></text>
+
+<rect x="1075" y="445" width="480" height="280" rx="18" fill="#fff" stroke="#ec7063" stroke-width="2"/>
+<text x="1103" y="486" font-family="system-ui,Arial,sans-serif" font-size="24" font-weight="700" fill="#922b21">PAM</text>
+<text x="1103" y="527" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="1103">auth · account · session · password</tspan><tspan x="1103" dy="31">modules + control arguments</tspan><tspan x="1103" dy="31">/etc/pam.d is security-critical</tspan><tspan x="1103" dy="39">Have recovery access before edits.</tspan></text>
+
+<rect x="45" y="775" width="1510" height="72" rx="14" fill="#17202a"/>
+<text x="74" y="819" font-family="system-ui,Arial,sans-serif" font-size="21" font-weight="700" fill="#fff">Operational rule: inspect canonical state → change through supported interface → verify logs/identity/auth result.</text>
+</svg>
