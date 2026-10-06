@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="960" viewBox="0 0 1360 960">
+  <rect width="1360" height="960" fill="white"/>
+  <text x="55" y="62" font-family="sans-serif" font-size="34" font-weight="700">Глава 15 — «Ввод-вывод»</text>
+  <text x="55" y="98" font-family="sans-serif" font-size="18">RAG PDF 121–126 · substantive content 121–125</text>
+
+  <rect x="55" y="140" width="390" height="200" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="80" y="180" font-family="sans-serif" font-size="22" font-weight="700">User I/O</text>
+  <text x="80" y="220" font-family="monospace" font-size="18">input(prompt)</text>
+  <text x="80" y="255" font-family="monospace" font-size="18">print(...)</text>
+  <text x="80" y="290" font-family="monospace" font-size="18">text[::-1]</text>
+
+  <rect x="485" y="140" width="390" height="200" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="510" y="180" font-family="sans-serif" font-size="22" font-weight="700">Text files</text>
+  <text x="510" y="220" font-family="monospace" font-size="18">open(..., 'w')</text>
+  <text x="510" y="255" font-family="monospace" font-size="18">write / readline</text>
+  <text x="510" y="290" font-family="monospace" font-size="18">close()</text>
+
+  <rect x="915" y="140" width="390" height="200" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="940" y="180" font-family="sans-serif" font-size="22" font-weight="700">Pickle</text>
+  <text x="940" y="220" font-family="monospace" font-size="18">open(..., 'wb')</text>
+  <text x="940" y="255" font-family="monospace" font-size="18">pickle.dump</text>
+  <text x="940" y="290" font-family="monospace" font-size="18">pickle.load</text>
+
+  <rect x="55" y="395" width="590" height="220" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="80" y="435" font-family="sans-serif" font-size="22" font-weight="700">Palindrome flow</text>
+  <text x="80" y="475" font-family="sans-serif" font-size="18">input → reverse → compare</text>
+  <text x="80" y="515" font-family="sans-serif" font-size="18">мадам / топот → yes</text>
+  <text x="80" y="555" font-family="sans-serif" font-size="18">homework: punctuation + spaces + case</text>
+
+  <rect x="695" y="395" width="610" height="220" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="720" y="435" font-family="sans-serif" font-size="22" font-weight="700">Filesystem effects</text>
+  <text x="720" y="475" font-family="monospace" font-size="18">poem.txt</text>
+  <text x="720" y="515" font-family="monospace" font-size="18">shoplist.data</text>
+  <text x="720" y="555" font-family="sans-serif" font-size="18">write/overwrite → rollback [Needs confirmation]</text>
+
+  <rect x="55" y="670" width="1250" height="125" rx="12" fill="#fafafa" stroke="#333"/>
+  <text x="80" y="710" font-family="sans-serif" font-size="22" font-weight="700">Acceptance</text>
+  <text x="80" y="748" font-family="sans-serif" font-size="18">input/output → file write/read → object dump/load</text>
+  <text x="80" y="778" font-family="sans-serif" font-size="17">Next: chapter 16 «Исключения».</text>
+
+  <text x="55" y="850" font-family="sans-serif" font-size="16">Findings: file-class wording; missing homework link; broad pickle claim; read handle not closed in shown example.</text>
+  <text x="55" y="884" font-family="sans-serif" font-size="16">15.4 summary on PDF 125; PDF 126 contains only chapter footer.</text>
+</svg>
