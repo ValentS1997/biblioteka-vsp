@@ -1,8 +1,8 @@
 schema: biblioteka-vsp/reading/v1
 book_id: linux-go-low-level-programming-tsilyurik-ru
-status: planned
+status: completed
 scope: full_book
 started: null
-completed: null
+completed: 2026-10-07
 current_page: null
 current_chapter: null
