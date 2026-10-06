@@ -1,3 +1,0 @@
-# Diagrams
-
-No diagrams yet.
