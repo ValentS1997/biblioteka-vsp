@@ -67,3 +67,4 @@ Canonical readiness command:
 - [Глава 11 — Тестирование кода](notes/chapters/chapter-11-testing-code/README.md)
 - [Глава 12 — Атакующий корабль](notes/chapters/chapter-12-attacking-ship/README.md)
 - [Глава 13 — Осторожно, пришельцы!](notes/chapters/chapter-13-watch-out-aliens/README.md)
+- [Глава 14 — Игровой счет](notes/chapters/chapter-14-game-score/README.md)

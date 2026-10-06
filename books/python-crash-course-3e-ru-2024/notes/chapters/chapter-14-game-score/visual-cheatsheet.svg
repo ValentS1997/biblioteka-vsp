@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#f6f8fb"/><rect width="1600" height="105" fill="#17202a"/>
+<text x="55" y="50" font-family="Arial" font-size="36" font-weight="700" fill="white">Глава 14 — Игровой счет</text>
+<text x="55" y="82" font-family="Arial" font-size="20" fill="#d6e4f0">start/restart → difficulty → score → high score → level → lives</text>
+<g font-family="Arial" fill="#273746">
+<rect x="50" y="145" width="470" height="250" rx="18" fill="white" stroke="#5dade2" stroke-width="2"/>
+<text x="78" y="190" font-size="24" font-weight="700">Start / Restart</text><text x="78" y="235" font-size="19">Play button + collidepoint()</text><text x="78" y="270" font-size="19">reset stats/settings</text><text x="78" y="305" font-size="19">clear groups + new fleet</text><text x="78" y="340" font-size="19">hide/show mouse cursor</text>
+<rect x="565" y="145" width="470" height="250" rx="18" fill="white" stroke="#7dcea0" stroke-width="2"/>
+<text x="593" y="190" font-size="24" font-weight="700">Difficulty</text><text x="593" y="235" font-size="19">initialize_dynamic_settings()</text><text x="593" y="270" font-size="19">speedup_scale = 1.1</text><text x="593" y="305" font-size="19">score_scale = 1.5</text><text x="593" y="340" font-size="19">increase_speed()</text>
+<rect x="1080" y="145" width="470" height="250" rx="18" fill="white" stroke="#f5b041" stroke-width="2"/>
+<text x="1108" y="190" font-size="24" font-weight="700">Scoreboard</text><text x="1108" y="235" font-size="19">score / high score / level</text><text x="1108" y="270" font-size="19">prep_*() rebuilds images</text><text x="1108" y="305" font-size="19">ship sprites = remaining lives</text><text x="1108" y="340" font-size="19">show_score() renders state</text>
+<rect x="50" y="445" width="720" height="280" rx="18" fill="white" stroke="#af7ac5" stroke-width="2"/>
+<text x="78" y="490" font-size="24" font-weight="700">Scoring lifecycle</text><text x="78" y="535" font-size="19">groupcollide() → collision dictionary</text><text x="78" y="570" font-size="19">sum all aliens in values()</text><text x="78" y="605" font-size="19">score += alien_points × count</text><text x="78" y="640" font-size="19">round(..., -1) + comma formatting</text>
+<rect x="815" y="445" width="735" height="280" rx="18" fill="white" stroke="#ec7063" stroke-width="2"/>
+<text x="843" y="490" font-size="24" font-weight="700">Source findings</text><text x="843" y="535" font-size="18">prep_msg ↔ _prep_msg</text><text x="843" y="570" font-size="18">level-up order mismatch</text><text x="843" y="605" font-size="18">high-score receiver mismatch</text><text x="843" y="640" font-size="18">create_fleet/check_collision naming</text>
+</g>
+<rect x="50" y="775" width="1500" height="72" rx="14" fill="#17202a"/>
+<text x="78" y="819" font-family="Arial" font-size="20" font-weight="700" fill="white">Provenance: e0024:c01–c13 · EPUB spine 24 · OEBPS/Text/978544614112-21.xhtml</text>
+</svg>
