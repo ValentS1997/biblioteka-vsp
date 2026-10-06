@@ -15,3 +15,4 @@ Current chapter workflow:
 - [Chapter 6 — «Первые шаги»](chapter-06-pervye-shagi/) — `RAG_GROUNDED`
 - [Chapter 7 — «Основы»](chapter-07-osnovy/) — `RAG_GROUNDED`
 - [Chapter 8 — «Операторы и выражения»](chapter-08-operatory-i-vyrazheniya/) — `RAG_GROUNDED`
+- [Chapter 9 — «Поток команд»](chapter-09-potok-komand/) — `RAG_GROUNDED`
