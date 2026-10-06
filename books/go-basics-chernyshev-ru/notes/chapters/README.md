@@ -10,5 +10,7 @@
 
 - [Глава 5. Работа с файлами и каталогами. Сборка приложения](./chapter-05-files-directories-build/) — `RAG_GROUNDED`, PDF 213–307.
 
+- [Глава 6. Работа с СУБД SQLite](./chapter-06-sqlite-gorm-transactions/) — `RAG_GROUNDED`, PDF 308–362.
+
 Book-level readiness must be `READY` before running
 `BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.6`.
