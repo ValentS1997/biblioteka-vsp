@@ -5,6 +5,8 @@
 ## 12.1. Синее небо
 
 ~~~python
+import sys
+
 import pygame
 
 pygame.init()
@@ -14,7 +16,7 @@ bg_color = (0, 0, 255)
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            raise SystemExit
+            sys.exit()
 
     screen.fill(bg_color)
     pygame.display.flip()
@@ -56,7 +58,9 @@ Source patterns extend directly from Ship movement.
 ~~~python
 class Rocket:
     def __init__(self, game):
-        self.screen_rect = game.screen.get_rect()
+        self.screen = game.screen
+        self.screen_rect = self.screen.get_rect()
+        self.image = pygame.image.load('images/rocket.bmp')
         self.rect = self.image.get_rect()
         self.rect.center = self.screen_rect.center
 
@@ -82,13 +86,15 @@ class Rocket:
         self.rect.y = self.y
 ~~~
 
-Asset loading/constructor details: `[Needs confirmation]`.
+Конкретный asset `images/rocket.bmp`: `[Needs confirmation]`; строка показывает source-supported image-loading pattern.
 
 Acceptance: все четыре направления работают, rect не пересекает screen bounds.
 
 ## 12.5. Клавиши
 
 ~~~python
+import sys
+
 import pygame
 
 pygame.init()
@@ -97,7 +103,7 @@ screen = pygame.display.set_mode((800, 600))
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            raise SystemExit
+            sys.exit()
         elif event.type == pygame.KEYDOWN:
             print(event.key)
 
