@@ -15,3 +15,4 @@ Reviewed chapter-level notes are stored here. Historical notes are not reconstru
 - [Chapter 11 — Сценарии оболочки](chapter-11-shell-scripts/README.md)
 - [Chapter 12 — Передача файлов по сети и доступ к ним](chapter-12-network-file-transfer-and-sharing/README.md)
 - [Chapter 13 — Пользовательское окружение](chapter-13-user-environment/README.md)
+- [Chapter 14 — Краткий обзор рабочего стола Linux. Вывод на печать](chapter-14-linux-desktop-and-printing/README.md)
