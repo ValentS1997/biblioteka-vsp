@@ -95,25 +95,28 @@ class Employee:
         self.annual_salary += amount
 ~~~
 
-Required assertions can be expressed as:
+Поведение можно полностью проверить средствами pytest, уже показанными в главе:
 
 ~~~python
-def test_give_default_raise(employee):
+def test_give_default_raise():
+    employee = Employee('anna', 'ivanova', 50000)
     employee.give_raise()
     assert employee.annual_salary == 55000
 
-def test_give_custom_raise(employee):
+def test_give_custom_raise():
+    employee = Employee('anna', 'ivanova', 50000)
     employee.give_raise(10000)
     assert employee.annual_salary == 60000
 ~~~
 
-Но fixture `employee` выше показан только как **pytest-style interpretation**, а source exercise требует `setUp()`.
+Этот вариант исполним и подтверждает два требуемых behavior, но **не удовлетворяет отдельному source-требованию использовать `setUp()`**.
 
 Точная RAG-grounded implementation `setUp()` невозможна: глава не определяет этот mechanism и не показывает framework/API, которому он принадлежит. Поэтому canonical answer:
 
 - production `Employee`: подтверждён source;
 - test names и expected behavior: подтверждены source;
+- executable pytest verification без shared setup: подтверждается изученным material;
 - конкретная реализация `setUp()`: `[Needs confirmation]`;
 - заменять `setUp()` fixture-ом как будто это исходное задание — нельзя.
 
-Если придерживаться только изученного в этой главе pytest flow, reusable Employee resource логически оформляется fixture, но это уже **interpretation**, а не дословное выполнение требования 11.3.
+Если придерживаться только изученного pytest flow, reusable Employee resource можно было бы оформить fixture по аналогии с `language_survey`, но это **interpretation**, а не дословное выполнение требования 11.3.
