@@ -5,6 +5,7 @@ import argparse
 import html
 import json
 import re
+import shutil
 import subprocess
 from pathlib import Path
 
@@ -442,6 +443,23 @@ def normalize_heading_text(text: str) -> str:
     out = re.sub(r"\bSTEP (\d+)\b", r"Шаг \1", out, flags=re.I)
     return out if out else original
 
+def inject_project_visual(text: str, image_rel: str, chapter: int) -> str:
+    lines = text.splitlines()
+    insert_at = 1
+    for i, line in enumerate(lines):
+        if line.startswith("# "):
+            insert_at = i + 1
+            break
+    block = [
+        "",
+        f"![Дополнительная схема к главе {chapter}]({image_rel})",
+        "",
+        f"*Дополнительная схема biblioteka-vsp к главе {chapter}; не является оригинальной иллюстрацией книги.*",
+        "",
+    ]
+    return "\n".join(lines[:insert_at] + block + lines[insert_at:]).strip() + "\n"
+
+
 def normalize_body_v2(text: str) -> str:
     text = html.unescape(text.replace("\r\n", "\n"))
     text = text.replace("&#x20;", " ")
@@ -504,6 +522,16 @@ def audit_and_assemble(repo_root: Path, out_dir: Path):
         original_third_party += body.count("THIRD_PARTY_REVIEW_REQUIRED")
         repaired = normalize_body_v2(body)
         v2_third_party += repaired.count("требуется отдельная проверка прав на сторонний визуальный материал")
+
+        note_root = repo_root / "books" / BOOK_ID / "notes" / "chapters"
+        matches = sorted(note_root.glob(f"chapter-{n:02d}-*/visual-cheatsheet.svg"))
+        if matches:
+            visuals_dir = out_dir / "visuals"
+            visuals_dir.mkdir(parents=True, exist_ok=True)
+            visual_out = visuals_dir / f"chapter-{n:02d}-visual-cheatsheet.svg"
+            shutil.copy2(matches[0], visual_out)
+            repaired = inject_project_visual(repaired, f"visuals/{visual_out.name}", n)
+
         parts.append(repaired)
         title = next((l.lstrip("# ").strip() for l in repaired.splitlines() if l.startswith("# ")), p.stem)
         rows.append({"chapter": n, "file": p.name, "title": title})
