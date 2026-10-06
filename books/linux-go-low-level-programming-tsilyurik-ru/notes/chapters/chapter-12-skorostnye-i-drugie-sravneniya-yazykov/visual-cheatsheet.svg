@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="790" viewBox="0 0 1200 790">
+<rect width="1200" height="790" fill="#fff"/>
+<style>text{font-family:Arial,sans-serif;fill:#111}.h{font-size:31px;font-weight:700}.t{font-size:20px;font-weight:700}.b{font-size:16px}.box{fill:#f7f7f7;stroke:#333;stroke-width:2}</style>
+<text x="50" y="55" class="h">Глава 12 — Скоростные и другие сравнения языков</text>
+<text x="50" y="88" class="b">RAG: PDF 244–257 · methodology → Fibonacci → sort → Hanoi → sieve</text>
+
+<rect x="50" y="125" width="340" height="205" rx="14" class="box"/>
+<text x="75" y="165" class="t">1. Benchmark setup</text>
+<text x="75" y="200" class="b">same problem / same input</text>
+<text x="75" y="230" class="b">repeat timings</text>
+<text x="75" y="260" class="b">record compiler/version</text>
+<text x="75" y="290" class="b">verify result first</text>
+
+<rect x="430" y="125" width="340" height="205" rx="14" class="box"/>
+<text x="455" y="165" class="t">2. Fibonacci</text>
+<text x="455" y="200" class="b">recursive CPU workload</text>
+<text x="455" y="230" class="b">GCC / Clang / gccgo / gc</text>
+<text x="455" y="260" class="b">binary size/linkage differs</text>
+<text x="455" y="290" class="b">same numeric result</text>
+
+<rect x="810" y="125" width="340" height="205" rx="14" class="box"/>
+<text x="835" y="165" class="t">3. Bubble sort</text>
+<text x="835" y="200" class="b">worst-case descending input</text>
+<text x="835" y="230" class="b">swap count validates result</text>
+<text x="835" y="260" class="b">C++ STL path not equivalent</text>
+<text x="835" y="290" class="b">source admits unfair comparison</text>
+
+<rect x="50" y="375" width="520" height="205" rx="14" class="box"/>
+<text x="75" y="415" class="t">4. Recursive / scan workloads</text>
+<text x="75" y="450" class="b">Tower of Hanoi → operation count</text>
+<text x="75" y="480" class="b">Sieve → prime count</text>
+<text x="75" y="510" class="b">Hanoi / sieve use -O3</text>
+<text x="75" y="540" class="b">do not merge with -O0 ranking</text>
+
+<rect x="625" y="375" width="525" height="205" rx="14" class="box"/>
+<text x="650" y="415" class="t">5. Source findings</text>
+<text x="650" y="450" class="b">type data_t int 64</text>
+<text x="650" y="480" class="b">missing C semicolon</text>
+<text x="650" y="510" class="b">complexity notation ambiguity</text>
+<text x="650" y="540" class="b">timings are environment-specific</text>
+
+<text x="50" y="645" class="t">Engineering takeaway</text>
+<text x="50" y="680" class="b">Benchmark a configuration, not a language label. Correctness and equivalent conditions come before timing.</text>
+<text x="50" y="715" class="b">Negative nice changes scheduling priority and is not a neutral measurement action.</text>
+</svg>
