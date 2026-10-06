@@ -14,7 +14,7 @@
 | Kivy | упомянут для игр на iOS/Android | tool/reference |
 | Python bytecode | промежуточная форма в source explanation | runtime concept |
 | Standard Library | встроенный набор возможностей | library/reference |
-| Python Package Index / «Каталог пакетов Python» | место сторонних библиотек в source framing | repository/reference |
+| «Каталог пакетов Python» | место сторонних библиотек в source framing | repository/reference |
 | GNU/Linux, Windows, FreeBSD, Macintosh и др. | примеры платформ | platform/reference |
 
 ## Read-only conceptual checks
