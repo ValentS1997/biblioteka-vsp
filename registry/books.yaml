@@ -266,7 +266,6 @@ books:
     direction: "Kubernetes / Containers"
   - number: 34
     inventory_number: "0034"
-    knowledge_id: "how-linux-works-3e-ru-2022"
     title: "Внутреннее устройство Linux. 3-е изд."
     authors_raw: "Брайан Уорд"
     translators_editors_raw: "С. Черников; научный редактор Н. Ланцунцевич"
