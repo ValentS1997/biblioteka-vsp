@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 2 — Переменные и простые типы данных: подробная шпаргалка</title>
+  <desc id="desc">Переменные, строки, числа, комментарии, диагностика ошибок, упражнения и source findings.</desc>
+  <rect width="1800" height="1200" fill="#f5f7fa"/>
+  <rect width="1800" height="116" fill="#17202a"/>
+  <text x="56" y="50" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="38" font-weight="700" fill="#ffffff">Глава 2 — Переменные и простые типы данных</text>
+  <text x="56" y="86" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">данные → преобразование → вывод → traceback → ясный код</text>
+
+  <rect x="45" y="150" width="540" height="300" rx="18" fill="#ffffff" stroke="#5dade2" stroke-width="2"/>
+  <text x="75" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#1b4f72">Переменные и имена</text>
+  <text x="75" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">message = value связывает имя со значением.</tspan>
+    <tspan x="75" dy="31">Повторное присваивание заменяет текущее значение.</tspan>
+    <tspan x="75" dy="31">Имена: буквы, цифры, _, не начинаются с цифры.</tspan>
+    <tspan x="75" dy="31">Пробелы запрещены; нижний регистр рекомендован.</tspan>
+    <tspan x="75" dy="31">NameError: сравнить написание присваивания/использования.</tspan>
+    <tspan x="75" dy="31">Модель «метки/ссылки» имеет source finding.</tspan>
+  </text>
+
+  <rect x="630" y="150" width="540" height="300" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="660" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#196f3d">Строки</text>
+  <text x="660" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="660" dy="0">Одинарные или двойные кавычки.</tspan>
+    <tspan x="660" dy="31">title(), upper(), lower().</tspan>
+    <tspan x="660" dy="31">f"{var}" для подстановки значений.</tspan>
+    <tspan x="660" dy="31">\t и \n — пробельные символы.</tspan>
+    <tspan x="660" dy="31">rstrip/lstrip/strip возвращают очищенную строку.</tspan>
+    <tspan x="660" dy="31">removeprefix/removesuffix возвращают новое значение.</tspan>
+  </text>
+
+  <rect x="1215" y="150" width="540" height="300" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1245" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#9c640c">Числа</text>
+  <text x="1245" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1245" dy="0">+  -  *  /  ** и порядок операций.</tspan>
+    <tspan x="1245" dy="31">4 / 2 → 2.0 по правилу главы.</tspan>
+    <tspan x="1245" dy="31">float может отображать длинную дробную часть.</tspan>
+    <tspan x="1245" dy="31">Смешение int + float → float.</tspan>
+    <tspan x="1245" dy="31">14_000_000_000 — читаемая запись числа.</tspan>
+    <tspan x="1245" dy="31">x, y, z = 0, 0, 0 — multiple assignment.</tspan>
+  </text>
+
+  <rect x="45" y="495" width="825" height="300" rx="18" fill="#ffffff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="75" y="540" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#6c3483">Диагностический поток</text>
+  <text x="75" y="583" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">1. Запустить минимальный пример.</tspan>
+    <tspan x="75" dy="31">2. Если сбой — читать traceback.</tspan>
+    <tspan x="75" dy="31">3. NameError → имя/присваивание.</tspan>
+    <tspan x="75" dy="31">4. SyntaxError → кавычки/границы строкового литерала.</tspan>
+    <tspan x="75" dy="31">5. Исправить одну причину и повторить проверку.</tspan>
+    <tspan x="75" dy="31">6. Сохранить простое и читаемое решение.</tspan>
+  </text>
+
+  <rect x="915" y="495" width="840" height="300" rx="18" fill="#ffffff" stroke="#ec7063" stroke-width="2"/>
+  <text x="945" y="540" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#922b21">Комментарии и простота</text>
+  <text x="945" y="583" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="945" dy="0"># комментирует оставшуюся часть строки.</tspan>
+    <tspan x="945" dy="31">Комментарий объясняет что/как и принятый подход.</tspan>
+    <tspan x="945" dy="31">Красивое лучше уродливого.</tspan>
+    <tspan x="945" dy="31">Простое лучше сложного.</tspan>
+    <tspan x="945" dy="31">Удобочитаемость имеет значение.</tspan>
+    <tspan x="945" dy="31">Сейчас лучше, чем никогда.</tspan>
+  </text>
+
+  <rect x="45" y="840" width="825" height="270" rx="18" fill="#ffffff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="75" y="885" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#21618c">Упражнения 2.1–2.12</text>
+  <text x="75" y="928" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">Переменные и повторное присваивание.</tspan>
+    <tspan x="75" dy="30">Имена, регистр, f-строки и цитаты.</tspan>
+    <tspan x="75" dy="30">Пробельные символы и removesuffix().</tspan>
+    <tspan x="75" dy="30">Арифметика до 8 и любимое число.</tspan>
+    <tspan x="75" dy="30">Комментарии и import this.</tspan>
+    <tspan x="75" dy="36">Персональные значения: [Needs confirmation].</tspan>
+  </text>
+
+  <rect x="915" y="840" width="840" height="270" rx="18" fill="#ffffff" stroke="#58d68d" stroke-width="2"/>
+  <text x="945" y="885" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#1e8449">Source findings</text>
+  <text x="945" y="928" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="945" dy="0">1. «метки, которые можно назначать переменным»</tspan>
+    <tspan x="945" dy="30">   ↔ следующее утверждение о ссылке на значение.</tspan>
+    <tspan x="945" dy="40">2. Упражнение 2.9 просит четыре результата «8»,</tspan>
+    <tspan x="945" dy="30">   но / по этой же главе отображает float: 8.0.</tspan>
+    <tspan x="945" dy="40">Никакой silent correction; adjudication отдельно.</tspan>
+  </text>
+
+  <rect x="45" y="1140" width="1710" height="40" rx="12" fill="#17202a"/>
+  <text x="75" y="1167" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#ffffff">Provenance: e0011:c01–c10 · EPUB spine 11 · locator OEBPS/Text/978544614112-8.xhtml</text>
+</svg>
