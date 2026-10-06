@@ -1,7 +1,10 @@
-# Chapter notes
+# Chapter artifacts
 
-No chapter artifacts have been accepted yet.
+Book-level readiness: `READY`.
 
-Book-level readiness must be `READY` under
-`BIBLIOTEKA-VSP-BOOK-READINESS v1.3` before running
+Current chapter workflow:
 `BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.7`.
+
+## RAG-grounded chapter work
+
+- [Chapter 1 — «Предыстория Go»](chapter-01-predystoriya-go/) — `RAG_GROUNDED`

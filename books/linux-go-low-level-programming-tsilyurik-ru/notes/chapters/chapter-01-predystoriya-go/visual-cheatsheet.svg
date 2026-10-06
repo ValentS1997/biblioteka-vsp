@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#ffffff"/>
+  <style>
+    text{font-family:Arial,sans-serif;fill:#111}
+    .h{font-size:34px;font-weight:700}
+    .t{font-size:22px;font-weight:700}
+    .b{font-size:18px}
+    .box{fill:#f7f7f7;stroke:#333;stroke-width:2}
+  </style>
+  <text x="60" y="60" class="h">Глава 1 — Предыстория Go</text>
+  <text x="60" y="94" class="b">RAG: PDF 17–25 · linux-go-low-level-programming-tsilyurik-ru</text>
+
+  <rect x="60" y="130" width="330" height="210" rx="16" class="box"/>
+  <text x="85" y="170" class="t">Зачем Go</text>
+  <text x="85" y="205" class="b">• современная альтернатива C</text>
+  <text x="85" y="237" class="b">• параллелизм / SMP</text>
+  <text x="85" y="269" class="b">• переносимость</text>
+  <text x="85" y="301" class="b">• быстрая компиляция</text>
+
+  <rect x="435" y="130" width="330" height="210" rx="16" class="box"/>
+  <text x="460" y="170" class="t">Benchmark</text>
+  <text x="460" y="205" class="b">Один Fibonacci workload</text>
+  <text x="460" y="237" class="b">Фиксировать версии</text>
+  <text x="460" y="269" class="b">Одинаковый N</text>
+  <text x="460" y="301" class="b">Не делать общий рейтинг</text>
+
+  <rect x="810" y="130" width="330" height="210" rx="16" class="box"/>
+  <text x="835" y="170" class="t">Позиционирование</text>
+  <text x="835" y="205" class="b">C / C++ / Go / Rust</text>
+  <text x="835" y="237" class="b">Java</text>
+  <text x="835" y="269" class="b">Python</text>
+  <text x="835" y="301" class="b">Каждый язык — под свою задачу</text>
+
+  <rect x="60" y="385" width="520" height="220" rx="16" class="box"/>
+  <text x="85" y="425" class="t">Идейные связи</text>
+  <text x="85" y="462" class="b">• линия C / Algol</text>
+  <text x="85" y="494" class="b">• хэш-таблицы и множественные значения</text>
+  <text x="85" y="526" class="b">• функции как объекты первого класса</text>
+  <text x="85" y="558" class="b">• строки и текстовый API</text>
+
+  <rect x="620" y="385" width="520" height="220" rx="16" class="box"/>
+  <text x="645" y="425" class="t">Память и надёжность</text>
+  <text x="645" y="462" class="b">1. Стек</text>
+  <text x="645" y="494" class="b">2. Ручное управление</text>
+  <text x="645" y="526" class="b">3. Сборка мусора — source claim</text>
+  <text x="645" y="558" class="b">4. Владение — Rust, source claim</text>
+
+  <text x="60" y="670" class="b">Главный вывод: benchmark контекстен; версия инструмента и класс задачи обязательны для интерпретации.</text>
+</svg>
