@@ -73,3 +73,14 @@ Glossary commit:
 ## Result
 
 `ACCEPTED`
+
+## RU v2 editorial recheck
+
+- PASS — mixed RU/EN narrative prose normalized to Russian without changing source scope or claims.
+- PASS — Tables 60–64 terminology normalized while preserving CSF/DAIR identifiers.
+- PASS — Figure 200 rights marker remains fail-closed.
+- PASS — no external-source enrichment introduced.
+- PASS — semantic structure and reference [1] preserved.
+
+Result: `ACCEPTED`
+
