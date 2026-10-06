@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1200">
+<rect width="1800" height="1200" fill="#f5f7fa"/><rect width="1800" height="115" fill="#17202a"/>
+<text x="55" y="50" font-family="Arial" font-size="38" font-weight="700" fill="white">Глава 14 — Игровой счет</text>
+<text x="55" y="85" font-family="Arial" font-size="20" fill="#d6e4f0">полный game lifecycle: UI start, scaling, scoring and persistent-state boundary</text>
+<g font-family="Arial" fill="#273746">
+<rect x="45" y="150" width="540" height="300" rx="18" fill="white" stroke="#5dade2" stroke-width="2"/>
+<text x="75" y="195" font-size="25" font-weight="700">Play button / UI</text><text x="75" y="240" font-size="18">Button draws rect + rendered text.</text><text x="75" y="273" font-size="18">MOUSEBUTTONDOWN → mouse.get_pos().</text><text x="75" y="306" font-size="18">collidepoint() gates valid click.</text><text x="75" y="339" font-size="18">Active game ignores hidden button area.</text>
+<rect x="630" y="150" width="540" height="300" rx="18" fill="white" stroke="#7dcea0" stroke-width="2"/>
+<text x="660" y="195" font-size="25" font-weight="700">New-game reset</text><text x="660" y="240" font-size="18">initialize_dynamic_settings().</text><text x="660" y="273" font-size="18">reset_stats().</text><text x="660" y="306" font-size="18">empty bullets/aliens → create fleet.</text><text x="660" y="339" font-size="18">center ship → refresh score/level/lives.</text>
+<rect x="1215" y="150" width="540" height="300" rx="18" fill="white" stroke="#f5b041" stroke-width="2"/>
+<text x="1245" y="195" font-size="25" font-weight="700">Progression</text><text x="1245" y="240" font-size="18">speedup_scale multiplies speeds.</text><text x="1245" y="273" font-size="18">score_scale multiplies alien_points.</text><text x="1245" y="306" font-size="18">level increments after fleet clear.</text><text x="1245" y="339" font-size="18">New game restores initial dynamic values.</text>
+<rect x="45" y="495" width="825" height="300" rx="18" fill="white" stroke="#af7ac5" stroke-width="2"/>
+<text x="75" y="540" font-size="25" font-weight="700">Score / high score / lives</text><text x="75" y="585" font-size="18">Score comes from all aliens in collision values.</text><text x="75" y="618" font-size="18">High score survives restarts in current process.</text><text x="75" y="651" font-size="18">Level rendered below current score.</text><text x="75" y="684" font-size="18">Ship Sprite group visualizes remaining lives.</text><text x="75" y="717" font-size="18">prep_* keeps UI synchronized with state.</text>
+<rect x="915" y="495" width="840" height="300" rx="18" fill="white" stroke="#ec7063" stroke-width="2"/>
+<text x="945" y="540" font-size="25" font-weight="700">Exercises 14.1–14.8</text><text x="945" y="585" font-size="18">Keyboard start and shared start_game().</text><text x="945" y="618" font-size="18">Target-shooting mini-game + 3 misses.</text><text x="945" y="651" font-size="18">Difficulty scaling and selectable presets.</text><text x="945" y="684" font-size="18">Persistent high score + refactoring.</text><text x="945" y="717" font-size="18">Extensions and final side-shooter.</text>
+<rect x="45" y="840" width="1710" height="270" rx="18" fill="white" stroke="#58d68d" stroke-width="2"/>
+<text x="75" y="885" font-size="25" font-weight="700">Quality boundary</text>
+<text x="75" y="930" font-size="18">Findings: prep_msg naming; level-up prose/code order; high-score receiver; create_fleet and collision-helper naming;</text>
+<text x="75" y="965" font-size="18">caption typo; e0024:c02–c13 boundary clipping/overlap.</text>
+<text x="75" y="1010" font-size="18">Exercise 14.5 requires a persistent file write, but exact path/format/error handling are not defined in this chapter.</text>
+<text x="75" y="1050" font-size="18">Custom difficulty presets and extensions remain [Needs confirmation].</text>
+</g>
+<rect x="45" y="1140" width="1710" height="40" rx="12" fill="#17202a"/>
+<text x="75" y="1167" font-family="Arial" font-size="18" font-weight="700" fill="white">Provenance: e0024:c01–c13 · EPUB spine 24 · OEBPS/Text/978544614112-21.xhtml</text>
+</svg>
