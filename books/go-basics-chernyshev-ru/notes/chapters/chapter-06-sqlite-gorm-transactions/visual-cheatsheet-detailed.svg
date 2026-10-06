@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120">
+<rect width="1600" height="1120" fill="#f4f7fb"/>
+<rect x="12" y="12" width="1576" height="78" rx="14" fill="#26384d"/>
+<text x="800" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">Основы Go — глава 6: detailed map</text>
+<text x="800" y="72" font-family="Arial, sans-serif" font-size="15.5" fill="#dce8f4" text-anchor="middle">database/sql → GORM → transaction control → DryRun → SQLite-backed game repository</text>
+<rect x="14" y="110" width="382" height="270" rx="12" fill="#f7fbff" stroke="#5b98cf" stroke-width="2"/>
+<text x="32" y="140" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#173d64">1. Relational schema</text>
+<text x="36" y="171" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="36" dy="0">SQLite file stores relational tables.</tspan>
+<tspan x="36" dy="20">projects: PK + unique name.</tspan>
+<tspan x="36" dy="20">tasks: PK + project_id FK.</tspan>
+<tspan x="36" dy="20">One project relates to many tasks.</tspan>
+<tspan x="36" dy="20">DDL defines tables and constraints.</tspan>
+</text>
+<rect x="408" y="110" width="382" height="270" rx="12" fill="#f6fff8" stroke="#58ad79" stroke-width="2"/>
+<text x="426" y="140" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#18572f">2. Classic database/sql</text>
+<text x="430" y="171" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="430" dy="0">sql.Open creates/opens SQLite connection.</tspan>
+<tspan x="430" dy="20">Exec handles DDL and writes.</tspan>
+<tspan x="430" dy="20">Query + Next + Scan handles multi-row reads.</tspan>
+<tspan x="430" dy="20">? placeholders bind values.</tspan>
+<tspan x="430" dy="20">LastInsertId / RowsAffected verify results.</tspan>
+</text>
+<rect x="802" y="110" width="382" height="270" rx="12" fill="#fff9f4" stroke="#d49a4c" stroke-width="2"/>
+<text x="820" y="140" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#714500">3. Entity / model / CRUD</text>
+<text x="824" y="171" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="824" dy="0">Entity = plain old data (POD).</tspan>
+<tspan x="824" dy="20">Model may extend entity.</tspan>
+<tspan x="824" dy="20">CRUD = Create / Read / Update / Delete.</tspan>
+<tspan x="824" dy="20">SQLiteRepository hides DB implementation.</tspan>
+<tspan x="824" dy="20">Menu layer calls repository methods.</tspan>
+</text>
+<rect x="1196" y="110" width="390" height="270" rx="12" fill="#fff7fb" stroke="#cf6d99" stroke-width="2"/>
+<text x="1214" y="140" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#842044">4. GORM layer</text>
+<text x="1218" y="171" font-family="Arial, sans-serif" font-size="12.7" fill="#19324a">
+<tspan x="1218" dy="0">Struct tags define constraints/relations.</tspan>
+<tspan x="1218" dy="20">gorm.Open connects through SQLite driver.</tspan>
+<tspan x="1218" dy="20">AutoMigrate creates schema from models.</tspan>
+<tspan x="1218" dy="20">Create/Delete/Find/Where/Save replace SQL boilerplate.</tspan>
+<tspan x="1218" dy="20">Generated complex SQL may be less optimal.</tspan>
+</text>
+<rect x="14" y="398" width="502" height="290" rx="12" fill="#f7f7ff" stroke="#8179d6" stroke-width="2"/>
+<text x="32" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#474092">5. Transaction guarantees</text>
+<text x="36" y="459" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="36" dy="0">Multiple writes form one atomic action.</tspan>
+<tspan x="36" dy="20">Return nil from callback → commit.</tspan>
+<tspan x="36" dy="20">Return error → rollback.</tspan>
+<tspan x="36" dy="20">Nested transactions can roll back subsets.</tspan>
+<tspan x="36" dy="20">Default GORM write transactions protect integrity.</tspan>
+</text>
+<rect x="528" y="398" width="502" height="290" rx="12" fill="#f5fff7" stroke="#58ad79" stroke-width="2"/>
+<text x="546" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#18572f">6. Manual transaction control</text>
+<text x="550" y="459" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="550" dy="0">Begin starts explicit transaction.</tspan>
+<tspan x="550" dy="20">Commit persists provisional changes.</tspan>
+<tspan x="550" dy="20">Rollback discards them.</tspan>
+<tspan x="550" dy="20">Deferred recover can trigger Rollback on panic.</tspan>
+<tspan x="550" dy="20">Skipping default transactions trades safety for speed.</tspan>
+</text>
+<rect x="1042" y="398" width="544" height="290" rx="12" fill="#fffdf3" stroke="#d5ad37" stroke-width="2"/>
+<text x="1060" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#714500">7. DryRun</text>
+<text x="1064" y="459" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="1064" dy="0">gorm.Config{DryRun: true} generates SQL only.</tspan>
+<tspan x="1064" dy="20">No query is executed.</tspan>
+<tspan x="1064" dy="20">Statement.SQL.String() exposes generated statement.</tspan>
+<tspan x="1064" dy="20">Use to inspect ORM behavior and optimization needs.</tspan>
+<tspan x="1064" dy="20">Safe for observing query shape without DB mutation.</tspan>
+</text>
+<rect x="14" y="706" width="760" height="278" rx="12" fill="#f4fbff" stroke="#6d9fc8" stroke-width="2"/>
+<text x="32" y="736" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#174d70">8. Tic-tac-toe v.5 repository</text>
+<text x="36" y="768" font-family="Arial, sans-serif" font-size="12.7" fill="#19324a">
+<tspan x="36" dy="0">Previous JSON-file storage package is removed.</tspan>
+<tspan x="36" dy="20">database package owns GORM-backed SQLiteRepository.</tspan>
+<tspan x="36" dy="20">IRepository hides storage implementation from Game.</tspan>
+<tspan x="36" dy="20">Tables store player profiles, snapshots and finished games.</tspan>
+<tspan x="36" dy="20">Board is serialized as JSON bytes inside DB records.</tspan>
+</text>
+<rect x="786" y="706" width="800" height="278" rx="12" fill="#fff8f2" stroke="#d17e4f" stroke-width="2"/>
+<text x="804" y="736" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#7b3e1e">9. Application behavior v.5</text>
+<text x="808" y="768" font-family="Arial, sans-serif" font-size="12.7" fill="#19324a">
+<tspan x="808" dy="0">GameSnapshot gets a human-readable SnapshotName.</tspan>
+<tspan x="808" dy="20">FinishGameSnapshot records winner and time.</tspan>
+<tspan x="808" dy="20">Save checks name collision per player.</tspan>
+<tspan x="808" dy="20">Load lists snapshots by nickname for selection.</tspan>
+<tspan x="808" dy="20">Main menu also lists completed-game history.</tspan>
+</text>
+<rect x="14" y="1004" width="1572" height="88" rx="10" fill="#26384d"/>
+<text x="800" y="1031" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Acceptance: explain classic SQLite CRUD, GORM migration/CRUD, transaction rollback semantics and DryRun.</text>
+<text x="800" y="1058" font-family="Arial, sans-serif" font-size="14.5" fill="#dce8f4" text-anchor="middle">Project acceptance: explain why v.5 replaces file storage with IRepository + SQLiteRepository.</text>
+<text x="800" y="1082" font-family="Arial, sans-serif" font-size="13.5" fill="#dce8f4" text-anchor="middle">RAG-only • PDF 308–362 • summary p0361 • questions p0361–p0362</text>
+</svg>
