@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 8 — Функции</title>
+  <desc id="desc">Определение функций, аргументы, return, списки, variadic arguments и modules.</desc>
+  <rect width="1600" height="900" fill="#f6f8fb"/>
+  <rect width="1600" height="108" fill="#17202a"/>
+  <text x="56" y="48" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="36" font-weight="700" fill="#fff">Глава 8 — Функции</text>
+  <text x="56" y="82" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">def → параметры → вызов → return → module</text>
+
+  <rect x="50" y="145" width="470" height="250" rx="18" fill="#fff" stroke="#5dade2" stroke-width="2"/>
+  <text x="78" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#1b4f72">Интерфейс</text>
+  <text x="78" y="230" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">
+    <tspan x="78" dy="0">def function(parameters):</tspan>
+    <tspan x="78" dy="34">positional / keyword</tspan>
+    <tspan x="78" dy="34">default values</tspan>
+    <tspan x="78" dy="34">parameter ≠ argument</tspan>
+  </text>
+
+  <rect x="565" y="145" width="470" height="250" rx="18" fill="#fff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="593" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#196f3d">Результат</text>
+  <text x="593" y="230" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">
+    <tspan x="593" dy="0">print → side effect / stdout</tspan>
+    <tspan x="593" dy="34">return → value to caller</tspan>
+    <tspan x="593" dy="34">return string / dict / other value</tspan>
+    <tspan x="593" dy="34">optional parameter через default</tspan>
+  </text>
+
+  <rect x="1080" y="145" width="470" height="250" rx="18" fill="#fff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1108" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#9c640c">Variadic</text>
+  <text x="1108" y="230" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">
+    <tspan x="1108" dy="0">*args → tuple</tspan>
+    <tspan x="1108" dy="34">**kwargs → dictionary</tspan>
+    <tspan x="1108" dy="34">required params идут раньше</tspan>
+    <tspan x="1108" dy="34">проверять разные call shapes</tspan>
+  </text>
+
+  <rect x="50" y="445" width="720" height="280" rx="18" fill="#fff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="78" y="488" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#6c3483">Mutability boundary</text>
+  <text x="78" y="531" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">
+    <tspan x="78" dy="0">function(list) → может изменить original</tspan>
+    <tspan x="78" dy="34">function(list[:]) → работает с copy</tspan>
+    <tspan x="78" dy="34">copy сохраняет original, но стоит memory/time</tspan>
+    <tspan x="78" dy="34">функция должна решать одну задачу</tspan>
+  </text>
+
+  <rect x="815" y="445" width="735" height="280" rx="18" fill="#fff" stroke="#ec7063" stroke-width="2"/>
+  <text x="843" y="488" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#922b21">Modules / findings</text>
+  <text x="843" y="531" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="843" dy="0">import module / from module import fn</tspan>
+    <tspan x="843" dy="34">aliases поддерживаются</tspan>
+    <tspan x="843" dy="34">import * → риск name conflicts</tspan>
+    <tspan x="843" dy="34">age default + while indentation → findings</tspan>
+  </text>
+
+  <rect x="50" y="775" width="1500" height="72" rx="14" fill="#17202a"/>
+  <text x="78" y="819" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#fff">Provenance: e0017:c01–c16 · EPUB spine 17 · OEBPS/Text/978544614112-14.xhtml</text>
+</svg>
