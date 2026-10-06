@@ -24,13 +24,13 @@ class ReadinessTests(unittest.TestCase):
         (self.root / "templates").mkdir()
         module.ROOT = self.root
         module.INDEX = self.root / "books" / "index.yaml"
-        module.CHAPTER_TEMPLATE = self.root / "templates" / "chapter-artifact-collection-v1.6.yaml"
+        module.CHAPTER_TEMPLATE = self.root / "templates" / "chapter-artifact-collection-v1.7.yaml"
         module.CHAPTER_TEMPLATE.write_text(
             yaml.safe_dump(
                 {
                     "template": {
                         "id": "BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION",
-                        "version": "1.6",
+                        "version": "1.7",
                         "status": "ACCEPTED",
                     }
                 },
@@ -194,6 +194,42 @@ class ReadinessTests(unittest.TestCase):
         self.assertEqual("BLOCKED", result["status"])
         failed_ids = {item["id"] for item in result["failed_checks"]}
         self.assertIn("source_provenance_consistent", failed_ids)
+
+
+    def test_new_generation_requires_bound_acceptance(self):
+        self.write_ready_book("pdf")
+        book = self.root / "books" / "test-book"
+        manifest_path = book / "rag" / "manifest.yaml"
+        manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
+        manifest["generation"] = {
+            "corpus_generation_id": "c" * 64,
+            "index_generation_id": "d" * 64,
+        }
+        manifest_path.write_text(yaml.safe_dump(manifest, sort_keys=False), encoding="utf-8")
+
+        blocked = module.compute_readiness("test-book")
+        self.assertEqual("BLOCKED", blocked["status"])
+        self.assertIn(
+            "rag_ingestion_acceptance_passed",
+            {item["id"] for item in blocked["failed_checks"]},
+        )
+
+        (book / "rag" / "acceptance.yaml").write_text(
+            yaml.safe_dump(
+                {
+                    "schema": "biblioteka-vsp/rag-ingestion-acceptance/v1",
+                    "book_id": "test-book",
+                    "status": "ACCEPTED",
+                    "source_sha256": "a" * 64,
+                    "corpus_generation_id": "c" * 64,
+                    "index_generation_id": "d" * 64,
+                },
+                sort_keys=False,
+            ),
+            encoding="utf-8",
+        )
+        ready = module.compute_readiness("test-book")
+        self.assertEqual("READY", ready["status"])
 
 
 if __name__ == "__main__":
