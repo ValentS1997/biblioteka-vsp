@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1740" height="1380" viewBox="0 0 1740 1380">
+  <rect width="1740" height="1380" fill="white"/>
+  <text x="55" y="65" font-family="sans-serif" font-size="36" font-weight="700">Глава 13. Решение задач — detailed map</text>
+  <text x="55" y="102" font-family="sans-serif" font-size="18">RAG-only · p0099:c01–p0108:c01 · PDF 99–108 · source SHA ac1abb…d7db5</text>
+
+  <rect x="55" y="140" width="1630" height="120" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="80" y="180" font-family="sans-serif" font-size="23" font-weight="700">Problem-solving model</text>
+  <text x="80" y="220" font-family="sans-serif" font-size="18">Analyze missing requirements → design smallest solution → implement → test/debug → use → improve iteratively.</text>
+
+  <rect x="55" y="305" width="500" height="360" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="80" y="345" font-family="sans-serif" font-size="23" font-weight="700">13.1–13.2 Version 1</text>
+  <text x="80" y="390" font-family="sans-serif" font-size="18">source list + target_dir</text>
+  <text x="80" y="430" font-family="monospace" font-size="17">strftime('%Y%m%d%H%M%S')</text>
+  <text x="80" y="470" font-family="monospace" font-size="17">zip -qr ...</text>
+  <text x="80" y="510" font-family="monospace" font-size="17">os.system(zip_command)</text>
+  <text x="80" y="550" font-family="sans-serif" font-size="17">debug: print generated command</text>
+  <text x="80" y="590" font-family="sans-serif" font-size="16">writes archive → state-changing</text>
+
+  <rect x="620" y="305" width="500" height="360" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="645" y="345" font-family="sans-serif" font-size="23" font-weight="700">13.3 Version 2</text>
+  <text x="645" y="390" font-family="sans-serif" font-size="18">date directory + time archive</text>
+  <text x="645" y="430" font-family="monospace" font-size="17">os.path.exists(today)</text>
+  <text x="645" y="470" font-family="monospace" font-size="17">os.mkdir(today)</text>
+  <text x="645" y="510" font-family="sans-serif" font-size="17">hierarchical backups</text>
+  <text x="645" y="555" font-family="sans-serif" font-size="16">RAG indentation/output mismatch recorded</text>
+
+  <rect x="1185" y="305" width="500" height="360" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="1210" y="345" font-family="sans-serif" font-size="23" font-weight="700">13.4–13.5 Versions 3 / 4</text>
+  <text x="1210" y="390" font-family="sans-serif" font-size="18">user comment in ZIP name</text>
+  <text x="1210" y="430" font-family="sans-serif" font-size="18">v3 intentionally broken</text>
+  <text x="1210" y="470" font-family="monospace" font-size="17">SyntaxError: invalid syntax</text>
+  <text x="1210" y="510" font-family="sans-serif" font-size="18">v4 adds line continuation</text>
+  <text x="1210" y="550" font-family="monospace" font-size="17">comment.replace(' ', '_')</text>
+
+  <rect x="55" y="715" width="770" height="245" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="80" y="755" font-family="sans-serif" font-size="23" font-weight="700">13.6 Improvements</text>
+  <text x="80" y="800" font-family="sans-serif" font-size="18">verbosity flag -v</text>
+  <text x="80" y="840" font-family="monospace" font-size="17">sys.argv + source.extend(...)</text>
+  <text x="80" y="880" font-family="sans-serif" font-size="18">replace external zip/os.system</text>
+  <text x="80" y="920" font-family="monospace" font-size="17">zipfile / tarfile</text>
+
+  <rect x="875" y="715" width="810" height="245" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="900" y="755" font-family="sans-serif" font-size="23" font-weight="700">13.7 Development cycle</text>
+  <text x="900" y="800" font-family="sans-serif" font-size="18">What → Analysis</text>
+  <text x="900" y="835" font-family="sans-serif" font-size="18">How → Design</text>
+  <text x="900" y="870" font-family="sans-serif" font-size="18">Build → Test/Debug → Use → Maintain</text>
+  <text x="900" y="910" font-family="sans-serif" font-size="17">«Программы выращиваются, а не строятся.» — source framing</text>
+
+  <rect x="55" y="1010" width="1630" height="240" rx="10" fill="#fafafa" stroke="#666" stroke-dasharray="7 5"/>
+  <text x="80" y="1050" font-family="sans-serif" font-size="22" font-weight="700">Safety / source integrity</text>
+  <text x="80" y="1090" font-family="sans-serif" font-size="17">• backup scripts create directories/ZIP archives and execute shell commands</text>
+  <text x="80" y="1125" font-family="sans-serif" font-size="17">• C:\My Documents / C:\Code / E:\Backup are source examples → [Needs confirmation]</text>
+  <text x="80" y="1160" font-family="sans-serif" font-size="17">• zip availability, os.sep Mac statement, os.system status semantics retained as source claims</text>
+  <text x="80" y="1195" font-family="sans-serif" font-size="17">• source rollback for created artifacts is not supplied</text>
+
+  <text x="55" y="1300" font-family="sans-serif" font-size="18">13.8 summary: build your own program using the same iterative recipe.</text>
+  <text x="55" y="1335" font-family="sans-serif" font-size="17">Next boundary: p0109:c01 / PDF 109 — chapter 14 OOP.</text>
+</svg>
