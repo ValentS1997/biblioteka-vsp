@@ -17,3 +17,4 @@ Current chapter workflow:
 - [Chapter 8 — «Осваиваемся в синтаксисе Go»](chapter-08-osvaivaemsya-v-sintaksise-go/) — `RAG_GROUNDED`
 - [Chapter 9 — «Структуры данных, типы и их методы»](chapter-09-struktury-dannyh-tipy-i-ih-metody/) — `RAG_GROUNDED`
 - [Chapter 10 — «Строки, руны и UNICODE»](chapter-10-stroki-runy-i-unicode/) — `RAG_GROUNDED`
+- [Chapter 11 — «Элементы функционального программирования»](chapter-11-elementy-funkcionalnogo-programmirovaniya/) — `RAG_GROUNDED`
