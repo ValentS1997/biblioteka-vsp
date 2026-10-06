@@ -413,6 +413,8 @@ HEADING_REPLACEMENTS = {
     "STABLE PRINCIPLES": "УСТОЙЧИВЫЕ ПРИНЦИПЫ",
 }
 
+EXTERNAL_HEADING_MAP = {}
+
 PHRASE_REPLACEMENTS = [
     ("incident response", "реагирование на инциденты"),
     ("Incident Response", "реагирование на инциденты"),
@@ -430,10 +432,23 @@ PHRASE_REPLACEMENTS = [
     ("Multi-cloud visibility", "сквозная видимость multi-cloud"),
 ]
 
+def load_external_heading_map(repo_root: Path):
+    global EXTERNAL_HEADING_MAP
+    p = repo_root / "books" / BOOK_ID / "translation" / "ru" / "V2-HEADING-MAP.yaml"
+    if not p.exists():
+        EXTERNAL_HEADING_MAP = {}
+        return
+    data = yaml.safe_load(p.read_text(encoding="utf-8")) or {}
+    raw = data.get("headings") or {}
+    EXTERNAL_HEADING_MAP = {str(k).upper(): str(v) for k, v in raw.items()}
+
+
 def normalize_heading_text(text: str) -> str:
     original = text
     key = text.strip()
     upper = key.upper()
+    if upper in EXTERNAL_HEADING_MAP:
+        return EXTERNAL_HEADING_MAP[upper]
     if upper in HEADING_REPLACEMENTS:
         return HEADING_REPLACEMENTS[upper]
     out = key
@@ -508,6 +523,7 @@ def normalize_body_v2(text: str) -> str:
     return text.strip() + "\n"
 
 def audit_and_assemble(repo_root: Path, out_dir: Path):
+    load_external_heading_map(repo_root)
     tr_root = repo_root / "books" / BOOK_ID / "translation" / "ru"
     chapters_dir = tr_root / "chapters"
     chapter_files = sorted(
