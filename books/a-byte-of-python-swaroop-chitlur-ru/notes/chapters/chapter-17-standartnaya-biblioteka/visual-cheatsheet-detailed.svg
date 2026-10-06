@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1760" height="1400" viewBox="0 0 1760 1400">
+  <rect width="1760" height="1400" fill="white"/>
+  <text x="55" y="65" font-family="sans-serif" font-size="36" font-weight="700">Глава 17. Стандартная библиотека — detailed map</text>
+  <text x="55" y="102" font-family="sans-serif" font-size="18">RAG-only · p0133:c01–p0136:c01 · PDF 133–136 · source SHA ac1abb…d7db5</text>
+
+  <rect x="55" y="140" width="1650" height="120" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="80" y="180" font-family="sans-serif" font-size="23" font-weight="700">Core lesson</text>
+  <text x="80" y="220" font-family="sans-serif" font-size="18">The standard library already contains reusable system, warning, path, platform and logging capabilities.</text>
+
+  <rect x="55" y="305" width="510" height="355" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="80" y="345" font-family="sans-serif" font-size="23" font-weight="700">17.1 sys / warnings</text>
+  <text x="80" y="390" font-family="monospace" font-size="17">import sys</text>
+  <text x="80" y="430" font-family="monospace" font-size="17">sys.version_info</text>
+  <text x="80" y="470" font-family="monospace" font-size="17">sys.version_info[0] &lt; 3</text>
+  <text x="80" y="510" font-family="monospace" font-size="17">warnings.warn(..., RuntimeWarning)</text>
+  <text x="80" y="550" font-family="sans-serif" font-size="17">python2.7 warning path</text>
+  <text x="80" y="590" font-family="sans-serif" font-size="17">python3 normal path</text>
+
+  <rect x="625" y="305" width="510" height="355" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="650" y="345" font-family="sans-serif" font-size="23" font-weight="700">17.2 Resolve log path</text>
+  <text x="650" y="390" font-family="monospace" font-size="17">platform.platform().startswith('Windows')</text>
+  <text x="650" y="430" font-family="monospace" font-size="17">HOMEDRIVE + HOMEPATH</text>
+  <text x="650" y="470" font-family="monospace" font-size="17">HOME</text>
+  <text x="650" y="510" font-family="monospace" font-size="17">os.path.join(..., 'test.log')</text>
+  <text x="650" y="550" font-family="sans-serif" font-size="17">environment values required</text>
+  <text x="650" y="590" font-family="sans-serif" font-size="16">resolved path → [Needs confirmation]</text>
+
+  <rect x="1195" y="305" width="510" height="355" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="1220" y="345" font-family="sans-serif" font-size="23" font-weight="700">17.2 Write log</text>
+  <text x="1220" y="390" font-family="monospace" font-size="17">logging.basicConfig(...)</text>
+  <text x="1220" y="430" font-family="monospace" font-size="17">filename=logging_file</text>
+  <text x="1220" y="470" font-family="monospace" font-size="17">filemode='w'</text>
+  <text x="1220" y="510" font-family="monospace" font-size="17">logging.debug(...)</text>
+  <text x="1220" y="550" font-family="monospace" font-size="17">logging.info(...) / warning(...)</text>
+  <text x="1220" y="590" font-family="sans-serif" font-size="16">filesystem state-changing / overwrite risk</text>
+
+  <rect x="55" y="710" width="800" height="245" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="80" y="750" font-family="sans-serif" font-size="23" font-weight="700">17.3 Further study</text>
+  <text x="80" y="795" font-family="sans-serif" font-size="18">debugging</text>
+  <text x="80" y="835" font-family="sans-serif" font-size="18">command-line processing</text>
+  <text x="80" y="875" font-family="sans-serif" font-size="18">regular expressions and more</text>
+  <text x="80" y="915" font-family="sans-serif" font-size="17">Module of the Week + official docs named by source</text>
+
+  <rect x="905" y="710" width="800" height="245" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="930" y="750" font-family="sans-serif" font-size="23" font-weight="700">Acceptance</text>
+  <text x="930" y="795" font-family="sans-serif" font-size="18">inspect version information</text>
+  <text x="930" y="835" font-family="sans-serif" font-size="18">emit version warning</text>
+  <text x="930" y="875" font-family="sans-serif" font-size="18">resolve target log path before write</text>
+  <text x="930" y="915" font-family="sans-serif" font-size="18">verify DEBUG / INFO / WARNING records</text>
+
+  <rect x="55" y="1005" width="1650" height="250" rx="10" fill="#fafafa" stroke="#666" stroke-dasharray="7 5"/>
+  <text x="80" y="1045" font-family="sans-serif" font-size="22" font-weight="700">Source integrity findings</text>
+  <text x="80" y="1085" font-family="sans-serif" font-size="17">• “только Python 3.0” prose is narrower than major-version condition</text>
+  <text x="80" y="1120" font-family="sans-serif" font-size="17">• Python 2.7 command / warning rendering retained as historical source variants</text>
+  <text x="80" y="1155" font-family="sans-serif" font-size="17">• HOME/HOMEDRIVE/HOMEPATH absence is not handled by the source example</text>
+  <text x="80" y="1190" font-family="sans-serif" font-size="17">• test.log is opened with filemode='w' → overwrite risk</text>
+  <text x="80" y="1225" font-family="sans-serif" font-size="17">• further-study references named without explicit URL in RAG</text>
+
+  <text x="55" y="1320" font-family="sans-serif" font-size="18">17.4 summary: only a small subset of the standard library was covered.</text>
+  <text x="55" y="1355" font-family="sans-serif" font-size="17">Next boundary: p0137:c01 / PDF 137 — chapter 18 «Дополнительно».</text>
+</svg>
