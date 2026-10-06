@@ -17,7 +17,7 @@
 <text x="75" y="885" font-size="25" font-weight="700">Exercises / quality boundary</text>
 <text x="75" y="930" font-size="18">18.1–18.8 cover repeated project bootstrap, Entry formatting, query docs, Pizzeria, Meal Planner and linked detail pages.</text>
 <text x="75" y="965" font-size="18">External Django docs were not opened in rag_only; current Django/Python compatibility remains unverified.</text>
-<text x="75" y="1000" font-size="18">Findings include command, argument, URL, docs-version, terminology and date-format mismatches.</text>
+<text x="75" y="1000" font-size="18">Findings include command, argument, URL, docs-version and terminology mismatches.</text>
 <text x="75" y="1035" font-size="18">e0028:c02–c18 also show legacy chunk-boundary clipping/overlap.</text>
 </g>
 <rect x="45" y="1140" width="1710" height="40" rx="12" fill="#17202a"/>
