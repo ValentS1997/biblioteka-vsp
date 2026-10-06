@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="960" viewBox="0 0 1360 960">
+  <rect width="1360" height="960" fill="white"/>
+  <text x="55" y="62" font-family="sans-serif" font-size="34" font-weight="700">Глава 17 — «Стандартная библиотека»</text>
+  <text x="55" y="98" font-family="sans-serif" font-size="18">RAG PDF 133–136 · p0133:c01–p0136:c01</text>
+
+  <rect x="55" y="140" width="390" height="200" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="80" y="180" font-family="sans-serif" font-size="22" font-weight="700">sys / warnings</text>
+  <text x="80" y="220" font-family="monospace" font-size="18">sys.version_info</text>
+  <text x="80" y="255" font-family="monospace" font-size="18">major &lt; 3</text>
+  <text x="80" y="290" font-family="monospace" font-size="18">warnings.warn(...)</text>
+
+  <rect x="485" y="140" width="390" height="200" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="510" y="180" font-family="sans-serif" font-size="22" font-weight="700">Path selection</text>
+  <text x="510" y="220" font-family="monospace" font-size="18">platform.platform()</text>
+  <text x="510" y="255" font-family="monospace" font-size="18">HOME / HOMEDRIVE</text>
+  <text x="510" y="290" font-family="monospace" font-size="18">os.path.join</text>
+
+  <rect x="915" y="140" width="390" height="200" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="940" y="180" font-family="sans-serif" font-size="22" font-weight="700">logging</text>
+  <text x="940" y="220" font-family="monospace" font-size="18">basicConfig(...)</text>
+  <text x="940" y="255" font-family="monospace" font-size="18">filemode='w'</text>
+  <text x="940" y="290" font-family="sans-serif" font-size="18">DEBUG / INFO / WARNING</text>
+
+  <rect x="55" y="395" width="590" height="220" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="80" y="435" font-family="sans-serif" font-size="22" font-weight="700">versioncheck.py</text>
+  <text x="80" y="475" font-family="monospace" font-size="18">python2.7 → warning</text>
+  <text x="80" y="515" font-family="monospace" font-size="18">python3 → normal continuation</text>
+  <text x="80" y="555" font-family="sans-serif" font-size="18">historical source variants</text>
+
+  <rect x="695" y="395" width="610" height="220" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="720" y="435" font-family="sans-serif" font-size="22" font-weight="700">use_logging.py</text>
+  <text x="720" y="475" font-family="monospace" font-size="18">.../test.log</text>
+  <text x="720" y="515" font-family="sans-serif" font-size="18">filesystem write / possible overwrite</text>
+  <text x="720" y="555" font-family="sans-serif" font-size="18">rollback → [Needs confirmation]</text>
+
+  <rect x="55" y="670" width="1250" height="125" rx="12" fill="#fafafa" stroke="#333"/>
+  <text x="80" y="710" font-family="sans-serif" font-size="22" font-weight="700">Standard-library habit</text>
+  <text x="80" y="748" font-family="sans-serif" font-size="18">know available modules → reuse built-in capabilities → consult documentation</text>
+  <text x="80" y="778" font-family="sans-serif" font-size="17">Next: chapter 18 «Дополнительно».</text>
+
+  <text x="55" y="850" font-family="sans-serif" font-size="16">Findings: Python 3.0 wording mismatch; historical Python 2.7 output; logging path/overwrite dependencies.</text>
+  <text x="55" y="884" font-family="sans-serif" font-size="16">Chapter-end summary present: 17.4.</text>
+</svg>

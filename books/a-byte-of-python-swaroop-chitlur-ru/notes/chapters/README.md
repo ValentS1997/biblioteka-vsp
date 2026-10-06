@@ -23,3 +23,4 @@ Current chapter workflow:
 - [Chapter 14 — «Объектно-ориентированное программирование»](chapter-14-oop/) — `RAG_GROUNDED`
 - [Chapter 15 — «Ввод-вывод»](chapter-15-vvod-vyvod/) — `RAG_GROUNDED`
 - [Chapter 16 — «Исключения»](chapter-16-isklyucheniya/) — `RAG_GROUNDED`
+- [Chapter 17 — «Стандартная библиотека»](chapter-17-standartnaya-biblioteka/) — `RAG_GROUNDED`
