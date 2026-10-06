@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1330" viewBox="0 0 1700 1330">
+  <rect width="1700" height="1330" fill="white"/>
+  <text x="55" y="65" font-family="sans-serif" font-size="36" font-weight="700">Глава 10. Функции — detailed map</text>
+  <text x="55" y="102" font-family="sans-serif" font-size="18">RAG-only · p0067:c01–p0078:c01 · PDF 67–78 · source SHA ac1abb…d7db5</text>
+
+  <rect x="55" y="140" width="1590" height="115" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="80" y="180" font-family="sans-serif" font-size="23" font-weight="700">Core function model</text>
+  <text x="80" y="220" font-family="monospace" font-size="18">def name(parameters): body    →    name(arguments)    →    reusable execution</text>
+
+  <rect x="55" y="300" width="500" height="350" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="80" y="340" font-family="sans-serif" font-size="23" font-weight="700">10.1–10.4 Scope & input</text>
+  <text x="80" y="385" font-family="sans-serif" font-size="18">parameters vs arguments</text>
+  <text x="80" y="425" font-family="sans-serif" font-size="18">local variable scope</text>
+  <text x="80" y="465" font-family="monospace" font-size="17">global x</text>
+  <text x="80" y="505" font-family="monospace" font-size="17">nonlocal x</text>
+  <text x="80" y="550" font-family="sans-serif" font-size="17">global: outermost binding</text>
+  <text x="80" y="585" font-family="sans-serif" font-size="17">nonlocal: enclosing function binding</text>
+
+  <rect x="600" y="300" width="500" height="350" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="625" y="340" font-family="sans-serif" font-size="23" font-weight="700">10.5–10.8 Argument forms</text>
+  <text x="625" y="385" font-family="sans-serif" font-size="18">default parameters</text>
+  <text x="625" y="425" font-family="sans-serif" font-size="18">keyword arguments</text>
+  <text x="625" y="465" font-family="monospace" font-size="17">*numbers</text>
+  <text x="625" y="505" font-family="monospace" font-size="17">**keywords</text>
+  <text x="625" y="545" font-family="sans-serif" font-size="18">keyword-only after *</text>
+  <text x="625" y="590" font-family="sans-serif" font-size="16">missing required keyword-only → source TypeError</text>
+
+  <rect x="1145" y="300" width="500" height="350" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="1170" y="340" font-family="sans-serif" font-size="23" font-weight="700">10.9 Return</text>
+  <text x="1170" y="385" font-family="monospace" font-size="17">return value</text>
+  <text x="1170" y="425" font-family="monospace" font-size="17">return None</text>
+  <text x="1170" y="465" font-family="sans-serif" font-size="18">implicit return None — source statement</text>
+  <text x="1170" y="505" font-family="monospace" font-size="17">pass</text>
+  <text x="1170" y="550" font-family="sans-serif" font-size="17">built-in max mentioned as existing solution</text>
+
+  <rect x="55" y="700" width="770" height="235" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="80" y="740" font-family="sans-serif" font-size="23" font-weight="700">10.10 Docstrings</text>
+  <text x="80" y="785" font-family="sans-serif" font-size="18">first logical string in function → documentation</text>
+  <text x="80" y="825" font-family="monospace" font-size="18">printMax.__doc__</text>
+  <text x="80" y="865" font-family="monospace" font-size="18">help(printMax)</text>
+  <text x="80" y="902" font-family="sans-serif" font-size="16">pydoc mentioned; no concrete CLI form supplied.</text>
+
+  <rect x="875" y="700" width="770" height="235" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="900" y="740" font-family="sans-serif" font-size="23" font-weight="700">10.11–10.12</text>
+  <text x="900" y="785" font-family="sans-serif" font-size="18">Annotations: parameter/return metadata concept</text>
+  <text x="900" y="825" font-family="sans-serif" font-size="18">Source refers reader to PEP 3107</text>
+  <text x="900" y="865" font-family="sans-serif" font-size="18">Summary: everyday function mechanics mostly covered</text>
+  <text x="900" y="902" font-family="sans-serif" font-size="17">Next: modules</text>
+
+  <rect x="55" y="985" width="1590" height="225" rx="10" fill="#fafafa" stroke="#666" stroke-dasharray="7 5"/>
+  <text x="80" y="1025" font-family="sans-serif" font-size="22" font-weight="700">Source integrity findings</text>
+  <text x="80" y="1065" font-family="sans-serif" font-size="17">• func_default.py calls are indented in RAG but shown output implies a different structure</text>
+  <text x="80" y="1100" font-family="sans-serif" font-size="17">• source says default values must be immutable → [Needs confirmation]</text>
+  <text x="80" y="1135" font-family="sans-serif" font-size="17">• func_global output typo: «Знчение» vs code «Значение»</text>
+  <text x="80" y="1170" font-family="sans-serif" font-size="17">• keyword-only TypeError text and #!/usr/bin/python retained as historical source variants</text>
+
+  <text x="55" y="1260" font-family="sans-serif" font-size="18">10.12 summary spans p0077:c01–p0078:c01 / PDF 77–78.</text>
+  <text x="55" y="1295" font-family="sans-serif" font-size="17">Next boundary: p0079:c01 / PDF 79 — chapter 11 «Модули».</text>
+</svg>
