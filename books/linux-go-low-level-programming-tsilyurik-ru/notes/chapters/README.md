@@ -2,6 +2,10 @@
 
 Book-level readiness: `READY`.
 
+Book activity status: `COMPLETED`.
+
+Chapter-analysis status: `COMPLETE` as of `2026-10-07`.
+
 Current chapter workflow:
 `BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.7`.
 

@@ -4,11 +4,20 @@ Book ID: `linux-go-low-level-programming-tsilyurik-ru`
 
 Author: Олег Иванович Цилюрик.
 
-## Reading state
+## Project state
 
-Reading has not been activated. Current state: `planned`.
+Book activity: `COMPLETED`.
+
+Reading state: `completed` on `2026-10-07`.
+
+The original reading start date was not recorded and remains `[Needs confirmation]`.
 
 Canonical reading state: [reading/progress.yaml](reading/progress.yaml).
+
+Chapter-analysis state: all technical chapter artifacts are complete under
+`BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.7`.
+
+The source's unnumbered `Заключение` is stored as project-indexed Chapter 14 for artifact continuity. Source page 281 `Об авторе` is not a technical chapter artifact.
 
 ## Source
 

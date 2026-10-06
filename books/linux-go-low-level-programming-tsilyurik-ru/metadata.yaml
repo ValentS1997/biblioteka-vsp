@@ -47,6 +47,6 @@ rag:
 reading:
   progress: "reading/progress.yaml"
   journal: "reading/journal.md"
-  status: planned
+  status: completed
   started: null
-  completed: null
+  completed: 2026-10-07
