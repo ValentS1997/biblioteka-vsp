@@ -58,7 +58,7 @@ jobs:
           grep -q "^Pages:" build/dynamic-ir-ru-book/pdfinfo.txt
 
       - name: Persist publication artifacts in book registry
-        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.head_ref != 'translation/dynamic-ir-ru-v2'
         run: |
           export_dir="books/dynamic-incident-response-joshua-wright-en-2026/exports"
           mkdir -p "$export_dir"
