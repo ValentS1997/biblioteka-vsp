@@ -231,7 +231,7 @@ Source-supported primitive:
 ~~~python
 from random import choice
 
-pool = ['[15 элементов]']
+pool = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'A', 'B', 'C', 'D', 'E']
 winning = []
 
 while len(winning) < 4:
