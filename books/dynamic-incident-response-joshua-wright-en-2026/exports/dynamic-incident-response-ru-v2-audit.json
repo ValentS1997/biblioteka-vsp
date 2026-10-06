@@ -105,7 +105,7 @@
     }
   ],
   "third_party_markers_source": 231,
-  "third_party_callouts_v2": 143,
+  "third_party_callouts_v2": 231,
   "problems": [],
   "chapter_analysis_workflow": "BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST v1.2 -> BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.6",
   "workflow_provenance": "RETROFIT_VERIFIED_COMPATIBILITY"
