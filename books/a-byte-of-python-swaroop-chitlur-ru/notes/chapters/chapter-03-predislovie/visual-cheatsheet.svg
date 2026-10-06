@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="740" viewBox="0 0 1200 740">
+  <rect width="1200" height="740" fill="white"/>
+  <text x="55" y="65" font-family="sans-serif" font-size="34" font-weight="700">Глава 3 — «Предисловие»</text>
+  <text x="55" y="100" font-family="sans-serif" font-size="18">RAG PDF 23–26 · chunks p0023:c01–p0026:c01</text>
+
+  <rect x="55" y="145" width="330" height="130" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="80" y="185" font-family="sans-serif" font-size="22" font-weight="700">3.1 Аудитория</text>
+  <text x="80" y="220" font-family="sans-serif" font-size="18">Прежде всего новички</text>
+  <text x="80" y="248" font-family="sans-serif" font-size="18">Но полезно и опытным</text>
+
+  <rect x="435" y="145" width="330" height="130" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="460" y="185" font-family="sans-serif" font-size="22" font-weight="700">3.2 История</text>
+  <text x="460" y="220" font-family="sans-serif" font-size="18">Installer → Python/PyQt</text>
+  <text x="460" y="248" font-family="sans-serif" font-size="18">Заметки → ~30 стр. → книга</text>
+
+  <rect x="815" y="145" width="330" height="130" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="840" y="185" font-family="sans-serif" font-size="22" font-weight="700">3.3 Развитие</text>
+  <text x="840" y="220" font-family="sans-serif" font-size="18">Редакции + Pandoc</text>
+  <text x="840" y="248" font-family="sans-serif" font-size="18">Отзывы читателей</text>
+
+  <line x1="385" y1="210" x2="435" y2="210" stroke="#444" stroke-width="3"/>
+  <line x1="765" y1="210" x2="815" y2="210" stroke="#444" stroke-width="3"/>
+
+  <rect x="55" y="330" width="520" height="165" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="80" y="370" font-family="sans-serif" font-size="22" font-weight="700">3.4 Official-page reference</text>
+  <text x="80" y="407" font-family="sans-serif" font-size="18">читать · скачать · купить · оставить отзыв</text>
+  <text x="80" y="443" font-family="sans-serif" font-size="17">URL в RAG повреждён glyph: hp</text>
+
+  <rect x="625" y="330" width="520" height="165" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="650" y="370" font-family="sans-serif" font-size="22" font-weight="700">3.5 К размышлению</text>
+  <text x="650" y="407" font-family="sans-serif" font-size="18">Простота программ</text>
+  <text x="650" y="443" font-family="sans-serif" font-size="18">Концентрация и настойчивость</text>
+
+  <text x="55" y="565" font-family="sans-serif" font-size="23" font-weight="700">Главный процесс</text>
+  <text x="55" y="605" font-family="sans-serif" font-size="20">личная задача → выбор Python → нехватка учебника → заметки → книга → feedback → улучшение</text>
+
+  <text x="55" y="665" font-family="sans-serif" font-size="17">Исполняемых Python/CLI-команд в главе нет.</text>
+  <text x="55" y="700" font-family="sans-serif" font-size="16">Следующая глава: PDF 27 «Введение».</text>
+</svg>
