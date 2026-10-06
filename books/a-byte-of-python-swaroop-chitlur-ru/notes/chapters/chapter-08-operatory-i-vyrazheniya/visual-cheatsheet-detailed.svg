@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1650" height="1280" viewBox="0 0 1650 1280">
+  <rect width="1650" height="1280" fill="white"/>
+  <text x="55" y="65" font-family="sans-serif" font-size="36" font-weight="700">Глава 8. Операторы и выражения — detailed map</text>
+  <text x="55" y="102" font-family="sans-serif" font-size="18">RAG-only · p0053:c01–p0058:c01 · PDF 53–58 · source SHA ac1abb…d7db5</text>
+
+  <rect x="55" y="140" width="1540" height="115" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="80" y="180" font-family="sans-serif" font-size="23" font-weight="700">Expression model</text>
+  <text x="80" y="220" font-family="sans-serif" font-size="18">operators act on operands → expression produces a value; REPL can be used to check examples.</text>
+
+  <rect x="55" y="300" width="480" height="370" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="80" y="340" font-family="sans-serif" font-size="23" font-weight="700">8.1 Operator families</text>
+  <text x="80" y="385" font-family="sans-serif" font-size="18">Arithmetic: + - * ** / // %</text>
+  <text x="80" y="425" font-family="sans-serif" font-size="18">Bitwise: &lt;&lt; &gt;&gt; &amp; | ^ ~</text>
+  <text x="80" y="465" font-family="sans-serif" font-size="18">Comparison: &lt; &gt; &lt;= &gt;= == !=</text>
+  <text x="80" y="505" font-family="sans-serif" font-size="18">Logical: not / and / or</text>
+  <text x="80" y="545" font-family="sans-serif" font-size="18">Chained comparison example: 3 &lt; 5 &lt; 7</text>
+  <text x="80" y="585" font-family="sans-serif" font-size="18">and/or: source describes short-circuit</text>
+  <text x="80" y="625" font-family="monospace" font-size="17">a = a * 3 → a *= 3</text>
+
+  <rect x="585" y="300" width="480" height="370" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="610" y="340" font-family="sans-serif" font-size="23" font-weight="700">8.2–8.4 Evaluation</text>
+  <text x="610" y="385" font-family="sans-serif" font-size="18">Precedence determines binding strength</text>
+  <text x="610" y="425" font-family="sans-serif" font-size="18">Equal-precedence: source says usually left→right</text>
+  <text x="610" y="465" font-family="sans-serif" font-size="18">Assignment: source gives right→left example</text>
+  <text x="610" y="505" font-family="monospace" font-size="17">2 + 3 * 4</text>
+  <text x="610" y="545" font-family="monospace" font-size="17">2 + (3 * 4)</text>
+  <text x="610" y="585" font-family="monospace" font-size="17">(2 + 3) * 4</text>
+  <text x="610" y="625" font-family="sans-serif" font-size="16">Parentheses: readability + explicit order.</text>
+
+  <rect x="1115" y="300" width="480" height="370" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="1140" y="340" font-family="sans-serif" font-size="23" font-weight="700">8.5 expression.py</text>
+  <text x="1140" y="385" font-family="monospace" font-size="17">length = 5</text>
+  <text x="1140" y="425" font-family="monospace" font-size="17">breadth = 2</text>
+  <text x="1140" y="465" font-family="monospace" font-size="17">area = length * breadth</text>
+  <text x="1140" y="505" font-family="monospace" font-size="17">2 * (length + breadth)</text>
+  <text x="1140" y="555" font-family="sans-serif" font-size="18">Output: area = 10</text>
+  <text x="1140" y="595" font-family="sans-serif" font-size="18">Output: perimeter = 14</text>
+  <text x="1140" y="635" font-family="monospace" font-size="16">python expression.py</text>
+
+  <rect x="55" y="720" width="1540" height="210" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="80" y="760" font-family="sans-serif" font-size="23" font-weight="700">Precedence ladder — source categories</text>
+  <text x="80" y="802" font-family="sans-serif" font-size="17">low: lambda → or → and → not → membership/identity → comparisons → bitwise → shifts → +,- → *,/,//,% → unary → **</text>
+  <text x="80" y="842" font-family="sans-serif" font-size="17">high: attribute / indexing / slicing / call / tuple / list / dict constructs</text>
+  <text x="80" y="882" font-family="sans-serif" font-size="16">Exact table layout in RAG is flattened; preserve content without inventing missing formatting.</text>
+
+  <rect x="55" y="980" width="1540" height="195" rx="10" fill="#fafafa" stroke="#666" stroke-dasharray="7 5"/>
+  <text x="80" y="1020" font-family="sans-serif" font-size="22" font-weight="700">Source integrity findings</text>
+  <text x="80" y="1060" font-family="sans-serif" font-size="17">• False translator footnote contains damaged text</text>
+  <text x="80" y="1095" font-family="sans-serif" font-size="17">• comparison row contains strong non-number comparison claim → [Needs confirmation]</text>
+  <text x="80" y="1130" font-family="sans-serif" font-size="17">• a = (b = c) retained as source explanatory notation, not promoted to executable syntax</text>
+
+  <text x="55" y="1220" font-family="sans-serif" font-size="18">8.6 summary: operators, operands and expressions are core building blocks.</text>
+  <text x="55" y="1252" font-family="sans-serif" font-size="17">Next boundary: p0059:c01 / PDF 59 — chapter 9 «Поток команд».</text>
+</svg>
