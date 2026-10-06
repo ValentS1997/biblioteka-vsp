@@ -415,6 +415,7 @@ HEADING_REPLACEMENTS = {
 
 EXTERNAL_HEADING_MAP = {}
 SECTION_PATCHES = {}
+BODY_REPLACEMENTS = []
 
 PHRASE_REPLACEMENTS = [
     ("incident response", "реагирование на инциденты"),
@@ -432,6 +433,40 @@ PHRASE_REPLACEMENTS = [
     ("Runtime visibility", "наблюдаемость времени выполнения"),
     ("Multi-cloud visibility", "сквозная видимость multi-cloud"),
 ]
+
+def load_body_replacements(repo_root: Path):
+    global BODY_REPLACEMENTS
+    root = repo_root / "books" / BOOK_ID / "translation" / "ru"
+    merged = []
+    for p in sorted(root.glob("V2-BODY-MAP*.yaml")):
+        data = yaml.safe_load(p.read_text(encoding="utf-8")) or {}
+        for item in data.get("replacements") or []:
+            if not isinstance(item, dict):
+                continue
+            src = str(item.get("source", ""))
+            dst = str(item.get("target", ""))
+            if src:
+                merged.append((src, dst))
+    BODY_REPLACEMENTS = sorted(merged, key=lambda x: len(x[0]), reverse=True)
+
+
+def apply_body_replacements(text: str) -> str:
+    out = []
+    in_fence = False
+    for line in text.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("~~~") or stripped.startswith("```"):
+            in_fence = not in_fence
+            out.append(line)
+            continue
+        if in_fence:
+            out.append(line)
+            continue
+        for src, dst in BODY_REPLACEMENTS:
+            line = line.replace(src, dst)
+        out.append(line)
+    return "\n".join(out)
+
 
 def load_section_patches(repo_root: Path):
     global SECTION_PATCHES
@@ -553,6 +588,7 @@ def normalize_body_v2(text: str) -> str:
 
 def audit_and_assemble(repo_root: Path, out_dir: Path):
     load_external_heading_map(repo_root)
+    load_body_replacements(repo_root)
     load_section_patches(repo_root)
     tr_root = repo_root / "books" / BOOK_ID / "translation" / "ru"
     chapters_dir = tr_root / "chapters"
@@ -588,6 +624,7 @@ def audit_and_assemble(repo_root: Path, out_dir: Path):
             problems.append(f"chapter {n}: unexpected [Needs confirmation]")
         original_third_party += body.count("THIRD_PARTY_REVIEW_REQUIRED")
         repaired = normalize_body_v2(body)
+        repaired = apply_body_replacements(repaired)
         repaired = apply_section_patches(repaired, n)
         v2_third_party += repaired.count("требуется отдельная проверка прав на сторонний визуальный материал")
 
