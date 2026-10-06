@@ -6,8 +6,8 @@ Canonical process and entrypoint templates.
 
 | Use case | Template | Version |
 |---|---|---:|
-| Start a new book branch for RAG + chapter cheatsheets | [book-branch-bootstrap-v1.2.yaml](book-branch-bootstrap-v1.2.yaml) | 1.2 |
-| Start analysis of one chapter | [chapter-analysis-request-v1.2.yaml](chapter-analysis-request-v1.2.yaml) | 1.2 |
+| Start a new book branch for RAG + chapter cheatsheets | [book-branch-bootstrap-v1.3.yaml](book-branch-bootstrap-v1.3.yaml) | 1.3 |
+| Start analysis of one chapter | [chapter-analysis-request-v1.3.yaml](chapter-analysis-request-v1.3.yaml) | 1.3 |
 
 ## Current process contracts
 
@@ -15,9 +15,10 @@ Canonical process and entrypoint templates.
 |---|---|---:|
 | Git execution / local-exception policy | [git-execution-policy-v1.0.yaml](git-execution-policy-v1.0.yaml) | 1.0 |
 | Optional one-shot preload of many future PDF/EPUB LFS objects | [source-vault-batch-stage-v1.0.yaml](source-vault-batch-stage-v1.0.yaml) | 1.0 |
-| One-time book source/RAG preparation | [book-onboarding-v1.2.yaml](book-onboarding-v1.2.yaml) | 1.2 |
-| Read-only chapter-analysis readiness gate | [book-readiness-v1.2.yaml](book-readiness-v1.2.yaml) | 1.2 |
-| Chapter artifact production | [chapter-artifact-collection-v1.6.yaml](chapter-artifact-collection-v1.6.yaml) | 1.6 |
+| One-time book source/RAG preparation | [book-onboarding-v1.3.yaml](book-onboarding-v1.3.yaml) | 1.3 |
+| Strict acceptance of new/rebuilt RAG generations | [rag-ingestion-acceptance-v1.0.yaml](rag-ingestion-acceptance-v1.0.yaml) | 1.0 |
+| Read-only chapter-analysis readiness gate | [book-readiness-v1.3.yaml](book-readiness-v1.3.yaml) | 1.3 |
+| Chapter artifact production | [chapter-artifact-collection-v1.7.yaml](chapter-artifact-collection-v1.7.yaml) | 1.7 |
 
 ## Git execution rule
 
@@ -48,19 +49,23 @@ to GitHub tools.
 ```text
 New book branch
   ↓
-BOOK-BRANCH-BOOTSTRAP v1.2
+BOOK-BRANCH-BOOTSTRAP v1.3
   ↓
-BOOK-READINESS v1.2
+BOOK-READINESS v1.3
   ├─ READY ──────────────────────────────┐
-  └─ BLOCKED → BOOK-ONBOARDING v1.2 → readiness
+  └─ BLOCKED → BOOK-ONBOARDING v1.3
+                 ↓
+          RAG-INGESTION-ACCEPTANCE v1.0
+                 ↓
+              readiness
                                         ↓
                               READY_FOR_CHAPTER_ANALYSIS
                                         ↓
                                   "Анализ главы N"
                                         ↓
-                          CHAPTER-ANALYSIS-REQUEST v1.2
+                          CHAPTER-ANALYSIS-REQUEST v1.3
                                         ↓
-                     CHAPTER-ARTIFACT-COLLECTION v1.6
+                     CHAPTER-ARTIFACT-COLLECTION v1.7
 ```
 
 ## Compatibility
@@ -84,3 +89,23 @@ BOOK-ONBOARDING / RAG / readiness
 ```
 
 The vault does not register books and does not trigger RAG. It only preloads immutable source candidates so subsequent book onboarding can stay remote-first.
+
+
+## RAG generation acceptance
+
+Current builds/rebuilds use deterministic generation identity and are not
+published merely because chunks/index were created.
+
+```text
+canonical source + SHA
+  ↓
+build derived RAG
+  ↓
+RAG-INGESTION-ACCEPTANCE v1.0
+  ├─ REJECTED/ERROR → do not commit generated generation
+  └─ ACCEPTED → commit/push → BOOK-READINESS v1.3
+```
+
+Existing legacy RAG remains valid under the compatibility path until its next
+controlled rebuild. Rebuild by the current pipeline makes strict acceptance
+mandatory.
