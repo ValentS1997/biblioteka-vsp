@@ -51,11 +51,6 @@ Source-supported pipeline после получения CSV:
 Используем только показанный в главе `enumerate()` pattern:
 
 ~~~python
-date_index = None
-name_index = None
-tmax_index = None
-tmin_index = None
-
 for index, column_header in enumerate(header_row):
     if column_header == 'DATE':
         date_index = index
@@ -67,21 +62,11 @@ for index, column_header in enumerate(header_row):
         tmin_index = index
 ~~~
 
-Перед data loop:
+Дальше используются обнаруженные indexes вместо hard-coded constants.
 
-~~~python
-if (
-    date_index is None
-    or name_index is None
-    or tmax_index is None
-    or tmin_index is None
-):
-    print("Required columns are missing.")
-~~~
+Этот шаблон предполагает, что обязательные headers присутствуют. Поведение при отсутствующем `DATE`, `NAME`, `TMAX` или `TMIN` source exercise не определяет: `[Needs confirmation]`.
 
-Дальше используются обнаруженные indexes вместо constants.
-
-Station title можно получить из `row[name_index]` после подтверждения первой valid data row. Точная final title string source exercise не задаёт.
+Station title можно получить из `row[name_index]` после первой valid data row. Точная final title string source exercise не задаёт.
 
 ## 16.5. Исследования
 
