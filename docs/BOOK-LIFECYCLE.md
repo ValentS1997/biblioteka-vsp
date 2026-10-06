@@ -77,8 +77,9 @@ BIBLIOTEKA-VSP-BOOK-READINESS v1.3
 BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.7
 ```
 
-The accepted v1.3 chapter template remains immutable for reproducibility.
-v1.4 adds only the mandatory book-readiness precondition.
+Older accepted chapter templates remain immutable for reproducibility.
+Current chapter work uses CHAPTER-ARTIFACT-COLLECTION v1.7 with
+BOOK-READINESS v1.3 and explicit source-findings handling.
 
 ## Reading-only books
 
