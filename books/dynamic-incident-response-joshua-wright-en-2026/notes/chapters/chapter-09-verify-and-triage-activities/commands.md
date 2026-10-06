@@ -99,3 +99,16 @@ Examples:
 - obfuscated PHP ≠ automatically malicious;
 - fresh domain ≠ automatically incident;
 - public bucket ≠ automatically misconfiguration.
+## v1.6 command classification
+
+All executable examples in Listings 36–40 are read-only in the source context.
+
+| Command group | Classification | Verification | Rollback |
+|---|---|---|---|
+| `cat` suspicious PHP | read-only | inspected file content matches target path | [Not applicable] |
+| `date` / `whois` | read-only | timestamps/registration data are returned | [Not applicable] |
+| `curl` certificate inspection | read-only network request | certificate metadata is returned | [Not applicable] |
+| AWS S3 policy/list commands | read-only | returned policy/object listing matches target bucket | [Not applicable] |
+
+No state-changing command is supplied by the chapter.
+

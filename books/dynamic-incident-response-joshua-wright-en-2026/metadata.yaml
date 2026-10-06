@@ -95,3 +95,30 @@ publication:
     excluded:
       - "Original English index because its pagination refers to the source edition"
     replaces_canonical_source: false
+
+chapter_analysis:
+  readiness:
+    contract_id: "BIBLIOTEKA-VSP-BOOK-READINESS"
+    contract_version: "1.2"
+    capability: "chapter-analysis"
+    status: "READY"
+    evidence:
+      rag_manifest_status: "READY_WITH_KNOWN_LIMITATIONS"
+      source_checksum_verified: true
+      chapter_boundaries: "verified per chapter README"
+      ci_validation: "PASS (PR #163 validate-book-readiness)"
+  workflow:
+    request:
+      id: "BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST"
+      version: "1.2"
+    artifact_collection:
+      id: "BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION"
+      version: "1.6"
+    provenance_status: "RETROFIT_VERIFIED_COMPATIBILITY"
+    provenance_note: >-
+      Chapters 1-20 were audited and retrofitted for current v1.6 contract
+      compliance. This records verified compatibility with the canonical
+      request/collection workflow; it does not rewrite historical invocation
+      provenance where the original per-chapter invocation was not recorded.
+    audit: "notes/chapters/WORKFLOW-COMPLIANCE.md"
+

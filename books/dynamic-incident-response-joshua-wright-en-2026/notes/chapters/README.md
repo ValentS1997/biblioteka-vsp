@@ -4,6 +4,16 @@
 
 Source truth для анализа: canonical English RAG. Русский перевод используется как RAG-grounded derived artifact и одновременно проверяется на editorial defects для будущего v2.
 
+## Workflow contract
+
+- User entrypoint: `BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST v1.2`
+- Artifact contract: `BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.6`
+- Source policy: `rag_only`
+- Compliance audit: [WORKFLOW-COMPLIANCE.md](WORKFLOW-COMPLIANCE.md)
+- Status: `RETROFIT_VERIFIED_COMPATIBILITY`
+
+The audit verifies that Chapters 1–20 conform to the current artifact contract after retrofit. It does not claim unrecorded historical invocation provenance.
+
 ## Chapters
 
 - [Chapter 1 — Кейс: катастрофа в цепочке поставок](chapter-01-case-study-supply-chain-calamity/) — `ACCEPTED`

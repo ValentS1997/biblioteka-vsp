@@ -94,3 +94,12 @@ Rollback: `[Not applicable]`.
 MTTD and MTTR equations are absent in canonical RAG text layer.
 
 They are intentionally not reconstructed from model memory.
+## v1.6 command classification
+
+| Artifact | Classification | Effect | Verification | Rollback |
+|---|---|---|---|---|
+| Listing 25 SQL queries | read-only | reads/aggregates WordPress audit data | query result matches intended time/IP scope | [Not applicable] |
+| Listing 26 Sigma rule | [Not applicable as an executed command] | detection rule artifact | validate rule logic against intended FortiOS events | [Not applicable] |
+
+No state-changing command is supplied by this chapter.
+

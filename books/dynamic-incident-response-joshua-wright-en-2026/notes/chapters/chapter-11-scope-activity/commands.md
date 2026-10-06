@@ -132,3 +132,15 @@ Check:
 - cloud region/account coverage;
 - identity scope;
 - missing data sources.
+## v1.6 command classification
+
+The executable examples in this chapter are read-only investigation/scoping operations as presented.
+
+| Command family | Classification | Verification | Rollback |
+|---|---|---|---|
+| file/hash/PDF inspection | read-only | expected metadata/URI indicators are returned | [Not applicable] |
+| AWS/Azure/GCP audit-log queries | read-only | result scope/time/identity matches intended pivot | [Not applicable] |
+| Azure blob/role/activity enumeration | read-only | resource and identity coverage is confirmed | [Not applicable] |
+
+Active scanning is mentioned conceptually but no universal command is supplied. Any resulting change/risk/rollback remains `[Needs confirmation]` for the target environment.
+

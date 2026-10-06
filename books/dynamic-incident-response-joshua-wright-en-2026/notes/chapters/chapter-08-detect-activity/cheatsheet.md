@@ -131,3 +131,37 @@ Document:
 - why event is interesting.
 
 Do not decide full incident truth inside Detect; hand off EOI to Verify/Triage.
+## v1.6 compatibility contract
+
+### Symptom / problem framing
+
+See the chapter-specific framing above. If the chapter is conceptual rather than diagnostic, this field is `[Not applicable]` as a troubleshooting symptom.
+
+### Baseline / context
+
+Use only the source-grounded chapter context documented above.
+
+### Read-only checks
+
+See `commands.md` for source-confirmed checks/tools. If the chapter provides no operational checks, this field is `[Not applicable]`.
+
+### Interpretation
+
+Use the source-grounded interpretation and chapter logic documented above.
+
+### Next action
+
+Follow the chapter-specific source-grounded flow above. Unsupported next actions remain `[Needs confirmation]`.
+
+### Modifying action
+
+See `commands.md` for source-confirmed modifying actions. If none are supplied by the chapter, this field is `[Not applicable]`.
+
+### Verification / acceptance checks
+
+Use the source-supported verification/acceptance criteria in this chapter and `commands.md`. If no modifying action exists, this field is `[Not applicable]`.
+
+### Rollback
+
+Use source-supported rollback only. If the source does not provide rollback, mark it `[Needs confirmation]`.
+
