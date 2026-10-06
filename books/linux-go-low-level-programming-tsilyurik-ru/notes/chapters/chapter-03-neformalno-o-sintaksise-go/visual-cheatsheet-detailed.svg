@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200">
+<rect width="1600" height="1200" fill="#fff"/>
+<style>text{font-family:Arial,sans-serif;fill:#111}.h{font-size:36px;font-weight:700}.s{font-size:22px;font-weight:700}.b{font-size:16px}.sm{font-size:14px}.box{fill:#f8f8f8;stroke:#333;stroke-width:2}</style>
+<text x="55" y="55" class="h">Глава 3 — Неформально о синтаксисе Go · detailed</text>
+<text x="55" y="90" class="b">Source boundary: PDF 66–125 · next section/chapter starts at 126</text>
+
+<rect x="55" y="125" width="475" height="245" rx="14" class="box"/>
+<text x="80" y="165" class="s">1. Syntax discipline</text>
+<text x="80" y="202" class="b">newline may imply semicolon</text>
+<text x="80" y="234" class="b">brace placement can affect parsing</text>
+<text x="80" y="266" class="b">if / for / switch are core controls</text>
+<text x="80" y="298" class="b">++ / -- are statements in source framing</text>
+<text x="80" y="330" class="b">gofmt / go fmt enforce common style</text>
+
+<rect x="565" y="125" width="475" height="245" rx="14" class="box"/>
+<text x="590" y="165" class="s">2. Types &amp; declarations</text>
+<text x="590" y="202" class="b">explicit conversions</text>
+<text x="590" y="234" class="b">named types are distinct</text>
+<text x="590" y="266" class="b">zero values</text>
+<text x="590" y="298" class="b">var + type inference + :=</text>
+<text x="590" y="330" class="b">byte / rune / string discussion</text>
+
+<rect x="1075" y="125" width="470" height="245" rx="14" class="box"/>
+<text x="1100" y="165" class="s">3. Data structures</text>
+<text x="1100" y="202" class="b">arrays are values</text>
+<text x="1100" y="234" class="b">slices: len / cap / append</text>
+<text x="1100" y="266" class="b">new(T) vs make(...)</text>
+<text x="1100" y="298" class="b">struct / embedded fields</text>
+<text x="1100" y="330" class="b">map read/write/delete/presence</text>
+
+<rect x="55" y="405" width="475" height="260" rx="14" class="box"/>
+<text x="80" y="445" class="s">4. Functions</text>
+<text x="80" y="482" class="b">functions are values</text>
+<text x="80" y="514" class="b">multiple return values</text>
+<text x="80" y="546" class="b">named results</text>
+<text x="80" y="578" class="b">variadic parameters</text>
+<text x="80" y="610" class="b">anonymous funcs / closures / higher-order</text>
+<text x="80" y="642" class="b">defer for deferred function calls</text>
+
+<rect x="565" y="405" width="475" height="260" rx="14" class="box"/>
+<text x="590" y="445" class="s">5. Methods &amp; interfaces</text>
+<text x="590" y="482" class="b">methods on named local types</text>
+<text x="590" y="514" class="b">value receiver / pointer receiver</text>
+<text x="590" y="546" class="b">embedding instead of classic inheritance</text>
+<text x="590" y="578" class="b">interface = required method set</text>
+<text x="590" y="610" class="b">implementation is implicit</text>
+<text x="590" y="642" class="b">compile-time interface checks shown</text>
+
+<rect x="1075" y="405" width="470" height="260" rx="14" class="box"/>
+<text x="1100" y="445" class="s">6. Error flow</text>
+<text x="1100" y="482" class="b">ordinary errors returned as error values</text>
+<text x="1100" y="514" class="b">Error() string defines error interface</text>
+<text x="1100" y="546" class="b">panic stops normal goroutine flow</text>
+<text x="1100" y="578" class="b">deferred calls still execute</text>
+<text x="1100" y="610" class="b">recover shown in panic example</text>
+
+<rect x="55" y="700" width="475" height="255" rx="14" class="box"/>
+<text x="80" y="740" class="s">7. Packages</text>
+<text x="80" y="777" class="b">package main + main()</text>
+<text x="80" y="809" class="b">import paths</text>
+<text x="80" y="841" class="b">exported names start with uppercase</text>
+<text x="80" y="873" class="b">blank import for side effects</text>
+<text x="80" y="905" class="b">package-level visibility across files</text>
+
+<rect x="565" y="700" width="475" height="255" rx="14" class="box"/>
+<text x="590" y="740" class="s">8. Standard library examples</text>
+<text x="590" y="777" class="b">fmt: formatted I/O</text>
+<text x="590" y="809" class="b">strings / Unicode / rune</text>
+<text x="590" y="841" class="b">math/big</text>
+<text x="590" y="873" class="b">testing</text>
+<text x="590" y="905" class="b">go test builds and runs tests</text>
+
+<rect x="1075" y="700" width="470" height="255" rx="14" class="box"/>
+<text x="1100" y="740" class="s">9. Command boundary</text>
+<text x="1100" y="777" class="b">read-only: formatter/help discovery</text>
+<text x="1100" y="809" class="b">state-changing: formatter write/build</text>
+<text x="1100" y="841" class="b">workload: binaries / go test</text>
+<text x="1100" y="873" class="b">rollback: mostly not supplied</text>
+<text x="1100" y="905" class="b">source mismatch kept explicit</text>
+
+<rect x="55" y="995" width="1490" height="125" rx="14" class="box"/>
+<text x="80" y="1035" class="s">Source-grounded takeaway</text>
+<text x="80" y="1070" class="b">The chapter builds one mental model of Go from syntax through interfaces and packages, rather than a complete language reference.</text>
+<text x="80" y="1102" class="sm">No web/model-memory corrections are injected; inconsistencies remain source findings.</text>
+</svg>
