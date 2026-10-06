@@ -18,3 +18,4 @@ Current chapter workflow:
 - [Chapter 9 — «Структуры данных, типы и их методы»](chapter-09-struktury-dannyh-tipy-i-ih-metody/) — `RAG_GROUNDED`
 - [Chapter 10 — «Строки, руны и UNICODE»](chapter-10-stroki-runy-i-unicode/) — `RAG_GROUNDED`
 - [Chapter 11 — «Элементы функционального программирования»](chapter-11-elementy-funkcionalnogo-programmirovaniya/) — `RAG_GROUNDED`
+- [Chapter 12 — «Скоростные и другие сравнения языков»](chapter-12-skorostnye-i-drugie-sravneniya-yazykov/) — `RAG_GROUNDED`
