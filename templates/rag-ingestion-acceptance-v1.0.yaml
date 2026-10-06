@@ -1,0 +1,149 @@
+schema_version: "1.0"
+
+template:
+  id: "BIBLIOTEKA-VSP-RAG-INGESTION-ACCEPTANCE"
+  version: "1.0"
+  type: "rag_ingestion_acceptance"
+  status: "ACCEPTED"
+  purpose: >-
+    Strict acceptance contract for a newly built or rebuilt RAG generation.
+    It proves source integrity, complete addressable provenance, deterministic
+    generation identity and bounded retrieval behavior before generated RAG
+    artifacts may be committed or promoted.
+
+scope:
+  applies_to:
+    - "new RAG builds"
+    - "controlled RAG rebuilds/reindex operations that emit generation metadata"
+  legacy_compatibility: >-
+    Existing legacy RAG without generation metadata remains valid under the
+    previous readiness path. Strict acceptance becomes mandatory when that RAG
+    is rebuilt by the current pipeline.
+
+source_authority:
+  canonical:
+    - "books/<book_id>/source/book.pdf"
+    - "books/<book_id>/source/book.epub"
+  checksum: "books/<book_id>/source/SHA256"
+  source_vault_role: "staging candidate only; never the canonical book source"
+  derived_state:
+    - "rag/text.md"
+    - "rag/chunks.jsonl"
+    - "rag/chunk-index.jsonl"
+    - "rag/chunks/"
+    - "rag/search-index/"
+
+generation_identity:
+  required:
+    - "ingestion.pipeline_version"
+    - "ingestion.normalization_policy_id"
+    - "ingestion.chunking_policy_id"
+    - "ingestion.retrieval_policy_id"
+    - "generation.corpus_generation_id"
+    - "generation.index_generation_id"
+  semantics:
+    corpus_generation_id: >-
+      Deterministic identity derived from canonical source SHA, source format,
+      parser/version, normalization policy and chunking policy/config.
+    index_generation_id: >-
+      Deterministic identity derived from corpus_generation_id and retrieval/index
+      policy/config.
+  rule: >-
+    Reindex without parser/chunking/source changes preserves corpus_generation_id.
+    Rechunk, parser change or source change must change corpus_generation_id.
+
+chunk_identity:
+  compatibility_address: "chunk_id"
+  stable_generation_identity: "chunk_uid"
+  chunk_uid_inputs:
+    - "source_sha256"
+    - "source_unit_type"
+    - "source_locator"
+    - "chunk_in_unit"
+    - "chunking_policy_id"
+    - "text_sha256"
+  rule: >-
+    Existing chunk_id remains the address for compatibility. chunk_uid detects
+    silent content/chunking drift within or across rebuilds.
+
+required_checks:
+  source_integrity:
+    - "source_hash_matches"
+    - "manifest_source_matches"
+    - "generation_ids_recompute"
+  chunk_integrity:
+    - "chunks_addressable_unique"
+    - "chunk_uids_unique"
+    - "all_chunk_provenance_and_hashes_resolve"
+    - "manifest_chunk_counts_match"
+  coverage:
+    - "source_unit_coverage_complete"
+  retrieval:
+    - "search_index_generation_matches"
+    - "deterministic_retrieval_samples_pass"
+    - "negative_exact_term_behavior_pass"
+
+retrieval_sampling:
+  baseline:
+    - "first addressable chunk"
+    - "middle addressable chunk"
+    - "last addressable chunk"
+  purpose: >-
+    Verify deterministic bounded retrieval plumbing across the corpus without
+    maintaining a large benchmark corpus.
+  optional_semantic_cases:
+    path: "books/<book_id>/rag/acceptance-cases.yaml"
+    required: false
+
+output:
+  canonical_result: "books/<book_id>/rag/acceptance.yaml"
+  schema: "biblioteka-vsp/rag-ingestion-acceptance/v1"
+  success_status: "ACCEPTED"
+  failure_status: "REJECTED"
+  error_status: "ERROR"
+  required_binding:
+    - "book_id"
+    - "source_sha256"
+    - "corpus_generation_id"
+    - "index_generation_id"
+
+implementation:
+  command: >-
+    python scripts/validate_rag_ingestion.py
+    --book-dir books/<book_id>
+    --write-result
+
+workflow_gate:
+  required_order:
+    - "build derived RAG on non-main branch/runner"
+    - "run BIBLIOTEKA-VSP-RAG-INGESTION-ACCEPTANCE"
+    - "commit generated RAG only on ACCEPTED"
+    - "run BOOK-READINESS"
+    - "merge only after readiness succeeds"
+  forbidden:
+    - "commit/publish a rejected new generation"
+    - "silently rewrite canonical source during rebuild"
+    - "treat successful index creation as sufficient acceptance"
+    - "use external knowledge to repair source-derived text"
+
+rebuild_control:
+  before:
+    - "record current corpus_generation_id/index_generation_id when present"
+    - "confirm canonical source SHA"
+    - "confirm rebuild is derived-state only"
+    - "use Git branch/commit as rollback boundary"
+  after:
+    - "compare generation identities"
+    - "compare source-unit coverage"
+    - "run strict acceptance"
+    - "promote/commit only on ACCEPTED"
+
+acceptance_criteria:
+  - "Canonical source remains unchanged by derived-state rebuild."
+  - "Every addressable chunk resolves to canonical source provenance."
+  - "Every new-generation chunk has verified text_sha256 and chunk_uid."
+  - "Source-unit coverage has no unexplained gaps."
+  - "Search index is bound to the same corpus/index generation."
+  - "Bounded first/middle/last retrieval samples pass."
+  - "Unsupported exact-term lookup preserves negative behavior."
+  - "Rejected generation is not committed by the normal build workflow."
