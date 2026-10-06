@@ -12,5 +12,7 @@
 
 - [Глава 6. Работа с СУБД SQLite](./chapter-06-sqlite-gorm-transactions/) — `RAG_GROUNDED`, PDF 308–362.
 
+- [Глава 7. Конкурентность в Go](./chapter-07-concurrency/) — `RAG_GROUNDED`, PDF 363–416.
+
 Book-level readiness must be `READY` before running
 `BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.6`.
