@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 9 — Классы: подробная шпаргалка</title>
+  <desc id="desc">ООП, состояние экземпляров, изменение атрибутов, наследование, композиция, модули и random.</desc>
+  <rect width="1800" height="1200" fill="#f5f7fa"/>
+  <rect width="1800" height="116" fill="#17202a"/>
+  <text x="56" y="50" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="38" font-weight="700" fill="#fff">Глава 9 — Классы</text>
+  <text x="56" y="86" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">моделирование состояния и поведения через instances, inheritance и composition</text>
+
+  <rect x="45" y="150" width="540" height="300" rx="18" fill="#fff" stroke="#5dade2" stroke-width="2"/>
+  <text x="75" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#1b4f72">Class / instance</text>
+  <text x="75" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">Class описывает общие attributes/methods.</tspan>
+    <tspan x="75" dy="31">Instance хранит собственное состояние.</tspan>
+    <tspan x="75" dy="31">__init__() вызывается при создании instance.</tspan>
+    <tspan x="75" dy="31">self автоматически связывает method с instance.</tspan>
+    <tspan x="75" dy="31">Dot notation → attribute access / method call.</tspan>
+  </text>
+
+  <rect x="630" y="150" width="540" height="300" rx="18" fill="#fff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="660" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#196f3d">State mutation</text>
+  <text x="660" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="660" dy="0">Direct assignment → simplest.</tspan>
+    <tspan x="660" dy="31">Method update → место для validation.</tspan>
+    <tspan x="660" dy="31">Increment method → delta update.</tspan>
+    <tspan x="660" dy="31">Odometer example rejects rollback.</tspan>
+    <tspan x="660" dy="31">Source: direct code access обходится вокруг validation.</tspan>
+  </text>
+
+  <rect x="1215" y="150" width="540" height="300" rx="18" fill="#fff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1245" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#9c640c">Inheritance</text>
+  <text x="1245" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1245" dy="0">class ElectricCar(Car)</tspan>
+    <tspan x="1245" dy="31">super().__init__() → parent initialization.</tspan>
+    <tspan x="1245" dy="31">Child adds specific attributes/methods.</tspan>
+    <tspan x="1245" dy="31">Same-name method overrides parent.</tspan>
+    <tspan x="1245" dy="31">Common behavior belongs in parent.</tspan>
+  </text>
+
+  <rect x="45" y="495" width="825" height="300" rx="18" fill="#fff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="75" y="540" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#6c3483">Composition / modeling</text>
+  <text x="75" y="583" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">Battery становится отдельным class.</tspan>
+    <tspan x="75" dy="31">ElectricCar хранит self.battery = Battery().</tspan>
+    <tspan x="75" dy="31">Вызов: my_leaf.battery.get_range().</tspan>
+    <tspan x="75" dy="42">Source подчёркивает: для real-world model</tspan>
+    <tspan x="75" dy="31">часто нет единственного правильного design.</tspan>
+  </text>
+
+  <rect x="915" y="495" width="840" height="300" rx="18" fill="#fff" stroke="#ec7063" stroke-width="2"/>
+  <text x="945" y="540" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#922b21">Modules / imports</text>
+  <text x="945" y="583" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="945" dy="0">from car import Car</tspan>
+    <tspan x="945" dy="31">from car import Car, ElectricCar</tspan>
+    <tspan x="945" dy="31">import car → car.Car()</tspan>
+    <tspan x="945" dy="31">module-to-module import для inheritance dependency.</tspan>
+    <tspan x="945" dy="31">import * не рекомендуется из-за ambiguity/conflicts.</tspan>
+  </text>
+
+  <rect x="45" y="840" width="825" height="270" rx="18" fill="#fff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="75" y="885" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#21618c">Standard library / exercises</text>
+  <text x="75" y="928" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">random.randint(a, b) → inclusive integer.</tspan>
+    <tspan x="75" dy="30">random.choice(sequence) → selected element.</tspan>
+    <tspan x="75" dy="30">Source: random не для security applications.</tspan>
+    <tspan x="75" dy="40">Упражнения 9.1–9.16: restaurants, users,</tspan>
+    <tspan x="75" dy="30">inheritance, imports, dice, lottery, PyMOTW.</tspan>
+  </text>
+
+  <rect x="915" y="840" width="840" height="270" rx="18" fill="#fff" stroke="#58d68d" stroke-width="2"/>
+  <text x="945" y="885" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#1e8449">Source findings</text>
+  <text x="945" y="928" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="945" dy="0">1. self.make initialized, self.manufacturer read.</tspan>
+    <tspan x="945" dy="30">2. malformed closing docstring in c07.</tspan>
+    <tspan x="945" dy="30">3. get_range code “about” vs output “approximately”.</tspan>
+    <tspan x="945" dy="40">4. e0018:c02–c15 boundary clipping/overlap.</tspan>
+  </text>
+
+  <rect x="45" y="1140" width="1710" height="40" rx="12" fill="#17202a"/>
+  <text x="75" y="1167" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#fff">Provenance: e0018:c01–c15 · EPUB spine 18 · OEBPS/Text/978544614112-15.xhtml</text>
+</svg>
