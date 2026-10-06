@@ -20,3 +20,4 @@ Reviewed chapter-level notes are stored here.
 - [Chapter 16 — Загрузка данных](chapter-16-downloading-data/README.md)
 - [Chapter 17 — Работа с API](chapter-17-working-with-apis/README.md)
 - [Chapter 18 — Знакомство с Django](chapter-18-getting-started-with-django/README.md)
+- [Chapter 19 — Учетные записи пользователей](chapter-19-user-accounts/README.md)

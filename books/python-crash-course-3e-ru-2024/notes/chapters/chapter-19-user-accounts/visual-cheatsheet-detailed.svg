@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1200">
+<rect width="1800" height="1200" fill="#f5f7fa"/><rect width="1800" height="115" fill="#17202a"/>
+<text x="55" y="50" font-family="Arial" font-size="38" font-weight="700" fill="white">Глава 19 — Учетные записи пользователей</text>
+<text x="55" y="85" font-family="Arial" font-size="20" fill="#d6e4f0">user input, sessions, registration and per-user data isolation</text>
+<g font-family="Arial" fill="#273746">
+<rect x="45" y="150" width="540" height="300" rx="18" fill="white" stroke="#5dade2" stroke-width="2"/>
+<text x="75" y="195" font-size="25" font-weight="700">Form lifecycle</text><text x="75" y="240" font-size="18">GET → empty/prefilled form.</text><text x="75" y="273" font-size="18">POST → bind request.POST.</text><text x="75" y="306" font-size="18">is_valid() before save.</text><text x="75" y="339" font-size="18">commit=False when relationship must be set.</text>
+<rect x="630" y="150" width="540" height="300" rx="18" fill="white" stroke="#7dcea0" stroke-width="2"/>
+<text x="660" y="195" font-size="25" font-weight="700">Authentication</text><text x="660" y="240" font-size="18">Django built-in auth URLs.</text><text x="660" y="273" font-size="18">Login/logout redirects in settings.</text><text x="660" y="306" font-size="18">UserCreationForm creates account.</text><text x="660" y="339" font-size="18">login(request, new_user) starts session.</text>
+<rect x="1215" y="150" width="540" height="300" rx="18" fill="white" stroke="#f5b041" stroke-width="2"/>
+<text x="1245" y="195" font-size="25" font-weight="700">Authorization</text><text x="1245" y="240" font-size="18">@login_required gates private views.</text><text x="1245" y="273" font-size="18">Lists filter by request.user.</text><text x="1245" y="306" font-size="18">Object views verify owner.</text><text x="1245" y="339" font-size="18">Mismatch → Http404.</text>
+<rect x="45" y="495" width="825" height="300" rx="18" fill="white" stroke="#af7ac5" stroke-width="2"/>
+<text x="75" y="540" font-size="25" font-weight="700">Ownership migration</text><text x="75" y="585" font-size="18">Add Topic.owner ForeignKey(User).</text><text x="75" y="618" font-size="18">Existing rows require one-off default.</text><text x="75" y="651" font-size="18">Inspect actual User IDs before migration.</text><text x="75" y="684" font-size="18">Apply migration and verify owner mapping.</text><text x="75" y="717" font-size="18">Source flush alternative destroys all data.</text>
+<rect x="915" y="495" width="840" height="300" rx="18" fill="white" stroke="#ec7063" stroke-width="2"/>
+<text x="945" y="540" font-size="25" font-weight="700">Exercises 19.1–19.5</text><text x="945" y="585" font-size="18">Blog CRUD forms.</text><text x="945" y="618" font-size="18">Blog authentication/registration.</text><text x="945" y="651" font-size="18">Refactor ownership helper.</text><text x="945" y="684" font-size="18">Guard new_entry ownership.</text><text x="945" y="717" font-size="18">Public-read / owner-write protected blog.</text>
+<rect x="45" y="840" width="1710" height="270" rx="18" fill="white" stroke="#58d68d" stroke-width="2"/>
+<text x="75" y="885" font-size="25" font-weight="700">Quality / security boundary</text>
+<text x="75" y="930" font-size="18">Authentication does not imply authorization: numeric object URLs still require ownership checks.</text>
+<text x="75" y="965" font-size="18">Source sample user ID 1 is not portable; migration must use an ID that exists in the target database.</text>
+<text x="75" y="1000" font-size="18">Findings cover redirect explanation, accounts paths, template rendering helper mismatch and an incomplete authorization claim.</text>
+<text x="75" y="1035" font-size="18">e0029:c02–c16 also show legacy chunk-boundary clipping/overlap.</text>
+</g>
+<rect x="45" y="1140" width="1710" height="40" rx="12" fill="#17202a"/>
+<text x="75" y="1167" font-family="Arial" font-size="18" font-weight="700" fill="white">Provenance: e0029:c01–c16 · EPUB spine 29 · OEBPS/Text/978544614112-26.xhtml</text>
+</svg>
