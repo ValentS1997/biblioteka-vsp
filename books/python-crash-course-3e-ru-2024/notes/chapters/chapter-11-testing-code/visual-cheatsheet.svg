@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 11 — Тестирование кода</title>
+  <desc id="desc">pytest, assertions, regression testing, class tests and fixtures.</desc>
+  <rect width="1600" height="900" fill="#f6f8fb"/>
+  <rect width="1600" height="108" fill="#17202a"/>
+  <text x="56" y="48" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="36" font-weight="700" fill="#fff">Глава 11 — Тестирование кода</text>
+  <text x="56" y="82" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">expected behavior → test → change → rerun → regression signal</text>
+
+  <rect x="50" y="145" width="470" height="250" rx="18" fill="#fff" stroke="#5dade2" stroke-width="2"/>
+  <text x="78" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#1b4f72">Discovery</text>
+  <text x="78" y="230" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">
+    <tspan x="78" dy="0">test_*.py → test files</tspan>
+    <tspan x="78" dy="34">test_*() → test functions</tspan>
+    <tspan x="78" dy="34">pytest → discover/run</tspan>
+    <tspan x="78" dy="34">python -m pytest → fallback</tspan>
+  </text>
+
+  <rect x="565" y="145" width="470" height="250" rx="18" fill="#fff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="593" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#196f3d">Assertions</text>
+  <text x="593" y="230" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">
+    <tspan x="593" dy="0">assert a == b / a != b</tspan>
+    <tspan x="593" dy="34">assert a / assert not a</tspan>
+    <tspan x="593" dy="34">assert item in items</tspan>
+    <tspan x="593" dy="34">failure → read test, line, exception</tspan>
+  </text>
+
+  <rect x="1080" y="145" width="470" height="250" rx="18" fill="#fff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1108" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#9c640c">Regression</text>
+  <text x="1108" y="230" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">
+    <tspan x="1108" dy="0">Correct test fails after change?</tspan>
+    <tspan x="1108" dy="34">Do not edit test just for green</tspan>
+    <tspan x="1108" dy="34">Fix production behavior</tspan>
+    <tspan x="1108" dy="34">Add test for new behavior</tspan>
+  </text>
+
+  <rect x="50" y="445" width="720" height="280" rx="18" fill="#fff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="78" y="488" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#6c3483">Class tests & fixtures</text>
+  <text x="78" y="531" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">
+    <tspan x="78" dy="0">Create instance → call method → assert state</tspan>
+    <tspan x="78" dy="34">@pytest.fixture → reusable resource</tspan>
+    <tspan x="78" dy="34">fixture name passed as test parameter</tspan>
+    <tspan x="78" dy="34">Useful when setup repeats across tests</tspan>
+  </text>
+
+  <rect x="815" y="445" width="735" height="280" rx="18" fill="#fff" stroke="#ec7063" stroke-width="2"/>
+  <text x="843" y="488" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#922b21">Source findings</text>
+  <text x="843" y="531" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="843" dy="0">assertIn() prose ↔ pytest assert code</tspan>
+    <tspan x="843" dy="34">TestAnonymousSurvey ↔ top-level functions</tspan>
+    <tspan x="843" dy="34">11.3 setUp() ↔ chapter fixtures</tspan>
+    <tspan x="843" dy="34">11.1 parameter-order wording mismatch</tspan>
+  </text>
+
+  <rect x="50" y="775" width="1500" height="72" rx="14" fill="#17202a"/>
+  <text x="78" y="819" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#fff">Provenance: e0020:c01–c11 · EPUB spine 20 · OEBPS/Text/978544614112-17.xhtml · Part I end</text>
+</svg>
