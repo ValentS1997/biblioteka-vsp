@@ -70,11 +70,22 @@ reading:
 
 translation:
   target_language: ru
-  status: completed
+  status: frozen
+  previous_status: completed
   root: "translation/ru/"
   source_truth: "canonical English RAG"
   replaces_canonical_source: false
   official_translation: false
+  freeze:
+    effective_date: "2026-10-06"
+    reason: >-
+      Translation/publication pipeline is temporarily frozen after repeated
+      assembly/QA instability. Canonical English source and RAG were audited
+      separately and are not the cause of the freeze.
+    resume_requires:
+      - "explicit user approval"
+      - "translation/assembly pipeline audit"
+      - "successful marker-preservation QA"
 
 
 publication:
