@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100">
+  <rect width="1600" height="1100" fill="#ffffff"/>
+  <style>
+    text{font-family:Arial,sans-serif;fill:#111}
+    .h{font-size:36px;font-weight:700}
+    .s{font-size:24px;font-weight:700}
+    .b{font-size:18px}
+    .sm{font-size:15px}
+    .box{fill:#f8f8f8;stroke:#333;stroke-width:2}
+  </style>
+
+  <text x="60" y="60" class="h">Глава 1 — Предыстория Go · detailed map</text>
+  <text x="60" y="95" class="b">Источник: chapter RAG · PDF pages 17–25 · SHA df8db489…afdd2</text>
+
+  <rect x="60" y="125" width="470" height="250" rx="14" class="box"/>
+  <text x="85" y="165" class="s">1. Цели Go</text>
+  <text x="85" y="202" class="b">• альтернатива C без тяжеловесности C++</text>
+  <text x="85" y="234" class="b">• естественный параллелизм</text>
+  <text x="85" y="266" class="b">• переносимость между ОС</text>
+  <text x="85" y="298" class="b">• переносимость между архитектурами</text>
+  <text x="85" y="330" class="b">• высокая скорость компиляции</text>
+
+  <rect x="565" y="125" width="470" height="250" rx="14" class="box"/>
+  <text x="590" y="165" class="s">2. Модель выполнения</text>
+  <text x="590" y="202" class="b">Go: компиляция → бинарный исполнимый файл</text>
+  <text x="590" y="234" class="b">go run: скрытая компиляция + запуск</text>
+  <text x="590" y="266" class="b">Java: runtime / VM в сравнении автора</text>
+  <text x="590" y="298" class="b">Python: интерпретируемый пример автора</text>
+  <text x="590" y="330" class="sm">Все формулировки здесь отражают только источник.</text>
+
+  <rect x="1070" y="125" width="470" height="250" rx="14" class="box"/>
+  <text x="1095" y="165" class="s">3. Версии перед benchmark</text>
+  <text x="1095" y="202" class="b">gcc / g++ / clang++ --version</text>
+  <text x="1095" y="234" class="b">go version</text>
+  <text x="1095" y="266" class="b">javac / java --version</text>
+  <text x="1095" y="298" class="b">rustc --version</text>
+  <text x="1095" y="330" class="b">python --version</text>
+
+  <rect x="60" y="410" width="730" height="285" rx="14" class="box"/>
+  <text x="85" y="450" class="s">4. Fibonacci comparison workflow</text>
+  <text x="85" y="490" class="b">1) Один рекурсивный алгоритм</text>
+  <text x="85" y="524" class="b">2) Собрать C / C++ / Clang / Go / Java / Rust</text>
+  <text x="85" y="558" class="b">3) Python — без отдельной build-команды</text>
+  <text x="85" y="592" class="b">4) Запустить все варианты с аргументом 45</text>
+  <text x="85" y="626" class="b">5) Сверить результат 1836311903 и время</text>
+  <text x="85" y="660" class="b">6) Не переносить вывод на другие классы задач</text>
+
+  <rect x="825" y="410" width="715" height="285" rx="14" class="box"/>
+  <text x="850" y="450" class="s">5. Команды сборки</text>
+  <text x="850" y="490" class="b">gcc fibo_c.c -O3 -o fibo_c</text>
+  <text x="850" y="524" class="b">g++ fibo_cc.cc -O3 -o fibo_cc</text>
+  <text x="850" y="558" class="b">clang++ ... fibo_cc.cc -o fibo_cl</text>
+  <text x="850" y="592" class="b">go build -o fibo_go fibo_go.go</text>
+  <text x="850" y="626" class="b">javac fibo.java · rustc fibo_rs.rs</text>
+  <text x="850" y="660" class="sm">Clang paths в источнике привязаны к Ubuntu/GCC 11.</text>
+
+  <rect x="60" y="730" width="470" height="270" rx="14" class="box"/>
+  <text x="85" y="770" class="s">6. Идейная преемственность</text>
+  <text x="85" y="810" class="b">• C / Algol</text>
+  <text x="85" y="844" class="b">• Python: хэши, множественные значения</text>
+  <text x="85" y="878" class="b">• функциональные языки: функции-значения</text>
+  <text x="85" y="912" class="b">• Pascal / Modula-2 / Oberon</text>
+  <text x="85" y="946" class="b">• string и текстовый API</text>
+
+  <rect x="565" y="730" width="470" height="270" rx="14" class="box"/>
+  <text x="590" y="770" class="s">7. Память</text>
+  <text x="590" y="810" class="b">Источник выделяет четыре подхода:</text>
+  <text x="590" y="844" class="b">1. stack allocation</text>
+  <text x="590" y="878" class="b">2. manual management</text>
+  <text x="590" y="912" class="b">3. garbage collection</text>
+  <text x="590" y="946" class="b">4. ownership</text>
+  <text x="590" y="976" class="sm">Без внешней технической коррекции source claims.</text>
+
+  <rect x="1070" y="730" width="470" height="270" rx="14" class="box"/>
+  <text x="1095" y="770" class="s">8. Operational boundary</text>
+  <text x="1095" y="810" class="b">Read-only: версии, ls, file, dnf list</text>
+  <text x="1095" y="844" class="b">State-changing: compiler build outputs</text>
+  <text x="1095" y="878" class="b">Workload: time ./fibo_* 45</text>
+  <text x="1095" y="912" class="b">Rollback build artifacts: [Needs confirmation]</text>
+  <text x="1095" y="946" class="b">Source defect: p0023 chunk split</text>
+
+  <text x="60" y="1060" class="b">Acceptance: chapter boundary 17–25 verified; page 26 begins «Разворачиваем экосистему Go».</text>
+</svg>
