@@ -227,7 +227,7 @@ workflow:
   - step: 8
     name: "Compute chapter-analysis readiness"
     type: "read-only"
-    contract: "BIBLIOTEKA-VSP-BOOK-READINESS v1.2"
+    contract: "BIBLIOTEKA-VSP-BOOK-READINESS v1.3"
     allowed:
       - "READY"
       - "BLOCKED"
