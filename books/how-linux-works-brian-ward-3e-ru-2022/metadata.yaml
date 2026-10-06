@@ -28,12 +28,13 @@ source:
   text_layer: "unclassified_extractable_pdf_text"
   repository_access: private
   storage: "Git LFS"
-  upload_status: "PENDING_GIT_LFS_UPLOAD"
+  upload_status: "VERIFIED_GIT_LFS_AVAILABLE"
   lawful_access_attested_by_user: "[Needs confirmation]"
   ownership_category: "[Needs confirmation]"
   physical_copy: true
   license: "all rights reserved"
   redistribution_permission: "[Needs confirmation]"
+  upload_commit: "bfb5906624b095623a211cbf28b0473dcb5f4477"
 
 inventory:
   inventory_number: "0034"
@@ -45,7 +46,9 @@ rag:
   manifest: "rag/manifest.yaml"
   text: "rag/text.md"
   chunks: "rag/chunks.jsonl"
-  status: "NOT_BUILT"
+  status: "READY_WITH_KNOWN_LIMITATIONS"
+  generated_commit: "0d9ccc996a010210a1c938a3cfe0a979eefea4fa"
+  workflow_run_id: 37529619119
 
 reading:
   progress: "reading/progress.yaml"
