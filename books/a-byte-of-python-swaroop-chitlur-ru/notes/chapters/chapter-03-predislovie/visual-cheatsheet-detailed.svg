@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1060" viewBox="0 0 1500 1060">
+  <rect width="1500" height="1060" fill="white"/>
+  <text x="55" y="65" font-family="sans-serif" font-size="36" font-weight="700">Глава 3. Предисловие — detailed map</text>
+  <text x="55" y="102" font-family="sans-serif" font-size="18">RAG-only · p0023:c01–p0026:c01 · PDF 23–26 · source SHA ac1abb…d7db5</text>
+
+  <rect x="55" y="140" width="1390" height="125" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="80" y="178" font-family="sans-serif" font-size="23" font-weight="700">3.1 Для кого эта книга</text>
+  <text x="80" y="215" font-family="sans-serif" font-size="18">Преимущественно новичкам; опытные программисты тоже названы целевой аудиторией.</text>
+  <text x="80" y="245" font-family="sans-serif" font-size="18">Минимальный заявленный вход: уметь сохранять текстовые файлы.</text>
+
+  <rect x="55" y="305" width="660" height="300" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="80" y="343" font-family="sans-serif" font-size="23" font-weight="700">3.2 Немного истории</text>
+  <text x="80" y="382" font-family="sans-serif" font-size="18">1. Нужен installer для программы Diamond</text>
+  <text x="80" y="417" font-family="sans-serif" font-size="18">2. Сравнение Python/Perl bindings к Qt</text>
+  <text x="80" y="452" font-family="sans-serif" font-size="18">3. Выбор Python / более зрелый PyQt</text>
+  <text x="80" y="487" font-family="sans-serif" font-size="18">4. Поиск учебника → материалы не подходят новичкам</text>
+  <text x="80" y="522" font-family="sans-serif" font-size="18">5. KWord: личные заметки → ~30 страниц</text>
+  <text x="80" y="557" font-family="sans-serif" font-size="18">6. Переписывание → учебная книга + feedback сообщества</text>
+
+  <rect x="765" y="305" width="680" height="300" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="790" y="343" font-family="sans-serif" font-size="23" font-weight="700">3.3 Состояние книги</text>
+  <text x="790" y="382" font-family="sans-serif" font-size="18">Октябрь 2012: исправления/обновления</text>
+  <text x="790" y="417" font-family="sans-serif" font-size="18">Pandoc: переформатирование для e-book generation</text>
+  <text x="790" y="452" font-family="sans-serif" font-size="18">Декабрь 2008: сведения, связанные с Python 3.0</text>
+  <text x="790" y="487" font-family="sans-serif" font-size="18">Март 2005: указан как предыдущий серьёзный пересмотр</text>
+  <text x="790" y="522" font-family="sans-serif" font-size="18">Читателей просят сообщать о неясном/неверном тексте</text>
+  <text x="790" y="557" font-family="sans-serif" font-size="18">Адресат: автор книги или автор используемого перевода</text>
+
+  <rect x="55" y="650" width="660" height="180" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="80" y="688" font-family="sans-serif" font-size="23" font-weight="700">3.4 Official-page reference</text>
+  <text x="80" y="728" font-family="sans-serif" font-size="18">читать книгу · скачать последнюю версию</text>
+  <text x="80" y="763" font-family="sans-serif" font-size="18">купить печатный вариант · оставить отзыв</text>
+  <text x="80" y="798" font-family="sans-serif" font-size="16">Finding: URL извлечён как hp://… — не нормализован.</text>
+
+  <rect x="765" y="650" width="680" height="180" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="790" y="688" font-family="sans-serif" font-size="23" font-weight="700">3.5 К размышлению</text>
+  <text x="790" y="728" font-family="sans-serif" font-size="18">C. A. R. Hoare: контраст простой и чрезмерно сложной программы</text>
+  <text x="790" y="763" font-family="sans-serif" font-size="18">C. W. Wendte: концентрация и настойчивость</text>
+
+  <rect x="55" y="875" width="1390" height="125" rx="10" fill="#fafafa" stroke="#666" stroke-dasharray="7 5"/>
+  <text x="80" y="915" font-family="sans-serif" font-size="22" font-weight="700">Operational boundary</text>
+  <text x="80" y="952" font-family="sans-serif" font-size="18">Команды отсутствуют. Исторические инструменты/версии не трактуются как современные рекомендации.</text>
+  <text x="80" y="982" font-family="sans-serif" font-size="17">Next boundary: p0027:c01 / PDF 27 начинается глава 4 «Введение».</text>
+</svg>
