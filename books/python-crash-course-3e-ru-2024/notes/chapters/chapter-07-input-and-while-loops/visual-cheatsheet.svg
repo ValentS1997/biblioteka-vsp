@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 7 — Ввод данных и циклы while</title>
+  <desc id="desc">input, int, modulo, while, flags, break, continue и изменение коллекций.</desc>
+  <rect width="1600" height="900" fill="#f6f8fb"/>
+  <rect width="1600" height="108" fill="#17202a"/>
+  <text x="56" y="48" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="36" font-weight="700" fill="#fff">Глава 7 — Ввод данных и циклы while</text>
+  <text x="56" y="82" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">input → преобразование → while → контролируемый выход</text>
+
+  <rect x="50" y="145" width="470" height="250" rx="18" fill="#fff" stroke="#5dade2" stroke-width="2"/>
+  <text x="78" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#1b4f72">Ввод</text>
+  <text x="78" y="230" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">
+    <tspan x="78" dy="0">input() → строка</tspan>
+    <tspan x="78" dy="34">int() → числовое значение</tspan>
+    <tspan x="78" dy="34">str vs int → TypeError при сравнении</tspan>
+    <tspan x="78" dy="34">% → остаток от деления</tspan>
+  </text>
+
+  <rect x="565" y="145" width="470" height="250" rx="18" fill="#fff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="593" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#196f3d">Управление while</text>
+  <text x="593" y="230" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">
+    <tspan x="593" dy="0">while condition</tspan>
+    <tspan x="593" dy="34">quit value</tspan>
+    <tspan x="593" dy="34">Boolean flag</tspan>
+    <tspan x="593" dy="34">break / continue</tspan>
+  </text>
+
+  <rect x="1080" y="145" width="470" height="250" rx="18" fill="#fff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1108" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#9c640c">Защита от loop</text>
+  <text x="1108" y="230" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">
+    <tspan x="1108" dy="0">Условие должно стать False</tspan>
+    <tspan x="1108" dy="34">или должен сработать break</tspan>
+    <tspan x="1108" dy="34">Emergency stop: Ctrl+C</tspan>
+    <tspan x="1108" dy="34">или закрыть окно вывода</tspan>
+  </text>
+
+  <rect x="50" y="445" width="720" height="280" rx="18" fill="#fff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="78" y="488" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#6c3483">Коллекции + while</text>
+  <text x="78" y="531" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">
+    <tspan x="78" dy="0">pop() → извлечь из source list</tspan>
+    <tspan x="78" dy="34">append() → добавить в destination list</tspan>
+    <tspan x="78" dy="34">while value in list → удалить все повторы</tspan>
+    <tspan x="78" dy="34">responses[name] = response → накопить опрос</tspan>
+  </text>
+
+  <rect x="815" y="445" width="735" height="280" rx="18" fill="#fff" stroke="#ec7063" stroke-width="2"/>
+  <text x="843" y="488" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#922b21">Source findings</text>
+  <text x="843" y="531" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="843" dy="0">mountain_poll: Eric → Lynn input</tspan>
+    <tspan x="843" dy="34">но output: Lynn → Eric</tspan>
+    <tspan x="843" dy="34">c02–c09: chunk-boundary clipping</tspan>
+    <tspan x="843" dy="34">Silent correction запрещён</tspan>
+  </text>
+
+  <rect x="50" y="775" width="1500" height="72" rx="14" fill="#17202a"/>
+  <text x="78" y="819" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#fff">Provenance: e0016:c01–c09 · EPUB spine 16 · OEBPS/Text/978544614112-13.xhtml</text>
+</svg>
