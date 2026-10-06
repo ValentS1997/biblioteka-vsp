@@ -1,16 +1,23 @@
 schema: biblioteka-vsp/reading/v1
 book_id: ai-engineering-chip-huyen-ru
 
-status: in_progress
+status: completed
 scope: full_book
 
 started:
   month: "2026-07"
   exact_date: "2026-07-20"
 
-completed: null
-current_page: "[Needs confirmation]"
-current_chapter: "[Needs confirmation]"
+completed:
+  month: "2026-10"
+  exact_date: "2026-10-06"
+
+current_page: null
+current_chapter: null
+
+reading_boundary:
+  mode: full_book_available
+  reason: "User explicitly confirmed completion of work on the book on 2026-10-06."
 
 paired_reading:
   book_id: designing-machine-learning-systems-chip-huyen-ru
@@ -18,4 +25,6 @@ paired_reading:
 
 notes:
   - "User explicitly confirmed that reading started on 2026-07-20."
+  - "User explicitly confirmed completion of work on the book on 2026-10-06."
   - "Read in pair with «Проектирование систем машинного обучения»."
+  - "An exact final page number was not separately provided; completion of the whole book is the authoritative reading-state fact."
