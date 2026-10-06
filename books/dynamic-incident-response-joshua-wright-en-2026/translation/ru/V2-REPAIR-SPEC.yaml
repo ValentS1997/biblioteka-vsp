@@ -1,0 +1,44 @@
+schema_version: "1.0"
+
+translation_v2:
+  id: "DYNAMIC-IR-RU-V2-REPAIR"
+  status: "IN_PROGRESS"
+  book_id: "dynamic-incident-response-joshua-wright-en-2026"
+  baseline: "translation/ru/ accepted chapters 1-20 + afterword"
+  source_truth: "canonical English RAG"
+
+chapter_analysis_provenance:
+  workflow: "BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST v1.2 -> BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.6"
+  status: "RETROFIT_VERIFIED_COMPATIBILITY"
+  audit: "notes/chapters/WORKFLOW-COMPLIANCE.md"
+
+goals:
+  - "Preserve accepted semantic translation; repair editorial/typographic quality."
+  - "Normalize mixed Russian/English headings where translation is unambiguous."
+  - "Decode HTML/XML entities and remove layout artifacts."
+  - "Preserve commands, code, product names, acronyms, identifiers and source uncertainty."
+  - "Generate a separate deterministic A4 DOCX/PDF without overwriting v1."
+  - "Use chapter editorial findings as the repair backlog."
+
+figure_policy:
+  default: "fail_closed"
+  rule: >-
+    THIRD_PARTY_REVIEW_REQUIRED remains excluded from the derivative PDF until
+    rights are verified per figure. Captions/cross-references remain.
+  book_native_reconstruction: >-
+    New project-created diagrams may be added later as supplemental material,
+    but must not be represented as original source figures.
+
+outputs:
+  markdown: "exports/dynamic-incident-response-ru-v2.md"
+  docx: "exports/dynamic-incident-response-ru-v2-a4.docx"
+  pdf: "exports/dynamic-incident-response-ru-v2-a4.pdf"
+  audit: "exports/dynamic-incident-response-ru-v2-audit.json"
+
+acceptance:
+  - "20 chapters + Afterword assembled once, in order"
+  - "chapter translation/QA statuses remain ACCEPTED"
+  - "no [Needs confirmation] introduced"
+  - "THIRD_PARTY_REVIEW_REQUIRED count preserved or reduced only by documented rights resolution"
+  - "A4 PDF renders without clipped text, broken glyphs or table overflow"
+  - "v1 artifacts remain untouched"
