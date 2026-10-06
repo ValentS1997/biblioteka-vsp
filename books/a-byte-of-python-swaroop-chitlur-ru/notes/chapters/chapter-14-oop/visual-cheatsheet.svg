@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="960" viewBox="0 0 1360 960">
+  <rect width="1360" height="960" fill="white"/>
+  <text x="55" y="62" font-family="sans-serif" font-size="34" font-weight="700">Глава 14 — «Объектно-ориентированное программирование»</text>
+  <text x="55" y="98" font-family="sans-serif" font-size="18">RAG PDF 109–120 · p0109:c01–p0120:c01</text>
+
+  <rect x="55" y="140" width="390" height="190" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="80" y="180" font-family="sans-serif" font-size="22" font-weight="700">Class / object</text>
+  <text x="80" y="220" font-family="monospace" font-size="18">class Person:</text>
+  <text x="80" y="252" font-family="sans-serif" font-size="18">instance = Person()</text>
+  <text x="80" y="284" font-family="sans-serif" font-size="18">fields + methods = attributes</text>
+
+  <rect x="485" y="140" width="390" height="190" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="510" y="180" font-family="sans-serif" font-size="22" font-weight="700">Instance model</text>
+  <text x="510" y="220" font-family="monospace" font-size="18">self</text>
+  <text x="510" y="252" font-family="monospace" font-size="18">__init__</text>
+  <text x="510" y="284" font-family="monospace" font-size="18">self.name</text>
+
+  <rect x="915" y="140" width="390" height="190" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="940" y="180" font-family="sans-serif" font-size="22" font-weight="700">Class state</text>
+  <text x="940" y="220" font-family="monospace" font-size="18">Robot.population</text>
+  <text x="940" y="252" font-family="monospace" font-size="18">@staticmethod</text>
+  <text x="940" y="284" font-family="monospace" font-size="18">__del__</text>
+
+  <rect x="55" y="385" width="590" height="220" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="80" y="425" font-family="sans-serif" font-size="22" font-weight="700">Inheritance</text>
+  <text x="80" y="465" font-family="monospace" font-size="18">Teacher(SchoolMember)</text>
+  <text x="80" y="500" font-family="monospace" font-size="18">Student(SchoolMember)</text>
+  <text x="80" y="535" font-family="sans-serif" font-size="18">override tell()</text>
+  <text x="80" y="570" font-family="sans-serif" font-size="18">polymorphism source model</text>
+
+  <rect x="695" y="385" width="610" height="220" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="720" y="425" font-family="sans-serif" font-size="22" font-weight="700">Abstract base class</text>
+  <text x="720" y="465" font-family="monospace" font-size="18">metaclass=ABCMeta</text>
+  <text x="720" y="500" font-family="monospace" font-size="18">@abstractmethod</text>
+  <text x="720" y="535" font-family="sans-serif" font-size="18">base class not instantiated</text>
+  <text x="720" y="570" font-family="sans-serif" font-size="17">section has translator editorial note</text>
+
+  <rect x="55" y="660" width="1250" height="135" rx="12" fill="#fafafa" stroke="#333"/>
+  <text x="80" y="700" font-family="sans-serif" font-size="22" font-weight="700">OOP model</text>
+  <text x="80" y="738" font-family="sans-serif" font-size="18">type/class → instance → state + behavior → inheritance → reuse/substitution</text>
+  <text x="80" y="770" font-family="sans-serif" font-size="17">Next: chapter 15 «Ввод-вывод».</text>
+
+  <text x="55" y="850" font-family="sans-serif" font-size="16">Findings: inherit_abc filename/output mismatch; __del__/privacy/base-init claims [Needs confirmation].</text>
+  <text x="55" y="884" font-family="sans-serif" font-size="16">Chapter-end summary present: 14.8.</text>
+</svg>
