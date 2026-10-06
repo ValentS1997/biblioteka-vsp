@@ -1,6 +1,8 @@
 # Ответы на контрольные вопросы — глава 2
 
-These are RAG-grounded answers derived from the chapter. They are not an official publisher answer key.
+These answers were derived from the chapter and cross-checked against the book's official appendix answer key. Official answer polarity follows the appendix; chapter-grounded rationale is retained, and appendix/chapter conflicts are marked explicitly.
+
+Official appendix provenance: PDF `308–309`.
 
 | № | Ответ | Основание |
 |---:|:---:|---|
