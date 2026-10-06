@@ -1,0 +1,228 @@
+schema_version: "1.7"
+
+template:
+  id: "BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION"
+  version: "1.7"
+  type: "chapter_artifact_collection"
+  status: "ACCEPTED"
+  purpose: >-
+    Canonical template for creating chapter-level RAG-grounded learning and
+    operational artifacts from format-neutral PDF/EPUB RAG provenance.
+
+artifact_collection:
+  book:
+    book_id: "[Needs confirmation]"
+    title: "[Needs confirmation]"
+    edition: "[Needs confirmation]"
+
+  chapter:
+    number: "[Needs confirmation]"
+    title: "[Needs confirmation]"
+    slug: "[Needs confirmation]"
+
+  preconditions:
+    book_level:
+      chapter_analysis_ready: true
+      readiness_contract:
+        id: "BIBLIOTEKA-VSP-BOOK-READINESS"
+        version: "1.3"
+    failure_behavior:
+      status: "CHAPTER_ANALYSIS_BLOCKED"
+      rule: >-
+        If book-level readiness is false or unknown, stop before workflow step 1.
+        Report failed prerequisite(s), verified evidence and next action. Do not
+        fall back to direct canonical-source reading, external web or model memory.
+
+  git_execution:
+    policy:
+      id: "BIBLIOTEKA-VSP-GIT-EXECUTION-POLICY"
+      version: "1.0"
+      path: "templates/git-execution-policy-v1.0.yaml"
+    default_mode: "github_connector_and_repository_automation"
+    local_git_default_allowed: false
+    rules:
+      - "Create/update chapter text artifacts through GitHub connector/API when supported."
+      - "Use repository CI/automation for validation when available."
+      - "Do not ask the user to clone/pull/commit/push for normal chapter work."
+      - "A local Git request requires a valid exception record from the Git execution policy."
+
+  source_policy:
+    mode: "rag_only"
+    external_sources_allowed: false
+    model_memory_allowed: false
+    canonical_source_direct_access: false
+    supported_source_formats:
+      - pdf
+      - epub
+    unknown_data_policy: "[Needs confirmation]"
+    unsupported_claim_policy: "omit_or_mark_needs_confirmation"
+    provenance_required: true
+
+  target:
+    directory: "books/<book_id>/notes/chapters/chapter-<NN>-<slug>/"
+
+  provenance:
+    rag_chunk_range: "[Needs confirmation]"
+    source_format: "pdf | epub | [Needs confirmation]"
+    source_locator_range: "[Needs confirmation]"
+    pdf_page_range: "[PDF only; otherwise Not applicable]"
+    epub_spine_range: "[EPUB only; otherwise Not applicable]"
+    printed_page_range: "[Needs confirmation]"
+    chapter_boundary_verified: "[Needs confirmation]"
+    rules:
+      - "Never fabricate PDF or printed page numbers for reflowable EPUB."
+      - "For EPUB, use canonical spine/XHTML locators and chunk IDs as provenance."
+      - "For PDF, preserve page-addressable provenance."
+
+  artifacts:
+    required:
+      - file: "README.md"
+        role: "chapter index, scope, provenance, chapter map, main principle and limitations"
+      - file: "cheatsheet.md"
+        role: "operational or conceptual chapter cheatsheet"
+        required_sections:
+          - "Symptom / problem framing"
+          - "Baseline / context"
+          - "Read-only checks"
+          - "Interpretation"
+          - "Next action"
+          - "Modifying action"
+          - "Verification / acceptance checks"
+          - "Rollback"
+        applicability_rule: >-
+          If a section is not supported by the chapter, keep the section and
+          mark it [Not applicable] or [Needs confirmation]; do not invent content.
+      - file: "commands.md"
+        role: "source-confirmed commands and tools"
+        rules:
+          - "Include only commands/tools explicitly supported by chapter RAG."
+          - "Do not add familiar commands from model memory."
+          - "Classify each command as read-only, workload-generating, or state-changing."
+          - "For state-changing actions include effect, risk, verification and rollback when source-supported."
+          - "If rollback is not supplied by the source, mark it [Needs confirmation]."
+      - file: "diagram.md"
+        role: "Mermaid chapter logic / diagnostic flow"
+        rules:
+          - "Represent the chapter's actual logic, not a generic invented workflow."
+          - "For operational diagnostics prefer baseline -> localization -> targeted analysis -> controlled change -> remeasure -> keep/rollback."
+          - "Conceptual chapters may use a source-grounded conceptual flow instead of a troubleshooting flow."
+      - file: "visual-cheatsheet.svg"
+        role: "mandatory compact visual chapter summary"
+        rules:
+          - "RAG-grounded only."
+          - "Readable as a compact overview."
+          - "Do not introduce facts absent from canonical chapter artifacts."
+      - file: "visual-cheatsheet-detailed.svg"
+        role: "mandatory detailed visual chapter summary"
+        rules:
+          - "RAG-grounded only."
+          - "Cover the chapter's major concepts, workflow, commands and operational boundaries where applicable."
+          - "Do not introduce facts absent from canonical chapter artifacts."
+
+    conditional:
+      - file: "summary.md"
+        condition: "chapter contains an explicit chapter-end summary/resume"
+        role: "chapter-end summary transferred from book RAG"
+        rules:
+          - "Preserve source meaning."
+          - "Only structural/extraction cleanup is allowed."
+          - "Record exact RAG provenance."
+      - file: "review-questions.md"
+        condition: "chapter contains review/control questions or exercises"
+        role: "source questions/exercises"
+        rules:
+          - "Preserve original numbering."
+          - "Only structural/extraction cleanup is allowed."
+          - "Record exact RAG provenance."
+      - file: "source-findings.md"
+        condition: "chapter analysis detects a source contradiction, code/text mismatch or extraction defect"
+        role: "explicit source-problem register with provenance; never a silent correction layer"
+        rules:
+          - "Allowed classifications: [Source contradiction], [Source code mismatch], [Source wording/code mismatch], [Source extraction issue], [Needs confirmation]."
+          - "Preserve all conflicting/source variants that are relevant."
+          - "Record provenance for each variant."
+          - "Do not select a 'correct' variant from model memory or external knowledge in rag_only mode."
+          - "Keep adjudication separate from source-grounded chapter artifacts."
+      - file: "review-answers.md"
+        condition: "review-questions.md exists"
+        role: "RAG-grounded answers/solutions; not an official publisher answer key"
+        rules:
+          - "Base answers on review-questions.md, chapter RAG and canonical chapter artifacts."
+          - "Do not use external web sources in rag_only mode."
+          - "Questions requiring current external data, user measurements, unavailable figures or missing evidence must be marked [Needs confirmation]."
+
+  content_rules:
+    source_truth:
+      - "Current chapter RAG is the authoritative content source."
+      - "Existing canonical chapter artifacts may be used only when they are themselves RAG-grounded."
+      - "Lower-priority model knowledge must not override or fill gaps in the source."
+    uncertainty:
+      - "Unknown data stays unknown."
+      - "Do not reconstruct missing chapter facts from memory."
+      - "Use [Needs confirmation] for unsupported or unavailable information."
+    operational_safety:
+      - "Separate observation from modification."
+      - "State what a modifying action changes before presenting it."
+      - "Include verification for state-changing actions."
+      - "Include rollback when supported; otherwise mark rollback [Needs confirmation]."
+    source_contradictions:
+      classifications:
+        - "[Source contradiction]"
+        - "[Source code mismatch]"
+        - "[Source wording/code mismatch]"
+        - "[Source extraction issue]"
+        - "[Needs confirmation]"
+      rules:
+        - "Do not silently fix the authoritative source."
+        - "Preserve conflicting variants and their provenance."
+        - "Do not use external/model knowledge to hide source-derived defects."
+        - "Create source-findings.md when such a finding materially affects the chapter."
+    command_discipline:
+      - "Do not normalize a source command into a different command unless the correction is explicitly documented."
+      - "Extraction normalization is allowed only when the intended command is unambiguous."
+      - "Credentials, secrets, real community strings, tokens and environment-specific identifiers must be replaced with placeholders."
+    visuals:
+      - "Both compact and detailed SVG summaries are mandatory."
+      - "Visuals must remain consistent with README.md, cheatsheet.md, commands.md and diagram.md."
+
+  workflow:
+    - step: 1
+      action: "Resolve and verify the chapter RAG boundary using format-appropriate source locators."
+    - step: 2
+      action: "Retrieve only the minimum relevant chapter chunks needed for each artifact."
+    - step: 3
+      action: "Create README.md with scope and provenance."
+    - step: 4
+      action: "Create cheatsheet.md, commands.md and diagram.md."
+    - step: 5
+      action: "Create both mandatory visual SVG summaries."
+    - step: 6
+      action: "If present in the source, add summary.md and review-questions.md."
+    - step: 7
+      action: "If review questions exist, create review-answers.md under the same RAG-only policy."
+    - step: 8
+      action: >-
+        Cross-check artifacts for contradictions, unsupported commands and
+        provenance gaps; create source-findings.md when a classified source
+        problem is detected.
+    - step: 9
+      action: "Update the chapter README index and book-level chapter index when applicable."
+
+  acceptance_criteria:
+    - "Book-level chapter-analysis readiness is READY before workflow step 1."
+    - "Chapter scope and provenance are explicit and source-format appropriate."
+    - "EPUB provenance never invents PDF page numbers."
+    - "No unsupported external or model-memory facts are presented as book content."
+    - "README.md, cheatsheet.md, commands.md and diagram.md exist."
+    - "visual-cheatsheet.svg and visual-cheatsheet-detailed.svg exist."
+    - "Conditional chapter-end artifacts exist when the source provides those sections."
+    - "Detected source contradictions/extraction defects are explicit in source-findings.md and are never silently corrected."
+    - "Normal chapter Git work is completed remotely without requiring a user-local clone."
+
+  completion_status:
+    value: "[Needs confirmation]"
+    allowed:
+      - "DRAFT"
+      - "RAG_GROUNDED"
+      - "VERIFIED"
+      - "ACCEPTED"
