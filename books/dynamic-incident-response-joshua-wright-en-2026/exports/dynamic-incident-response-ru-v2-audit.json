@@ -1,0 +1,112 @@
+{
+  "book_id": "dynamic-incident-response-joshua-wright-en-2026",
+  "edition": "ru-v2-repair",
+  "status": "ACCEPTED",
+  "chapters": [
+    {
+      "chapter": 1,
+      "file": "chapter-01-case-study-supply-chain-calamity.md",
+      "title": "Глава 1. Кейс: катастрофа в цепочке поставок"
+    },
+    {
+      "chapter": 2,
+      "file": "chapter-02-introduction.md",
+      "title": "Глава 2. Введение"
+    },
+    {
+      "chapter": 3,
+      "file": "chapter-03-a-short-history-of-incident-response.md",
+      "title": "Глава 3. Краткая история реагирования на инциденты"
+    },
+    {
+      "chapter": 4,
+      "file": "chapter-04-getting-started.md",
+      "title": "Глава 4. С чего начать"
+    },
+    {
+      "chapter": 5,
+      "file": "chapter-05-incident-response-models-and-their-limitations.md",
+      "title": "Глава 5. Модели реагирования на инциденты и их ограничения"
+    },
+    {
+      "chapter": 6,
+      "file": "chapter-06-a-dynamic-approach-to-incident-response.md",
+      "title": "Глава 6. Динамический подход к реагированию на инциденты"
+    },
+    {
+      "chapter": 7,
+      "file": "chapter-07-prepare-activity.md",
+      "title": "Глава 7. Подготовка"
+    },
+    {
+      "chapter": 8,
+      "file": "chapter-08-detect-activity.md",
+      "title": "Глава 8. Обнаружение"
+    },
+    {
+      "chapter": 9,
+      "file": "chapter-09-verify-and-triage-activities.md",
+      "title": "Глава 9. Проверка и триаж"
+    },
+    {
+      "chapter": 10,
+      "file": "chapter-10-response-actions-loop.md",
+      "title": "Глава 10. Цикл действий реагирования"
+    },
+    {
+      "chapter": 11,
+      "file": "chapter-11-scope-activity.md",
+      "title": "Глава 11. Определение масштаба"
+    },
+    {
+      "chapter": 12,
+      "file": "chapter-12-contain-activity.md",
+      "title": "Глава 12. Сдерживание"
+    },
+    {
+      "chapter": 13,
+      "file": "chapter-13-eradicate-activity.md",
+      "title": "Глава 13. Искоренение угрозы"
+    },
+    {
+      "chapter": 14,
+      "file": "chapter-14-recover-activity.md",
+      "title": "Глава 14. Восстановление"
+    },
+    {
+      "chapter": 15,
+      "file": "chapter-15-debrief-activity.md",
+      "title": "Глава 15. Разбор инцидента"
+    },
+    {
+      "chapter": 16,
+      "file": "chapter-16-accelerating-incident-response-with-ai.md",
+      "title": "Глава 16. Ускорение реагирования на инциденты с помощью ИИ"
+    },
+    {
+      "chapter": 17,
+      "file": "chapter-17-incident-response-for-ransomware.md",
+      "title": "Глава 17. Реагирование на инциденты с программами-вымогателями"
+    },
+    {
+      "chapter": 18,
+      "file": "chapter-18-incident-response-for-cloud-systems.md",
+      "title": "Глава 18. Реагирование на инциденты в облачных системах"
+    },
+    {
+      "chapter": 19,
+      "file": "chapter-19-incident-response-for-operational-technology.md",
+      "title": "Глава 19. Реагирование на инциденты в операционных технологиях"
+    },
+    {
+      "chapter": 20,
+      "file": "chapter-20-integrating-dair-with-nist-csf-2-0.md",
+      "title": "Глава 20. Интеграция DAIR с NIST CSF 2.0"
+    }
+  ],
+  "third_party_markers_source": 231,
+  "third_party_callouts_v2": 143,
+  "problems": [],
+  "chapter_analysis_workflow": "BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST v1.2 -> BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.6",
+  "workflow_provenance": "RETROFIT_VERIFIED_COMPATIBILITY"
+}
