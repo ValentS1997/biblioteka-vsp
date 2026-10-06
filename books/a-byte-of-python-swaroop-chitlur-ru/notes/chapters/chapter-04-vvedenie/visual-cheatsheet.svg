@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="820" viewBox="0 0 1280 820">
+  <rect width="1280" height="820" fill="white"/>
+  <text x="55" y="62" font-family="sans-serif" font-size="34" font-weight="700">Глава 4 — «Введение»</text>
+  <text x="55" y="98" font-family="sans-serif" font-size="18">RAG PDF 27–30 · p0027:c01–p0030:c01</text>
+
+  <rect x="55" y="140" width="350" height="150" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="80" y="178" font-family="sans-serif" font-size="22" font-weight="700">Простота</text>
+  <text x="80" y="214" font-family="sans-serif" font-size="18">Простой</text>
+  <text x="80" y="244" font-family="sans-serif" font-size="18">Лёгкий в освоении</text>
+  <text x="80" y="274" font-family="sans-serif" font-size="18">Высокий уровень</text>
+
+  <rect x="465" y="140" width="350" height="150" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="490" y="178" font-family="sans-serif" font-size="22" font-weight="700">Экосистема</text>
+  <text x="490" y="214" font-family="sans-serif" font-size="18">FLOSS</text>
+  <text x="490" y="244" font-family="sans-serif" font-size="18">Портируемый</text>
+  <text x="490" y="274" font-family="sans-serif" font-size="18">Обширные библиотеки</text>
+
+  <rect x="875" y="140" width="350" height="150" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="900" y="178" font-family="sans-serif" font-size="22" font-weight="700">Модель языка</text>
+  <text x="900" y="214" font-family="sans-serif" font-size="18">Интерпретируемый</text>
+  <text x="900" y="244" font-family="sans-serif" font-size="18">Процедурный + ООП</text>
+  <text x="900" y="274" font-family="sans-serif" font-size="18">Расширяемый / встраиваемый</text>
+
+  <rect x="55" y="345" width="550" height="170" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="80" y="385" font-family="sans-serif" font-size="22" font-weight="700">Source execution model</text>
+  <text x="80" y="425" font-family="sans-serif" font-size="19">исходный текст → байткод → машинный язык → запуск</text>
+  <text x="80" y="465" font-family="sans-serif" font-size="17">Ручной compile/link step пользователю не требуется.</text>
+
+  <rect x="665" y="345" width="560" height="170" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="690" y="385" font-family="sans-serif" font-size="22" font-weight="700">Python 2 против 3</text>
+  <text x="690" y="425" font-family="sans-serif" font-size="19">Книга обучает Python 3</text>
+  <text x="690" y="465" font-family="sans-serif" font-size="17">Версию нужно держать в уме при чтении/запуске кода.</text>
+
+  <rect x="55" y="570" width="1170" height="125" rx="12" fill="#f5f5f5" stroke="#333"/>
+  <text x="80" y="610" font-family="sans-serif" font-size="22" font-weight="700">Интеграция</text>
+  <text x="80" y="648" font-family="sans-serif" font-size="18">Расширяемость: C/C++ часть вызывается из Python.</text>
+  <text x="650" y="648" font-family="sans-serif" font-size="18">Встраиваемость: Python помещается внутрь C/C++ приложения.</text>
+
+  <text x="55" y="755" font-family="sans-serif" font-size="17">Команд в главе нет. Следующая глава: PDF 31 «Установка».</text>
+  <text x="55" y="785" font-family="sans-serif" font-size="16">Findings: Soware, «радел», Amiga,AROS — сохранены без молчаливой правки.</text>
+</svg>
