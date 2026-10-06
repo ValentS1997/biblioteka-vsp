@@ -1,6 +1,8 @@
 # Ответы на контрольные вопросы — глава 8
 
-These are RAG-grounded answers derived from the chapter, not an official publisher answer key.
+These answers were derived from the chapter and cross-checked against the book's official appendix answer key. Official answer polarity follows the appendix; chapter-grounded rationale is retained, and appendix/chapter conflicts are marked explicitly.
+
+Official appendix provenance: PDF `315–316`.
 
 | № | Ответ | Основание |
 |---:|:---:|---|
@@ -11,7 +13,7 @@ These are RAG-grounded answers derived from the chapter, not an official publish
 | 5 | Да | The environment uses `accelerate`, `float16` and `device_map="auto"`; GPU is strongly recommended when available. |
 | 6 | Да | The chapter explicitly measures session preparation time so the team can tune preparation before a meeting. |
 | 7 | Да | Chroma retrieval is combined with embedding models and Llama generation. |
-| 8 | Нет | The script measures performance and exposes tunable query/model settings, but the source does not implement automatic adjustment of Chroma database parameters from session metrics. |
+| 8 | Да | Official appendix answer: performance/session metrics can be used to inform project-dependent adjustments. The chapter code itself does not implement automatic Chroma-parameter tuning from those metrics. `[Appendix/chapter interpretation tension]` |
 
 ## Provenance by answer
 

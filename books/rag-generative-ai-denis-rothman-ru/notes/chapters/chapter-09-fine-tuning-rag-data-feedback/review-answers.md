@@ -1,6 +1,8 @@
 # Ответы на контрольные вопросы — глава 9
 
-These are RAG-grounded answers derived from the chapter, not an official publisher answer key.
+These answers were derived from the chapter and cross-checked against the book's official appendix answer key. Official answer polarity follows the appendix; chapter-grounded rationale is retained, and appendix/chapter conflicts are marked explicitly.
+
+Official appendix provenance: PDF `316–317`.
 
 | № | Ответ | Основание |
 |---:|:---:|---|
@@ -8,7 +10,7 @@ These are RAG-grounded answers derived from the chapter, not an official publish
 | 2 | Нет | GPT-4o-mini is selected precisely because the source considers it sufficient and lower-cost for this fine-tuning example. |
 | 3 | Нет | The chapter says pretrained/fine-tuned knowledge is bounded by training data; new information still requires retrieval or another update mechanism. |
 | 4 | Нет | “Static” means stable for long periods, not permanently immutable. |
-| 5 | Нет | Hugging Face/SciQ is the worked example, not the only possible preparation source. |
+| 5 | Да | Official appendix answer: Hugging Face is the specifically designated data source in this chapter. The chapter implementation does not establish that Hugging Face is the only possible dataset-preparation source. `[Appendix/question wording tension]` |
 | 6 | Нет | Only suitable stable data is discussed as a fine-tuning candidate; dynamic data can remain in RAG. |
 | 7 | Нет | The chapter fine-tunes on stable existing SciQ data, not only newly created data. |
 | 8 | Нет | The metrics interface exposes training information such as LR multiplier, but the source does not describe it as directly changing the learning rate during a running job. |
