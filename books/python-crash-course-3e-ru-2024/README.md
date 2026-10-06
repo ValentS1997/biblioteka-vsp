@@ -58,3 +58,4 @@ Canonical readiness command:
 - [Глава 2 — Переменные и простые типы данных](notes/chapters/chapter-02-variables-and-simple-data-types/README.md)
 - [Глава 3 — Списки](notes/chapters/chapter-03-lists/README.md)
 - [Глава 4 — Работа со списками](notes/chapters/chapter-04-working-with-lists/README.md)
+- [Глава 5 — Оператор if](notes/chapters/chapter-05-if-statements/README.md)

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 5 — Оператор if</title>
+  <desc id="desc">Условия, сравнения, if-else, if-elif-else и проверки списков.</desc>
+  <rect width="1600" height="900" fill="#f6f8fb"/>
+  <rect width="1600" height="108" fill="#17202a"/>
+  <text x="56" y="48" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="36" font-weight="700" fill="#fff">Глава 5 — Оператор if</text>
+  <text x="56" y="82" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">условие → True/False → выбрать корректную форму ветвления</text>
+
+  <rect x="50" y="145" width="470" height="250" rx="18" fill="#fff" stroke="#5dade2" stroke-width="2"/>
+  <text x="78" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#1b4f72">Проверки</text>
+  <text x="78" y="230" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">
+    <tspan x="78" dy="0">==  !=  &lt;  &lt;=  &gt;  &gt;=</tspan>
+    <tspan x="78" dy="34">lower() для сравнения регистра</tspan>
+    <tspan x="78" dy="34">and / or</tspan>
+    <tspan x="78" dy="34">in / not in</tspan>
+  </text>
+
+  <rect x="565" y="145" width="470" height="250" rx="18" fill="#fff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="593" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#196f3d">Выбор конструкции</text>
+  <text x="593" y="230" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">
+    <tspan x="593" dy="0">if → условный блок</tspan>
+    <tspan x="593" dy="34">if-else → один из двух</tspan>
+    <tspan x="593" dy="34">if-elif-else → первый истинный</tspan>
+    <tspan x="593" dy="34">несколько if → все истинные</tspan>
+  </text>
+
+  <rect x="1080" y="145" width="470" height="250" rx="18" fill="#fff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1108" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#9c640c">Списки</text>
+  <text x="1108" y="230" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">
+    <tspan x="1108" dy="0">if list_name: → есть элементы?</tspan>
+    <tspan x="1108" dy="34">value in list → доступно?</tspan>
+    <tspan x="1108" dy="34">value not in list → отсутствует?</tspan>
+    <tspan x="1108" dy="34">for + if → особая обработка</tspan>
+  </text>
+
+  <rect x="50" y="445" width="720" height="280" rx="18" fill="#fff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="78" y="488" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#6c3483">Главное различие</text>
+  <text x="78" y="531" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">
+    <tspan x="78" dy="0">if-elif-else:</tspan>
+    <tspan x="108" dy="34">после первого True остальные ветви пропускаются.</tspan>
+    <tspan x="78" dy="44">Несколько независимых if:</tspan>
+    <tspan x="108" dy="34">каждое условие проверяется отдельно.</tspan>
+  </text>
+
+  <rect x="815" y="445" width="735" height="280" rx="18" fill="#fff" stroke="#ec7063" stroke-width="2"/>
+  <text x="843" y="488" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#922b21">Verification</text>
+  <text x="843" y="531" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">
+    <tspan x="843" dy="0">Проверить True и False cases.</tspan>
+    <tspan x="843" dy="34">Проверить каждую ветвь.</tspan>
+    <tspan x="843" dy="34">Для списков: empty и non-empty.</tspan>
+    <tspan x="843" dy="34">Для whitelist: valid и invalid value.</tspan>
+  </text>
+
+  <rect x="50" y="775" width="1500" height="72" rx="14" fill="#17202a"/>
+  <text x="78" y="819" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#fff">Provenance: e0014:c01–c11 · EPUB spine 14 · OEBPS/Text/978544614112-11.xhtml</text>
+</svg>
