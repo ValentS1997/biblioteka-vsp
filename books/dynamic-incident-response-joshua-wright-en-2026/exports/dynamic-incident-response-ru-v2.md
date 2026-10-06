@@ -6263,7 +6263,7 @@ Source рассматривает:
 
 > **Иллюстрация не воспроизводится:** требуется отдельная проверка прав на сторонний визуальный материал. visual asset не воспроизводится.
 
-### TERMINATE OR MONITOR: ORGANIZATIONAL CONSIDERATIONS
+### ЗАВЕРШИТЬ ИЛИ НАБЛЮДАТЬ: ОРГАНИЗАЦИОННЫЕ АСПЕКТЫ
 
 Containment часто требует выбора:
 
@@ -6389,7 +6389,7 @@ When other methods insufficient:
 
 Service disruption must be coordinated with business stakeholders and alternative workflows.
 
-## WHEN RMM TOOLS TURN AGAINST YOU: THE STRYKER COMPROMISE
+## КОГДА RMM-ИНСТРУМЕНТЫ ОБОРАЧИВАЮТСЯ ПРОТИВ ВАС: КОМПРОМЕТАЦИЯ STRYKER
 
 Stryker — large global medical-technology company with:
 
@@ -6447,7 +6447,7 @@ Adaptive containment evolves with attacker behavior and incident intelligence.
 
 It combines passive and active methods.
 
-### Progressive Restrictions
+### ПОЭТАПНЫЕ ОГРАНИЧЕНИЯ
 
 Measures increase over time according to observed behavior.
 
@@ -6459,7 +6459,7 @@ Example sequence:
 4. leave controlled low-value decoys accessible;
 5. escalate to full active containment when needed.
 
-### Deceptive Containment
+### ОБМАННОЕ СДЕРЖИВАНИЕ
 
 Attacker believes access remains intact while actually operating in controlled environment.
 
@@ -6490,13 +6490,13 @@ Containment timing affects both security outcome and business impact.
 
 Organizations should define timing criteria before incidents where possible.
 
-## Immediate Containment Triggers
+## ТРИГГЕРЫ НЕМЕДЛЕННОГО СДЕРЖИВАНИЯ
 
 Certain scenarios demand action even if scope incomplete.
 
 These are examined in the next source range.
 
-## Immediate Containment Triggers
+## ТРИГГЕРЫ НЕМЕДЛЕННОГО СДЕРЖИВАНИЯ
 
 Некоторые scenarios требуют immediate containment независимо от incomplete scoping.
 
@@ -6522,7 +6522,7 @@ European organizations should additionally consider:
 
 > Ideally decision makers define applicable triggers during Prepare activity and map each trigger to pre-approved actions. This avoids fresh policy interpretation under incident pressure.
 
-### Active Data Destruction
+### АКТИВНОЕ УНИЧТОЖЕНИЕ ДАННЫХ
 
 Самый urgent trigger.
 
@@ -6534,7 +6534,7 @@ Examples:
 
 Modern ransomware can encrypt thousands files per minute, поэтому delays directly increase loss and recovery effort.
 
-### Ongoing Data Exfiltration
+### ПРОДОЛЖАЮЩАЯСЯ ЭКСФИЛЬТРАЦИЯ ДАННЫХ
 
 Urgent containment especially important for:
 
@@ -6548,7 +6548,7 @@ Example: compromised service account executes bulk sensitive PII queries and com
 
 Containment may be justified before initial compromise path is known.
 
-### Safety/Critical Systems
+### СИСТЕМЫ БЕЗОПАСНОСТИ И КРИТИЧЕСКИЕ СИСТЕМЫ
 
 Immediate action warranted when attacker activity threatens:
 
@@ -6560,7 +6560,7 @@ Immediate action warranted when attacker activity threatens:
 
 These environments often cannot tolerate extended attacker presence for intelligence gathering.
 
-### Regulatory Requirements
+### РЕГУЛЯТОРНЫЕ ТРЕБОВАНИЯ
 
 Regulatory frameworks may impose notification/response expectations that effectively favor rapid containment.
 
@@ -6582,7 +6582,7 @@ Example: unauthorized access to Protected Health Information database should be 
 
 Multi-system incidents require coordinated action to prevent attacker pivoting.
 
-### Simultaneous Isolation
+### ОДНОВРЕМЕННАЯ ИЗОЛЯЦИЯ
 
 If attacker controls multiple systems, sequential isolation can alert them.
 
@@ -6608,7 +6608,7 @@ Example: 15 compromised workstations across 3 departments can be isolated throug
 
 > Sequential containment is a common mistake. Narrow execution windows reduce attacker reaction time.
 
-### Credential and Infrastructure Coordination
+### КООРДИНАЦИЯ УЧЁТНЫХ ДАННЫХ И ИНФРАСТРУКТУРЫ
 
 Credential theft may require environment-wide reset strategy.
 
@@ -6620,7 +6620,7 @@ Reset sequencing should prioritize:
 
 Coordinate with business units and maintenance windows.
 
-#### Kerberos Golden Ticket Example
+#### ПРИМЕР KERBEROS GOLDEN TICKET
 
 For suspected Golden Ticket:
 
@@ -6653,7 +6653,7 @@ Containment operates across multiple control layers.
 
 Network controls can rapidly manage many systems.
 
-### Network Isolation Techniques
+### МЕТОДЫ СЕТЕВОЙ ИЗОЛЯЦИИ
 
 **VLAN isolation**
 
@@ -6687,7 +6687,7 @@ Large organizations can redirect network ranges into containment infrastructure.
 
 This requires network-engineering coordination due outage risk.
 
-## DNS Sinkholes
+## DNS-SINKHOLE
 
 DNS sinkhole redirects attacker domains to internal systems.
 
@@ -6711,7 +6711,7 @@ Adding `thirtjo13ht[dot]top` to internal DNS redirects C2 traffic to quarantine 
 
 > **Иллюстрация не воспроизводится:** требуется отдельная проверка прав на сторонний визуальный материал. .
 
-### Sinkhole Limitations
+### ОГРАНИЧЕНИЯ SINKHOLE
 
 DNS sinkholes do not work when attacker uses:
 
@@ -6725,7 +6725,7 @@ Example malicious application:
 
 Sinkholing whole `vercel.app` would disrupt legitimate users.
 
-## DNS over HTTPS and Sinkhole Limitations
+## DNS OVER HTTPS И ОГРАНИЧЕНИЯ SINKHOLE
 
 DoH encrypts DNS queries in HTTPS traffic.
 
@@ -6753,7 +6753,7 @@ Unmanaged BYOD devices may remain outside sinkhole policy.
 
 Host containment allows granular enforcement while preserving investigation access.
 
-### EDR Isolation
+### ИЗОЛЯЦИЯ ЧЕРЕЗ EDR
 
 EDR quarantine can:
 
@@ -6762,7 +6762,7 @@ EDR quarantine can:
 - preserve remote forensic access;
 - allow evidence collection.
 
-### Local Firewall
+### ЛОКАЛЬНЫЙ МЕЖСЕТЕВОЙ ЭКРАН
 
 If EDR unavailable, configure host firewall to block traffic except required management paths.
 
@@ -6777,7 +6777,7 @@ Possible allowed dependencies:
 - DNS;
 - IR management systems.
 
-### Process and Service Restrictions
+### ОГРАНИЧЕНИЯ ПРОЦЕССОВ И СЛУЖБ
 
 Application-control technologies can block unauthorized execution.
 
@@ -6799,7 +6799,7 @@ Rules may target:
 
 Application-specific controls reduce business impact compared with full service shutdown.
 
-### Web Application Firewalls
+### МЕЖСЕТЕВЫЕ ЭКРАНЫ ВЕБ-ПРИЛОЖЕНИЙ
 
 WAF can block malicious requests while preserving authorized access.
 
@@ -6810,7 +6810,7 @@ Examples:
 
 WAF is containment, not substitute for fixing underlying vulnerability.
 
-### Database Access Restrictions
+### ОГРАНИЧЕНИЯ ДОСТУПА К БАЗАМ ДАННЫХ
 
 Controls can:
 
@@ -6821,7 +6821,7 @@ Controls can:
 
 Example product in source: IBM Security Guardium.
 
-## AI Agent / MCP Containment
+## СДЕРЖИВАНИЕ ИИ-АГЕНТОВ / MCP
 
 Organizations increasingly use AI agents with broad internal-system access through frameworks such as Model Context Protocol (MCP).
 
@@ -6880,7 +6880,7 @@ The next source range expands these procedures.
 
 Closure activities затем review accounts на retention/removal.
 
-## Credential Revocation
+## ОТЗЫВ УЧЁТНЫХ ДАННЫХ
 
 Containment begins с invalidation compromised credentials wherever they exist.
 
@@ -6907,7 +6907,7 @@ Synchronization delay может создать brief window, где old credent
 - SaaS platforms with cached authentication;
 - separate local identity stores.
 
-### Order-of-Operations Problem in Isolated Environments
+### ПРОБЛЕМА ПОРЯДКА ДЕЙСТВИЙ В ИЗОЛИРОВАННЫХ СРЕДАХ
 
 Credential revocation может зависеть от connectivity.
 
@@ -6952,7 +6952,7 @@ Source recommends define in-incident SLA during Prepare:
 - session termination target;
 - exercise actual timing to verify achievable SLA.
 
-### SaaS Session Persistence
+### СОХРАНЕНИЕ SaaS-СЕССИЙ
 
 IdP revocation affects applications only if they validate session state against IdP.
 
@@ -6967,7 +6967,7 @@ For privileged/high-risk accounts it may be necessary to contact SaaS provider s
 - forced logout;
 - application-level session invalidation.
 
-### VPN / RDP / SSH Sessions
+### СЕССИИ VPN / RDP / SSH
 
 Containment must address active connections across all authentication mechanisms.
 
@@ -7018,7 +7018,7 @@ bob      pts/3        2025-11-02 08:20 (192.0.2.22)
 
 ① Attacker SSH session.
 
-## Enterprise Session Detection
+## ОБНАРУЖЕНИЕ СЕССИЙ В МАСШТАБЕ ОРГАНИЗАЦИИ
 
 Host commands do not scale.
 
@@ -7087,23 +7087,23 @@ For compromised service account in OAuth microservices environment:
 
 Source recommends documenting token types/revocation capabilities during Prepare.
 
-## Conditional Access Policy Implementation
+## РЕАЛИЗАЦИЯ ПОЛИТИКИ УСЛОВНОГО ДОСТУПА
 
 After invalidating credentials/sessions, use temporary conditional-access controls to prevent re-authentication.
 
-### Location-Based Restrictions
+### ОГРАНИЧЕНИЯ ПО МЕСТОПОЛОЖЕНИЮ
 
 Block sign-ins from geographic regions tied to attacker infrastructure where legitimate business presence is absent.
 
 This is layered control, not standalone defense.
 
-### Device Compliance
+### СООТВЕТСТВИЕ УСТРОЙСТВА ТРЕБОВАНИЯМ
 
 Require authentication only from managed/compliant devices where possible.
 
 This can block attacker use from unmanaged systems even when credentials are valid.
 
-### Risk-Based Conditional Access
+### УСЛОВНЫЙ ДОСТУП НА ОСНОВЕ РИСКА
 
 Integrate IdP risk signals and CTI.
 
@@ -7123,7 +7123,7 @@ Sign-in-risk policies can require step-up phishing-resistant MFA for:
 - anomalous timing;
 - unfamiliar device fingerprints.
 
-## Multi-Application Containment Through SSO
+## СДЕРЖИВАНИЕ НЕСКОЛЬКИХ ПРИЛОЖЕНИЙ ЧЕРЕЗ SSO
 
 SSO can centralize containment across connected SaaS applications.
 
@@ -7143,7 +7143,7 @@ Example:
 
 The latter requires separate disabling.
 
-### MFA Enforcement
+### ПРИНУДИТЕЛЬНОЕ ПРИМЕНЕНИЕ MFA
 
 Where possible:
 
@@ -7151,7 +7151,7 @@ Where possible:
 - use phishing-resistant FIDO2 methods during containment;
 - avoid relying only on SMS/TOTP for high-risk cases because they are more interceptable.
 
-### Synchronization Delays
+### ЗАДЕРЖКИ СИНХРОНИЗАЦИИ
 
 Some applications cache authentication state.
 
@@ -7159,7 +7159,7 @@ Track delay between IdP disable action and actual attacker activity cessation.
 
 This informs future containment timing.
 
-## Session Management Across Hybrid Environments
+## УПРАВЛЕНИЕ СЕССИЯМИ В ГИБРИДНЫХ СРЕДАХ
 
 Users may have simultaneous sessions across:
 
@@ -7171,7 +7171,7 @@ Users may have simultaneous sessions across:
 
 All may preserve access after primary credential action.
 
-### Multi-Server RDP Enumeration
+### ИНВЕНТАРИЗАЦИЯ RDP-СЕССИЙ НА НЕСКОЛЬКИХ СЕРВЕРАХ
 
 ### Listing 51. Enumerate Active RDP Sessions Across Multiple Servers
 
@@ -7197,7 +7197,7 @@ SESSIONNAME       USERNAME        ID  STATE   TYPE        DEVICE
  rdp-tcp#6        analyst          3  Active
 ~~~
 
-## Browser Session Management
+## УПРАВЛЕНИЕ БРАУЗЕРНЫМИ СЕССИЯМИ
 
 SaaS sessions may survive via persistent cookies.
 
@@ -7217,7 +7217,7 @@ Create an environment-specific session-termination checklist during Prepare:
 - refresh tokens;
 - mobile app sessions.
 
-## BACK-CHANNEL LOGOUT: A CRITICAL MISSING COMPONENT
+## BACK-CHANNEL LOGOUT: КРИТИЧЕСКИ ВАЖНЫЙ НЕДОСТАЮЩИЙ КОМПОНЕНТ
 
 Back-channel logout allows IdP to notify service providers when user logs out, terminating sessions ecosystem-wide.
 
@@ -7244,7 +7244,7 @@ Containment также используется для evidence collection, по
 
 После isolation affected systems analysts могут получить более reliable access к evidence без ongoing attacker interference.
 
-### EVERY STEP IS FOR DATA COLLECTION
+### КАЖДЫЙ ЭТАП — ЭТО СБОР ДАННЫХ
 
 В PICERL и NIST SP 800-61 containment часто рассматривается как first moment, когда responders непосредственно получают control affected system и начинают volatile-data collection.
 
@@ -7334,7 +7334,7 @@ DAIR iterative nature means data from one activity informs another:
 - eradication may expose Prepare gaps;
 - recovery may drive detection improvements.
 
-## Prioritized Collection
+## ПРИОРИТИЗИРОВАННЫЙ СБОР
 
 Collection should be prioritized by:
 
@@ -7343,7 +7343,7 @@ Collection should be prioritized by:
 - risk of evidence loss;
 - operational/security cost of delay.
 
-### Volatile Data Collection
+### СБОР ВОЛАТИЛЬНЫХ ДАННЫХ
 
 Highest-priority volatile data includes:
 
@@ -7366,7 +7366,7 @@ Tools mentioned:
 
 Example: capture web-server memory before isolation/power cycle so web-shell in-memory configuration and active sessions are preserved.
 
-### PRIORITIZED COLLECTION: ORGANIZATION-SPECIFIC APPROACH
+### ПРИОРИТИЗИРОВАННЫЙ СБОР: ПОДХОД С УЧЁТОМ ОРГАНИЗАЦИИ
 
 DAIR generally advocates:
 
@@ -7416,7 +7416,7 @@ then isolation-first is safer.
 
 If no alternative source exists, organization may decide collect-before-isolate.
 
-## Persistent and Log-Based Evidence
+## ПОСТОЯННЫЕ АРТЕФАКТЫ И ДОКАЗАТЕЛЬСТВА ИЗ ЖУРНАЛОВ
 
 Less volatile artifacts include:
 
@@ -7459,7 +7459,7 @@ Cloud containment requires adaptation due:
 - misconfiguration;
 - ephemeral resources.
 
-## Cloud Security Demarcation
+## РАЗГРАНИЧЕНИЕ ОТВЕТСТВЕННОСТИ ЗА ОБЛАЧНУЮ БЕЗОПАСНОСТЬ
 
 Cloud security demarcation = boundary between provider and customer security responsibilities.
 
@@ -7501,7 +7501,7 @@ The exact line is product-specific.
 
 > **Иллюстрация не воспроизводится:** требуется отдельная проверка прав на сторонний визуальный материал. visual not reproduced.
 
-### CLOUD SERVICE AND RESPONSIBILITY DEFINITIONS
+### ОПРЕДЕЛЕНИЯ ОБЛАЧНЫХ СЕРВИСОВ И ОТВЕТСТВЕННОСТИ
 
 Broad IaaS/PaaS/SaaS labels are not enough to determine actual containment authority.
 
@@ -7524,7 +7524,7 @@ Therefore responders should enumerate actual cloud products and review product-s
 
 > Do not infer security responsibility solely from broad service category.
 
-## Cloud Containment Objectives
+## ЦЕЛИ СДЕРЖИВАНИЯ В ОБЛАКЕ
 
 Core goals remain:
 
@@ -7541,7 +7541,7 @@ Use cloud-native capabilities where appropriate:
 - deletion locks;
 - IAM controls.
 
-## Identity-First Containment
+## СДЕРЖИВАНИЕ С ПРИОРИТЕТОМ ИДЕНТИЧНОСТЕЙ
 
 Cloud attacks often persist through identity rather than network position.
 
@@ -7571,7 +7571,7 @@ Example: compromised service-account key used by critical pipeline requires:
 
 Prepare should document privileged-identity dependencies in advance.
 
-## Network Isolation Containment
+## СДЕРЖИВАНИЕ ЧЕРЕЗ СЕТЕВУЮ ИЗОЛЯЦИЮ
 
 In cloud IaaS:
 
@@ -7585,7 +7585,7 @@ In cloud IaaS:
 
 Storage cost should be weighed against forensic value during large incidents.
 
-## Resource Tagging for Containment Visibility
+## ТЕГИРОВАНИЕ РЕСУРСОВ ДЛЯ НАБЛЮДАЕМОСТИ СДЕРЖИВАНИЯ
 
 Cloud tags help:
 
@@ -7626,7 +7626,7 @@ Tags can apply across:
 
 Temporary containment objects should also be tagged so they can be cleaned up after incident closure.
 
-### Protecting Tag Integrity
+### ЗАЩИТА ЦЕЛОСТНОСТИ ТЕГОВ
 
 Tags are meaningful only if attacker cannot remove/alter them.
 
@@ -7638,7 +7638,7 @@ Source recommends:
 
 This prevents attacker from removing `Status:UnderInvestigation` and disappearing from IR dashboards.
 
-## IaaS Termination Protection
+## ЗАЩИТА IaaS-РЕСУРСОВ ОТ УДАЛЕНИЯ
 
 Termination protection prevents accidental or malicious deletion of contained cloud resources holding evidence.
 
@@ -7646,7 +7646,7 @@ Cloud admins and automation may routinely terminate instances, so a contained sy
 
 Protection introduces explicit additional step before deletion.
 
-### AWS Example
+### ПРИМЕР AWS
 
 ### Listing 53. AWS CLI Command to Enable Termination Protection
 
@@ -7681,7 +7681,7 @@ Remove protection only after:
 - legal hold requirements satisfied;
 - authorized decision.
 
-### Clone-Then-Terminate Pattern
+### ШАБЛОН «КЛОНИРОВАТЬ, ЗАТЕМ УДАЛИТЬ»
 
 If business insists compromised instance must be terminated before investigation completes:
 
@@ -7699,7 +7699,7 @@ Source gives equivalent patterns:
 - Azure Event Grid/Functions → forensic subscription;
 - GCP Eventarc/Pub/Sub → separate project.
 
-## SaaS Platform Containment
+## СДЕРЖИВАНИЕ SaaS-ПЛАТФОРМЫ
 
 SaaS containment differs from IaaS because customer cannot access underlying infrastructure.
 
@@ -7730,7 +7730,7 @@ Source example for compromised Microsoft 365 administrator:
 - rotate service principals/app registrations created by compromised admin;
 - timestamp actions.
 
-## Third-Party Integration Containment
+## СДЕРЖИВАНИЕ СТОРОННИХ ИНТЕГРАЦИЙ
 
 Compromised accounts may retain access through authorized integrations after human credential reset.
 
@@ -7759,7 +7759,7 @@ Example Slack administrator compromise:
 - revoke API tokens;
 - review bot users.
 
-## WHEN LEGITIMATE APPS LOOK LIKE COMPROMISE
+## КОГДА ЛЕГИТИМНЫЕ ПРИЛОЖЕНИЯ ВЫГЛЯДЯТ КАК КОМПРОМЕТАЦИЯ
 
 Source recounts Microsoft 365 security assessment where team found application with broad permissions:
 
@@ -7824,7 +7824,7 @@ Source highlights:
 
 Cloud containment should leverage cloud-native controls and account for ephemeral infrastructure.
 
-### API-Based Isolation
+### ИЗОЛЯЦИЯ ЧЕРЕЗ API
 
 Provider APIs can modify:
 
@@ -7866,7 +7866,7 @@ Purpose:
 4. deny outbound;
 5. attach quarantine NSG.
 
-## Serverless Containment
+## СДЕРЖИВАНИЕ SERVERLESS-РЕСУРСОВ
 
 Serverless functions may have:
 
@@ -7926,7 +7926,7 @@ Pattern also applies to:
 - Azure Functions via deployment ZIP + Application Insights;
 - GCP Functions via `gcloud functions deploy` + Cloud Logging.
 
-## Multi-Cloud Coordination
+## КООРДИНАЦИЯ В МУЛЬТИОБЛАЧНОЙ СРЕДЕ
 
 Incidents spanning multiple providers require adaptation to different:
 
@@ -7968,13 +7968,13 @@ Prepare activity should define:
 | Snapshot/evidence | EBS snapshots, AMI | Managed disk snapshots, VM capture | Persistent disk snapshots |
 | Termination protection | EC2 termination protection | Resource deletion locks | Instance deletion protection |
 
-## Encrypted Communications
+## ЗАШИФРОВАННЫЕ КОММУНИКАЦИИ
 
 Pervasive encryption reduces visibility of attacker traffic.
 
 Encryption improves general security but may allow C2/exfiltration to evade traditional network inspection.
 
-### TLS Interception
+### ПЕРЕХВАТ TLS
 
 TLS interception proxies can:
 
@@ -8027,7 +8027,7 @@ Details like:
 
 must be worked out in Prepare, not during active incident.
 
-### Network Visibility and Endpoint Controls
+### СЕТЕВАЯ НАБЛЮДАЕМОСТЬ И КОНТРОЛЬ КОНЕЧНЫХ ТОЧЕК
 
 Home-network infrastructure is outside organization control.
 
@@ -8038,7 +8038,7 @@ Therefore containment shifts toward:
 - endpoint policy;
 - identity controls.
 
-### Personal Device Contamination
+### КОМПРОМЕТАЦИЯ ЛИЧНОГО УСТРОЙСТВА
 
 BYOD requires separation of corporate and personal data.
 
@@ -8052,7 +8052,7 @@ Use:
 
 Policies should define organization authority over personal devices before incident.
 
-### Home Network Compromise
+### КОМПРОМЕТАЦИЯ ДОМАШНЕЙ СЕТИ
 
 Attacker may pivot from corporate device to family/personal systems, but source emphasizes that this often reflects weak remote-device configuration.
 
@@ -8083,7 +8083,7 @@ Prepare should define:
 - household coordination;
 - legal boundaries.
 
-### Access and Recovery
+### ДОСТУП И ВОССТАНОВЛЕНИЕ
 
 VPN containment can be granular rather than disabling all remote access.
 
@@ -8102,7 +8102,7 @@ For remote SaaS usage, rely on:
 
 Document each critical SaaS application's containment capabilities.
 
-### Physical Device Recovery
+### ФИЗИЧЕСКОЕ ВОССТАНОВЛЕНИЕ УСТРОЙСТВА
 
 Remote compromised devices may need:
 
@@ -8128,7 +8128,7 @@ Containment can instead focus on:
 
 > **Иллюстрация не воспроизводится:** требуется отдельная проверка прав на сторонний визуальный материал. .
 
-## Business Email Compromise
+## КОМПРОМЕТАЦИЯ ДЕЛОВОЙ ПОЧТЫ
 
 BEC uses legitimate email infrastructure for:
 
@@ -8166,7 +8166,7 @@ Therefore BEC workflow should include:
 - EDR review;
 - endpoint evidence collection.
 
-## Supply Chain Incidents
+## ИНЦИДЕНТЫ В ЦЕПОЧКЕ ПОСТАВОК
 
 Supply chain incidents include:
 
@@ -8186,7 +8186,7 @@ If compromised CI/CD publishes malicious versions, containment must address both
 - internal breach;
 - distributed artifacts already in customer environments.
 
-## MODERN BREACH COMPLEXITY: THE MOVEIT SUPPLY CHAIN ATTACK
+## СЛОЖНОСТЬ СОВРЕМЕННЫХ КОМПРОМЕТАЦИЙ: АТАКА НА ЦЕПОЧКУ ПОСТАВОК MOVEIT
 
 Source uses 2023 MOVEit incident to show breach chains crossing organizational boundaries.
 
@@ -8227,7 +8227,7 @@ Source notes similar MOVEit exposure across many organizations including Deutsch
 
 Lesson: modern response planning must model data embedded in vendor ecosystems and SaaS, not only direct system compromise.
 
-## Partner Ecosystem Breaches
+## КОМПРОМЕТАЦИИ В ЭКОСИСТЕМЕ ПАРТНЁРОВ
 
 Partner ecosystem breach compromises organization's data in third-party systems while local environment may be clean.
 
@@ -8286,7 +8286,7 @@ Validation should combine:
 | Process Monitoring | process creation, services, parent-child relationships | respawned malware, new persistence, unusual paths |
 | Log Analysis | authentication, application, security logs | failed logons, privilege escalation, unusual file access |
 
-### Network Monitoring
+### СЕТЕВОЙ МОНИТОРИНГ
 
 Review:
 
@@ -8307,7 +8307,7 @@ Look for:
 
 Containment should be treated as failed or incomplete if attacker simply shifts channels.
 
-### Process Monitoring
+### МОНИТОРИНГ ПРОЦЕССОВ
 
 Confirm malicious processes no longer run.
 
@@ -8333,7 +8333,7 @@ Establish expected process baseline and investigate deviations.
 
 > **Иллюстрация не воспроизводится:** требуется отдельная проверка прав на сторонний визуальный материал. product screenshot not reproduced.
 
-### Log Analysis
+### АНАЛИЗ ЖУРНАЛОВ
 
 Monitor:
 
@@ -8355,7 +8355,7 @@ Compare pre-containment and post-containment behavior.
 
 # ПРИМЕРЫ СДЕРЖИВАНИЯ
 
-## The Multi-Tenant Credential Exposure
+## РАСКРЫТИЕ УЧЁТНЫХ ДАННЫХ В MULTI-TENANT СРЕДЕ
 
 Sarah leads IRT for Kubernetes managed service provider.
 
@@ -8415,7 +8415,7 @@ Sarah repeated credential disable for Meridian and Cascade despite no confirmed 
 
 This precaution prevented attacker from pivoting into exposed but unused credentials.
 
-## TechFlow EC2 Isolation
+## ИЗОЛЯЦИЯ EC2 В TECHFLOW
 
 Sarah then contained two attacker-created EC2 instances.
 
@@ -8470,7 +8470,7 @@ Ingress allows SSH only from IR jump box `198.51.100.10`.
 
 Outbound is blocked.
 
-## Kubernetes Service Account Containment
+## СДЕРЖИВАНИЕ SERVICE ACCOUNT В KUBERNETES
 
 Rather than deleting overprivileged service account and destroying evidence, Sarah removed RBAC binding.
 
@@ -8499,7 +8499,7 @@ $ kubectl annotate serviceaccount dashboard-viewer -n kubernetes-dashboard   IR-
 serviceaccount/dashboard-viewer annotated
 ~~~
 
-## Validation
+## ПРОВЕРКА
 
 Sarah monitored:
 
@@ -8545,7 +8545,7 @@ Documented IOCs/containment:
 
 Key lesson: multi-tenant exposure requires coordinated simultaneous containment of all potentially disclosed credentials, not only environments with confirmed abuse.
 
-## The Ransomware Rapid Response
+## БЫСТРОЕ РЕАГИРОВАНИЕ НА RANSOMWARE
 
 Marcus Chen is senior support-desk analyst at Vanguard Point Advisors, mid-sized financial-services firm.
 
@@ -8639,7 +8639,7 @@ Source указывает, что guide доступен в PDF/Markdown на `d
 
 ### Шаг 1. Assess Containment Urgency and Strategy
 
-#### 1. Evaluate immediate-containment triggers
+#### 1. ОЦЕНИТЬ ТРИГГЕРЫ НЕМЕДЛЕННОГО СДЕРЖИВАНИЯ
 
 Urgent triggers include:
 
@@ -8648,7 +8648,7 @@ Urgent triggers include:
 - threat to critical/safety systems;
 - regulatory timeframe requiring rapid action.
 
-#### 2. Select containment approach
+#### 2. ВЫБРАТЬ ПОДХОД К СДЕРЖИВАНИЮ
 
 **Passive containment**
 
@@ -8672,7 +8672,7 @@ Urgent triggers include:
 - production-like controlled environments;
 - intelligence gathering while protecting real assets.
 
-#### 3. Balance competing priorities
+#### 3. СБАЛАНСИРОВАТЬ КОНКУРИРУЮЩИЕ ПРИОРИТЕТЫ
 
 Evaluate:
 
@@ -8680,7 +8680,7 @@ Evaluate:
 - intelligence value vs continued attacker access;
 - business impact vs security benefit.
 
-#### 4. Plan coordinated execution
+#### 4. СПЛАНИРОВАТЬ СКООРДИНИРОВАННОЕ ВЫПОЛНЕНИЕ
 
 - identify known compromised systems/accounts/services;
 - coordinate network, endpoint, identity, application teams;
@@ -8694,7 +8694,7 @@ Evaluate:
 
 ### Шаг 2. Implement Identity and Access Containment
 
-### 1. Invalidate known-compromised credentials
+### 1. АННУЛИРОВАТЬ ИЗВЕСТНЫЕ СКОМПРОМЕТИРОВАННЫЕ УЧЁТНЫЕ ДАННЫЕ
 
 This step addresses known-compromised set.
 
@@ -8708,7 +8708,7 @@ Actions:
 - coordinate synced on-prem/cloud identities;
 - prioritize privileged/high-risk accounts.
 
-### 2. Terminate active sessions
+### 2. ЗАВЕРШИТЬ АКТИВНЫЕ СЕССИИ
 
 - revoke sessions/tokens through IdP;
 - disconnect VPN;
@@ -8717,28 +8717,28 @@ Actions:
 - invalidate browser session versions where supported;
 - request SaaS provider forced logout if necessary.
 
-### 3. Revoke refresh/persistent tokens
+### 3. ОТОЗВАТЬ REFRESH- И ПОСТОЯННЫЕ ТОКЕНЫ
 
 - revoke OAuth refresh tokens;
 - revoke offline-access tokens;
 - implement deny lists for stateless JWTs where applicable;
 - monitor token endpoint use indicating cached credentials.
 
-### 4. Implement conditional access
+### 4. ВНЕДРИТЬ УСЛОВНЫЙ ДОСТУП
 
 - geographic restrictions;
 - managed-device compliance;
 - block suspicious IP/risk patterns;
 - escalate MFA to phishing-resistant methods.
 
-### 5. Coordinate SSO containment
+### 5. СКООРДИНИРОВАТЬ СДЕРЖИВАНИЕ ЧЕРЕЗ SSO
 
 - disable compromised account at central IdP;
 - identify apps using local accounts separately;
 - account for sync/cache delays;
 - enforce MFA at IdP.
 
-### 6. Disable third-party integrations
+### 6. ОТКЛЮЧИТЬ СТОРОННИЕ ИНТЕГРАЦИИ
 
 - revoke OAuth apps;
 - disable automation;
@@ -8749,7 +8749,7 @@ Actions:
 
 ### Шаг 3. Implement Network and Host Containment
 
-### 1. Network isolation
+### 1. СЕТЕВАЯ ИЗОЛЯЦИЯ
 
 - quarantine VLAN;
 - firewall rules;
@@ -8757,7 +8757,7 @@ Actions:
 - micro-segmentation;
 - route manipulation when necessary.
 
-### 2. Individual host isolation
+### 2. ИЗОЛЯЦИЯ ОТДЕЛЬНЫХ ХОСТОВ
 
 - EDR quarantine while preserving forensic channel;
 - local firewall restrictions;
@@ -8768,7 +8768,7 @@ Actions:
   - Gatekeeper;
   - AppArmor.
 
-### 3. Application-level restrictions
+### 3. ОГРАНИЧЕНИЯ НА УРОВНЕ ПРИЛОЖЕНИЙ
 
 - WAF rules;
 - database access/query restrictions;
@@ -8784,42 +8784,42 @@ Coordinate disruptive actions with business owners.
 
 ### Шаг 4. Implement Cloud-Specific Containment
 
-### 1. Verify security demarcation
+### 1. ПРОВЕРИТЬ ГРАНИЦЫ ОТВЕТСТВЕННОСТИ ЗА БЕЗОПАСНОСТЬ
 
 - determine customer-controlled vs provider-controlled actions;
 - do not rely solely on IaaS/PaaS/SaaS labels;
 - check product-specific responsibility;
 - engage provider security team for infrastructure outside customer control.
 
-### 2. Prioritize cloud identity
+### 2. ПОСТАВИТЬ ОБЛАЧНЫЕ ИДЕНТИЧНОСТИ В ПРИОРИТЕТ
 
 - disable IAM access keys;
 - rotate service principals;
 - revoke OAuth/access/refresh tokens;
 - document downstream automation impact.
 
-### 3. Apply network isolation
+### 3. ПРИМЕНИТЬ СЕТЕВУЮ ИЗОЛЯЦИЮ
 
 - security groups;
 - NACLs;
 - isolation VPC;
 - remove from load balancers while retaining running state.
 
-### 4. Protect and track cloud resources
+### 4. ЗАЩИТИТЬ И ОТСЛЕЖИВАТЬ ОБЛАЧНЫЕ РЕСУРСЫ
 
 - IR tags;
 - termination protection;
 - deletion locks;
 - snapshots.
 
-### 5. Address SaaS limitations
+### 5. УЧЕСТЬ ОГРАНИЧЕНИЯ SaaS
 
 - password reset/random password;
 - freeze/disable account;
 - revoke sessions;
 - contact provider support when admin interface insufficient.
 
-### 6. Contain serverless/ephemeral resources
+### 6. СДЕРЖИВАТЬ SERVERLESS- И ЭФЕМЕРНЫЕ РЕСУРСЫ
 
 - disable event triggers;
 - replace function code with deny-and-log;
@@ -8827,7 +8827,7 @@ Coordinate disruptive actions with business owners.
 
 ### Шаг 5. Address Remote Work and Modern Environment Challenges
 
-### 1. Remote workers
+### 1. УДАЛЁННЫЕ СОТРУДНИКИ
 
 - prefer EDR endpoint isolation;
 - per-user/device VPN restrictions;
@@ -8835,13 +8835,13 @@ Coordinate disruptive actions with business owners.
 - coordinate device recovery;
 - balance forensics and continuity.
 
-### 2. BYOD/personal devices
+### 2. BYOD / ЛИЧНЫЕ УСТРОЙСТВА
 
 - MDM/MAM selective controls;
 - device compliance;
 - respect privacy/legal boundaries.
 
-### 3. Encrypted communications
+### 3. ЗАШИФРОВАННЫЕ КОММУНИКАЦИИ
 
 - TLS interception where authorized;
 - require egress through inspection point;
@@ -8850,7 +8850,7 @@ Coordinate disruptive actions with business owners.
 - use host overrides/local DoH/browser policy;
 - balance security with privacy/compatibility.
 
-### 4. Non-traditional compromise
+### 4. НЕТИПИЧНАЯ КОМПРОМЕТАЦИЯ
 
 **BEC**
 
@@ -8871,7 +8871,7 @@ This step preserves volatile evidence.
 
 Eradicate Step 1 later interprets the captured artifacts during short-form investigation.
 
-### 1. Decide timing
+### 1. ОПРЕДЕЛИТЬ МОМЕНТ СБОРА
 
 Weigh:
 
@@ -8888,7 +8888,7 @@ it can isolate first, then collect.
 
 Without alternate volatile-network evidence, collect active connections before isolation where justified.
 
-### 2. Volatile collection
+### 2. СОБРАТЬ ВОЛАТИЛЬНЫЕ ДАННЫЕ
 
 - memory dump;
 - active connections;
@@ -8896,7 +8896,7 @@ Without alternate volatile-network evidence, collect active connections before i
 - parent-child relationships;
 - temporary files/cache.
 
-### 3. Persistent system artifacts
+### 3. СОБРАТЬ ПОСТОЯННЫЕ СИСТЕМНЫЕ АРТЕФАКТЫ
 
 - registry hives;
 - event logs;
@@ -8907,7 +8907,7 @@ Without alternate volatile-network evidence, collect active connections before i
 - AmCache;
 - browser history/cache.
 
-### 4. Network/application evidence
+### 4. СОБРАТЬ СЕТЕВЫЕ И ПРИКЛАДНЫЕ ДОКАЗАТЕЛЬСТВА
 
 - packet capture where practical;
 - NetFlow/VPC Flow Logs;
@@ -8920,7 +8920,7 @@ Without alternate volatile-network evidence, collect active connections before i
 
 ### Шаг 7. Validate Containment Effectiveness
 
-### 1. Network validation
+### 1. ПРОВЕРИТЬ СЕТЬ
 
 - firewall/proxy/DNS review;
 - known C2 monitoring;
@@ -8929,7 +8929,7 @@ Without alternate volatile-network evidence, collect active connections before i
 - combine appliance visibility + contained-host investigation;
 - compare pre/post containment.
 
-### 2. Process validation
+### 2. ПРОВЕРИТЬ ПРОЦЕССЫ
 
 - EDR/host telemetry;
 - process creation;
@@ -8938,7 +8938,7 @@ Without alternate volatile-network evidence, collect active connections before i
 - new services/persistence;
 - process-inspection utilities.
 
-### 3. Log validation
+### 3. ПРОВЕРИТЬ ЖУРНАЛЫ
 
 - authentication failures;
 - privilege escalation;
@@ -8946,7 +8946,7 @@ Without alternate volatile-network evidence, collect active connections before i
 - continued exfiltration;
 - local + external logs.
 
-### 4. Baseline comparison
+### 4. СРАВНИТЬ С БАЗОВОЙ ЛИНИЕЙ
 
 - expected process activity;
 - network difference;
@@ -8956,7 +8956,7 @@ Without alternate volatile-network evidence, collect active connections before i
 
 ### Шаг 8. Document Containment Actions and Communicate Status
 
-### 1. Decision documentation
+### 1. ЗАДОКУМЕНТИРОВАТЬ РЕШЕНИЯ
 
 Record:
 
@@ -8967,7 +8967,7 @@ Record:
 - alternatives considered;
 - chain of custody.
 
-### 2. Operational impact
+### 2. ЗАФИКСИРОВАТЬ ОПЕРАЦИОННОЕ ВЛИЯНИЕ
 
 Document:
 
@@ -8977,7 +8977,7 @@ Document:
 - workarounds;
 - business-unit feedback.
 
-### 3. Stakeholder communication
+### 3. ПРОВЕСТИ КОММУНИКАЦИЮ С ЗАИНТЕРЕСОВАННЫМИ СТОРОНАМИ
 
 Provide:
 
@@ -9003,7 +9003,7 @@ Coordinate with:
 - compliance;
 - public relations.
 
-### 4. Prepare downstream phases
+### 4. ПОДГОТОВИТЬ ПОСЛЕДУЮЩИЕ ЭТАПЫ
 
 - organize evidence for eradication/threat-intelligence analysis;
 - create system inventory/prioritized recovery sequence;
@@ -13957,7 +13957,7 @@ Per-system backup integrity validation at restore time belongs to Recover Step 1
 - patches;
 - compensating controls.
 
-#### 3. Stakeholder communication
+#### 3. ПРОВЕСТИ КОММУНИКАЦИЮ С ЗАИНТЕРЕСОВАННЫМИ СТОРОНАМИ
 
 - executive outcome summary;
 - technical brief for IT/security;
@@ -14463,7 +14463,7 @@ Applications may depend on:
 
 Dependency chain and restoration procedure should ideally be documented before incident.
 
-# AWS OUTAGE CASE STUDY: THE CRITICAL ROLE OF DNS IN RECOVERY
+# КЕЙС СБОЯ AWS: КРИТИЧЕСКАЯ РОЛЬ DNS В ВОССТАНОВЛЕНИИ
 
 Source uses the AWS us-east-1 outage of December 7, 2021 as a recovery dependency example.[1]
 
@@ -14696,7 +14696,7 @@ Best fit:
 - phased restoration would create unacceptable business impact;
 - high confidence in eradication/restoration readiness.
 
-# COORDINATED RECOVERY AT MAERSK: AN INCIDENT OF GLOBAL SCALE
+# СКООРДИНИРОВАННОЕ ВОССТАНОВЛЕНИЕ В MAERSK: ИНЦИДЕНТ ГЛОБАЛЬНОГО МАСШТАБА
 
 Source uses Maersk's NotPetya recovery as coordinated recovery example.[2]
 
@@ -14841,7 +14841,7 @@ Validate MFA for cloud users.
 
 Apply least privilege.
 
-## Cloud Logging
+## ОБЛАЧНОЕ ЖУРНАЛИРОВАНИЕ
 
 Temporarily increase logging verbosity for:
 
@@ -15003,7 +15003,7 @@ This gives leadership a business-readable basis for decisions about:
 - change windows;
 - reprioritization.
 
-## Explicit Handoffs
+## ЯВНАЯ ПЕРЕДАЧА ОТВЕТСТВЕННОСТИ
 
 Recovery plans should define conditions for moving between:
 
@@ -15072,9 +15072,9 @@ Relationships matter too.
 
 System owners who participate in recovery are more likely to treat recovery as shared work rather than imposed change.
 
-# RECOVERY ACTIVITY EXAMPLE
+# ПРИМЕР ЭТАПА ВОССТАНОВЛЕНИЯ
 
-## Phased Recovery of a Domain Controller Environment
+## ПОЭТАПНОЕ ВОССТАНОВЛЕНИЕ СРЕДЫ ДОМЕННЫХ КОНТРОЛЛЕРОВ
 
 Sarah Park, senior incident responder at Lakewood Health Systems, is recovering from ransomware.
 
@@ -15132,7 +15132,7 @@ Before production restore:
 
 Recovery then proceeded in phases.
 
-## Phase 1 — Primary Domain Controller
+## ЭТАП 1 — ОСНОВНОЙ КОНТРОЛЛЕР ДОМЕНА
 
 PDC emulator restored first because other DCs and AD-dependent systems required it.
 
@@ -15173,7 +15173,7 @@ PS C:\> auditpol /set /subcategory:"Credential Validation" /success:enable /fail
 The command was successfully executed.
 ~~~
 
-## Phase 2 — Secondary Domain Controllers
+## ЭТАП 2 — ДОПОЛНИТЕЛЬНЫЕ КОНТРОЛЛЕРЫ ДОМЕНА
 
 Two satellite-site DCs restored sequentially.
 
@@ -15209,7 +15209,7 @@ A known complication appeared:
 
 Sarah documented those objects for later recreation rather than delaying DC restore.
 
-## Phase 3 — Member Servers and Workstations
+## ЭТАП 3 — СЕРВЕРЫ-ЧЛЕНЫ ДОМЕНА И РАБОЧИЕ СТАНЦИИ
 
 Priority:
 
@@ -15226,7 +15226,7 @@ User data lived separately on unaffected network shares.
 
 Deployment proceeded by department, prioritizing clinical areas.
 
-## Radiology Dependency Problem
+## ПРОБЛЕМА ЗАВИСИМОСТЕЙ РАДИОЛОГИИ
 
 A radiology service-account password had been rotated:
 
@@ -15254,7 +15254,7 @@ After eight days, full restoration completed.
 
 > **Иллюстрация не воспроизводится:** требуется отдельная проверка прав на сторонний визуальный материал. .
 
-## Lessons Captured
+## ЗАФИКСИРОВАННЫЕ УРОКИ
 
 1. Online backup repository was destroyed.
    - only four offline weekly snapshots survived;
@@ -15300,14 +15300,14 @@ Focus Recover Step 1:
 - rebuild integrity;
 - recovery-specific validation.
 
-#### 1. Revalidate root-cause remediation
+#### 1. ПОВТОРНО ПРОВЕРИТЬ УСТРАНЕНИЕ КОРНЕВОЙ ПРИЧИНЫ
 
 - exploited vulnerability remains patched;
 - compromised credentials remain rotated across all systems where used;
 - initial-access misconfiguration remains corrected;
 - eradication documentation confirms no unresolved issues/regressions.
 
-#### 2. Revalidate persistence removal
+#### 2. ПОВТОРНО ПРОВЕРИТЬ УДАЛЕНИЕ ЗАКРЕПЛЕНИЯ
 
 Treat eradication verification as ongoing.
 
@@ -15325,7 +15325,7 @@ Spot-check:
 
 Use findings for go/no-go.
 
-#### 3. Validate backup integrity
+#### 3. ПРОВЕРИТЬ ЦЕЛОСТНОСТЬ РЕЗЕРВНЫХ КОПИЙ
 
 For backup restore:
 
@@ -15334,7 +15334,7 @@ For backup restore:
 - document selection rationale;
 - if no clean backup exists, document rebuild method and validation.
 
-#### 4. Verify rebuild integrity
+#### 4. ПРОВЕРИТЬ ЦЕЛОСТНОСТЬ ПЕРЕСОБРАННЫХ СИСТЕМ
 
 - trusted installation media/gold image;
 - source not compromised;
@@ -15343,7 +15343,7 @@ For backup restore:
 
 ### Шаг 2. Perform System Validation Testing
 
-#### 1. Functional testing
+#### 1. ФУНКЦИОНАЛЬНОЕ ТЕСТИРОВАНИЕ
 
 - standard business-operation tests;
 - data access;
@@ -15352,14 +15352,14 @@ For backup restore:
 - UAT/test plans where available;
 - document issues.
 
-#### 2. Security controls
+#### 2. ПРОВЕРКА СРЕДСТВ ЗАЩИТЫ
 
 - EDR installed/running/reporting;
 - host firewall enabled/configured;
 - logs flowing;
 - patches/hardening retained.
 
-#### 3. Interconnectivity
+#### 3. ПРОВЕРКА ВЗАИМОСВЯЗЕЙ
 
 - database connectivity/data access;
 - application-server paths;
@@ -15368,14 +15368,14 @@ For backup restore:
 
 ### Шаг 3. Obtain владелец системы Acceptance
 
-#### 1. Coordinate acceptance testing
+#### 1. СКООРДИНИРОВАТЬ ПРИЁМОЧНОЕ ТЕСТИРОВАНИЕ
 
 - provide test plans/checklists;
 - schedule with business representatives;
 - support testing;
 - document identified issues.
 
-#### 2. Obtain sign-off
+#### 2. ПОЛУЧИТЬ ФОРМАЛЬНОЕ ПОДТВЕРЖДЕНИЕ
 
 - record testing and tester;
 - owner acknowledgment of production readiness;
@@ -15384,14 +15384,14 @@ For backup restore:
 
 ### Шаг 4. Configure Enhanced Monitoring
 
-#### 1. Elevated logging
+#### 1. РАСШИРЕННОЕ ЖУРНАЛИРОВАНИЕ
 
 - advanced authentication/process/system-change audit;
 - PowerShell Script Block Logging;
 - Linux auditd for critical files/processes;
 - verify SIEM/log forwarding.
 
-#### 2. Incident-specific detection
+#### 2. СПЕЦИАЛЬНОЕ ОБНАРУЖЕНИЕ ДЛЯ ДАННОГО ИНЦИДЕНТА
 
 Confirm rules created during Contain/Eradicate are active on restored systems:
 
@@ -15409,7 +15409,7 @@ Add any newly identified recovery rules through detection engineering rather tha
 
 Test that rules generate expected alerts.
 
-#### 3. Monitoring duration/procedure
+#### 3. ОПРЕДЕЛИТЬ СРОК И ПРОЦЕДУРУ МОНИТОРИНГА
 
 - duration matched to incident severity;
 - source notes thirty days minimum as typical guidance in this step;
@@ -15419,7 +15419,7 @@ Test that rules generate expected alerts.
 
 ### Шаг 5. Execute Coordinated Production Restoration
 
-#### 1. Identify dependencies and sequence
+#### 1. ОПРЕДЕЛИТЬ ЗАВИСИМОСТИ И ПОСЛЕДОВАТЕЛЬНОСТЬ
 
 - map dependencies;
 - identify foundational services:
@@ -15429,7 +15429,7 @@ Test that rules generate expected alerts.
 - document sequence;
 - coordinate with owners/IT operations.
 
-#### 2. Coordinate timing
+#### 2. СОГЛАСОВАТЬ ВРЕМЯ
 
 - present timing options/risks to decision makers;
 - recommend off-hours where feasible;
@@ -15438,7 +15438,7 @@ Test that rules generate expected alerts.
 - communicate schedule;
 - prepare rollback.
 
-#### 3. Select phased or coordinated restoration
+#### 3. ВЫБРАТЬ ПОЭТАПНОЕ ИЛИ СКООРДИНИРОВАННОЕ ВОССТАНОВЛЕНИЕ
 
 **Phased**
 
@@ -15464,7 +15464,7 @@ For either approach:
 - monitor immediately;
 - document deviations.
 
-#### 4. Manage coordination complexity
+#### 4. УПРАВЛЯТЬ СЛОЖНОСТЬЮ КООРДИНАЦИИ
 
 - designate IR coordinator for multi-team recovery;
 - define explicit handoff criteria:
@@ -15476,7 +15476,7 @@ For either approach:
 - prepare communication templates;
 - establish owner-signed post-recovery baseline.
 
-#### 5. Cloud-specific recovery
+#### 5. УЧЕСТЬ ОСОБЕННОСТИ ОБЛАЧНОГО ВОССТАНОВЛЕНИЯ
 
 When applicable:
 
@@ -15491,7 +15491,7 @@ When applicable:
 - review IaC/version-control history;
 - consider elevated cloud logging.
 
-#### 6. User communications
+#### 6. ОРГАНИЗОВАТЬ КОММУНИКАЦИЮ С ПОЛЬЗОВАТЕЛЯМИ
 
 - designate communication leads;
 - establish fixed cadence;
@@ -15500,7 +15500,7 @@ When applicable:
 - prepare delay/partial-restoration/action-required templates;
 - use multiple channels.
 
-#### 7. Address data loss from clean backup
+#### 7. УЧЕСТЬ ПОТЕРЮ ДАННЫХ ПРИ ВОССТАНОВЛЕНИИ ИЗ ЧИСТОЙ КОПИИ
 
 - identify data changed after clean backup;
 - recover newer files/application data only after validating them clean;
@@ -15513,7 +15513,7 @@ Containment is lifted incrementally during Step 5 as systems require connectivit
 
 Step 6 consolidates status and decides what remains permanent.
 
-#### 1. Inventory measures
+#### 1. ИНВЕНТАРИЗИРОВАТЬ МЕРЫ
 
 - firewall rules;
 - segmentation;
@@ -15524,7 +15524,7 @@ Step 6 consolidates status and decides what remains permanent.
 - rationale/date;
 - candidate permanent controls.
 
-#### 2. Remove incrementally
+#### 2. СНИМАТЬ МЕРЫ ПОЭТАПНО
 
 For each validated system:
 
@@ -15533,7 +15533,7 @@ For each validated system:
 - timestamp action/outcome;
 - verify functionality.
 
-#### 3. Evaluate permanent controls
+#### 3. ОЦЕНИТЬ ПОСТОЯННЫЕ СРЕДСТВА КОНТРОЛЯ
 
 - identify long-term security value;
 - coordinate with security architecture;
@@ -15542,7 +15542,7 @@ For each validated system:
 
 ### Шаг 7. Capture Recovery Metrics
 
-#### 1. Timeline
+#### 1. ХРОНОЛОГИЯ
 
 For every system:
 
@@ -15557,7 +15557,7 @@ Calculate:
 - bottlenecks;
 - variance from stakeholder estimates.
 
-#### 2. Issues/resolutions
+#### 2. ПРОБЛЕМЫ И ИХ РЕШЕНИЯ
 
 - restoration problems;
 - resolutions;
@@ -15565,14 +15565,14 @@ Calculate:
 - lessons while fresh;
 - documentation/procedure gaps.
 
-#### 3. Resource investment
+#### 3. ЗАТРАЧЕННЫЕ РЕСУРСЫ
 
 - personnel hours;
 - third-party support;
 - additional costs;
 - data for incident cost/future planning.
 
-#### 4. Pass documentation to Debrief
+#### 4. ПЕРЕДАТЬ ДОКУМЕНТАЦИЮ НА ЭТАП РАЗБОРА
 
 - hand recovery documentation to Debrief Step 3 for unified incident record;
 - ensure accessibility for post-incident review;
@@ -15717,7 +15717,7 @@ Debrief strategies включают две группы.
 1. Response Actions Loop больше не даёт new information about attacker presence/activity.
 2. Organizational leadership считает incident sufficiently resolved для завершения active response.
 
-## Condition 1: Technical Readiness
+## УСЛОВИЕ 1: ТЕХНИЧЕСКАЯ ГОТОВНОСТЬ
 
 Indicators:
 
@@ -15728,7 +15728,7 @@ Indicators:
 
 IRT может рекомендовать переход, когда confidence in elimination high and residual risk minimal.
 
-## Condition 2: Organizational Decision
+## УСЛОВИЕ 2: ОРГАНИЗАЦИОННОЕ РЕШЕНИЕ
 
 Leadership может завершить active response из-за broader priorities:
 
@@ -15799,7 +15799,7 @@ If artifact:
 
 organization should weigh storage cost against potential value.
 
-## Temporary Accounts and Monitoring
+## ВРЕМЕННЫЕ УЧЁТНЫЕ ЗАПИСИ И МОНИТОРИНГ
 
 Temporary accounts/elevated access should be revoked unless ongoing legitimate need exists.
 
@@ -15821,7 +15821,7 @@ Retained accounts need:
 - periodic review;
 - standard revocation processes.
 
-## Enhanced Monitoring Configurations
+## КОНФИГУРАЦИИ УСИЛЕННОГО МОНИТОРИНГА
 
 Evaluate whether temporary monitoring should be:
 
@@ -15954,7 +15954,7 @@ Metrics should primarily support **internal improvement**, not external benchmar
 
 Important metrics:
 
-## Mean Time to Detect (MTTD)
+## СРЕДНЕЕ ВРЕМЯ ОБНАРУЖЕНИЯ (MTTD)
 
 Elapsed time:
 
@@ -15962,7 +15962,7 @@ Elapsed time:
 
 Incident start may need retrospective reconstruction.
 
-## Mean Time to Respond (MTTR)
+## СРЕДНЕЕ ВРЕМЯ РЕАГИРОВАНИЯ (MTTR)
 
 Elapsed time:
 
@@ -15974,7 +15974,7 @@ Organizations may also split response into:
 - time to eradication;
 - time to full recovery.
 
-## Scope of Impact
+## МАСШТАБ ВЛИЯНИЯ
 
 Quantify:
 
@@ -15984,7 +15984,7 @@ Quantify:
 
 This helps correlate incident severity and response effort.
 
-## Resource Utilization
+## ИСПОЛЬЗОВАНИЕ РЕСУРСОВ
 
 Track:
 
@@ -15993,7 +15993,7 @@ Track:
 - tool/infrastructure expenses;
 - other incident costs.
 
-## Total Incident Lifecycle
+## ПОЛНЫЙ ЖИЗНЕННЫЙ ЦИКЛ ИНЦИДЕНТА
 
 Elapsed time:
 
@@ -16056,7 +16056,7 @@ Not individual fault.
 
 Source defines six core questions.
 
-## 1. What was supposed to happen?
+## 1. ЧТО ДОЛЖНО БЫЛО ПРОИЗОЙТИ?
 
 Review:
 
@@ -16066,7 +16066,7 @@ Review:
 
 Identify what was expected.
 
-## 2. What actually happened?
+## 2. ЧТО ПРОИЗОШЛО НА САМОМ ДЕЛЕ?
 
 Walk through:
 
@@ -16076,14 +16076,14 @@ Walk through:
 - deviations;
 - outcomes.
 
-## 3. Why did it happen?
+## 3. ПОЧЕМУ ЭТО ПРОИЗОШЛО?
 
 Distinguish:
 
 - **plan failure** — procedure did not work as designed;
 - **execution failure** — procedure was not followed as designed.
 
-## 4. What can we do better next time?
+## 4. ЧТО МЫ МОЖЕМ СДЕЛАТЬ ЛУЧШЕ В СЛЕДУЮЩИЙ РАЗ?
 
 Develop actionable recommendations for:
 
@@ -16093,11 +16093,11 @@ Develop actionable recommendations for:
 - training;
 - organizational coordination.
 
-## 5. What worked well?
+## 5. ЧТО СРАБОТАЛО ХОРОШО?
 
 Identify successful elements worth preserving or expanding.
 
-## 6. Why did those things work?
+## 6. ПОЧЕМУ ЭТО СРАБОТАЛО?
 
 Determine whether success came from:
 
@@ -16113,7 +16113,7 @@ Document AAR findings with:
 - due date;
 - follow-up review.
 
-# VALUE IN DEVELOPING A VISUAL TIMELINE
+# ЦЕННОСТЬ ВИЗУАЛЬНОЙ ХРОНОЛОГИИ
 
 A visual timeline helps create shared context.
 
@@ -16139,13 +16139,13 @@ Work with decision makers to prioritize and resource them.
 
 Source groups recommendations by timeline.
 
-## Immediate Actions
+## НЕМЕДЛЕННЫЕ ДЕЙСТВИЯ
 
 Outstanding gaps presenting ongoing risk.
 
 Implement before debrief closes or as soon as practicable.
 
-## Short-Term Improvements
+## КРАТКОСРОЧНЫЕ УЛУЧШЕНИЯ
 
 Usually weeks to a few months.
 
@@ -16155,7 +16155,7 @@ Examples:
 - monitoring;
 - targeted training.
 
-## Long-Term Strategic Changes
+## ДОЛГОСРОЧНЫЕ СТРАТЕГИЧЕСКИЕ ИЗМЕНЕНИЯ
 
 Require larger investments:
 
@@ -16228,7 +16228,7 @@ Uses beyond documentation:
 - institutional knowledge;
 - security-strategy input.
 
-# Report Audience
+# АУДИТОРИЯ ОТЧЁТА
 
 Different audiences need different detail.
 
@@ -16267,7 +16267,7 @@ May receive sanitized material for:
 
 Report length/content should be adapted to audience rather than forced into a single universal format.
 
-# Report Contents
+# СОДЕРЖАНИЕ ОТЧЁТА
 
 Regardless of format, an effective incident report should:
 
@@ -16460,7 +16460,7 @@ Typical sections:
 
 > **Иллюстрация не воспроизводится:** требуется отдельная проверка прав на сторонний визуальный материал. .
 
-# REPORTING THAT MATCHES THE ORGANIZATION'S NEEDS
+# ОТЧЁТНОСТЬ, СООТВЕТСТВУЮЩАЯ ПОТРЕБНОСТЯМ ОРГАНИЗАЦИИ
 
 Source explicitly warns against rigid reporting doctrine.
 
@@ -16482,7 +16482,7 @@ The goal is not format compliance for its own sake.
 
 Ask stakeholders what they actually need and adapt reporting accordingly.
 
-# USING A STRUCTURED TEMPLATE FOR TECHNICAL REPORTS
+# ИСПОЛЬЗОВАНИЕ СТРУКТУРИРОВАННОГО ШАБЛОНА ТЕХНИЧЕСКОГО ОТЧЁТА
 
 Organizations can start from an established incident-report framework rather than inventing structure from scratch.
 
@@ -16557,26 +16557,26 @@ The same session structure applies either way.
 
 > **Иллюстрация не воспроизводится:** требуется отдельная проверка прав на сторонний визуальный материал. .
 
-# Session Objectives
+# ЦЕЛИ СЕССИИ
 
 Presentation should achieve:
 
-## Shared Understanding
+## ОБЩЕЕ ПОНИМАНИЕ
 
 All stakeholders should leave with a consistent view of:
 
 - incident;
 - response.
 
-## Findings Review
+## ОБЗОР ВЫВОДОВ
 
 Translate important findings into language accessible to non-technical stakeholders.
 
-## Recommendation Alignment
+## СОГЛАСОВАНИЕ РЕКОМЕНДАЦИЙ
 
 Review improvements and obtain implementation commitment.
 
-## Formal Closure
+## ФОРМАЛЬНОЕ ЗАКРЫТИЕ
 
 Mark transition from incident response to normal operations with clear accountability for follow-up.
 
@@ -16588,7 +16588,7 @@ The session is **not** for:
 
 Facilitator should set ground rules and redirect unproductive discussion.
 
-# Attendees and Roles
+# УЧАСТНИКИ И РОЛИ
 
 Typical attendees:
 
@@ -16646,7 +16646,7 @@ Source identifies five common challenges:
 4. legal/regulatory constraints;
 5. resource constraints.
 
-# Incomplete Documentation
+# НЕПОЛНАЯ ДОКУМЕНТАЦИЯ
 
 Debrief quality depends on accurate response documentation.
 
@@ -16669,7 +16669,7 @@ Mitigation should be designed before incidents:
 - use templates/checklists;
 - review documentation completeness during response.
 
-# IF YOU'RE GOING TOO FAST…
+# ЕСЛИ ВЫ ДВИГАЕТЕСЬ СЛИШКОМ БЫСТРО…
 
 Source recounts a story from Stephen Northcutt about early work as a Navy medic.
 
@@ -16684,7 +16684,7 @@ Lesson:
 
 Not every incident needs exhaustive documentation, but organization-important facts must be captured.
 
-# Organizational Attention and Priority
+# ВНИМАНИЕ ОРГАНИЗАЦИИ И ПРИОРИТЕТ
 
 Once crisis subsides:
 
@@ -16711,7 +16711,7 @@ Recommendations should connect to:
 - competitive/operational impact;
 - incident cost.
 
-# THE CONSULTANT'S SUPERPOWER
+# СУПЕРСИЛА КОНСУЛЬТАНТА
 
 Source describes an observation from consulting work:
 
@@ -16739,7 +16739,7 @@ Source recommends building a prioritized improvement list **during the response*
 - incident-evidence based;
 - framed in business-risk terms.
 
-# Blame and Accountability Dynamics
+# ДИНАМИКА ВИНЫ И ОТВЕТСТВЕННОСТИ
 
 Debrief can fail if it becomes blame assignment.
 
@@ -16772,7 +16772,7 @@ If individual performance issues require management action, handle them separate
 
 Mixing performance management and learning discourages participation.
 
-# Legal and Regulatory Constraints
+# ЮРИДИЧЕСКИЕ И РЕГУЛЯТОРНЫЕ ОГРАНИЧЕНИЯ
 
 Debrief documentation may become relevant in:
 
@@ -16845,7 +16845,7 @@ Third parties can help:
 
 # ПРИМЕРЫ РАЗБОРА ИНЦИДЕНТА
 
-## The Compromised SaaS Account
+## СКОМПРОМЕТИРОВАННАЯ УЧЁТНАЯ ЗАПИСЬ SaaS
 
 A few days after a SaaS account compromise at Vanguard Point Advisors, security operations manager Lisa Park scheduled a short stand-up debrief.
 
@@ -16943,7 +16943,7 @@ Improvement actions were entered into security project tracking.
 
 Lisa scheduled a 30-day follow-up.
 
-# The Healthcare Ransomware Recovery
+# ВОССТАНОВЛЕНИЕ ПОСЛЕ RANSOMWARE В ЗДРАВООХРАНЕНИИ
 
 Three weeks after phased domain-controller recovery at Lakewood Medical Center, the organization conducted a comprehensive debrief.
 
@@ -16966,7 +16966,7 @@ She structured Debrief in three phases:
 2. formal AAR;
 3. executive presentation with recommendations.
 
-## Phase 1: Documentation Consolidation
+## ЭТАП 1: КОНСОЛИДАЦИЯ ДОКУМЕНТАЦИИ
 
 Two analysts consolidated:
 
@@ -17008,7 +17008,7 @@ The team filled missing documentation by interviewing responders.
 | Dec 16–20 | Recovery Phase 3 | Workstations rebuilt from gold images; user data restored |
 | Dec 21 | Incident Closure | Systems operational, enhanced monitoring active, debrief starts |
 
-## Phase 2: After-Action Review
+## ЭТАП 2: ПОСЛЕИНЦИДЕНТНЫЙ РАЗБОР
 
 Dr. Davis invited:
 
@@ -17075,7 +17075,7 @@ Lesson:
 
 If a process depends on a person manually noticing a failure, the monitoring/process design may be inadequate.
 
-## Phase 3: Documentation and Presentation
+## ЭТАП 3: ДОКУМЕНТИРОВАНИЕ И ПРЕЗЕНТАЦИЯ
 
 Two reports were created:
 
@@ -17193,14 +17193,14 @@ Source notes the guide is available in PDF/Markdown at dynamicincidentresponse.c
 
 ### Шаг 1. Determine Debrief Scope and Documentation Requirements
 
-#### 1. Assess transition readiness
+#### 1. ОЦЕНИТЬ ГОТОВНОСТЬ К ПЕРЕХОДУ
 
 - Response Actions Loop has concluded with no new IOC.
 - Organizational decision makers approved transition.
 - Critical systems restored/validated.
 - Residual risks accepted by leadership are documented.
 
-#### 2. Determine documentation depth
+#### 2. ОПРЕДЕЛИТЬ ГЛУБИНУ ДОКУМЕНТИРОВАНИЯ
 
 Review organizational thresholds:
 
@@ -17219,7 +17219,7 @@ Assess:
 
 Consult legal on retention/documentation.
 
-#### 3. Select approach
+#### 3. ВЫБРАТЬ ПОДХОД
 
 **Lightweight debrief**
 
@@ -17242,7 +17242,7 @@ Consult legal on retention/documentation.
 
 Document why approach was chosen.
 
-#### 4. Legal/regulatory considerations
+#### 4. УЧЕСТЬ ЮРИДИЧЕСКИЕ И РЕГУЛЯТОРНЫЕ ТРЕБОВАНИЯ
 
 - legal review of documentation practice;
 - consider privilege structures where appropriate;
@@ -17252,7 +17252,7 @@ Document why approach was chosen.
 
 ### Шаг 2. Manage Temporary Assets Created During Response
 
-#### 1. Forensic evidence retention
+#### 1. ОПРЕДЕЛИТЬ СРОК ХРАНЕНИЯ ФОРЕНЗИК-ДОКАЗАТЕЛЬСТВ
 
 Inventory:
 
@@ -17273,14 +17273,14 @@ Document retention decisions.
 
 Destroy artifacts not required, according to policy.
 
-#### 2. Temporary accounts/elevated access
+#### 2. ОБРАБОТАТЬ ВРЕМЕННЫЕ УЧЁТНЫЕ ЗАПИСИ И ПОВЫШЕННЫЙ ДОСТУП
 
 - enumerate response-created accounts;
 - disable/delete unless justified;
 - revoke temporary elevated responder access;
 - record disposition/timestamp.
 
-#### 3. Temporary monitoring
+#### 3. ОБРАБОТАТЬ ВРЕМЕННЫЙ МОНИТОРИНГ
 
 Assess:
 
@@ -17297,7 +17297,7 @@ Document decision.
 
 ### Шаг 3. Consolidate Incident Documentation
 
-#### 1. Gather all sources
+#### 1. СОБРАТЬ ВСЕ ИСТОЧНИКИ
 
 - tickets;
 - chat;
@@ -17309,14 +17309,14 @@ Document decision.
 - stakeholder communication;
 - decision records.
 
-#### 2. Validate/refine timeline
+#### 2. ПРОВЕРИТЬ И УТОЧНИТЬ ХРОНОЛОГИЮ
 
 - review with key responders;
 - fill gaps;
 - reconcile conflicting timestamps/accounts;
 - document confidence levels based on evidence quality.
 
-#### 3. Document important decisions
+#### 3. ЗАДОКУМЕНТИРОВАТЬ ВАЖНЫЕ РЕШЕНИЯ
 
 For significant decisions record:
 
@@ -17336,7 +17336,7 @@ Preserve decision record for future incidents/legal needs.
 
 ### Шаг 4. Capture Incident Metrics
 
-#### 1. Detection/response metrics
+#### 1. МЕТРИКИ ОБНАРУЖЕНИЯ И РЕАГИРОВАНИЯ
 
 - MTTD: incident start → detection;
 - MTTR: detection → resolution;
@@ -17345,7 +17345,7 @@ Preserve decision record for future incidents/legal needs.
 - Time to Full Recovery;
 - Total Incident Lifecycle: initial compromise → verified resolution.
 
-#### 2. Scope/impact
+#### 2. МАСШТАБ И ВЛИЯНИЕ
 
 - affected servers/workstations/cloud resources;
 - compromised/reset accounts;
@@ -17357,14 +17357,14 @@ Preserve decision record for future incidents/legal needs.
   - disruption duration;
   - revenue impact where applicable.
 
-#### 3. Resource utilization
+#### 3. ИСПОЛЬЗОВАНИЕ РЕСУРСОВ
 
 - personnel hours;
 - external support;
 - tools/infrastructure;
 - ransom/extortion costs where applicable.
 
-#### 4. Preserve metrics for improvement
+#### 4. СОХРАНИТЬ МЕТРИКИ ДЛЯ ПОСЛЕДУЮЩИХ УЛУЧШЕНИЙ
 
 - consistent format across incidents;
 - compare against internal baseline;
@@ -17373,7 +17373,7 @@ Preserve decision record for future incidents/legal needs.
 
 ### Шаг 5. Conduct After-Action Review
 
-#### 1. Schedule and prepare
+#### 1. ЗАПЛАНИРОВАТЬ И ПОДГОТОВИТЬ
 
 - within 1–2 weeks of closure;
 - all relevant teams;
@@ -17389,7 +17389,7 @@ Focus on systemic causes:
 
 Handle individual performance separately.
 
-#### 2. Core AAR questions
+#### 2. ОСНОВНЫЕ ВОПРОСЫ AAR
 
 - What was supposed to happen?
 - What actually happened?
@@ -17398,7 +17398,7 @@ Handle individual performance separately.
 - What worked well?
 - Why did it work well?
 
-#### 3. Capture/prioritize recommendations
+#### 3. ЗАФИКСИРОВАТЬ И ПРИОРИТИЗИРОВАТЬ РЕКОМЕНДАЦИИ
 
 - record suggestions;
 - categorize:
@@ -17409,7 +17409,7 @@ Handle individual performance separately.
 - assign dates;
 - prioritize by risk reduction and feasibility.
 
-#### 4. Document AAR outcome
+#### 4. ЗАДОКУМЕНТИРОВАТЬ РЕЗУЛЬТАТ AAR
 
 - participants;
 - summary;
@@ -17421,7 +17421,7 @@ Handle individual performance separately.
 
 ### Шаг 6. Develop Incident Reports — When Required
 
-#### 1. Lightweight documentation
+#### 1. ОБЛЕГЧЁННАЯ ДОКУМЕНТАЦИЯ
 
 - Debrief Summary in incident ticket;
 - what happened;
@@ -17432,7 +17432,7 @@ Handle individual performance separately.
 - management sign-off;
 - formal close.
 
-#### 2. Formal reporting purpose/audience
+#### 2. ЦЕЛЬ И АУДИТОРИЯ ФОРМАЛЬНОЙ ОТЧЁТНОСТИ
 
 Define:
 
@@ -17443,7 +17443,7 @@ Define:
 - HIPAA/PCI DSS/GDPR or other obligations;
 - single-report vs multi-report format.
 
-#### 3. Executive summary report
+#### 3. КРАТКИЙ ОТЧЁТ ДЛЯ РУКОВОДСТВА
 
 For significant incidents:
 
@@ -17462,7 +17462,7 @@ For significant incidents:
 - leadership decisions required;
 - link/reference to technical report.
 
-#### 4. Technical incident report
+#### 4. ТЕХНИЧЕСКИЙ ОТЧЁТ ОБ ИНЦИДЕНТЕ
 
 Include:
 
@@ -17480,7 +17480,7 @@ Include:
 
 ### Шаг 7. Present Findings and Recommendations to Stakeholders
 
-#### 1. Prepare/schedule
+#### 1. ПОДГОТОВИТЬ И ЗАПЛАНИРОВАТЬ
 
 - promptly after documentation;
 - generally within 1–2 weeks;
@@ -17489,7 +17489,7 @@ Include:
 - facilitator;
 - note-taker.
 
-#### 2. Conduct session
+#### 2. ПРОВЕСТИ СЕССИЮ
 
 - timeline;
 - key findings;
@@ -17500,7 +17500,7 @@ Include:
 - stakeholder questions;
 - capture decisions/action items.
 
-#### 3. Distribute outcomes
+#### 3. РАСПРОСТРАНИТЬ РЕЗУЛЬТАТЫ
 
 Within 24–48 hours:
 
@@ -17515,7 +17515,7 @@ Within 24–48 hours:
 
 ### Шаг 8. Drive Organizational Improvement
 
-#### 1. Integrate lessons
+#### 1. ИНТЕГРИРОВАТЬ ИЗВЛЕЧЁННЫЕ УРОКИ
 
 - update IR plans;
 - update playbooks;
@@ -17524,21 +17524,21 @@ Within 24–48 hours:
 - create training scenarios;
 - share relevant threat intelligence with partners/ISACs where appropriate.
 
-#### 2. Track implementation
+#### 2. ОТСЛЕЖИВАТЬ РЕАЛИЗАЦИЮ
 
 - enter recommendations in project/security tracking;
 - milestones;
 - named owners;
 - implementation expectations.
 
-#### 3. Follow-up reviews
+#### 3. ПРОВОДИТЬ КОНТРОЛЬНЫЕ ОБЗОРЫ
 
 - 30/60/90-day cadence;
 - leadership representation;
 - address blockers/resources;
 - escalate stalled recommendations.
 
-#### 4. Close Debrief
+#### 4. ЗАВЕРШИТЬ РАЗБОР
 
 - immediate recommendations implemented or on track;
 - long-term items in planning/budget cycles;
@@ -17587,7 +17587,7 @@ Chapter сосредоточена на practical generative-AI applications д�
 
 > ускорить analysis, не отказываясь от verification, evidence quality и human judgment.
 
-## AI как data-handling decision
+## ИИ КАК РЕШЕНИЕ ПО ОБРАБОТКЕ ДАННЫХ
 
 Incident data часто содержит:
 
@@ -17830,7 +17830,7 @@ Organization should define explicit policy:
 - under what conditions;
 - through which approved platforms.
 
-# Chapter Organization
+# СТРУКТУРА ГЛАВЫ
 
 Chapter progresses from simple to advanced:
 
@@ -17859,7 +17859,7 @@ Poorly defined prompts produce:
 
 results.
 
-## Quick Prompting Tips
+## КРАТКИЕ СОВЕТЫ ПО СОСТАВЛЕНИЮ ЗАПРОСОВ
 
 ### Таблица 45. Quick Prompting Techniques for реагирование на инциденты
 
@@ -17977,7 +17977,7 @@ AI can:
 - decode/clarify obfuscation;
 - help analysts understand unfamiliar syntax.
 
-## Suspicious Scheduled Task Example
+## ПРИМЕР ПОДОЗРИТЕЛЬНОЙ ЗАПЛАНИРОВАННОЙ ЗАДАЧИ
 
 ### Listing 123. Windows Scheduled Task Command Runs PowerShell
 
@@ -18068,7 +18068,7 @@ Unverified AI output нельзя использовать как authoritative 
 - regulatory attestations;
 - material stakeholder communication.
 
-# Iterative Analysis for Complex Artifacts
+# ИТЕРАТИВНЫЙ АНАЛИЗ СЛОЖНЫХ АРТЕФАКТОВ
 
 Complex code benefits from progressive analysis:
 
@@ -18082,7 +18082,7 @@ Complex code benefits from progressive analysis:
 
 Context accumulates across the conversation.
 
-## C# Obfuscated Malware Example
+## ПРИМЕР ОБФУСЦИРОВАННОГО ВРЕДОНОСНОГО ПО НА C#
 
 ### Listing 125. C# Malware Sample with Obfuscation
 
@@ -18158,7 +18158,7 @@ Further iterations can ask about:
 - language concepts;
 - audience-specific reporting.
 
-# MODEL GUARDRAILS AND MALWARE ANALYSIS
+# ОГРАНИЧЕНИЯ МОДЕЛЕЙ И АНАЛИЗ ВРЕДОНОСНОГО ПО
 
 AI platforms implement different safety/guardrail policies.
 
@@ -18198,9 +18198,9 @@ Typical sources:
 
 AI can accelerate first-pass triage and anomaly identification.
 
-## Use Cases for AI Log Analysis
+## СЦЕНАРИИ ИСПОЛЬЗОВАНИЯ ИИ ДЛЯ АНАЛИЗА ЖУРНАЛОВ
 
-### Initial Orientation
+### ПЕРВИЧНАЯ ОРИЕНТАЦИЯ
 
 For unfamiliar formats, AI can help identify:
 
@@ -18211,7 +18211,7 @@ For unfamiliar formats, AI can help identify:
 
 This reduces time spent orienting before substantive analysis.
 
-### Anomaly Identification
+### ВЫЯВЛЕНИЕ АНОМАЛИЙ
 
 Models can surface obvious anomalies such as:
 
@@ -18222,7 +18222,7 @@ Models can surface obvious anomalies such as:
 
 These are investigation leads, not final conclusions.
 
-### Report Preparation
+### ПОДГОТОВКА ОТЧЁТА
 
 AI can turn raw logs into:
 
@@ -18232,7 +18232,7 @@ AI can turn raw logs into:
 
 Analyst must verify summaries against source data before formal use.
 
-### Query Generation
+### ГЕНЕРАЦИЯ ЗАПРОСОВ
 
 Models can generate SIEM queries for platforms such as:
 
@@ -18242,7 +18242,7 @@ Models can generate SIEM queries for platforms such as:
 
 Generated queries must be reviewed and tested.
 
-# Microsoft 365 Authentication Log Triage
+# ТРИАЖ ЖУРНАЛОВ АУТЕНТИФИКАЦИИ MICROSOFT 365
 
 Source example uses Microsoft 365 access logs exported as JSON and Claude Opus to identify events of interest.
 
@@ -18256,7 +18256,7 @@ The model identifies multiple anomalies, summarized in the next range.
 
 > **Иллюстрация не воспроизводится:** требуется отдельная проверка прав на сторонний визуальный материал. .
 
-# Microsoft 365 Authentication Log Analysis — Results
+# АНАЛИЗ ЖУРНАЛОВ АУТЕНТИФИКАЦИИ MICROSOFT 365 — РЕЗУЛЬТАТЫ
 
 ### Таблица 46. Microsoft 365 Authentication Log Analysis Summary
 
@@ -18293,7 +18293,7 @@ Findings still require verification against:
 - SIEM;
 - authoritative identity telemetry.
 
-# Beaconing Detection: Network Proxy Data
+# ОБНАРУЖЕНИЕ BEACONING ПО ДАННЫМ СЕТЕВОГО ПРОКСИ
 
 Proxy logs can reveal C2 through regular request intervals.
 
@@ -18343,7 +18343,7 @@ Potential acceleration:
 
 # ОГРАНИЧЕНИЯ ИИ-АНАЛИЗА ЖУРНАЛОВ
 
-## Incomplete Detection
+## НЕПОЛНОЕ ОБНАРУЖЕНИЕ
 
 Models may miss:
 
@@ -18353,13 +18353,13 @@ Models may miss:
 
 Use AI as first-pass triage, not complete detection control.
 
-## False Positives
+## ЛОЖНЫЕ СРАБАТЫВАНИЯ
 
 Legitimate unusual behavior can be flagged as malicious.
 
 Every alert/findings requires analyst validation.
 
-## Lack of Definitive Conclusions
+## ОТСУТСТВИЕ ОДНОЗНАЧНЫХ ВЫВОДОВ
 
 Models may hedge:
 
@@ -18369,7 +18369,7 @@ Models may hedge:
 
 Impact/attribution still needs human assessment.
 
-## Context Window Constraints
+## ОГРАНИЧЕНИЯ КОНТЕКСТНОГО ОКНА
 
 Models can only process bounded input per interaction.
 
@@ -18411,7 +18411,7 @@ AI can accelerate drafting:
 - reports;
 - audience-specific translations.
 
-# Executive Summary Generation
+# ГЕНЕРАЦИЯ КРАТКОГО ОТЧЁТА ДЛЯ РУКОВОДСТВА
 
 ### Listing 126. Executive Summary Generation Prompt
 
@@ -18488,7 +18488,7 @@ Manual playbook authoring is expensive because:
 
 AI can accelerate the first draft, which analysts then validate/customize.
 
-# Structured Prompt for Playbook Generation
+# СТРУКТУРИРОВАННЫЙ ЗАПРОС ДЛЯ ГЕНЕРАЦИИ ПЛЕЙБУКА
 
 Source references a DAIR playbook prompt at:
 
@@ -18575,7 +18575,7 @@ Source excerpt includes an AI-generated external citation artifact in the model 
 
 The excerpt continues in next source range.
 
-# Playbook Generation — Continuation
+# ГЕНЕРАЦИЯ ПЛЕЙБУКА — ПРОДОЛЖЕНИЕ
 
 Generated example continues with immediate scoping/context questions.
 
@@ -18607,7 +18607,7 @@ Get-Date
 
 The generated playbook continues through all DAIR waypoints.
 
-# Refining Generated Playbooks
+# ДОРАБОТКА СГЕНЕРИРОВАННЫХ ПЛЕЙБУКОВ
 
 AI-generated playbooks are drafts, not operationally trusted procedures.
 
@@ -18703,7 +18703,7 @@ Treat AI as:
 
 Not final approver.
 
-# Enhancing Report Quality with Specialized Knowledge
+# ПОВЫШЕНИЕ КАЧЕСТВА ОТЧЁТА С ПОМОЩЬЮ СПЕЦИАЛИЗИРОВАННЫХ ЗНАНИЙ
 
 Generic models do not automatically know:
 
@@ -18733,7 +18733,7 @@ Possible deployment approaches:
 
 If MCP cannot be deployed, guidance can still be embedded in prompts/local docs.
 
-# Zeltser IR Report Guidance
+# РЕКОМЕНДАЦИИ ЗЕЛЬЦЕРА ПО ОТЧЁТАМ IR
 
 Source describes an MCP server by Lenny Zeltser.[4]
 
@@ -18808,7 +18808,7 @@ Three levels:
 2. organizationally grounded scenarios;
 3. interactive/gamified scenarios.
 
-# Generating Scenario Ideas
+# ГЕНЕРАЦИЯ ИДЕЙ ДЛЯ СЦЕНАРИЕВ
 
 ### Listing 132. Basic Tabletop Exercise Scenario Prompt
 
@@ -18861,7 +18861,7 @@ These generated concepts are starting points to refine based on:
 - recent incidents;
 - learning goals.
 
-# Organizationally-Grounded Scenarios
+# СЦЕНАРИИ, ПРИВЯЗАННЫЕ К КОНТЕКСТУ ОРГАНИЗАЦИИ
 
 More useful scenarios can use sanitized real artifacts:
 
@@ -18902,7 +18902,7 @@ Learning objectives:
 
 Scenario continues in next source range.
 
-# Organizationally-Grounded Scenarios — Continuation
+# СЦЕНАРИИ, ПРИВЯЗАННЫЕ К КОНТЕКСТУ ОРГАНИЗАЦИИ — ПРОДОЛЖЕНИЕ
 
 Source example uses Google Gemini with a Microsoft 365 interactive-login dataset.
 
@@ -18942,7 +18942,7 @@ Important requirement:
 - enough sample data to establish format/normal baseline;
 - sanitize sensitive data first.
 
-# Gamified, Interactive Exercise Generation with Twine
+# ГЕЙМИФИЦИРОВАННЫЕ ИНТЕРАКТИВНЫЕ УЧЕНИЯ С TWINE
 
 Twine is an open-source tool for nonlinear interactive narratives.
 
@@ -19017,11 +19017,11 @@ Twine syntax:
 - each passage begins with \`:: PassageName\`;
 - links use \`->TargetPassage\`.
 
-# GAMIFIED LEARNING FOR INCIDENT RESPONSE TRAINING
+# ГЕЙМИФИЦИРОВАННОЕ ОБУЧЕНИЕ РЕАГИРОВАНИЮ НА ИНЦИДЕНТЫ
 
 Source highlights four gamification benefits.
 
-## Choice and Consequence
+## ВЫБОР И ПОСЛЕДСТВИЯ
 
 Branching decisions:
 
@@ -19029,7 +19029,7 @@ Branching decisions:
 - make consequences visible;
 - connect actions to outcomes.
 
-## Safe Experimentation
+## БЕЗОПАСНЫЕ ЭКСПЕРИМЕНТЫ
 
 Participants can test risky choices without real incident impact.
 
@@ -19040,7 +19040,7 @@ Example:
 
 This reduces fear of making the “wrong” choice publicly.
 
-## Replayability and Mastery
+## ПОВТОРЯЕМОСТЬ И ОСВОЕНИЕ НАВЫКА
 
 Interactive exercises can be replayed through different paths.
 
@@ -19050,7 +19050,7 @@ Benefits:
 - comparison of strategies;
 - decision-confidence building.
 
-## Engagement Through Agency
+## ВОВЛЕЧЁННОСТЬ ЧЕРЕЗ САМОСТОЯТЕЛЬНОСТЬ
 
 Participants actively choose rather than passively listen.
 
@@ -19062,7 +19062,7 @@ Agency improves:
 
 Gamification must still serve learning objectives rather than entertainment alone.
 
-# AI-Generated Twine Scenarios
+# СЦЕНАРИИ TWINE, СОЗДАННЫЕ С ПОМОЩЬЮ ИИ
 
 Source provides a prompt at:
 
@@ -19172,11 +19172,11 @@ This frees analysts for:
 
 MCP provides a standardized integration layer between AI models and security tooling.
 
-# Understanding MCP Architecture
+# АРХИТЕКТУРА MCP
 
 Source defines three main components.
 
-## MCP Client
+## КЛИЕНТ MCP
 
 The user-facing AI interface:
 
@@ -19184,7 +19184,7 @@ The user-facing AI interface:
 - IDE;
 - custom interface.
 
-## MCP Server
+## СЕРВЕР MCP
 
 A service exposing tools that the model can invoke.
 
@@ -19194,7 +19194,7 @@ Tools may:
 - execute queries;
 - take actions.
 
-## Underlying Applications
+## БАЗОВЫЕ ПРИЛОЖЕНИЯ
 
 Actual systems/data sources:
 
@@ -19224,9 +19224,9 @@ Example requests from source:
 - enrich \`login.c1ic.link\` with CTI;
 - create/assign incident ticket.
 
-# Defensive Applications
+# ПРИМЕНЕНИЕ В ЗАЩИТНЫХ ОПЕРАЦИЯХ
 
-## Natural-Language Threat Hunting
+## ПОИСК УГРОЗ НА ЕСТЕСТВЕННОМ ЯЗЫКЕ
 
 Analyst can describe the hunt instead of writing platform-specific syntax.
 
@@ -19243,7 +19243,7 @@ Benefits:
 - helps experienced hunters express hypotheses faster;
 - reduces institutional dependence on proprietary SIEM syntax.
 
-## Automated Enrichment
+## АВТОМАТИЗИРОВАННОЕ ОБОГАЩЕНИЕ
 
 For an indicator, MCP may collect:
 
@@ -19254,7 +19254,7 @@ For an indicator, MCP may collect:
 
 This replaces manual cross-tool lookups.
 
-## Cross-Platform Correlation
+## КРОСС-ПЛАТФОРМЕННАЯ КОРРЕЛЯЦИЯ
 
 MCP can query multiple systems:
 
@@ -19268,7 +19268,7 @@ Example:
 
 - find all activity associated with one IP across platforms.
 
-## Incident Documentation
+## ДОКУМЕНТИРОВАНИЕ ИНЦИДЕНТА
 
 Ticketing integration allows conversational updates to incident records.
 
@@ -19281,7 +19281,7 @@ Benefit:
 
 MCP expands the attack surface.
 
-## Prompt Injection
+## ИНЪЕКЦИЯ В ЗАПРОС
 
 External data may contain malicious instructions.
 
@@ -19310,7 +19310,7 @@ When MCP converts model output into:
 
 prompt injection can become classic command/query injection.
 
-## Access Control
+## КОНТРОЛЬ ДОСТУПА
 
 MCP must not grant more privilege than direct access.
 
@@ -19324,7 +19324,7 @@ Use:
 - scoped credentials;
 - least privilege.
 
-## Audit Logging
+## ЖУРНАЛИРОВАНИЕ АУДИТА
 
 Log every MCP invocation with:
 
@@ -19339,7 +19339,7 @@ Integrate logs with:
 - SIEM;
 - dedicated audit store.
 
-## Data Exposure
+## РАСКРЫТИЕ ДАННЫХ
 
 Tool output becomes model context.
 
@@ -19384,7 +19384,7 @@ Recommended controls:
 - restrict network egress;
 - maintain internal vetted registry.
 
-# MCP Integration for Threat Hunting
+# ИНТЕГРАЦИЯ MCP ДЛЯ ПОИСКА УГРОЗ
 
 Source uses OpenSearch as an example.
 
@@ -19454,7 +19454,7 @@ AI is changing both offensive and defensive operations.
 
 Defenders must accelerate investigation as attackers accelerate campaign execution.
 
-# Autonomous Adversaries
+# АВТОНОМНЫЕ ПРОТИВНИКИ
 
 Source discusses AI-orchestrated intrusion campaigns.
 
@@ -19498,7 +19498,7 @@ Source explicitly notes controversy:
 
 Therefore this is treated as an early indicator of possible future capability, not independently verified incident fact.
 
-# Accelerating Forensic Investigations
+# УСКОРЕНИЕ ФОРЕНЗИК-РАССЛЕДОВАНИЙ
 
 Manual forensic workflows may be slower than modern attack progression.
 
@@ -19550,7 +19550,7 @@ Identify threats that indicate malicious activity against the system.
 
 The resulting autonomous workflow continues in the next source range.
 
-# Protocol SIFT Autonomous Workflow
+# АВТОНОМНЫЙ РАБОЧИЙ ПРОЦЕСС PROTOCOL SIFT
 
 ### Рисунок 174. Claude Code Analysis Prompt on SIFT Workstation
 
@@ -19606,7 +19606,7 @@ Source lesson:
 
 natural-language direction + autonomous orchestration + iterative analysis can reduce time spent on low-level tool handling.
 
-# REACT AGENTS: REASONING AND ACTING FOR ENHANCED AI CAPABILITIES
+# АГЕНТЫ REACT: РАССУЖДЕНИЕ И ДЕЙСТВИЕ ДЛЯ РАСШИРЕНИЯ ВОЗМОЖНОСТЕЙ ИИ
 
 Protocol SIFT uses the ReAct paradigm.[8]
 
@@ -19617,7 +19617,7 @@ ReAct combines:
 - observations;
 - iterative adjustment.
 
-## ReAct Cycle
+## ЦИКЛ REACT
 
 1. Receive task and plan approach.
 2. Execute an action:
@@ -19635,7 +19635,7 @@ ReAct combines:
 
 > **Иллюстрация не воспроизводится:** требуется отдельная проверка прав на сторонний визуальный материал. .
 
-## Reasoning and External Verification
+## РАССУЖДЕНИЕ И ВНЕШНЯЯ ПРОВЕРКА
 
 Source describes stepwise problem decomposition, e.g.:
 
@@ -19647,7 +19647,7 @@ Source describes stepwise problem decomposition, e.g.:
 
 Operational value comes from combining model planning with deterministic tool output.
 
-## Action Capabilities
+## ВОЗМОЖНОСТИ ВЫПОЛНЕНИЯ ДЕЙСТВИЙ
 
 Possible actions include:
 
@@ -19659,7 +19659,7 @@ Possible actions include:
 - sandbox or analysis-service interaction;
 - human approval requests.
 
-# MCP Integration
+# ИНТЕГРАЦИЯ MCP
 
 MCP gives the ReAct agent a standardized interface to:
 
@@ -19672,7 +19672,7 @@ MCP gives the ReAct agent a standardized interface to:
 
 Organizations can extend capability by exposing internal tools through vetted MCP servers.
 
-# Accuracy and Deep Understanding
+# ТОЧНОСТЬ И ГЛУБОКОЕ ПОНИМАНИЕ
 
 Source identifies accuracy improvements from:
 
@@ -19684,7 +19684,7 @@ Source identifies accuracy improvements from:
 
 Forensics benefits when evidentiary facts originate from deterministic parsers rather than free-form model inference.
 
-# Trust Mechanisms in Autonomous Forensics
+# МЕХАНИЗМЫ ДОВЕРИЯ В АВТОНОМНОЙ ФОРЕНЗИКЕ
 
 Autonomous AI creates concerns about:
 
@@ -19697,7 +19697,7 @@ Source explicitly notes this is an active area of research/debate.
 
 Early adopters should treat forensic soundness as a primary architecture requirement.
 
-# Inference Constraint
+# ОГРАНИЧЕНИЕ ВЫВОДОВ
 
 Protocol SIFT uses a high inference constraint.
 
@@ -19744,7 +19744,7 @@ Commands that modify:
 
 require explicit approval.
 
-# Forensically Sound Tools
+# ФОРЕНЗИК-КОРРЕКТНЫЕ ИНСТРУМЕНТЫ
 
 Protocol SIFT orchestrates established tools.
 
@@ -19835,11 +19835,11 @@ AI integration must include:
 - documentation;
 - skill development.
 
-# Verification and Trust
+# ПРОВЕРКА И ДОВЕРИЕ
 
 AI output must be verified before being treated as factual.
 
-## Log Analysis Verification
+## ПРОВЕРКА АНАЛИЗА ЖУРНАЛОВ
 
 If AI claims beaconing every five minutes:
 
@@ -19849,7 +19849,7 @@ If AI claims beaconing every five minutes:
 
 Pattern identification is a hypothesis until confirmed.
 
-## Report Verification
+## ПРОВЕРКА ОТЧЁТА
 
 Every factual claim should trace to source evidence.
 
@@ -19862,7 +19862,7 @@ Especially verify:
 
 AI should change presentation, not facts.
 
-## Playbook Verification
+## ПРОВЕРКА ПЛЕЙБУКА
 
 Generated playbooks should be:
 
@@ -19877,7 +19877,7 @@ Potential failures:
 - nonexistent features;
 - environment-inappropriate procedures.
 
-## Document Verification
+## ПРОВЕРКА ДОКУМЕНТА
 
 For significant findings document the validation:
 
@@ -19885,7 +19885,7 @@ For significant findings document the validation:
 - verification method;
 - analyst/SME confirmation.
 
-# Documentation Practices
+# ПРАКТИКИ ДОКУМЕНТИРОВАНИЯ
 
 When AI contributes, documentation should record:
 
@@ -19917,7 +19917,7 @@ Documentation must distinguish:
 - AI-suggested hypothesis;
 - verified finding.
 
-# Reproducibility, Defensibility, Continuous Improvement
+# ВОСПРОИЗВОДИМОСТЬ, ЗАЩИЩАЕМОСТЬ И НЕПРЕРЫВНОЕ УЛУЧШЕНИЕ
 
 **Reproducibility**
 
@@ -19935,7 +19935,7 @@ Review AI-assisted workflows to identify:
 - weak use cases;
 - prompt improvements.
 
-# Building Organizational Capability
+# ФОРМИРОВАНИЕ ОРГАНИЗАЦИОННЫХ КОМПЕТЕНЦИЙ
 
 AI adoption should be intentional across the team, not isolated to individual enthusiasts.
 
@@ -19946,7 +19946,7 @@ Benefits increase when analysts share:
 - verification practices;
 - lessons learned.
 
-# Prompt Libraries
+# БИБЛИОТЕКИ ЗАПРОСОВ
 
 Effective prompts are reusable assets.
 
@@ -19963,7 +19963,7 @@ Prompt libraries:
 - support consistent output;
 - enable team refinement.
 
-# Skill Files and Prompt Library Integration
+# ИНТЕГРАЦИЯ SKILL-ФАЙЛОВ И БИБЛИОТЕКИ ЗАПРОСОВ
 
 Source notes reusable skill/prompt files in environments such as:
 
@@ -20008,7 +20008,7 @@ The skill defines mappings such as:
 
 Output template continues in the next source range.
 
-# Sigma Skill Example — Completion
+# ПРИМЕР SIGMA SKILL — ЗАВЕРШЕНИЕ
 
 Source skill defines a reusable Sigma output template containing:
 
@@ -20086,7 +20086,7 @@ Prompt libraries and skill files improve:
 - adoption;
 - team capability.
 
-# Use Case Documentation
+# ДОКУМЕНТИРОВАНИЕ СЦЕНАРИЕВ ПРИМЕНЕНИЯ
 
 Organizations should document which AI use cases:
 
@@ -20098,7 +20098,7 @@ This prevents teams from repeatedly attempting already-failed approaches.
 
 It also accelerates onboarding of new team members.
 
-# Training
+# ОБУЧЕНИЕ
 
 Structured training should cover both:
 
@@ -20114,23 +20114,23 @@ Potential exercises:
 - log analysis;
 - prompt troubleshooting.
 
-# Structured Learning Paths
+# СТРУКТУРИРОВАННЫЕ ТРАЕКТОРИИ ОБУЧЕНИЯ
 
 Source uses a scaffolding model.
 
-## Foundational
+## БАЗОВЫЙ УРОВЕНЬ
 
 - how LLMs work at a practical level;
 - hallucinations/failure modes;
 - basic prompting.
 
-## Intermediate
+## СРЕДНИЙ УРОВЕНЬ
 
 - log analysis;
 - code review;
 - report generation.
 
-## Advanced
+## ПРОДВИНУТЫЙ УРОВЕНЬ
 
 - multi-step analysis chains;
 - API/tool integration;
@@ -20140,7 +20140,7 @@ General AI familiarity does not automatically imply effective security use.
 
 Security-specific training is needed.
 
-# Practical Training Exercises
+# ПРАКТИЧЕСКИЕ УЧЕБНЫЕ УПРАЖНЕНИЯ
 
 ### Таблица 49. Suggested Training Exercises for AI-Assisted реагирование на инциденты
 
@@ -20158,7 +20158,7 @@ Security-specific training is needed.
 
 Labs are preferred because analysts can experiment without production pressure.
 
-# Cross-Training Considerations
+# АСПЕКТЫ КРОСС-ФУНКЦИОНАЛЬНОГО ОБУЧЕНИЯ
 
 AI knowledge should not be isolated to a specialist AI team.
 
@@ -20187,13 +20187,13 @@ Specific prompt patterns may age, so teams should periodically reassess whether 
 
 Trends highlighted:
 
-## Better Multi-Step Reasoning
+## УЛУЧШЕНИЕ МНОГОШАГОВОГО РАССУЖДЕНИЯ
 
 Tasks requiring elaborate prompt structure may become easier.
 
 Review existing prompts periodically.
 
-## Maturing Agent/MCP Ecosystem
+## РАЗВИТИЕ ЭКОСИСТЕМЫ АГЕНТОВ И MCP
 
 MCP and related standards may make security-tool integration easier.
 
@@ -20203,7 +20203,7 @@ Possible outcomes:
 - more turnkey integrations;
 - broader vendor support.
 
-## Security-Specific Models
+## СПЕЦИАЛИЗИРОВАННЫЕ МОДЕЛИ ДЛЯ КИБЕРБЕЗОПАСНОСТИ
 
 Source cites Cisco Foundation-sec-8b as an example of a security-focused small language model.[9]
 
@@ -20351,7 +20351,7 @@ Credential compromise may have happened:
 
 Therefore the initial credential-theft event may leave no evidence in organizational logs.
 
-# SIDEBAR: THE UNTRACEABLE CREDENTIAL PROBLEM
+# ВРЕЗКА: ПРОБЛЕМА НЕОТСЛЕЖИВАЕМЫХ УЧЁТНЫХ ДАННЫХ
 
 A common ransomware investigation finding:
 
@@ -20369,11 +20369,11 @@ Possible credential origins:
 
 This uncertainty affects:
 
-## Investigation scope
+## МАСШТАБ РАССЛЕДОВАНИЯ
 
 Without knowing where the credentials came from, responders cannot prove the initial-access vector is fully closed.
 
-## Lessons learned
+## ИЗВЛЕЧЁННЫЕ УРОКИ
 
 “Deploy MFA everywhere” is not always sufficient because AitM attacks may bypass some MFA implementations.
 
@@ -20525,7 +20525,7 @@ Consider this when:
 - decryption fails despite apparently valid keys;
 - artifacts indicate destructive rather than recoverable encryption.
 
-# SIDEBAR: RANSOMWARE-AS-A-SERVICE — LOCKBIT
+# ВРЕЗКА: RANSOMWARE-AS-A-SERVICE — LOCKBIT
 
 RaaS separates roles:
 
@@ -20650,7 +20650,7 @@ This chapter adds ransomware-specific preparation for:
 - identity/tier-0 hardening;
 - resilient backup architecture.
 
-# PREPARE — Ransomware-Specific Preparation
+# ПОДГОТОВКА — СПЕЦИФИКА RANSOMWARE
 
 Source emphasizes repeatedly:
 
@@ -20708,7 +20708,7 @@ A ransomware crisis-communications plan should include:
   - communications;
   - leadership.
 
-# THE VALUE OF A GOOD HOLDING STATEMENT
+# ЦЕННОСТЬ ХОРОШЕГО ПЕРВИЧНОГО ЗАЯВЛЕНИЯ
 
 A holding statement is a short pre-approved message acknowledging that:
 
@@ -20810,7 +20810,7 @@ Training should therefore emphasize:
 - support-desk validation;
 - process compliance.
 
-## Help Desk Impersonation
+## ВЫДАВАНИЕ СЕБЯ ЗА СЛУЖБУ ПОДДЕРЖКИ
 
 Employees should know whether legitimate support staff will ever:
 
@@ -20820,7 +20820,7 @@ Employees should know whether legitimate support staff will ever:
 
 Source recommends clear organizational rules stating legitimate support will not request password disclosure.
 
-## Continuous Training
+## НЕПРЕРЫВНОЕ ОБУЧЕНИЕ
 
 Annual “click-through” compliance is insufficient.
 
@@ -20904,7 +20904,7 @@ Targets include:
 - hypervisors;
 - storage snapshots.
 
-# THE CRUSHING DISAPPOINTMENT OF ENCRYPTED BACKUPS
+# СОКРУШИТЕЛЬНОЕ РАЗОЧАРОВАНИЕ ОТ ЗАШИФРОВАННЫХ РЕЗЕРВНЫХ КОПИЙ
 
 Source describes a common ransomware-response failure:
 
@@ -20936,7 +20936,7 @@ If yes, backup architecture has a critical ransomware-resilience gap.
 
 # СТРАТЕГИИ РЕЗЕРВНОГО КОПИРОВАНИЯ, УСТОЙЧИВЫЕ К RANSOMWARE
 
-## Pull-Based Architecture
+## АРХИТЕКТУРА С ПОЛУЧЕНИЕМ ДАННЫХ (PULL-BASED)
 
 Prefer backup systems retrieving data from production rather than production pushing to backup.
 
@@ -20944,7 +20944,7 @@ Benefit:
 
 - compromised production systems have less ability to overwrite/delete backup history.
 
-## Network Isolation
+## СЕТЕВАЯ ИЗОЛЯЦИЯ
 
 Backup infrastructure should be accessible through:
 
@@ -20953,7 +20953,7 @@ Backup infrastructure should be accessible through:
 
 A compromised workstation/DC should not have direct network path to backup storage.
 
-## Immutability
+## НЕИЗМЕНЯЕМОСТЬ
 
 Use:
 
@@ -20965,7 +20965,7 @@ Credential compromise should not permit deletion before retention expiry.
 
 Snapshot methods may improve recovery speed for virtual workloads but can require more storage.
 
-## Air-Gapped / Offline Copies
+## ИЗОЛИРОВАННЫЕ / ОФЛАЙН-КОПИИ
 
 At least one copy should be disconnected from normal network access.
 
@@ -20975,7 +20975,7 @@ Examples:
 - offline libraries;
 - systems powered on only during controlled windows.
 
-## Identity Separation
+## РАЗДЕЛЕНИЕ ИДЕНТИЧНОСТЕЙ
 
 Backup administration should not automatically trust the same identity plane as production.
 
@@ -20987,7 +20987,7 @@ Options:
 
 Compromised domain-admin credentials should not automatically grant backup control.
 
-## Hypervisor-Level Protection
+## ЗАЩИТА НА УРОВНЕ ГИПЕРВИЗОРА
 
 For virtual environments:
 
@@ -21001,7 +21001,7 @@ This can let organizations restore priority workloads directly from backup data 
 
 Cross-cloud storage with separate identity can add further isolation.
 
-# Prioritize Critical Systems
+# ПРИОРИТИЗАЦИЯ КРИТИЧЕСКИХ СИСТЕМ
 
 Backup/recovery strategy should reflect business criticality.
 
@@ -21044,7 +21044,7 @@ Source warns ransomware recovery often takes much longer than theoretical estima
 
 Use measured restore performance, not optimistic assumptions, when setting stakeholder expectations.
 
-# Backups Are Your Last Line of Defense
+# РЕЗЕРВНЫЕ КОПИИ — ПОСЛЕДНЯЯ ЛИНИЯ ЗАЩИТЫ
 
 Backups are insurance, not prevention.
 
@@ -21090,7 +21090,7 @@ Ransom notes can contain:
 - payment portal;
 - victim identifier.
 
-# PROTECT VICTIM IDENTIFIERS IN RANSOM NOTES
+# ЗАЩИЩАЙТЕ ИДЕНТИФИКАТОРЫ ЖЕРТВЫ В ЗАПИСКАХ ВЫМОГАТЕЛЯ
 
 Victim IDs may grant access to ransomware negotiation portals.
 
@@ -21123,7 +21123,7 @@ Operational rule:
 - instruct employees to report internally rather than photograph/post them;
 - redact victim identifiers, chat URLs, and sensitive paths before broader distribution.
 
-# Distinguishing Attack Types
+# РАЗЛИЧЕНИЕ ТИПОВ АТАК
 
 Not every ransomware incident includes exfiltration.
 
@@ -21173,7 +21173,7 @@ Communication should:
 - avoid overpromising;
 - acknowledge that some questions may never be answered conclusively.
 
-# THE INCIDENT COMMANDER ROLE IN RANSOMWARE RESPONSE
+# РОЛЬ РУКОВОДИТЕЛЯ ИНЦИДЕНТА ПРИ RANSOMWARE
 
 Ransomware produces sustained requests from:
 
@@ -21199,7 +21199,7 @@ IC needs:
 
 Organizations should identify/train IC candidates before incidents and exercise the role in tabletops.
 
-# Resource Planning for Extended Response
+# ПЛАНИРОВАНИЕ РЕСУРСОВ ДЛЯ ДЛИТЕЛЬНОГО РЕАГИРОВАНИЯ
 
 Ransomware response may last:
 
@@ -21263,9 +21263,9 @@ This supports:
 - evidence-source mapping;
 - collection planning.
 
-# Scoping Activities for Ransomware
+# ОПРЕДЕЛЕНИЕ МАСШТАБА RANSOMWARE-ИНЦИДЕНТА
 
-## Identify All Affected Systems
+## ВЫЯВИТЬ ВСЕ ЗАТРОНУТЫЕ СИСТЕМЫ
 
 Do not limit scope to visibly encrypted hosts.
 
@@ -21276,7 +21276,7 @@ Include every system attacker:
 - used for tooling;
 - used for staging.
 
-## Determine Data Exposure
+## ОПРЕДЕЛИТЬ РАСКРЫТИЕ ДАННЫХ
 
 Review:
 
@@ -21286,7 +21286,7 @@ Review:
 - backups;
 - other sensitive-data systems.
 
-## Map Lateral Movement
+## ВОССТАНОВИТЬ МАРШРУТЫ ЛАТЕРАЛЬНОГО ПЕРЕМЕЩЕНИЯ
 
 Reconstruct:
 
@@ -21295,7 +21295,7 @@ Reconstruct:
 - systems traversed;
 - final encryption targets.
 
-## Identify Persistence
+## ВЫЯВИТЬ ЗАКРЕПЛЕНИЕ
 
 Examples:
 
@@ -21304,7 +21304,7 @@ Examples:
 - registry changes;
 - unauthorized accounts.
 
-## Establish Timeline
+## ПОСТРОИТЬ ХРОНОЛОГИЮ
 
 Determine:
 
@@ -21324,7 +21324,7 @@ Ransomware eradication has two parallel objectives:
 
 Recovery should not proceed until both are sufficiently addressed.
 
-# Assessing Data Access and Exfiltration
+# ОЦЕНКА ДОСТУПА К ДАННЫМ И ЭКСФИЛЬТРАЦИИ
 
 Data exposure affects:
 
@@ -21335,19 +21335,19 @@ Data exposure affects:
 
 Useful evidence:
 
-## AAA / Authentication Records
+## AAA / ЖУРНАЛЫ АУТЕНТИФИКАЦИИ
 
 Where did compromised identities authenticate?
 
-## File Access Telemetry
+## ТЕЛЕМЕТРИЯ ДОСТУПА К ФАЙЛАМ
 
 Which files were opened/copied/modified?
 
-## Network Shares
+## СЕТЕВЫЕ РЕСУРСЫ ОБЩЕГО ДОСТУПА
 
 Which shares/file servers were browsed?
 
-## Databases
+## БАЗЫ ДАННЫХ
 
 Did attackers connect to sensitive databases?
 
@@ -21361,7 +21361,7 @@ Example:
 - financial records;
 - other regulated data.
 
-# Investigative Techniques for Data Exfiltration Hunting
+# МЕТОДЫ РАССЛЕДОВАНИЯ ЭКСФИЛЬТРАЦИИ ДАННЫХ
 
 Attackers often stage data before transfer.
 
@@ -21412,13 +21412,13 @@ check whether legitimate free decryption exists.
 
 Possible sources:
 
-## Implementation Vulnerabilities
+## УЯЗВИМОСТИ РЕАЛИЗАЦИИ
 
 Some ransomware contains cryptographic mistakes.
 
 Less common in mature modern families, but still possible.
 
-## Law Enforcement Operations
+## ОПЕРАЦИИ ПРАВООХРАНИТЕЛЬНЫХ ОРГАНОВ
 
 Seized infrastructure/keys have produced decryptors for families including:
 
@@ -21426,7 +21426,7 @@ Seized infrastructure/keys have produced decryptors for families including:
 - ALPHV/BlackCat;
 - LockBit.
 
-## Leaked Keys
+## УТЁКШИЕ КЛЮЧИ
 
 Can result from:
 
@@ -21434,11 +21434,11 @@ Can result from:
 - insider leak;
 - operational-security failure.
 
-## Security Research
+## ИССЛЕДОВАНИЯ БЕЗОПАСНОСТИ
 
 Researchers/vendors may publish decryptors after finding implementation flaws.
 
-# No More Ransom
+# NO MORE RANSOM
 
 Source identifies the No More Ransom Project as the primary repository for free ransomware decryptors.
 
@@ -21454,7 +21454,7 @@ Other resources include:
 - security researchers;
 - commercial decryption services such as Coveware Unidecrypt.
 
-# Decryptor Limitations
+# ОГРАНИЧЕНИЯ ДЕШИФРАТОРОВ
 
 For modern ransomware, free decryption may not exist.
 
@@ -21471,7 +21471,7 @@ Responders should investigate decryption early while continuing in parallel with
 - clean backup planning;
 - rebuild planning.
 
-# DECRYPTOR LIMITATIONS — HSE Example
+# ОГРАНИЧЕНИЯ ДЕШИФРАТОРОВ — ПРИМЕР HSE
 
 Source cites the 2021 Conti attack on Ireland's Health Service Executive.[10]
 
@@ -21491,7 +21491,7 @@ Systems still require:
 
 Stakeholders should be told this early to avoid unrealistic timelines.
 
-# Decryption Assessment Process
+# ПРОЦЕСС ОЦЕНКИ ВОЗМОЖНОСТИ РАСШИФРОВКИ
 
 1. Identify the ransomware family.
 2. Search No More Ransom/vendor/security resources.
@@ -21538,7 +21538,7 @@ Important questions:
 
 Priorities should be agreed with decision makers.
 
-# Restoration from Backups
+# ВОССТАНОВЛЕНИЕ ИЗ РЕЗЕРВНЫХ КОПИЙ
 
 Backup restoration is preferred when:
 
@@ -21547,13 +21547,13 @@ Backup restoration is preferred when:
 
 Critical requirements:
 
-## Clean Restore Point
+## ЧИСТАЯ ТОЧКА ВОССТАНОВЛЕНИЯ
 
 Restore point must predate **initial compromise**, not merely encryption.
 
 An IAB or affiliate may have been present weeks/months before encryption.
 
-## Backup Infrastructure Verification
+## ПРОВЕРКА ИНФРАСТРУКТУРЫ РЕЗЕРВНОГО КОПИРОВАНИЯ
 
 Confirm:
 
@@ -21561,11 +21561,11 @@ Confirm:
 - repository not manipulated;
 - control plane not attacker-controlled.
 
-## Backup Integrity
+## ЦЕЛОСТНОСТЬ РЕЗЕРВНЫХ КОПИЙ
 
 Test restore in isolation before production use.
 
-## Data-Loss Acceptance
+## ПРИНЯТИЕ ПОТЕРИ ДАННЫХ
 
 Data created after the last clean restore point may be lost.
 
@@ -21576,7 +21576,7 @@ Challenges include:
 - large restore volume;
 - long transfer/restoration time.
 
-# System Rebuild
+# ПЕРЕСБОРКА СИСТЕМЫ
 
 For high-trust infrastructure, rebuild may be safer than restoration.
 
@@ -21644,9 +21644,9 @@ Ransomware recovery can span weeks/months.
 
 Communication needs sustained management.
 
-## Internal Communication
+## ВНУТРЕННЯЯ КОММУНИКАЦИЯ
 
-### Leadership Updates
+### ОБНОВЛЕНИЯ ДЛЯ РУКОВОДСТВА
 
 Focus on:
 
@@ -21661,7 +21661,7 @@ Cadence example from source:
 - daily during active recovery;
 - transition to weekly later.
 
-### User Communication
+### КОММУНИКАЦИЯ С ПОЛЬЗОВАТЕЛЯМИ
 
 Users need:
 
@@ -21671,7 +21671,7 @@ Users need:
 
 Do not repeatedly provide unrealistic optimistic dates.
 
-### Recovery Team
+### КОМАНДА ВОССТАНОВЛЕНИЯ
 
 Multiple teams may include:
 
@@ -21687,7 +21687,7 @@ Use regular coordination and document:
 - decisions;
 - assignments.
 
-## External Communication
+## ВНЕШНЯЯ КОММУНИКАЦИЯ
 
 Coordinate through:
 
@@ -21696,7 +21696,7 @@ Coordinate through:
 - communications;
 - leadership.
 
-### Regulatory Notifications
+### РЕГУЛЯТОРНЫЕ УВЕДОМЛЕНИЯ
 
 Potential frameworks/laws mentioned:
 
@@ -21710,7 +21710,7 @@ Potential frameworks/laws mentioned:
 
 Legal counsel should identify applicable deadlines.
 
-### Customers and Partners
+### КЛИЕНТЫ И ПАРТНЁРЫ
 
 May require notice about:
 
@@ -21720,7 +21720,7 @@ May require notice about:
 
 Messaging should be legally and operationally coordinated.
 
-### Cyber Insurance
+### КИБЕРСТРАХОВАНИЕ
 
 Contact carrier early, ideally before:
 
@@ -21736,7 +21736,7 @@ Policies may specify:
 
 Failure to notify early can jeopardize cost coverage.
 
-### Law Enforcement
+### ПРАВООХРАНИТЕЛЬНЫЕ ОРГАНЫ
 
 Coordinate disclosure to avoid compromising ongoing investigations.
 
@@ -21758,7 +21758,7 @@ Ransomware-specific debrief should address:
 
 # ВОПРОСЫ ДЛЯ РАЗБОРА RANSOMWARE-ИНЦИДЕНТА
 
-## Backup and Recovery
+## РЕЗЕРВНОЕ КОПИРОВАНИЕ И ВОССТАНОВЛЕНИЕ
 
 - Did backups survive?
 - If not, why?
@@ -21766,7 +21766,7 @@ Ransomware-specific debrief should address:
 - How did real recovery time compare to RTO?
 - Was data loss accepted?
 
-## Dwell Time
+## ВРЕМЯ ПРИСУТСТВИЯ АТАКУЮЩЕГО
 
 - How long before encryption?
 - What detection opportunities existed?
@@ -21778,7 +21778,7 @@ Ransomware-specific debrief should address:
 - What logging gaps created uncertainty?
 - How did uncertainty affect notification?
 
-## Ransom Decision
+## РЕШЕНИЕ О ВЫКУПЕ
 
 If payment considered/made:
 
@@ -21787,7 +21787,7 @@ If payment considered/made:
 - Did decryptor work?
 - If no payment, what happened to stolen data?
 
-## Multi-Vector Extortion
+## МНОГОВЕКТОРНОЕ ВЫМОГАТЕЛЬСТВО
 
 How effectively did:
 
@@ -21798,7 +21798,7 @@ How effectively did:
 
 coordinate across leak/harassment/reputation pressure?
 
-## Identity and Privilege Exposure
+## КОМПРОМЕТАЦИЯ ИДЕНТИЧНОСТЕЙ И ПРИВИЛЕГИЙ
 
 - Which privileged accounts were compromised?
 - Was credential scope understood?
@@ -21835,7 +21835,7 @@ Sharing anonymized metrics through:
 
 can improve collective resilience.
 
-# WHEN RECOVERY LESSONS STAY BEHIND CLOSED DOORS
+# КОГДА УРОКИ ВОССТАНОВЛЕНИЯ ОСТАЮТСЯ ЗА ЗАКРЫТЫМИ ДВЕРЯМИ
 
 Source uses the October 2019 Ryuk attack against DCH Health System.[11]
 
@@ -21872,7 +21872,7 @@ Strongest outcomes come from:
 - resilient business processes;
 - technical defenses.
 
-# The Human Element
+# ЧЕЛОВЕЧЕСКИЙ ФАКТОР
 
 Long incidents create:
 
@@ -21889,7 +21889,7 @@ Plan for:
 
 Avoid single points of failure in staffing as well as infrastructure.
 
-# A HANGRY RESPONSE TEAM IS NOT AN EFFECTIVE RESPONSE TEAM
+# ГОЛОДНАЯ И РАЗДРАЖЁННАЯ КОМАНДА НЕ БЫВАЕТ ЭФФЕКТИВНОЙ
 
 Source emphasizes a practical leadership lesson:
 
@@ -21910,7 +21910,7 @@ Exhausted teams:
 - lose focus;
 - burn out faster.
 
-# Legal and Regulatory Complexity
+# ЮРИДИЧЕСКАЯ И РЕГУЛЯТОРНАЯ СЛОЖНОСТЬ
 
 Ransomware intersects with:
 
@@ -21924,7 +21924,7 @@ Technical responders should not navigate this alone.
 
 Engage legal counsel early, preferably counsel experienced in ransomware.
 
-# AI as an Evolving Ransomware Threat
+# ИИ КАК РАЗВИВАЮЩАЯСЯ RANSOMWARE-УГРОЗА
 
 Source argues that historical assumptions linking attack complexity to attacker skill are becoming less reliable.
 
@@ -21936,7 +21936,7 @@ AI coding/agent systems can give less-skilled actors operational capability acro
 - data exfiltration;
 - tooling development.
 
-# AI Across the Attack Lifecycle
+# ИИ НА ВСЕХ ЭТАПАХ АТАКИ
 
 AI is moving from advisory support to active execution of attack phases.
 
@@ -21955,7 +21955,7 @@ Operational implication:
 
 a single operator may conduct parallel, technically complex campaigns against multiple organizations.
 
-# AI-Optimized Extortion
+# ВЫМОГАТЕЛЬСТВО, ОПТИМИЗИРОВАННОЕ С ПОМОЩЬЮ ИИ
 
 Extortion requires selecting the data most likely to create leverage.
 
@@ -21997,7 +21997,7 @@ AI may also generate:
 - regulatory references;
 - adaptive communication based on victim responses.
 
-# AI-Generated Ransomware Development
+# РАЗРАБОТКА RANSOMWARE С ПОМОЩЬЮ ИИ
 
 Source cites cases in which actors with limited development skill used AI to produce sellable ransomware packages.[15]
 
@@ -22016,7 +22016,7 @@ Potential consequence:
 - lower barrier to RaaS participation;
 - greater campaign volume.
 
-# Attribution Complexity
+# СЛОЖНОСТЬ АТРИБУЦИИ
 
 AI-generated code may reflect model-specific coding patterns rather than an individual developer's distinctive style.
 
@@ -22031,7 +22031,7 @@ Core point:
 
 AI adds another confounder to already difficult ransomware attribution.
 
-# AI for Defenders
+# ИИ ДЛЯ ЗАЩИТНИКОВ
 
 The same capabilities can accelerate defenders.
 
@@ -22061,7 +22061,7 @@ Key defensive foundations remain:
 - detection;
 - preparation.
 
-# Recovery Is Not the End
+# ВОССТАНОВЛЕНИЕ — НЕ КОНЕЦ
 
 Technical recovery does not end ransomware impact.
 
@@ -22073,7 +22073,7 @@ Long-tail consequences include:
 - stakeholder trust;
 - extortion/data-leak risk.
 
-# Regulatory and Legal Exposure
+# РЕГУЛЯТОРНЫЕ И ЮРИДИЧЕСКИЕ РИСКИ
 
 Notification and legal timelines may continue long after systems return.
 
@@ -22091,7 +22091,7 @@ Maintain access to:
 - evidence;
 - knowledgeable personnel.
 
-# BLACKBAUD: FOUR YEARS OF REGULATORY CONSEQUENCES
+# BLACKBAUD: ЧЕТЫРЕ ГОДА РЕГУЛЯТОРНЫХ ПОСЛЕДСТВИЙ
 
 Source uses the 2020 Blackbaud ransomware incident as a long-tail case.[16]
 
@@ -22129,7 +22129,7 @@ post-incident regulatory scrutiny evaluates not only the security failure but al
 - data-retention practices;
 - representations made to affected parties.
 
-# Insurance Resolution
+# УРЕГУЛИРОВАНИЕ СО СТРАХОВОЙ
 
 Cyber-insurance claims may continue months after incident closure.
 
@@ -22142,7 +22142,7 @@ Carriers may request:
 
 Preserve incident records and access to personnel who can explain decisions.
 
-# Stakeholder Confidence
+# ДОВЕРИЕ ЗАИНТЕРЕСОВАННЫХ СТОРОН
 
 Customers, partners, and boards often expect evidence of improved posture, not merely service restoration.
 
@@ -22157,7 +22157,7 @@ Source uses Blackbaud to warn against minimizing severity in initial notificatio
 
 Overly optimistic messages that later require correction can damage trust more than difficult but accurate communication.
 
-# Ongoing Extortion Risk
+# СОХРАНЯЮЩИЙСЯ РИСК ВЫМОГАТЕЛЬСТВА
 
 Double-extortion actors retain stolen data regardless of payment.
 
@@ -22179,7 +22179,7 @@ Therefore organizations should maintain:
 - customer communication procedures;
 - incident context for possible future data exposure.
 
-# KADOKAWA: PAYMENT DID NOT PREVENT DISCLOSURE
+# KADOKAWA: ВЫПЛАТА НЕ ПРЕДОТВРАТИЛА РАСКРЫТИЕ
 
 Source cites the 2024 BlackSuit attack on Kadokawa Corporation.[17]
 
@@ -22202,7 +22202,7 @@ Lesson:
 
 criminal payment agreements are not enforceable guarantees.
 
-# Prevention Remains Essential
+# ПРЕДОТВРАЩЕНИЕ ОСТАЁТСЯ КРИТИЧЕСКИ ВАЖНЫМ
 
 Ransomware response capability is a fallback, not a substitute for prevention.
 

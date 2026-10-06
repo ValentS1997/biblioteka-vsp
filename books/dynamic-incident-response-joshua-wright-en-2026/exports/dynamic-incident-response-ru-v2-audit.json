@@ -107,7 +107,7 @@
   "third_party_markers_source": 231,
   "third_party_callouts_v2": 231,
   "project_visuals_included": 20,
-  "mixed_heading_candidate_count": 669,
+  "mixed_heading_candidate_count": 302,
   "mixed_heading_candidates": [
     {
       "chapter": 3,
@@ -291,319 +291,43 @@
     },
     {
       "chapter": 12,
-      "heading": "TERMINATE OR MONITOR: ORGANIZATIONAL CONSIDERATIONS"
+      "heading": "ПРИМЕР KERBEROS GOLDEN TICKET"
     },
     {
       "chapter": 12,
-      "heading": "WHEN RMM TOOLS TURN AGAINST YOU: THE STRYKER COMPROMISE"
+      "heading": "DNS-SINKHOLE"
     },
     {
       "chapter": 12,
-      "heading": "Progressive Restrictions"
+      "heading": "ОГРАНИЧЕНИЯ SINKHOLE"
     },
     {
       "chapter": 12,
-      "heading": "Deceptive Containment"
+      "heading": "DNS OVER HTTPS И ОГРАНИЧЕНИЯ SINKHOLE"
     },
     {
       "chapter": 12,
-      "heading": "Immediate Containment Triggers"
+      "heading": "СЕССИИ VPN / RDP / SSH"
     },
     {
       "chapter": 12,
-      "heading": "Immediate Containment Triggers"
+      "heading": "BACK-CHANNEL LOGOUT: КРИТИЧЕСКИ ВАЖНЫЙ НЕДОСТАЮЩИЙ КОМПОНЕНТ"
     },
     {
       "chapter": 12,
-      "heading": "Active Data Destruction"
+      "heading": "СДЕРЖИВАНИЕ SERVERLESS-РЕСУРСОВ"
     },
     {
       "chapter": 12,
-      "heading": "Ongoing Data Exfiltration"
+      "heading": "ИЗОЛЯЦИЯ EC2 В TECHFLOW"
     },
     {
       "chapter": 12,
-      "heading": "Safety/Critical Systems"
+      "heading": "СДЕРЖИВАНИЕ SERVICE ACCOUNT В KUBERNETES"
     },
     {
       "chapter": 12,
-      "heading": "Regulatory Requirements"
-    },
-    {
-      "chapter": 12,
-      "heading": "Simultaneous Isolation"
-    },
-    {
-      "chapter": 12,
-      "heading": "Credential and Infrastructure Coordination"
-    },
-    {
-      "chapter": 12,
-      "heading": "Kerberos Golden Ticket Example"
-    },
-    {
-      "chapter": 12,
-      "heading": "Network Isolation Techniques"
-    },
-    {
-      "chapter": 12,
-      "heading": "DNS Sinkholes"
-    },
-    {
-      "chapter": 12,
-      "heading": "Sinkhole Limitations"
-    },
-    {
-      "chapter": 12,
-      "heading": "DNS over HTTPS and Sinkhole Limitations"
-    },
-    {
-      "chapter": 12,
-      "heading": "EDR Isolation"
-    },
-    {
-      "chapter": 12,
-      "heading": "Local Firewall"
-    },
-    {
-      "chapter": 12,
-      "heading": "Process and Service Restrictions"
-    },
-    {
-      "chapter": 12,
-      "heading": "Web Application Firewalls"
-    },
-    {
-      "chapter": 12,
-      "heading": "Database Access Restrictions"
-    },
-    {
-      "chapter": 12,
-      "heading": "AI Agent / MCP Containment"
-    },
-    {
-      "chapter": 12,
-      "heading": "Credential Revocation"
-    },
-    {
-      "chapter": 12,
-      "heading": "Order-of-Operations Problem in Isolated Environments"
-    },
-    {
-      "chapter": 12,
-      "heading": "SaaS Session Persistence"
-    },
-    {
-      "chapter": 12,
-      "heading": "VPN / RDP / SSH Sessions"
-    },
-    {
-      "chapter": 12,
-      "heading": "Enterprise Session Detection"
-    },
-    {
-      "chapter": 12,
-      "heading": "Conditional Access Policy Implementation"
-    },
-    {
-      "chapter": 12,
-      "heading": "Location-Based Restrictions"
-    },
-    {
-      "chapter": 12,
-      "heading": "Device Compliance"
-    },
-    {
-      "chapter": 12,
-      "heading": "Risk-Based Conditional Access"
-    },
-    {
-      "chapter": 12,
-      "heading": "Multi-Application Containment Through SSO"
-    },
-    {
-      "chapter": 12,
-      "heading": "MFA Enforcement"
-    },
-    {
-      "chapter": 12,
-      "heading": "Synchronization Delays"
-    },
-    {
-      "chapter": 12,
-      "heading": "Session Management Across Hybrid Environments"
-    },
-    {
-      "chapter": 12,
-      "heading": "Multi-Server RDP Enumeration"
-    },
-    {
-      "chapter": 12,
-      "heading": "Browser Session Management"
-    },
-    {
-      "chapter": 12,
-      "heading": "BACK-CHANNEL LOGOUT: A CRITICAL MISSING COMPONENT"
-    },
-    {
-      "chapter": 12,
-      "heading": "EVERY STEP IS FOR DATA COLLECTION"
-    },
-    {
-      "chapter": 12,
-      "heading": "Prioritized Collection"
-    },
-    {
-      "chapter": 12,
-      "heading": "Volatile Data Collection"
-    },
-    {
-      "chapter": 12,
-      "heading": "PRIORITIZED COLLECTION: ORGANIZATION-SPECIFIC APPROACH"
-    },
-    {
-      "chapter": 12,
-      "heading": "Persistent and Log-Based Evidence"
-    },
-    {
-      "chapter": 12,
-      "heading": "Cloud Security Demarcation"
-    },
-    {
-      "chapter": 12,
-      "heading": "CLOUD SERVICE AND RESPONSIBILITY DEFINITIONS"
-    },
-    {
-      "chapter": 12,
-      "heading": "Cloud Containment Objectives"
-    },
-    {
-      "chapter": 12,
-      "heading": "Identity-First Containment"
-    },
-    {
-      "chapter": 12,
-      "heading": "Network Isolation Containment"
-    },
-    {
-      "chapter": 12,
-      "heading": "Resource Tagging for Containment Visibility"
-    },
-    {
-      "chapter": 12,
-      "heading": "Protecting Tag Integrity"
-    },
-    {
-      "chapter": 12,
-      "heading": "IaaS Termination Protection"
-    },
-    {
-      "chapter": 12,
-      "heading": "AWS Example"
-    },
-    {
-      "chapter": 12,
-      "heading": "Clone-Then-Terminate Pattern"
-    },
-    {
-      "chapter": 12,
-      "heading": "SaaS Platform Containment"
-    },
-    {
-      "chapter": 12,
-      "heading": "Third-Party Integration Containment"
-    },
-    {
-      "chapter": 12,
-      "heading": "WHEN LEGITIMATE APPS LOOK LIKE COMPROMISE"
-    },
-    {
-      "chapter": 12,
-      "heading": "API-Based Isolation"
-    },
-    {
-      "chapter": 12,
-      "heading": "Serverless Containment"
-    },
-    {
-      "chapter": 12,
-      "heading": "Multi-Cloud Coordination"
-    },
-    {
-      "chapter": 12,
-      "heading": "Encrypted Communications"
-    },
-    {
-      "chapter": 12,
-      "heading": "TLS Interception"
-    },
-    {
-      "chapter": 12,
-      "heading": "Network Visibility and Endpoint Controls"
-    },
-    {
-      "chapter": 12,
-      "heading": "Personal Device Contamination"
-    },
-    {
-      "chapter": 12,
-      "heading": "Home Network Compromise"
-    },
-    {
-      "chapter": 12,
-      "heading": "Access and Recovery"
-    },
-    {
-      "chapter": 12,
-      "heading": "Physical Device Recovery"
-    },
-    {
-      "chapter": 12,
-      "heading": "Business Email Compromise"
-    },
-    {
-      "chapter": 12,
-      "heading": "Supply Chain Incidents"
-    },
-    {
-      "chapter": 12,
-      "heading": "MODERN BREACH COMPLEXITY: THE MOVEIT SUPPLY CHAIN ATTACK"
-    },
-    {
-      "chapter": 12,
-      "heading": "Partner Ecosystem Breaches"
-    },
-    {
-      "chapter": 12,
-      "heading": "Network Monitoring"
-    },
-    {
-      "chapter": 12,
-      "heading": "Process Monitoring"
-    },
-    {
-      "chapter": 12,
-      "heading": "Log Analysis"
-    },
-    {
-      "chapter": 12,
-      "heading": "The Multi-Tenant Credential Exposure"
-    },
-    {
-      "chapter": 12,
-      "heading": "TechFlow EC2 Isolation"
-    },
-    {
-      "chapter": 12,
-      "heading": "Kubernetes Service Account Containment"
-    },
-    {
-      "chapter": 12,
-      "heading": "Validation"
-    },
-    {
-      "chapter": 12,
-      "heading": "The Ransomware Rapid Response"
+      "heading": "БЫСТРОЕ РЕАГИРОВАНИЕ НА RANSOMWARE"
     },
     {
       "chapter": 12,
@@ -611,47 +335,7 @@
     },
     {
       "chapter": 12,
-      "heading": "1. Evaluate immediate-containment triggers"
-    },
-    {
-      "chapter": 12,
-      "heading": "2. Select containment approach"
-    },
-    {
-      "chapter": 12,
-      "heading": "3. Balance competing priorities"
-    },
-    {
-      "chapter": 12,
-      "heading": "4. Plan coordinated execution"
-    },
-    {
-      "chapter": 12,
       "heading": "Шаг 2. Implement Identity and Access Containment"
-    },
-    {
-      "chapter": 12,
-      "heading": "1. Invalidate known-compromised credentials"
-    },
-    {
-      "chapter": 12,
-      "heading": "2. Terminate active sessions"
-    },
-    {
-      "chapter": 12,
-      "heading": "3. Revoke refresh/persistent tokens"
-    },
-    {
-      "chapter": 12,
-      "heading": "4. Implement conditional access"
-    },
-    {
-      "chapter": 12,
-      "heading": "5. Coordinate SSO containment"
-    },
-    {
-      "chapter": 12,
-      "heading": "6. Disable third-party integrations"
     },
     {
       "chapter": 12,
@@ -659,43 +343,7 @@
     },
     {
       "chapter": 12,
-      "heading": "1. Network isolation"
-    },
-    {
-      "chapter": 12,
-      "heading": "2. Individual host isolation"
-    },
-    {
-      "chapter": 12,
-      "heading": "3. Application-level restrictions"
-    },
-    {
-      "chapter": 12,
       "heading": "Шаг 4. Implement Cloud-Specific Containment"
-    },
-    {
-      "chapter": 12,
-      "heading": "1. Verify security demarcation"
-    },
-    {
-      "chapter": 12,
-      "heading": "2. Prioritize cloud identity"
-    },
-    {
-      "chapter": 12,
-      "heading": "3. Apply network isolation"
-    },
-    {
-      "chapter": 12,
-      "heading": "4. Protect and track cloud resources"
-    },
-    {
-      "chapter": 12,
-      "heading": "5. Address SaaS limitations"
-    },
-    {
-      "chapter": 12,
-      "heading": "6. Contain serverless/ephemeral resources"
     },
     {
       "chapter": 12,
@@ -703,39 +351,7 @@
     },
     {
       "chapter": 12,
-      "heading": "1. Remote workers"
-    },
-    {
-      "chapter": 12,
-      "heading": "2. BYOD/personal devices"
-    },
-    {
-      "chapter": 12,
-      "heading": "3. Encrypted communications"
-    },
-    {
-      "chapter": 12,
-      "heading": "4. Non-traditional compromise"
-    },
-    {
-      "chapter": 12,
       "heading": "Шаг 6. Collect and Preserve Evidence"
-    },
-    {
-      "chapter": 12,
-      "heading": "1. Decide timing"
-    },
-    {
-      "chapter": 12,
-      "heading": "2. Volatile collection"
-    },
-    {
-      "chapter": 12,
-      "heading": "3. Persistent system artifacts"
-    },
-    {
-      "chapter": 12,
-      "heading": "4. Network/application evidence"
     },
     {
       "chapter": 12,
@@ -743,39 +359,7 @@
     },
     {
       "chapter": 12,
-      "heading": "1. Network validation"
-    },
-    {
-      "chapter": 12,
-      "heading": "2. Process validation"
-    },
-    {
-      "chapter": 12,
-      "heading": "3. Log validation"
-    },
-    {
-      "chapter": 12,
-      "heading": "4. Baseline comparison"
-    },
-    {
-      "chapter": 12,
       "heading": "Шаг 8. Document Containment Actions and Communicate Status"
-    },
-    {
-      "chapter": 12,
-      "heading": "1. Decision documentation"
-    },
-    {
-      "chapter": 12,
-      "heading": "2. Operational impact"
-    },
-    {
-      "chapter": 12,
-      "heading": "3. Stakeholder communication"
-    },
-    {
-      "chapter": 12,
-      "heading": "4. Prepare downstream phases"
     },
     {
       "chapter": 13,
@@ -1539,23 +1123,7 @@
     },
     {
       "chapter": 13,
-      "heading": "3. Stakeholder communication"
-    },
-    {
-      "chapter": 13,
       "heading": "4. Feed Debrief"
-    },
-    {
-      "chapter": 14,
-      "heading": "AWS OUTAGE CASE STUDY: THE CRITICAL ROLE OF DNS IN RECOVERY"
-    },
-    {
-      "chapter": 14,
-      "heading": "COORDINATED RECOVERY AT MAERSK: AN INCIDENT OF GLOBAL SCALE"
-    },
-    {
-      "chapter": 14,
-      "heading": "Cloud Logging"
     },
     {
       "chapter": 14,
@@ -1563,55 +1131,7 @@
     },
     {
       "chapter": 14,
-      "heading": "Explicit Handoffs"
-    },
-    {
-      "chapter": 14,
-      "heading": "RECOVERY ACTIVITY EXAMPLE"
-    },
-    {
-      "chapter": 14,
-      "heading": "Phased Recovery of a Domain Controller Environment"
-    },
-    {
-      "chapter": 14,
-      "heading": "Phase 1 — Primary Domain Controller"
-    },
-    {
-      "chapter": 14,
-      "heading": "Phase 2 — Secondary Domain Controllers"
-    },
-    {
-      "chapter": 14,
-      "heading": "Phase 3 — Member Servers and Workstations"
-    },
-    {
-      "chapter": 14,
-      "heading": "Radiology Dependency Problem"
-    },
-    {
-      "chapter": 14,
-      "heading": "Lessons Captured"
-    },
-    {
-      "chapter": 14,
       "heading": "Шаг 1. Conduct Pre-Restoration Verification"
-    },
-    {
-      "chapter": 14,
-      "heading": "1. Revalidate root-cause remediation"
-    },
-    {
-      "chapter": 14,
-      "heading": "2. Revalidate persistence removal"
-    },
-    {
-      "chapter": 14,
-      "heading": "3. Validate backup integrity"
-    },
-    {
-      "chapter": 14,
-      "heading": "4. Verify rebuild integrity"
     },
     {
       "chapter": 14,
@@ -1619,27 +1139,7 @@
     },
     {
       "chapter": 14,
-      "heading": "1. Functional testing"
-    },
-    {
-      "chapter": 14,
-      "heading": "2. Security controls"
-    },
-    {
-      "chapter": 14,
-      "heading": "3. Interconnectivity"
-    },
-    {
-      "chapter": 14,
       "heading": "Шаг 3. Obtain владелец системы Acceptance"
-    },
-    {
-      "chapter": 14,
-      "heading": "1. Coordinate acceptance testing"
-    },
-    {
-      "chapter": 14,
-      "heading": "2. Obtain sign-off"
     },
     {
       "chapter": 14,
@@ -1647,47 +1147,7 @@
     },
     {
       "chapter": 14,
-      "heading": "1. Elevated logging"
-    },
-    {
-      "chapter": 14,
-      "heading": "2. Incident-specific detection"
-    },
-    {
-      "chapter": 14,
-      "heading": "3. Monitoring duration/procedure"
-    },
-    {
-      "chapter": 14,
       "heading": "Шаг 5. Execute Coordinated Production Restoration"
-    },
-    {
-      "chapter": 14,
-      "heading": "1. Identify dependencies and sequence"
-    },
-    {
-      "chapter": 14,
-      "heading": "2. Coordinate timing"
-    },
-    {
-      "chapter": 14,
-      "heading": "3. Select phased or coordinated restoration"
-    },
-    {
-      "chapter": 14,
-      "heading": "4. Manage coordination complexity"
-    },
-    {
-      "chapter": 14,
-      "heading": "5. Cloud-specific recovery"
-    },
-    {
-      "chapter": 14,
-      "heading": "6. User communications"
-    },
-    {
-      "chapter": 14,
-      "heading": "7. Address data loss from clean backup"
     },
     {
       "chapter": 14,
@@ -1695,195 +1155,7 @@
     },
     {
       "chapter": 14,
-      "heading": "1. Inventory measures"
-    },
-    {
-      "chapter": 14,
-      "heading": "2. Remove incrementally"
-    },
-    {
-      "chapter": 14,
-      "heading": "3. Evaluate permanent controls"
-    },
-    {
-      "chapter": 14,
       "heading": "Шаг 7. Capture Recovery Metrics"
-    },
-    {
-      "chapter": 14,
-      "heading": "1. Timeline"
-    },
-    {
-      "chapter": 14,
-      "heading": "2. Issues/resolutions"
-    },
-    {
-      "chapter": 14,
-      "heading": "3. Resource investment"
-    },
-    {
-      "chapter": 14,
-      "heading": "4. Pass documentation to Debrief"
-    },
-    {
-      "chapter": 15,
-      "heading": "Condition 1: Technical Readiness"
-    },
-    {
-      "chapter": 15,
-      "heading": "Condition 2: Organizational Decision"
-    },
-    {
-      "chapter": 15,
-      "heading": "Temporary Accounts and Monitoring"
-    },
-    {
-      "chapter": 15,
-      "heading": "Enhanced Monitoring Configurations"
-    },
-    {
-      "chapter": 15,
-      "heading": "Mean Time to Detect (MTTD)"
-    },
-    {
-      "chapter": 15,
-      "heading": "Mean Time to Respond (MTTR)"
-    },
-    {
-      "chapter": 15,
-      "heading": "Scope of Impact"
-    },
-    {
-      "chapter": 15,
-      "heading": "Resource Utilization"
-    },
-    {
-      "chapter": 15,
-      "heading": "Total Incident Lifecycle"
-    },
-    {
-      "chapter": 15,
-      "heading": "1. What was supposed to happen?"
-    },
-    {
-      "chapter": 15,
-      "heading": "2. What actually happened?"
-    },
-    {
-      "chapter": 15,
-      "heading": "3. Why did it happen?"
-    },
-    {
-      "chapter": 15,
-      "heading": "4. What can we do better next time?"
-    },
-    {
-      "chapter": 15,
-      "heading": "5. What worked well?"
-    },
-    {
-      "chapter": 15,
-      "heading": "6. Why did those things work?"
-    },
-    {
-      "chapter": 15,
-      "heading": "VALUE IN DEVELOPING A VISUAL TIMELINE"
-    },
-    {
-      "chapter": 15,
-      "heading": "Immediate Actions"
-    },
-    {
-      "chapter": 15,
-      "heading": "Short-Term Improvements"
-    },
-    {
-      "chapter": 15,
-      "heading": "Long-Term Strategic Changes"
-    },
-    {
-      "chapter": 15,
-      "heading": "Report Audience"
-    },
-    {
-      "chapter": 15,
-      "heading": "Report Contents"
-    },
-    {
-      "chapter": 15,
-      "heading": "REPORTING THAT MATCHES THE ORGANIZATION'S NEEDS"
-    },
-    {
-      "chapter": 15,
-      "heading": "USING A STRUCTURED TEMPLATE FOR TECHNICAL REPORTS"
-    },
-    {
-      "chapter": 15,
-      "heading": "Session Objectives"
-    },
-    {
-      "chapter": 15,
-      "heading": "Shared Understanding"
-    },
-    {
-      "chapter": 15,
-      "heading": "Findings Review"
-    },
-    {
-      "chapter": 15,
-      "heading": "Recommendation Alignment"
-    },
-    {
-      "chapter": 15,
-      "heading": "Formal Closure"
-    },
-    {
-      "chapter": 15,
-      "heading": "Attendees and Roles"
-    },
-    {
-      "chapter": 15,
-      "heading": "Incomplete Documentation"
-    },
-    {
-      "chapter": 15,
-      "heading": "IF YOU'RE GOING TOO FAST…"
-    },
-    {
-      "chapter": 15,
-      "heading": "Organizational Attention and Priority"
-    },
-    {
-      "chapter": 15,
-      "heading": "THE CONSULTANT'S SUPERPOWER"
-    },
-    {
-      "chapter": 15,
-      "heading": "Blame and Accountability Dynamics"
-    },
-    {
-      "chapter": 15,
-      "heading": "Legal and Regulatory Constraints"
-    },
-    {
-      "chapter": 15,
-      "heading": "The Compromised SaaS Account"
-    },
-    {
-      "chapter": 15,
-      "heading": "The Healthcare Ransomware Recovery"
-    },
-    {
-      "chapter": 15,
-      "heading": "Phase 1: Documentation Consolidation"
-    },
-    {
-      "chapter": 15,
-      "heading": "Phase 2: After-Action Review"
-    },
-    {
-      "chapter": 15,
-      "heading": "Phase 3: Documentation and Presentation"
     },
     {
       "chapter": 15,
@@ -1891,35 +1163,7 @@
     },
     {
       "chapter": 15,
-      "heading": "1. Assess transition readiness"
-    },
-    {
-      "chapter": 15,
-      "heading": "2. Determine documentation depth"
-    },
-    {
-      "chapter": 15,
-      "heading": "3. Select approach"
-    },
-    {
-      "chapter": 15,
-      "heading": "4. Legal/regulatory considerations"
-    },
-    {
-      "chapter": 15,
       "heading": "Шаг 2. Manage Temporary Assets Created During Response"
-    },
-    {
-      "chapter": 15,
-      "heading": "1. Forensic evidence retention"
-    },
-    {
-      "chapter": 15,
-      "heading": "2. Temporary accounts/elevated access"
-    },
-    {
-      "chapter": 15,
-      "heading": "3. Temporary monitoring"
     },
     {
       "chapter": 15,
@@ -1927,35 +1171,7 @@
     },
     {
       "chapter": 15,
-      "heading": "1. Gather all sources"
-    },
-    {
-      "chapter": 15,
-      "heading": "2. Validate/refine timeline"
-    },
-    {
-      "chapter": 15,
-      "heading": "3. Document important decisions"
-    },
-    {
-      "chapter": 15,
       "heading": "Шаг 4. Capture Incident Metrics"
-    },
-    {
-      "chapter": 15,
-      "heading": "1. Detection/response metrics"
-    },
-    {
-      "chapter": 15,
-      "heading": "2. Scope/impact"
-    },
-    {
-      "chapter": 15,
-      "heading": "3. Resource utilization"
-    },
-    {
-      "chapter": 15,
-      "heading": "4. Preserve metrics for improvement"
     },
     {
       "chapter": 15,
@@ -1963,39 +1179,7 @@
     },
     {
       "chapter": 15,
-      "heading": "1. Schedule and prepare"
-    },
-    {
-      "chapter": 15,
-      "heading": "2. Core AAR questions"
-    },
-    {
-      "chapter": 15,
-      "heading": "3. Capture/prioritize recommendations"
-    },
-    {
-      "chapter": 15,
-      "heading": "4. Document AAR outcome"
-    },
-    {
-      "chapter": 15,
       "heading": "Шаг 6. Develop Incident Reports — When Required"
-    },
-    {
-      "chapter": 15,
-      "heading": "1. Lightweight documentation"
-    },
-    {
-      "chapter": 15,
-      "heading": "2. Formal reporting purpose/audience"
-    },
-    {
-      "chapter": 15,
-      "heading": "3. Executive summary report"
-    },
-    {
-      "chapter": 15,
-      "heading": "4. Technical incident report"
     },
     {
       "chapter": 15,
@@ -2003,175 +1187,7 @@
     },
     {
       "chapter": 15,
-      "heading": "1. Prepare/schedule"
-    },
-    {
-      "chapter": 15,
-      "heading": "2. Conduct session"
-    },
-    {
-      "chapter": 15,
-      "heading": "3. Distribute outcomes"
-    },
-    {
-      "chapter": 15,
       "heading": "Шаг 8. Drive Organizational Improvement"
-    },
-    {
-      "chapter": 15,
-      "heading": "1. Integrate lessons"
-    },
-    {
-      "chapter": 15,
-      "heading": "2. Track implementation"
-    },
-    {
-      "chapter": 15,
-      "heading": "3. Follow-up reviews"
-    },
-    {
-      "chapter": 15,
-      "heading": "4. Close Debrief"
-    },
-    {
-      "chapter": 16,
-      "heading": "AI как data-handling decision"
-    },
-    {
-      "chapter": 16,
-      "heading": "Chapter Organization"
-    },
-    {
-      "chapter": 16,
-      "heading": "Quick Prompting Tips"
-    },
-    {
-      "chapter": 16,
-      "heading": "Suspicious Scheduled Task Example"
-    },
-    {
-      "chapter": 16,
-      "heading": "Iterative Analysis for Complex Artifacts"
-    },
-    {
-      "chapter": 16,
-      "heading": "C# Obfuscated Malware Example"
-    },
-    {
-      "chapter": 16,
-      "heading": "MODEL GUARDRAILS AND MALWARE ANALYSIS"
-    },
-    {
-      "chapter": 16,
-      "heading": "Use Cases for AI Log Analysis"
-    },
-    {
-      "chapter": 16,
-      "heading": "Initial Orientation"
-    },
-    {
-      "chapter": 16,
-      "heading": "Anomaly Identification"
-    },
-    {
-      "chapter": 16,
-      "heading": "Report Preparation"
-    },
-    {
-      "chapter": 16,
-      "heading": "Query Generation"
-    },
-    {
-      "chapter": 16,
-      "heading": "Microsoft 365 Authentication Log Triage"
-    },
-    {
-      "chapter": 16,
-      "heading": "Microsoft 365 Authentication Log Analysis — Results"
-    },
-    {
-      "chapter": 16,
-      "heading": "Beaconing Detection: Network Proxy Data"
-    },
-    {
-      "chapter": 16,
-      "heading": "Incomplete Detection"
-    },
-    {
-      "chapter": 16,
-      "heading": "False Positives"
-    },
-    {
-      "chapter": 16,
-      "heading": "Lack of Definitive Conclusions"
-    },
-    {
-      "chapter": 16,
-      "heading": "Context Window Constraints"
-    },
-    {
-      "chapter": 16,
-      "heading": "Executive Summary Generation"
-    },
-    {
-      "chapter": 16,
-      "heading": "Structured Prompt for Playbook Generation"
-    },
-    {
-      "chapter": 16,
-      "heading": "Playbook Generation — Continuation"
-    },
-    {
-      "chapter": 16,
-      "heading": "Refining Generated Playbooks"
-    },
-    {
-      "chapter": 16,
-      "heading": "Enhancing Report Quality with Specialized Knowledge"
-    },
-    {
-      "chapter": 16,
-      "heading": "Zeltser IR Report Guidance"
-    },
-    {
-      "chapter": 16,
-      "heading": "Generating Scenario Ideas"
-    },
-    {
-      "chapter": 16,
-      "heading": "Organizationally-Grounded Scenarios"
-    },
-    {
-      "chapter": 16,
-      "heading": "Organizationally-Grounded Scenarios — Continuation"
-    },
-    {
-      "chapter": 16,
-      "heading": "Gamified, Interactive Exercise Generation with Twine"
-    },
-    {
-      "chapter": 16,
-      "heading": "GAMIFIED LEARNING FOR INCIDENT RESPONSE TRAINING"
-    },
-    {
-      "chapter": 16,
-      "heading": "Choice and Consequence"
-    },
-    {
-      "chapter": 16,
-      "heading": "Safe Experimentation"
-    },
-    {
-      "chapter": 16,
-      "heading": "Replayability and Mastery"
-    },
-    {
-      "chapter": 16,
-      "heading": "Engagement Through Agency"
-    },
-    {
-      "chapter": 16,
-      "heading": "AI-Generated Twine Scenarios"
     },
     {
       "chapter": 16,
@@ -2179,199 +1195,15 @@
     },
     {
       "chapter": 16,
-      "heading": "Understanding MCP Architecture"
-    },
-    {
-      "chapter": 16,
-      "heading": "MCP Client"
-    },
-    {
-      "chapter": 16,
-      "heading": "MCP Server"
-    },
-    {
-      "chapter": 16,
-      "heading": "Underlying Applications"
-    },
-    {
-      "chapter": 16,
-      "heading": "Defensive Applications"
-    },
-    {
-      "chapter": 16,
-      "heading": "Natural-Language Threat Hunting"
-    },
-    {
-      "chapter": 16,
-      "heading": "Automated Enrichment"
-    },
-    {
-      "chapter": 16,
-      "heading": "Cross-Platform Correlation"
-    },
-    {
-      "chapter": 16,
-      "heading": "Incident Documentation"
-    },
-    {
-      "chapter": 16,
-      "heading": "Prompt Injection"
-    },
-    {
-      "chapter": 16,
-      "heading": "Access Control"
-    },
-    {
-      "chapter": 16,
-      "heading": "Audit Logging"
-    },
-    {
-      "chapter": 16,
-      "heading": "Data Exposure"
-    },
-    {
-      "chapter": 16,
-      "heading": "MCP Integration for Threat Hunting"
-    },
-    {
-      "chapter": 16,
       "heading": "УСКОРЕНИЕ ФОРЕНЗИК-АНАЛИЗА С PROTOCOL SIFT"
     },
     {
       "chapter": 16,
-      "heading": "Autonomous Adversaries"
+      "heading": "АВТОНОМНЫЙ РАБОЧИЙ ПРОЦЕСС PROTOCOL SIFT"
     },
     {
       "chapter": 16,
-      "heading": "Accelerating Forensic Investigations"
-    },
-    {
-      "chapter": 16,
-      "heading": "Protocol SIFT Autonomous Workflow"
-    },
-    {
-      "chapter": 16,
-      "heading": "REACT AGENTS: REASONING AND ACTING FOR ENHANCED AI CAPABILITIES"
-    },
-    {
-      "chapter": 16,
-      "heading": "ReAct Cycle"
-    },
-    {
-      "chapter": 16,
-      "heading": "Reasoning and External Verification"
-    },
-    {
-      "chapter": 16,
-      "heading": "Action Capabilities"
-    },
-    {
-      "chapter": 16,
-      "heading": "MCP Integration"
-    },
-    {
-      "chapter": 16,
-      "heading": "Accuracy and Deep Understanding"
-    },
-    {
-      "chapter": 16,
-      "heading": "Trust Mechanisms in Autonomous Forensics"
-    },
-    {
-      "chapter": 16,
-      "heading": "Inference Constraint"
-    },
-    {
-      "chapter": 16,
-      "heading": "Forensically Sound Tools"
-    },
-    {
-      "chapter": 16,
-      "heading": "Verification and Trust"
-    },
-    {
-      "chapter": 16,
-      "heading": "Log Analysis Verification"
-    },
-    {
-      "chapter": 16,
-      "heading": "Report Verification"
-    },
-    {
-      "chapter": 16,
-      "heading": "Playbook Verification"
-    },
-    {
-      "chapter": 16,
-      "heading": "Document Verification"
-    },
-    {
-      "chapter": 16,
-      "heading": "Documentation Practices"
-    },
-    {
-      "chapter": 16,
-      "heading": "Reproducibility, Defensibility, Continuous Improvement"
-    },
-    {
-      "chapter": 16,
-      "heading": "Building Organizational Capability"
-    },
-    {
-      "chapter": 16,
-      "heading": "Prompt Libraries"
-    },
-    {
-      "chapter": 16,
-      "heading": "Skill Files and Prompt Library Integration"
-    },
-    {
-      "chapter": 16,
-      "heading": "Sigma Skill Example — Completion"
-    },
-    {
-      "chapter": 16,
-      "heading": "Use Case Documentation"
-    },
-    {
-      "chapter": 16,
-      "heading": "Training"
-    },
-    {
-      "chapter": 16,
-      "heading": "Structured Learning Paths"
-    },
-    {
-      "chapter": 16,
-      "heading": "Foundational"
-    },
-    {
-      "chapter": 16,
-      "heading": "Intermediate"
-    },
-    {
-      "chapter": 16,
-      "heading": "Advanced"
-    },
-    {
-      "chapter": 16,
-      "heading": "Practical Training Exercises"
-    },
-    {
-      "chapter": 16,
-      "heading": "Cross-Training Considerations"
-    },
-    {
-      "chapter": 16,
-      "heading": "Better Multi-Step Reasoning"
-    },
-    {
-      "chapter": 16,
-      "heading": "Maturing Agent/MCP Ecosystem"
-    },
-    {
-      "chapter": 16,
-      "heading": "Security-Specific Models"
+      "heading": "ПРИМЕР SIGMA SKILL — ЗАВЕРШЕНИЕ"
     },
     {
       "chapter": 17,
@@ -2383,18 +1215,6 @@
     },
     {
       "chapter": 17,
-      "heading": "SIDEBAR: THE UNTRACEABLE CREDENTIAL PROBLEM"
-    },
-    {
-      "chapter": 17,
-      "heading": "Investigation scope"
-    },
-    {
-      "chapter": 17,
-      "heading": "Lessons learned"
-    },
-    {
-      "chapter": 17,
       "heading": "RANSOMWARE ПОД УПРАВЛЕНИЕМ ЧЕЛОВЕКА (HUMOR)"
     },
     {
@@ -2403,15 +1223,11 @@
     },
     {
       "chapter": 17,
-      "heading": "SIDEBAR: RANSOMWARE-AS-A-SERVICE — LOCKBIT"
+      "heading": "ВРЕЗКА: RANSOMWARE-AS-A-SERVICE — LOCKBIT"
     },
     {
       "chapter": 17,
-      "heading": "PREPARE — Ransomware-Specific Preparation"
-    },
-    {
-      "chapter": 17,
-      "heading": "THE VALUE OF A GOOD HOLDING STATEMENT"
+      "heading": "ПОДГОТОВКА — СПЕЦИФИКА RANSOMWARE"
     },
     {
       "chapter": 17,
@@ -2419,227 +1235,11 @@
     },
     {
       "chapter": 17,
-      "heading": "Help Desk Impersonation"
-    },
-    {
-      "chapter": 17,
-      "heading": "Continuous Training"
-    },
-    {
-      "chapter": 17,
-      "heading": "THE CRUSHING DISAPPOINTMENT OF ENCRYPTED BACKUPS"
-    },
-    {
-      "chapter": 17,
-      "heading": "Pull-Based Architecture"
-    },
-    {
-      "chapter": 17,
-      "heading": "Network Isolation"
-    },
-    {
-      "chapter": 17,
-      "heading": "Immutability"
-    },
-    {
-      "chapter": 17,
-      "heading": "Air-Gapped / Offline Copies"
-    },
-    {
-      "chapter": 17,
-      "heading": "Identity Separation"
-    },
-    {
-      "chapter": 17,
-      "heading": "Hypervisor-Level Protection"
-    },
-    {
-      "chapter": 17,
-      "heading": "Prioritize Critical Systems"
-    },
-    {
-      "chapter": 17,
-      "heading": "Backups Are Your Last Line of Defense"
-    },
-    {
-      "chapter": 17,
-      "heading": "PROTECT VICTIM IDENTIFIERS IN RANSOM NOTES"
-    },
-    {
-      "chapter": 17,
-      "heading": "Distinguishing Attack Types"
-    },
-    {
-      "chapter": 17,
       "heading": "Communicating with лица, принимающие решения"
     },
     {
       "chapter": 17,
-      "heading": "THE INCIDENT COMMANDER ROLE IN RANSOMWARE RESPONSE"
-    },
-    {
-      "chapter": 17,
-      "heading": "Resource Planning for Extended Response"
-    },
-    {
-      "chapter": 17,
-      "heading": "Scoping Activities for Ransomware"
-    },
-    {
-      "chapter": 17,
-      "heading": "Identify All Affected Systems"
-    },
-    {
-      "chapter": 17,
-      "heading": "Determine Data Exposure"
-    },
-    {
-      "chapter": 17,
-      "heading": "Map Lateral Movement"
-    },
-    {
-      "chapter": 17,
-      "heading": "Identify Persistence"
-    },
-    {
-      "chapter": 17,
-      "heading": "Establish Timeline"
-    },
-    {
-      "chapter": 17,
-      "heading": "Assessing Data Access and Exfiltration"
-    },
-    {
-      "chapter": 17,
-      "heading": "AAA / Authentication Records"
-    },
-    {
-      "chapter": 17,
-      "heading": "File Access Telemetry"
-    },
-    {
-      "chapter": 17,
-      "heading": "Network Shares"
-    },
-    {
-      "chapter": 17,
-      "heading": "Databases"
-    },
-    {
-      "chapter": 17,
-      "heading": "Investigative Techniques for Data Exfiltration Hunting"
-    },
-    {
-      "chapter": 17,
-      "heading": "Implementation Vulnerabilities"
-    },
-    {
-      "chapter": 17,
-      "heading": "Law Enforcement Operations"
-    },
-    {
-      "chapter": 17,
-      "heading": "Leaked Keys"
-    },
-    {
-      "chapter": 17,
-      "heading": "Security Research"
-    },
-    {
-      "chapter": 17,
-      "heading": "No More Ransom"
-    },
-    {
-      "chapter": 17,
-      "heading": "Decryptor Limitations"
-    },
-    {
-      "chapter": 17,
-      "heading": "DECRYPTOR LIMITATIONS — HSE Example"
-    },
-    {
-      "chapter": 17,
-      "heading": "Decryption Assessment Process"
-    },
-    {
-      "chapter": 17,
-      "heading": "Restoration from Backups"
-    },
-    {
-      "chapter": 17,
-      "heading": "Clean Restore Point"
-    },
-    {
-      "chapter": 17,
-      "heading": "Backup Infrastructure Verification"
-    },
-    {
-      "chapter": 17,
-      "heading": "Backup Integrity"
-    },
-    {
-      "chapter": 17,
-      "heading": "Data-Loss Acceptance"
-    },
-    {
-      "chapter": 17,
-      "heading": "System Rebuild"
-    },
-    {
-      "chapter": 17,
-      "heading": "Internal Communication"
-    },
-    {
-      "chapter": 17,
-      "heading": "Leadership Updates"
-    },
-    {
-      "chapter": 17,
-      "heading": "User Communication"
-    },
-    {
-      "chapter": 17,
-      "heading": "Recovery Team"
-    },
-    {
-      "chapter": 17,
-      "heading": "External Communication"
-    },
-    {
-      "chapter": 17,
-      "heading": "Regulatory Notifications"
-    },
-    {
-      "chapter": 17,
-      "heading": "Customers and Partners"
-    },
-    {
-      "chapter": 17,
-      "heading": "Cyber Insurance"
-    },
-    {
-      "chapter": 17,
-      "heading": "Law Enforcement"
-    },
-    {
-      "chapter": 17,
-      "heading": "Backup and Recovery"
-    },
-    {
-      "chapter": 17,
-      "heading": "Dwell Time"
-    },
-    {
-      "chapter": 17,
-      "heading": "Ransom Decision"
-    },
-    {
-      "chapter": 17,
-      "heading": "Multi-Vector Extortion"
-    },
-    {
-      "chapter": 17,
-      "heading": "Identity and Privilege Exposure"
+      "heading": "NO MORE RANSOM"
     },
     {
       "chapter": 17,
@@ -2647,75 +1247,7 @@
     },
     {
       "chapter": 17,
-      "heading": "WHEN RECOVERY LESSONS STAY BEHIND CLOSED DOORS"
-    },
-    {
-      "chapter": 17,
-      "heading": "The Human Element"
-    },
-    {
-      "chapter": 17,
-      "heading": "A HANGRY RESPONSE TEAM IS NOT AN EFFECTIVE RESPONSE TEAM"
-    },
-    {
-      "chapter": 17,
-      "heading": "Legal and Regulatory Complexity"
-    },
-    {
-      "chapter": 17,
-      "heading": "AI as an Evolving Ransomware Threat"
-    },
-    {
-      "chapter": 17,
-      "heading": "AI Across the Attack Lifecycle"
-    },
-    {
-      "chapter": 17,
-      "heading": "AI-Optimized Extortion"
-    },
-    {
-      "chapter": 17,
-      "heading": "AI-Generated Ransomware Development"
-    },
-    {
-      "chapter": 17,
-      "heading": "Attribution Complexity"
-    },
-    {
-      "chapter": 17,
-      "heading": "AI for Defenders"
-    },
-    {
-      "chapter": 17,
-      "heading": "Recovery Is Not the End"
-    },
-    {
-      "chapter": 17,
-      "heading": "Regulatory and Legal Exposure"
-    },
-    {
-      "chapter": 17,
-      "heading": "BLACKBAUD: FOUR YEARS OF REGULATORY CONSEQUENCES"
-    },
-    {
-      "chapter": 17,
-      "heading": "Insurance Resolution"
-    },
-    {
-      "chapter": 17,
-      "heading": "Stakeholder Confidence"
-    },
-    {
-      "chapter": 17,
-      "heading": "Ongoing Extortion Risk"
-    },
-    {
-      "chapter": 17,
-      "heading": "KADOKAWA: PAYMENT DID NOT PREVENT DISCLOSURE"
-    },
-    {
-      "chapter": 17,
-      "heading": "Prevention Remains Essential"
+      "heading": "РАЗРАБОТКА RANSOMWARE С ПОМОЩЬЮ ИИ"
     },
     {
       "chapter": 18,
