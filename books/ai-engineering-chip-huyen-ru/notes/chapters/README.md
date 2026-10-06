@@ -7,3 +7,4 @@ Reviewed chapter-level notes are stored here.
 - [Chapter 3 — Методология оценки](chapter-03-evaluation-methodology/README.md)
 - [Chapter 4 — Оценка систем AI](chapter-04-evaluating-ai-systems/README.md)
 - [Chapter 5 — Промт-инжиниринг](chapter-05-prompt-engineering/README.md)
+- [Chapter 6 — RAG и агенты](chapter-06-rag-and-agents/README.md)
