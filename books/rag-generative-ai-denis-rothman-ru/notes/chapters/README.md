@@ -8,5 +8,7 @@
 
 - [Глава 4. Мультимодальная RAG](./chapter-04-multimodal-rag/) — `RAG_GROUNDED`, PDF 110–135.
 
+- [Глава 5. Повышение эффективности RAG за счет обратной связи от эксперта](./chapter-05-adaptive-rag-human-feedback/) — `RAG_GROUNDED`, PDF 136–160.
+
 Book-level readiness must be `READY` before running
 `BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.6`.
