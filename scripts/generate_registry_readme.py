@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from pathlib import Path
-import argparse, sys, yaml
+import argparse, sys, yaml, difflib
 
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "registry/books.yaml"
@@ -270,6 +270,12 @@ def main():
         current = OUTPUT.read_text(encoding="utf-8") if OUTPUT.exists() else ""
         if current != out:
             print("registry/README.md is stale; run: python scripts/generate_registry_readme.py", file=sys.stderr)
+            print("".join(difflib.unified_diff(
+                current.splitlines(keepends=True),
+                out.splitlines(keepends=True),
+                fromfile="registry/README.md",
+                tofile="generated",
+            )), file=sys.stderr)
             return 1
         print("registry/README.md is up to date")
         return 0
