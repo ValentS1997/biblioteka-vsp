@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 5 — Оператор if: подробная шпаргалка</title>
+  <desc id="desc">Сравнения, Boolean logic, виды if и применение условий к спискам.</desc>
+  <rect width="1800" height="1200" fill="#f5f7fa"/>
+  <rect width="1800" height="116" fill="#17202a"/>
+  <text x="56" y="50" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="38" font-weight="700" fill="#fff">Глава 5 — Оператор if</text>
+  <text x="56" y="86" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">проверить состояние → получить Boolean → выполнить подходящий блок</text>
+
+  <rect x="45" y="150" width="540" height="300" rx="18" fill="#fff" stroke="#5dade2" stroke-width="2"/>
+  <text x="75" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#1b4f72">Conditional tests</text>
+  <text x="75" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">= присваивает · == сравнивает.</tspan>
+    <tspan x="75" dy="31">!= проверяет различие.</tspan>
+    <tspan x="75" dy="31">&lt; &lt;= &gt; &gt;= — числовые сравнения.</tspan>
+    <tspan x="75" dy="31">lower() позволяет сравнивать без учёта регистра.</tspan>
+    <tspan x="75" dy="31">Результат проверки: True или False.</tspan>
+  </text>
+
+  <rect x="630" y="150" width="540" height="300" rx="18" fill="#fff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="660" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#196f3d">Комбинация условий</text>
+  <text x="660" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="660" dy="0">A and B → обе части должны быть True.</tspan>
+    <tspan x="660" dy="31">A or B → достаточно одной True.</tspan>
+    <tspan x="660" dy="31">value in items → значение присутствует.</tspan>
+    <tspan x="660" dy="31">value not in items → значение отсутствует.</tspan>
+    <tspan x="660" dy="31">Boolean values могут хранить состояние программы.</tspan>
+  </text>
+
+  <rect x="1215" y="150" width="540" height="300" rx="18" fill="#fff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1245" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#9c640c">Формы if</text>
+  <text x="1245" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1245" dy="0">if → блок только при True.</tspan>
+    <tspan x="1245" dy="31">if-else → ровно одна из двух ветвей.</tspan>
+    <tspan x="1245" dy="31">if-elif-else → первый истинный блок.</tspan>
+    <tspan x="1245" dy="31">Допустимо несколько elif.</tspan>
+    <tspan x="1245" dy="31">else не обязателен; можно завершить конкретным elif.</tspan>
+  </text>
+
+  <rect x="45" y="495" width="825" height="300" rx="18" fill="#fff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="75" y="540" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#6c3483">Один блок или несколько?</text>
+  <text x="75" y="583" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">if-elif-else:</tspan>
+    <tspan x="105" dy="31">первое True завершает цепочку.</tspan>
+    <tspan x="75" dy="42">Несколько if:</tspan>
+    <tspan x="105" dy="31">каждый тест выполняется независимо.</tspan>
+    <tspan x="75" dy="42">Выбор зависит от требуемой семантики,</tspan>
+    <tspan x="75" dy="31">а не от количества написанных условий.</tspan>
+  </text>
+
+  <rect x="915" y="495" width="840" height="300" rx="18" fill="#fff" stroke="#ec7063" stroke-width="2"/>
+  <text x="945" y="540" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#922b21">if + lists</text>
+  <text x="945" y="583" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="945" dy="0">Особое значение внутри for → специальная ветвь.</tspan>
+    <tspan x="945" dy="31">if requested_toppings → проверка непустого списка.</tspan>
+    <tspan x="945" dy="31">requested in available → whitelist check.</tspan>
+    <tspan x="945" dy="31">Недоступное значение → отдельное сообщение.</tspan>
+    <tspan x="945" dy="31">Constant assortment source допускает представить tuple.</tspan>
+  </text>
+
+  <rect x="45" y="840" width="825" height="270" rx="18" fill="#fff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="75" y="885" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#21618c">Упражнения 5.1–5.13</text>
+  <text x="75" y="928" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">True/False tests и все виды сравнений.</tspan>
+    <tspan x="75" dy="30">Alien colors и age categories.</tspan>
+    <tspan x="75" dy="30">Favorite fruits и admin greeting.</tspan>
+    <tspan x="75" dy="30">Empty users, username uniqueness, ordinals.</tspan>
+    <tspan x="75" dy="30">Formatting + personal project ideas.</tspan>
+  </text>
+
+  <rect x="915" y="840" width="840" height="270" rx="18" fill="#fff" stroke="#58d68d" stroke-width="2"/>
+  <text x="945" y="885" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#1e8449">Source / quality boundary</text>
+  <text x="945" y="928" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="945" dy="0">Сравнения оформляются пробелами вокруг операторов.</tspan>
+    <tspan x="945" dy="30">Персональные ответы не выдумываются.</tspan>
+    <tspan x="945" dy="40">Legacy RAG: clipping на нескольких chunk starts.</tspan>
+    <tspan x="945" dy="30">Соседние chunks сохраняют контекст.</tspan>
+    <tspan x="945" dy="30">RAG rebuild для chapter work не выполняется.</tspan>
+  </text>
+
+  <rect x="45" y="1140" width="1710" height="40" rx="12" fill="#17202a"/>
+  <text x="75" y="1167" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#fff">Provenance: e0014:c01–c11 · EPUB spine 14 · OEBPS/Text/978544614112-11.xhtml</text>
+</svg>
