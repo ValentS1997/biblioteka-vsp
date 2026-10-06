@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="950" viewBox="0 0 1360 950">
+  <rect width="1360" height="950" fill="white"/>
+  <text x="55" y="62" font-family="sans-serif" font-size="34" font-weight="700">Глава 11 — «Модули»</text>
+  <text x="55" y="98" font-family="sans-serif" font-size="18">RAG PDF 79–86 · p0079:c01–p0086:c01</text>
+
+  <rect x="55" y="140" width="380" height="190" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="80" y="180" font-family="sans-serif" font-size="22" font-weight="700">Import</text>
+  <text x="80" y="220" font-family="monospace" font-size="18">import sys</text>
+  <text x="80" y="252" font-family="monospace" font-size="18">sys.argv / sys.path</text>
+  <text x="80" y="284" font-family="sans-serif" font-size="18">dotted namespace</text>
+
+  <rect x="490" y="140" width="380" height="190" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="515" y="180" font-family="sans-serif" font-size="22" font-weight="700">Import styles</text>
+  <text x="515" y="220" font-family="monospace" font-size="18">from x import y</text>
+  <text x="515" y="252" font-family="monospace" font-size="18">from x import *</text>
+  <text x="515" y="284" font-family="sans-serif" font-size="18">source prefers plain import</text>
+
+  <rect x="925" y="140" width="380" height="190" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="950" y="180" font-family="sans-serif" font-size="22" font-weight="700">Execution mode</text>
+  <text x="950" y="220" font-family="monospace" font-size="18">__name__</text>
+  <text x="950" y="252" font-family="monospace" font-size="18">__main__</text>
+  <text x="950" y="284" font-family="sans-serif" font-size="18">direct vs imported</text>
+
+  <rect x="55" y="385" width="590" height="210" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="80" y="425" font-family="sans-serif" font-size="22" font-weight="700">Own module + inspection</text>
+  <text x="80" y="465" font-family="monospace" font-size="18">mymodule.py → import mymodule</text>
+  <text x="80" y="500" font-family="monospace" font-size="18">dir(sys) / dir()</text>
+  <text x="80" y="535" font-family="monospace" font-size="18">del a</text>
+
+  <rect x="695" y="385" width="610" height="210" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="720" y="425" font-family="sans-serif" font-size="22" font-weight="700">Packages</text>
+  <text x="720" y="465" font-family="sans-serif" font-size="18">directory hierarchy</text>
+  <text x="720" y="500" font-family="monospace" font-size="18">__init__.py</text>
+  <text x="720" y="535" font-family="sans-serif" font-size="18">world / asia / africa / ...</text>
+
+  <rect x="55" y="650" width="1250" height="135" rx="12" fill="#fafafa" stroke="#333"/>
+  <text x="80" y="690" font-family="sans-serif" font-size="22" font-weight="700">Reuse hierarchy</text>
+  <text x="80" y="728" font-family="sans-serif" font-size="18">function → module → package → standard-library-like collection</text>
+  <text x="80" y="760" font-family="sans-serif" font-size="17">Next: chapter 12 «Структуры данных».</text>
+
+  <text x="55" y="845" font-family="sans-serif" font-size="16">Findings: python/python3 mismatch; print p source variant; .pyc/sys.path/package claims [Needs confirmation].</text>
+  <text x="55" y="878" font-family="sans-serif" font-size="16">Chapter-end summary present: 11.7.</text>
+</svg>
