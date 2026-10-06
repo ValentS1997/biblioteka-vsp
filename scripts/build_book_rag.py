@@ -29,6 +29,11 @@ SEARCH_POSTINGS_MAX = 32
 SEARCH_SHARD_MAX_BYTES = 262144
 SUPPORTED_SOURCES = {"book.pdf": "pdf", "book.epub": "epub"}
 
+PIPELINE_VERSION = "1.0"
+NORMALIZATION_POLICY_ID = "text-normalization-v1"
+CHUNKING_POLICY_ID = "source-unit-char-window-v1"
+RETRIEVAL_POLICY_ID = "deterministic-lexical-shards-v2"
+
 
 class EpubTextExtractor(HTMLParser):
     """Small deterministic XHTML-to-text extractor for EPUB spine documents."""
@@ -89,6 +94,31 @@ def sha256_file(path: Path) -> str:
 
 def sha256_text(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def sha256_json(value: dict) -> str:
+    encoded = json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+    return sha256_text(encoded)
+
+
+def chunk_uid(
+    *,
+    source_sha: str,
+    source_unit_type: str,
+    source_locator: str,
+    chunk_in_unit: int,
+    chunk_text_sha256: str,
+) -> str:
+    return sha256_json(
+        {
+            "source_sha256": source_sha,
+            "source_unit_type": source_unit_type,
+            "source_locator": source_locator,
+            "chunk_in_unit": chunk_in_unit,
+            "chunking_policy_id": CHUNKING_POLICY_ID,
+            "text_sha256": chunk_text_sha256,
+        }
+    )
 
 
 def normalize_text(text: str) -> str:
@@ -307,6 +337,8 @@ def build_lexical_search_index(
     book_id: str,
     chunk_records: list[dict],
     index_records: list[dict],
+    corpus_generation_id: str,
+    index_generation_id: str,
 ) -> dict:
     search_dir = book_dir / "rag" / "search-index"
     path_by_chunk = {record["chunk_id"]: record["path"] for record in index_records}
@@ -383,6 +415,8 @@ def build_lexical_search_index(
             payload = {
                 "schema": "biblioteka-vsp/search-shard/v2",
                 "book_id": book_id,
+                "corpus_generation_id": corpus_generation_id,
+                "index_generation_id": index_generation_id,
                 "shard": shard,
                 "normalization": {
                     "lowercase": True,
@@ -415,6 +449,9 @@ def build_lexical_search_index(
             "schema": "biblioteka-vsp/search-index/v2",
             "book_id": book_id,
             "mode": "deterministic_lexical_shards",
+            "retrieval_policy_id": RETRIEVAL_POLICY_ID,
+            "corpus_generation_id": corpus_generation_id,
+            "index_generation_id": index_generation_id,
             "normalization": {
                 "lowercase": True,
                 "yo_to_e": True,
@@ -473,15 +510,28 @@ def write_retrieval_chunk(
     abs_path = book_dir / rel_path
     abs_path.parent.mkdir(parents=True, exist_ok=True)
 
+    text_hash = sha256_text(chunk_text)
+    stable_uid = chunk_uid(
+        source_sha=source_sha,
+        source_unit_type=source_unit_type,
+        source_locator=source_locator,
+        chunk_in_unit=chunk_in_unit,
+        chunk_text_sha256=text_hash,
+    )
+
     front = [
         "---",
         "schema: biblioteka-vsp/chunk/v2",
         f"chunk_id: {chunk_id}",
+        f"chunk_uid: {stable_uid}",
         f"book_id: {book_id}",
         f"source_format: {source_format}",
         f"source_unit_type: {source_unit_type}",
         f"source_unit: {source_unit}",
         f"source_locator: {json.dumps(source_locator, ensure_ascii=False)}",
+        f"chunk_path: {rel_path.as_posix()}",
+        f"chunking_policy_id: {CHUNKING_POLICY_ID}",
+        f"text_sha256: {text_hash}",
     ]
     if source_format == "pdf":
         front.append(f"pdf_page: {source_unit}")
@@ -501,6 +551,7 @@ def write_retrieval_chunk(
 
     record = {
         "chunk_id": chunk_id,
+        "chunk_uid": stable_uid,
         "book_id": book_id,
         "source_format": source_format,
         "source_unit_type": source_unit_type,
@@ -510,8 +561,9 @@ def write_retrieval_chunk(
         "path": rel_path.as_posix(),
         "source_path": source_path,
         "source_sha256": source_sha,
+        "chunking_policy_id": CHUNKING_POLICY_ID,
         "chars": len(chunk_text),
-        "text_sha256": sha256_text(chunk_text),
+        "text_sha256": text_hash,
     }
     if source_format == "pdf":
         record["pdf_page"] = source_unit
@@ -538,6 +590,33 @@ def build(book_dir: Path) -> dict:
     retrieval_dir.mkdir(parents=True, exist_ok=True)
 
     units, extraction = extract_units(source, source_format)
+
+    corpus_generation_payload = {
+        "pipeline_version": PIPELINE_VERSION,
+        "source_sha256": source_sha,
+        "source_format": source_format,
+        "extractor_engine": extraction["engine"],
+        "extractor_version": extraction["engine_version"],
+        "unit_coordinate_system": extraction["unit_coordinate_system"],
+        "content_model": extraction["content_model"],
+        "normalization_policy_id": NORMALIZATION_POLICY_ID,
+        "chunking_policy_id": CHUNKING_POLICY_ID,
+        "target_chars": TARGET_CHARS,
+        "overlap_chars": OVERLAP_CHARS,
+    }
+    corpus_generation_id = sha256_json(corpus_generation_payload)
+    index_generation_id = sha256_json(
+        {
+            "corpus_generation_id": corpus_generation_id,
+            "retrieval_policy_id": RETRIEVAL_POLICY_ID,
+            "retrieval_key_chars": SEARCH_KEY_CHARS,
+            "search_prefix_chars_min": SEARCH_PREFIX_CHARS,
+            "postings_per_key_max": SEARCH_POSTINGS_MAX,
+            "max_shard_bytes": SEARCH_SHARD_MAX_BYTES,
+            "top_k_max": RETRIEVAL_TOP_K_MAX,
+        }
+    )
+
     text_parts: list[str] = ["# Extracted text\n"]
     chunk_records: list[dict] = []
     index_records: list[dict] = []
@@ -567,8 +646,17 @@ def build(book_dir: Path) -> dict:
 
         for chunk_in_unit, chunk_text in enumerate(split_unit(text), start=1):
             chunk_id = f"{book_id}:{prefix}{source_unit:04d}:c{chunk_in_unit:02d}"
+            text_hash = sha256_text(chunk_text)
+            stable_uid = chunk_uid(
+                source_sha=source_sha,
+                source_unit_type=source_unit_type,
+                source_locator=source_locator,
+                chunk_in_unit=chunk_in_unit,
+                chunk_text_sha256=text_hash,
+            )
             record = {
                 "chunk_id": chunk_id,
+                "chunk_uid": stable_uid,
                 "book_id": book_id,
                 "source_format": source_format,
                 "source_unit_type": source_unit_type,
@@ -577,6 +665,8 @@ def build(book_dir: Path) -> dict:
                 "chunk_in_unit": chunk_in_unit,
                 "source_path": source_rel,
                 "source_sha256": source_sha,
+                "chunking_policy_id": CHUNKING_POLICY_ID,
+                "text_sha256": text_hash,
                 "text": chunk_text,
             }
             if source_format == "pdf":
@@ -606,6 +696,8 @@ def build(book_dir: Path) -> dict:
         book_id=book_id,
         chunk_records=chunk_records,
         index_records=index_records,
+        corpus_generation_id=corpus_generation_id,
+        index_generation_id=index_generation_id,
     )
 
     text_path = rag_dir / "text.md"
@@ -660,6 +752,16 @@ source:
   format: {source_format}
   sha256: {source_sha}
 {source_specific}
+ingestion:
+  pipeline_version: "{PIPELINE_VERSION}"
+  normalization_policy_id: "{NORMALIZATION_POLICY_ID}"
+  chunking_policy_id: "{CHUNKING_POLICY_ID}"
+  retrieval_policy_id: "{RETRIEVAL_POLICY_ID}"
+
+generation:
+  corpus_generation_id: {corpus_generation_id}
+  index_generation_id: {index_generation_id}
+
 extraction:
   engine: {extraction['engine']}
   engine_version: "{extraction['engine_version']}"
@@ -732,6 +834,12 @@ known_limitations:
         "source_sha256": source_sha,
         "source_checksum_expected_present": checksum_expected_present,
         "source_checksum_matched_expected": checksum_matched_expected,
+        "pipeline_version": PIPELINE_VERSION,
+        "normalization_policy_id": NORMALIZATION_POLICY_ID,
+        "chunking_policy_id": CHUNKING_POLICY_ID,
+        "retrieval_policy_id": RETRIEVAL_POLICY_ID,
+        "corpus_generation_id": corpus_generation_id,
+        "index_generation_id": index_generation_id,
         "source_units": len(units),
         "source_units_with_text": len(units) - len(blank_units),
         "blank_source_units": blank_units,

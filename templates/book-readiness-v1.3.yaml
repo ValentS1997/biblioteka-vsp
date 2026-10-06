@@ -1,0 +1,132 @@
+schema_version: "1.3"
+
+template:
+  id: "BIBLIOTEKA-VSP-BOOK-READINESS"
+  version: "1.3"
+  type: "book_readiness"
+  status: "ACCEPTED"
+  purpose: >-
+    Read-only capability gate for determining whether one PDF- or EPUB-backed
+    book may enter the canonical chapter-analysis workflow.
+
+git_execution:
+  policy:
+    id: "BIBLIOTEKA-VSP-GIT-EXECUTION-POLICY"
+    version: "1.0"
+    path: "templates/git-execution-policy-v1.0.yaml"
+  preferred_execution: "GitHub connector/API evidence + repository CI"
+  local_git_required: false
+
+policy:
+  computed_not_persisted: true
+  canonical_status_store_created: false
+  reading_requires_rag: false
+  supported_source_formats:
+    - pdf
+    - epub
+  capability: "chapter-analysis"
+  success_status: "READY"
+  failure_status: "BLOCKED"
+  malformed_status: "ERROR"
+
+chapter_analysis_ready_rule:
+  all_required:
+    - "book_id_resolved"
+    - "knowledge_registered"
+    - "metadata_exists"
+    - "metadata_id_matches"
+    - "canonical_source_exists"
+    - "source_checksum_record_exists"
+    - "metadata_expected_sha256_exists"
+    - "source_provenance_consistent"
+    - "rag_manifest_exists"
+    - "rag_manifest_book_id_matches"
+    - "rag_manifest_source_matches"
+    - "rag_validation_ready"
+    - "rag_ingestion_acceptance_passed"
+    - "chunk_index_exists"
+    - "addressable_chunks_exist"
+    - "retrieval_index_manifest_exists"
+    - "retrieval_integrity_smoke_test_passed"
+    - "chapter_template_available"
+
+checks:
+  canonical_source_exists:
+    source: "books/index.yaml paths.source"
+    accepted_canonical_paths:
+      - "books/<book_id>/source/book.pdf"
+      - "books/<book_id>/source/book.epub"
+  source_checksum_record_exists:
+    source: "books/<book_id>/source/SHA256"
+  source_provenance_consistent:
+    rule: >-
+      source/SHA256, metadata source.expected_sha256 and RAG manifest
+      source.sha256 must agree after RAG build.
+  rag_manifest_source_matches:
+    source: "rag/manifest.yaml source.path + source.sha256"
+  rag_validation_ready:
+    source: "rag/manifest.yaml validation.status"
+    accepted_status_pattern: "^READY"
+  rag_ingestion_acceptance_passed:
+    source: "books/<book_id>/rag/acceptance.yaml"
+    new_generation_rule: >-
+      If rag/manifest.yaml contains generation metadata, acceptance.yaml must be
+      ACCEPTED and bound to the same book_id, source SHA, corpus_generation_id
+      and index_generation_id.
+    legacy_compatibility: >-
+      Existing legacy RAG without generation metadata remains valid under the
+      previous readiness path until its next controlled rebuild.
+  retrieval_integrity_smoke_test_passed:
+    method: >-
+      Deterministically select a valid addressable chunk from chunk-index,
+      derive an informative token from its text, resolve the lexical shard,
+      confirm the shard references a valid chunk, and verify book_id/chunk_id/
+      source locator/source path/source_sha256/path consistency. Legacy PDF v1
+      chunks using pdf_page remain accepted.
+  chapter_template_available:
+    source: "templates/chapter-artifact-collection-v1.7.yaml"
+    required_template_id: "BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION"
+    required_status: "ACCEPTED"
+    required_version: "1.7"
+
+failure_model:
+  top_level_status: "BLOCKED"
+  reason_codes:
+    - "BOOK_NOT_REGISTERED"
+    - "METADATA_MISSING"
+    - "METADATA_ID_MISMATCH"
+    - "CANONICAL_SOURCE_MISSING"
+    - "SOURCE_CHECKSUM_RECORD_MISSING"
+    - "SOURCE_PROVENANCE_INCOMPLETE"
+    - "RAG_MANIFEST_MISSING"
+    - "RAG_ID_MISMATCH"
+    - "RAG_SOURCE_MISMATCH"
+    - "RAG_VALIDATION_NOT_READY"
+    - "RAG_INGESTION_ACCEPTANCE_FAILED"
+    - "CHUNK_INDEX_MISSING"
+    - "ADDRESSABLE_CHUNKS_MISSING"
+    - "RETRIEVAL_INDEX_MISSING"
+    - "RETRIEVAL_INTEGRITY_FAILED"
+    - "CHAPTER_TEMPLATE_MISSING"
+  rule: >-
+    Do not create a second lifecycle state machine. Keep one top-level BLOCKED
+    state and report exact failed checks/reason codes.
+
+implementation_reference:
+  command: >-
+    python scripts/check_book_readiness.py --book-id <book_id>
+    --capability chapter-analysis
+  exit_codes:
+    0: "READY"
+    1: "BLOCKED"
+    2: "malformed repository/configuration or unsupported invocation"
+
+acceptance_criteria:
+  - "Result is derived from canonical artifacts and is not a new source of truth."
+  - "Existing PDF/EPUB legacy RAG remains valid without rebuild when it satisfies the prior provenance path."
+  - "Every current-generation RAG requires ACCEPTED ingestion acceptance bound to the same source/corpus/index generation."
+  - "EPUB RAG artifacts use spine/XHTML source locators rather than fabricated page numbers."
+  - "Reading-only knowledge entries may return BLOCKED while remaining registry-valid."
+  - "A BLOCKED result identifies exact prerequisites and next actions."
+  - "No external web or model-memory fallback is used."
+  - "Readiness does not require user-local Git when GitHub evidence is available."

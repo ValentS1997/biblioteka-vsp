@@ -51,7 +51,7 @@ reading-only и оставаться валидной без RAG.
 одноразовый book onboarding:
 
 ```text
-BIBLIOTEKA-VSP-BOOK-ONBOARDING v1.2
+BIBLIOTEKA-VSP-BOOK-ONBOARDING v1.3
   ↓
 canonical source + provenance
   ↓
@@ -59,7 +59,7 @@ full-text extraction + normalization
   ↓
 full-book RAG + addressable retrieval
   ↓
-BIBLIOTEKA-VSP-BOOK-READINESS v1.2
+BIBLIOTEKA-VSP-BOOK-READINESS v1.3
   ↓
 READY_FOR_CHAPTER_ANALYSIS
 ```
@@ -86,11 +86,12 @@ RAG readiness и reading progress — разные состояния. Нали�
 
 - [Templates index](templates/README.md)
 - [Git execution policy v1.0](templates/git-execution-policy-v1.0.yaml)
-- [New book branch bootstrap v1.2](templates/book-branch-bootstrap-v1.2.yaml)
-- [Book onboarding v1.2](templates/book-onboarding-v1.2.yaml)
-- [Book readiness v1.2](templates/book-readiness-v1.2.yaml)
-- [Chapter analysis request v1.2](templates/chapter-analysis-request-v1.2.yaml)
-- [Chapter artifacts v1.6](templates/chapter-artifact-collection-v1.6.yaml)
+- [New book branch bootstrap v1.3](templates/book-branch-bootstrap-v1.3.yaml)
+- [Book onboarding v1.3](templates/book-onboarding-v1.3.yaml)
+- [RAG ingestion acceptance v1.0](templates/rag-ingestion-acceptance-v1.0.yaml)
+- [Book readiness v1.3](templates/book-readiness-v1.3.yaml)
+- [Chapter analysis request v1.3](templates/chapter-analysis-request-v1.3.yaml)
+- [Chapter artifacts v1.7](templates/chapter-artifact-collection-v1.7.yaml)
 - [Book lifecycle matrix](docs/BOOK-LIFECYCLE.md)
 
 Readiness вычисляется, а не хранится как новый canonical status:
@@ -157,10 +158,20 @@ When `books/<book-slug>/source/book.pdf` or `book.epub` is pushed to a non-`main
 5. generates source-traceable `rag/chunks.jsonl`;
 6. generates addressable `rag/chunks/**/*.md`;
 7. generates deterministic `rag/search-index/**/*.json`;
-8. writes `rag/manifest.yaml`;
-9. commits generated artifacts back to the same ingest branch.
+8. writes generation identity into `rag/manifest.yaml`;
+9. runs strict RAG ingestion acceptance across source integrity, complete
+   provenance/content hashes, source-unit coverage, bounded retrieval samples
+   and negative exact-term behavior;
+10. writes `rag/acceptance.yaml`;
+11. commits generated artifacts back to the ingest branch only on ACCEPTED.
 
 PDF provenance remains page-based. EPUB provenance uses 1-indexed spine items plus XHTML ZIP-member locators; these are not treated as printed/PDF page numbers.
+
+New/rebuilt RAG generations carry deterministic `corpus_generation_id` and
+`index_generation_id`. Addressable chunks preserve compatibility `chunk_id`
+and add `chunk_uid` + `text_sha256` so silent content/chunking drift can be
+detected. Existing legacy RAG is not mass-rebuilt; strict acceptance becomes
+mandatory when a legacy book is rebuilt by the current pipeline.
 
 The workflow does not write directly to `main`.
 
