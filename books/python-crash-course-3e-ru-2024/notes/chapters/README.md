@@ -16,3 +16,4 @@ Reviewed chapter-level notes are stored here.
 - [Chapter 12 — Атакующий корабль](chapter-12-attacking-ship/README.md)
 - [Chapter 13 — Осторожно, пришельцы!](chapter-13-watch-out-aliens/README.md)
 - [Chapter 14 — Игровой счет](chapter-14-game-score/README.md)
+- [Chapter 15 — Генерирование данных](chapter-15-generating-data/README.md)
