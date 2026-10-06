@@ -36,7 +36,7 @@ NEXT_ACTIONS = {
     "ADDRESSABLE_CHUNKS_MISSING": "generate addressable rag/chunks files",
     "RETRIEVAL_INDEX_MISSING": "generate rag/search-index including manifest.json",
     "RETRIEVAL_INTEGRITY_FAILED": "repair/rebuild deterministic retrieval artifacts and rerun the smoke test",
-    "CHAPTER_TEMPLATE_MISSING": "install an ACCEPTED BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.6 template",
+    "CHAPTER_TEMPLATE_MISSING": "install an ACCEPTED BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.7 template",
 }
 
 
