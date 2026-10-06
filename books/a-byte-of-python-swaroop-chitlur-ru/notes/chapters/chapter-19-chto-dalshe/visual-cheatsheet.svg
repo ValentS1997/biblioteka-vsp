@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="980" viewBox="0 0 1360 980">
+  <rect width="1360" height="980" fill="white"/>
+  <text x="55" y="62" font-family="sans-serif" font-size="34" font-weight="700">Глава 19 — «Что дальше»</text>
+  <text x="55" y="98" font-family="sans-serif" font-size="18">RAG PDF 145–150 · p0145:c01–p0150:c01</text>
+
+  <rect x="55" y="140" width="390" height="210" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="80" y="180" font-family="sans-serif" font-size="22" font-weight="700">Build</text>
+  <text x="80" y="220" font-family="sans-serif" font-size="18">Address book</text>
+  <text x="80" y="255" font-family="sans-serif" font-size="18">class + dict + pickle</text>
+  <text x="80" y="290" font-family="sans-serif" font-size="18">CRUD + search + persistence</text>
+
+  <rect x="485" y="140" width="390" height="210" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="510" y="180" font-family="sans-serif" font-size="22" font-weight="700">Automate</text>
+  <text x="510" y="220" font-family="sans-serif" font-size="18">replace utility</text>
+  <text x="510" y="255" font-family="sans-serif" font-size="18">literal or regex search</text>
+  <text x="510" y="290" font-family="sans-serif" font-size="18">file-modifying boundary</text>
+
+  <rect x="915" y="140" width="390" height="210" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="940" y="180" font-family="sans-serif" font-size="22" font-weight="700">Practice</text>
+  <text x="940" y="220" font-family="sans-serif" font-size="18">exercises</text>
+  <text x="940" y="255" font-family="sans-serif" font-size="18">read programs</text>
+  <text x="940" y="290" font-family="sans-serif" font-size="18">Q&amp;A / tutorials / video</text>
+
+  <rect x="55" y="405" width="590" height="220" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="80" y="445" font-family="sans-serif" font-size="22" font-weight="700">Extend Python</text>
+  <text x="80" y="485" font-family="sans-serif" font-size="18">package catalog + pip</text>
+  <text x="80" y="520" font-family="sans-serif" font-size="18">Kivy / PyGTK / PyQt / wxPython</text>
+  <text x="80" y="555" font-family="sans-serif" font-size="18">source ecosystem claims are historical</text>
+
+  <rect x="695" y="405" width="610" height="220" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="720" y="445" font-family="sans-serif" font-size="22" font-weight="700">Broaden</text>
+  <text x="720" y="485" font-family="sans-serif" font-size="18">CPython / Jython / IronPython / PyPy</text>
+  <text x="720" y="520" font-family="sans-serif" font-size="18">Stackless / CLPython / IronMonkey</text>
+  <text x="720" y="555" font-family="sans-serif" font-size="18">functional programming</text>
+
+  <rect x="55" y="680" width="1250" height="135" rx="12" fill="#fafafa" stroke="#333"/>
+  <text x="80" y="720" font-family="sans-serif" font-size="22" font-weight="700">End of main book</text>
+  <text x="80" y="758" font-family="sans-serif" font-size="18">learn → build → read → reuse libraries → specialize → keep practicing</text>
+  <text x="80" y="790" font-family="sans-serif" font-size="17">Next: Appendix 20 «FLOSS».</text>
+
+  <text x="55" y="865" font-family="sans-serif" font-size="16">Safety: address-book persistence and replace-file writes require explicit path/rollback design.</text>
+  <text x="55" y="898" font-family="sans-serif" font-size="16">References/toolkit/licensing/project-status claims remain historical source material.</text>
+</svg>
