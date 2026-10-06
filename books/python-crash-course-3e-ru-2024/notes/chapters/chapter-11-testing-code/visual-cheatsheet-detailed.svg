@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 11 — Тестирование кода: подробная шпаргалка</title>
+  <desc id="desc">pytest installation, test discovery, assertions, regression testing, class tests, fixtures and source findings.</desc>
+  <rect width="1800" height="1200" fill="#f5f7fa"/>
+  <rect width="1800" height="116" fill="#17202a"/>
+  <text x="56" y="50" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="38" font-weight="700" fill="#fff">Глава 11 — Тестирование кода</text>
+  <text x="56" y="86" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">автоматическая проверка поведения, regression detection и reusable test setup</text>
+
+  <rect x="45" y="150" width="540" height="300" rx="18" fill="#fff" stroke="#5dade2" stroke-width="2"/>
+  <text x="75" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#1b4f72">pytest environment</text>
+  <text x="75" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">pytest — third-party package.</tspan>
+    <tspan x="75" dy="31">Source: python -m pip install --upgrade pip.</tspan>
+    <tspan x="75" dy="31">Source: python -m pip install --user pytest.</tspan>
+    <tspan x="75" dy="31">These commands modify Python environment.</tspan>
+    <tspan x="75" dy="31">Current applicability/version → Needs confirmation.</tspan>
+  </text>
+
+  <rect x="630" y="150" width="540" height="300" rx="18" fill="#fff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="660" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#196f3d">Function testing</text>
+  <text x="660" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="660" dy="0">test_ file/function naming enables discovery.</tspan>
+    <tspan x="660" dy="31">Call function with representative input.</tspan>
+    <tspan x="660" dy="31">assert returned value == expected.</tspan>
+    <tspan x="660" dy="31">Pass confirms only covered behavior.</tspan>
+    <tspan x="660" dy="31">Failure report shows test, line and exception.</tspan>
+  </text>
+
+  <rect x="1215" y="150" width="540" height="300" rx="18" fill="#fff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1245" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#9c640c">Regression mindset</text>
+  <text x="1245" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1245" dy="0">Existing valid test becomes red after change.</tspan>
+    <tspan x="1245" dy="31">Do not change it only to make suite green.</tspan>
+    <tspan x="1245" dy="31">Find production change that broke behavior.</tspan>
+    <tspan x="1245" dy="31">Restore compatibility.</tspan>
+    <tspan x="1245" dy="31">Add a separate test for new behavior.</tspan>
+  </text>
+
+  <rect x="45" y="495" width="825" height="300" rx="18" fill="#fff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="75" y="540" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#6c3483">Class tests / fixtures</text>
+  <text x="75" y="583" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">AnonymousSurvey → store one / three responses.</tspan>
+    <tspan x="75" dy="31">Membership assertions verify resulting state.</tspan>
+    <tspan x="75" dy="42">@pytest.fixture decorates resource factory.</tspan>
+    <tspan x="75" dy="31">Matching test parameter triggers fixture automatically.</tspan>
+    <tspan x="75" dy="42">Useful when setup is repeated or expensive.</tspan>
+  </text>
+
+  <rect x="915" y="495" width="840" height="300" rx="18" fill="#fff" stroke="#ec7063" stroke-width="2"/>
+  <text x="945" y="540" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#922b21">Coverage / interpretation</text>
+  <text x="945" y="583" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="945" dy="0">Full coverage can be difficult in large projects.</tspan>
+    <tspan x="945" dy="31">Source prioritizes critical behavior first.</tspan>
+    <tspan x="945" dy="31">Early projects need not chase 100% coverage.</tspan>
+    <tspan x="945" dy="31">Tests enable safer change and collaboration.</tspan>
+    <tspan x="945" dy="31">Green does not prove untested behavior.</tspan>
+  </text>
+
+  <rect x="45" y="840" width="825" height="270" rx="18" fill="#fff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="75" y="885" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#21618c">Упражнения 11.1–11.3</text>
+  <text x="75" y="928" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">City/country formatting test.</tspan>
+    <tspan x="75" dy="30">Introduce required population → observe failure.</tspan>
+    <tspan x="75" dy="30">Make population optional → old + new tests green.</tspan>
+    <tspan x="75" dy="30">Employee raises: default and custom.</tspan>
+    <tspan x="75" dy="30">11.3 setup mechanism has source mismatch.</tspan>
+  </text>
+
+  <rect x="915" y="840" width="840" height="270" rx="18" fill="#fff" stroke="#58d68d" stroke-width="2"/>
+  <text x="945" y="885" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#1e8449">Source findings / boundary</text>
+  <text x="945" y="928" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="945" dy="0">assertIn prose ↔ pytest assert syntax.</tspan>
+    <tspan x="945" dy="30">TestAnonymousSurvey prose ↔ top-level functions.</tspan>
+    <tspan x="945" dy="30">Exercise 11.3 setUp ↔ chapter pytest fixtures.</tspan>
+    <tspan x="945" dy="30">Exercise 11.1 parameter-order wording mismatch.</tspan>
+    <tspan x="945" dy="30">e0020:c02–c11 boundary clipping; next unit = Part II.</tspan>
+  </text>
+
+  <rect x="45" y="1140" width="1710" height="40" rx="12" fill="#17202a"/>
+  <text x="75" y="1167" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#fff">Provenance: e0020:c01–c11 · EPUB spine 20 · OEBPS/Text/978544614112-17.xhtml · Part I end</text>
+</svg>
