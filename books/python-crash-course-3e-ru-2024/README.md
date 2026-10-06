@@ -72,3 +72,4 @@ Canonical readiness command:
 - [Глава 16 — Загрузка данных](notes/chapters/chapter-16-downloading-data/README.md)
 - [Глава 17 — Работа с API](notes/chapters/chapter-17-working-with-apis/README.md)
 - [Глава 18 — Знакомство с Django](notes/chapters/chapter-18-getting-started-with-django/README.md)
+- [Глава 19 — Учетные записи пользователей](notes/chapters/chapter-19-user-accounts/README.md)
