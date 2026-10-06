@@ -85,6 +85,7 @@ RAG readiness и reading progress — разные состояния. Нали�
 Канонические шаблоны и контракты:
 
 - [Templates index](templates/README.md)
+- [Process compliance router v1.0](templates/process-compliance-router-v1.0.yaml)
 - [Git execution policy v1.0](templates/git-execution-policy-v1.0.yaml)
 - [New book branch bootstrap v1.3](templates/book-branch-bootstrap-v1.3.yaml)
 - [Book onboarding v1.3](templates/book-onboarding-v1.3.yaml)
