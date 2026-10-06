@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<rect width="1200" height="760" fill="#fff"/>
+<style>text{font-family:Arial,sans-serif;fill:#111}.h{font-size:31px;font-weight:700}.t{font-size:20px;font-weight:700}.b{font-size:16px}.box{fill:#f7f7f7;stroke:#333;stroke-width:2}</style>
+<text x="50" y="55" class="h">Заключение — book-level synthesis</text>
+<text x="50" y="88" class="b">Source: PDF 280 · project artifact number 14 · source heading itself is unnumbered</text>
+
+<rect x="50" y="125" width="340" height="190" rx="14" class="box"/>
+<text x="75" y="165" class="t">1. Hardware shift</text>
+<text x="75" y="200" class="b">clock-frequency framing</text>
+<text x="75" y="230" class="b">→ more processors</text>
+<text x="75" y="260" class="b">author's historical framing</text>
+<text x="75" y="290" class="b">not independently verified here</text>
+
+<rect x="430" y="125" width="340" height="190" rx="14" class="box"/>
+<text x="455" y="165" class="t">2. Software response</text>
+<text x="455" y="200" class="b">expose useful parallelism</text>
+<text x="455" y="230" class="b">control shared state</text>
+<text x="455" y="260" class="b">synchronize deliberately</text>
+<text x="455" y="290" class="b">measure actual scaling</text>
+
+<rect x="810" y="125" width="340" height="190" rx="14" class="box"/>
+<text x="835" y="165" class="t">3. Go framing</text>
+<text x="835" y="200" class="b">Go is author's chosen tool</text>
+<text x="835" y="230" class="b">goroutines / channels</text>
+<text x="835" y="260" class="b">multicore-oriented design</text>
+<text x="835" y="290" class="b">historical intent claim scoped</text>
+
+<rect x="50" y="365" width="1100" height="200" rx="14" class="box"/>
+<text x="75" y="405" class="t">Book-level invariant</text>
+<text x="75" y="445" class="b">More processors ≠ automatic speedup.</text>
+<text x="75" y="480" class="b">Correct decomposition + race-free state + bounded synchronization cost + measurement</text>
+<text x="75" y="515" class="b">→ only then can a multicore performance claim be accepted.</text>
+
+<text x="50" y="635" class="t">Boundary</text>
+<text x="50" y="670" class="b">Page 281 «Об авторе» is excluded from this artifact.</text>
+</svg>
