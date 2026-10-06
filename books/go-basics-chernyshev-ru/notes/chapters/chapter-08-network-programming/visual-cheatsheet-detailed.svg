@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120">
+<rect width="1600" height="1120" fill="#f4f7fb"/>
+<rect x="12" y="12" width="1576" height="78" rx="14" fill="#26384d"/>
+<text x="800" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">Основы Go — глава 8: detailed map</text>
+<text x="800" y="72" font-family="Arial, sans-serif" font-size="15.5" fill="#dce8f4" text-anchor="middle">network basics → UDP/TCP → chat → HTTP/REST/OpenAPI → service → Tic-tac-toe v.7</text>
+<rect x="14" y="110" width="382" height="270" rx="12" fill="#f7fbff" stroke="#5b98cf" stroke-width="2"/>
+<text x="32" y="140" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#173d64">1. Network foundations</text>
+<text x="36" y="171" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="36" dy="0">Protocol = agreed language between programs.</tspan>
+<tspan x="36" dy="20">TCP/UDP operate over IP in source framing.</tspan>
+<tspan x="36" dy="20">Socket address combines address + port.</tspan>
+<tspan x="36" dy="20">Network exchange is byte-oriented.</tspan>
+<tspan x="36" dy="20">Go uses net and net/http packages.</tspan>
+</text>
+<rect x="408" y="110" width="382" height="270" rx="12" fill="#f6fff8" stroke="#58ad79" stroke-width="2"/>
+<text x="426" y="140" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#18572f">2. UDP / TCP sockets</text>
+<text x="430" y="171" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="430" dy="0">UDP: ResolveUDPAddr / DialUDP / ListenUDP.</tspan>
+<tspan x="430" dy="20">ReadFromUDP / WriteToUDP exchange datagrams.</tspan>
+<tspan x="430" dy="20">TCP: Dial / Listen / Accept.</tspan>
+<tspan x="430" dy="20">Read/Write exchange stream data.</tspan>
+<tspan x="430" dy="20">goroutine-per-connection enables multi-client server.</tspan>
+</text>
+<rect x="802" y="110" width="382" height="270" rx="12" fill="#fff9f4" stroke="#d49a4c" stroke-width="2"/>
+<text x="820" y="140" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#714500">3. TCP chat</text>
+<text x="824" y="171" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="824" dy="0">Client sends and receives in separate goroutines.</tspan>
+<tspan x="824" dy="20">WaitGroup coordinates client shutdown.</tspan>
+<tspan x="824" dy="20">Server stores active connections.</tspan>
+<tspan x="824" dy="20">Mutex protects connection-list mutation.</tspan>
+<tspan x="824" dy="20">Broadcast sends one client message to others.</tspan>
+</text>
+<rect x="1196" y="110" width="390" height="270" rx="12" fill="#fff7fb" stroke="#cf6d99" stroke-width="2"/>
+<text x="1214" y="140" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#842044">4. HTTP / REST</text>
+<text x="1218" y="171" font-family="Arial, sans-serif" font-size="12.7" fill="#19324a">
+<tspan x="1218" dy="0">REST uses HTTP client-server messages.</tspan>
+<tspan x="1218" dy="20">GET / PUT / POST / DELETE are highlighted.</tspan>
+<tspan x="1218" dy="20">HTTP = headers + optional body.</tspan>
+<tspan x="1218" dy="20">Status line reports protocol/code/description.</tspan>
+<tspan x="1218" dy="20">Resources should be represented with nouns.</tspan>
+</text>
+<rect x="14" y="398" width="502" height="290" rx="12" fill="#f7f7ff" stroke="#8179d6" stroke-width="2"/>
+<text x="32" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#474092">5. OpenAPI contract</text>
+<text x="36" y="459" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="36" dy="0">info describes API metadata.</tspan>
+<tspan x="36" dy="20">paths declares endpoints and methods.</tspan>
+<tspan x="36" dy="20">components stores reusable schemas.</tspan>
+<tspan x="36" dy="20">parameters use in:path or in:query.</tspan>
+<tspan x="36" dy="20">requestBody maps application/json to schema.</tspan>
+</text>
+<rect x="528" y="398" width="502" height="290" rx="12" fill="#f5fff7" stroke="#58ad79" stroke-width="2"/>
+<text x="546" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#18572f">6. ToDo REST service</text>
+<text x="550" y="459" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="550" dy="0">gorilla/mux maps method + path to handler.</tspan>
+<tspan x="550" dy="20">Route registry stores name/method/pattern/handler.</tspan>
+<tspan x="550" dy="20">Handlers validate path/query/body data.</tspan>
+<tspan x="550" dy="20">Repository performs SQLite/GORM operations.</tspan>
+<tspan x="550" dy="20">Responses carry JSON + HTTP status.</tspan>
+</text>
+<rect x="1042" y="398" width="544" height="290" rx="12" fill="#fffdf3" stroke="#d5ad37" stroke-width="2"/>
+<text x="1060" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#714500">7. Final network protocol</text>
+<text x="1064" y="459" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="1064" dy="0">network package defines Command + JSON payload types.</tspan>
+<tspan x="1064" dy="20">Commands cover nickname, rooms, moves and game state.</tspan>
+<tspan x="1064" dy="20">Server handleCommand routes by command type.</tspan>
+<tspan x="1064" dy="20">Rooms own board/game/player coordination.</tspan>
+<tspan x="1064" dy="20">Shared state is protected with mutex/RWMutex.</tspan>
+</text>
+<rect x="14" y="706" width="760" height="278" rx="12" fill="#f4fbff" stroke="#6d9fc8" stroke-width="2"/>
+<text x="32" y="736" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#174d70">8. Tic-tac-toe v.7 — server</text>
+<text x="36" y="768" font-family="Arial, sans-serif" font-size="12.7" fill="#19324a">
+<tspan x="36" dy="0">Server accepts many TCP clients via goroutines.</tspan>
+<tspan x="36" dy="20">Rooms support PvP and PvC with board/difficulty settings.</tspan>
+<tspan x="36" dy="20">Move handler resolves room/player and advances state.</tspan>
+<tspan x="36" dy="20">Server broadcasts init/update/end messages to players.</tspan>
+<tspan x="36" dy="20">DB stores completed games queried through network commands.</tspan>
+</text>
+<rect x="786" y="706" width="800" height="278" rx="12" fill="#fff8f2" stroke="#d17e4f" stroke-width="2"/>
+<text x="804" y="736" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#7b3e1e">9. Tic-tac-toe v.7 — client</text>
+<text x="808" y="768" font-family="Arial, sans-serif" font-size="12.7" fill="#19324a">
+<tspan x="808" dy="0">Client tracks explicit application states.</tspan>
+<tspan x="808" dy="20">readFromServer runs in dedicated goroutine.</tspan>
+<tspan x="808" dy="20">JSON decoder reads Command + Payload messages.</tspan>
+<tspan x="808" dy="20">Message type selects a dedicated response handler.</tspan>
+<tspan x="808" dy="20">CLI mode selects server/client and configurable address.</tspan>
+</text>
+<rect x="14" y="1004" width="1572" height="88" rx="10" fill="#26384d"/>
+<text x="800" y="1031" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Acceptance: explain UDP/TCP sockets, HTTP/REST/OpenAPI, mux routing and final TCP protocol architecture.</text>
+<text x="800" y="1058" font-family="Arial, sans-serif" font-size="14.5" fill="#dce8f4" text-anchor="middle">Project acceptance: trace client action → message → server handler → room/repository → response → client state update.</text>
+<text x="800" y="1082" font-family="Arial, sans-serif" font-size="13.5" fill="#dce8f4" text-anchor="middle">RAG-only • PDF 417–507 • summary p0506–p0507 • questions p0507</text>
+</svg>
