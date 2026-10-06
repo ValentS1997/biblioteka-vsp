@@ -2,10 +2,25 @@ schema_version: "1.0"
 
 workflow:
   id: "DYNAMIC-IR-RU-TRANSLATION-WORKFLOW"
-  status: "IN_PROGRESS"
+  status: "FROZEN"
   book_id: "dynamic-incident-response-joshua-wright-en-2026"
   source_language: "en"
   target_language: "ru"
+
+freeze:
+  effective_date: "2026-10-06"
+  reason: >-
+    Translation and publication assembly are frozen. The canonical English RAG
+    passed an independent current-process audit; the active defect is in the
+    Russian translation/assembly QA path, including third-party marker
+    preservation.
+  resume_requires:
+    - "explicit user approval"
+    - "root-cause fix for translation/assembly marker preservation"
+    - "fresh end-to-end QA pass"
+  mutation_policy: >-
+    Do not create, modify, assemble or publish Russian translation artifacts
+    while status is FROZEN.
 
 source_truth:
   canonical: "books/dynamic-incident-response-joshua-wright-en-2026/rag/"
