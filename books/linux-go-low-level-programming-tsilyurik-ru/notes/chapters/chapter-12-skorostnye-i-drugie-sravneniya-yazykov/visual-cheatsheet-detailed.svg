@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1160" viewBox="0 0 1600 1160">
+<rect width="1600" height="1160" fill="#fff"/>
+<style>text{font-family:Arial,sans-serif;fill:#111}.h{font-size:35px;font-weight:700}.s{font-size:22px;font-weight:700}.b{font-size:16px}.sm{font-size:14px}.box{fill:#f8f8f8;stroke:#333;stroke-width:2}</style>
+<text x="55" y="55" class="h">Глава 12 — Скоростные и другие сравнения языков · detailed</text>
+<text x="55" y="90" class="b">Boundary: PDF 244–257 · page 258 starts «Многопроцессорные параллельные вычисления»</text>
+
+<rect x="55" y="125" width="475" height="245" rx="14" class="box"/>
+<text x="80" y="165" class="s">1. Measurement discipline</text>
+<text x="80" y="202" class="b">time command</text>
+<text x="80" y="234" class="b">repeat series; skip first run</text>
+<text x="80" y="266" class="b">same input size</text>
+<text x="80" y="298" class="b">record compiler/runtime version</text>
+<text x="80" y="330" class="sm">nice -9 is priority-affecting, not read-only.</text>
+
+<rect x="565" y="125" width="475" height="245" rx="14" class="box"/>
+<text x="590" y="165" class="s">2. Fibonacci</text>
+<text x="590" y="202" class="b">intentional inefficient recursion</text>
+<text x="590" y="234" class="b">C / C++ / Go variants</text>
+<text x="590" y="266" class="b">GCC / Clang / gccgo / gc</text>
+<text x="590" y="298" class="b">same output before timing</text>
+<text x="590" y="330" class="b">file / ldd inspect linkage</text>
+
+<rect x="1075" y="125" width="470" height="245" rx="14" class="box"/>
+<text x="1100" y="165" class="s">3. Bubble sort</text>
+<text x="1100" y="202" class="b">descending worst-case input</text>
+<text x="1100" y="234" class="b">swap count = correctness signal</text>
+<text x="1100" y="266" class="b">C++ uses STL vector/iterators</text>
+<text x="1100" y="298" class="b">comparison explicitly non-equivalent</text>
+<text x="1100" y="330" class="sm">Go listing contains a code/build mismatch.</text>
+
+<rect x="55" y="405" width="475" height="260" rx="14" class="box"/>
+<text x="80" y="445" class="s">4. Tower of Hanoi</text>
+<text x="80" y="482" class="b">recursive move decomposition</text>
+<text x="80" y="514" class="b">negative input enables debug output</text>
+<text x="80" y="546" class="b">N=30 → 1073741823 moves</text>
+<text x="80" y="578" class="b">build shown with -O3</text>
+<text x="80" y="610" class="b">timing remains host-specific</text>
+
+<rect x="565" y="405" width="475" height="260" rx="14" class="box"/>
+<text x="590" y="445" class="s">5. Sieve</text>
+<text x="590" y="482" class="b">array / []bool scanning</text>
+<text x="590" y="514" class="b">same prime count across variants</text>
+<text x="590" y="546" class="b">N=50000000 → 3001134</text>
+<text x="590" y="578" class="b">GCC/Clang/gccgo/gc with -O3 context</text>
+<text x="590" y="610" class="sm">C listing has missing semicolon vs successful build.</text>
+
+<rect x="1075" y="405" width="470" height="260" rx="14" class="box"/>
+<text x="1100" y="445" class="s">6. Interpretation gate</text>
+<text x="1100" y="482" class="b">correct result?</text>
+<text x="1100" y="514" class="b">same algorithm?</text>
+<text x="1100" y="546" class="b">same optimization level?</text>
+<text x="1100" y="578" class="b">source structures comparable?</text>
+<text x="1100" y="610" class="b">repeatable timing?</text>
+
+<rect x="55" y="705" width="720" height="245" rx="14" class="box"/>
+<text x="80" y="745" class="s">7. Operational classes</text>
+<text x="80" y="782" class="b">read-only: versions / file / ldd / ls</text>
+<text x="80" y="814" class="b">modify: apt install / make / compilers</text>
+<text x="80" y="846" class="b">workload: benchmark binaries</text>
+<text x="80" y="878" class="b">priority: nice -9</text>
+
+<rect x="825" y="705" width="720" height="245" rx="14" class="box"/>
+<text x="850" y="745" class="s">8. Source findings</text>
+<text x="850" y="782" class="b">invalid-looking Go type tokenization</text>
+<text x="850" y="814" class="b">missing C semicolon</text>
+<text x="850" y="846" class="b">complexity notation unclear</text>
+<text x="850" y="878" class="b">optimization policy changes by subsection</text>
+
+<text x="55" y="1040" class="s">Transition</text>
+<text x="55" y="1075" class="b">Page 258 begins chapter 13: «Многопроцессорные параллельные вычисления».</text>
+</svg>
