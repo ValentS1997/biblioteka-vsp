@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1180" viewBox="0 0 1600 1180">
+<rect width="1600" height="1180" fill="#fff"/>
+<style>text{font-family:Arial,sans-serif;fill:#111}.h{font-size:34px;font-weight:700}.s{font-size:22px;font-weight:700}.b{font-size:16px}.sm{font-size:14px}.box{fill:#f8f8f8;stroke:#333;stroke-width:2}</style>
+<text x="55" y="55" class="h">Глава 13 — Многопроцессорные параллельные вычисления · detailed</text>
+<text x="55" y="90" class="b">Boundary: PDF 258–279 · page 280 starts «Заключение»</text>
+
+<rect x="55" y="125" width="475" height="245" rx="14" class="box"/>
+<text x="80" y="165" class="s">1. Activation models</text>
+<text x="80" y="202" class="b">fork → processes</text>
+<text x="80" y="234" class="b">pthread_create → kernel threads</text>
+<text x="80" y="266" class="b">goroutines → runtime-managed tasks</text>
+<text x="80" y="298" class="b">compare several N values</text>
+<text x="80" y="330" class="sm">Large process/thread N can exhaust host resources.</text>
+
+<rect x="565" y="125" width="475" height="245" rx="14" class="box"/>
+<text x="590" y="165" class="s">2. Resource boundaries</text>
+<text x="590" y="202" class="b">ulimit -u / -i / -s</text>
+<text x="590" y="234" class="b">/proc/sys/kernel/threads-max</text>
+<text x="590" y="266" class="b">root tuning shown by source</text>
+<text x="590" y="298" class="b">capture original values before change</text>
+<text x="590" y="330" class="sm">Different commands affect different scopes.</text>
+
+<rect x="1075" y="125" width="470" height="245" rx="14" class="box"/>
+<text x="1100" y="165" class="s">3. Race diagnostics</text>
+<text x="1100" y="202" class="b">counter++ is shared mutation</text>
+<text x="1100" y="234" class="b">results vary between runs</text>
+<text x="1100" y="266" class="b">go build -race race.go</text>
+<text x="1100" y="298" class="b">instrumentation changes timing</text>
+<text x="1100" y="330" class="b">diagnostics before optimization</text>
+
+<rect x="55" y="405" width="475" height="260" rx="14" class="box"/>
+<text x="80" y="445" class="s">4. Protecting shared data</text>
+<text x="80" y="482" class="b">atomic increment</text>
+<text x="80" y="514" class="b">mutex critical section</text>
+<text x="80" y="546" class="b">channel-based coordination</text>
+<text x="80" y="578" class="b">contention rises with workers</text>
+<text x="80" y="610" class="sm">races.go listing/result mismatch recorded.</text>
+
+<rect x="565" y="405" width="475" height="260" rx="14" class="box"/>
+<text x="590" y="445" class="s">5. Independent CPU work</text>
+<text x="590" y="482" class="b">toy local MD5 search</text>
+<text x="590" y="514" class="b">1 → 2 → 5 → 10 → 20 workers</text>
+<text x="590" y="546" class="b">elapsed time falls in source setup</text>
+<text x="590" y="578" class="b">benefit saturates beyond CPU count</text>
+<text x="590" y="610" class="sm">Not a general password-security benchmark.</text>
+
+<rect x="1075" y="405" width="470" height="260" rx="14" class="box"/>
+<text x="1100" y="445" class="s">6. Channels and time</text>
+<text x="1100" y="482" class="b">relay pipeline across goroutines</text>
+<text x="1100" y="514" class="b">Timer channel</text>
+<text x="1100" y="546" class="b">AfterFunc callback</text>
+<text x="1100" y="578" class="b">Ticker periodic events</text>
+<text x="1100" y="610" class="b">stop/lifecycle behavior</text>
+
+<rect x="55" y="705" width="720" height="245" rx="14" class="box"/>
+<text x="80" y="745" class="s">7. Basel counterexample</text>
+<text x="80" y="782" class="b">sequential baseline is much faster in shown data</text>
+<text x="80" y="814" class="b">parallel code launches very fine-grained goroutines</text>
+<text x="80" y="846" class="b">each term contends on shared accumulator mutex</text>
+<text x="80" y="878" class="b">more execution capacity makes result no better</text>
+<text x="80" y="910" class="sm">One source sentence reverses the timing direction.</text>
+
+<rect x="825" y="705" width="720" height="245" rx="14" class="box"/>
+<text x="850" y="745" class="s">8. Chapter conclusion</text>
+<text x="850" y="782" class="b">mechanical parallelization may be slower</text>
+<text x="850" y="814" class="b">critical sections need enough useful work</text>
+<text x="850" y="846" class="b">correctness precedes speedup</text>
+<text x="850" y="878" class="b">measure against sequential baseline</text>
+<text x="850" y="910" class="b">optimize granularity, not only worker count</text>
+
+<text x="55" y="1040" class="s">Source findings</text>
+<text x="55" y="1075" class="b">one-goroutine-per-CPU wording · races.go mismatch · MD5 length wording · Basel inversion · branch-count mismatch · risky limit tuning</text>
+</svg>
