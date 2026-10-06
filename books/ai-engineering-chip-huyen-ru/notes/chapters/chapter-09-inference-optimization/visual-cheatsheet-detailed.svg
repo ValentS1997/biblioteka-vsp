@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1260" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 9 — Оптимизация вывода: подробная шпаргалка</title>
+  <desc id="desc">Подробная карта главы 9: metrics, bottlenecks, accelerators, decoding, attention, kernels and inference-service optimization.</desc>
+  <rect width="1600" height="1260" fill="#f7f8fa"/>
+  <rect width="1600" height="112" fill="#17202a"/>
+  <text x="58" y="49" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#ffffff">Глава 9 — Оптимизация вывода</text>
+  <text x="58" y="84" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#d6e4f0">latency · throughput · bottlenecks · hardware · decoding · KV cache · batching · parallelism</text>
+
+  <rect x="50" y="145" width="470" height="245" rx="18" fill="#ffffff" stroke="#5dade2" stroke-width="2"/>
+  <text x="78" y="185" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#1b4f72">1. Measure first</text>
+  <text x="78" y="223" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="78" dy="0">TTFT · TPOT · total latency.</tspan>
+    <tspan x="78" dy="28">p50 / p90 / p95 / p99.</tspan>
+    <tspan x="78" dy="28">TPS · RPS/RPM · goodput.</tspan>
+    <tspan x="78" dy="28">MFU · MBU · cost.</tspan>
+  </text>
+
+  <rect x="565" y="145" width="470" height="245" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="593" y="185" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#196f3d">2. Localize bottleneck</text>
+  <text x="593" y="223" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="593" dy="0">Prefill: parallel input processing → compute-heavy.</tspan>
+    <tspan x="593" dy="28">Decode: sequential token generation → bandwidth-heavy.</tspan>
+    <tspan x="593" dy="28">OOM: capacity issue; often forces slower movement/offload.</tspan>
+    <tspan x="593" dy="36">Roofline analysis maps compute vs bandwidth limits.</tspan>
+  </text>
+
+  <rect x="1080" y="145" width="470" height="245" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1108" y="185" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#9c640c">3. Hardware fit</text>
+  <text x="1108" y="223" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="1108" dy="0">Compute: FLOP/s.</tspan>
+    <tspan x="1108" dy="28">Memory: capacity + bandwidth.</tspan>
+    <tspan x="1108" dy="28">Hierarchy: CPU DRAM → GPU HBM → SRAM.</tspan>
+    <tspan x="1108" dy="28">Energy / TDP constrain scale.</tspan>
+  </text>
+
+  <rect x="50" y="420" width="720" height="285" rx="18" fill="#ffffff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="78" y="460" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#6c3483">4. Model-level optimization</text>
+  <text x="78" y="498" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="78" dy="0">Compression: quantization · distillation · pruning.</tspan>
+    <tspan x="78" dy="28">Decode: speculative · reference-based · parallel/Jacobi/Medusa.</tspan>
+    <tspan x="78" dy="28">Attention: KV cache · window/MQA/GQA/shared KV.</tspan>
+    <tspan x="78" dy="28">Serving memory: PagedAttention · KV compression/quantization.</tspan>
+    <tspan x="78" dy="36" font-weight="700">Model-level changes can alter behavior → run quality regression.</tspan>
+  </text>
+
+  <rect x="810" y="420" width="740" height="285" rx="18" fill="#ffffff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="838" y="460" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#21618c">5. Kernels and compilers</text>
+  <text x="838" y="498" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="838" dy="0">Kernel languages/stacks: CUDA · Triton · ROCm.</tspan>
+    <tspan x="838" dy="28">Optimize via vectorization · parallelization · loop tiling · fusion.</tspan>
+    <tspan x="838" dy="28">FlashAttention is a hardware-aware attention kernel.</tspan>
+    <tspan x="838" dy="28">Compilers: torch.compile · TVM · MLIR · XLA/OpenXLA · TensorRT.</tspan>
+    <tspan x="838" dy="36">Goal: lower model graph into efficient target-hardware kernels.</tspan>
+  </text>
+
+  <rect x="50" y="735" width="470" height="270" rx="18" fill="#ffffff" stroke="#ec7063" stroke-width="2"/>
+  <text x="78" y="775" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#922b21">6. Batching</text>
+  <text x="78" y="813" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="78" dy="0">Static: wait for fixed batch.</tspan>
+    <tspan x="78" dy="28">Dynamic: batch size or timeout.</tspan>
+    <tspan x="78" dy="28">Continuous: refill completed slots immediately.</tspan>
+    <tspan x="78" dy="36">Higher throughput can worsen latency; measure goodput.</tspan>
+  </text>
+
+  <rect x="565" y="735" width="470" height="270" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+  <text x="593" y="775" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#9c640c">7. LLM service methods</text>
+  <text x="593" y="813" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="593" dy="0">Disaggregate prefill and decode resources.</tspan>
+    <tspan x="593" dy="28">Prompt/prefix caching for repeated context.</tspan>
+    <tspan x="593" dy="28">Long shared system prompts benefit strongly.</tspan>
+    <tspan x="593" dy="36">Cache is not free: memory/storage + management.</tspan>
+  </text>
+
+  <rect x="1080" y="735" width="470" height="270" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="1108" y="775" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#196f3d">8. Parallelism</text>
+  <text x="1108" y="813" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="1108" dy="0">Replica: concurrency / easier scaling.</tspan>
+    <tspan x="1108" dy="28">Tensor: split operators; fit larger models.</tspan>
+    <tspan x="1108" dy="28">Pipeline: split stages; communication adds latency.</tspan>
+    <tspan x="1108" dy="28">Context/sequence: long-input specialization.</tspan>
+  </text>
+
+  <rect x="50" y="1040" width="1500" height="145" rx="16" fill="#17202a"/>
+  <text x="78" y="1080" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#ffffff">Operational sequence</text>
+  <text x="78" y="1115" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#d6e4f0">
+    <tspan x="78" dy="0">baseline → compute/bandwidth/capacity localization → smallest targeted model/service/hardware change</tspan>
+    <tspan x="78" dy="29">→ remeasure p95/p99 + goodput + cost + quality → keep or rollback → locate next bottleneck</tspan>
+  </text>
+
+  <text x="50" y="1225" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="15" fill="#566573">Provenance: RAG p0460:c01–p0507:c01 · PDF/printed pages 460–507 · source SHA-256 850c3652…62fba</text>
+</svg>

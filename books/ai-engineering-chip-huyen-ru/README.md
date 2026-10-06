@@ -59,3 +59,4 @@ Canonical readiness command:
 - [Глава 6 — RAG и агенты](notes/chapters/chapter-06-rag-and-agents/README.md)
 - [Глава 7 — Дообучение, или Тонкая настройка](notes/chapters/chapter-07-finetuning/README.md)
 - [Глава 8 — Проектирование наборов данных](notes/chapters/chapter-08-dataset-design/README.md)
+- [Глава 9 — Оптимизация вывода](notes/chapters/chapter-09-inference-optimization/README.md)

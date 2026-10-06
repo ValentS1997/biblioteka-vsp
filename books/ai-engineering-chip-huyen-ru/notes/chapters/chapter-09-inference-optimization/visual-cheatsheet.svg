@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 9 — Оптимизация вывода</title>
+  <desc id="desc">Компактная шпаргалка по bottlenecks, metrics, model/service optimization and parallelism.</desc>
+  <rect width="1600" height="900" fill="#f6f8fb"/>
+  <rect width="1600" height="110" fill="#17202a"/>
+  <text x="56" y="48" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#ffffff">Глава 9 — Оптимизация вывода</text>
+  <text x="56" y="83" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">Measure → localize bottleneck → optimize one layer → remeasure</text>
+
+  <rect x="50" y="145" width="470" height="260" rx="18" fill="#ffffff" stroke="#5dade2" stroke-width="2"/>
+  <text x="78" y="187" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#1b4f72">Metrics</text>
+  <text x="78" y="226" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="78" dy="0">TTFT · TPOT · p50/p95/p99</tspan>
+    <tspan x="78" dy="31">TPS · RPS/RPM · goodput</tspan>
+    <tspan x="78" dy="31">MFU · MBU · cost</tspan>
+    <tspan x="78" dy="31">Average latency alone is insufficient</tspan>
+  </text>
+
+  <rect x="565" y="145" width="470" height="260" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="593" y="187" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#196f3d">Bottlenecks</text>
+  <text x="593" y="226" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="593" dy="0">Prefill → compute-bound</tspan>
+    <tspan x="593" dy="31">Decode → memory-bandwidth-bound</tspan>
+    <tspan x="593" dy="31">Long context → KV-cache pressure</tspan>
+    <tspan x="593" dy="31">OOM ≠ bandwidth, but they interact</tspan>
+  </text>
+
+  <rect x="1080" y="145" width="470" height="260" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1108" y="187" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#9c640c">Hardware</text>
+  <text x="1108" y="226" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1108" dy="0">FLOP/s · memory capacity · bandwidth</tspan>
+    <tspan x="1108" dy="31">CPU DRAM · GPU HBM · SRAM</tspan>
+    <tspan x="1108" dy="31">Accelerator choice follows workload</tspan>
+    <tspan x="1108" dy="31">Energy / TDP also matter</tspan>
+  </text>
+
+  <rect x="50" y="450" width="470" height="270" rx="18" fill="#ffffff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="78" y="492" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#6c3483">Model optimization</text>
+  <text x="78" y="532" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="78" dy="0">Quantize · distill · prune</tspan>
+    <tspan x="78" dy="31">Speculative / reference / parallel decode</tspan>
+    <tspan x="78" dy="31">KV-cache / attention optimization</tspan>
+    <tspan x="78" dy="31">Quality regression required</tspan>
+  </text>
+
+  <rect x="565" y="450" width="470" height="270" rx="18" fill="#ffffff" stroke="#ec7063" stroke-width="2"/>
+  <text x="593" y="492" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#922b21">Kernels / compilers</text>
+  <text x="593" y="532" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="593" dy="0">CUDA · Triton · ROCm</tspan>
+    <tspan x="593" dy="31">Vectorize · parallelize · tile · fuse</tspan>
+    <tspan x="593" dy="31">torch.compile · TVM · XLA · TensorRT</tspan>
+    <tspan x="593" dy="31">Hardware-specific optimization</tspan>
+  </text>
+
+  <rect x="1080" y="450" width="470" height="270" rx="18" fill="#ffffff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="1108" y="492" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#21618c">Service optimization</text>
+  <text x="1108" y="532" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1108" dy="0">Static / dynamic / continuous batching</tspan>
+    <tspan x="1108" dy="31">Prefill-decode disaggregation</tspan>
+    <tspan x="1108" dy="31">Prompt/prefix caching</tspan>
+    <tspan x="1108" dy="31">Replica · tensor · pipeline parallelism</tspan>
+  </text>
+
+  <rect x="50" y="775" width="1500" height="72" rx="14" fill="#17202a"/>
+  <text x="78" y="820" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#ffffff">Принцип: throughput без SLO — не цель; оптимизируй bottleneck, а не модную технику.</text>
+</svg>
