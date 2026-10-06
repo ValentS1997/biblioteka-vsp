@@ -10,11 +10,11 @@ Russian edition: «Спринт Бук». ISBN `978-601-12-4595-1`.
 
 ## Reading state
 
-Reading is already active in the canonical reading state.
+The user confirmed that reading started on 2026-07-20 and work on the complete book was finished on 2026-10-06.
 
 Canonical reading state: [reading/progress.yaml](reading/progress.yaml).
 
-The exact start date, current page and current chapter remain `[Needs confirmation]`.
+The whole-book completion fact is authoritative; an exact final page number was not separately recorded.
 
 ## Source
 
@@ -61,3 +61,13 @@ Canonical readiness command:
 - [Глава 8 — Проектирование наборов данных](notes/chapters/chapter-08-dataset-design/README.md)
 - [Глава 9 — Оптимизация вывода](notes/chapters/chapter-09-inference-optimization/README.md)
 - [Глава 10 — Архитектура AI-инженерии и обратная связь от пользователей](notes/chapters/chapter-10-ai-engineering-architecture-user-feedback/README.md)
+
+## Book completion
+
+Book work was closed on 2026-10-06.
+
+- All 10 numbered chapters have canonical chapter artifacts.
+- Chapter 10 ends at `p0555:c01`.
+- The next source section is `p0556:c01` — «Эпилог».
+- A source-grounded search found no chapter 11; no synthetic `chapter-11-*` artifact was created.
+- RAG remains `READY_WITH_KNOWN_LIMITATIONS` for future reference and retrieval.

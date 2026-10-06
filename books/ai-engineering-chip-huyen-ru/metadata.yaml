@@ -49,6 +49,6 @@ rag:
 reading:
   progress: "reading/progress.yaml"
   journal: "reading/journal.md"
-  status: in_progress
-  started: "[Needs confirmation]"
-  completed: null
+  status: completed
+  started: "2026-07-20"
+  completed: "2026-10-06"
