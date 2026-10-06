@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1200">
+<rect width="1800" height="1200" fill="#f5f7fa"/><rect width="1800" height="115" fill="#17202a"/>
+<text x="55" y="50" font-family="Arial" font-size="38" font-weight="700" fill="white">Глава 17 — Работа с API</text>
+<text x="55" y="85" font-family="Arial" font-size="20" fill="#d6e4f0">live data acquisition, schema inspection, rate limits and interactive visualization</text>
+<g font-family="Arial" fill="#273746">
+<rect x="45" y="150" width="540" height="300" rx="18" fill="white" stroke="#5dade2" stroke-width="2"/>
+<text x="75" y="195" font-size="25" font-weight="700">Request / response</text><text x="75" y="240" font-size="18">Build API URL + query.</text><text x="75" y="273" font-size="18">requests.get() performs network call.</text><text x="75" y="306" font-size="18">Inspect status_code before processing.</text><text x="75" y="339" font-size="18">r.json() converts response to Python data.</text>
+<rect x="630" y="150" width="540" height="300" rx="18" fill="white" stroke="#7dcea0" stroke-width="2"/>
+<text x="660" y="195" font-size="25" font-weight="700">Schema exploration</text><text x="660" y="240" font-size="18">Check total_count and incomplete_results.</text><text x="660" y="273" font-size="18">items contains repository dictionaries.</text><text x="660" y="306" font-size="18">Inspect keys before choosing fields.</text><text x="660" y="339" font-size="18">Extract only data required by chart.</text>
+<rect x="1215" y="150" width="540" height="300" rx="18" fill="white" stroke="#f5b041" stroke-width="2"/>
+<text x="1245" y="195" font-size="25" font-weight="700">Rate-limit boundary</text><text x="1245" y="240" font-size="18">Search API exposes limit/remaining/reset.</text><text x="1245" y="273" font-size="18">Repeated requests consume quota.</text><text x="1245" y="306" font-size="18">Source numeric values are historical.</text><text x="1245" y="339" font-size="18">Current auth/version/limits need verification.</text>
+<rect x="45" y="495" width="825" height="300" rx="18" fill="white" stroke="#af7ac5" stroke-width="2"/>
+<text x="75" y="540" font-size="25" font-weight="700">Plotly repository chart</text><text x="75" y="585" font-size="18">px.bar(repo links, stars).</text><text x="75" y="618" font-size="18">Custom title and axis labels.</text><text x="75" y="651" font-size="18">Hover: owner + description.</text><text x="75" y="684" font-size="18">HTML repository links on X-axis.</text><text x="75" y="717" font-size="18">update_traces() tunes markers.</text>
+<rect x="915" y="495" width="840" height="300" rx="18" fill="white" stroke="#ec7063" stroke-width="2"/>
+<text x="945" y="540" font-size="25" font-weight="700">Hacker News aggregation</text><text x="945" y="585" font-size="18">Fetch top story IDs.</text><text x="945" y="618" font-size="18">Fetch first 30 stories individually.</text><text x="945" y="651" font-size="18">Build title/link/comments dictionaries.</text><text x="945" y="684" font-size="18">Sort descending via itemgetter('comments').</text><text x="945" y="717" font-size="18">Skip posts missing descendants via try/except.</text>
+<rect x="45" y="840" width="1710" height="270" rx="18" fill="white" stroke="#58d68d" stroke-width="2"/>
+<text x="75" y="885" font-size="25" font-weight="700">Exercises / quality boundary</text>
+<text x="75" y="930" font-size="18">17.1 changes GitHub language query; 17.2 visualizes HN discussions; 17.3 tests live API status; 17.4 requires external docs.</text>
+<text x="75" y="965" font-size="18">Findings: undefined pprint call, visiblity output typo, temporal API/rate-limit claims, live-result reproducibility boundary.</text>
+<text x="75" y="1000" font-size="18">GitHub/HN/Plotly documentation and live APIs were not accessed under rag_only.</text>
+<text x="75" y="1035" font-size="18">e0027:c02–c10 also show legacy chunk-boundary clipping/overlap.</text>
+</g>
+<rect x="45" y="1140" width="1710" height="40" rx="12" fill="#17202a"/>
+<text x="75" y="1167" font-family="Arial" font-size="18" font-weight="700" fill="white">Provenance: e0027:c01–c10 · EPUB spine 27 · OEBPS/Text/978544614112-24.xhtml</text>
+</svg>
