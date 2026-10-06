@@ -57,3 +57,4 @@ Canonical readiness command:
 - [Глава 4 — Оценка систем AI](notes/chapters/chapter-04-evaluating-ai-systems/README.md)
 - [Глава 5 — Промт-инжиниринг](notes/chapters/chapter-05-prompt-engineering/README.md)
 - [Глава 6 — RAG и агенты](notes/chapters/chapter-06-rag-and-agents/README.md)
+- [Глава 7 — Дообучение, или Тонкая настройка](notes/chapters/chapter-07-finetuning/README.md)

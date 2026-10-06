@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 7 — Дообучение</title>
+  <desc id="desc">Компактная шпаргалка: when to finetune, memory constraints, PEFT, LoRA, quantization and tactics.</desc>
+  <rect width="1600" height="900" fill="#f6f8fb"/>
+  <rect width="1600" height="110" fill="#17202a"/>
+  <text x="56" y="48" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#ffffff">Глава 7 — Дообучение</text>
+  <text x="56" y="83" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">Failure type → choose adaptation → fit memory → evaluate</text>
+
+  <rect x="50" y="145" width="470" height="260" rx="18" fill="#ffffff" stroke="#5dade2" stroke-width="2"/>
+  <text x="78" y="187" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#1b4f72">When to finetune</text>
+  <text x="78" y="226" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="78" dy="0">Missing/stale information → RAG first.</tspan>
+    <tspan x="78" dy="31">Persistent behavior/format → finetuning.</tspan>
+    <tspan x="78" dy="31">Prompt/few-shot before expensive training.</tspan>
+    <tspan x="78" dy="31">RAG + finetuning may be combined.</tspan>
+  </text>
+
+  <rect x="565" y="145" width="470" height="260" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="593" y="187" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#196f3d">Memory model</text>
+  <text x="593" y="226" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="593" dy="0">Inference: weights + activations.</tspan>
+    <tspan x="593" dy="31">Training adds gradients + optimizer states.</tspan>
+    <tspan x="593" dy="31">Trainable params drive training memory.</tspan>
+    <tspan x="593" dy="31">Checkpointing trades memory for compute.</tspan>
+  </text>
+
+  <rect x="1080" y="145" width="470" height="260" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1108" y="187" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#9c640c">Precision / quantization</text>
+  <text x="1108" y="226" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1108" dy="0">FP32 · FP16 · BF16 · INT8 · INT4</tspan>
+    <tspan x="1108" dy="31">Fewer bits → lower memory.</tspan>
+    <tspan x="1108" dy="31">Training is more precision-sensitive.</tspan>
+    <tspan x="1108" dy="31">Mixed precision balances stability/cost.</tspan>
+  </text>
+
+  <rect x="50" y="450" width="470" height="270" rx="18" fill="#ffffff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="78" y="492" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#6c3483">PEFT / LoRA</text>
+  <text x="78" y="532" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="78" dy="0">Freeze base weights.</tspan>
+    <tspan x="78" dy="31">Train low-rank A/B matrices.</tspan>
+    <tspan x="78" dy="31">Rank r controls adapter capacity.</tspan>
+    <tspan x="78" dy="31">QLoRA adds 4-bit base-weight storage.</tspan>
+  </text>
+
+  <rect x="565" y="450" width="470" height="270" rx="18" fill="#ffffff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="593" y="492" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#21618c">Model merging</text>
+  <text x="593" y="532" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="593" dy="0">Task vectors · averaging · SLERP</tspan>
+    <tspan x="593" dy="31">TIES / DARE pruning</tspan>
+    <tspan x="593" dy="31">Layer stacking</tspan>
+    <tspan x="593" dy="31">Experimental → evaluate every task.</tspan>
+  </text>
+
+  <rect x="1080" y="450" width="470" height="270" rx="18" fill="#ffffff" stroke="#ec7063" stroke-width="2"/>
+  <text x="1108" y="492" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#922b21">Training tactics</text>
+  <text x="1108" y="532" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1108" dy="0">Progression: cheap → mid → strong model.</tspan>
+    <tspan x="1108" dy="31">Tune learning rate / batch / epochs.</tspan>
+    <tspan x="1108" dy="31">Track train + validation loss.</tspan>
+    <tspan x="1108" dy="31">Choose cost/performance after evaluation.</tspan>
+  </text>
+
+  <rect x="50" y="775" width="1500" height="72" rx="14" fill="#17202a"/>
+  <text x="78" y="820" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#ffffff">Принцип: finetuning оправдан только измеримым improvement после более дешевых adaptation methods.</text>
+</svg>
