@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120">
+<rect width="1600" height="1120" fill="white"/>
+<text x="50" y="60" font-family="sans-serif" font-size="38" font-weight="700">Изучаем Python. 3-е изд. — сводная карта</text>
+<text x="50" y="100" font-family="sans-serif" font-size="19">20 глав + 5 приложений · source-grounded collection</text>
+
+<rect x="50" y="140" width="470" height="260" rx="18" fill="#f4f4f4" stroke="#222"/>
+<text x="80" y="185" font-family="sans-serif" font-size="27" font-weight="700">Core Python</text>
+<text x="80" y="235" font-family="sans-serif" font-size="19">values · lists · dicts</text>
+<text x="80" y="275" font-family="sans-serif" font-size="19">if · for · while</text>
+<text x="80" y="315" font-family="sans-serif" font-size="19">functions · modules</text>
+<text x="80" y="355" font-family="sans-serif" font-size="19">classes · composition</text>
+
+<rect x="565" y="140" width="470" height="260" rx="18" fill="#f4f4f4" stroke="#222"/>
+<text x="595" y="185" font-family="sans-serif" font-size="27" font-weight="700">Reliability</text>
+<text x="595" y="235" font-family="sans-serif" font-size="19">files + Path</text>
+<text x="595" y="275" font-family="sans-serif" font-size="19">exceptions + JSON</text>
+<text x="595" y="315" font-family="sans-serif" font-size="19">pytest + assertions</text>
+<text x="595" y="355" font-family="sans-serif" font-size="19">verify → refactor → regression test</text>
+
+<rect x="1080" y="140" width="470" height="260" rx="18" fill="#f4f4f4" stroke="#222"/>
+<text x="1110" y="185" font-family="sans-serif" font-size="27" font-weight="700">Game project</text>
+<text x="1110" y="235" font-family="monospace" font-size="19">events → state → render</text>
+<text x="1110" y="275" font-family="sans-serif" font-size="19">sprites · groups · collisions</text>
+<text x="1110" y="315" font-family="sans-serif" font-size="19">stats · score · lifecycle</text>
+<text x="1110" y="355" font-family="sans-serif" font-size="19">simple → verify → refactor</text>
+
+<rect x="50" y="450" width="470" height="260" rx="18" fill="#f4f4f4" stroke="#222"/>
+<text x="80" y="495" font-family="sans-serif" font-size="27" font-weight="700">Data & APIs</text>
+<text x="80" y="545" font-family="sans-serif" font-size="19">CSV / GeoJSON / JSON</text>
+<text x="80" y="585" font-family="sans-serif" font-size="19">Matplotlib / Plotly</text>
+<text x="80" y="625" font-family="sans-serif" font-size="19">request → schema → extract</text>
+<text x="80" y="665" font-family="sans-serif" font-size="19">validate before visualization</text>
+
+<rect x="565" y="450" width="470" height="260" rx="18" fill="#f4f4f4" stroke="#222"/>
+<text x="595" y="495" font-family="sans-serif" font-size="27" font-weight="700">Django</text>
+<text x="595" y="545" font-family="sans-serif" font-size="19">model → migration → query</text>
+<text x="595" y="585" font-family="sans-serif" font-size="19">URL → view → template</text>
+<text x="595" y="625" font-family="sans-serif" font-size="19">forms · auth · ownership</text>
+<text x="595" y="665" font-family="sans-serif" font-size="19">Bootstrap → deploy → verify</text>
+
+<rect x="1080" y="450" width="470" height="260" rx="18" fill="#f4f4f4" stroke="#222"/>
+<text x="1110" y="495" font-family="sans-serif" font-size="27" font-weight="700">Operational appendices</text>
+<text x="1110" y="545" font-family="sans-serif" font-size="19">Python environment</text>
+<text x="1110" y="585" font-family="sans-serif" font-size="19">editor + support workflow</text>
+<text x="1110" y="625" font-family="sans-serif" font-size="19">Git snapshots + rollback</text>
+<text x="1110" y="665" font-family="sans-serif" font-size="19">deployment troubleshooting</text>
+
+<rect x="50" y="760" width="1500" height="245" rx="18" fill="#f4f4f4" stroke="#222"/>
+<text x="80" y="805" font-family="sans-serif" font-size="27" font-weight="700">Recurring engineering loop</text>
+<text x="80" y="855" font-family="monospace" font-size="20">baseline → one change → observe → localize → verify → refactor/test → persist/deploy</text>
+<text x="80" y="905" font-family="sans-serif" font-size="19">Critical boundaries: mutation, exception scope, API dynamism, Django ownership, DEBUG, Git destructive recovery.</text>
+<text x="80" y="955" font-family="sans-serif" font-size="19">When stuck: exact goal + exact attempts + exact result → minimal reproducible example → trusted help.</text>
+
+<text x="50" y="1070" font-family="sans-serif" font-size="16">Source-era versions/services preserved; current compatibility requires separate verification.</text>
+</svg>

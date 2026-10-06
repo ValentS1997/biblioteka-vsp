@@ -14,9 +14,19 @@ Verified EPUB metadata:
 - ISBN: `9785446141128`
 - edition: 3
 
+## Project state
+
+Book activity: `COMPLETED`.
+
+Chapter-analysis state: Chapters 1–20 complete.
+
+Appendix-analysis state: Appendices А–Д complete.
+
+Final collection status: `ACCEPTED_WITH_READING_STATE_UNCONFIRMED`.
+
 ## Reading state
 
-Technical onboarding does not imply reading progress.
+Technical/content completion does not imply confirmed reading progress.
 
 Reading activation/progress: `[Needs confirmation]`.
 
@@ -74,3 +84,14 @@ Canonical readiness command:
 - [Глава 18 — Знакомство с Django](notes/chapters/chapter-18-getting-started-with-django/README.md)
 - [Глава 19 — Учетные записи пользователей](notes/chapters/chapter-19-user-accounts/README.md)
 - [Глава 20 — Оформление и развертывание приложения](notes/chapters/chapter-20-styling-and-deploying-an-app/README.md)
+
+
+## Appendix artifacts
+
+- [Приложения А–Д](notes/appendices/README.md)
+
+## Final collection artifacts
+
+- [Final audit](notes/final-audit.md)
+- [Book-wide cheatsheet](notes/book-cheatsheet.md)
+- [Book-wide visual cheatsheet](notes/book-cheatsheet.svg)
