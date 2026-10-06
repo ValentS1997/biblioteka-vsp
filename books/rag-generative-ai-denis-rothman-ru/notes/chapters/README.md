@@ -14,5 +14,7 @@
 
 - [Глава 7. Создание масштабируемой RAG на основе графа знаний с помощью API Википедии и LlamaIndex](./chapter-07-scalable-knowledge-graph-rag/) — `RAG_GROUNDED`, PDF 199–226.
 
+- [Глава 8. Создание динамических RAG с помощью Chroma и Hugging Face Llama](./chapter-08-dynamic-rag-chroma-huggingface-llama/) — `RAG_GROUNDED`, PDF 227–252.
+
 Book-level readiness must be `READY` before running
 `BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.6`.
