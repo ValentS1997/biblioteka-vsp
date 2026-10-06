@@ -1,5 +1,5 @@
 schema: "biblioteka-vsp/registry/v2"
-updated: "2026-10-05"
+updated: "2026-10-06"
 
 source:
   file: "registry/reestr_knig_0046.xlsx"
@@ -346,11 +346,11 @@ verification_sources:
 
 electronic_holdings:
   source: "user-provided local file inventory + uploaded file confirmation"
-  observed_date: "2026-10-03"
-  file_count: 24
+  observed_date: "2026-10-06"
+  file_count: 22
   matched_unambiguous: 21
   needs_confirmation: 0
-  unregistered: 3
+  unregistered: 1
   files:
     - filename: "AI-инженерия. Построение приложений с использовани. Хьюен.pdf"
       format: "pdf"
@@ -410,16 +410,6 @@ electronic_holdings:
       format: "epub"
       match_status: "matched"
       inventory_numbers: ["0023"]
-    - filename: "Командная строка Linux.Лучшие практики. Барретт.pdf"
-      format: "pdf"
-      match_status: "unregistered"
-      inventory_numbers: []
-      knowledge_id: "linux-command-line-best-practices-barrett-ru"
-    - filename: "Командная строка Linux. Полное руководство. Шоттс.pdf"
-      format: "pdf"
-      match_status: "unregistered"
-      inventory_numbers: []
-      knowledge_id: "linux-command-line-shotts-ru"
     - filename: " Компьютерные сети. Принципы, технологии, протоколы. Олиферы.pdf"
       format: "pdf"
       match_status: "matched"
