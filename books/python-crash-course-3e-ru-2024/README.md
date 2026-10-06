@@ -61,3 +61,4 @@ Canonical readiness command:
 - [Глава 5 — Оператор if](notes/chapters/chapter-05-if-statements/README.md)
 - [Глава 6 — Словари](notes/chapters/chapter-06-dictionaries/README.md)
 - [Глава 7 — Ввод данных и циклы while](notes/chapters/chapter-07-input-and-while-loops/README.md)
+- [Глава 8 — Функции](notes/chapters/chapter-08-functions/README.md)
