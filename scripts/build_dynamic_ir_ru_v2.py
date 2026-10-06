@@ -450,10 +450,10 @@ def find_mixed_heading_candidates(text: str):
         if line.strip().startswith("~~~") or line.strip().startswith("```"):
             in_fence = not in_fence
             continue
-        if in_fence or not re.match(r"^#{1,4}\\s+", line):
+        if in_fence or not re.match(r"^#{1,4}\s+", line):
             continue
-        title = re.sub(r"^#{1,4}\\s+", "", line).strip()
-        if re.match(r"^(Рисунок|Листинг|Listing|Таблица|Table)\\s+", title, re.I):
+        title = re.sub(r"^#{1,4}\s+", "", line).strip()
+        if re.match(r"^(Рисунок|Листинг|Listing|Таблица|Table)\s+", title, re.I):
             continue
         latin = sum(ch.isascii() and ch.isalpha() for ch in title)
         cyr = sum(("А" <= ch <= "я") or ch in "Ёё" for ch in title)
