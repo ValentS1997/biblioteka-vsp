@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="980" viewBox="0 0 1360 980">
+  <rect width="1360" height="980" fill="white"/>
+  <text x="55" y="62" font-family="sans-serif" font-size="34" font-weight="700">Глава 18 — «Дополнительно»</text>
+  <text x="55" y="98" font-family="sans-serif" font-size="18">RAG PDF 137–144 · substantive content 137–143</text>
+
+  <rect x="55" y="140" width="390" height="200" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="80" y="180" font-family="sans-serif" font-size="22" font-weight="700">Unpacking</text>
+  <text x="80" y="220" font-family="monospace" font-size="18">a, b = expr</text>
+  <text x="80" y="255" font-family="monospace" font-size="18">a, *b = [1,2,3,4]</text>
+  <text x="80" y="290" font-family="monospace" font-size="18">a, b = b, a</text>
+
+  <rect x="485" y="140" width="390" height="200" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="510" y="180" font-family="sans-serif" font-size="22" font-weight="700">Compact forms</text>
+  <text x="510" y="220" font-family="monospace" font-size="18">lambda i: i['y']</text>
+  <text x="510" y="255" font-family="monospace" font-size="18">[2*i for i in ...]</text>
+  <text x="510" y="290" font-family="monospace" font-size="18">*args / **kwargs</text>
+
+  <rect x="915" y="140" width="390" height="200" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="940" y="180" font-family="sans-serif" font-size="22" font-weight="700">Class protocol</text>
+  <text x="940" y="220" font-family="monospace" font-size="18">__str__ / __len__</text>
+  <text x="940" y="255" font-family="monospace" font-size="18">__getitem__</text>
+  <text x="940" y="290" font-family="monospace" font-size="18">__repr__</text>
+
+  <rect x="55" y="395" width="590" height="220" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="80" y="435" font-family="sans-serif" font-size="22" font-weight="700">Execution boundary</text>
+  <text x="80" y="475" font-family="monospace" font-size="18">exec(code_string)</text>
+  <text x="80" y="515" font-family="monospace" font-size="18">eval(expression_string)</text>
+  <text x="80" y="555" font-family="sans-serif" font-size="18">effect depends on supplied source text</text>
+
+  <rect x="695" y="395" width="610" height="220" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="720" y="435" font-family="sans-serif" font-size="22" font-weight="700">Checks / strings</text>
+  <text x="720" y="475" font-family="monospace" font-size="18">assert condition</text>
+  <text x="720" y="515" font-family="monospace" font-size="18">\n · \t · \\</text>
+  <text x="720" y="555" font-family="monospace" font-size="18">r"raw string"</text>
+
+  <rect x="55" y="670" width="1250" height="140" rx="12" fill="#fafafa" stroke="#333"/>
+  <text x="80" y="710" font-family="sans-serif" font-size="22" font-weight="700">Practical takeaway</text>
+  <text x="80" y="748" font-family="sans-serif" font-size="18">compact idioms + object protocols + runtime checks + string literal control</text>
+  <text x="80" y="782" font-family="sans-serif" font-size="17">Next: chapter 19 «Что дальше».</text>
+
+  <text x="55" y="865" font-family="sans-serif" font-size="16">Findings: special-method extraction corruption; exec/repr/raw-string claims scoped to source examples.</text>
+  <text x="55" y="898" font-family="sans-serif" font-size="16">18.12 summary on PDF 143; PDF 144 contains only chapter footer.</text>
+</svg>
