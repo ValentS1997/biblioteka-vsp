@@ -13,6 +13,7 @@ Canonical process and entrypoint templates.
 
 | Responsibility | Template | Version |
 |---|---|---:|
+| Branch/process compliance routing and drift gate | [process-compliance-router-v1.0.yaml](process-compliance-router-v1.0.yaml) | 1.0 |
 | Git execution / local-exception policy | [git-execution-policy-v1.0.yaml](git-execution-policy-v1.0.yaml) | 1.0 |
 | Optional one-shot preload of many future PDF/EPUB LFS objects | [source-vault-batch-stage-v1.0.yaml](source-vault-batch-stage-v1.0.yaml) | 1.0 |
 | One-time book source/RAG preparation | [book-onboarding-v1.3.yaml](book-onboarding-v1.3.yaml) | 1.3 |
