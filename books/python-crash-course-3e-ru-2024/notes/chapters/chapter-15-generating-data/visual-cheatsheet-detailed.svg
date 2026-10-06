@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1200">
+<rect width="1800" height="1200" fill="#f5f7fa"/><rect width="1800" height="115" fill="#17202a"/>
+<text x="55" y="50" font-family="Arial" font-size="38" font-weight="700" fill="white">Глава 15 — Генерирование данных</text>
+<text x="55" y="85" font-family="Arial" font-size="20" fill="#d6e4f0">synthetic datasets, visual encoding, simulation and output artifacts</text>
+<g font-family="Arial" fill="#273746">
+<rect x="45" y="150" width="540" height="300" rx="18" fill="white" stroke="#5dade2" stroke-width="2"/>
+<text x="75" y="195" font-size="25" font-weight="700">Matplotlib pipeline</text><text x="75" y="240" font-size="18">Explicit x/y values avoid index assumptions.</text><text x="75" y="273" font-size="18">plot() for lines; scatter() for points.</text><text x="75" y="306" font-size="18">axis(), ticklabel_format(), title/labels.</text><text x="75" y="339" font-size="18">Colors and colormaps reveal patterns.</text>
+<rect x="630" y="150" width="540" height="300" rx="18" fill="white" stroke="#7dcea0" stroke-width="2"/>
+<text x="660" y="195" font-size="25" font-weight="700">RandomWalk</text><text x="660" y="240" font-size="18">Start at (0,0).</text><text x="660" y="273" font-size="18">Random direction × random distance.</text><text x="660" y="306" font-size="18">Skip zero-zero movement.</text><text x="660" y="339" font-size="18">Color by point order; highlight endpoints.</text>
+<rect x="1215" y="150" width="540" height="300" rx="18" fill="white" stroke="#f5b041" stroke-width="2"/>
+<text x="1245" y="195" font-size="25" font-weight="700">Scale / presentation</text><text x="1245" y="240" font-size="18">Hide axes when they distract.</text><text x="1245" y="273" font-size="18">set_aspect('equal') preserves geometry.</text><text x="1245" y="306" font-size="18">figsize/dpi tune viewport use.</text><text x="1245" y="339" font-size="18">50000 points can expose resource limits.</text>
+<rect x="45" y="495" width="825" height="300" rx="18" fill="white" stroke="#af7ac5" stroke-width="2"/>
+<text x="75" y="540" font-size="25" font-weight="700">Dice / Plotly</text><text x="75" y="585" font-size="18">Die.roll() uses randint(1, num_sides).</text><text x="75" y="618" font-size="18">Repeated rolls populate results.</text><text x="75" y="651" font-size="18">count(value) builds frequencies.</text><text x="75" y="684" font-size="18">px.bar() visualizes discrete results.</text><text x="75" y="717" font-size="18">update_layout(xaxis_dtick=1) labels every result.</text>
+<rect x="915" y="495" width="840" height="300" rx="18" fill="white" stroke="#ec7063" stroke-width="2"/>
+<text x="945" y="540" font-size="25" font-weight="700">Exercises 15.1–15.10</text><text x="945" y="585" font-size="18">Cubes + colormap.</text><text x="945" y="618" font-size="18">Random-walk line view + step refactor.</text><text x="945" y="651" font-size="18">D8, three D6, product distributions.</text><text x="945" y="684" font-size="18">List comprehensions for simulations.</text><text x="945" y="717" font-size="18">Cross-library experiment requires external docs.</text>
+<rect x="45" y="840" width="1710" height="270" rx="18" fill="white" stroke="#58d68d" stroke-width="2"/>
+<text x="75" y="885" font-size="25" font-weight="700">Quality / risk boundary</text>
+<text x="75" y="930" font-size="18">pip install --user matplotlib/plotly/pandas changes Python environment; current compatibility is not verified.</text>
+<text x="75" y="965" font-size="18">savefig() and write_html() create persistent artifacts; overwrite behavior is not specified by chapter source.</text>
+<text x="75" y="1000" font-size="18">Findings: xlabel naming, point-number range wording, figure/subplots API wording, chunk clipping.</text>
+<text x="75" y="1035" font-size="18">Source style 'seaborn' is preserved as historical source example; current availability remains [Needs confirmation].</text>
+</g>
+<rect x="45" y="1140" width="1710" height="40" rx="12" fill="#17202a"/>
+<text x="75" y="1167" font-family="Arial" font-size="18" font-weight="700" fill="white">Provenance: e0025:c01–c13 · EPUB spine 25 · OEBPS/Text/978544614112-22.xhtml</text>
+</svg>
