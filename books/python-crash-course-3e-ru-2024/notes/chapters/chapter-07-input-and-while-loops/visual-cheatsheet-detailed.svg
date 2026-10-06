@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 7 — Ввод данных и циклы while: подробная шпаргалка</title>
+  <desc id="desc">Пользовательский ввод, преобразование типов, циклы while, флаги, break, continue и изменение коллекций.</desc>
+  <rect width="1800" height="1200" fill="#f5f7fa"/>
+  <rect width="1800" height="116" fill="#17202a"/>
+  <text x="56" y="50" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="38" font-weight="700" fill="#fff">Глава 7 — Ввод данных и циклы while</text>
+  <text x="56" y="86" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">интерактивность, состояние цикла и гарантированный путь завершения</text>
+
+  <rect x="45" y="150" width="540" height="300" rx="18" fill="#fff" stroke="#5dade2" stroke-width="2"/>
+  <text x="75" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#1b4f72">input и int</text>
+  <text x="75" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">input(prompt) ждёт пользовательский текст.</tspan>
+    <tspan x="75" dy="31">Source: результат input — строка.</tspan>
+    <tspan x="75" dy="31">'21' >= 18 → TypeError.</tspan>
+    <tspan x="75" dy="31">age = int(age) → числовое сравнение.</tspan>
+    <tspan x="75" dy="31">% возвращает остаток и проверяет кратность.</tspan>
+  </text>
+
+  <rect x="630" y="150" width="540" height="300" rx="18" fill="#fff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="660" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#196f3d">while lifecycle</text>
+  <text x="660" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="660" dy="0">1. Начальное состояние.</tspan>
+    <tspan x="660" dy="31">2. Проверка условия.</tspan>
+    <tspan x="660" dy="31">3. Выполнение тела.</tspan>
+    <tspan x="660" dy="31">4. Изменение состояния.</tspan>
+    <tspan x="660" dy="31">5. Повтор или выход.</tspan>
+  </text>
+
+  <rect x="1215" y="150" width="540" height="300" rx="18" fill="#fff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1245" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#9c640c">Exit control</text>
+  <text x="1245" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1245" dy="0">quit value → условие while.</tspan>
+    <tspan x="1245" dy="31">flag → active True/False.</tspan>
+    <tspan x="1245" dy="31">break → немедленный выход.</tspan>
+    <tspan x="1245" dy="31">continue → следующая итерация.</tspan>
+    <tspan x="1245" dy="31">Infinite loop stop: Ctrl+C.</tspan>
+  </text>
+
+  <rect x="45" y="495" width="825" height="300" rx="18" fill="#fff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="75" y="540" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#6c3483">Изменение списков</text>
+  <text x="75" y="583" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">while unconfirmed_users:</tspan>
+    <tspan x="75" dy="31">pop() → current_user → append() confirmed.</tspan>
+    <tspan x="75" dy="42">while 'cat' in pets:</tspan>
+    <tspan x="75" dy="31">remove('cat') повторяется до отсутствия значения.</tspan>
+    <tspan x="75" dy="42">Source rationale: while подходит, когда список меняется.</tspan>
+  </text>
+
+  <rect x="915" y="495" width="840" height="300" rx="18" fill="#fff" stroke="#ec7063" stroke-width="2"/>
+  <text x="945" y="540" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#922b21">Опрос → словарь</text>
+  <text x="945" y="583" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="945" dy="0">responses = {}</tspan>
+    <tspan x="945" dy="31">name = input(...)</tspan>
+    <tspan x="945" dy="31">response = input(...)</tspan>
+    <tspan x="945" dy="31">responses[name] = response</tspan>
+    <tspan x="945" dy="31">flag завершает сбор → items() выводит результаты.</tspan>
+  </text>
+
+  <rect x="45" y="840" width="825" height="270" rx="18" fill="#fff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="75" y="885" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#21618c">Упражнения 7.1–7.10</text>
+  <text x="75" y="928" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">Input: car sharing, table, multiples of 10.</tspan>
+    <tspan x="75" dy="30">while: toppings, tickets, three exits.</tspan>
+    <tspan x="75" dy="30">Intentional infinite loop.</tspan>
+    <tspan x="75" dy="30">Move sandwiches, remove pastrami.</tspan>
+    <tspan x="75" dy="30">Dream vacation poll.</tspan>
+  </text>
+
+  <rect x="915" y="840" width="840" height="270" rx="18" fill="#fff" stroke="#58d68d" stroke-width="2"/>
+  <text x="945" y="885" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#1e8449">Quality boundary</text>
+  <text x="945" y="928" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="945" dy="0">mountain_poll output order conflicts with source dict model.</tspan>
+    <tspan x="945" dy="30">e0016:c02–c09 have boundary clipping/overlap.</tspan>
+    <tspan x="945" dy="40">Personal inputs are [Needs confirmation].</tspan>
+    <tspan x="945" dy="30">External/editor behavior is not independently verified.</tspan>
+  </text>
+
+  <rect x="45" y="1140" width="1710" height="40" rx="12" fill="#17202a"/>
+  <text x="75" y="1167" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#fff">Provenance: e0016:c01–c09 · EPUB spine 16 · OEBPS/Text/978544614112-13.xhtml</text>
+</svg>
