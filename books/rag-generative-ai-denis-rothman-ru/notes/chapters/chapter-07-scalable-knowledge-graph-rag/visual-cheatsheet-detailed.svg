@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1260" viewBox="0 0 1600 1260" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 7 — detailed knowledge graph RAG map</title>
+  <desc id="desc">Подробная схема сбора Википедии, Deep Lake, KnowledgeGraphIndex, visualization, reranking and statistics.</desc>
+  <rect width="1600" height="1260" fill="#ffffff"/>
+  <style>
+    text { font-family: Arial, sans-serif; fill: #111; }
+    .h1 { font-size: 31px; font-weight: 700; }
+    .h2 { font-size: 20px; font-weight: 700; }
+    .body { font-size: 15px; }
+    .small { font-size: 13px; }
+    .box { fill: #f8f8f8; stroke: #222; stroke-width: 2; rx: 12; }
+    .arrow { stroke: #222; stroke-width: 3; fill: none; marker-end: url(#a); }
+  </style>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#222"/>
+    </marker>
+  </defs>
+
+  <text x="55" y="55" class="h1">Глава 7. Knowledge Graph RAG — detailed map</text>
+  <text x="55" y="84" class="small">Source: p0199:c01–p0226:c01 · PDF 199–226</text>
+
+  <rect x="55" y="125" width="455" height="230" class="box"/>
+  <text x="80" y="162" class="h2">Component 1 — Wikipedia</text>
+  <text x="80" y="198" class="body">topic = Marketing</text>
+  <text x="80" y="228" class="body">check page + summary + token count</text>
+  <text x="80" y="258" class="body">extract up to maxl linked pages</text>
+  <text x="80" y="288" class="body">write citations file</text>
+  <text x="80" y="318" class="body">write URLs file</text>
+
+  <rect x="570" y="125" width="455" height="230" class="box"/>
+  <text x="595" y="162" class="h2">Component 2 — Deep Lake</text>
+  <text x="595" y="198" class="body">fetch/clean linked documents</text>
+  <text x="595" y="228" class="body">store text + metadata + embedding</text>
+  <text x="595" y="258" class="body">pop_vs controls insertion</text>
+  <text x="595" y="288" class="body">ow=True overwrites dataset</text>
+  <text x="595" y="318" class="body">verify record provenance</text>
+
+  <rect x="1085" y="125" width="455" height="230" class="box"/>
+  <text x="1110" y="162" class="h2">Component 3 — Graph RAG</text>
+  <text x="1110" y="198" class="body">KnowledgeGraphIndex</text>
+  <text x="1110" y="228" class="body">max_triplets_per_chunk=2</text>
+  <text x="1110" y="258" class="body">include_embeddings=True</text>
+  <text x="1110" y="288" class="body">query engine + source nodes</text>
+  <text x="1110" y="318" class="body">PyVis HTML visualization</text>
+
+  <path d="M510 240 H570" class="arrow"/>
+  <path d="M1025 240 H1085" class="arrow"/>
+
+  <text x="55" y="430" class="h2">Query and evaluation</text>
+
+  <rect x="55" y="465" width="350" height="185" class="box"/>
+  <text x="80" y="502" class="body">user query</text>
+  <text x="80" y="532" class="body">graph_query_engine.query()</text>
+  <text x="80" y="562" class="body">response + source_nodes</text>
+  <text x="80" y="592" class="body">query time</text>
+
+  <rect x="445" y="465" width="350" height="185" class="box"/>
+  <text x="470" y="502" class="body">SentenceTransformer</text>
+  <text x="470" y="532" class="body">all-MiniLM-L6-v2</text>
+  <text x="470" y="562" class="body">query↔node cosine</text>
+  <text x="470" y="592" class="body">rerank source nodes</text>
+
+  <rect x="835" y="465" width="350" height="185" class="box"/>
+  <text x="860" y="502" class="body">automated score</text>
+  <text x="860" y="532" class="body">scores[]</text>
+  <text x="860" y="562" class="body">10 examples in source</text>
+
+  <rect x="1225" y="465" width="315" height="185" class="box"/>
+  <text x="1250" y="502" class="body">human feedback</text>
+  <text x="1250" y="532" class="body">rscores[]</text>
+  <text x="1250" y="562" class="body">separate signal</text>
+
+  <path d="M405 555 H445" class="arrow"/>
+  <path d="M795 555 H835" class="arrow"/>
+  <path d="M1185 555 H1225" class="arrow"/>
+
+  <text x="55" y="725" class="h2">Statistics</text>
+
+  <rect x="55" y="760" width="710" height="185" class="box"/>
+  <text x="80" y="797" class="body">mean · median · std dev · variance</text>
+  <text x="80" y="827" class="body">min · max · range</text>
+  <text x="80" y="857" class="body">Q1 · Q3 · IQR</text>
+  <text x="80" y="897" class="small">Source example mean=0.68, median=0.71.</text>
+
+  <rect x="825" y="760" width="715" height="185" class="box"/>
+  <text x="850" y="797" class="h2">Scaling boundary</text>
+  <text x="850" y="827" class="body">Deep Lake can grow incrementally.</text>
+  <text x="850" y="857" class="body">Graph index may not load arbitrarily large full datasets.</text>
+  <text x="850" y="887" class="body">Source suggests subsets or separate datasets by topic.</text>
+
+  <text x="55" y="1015" class="h2">Source issues</text>
+  <rect x="55" y="1050" width="1490" height="145" class="box"/>
+  <text x="80" y="1087" class="body">1. p209 shows invalid Python: except page.exists()==False.</text>
+  <text x="80" y="1117" class="body">2. p218 Hugging Face userdata import is damaged by extraction.</text>
+  <text x="80" y="1147" class="body">3. ow=True is explicitly destructive for an existing Deep Lake dataset.</text>
+</svg>
