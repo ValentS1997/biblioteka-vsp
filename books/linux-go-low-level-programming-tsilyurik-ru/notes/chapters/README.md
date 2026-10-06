@@ -8,3 +8,4 @@ Current chapter workflow:
 ## RAG-grounded chapter work
 
 - [Chapter 1 — «Предыстория Go»](chapter-01-predystoriya-go/) — `RAG_GROUNDED`
+- [Chapter 2 — «Разворачиваем экосистему Go»](chapter-02-razvorachivaem-ekosistemu-go/) — `RAG_GROUNDED`
