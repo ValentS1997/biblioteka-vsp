@@ -19,3 +19,4 @@ Current chapter workflow:
 - [Chapter 10 — «Строки, руны и UNICODE»](chapter-10-stroki-runy-i-unicode/) — `RAG_GROUNDED`
 - [Chapter 11 — «Элементы функционального программирования»](chapter-11-elementy-funkcionalnogo-programmirovaniya/) — `RAG_GROUNDED`
 - [Chapter 12 — «Скоростные и другие сравнения языков»](chapter-12-skorostnye-i-drugie-sravneniya-yazykov/) — `RAG_GROUNDED`
+- [Chapter 13 — «Многопроцессорные параллельные вычисления»](chapter-13-mnogoprocessornye-parallelnye-vychisleniya/) — `RAG_GROUNDED`
