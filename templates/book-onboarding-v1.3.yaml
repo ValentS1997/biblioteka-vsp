@@ -218,11 +218,16 @@ workflow:
       - "addressable chunks and deterministic search index generated"
 
   - step: 7
-    name: "Validate retrieval integrity"
+    name: "Run strict RAG ingestion acceptance"
     type: "read-only"
+    contract: "BIBLIOTEKA-VSP-RAG-INGESTION-ACCEPTANCE v1.0"
     method: >-
-      Use the book readiness validator to verify chunk-index, addressable chunks,
-      deterministic search-index plumbing, generic source locators and provenance consistency.
+      Validate source hash, deterministic generation IDs, complete source-unit
+      coverage, all addressable chunk provenance/content hashes, bounded
+      first/middle/last retrieval samples and negative exact-term behavior.
+    publication_gate: >-
+      The normal build workflow must not commit a newly built/rebuilt RAG
+      generation unless acceptance status is ACCEPTED.
 
   - step: 8
     name: "Compute chapter-analysis readiness"
