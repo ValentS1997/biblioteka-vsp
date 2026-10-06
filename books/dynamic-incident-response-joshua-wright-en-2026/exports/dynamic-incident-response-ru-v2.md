@@ -8977,7 +8977,7 @@ Document:
 - workarounds;
 - business-unit feedback.
 
-### 3. ПРОВЕСТИ КОММУНИКАЦИЮ С ЗАИНТЕРЕСОВАННЫМИ СТОРОНАМИ
+### 3. КОММУНИКАЦИЯ С ЗАИНТЕРЕСОВАННЫМИ СТОРОНАМИ
 
 Provide:
 
@@ -9190,7 +9190,7 @@ Eradication требует practical remediation:
 - close exploited entry points;
 - restore confidence that compromise will not immediately recur.
 
-## THE DIRTY KEBAB: SHORT-FORM INVESTIGATION
+## DIRTY KEBAB: КРАТКОЕ РАССЛЕДОВАНИЕ
 
 Source приводит метафору от technical editor Steve Armstrong.
 
@@ -9241,7 +9241,7 @@ Long-form может быть нужна для:
 - fast short-form support for eradication;
 - parallel long-form work for broader requirements.
 
-### Long-Form Scope Governance
+### УПРАВЛЕНИЕ МАСШТАБОМ УГЛУБЛЁННОГО РАССЛЕДОВАНИЯ
 
 Scope определяется совместно с decision makers.
 
@@ -9262,7 +9262,7 @@ Scope определяется совместно с decision makers.
 
 Resources следует направлять на work, который даёт tangible organizational value.
 
-## LONG-FORM INVESTIGATION EXAMPLE: IDAHO MURDERS
+## ПРИМЕР УГЛУБЛЁННОГО РАССЛЕДОВАНИЯ: УБИЙСТВА В АЙДАХО
 
 Source приводит criminal-forensics example из RSAC 2025 presentation Heather Barnhart, SANS DFIR Curriculum Lead / Head of Faculty.[1]
 
@@ -9323,7 +9323,7 @@ During Eradicate, responders work backward from compromise symptoms to weaknesse
 
 Modern attacks often chain multiple opportunities, so RCA should identify all meaningful contributing conditions rather than one visible cause.
 
-## FINTECH SSH COMPROMISE: ROOT CAUSE ANALYSIS
+## КОМПРОМЕТАЦИЯ SSH В FINTECH: АНАЛИЗ КОРНЕВОЙ ПРИЧИНЫ
 
 Source recounts an incident involving Linux transaction-processing cluster at a fintech company.
 
@@ -9352,7 +9352,7 @@ Lesson:
 
 > Root cause analysis is not about identifying a person to blame; it is about identifying what must be fixed.
 
-# Assessing Root Cause
+# ОЦЕНКА КОРНЕВОЙ ПРИЧИНЫ
 
 Without RCA responders risk:
 
@@ -9399,7 +9399,7 @@ The four P's categorize root causes:
 
 This framework helps avoid oversimplifying incidents into a single human or technical mistake.
 
-## Root Cause Analysis Example: Public S3 Bucket Exposure
+## ПРИМЕР АНАЛИЗА КОРНЕВОЙ ПРИЧИНЫ: ПУБЛИЧНО ДОСТУПНЫЙ S3 BUCKET
 
 Source описывает customer incident: S3 bucket
 
@@ -9545,7 +9545,7 @@ Fishbone is not strict taxonomy; overlap between categories is acceptable.
 
 The value is not category purity but systematic identification/documentation of contributing factors.
 
-## ALTERNATIVE TO FISHBONE DIAGRAM: THE FIVE WHYS
+## АЛЬТЕРНАТИВА ДИАГРАММЕ ИСИКАВЫ: ПЯТЬ «ПОЧЕМУ»
 
 Five Whys is a simpler RCA technique associated with Sakichi Toyoda.[3]
 
@@ -9564,7 +9564,7 @@ Could require:
 - 5 iterations;
 - 7 iterations.
 
-### Fintech SSH Example
+### ПРИМЕР SSH-КОМПРОМЕТАЦИИ В FINTECH
 
 Problem:
 
@@ -9594,7 +9594,7 @@ This reveals intervention points at multiple levels:
 - governance;
 - exposure management.
 
-### When to Use Five Whys
+### КОГДА ИСПОЛЬЗОВАТЬ МЕТОД ПЯТИ «ПОЧЕМУ»
 
 Best for:
 
@@ -9603,7 +9603,7 @@ Best for:
 - small teams;
 - limited documentation overhead.
 
-### When to Prefer Fishbone
+### КОГДА ПРЕДПОЧЕСТЬ ДИАГРАММУ ИСИКАВЫ
 
 Best when:
 
@@ -9682,7 +9682,7 @@ A single server may generate gigabytes over attacker dwell time.
 
 Without aggregation/correlation, manual analysis delays eradication.
 
-## Sigma for Log Analysis
+## SIGMA ДЛЯ АНАЛИЗА ЖУРНАЛОВ
 
 Sigma provides portable detection-rule format.[4]
 
@@ -9704,7 +9704,7 @@ Sigma rules can be converted to queries for:
 
 Some tools directly apply Sigma.
 
-## Hayabusa
+## HAYABUSA
 
 Hayabusa is open-source Windows EVTX forensic timeline/threat analysis tool with Sigma support.[5]
 
@@ -9751,7 +9751,7 @@ Examples:
 - correlate failed auth + successful login from unusual location;
 - deploy custom Sigma-derived detections.
 
-### SIEM Operational Cost
+### ОПЕРАЦИОННАЯ СТОИМОСТЬ SIEM
 
 SIEM requires:
 
@@ -9765,7 +9765,7 @@ SIEM requires:
 
 A SIEM deployed without people/process/maintenance can provide little security value despite high cost.
 
-# SAME LOGS, DIFFERENT OUTCOMES: THE RIBRIDGES DATA BREACH
+# ОДНИ И ТЕ ЖЕ ЖУРНАЛЫ, РАЗНЫЕ РЕЗУЛЬТАТЫ: УТЕЧКА ДАННЫХ RIBRIDGES
 
 Source discusses December 2024 Rhode Island government RIBridges compromise affecting services used by approximately **735,000 citizens**.[6]
 
@@ -9796,7 +9796,7 @@ Key lesson begins here and continues in the next source range:
 
 the same logs can be either a missed detection opportunity or a high-value post-compromise investigation resource, depending on people/process around them.
 
-## RIBridges: Same Logs, Different Outcomes — Conclusion
+## RIBRIDGES: ОДНИ И ТЕ ЖЕ ЖУРНАЛЫ, РАЗНЫЕ РЕЗУЛЬТАТЫ — ВЫВОД
 
 Source contrasts two uses of the same firewall telemetry:
 
@@ -9839,7 +9839,7 @@ Use live investigation when:
 - evidence-disruption risk is acceptable;
 - collected forensic evidence already meets preservation needs.
 
-## DIFFERENTIAL ANALYSIS FOR THREAT INVESTIGATION
+## ДИФФЕРЕНЦИАЛЬНЫЙ АНАЛИЗ ДЛЯ РАССЛЕДОВАНИЯ УГРОЗ
 
 Differential analysis compares known-good baseline with current state.
 
@@ -9944,7 +9944,7 @@ Platforms often use endpoint agents and support:
 
 Offline systems can return data when reconnecting.
 
-## Velociraptor IOC Analysis Example
+## ПРИМЕР АНАЛИЗА IOC В VELOCIRAPTOR
 
 Source uses LockBit example.
 
@@ -10038,7 +10038,7 @@ Two scopes:
 1. process-specific;
 2. whole-system.
 
-## Process-Specific Memory Investigation
+## АНАЛИЗ ПАМЯТИ КОНКРЕТНОГО ПРОЦЕССА
 
 Process dump captures only target process memory.
 
@@ -10106,7 +10106,7 @@ Process-specific dump is appropriate when:
 - analyst needs detailed runtime behavior;
 - whole-system context is unnecessary.
 
-# Whole-System Memory Investigation
+# АНАЛИЗ ПАМЯТИ ВСЕЙ СИСТЕМЫ
 
 Whole-system memory preserves complete physical memory state.
 
@@ -10165,7 +10165,7 @@ Volatility can enumerate:
 
 Volatility runs with Python 3 and can analyze memory from Windows, Linux, and macOS.
 
-## Vulnerable Driver Investigation
+## РАССЛЕДОВАНИЕ УЯЗВИМОГО ДРАЙВЕРА
 
 Windows driver inventory can reveal vulnerable kernel drivers that enable privilege escalation/EDR bypass.
 
@@ -10190,7 +10190,7 @@ Offset         Start          Size      Name
 
 Listing continues in next source range.
 
-## Volatility Driver Enumeration — Continuation
+## ИНВЕНТАРИЗАЦИЯ ДРАЙВЕРОВ В VOLATILITY — ПРОДОЛЖЕНИЕ
 
 ### Listing 73. Volatility Windows Driver Enumeration — Continuation
 
@@ -10211,7 +10211,7 @@ Important entries:
 - `KfeCoSvc` — Kyocera-related driver;
 - `winpmem` — memory-capture driver loaded by acquisition process.
 
-# Browsing Memory Artifacts with MemProcFS
+# ПРОСМОТР АРТЕФАКТОВ ПАМЯТИ С MEMPROCFS
 
 Volatility remains one of the standard memory-analysis frameworks.
 
@@ -10293,9 +10293,9 @@ Network analysis helps answer:
 - what infrastructure was contacted;
 - what other systems require eradication.
 
-## Network Data Sources
+## ИСТОЧНИКИ СЕТЕВЫХ ДАННЫХ
 
-### Packet Capture (PCAP)
+### ЗАХВАТ ПАКЕТОВ (PCAP)
 
 Provides deepest network visibility:
 
@@ -10310,7 +10310,7 @@ Limitations:
 - narrow retention/coverage;
 - encrypted TLS reduces payload visibility without decryption.
 
-### Flow Data
+### ДАННЫЕ СЕТЕВЫХ ПОТОКОВ
 
 Examples:
 
@@ -10343,7 +10343,7 @@ DNS often preserves:
 
 Attackers may forget or fail to erase centralized DNS history.
 
-### Proxy Logs
+### ЖУРНАЛЫ ПРОКСИ
 
 Can reveal:
 
@@ -10353,7 +10353,7 @@ Can reveal:
 - web-tunneled attacker traffic;
 - staging behavior.
 
-### Firewall Logs
+### ЖУРНАЛЫ МЕЖСЕТЕВЫХ ЭКРАНОВ
 
 Show:
 
@@ -10362,7 +10362,7 @@ Show:
 - reconnaissance;
 - perimeter communication.
 
-# Network Detection and Response Platforms
+# ПЛАТФОРМЫ СЕТЕВОГО ОБНАРУЖЕНИЯ И РЕАГИРОВАНИЯ
 
 NDR platforms can combine:
 
@@ -10385,7 +10385,7 @@ Analysts should corroborate with:
 - firewall/proxy logs;
 - memory/EDR.
 
-# Network Data for Connection Mapping
+# СЕТЕВЫЕ ДАННЫЕ ДЛЯ КАРТИРОВАНИЯ СОЕДИНЕНИЙ
 
 Raw network data can map attacker connectivity even without dedicated NDR.
 
@@ -10461,7 +10461,7 @@ Malware investigation combines:
 
 Comprehensive malware reverse engineering is specialized, but IR teams need enough capability for practical eradication.
 
-## SAFETY IN MALWARE ANALYSIS
+## БЕЗОПАСНОСТЬ ПРИ АНАЛИЗЕ ВРЕДОНОСНОГО ПО
 
 Malware handling has direct operational risk.
 
@@ -10480,7 +10480,7 @@ Source recommends strict isolation:
 
 Goal: prevent accidental execution, distribution, environment compromise, or attacker awareness.
 
-# Static Analysis
+# СТАТИЧЕСКИЙ АНАЛИЗ
 
 Static analysis examines binary without executing it.
 
@@ -10512,7 +10512,7 @@ Known family reports may reveal:
 - network infrastructure;
 - related sample knowledge.
 
-## PE Structure Analysis
+## АНАЛИЗ СТРУКТУРЫ PE
 
 Windows PE tools:
 
@@ -10547,7 +10547,7 @@ Static analysis limitations:
 
 Therefore dynamic analysis may be needed.
 
-# Dynamic Analysis
+# ДИНАМИЧЕСКИЙ АНАЛИЗ
 
 Dynamic analysis executes malware inside controlled environment and observes real behavior.
 
@@ -10569,7 +10569,7 @@ Basic workflow:
 
 Dynamic analysis is iterative; multiple runs may be needed to build complete behavior picture.
 
-## Dynamic Analysis — Continued
+## ДИНАМИЧЕСКИЙ АНАЛИЗ — ПРОДОЛЖЕНИЕ
 
 После execution sample analysts review captured output for:
 
@@ -10601,7 +10601,7 @@ Filters can focus on:
 
 > **Иллюстрация не воспроизводится:** требуется отдельная проверка прав на сторонний визуальный материал. product screenshot not reproduced.
 
-## Automated Sandboxes
+## АВТОМАТИЗИРОВАННЫЕ ПЕСОЧНИЦЫ
 
 Examples in source:
 
@@ -10618,7 +10618,7 @@ Automated sandboxes:
 
 For known malware families, sandbox report may provide enough eradication insight without manual reverse engineering.
 
-## Practical Limitations
+## ПРАКТИЧЕСКИЕ ОГРАНИЧЕНИЯ
 
 Basic analysis may be insufficient for:
 
@@ -10709,7 +10709,7 @@ Investigation needs to determine:
 - affected accounts;
 - financial transactions.
 
-# Email System Investigation
+# РАССЛЕДОВАНИЕ ПОЧТОВОЙ СИСТЕМЫ
 
 Inspect mailbox rules and forwarding.
 
@@ -10859,7 +10859,7 @@ Commands:
 
 These permissions survive password reset until explicitly revoked.
 
-# Financial Transaction Investigation
+# РАССЛЕДОВАНИЕ ФИНАНСОВЫХ ТРАНЗАКЦИЙ
 
 Coordinate with finance/accounting.
 
@@ -10875,7 +10875,7 @@ BEC attackers may monitor for weeks before acting during:
 - quarter-end;
 - high workload.
 
-## Sign-In Analysis
+## АНАЛИЗ ВХОДОВ В СИСТЕМУ
 
 Review:
 
@@ -10908,7 +10908,7 @@ ldolman@falsimentis.com  11/26/2025 3:40:22 AM   Columbus, Ohio     3.145.230.62
 
 Alternation between Virginia and Ohio over minutes is impossible physical travel and supports credential-compromise hypothesis.
 
-# Victim by Proxy
+# ЖЕРТВА ЧЕРЕЗ ПОСРЕДНИКА
 
 Not every BEC incident means victim organization itself was compromised.
 
@@ -10934,7 +10934,7 @@ Available evidence may be only:
 
 Source recommends three focus areas.
 
-## Email Header and Content Analysis
+## АНАЛИЗ ЗАГОЛОВКОВ И СОДЕРЖИМОГО ПОЧТЫ
 
 Check:
 
@@ -10947,7 +10947,7 @@ Example lookalikes from source:
 - `wehost4every1.com`;
 - `wehost4evrey1.com`.
 
-## Domain Registration Timing
+## ВРЕМЯ РЕГИСТРАЦИИ ДОМЕНА
 
 WHOIS can show newly registered lookalike domains.
 
@@ -10955,7 +10955,7 @@ A domain registered shortly before first suspicious email supports staged BEC hy
 
 Attackers may also register victim lookalike domain after receiving payment to intercept supplier follow-up and delay discovery.
 
-## Information Flow Analysis
+## АНАЛИЗ ПОТОКОВ ИНФОРМАЦИИ
 
 Ask whether attacker introduced genuinely new supplier information or mostly replayed information already present in thread.
 
@@ -10963,7 +10963,7 @@ A legitimate supplier may provide new invoice/payment details unavailable to vic
 
 A thread hijacker may mirror known details with plausible filler.
 
-### Supplier-Mailbox Compromise Limitation
+### ОГРАНИЧЕНИЯ ПРИ КОМПРОМЕТАЦИИ ПОЧТОВОГО ЯЩИКА ПОСТАВЩИКА
 
 If attacker operates from supplier's legitimate mailbox:
 
@@ -10998,7 +10998,7 @@ Main challenge:
 
 Investigation should focus on three primary areas.
 
-## 1. Data Access Patterns
+## 1. ШАБЛОНЫ ДОСТУПА К ДАННЫМ
 
 Review:
 
@@ -11013,7 +11013,7 @@ Questions:
 - was data downloaded/transferred outside normal pattern?
 - were sensitive repositories accessed without business need?
 
-## 2. Privilege Changes
+## 2. ИЗМЕНЕНИЯ ПРИВИЛЕГИЙ
 
 Review:
 
@@ -11025,7 +11025,7 @@ Review:
 
 Goal: identify deliberate privilege expansion.
 
-## 3. Exfiltration Methods
+## 3. МЕТОДЫ ЭКСФИЛЬТРАЦИИ
 
 Review:
 
@@ -11061,7 +11061,7 @@ Coordinate with:
 - legal;
 - leadership.
 
-## INSIDER THREAT FROM DAY ONE: KNOWBE4'S NORTH KOREAN IT WORKER
+## ВНУТРЕННЯЯ УГРОЗА С ПЕРВОГО ДНЯ: СЕВЕРОКОРЕЙСКИЙ IT-СОТРУДНИК KNOWBE4
 
 Source discusses KnowBe4's July 2024 disclosure involving a North Korean threat actor posing as a remote IT worker.[14]
 
@@ -11117,13 +11117,13 @@ Source defines four categories:
 3. SaaS vendor compromise;
 4. managed-service-provider/staff-access compromise.
 
-# Software Supply Chain Compromises
+# КОМПРОМЕТАЦИИ ЦЕПОЧКИ ПОСТАВОК ПО
 
 Software supply-chain compromise affects software run in organization's environment.
 
 Two major subtypes:
 
-## Boundary Software
+## ПОГРАНИЧНОЕ ПО
 
 Examples:
 
@@ -11138,7 +11138,7 @@ Risks:
 - security device itself may be compromised;
 - detection telemetry may be untrustworthy.
 
-## Internal Software
+## ВНУТРЕННЕЕ ПО
 
 Examples:
 
@@ -11153,7 +11153,7 @@ Dependency breadth makes investigation difficult.
 
 Log4j is cited as example of broad supply-chain/search-surface risk.
 
-## Investigation Approach
+## ПОДХОД К РАССЛЕДОВАНИЮ
 
 Start by identifying all systems with compromised version.
 
@@ -11178,7 +11178,7 @@ Coordinate with vendor for:
 
 Threat-intelligence community may publish IOC quickly for widespread incidents.
 
-## 2025 NPM / Shai-Hulud Example
+## ПРИМЕР NPM / SHAI-HULUD 2025 ГОДА
 
 Source references GitLab Vulnerability Research Team research into multiple compromised NPM packages distributing Shai-Hulud malware.[15]
 
@@ -11212,7 +11212,7 @@ If supply-chain payload supports remote access/persistence, investigate whether 
 
 Eradication may need to extend far beyond removing poisoned package.
 
-## VENDOR BREACH ACCOUNTABILITY: MARQUIS V. SONICWALL
+## ОТВЕТСТВЕННОСТЬ ЗА КОМПРОМЕТАЦИЮ ПОСТАВЩИКА: MARQUIS ПРОТИВ SONICWALL
 
 Source discusses litigation trend where downstream organizations pursue security vendors following vendor compromise.
 
@@ -11244,7 +11244,7 @@ Vendor contracts should address:
 - indemnification;
 - security accountability.
 
-# Hardware Supply Chain Attacks
+# АТАКИ НА АППАРАТНУЮ ЦЕПОЧКУ ПОСТАВОК
 
 Hardware compromise may involve physical modification during:
 
@@ -11269,7 +11269,7 @@ Often require:
 - supplier coordination;
 - law-enforcement coordination where appropriate.
 
-## COUNTERFEIT CISCO EQUIPMENT IN MILITARY SYSTEMS
+## ПОДДЕЛЬНОЕ ОБОРУДОВАНИЕ CISCO В ВОЕННЫХ СИСТЕМАХ
 
 Source cites 2024 U.S. DOJ sentencing tied to long-running counterfeit network-equipment scheme.[17]
 
@@ -11288,7 +11288,7 @@ Security research analyzed counterfeit Cisco switches with hardware modification
 
 Source notes analyzed implants were reportedly used to bypass authenticity controls/run pirated software, while similar techniques could theoretically support persistent hardware-level backdoor behavior.
 
-# SaaS Vendor Compromises
+# КОМПРОМЕТАЦИИ ПОСТАВЩИКОВ SaaS
 
 In SaaS vendor compromise:
 
@@ -11327,7 +11327,7 @@ Then check own logs for:
 
 Use NDA if necessary for detailed partner disclosure.
 
-## SUPPLY CHAIN COMPROMISE: THE SALESLOFT DRIFT INCIDENT
+## КОМПРОМЕТАЦИЯ ЦЕПОЧКИ ПОСТАВОК: ИНЦИДЕНТ SALESLOFT DRIFT
 
 Source discusses August 2025 compromise of Salesloft Drift, a marketing/chat platform with broad third-party integrations.[19]
 
@@ -11373,7 +11373,7 @@ Remediation:
 - revoke vendor OAuth grants;
 - assess whether data can safely remain at compromised provider.
 
-# Managed Service Provider and Staff Access Compromises
+# КОМПРОМЕТАЦИИ MSP И ДОСТУПА ПЕРСОНАЛА
 
 This category covers vendors with legitimate access to organization.
 
@@ -11418,7 +11418,7 @@ They may provide:
 
 Findings should be shared reciprocally where allowed.
 
-# Cloud Investigation — Introduction
+# ОБЛАЧНОЕ РАССЛЕДОВАНИЕ — ВВЕДЕНИЕ
 
 Cloud environments differ from traditional on-prem due to:
 
@@ -11493,7 +11493,7 @@ Focus especially on:
 - security groups;
 - resource configurations.
 
-## IAM Investigation
+## РАССЛЕДОВАНИЕ IAM
 
 Attackers may:
 
@@ -11548,7 +11548,7 @@ Pay particular attention to roles allowed to modify IAM:
 
 If attacker retains these permissions, they can continuously recreate persistence.
 
-# Infrastructure Investigation
+# РАССЛЕДОВАНИЕ ИНФРАСТРУКТУРЫ
 
 For cloud VMs/containers/storage/databases, use many of the same forensic concepts as on-prem systems, enhanced by cloud-native:
 
@@ -11557,7 +11557,7 @@ For cloud VMs/containers/storage/databases, use many of the same forensic concep
 - image history;
 - API metadata.
 
-## VM and Container Images
+## ОБРАЗЫ VM И КОНТЕЙНЕРОВ
 
 Review recent image changes.
 
@@ -11571,7 +11571,7 @@ so newly deployed instances inherit backdoors.
 
 Compare against trusted baselines.
 
-## Storage Access and Exfiltration
+## ДОСТУП К ХРАНИЛИЩУ И ЭКСФИЛЬТРАЦИЯ
 
 Review:
 
@@ -11616,7 +11616,7 @@ Interpretation:
 - AWS CLI dominates accesses → scripted activity;
 - top IP shows highest transfer volume.
 
-## Serverless and Event-Driven Infrastructure
+## SERVERLESS- И СОБЫТИЙНО-ОРИЕНТИРОВАННАЯ ИНФРАСТРУКТУРА
 
 Review:
 
@@ -11628,7 +11628,7 @@ Review:
 
 Malicious serverless functions can provide persistence without traditional host.
 
-## Network Configuration
+## СЕТЕВАЯ КОНФИГУРАЦИЯ
 
 Review changes to:
 
@@ -11646,7 +11646,7 @@ These may enable:
 - C2;
 - pivot to on-prem.
 
-# SaaS Investigation and Eradication
+# РАССЛЕДОВАНИЕ И ИСКОРЕНЕНИЕ В SaaS
 
 SaaS compromises often involve:
 
@@ -11678,7 +11678,7 @@ Request:
 - compromise-period telemetry;
 - any non-default/provider-internal logging available.
 
-## Integration-Side Logs
+## ЖУРНАЛЫ НА СТОРОНЕ ИНТЕГРАЦИЙ
 
 Even when SaaS logs are weak, own infrastructure may retain evidence through:
 
@@ -11689,7 +11689,7 @@ Even when SaaS logs are weak, own infrastructure may retain evidence through:
 - custom integration services;
 - webhooks.
 
-## SaaS Privilege Enumeration
+## ИНВЕНТАРИЗАЦИЯ ПРИВИЛЕГИЙ SaaS
 
 Review:
 
@@ -11700,7 +11700,7 @@ Review:
 - third-party apps;
 - suspicious high-scope consent.
 
-# MIDNIGHT BLIZZARD OAUTH CAMPAIGN
+# OAUTH-КАМПАНИЯ MIDNIGHT BLIZZARD
 
 Source discusses Microsoft's January 2024 disclosure involving Midnight Blizzard/NOBELIUM, described as Russian state-sponsored actor.[23]
 
@@ -11760,7 +11760,7 @@ Major eradication categories:
 
 Use systematic process.
 
-## Build Persistence Inventory
+## СОСТАВИТЬ ИНВЕНТАРЬ МЕХАНИЗМОВ ЗАКРЕПЛЕНИЯ
 
 For every mechanism document:
 
@@ -11778,7 +11778,7 @@ Documentation before removal supports:
 - legal evidence;
 - post-incident review.
 
-## Plan Removal Sequence
+## СПЛАНИРОВАТЬ ПОСЛЕДОВАТЕЛЬНОСТЬ УДАЛЕНИЯ
 
 Identify dependencies.
 
@@ -11791,7 +11791,7 @@ Sequence:
 3. verify;
 4. monitor reappearance.
 
-## Verify Immediately
+## НЕМЕДЛЕННО ПРОВЕРИТЬ РЕЗУЛЬТАТ
 
 Re-run same enumeration used during investigation.
 
@@ -11807,7 +11807,7 @@ Reappearance can mean:
 - hidden malicious process;
 - reinfection from still-open vector.
 
-# Windows Persistence Removal Considerations
+# ОСОБЕННОСТИ УДАЛЕНИЯ ЗАКРЕПЛЕНИЯ В WINDOWS
 
 Common locations:
 
@@ -11872,7 +11872,7 @@ Using `sc.exe delete` supports older Windows versions where `Remove-Service` may
 
 Same systematic pattern applies to other Windows persistence types.
 
-# Linux Persistence Removal Considerations
+# ОСОБЕННОСТИ УДАЛЕНИЯ ЗАКРЕПЛЕНИЯ В LINUX
 
 Linux persistence differs from Windows, but eradication workflow is the same:
 
@@ -11903,7 +11903,7 @@ Source recommends performing comprehensive enumeration/removal with root privile
 
 Verification should repeat enumeration and inspect relevant configuration directories.
 
-# Web Shell Removal
+# УДАЛЕНИЕ WEB SHELL
 
 Web shells provide interactive access to web servers.
 
@@ -11983,7 +11983,7 @@ Web shells can exist at both:
 - web-server layer;
 - web-application layer.
 
-# Cloud Persistence Removal
+# УДАЛЕНИЕ ЗАКРЕПЛЕНИЯ В ОБЛАКЕ
 
 Cloud persistence can exist without traditional host startup mechanism.
 
@@ -11996,7 +11996,7 @@ Investigation should identify:
 - access keys;
 - cross-account trusts.
 
-## Lambda / Serverless Functions
+## LAMBDA / SERVERLESS-ФУНКЦИИ
 
 Delete malicious functions and associated triggers.
 
@@ -12021,7 +12021,7 @@ Also remove associated triggers:
 - CloudWatch/EventBridge rules;
 - equivalent event sources.
 
-# IAM Policy Modifications
+# ИЗМЕНЕНИЯ ПОЛИТИК IAM
 
 IAM persistence grants access rather than running code.
 
@@ -12036,7 +12036,7 @@ Eradication:
 - revert policy modifications;
 - rotate compromised access keys.
 
-# Container Image Modifications
+# ИЗМЕНЕНИЯ ОБРАЗОВ КОНТЕЙНЕРОВ
 
 Modified container images can persist across:
 
@@ -12075,7 +12075,7 @@ Any replacement/temporary accounts created during remediation must be documented
 
 Closure should review them for removal/retention.
 
-# Local Account and Credential Remediation
+# ИСПРАВЛЕНИЕ ЛОКАЛЬНЫХ УЧЁТНЫХ ЗАПИСЕЙ И УЧЁТНЫХ ДАННЫХ
 
 Attackers may create local accounts for persistence.
 
@@ -12121,7 +12121,7 @@ $
 
 Evidence from home directory should be preserved during Contain before destructive account removal.
 
-# Active Directory Account and Credential Remediation
+# ИСПРАВЛЕНИЕ УЧЁТНЫХ ЗАПИСЕЙ И УЧЁТНЫХ ДАННЫХ ACTIVE DIRECTORY
 
 AD compromise may expose cryptographic materials allowing attacker to:
 
@@ -12139,7 +12139,7 @@ Microsoft tier model:[25]
 - **Tier 1:** server/application admins;
 - **Tier 2:** workstation users.
 
-## Phase 1: Privileged Account Reset
+## ЭТАП 1: СБРОС ПРИВИЛЕГИРОВАННЫХ УЧЁТНЫХ ЗАПИСЕЙ
 
 Reset Tier 0/Tier 1 first.
 
@@ -12169,7 +12169,7 @@ PS C:\> Set-ADAccountPassword -Identity "ttidmas" -Reset -NewPassword $cred.Pass
 PS C:\> Set-ADUser -Identity "ttidmas" -ChangePasswordAtLogon $true
 ~~~
 
-# ACCOUNT RECREATION VS. PASSWORD RESET FOR SEVERE COMPROMISES
+# ПЕРЕСОЗДАНИЕ УЧЁТНОЙ ЗАПИСИ ИЛИ СБРОС ПАРОЛЯ ПРИ ТЯЖЁЛОЙ КОМПРОМЕТАЦИИ
 
 For severe AD compromise involving:
 
@@ -12216,7 +12216,7 @@ Account recreation is most appropriate when:
 
 For credential theft without DC compromise, password reset + krbtgt rotation may be sufficient.
 
-# Phase 2: Service Account and Identity Infrastructure Reset
+# ЭТАП 2: СБРОС СЕРВИСНЫХ УЧЁТНЫХ ЗАПИСЕЙ И ИНФРАСТРУКТУРЫ ИДЕНТИЧНОСТЕЙ
 
 Reset:
 
@@ -12235,7 +12235,7 @@ Pay particular attention to:
 - AD CS;
 - federation/identity-bridge accounts.
 
-# Phase 3: General User Reset
+# ЭТАП 3: СБРОС УЧЁТНЫХ ЗАПИСЕЙ ОБЫЧНЫХ ПОЛЬЗОВАТЕЛЕЙ
 
 After privileged/service accounts:
 
@@ -12255,7 +12255,7 @@ But password reset alone does **not** revoke:
 
 Additional cryptographic-root/session/hybrid remediation is required.
 
-# Krbtgt Account Reset — Introduction
+# СБРОС УЧЁТНОЙ ЗАПИСИ KRBTGT — ВВЕДЕНИЕ
 
 `krbtgt` is Kerberos cryptographic root of trust in AD.
 
@@ -12314,7 +12314,7 @@ After each reset, repadmin /replsum must confirm healthy replication before proc
 
 Incomplete replication can cause authentication failures against DCs with inconsistent krbtgt keys.
 
-## Multi-Domain Forest Considerations
+## ОСОБЕННОСТИ МНОГОДОМЕННОГО ЛЕСА
 
 Each domain has its own krbtgt.
 
@@ -12325,7 +12325,7 @@ Source recommends:
 - appropriate delay;
 - replication verification each time.
 
-# Domain Controller Machine Account Reset
+# СБРОС МАШИННОЙ УЧЁТНОЙ ЗАПИСИ КОНТРОЛЛЕРА ДОМЕНА
 
 DCs authenticate to each other with machine-account passwords.
 
@@ -12349,7 +12349,7 @@ Execute on each domain controller, using another DC as target server.
 
 Allow replication between resets because DC machine accounts also maintain limited password history.
 
-# Trust Password Reset
+# СБРОС ПАРОЛЯ ДОВЕРИТЕЛЬНОГО ОТНОШЕНИЯ
 
 If incident affects inter-domain/inter-forest trust:
 
@@ -12363,7 +12363,7 @@ If compromised, attacker may persist across trusted environment boundaries.
 
 Reset trust password on trusting side of each affected trust relationship.
 
-# Disabling Unconstrained Delegation
+# ОТКЛЮЧЕНИЕ НЕОГРАНИЧЕННОГО ДЕЛЕГИРОВАНИЯ
 
 Unconstrained delegation allows service to:
 
@@ -12427,7 +12427,7 @@ Goal:
 - conditional access;
 - sync/federation validation.
 
-# Entra ID Session and Token Revocation
+# ОТЗЫВ СЕССИЙ И ТОКЕНОВ ENTRA ID
 
 Revoke all refresh tokens and active sessions for compromised users.
 
@@ -12462,7 +12462,7 @@ Entra UI alternative:
 
 Identity → Users → user → Properties → Block sign in = Yes.
 
-## Back-Channel Logout
+## BACK-CHANNEL LOGOUT
 
 Some integrations support back-channel logout, allowing IdP to notify applications to terminate sessions.
 
@@ -12470,7 +12470,7 @@ Without support, app session may remain active until token expiry.
 
 For those apps, manually terminate sessions via application admin interface.
 
-# THE FOUR-MONTH ZOMBIE ACCOUNT
+# ЧЕТЫРЁХМЕСЯЧНАЯ «ЗОМБИ»-УЧЁТНАЯ ЗАПИСЬ
 
 Source recounts a consultant anecdote about disabled account that continued functioning for approximately four months due to:
 
@@ -12494,7 +12494,7 @@ It may not invalidate:
 
 Without session/token revocation, attacker may retain access long after organization believes access is gone.
 
-# Entra Connect and Directory Synchronization
+# ENTRA CONNECT И СИНХРОНИЗАЦИЯ КАТАЛОГА
 
 If Entra Connect or another sync service compromised:
 
@@ -12516,7 +12516,7 @@ Review via:
 - Entra admin center;
 - Synchronization Rules Editor on Entra Connect host.
 
-# Session and Token Revocation
+# ОТЗЫВ СЕССИЙ И ТОКЕНОВ
 
 Modern authentication produces access paths independent of password:
 
@@ -12542,7 +12542,7 @@ Prioritize systems holding sensitive data or critical infrastructure.
 
 Use application inventory from investigation to avoid omissions.
 
-# OAuth Application and Consent Revocation
+# ОТЗЫВ OAUTH-ПРИЛОЖЕНИЙ И СОГЛАСИЙ
 
 Malicious OAuth app can persist after password reset and session termination.
 
@@ -12569,7 +12569,7 @@ GitHub example: unauthorized GitHub Apps can retain organization/repository API 
 
 > **Иллюстрация не воспроизводится:** требуется отдельная проверка прав на сторонний визуальный материал. .
 
-# Personal Access Tokens and Long-Lived Credentials
+# ПЕРСОНАЛЬНЫЕ ТОКЕНЫ ДОСТУПА И ДОЛГОЖИВУЩИЕ УЧЁТНЫЕ ДАННЫЕ
 
 PATs may remain valid months/years and survive password reset.
 
@@ -12633,7 +12633,7 @@ On compromised systems:
 - clear browser profiles where appropriate;
 - rotate credentials saved in affected browser stores.
 
-# API Keys and Service Credentials
+# API-КЛЮЧИ И СЕРВИСНЫЕ УЧЁТНЫЕ ДАННЫЕ
 
 Service credentials provide programmatic access independent of individual user authentication.
 
@@ -12689,13 +12689,13 @@ Rebuild provides stronger assurance when compromise is deep or uncertain, but us
 
 Three key factors:
 
-## Severity of Compromise
+## ТЯЖЕСТЬ КОМПРОМЕТАЦИИ
 Full rebuild is favored for rootkits, kernel-mode malware, firmware compromise, and other below-OS threats. Less severe, well-bounded compromise may be cleanable in place.
 
-## System Criticality
+## КРИТИЧНОСТЬ СИСТЕМЫ
 Production criticality affects acceptable downtime and sequencing. Decision makers must balance confidence, restoration speed, and operational cost.
 
-## Availability of Clean Sources
+## НАЛИЧИЕ ЧИСТЫХ ИСХОДНЫХ МАТЕРИАЛОВ
 Rebuild requires trusted backups, gold images, or installation media.
 
 A backup is useful only if it predates compromise and does not contain attacker artifacts. Older clean backups imply data loss between backup time and incident response. Managing that data-loss tradeoff belongs primarily to Recover.
@@ -12708,7 +12708,7 @@ Eradication must close the security gap that enabled the attack before recovery.
 
 Focus first on vulnerabilities/misconfigurations proven relevant to this incident. Broader vulnerability cleanup is valuable but should not distract from the actual root cause.
 
-# Identifying Exploited Vulnerabilities
+# ВЫЯВЛЕНИЕ ЭКСПЛУАТИРОВАННЫХ УЯЗВИМОСТЕЙ
 
 Use evidence and RCA to identify exploited CVEs, misconfigurations, weak controls, and attack-path dependencies. Prioritize vulnerabilities confirmed exploited.
 
@@ -12716,7 +12716,7 @@ Use CVE identifiers for documentation, vendor guidance, patch tracking, and CTI 
 
 Vulnerability remediation must account for actual software version, environment, deployment model, and operational dependencies.
 
-## Threat Intelligence / KEV Context
+## КОНТЕКСТ КИБЕРРАЗВЕДКИ / KEV
 
 Vendor advisories explain technical details and fixes. Threat intelligence can add exploitation-in-the-wild context, TTPs, IOC, and known campaigns.
 
@@ -12737,7 +12737,7 @@ Source also describes CTI linking to a working exploit and using GitHub Copilot 
 
 Additional exploit context may improve detections, IOC development, and remediation validation.
 
-## Configuration Weaknesses
+## СЛАБЫЕ МЕСТА КОНФИГУРАЦИИ
 
 Not every attack uses a software CVE.
 
@@ -12749,48 +12749,48 @@ Examples:
 
 Corrective action must fix both the specific misconfiguration and the operational process that allowed it.
 
-# Patch Management During Eradication
+# УПРАВЛЕНИЕ ПАТЧАМИ ВО ВРЕМЯ ИСКОРЕНЕНИЯ
 
 Apply patches for exploited vulnerabilities before recovery.
 
-## Test and Verify Before Broad Rollout
+## ТЕСТИРОВАТЬ И ПРОВЕРЯТЬ ПЕРЕД МАССОВЫМ РАЗВЁРТЫВАНИЕМ
 Create documented procedure containing deployment steps, expected result, verification, and rollback. Test non-production first where feasible.
 
-## Track Patch Status
+## ОТСЛЕЖИВАТЬ СТАТУС ПАТЧЕЙ
 Use CMDB, vulnerability scanner, inventory platform, tickets, or spreadsheet if nothing better exists. Need clear visibility into patched, pending, and failed systems.
 
-## Balance Change Management with Speed
+## БАЛАНСИРОВАТЬ УПРАВЛЕНИЕ ИЗМЕНЕНИЯМИ И СКОРОСТЬ
 Normal change process is useful, but active exploitation often justifies expedited patching. Prepare should predefine who can authorize emergency change-window bypass and acceptable risk. Document deviations.
 
-## Consider Phased Rollout
+## РАССМОТРЕТЬ ПОЭТАПНОЕ РАЗВЁРТЫВАНИЕ
 For large fleets: patch a lower-risk group, verify, advance to the next group, then critical systems. This reduces blast radius of patch problems.
 
-## Verify System Functionality
+## ПРОВЕРИТЬ ФУНКЦИОНАЛЬНОСТЬ СИСТЕМЫ
 After patching, validate business function, coordinate with owner, resolve compatibility/configuration issues, and document failures/resolutions.
 
-# Addressing Unpatchable Systems
+# РАБОТА С СИСТЕМАМИ, КОТОРЫЕ НЕЛЬЗЯ ПРОПАТЧИТЬ
 
 Some systems cannot be patched due to end-of-life, vendor restriction, or operational dependency.
 
 Use compensating controls temporarily.
 
-## Network Segmentation
+## СЕТЕВАЯ СЕГМЕНТАЦИЯ
 Isolate vulnerable system, allow minimum inbound/outbound flows, and monitor closely.
 
-## Application-Layer Controls
+## СРЕДСТВА КОНТРОЛЯ НА УРОВНЕ ПРИЛОЖЕНИЙ
 Examples include WAF and virtual patching. These can block known exploit patterns but are temporary.
 
-## Enhanced Monitoring
+## УСИЛЕННЫЙ МОНИТОРИНГ
 Monitoring does not fix vulnerability, but can reduce time to detection. Alert on access to vulnerable service, abnormal process execution, and exploit-associated network traffic.
 
-## Permanent Remediation Plan
+## ПЛАН ПОСТОЯННОГО УСТРАНЕНИЯ ПРОБЛЕМЫ
 Define migration/replacement/upgrade timeline. Compensating controls degrade over time and consume ongoing resources. Treat unpatchable systems as technical debt.
 
 In regulated environment, known critical residual vulnerability may also require formal risk/disclosure tracking. Once IRT has implemented appropriate compensating control, business/system owner should carry residual risk in organization's risk-management process rather than let it disappear with incident closure.
 
 > Compensating controls are temporary mitigation, not permanent remediation.
 
-# WAF BYPASS OPPORTUNITIES
+# ВОЗМОЖНОСТИ ОБХОДА WAF
 
 WAF can reduce risk from common web attacks such as SQL injection, XSS, and remote file inclusion, but it cannot be assumed to make a vulnerable application safe.
 
@@ -12802,7 +12802,7 @@ Source cites examples of WAF bypass research/incidents:
 
 Practical lesson: WAF adds defensive depth and telemetry, but permanent remediation of underlying vulnerability remains required.
 
-# Broader Vulnerability Assessment
+# БОЛЕЕ ШИРОКАЯ ОЦЕНКА УЯЗВИМОСТЕЙ
 
 If one system was exploited because of a vulnerability, find all systems sharing the vulnerable condition.
 
@@ -12810,7 +12810,7 @@ Tools may include commercial scanners, Greenbone/OpenVAS, EDR agent-based assess
 
 Nuclei uses YAML templates and can support custom CVE/weakness checks.
 
-## IP Camera SSRF Example
+## ПРИМЕР SSRF НА IP-КАМЕРЕ
 
 Source uses a network camera with vulnerable /fetch endpoint accepting url parameter.
 
@@ -12887,7 +12887,7 @@ The scan identifies another vulnerable camera at 172.16.40.20.
 
 Broader vulnerability scanning ensures eradication is not limited to the originally compromised host.
 
-# Configuration Hardening
+# УКРЕПЛЕНИЕ КОНФИГУРАЦИИ
 
 Eradication is not only patching.
 
@@ -12899,7 +12899,7 @@ Misconfiguration can be part of the attack chain and should be corrected accordi
 
 > Vulnerability remediation should cover supporting conditions that enabled the incident, not software patching alone.
 
-## Harden System Configurations
+## УКРЕПИТЬ КОНФИГУРАЦИИ СИСТЕМ
 
 Source points back to preparation guidance using CIS Benchmarks and similar hardening standards.[36]
 
@@ -12912,7 +12912,7 @@ Configuration drift can occur because of:
 
 During Eradicate, validate that intended hardening still exists.
 
-# Enumerate Accessible Services
+# ПЕРЕЧИСЛИТЬ ДОСТУПНЫЕ СЕРВИСЫ
 
 Review attack surface from both:
 
@@ -12998,7 +12998,7 @@ Source highlights Nginx listening on port 9001.
 
 Local enumeration is accurate but requires host-by-host access and collection coordination.
 
-# Review Network Device Configurations
+# ПРОВЕРИТЬ КОНФИГУРАЦИИ СЕТЕВЫХ УСТРОЙСТВ
 
 Review:
 
@@ -13052,7 +13052,7 @@ Eradication/hardening should:
 - narrow broad allow rules;
 - ensure business requirement exists.
 
-# Disable Unnecessary Services
+# ОТКЛЮЧИТЬ НЕНУЖНЫЕ СЕРВИСЫ
 
 Disable unneeded:
 
@@ -13116,7 +13116,7 @@ Mitigations:
 - application allowlisting;
 - permit only approved scripts.
 
-## THIRD-PARTY LOLBIN ACCESS
+## ДОСТУП К СТОРОННИМ LOLBIN
 
 Source recounts a penetration test in a VDI environment where common offensive tools were blocked by endpoint protection.
 
@@ -13179,7 +13179,7 @@ Eradication therefore requires removal of both:
 - runtime payload;
 - persistence mechanism.
 
-# Legitimate Remote Monitoring and Management Tool Investigation
+# РАССЛЕДОВАНИЕ ЛЕГИТИМНЫХ RMM-ИНСТРУМЕНТОВ
 
 Attackers increasingly use legitimate RMM tools:
 
@@ -13220,7 +13220,7 @@ Effective remediation requires:
 - visibility into active sessions;
 - vendor-side access revocation when necessary.
 
-# Cross-Trust Boundary Threat Investigation
+# РАССЛЕДОВАНИЕ УГРОЗ ЧЕРЕЗ ГРАНИЦЫ ДОВЕРИЯ
 
 A compromise in one domain or identity provider can propagate through trust relationships.
 
@@ -13249,7 +13249,7 @@ If compromised IdP continues issuing valid SAML/OIDC tokens, cleaning individual
 
 Hybrid synchronization can also propagate compromised identity state between on-prem AD and Entra ID.
 
-## Scoping Trust Relationships
+## ОПРЕДЕЛЕНИЕ МАСШТАБА ДОВЕРИТЕЛЬНЫХ ОТНОШЕНИЙ
 
 Enumerate all trust paths.
 
@@ -13289,7 +13289,7 @@ Sequencing:
 
 # ПРИМЕРЫ ИСКОРЕНЕНИЯ
 
-# The Memory Forensics Discovery
+# НАХОДКА ПРИ ФОРЕНЗИКЕ ПАМЯТИ
 
 Greystone Manufacturing contained workstation of a senior engineer.
 
@@ -13303,7 +13303,7 @@ The engineer had access to:
 
 Analyst Maya Rodriguez reviewed whole-system memory using Volatility.
 
-## Process Enumeration
+## ИНВЕНТАРИЗАЦИЯ ПРОЦЕССОВ
 
 ### Listing 107. Process Listing with Volatility
 
@@ -13329,7 +13329,7 @@ These suggest:
 - injection / DLL side-loading;
 - process manipulation.
 
-## Injected Code
+## ВНЕДРЁННЫЙ КОД
 
 ### Listing 108. Detecting Injected Code with Malfind
 
@@ -13346,7 +13346,7 @@ PID     Process         Start VPN       End VPN         Tag     Protection      
 
 MZ header indicates PE code injected into rundll32 memory.
 
-## Network Connections
+## СЕТЕВЫЕ СОЕДИНЕНИЯ
 
 ### Listing 109. Network Connection Analysis
 
@@ -13368,7 +13368,7 @@ Findings:
 
 This reveals missed lateral movement.
 
-## Command Line Analysis
+## АНАЛИЗ КОМАНДНОЙ СТРОКИ
 
 ### Listing 110. Command Line Analysis
 
@@ -13385,7 +13385,7 @@ The fake smss command line includes Base64-encoded PowerShell.
 
 Decoded content revealed a second-stage loader supporting persistence/lateral movement.
 
-## Handle Analysis
+## АНАЛИЗ ДЕСКРИПТОРОВ
 
 ### Listing 111. Handle Analysis for Malicious Process
 
@@ -13418,7 +13418,7 @@ Maya documents eradication implications:
 
 Memory analysis transforms apparent single-host malware cleanup into multi-system incident and triggers new Scope iteration.
 
-# The Coordinated Credential Reset
+# СКООРДИНИРОВАННЫЙ СБРОС УЧЁТНЫХ ДАННЫХ
 
 Northwind Financial Services confirmed:
 - attacker obtained domain-admin access;
@@ -13550,7 +13550,7 @@ Incident record:
 
 The phased approach removed harvested-credential access while minimizing disruption to critical trading operations.
 
-## Coordinated Credential Reset — Conclusion
+## СКООРДИНИРОВАННЫЙ СБРОС УЧЁТНЫХ ДАННЫХ — ВЫВОД
 
 Incident record also captured:
 
@@ -13578,7 +13578,7 @@ Source notes the guide is available in PDF/Markdown at dynamicincidentresponse.c
 
 Short-form investigation provides enough insight to proceed without waiting for complete long-form forensics. Long-form work may continue in parallel for regulatory, legal, and organizational-learning needs.
 
-#### 1. Answer key eradication questions
+#### 1. ОТВЕТИТЬ НА КЛЮЧЕВЫЕ ВОПРОСЫ ИСКОРЕНЕНИЯ
 
 - What was the initial access vector, and is it closed?
 - Which credentials were compromised, and are they rotated?
@@ -13586,7 +13586,7 @@ Short-form investigation provides enough insight to proceed without waiting for 
 - Which persistence mechanisms were deployed, and are all known?
 - What vulnerability enabled attack, and is it remediated?
 
-#### 2. Apply log investigation
+#### 2. ПРОВЕСТИ АНАЛИЗ ЖУРНАЛОВ
 
 - use portable detection rules and fast event-log analysis;
 - query SIEM for IOC across ingested sources;
@@ -13595,7 +13595,7 @@ Short-form investigation provides enough insight to proceed without waiting for 
 
 Scope owns the canonical attack-progression timeline; Eradicate annotates it.
 
-#### 3. Conduct live investigation
+#### 3. ПРОВЕСТИ ИССЛЕДОВАНИЕ ЖИВОЙ СИСТЕМЫ
 
 - enumerate processes;
 - enumerate connections;
@@ -13604,7 +13604,7 @@ Scope owns the canonical attack-progression timeline; Eradicate annotates it.
 - identify new services, tasks, accounts;
 - document findings for eradication planning.
 
-#### 4. Perform memory investigation when needed
+#### 4. ПРИ НЕОБХОДИМОСТИ ПРОВЕСТИ АНАЛИЗ ПАМЯТИ
 
 - analyze memory captured during Contain;
 - if memory was not captured, acquire whole-system memory before analysis;
@@ -13614,7 +13614,7 @@ Scope owns the canonical attack-progression timeline; Eradicate annotates it.
 
 Volatile acquisition itself belongs primarily to Contain.
 
-#### 5. Analyze network data
+#### 5. ПРОАНАЛИЗИРОВАТЬ СЕТЕВЫЕ ДАННЫЕ
 
 - PCAP;
 - NetFlow;
@@ -13623,12 +13623,12 @@ Volatile acquisition itself belongs primarily to Contain.
 - cloud flow graphs;
 - exfiltration volume/destination analysis.
 
-#### 6. Use EDR for centralized endpoint investigation
+#### 6. ИСПОЛЬЗОВАТЬ EDR ДЛЯ ЦЕНТРАЛИЗОВАННОГО АНАЛИЗА КОНЕЧНЫХ ТОЧЕК
 
 - query multiple endpoints;
 - correlate EDR with log/memory/network findings.
 
-#### 7. Investigate malware
+#### 7. ИССЛЕДОВАТЬ ВРЕДОНОСНОЕ ПО
 
 Static:
 - hashes;
@@ -13648,7 +13648,7 @@ Extract:
 - persistence;
 - C2 domains/IPs.
 
-#### 8. Investigate BEC where relevant
+#### 8. ПРИ НЕОБХОДИМОСТИ ИССЛЕДОВАТЬ BEC
 
 - mailbox rules/forwarding;
 - organization mail-flow rules;
@@ -13657,7 +13657,7 @@ Extract:
 - impossible travel/sign-in anomalies;
 - fraudulent transactions with finance/accounting.
 
-#### 9. Investigate insider threat where relevant
+#### 9. ПРИ НЕОБХОДИМОСТИ ИССЛЕДОВАТЬ ВНУТРЕННЮЮ УГРОЗУ
 
 - coordinate HR/legal/leadership;
 - inspect data access;
@@ -13668,14 +13668,14 @@ Extract:
 - altered configurations;
 - preserve detailed evidence.
 
-#### 10. Investigate supply-chain compromise
+#### 10. ИССЛЕДОВАТЬ КОМПРОМЕТАЦИЮ ЦЕПОЧКИ ПОСТАВОК
 
 - software: all systems with compromised version + vendor IOC;
 - hardware: serial numbers, procurement and shipping chain;
 - service providers: enumerate all vendor access paths;
 - coordinate findings with supplier/partner.
 
-#### 11. Investigate cloud environments
+#### 11. ИССЛЕДОВАТЬ ОБЛАЧНЫЕ СРЕДЫ
 
 - audit logs;
 - differential IaC/baseline analysis;
@@ -13690,21 +13690,21 @@ Extract:
 
 ### Шаг 2. Perform Root Cause Analysis
 
-#### 1. Identify root cause
+#### 1. ВЫЯВИТЬ КОРНЕВУЮ ПРИЧИНУ
 
 - trace attack chain to initial compromise;
 - distinguish immediate vs underlying cause;
 - document sequence;
 - identify systemic weaknesses.
 
-#### 2. Use structured analysis
+#### 2. ИСПОЛЬЗОВАТЬ СТРУКТУРИРОВАННЫЙ АНАЛИЗ
 
 - fishbone with four P's: People, Process, Product, Policy;
 - or Five Whys for linear investigation;
 - involve IT/security/business;
 - validate against evidence.
 
-#### 3. Document findings for remediation
+#### 3. ЗАДОКУМЕНТИРОВАТЬ ВЫВОДЫ ДЛЯ УСТРАНЕНИЯ
 
 - vulnerabilities;
 - misconfigurations;
@@ -13715,7 +13715,7 @@ Extract:
 
 ### Шаг 3. Remove Persistence Mechanisms
 
-#### 1. Windows persistence
+#### 1. ЗАКРЕПЛЕНИЕ В WINDOWS
 
 - consolidated autorun enumeration;
 - registry Run keys;
@@ -13726,7 +13726,7 @@ Extract:
 - DLL search-order hijacking;
 - Group Policy scripts/software deployment.
 
-#### 2. Linux persistence
+#### 2. ЗАКРЕПЛЕНИЕ В LINUX
 
 - /etc/crontab, /etc/cron.d/, user crontabs;
 - pending at jobs;
@@ -13742,14 +13742,14 @@ Extract:
 - git hooks;
 - udev.
 
-#### 3. Service/application persistence
+#### 3. ЗАКРЕПЛЕНИЕ В СЕРВИСАХ И ПРИЛОЖЕНИЯХ
 
 - suspicious encoded/eval files;
 - compare web directories with known-good;
 - web logs;
 - file-integrity comparison against manifests/version control.
 
-#### 4. Cloud persistence
+#### 4. ЗАКРЕПЛЕНИЕ В ОБЛАКЕ
 
 - unauthorized IAM users/roles/policies;
 - serverless functions;
@@ -13771,14 +13771,14 @@ This step expands beyond the known-compromised set already handled in Contain to
 - delegation;
 - hybrid AD/Entra.
 
-#### 1. Local accounts and credentials
+#### 1. ЛОКАЛЬНЫЕ УЧЁТНЫЕ ЗАПИСИ И УЧЁТНЫЕ ДАННЫЕ
 
 - remove unauthorized local accounts;
 - reset additional legitimate affected accounts;
 - clear cached credentials from LSASS, browser stores, credential managers;
 - rotate local admin passwords using managed local-admin password solution.
 
-#### 2. Active Directory
+#### 2. ACTIVE DIRECTORY
 
 - prioritize Tier 0 → Tier 1 → Tier 2;
 - reset compromised/high-risk accounts;
@@ -13794,23 +13794,23 @@ This step expands beyond the known-compromised set already handled in Contain to
 - monitor for Golden Ticket use;
 - document timings.
 
-#### 4. Domain-controller machine accounts
+#### 4. МАШИННЫЕ УЧЁТНЫЕ ЗАПИСИ КОНТРОЛЛЕРОВ ДОМЕНА
 
 - reset individually after KRBTGT;
 - allow replication between resets.
 
-#### 5. Trust passwords
+#### 5. ПАРОЛИ ДОВЕРИТЕЛЬНЫХ ОТНОШЕНИЙ
 
 - reset on trusting side of affected trusts;
 - verify trust functionality.
 
-#### 6. Unconstrained delegation
+#### 6. НЕОГРАНИЧЕННОЕ ДЕЛЕГИРОВАНИЕ
 
 - enumerate affected computer/user objects;
 - disable where unnecessary;
 - migrate required cases to constrained or resource-based constrained delegation.
 
-#### 7. Hybrid/cloud identity
+#### 7. ГИБРИДНЫЕ И ОБЛАЧНЫЕ ИДЕНТИЧНОСТИ
 
 - coordinate AD and Entra;
 - revoke sessions/refresh tokens;
@@ -13821,7 +13821,7 @@ This step expands beyond the known-compromised set already handled in Contain to
 - reset sync-service credentials;
 - audit federation.
 
-#### 8. Extend session/token revocation
+#### 8. РАСШИРИТЬ ОТЗЫВ СЕССИЙ И ТОКЕНОВ
 
 For additional accounts discovered after Contain:
 - terminate active sessions;
@@ -13833,13 +13833,13 @@ For additional accounts discovered after Contain:
 
 ### Шаг 5. Execute Targeted Removal or Rebuild
 
-#### 1. Choose strategy
+#### 1. ВЫБРАТЬ СТРАТЕГИЮ
 
 - targeted removal when scope is well understood;
 - full rebuild when scope uncertain;
 - restore from verified clean backup where appropriate.
 
-#### 2. Validate method
+#### 2. ПРОВЕРИТЬ МЕТОД
 
 - confirm clean backup exists for restore path;
 - close root cause before rebuild/restore;
@@ -13850,28 +13850,28 @@ Per-system backup integrity validation at restore time belongs to Recover Step 1
 
 ### Шаг 6. Remediate Vulnerabilities
 
-#### 1. Patch exploited vulnerabilities
+#### 1. ПРОПАТЧИТЬ ЭКСПЛУАТИРОВАННЫЕ УЯЗВИМОСТИ
 
 - map to CVE where possible;
 - check CISA KEV;
 - prioritize actively exploited vulnerabilities;
 - test patches in non-production before broad rollout.
 
-#### 2. Patch management
+#### 2. УПРАВЛЕНИЕ ПАТЧАМИ
 
 - track status;
 - balance change-control with urgent eradication;
 - use phased rollout;
 - verify functionality.
 
-#### 3. Unpatchable systems
+#### 3. СИСТЕМЫ, КОТОРЫЕ НЕЛЬЗЯ ПРОПАТЧИТЬ
 
 - compensating controls;
 - document temporary status;
 - replacement/upgrade timeline;
 - ongoing vulnerability management.
 
-#### 4. Broader assessment
+#### 4. БОЛЕЕ ШИРОКАЯ ОЦЕНКА
 
 - scan for related vulnerabilities across environment;
 - compare hardening to CIS Benchmarks or equivalent;
@@ -13883,14 +13883,14 @@ Per-system backup integrity validation at restore time belongs to Recover Step 1
 
 ### Шаг 7. Address Eradication Challenges
 
-#### 1. Living off the land
+#### 1. ИСПОЛЬЗОВАНИЕ ШТАТНЫХ СРЕДСТВ
 
 - review legitimate system tools used maliciously;
 - analyze command-line arguments;
 - baseline admin usage;
 - improve logging.
 
-#### 2. Fileless malware
+#### 2. БЕСФАЙЛОВОЕ ВРЕДОНОСНОЕ ПО
 
 - memory analysis;
 - injected/reflected loading;
@@ -13899,14 +13899,14 @@ Per-system backup integrity validation at restore time belongs to Recover Step 1
 - registry/WMI persistence;
 - controlled restarts after persistence removal.
 
-#### 3. RMM abuse
+#### 3. ЗЛОУПОТРЕБЛЕНИЕ RMM
 
 - audit installed RMM;
 - identify unauthorized tools;
 - review authorized-tool access;
 - allowlist approved tools.
 
-#### 4. Cross-trust persistence
+#### 4. ЗАКРЕПЛЕНИЕ ЧЕРЕЗ ГРАНИЦЫ ДОВЕРИЯ
 
 - enumerate domain/forest/federation trusts;
 - review trusted-environment auth logs;
@@ -13915,21 +13915,21 @@ Per-system backup integrity validation at restore time belongs to Recover Step 1
 
 ### Шаг 8. Validate Eradication Success
 
-#### 1. Verify persistence removal
+#### 1. ПРОВЕРИТЬ УДАЛЕНИЕ ЗАКРЕПЛЕНИЯ
 
 - re-scan IOC;
 - confirm tasks/services/registry entries gone;
 - monitor authentication for account remediation;
 - verify blocked network indicators alert when touched.
 
-#### 2. Monitor for continued attacker activity
+#### 2. ОТСЛЕЖИВАТЬ ПРОДОЛЖАЮЩУЮСЯ АКТИВНОСТЬ АТАКУЮЩЕГО
 
 - revoked credential use;
 - known attacker infrastructure;
 - suspicious process creation;
 - canary files/honeypot credentials where appropriate.
 
-#### 3. Confirm vulnerability remediation
+#### 3. ПОДТВЕРДИТЬ УСТРАНЕНИЕ УЯЗВИМОСТЕЙ
 
 - patches installed;
 - compensating controls effective;
@@ -13938,7 +13938,7 @@ Per-system backup integrity validation at restore time belongs to Recover Step 1
 
 ### Шаг 9. Document Eradication Actions
 
-#### 1. Investigation findings
+#### 1. ВЫВОДЫ РАССЛЕДОВАНИЯ
 
 - IOC;
 - persistence mechanisms;
@@ -13947,7 +13947,7 @@ Per-system backup integrity validation at restore time belongs to Recover Step 1
 - attacker timeline;
 - evidence gaps.
 
-#### 2. Remediation actions
+#### 2. ДЕЙСТВИЯ ПО УСТРАНЕНИЮ
 
 - each persistence removal with timestamp/method;
 - credential resets;
@@ -13957,14 +13957,14 @@ Per-system backup integrity validation at restore time belongs to Recover Step 1
 - patches;
 - compensating controls.
 
-#### 3. ПРОВЕСТИ КОММУНИКАЦИЮ С ЗАИНТЕРЕСОВАННЫМИ СТОРОНАМИ
+#### 3. КОММУНИКАЦИЯ С ЗАИНТЕРЕСОВАННЫМИ СТОРОНАМИ
 
 - executive outcome summary;
 - technical brief for IT/security;
 - legal/compliance documentation;
 - Recover handoff.
 
-#### 4. Feed Debrief
+#### 4. ПЕРЕДАТЬ РЕЗУЛЬТАТЫ НА ЭТАП РАЗБОРА
 
 Capture:
 - detection gaps;

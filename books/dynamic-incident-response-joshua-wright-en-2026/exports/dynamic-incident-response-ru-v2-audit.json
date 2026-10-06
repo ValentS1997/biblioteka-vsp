@@ -107,7 +107,7 @@
   "third_party_markers_source": 231,
   "third_party_callouts_v2": 231,
   "project_visuals_included": 20,
-  "mixed_heading_candidate_count": 302,
+  "mixed_heading_candidate_count": 136,
   "mixed_heading_candidates": [
     {
       "chapter": 3,
@@ -363,151 +363,19 @@
     },
     {
       "chapter": 13,
-      "heading": "THE DIRTY KEBAB: SHORT-FORM INVESTIGATION"
+      "heading": "DIRTY KEBAB: КРАТКОЕ РАССЛЕДОВАНИЕ"
     },
     {
       "chapter": 13,
-      "heading": "Long-Form Scope Governance"
+      "heading": "ПРИМЕР SSH-КОМПРОМЕТАЦИИ В FINTECH"
     },
     {
       "chapter": 13,
-      "heading": "LONG-FORM INVESTIGATION EXAMPLE: IDAHO MURDERS"
+      "heading": "HAYABUSA"
     },
     {
       "chapter": 13,
-      "heading": "FINTECH SSH COMPROMISE: ROOT CAUSE ANALYSIS"
-    },
-    {
-      "chapter": 13,
-      "heading": "Assessing Root Cause"
-    },
-    {
-      "chapter": 13,
-      "heading": "Root Cause Analysis Example: Public S3 Bucket Exposure"
-    },
-    {
-      "chapter": 13,
-      "heading": "ALTERNATIVE TO FISHBONE DIAGRAM: THE FIVE WHYS"
-    },
-    {
-      "chapter": 13,
-      "heading": "Fintech SSH Example"
-    },
-    {
-      "chapter": 13,
-      "heading": "When to Use Five Whys"
-    },
-    {
-      "chapter": 13,
-      "heading": "When to Prefer Fishbone"
-    },
-    {
-      "chapter": 13,
-      "heading": "Sigma for Log Analysis"
-    },
-    {
-      "chapter": 13,
-      "heading": "Hayabusa"
-    },
-    {
-      "chapter": 13,
-      "heading": "SIEM Operational Cost"
-    },
-    {
-      "chapter": 13,
-      "heading": "SAME LOGS, DIFFERENT OUTCOMES: THE RIBRIDGES DATA BREACH"
-    },
-    {
-      "chapter": 13,
-      "heading": "RIBridges: Same Logs, Different Outcomes — Conclusion"
-    },
-    {
-      "chapter": 13,
-      "heading": "DIFFERENTIAL ANALYSIS FOR THREAT INVESTIGATION"
-    },
-    {
-      "chapter": 13,
-      "heading": "Velociraptor IOC Analysis Example"
-    },
-    {
-      "chapter": 13,
-      "heading": "Process-Specific Memory Investigation"
-    },
-    {
-      "chapter": 13,
-      "heading": "Whole-System Memory Investigation"
-    },
-    {
-      "chapter": 13,
-      "heading": "Vulnerable Driver Investigation"
-    },
-    {
-      "chapter": 13,
-      "heading": "Volatility Driver Enumeration — Continuation"
-    },
-    {
-      "chapter": 13,
-      "heading": "Browsing Memory Artifacts with MemProcFS"
-    },
-    {
-      "chapter": 13,
-      "heading": "Network Data Sources"
-    },
-    {
-      "chapter": 13,
-      "heading": "Packet Capture (PCAP)"
-    },
-    {
-      "chapter": 13,
-      "heading": "Flow Data"
-    },
-    {
-      "chapter": 13,
-      "heading": "Proxy Logs"
-    },
-    {
-      "chapter": 13,
-      "heading": "Firewall Logs"
-    },
-    {
-      "chapter": 13,
-      "heading": "Network Detection and Response Platforms"
-    },
-    {
-      "chapter": 13,
-      "heading": "Network Data for Connection Mapping"
-    },
-    {
-      "chapter": 13,
-      "heading": "SAFETY IN MALWARE ANALYSIS"
-    },
-    {
-      "chapter": 13,
-      "heading": "Static Analysis"
-    },
-    {
-      "chapter": 13,
-      "heading": "PE Structure Analysis"
-    },
-    {
-      "chapter": 13,
-      "heading": "Dynamic Analysis"
-    },
-    {
-      "chapter": 13,
-      "heading": "Dynamic Analysis — Continued"
-    },
-    {
-      "chapter": 13,
-      "heading": "Automated Sandboxes"
-    },
-    {
-      "chapter": 13,
-      "heading": "Practical Limitations"
-    },
-    {
-      "chapter": 13,
-      "heading": "Email System Investigation"
+      "heading": "ПРИМЕР АНАЛИЗА IOC В VELOCIRAPTOR"
     },
     {
       "chapter": 13,
@@ -515,95 +383,7 @@
     },
     {
       "chapter": 13,
-      "heading": "Financial Transaction Investigation"
-    },
-    {
-      "chapter": 13,
-      "heading": "Sign-In Analysis"
-    },
-    {
-      "chapter": 13,
-      "heading": "Victim by Proxy"
-    },
-    {
-      "chapter": 13,
-      "heading": "Email Header and Content Analysis"
-    },
-    {
-      "chapter": 13,
-      "heading": "Domain Registration Timing"
-    },
-    {
-      "chapter": 13,
-      "heading": "Information Flow Analysis"
-    },
-    {
-      "chapter": 13,
-      "heading": "Supplier-Mailbox Compromise Limitation"
-    },
-    {
-      "chapter": 13,
-      "heading": "1. Data Access Patterns"
-    },
-    {
-      "chapter": 13,
-      "heading": "2. Privilege Changes"
-    },
-    {
-      "chapter": 13,
-      "heading": "3. Exfiltration Methods"
-    },
-    {
-      "chapter": 13,
-      "heading": "INSIDER THREAT FROM DAY ONE: KNOWBE4'S NORTH KOREAN IT WORKER"
-    },
-    {
-      "chapter": 13,
-      "heading": "Software Supply Chain Compromises"
-    },
-    {
-      "chapter": 13,
-      "heading": "Boundary Software"
-    },
-    {
-      "chapter": 13,
-      "heading": "Internal Software"
-    },
-    {
-      "chapter": 13,
-      "heading": "Investigation Approach"
-    },
-    {
-      "chapter": 13,
-      "heading": "2025 NPM / Shai-Hulud Example"
-    },
-    {
-      "chapter": 13,
-      "heading": "VENDOR BREACH ACCOUNTABILITY: MARQUIS V. SONICWALL"
-    },
-    {
-      "chapter": 13,
-      "heading": "Hardware Supply Chain Attacks"
-    },
-    {
-      "chapter": 13,
-      "heading": "COUNTERFEIT CISCO EQUIPMENT IN MILITARY SYSTEMS"
-    },
-    {
-      "chapter": 13,
-      "heading": "SaaS Vendor Compromises"
-    },
-    {
-      "chapter": 13,
-      "heading": "SUPPLY CHAIN COMPROMISE: THE SALESLOFT DRIFT INCIDENT"
-    },
-    {
-      "chapter": 13,
-      "heading": "Managed Service Provider and Staff Access Compromises"
-    },
-    {
-      "chapter": 13,
-      "heading": "Cloud Investigation — Introduction"
+      "heading": "ПРИМЕР NPM / SHAI-HULUD 2025 ГОДА"
     },
     {
       "chapter": 13,
@@ -615,127 +395,15 @@
     },
     {
       "chapter": 13,
-      "heading": "IAM Investigation"
+      "heading": "OAUTH-КАМПАНИЯ MIDNIGHT BLIZZARD"
     },
     {
       "chapter": 13,
-      "heading": "Infrastructure Investigation"
+      "heading": "УДАЛЕНИЕ WEB SHELL"
     },
     {
       "chapter": 13,
-      "heading": "VM and Container Images"
-    },
-    {
-      "chapter": 13,
-      "heading": "Storage Access and Exfiltration"
-    },
-    {
-      "chapter": 13,
-      "heading": "Serverless and Event-Driven Infrastructure"
-    },
-    {
-      "chapter": 13,
-      "heading": "Network Configuration"
-    },
-    {
-      "chapter": 13,
-      "heading": "SaaS Investigation and Eradication"
-    },
-    {
-      "chapter": 13,
-      "heading": "Integration-Side Logs"
-    },
-    {
-      "chapter": 13,
-      "heading": "SaaS Privilege Enumeration"
-    },
-    {
-      "chapter": 13,
-      "heading": "MIDNIGHT BLIZZARD OAUTH CAMPAIGN"
-    },
-    {
-      "chapter": 13,
-      "heading": "Build Persistence Inventory"
-    },
-    {
-      "chapter": 13,
-      "heading": "Plan Removal Sequence"
-    },
-    {
-      "chapter": 13,
-      "heading": "Verify Immediately"
-    },
-    {
-      "chapter": 13,
-      "heading": "Windows Persistence Removal Considerations"
-    },
-    {
-      "chapter": 13,
-      "heading": "Linux Persistence Removal Considerations"
-    },
-    {
-      "chapter": 13,
-      "heading": "Web Shell Removal"
-    },
-    {
-      "chapter": 13,
-      "heading": "Cloud Persistence Removal"
-    },
-    {
-      "chapter": 13,
-      "heading": "Lambda / Serverless Functions"
-    },
-    {
-      "chapter": 13,
-      "heading": "IAM Policy Modifications"
-    },
-    {
-      "chapter": 13,
-      "heading": "Container Image Modifications"
-    },
-    {
-      "chapter": 13,
-      "heading": "Local Account and Credential Remediation"
-    },
-    {
-      "chapter": 13,
-      "heading": "Active Directory Account and Credential Remediation"
-    },
-    {
-      "chapter": 13,
-      "heading": "Phase 1: Privileged Account Reset"
-    },
-    {
-      "chapter": 13,
-      "heading": "ACCOUNT RECREATION VS. PASSWORD RESET FOR SEVERE COMPROMISES"
-    },
-    {
-      "chapter": 13,
-      "heading": "Phase 2: Service Account and Identity Infrastructure Reset"
-    },
-    {
-      "chapter": 13,
-      "heading": "Phase 3: General User Reset"
-    },
-    {
-      "chapter": 13,
-      "heading": "Krbtgt Account Reset — Introduction"
-    },
-    {
-      "chapter": 13,
-      "heading": "Multi-Domain Forest Considerations"
-    },
-    {
-      "chapter": 13,
-      "heading": "Domain Controller Machine Account Reset"
-    },
-    {
-      "chapter": 13,
-      "heading": "Trust Password Reset"
-    },
-    {
-      "chapter": 13,
-      "heading": "Disabling Unconstrained Delegation"
+      "heading": "LAMBDA / SERVERLESS-ФУНКЦИИ"
     },
     {
       "chapter": 13,
@@ -743,135 +411,11 @@
     },
     {
       "chapter": 13,
-      "heading": "Entra ID Session and Token Revocation"
+      "heading": "BACK-CHANNEL LOGOUT"
     },
     {
       "chapter": 13,
-      "heading": "Back-Channel Logout"
-    },
-    {
-      "chapter": 13,
-      "heading": "THE FOUR-MONTH ZOMBIE ACCOUNT"
-    },
-    {
-      "chapter": 13,
-      "heading": "Entra Connect and Directory Synchronization"
-    },
-    {
-      "chapter": 13,
-      "heading": "Session and Token Revocation"
-    },
-    {
-      "chapter": 13,
-      "heading": "OAuth Application and Consent Revocation"
-    },
-    {
-      "chapter": 13,
-      "heading": "Personal Access Tokens and Long-Lived Credentials"
-    },
-    {
-      "chapter": 13,
-      "heading": "API Keys and Service Credentials"
-    },
-    {
-      "chapter": 13,
-      "heading": "Severity of Compromise"
-    },
-    {
-      "chapter": 13,
-      "heading": "System Criticality"
-    },
-    {
-      "chapter": 13,
-      "heading": "Availability of Clean Sources"
-    },
-    {
-      "chapter": 13,
-      "heading": "Identifying Exploited Vulnerabilities"
-    },
-    {
-      "chapter": 13,
-      "heading": "Threat Intelligence / KEV Context"
-    },
-    {
-      "chapter": 13,
-      "heading": "Configuration Weaknesses"
-    },
-    {
-      "chapter": 13,
-      "heading": "Patch Management During Eradication"
-    },
-    {
-      "chapter": 13,
-      "heading": "Test and Verify Before Broad Rollout"
-    },
-    {
-      "chapter": 13,
-      "heading": "Track Patch Status"
-    },
-    {
-      "chapter": 13,
-      "heading": "Balance Change Management with Speed"
-    },
-    {
-      "chapter": 13,
-      "heading": "Consider Phased Rollout"
-    },
-    {
-      "chapter": 13,
-      "heading": "Verify System Functionality"
-    },
-    {
-      "chapter": 13,
-      "heading": "Addressing Unpatchable Systems"
-    },
-    {
-      "chapter": 13,
-      "heading": "Network Segmentation"
-    },
-    {
-      "chapter": 13,
-      "heading": "Application-Layer Controls"
-    },
-    {
-      "chapter": 13,
-      "heading": "Enhanced Monitoring"
-    },
-    {
-      "chapter": 13,
-      "heading": "Permanent Remediation Plan"
-    },
-    {
-      "chapter": 13,
-      "heading": "WAF BYPASS OPPORTUNITIES"
-    },
-    {
-      "chapter": 13,
-      "heading": "Broader Vulnerability Assessment"
-    },
-    {
-      "chapter": 13,
-      "heading": "IP Camera SSRF Example"
-    },
-    {
-      "chapter": 13,
-      "heading": "Configuration Hardening"
-    },
-    {
-      "chapter": 13,
-      "heading": "Harden System Configurations"
-    },
-    {
-      "chapter": 13,
-      "heading": "Enumerate Accessible Services"
-    },
-    {
-      "chapter": 13,
-      "heading": "Review Network Device Configurations"
-    },
-    {
-      "chapter": 13,
-      "heading": "Disable Unnecessary Services"
+      "heading": "ENTRA CONNECT И СИНХРОНИЗАЦИЯ КАТАЛОГА"
     },
     {
       "chapter": 13,
@@ -879,99 +423,7 @@
     },
     {
       "chapter": 13,
-      "heading": "THIRD-PARTY LOLBIN ACCESS"
-    },
-    {
-      "chapter": 13,
-      "heading": "Legitimate Remote Monitoring and Management Tool Investigation"
-    },
-    {
-      "chapter": 13,
-      "heading": "Cross-Trust Boundary Threat Investigation"
-    },
-    {
-      "chapter": 13,
-      "heading": "Scoping Trust Relationships"
-    },
-    {
-      "chapter": 13,
-      "heading": "The Memory Forensics Discovery"
-    },
-    {
-      "chapter": 13,
-      "heading": "Process Enumeration"
-    },
-    {
-      "chapter": 13,
-      "heading": "Injected Code"
-    },
-    {
-      "chapter": 13,
-      "heading": "Network Connections"
-    },
-    {
-      "chapter": 13,
-      "heading": "Command Line Analysis"
-    },
-    {
-      "chapter": 13,
-      "heading": "Handle Analysis"
-    },
-    {
-      "chapter": 13,
-      "heading": "The Coordinated Credential Reset"
-    },
-    {
-      "chapter": 13,
-      "heading": "Coordinated Credential Reset — Conclusion"
-    },
-    {
-      "chapter": 13,
       "heading": "Шаг 1. Conduct Short-Form Investigation to Inform Eradication"
-    },
-    {
-      "chapter": 13,
-      "heading": "1. Answer key eradication questions"
-    },
-    {
-      "chapter": 13,
-      "heading": "2. Apply log investigation"
-    },
-    {
-      "chapter": 13,
-      "heading": "3. Conduct live investigation"
-    },
-    {
-      "chapter": 13,
-      "heading": "4. Perform memory investigation when needed"
-    },
-    {
-      "chapter": 13,
-      "heading": "5. Analyze network data"
-    },
-    {
-      "chapter": 13,
-      "heading": "6. Use EDR for centralized endpoint investigation"
-    },
-    {
-      "chapter": 13,
-      "heading": "7. Investigate malware"
-    },
-    {
-      "chapter": 13,
-      "heading": "8. Investigate BEC where relevant"
-    },
-    {
-      "chapter": 13,
-      "heading": "9. Investigate insider threat where relevant"
-    },
-    {
-      "chapter": 13,
-      "heading": "10. Investigate supply-chain compromise"
-    },
-    {
-      "chapter": 13,
-      "heading": "11. Investigate cloud environments"
     },
     {
       "chapter": 13,
@@ -979,35 +431,7 @@
     },
     {
       "chapter": 13,
-      "heading": "1. Identify root cause"
-    },
-    {
-      "chapter": 13,
-      "heading": "2. Use structured analysis"
-    },
-    {
-      "chapter": 13,
-      "heading": "3. Document findings for remediation"
-    },
-    {
-      "chapter": 13,
       "heading": "Шаг 3. Remove Persistence Mechanisms"
-    },
-    {
-      "chapter": 13,
-      "heading": "1. Windows persistence"
-    },
-    {
-      "chapter": 13,
-      "heading": "2. Linux persistence"
-    },
-    {
-      "chapter": 13,
-      "heading": "3. Service/application persistence"
-    },
-    {
-      "chapter": 13,
-      "heading": "4. Cloud persistence"
     },
     {
       "chapter": 13,
@@ -1015,31 +439,7 @@
     },
     {
       "chapter": 13,
-      "heading": "1. Local accounts and credentials"
-    },
-    {
-      "chapter": 13,
-      "heading": "2. Active Directory"
-    },
-    {
-      "chapter": 13,
-      "heading": "4. Domain-controller machine accounts"
-    },
-    {
-      "chapter": 13,
-      "heading": "5. Trust passwords"
-    },
-    {
-      "chapter": 13,
-      "heading": "6. Unconstrained delegation"
-    },
-    {
-      "chapter": 13,
-      "heading": "7. Hybrid/cloud identity"
-    },
-    {
-      "chapter": 13,
-      "heading": "8. Extend session/token revocation"
+      "heading": "2. ACTIVE DIRECTORY"
     },
     {
       "chapter": 13,
@@ -1047,31 +447,7 @@
     },
     {
       "chapter": 13,
-      "heading": "1. Choose strategy"
-    },
-    {
-      "chapter": 13,
-      "heading": "2. Validate method"
-    },
-    {
-      "chapter": 13,
       "heading": "Шаг 6. Remediate Vulnerabilities"
-    },
-    {
-      "chapter": 13,
-      "heading": "1. Patch exploited vulnerabilities"
-    },
-    {
-      "chapter": 13,
-      "heading": "2. Patch management"
-    },
-    {
-      "chapter": 13,
-      "heading": "3. Unpatchable systems"
-    },
-    {
-      "chapter": 13,
-      "heading": "4. Broader assessment"
     },
     {
       "chapter": 13,
@@ -1079,51 +455,11 @@
     },
     {
       "chapter": 13,
-      "heading": "1. Living off the land"
-    },
-    {
-      "chapter": 13,
-      "heading": "2. Fileless malware"
-    },
-    {
-      "chapter": 13,
-      "heading": "3. RMM abuse"
-    },
-    {
-      "chapter": 13,
-      "heading": "4. Cross-trust persistence"
-    },
-    {
-      "chapter": 13,
       "heading": "Шаг 8. Validate Eradication Success"
     },
     {
       "chapter": 13,
-      "heading": "1. Verify persistence removal"
-    },
-    {
-      "chapter": 13,
-      "heading": "2. Monitor for continued attacker activity"
-    },
-    {
-      "chapter": 13,
-      "heading": "3. Confirm vulnerability remediation"
-    },
-    {
-      "chapter": 13,
       "heading": "Шаг 9. Document Eradication Actions"
-    },
-    {
-      "chapter": 13,
-      "heading": "1. Investigation findings"
-    },
-    {
-      "chapter": 13,
-      "heading": "2. Remediation actions"
-    },
-    {
-      "chapter": 13,
-      "heading": "4. Feed Debrief"
     },
     {
       "chapter": 14,
