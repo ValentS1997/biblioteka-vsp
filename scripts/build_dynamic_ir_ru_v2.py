@@ -434,13 +434,14 @@ PHRASE_REPLACEMENTS = [
 
 def load_external_heading_map(repo_root: Path):
     global EXTERNAL_HEADING_MAP
-    p = repo_root / "books" / BOOK_ID / "translation" / "ru" / "V2-HEADING-MAP.yaml"
-    if not p.exists():
-        EXTERNAL_HEADING_MAP = {}
-        return
-    data = yaml.safe_load(p.read_text(encoding="utf-8")) or {}
-    raw = data.get("headings") or {}
-    EXTERNAL_HEADING_MAP = {str(k).upper(): str(v) for k, v in raw.items()}
+    root = repo_root / "books" / BOOK_ID / "translation" / "ru"
+    merged = {}
+    for p in sorted(root.glob("V2-HEADING-MAP*.yaml")):
+        data = yaml.safe_load(p.read_text(encoding="utf-8")) or {}
+        raw = data.get("headings") or {}
+        for k, v in raw.items():
+            merged[str(k).upper()] = str(v)
+    EXTERNAL_HEADING_MAP = merged
 
 
 def normalize_heading_text(text: str) -> str:
