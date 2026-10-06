@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#f6f8fb"/><rect width="1600" height="105" fill="#17202a"/>
+<text x="55" y="50" font-family="Arial" font-size="36" font-weight="700" fill="white">Глава 17 — Работа с API</text>
+<text x="55" y="82" font-family="Arial" font-size="20" fill="#d6e4f0">request → status → JSON → inspect → extract → visualize</text>
+<g font-family="Arial" fill="#273746">
+<rect x="50" y="145" width="470" height="250" rx="18" fill="white" stroke="#5dade2" stroke-width="2"/>
+<text x="78" y="190" font-size="24" font-weight="700">GitHub API</text><text x="78" y="235" font-size="19">search/repositories</text><text x="78" y="270" font-size="19">language + stars query</text><text x="78" y="305" font-size="19">requests.get()</text><text x="78" y="340" font-size="19">status_code + r.json()</text>
+<rect x="565" y="145" width="470" height="250" rx="18" fill="white" stroke="#7dcea0" stroke-width="2"/>
+<text x="593" y="190" font-size="24" font-weight="700">Response schema</text><text x="593" y="235" font-size="19">total_count</text><text x="593" y="270" font-size="19">incomplete_results</text><text x="593" y="305" font-size="19">items → repo dictionaries</text><text x="593" y="340" font-size="19">inspect before visualization</text>
+<rect x="1080" y="145" width="470" height="250" rx="18" fill="white" stroke="#f5b041" stroke-width="2"/>
+<text x="1108" y="190" font-size="24" font-weight="700">Rate limits</text><text x="1108" y="235" font-size="19">limit / remaining</text><text x="1108" y="270" font-size="19">reset epoch time</text><text x="1108" y="305" font-size="19">live values change</text><text x="1108" y="340" font-size="19">source examples are historical</text>
+<rect x="50" y="445" width="720" height="280" rx="18" fill="white" stroke="#af7ac5" stroke-width="2"/>
+<text x="78" y="490" font-size="24" font-weight="700">Plotly + Hacker News</text><text x="78" y="535" font-size="19">bar chart: repo links + stars</text><text x="78" y="570" font-size="19">hover text + update_traces()</text><text x="78" y="605" font-size="19">topstories → 30 item requests</text><text x="78" y="640" font-size="19">sort by comments; skip missing descendants</text>
+<rect x="815" y="445" width="735" height="280" rx="18" fill="white" stroke="#ec7063" stroke-width="2"/>
+<text x="843" y="490" font-size="24" font-weight="700">Source findings</text><text x="843" y="535" font-size="18">pprint() without import</text><text x="843" y="570" font-size="18">visiblity output typo</text><text x="843" y="605" font-size="18">API/rate-limit temporal claims</text><text x="843" y="640" font-size="18">live-data + chunk clipping boundaries</text>
+</g>
+<rect x="50" y="775" width="1500" height="72" rx="14" fill="#17202a"/>
+<text x="78" y="819" font-family="Arial" font-size="20" font-weight="700" fill="white">Provenance: e0027:c01–c10 · EPUB spine 27 · OEBPS/Text/978544614112-24.xhtml</text>
+</svg>
