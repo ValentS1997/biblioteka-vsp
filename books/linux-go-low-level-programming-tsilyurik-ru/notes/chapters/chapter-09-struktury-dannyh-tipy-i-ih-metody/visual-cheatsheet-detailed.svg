@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120">
+<rect width="1600" height="1120" fill="#fff"/>
+<style>text{font-family:Arial,sans-serif;fill:#111}.h{font-size:35px;font-weight:700}.s{font-size:22px;font-weight:700}.b{font-size:16px}.sm{font-size:14px}.box{fill:#f8f8f8;stroke:#333;stroke-width:2}</style>
+<text x="55" y="55" class="h">Глава 9 — Структуры данных, типы и их методы · detailed</text>
+<text x="55" y="90" class="b">Boundary: PDF 216–222 · page 223 starts «Строки, руны и UNICODE»</text>
+
+<rect x="55" y="125" width="475" height="245" rx="14" class="box"/>
+<text x="80" y="165" class="s">1. C comparison</text>
+<text x="80" y="202" class="b">array parameter / pointer behavior</text>
+<text x="80" y="234" class="b">size passed separately</text>
+<text x="80" y="266" class="b">element mutation visible to caller</text>
+<text x="80" y="298" class="b">pointer variable itself copied by value</text>
+<text x="80" y="330" class="sm">Nested C function uses GCC-specific extension per source.</text>
+
+<rect x="565" y="125" width="475" height="245" rx="14" class="box"/>
+<text x="590" y="165" class="s">2. Go array value</text>
+<text x="590" y="202" class="b">type arr [7]int</text>
+<text x="590" y="234" class="b">[7]int ≠ [8]int</text>
+<text x="590" y="266" class="b">atrans(v arr) works on a copy</text>
+<text x="590" y="298" class="b">array assignment copies value</text>
+<text x="590" y="330" class="b">array can be returned as result</text>
+
+<rect x="1075" y="125" width="470" height="245" rx="14" class="box"/>
+<text x="1100" y="165" class="s">3. Pointer &amp; slice</text>
+<text x="1100" y="202" class="b">ptrans(*arr) mutates caller array</text>
+<text x="1100" y="234" class="b">slice created from backing array</text>
+<text x="1100" y="266" class="b">strans changes observed elements</text>
+<text x="1100" y="298" class="b">array and slice are not interchangeable</text>
+<text x="1100" y="330" class="sm">Terminology contradiction preserved separately.</text>
+
+<rect x="55" y="405" width="475" height="250" rx="14" class="box"/>
+<text x="80" y="445" class="s">4. Multidimensional slices</text>
+<text x="80" y="482" class="b">twoD := make([][]int, dim)</text>
+<text x="80" y="514" class="b">each row allocated independently</text>
+<text x="80" y="546" class="b">row lengths: 1,2,3,4,5</text>
+<text x="80" y="578" class="b">triangular, non-rectangular structure</text>
+<text x="80" y="610" class="b">fmt output used as observation</text>
+
+<rect x="565" y="405" width="475" height="250" rx="14" class="box"/>
+<text x="590" y="445" class="s">5. Multiple returns</text>
+<text x="590" y="482" class="b">return int, float64, []string</text>
+<text x="590" y="514" class="b">different result types in one call</text>
+<text x="590" y="546" class="b">blank identifier discards values</text>
+<text x="590" y="578" class="b">named result variables</text>
+<text x="590" y="610" class="b">bare return in named-result variant</text>
+
+<rect x="1075" y="405" width="470" height="250" rx="14" class="box"/>
+<text x="1100" y="445" class="s">6. Verification examples</text>
+<text x="1100" y="482" class="b">./array_c</text>
+<text x="1100" y="514" class="b">./array_go</text>
+<text x="1100" y="546" class="b">./garray_c · ./cpptr</text>
+<text x="1100" y="578" class="b">./3slice</text>
+<text x="1100" y="610" class="b">./marg</text>
+
+<rect x="55" y="700" width="720" height="245" rx="14" class="box"/>
+<text x="80" y="740" class="s">7. Observable invariants</text>
+<text x="80" y="777" class="b">array value call does not mutate caller copy</text>
+<text x="80" y="809" class="b">pointer call does mutate caller array</text>
+<text x="80" y="841" class="b">slice example exposes element changes</text>
+<text x="80" y="873" class="b">type boundary prevents array/slice substitution</text>
+
+<rect x="825" y="700" width="720" height="245" rx="14" class="box"/>
+<text x="850" y="740" class="s">8. Source findings</text>
+<text x="850" y="777" class="b">slice passing terminology contradicts itself</text>
+<text x="850" y="809" class="b">garray_c ptrans increments loop index twice</text>
+<text x="850" y="841" class="b">Stringer explanation lacks internal proof</text>
+<text x="850" y="873" class="b">returned-local lifetime explanation remains source-scoped</text>
+
+<text x="55" y="1030" class="s">Transition</text>
+<text x="55" y="1065" class="b">Next chapter moves to strings, rune values and Unicode representation.</text>
+</svg>

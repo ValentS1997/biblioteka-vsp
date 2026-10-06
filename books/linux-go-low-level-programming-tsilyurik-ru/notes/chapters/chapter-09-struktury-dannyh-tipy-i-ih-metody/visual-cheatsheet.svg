@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780">
+<rect width="1200" height="780" fill="#fff"/>
+<style>text{font-family:Arial,sans-serif;fill:#111}.h{font-size:31px;font-weight:700}.t{font-size:20px;font-weight:700}.b{font-size:16px}.box{fill:#f7f7f7;stroke:#333;stroke-width:2}</style>
+<text x="50" y="55" class="h">Глава 9 — Структуры данных, типы и их методы</text>
+<text x="50" y="88" class="b">RAG: PDF 216–222 · arrays → pointers → slices → multiple returns</text>
+
+<rect x="50" y="125" width="340" height="200" rx="14" class="box"/>
+<text x="75" y="165" class="t">1. Go array</text>
+<text x="75" y="200" class="b">[7]int includes length in type</text>
+<text x="75" y="230" class="b">value-copy example</text>
+<text x="75" y="260" class="b">assignment copies array</text>
+<text x="75" y="290" class="b">return array by value</text>
+
+<rect x="430" y="125" width="340" height="200" rx="14" class="box"/>
+<text x="455" y="165" class="t">2. Pointer / slice</text>
+<text x="455" y="200" class="b">*arr → caller-visible mutation</text>
+<text x="455" y="230" class="b">[]int is a different type</text>
+<text x="455" y="260" class="b">slice example changes elements</text>
+<text x="455" y="290" class="b">len() available in callee</text>
+
+<rect x="810" y="125" width="340" height="200" rx="14" class="box"/>
+<text x="835" y="165" class="t">3. Nested slices</text>
+<text x="835" y="200" class="b">[][]int</text>
+<text x="835" y="230" class="b">rows may have different lengths</text>
+<text x="835" y="260" class="b">triangular example</text>
+<text x="835" y="290" class="b">fmt output observed</text>
+
+<rect x="50" y="370" width="520" height="210" rx="14" class="box"/>
+<text x="75" y="410" class="t">4. Multiple returns</text>
+<text x="75" y="445" class="b">(int, float64, []string)</text>
+<text x="75" y="475" class="b">i, f, s := vals(...)</text>
+<text x="75" y="505" class="b">_ ignores unwanted values</text>
+<text x="75" y="535" class="b">named results allow bare return</text>
+
+<rect x="625" y="370" width="525" height="210" rx="14" class="box"/>
+<text x="650" y="410" class="t">5. Source findings</text>
+<text x="650" y="445" class="b">slice: “by reference” vs “all by value”</text>
+<text x="650" y="475" class="b">garray_c loop increments i twice</text>
+<text x="650" y="505" class="b">Stringer mechanism not proven in chapter</text>
+<text x="650" y="535" class="b">no silent external correction</text>
+
+<text x="50" y="650" class="t">Takeaway</text>
+<text x="50" y="685" class="b">Reason from observable mutation and type boundaries, not from ambiguous shorthand terminology.</text>
+</svg>
