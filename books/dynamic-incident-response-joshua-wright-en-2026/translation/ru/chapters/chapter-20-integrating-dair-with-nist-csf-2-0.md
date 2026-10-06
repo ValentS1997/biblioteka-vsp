@@ -17,465 +17,429 @@ translation_notes:
 
 # Глава 20. Интеграция DAIR с NIST CSF 2.0
 
-Организации, работающие в условиях regulatory requirements, government contracts или industry mandates, сталкиваются с двойной задачей: необходимо одновременно демонстрировать compliance с established frameworks и эффективно реагировать на реальные incidents.
+Организации, работающие в условиях регуляторных требований, государственных контрактов или отраслевых предписаний, сталкиваются с двойной задачей: одновременно демонстрировать соответствие принятым фреймворкам и эффективно реагировать на реальные инциденты.
 
-Для многих организаций, особенно US federal agencies и critical infrastructure operators, NIST SP 800-61 Revision 3 и Cybersecurity Framework (CSF) 2.0 определяют требования к incident response.[1]
+Для многих организаций, особенно федеральных ведомств США и операторов критической инфраструктуры, NIST SP 800-61 Revision 3 и Cybersecurity Framework (CSF) 2.0 задают требования и ориентиры для реагирования на инциденты.[1]
 
-Dynamic Approach to Incident Response (DAIR) предоставляет tactical methodology, необходимую для operationalization требований CSF 2.0 при сохранении practical effectiveness incident response.
+Dynamic Approach to Incident Response (DAIR) предоставляет тактическую методологию, необходимую для практической реализации требований CSF 2.0 без потери эффективности реагирования.
 
-Эта глава показывает, как DAIR activities сопоставляются с CSF 2.0 functions. Compliance и operational effectiveness не являются взаимоисключающими целями.
+Эта глава показывает, как этапы DAIR сопоставляются с функциями CSF 2.0. Соответствие требованиям и операционная эффективность не являются взаимоисключающими целями.
 
 Организации могут:
 
-- выполнять audit requirements;
-- формировать необходимую documentation;
-- демонстрировать control effectiveness;
-- при этом использовать dynamic подход DAIR для более полного handling incidents, чем позволяют linear models.
+- выполнять требования аудита;
+- формировать необходимую документацию;
+- демонстрировать эффективность мер контроля;
+- при этом использовать динамический подход DAIR для более полного реагирования, чем позволяют линейные модели.
 
-Интеграция DAIR и CSF 2.0 создает practical framework, где compliance достигается через effective response activities, а не существует как отдельная administrative burden.
+Интеграция DAIR и CSF 2.0 создаёт практическую модель, в которой соответствие требованиям достигается через эффективные действия реагирования, а не существует как отдельная административная нагрузка.
 
 # Понимание NIST SP 800-61 R3 и CSF 2.0
 
-NIST SP 800-61 Revision 3 существенно меняет место incident response внутри cybersecurity program.
+NIST SP 800-61 Revision 3 существенно меняет место реагирования на инциденты внутри программы кибербезопасности.
 
-Revision 2 предоставлял specific incident-handling procedures и four-phase lifecycle.
+Revision 2 предлагал конкретные процедуры обработки инцидентов и четырёхфазный жизненный цикл.
 
-Revision 3 рассматривает incident response как integrated component enterprise cybersecurity risk management.
+Revision 3 рассматривает реагирование на инциденты как встроенную часть управления рисками кибербезопасности предприятия.
 
-Это отражает важный сдвиг: effective incident response не может существовать как isolated function.
+Это отражает важный сдвиг: эффективное реагирование не может существовать как изолированная функция.
 
-Response capabilities зависят от и одновременно влияют на:
+Возможности реагирования зависят от следующих областей и одновременно влияют на них:
 
-- governance decisions;
-- asset identification;
-- protective controls;
-- detection mechanisms;
-- recovery planning.
+- решения в области управления;
+- идентификация активов;
+- защитные меры;
+- механизмы обнаружения;
+- планирование восстановления.
 
-CSF 2.0 описывает эти взаимозависимости через шесть core functions.
+CSF 2.0 описывает эти взаимозависимости через шесть основных функций.
 
 # Шесть функций CSF
 
-## Govern (GV)
+## Управление (Govern, GV)
 
-Govern задает organizational context для cybersecurity activities.
+Govern задаёт организационный контекст для деятельности в области кибербезопасности.
 
-Включает:
+Сюда входят:
 
-- cybersecurity risk management strategy;
-- expectations;
-- policy;
-- communication и monitoring этих элементов across organization.
+- стратегия управления рисками кибербезопасности;
+- ожидания руководства;
+- политики;
+- коммуникация и контроль исполнения этих элементов в масштабе организации.
 
-Для incident response Govern определяет:
+Для реагирования на инциденты Govern определяет:
 
-- severity thresholds;
-- escalation procedures;
-- allocation response resources;
-- integration incident handling с enterprise risk management.
+- пороги тяжести;
+- процедуры эскалации;
+- распределение ресурсов реагирования;
+- связь обработки инцидентов с управлением корпоративными рисками.
 
-Compliance демонстрируется через documentation того, как response decisions соответствуют organizational risk tolerance и strategic objectives.
+Соответствие требованиям подтверждается документами, показывающими, что решения по реагированию согласованы с допустимым уровнем риска и стратегическими целями организации.
 
-## Identify (ID)
+## Идентификация (Identify, ID)
 
-Identify требует понимания текущих cybersecurity risks.
+Identify требует понимания текущих рисков кибербезопасности.
 
-Включает awareness:
+Сюда входит знание:
 
-- assets;
-- vulnerabilities;
-- threats;
-- potential business impacts.
+- активов;
+- уязвимостей;
+- угроз;
+- потенциального влияния на бизнес.
 
-Effective incident response зависит от знания:
+Эффективное реагирование зависит от понимания:
 
-- какие systems critical;
-- какие data требуют protection;
-- как systems interconnect.
+- какие системы являются критичными;
+- какие данные требуют защиты;
+- как системы связаны между собой.
 
-Identify также включает threat intelligence, влияющий на detection strategy и response priorities.
+Identify также включает киберразведку, влияющую на стратегию обнаружения и приоритеты реагирования.
 
-## Protect (PR)
+## Защита (Protect, PR)
 
-Protect охватывает safeguards, управляющие cybersecurity risks до incidents.
+Protect охватывает меры, управляющие рисками кибербезопасности до возникновения инцидента.
 
-Хотя функция в основном preventive, protective controls напрямую влияют на response через:
+Хотя функция в основном превентивная, защитные меры напрямую влияют на реагирование через:
 
-- attack surface;
-- available evidence sources;
-- recovery options.
+- поверхность атаки;
+- доступные источники доказательств;
+- варианты восстановления.
 
-Полезные controls для IR:
+Для IR особенно полезны:
 
-- network segmentation;
-- access management;
-- data protection mechanisms.
+- сегментация сети;
+- управление доступом;
+- механизмы защиты данных.
 
-Они ограничивают incident scope и помогают сохранять forensic artifacts.
+Они ограничивают масштаб инцидента и помогают сохранять форензик-артефакты.
 
-## Detect (DE)
+## Обнаружение (Detect, DE)
 
-Detect охватывает capabilities для поиска и анализа cyber attacks и compromises.
+Detect охватывает возможности поиска и анализа кибератак и компрометаций.
 
-Функция соответствует ранним stages incident response:
+Функция соответствует ранним этапам реагирования:
 
-- monitoring;
-- alerting;
-- initial analysis.
+- мониторингу;
+- оповещениям;
+- первичному анализу.
 
-Она превращает security events в actionable incident reports.
+Она превращает события безопасности в отчёты об инцидентах, пригодные для дальнейших действий.
 
-Detection capabilities определяют:
+Качество обнаружения определяет:
 
-- насколько быстро incident обнаружен;
-- сколько context доступно responders на старте.
+- насколько быстро инцидент будет замечен;
+- сколько контекста получат специалисты реагирования на старте.
 
-## Respond (RS)
+## Реагирование (Respond, RS)
 
-Respond охватывает actions после обнаружения incident.
+Respond охватывает действия после обнаружения инцидента.
 
-Основные activities:
+Основные виды деятельности:
 
-- analysis;
-- containment;
-- eradication;
-- communication.
+- анализ;
+- сдерживание;
+- искоренение;
+- коммуникация.
 
-CSF 2.0 прямо признает необходимость iterative response, который адаптируется к новой информации.
+CSF 2.0 прямо допускает необходимость итеративного реагирования, которое адаптируется к новой информации.
 
-## Recover (RC)
+## Восстановление (Recover, RC)
 
-Recover фокусируется на restoration assets и operations.
+Recover сосредоточен на восстановлении активов и операций.
 
-Включает:
+Сюда входят:
 
-- restoring system availability;
-- rebuilding stakeholder trust;
-- implementing improvements для предотвращения recurrence;
-- post-incident lessons learned;
-- resilience improvement.
+- восстановление доступности систем;
+- восстановление доверия заинтересованных сторон;
+- внедрение улучшений для предотвращения повторения инцидента;
+- фиксация извлечённых уроков;
+- повышение устойчивости.
 
-Эти шесть functions формируют структуру, через которую организации демонстрируют maturity и compliance incident response capability.
+Эти шесть функций образуют структуру, через которую организации могут демонстрировать зрелость и соответствие требованиям в области реагирования на инциденты.
 
-# Что требует Compliance
+# Что требуется для соответствия
 
-## Таблица 60. Требования CSF 2.0 к Incident Response Compliance
+## Таблица 60. Требования CSF 2.0 к реагированию на инциденты
 
-| Requirement | Description |
+| Требование | Описание |
 |---|---|
-| Documented Capabilities | Организация документирует IR capabilities по relevant CSF functions: detection methods, response procedures, decision authority, external coordination |
-| Demonstrated Effectiveness | Организация показывает, что capabilities реально работают через exercises, tabletop scenarios или actual incidents |
-| Metrics and Measurement | Устанавливаются baselines для detection time, response time, containment effectiveness, recovery duration |
-| Continuous Improvement | Lessons learned, procedure updates и root-cause remediation должны приводить к улучшениям |
+| Документированные возможности | Организация документирует возможности IR по соответствующим функциям CSF: методы обнаружения, процедуры реагирования, полномочия принятия решений и внешнюю координацию |
+| Подтверждённая эффективность | Организация показывает, что заявленные возможности действительно работают, используя учения, настольные сценарии или реальные инциденты |
+| Метрики и измерения | Устанавливаются базовые показатели времени обнаружения, времени реагирования, эффективности сдерживания и длительности восстановления |
+| Непрерывное улучшение | Извлечённые уроки, обновления процедур и устранение корневых причин должны приводить к измеримым улучшениям |
 
-Основная проблема — bridge между compliance requirements и practical incident response operations.
+Основная задача — связать требования соответствия с реальными операциями реагирования.
 
-CSF 2.0 дает strategic framework, но требуется tactical methodology.
+CSF 2.0 даёт стратегический фреймворк, но для его практического применения нужна тактическая методология.
 
-# DAIR как Implementation CSF 2.0
+# DAIR как практическая реализация CSF 2.0
 
-DAIR предоставляет tactical methodology для выполнения требований CSF 2.0.
+DAIR предоставляет тактическую методологию для выполнения требований CSF 2.0.
 
-DAIR activities напрямую сопоставляются с CSF functions, формируя practical implementation path.
+Этапы DAIR напрямую сопоставляются с функциями CSF и формируют практический путь реализации.
 
-Когда организации внедряют effective IR practices, compliance часто становится естественным результатом. CSF 2.0 codifies то, что experienced practitioners уже делают, а DAIR formalizes эти practices и облегчает demonstration compliance.
+Когда организация внедряет эффективные практики IR, соответствие требованиям часто становится естественным результатом. CSF 2.0 формализует то, что опытные специалисты уже делают, а DAIR превращает эти практики в операционную модель и облегчает демонстрацию соответствия.
 
-# Mapping DAIR Activities to CSF Functions
+# Сопоставление этапов DAIR с функциями CSF
 
-Figure 200 показывает alignment шести CSF functions с DAIR structure.
+Рисунок 200 показывает соответствие шести функций CSF структуре DAIR.
 
-### Рисунок 200. DAIR Model Mapped to NIST CSF 2.0 Functions
+### Рисунок 200. Модель DAIR, сопоставленная с функциями NIST CSF 2.0
 
 THIRD_PARTY_REVIEW_REQUIRED — внешний визуальный материал не воспроизводится.
 
-## Таблица 61. DAIR Activities Mapped to CSF 2.0 Functions
+## Таблица 61. Сопоставление этапов DAIR с функциями CSF 2.0
 
-| CSF Function | DAIR Activities | How DAIR satisfies requirements |
+| Функция CSF | Этапы DAIR | Как DAIR поддерживает требования |
 |---|---|---|
-| Govern (GV) / Identify (ID) | Decision Maker coordination throughout all activities | Координация с Decision Maker связывает response с organizational risk tolerance и critical asset/business context |
-| Protect (PR) | Prepare | Prepare включает proactive controls, response readiness, detection capability deployment, forensic readiness, training |
-| Detect (DE) | Detect, Verify, Triage | Detect обнаруживает events; Verify подтверждает incidents; Triage prioritizes по organizational impact |
-| Respond (RS) | Response Actions Loop: Scope, Contain, Eradicate, Recover | Iterative loop адаптирует response к новым findings и формирует evidence comprehensive handling |
-| Recover (RC) | Recover, Debrief | Recover восстанавливает systems; Debrief фиксирует lessons learned и improvement opportunities |
+| Govern (GV) / Identify (ID) | Координация с лицами, принимающими решения, на всех этапах | Связывает реагирование с допустимым риском, критичностью активов и бизнес-контекстом |
+| Protect (PR) | Prepare | Включает превентивные меры, готовность к реагированию, развёртывание средств обнаружения, форензик-готовность и обучение |
+| Detect (DE) | Detect, Verify, Triage | Detect обнаруживает события; Verify подтверждает инциденты; Triage определяет приоритет по влиянию на организацию |
+| Respond (RS) | Response Actions Loop: Scope, Contain, Eradicate, Recover | Итеративный цикл адаптирует реагирование к новым данным и формирует доказательства полноты обработки инцидента |
+| Recover (RC) | Recover, Debrief | Recover восстанавливает системы; Debrief фиксирует извлечённые уроки и направления улучшения |
 
-Эта mapping показывает, что организации, уже использующие DAIR, выполняют activities, соответствующие требованиям CSF 2.0.
+Организации, уже использующие DAIR, фактически выполняют действия, соответствующие CSF 2.0. Остаётся документировать их так, чтобы соответствие было очевидно аудитору или оценщику.
 
-Остается документировать их так, чтобы compliance была видима assessor/auditor.
+# Ценность итеративного реагирования для соответствия требованиям
 
-# Value of Iterative Response for Compliance
+Итеративный Response Actions Loop особенно полезен для CSF 2.0.
 
-Iterative Response Actions Loop особенно полезен для CSF 2.0 compliance.
+Линейные модели могут создавать впечатление неудачи процесса, если:
 
-Linear models могут создавать впечатление process failure, если:
+- устранение приходится повторять;
+- после сдерживания обнаруживается новый масштаб;
+- приходится возвращаться к предыдущим этапам.
 
-- remediation приходится повторять;
-- после containment обнаруживается новый scope;
-- нужно возвращаться к предыдущим фазам.
+DAIR рассматривает новую итерацию как ожидаемое и корректное поведение.
 
-DAIR рассматривает iteration как expected и appropriate behavior.
+Каждый цикл:
 
-Каждый loop:
+- повышает полноту расследования;
+- добавляет необходимые действия по устранению;
+- создаёт новые доказательственные артефакты.
 
-- увеличивает thoroughness;
-- добавляет remediation effort;
-- генерирует новые evidence artifacts.
+Количество итераций можно показывать как положительную метрику адаптивности, а не как признак провала.
 
-Iteration count можно показывать как positive metric, а не признак failure.
+Для каждой новой итерации следует фиксировать:
 
-При documentation iterations необходимо записывать:
+- какая новая информация запустила следующий цикл;
+- как изменился масштаб;
+- какие дополнительные действия были выполнены;
+- почему было принято соответствующее решение.
 
-- какая new information запустила следующий cycle;
-- какое дополнительное remediation было выполнено.
+Это превращает итерацию в доказательство адаптивного и обоснованного реагирования.
 
-Это превращает iteration в evidence adaptive и considered response.
+Для аудита это особенно важно: длительность реагирования и повторные попытки устранения можно объяснить как осознанную работу по DAIR, а не как хаотическое возвращение к уже пройденным этапам.
 
-Для audit это важно: extended response periods и multiple remediation attempts могут быть объяснены как intentional DAIR behavior.
+# Интеграция лиц, принимающих решения, и функция Govern
 
-Каждый cycle:
+Акцент DAIR на постоянной координации с лицами, принимающими решения, соответствует функции Govern на протяжении всего жизненного цикла инцидента.
 
-- incorporates new information;
-- appropriately expands scope;
-- improves overall response effectiveness.
+Оценщики ожидают доказательств того, что решения IR отражают корпоративную стратегию управления рисками.
 
-# Decision Maker Integration и Govern Function
+Лица, принимающие решения, участвуют не только в начале или конце инцидента. Они дают постоянные указания по вопросам:
 
-DAIR emphasis на Decision Maker coordination соответствует Govern function на протяжении всего lifecycle.
+- расширения масштаба;
+- подхода к сдерживанию;
+- допустимого операционного влияния;
+- приоритетов восстановления.
 
-Assessors ожидают evidence, что IR decisions отражают enterprise risk management strategy на практике.
+Такая непрерывная координация создаёт записи, напрямую относящиеся к категориям Govern.
 
-Decision Makers участвуют не только в начале или конце incident.
+## Таблица 62. Этапы DAIR и категории Govern CSF 2.0
 
-Они дают ongoing guidance по:
+### GV.OC — Организационный контекст
 
-- scope expansion;
-- containment approach;
-- acceptable operational impacts;
-- recovery priorities.
+Оценщик ожидает документацию, показывающую, что решения реагирования учитывают:
 
-Эта continuous coordination формирует records, напрямую относящиеся к CSF Govern categories.
+- регуляторные обязательства;
+- ожидания заинтересованных сторон;
+- допустимый уровень риска;
+- бизнес-среду.
 
-## Таблица 62. DAIR Activities Mapped to CSF 2.0 Govern Categories
+Артефакты DAIR:
 
-### GV.OC — Organizational Context
+- фреймворк классификации риска;
+- записи решений триажа;
+- журнал триггеров регуляторного уведомления.
 
-Assessor ожидает documentation того, что response decisions учитывают:
+### GV.RM — Стратегия управления рисками
 
-- regulatory obligations;
-- stakeholder expectations;
-- risk appetite;
-- business environment.
+Необходимо показать, что остаточный риск при закрытии инцидента:
 
-DAIR artifacts:
+- формально оценён;
+- принят уполномоченным лицом;
+- возвращён в корпоративный реестр рисков.
 
-- risk classification framework;
-- triage decision records;
-- regulatory notification trigger log.
+Артефакты DAIR:
 
-### GV.RM — Risk Management Strategy
+- подписанное принятие риска при выходе из цикла;
+- отчёт разбора с рекомендациями для реестра рисков;
+- метрики восстановления и данные о тенденциях.
 
-Нужно evidence, что residual risk при closure:
+### GV.RR — Роли, обязанности и полномочия
 
-- formally assessed;
-- accepted authorized individual;
-- возвращается в enterprise risk register.
+Оценщик ожидает определённую матрицу полномочий для реагирования, включая:
 
-DAIR artifacts:
+- объявление инцидента;
+- командные полномочия;
+- решения о влиянии на бизнес;
+- решение о выходе из цикла;
+- ответственность за послеинцидентные улучшения.
 
-- signed loop-exit risk acceptance;
-- debrief report с risk register recommendations;
-- recovery metrics/trend data.
+Нужны конкретно назначенные роли, а не только общие названия должностей.
 
-## Продолжение таблицы 62. Govern Categories
+Артефакты:
 
-### GV.RR — Roles, Responsibilities, and Authorities
+- матрица полномочий IR;
+- документированные процедуры эскалации;
+- назначения ролей по типу или уровню тяжести инцидента.
 
-Assessor ожидает defined authority matrix для incident response, включая:
+### GV.PO — Политика
 
-- incident declaration;
-- command authority;
-- business-impact decisions;
-- loop exit;
-- ownership post-incident improvements.
+Нужны документированные политики кибербезопасности, отражающие контекст организации.
 
-Нужны named roles, а не generic titles.
+Документация по реагированию должна последовательно различать:
 
-DAIR activities:
+- политику — что должно происходить;
+- процедуру — как это должно происходить;
+- плейбук — как действовать в конкретном сценарии.
 
-- Prepare;
-- incident response team structure;
-- RACI matrix;
-- escalation thresholds;
-- documented decision authority.
+Артефакты:
 
-Artifacts:
+- политика реагирования на инциденты;
+- процедурные документы по этапам DAIR;
+- сценарные плейбуки;
+- план коммуникаций с отметкой даты последнего пересмотра.
 
-- incident response authority matrix;
-- escalation procedure documentation;
-- named role assignments по incident type или severity tier.
+### GV.SC — Управление рисками цепочки поставок
 
-### GV.PO — Policy
+Оценщик ожидает подтверждения того, что:
 
-Нужны documented cybersecurity policies, отражающие organizational context.
+- определены обязательства поставщиков по IR;
+- договорные требования к уведомлению сопоставлены с процедурами;
+- отзыв доступа поставщика включён в процесс реагирования.
 
-Incident response documentation должна различать:
+Артефакты:
 
-- policy — что должно происходить;
-- procedure — как это происходит;
-- playbook — как это происходит для specific scenario.
+- реестр обязательств поставщиков по IR;
+- записи проверки DPA и контрактов;
+- журнал отзыва стороннего доступа;
+- отслеживание послеинцидентных мер поставщика.
 
-DAIR activities:
+Такое документирование на уровне категорий показывает, что реагирование встроено в корпоративную систему управления рисками.
 
-- incident response plan;
-- playbooks;
-- communication plan;
-- contact lists;
-- callout rosters.
+# Обеспечение соответствия через этапы DAIR
 
-Artifacts:
+Эффективное реагирование естественным образом создаёт значительный объём документации.
 
-- incident response policy;
-- procedure documents по DAIR phase;
-- scenario-specific playbooks;
-- communication plan с last-reviewed timestamp.
-
-### GV.SC — Supply Chain Risk Management
-
-Assessor ожидает evidence, что:
-
-- third-party/supplier IR obligations определены;
-- contractual notification requirements mapped;
-- supplier access revocation включен в procedures.
-
-DAIR activities:
-
-- Prepare: supplier incident obligations, data processing agreement review, third-party access inventory;
-- Scope/Contain: third-party access revocation;
-- Debrief: supplier-related root cause и remediation tracking.
-
-Artifacts:
-
-- supplier IR obligations register;
-- DPA/contract review records;
-- third-party access revocation log;
-- post-incident supplier remediation tracking.
-
-Организация может демонстрировать Govern compliance через artifacts из таблицы и связывать их с конкретными incident records.
-
-Такой category-level documentation показывает, что incident response встроен в enterprise risk management framework.
-
-# Meeting Compliance Through DAIR Activities
-
-Effective incident response естественным образом генерирует значительный объем documentation.
-
-При использовании DAIR эту documentation можно структурировать под compliance requirements без создания отдельного administrative process.
+При использовании DAIR её можно структурировать под требования соответствия без создания отдельного административного процесса.
 
 Главная задача:
 
-- распознать compliance artifacts, уже возникающие в DAIR operations;
-- оформить их в ожидаемом assessment format.
+- распознавать артефакты соответствия, уже возникающие в операциях DAIR;
+- оформлять их в формате, ожидаемом при оценке или аудите.
 
-# Compliance Artifacts from DAIR Activities
+# Артефакты соответствия из этапов DAIR
 
-Assessors требуют tangible evidence того, что IR capabilities:
+Оценщики требуют материальных доказательств того, что возможности IR:
 
 - существуют;
 - работают как задумано;
 - улучшаются со временем.
 
-Если evidence не представлено, возможны compliance gaps даже при фактически сильной operational capability.
+Даже сильная операционная программа может получить пробелы соответствия, если доказательства не представлены.
 
-Каждый DAIR waypoint генерирует documentation, пригодную для compliance.
+Каждый waypoint DAIR естественно создаёт документацию.
 
-## Таблица 63. Compliance Artifacts by DAIR Phase
+## Таблица 63. Артефакты соответствия по этапам DAIR
 
-| DAIR Phase | Artifacts Generated | CSF Function |
+| Этап DAIR | Формируемые артефакты | Функция CSF |
 |---|---|---|
-| Prepare | Incident response plans, playbooks, contact lists, training records, CSF cross-references | Protect (PR) |
-| Detect / Verify / Triage | Alert logs, monitoring dashboards, threat intelligence reports, triage decisions, false-positive records, incident declaration | Detect (DE) |
-| Response Actions Loop | Scoping analysis, containment decisions, eradication records, recovery verification; artifacts accumulate across iterations | Respond (RS) |
-| Debrief | Lessons learned, root cause analysis, improvement recommendations, implementation tracking | Recover (RC) |
-| Decision Maker coordination | Stakeholder consultation records, guidance, business impact assessments, risk-aligned decision rationale | Govern (GV) / Identify (ID) |
+| Prepare | Планы реагирования, плейбуки, контактные списки, записи обучения, перекрёстные ссылки на CSF | Protect (PR) |
+| Detect / Verify / Triage | Журналы оповещений, панели мониторинга, отчёты киберразведки, решения триажа, записи ложных срабатываний, объявление инцидента | Detect (DE) |
+| Response Actions Loop | Анализ масштаба, решения по сдерживанию, записи искоренения, проверка восстановления; артефакты накапливаются на каждой итерации | Respond (RS) |
+| Debrief | Извлечённые уроки, анализ корневой причины, рекомендации по улучшению, отслеживание реализации | Recover (RC) |
+| Координация с лицами, принимающими решения | Записи консультаций, указания, оценки влияния на бизнес, обоснования решений с учётом риска | Govern (GV) / Identify (ID) |
 
-Artifacts накапливаются естественно.
+Каждая итерация Response Actions Loop увеличивает доказательную базу.
 
-Каждая iteration Response Actions Loop увеличивает evidence base.
+Отслеживание реализации рекомендаций после Debrief дополнительно демонстрирует развитие программы.
 
-Tracking implementation of debrief recommendations дополнительно показывает program maturation.
+Важно документировать не только действия, но и основания принятия решений.
 
-Важно документировать не только actions, но и rationale decision-making.
+# Подтверждение эффективности мер контроля
 
-# Demonstrating Control Effectiveness
+CSF 2.0 требует показывать, что меры контроля работают, а не просто существуют.
 
-CSF 2.0 требует показать, что controls работают, а не просто существуют.
+DAIR позволяет демонстрировать эффективность на примере реального реагирования.
 
-DAIR дает возможность продемонстрировать effectiveness через actual incident handling.
+## Таблица 64. Доказательства эффективности по функциям CSF
 
-## Таблица 64. Control Effectiveness Evidence by CSF Function
-
-| CSF Function | Evidence of Effectiveness | DAIR Source Activities |
+| Функция CSF | Доказательство эффективности | Этапы DAIR |
 |---|---|---|
-| Detect (DE) | Incidents обнаруживаются monitoring/alerting, а не external notification; MTTD дает quantitative evidence | Detect, Verify, Triage |
-| Respond (RS) | Containment ограничил scope, eradication удалил attacker presence, iteration обработала дополнительные findings | Response Actions Loop |
-| Recover (RC) | Systems успешно restored, integrity validated, improvements implemented | Recover, Debrief |
+| Detect (DE) | Инциденты обнаруживаются мониторингом и оповещениями, а не только внешними уведомлениями; MTTD даёт количественный показатель | Detect, Verify, Triage |
+| Respond (RS) | Сдерживание ограничило масштаб, искоренение удалило присутствие атакующего, дополнительные итерации обработали новые находки | Response Actions Loop |
+| Recover (RC) | Системы успешно восстановлены, целостность проверена, улучшения внедрены | Recover, Debrief |
 
-Каждая iteration Response Actions Loop усиливает evidence эффективности, поскольку показывает adaptation к новым findings.
+Каждая итерация усиливает доказательства эффективности, поскольку показывает адаптацию к новой информации.
 
-# Satisfying Audit Requirements
+# Выполнение требований аудита
 
-Audit/assessment обычно включает:
+Аудит или оценка обычно включает:
 
-- document review;
-- interviews;
-- evidence examination.
+- проверку документов;
+- интервью;
+- изучение доказательств.
 
-Организациям с DAIR следует:
+Организациям, использующим DAIR, следует:
 
-1. поддерживать organized documentation;
-2. обучить response personnel объяснять DAIR concepts в CSF 2.0 terminology.
+1. поддерживать упорядоченную документацию;
+2. обучать персонал объяснять DAIR в терминологии CSF 2.0.
 
-Incident documentation следует организовать в alignment с CSF functions.
+Документацию по инцидентам целесообразно организовать в соответствии с функциями CSF.
 
-Auditors часто строят assessment по CSF categories/subcategories, поэтому такой же structure уменьшает assessment friction.
+Аудиторы часто строят оценку по категориям и подкатегориям CSF, поэтому похожая структура уменьшает трение при проверке.
 
-DAIR activities должны быть cross-referenced с CSF functions в plans и procedures.
+Этапы DAIR следует перекрёстно связывать с функциями CSF в планах и процедурах.
 
-Personnel должны уметь объяснять:
+Персонал должен уметь объяснить:
 
-- Detect + Verify/Triage как detection capability;
-- Response Actions Loop как response procedure.
+- Detect + Verify/Triage как способность обнаружения;
+- Response Actions Loop как процедуру реагирования.
 
-Incident records следует хранить в standardized formats, удобных для evidence review.
+Записи инцидентов следует хранить в стандартизированном формате, удобном для проверки доказательств.
 
-Auditors обычно запрашивают:
+Аудиторы обычно запрашивают:
 
-- incident reports;
-- timeline reconstructions;
-- lessons learned summaries.
+- отчёты об инцидентах;
+- восстановленные хронологии;
+- сводки извлечённых уроков.
 
-Если эти документы доступны в standardized format, это демонстрирует program maturity.
+Если эти документы доступны в едином формате, это демонстрирует зрелость программы.
 
-Интеграция compliance в routine DAIR operations устраняет необходимость собирать evidence постфактум.
+Интеграция требований соответствия в обычные операции DAIR устраняет необходимость собирать доказательства постфактум.
 
-# Incident Tracking Platform Configuration
+# Настройка платформы учёта инцидентов
 
-Incident tracking tooling можно настроить одновременно для:
+Инструменты учёта инцидентов можно настроить одновременно для:
 
-- effective operations;
-- compliance requirements.
+- эффективной операционной работы;
+- выполнения требований соответствия.
 
-Хорошая configuration уменьшает manual effort и обеспечивает consistent generation artifacts.
+Хорошая конфигурация снижает ручную нагрузку и обеспечивает последовательное формирование артефактов.
 
-# Ticketing and Case Management
+# Тикетинг и управление кейсами
 
-Primary documentation platform может быть:
+Основной платформой документирования может быть:
 
 - JIRA;
 - Remedy;
-- specialty IR tracking system.
+- специализированная система учёта IR.
 
-Для DAIR + CSF 2.0 tracking system должен capture operational coordination и compliance evidence.
+Для DAIR + CSF 2.0 система должна фиксировать как операционную координацию, так и доказательства соответствия.
 
-Status fields могут использовать vocabulary вроде:
+Поля статуса могут использовать значения вроде:
 
 - Detection Complete;
 - Verification Pending;
@@ -483,96 +447,94 @@ Status fields могут использовать vocabulary вроде:
 - Eradication in Progress;
 - Recovery Underway.
 
-Эти statuses напрямую mapping на CSF functions и DAIR activities.
+Такие статусы напрямую сопоставляются с функциями CSF и этапами DAIR.
 
-Workflow должен позволять incidents многократно проходить Response Actions Loop без интерпретации iteration как undesirable backtracking.
+Рабочий процесс должен позволять инциденту многократно проходить Response Actions Loop, не трактуя новую итерацию как нежелательный возврат назад.
 
-По возможности нужно фиксировать Decision Maker involvement:
+По возможности следует фиксировать участие лиц, принимающих решения:
 
-- какие stakeholders consulted;
-- какую guidance дали;
-- как input повлиял на response.
+- какие заинтересованные стороны были привлечены;
+- какие указания они дали;
+- как эти указания повлияли на реагирование.
 
-Это поддерживает Govern function requirements по risk-aligned decision-making.
+Это поддерживает требования функции Govern к решениям, согласованным с риском.
 
-Evidence artifacts следует связывать с конкретными incident records и сохранять согласно retention policies.
+Доказательственные артефакты следует связывать с конкретными записями инцидентов и хранить в соответствии с политиками хранения.
 
-# Communication Templates
+# Шаблоны коммуникаций
 
-Communication templates должны быть разработаны during Prepare в рамках Emergency Communication Plan.
+Шаблоны коммуникаций следует разрабатывать на этапе Prepare как часть плана экстренных коммуникаций.
 
-Для major incident categories полезны шаблоны, обеспечивающие consistent messaging в первые 24 часа.
+Для крупных категорий инцидентов полезны заранее подготовленные шаблоны, обеспечивающие последовательные сообщения в первые 24 часа.
 
-Интеграция с CSF 2.0 состоит в tagging/adaptation templates для compliance reporting.
+Для интеграции с CSF 2.0 шаблоны можно помечать:
 
-Status updates можно маркировать:
-
-- CSF function;
-- DAIR activity.
+- функцией CSF;
+- этапом DAIR.
 
 Пример:
 
-- initial scoping update → CSF Respond / DAIR Scope;
-- recovery validation → CSF Recover.
+- первичное обновление по масштабу → CSF Respond / DAIR Scope;
+- проверка восстановления → CSF Recover / DAIR Recover.
 
-Consistent vocabulary демонстрирует organizational fluency и создает audit-ready records.
+Единая терминология демонстрирует зрелость организации и создаёт записи, готовые к аудиту.
 
-Нужны variants для разных audiences:
+Нужны варианты для разных аудиторий.
 
-## Executive
+## Для руководства
 
-- impact;
-- progress;
-- concise decision-relevant information.
+- влияние;
+- прогресс;
+- краткая информация, необходимая для принятия решений.
 
-## Technical
+## Технический
 
-- detailed activities;
-- DAIR waypoint terminology.
+- подробные выполненные действия;
+- терминология waypoint DAIR.
 
-Оба variants должны поддерживать compliance documentation.
+Оба варианта должны поддерживать требования документирования.
 
-Инвестиции в tool configuration окупаются долгосрочно.
+Инвестиции в настройку инструментов окупаются на длинной дистанции.
 
-Clear expectations к note-taking уменьшают manual effort и повышают consistency.
+Чёткие требования к ведению записей уменьшают ручную нагрузку и повышают последовательность.
 
-Tooling нужно регулярно review, чтобы оно продолжало поддерживать operational и compliance needs.
+Инструменты следует регулярно пересматривать, чтобы они продолжали поддерживать и операционные задачи, и требования соответствия.
 
-# Integrating DAIR with NIST CSF 2.0
+# Интеграция DAIR с NIST CSF 2.0
 
-Интеграция DAIR и CSF 2.0 показывает, что compliance и operational effectiveness усиливают друг друга.
+Интеграция DAIR и CSF 2.0 показывает, что соответствие требованиям и операционная эффективность усиливают друг друга.
 
-DAIR дает tactical methodology для реализации strategic vision CSF 2.0.
+DAIR предоставляет тактическую методологию для реализации стратегического замысла CSF 2.0.
 
-Key relationships:
+Ключевые связи:
 
-- DAIR activities map ко всем шести CSF functions;
-- Response Actions Loop operationalizes adaptive iterative response;
-- Decision Maker coordination удовлетворяет Govern requirements.
+- этапы DAIR сопоставляются со всеми шестью функциями CSF;
+- Response Actions Loop реализует адаптивное итеративное реагирование;
+- координация с лицами, принимающими решения, поддерживает требования Govern.
 
-Каждый DAIR waypoint естественно генерирует compliance artifacts:
+Каждый waypoint DAIR естественно создаёт артефакты соответствия:
 
-- preparation documentation;
-- detection records;
-- response action logs;
-- post-incident debrief reports.
+- документацию подготовки;
+- записи обнаружения;
+- журналы действий реагирования;
+- отчёты послеинцидентного разбора.
 
-Эти artifacts демонстрируют control effectiveness across:
+Эти артефакты демонстрируют эффективность контроля в областях:
 
-- detection;
-- response;
-- recovery.
+- обнаружения;
+- реагирования;
+- восстановления.
 
-Если организация документирует decision rationale вместе с actions, evidence становится сильнее, потому что показывает alignment с enterprise risk management.
+Если организация документирует основания решений вместе с самими действиями, доказательная база становится сильнее, поскольку показывает связь с корпоративным управлением рисками.
 
-Настройка incident-tracking platforms и communication templates под DAIR + CSF vocabulary снижает manual effort при compliance preparation.
+Настройка платформ учёта инцидентов и коммуникационных шаблонов под терминологию DAIR + CSF снижает ручную нагрузку при подготовке к аудиту.
 
-Когда compliance встроен в routine DAIR operations, организация не собирает evidence в спешке после incident.
+Когда соответствие требованиям встроено в обычные операции DAIR, организации не приходится в спешке собирать доказательства после инцидента.
 
-Результат — incident response capability, которая одновременно:
+Результат — способность реагирования, которая одновременно:
 
-- demonstrably compliant;
-- genuinely effective.
+- подтверждённо соответствует требованиям;
+- действительно эффективна.
 
 # Ссылка
 
