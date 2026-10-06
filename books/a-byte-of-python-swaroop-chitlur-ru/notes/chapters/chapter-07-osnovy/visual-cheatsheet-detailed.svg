@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1650" height="1300" viewBox="0 0 1650 1300">
+  <rect width="1650" height="1300" fill="white"/>
+  <text x="55" y="65" font-family="sans-serif" font-size="36" font-weight="700">Глава 7. Основы — detailed map</text>
+  <text x="55" y="102" font-family="sans-serif" font-size="18">RAG-only · p0043:c01–p0052:c01 · PDF 43–52 · source SHA ac1abb…d7db5</text>
+
+  <rect x="55" y="140" width="1540" height="120" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="80" y="180" font-family="sans-serif" font-size="23" font-weight="700">7.1 Comments</text>
+  <text x="80" y="220" font-family="sans-serif" font-size="18">Source principle: program text says HOW; useful comments should explain WHY, assumptions, decisions and avoided problems.</text>
+
+  <rect x="55" y="305" width="480" height="330" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="80" y="345" font-family="sans-serif" font-size="23" font-weight="700">7.2–7.4 Values</text>
+  <text x="80" y="390" font-family="sans-serif" font-size="18">Literals</text>
+  <text x="80" y="430" font-family="sans-serif" font-size="18">Numbers: int / float / complex</text>
+  <text x="80" y="470" font-family="sans-serif" font-size="18">Strings: Unicode source framing</text>
+  <text x="80" y="510" font-family="sans-serif" font-size="18">single / double / triple quotes</text>
+  <text x="80" y="550" font-family="sans-serif" font-size="18">immutable + adjacent literal concat</text>
+  <text x="80" y="590" font-family="sans-serif" font-size="18">format() placeholders / alignment</text>
+
+  <rect x="585" y="305" width="480" height="330" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="610" y="345" font-family="sans-serif" font-size="23" font-weight="700">7.5–7.8 Names & objects</text>
+  <text x="610" y="390" font-family="sans-serif" font-size="18">Variables change bindings/values</text>
+  <text x="610" y="430" font-family="sans-serif" font-size="18">Identifiers have naming rules</text>
+  <text x="610" y="470" font-family="sans-serif" font-size="18">Names are case-sensitive</text>
+  <text x="610" y="510" font-family="sans-serif" font-size="18">Values have data types</text>
+  <text x="610" y="550" font-family="sans-serif" font-size="18">Everything is object in source framing</text>
+  <text x="610" y="590" font-family="monospace" font-size="17">i = 5 → i = i + 1 → 6</text>
+
+  <rect x="1115" y="305" width="480" height="330" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="1140" y="345" font-family="sans-serif" font-size="23" font-weight="700">7.9–7.10 Structure</text>
+  <text x="1140" y="390" font-family="sans-serif" font-size="18">Logical vs physical lines</text>
+  <text x="1140" y="430" font-family="sans-serif" font-size="18">semicolon allowed but discouraged</text>
+  <text x="1140" y="470" font-family="sans-serif" font-size="18">explicit \ continuation</text>
+  <text x="1140" y="510" font-family="sans-serif" font-size="18">implicit bracket continuation</text>
+  <text x="1140" y="550" font-family="sans-serif" font-size="18">indentation groups blocks</text>
+  <text x="1140" y="590" font-family="sans-serif" font-size="18">bad indent → IndentationError</text>
+
+  <rect x="55" y="680" width="740" height="230" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="80" y="720" font-family="sans-serif" font-size="23" font-weight="700">format() source examples</text>
+  <text x="80" y="765" font-family="monospace" font-size="17">{0:.3}.format(1/3) → 0.333</text>
+  <text x="80" y="805" font-family="monospace" font-size="17">{0:_^11}.format('hello') → ___hello___</text>
+  <text x="80" y="845" font-family="monospace" font-size="17">{name} / {book} keyword placeholders</text>
+  <text x="80" y="882" font-family="sans-serif" font-size="16">Source references PEP 3101 for detail.</text>
+
+  <rect x="855" y="680" width="740" height="230" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="880" y="720" font-family="sans-serif" font-size="23" font-weight="700">Standard execution procedure</text>
+  <text x="880" y="765" font-family="sans-serif" font-size="18">edit → save .py → run interpreter command</text>
+  <text x="880" y="805" font-family="monospace" font-size="18">python3 program.py</text>
+  <text x="880" y="845" font-family="sans-serif" font-size="17">But concrete examples also show python str_format.py / python var.py.</text>
+  <text x="880" y="882" font-family="sans-serif" font-size="16">Preserved as source command mismatch.</text>
+
+  <rect x="55" y="955" width="1540" height="210" rx="10" fill="#fafafa" stroke="#666" stroke-dasharray="7 5"/>
+  <text x="80" y="995" font-family="sans-serif" font-size="22" font-weight="700">Source integrity findings</text>
+  <text x="80" y="1035" font-family="sans-serif" font-size="17">• 7.1 comment examples: print string has missing closing quote in RAG/source variant</text>
+  <text x="80" y="1070" font-family="sans-serif" font-size="17">• StackOverﬂow contains ligature glyph</text>
+  <text x="80" y="1105" font-family="sans-serif" font-size="17">• python vs python3 execution command variants are not normalized</text>
+  <text x="80" y="1140" font-family="sans-serif" font-size="17">• «Komodo Edit, буду делать...» marked [Needs confirmation]</text>
+
+  <text x="55" y="1225" font-family="sans-serif" font-size="18">7.11 summary: master these details before moving to control structures.</text>
+  <text x="55" y="1260" font-family="sans-serif" font-size="17">Next boundary: p0053:c01 / PDF 53 — chapter 8 «Операторы и выражения».</text>
+</svg>
