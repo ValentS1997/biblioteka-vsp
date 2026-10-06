@@ -18,3 +18,4 @@ Reviewed chapter-level notes are stored here.
 - [Chapter 14 — Игровой счет](chapter-14-game-score/README.md)
 - [Chapter 15 — Генерирование данных](chapter-15-generating-data/README.md)
 - [Chapter 16 — Загрузка данных](chapter-16-downloading-data/README.md)
+- [Chapter 17 — Работа с API](chapter-17-working-with-apis/README.md)
