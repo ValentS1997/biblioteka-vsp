@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="790" viewBox="0 0 1200 790">
+<rect width="1200" height="790" fill="#fff"/>
+<style>text{font-family:Arial,sans-serif;fill:#111}.h{font-size:31px;font-weight:700}.t{font-size:20px;font-weight:700}.b{font-size:16px}.box{fill:#f7f7f7;stroke:#333;stroke-width:2}</style>
+<text x="50" y="55" class="h">Глава 8 — Осваиваемся в синтаксисе Go</text>
+<text x="50" y="88" class="b">RAG: PDF 197–215 · CLI → numerics → data → network → map</text>
+
+<rect x="50" y="125" width="340" height="195" rx="14" class="box"/>
+<text x="75" y="165" class="t">1. CLI</text>
+<text x="75" y="200" class="b">flag.Bool / flag.Parse</text>
+<text x="75" y="230" class="b">NArg / Arg</text>
+<text x="75" y="260" class="b">-h / --help</text>
+<text x="75" y="290" class="b">invalid option handling</text>
+
+<rect x="430" y="125" width="340" height="195" rx="14" class="box"/>
+<text x="455" y="165" class="t">2. Numerics</text>
+<text x="455" y="200" class="b">Newton sqrt</text>
+<text x="455" y="230" class="b">math/big integer π</text>
+<text x="455" y="260" class="b">high-precision float</text>
+<text x="455" y="290" class="b">streaming statistics</text>
+
+<rect x="810" y="125" width="340" height="195" rx="14" class="box"/>
+<text x="835" y="165" class="t">3. Data / geometry</text>
+<text x="835" y="200" class="b">complex128 point</text>
+<text x="835" y="230" class="b">methods / String()</text>
+<text x="835" y="260" class="b">polygon perimeter</text>
+<text x="835" y="290" class="b">polygon area</text>
+
+<rect x="50" y="365" width="520" height="210" rx="14" class="box"/>
+<text x="75" y="405" class="t">4. Network progression</text>
+<text x="75" y="440" class="b">TCP sequential echo</text>
+<text x="75" y="470" class="b">Go / nc / socat / telnet clients</text>
+<text x="75" y="500" class="b">goroutine-per-connection TCP server</text>
+<text x="75" y="530" class="b">http.Handler → localhost:4000</text>
+
+<rect x="625" y="365" width="525" height="210" rx="14" class="box"/>
+<text x="650" y="405" class="t">5. Map iteration</text>
+<text x="650" y="440" class="b">repeated range iterations</text>
+<text x="650" y="470" class="b">observed order changes</text>
+<text x="650" y="500" class="b">do not depend on stable order</text>
+<text x="650" y="530" class="b">runtime details are version-scoped</text>
+
+<text x="50" y="640" class="t">Engineering takeaway</text>
+<text x="50" y="675" class="b">Build → run → verify behavior. Keep network lifecycle and benchmark confounders explicit.</text>
+<text x="50" y="710" class="b">Source mismatch: skoc.go vs sko.go in the statistics example.</text>
+</svg>

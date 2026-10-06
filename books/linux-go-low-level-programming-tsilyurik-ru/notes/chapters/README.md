@@ -14,3 +14,4 @@ Current chapter workflow:
 - [Chapter 5 — «Процессоры в Linux»](chapter-05-processory-v-linux/) — `RAG_GROUNDED`
 - [Chapter 6 — «Параллелизм и многопроцессорность»](chapter-06-parallelizm-i-mnogoprocessornost/) — `RAG_GROUNDED`
 - [Chapter 7 — «Масштабирование»](chapter-07-masshtabirovanie/) — `RAG_GROUNDED`
+- [Chapter 8 — «Осваиваемся в синтаксисе Go»](chapter-08-osvaivaemsya-v-sintaksise-go/) — `RAG_GROUNDED`
