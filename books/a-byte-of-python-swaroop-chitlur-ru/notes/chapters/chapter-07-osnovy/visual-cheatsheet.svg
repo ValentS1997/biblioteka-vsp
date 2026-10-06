@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="900" viewBox="0 0 1300 900">
+  <rect width="1300" height="900" fill="white"/>
+  <text x="55" y="62" font-family="sans-serif" font-size="34" font-weight="700">Глава 7 — «Основы»</text>
+  <text x="55" y="98" font-family="sans-serif" font-size="18">RAG PDF 43–52 · p0043:c01–p0052:c01</text>
+
+  <rect x="55" y="140" width="360" height="180" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="80" y="180" font-family="sans-serif" font-size="22" font-weight="700">Values</text>
+  <text x="80" y="220" font-family="sans-serif" font-size="18">Literals</text>
+  <text x="80" y="252" font-family="sans-serif" font-size="18">Numbers: int / float / complex</text>
+  <text x="80" y="284" font-family="sans-serif" font-size="18">Strings: Unicode by source framing</text>
+
+  <rect x="470" y="140" width="360" height="180" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="495" y="180" font-family="sans-serif" font-size="22" font-weight="700">Strings</text>
+  <text x="495" y="220" font-family="sans-serif" font-size="18">'...' / "..." / triple quotes</text>
+  <text x="495" y="252" font-family="sans-serif" font-size="18">Immutable</text>
+  <text x="495" y="284" font-family="sans-serif" font-size="18">format()</text>
+
+  <rect x="885" y="140" width="360" height="180" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="910" y="180" font-family="sans-serif" font-size="22" font-weight="700">Names</text>
+  <text x="910" y="220" font-family="sans-serif" font-size="18">Variables</text>
+  <text x="910" y="252" font-family="sans-serif" font-size="18">Identifiers</text>
+  <text x="910" y="284" font-family="sans-serif" font-size="18">Case-sensitive</text>
+
+  <rect x="55" y="375" width="570" height="200" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="80" y="415" font-family="sans-serif" font-size="22" font-weight="700">Lines</text>
+  <text x="80" y="455" font-family="sans-serif" font-size="18">logical ≠ always physical</text>
+  <text x="80" y="490" font-family="sans-serif" font-size="18">semicolon possible, source discourages it</text>
+  <text x="80" y="525" font-family="sans-serif" font-size="18">explicit \ or implicit bracket continuation</text>
+
+  <rect x="675" y="375" width="570" height="200" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="700" y="415" font-family="sans-serif" font-size="22" font-weight="700">Blocks = indentation</text>
+  <text x="700" y="455" font-family="sans-serif" font-size="18">same indent → same block</text>
+  <text x="700" y="490" font-family="sans-serif" font-size="18">bad leading space → IndentationError</text>
+  <text x="700" y="525" font-family="sans-serif" font-size="18">do not mix tabs/spaces by source guidance</text>
+
+  <rect x="55" y="630" width="1190" height="125" rx="12" fill="#fafafa" stroke="#333"/>
+  <text x="80" y="670" font-family="sans-serif" font-size="22" font-weight="700">Acceptance</text>
+  <text x="80" y="707" font-family="sans-serif" font-size="18">literal → variable → type/object → logical line → indentation-defined block</text>
+  <text x="80" y="738" font-family="sans-serif" font-size="17">Next: chapter 8 «Операторы и выражения».</text>
+
+  <text x="55" y="820" font-family="sans-serif" font-size="16">Findings: malformed quote in 7.1; StackOverﬂow ligature; python/python3 command variants.</text>
+  <text x="55" y="852" font-family="sans-serif" font-size="16">Chapter-end summary present: 7.11.</text>
+</svg>
