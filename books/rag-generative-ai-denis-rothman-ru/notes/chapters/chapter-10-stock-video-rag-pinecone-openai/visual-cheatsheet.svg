@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="840" viewBox="0 0 1200 840" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 10 — Video RAG with Pinecone and OpenAI</title>
+  <desc id="desc">Компактная схема Generator → Commentator → Pinecone → Video Expert.</desc>
+  <rect width="1200" height="840" fill="#ffffff"/>
+  <style>
+    text { font-family: Arial, sans-serif; fill: #111; }
+    .h1 { font-size: 29px; font-weight: 700; }
+    .h2 { font-size: 20px; font-weight: 700; }
+    .body { font-size: 16px; }
+    .small { font-size: 13px; }
+    .box { fill: #f7f7f7; stroke: #222; stroke-width: 2; rx: 14; }
+    .arrow { stroke: #222; stroke-width: 3; fill: none; marker-end: url(#a); }
+  </style>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#222"/>
+    </marker>
+  </defs>
+
+  <text x="55" y="55" class="h1">Глава 10. Video RAG: Pinecone + OpenAI</text>
+  <text x="55" y="86" class="small">RAG provenance: p0271:c01–p0306:c01 · PDF 271–306</text>
+
+  <rect x="55" y="145" width="250" height="170" class="box"/>
+  <text x="80" y="182" class="h2">Generator</text>
+  <text x="80" y="220" class="body">video → frames</text>
+  <text x="80" y="250" class="body">one video at a time</text>
+
+  <rect x="345" y="145" width="250" height="170" class="box"/>
+  <text x="370" y="182" class="h2">Commentator</text>
+  <text x="370" y="220" class="body">sample JPG frames</text>
+  <text x="370" y="250" class="body">vision → comments</text>
+
+  <rect x="635" y="145" width="250" height="170" class="box"/>
+  <text x="660" y="182" class="h2">Pinecone Admin</text>
+  <text x="660" y="220" class="body">embeddings + metadata</text>
+  <text x="660" y="250" class="body">semantic query</text>
+
+  <rect x="925" y="145" width="220" height="170" class="box"/>
+  <text x="950" y="182" class="h2">Video Expert</text>
+  <text x="950" y="220" class="body">rewrite + label</text>
+  <text x="950" y="250" class="body">GPT-4o</text>
+
+  <path d="M305 230 H345" class="arrow"/>
+  <path d="M595 230 H635" class="arrow"/>
+  <path d="M885 230 H925" class="arrow"/>
+
+  <rect x="140" y="420" width="420" height="155" class="box"/>
+  <text x="165" y="458" class="h2">Hybrid retrieval</text>
+  <text x="165" y="495" class="body">Pinecone: comment vectors + metadata</text>
+  <text x="165" y="525" class="body">File store: MP4/JPG media</text>
+
+  <rect x="640" y="420" width="420" height="155" class="box"/>
+  <text x="665" y="458" class="h2">Evaluation</text>
+  <text x="665" y="495" class="body">human expected comment</text>
+  <text x="665" y="525" class="body">cosine similarity + retrieval score</text>
+
+  <rect x="190" y="675" width="820" height="105" class="box"/>
+  <text x="215" y="715" class="h2">Production boundary</text>
+  <text x="215" y="750" class="body">Automation scales the pipeline, but engineering, quality control and ethics remain human responsibilities.</text>
+</svg>
