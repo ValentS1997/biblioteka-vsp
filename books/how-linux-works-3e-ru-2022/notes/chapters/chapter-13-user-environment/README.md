@@ -41,7 +41,7 @@
 - `p0401:c01` завершает раздел 13.7 «Далее о файлах запуска».
 - Следующий чанк `p0402:c01` начинается главой 14 «Краткий обзор рабочего стола Linux. Вывод на печать».
 - Chapter boundary verified: yes
-- Completion status: `RAG_GROUNDED`
+- Completion status: `ACCEPTED`
 
 ## Содержимое
 

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1260" viewBox="0 0 1600 1260" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 5 — detailed adaptive RAG map</title>
+  <desc id="desc">Подробная схема retriever, adaptive branches, GPT-4o, automated metrics, user ratings and expert feedback.</desc>
+  <rect width="1600" height="1260" fill="#ffffff"/>
+  <style>
+    text { font-family: Arial, sans-serif; fill: #111; }
+    .h1 { font-size: 31px; font-weight: 700; }
+    .h2 { font-size: 20px; font-weight: 700; }
+    .body { font-size: 15px; }
+    .small { font-size: 13px; }
+    .box { fill: #f8f8f8; stroke: #222; stroke-width: 2; rx: 12; }
+    .arrow { stroke: #222; stroke-width: 3; fill: none; marker-end: url(#a); }
+  </style>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#222"/>
+    </marker>
+  </defs>
+
+  <text x="55" y="55" class="h1">Глава 5. Adaptive RAG — detailed feedback loop</text>
+  <text x="55" y="84" class="small">Source: p0136:c01–p0160:c01 · PDF 136–160</text>
+
+  <rect x="55" y="125" width="455" height="210" class="box"/>
+  <text x="80" y="162" class="h2">Retriever</text>
+  <text x="80" y="198" class="body">Wikipedia URL map</text>
+  <text x="80" y="228" class="body">requests + BeautifulSoup</text>
+  <text x="80" y="258" class="body">keyword match</text>
+  <text x="80" y="288" class="body">return first N words</text>
+
+  <rect x="570" y="125" width="455" height="210" class="box"/>
+  <text x="595" y="162" class="h2">Adaptive selector</text>
+  <text x="595" y="198" class="body">ranking 1–2 → no RAG</text>
+  <text x="595" y="228" class="body">ranking 3–4 → expert feedback</text>
+  <text x="595" y="258" class="body">ranking 5 → keyword retrieval</text>
+  <text x="595" y="298" class="small">source code enables expert branch only for 4</text>
+
+  <rect x="1085" y="125" width="455" height="210" class="box"/>
+  <text x="1110" y="162" class="h2">Generator</text>
+  <text x="1110" y="198" class="body">text_input</text>
+  <text x="1110" y="228" class="body">GPT-4o</text>
+  <text x="1110" y="258" class="body">temperature=0.1</text>
+  <text x="1110" y="288" class="body">formatted response</text>
+
+  <path d="M510 230 H570" class="arrow"/>
+  <path d="M1025 230 H1085" class="arrow"/>
+
+  <text x="55" y="405" class="h2">Evaluation signals</text>
+
+  <rect x="55" y="440" width="340" height="180" class="box"/>
+  <text x="80" y="478" class="h2">Response time</text>
+  <text x="80" y="515" class="body">elapsed API time</text>
+
+  <rect x="430" y="440" width="340" height="180" class="box"/>
+  <text x="455" y="478" class="h2">Cosine similarity</text>
+  <text x="455" y="515" class="body">TF-IDF vectors</text>
+  <text x="455" y="545" class="body">similarity ≠ correctness</text>
+
+  <rect x="805" y="440" width="340" height="180" class="box"/>
+  <text x="830" y="478" class="h2">User rating</text>
+  <text x="830" y="515" class="body">1–5 relevance/coherence</text>
+  <text x="830" y="545" class="body">updates score history</text>
+
+  <rect x="1180" y="440" width="360" height="180" class="box"/>
+  <text x="1205" y="478" class="h2">Expert review</text>
+  <text x="1205" y="515" class="body">thumbs up/down</text>
+  <text x="1205" y="545" class="body">free-text correction</text>
+
+  <text x="55" y="700" class="h2">Feedback loop</text>
+
+  <rect x="130" y="735" width="430" height="185" class="box"/>
+  <text x="155" y="772" class="body">Low user satisfaction</text>
+  <text x="155" y="802" class="body">→ expert evaluation</text>
+  <text x="155" y="832" class="body">→ save expert_feedback.txt</text>
+  <text x="155" y="862" class="body">→ use corrected expert document later</text>
+
+  <rect x="650" y="735" width="430" height="185" class="box"/>
+  <text x="675" y="772" class="body">Goal:</text>
+  <text x="675" y="802" class="body">improve retrieval material and augmentation</text>
+  <text x="675" y="832" class="body">without assuming automatic metric = truth</text>
+
+  <rect x="1170" y="735" width="330" height="185" class="box"/>
+  <text x="1195" y="772" class="body">Hybrid system</text>
+  <text x="1195" y="802" class="body">human + machine</text>
+  <text x="1195" y="832" class="body">dynamic / adaptive</text>
+
+  <path d="M560 825 H650" class="arrow"/>
+  <path d="M1080 825 H1170" class="arrow"/>
+
+  <text x="55" y="1000" class="h2">Source issues</text>
+
+  <rect x="55" y="1035" width="1490" height="170" class="box"/>
+  <text x="80" y="1072" class="body">1. Narrative says expert branch for ratings 3–4; code condition allows only 4.</text>
+  <text x="80" y="1102" class="body">2. mean_score is computed, but expert trigger compares accumulated score_history to threshold.</text>
+  <text x="80" y="1132" class="body">3. Text says entered rating 1; displayed console input is 3.</text>
+  <text x="80" y="1162" class="body">4. private_token setup is not supported by retrieved chapter chunks.</text>
+</svg>

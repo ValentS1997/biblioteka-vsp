@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 5 — Adaptive RAG with Human Feedback</title>
+  <desc id="desc">Компактная схема adaptive RAG: ranking, retrieval strategy, generation, user and expert feedback.</desc>
+  <rect width="1200" height="820" fill="#ffffff"/>
+  <style>
+    text { font-family: Arial, sans-serif; fill: #111; }
+    .h1 { font-size: 29px; font-weight: 700; }
+    .h2 { font-size: 20px; font-weight: 700; }
+    .body { font-size: 16px; }
+    .small { font-size: 13px; }
+    .box { fill: #f7f7f7; stroke: #222; stroke-width: 2; rx: 14; }
+    .arrow { stroke: #222; stroke-width: 3; fill: none; marker-end: url(#a); }
+  </style>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#222"/>
+    </marker>
+  </defs>
+
+  <text x="55" y="55" class="h1">Глава 5. Adaptive RAG + Human Feedback</text>
+  <text x="55" y="86" class="small">RAG provenance: p0136:c01–p0160:c01 · PDF 136–160</text>
+
+  <rect x="55" y="145" width="260" height="150" class="box"/>
+  <text x="80" y="182" class="h2">Rating 1–2</text>
+  <text x="80" y="220" class="body">RAG disabled</text>
+  <text x="80" y="250" class="body">user input only</text>
+
+  <rect x="470" y="145" width="260" height="150" class="box"/>
+  <text x="495" y="182" class="h2">Rating 3–4</text>
+  <text x="495" y="220" class="body">expert feedback</text>
+  <text x="495" y="250" class="small">source code contradicts 3-case</text>
+
+  <rect x="885" y="145" width="260" height="150" class="box"/>
+  <text x="910" y="182" class="h2">Rating 5</text>
+  <text x="910" y="220" class="body">keyword retrieval</text>
+  <text x="910" y="250" class="body">example max_words=100</text>
+
+  <rect x="390" y="385" width="420" height="140" class="box"/>
+  <text x="415" y="423" class="h2">GPT-4o generation</text>
+  <text x="415" y="460" class="body">selected text_input → answer</text>
+  <text x="415" y="490" class="body">response time + cosine similarity</text>
+
+  <path d="M185 295 V455 H390" class="arrow"/>
+  <path d="M600 295 V385" class="arrow"/>
+  <path d="M1015 295 V455 H810" class="arrow"/>
+
+  <rect x="160" y="625" width="350" height="130" class="box"/>
+  <text x="185" y="663" class="h2">User feedback</text>
+  <text x="185" y="700" class="body">rating 1–5</text>
+  <text x="185" y="730" class="body">updates feedback statistics</text>
+
+  <rect x="690" y="625" width="350" height="130" class="box"/>
+  <text x="715" y="663" class="h2">Expert feedback</text>
+  <text x="715" y="700" class="body">thumbs up/down + comment</text>
+  <text x="715" y="730" class="body">expert_feedback.txt</text>
+
+  <path d="M510 525 V625" class="arrow"/>
+  <path d="M690 690 H510" class="arrow"/>
+</svg>
