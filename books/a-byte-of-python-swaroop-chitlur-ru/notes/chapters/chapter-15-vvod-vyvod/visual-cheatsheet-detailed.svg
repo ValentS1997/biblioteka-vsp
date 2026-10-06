@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1760" height="1400" viewBox="0 0 1760 1400">
+  <rect width="1760" height="1400" fill="white"/>
+  <text x="55" y="65" font-family="sans-serif" font-size="36" font-weight="700">Глава 15. Ввод-вывод — detailed map</text>
+  <text x="55" y="102" font-family="sans-serif" font-size="18">RAG-only · p0121:c01–p0126:c01 · substantive PDF 121–125 · source SHA ac1abb…d7db5</text>
+
+  <rect x="55" y="140" width="1650" height="120" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="80" y="180" font-family="sans-serif" font-size="23" font-weight="700">I/O progression</text>
+  <text x="80" y="220" font-family="sans-serif" font-size="18">user text → string processing → text-file write/read → binary object persistence with pickle.</text>
+
+  <rect x="55" y="305" width="510" height="355" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="80" y="345" font-family="sans-serif" font-size="23" font-weight="700">15.1 User input</text>
+  <text x="80" y="390" font-family="monospace" font-size="17">input('Введите текст: ')</text>
+  <text x="80" y="430" font-family="monospace" font-size="17">text[::-1]</text>
+  <text x="80" y="470" font-family="monospace" font-size="17">text == reverse(text)</text>
+  <text x="80" y="515" font-family="sans-serif" font-size="17">source: сэр → no</text>
+  <text x="80" y="550" font-family="sans-serif" font-size="17">мадам / топот → yes</text>
+  <text x="80" y="595" font-family="sans-serif" font-size="16">homework expands normalization requirements.</text>
+
+  <rect x="625" y="305" width="510" height="355" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="650" y="345" font-family="sans-serif" font-size="23" font-weight="700">15.2 Files</text>
+  <text x="650" y="390" font-family="monospace" font-size="17">open('poem.txt', 'w')</text>
+  <text x="650" y="430" font-family="monospace" font-size="17">write(poem)</text>
+  <text x="650" y="470" font-family="monospace" font-size="17">open('poem.txt')</text>
+  <text x="650" y="510" font-family="monospace" font-size="17">readline()</text>
+  <text x="650" y="550" font-family="sans-serif" font-size="17">empty string → EOF in source example</text>
+  <text x="650" y="590" font-family="monospace" font-size="17">close()</text>
+
+  <rect x="1195" y="305" width="510" height="355" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="1220" y="345" font-family="sans-serif" font-size="23" font-weight="700">15.3 Pickle</text>
+  <text x="1220" y="390" font-family="monospace" font-size="17">open(..., 'wb')</text>
+  <text x="1220" y="430" font-family="monospace" font-size="17">pickle.dump(shoplist, f)</text>
+  <text x="1220" y="470" font-family="monospace" font-size="17">del shoplist</text>
+  <text x="1220" y="510" font-family="monospace" font-size="17">open(..., 'rb')</text>
+  <text x="1220" y="550" font-family="monospace" font-size="17">pickle.load(f)</text>
+  <text x="1220" y="590" font-family="sans-serif" font-size="16">restored list is printed.</text>
+
+  <rect x="55" y="710" width="800" height="245" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="80" y="750" font-family="sans-serif" font-size="23" font-weight="700">Modes / runtime behavior</text>
+  <text x="80" y="795" font-family="monospace" font-size="17">r / w / a</text>
+  <text x="80" y="835" font-family="monospace" font-size="17">t / b</text>
+  <text x="80" y="875" font-family="monospace" font-size="17">print(line, end='')</text>
+  <text x="80" y="915" font-family="sans-serif" font-size="16">write and pickle examples are filesystem state-changing.</text>
+
+  <rect x="905" y="710" width="800" height="245" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="930" y="750" font-family="sans-serif" font-size="23" font-weight="700">Acceptance</text>
+  <text x="930" y="795" font-family="sans-serif" font-size="18">palindrome check works for shown source cases</text>
+  <text x="930" y="835" font-family="sans-serif" font-size="18">poem written and read back</text>
+  <text x="930" y="875" font-family="sans-serif" font-size="18">shoplist dumped and restored</text>
+  <text x="930" y="915" font-family="sans-serif" font-size="18">filesystem rollback remains [Needs confirmation]</text>
+
+  <rect x="55" y="1005" width="1650" height="250" rx="10" fill="#fafafa" stroke="#666" stroke-dasharray="7 5"/>
+  <text x="80" y="1045" font-family="sans-serif" font-size="22" font-weight="700">Source integrity findings</text>
+  <text x="80" y="1085" font-family="sans-serif" font-size="17">• source calls file handling creation of an object of class file → [Needs confirmation]</text>
+  <text x="80" y="1120" font-family="sans-serif" font-size="17">• homework says punctuation list is “here”, but RAG has no target URL</text>
+  <text x="80" y="1155" font-family="sans-serif" font-size="17">• pickle described as able to store any Python object → broad source claim</text>
+  <text x="80" y="1190" font-family="sans-serif" font-size="17">• pickling example closes write handle but does not show close after load</text>
+  <text x="80" y="1225" font-family="sans-serif" font-size="17">• PDF 126 contains only chapter footer; substantive summary is PDF 125</text>
+
+  <text x="55" y="1320" font-family="sans-serif" font-size="18">15.4 summary: input/output, files and pickle.</text>
+  <text x="55" y="1355" font-family="sans-serif" font-size="17">Next boundary: p0127:c01 / PDF 127 — chapter 16 «Исключения».</text>
+</svg>
