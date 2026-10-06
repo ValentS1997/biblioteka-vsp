@@ -36,8 +36,8 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install extractor
-        run: python -m pip install --disable-pip-version-check "PyMuPDF>=1.24,<2"
+      - name: Install extractor and validator dependencies
+        run: python -m pip install --disable-pip-version-check PyYAML "PyMuPDF>=1.24,<2"
 
       - name: Detect books to rebuild
         id: detect
@@ -86,6 +86,24 @@ jobs:
             python scripts/build_book_rag.py --book-dir "$book_dir"
           done < /tmp/rag-sources.txt
 
+      - name: Validate generated RAG before commit
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [ ! -s /tmp/rag-sources.txt ]; then
+            echo "No generated RAG selected for acceptance."
+            exit 0
+          fi
+
+          while IFS= read -r source; do
+            book_dir="$(dirname "$(dirname "$source")")"
+            echo "Validating RAG ingestion for $book_dir"
+            python scripts/validate_rag_ingestion.py \
+              --book-dir "$book_dir" \
+              --write-result
+          done < /tmp/rag-sources.txt
+
       - name: Commit generated RAG artifacts back to the ingest branch
         shell: bash
         run: |
@@ -98,6 +116,7 @@ jobs:
             books/*/rag/text.md \
             books/*/rag/chunks.jsonl \
             books/*/rag/chunk-index.jsonl \
+            books/*/rag/acceptance.yaml \
             books/*/rag/chunks/ \
             books/*/rag/search-index/
 
