@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect x="0" y="0" width="1200" height="700" fill="white"/>
+  <text x="60" y="70" font-family="sans-serif" font-size="34" font-weight="700">Глава 1 — «Обложка»</text>
+  <text x="60" y="105" font-family="sans-serif" font-size="18">A Byte of Python / Укус Питона · RAG: PDF 9–14</text>
+
+  <rect x="60" y="150" width="330" height="120" rx="12" fill="#f2f2f2" stroke="#333"/>
+  <text x="85" y="190" font-family="sans-serif" font-size="22" font-weight="700">Идентичность</text>
+  <text x="85" y="225" font-family="sans-serif" font-size="18">Swaroop Chitlur</text>
+  <text x="85" y="252" font-family="sans-serif" font-size="18">Перевод: Владимир Смоляр · v2.01</text>
+
+  <rect x="435" y="150" width="330" height="120" rx="12" fill="#f2f2f2" stroke="#333"/>
+  <text x="460" y="190" font-family="sans-serif" font-size="22" font-weight="700">Аудитория</text>
+  <text x="460" y="225" font-family="sans-serif" font-size="18">Начинающие</text>
+  <text x="460" y="252" font-family="sans-serif" font-size="18">Книга заявляет Python 3</text>
+
+  <rect x="810" y="150" width="330" height="120" rx="12" fill="#f2f2f2" stroke="#333"/>
+  <text x="835" y="190" font-family="sans-serif" font-size="22" font-weight="700">Отзывы и применение</text>
+  <text x="835" y="225" font-family="sans-serif" font-size="18">Отзывы читателей</text>
+  <text x="835" y="252" font-family="sans-serif" font-size="18">Курсы + заявленное NASA/JPL</text>
+
+  <rect x="60" y="330" width="330" height="120" rx="12" fill="#f2f2f2" stroke="#333"/>
+  <text x="85" y="370" font-family="sans-serif" font-size="22" font-weight="700">Лицензия</text>
+  <text x="85" y="405" font-family="sans-serif" font-size="18">CC-текст в RAG</text>
+  <text x="85" y="432" font-family="sans-serif" font-size="18">Код/скрипты: modified BSD note</text>
+
+  <rect x="435" y="330" width="330" height="120" rx="12" fill="#f2f2f2" stroke="#333"/>
+  <text x="460" y="370" font-family="sans-serif" font-size="22" font-weight="700">Доступ</text>
+  <text x="460" y="405" font-family="sans-serif" font-size="18">Браузер · PDF · полный исходник</text>
+  <text x="460" y="432" font-family="sans-serif" font-size="18">EPUB: в источнике «готовится»</text>
+
+  <rect x="810" y="330" width="330" height="120" rx="12" fill="#f2f2f2" stroke="#333"/>
+  <text x="835" y="370" font-family="sans-serif" font-size="22" font-weight="700">Переводы</text>
+  <text x="835" y="405" font-family="sans-serif" font-size="18">1.7 ведёт к странице переводов</text>
+  <text x="835" y="432" font-family="sans-serif" font-size="18">Глава 2 начинается с «Переводы»</text>
+
+  <line x1="225" y1="270" x2="600" y2="330" stroke="#555" stroke-width="2"/>
+  <line x1="600" y1="270" x2="975" y2="330" stroke="#555" stroke-width="2"/>
+
+  <text x="60" y="530" font-family="sans-serif" font-size="22" font-weight="700">Главный вывод</text>
+  <text x="60" y="565" font-family="sans-serif" font-size="20">Это «паспорт книги»: происхождение, аудитория, доверие, лицензия и способы доступа.</text>
+  <text x="60" y="605" font-family="sans-serif" font-size="18">CLI/Python-команд в главе нет.</text>
+  <text x="60" y="640" font-family="sans-serif" font-size="16">Source finding: в RAG есть повреждённые glyphs в точных именах/URL/названии лицензии.</text>
+</svg>
