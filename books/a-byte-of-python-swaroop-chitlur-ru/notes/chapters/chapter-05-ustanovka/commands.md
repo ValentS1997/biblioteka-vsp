@@ -19,8 +19,8 @@
 - `yum` для Fedora;
 - `pkg_add` для FreeBSD.
 
-Но конкретные install commands/arguments в главе **не приведены**. Не добавлять
-`apt-get install ...`, `yum install ...` или `pkg_add ...` из model memory.
+Но конкретные install commands/arguments в главе **не приведены**. Не синтезировать
+параметры, package names или полные команды для этих package managers из model memory.
 
 ## Compile-from-source path
 
