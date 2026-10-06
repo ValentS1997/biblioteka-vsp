@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1080" viewBox="0 0 1600 1080">
+<rect width="1600" height="1080" fill="#fff"/>
+<style>text{font-family:Arial,sans-serif;fill:#111}.h{font-size:35px;font-weight:700}.s{font-size:22px;font-weight:700}.b{font-size:16px}.sm{font-size:14px}.box{fill:#f8f8f8;stroke:#333;stroke-width:2}</style>
+<text x="55" y="55" class="h">Заключение · detailed synthesis</text>
+<text x="55" y="90" class="b">Source boundary: PDF 280 only · project Chapter 14 for indexing · source heading unnumbered</text>
+
+<rect x="55" y="125" width="475" height="235" rx="14" class="box"/>
+<text x="80" y="165" class="s">1. Source framing</text>
+<text x="80" y="202" class="b">book is not primarily about Go syntax</text>
+<text x="80" y="234" class="b">focus: simultaneous processor use</text>
+<text x="80" y="266" class="b">Go presented as suitable vehicle</text>
+<text x="80" y="298" class="sm">Designer-intent claim remains source attribution.</text>
+
+<rect x="565" y="125" width="475" height="235" rx="14" class="box"/>
+<text x="590" y="165" class="s">2. Hardware trend</text>
+<text x="590" y="202" class="b">author contrasts frequency era</text>
+<text x="590" y="234" class="b">with processor-count era</text>
+<text x="590" y="266" class="b">software must adapt to architecture</text>
+<text x="590" y="298" class="sm">Broad historical claim is not independently verified.</text>
+
+<rect x="1075" y="125" width="470" height="235" rx="14" class="box"/>
+<text x="1100" y="165" class="s">3. What earlier chapters proved</text>
+<text x="1100" y="202" class="b">races break correctness</text>
+<text x="1100" y="234" class="b">synchronization costs time</text>
+<text x="1100" y="266" class="b">fine-grained parallelism may lose</text>
+<text x="1100" y="298" class="b">benchmarks need controlled context</text>
+
+<rect x="55" y="405" width="720" height="270" rx="14" class="box"/>
+<text x="80" y="445" class="s">4. Operational acceptance chain</text>
+<text x="80" y="482" class="b">1. establish sequential baseline</text>
+<text x="80" y="514" class="b">2. parallelize independent useful work</text>
+<text x="80" y="546" class="b">3. verify race-free correctness</text>
+<text x="80" y="578" class="b">4. bound shared critical sections</text>
+<text x="80" y="610" class="b">5. measure on target hardware</text>
+<text x="80" y="642" class="b">6. keep parallel design only if speedup is real</text>
+
+<rect x="825" y="405" width="720" height="270" rx="14" class="box"/>
+<text x="850" y="445" class="s">5. Source findings</text>
+<text x="850" y="482" class="b">heading is not source-numbered</text>
+<text x="850" y="514" class="b">frequency-era claim is broad</text>
+<text x="850" y="546" class="b">Go-designer foresight is attribution</text>
+<text x="850" y="578" class="b">no new API/command is introduced</text>
+<text x="850" y="610" class="b">page 281 author bio is excluded</text>
+
+<rect x="55" y="720" width="1490" height="150" rx="14" class="box"/>
+<text x="80" y="760" class="s">Final rule</text>
+<text x="80" y="800" class="b">Architecture opportunity → correct parallel design → controlled synchronization → measurement → performance claim.</text>
+
+<text x="55" y="965" class="s">End of analytical chapter sequence</text>
+<text x="55" y="1000" class="b">The next source page is biographical, not another technical chapter.</text>
+</svg>

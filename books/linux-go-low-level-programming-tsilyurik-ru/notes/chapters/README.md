@@ -20,3 +20,4 @@ Current chapter workflow:
 - [Chapter 11 — «Элементы функционального программирования»](chapter-11-elementy-funkcionalnogo-programmirovaniya/) — `RAG_GROUNDED`
 - [Chapter 12 — «Скоростные и другие сравнения языков»](chapter-12-skorostnye-i-drugie-sravneniya-yazykov/) — `RAG_GROUNDED`
 - [Chapter 13 — «Многопроцессорные параллельные вычисления»](chapter-13-mnogoprocessornye-parallelnye-vychisleniya/) — `RAG_GROUNDED`
+- [Chapter 14 — «Заключение»](chapter-14-zaklyuchenie/) — `RAG_GROUNDED` *(source heading unnumbered; project index only)*
