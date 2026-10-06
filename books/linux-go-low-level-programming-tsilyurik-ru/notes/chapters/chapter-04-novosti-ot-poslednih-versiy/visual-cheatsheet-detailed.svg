@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100">
+<rect width="1600" height="1100" fill="#fff"/>
+<style>text{font-family:Arial,sans-serif;fill:#111}.h{font-size:36px;font-weight:700}.s{font-size:22px;font-weight:700}.b{font-size:16px}.sm{font-size:14px}.box{fill:#f8f8f8;stroke:#333;stroke-width:2}</style>
+<text x="55" y="55" class="h">Глава 4 — Новости от последних версий... · detailed</text>
+<text x="55" y="90" class="b">Source boundary: PDF 126–131 · page 132 starts Part 2</text>
+
+<rect x="55" y="125" width="475" height="260" rx="14" class="box"/>
+<text x="80" y="165" class="s">1. Module initialization</text>
+<text x="80" y="202" class="b">go mod init generic</text>
+<text x="80" y="234" class="b">creates go.mod</text>
+<text x="80" y="266" class="b">module metadata includes Go version</text>
+<text x="80" y="298" class="b">external import may require dependency</text>
+<text x="80" y="330" class="sm">Source has module-name mismatch in first listing.</text>
+
+<rect x="565" y="125" width="475" height="260" rx="14" class="box"/>
+<text x="590" y="165" class="s">2. Dependency reconciliation</text>
+<text x="590" y="202" class="b">go get constraints</text>
+<text x="590" y="234" class="b">or go mod tidy</text>
+<text x="590" y="266" class="b">go.mod / go.sum change</text>
+<text x="590" y="298" class="b">module cache populated under GOPATH</text>
+<text x="590" y="330" class="b">successful go build verifies resolution</text>
+
+<rect x="1075" y="125" width="470" height="260" rx="14" class="box"/>
+<text x="1100" y="165" class="s">3. Generic function</text>
+<text x="1100" y="202" class="b">func PrintSlice[T any](s []T)</text>
+<text x="1100" y="234" class="b">explicit: PrintSlice[string](...)</text>
+<text x="1100" y="266" class="b">inferred: PrintSlice(...)</text>
+<text x="1100" y="298" class="b">compiler inference may succeed or fail</text>
+
+<rect x="55" y="425" width="475" height="260" rx="14" class="box"/>
+<text x="80" y="465" class="s">4. Constraints</text>
+<text x="80" y="502" class="b">any</text>
+<text x="80" y="534" class="b">custom interface type set</text>
+<text x="80" y="566" class="b">comparable</text>
+<text x="80" y="598" class="b">constraints.Ordered</text>
+<text x="80" y="630" class="b">constraint failure → compile error</text>
+
+<rect x="565" y="425" width="475" height="260" rx="14" class="box"/>
+<text x="590" y="465" class="s">5. Examples</text>
+<text x="590" y="502" class="b">PrintSlice: string/int8/float32/complex128</text>
+<text x="590" y="534" class="b">existsInSlice[T comparable]</text>
+<text x="590" y="566" class="b">Max[T constraints.Ordered]</text>
+<text x="590" y="598" class="b">complex value rejected by shown Ordered</text>
+<text x="590" y="630" class="sm">All claims remain source-scoped.</text>
+
+<rect x="1075" y="425" width="470" height="260" rx="14" class="box"/>
+<text x="1100" y="465" class="s">6. Change classification</text>
+<text x="1100" y="502" class="b">read-only: cat / grep / ls / go env</text>
+<text x="1100" y="534" class="b">modify: mod init / fmt / build</text>
+<text x="1100" y="566" class="b">network+modify: get / tidy</text>
+<text x="1100" y="598" class="b">verification: metadata + build + run</text>
+<text x="1100" y="630" class="b">rollback mostly [Needs confirmation]</text>
+
+<rect x="55" y="725" width="1490" height="210" rx="14" class="box"/>
+<text x="80" y="765" class="s">7. Source findings</text>
+<text x="80" y="805" class="b">A. go mod init generic → first shown go.mod says module types; later says module generic.</text>
+<text x="80" y="840" class="b">B. go build -o print_slice ... → following execution shown as ./print_slice.0.</text>
+<text x="80" y="875" class="b">Both are preserved as mismatches; no web/model-memory adjudication is injected.</text>
+
+<text x="55" y="1010" class="s">Transition</text>
+<text x="55" y="1045" class="b">Page 132 begins Part 2: «Конкурентность и многопроцессорность».</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<rect width="1200" height="760" fill="#fff"/>
+<style>text{font-family:Arial,sans-serif;fill:#111}.h{font-size:32px;font-weight:700}.t{font-size:21px;font-weight:700}.b{font-size:17px}.box{fill:#f7f7f7;stroke:#333;stroke-width:2}</style>
+<text x="55" y="55" class="h">Глава 4 — Новости от последних версий...</text>
+<text x="55" y="88" class="b">RAG: PDF 126–131 · Modules + Generics</text>
+
+<rect x="55" y="130" width="520" height="245" rx="14" class="box"/>
+<text x="80" y="170" class="t">Modules</text>
+<text x="80" y="205" class="b">go mod init → go.mod</text>
+<text x="80" y="237" class="b">external import → dependency requirement</text>
+<text x="80" y="269" class="b">go get / go mod tidy</text>
+<text x="80" y="301" class="b">go.mod + go.sum + module cache</text>
+<text x="80" y="333" class="b">verify with go build</text>
+
+<rect x="625" y="130" width="520" height="245" rx="14" class="box"/>
+<text x="650" y="170" class="t">Generics</text>
+<text x="650" y="205" class="b">func F[T any](...)</text>
+<text x="650" y="237" class="b">explicit type args or inference</text>
+<text x="650" y="269" class="b">custom constraints</text>
+<text x="650" y="301" class="b">comparable</text>
+<text x="650" y="333" class="b">constraints.Ordered</text>
+
+<rect x="55" y="420" width="1090" height="180" rx="14" class="box"/>
+<text x="80" y="460" class="t">Operational boundary</text>
+<text x="80" y="495" class="b">Read-only: cat · grep · ls · go env</text>
+<text x="80" y="527" class="b">State-changing: go mod init · go fmt · go build</text>
+<text x="80" y="559" class="b">Network + state-changing: go get · go mod tidy</text>
+
+<text x="55" y="650" class="t">Source findings</text>
+<text x="55" y="685" class="b">module generic ↔ module types; build output print_slice ↔ execution ./print_slice.0</text>
+<text x="55" y="720" class="b">No external correction injected under rag_only policy.</text>
+</svg>
