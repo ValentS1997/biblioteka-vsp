@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#f6f8fb"/><rect width="1600" height="105" fill="#17202a"/>
+<text x="55" y="50" font-family="Arial" font-size="36" font-weight="700" fill="white">Глава 16 — Загрузка данных</text>
+<text x="55" y="82" font-family="Arial" font-size="20" fill="#d6e4f0">schema → parse → validate → visualize</text>
+<g font-family="Arial" fill="#273746">
+<rect x="50" y="145" width="470" height="250" rx="18" fill="white" stroke="#5dade2" stroke-width="2"/>
+<text x="78" y="190" font-size="24" font-weight="700">CSV weather</text><text x="78" y="235" font-size="19">csv.reader() + next()</text><text x="78" y="270" font-size="19">enumerate(header_row)</text><text x="78" y="305" font-size="19">datetime.strptime()</text><text x="78" y="340" font-size="19">try/except ValueError</text>
+<rect x="565" y="145" width="470" height="250" rx="18" fill="white" stroke="#7dcea0" stroke-width="2"/>
+<text x="593" y="190" font-size="24" font-weight="700">Matplotlib</text><text x="593" y="235" font-size="19">highs + lows</text><text x="593" y="270" font-size="19">fill_between()</text><text x="593" y="305" font-size="19">autofmt_xdate()</text><text x="593" y="340" font-size="19">shared scale for comparison</text>
+<rect x="1080" y="145" width="470" height="250" rx="18" fill="white" stroke="#f5b041" stroke-width="2"/>
+<text x="1108" y="190" font-size="24" font-weight="700">GeoJSON</text><text x="1108" y="235" font-size="19">json.loads()</text><text x="1108" y="270" font-size="19">features → records</text><text x="1108" y="305" font-size="19">mag / lon / lat / title</text><text x="1108" y="340" font-size="19">longitude before latitude</text>
+<rect x="50" y="445" width="720" height="280" rx="18" fill="white" stroke="#af7ac5" stroke-width="2"/>
+<text x="78" y="490" font-size="24" font-weight="700">Plotly map</text><text x="78" y="535" font-size="19">scatter_geo()</text><text x="78" y="570" font-size="19">size/color = magnitude</text><text x="78" y="605" font-size="19">Viridis + natural earth</text><text x="78" y="640" font-size="19">hover_name = earthquake title</text>
+<rect x="815" y="445" width="735" height="280" rx="18" fill="white" stroke="#ec7063" stroke-width="2"/>
+<text x="843" y="490" font-size="24" font-weight="700">Source findings</text><text x="843" y="535" font-size="18">population intro ↔ earthquake project</text><text x="843" y="570" font-size="18">color='red' ↔ prose c='red'</text><text x="843" y="605" font-size="18">filename/extension mismatches</text><text x="843" y="640" font-size="18">variable naming + clipping</text>
+</g>
+<rect x="50" y="775" width="1500" height="72" rx="14" fill="#17202a"/>
+<text x="78" y="819" font-family="Arial" font-size="20" font-weight="700" fill="white">Provenance: e0026:c01–c13 · EPUB spine 26 · OEBPS/Text/978544614112-23.xhtml</text>
+</svg>
