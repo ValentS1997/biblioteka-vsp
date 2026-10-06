@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1120" role="img" aria-labelledby="title desc">
+<title id="title">Глава 14 — подробная шпаргалка</title>
+<desc id="desc">Detailed Linux desktop and printing summary covering Wayland, X Window, input, D-Bus and CUPS.</desc>
+<rect width="1600" height="1120" fill="#f7f8fa"/>
+<rect width="1600" height="112" fill="#17202a"/>
+<text x="60" y="49" font-family="system-ui,Arial,sans-serif" font-size="34" font-weight="700" fill="#fff">Глава 14 — Рабочий стол Linux и печать</text>
+<text x="60" y="85" font-family="system-ui,Arial,sans-serif" font-size="19" fill="#d6e4f0">framebuffer · Wayland · X/Xwayland · libinput · X events/input · D-Bus · CUPS/IPP</text>
+
+<rect x="50" y="145" width="470" height="235" rx="18" fill="#fff" stroke="#5dade2" stroke-width="2"/>
+<text x="78" y="185" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#1b4f72">1. Display foundations</text>
+<text x="78" y="223" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="78">Framebuffer represents display pixels in memory.</tspan><tspan x="78" dy="29">Window system coordinates independent processes.</tspan><tspan x="78" dy="29">Toolkits build widgets; desktop environment adds integration.</tspan><tspan x="78" dy="29">Applications sit at the top.</tspan><tspan x="78" dy="29">D-Bus connects otherwise separate applications/services.</tspan></text>
+
+<rect x="565" y="145" width="470" height="235" rx="18" fill="#fff" stroke="#7dcea0" stroke-width="2"/>
+<text x="593" y="185" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#196f3d">2. Wayland</text>
+<text x="593" y="223" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="593">Wayland is a protocol, not a monolithic server package.</tspan><tspan x="593" dy="29">Clients own buffers.</tspan><tspan x="593" dy="29">Compositor combines buffers and routes input.</tspan><tspan x="593" dy="29">WAYLAND_DISPLAY identifies runtime socket.</tspan><tspan x="593" dy="29">Weston is reference compositor implementation.</tspan></text>
+
+<rect x="1080" y="145" width="470" height="235" rx="18" fill="#fff" stroke="#f5b041" stroke-width="2"/>
+<text x="1108" y="185" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#9c640c">3. Input path</text>
+<text x="1108" y="223" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="1108">Kernel devices appear under /dev/input.</tspan><tspan x="1108" dy="29">libinput normalizes input events.</tspan><tspan x="1108" dy="29">list-devices shows capabilities.</tspan><tspan x="1108" dy="29">debug-events shows actual key/pointer events.</tspan><tspan x="1108" dy="29">Used by Wayland and many X setups.</tspan></text>
+
+<rect x="50" y="410" width="720" height="280" rx="18" fill="#fff" stroke="#af7ac5" stroke-width="2"/>
+<text x="78" y="450" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#6c3483">4. X and Xwayland</text>
+<text x="78" y="488" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="78">X server centrally manages display and input.</tspan><tspan x="78" dy="29">Window manager is an X client assisting server/window placement.</tspan><tspan x="78" dy="29">DISPLAY such as :0 names an X display.</tspan><tspan x="78" dy="29">Xwayland runs an X server as a Wayland client.</tspan><tspan x="78" dy="29">Direct X TCP/6000 is historically unencrypted.</tspan><tspan x="78" dy="29">Display manager starts server + session clients.</tspan></text>
+
+<rect x="810" y="410" width="740" height="280" rx="18" fill="#fff" stroke="#85c1e9" stroke-width="2"/>
+<text x="838" y="450" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#21618c">5. X diagnostics</text>
+<text x="838" y="488" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="838">xwininfo → window ID/geometry.</tspan><tspan x="838" dy="29">xlsclients -l → client/window list.</tspan><tspan x="838" dy="29">xev → pointer/focus/key events.</tspan><tspan x="838" dy="29">xinput --list → input topology.</tspan><tspan x="838" dy="29">xinput --list-props → per-device properties.</tspan><tspan x="838" dy="29">set-button-map is a state-changing input operation.</tspan></text>
+
+<rect x="50" y="720" width="470" height="250" rx="18" fill="#fff" stroke="#ec7063" stroke-width="2"/>
+<text x="78" y="760" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#922b21">6. D-Bus</text>
+<text x="78" y="798" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="78">dbus-daemon is message broker.</tspan><tspan x="78" dy="29">System bus handles system-wide services/events.</tspan><tspan x="78" dy="29">Session bus handles desktop-session traffic.</tspan><tspan x="78" dy="29">dbus-monitor reveals event flow.</tspan><tspan x="78" dy="29">Source says not to edit system.conf.</tspan></text>
+
+<rect x="565" y="720" width="470" height="250" rx="18" fill="#fff" stroke="#f5b041" stroke-width="2"/>
+<text x="593" y="760" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#9c640c">7. Printing pipeline</text>
+<text x="593" y="798" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="593">Application submits job to print server.</tspan><tspan x="593" dy="29">CUPS queues it.</tspan><tspan x="593" dy="29">Filters/RIP convert formats.</tspan><tspan x="593" dy="29">Ghostscript + PPD drive device-specific output.</tspan><tspan x="593" dy="29">Backend delivers data to printer.</tspan></text>
+
+<rect x="1080" y="720" width="470" height="250" rx="18" fill="#fff" stroke="#7dcea0" stroke-width="2"/>
+<text x="1108" y="760" font-family="system-ui,Arial,sans-serif" font-size="23" font-weight="700" fill="#196f3d">8. CUPS / IPP</text>
+<text x="1108" y="798" font-family="system-ui,Arial,sans-serif" font-size="18" fill="#273746"><tspan x="1108">cupsd = CUPS daemon.</tspan><tspan x="1108" dy="29">lpr = simple client named by source.</tspan><tspan x="1108" dy="29">IPP uses TCP/631.</tspan><tspan x="1108" dy="29">localhost:631 shows current config/jobs.</tspan><tspan x="1108" dy="29">Prefer distro graphical tools for printer changes.</tspan></text>
+
+<rect x="50" y="1005" width="1500" height="72" rx="14" fill="#17202a"/>
+<text x="76" y="1037" font-family="system-ui,Arial,sans-serif" font-size="20" font-weight="700" fill="#fff">Operational model: session/protocol → compositor/X server → client/input events → D-Bus; printing: queue → filter/RIP → driver → backend.</text>
+<text x="76" y="1064" font-family="system-ui,Arial,sans-serif" font-size="16" fill="#d6e4f0">Provenance: RAG p0402:c01–p0418:c01 · PDF/printed pages 402–418.</text>
+</svg>
