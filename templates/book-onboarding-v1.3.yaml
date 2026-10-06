@@ -1,0 +1,261 @@
+schema_version: "1.3"
+
+template:
+  id: "BIBLIOTEKA-VSP-BOOK-ONBOARDING"
+  version: "1.3"
+  type: "book_onboarding"
+  status: "ACCEPTED"
+  purpose: >-
+    Canonical one-time process for preparing a biblioteka-vsp book for
+    RAG-dependent workflows using a verified PDF or EPUB canonical source.
+
+policy:
+  capability_scoped: true
+  reading_requires_rag: false
+  inventory_requires_rag: false
+  chapter_analysis_requires_rag: true
+  supported_canonical_source_formats:
+    - pdf
+    - epub
+  external_web_fallback_for_rag_only: false
+  unknown_data_policy: "[Needs confirmation]"
+  force_push_allowed: false
+
+contracts:
+  rag_ingestion_acceptance:
+    id: "BIBLIOTEKA-VSP-RAG-INGESTION-ACCEPTANCE"
+    version: "1.0"
+    path: "templates/rag-ingestion-acceptance-v1.0.yaml"
+  readiness:
+    id: "BIBLIOTEKA-VSP-BOOK-READINESS"
+    version: "1.3"
+    path: "templates/book-readiness-v1.3.yaml"
+
+git_execution:
+  policy:
+    id: "BIBLIOTEKA-VSP-GIT-EXECUTION-POLICY"
+    version: "1.0"
+    path: "templates/git-execution-policy-v1.0.yaml"
+  default_mode: "github_connector_and_repository_automation"
+  local_git_default_allowed: false
+  rule: >-
+    Perform branch creation, text-file changes, PRs, merges, CI inspection and
+    repository read-back through GitHub tools. Ask for user-local Git only after
+    producing a valid local_git_exception_policy record.
+
+triggers:
+  full_onboarding_required_when:
+    - "Branch purpose explicitly includes RAG/chapter artifacts."
+    - "User asks to work chapter-by-chapter using the canonical RAG workflow."
+    - "A chapter-analysis request arrives and chapter-analysis readiness is not already READY."
+  full_onboarding_not_implied_by:
+    - "Book is present in inventory."
+    - "Electronic holding is known."
+    - "Reading status is in_progress."
+    - "A PDF or EPUB was merely mentioned or attached without RAG-dependent intent."
+
+inputs:
+  book_identity:
+    book_id: "[Needs confirmation or resolved]"
+    inventory_number: "[Optional]"
+    title: "[Needs confirmation or resolved]"
+    edition: "[Needs confirmation or resolved]"
+  source:
+    electronic_copy_available: "[Needs confirmation]"
+    source_file_identity: "[Needs confirmation]"
+    source_format: "pdf | epub | [Needs confirmation]"
+    canonical_destination_rule: >-
+      PDF -> books/<book_id>/source/book.pdf;
+      EPUB -> books/<book_id>/source/book.epub.
+  desired_use:
+    reading_tracking: "[Derived from user intent]"
+    rag_required: "[Derived from user intent]"
+    chapter_analysis_required: "[Derived from user intent]"
+
+capabilities:
+  independent:
+    - "inventory_registered"
+    - "electronic_holding_known"
+    - "knowledge_registered"
+    - "reading_active"
+    - "metadata_ready"
+    - "canonical_source_ready"
+    - "source_provenance_verified"
+    - "rag_ready"
+    - "retrieval_ready"
+    - "chapter_analysis_ready"
+
+scaffold:
+  reading_only:
+    required:
+      - "books/index.yaml entry"
+      - "books/<book_id>/reading/progress.yaml"
+  rag_onboarded:
+    required:
+      - "books/<book_id>/README.md"
+      - "books/<book_id>/metadata.yaml"
+      - "books/<book_id>/source/book.<pdf|epub>"
+      - "books/<book_id>/source/SHA256"
+      - "books/<book_id>/reading/"
+      - "books/<book_id>/notes/"
+      - "books/<book_id>/notes/chapters/"
+      - "books/<book_id>/notes/questions/"
+      - "books/<book_id>/diagrams/"
+    generated_after_build:
+      - "books/<book_id>/rag/manifest.yaml"
+      - "books/<book_id>/rag/text.md"
+      - "books/<book_id>/rag/chunks.jsonl"
+      - "books/<book_id>/rag/chunk-index.jsonl"
+      - "books/<book_id>/rag/acceptance.yaml"
+      - "books/<book_id>/rag/chunks/"
+      - "books/<book_id>/rag/search-index/"
+
+metadata_minimum_before_rag:
+  required:
+    - "id"
+    - "title"
+    - "source.canonical_path"
+    - "source.format"
+    - "source.expected_sha256"
+    - "source.expected_size_bytes"
+    - "source.repository_access"
+    - "source.storage"
+    - "source.upload_status"
+  non_blocking_unknowns:
+    - "source.source_unit_count"
+    - "source.source_pdf_pages"
+    - "source.epub_spine_items"
+    - "source.text_layer"
+    - "source.ownership_category"
+    - "source.physical_copy"
+    - "source.redistribution_permission"
+  rule: >-
+    Do not fabricate source-unit counts, PDF page counts, EPUB spine counts,
+    text-layer classification, legal provenance, ownership or licensing facts.
+    Build-derived properties may remain unknown before the first successful RAG build.
+
+workflow:
+  - step: 1
+    name: "Resolve book identity and source format"
+    type: "read-only"
+    acceptance:
+      - "book_id resolved"
+      - "inventory mapping unambiguous when applicable"
+      - "source format resolved as PDF or EPUB from verified evidence"
+
+  - step: 2
+    name: "Inspect current lifecycle capabilities"
+    type: "read-only"
+    checks:
+      - "books/index.yaml entry"
+      - "reading/progress.yaml"
+      - "metadata.yaml"
+      - "declared source path"
+      - "source/SHA256"
+      - "rag/manifest.yaml"
+      - "rag/chunk-index.jsonl"
+      - "rag/chunks/"
+      - "rag/search-index/"
+
+  - step: 3
+    name: "Create capability-scoped scaffold"
+    type: "state-changing"
+    rule: "Create only structure required for the requested capability."
+
+  - step: 4
+    name: "Record metadata and source provenance"
+    type: "state-changing"
+    rules:
+      - "Unknown metadata remains [Needs confirmation]."
+      - "Do not fabricate checksums."
+      - "Do not fabricate source-unit counts."
+      - "Do not infer legal provenance."
+
+  - step: 5
+    name: "Ingest canonical source"
+    type: "state-changing"
+    execution_preference:
+      - "GitHub connector/API when real Git LFS binary upload is supported"
+      - "repository-native/remote execution when available"
+      - "user-local Git only as GIT_LFS_BINARY_UPLOAD_REQUIRED exception"
+    destination_rule: >-
+      Preserve the uploaded format: PDF -> source/book.pdf; EPUB -> source/book.epub.
+      Never convert EPUB to PDF or PDF to EPUB as a hidden ingest step.
+    storage: "Git LFS"
+    verification:
+      - "declared canonical source path exists"
+      - "source extension is .pdf or .epub"
+      - "Git LFS tracking applies"
+      - "real LFS object is available to GitHub checkout"
+      - "source/SHA256 exists"
+      - "recorded checksum corresponds to the exact canonical source"
+    local_exception:
+      reason_code: "GIT_LFS_BINARY_UPLOAD_REQUIRED"
+      allowed_only_when: >-
+        Available GitHub/remote tooling cannot upload the exact canonical source
+        binary as a real Git LFS object.
+      scope: "upload canonical source/LFS object and push the minimal source commit only"
+      handback: >-
+        After GitHub confirms the source commit/LFS object, continue RAG, PR,
+        CI and readiness remotely.
+    rollback: >-
+      Revert the source-ingest commit. Never silently replace the canonical source
+      without updating provenance.
+
+  - step: 6
+    name: "Build full-book RAG"
+    type: "state-changing"
+    current_automation: ".github/workflows/build-book-rag.yml"
+    branch_requirement: "non-main ingest branch"
+    source_unit_policy:
+      pdf: "1-indexed PDF pages"
+      epub: "1-indexed EPUB spine items with XHTML member locator"
+    postconditions:
+      - "rag/manifest.yaml exists"
+      - "manifest book_id matches"
+      - "manifest source.path and source.sha256 match canonical source"
+      - "full canonical source-unit range processed"
+      - "addressable chunks and deterministic search index generated"
+
+  - step: 7
+    name: "Validate retrieval integrity"
+    type: "read-only"
+    method: >-
+      Use the book readiness validator to verify chunk-index, addressable chunks,
+      deterministic search-index plumbing, generic source locators and provenance consistency.
+
+  - step: 8
+    name: "Compute chapter-analysis readiness"
+    type: "read-only"
+    contract: "BIBLIOTEKA-VSP-BOOK-READINESS v1.2"
+    allowed:
+      - "READY"
+      - "BLOCKED"
+
+  - step: 9
+    name: "Merge only after readiness succeeds"
+    type: "state-changing"
+    execution: "GitHub connector/API"
+    rules:
+      - "No force-push."
+      - "Verify ingest-branch HEAD before merge."
+      - "After merge, recompute readiness on main."
+
+acceptance_criteria:
+  - "Reading-only books remain valid without RAG."
+  - "PDF and EPUB are supported canonical source formats."
+  - "The original uploaded format is preserved as canonical source."
+  - "Electronic holding is never treated as canonical source readiness."
+  - "Reading state is never treated as RAG or chapter-analysis readiness."
+  - "Canonical source and provenance are explicit before chapter analysis."
+  - "Full-book RAG exists and validates."
+  - "Strict RAG ingestion acceptance passes for every new/rebuilt generation."
+  - "Legacy RAG remains valid until its next controlled rebuild."
+  - "Bounded retrieval integrity check passes for generic source locators."
+  - "Book readiness result is READY before chapter workflow begins."
+  - "Routine Git operations are completed through GitHub tools without user-local Git."
+  - "Any local Git exception is evidence-backed, minimally scoped and handed back to remote execution."
+
+rollback:
+  architecture: "Template is additive and can be superseded by a later version."
+  repository_changes: "Use normal Git revert boundaries; never force-push."
