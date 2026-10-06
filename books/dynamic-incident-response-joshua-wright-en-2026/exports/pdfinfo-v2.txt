@@ -2,7 +2,7 @@ Title:           Динамическое реагирование на инци
 Author:          Joshua Wright
 Creator:         Writer
 Producer:        LibreOffice 24.2
-CreationDate:    Tue Oct  6 07:43:27 2026 UTC
+CreationDate:    Tue Oct  6 07:49:36 2026 UTC
 Custom Metadata: no
 Metadata Stream: no
 Tagged:          yes
