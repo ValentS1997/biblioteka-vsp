@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="white"/>
+  <text x="55" y="65" font-family="sans-serif" font-size="34" font-weight="700">Глава 2 — «Переводы»</text>
+  <text x="55" y="100" font-family="sans-serif" font-size="18">A Byte of Python · RAG PDF 15–22 · 22 языковых направления</text>
+
+  <rect x="55" y="145" width="320" height="125" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="80" y="185" font-family="sans-serif" font-size="22" font-weight="700">Проблема</text>
+  <text x="80" y="220" font-family="sans-serif" font-size="18">Языковой барьер</text>
+  <text x="80" y="248" font-family="sans-serif" font-size="18">для изучающих Python</text>
+
+  <rect x="440" y="145" width="320" height="125" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="465" y="185" font-family="sans-serif" font-size="22" font-weight="700">Сначала проверить</text>
+  <text x="465" y="220" font-family="sans-serif" font-size="18">Есть ли перевод?</text>
+  <text x="465" y="248" font-family="sans-serif" font-size="18">Есть ли волонтёры?</text>
+
+  <rect x="825" y="145" width="320" height="125" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="850" y="185" font-family="sans-serif" font-size="22" font-weight="700">Выбор</text>
+  <text x="850" y="220" font-family="sans-serif" font-size="18">Помочь существующему</text>
+  <text x="850" y="248" font-family="sans-serif" font-size="18">или начать новый</text>
+
+  <line x1="375" y1="207" x2="440" y2="207" stroke="#444" stroke-width="3"/>
+  <line x1="760" y1="207" x2="825" y2="207" stroke="#444" stroke-width="3"/>
+
+  <rect x="55" y="320" width="520" height="180" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="80" y="360" font-family="sans-serif" font-size="22" font-weight="700">Что показывает список</text>
+  <text x="80" y="395" font-family="sans-serif" font-size="18">• завершённые / доступные версии</text>
+  <text x="80" y="425" font-family="sans-serif" font-size="18">• начатые и продолжающиеся переводы</text>
+  <text x="80" y="455" font-family="sans-serif" font-size="18">• команды и одиночные волонтёры</text>
+  <text x="80" y="485" font-family="sans-serif" font-size="18">• исторические даты, страницы и контакты</text>
+
+  <rect x="625" y="320" width="520" height="180" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="650" y="360" font-family="sans-serif" font-size="22" font-weight="700">Source boundary</text>
+  <text x="650" y="395" font-family="sans-serif" font-size="18">RAG chunks p0015:c01–p0022:c01</text>
+  <text x="650" y="425" font-family="sans-serif" font-size="18">Следующая глава: PDF 23 «Предисловие»</text>
+  <text x="650" y="455" font-family="sans-serif" font-size="18">CLI/Python-команд нет</text>
+  <text x="650" y="485" font-family="sans-serif" font-size="18">URL/имена местами повреждены extraction</text>
+
+  <text x="55" y="565" font-family="sans-serif" font-size="22" font-weight="700">Email rule из главы</text>
+  <text x="55" y="602" font-family="monospace" font-size="21">-at- → @     -dot- → .     -underscore- → _</text>
+  <text x="55" y="634" font-family="sans-serif" font-size="17">Остальные дефисы оставить как есть.</text>
+
+  <text x="55" y="685" font-family="sans-serif" font-size="16">Source finding: subsection «Словацкий» содержит цитату с упоминанием «болгар» — не исправлено.</text>
+</svg>
