@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 6 — Scaling RAG with Pinecone</title>
+  <desc id="desc">Компактная схема Kaggle/EDA, embeddings/Pinecone и GPT-4o recommendation flow.</desc>
+  <rect width="1200" height="820" fill="#ffffff"/>
+  <style>
+    text { font-family: Arial, sans-serif; fill: #111; }
+    .h1 { font-size: 29px; font-weight: 700; }
+    .h2 { font-size: 20px; font-weight: 700; }
+    .body { font-size: 16px; }
+    .small { font-size: 13px; }
+    .box { fill: #f7f7f7; stroke: #222; stroke-width: 2; rx: 14; }
+    .arrow { stroke: #222; stroke-width: 3; fill: none; marker-end: url(#a); }
+  </style>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#222"/>
+    </marker>
+  </defs>
+
+  <text x="55" y="55" class="h1">Глава 6. Масштабирование RAG с Pinecone</text>
+  <text x="55" y="86" class="small">RAG provenance: p0161:c01–p0198:c01 · PDF 161–198</text>
+
+  <rect x="55" y="145" width="300" height="180" class="box"/>
+  <text x="80" y="182" class="h2">1. Data / EDA</text>
+  <text x="80" y="220" class="body">Kaggle customer churn</text>
+  <text x="80" y="250" class="body">clean columns</text>
+  <text x="80" y="280" class="body">EDA + k-means</text>
+
+  <rect x="450" y="145" width="300" height="180" class="box"/>
+  <text x="475" y="182" class="h2">2. Vector scale</text>
+  <text x="475" y="220" class="body">row → chunk → embedding</text>
+  <text x="475" y="250" class="body">Pinecone serverless</text>
+  <text x="475" y="280" class="body">batch upsert + query</text>
+
+  <rect x="845" y="145" width="300" height="180" class="box"/>
+  <text x="870" y="182" class="h2">3. RAG generation</text>
+  <text x="870" y="220" class="body">target customer vector</text>
+  <text x="870" y="250" class="body">top-k similar profiles</text>
+  <text x="870" y="280" class="body">GPT-4o recommendation</text>
+
+  <path d="M355 235 H450" class="arrow"/>
+  <path d="M750 235 H845" class="arrow"/>
+
+  <rect x="170" y="425" width="860" height="135" class="box"/>
+  <text x="195" y="465" class="h2">Scaling controls</text>
+  <text x="195" y="500" class="body">cost · API limits · cloud/region · read/write units · storage · latency · batch size</text>
+  <text x="195" y="530" class="small">Source treats these as design constraints before running large jobs.</text>
+
+  <rect x="250" y="640" width="700" height="105" class="box"/>
+  <text x="275" y="680" class="h2">Verification</text>
+  <text x="275" y="715" class="body">row/chunk/embedding counts → vector count → query metadata → response time</text>
+</svg>
