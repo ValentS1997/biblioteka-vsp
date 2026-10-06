@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 6 — Словари: подробная шпаргалка</title>
+  <desc id="desc">Создание, изменение, безопасный доступ, перебор, множества и вложение словарей.</desc>
+  <rect width="1800" height="1200" fill="#f5f7fa"/>
+  <rect width="1800" height="116" fill="#17202a"/>
+  <text x="56" y="50" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="38" font-weight="700" fill="#fff">Глава 6 — Словари</text>
+  <text x="56" y="86" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">смысловые ключи, изменяемые атрибуты, безопасный доступ и вложенные модели</text>
+
+  <rect x="45" y="150" width="540" height="300" rx="18" fill="#fff" stroke="#5dade2" stroke-width="2"/>
+  <text x="75" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#1b4f72">Key → value</text>
+  <text x="75" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">{'color': 'green', 'points': 5}</tspan>
+    <tspan x="75" dy="31">d['color'] → green.</tspan>
+    <tspan x="75" dy="31">Ключ отделён от значения двоеточием.</tspan>
+    <tspan x="75" dy="31">Пары разделяются запятыми.</tspan>
+    <tspan x="75" dy="31">Порядок добавления сохраняется по source.</tspan>
+  </text>
+
+  <rect x="630" y="150" width="540" height="300" rx="18" fill="#fff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="660" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#196f3d">Mutation</text>
+  <text x="660" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="660" dy="0">d[new_key] = value → новая пара.</tspan>
+    <tspan x="660" dy="31">d[key] = new_value → замена.</tspan>
+    <tspan x="660" dy="31">{} + assignments → постепенное построение.</tspan>
+    <tspan x="660" dy="31">del d[key] → полное удаление пары.</tspan>
+    <tspan x="660" dy="31">Source: удаление через del отменить нельзя.</tspan>
+  </text>
+
+  <rect x="1215" y="150" width="540" height="300" rx="18" fill="#fff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1245" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#9c640c">Missing key</text>
+  <text x="1245" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1245" dy="0">d[key] при отсутствии → KeyError.</tspan>
+    <tspan x="1245" dy="31">d.get(key, default) → default.</tspan>
+    <tspan x="1245" dy="31">d.get(key) без второго аргумента → None.</tspan>
+    <tspan x="1245" dy="31">Сначала решить: отсутствие ключа — ошибка?</tspan>
+  </text>
+
+  <rect x="45" y="495" width="825" height="300" rx="18" fill="#fff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="75" y="540" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#6c3483">Перебор</text>
+  <text x="75" y="583" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">items() → key, value.</tspan>
+    <tspan x="75" dy="31">keys() → ключи; простой for dict тоже используется.</tspan>
+    <tspan x="75" dy="31">sorted(keys()) → другой порядок обхода.</tspan>
+    <tspan x="75" dy="31">values() → значения, включая повторы.</tspan>
+    <tspan x="75" dy="31">set(values()) → только уникальные значения.</tspan>
+  </text>
+
+  <rect x="915" y="495" width="840" height="300" rx="18" fill="#fff" stroke="#ec7063" stroke-width="2"/>
+  <text x="945" y="540" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#922b21">Nesting</text>
+  <text x="945" y="583" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="945" dy="0">list of dicts → флот / множество объектов.</tspan>
+    <tspan x="945" dy="31">list in dict → toppings / несколько languages.</tspan>
+    <tspan x="945" dy="31">dict in dict → user → first/last/location.</tspan>
+    <tspan x="945" dy="31">Одинаковая структура вложенных dict упрощает цикл.</tspan>
+    <tspan x="945" dy="31">Слишком глубокое nesting → искать более простую модель.</tspan>
+  </text>
+
+  <rect x="45" y="840" width="825" height="270" rx="18" fill="#fff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="75" y="885" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#21618c">Упражнения 6.1–6.12</text>
+  <text x="75" y="928" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">Person, favorite numbers, glossary.</tspan>
+    <tspan x="75" dy="30">Rivers and poll.</tspan>
+    <tspan x="75" dy="30">People, pets, favorite places.</tspan>
+    <tspan x="75" dy="30">Multiple favorite numbers, cities.</tspan>
+    <tspan x="75" dy="30">Extend one chapter example.</tspan>
+  </text>
+
+  <rect x="915" y="840" width="840" height="270" rx="18" fill="#fff" stroke="#58d68d" stroke-width="2"/>
+  <text x="945" y="885" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#1e8449">Source findings</text>
+  <text x="945" y="928" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="945" dy="0">1. alien_0['speed'] = fast — code mismatch.</tspan>
+    <tspan x="945" dy="30">2. Edward: rust/go in dict, Ruby/Go in output.</tspan>
+    <tspan x="945" dy="40">3. e0015:c02–c12 boundary clipping/overlap.</tspan>
+    <tspan x="945" dy="40">Findings preserved; source not silently corrected.</tspan>
+  </text>
+
+  <rect x="45" y="1140" width="1710" height="40" rx="12" fill="#17202a"/>
+  <text x="75" y="1167" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#fff">Provenance: e0015:c01–c12 · EPUB spine 15 · OEBPS/Text/978544614112-12.xhtml</text>
+</svg>
