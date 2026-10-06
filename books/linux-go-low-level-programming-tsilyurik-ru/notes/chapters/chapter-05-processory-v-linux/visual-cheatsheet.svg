@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780">
+<rect width="1200" height="780" fill="#fff"/>
+<style>text{font-family:Arial,sans-serif;fill:#111}.h{font-size:32px;font-weight:700}.t{font-size:20px;font-weight:700}.b{font-size:16px}.box{fill:#f7f7f7;stroke:#333;stroke-width:2}</style>
+<text x="50" y="55" class="h">Глава 5 — Процессоры в Linux</text>
+<text x="50" y="88" class="b">RAG: PDF 133–146 · topology → affinity → scheduler → priorities</text>
+
+<rect x="50" y="125" width="340" height="200" rx="14" class="box"/>
+<text x="75" y="165" class="t">1. Observe</text>
+<text x="75" y="200" class="b">/proc/cpuinfo</text>
+<text x="75" y="230" class="b">lscpu · lscpu -e</text>
+<text x="75" y="260" class="b">inxi -Cxxx</text>
+<text x="75" y="290" class="b">sensors</text>
+
+<rect x="430" y="125" width="340" height="200" rx="14" class="box"/>
+<text x="455" y="165" class="t">2. Map topology</text>
+<text x="455" y="200" class="b">CPU ↔ CORE ↔ SOCKET</text>
+<text x="455" y="230" class="b">SMT / Hyper-Threading</text>
+<text x="455" y="260" class="b">numbering differs by system</text>
+<text x="455" y="290" class="b">measure, do not guess</text>
+
+<rect x="810" y="125" width="340" height="200" rx="14" class="box"/>
+<text x="835" y="165" class="t">3. Affinity</text>
+<text x="835" y="200" class="b">cpu_set_t · CPU_*</text>
+<text x="835" y="230" class="b">sched_*affinity</text>
+<text x="835" y="260" class="b">pthread_*affinity_np</text>
+<text x="835" y="290" class="b">taskset</text>
+
+<rect x="50" y="370" width="520" height="205" rx="14" class="box"/>
+<text x="75" y="410" class="t">4. Scheduler</text>
+<text x="75" y="445" class="b">SCHED_OTHER</text>
+<text x="75" y="475" class="b">SCHED_FIFO</text>
+<text x="75" y="505" class="b">SCHED_RR</text>
+<text x="75" y="535" class="b">nice vs real-time priority</text>
+
+<rect x="625" y="370" width="525" height="205" rx="14" class="box"/>
+<text x="650" y="410" class="t">5. Change safely</text>
+<text x="650" y="445" class="b">save taskset/chrt state first</text>
+<text x="650" y="475" class="b">apply taskset/chrt deliberately</text>
+<text x="650" y="505" class="b">verify immediately</text>
+<text x="650" y="535" class="b">RT policy may starve normal tasks</text>
+
+<text x="50" y="640" class="t">Source findings</text>
+<text x="50" y="675" class="b">nice range mismatch · pthread getter/setter diagnostic mismatch</text>
+<text x="50" y="710" class="b">Scheduler internals remain version-scoped source claims.</text>
+</svg>

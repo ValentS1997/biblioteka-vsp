@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1160" viewBox="0 0 1600 1160">
+<rect width="1600" height="1160" fill="#fff"/>
+<style>text{font-family:Arial,sans-serif;fill:#111}.h{font-size:36px;font-weight:700}.s{font-size:22px;font-weight:700}.b{font-size:16px}.sm{font-size:14px}.box{fill:#f8f8f8;stroke:#333;stroke-width:2}</style>
+<text x="55" y="55" class="h">Глава 5 — Процессоры в Linux · detailed</text>
+<text x="55" y="90" class="b">Chapter boundary: PDF 133–146 · page 132 is Part 2 preface · page 147 starts next chapter</text>
+
+<rect x="55" y="125" width="475" height="255" rx="14" class="box"/>
+<text x="80" y="165" class="s">1. CPU inventory</text>
+<text x="80" y="202" class="b">cat /proc/cpuinfo</text>
+<text x="80" y="234" class="b">lscpu</text>
+<text x="80" y="266" class="b">inxi -Cxxx</text>
+<text x="80" y="298" class="b">architecture / cores / sockets / cache</text>
+<text x="80" y="330" class="b">read-only baseline before tuning</text>
+
+<rect x="565" y="125" width="475" height="255" rx="14" class="box"/>
+<text x="590" y="165" class="s">2. SMT / topology</text>
+<text x="590" y="202" class="b">lscpu -e exposes CPU/CORE/SOCKET</text>
+<text x="590" y="234" class="b">logical siblings share physical core</text>
+<text x="590" y="266" class="b">numbering order varies by platform</text>
+<text x="590" y="298" class="b">sensors used as extra observation</text>
+<text x="590" y="330" class="b">select CPUs from measured mapping</text>
+
+<rect x="1075" y="125" width="470" height="255" rx="14" class="box"/>
+<text x="1100" y="165" class="s">3. Affinity API</text>
+<text x="1100" y="202" class="b">cpu_set_t + CPU_* macros</text>
+<text x="1100" y="234" class="b">sched_get/setaffinity</text>
+<text x="1100" y="266" class="b">pthread_get/setaffinity_np</text>
+<text x="1100" y="298" class="b">CPU_COUNT verifies allowed CPUs</text>
+<text x="1100" y="330" class="b">_GNU_SOURCE required in examples</text>
+
+<rect x="55" y="420" width="475" height="255" rx="14" class="box"/>
+<text x="80" y="460" class="s">4. taskset</text>
+<text x="80" y="497" class="b">read existing PID mask</text>
+<text x="80" y="529" class="b">set mask/list for existing PID</text>
+<text x="80" y="561" class="b">launch command on selected CPUs</text>
+<text x="80" y="593" class="b">verify effective mask/count</text>
+<text x="80" y="625" class="sm">Save original state before mutation.</text>
+
+<rect x="565" y="420" width="475" height="255" rx="14" class="box"/>
+<text x="590" y="460" class="s">5. Scheduler model</text>
+<text x="590" y="497" class="b">SCHED_OTHER — normal tasks</text>
+<text x="590" y="529" class="b">SCHED_FIFO — real-time policy</text>
+<text x="590" y="561" class="b">SCHED_RR — real-time round robin</text>
+<text x="590" y="593" class="b">nice applies to normal scheduling</text>
+<text x="590" y="625" class="sm">Internals are preserved as book claims.</text>
+
+<rect x="1075" y="420" width="470" height="255" rx="14" class="box"/>
+<text x="1100" y="460" class="s">6. chrt risk boundary</text>
+<text x="1100" y="497" class="b">chrt -p PID → read state</text>
+<text x="1100" y="529" class="b">RR/FIFO changes need privilege</text>
+<text x="1100" y="561" class="b">RT priority can starve normal tasks</text>
+<text x="1100" y="593" class="b">keep separate recovery channel</text>
+<text x="1100" y="625" class="b">verify immediately after change</text>
+
+<rect x="55" y="715" width="720" height="245" rx="14" class="box"/>
+<text x="80" y="755" class="s">7. Acceptance pattern</text>
+<text x="80" y="792" class="b">Topology: CPU→CORE→SOCKET mapping confirmed</text>
+<text x="80" y="824" class="b">Affinity: taskset / CPU_COUNT matches request</text>
+<text x="80" y="856" class="b">Policy: chrt -p shows requested policy/priority</text>
+<text x="80" y="888" class="b">Unexpected result → restore captured state</text>
+
+<rect x="825" y="715" width="720" height="245" rx="14" class="box"/>
+<text x="850" y="755" class="s">8. Source findings</text>
+<text x="850" y="792" class="b">nice range: -20..19 vs -19..20</text>
+<text x="850" y="824" class="b">pthread_getaffinity_np call has setter name in error text</text>
+<text x="850" y="856" class="b">scheduler internals/version values not externally adjudicated</text>
+<text x="850" y="888" class="b">rag_only: no silent modernization</text>
+
+<text x="55" y="1040" class="s">Transition</text>
+<text x="55" y="1075" class="b">Next chapter moves from CPU/scheduler control to processes, threads and Go parallelism.</text>
+</svg>
