@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1340" height="930" viewBox="0 0 1340 930">
+  <rect width="1340" height="930" fill="white"/>
+  <text x="55" y="62" font-family="sans-serif" font-size="34" font-weight="700">Глава 10 — «Функции»</text>
+  <text x="55" y="98" font-family="sans-serif" font-size="18">RAG PDF 67–78 · p0067:c01–p0078:c01</text>
+
+  <rect x="55" y="140" width="370" height="190" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="80" y="180" font-family="sans-serif" font-size="22" font-weight="700">Definition</text>
+  <text x="80" y="220" font-family="monospace" font-size="18">def name(...):</text>
+  <text x="80" y="252" font-family="sans-serif" font-size="18">parameters → function body</text>
+  <text x="80" y="284" font-family="sans-serif" font-size="18">arguments → call</text>
+
+  <rect x="485" y="140" width="370" height="190" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="510" y="180" font-family="sans-serif" font-size="22" font-weight="700">Scope</text>
+  <text x="510" y="220" font-family="sans-serif" font-size="18">local</text>
+  <text x="510" y="252" font-family="monospace" font-size="18">global x</text>
+  <text x="510" y="284" font-family="monospace" font-size="18">nonlocal x</text>
+
+  <rect x="915" y="140" width="370" height="190" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="940" y="180" font-family="sans-serif" font-size="22" font-weight="700">Arguments</text>
+  <text x="940" y="220" font-family="sans-serif" font-size="18">default / keyword</text>
+  <text x="940" y="252" font-family="monospace" font-size="18">*numbers / **keywords</text>
+  <text x="940" y="284" font-family="sans-serif" font-size="18">keyword-only</text>
+
+  <rect x="55" y="385" width="570" height="210" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="80" y="425" font-family="sans-serif" font-size="22" font-weight="700">Return path</text>
+  <text x="80" y="465" font-family="monospace" font-size="18">return value</text>
+  <text x="80" y="500" font-family="monospace" font-size="18">return None</text>
+  <text x="80" y="535" font-family="monospace" font-size="18">pass</text>
+
+  <rect x="675" y="385" width="610" height="210" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="700" y="425" font-family="sans-serif" font-size="22" font-weight="700">Documentation</text>
+  <text x="700" y="465" font-family="sans-serif" font-size="18">docstring → function documentation</text>
+  <text x="700" y="500" font-family="monospace" font-size="18">printMax.__doc__</text>
+  <text x="700" y="535" font-family="monospace" font-size="18">help(printMax)</text>
+
+  <rect x="55" y="650" width="1230" height="125" rx="12" fill="#fafafa" stroke="#333"/>
+  <text x="80" y="690" font-family="sans-serif" font-size="22" font-weight="700">Acceptance</text>
+  <text x="80" y="728" font-family="sans-serif" font-size="18">define → pass arguments → control scope → return → document → reuse</text>
+  <text x="80" y="758" font-family="sans-serif" font-size="17">Next: chapter 11 «Модули».</text>
+
+  <text x="55" y="840" font-family="sans-serif" font-size="16">Findings: func_default indentation mismatch; default-value immutability claim; historical TypeError/shebang variants.</text>
+  <text x="55" y="872" font-family="sans-serif" font-size="16">Chapter-end summary: 10.12 spans PDF 77–78.</text>
+</svg>
