@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 7 — Knowledge Graph RAG</title>
+  <desc id="desc">Компактная схема Wikipedia API → Deep Lake → KnowledgeGraphIndex → query/evaluation.</desc>
+  <rect width="1200" height="820" fill="#ffffff"/>
+  <style>
+    text { font-family: Arial, sans-serif; fill: #111; }
+    .h1 { font-size: 29px; font-weight: 700; }
+    .h2 { font-size: 20px; font-weight: 700; }
+    .body { font-size: 16px; }
+    .small { font-size: 13px; }
+    .box { fill: #f7f7f7; stroke: #222; stroke-width: 2; rx: 14; }
+    .arrow { stroke: #222; stroke-width: 3; fill: none; marker-end: url(#a); }
+  </style>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#222"/>
+    </marker>
+  </defs>
+
+  <text x="55" y="55" class="h1">Глава 7. Масштабируемая RAG на основе графа знаний</text>
+  <text x="55" y="86" class="small">RAG provenance: p0199:c01–p0226:c01 · PDF 199–226</text>
+
+  <rect x="55" y="145" width="300" height="180" class="box"/>
+  <text x="80" y="182" class="h2">1. Wikipedia</text>
+  <text x="80" y="220" class="body">root topic + linked pages</text>
+  <text x="80" y="250" class="body">citations + URLs</text>
+  <text x="80" y="280" class="body">source preparation</text>
+
+  <rect x="450" y="145" width="300" height="180" class="box"/>
+  <text x="475" y="182" class="h2">2. Deep Lake</text>
+  <text x="475" y="220" class="body">text + metadata</text>
+  <text x="475" y="250" class="body">embeddings</text>
+  <text x="475" y="280" class="body">vector storage</text>
+
+  <rect x="845" y="145" width="300" height="180" class="box"/>
+  <text x="870" y="182" class="h2">3. Knowledge graph</text>
+  <text x="870" y="220" class="body">KnowledgeGraphIndex</text>
+  <text x="870" y="250" class="body">query + source nodes</text>
+  <text x="870" y="280" class="body">PyVis graph</text>
+
+  <path d="M355 235 H450" class="arrow"/>
+  <path d="M750 235 H845" class="arrow"/>
+
+  <rect x="180" y="425" width="360" height="140" class="box"/>
+  <text x="205" y="463" class="h2">Automated evaluation</text>
+  <text x="205" y="500" class="body">SentenceTransformer</text>
+  <text x="205" y="530" class="body">cosine similarity + reranking</text>
+
+  <rect x="660" y="425" width="360" height="140" class="box"/>
+  <text x="685" y="463" class="h2">Human evaluation</text>
+  <text x="685" y="500" class="body">separate feedback scores</text>
+  <text x="685" y="530" class="body">compare with metrics</text>
+
+  <rect x="230" y="650" width="740" height="105" class="box"/>
+  <text x="255" y="690" class="h2">Scaling boundary</text>
+  <text x="255" y="725" class="body">Vector DB can grow broadly; graph-index loading may require partitioning by topic/subset.</text>
+</svg>

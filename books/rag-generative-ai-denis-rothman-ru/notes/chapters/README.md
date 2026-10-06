@@ -12,5 +12,7 @@
 
 - [Глава 6. Масштабирование банковских данных клиентов в системе RAG с помощью Pinecone](./chapter-06-scaling-bank-rag-pinecone/) — `RAG_GROUNDED`, PDF 161–198.
 
+- [Глава 7. Создание масштабируемой RAG на основе графа знаний с помощью API Википедии и LlamaIndex](./chapter-07-scalable-knowledge-graph-rag/) — `RAG_GROUNDED`, PDF 199–226.
+
 Book-level readiness must be `READY` before running
 `BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.6`.
