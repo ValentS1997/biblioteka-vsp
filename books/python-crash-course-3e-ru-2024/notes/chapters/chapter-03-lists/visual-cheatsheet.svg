@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 3 — Списки</title>
+  <desc id="desc">Индексный доступ, изменение, добавление, удаление, сортировка и IndexError.</desc>
+  <rect width="1600" height="900" fill="#f6f8fb"/>
+  <rect x="0" y="0" width="1600" height="108" fill="#17202a"/>
+  <text x="56" y="48" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="36" font-weight="700" fill="#ffffff">Глава 3 — Списки</text>
+  <text x="56" y="82" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">прочитать → изменить → добавить → удалить → упорядочить → измерить</text>
+
+  <rect x="50" y="145" width="470" height="255" rx="18" fill="#ffffff" stroke="#5dade2" stroke-width="2"/>
+  <text x="78" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#1b4f72">Доступ</text>
+  <text x="78" y="230" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">
+    <tspan x="78" dy="0">items[0] → первый элемент</tspan>
+    <tspan x="78" dy="34">items[-1] → последний, если список не пуст</tspan>
+    <tspan x="78" dy="34">len(items) → количество элементов</tspan>
+    <tspan x="78" dy="34">Off-by-one — типичная ошибка</tspan>
+  </text>
+
+  <rect x="565" y="145" width="470" height="255" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="593" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#196f3d">Изменение состава</text>
+  <text x="593" y="230" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">
+    <tspan x="593" dy="0">append() → в конец</tspan>
+    <tspan x="593" dy="34">insert() → в позицию</tspan>
+    <tspan x="593" dy="34">del → удалить без использования значения</tspan>
+    <tspan x="593" dy="34">pop() → удалить и сохранить значение</tspan>
+    <tspan x="593" dy="34">remove() → удалить первое совпадение</tspan>
+  </text>
+
+  <rect x="1080" y="145" width="470" height="255" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1108" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#9c640c">Порядок</text>
+  <text x="1108" y="230" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">
+    <tspan x="1108" dy="0">sorted() → временное представление</tspan>
+    <tspan x="1108" dy="34">sort() → меняет сам список</tspan>
+    <tspan x="1108" dy="34">reverse() → обращает текущий порядок</tspan>
+    <tspan x="1108" dy="34">reverse() ещё раз → возврат порядка</tspan>
+  </text>
+
+  <rect x="50" y="445" width="720" height="280" rx="18" fill="#ffffff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="78" y="488" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#6c3483">IndexError</text>
+  <text x="78" y="531" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">
+    <tspan x="78" dy="0">list index out of range</tspan>
+    <tspan x="78" dy="34">1. Прочитать traceback.</tspan>
+    <tspan x="78" dy="34">2. Проверить индекс и off-by-one.</tspan>
+    <tspan x="78" dy="34">3. Вывести список или len(list).</tspan>
+    <tspan x="78" dy="34">4. Повторить запуск после исправления.</tspan>
+  </text>
+
+  <rect x="815" y="445" width="735" height="280" rx="18" fill="#ffffff" stroke="#ec7063" stroke-width="2"/>
+  <text x="843" y="488" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#922b21">Выбор удаления</text>
+  <text x="843" y="531" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">
+    <tspan x="843" dy="0">Индекс известен, значение не нужно → del</tspan>
+    <tspan x="843" dy="34">Удалённое значение нужно → pop()</tspan>
+    <tspan x="843" dy="34">Известно само значение → remove()</tspan>
+    <tspan x="843" dy="34">remove() удаляет только первое вхождение</tspan>
+  </text>
+
+  <rect x="50" y="775" width="1500" height="72" rx="14" fill="#17202a"/>
+  <text x="78" y="819" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#ffffff">Provenance: e0012:c01–c08 · EPUB spine 12 · locator OEBPS/Text/978544614112-9.xhtml</text>
+</svg>

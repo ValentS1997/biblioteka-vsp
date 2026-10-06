@@ -56,3 +56,4 @@ Canonical readiness command:
 
 - [Глава 1 — Первые шаги](notes/chapters/chapter-01-first-steps/README.md)
 - [Глава 2 — Переменные и простые типы данных](notes/chapters/chapter-02-variables-and-simple-data-types/README.md)
+- [Глава 3 — Списки](notes/chapters/chapter-03-lists/README.md)

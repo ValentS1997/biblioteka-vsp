@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 3 — Списки: подробная шпаргалка</title>
+  <desc id="desc">Создание списков, индексы, изменение, удаление, сортировка, длина и диагностика IndexError.</desc>
+  <rect width="1800" height="1200" fill="#f5f7fa"/>
+  <rect width="1800" height="116" fill="#17202a"/>
+  <text x="56" y="50" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="38" font-weight="700" fill="#ffffff">Глава 3 — Списки</text>
+  <text x="56" y="86" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">упорядоченные данные, изменяемое состояние и контроль индексов</text>
+
+  <rect x="45" y="150" width="540" height="290" rx="18" fill="#ffffff" stroke="#5dade2" stroke-width="2"/>
+  <text x="75" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#1b4f72">Создание и доступ</text>
+  <text x="75" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">items = ['a', 'b', 'c']</tspan>
+    <tspan x="75" dy="31">items[0] → первый элемент</tspan>
+    <tspan x="75" dy="31">items[1] → второй элемент</tspan>
+    <tspan x="75" dy="31">items[-1] → последний непустого списка</tspan>
+    <tspan x="75" dy="31">Элемент можно использовать в f-строке.</tspan>
+    <tspan x="75" dy="31">len(items) → количество элементов.</tspan>
+  </text>
+
+  <rect x="630" y="150" width="540" height="290" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="660" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#196f3d">Добавление и изменение</text>
+  <text x="660" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="660" dy="0">items[i] = value → заменить элемент</tspan>
+    <tspan x="660" dy="31">append(value) → добавить в конец</tspan>
+    <tspan x="660" dy="31">insert(i, value) → вставить в позицию</tspan>
+    <tspan x="660" dy="31">insert() сдвигает последующие элементы.</tspan>
+    <tspan x="660" dy="31">Пустой список + append() → динамическое создание.</tspan>
+  </text>
+
+  <rect x="1215" y="150" width="540" height="290" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1245" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#9c640c">Удаление</text>
+  <text x="1245" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1245" dy="0">del items[i] → удалить по позиции.</tspan>
+    <tspan x="1245" dy="31">pop() → удалить последний и вернуть его.</tspan>
+    <tspan x="1245" dy="31">pop(i) → удалить/вернуть по индексу.</tspan>
+    <tspan x="1245" dy="31">remove(value) → удалить первое совпадение.</tspan>
+    <tspan x="1245" dy="31">Нужно значение после удаления? → pop().</tspan>
+  </text>
+
+  <rect x="45" y="485" width="825" height="300" rx="18" fill="#ffffff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="75" y="530" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#6c3483">Порядок списка</text>
+  <text x="75" y="573" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">sort() → постоянная сортировка самого списка.</tspan>
+    <tspan x="75" dy="31">sort(reverse=True) → постоянный обратный порядок сортировки.</tspan>
+    <tspan x="75" dy="31">sorted() → временно отсортированное представление.</tspan>
+    <tspan x="75" dy="31">sorted(..., reverse=True) → временный обратный порядок.</tspan>
+    <tspan x="75" dy="31">reverse() → просто обратить текущую последовательность.</tspan>
+    <tspan x="75" dy="31">Повторный reverse() → вернуть предыдущую последовательность.</tspan>
+  </text>
+
+  <rect x="915" y="485" width="840" height="300" rx="18" fill="#ffffff" stroke="#ec7063" stroke-width="2"/>
+  <text x="945" y="530" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#922b21">IndexError</text>
+  <text x="945" y="573" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="945" dy="0">Список из 3 элементов имеет индексы 0, 1, 2.</tspan>
+    <tspan x="945" dy="31">Запрос [3] → list index out of range.</tspan>
+    <tspan x="945" dy="31">Проверить off-by-one и уменьшить индекс на 1.</tspan>
+    <tspan x="945" dy="31">Если состояние неясно: print(list) + len(list).</tspan>
+    <tspan x="945" dy="31">[-1] работает для последнего элемента непустого списка.</tspan>
+    <tspan x="945" dy="31">Пустой список + [-1] → IndexError.</tspan>
+  </text>
+
+  <rect x="45" y="830" width="825" height="270" rx="18" fill="#ffffff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="75" y="875" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#21618c">Упражнения 3.1–3.11</text>
+  <text x="75" y="918" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">Имена, сообщения, транспорт.</tspan>
+    <tspan x="75" dy="30">Гости: замена, расширение, сокращение.</tspan>
+    <tspan x="75" dy="30">Страны: sorted / reverse / sort.</tspan>
+    <tspan x="75" dy="30">len() для количества гостей.</tspan>
+    <tspan x="75" dy="30">Все функции главы и намеренный IndexError.</tspan>
+    <tspan x="75" dy="36">Личные данные: [Needs confirmation].</tspan>
+  </text>
+
+  <rect x="915" y="830" width="840" height="270" rx="18" fill="#ffffff" stroke="#58d68d" stroke-width="2"/>
+  <text x="945" y="875" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#1e8449">RAG extraction finding</text>
+  <text x="945" y="918" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="945" dy="0">c03 / c05 / c06 / c08 начинаются с обрезанных</tspan>
+    <tspan x="945" dy="30">фрагментов на chunk boundary.</tspan>
+    <tspan x="945" dy="40">Соседние chunks сохраняют полный контекст.</tspan>
+    <tspan x="945" dy="30">Семантическая потеря главы не выявлена.</tspan>
+    <tspan x="945" dy="40">Legacy RAG не перестраивается ради chapter work.</tspan>
+  </text>
+
+  <rect x="45" y="1140" width="1710" height="40" rx="12" fill="#17202a"/>
+  <text x="75" y="1167" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#ffffff">Provenance: e0012:c01–c08 · EPUB spine 12 · OEBPS/Text/978544614112-9.xhtml</text>
+</svg>
