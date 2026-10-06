@@ -2,7 +2,7 @@ schema_version: "1.0"
 
 workflow:
   id: "DYNAMIC-IR-RU-TRANSLATION-WORKFLOW"
-  status: "IN_PROGRESS"
+  status: "RU_V2_REPAIR_IN_PROGRESS"
   book_id: "dynamic-incident-response-joshua-wright-en-2026"
   source_language: "en"
   target_language: "ru"
@@ -48,3 +48,12 @@ terminal_state:
     - "attribution/license notice present"
     - "third-party review flags resolved or explicitly retained"
     - "assembled Russian artifact generated"
+
+
+v2_repair:
+  spec: "V2-REPAIR-SPEC.yaml"
+  baseline: "accepted RU translation chapters 1-20 + afterword"
+  strategy: "editorial repair, not full retranslation from scratch"
+  chapter_analysis_workflow: "BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST v1.2 -> BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.6"
+  chapter_analysis_provenance: "RETROFIT_VERIFIED_COMPATIBILITY"
+  output_pdf: "../../exports/dynamic-incident-response-ru-v2-a4.pdf"
