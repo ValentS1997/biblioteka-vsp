@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1780" height="1440" viewBox="0 0 1780 1440">
+  <rect width="1780" height="1440" fill="white"/>
+  <text x="55" y="65" font-family="sans-serif" font-size="36" font-weight="700">Глава 19. Что дальше — detailed map</text>
+  <text x="55" y="102" font-family="sans-serif" font-size="18">RAG-only · p0145:c01–p0150:c01 · PDF 145–150 · source SHA ac1abb…d7db5</text>
+
+  <rect x="55" y="140" width="1670" height="120" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="80" y="180" font-family="sans-serif" font-size="23" font-weight="700">Transition</text>
+  <text x="80" y="220" font-family="sans-serif" font-size="18">From learning Python constructs to independent projects, community resources, libraries, specialization and continued practice.</text>
+
+  <rect x="55" y="305" width="520" height="370" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="80" y="345" font-family="sans-serif" font-size="23" font-weight="700">Project 1 — Address book</text>
+  <text x="80" y="390" font-family="sans-serif" font-size="18">command-line application</text>
+  <text x="80" y="430" font-family="sans-serif" font-size="18">view / add / modify / delete / search</text>
+  <text x="80" y="470" font-family="monospace" font-size="17">Contact class</text>
+  <text x="80" y="510" font-family="monospace" font-size="17">dict keyed by contact name</text>
+  <text x="80" y="550" font-family="monospace" font-size="17">pickle persistence</text>
+  <text x="80" y="600" font-family="sans-serif" font-size="16">path / overwrite / recovery → [Needs confirmation]</text>
+
+  <rect x="630" y="305" width="520" height="370" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="655" y="345" font-family="sans-serif" font-size="23" font-weight="700">Project 2 — replace</text>
+  <text x="655" y="390" font-family="sans-serif" font-size="18">replace one string in supplied files</text>
+  <text x="655" y="430" font-family="sans-serif" font-size="18">optional regex/pattern complexity</text>
+  <text x="655" y="470" font-family="sans-serif" font-size="18">filesystem state-changing</text>
+  <text x="655" y="510" font-family="sans-serif" font-size="17">CLI syntax not supplied</text>
+  <text x="655" y="550" font-family="sans-serif" font-size="17">encoding / atomic write not supplied</text>
+  <text x="655" y="600" font-family="sans-serif" font-size="16">backup / rollback → [Needs confirmation]</text>
+
+  <rect x="1205" y="305" width="520" height="370" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="1230" y="345" font-family="sans-serif" font-size="23" font-weight="700">19.1–19.9 Learn / connect / install</text>
+  <text x="1230" y="390" font-family="sans-serif" font-size="18">exercises + code examples</text>
+  <text x="1230" y="430" font-family="sans-serif" font-size="18">Q&amp;A + tips + tutorials + video</text>
+  <text x="1230" y="470" font-family="sans-serif" font-size="18">discussion + news</text>
+  <text x="1230" y="510" font-family="sans-serif" font-size="18">package catalog</text>
+  <text x="1230" y="550" font-family="monospace" font-size="17">pip</text>
+  <text x="1230" y="600" font-family="sans-serif" font-size="16">URLs/current status not verified in RAG-only mode.</text>
+
+  <rect x="55" y="725" width="820" height="260" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="80" y="765" font-family="sans-serif" font-size="23" font-weight="700">19.10–19.11 GUI direction</text>
+  <text x="80" y="810" font-family="sans-serif" font-size="18">Kivy · PyGTK · PyQt · wxPython</text>
+  <text x="80" y="850" font-family="sans-serif" font-size="18">choose by licensing/cost</text>
+  <text x="80" y="890" font-family="sans-serif" font-size="18">choose by target platforms</text>
+  <text x="80" y="930" font-family="sans-serif" font-size="17">ecosystem/license/platform statements are historical source claims</text>
+
+  <rect x="925" y="725" width="800" height="260" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="950" y="765" font-family="sans-serif" font-size="23" font-weight="700">19.12–19.13 Broaden runtime/paradigm</text>
+  <text x="950" y="810" font-family="sans-serif" font-size="18">CPython · Jython · IronPython · PyPy</text>
+  <text x="950" y="850" font-family="sans-serif" font-size="18">Stackless · CLPython · IronMonkey</text>
+  <text x="950" y="890" font-family="sans-serif" font-size="18">functional programming resources</text>
+  <text x="950" y="930" font-family="sans-serif" font-size="17">project status/capabilities retained as historical source framing</text>
+
+  <rect x="55" y="1035" width="1670" height="265" rx="10" fill="#fafafa" stroke="#666" stroke-dasharray="7 5"/>
+  <text x="80" y="1075" font-family="sans-serif" font-size="22" font-weight="700">Source integrity / continuation boundary</text>
+  <text x="80" y="1115" font-family="sans-serif" font-size="17">• most external resources are named without explicit URLs in RAG</text>
+  <text x="80" y="1150" font-family="sans-serif" font-size="17">• Kivy URL contains extraction-corrupted scheme</text>
+  <text x="80" y="1185" font-family="sans-serif" font-size="17">• GUI licensing/platform statements and implementation descriptions are historical</text>
+  <text x="80" y="1220" font-family="sans-serif" font-size="17">• address-book and replace tasks lack safe persistence/write contracts</text>
+  <text x="80" y="1255" font-family="sans-serif" font-size="17">• p0151:c01 immediately starts Appendix 20 — no extra chapter-19 footer page</text>
+
+  <text x="55" y="1350" font-family="sans-serif" font-size="18">19.14 summary: core book ends; independent Python work begins.</text>
+  <text x="55" y="1385" font-family="sans-serif" font-size="17">Next boundary: p0151:c01 / PDF 151 — Appendix 20 «FLOSS».</text>
+</svg>
