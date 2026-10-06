@@ -70,3 +70,4 @@ Canonical readiness command:
 - [Глава 14 — Игровой счет](notes/chapters/chapter-14-game-score/README.md)
 - [Глава 15 — Генерирование данных](notes/chapters/chapter-15-generating-data/README.md)
 - [Глава 16 — Загрузка данных](notes/chapters/chapter-16-downloading-data/README.md)
+- [Глава 17 — Работа с API](notes/chapters/chapter-17-working-with-apis/README.md)
