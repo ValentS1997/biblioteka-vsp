@@ -196,7 +196,12 @@ def audit_and_assemble(repo_root: Path, out_dir: Path):
         original_third_party += abody.count("THIRD_PARTY_REVIEW_REQUIRED")
         abody = normalize_body_v2(abody)
 
-    if v2_third_party != original_third_party:\n        problems.append(f"third-party marker preservation mismatch: source={original_third_party}, v2={v2_third_party}")\n\n    audit = {
+    if v2_third_party != original_third_party:
+        problems.append(
+            f"third-party marker preservation mismatch: source={original_third_party}, v2={v2_third_party}"
+        )
+
+    audit = {
         "book_id": BOOK_ID,
         "edition": "ru-v2-repair",
         "status": "ACCEPTED" if not problems else "BLOCKED",
