@@ -13,7 +13,32 @@ permissions:
   contents: write
 
 jobs:
+  freeze-gate:
+    runs-on: ubuntu-latest
+    outputs:
+      frozen: ${{ steps.freeze.outputs.frozen }}
+    steps:
+      - name: Checkout freeze marker
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+          fetch-depth: 1
+
+      - name: Check translation freeze
+        id: freeze
+        shell: bash
+        run: |
+          marker="books/dynamic-incident-response-joshua-wright-en-2026/translation/ru/FROZEN.yaml"
+          if [ -f "$marker" ] && grep -q 'status: "FROZEN"' "$marker"; then
+            echo "frozen=true" >> "$GITHUB_OUTPUT"
+            echo "Dynamic IR Russian translation is FROZEN; build/publish job will be skipped."
+          else
+            echo "frozen=false" >> "$GITHUB_OUTPUT"
+          fi
+
   build:
+    needs: freeze-gate
+    if: needs.freeze-gate.outputs.frozen != 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
