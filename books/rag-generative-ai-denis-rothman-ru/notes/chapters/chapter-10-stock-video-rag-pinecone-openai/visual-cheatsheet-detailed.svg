@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1300" viewBox="0 0 1600 1300" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 10 — detailed video RAG map</title>
+  <desc id="desc">Подробная схема video generation, frame commenting, Pinecone hybrid retrieval, GPT-4o Video Expert and evaluation.</desc>
+  <rect width="1600" height="1300" fill="#ffffff"/>
+  <style>
+    text { font-family: Arial, sans-serif; fill: #111; }
+    .h1 { font-size: 31px; font-weight: 700; }
+    .h2 { font-size: 20px; font-weight: 700; }
+    .body { font-size: 15px; }
+    .small { font-size: 13px; }
+    .box { fill: #f8f8f8; stroke: #222; stroke-width: 2; rx: 12; }
+    .arrow { stroke: #222; stroke-width: 3; fill: none; marker-end: url(#a); }
+  </style>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#222"/>
+    </marker>
+  </defs>
+
+  <text x="55" y="55" class="h1">Глава 10. Video RAG — detailed map</text>
+  <text x="55" y="84" class="small">Source: p0271:c01–p0306:c01 · PDF 271–306</text>
+
+  <rect x="55" y="125" width="350" height="225" class="box"/>
+  <text x="80" y="162" class="h2">Generator</text>
+  <text x="80" y="198" class="body">AI/source video</text>
+  <text x="80" y="228" class="body">download MP4</text>
+  <text x="80" y="258" class="body">inspect frames/FPS/duration</text>
+  <text x="80" y="288" class="body">split → frame_N.jpg</text>
+  <text x="80" y="318" class="body">one-video-at-a-time scaling</text>
+
+  <rect x="445" y="125" width="350" height="225" class="box"/>
+  <text x="470" y="162" class="h2">Commentator</text>
+  <text x="470" y="198" class="body">sample every Nth frame</text>
+  <text x="470" y="228" class="body">vision model comment</text>
+  <text x="470" y="258" class="body">UUID + frame + comment + file</text>
+  <text x="470" y="288" class="body">CSV + optional Drive copy</text>
+
+  <rect x="835" y="125" width="350" height="225" class="box"/>
+  <text x="860" y="162" class="h2">Vector Store Admin</text>
+  <text x="860" y="198" class="body">comment → embedding</text>
+  <text x="860" y="228" class="body">Pinecone upsert</text>
+  <text x="860" y="258" class="body">metadata: frame/file/text</text>
+  <text x="860" y="288" class="body">query top-k</text>
+
+  <rect x="1225" y="125" width="320" height="225" class="box"/>
+  <text x="1250" y="162" class="h2">Video Expert</text>
+  <text x="1250" y="198" class="body">GPT-4o</text>
+  <text x="1250" y="228" class="body">find contradictions</text>
+  <text x="1250" y="258" class="body">rewrite description</text>
+  <text x="1250" y="288" class="body">assign label</text>
+
+  <path d="M405 237 H445" class="arrow"/>
+  <path d="M795 237 H835" class="arrow"/>
+  <path d="M1185 237 H1225" class="arrow"/>
+
+  <text x="55" y="425" class="h2">Hybrid retrieval path</text>
+
+  <rect x="55" y="460" width="450" height="190" class="box"/>
+  <text x="80" y="497" class="body">User query</text>
+  <text x="80" y="527" class="body">→ embedding</text>
+  <text x="80" y="557" class="body">→ Pinecone top_k=1</text>
+  <text x="80" y="587" class="body">→ score + text + frame + file</text>
+
+  <rect x="575" y="460" width="450" height="190" class="box"/>
+  <text x="600" y="497" class="body">Vector store:</text>
+  <text x="600" y="527" class="body">semantic comment representation</text>
+  <text x="600" y="557" class="body">source metadata</text>
+
+  <rect x="1095" y="460" width="450" height="190" class="box"/>
+  <text x="1120" y="497" class="body">File/object storage:</text>
+  <text x="1120" y="527" class="body">MP4 video</text>
+  <text x="1120" y="557" class="body">JPG frame</text>
+  <text x="1120" y="587" class="body">verify existence + file size</text>
+
+  <path d="M505 555 H575" class="arrow"/>
+  <path d="M1025 555 H1095" class="arrow"/>
+
+  <text x="55" y="725" class="h2">Evaluation</text>
+
+  <rect x="55" y="760" width="450" height="190" class="box"/>
+  <text x="80" y="797" class="body">Human feedback comment</text>
+  <text x="80" y="827" class="body">expected semantic description</text>
+
+  <rect x="575" y="760" width="450" height="190" class="box"/>
+  <text x="600" y="797" class="body">Video Expert rewritten comment</text>
+  <text x="600" y="827" class="body">SentenceTransformer similarity</text>
+  <text x="600" y="857" class="body">scores[]</text>
+
+  <rect x="1095" y="760" width="450" height="190" class="box"/>
+  <text x="1120" y="797" class="body">Original retrieval score</text>
+  <text x="1120" y="827" class="body">rscores[]</text>
+  <text x="1120" y="857" class="body">aggregate metrics</text>
+
+  <text x="55" y="1025" class="h2">Source issues / safety boundary</text>
+
+  <rect x="55" y="1060" width="1490" height="175" class="box"/>
+  <text x="80" y="1097" class="body">1. p277 OpenAI-key extraction contains damaged source text.</text>
+  <text x="80" y="1127" class="body">2. download_video() overwrites its filename argument with global file_name.</text>
+  <text x="80" y="1157" class="body">3. save_comment() shows data-row write only inside the new-file/header branch.</text>
+  <text x="80" y="1187" class="body">4. Session cleanup rm -f commands are destructive and guarded by delf=False in source.</text>
+</svg>
