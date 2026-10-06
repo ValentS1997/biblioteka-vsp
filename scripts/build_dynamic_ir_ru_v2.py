@@ -443,6 +443,25 @@ def normalize_heading_text(text: str) -> str:
     out = re.sub(r"\bSTEP (\d+)\b", r"Шаг \1", out, flags=re.I)
     return out if out else original
 
+def find_mixed_heading_candidates(text: str):
+    out = []
+    in_fence = False
+    for line in text.splitlines():
+        if line.strip().startswith("~~~") or line.strip().startswith("```"):
+            in_fence = not in_fence
+            continue
+        if in_fence or not re.match(r"^#{1,4}\\s+", line):
+            continue
+        title = re.sub(r"^#{1,4}\\s+", "", line).strip()
+        if re.match(r"^(Рисунок|Листинг|Listing|Таблица|Table)\\s+", title, re.I):
+            continue
+        latin = sum(ch.isascii() and ch.isalpha() for ch in title)
+        cyr = sum(("А" <= ch <= "я") or ch in "Ёё" for ch in title)
+        if latin >= 8 and latin > max(4, cyr * 0.45):
+            out.append(title)
+    return out
+
+
 def inject_project_visual(text: str, image_rel: str, chapter: int) -> str:
     lines = text.splitlines()
     insert_at = 1
@@ -501,6 +520,8 @@ def audit_and_assemble(repo_root: Path, out_dir: Path):
     parts = []
     original_third_party = 0
     v2_third_party = 0
+    mixed_heading_candidates = []
+    project_visuals_included = 0
 
     if [chapter_num(p) for p in chapter_files] != list(range(1, 21)):
         problems.append("chapter sequence mismatch")
@@ -531,6 +552,10 @@ def audit_and_assemble(repo_root: Path, out_dir: Path):
             visual_out = visuals_dir / f"chapter-{n:02d}-visual-cheatsheet.svg"
             shutil.copy2(matches[0], visual_out)
             repaired = inject_project_visual(repaired, f"visuals/{visual_out.name}", n)
+            project_visuals_included += 1
+
+        for heading in find_mixed_heading_candidates(repaired):
+            mixed_heading_candidates.append({"chapter": n, "heading": heading})
 
         parts.append(repaired)
         title = next((l.lstrip("# ").strip() for l in repaired.splitlines() if l.startswith("# ")), p.stem)
@@ -551,6 +576,9 @@ def audit_and_assemble(repo_root: Path, out_dir: Path):
         original_third_party += abody.count("THIRD_PARTY_REVIEW_REQUIRED")
         abody = normalize_body_v2(abody)
 
+    if project_visuals_included != 20:
+        problems.append(f"project visual count mismatch: expected=20, got={project_visuals_included}")
+
     if v2_third_party != original_third_party:
         problems.append(
             f"third-party marker preservation mismatch: source={original_third_party}, v2={v2_third_party}"
@@ -563,6 +591,9 @@ def audit_and_assemble(repo_root: Path, out_dir: Path):
         "chapters": rows,
         "third_party_markers_source": original_third_party,
         "third_party_callouts_v2": v2_third_party,
+        "project_visuals_included": project_visuals_included,
+        "mixed_heading_candidate_count": len(mixed_heading_candidates),
+        "mixed_heading_candidates": mixed_heading_candidates,
         "problems": problems,
         "chapter_analysis_workflow": "BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST v1.2 -> BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.6",
         "workflow_provenance": "RETROFIT_VERIFIED_COMPATIBILITY",
