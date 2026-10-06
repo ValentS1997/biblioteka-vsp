@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="790" viewBox="0 0 1200 790">
+<rect width="1200" height="790" fill="#fff"/>
+<style>text{font-family:Arial,sans-serif;fill:#111}.h{font-size:31px;font-weight:700}.t{font-size:20px;font-weight:700}.b{font-size:16px}.box{fill:#f7f7f7;stroke:#333;stroke-width:2}</style>
+<text x="50" y="55" class="h">Глава 10 — Строки, руны и UNICODE</text>
+<text x="50" y="88" class="b">RAG: PDF 223–232 · bytes → rune → strings → palindrome → regexp</text>
+
+<rect x="50" y="125" width="340" height="200" rx="14" class="box"/>
+<text x="75" y="165" class="t">1. Representation</text>
+<text x="75" y="200" class="b">len(string) → bytes</text>
+<text x="75" y="230" class="b">s[i] → byte access</text>
+<text x="75" y="260" class="b">[]rune / range</text>
+<text x="75" y="290" class="b">unicode/utf8 count</text>
+
+<rect x="430" y="125" width="340" height="200" rx="14" class="box"/>
+<text x="455" y="165" class="t">2. Transform</text>
+<text x="455" y="200" class="b">strings.Map</text>
+<text x="455" y="230" class="b">ToLower</text>
+<text x="455" y="260" class="b">ReplaceAll</text>
+<text x="455" y="290" class="b">string ↔ []rune</text>
+
+<rect x="810" y="125" width="340" height="200" rx="14" class="box"/>
+<text x="835" y="165" class="t">3. Palindrome</text>
+<text x="835" y="200" class="b">palindrow</text>
+<text x="835" y="230" class="b">palindrob</text>
+<text x="835" y="260" class="b">palindrom + regexp</text>
+<text x="835" y="290" class="b">inspect normalization</text>
+
+<rect x="50" y="370" width="520" height="210" rx="14" class="box"/>
+<text x="75" y="410" class="t">4. regexp</text>
+<text x="75" y="445" class="b">Compile / MustCompile</text>
+<text x="75" y="475" class="b">FindAllString / indexes</text>
+<text x="75" y="505" class="b">ReplaceAllStringFunc</text>
+<text x="75" y="535" class="b">raw string patterns</text>
+
+<rect x="625" y="370" width="525" height="210" rx="14" class="box"/>
+<text x="650" y="410" class="t">5. Validation hazards</text>
+<text x="650" y="445" class="b">byte vs rune confusion</text>
+<text x="650" y="475" class="b">regex excludes unsupported scripts</text>
+<text x="650" y="505" class="b">true can follow empty normalization</text>
+<text x="650" y="535" class="b">RE2 claims remain source-scoped</text>
+
+<text x="50" y="650" class="t">Takeaway</text>
+<text x="50" y="685" class="b">For multilingual text, verify both representation and normalization—not only the final boolean/output.</text>
+</svg>
