@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1760" height="1400" viewBox="0 0 1760 1400">
+  <rect width="1760" height="1400" fill="white"/>
+  <text x="55" y="65" font-family="sans-serif" font-size="36" font-weight="700">Глава 16. Исключения — detailed map</text>
+  <text x="55" y="102" font-family="sans-serif" font-size="18">RAG-only · p0127:c01–p0132:c01 · PDF 127–132 · source SHA ac1abb…d7db5</text>
+
+  <rect x="55" y="140" width="1650" height="120" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="80" y="180" font-family="sans-serif" font-size="23" font-weight="700">Exception control flow</text>
+  <text x="80" y="220" font-family="sans-serif" font-size="18">exception occurs → matching handler or default traceback → optional no-error branch → cleanup/resource release.</text>
+
+  <rect x="55" y="305" width="510" height="355" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="80" y="345" font-family="sans-serif" font-size="23" font-weight="700">16.1–16.3 Detect / catch</text>
+  <text x="80" y="390" font-family="monospace" font-size="17">Print(...) → shown NameError</text>
+  <text x="80" y="430" font-family="monospace" font-size="17">Ctrl-D → EOFError</text>
+  <text x="80" y="470" font-family="monospace" font-size="17">try:</text>
+  <text x="80" y="510" font-family="monospace" font-size="17">except EOFError:</text>
+  <text x="80" y="550" font-family="monospace" font-size="17">except KeyboardInterrupt:</text>
+  <text x="80" y="590" font-family="monospace" font-size="17">else:</text>
+
+  <rect x="625" y="305" width="510" height="355" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="650" y="345" font-family="sans-serif" font-size="23" font-weight="700">16.4 Raise custom exception</text>
+  <text x="650" y="390" font-family="monospace" font-size="17">class ShortInputException(Exception)</text>
+  <text x="650" y="430" font-family="monospace" font-size="17">raise ShortInputException(...)</text>
+  <text x="650" y="470" font-family="monospace" font-size="17">except ... as ex</text>
+  <text x="650" y="515" font-family="sans-serif" font-size="17">length / atleast fields</text>
+  <text x="650" y="555" font-family="sans-serif" font-size="17">short input → custom path</text>
+
+  <rect x="1195" y="305" width="510" height="355" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="1220" y="345" font-family="sans-serif" font-size="23" font-weight="700">16.5–16.6 Cleanup</text>
+  <text x="1220" y="390" font-family="monospace" font-size="17">try ... finally</text>
+  <text x="1220" y="430" font-family="monospace" font-size="17">f.close()</text>
+  <text x="1220" y="470" font-family="monospace" font-size="17">with open(...) as f</text>
+  <text x="1220" y="510" font-family="monospace" font-size="17">__enter__ / __exit__</text>
+  <text x="1220" y="555" font-family="sans-serif" font-size="17">poem.txt dependency</text>
+  <text x="1220" y="590" font-family="sans-serif" font-size="16">PEP 343 referenced by source.</text>
+
+  <rect x="55" y="710" width="800" height="245" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="80" y="750" font-family="sans-serif" font-size="23" font-weight="700">Operational tests</text>
+  <text x="80" y="795" font-family="monospace" font-size="17">python3 try_except.py</text>
+  <text x="80" y="835" font-family="monospace" font-size="17">python3 raising.py</text>
+  <text x="80" y="875" font-family="monospace" font-size="17">python3 finally.py</text>
+  <text x="80" y="915" font-family="monospace" font-size="17">python3 using_with.py</text>
+
+  <rect x="905" y="710" width="800" height="245" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="930" y="750" font-family="sans-serif" font-size="23" font-weight="700">Acceptance</text>
+  <text x="930" y="795" font-family="sans-serif" font-size="18">different exceptions reach different handlers</text>
+  <text x="930" y="835" font-family="sans-serif" font-size="18">raise reaches custom handler</text>
+  <text x="930" y="875" font-family="sans-serif" font-size="18">finally cleanup executes in shown Ctrl-C run</text>
+  <text x="930" y="915" font-family="sans-serif" font-size="18">with reads file without explicit close in source code</text>
+
+  <rect x="55" y="1005" width="1650" height="250" rx="10" fill="#fafafa" stroke="#666" stroke-dasharray="7 5"/>
+  <text x="80" y="1045" font-family="sans-serif" font-size="22" font-weight="700">Source integrity findings</text>
+  <text x="80" y="1085" font-family="sans-serif" font-size="17">• prose says syntax error, displayed traceback says NameError</text>
+  <text x="80" y="1120" font-family="sans-serif" font-size="17">• “every try needs except” wording conflicts with chapter's broader finally treatment</text>
+  <text x="80" y="1155" font-family="sans-serif" font-size="17">• finally.py assumes f exists for cleanup if acquisition succeeds; failure path not discussed</text>
+  <text x="80" y="1190" font-family="sans-serif" font-size="17">• theﬁle / thefile rendering mismatch in context-manager explanation</text>
+  <text x="80" y="1225" font-family="sans-serif" font-size="17">• bare-except claim retained as source statement / [Needs confirmation]</text>
+
+  <text x="55" y="1320" font-family="sans-serif" font-size="18">16.7 summary: try/except, try/finally, custom exceptions and raise.</text>
+  <text x="55" y="1355" font-family="sans-serif" font-size="17">Next boundary: p0133:c01 / PDF 133 — chapter 17 «Стандартная библиотека».</text>
+</svg>
