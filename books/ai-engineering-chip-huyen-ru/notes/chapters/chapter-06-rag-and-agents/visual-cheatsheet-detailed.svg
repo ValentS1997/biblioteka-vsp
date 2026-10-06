@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1260" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 6 — RAG и агенты: подробная шпаргалка</title>
+  <desc id="desc">Подробная карта главы 6: retrieval, hybrid search, chunking, agents, planning, failures and memory.</desc>
+  <rect width="1600" height="1260" fill="#f7f8fa"/>
+  <rect width="1600" height="112" fill="#17202a"/>
+  <text x="58" y="49" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#ffffff">Глава 6 — RAG и агенты</text>
+  <text x="58" y="84" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#d6e4f0">retrieval · vector search · chunking · agents · planning · evaluation · memory</text>
+
+  <rect x="50" y="145" width="470" height="245" rx="18" fill="#ffffff" stroke="#5dade2" stroke-width="2"/>
+  <text x="78" y="185" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#1b4f72">1. RAG architecture</text>
+  <text x="78" y="223" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="78" dy="0">External memory → index → retrieve.</tspan>
+    <tspan x="78" dy="28">Retrieved context + user query → model.</tspan>
+    <tspan x="78" dy="28">Retrieval quality limits generation quality.</tspan>
+    <tspan x="78" dy="36">Evaluate components + end-to-end system.</tspan>
+  </text>
+
+  <rect x="565" y="145" width="470" height="245" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="593" y="185" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#196f3d">2. Retrieval choices</text>
+  <text x="593" y="223" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="593" dy="0">Lexical: TF-IDF · BM25.</tspan>
+    <tspan x="593" dy="28">Semantic: embeddings + vector DB.</tspan>
+    <tspan x="593" dy="28">Exact k-NN vs approximate ANN.</tspan>
+    <tspan x="593" dy="28">FAISS · ScaNN · Annoy · HNSW.</tspan>
+  </text>
+
+  <rect x="1080" y="145" width="470" height="245" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1108" y="185" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#9c640c">3. Retrieval tuning</text>
+  <text x="1108" y="223" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="1108" dy="0">Hybrid search + reranking + RRF.</tspan>
+    <tspan x="1108" dy="28">Chunk size / overlap trade-off.</tspan>
+    <tspan x="1108" dy="28">Query rewrite for conversational intent.</tspan>
+    <tspan x="1108" dy="28">Contextual metadata improves retrieval.</tspan>
+  </text>
+
+  <rect x="50" y="420" width="720" height="285" rx="18" fill="#ffffff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="78" y="460" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#6c3483">4. Retrieval evaluation</text>
+  <text x="78" y="498" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="78" dy="0">Context precision / recall.</tspan>
+    <tspan x="78" dy="28">Ranking: NDCG · MAP · MRR.</tspan>
+    <tspan x="78" dy="28">Embedding quality independently.</tspan>
+    <tspan x="78" dy="28">Operational: query latency · index build time · index size.</tspan>
+    <tspan x="78" dy="28">Final criterion: does retrieval improve generated answers?</tspan>
+  </text>
+
+  <rect x="810" y="420" width="740" height="285" rx="18" fill="#ffffff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="838" y="460" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#21618c">5. Agent model</text>
+  <text x="838" y="498" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="838" dy="0">Agent = environment + actions/tools.</tspan>
+    <tspan x="838" dy="28">Inventory controls possible actions.</tspan>
+    <tspan x="838" dy="28">Read tools expand knowledge.</tspan>
+    <tspan x="838" dy="28">Write tools change external state.</tspan>
+    <tspan x="838" dy="36" font-weight="700">More capability means larger blast radius.</tspan>
+  </text>
+
+  <rect x="50" y="735" width="470" height="270" rx="18" fill="#ffffff" stroke="#ec7063" stroke-width="2"/>
+  <text x="78" y="775" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#922b21">6. Planning loop</text>
+  <text x="78" y="813" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="78" dy="0">Generate plan.</tspan>
+    <tspan x="78" dy="28">Reflect / correct.</tspan>
+    <tspan x="78" dy="28">Execute tool calls.</tspan>
+    <tspan x="78" dy="28">Reflect on outcome; re-plan if needed.</tspan>
+    <tspan x="78" dy="36">Hierarchical planning trades planning detail for execution difficulty.</tspan>
+  </text>
+
+  <rect x="565" y="735" width="470" height="270" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+  <text x="593" y="775" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#9c640c">7. Agent evaluation</text>
+  <text x="593" y="813" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="593" dy="0">Invalid tool / params / values.</tspan>
+    <tspan x="593" dy="28">Goal · deadline · reflection failure.</tspan>
+    <tspan x="593" dy="28">Tool output can fail independently.</tspan>
+    <tspan x="593" dy="28">Efficiency: steps · cost · time.</tspan>
+    <tspan x="593" dy="36">Log every tool call and result.</tspan>
+  </text>
+
+  <rect x="1080" y="735" width="470" height="270" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="1108" y="775" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#196f3d">8. Memory</text>
+  <text x="1108" y="813" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="1108" dy="0">Internal knowledge: weights.</tspan>
+    <tspan x="1108" dy="28">Short-term: current context.</tspan>
+    <tspan x="1108" dy="28">Long-term: external storage.</tspan>
+    <tspan x="1108" dy="28">Manage via FIFO · summarization · merge/replace.</tspan>
+    <tspan x="1108" dy="36">Memory retrieval resembles RAG.</tspan>
+  </text>
+
+  <rect x="50" y="1040" width="1500" height="145" rx="16" fill="#17202a"/>
+  <text x="78" y="1080" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#ffffff">Operational sequence</text>
+  <text x="78" y="1115" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#d6e4f0">
+    <tspan x="78" dy="0">need context/action → retrieve/select tool → validate → execute → observe → evaluate failure type</tspan>
+    <tspan x="78" dy="29">→ re-rank/re-plan → manage short/long-term memory → repeat until goal + constraints are satisfied</tspan>
+  </text>
+
+  <text x="50" y="1225" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="15" fill="#566573">Provenance: RAG p0295:c01–p0352:c01 · PDF/printed pages 295–352 · source SHA-256 850c3652…62fba</text>
+</svg>

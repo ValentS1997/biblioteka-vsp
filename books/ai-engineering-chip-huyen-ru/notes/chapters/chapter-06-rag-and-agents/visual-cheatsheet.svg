@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 6 — RAG и агенты</title>
+  <desc id="desc">Компактная шпаргалка по retrieval, agents, planning, evaluation и memory.</desc>
+  <rect width="1600" height="900" fill="#f6f8fb"/>
+  <rect width="1600" height="110" fill="#17202a"/>
+  <text x="56" y="48" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="34" font-weight="700" fill="#ffffff">Глава 6 — RAG и агенты</text>
+  <text x="56" y="83" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">Retrieve context · use tools · plan · observe · remember</text>
+
+  <rect x="50" y="145" width="470" height="260" rx="18" fill="#ffffff" stroke="#5dade2" stroke-width="2"/>
+  <text x="78" y="187" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#1b4f72">RAG</text>
+  <text x="78" y="226" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="78" dy="0">Index → retrieve → context → generate</tspan>
+    <tspan x="78" dy="31">Lexical: TF-IDF / BM25</tspan>
+    <tspan x="78" dy="31">Semantic: embeddings + vector search</tspan>
+    <tspan x="78" dy="31">Hybrid + reranking where justified</tspan>
+  </text>
+
+  <rect x="565" y="145" width="470" height="260" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="593" y="187" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#196f3d">Retrieval evaluation</text>
+  <text x="593" y="226" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="593" dy="0">Context precision / recall</tspan>
+    <tspan x="593" dy="31">NDCG · MAP · MRR</tspan>
+    <tspan x="593" dy="31">Latency · index build time · size</tspan>
+    <tspan x="593" dy="31">Always check end-to-end answer quality</tspan>
+  </text>
+
+  <rect x="1080" y="145" width="470" height="260" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1108" y="187" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#9c640c">Retrieval tuning</text>
+  <text x="1108" y="226" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1108" dy="0">Chunk size + overlap</tspan>
+    <tspan x="1108" dy="31">Query modification</tspan>
+    <tspan x="1108" dy="31">Contextual metadata</tspan>
+    <tspan x="1108" dy="31">No universal best chunk size</tspan>
+  </text>
+
+  <rect x="50" y="450" width="470" height="270" rx="18" fill="#ffffff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="78" y="492" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#6c3483">Agents</text>
+  <text x="78" y="532" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="78" dy="0">Environment + action/tool inventory</tspan>
+    <tspan x="78" dy="31">Read tools expand knowledge</tspan>
+    <tspan x="78" dy="31">Write tools change the world</tspan>
+    <tspan x="78" dy="31">More tools → more capability + risk</tspan>
+  </text>
+
+  <rect x="565" y="450" width="470" height="270" rx="18" fill="#ffffff" stroke="#ec7063" stroke-width="2"/>
+  <text x="593" y="492" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#922b21">Planning &amp; failures</text>
+  <text x="593" y="532" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="593" dy="0">Plan → reflect → execute → re-plan</tspan>
+    <tspan x="593" dy="31">Invalid tool / params / values</tspan>
+    <tspan x="593" dy="31">Goal · deadline · reflection failures</tspan>
+    <tspan x="593" dy="31">Log every tool call and output</tspan>
+  </text>
+
+  <rect x="1080" y="450" width="470" height="270" rx="18" fill="#ffffff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="1108" y="492" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#21618c">Memory</text>
+  <text x="1108" y="532" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1108" dy="0">Internal knowledge</tspan>
+    <tspan x="1108" dy="31">Short-term context</tspan>
+    <tspan x="1108" dy="31">Long-term external memory</tspan>
+    <tspan x="1108" dy="31">FIFO / summarize / merge / replace</tspan>
+  </text>
+
+  <rect x="50" y="775" width="1500" height="72" rx="14" fill="#17202a"/>
+  <text x="78" y="820" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#ffffff">Принцип: capabilities растут вместе с retrieval/tools — и вместе с ними растут failure surface и требования к evaluation.</text>
+</svg>

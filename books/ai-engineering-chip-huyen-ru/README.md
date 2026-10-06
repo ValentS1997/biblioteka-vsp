@@ -56,3 +56,4 @@ Canonical readiness command:
 - [Глава 3 — Методология оценки](notes/chapters/chapter-03-evaluation-methodology/README.md)
 - [Глава 4 — Оценка систем AI](notes/chapters/chapter-04-evaluating-ai-systems/README.md)
 - [Глава 5 — Промт-инжиниринг](notes/chapters/chapter-05-prompt-engineering/README.md)
+- [Глава 6 — RAG и агенты](notes/chapters/chapter-06-rag-and-agents/README.md)
