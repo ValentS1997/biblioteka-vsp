@@ -12,3 +12,4 @@ Reviewed chapter-level notes are stored here.
 - [Chapter 8 — Функции](chapter-08-functions/README.md)
 - [Chapter 9 — Классы](chapter-09-classes/README.md)
 - [Chapter 10 — Файлы и исключения](chapter-10-files-and-exceptions/README.md)
+- [Chapter 11 — Тестирование кода](chapter-11-testing-code/README.md)
