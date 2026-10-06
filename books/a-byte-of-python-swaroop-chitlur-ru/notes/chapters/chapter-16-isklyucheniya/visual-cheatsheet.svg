@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="960" viewBox="0 0 1360 960">
+  <rect width="1360" height="960" fill="white"/>
+  <text x="55" y="62" font-family="sans-serif" font-size="34" font-weight="700">Глава 16 — «Исключения»</text>
+  <text x="55" y="98" font-family="sans-serif" font-size="18">RAG PDF 127–132 · p0127:c01–p0132:c01</text>
+
+  <rect x="55" y="140" width="390" height="200" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="80" y="180" font-family="sans-serif" font-size="22" font-weight="700">Detect / handle</text>
+  <text x="80" y="220" font-family="monospace" font-size="18">try:</text>
+  <text x="80" y="255" font-family="monospace" font-size="18">except EOFError:</text>
+  <text x="80" y="290" font-family="monospace" font-size="18">else:</text>
+
+  <rect x="485" y="140" width="390" height="200" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="510" y="180" font-family="sans-serif" font-size="22" font-weight="700">Raise</text>
+  <text x="510" y="220" font-family="sans-serif" font-size="18">custom Exception subclass</text>
+  <text x="510" y="255" font-family="monospace" font-size="18">raise ...</text>
+  <text x="510" y="290" font-family="monospace" font-size="18">except ... as ex</text>
+
+  <rect x="915" y="140" width="390" height="200" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="940" y="180" font-family="sans-serif" font-size="22" font-weight="700">Cleanup</text>
+  <text x="940" y="220" font-family="monospace" font-size="18">finally:</text>
+  <text x="940" y="255" font-family="monospace" font-size="18">f.close()</text>
+  <text x="940" y="290" font-family="monospace" font-size="18">with open(...) as f</text>
+
+  <rect x="55" y="395" width="590" height="220" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="80" y="435" font-family="sans-serif" font-size="22" font-weight="700">Interactive tests</text>
+  <text x="80" y="475" font-family="sans-serif" font-size="18">Ctrl-D → EOFError path</text>
+  <text x="80" y="515" font-family="sans-serif" font-size="18">Ctrl-C → KeyboardInterrupt path</text>
+  <text x="80" y="555" font-family="sans-serif" font-size="18">short input → custom exception</text>
+
+  <rect x="695" y="395" width="610" height="220" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="720" y="435" font-family="sans-serif" font-size="22" font-weight="700">Resource dependency</text>
+  <text x="720" y="475" font-family="monospace" font-size="18">poem.txt</text>
+  <text x="720" y="515" font-family="sans-serif" font-size="18">required by finally.py / using_with.py</text>
+  <text x="720" y="555" font-family="sans-serif" font-size="18">standalone presence → [Needs confirmation]</text>
+
+  <rect x="55" y="670" width="1250" height="125" rx="12" fill="#fafafa" stroke="#333"/>
+  <text x="80" y="710" font-family="sans-serif" font-size="22" font-weight="700">Exception workflow</text>
+  <text x="80" y="748" font-family="sans-serif" font-size="18">detect → catch / raise → inspect → cleanup → continue or exit</text>
+  <text x="80" y="778" font-family="sans-serif" font-size="17">Next: chapter 17 «Стандартная библиотека».</text>
+
+  <text x="55" y="850" font-family="sans-serif" font-size="16">Findings: “syntax error” vs NameError; try/except wording contradiction; finally acquisition caveat.</text>
+  <text x="55" y="884" font-family="sans-serif" font-size="16">Chapter-end summary present: 16.7.</text>
+</svg>
