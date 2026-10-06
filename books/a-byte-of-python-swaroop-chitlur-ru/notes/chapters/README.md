@@ -24,3 +24,4 @@ Current chapter workflow:
 - [Chapter 15 — «Ввод-вывод»](chapter-15-vvod-vyvod/) — `RAG_GROUNDED`
 - [Chapter 16 — «Исключения»](chapter-16-isklyucheniya/) — `RAG_GROUNDED`
 - [Chapter 17 — «Стандартная библиотека»](chapter-17-standartnaya-biblioteka/) — `RAG_GROUNDED`
+- [Chapter 18 — «Дополнительно»](chapter-18-dopolnitelno/) — `RAG_GROUNDED`

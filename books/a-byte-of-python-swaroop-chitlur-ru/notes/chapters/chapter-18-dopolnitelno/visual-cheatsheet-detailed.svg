@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1780" height="1440" viewBox="0 0 1780 1440">
+  <rect width="1780" height="1440" fill="white"/>
+  <text x="55" y="65" font-family="sans-serif" font-size="36" font-weight="700">Глава 18. Дополнительно — detailed map</text>
+  <text x="55" y="102" font-family="sans-serif" font-size="18">RAG-only · p0137:c01–p0144:c01 · substantive PDF 137–143 · source SHA ac1abb…d7db5</text>
+
+  <rect x="55" y="140" width="1670" height="120" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="80" y="180" font-family="sans-serif" font-size="23" font-weight="700">Advanced-feature map</text>
+  <text x="80" y="220" font-family="sans-serif" font-size="18">unpack values · customize class behavior · build compact transformations · execute/evaluate source text · control assertions and strings.</text>
+
+  <rect x="55" y="305" width="520" height="360" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="80" y="345" font-family="sans-serif" font-size="23" font-weight="700">18.1–18.3 Unpacking / protocols</text>
+  <text x="80" y="390" font-family="monospace" font-size="17">errnum, errstr = ...</text>
+  <text x="80" y="430" font-family="monospace" font-size="17">a, *b = [1,2,3,4]</text>
+  <text x="80" y="470" font-family="monospace" font-size="17">a, b = b, a</text>
+  <text x="80" y="515" font-family="monospace" font-size="17">__str__ / __lt__ / __getitem__ / __len__</text>
+  <text x="80" y="555" font-family="monospace" font-size="17">if flag: print('Да')</text>
+  <text x="80" y="600" font-family="sans-serif" font-size="16">source recommends avoiding one-line blocks generally.</text>
+
+  <rect x="630" y="305" width="520" height="360" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="655" y="345" font-family="sans-serif" font-size="23" font-weight="700">18.4–18.6 Functional compactness</text>
+  <text x="655" y="390" font-family="monospace" font-size="17">lambda i: i['y']</text>
+  <text x="655" y="430" font-family="monospace" font-size="17">points.sort(key=...)</text>
+  <text x="655" y="470" font-family="monospace" font-size="17">[2*i for i in listone if i &gt; 2]</text>
+  <text x="655" y="515" font-family="monospace" font-size="17">def powersum(power, *args)</text>
+  <text x="655" y="555" font-family="sans-serif" font-size="17">** → additional key/value parameters</text>
+  <text x="655" y="600" font-family="sans-serif" font-size="16">source list comprehension leaves original list unchanged.</text>
+
+  <rect x="1205" y="305" width="520" height="360" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="1230" y="345" font-family="sans-serif" font-size="23" font-weight="700">18.7–18.9 Execute / check / represent</text>
+  <text x="1230" y="390" font-family="monospace" font-size="17">exec('print(...)')</text>
+  <text x="1230" y="430" font-family="monospace" font-size="17">eval('2*3')</text>
+  <text x="1230" y="470" font-family="monospace" font-size="17">assert len(mylist) &gt;= 1</text>
+  <text x="1230" y="510" font-family="monospace" font-size="17">repr(i)</text>
+  <text x="1230" y="550" font-family="monospace" font-size="17">eval(repr(i))</text>
+  <text x="1230" y="600" font-family="sans-serif" font-size="16">exec/eval marked as execution boundary.</text>
+
+  <rect x="55" y="715" width="820" height="255" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="80" y="755" font-family="sans-serif" font-size="23" font-weight="700">18.10 Escape sequences</text>
+  <text x="80" y="800" font-family="monospace" font-size="17">\' · \" · \\</text>
+  <text x="80" y="840" font-family="monospace" font-size="17">\n · \t</text>
+  <text x="80" y="880" font-family="sans-serif" font-size="17">backslash at physical line end → source line continuation</text>
+  <text x="80" y="920" font-family="sans-serif" font-size="16">triple-quoted strings are mentioned as another multi-line form.</text>
+
+  <rect x="925" y="715" width="800" height="255" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="950" y="755" font-family="sans-serif" font-size="23" font-weight="700">18.11 Raw strings</text>
+  <text x="950" y="800" font-family="monospace" font-size="17">r"Перевод строки обозначается \n"</text>
+  <text x="950" y="840" font-family="sans-serif" font-size="18">prefix r / R</text>
+  <text x="950" y="880" font-family="sans-serif" font-size="18">source recommends for regular expressions</text>
+  <text x="950" y="920" font-family="monospace" font-size="17">'\\1' or r'\1'</text>
+
+  <rect x="55" y="1020" width="1670" height="275" rx="10" fill="#fafafa" stroke="#666" stroke-dasharray="7 5"/>
+  <text x="80" y="1060" font-family="sans-serif" font-size="22" font-weight="700">Source integrity / safety findings</text>
+  <text x="80" y="1100" font-family="sans-serif" font-size="17">• special-method table contains sel extraction corruption</text>
+  <text x="80" y="1135" font-family="sans-serif" font-size="17">• exec input-form wording retained as source claim; canonical example uses fixed string</text>
+  <text x="80" y="1170" font-family="sans-serif" font-size="17">• exec/eval are runtime code/expression execution boundary</text>
+  <text x="80" y="1205" font-family="sans-serif" font-size="17">• eval(repr(object)) == object generalized by source beyond demonstrated list example</text>
+  <text x="80" y="1240" font-family="sans-serif" font-size="17">• raw-string “no special processing” wording retained as source framing</text>
+  <text x="80" y="1275" font-family="sans-serif" font-size="17">• PDF 144 contains only chapter footer; substantive summary is PDF 143</text>
+
+  <text x="55" y="1350" font-family="sans-serif" font-size="18">18.12 summary: enough additional Python features for practical work.</text>
+  <text x="55" y="1385" font-family="sans-serif" font-size="17">Next boundary: p0145:c01 / PDF 145 — chapter 19 «Что дальше».</text>
+</svg>
