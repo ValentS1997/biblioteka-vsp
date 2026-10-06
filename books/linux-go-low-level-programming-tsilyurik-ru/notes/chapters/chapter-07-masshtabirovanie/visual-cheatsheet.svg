@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="790" viewBox="0 0 1200 790">
+<rect width="1200" height="790" fill="#fff"/>
+<style>text{font-family:Arial,sans-serif;fill:#111}.h{font-size:32px;font-weight:700}.t{font-size:20px;font-weight:700}.b{font-size:16px}.box{fill:#f7f7f7;stroke:#333;stroke-width:2}</style>
+<text x="50" y="55" class="h">Глава 7 — Масштабирование</text>
+<text x="50" y="88" class="b">RAG: PDF 174–195 · hardware → workload → GOMAXPROCS → taskset</text>
+
+<rect x="50" y="125" width="340" height="205" rx="14" class="box"/>
+<text x="75" y="165" class="t">1. Test matrix</text>
+<text x="75" y="200" class="b">ARM SBC</text>
+<text x="75" y="230" class="b">desktop</text>
+<text x="75" y="260" class="b">multi-socket server</text>
+<text x="75" y="290" class="b">record Go + CPU topology</text>
+
+<rect x="430" y="125" width="340" height="205" rx="14" class="box"/>
+<text x="455" y="165" class="t">2. mlpar</text>
+<text x="455" y="200" class="b">vary goroutines N</text>
+<text x="455" y="230" class="b">observe threads + T(N)</text>
+<text x="455" y="260" class="b">time.Now contaminates loop</text>
+<text x="455" y="290" class="b">→ methodology revised</text>
+
+<rect x="810" y="125" width="340" height="205" rx="14" class="box"/>
+<text x="835" y="165" class="t">3. mlpar2</text>
+<text x="835" y="200" class="b">pre-calibrated CPU work</text>
+<text x="835" y="230" class="b">thread-ID histogram</text>
+<text x="835" y="260" class="b">N ≤ P / N &gt; P</text>
+<text x="835" y="290" class="b">compare across hardware</text>
+
+<rect x="50" y="375" width="520" height="205" rx="14" class="box"/>
+<text x="75" y="415" class="t">4. Runtime control</text>
+<text x="75" y="450" class="b">runtime.NumCPU()</text>
+<text x="75" y="480" class="b">runtime.GOMAXPROCS(n)</text>
+<text x="75" y="510" class="b">GOMAXPROCS environment</text>
+<text x="75" y="540" class="b">version-sensitive source model</text>
+
+<rect x="625" y="375" width="525" height="205" rx="14" class="box"/>
+<text x="650" y="415" class="t">5. OS control</text>
+<text x="650" y="450" class="b">nproc / lscpu</text>
+<text x="650" y="480" class="b">taskset -p → inspect</text>
+<text x="650" y="510" class="b">taskset -c → restrict workload</text>
+<text x="650" y="540" class="b">CPU IDs require topology validation</text>
+
+<text x="50" y="640" class="t">Acceptance</text>
+<text x="50" y="675" class="b">Same workload + known CPU set + known GOMAXPROCS + repeatable measurement.</text>
+<text x="50" y="710" class="b">More goroutines is not equivalent to more speed.</text>
+<text x="50" y="745" class="b">Scheduler details and exact timings remain source/version/environment scoped.</text>
+</svg>
