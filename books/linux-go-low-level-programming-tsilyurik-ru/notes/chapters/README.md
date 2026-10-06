@@ -13,3 +13,4 @@ Current chapter workflow:
 - [Chapter 4 — «Новости от последних версий...»](chapter-04-novosti-ot-poslednih-versiy/) — `RAG_GROUNDED`
 - [Chapter 5 — «Процессоры в Linux»](chapter-05-processory-v-linux/) — `RAG_GROUNDED`
 - [Chapter 6 — «Параллелизм и многопроцессорность»](chapter-06-parallelizm-i-mnogoprocessornost/) — `RAG_GROUNDED`
+- [Chapter 7 — «Масштабирование»](chapter-07-masshtabirovanie/) — `RAG_GROUNDED`

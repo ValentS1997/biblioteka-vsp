@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200">
+<rect width="1600" height="1200" fill="#fff"/>
+<style>text{font-family:Arial,sans-serif;fill:#111}.h{font-size:35px;font-weight:700}.s{font-size:22px;font-weight:700}.b{font-size:16px}.sm{font-size:14px}.box{fill:#f8f8f8;stroke:#333;stroke-width:2}</style>
+<text x="55" y="55" class="h">Глава 7 — Масштабирование · detailed</text>
+<text x="55" y="90" class="b">Boundary: PDF 174–195 · page 196 starts Part 3</text>
+
+<rect x="55" y="125" width="475" height="245" rx="14" class="box"/>
+<text x="80" y="165" class="s">1. Scaling definition</text>
+<text x="80" y="202" class="b">same application idea</text>
+<text x="80" y="234" class="b">radically different hardware</text>
+<text x="80" y="266" class="b">use available processors efficiently</text>
+<text x="80" y="298" class="b">avoid platform-specific assumptions</text>
+<text x="80" y="330" class="sm">"without recompilation" wording is recorded as ambiguous.</text>
+
+<rect x="565" y="125" width="475" height="245" rx="14" class="box"/>
+<text x="590" y="165" class="s">2. Test stand</text>
+<text x="590" y="202" class="b">Raspberry Pi 2</text>
+<text x="590" y="234" class="b">Orange Pi One</text>
+<text x="590" y="266" class="b">2/4/8-thread desktops</text>
+<text x="590" y="298" class="b">40-CPU server example</text>
+<text x="590" y="330" class="b">native OS/Go versions recorded</text>
+
+<rect x="1075" y="125" width="470" height="245" rx="14" class="box"/>
+<text x="1100" y="165" class="s">3. Scheduler source model</text>
+<text x="1100" y="202" class="b">GOMAXPROCS execution capacity</text>
+<text x="1100" y="234" class="b">goroutine queues</text>
+<text x="1100" y="266" class="b">local/global redistribution</text>
+<text x="1100" y="298" class="b">runtime preemption exists</text>
+<text x="1100" y="330" class="sm">Author explicitly marks details version-sensitive.</text>
+
+<rect x="55" y="405" width="475" height="260" rx="14" class="box"/>
+<text x="80" y="445" class="s">4. Experiment 1 — mlpar</text>
+<text x="80" y="482" class="b">N goroutines perform timed busy activity</text>
+<text x="80" y="514" class="b">thread IDs observed through Cgo</text>
+<text x="80" y="546" class="b">tested on server/desktop/SBC</text>
+<text x="80" y="578" class="b">good qualitative scheduler visibility</text>
+<text x="80" y="610" class="b">but time.Now exists inside worker loop</text>
+<text x="80" y="642" class="sm">Source itself flags this as measurement contaminant.</text>
+
+<rect x="565" y="405" width="475" height="260" rx="14" class="box"/>
+<text x="590" y="445" class="s">5. Experiment 2 — mlpar2</text>
+<text x="590" y="482" class="b">pre-calibrate CPU-heavy activity</text>
+<text x="590" y="514" class="b">main worker avoids time calls</text>
+<text x="590" y="546" class="b">collect thread-ID histogram</text>
+<text x="590" y="578" class="b">observe N relative to P</text>
+<text x="590" y="610" class="b">compare T(N) across platforms</text>
+
+<rect x="1075" y="405" width="470" height="260" rx="14" class="box"/>
+<text x="1100" y="445" class="s">6. Experimental lesson</text>
+<text x="1100" y="482" class="b">N ≤ P can map broadly across resources</text>
+<text x="1100" y="514" class="b">N &gt; P queues multiple goroutines</text>
+<text x="1100" y="546" class="b">small systems saturate earlier</text>
+<text x="1100" y="578" class="b">Linux background load remains noise</text>
+<text x="1100" y="610" class="b">single-run timing is not proof</text>
+
+<rect x="55" y="705" width="475" height="250" rx="14" class="box"/>
+<text x="80" y="745" class="s">7. Runtime control</text>
+<text x="80" y="782" class="b">runtime.NumCPU()</text>
+<text x="80" y="814" class="b">runtime.GOMAXPROCS(-1)</text>
+<text x="80" y="846" class="b">runtime.GOMAXPROCS(n)</text>
+<text x="80" y="878" class="b">export GOMAXPROCS=...</text>
+<text x="80" y="910" class="b">inline GOMAXPROCS=... command</text>
+
+<rect x="565" y="705" width="475" height="250" rx="14" class="box"/>
+<text x="590" y="745" class="s">8. OS CPU-set control</text>
+<text x="590" y="782" class="b">nproc / /proc/cpuinfo / lscpu</text>
+<text x="590" y="814" class="b">taskset -p → inspect mask</text>
+<text x="590" y="846" class="b">taskset -c → launch constrained</text>
+<text x="590" y="878" class="b">physical/HT/socket experiments</text>
+<text x="590" y="910" class="b">CPU IDs are host-specific</text>
+
+<rect x="1075" y="705" width="470" height="250" rx="14" class="box"/>
+<text x="1100" y="745" class="s">9. Reproducibility gate</text>
+<text x="1100" y="782" class="b">record hardware</text>
+<text x="1100" y="814" class="b">record Go version</text>
+<text x="1100" y="846" class="b">record CPU set + GOMAXPROCS</text>
+<text x="1100" y="878" class="b">hold workload constant</text>
+<text x="1100" y="910" class="b">repeat measurements</text>
+
+<rect x="55" y="995" width="1490" height="120" rx="14" class="box"/>
+<text x="80" y="1035" class="s">Source findings</text>
+<text x="80" y="1070" class="b">scheduler is version-sensitive · "without recompilation" is ambiguous · mlpar methodology revised · taskset CPU IDs are topology-specific</text>
+</svg>
