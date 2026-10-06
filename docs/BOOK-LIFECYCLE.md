@@ -36,6 +36,16 @@ A supplied PDF or EPUB is not by itself equal to canonical repository ingest.
 
 ## Canonical entrypoints
 
+All branch work first passes the process-compliance gate:
+
+```text
+BIBLIOTEKA-VSP-PROCESS-COMPLIANCE-ROUTER v1.0
+```
+
+The router resolves branch type, checks current canonical contract versions,
+preserves explicitly compatible legacy RAG, and blocks state-changing work on
+critical process drift.
+
 New RAG/chapter book branch:
 
 ```text
