@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import hashlib
 import importlib.util
+import json
 import tempfile
 import unittest
 import zipfile
@@ -90,6 +91,22 @@ class BuildBookRagTests(unittest.TestCase):
         self.assertTrue(manifest["validation"]["source_checksum_verified"])
         self.assertEqual("pdf", manifest["source"]["format"])
         self.assertEqual("pdf_page", manifest["chunking"]["source_unit_type"])
+        self.assertEqual("1.0", manifest["ingestion"]["pipeline_version"])
+        self.assertEqual(
+            module.CHUNKING_POLICY_ID,
+            manifest["ingestion"]["chunking_policy_id"],
+        )
+        self.assertRegex(manifest["generation"]["corpus_generation_id"], r"^[0-9a-f]{64}$")
+        self.assertRegex(manifest["generation"]["index_generation_id"], r"^[0-9a-f]{64}$")
+
+        index_record = json.loads(
+            (book / "rag" / "chunk-index.jsonl").read_text(encoding="utf-8").splitlines()[0]
+        )
+        self.assertRegex(index_record["chunk_uid"], r"^[0-9a-f]{64}$")
+        self.assertRegex(index_record["text_sha256"], r"^[0-9a-f]{64}$")
+        chunk_text = (book / index_record["path"]).read_text(encoding="utf-8")
+        self.assertIn(f"chunk_uid: {index_record['chunk_uid']}", chunk_text)
+        self.assertIn(f"text_sha256: {index_record['text_sha256']}", chunk_text)
 
     def test_missing_expected_checksum_is_not_reported_verified(self):
         book = self.make_pdf_book(with_expected_sha=False)
@@ -123,6 +140,28 @@ class BuildBookRagTests(unittest.TestCase):
         (book / "source" / "book.epub").write_bytes(b"placeholder")
         with self.assertRaisesRegex(RuntimeError, "Ambiguous canonical source"):
             module.build(book)
+
+
+    def test_rebuild_preserves_generation_and_chunk_uid(self):
+        book = self.make_pdf_book(with_expected_sha=True)
+        first = module.build(book)
+        first_records = [
+            json.loads(line)
+            for line in (book / "rag" / "chunk-index.jsonl").read_text(encoding="utf-8").splitlines()
+        ]
+
+        second = module.build(book)
+        second_records = [
+            json.loads(line)
+            for line in (book / "rag" / "chunk-index.jsonl").read_text(encoding="utf-8").splitlines()
+        ]
+
+        self.assertEqual(first["corpus_generation_id"], second["corpus_generation_id"])
+        self.assertEqual(first["index_generation_id"], second["index_generation_id"])
+        self.assertEqual(
+            [record["chunk_uid"] for record in first_records],
+            [record["chunk_uid"] for record in second_records],
+        )
 
 
 if __name__ == "__main__":
