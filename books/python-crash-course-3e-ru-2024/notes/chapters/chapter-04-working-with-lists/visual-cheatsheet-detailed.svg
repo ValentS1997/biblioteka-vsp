@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 4 — Работа со списками: подробная шпаргалка</title>
+  <desc id="desc">Циклы, range, числовые списки, срезы, копирование, кортежи, ошибки отступов и PEP 8.</desc>
+  <rect width="1800" height="1200" fill="#f5f7fa"/>
+  <rect width="1800" height="116" fill="#17202a"/>
+  <text x="56" y="50" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="38" font-weight="700" fill="#fff">Глава 4 — Работа со списками</text>
+  <text x="56" y="86" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">повторение, числовые диапазоны, подмножества, копии и неизменяемые наборы</text>
+
+  <rect x="45" y="150" width="540" height="300" rx="18" fill="#fff" stroke="#5dade2" stroke-width="2"/>
+  <text x="75" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#1b4f72">for и indentation</text>
+  <text x="75" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">for magician in magicians:</tspan>
+    <tspan x="75" dy="31">4-space indented body повторяется.</tspan>
+    <tspan x="75" dy="31">Код без отступа идёт после цикла.</tspan>
+    <tspan x="75" dy="31">Пропуск отступа → IndentationError.</tspan>
+    <tspan x="75" dy="31">Лишний/неверный отступ → exception или logic error.</tspan>
+    <tspan x="75" dy="31">Пропущенный ':' → SyntaxError.</tspan>
+  </text>
+
+  <rect x="630" y="150" width="540" height="300" rx="18" fill="#fff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="660" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#196f3d">range и числа</text>
+  <text x="660" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="660" dy="0">range(1, 6) → 1…5.</tspan>
+    <tspan x="660" dy="31">range(6) → 0…5.</tspan>
+    <tspan x="660" dy="31">Третий аргумент задаёт step.</tspan>
+    <tspan x="660" dy="31">list(range(...)) создаёт список.</tspan>
+    <tspan x="660" dy="31">min / max / sum — простая статистика.</tspan>
+    <tspan x="660" dy="31">[expr for value in range(...)] — comprehension.</tspan>
+  </text>
+
+  <rect x="1215" y="150" width="540" height="300" rx="18" fill="#fff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1245" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#9c640c">Срезы</text>
+  <text x="1245" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1245" dy="0">[0:3] → индексы 0,1,2.</tspan>
+    <tspan x="1245" dy="31">[:4] → от начала.</tspan>
+    <tspan x="1245" dy="31">[2:] → до конца.</tspan>
+    <tspan x="1245" dy="31">[-3:] → последние три.</tspan>
+    <tspan x="1245" dy="31">for item in items[:3] → цикл по части списка.</tspan>
+    <tspan x="1245" dy="31">[:] → полная копия списка.</tspan>
+  </text>
+
+  <rect x="45" y="495" width="825" height="300" rx="18" fill="#fff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="75" y="540" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#6c3483">Независимая копия vs alias</text>
+  <text x="75" y="583" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">friend_foods = my_foods[:]</tspan>
+    <tspan x="75" dy="31">→ два отдельных списка.</tspan>
+    <tspan x="75" dy="42">friend_foods = my_foods</tspan>
+    <tspan x="75" dy="31">→ две переменные связаны с одним списком.</tspan>
+    <tspan x="75" dy="42">Verification: append разных значений и сравнить вывод.</tspan>
+  </text>
+
+  <rect x="915" y="495" width="840" height="300" rx="18" fill="#fff" stroke="#ec7063" stroke-width="2"/>
+  <text x="945" y="540" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#922b21">Кортежи</text>
+  <text x="945" y="583" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="945" dy="0">dimensions = (200, 50)</tspan>
+    <tspan x="945" dy="31">Индексный доступ и for разрешены.</tspan>
+    <tspan x="945" dy="31">dimensions[0] = 250 → TypeError.</tspan>
+    <tspan x="945" dy="31">dimensions = (400, 100) → допустима замена tuple.</tspan>
+    <tspan x="945" dy="31">Одноэлементный tuple: (3,)</tspan>
+    <tspan x="945" dy="31">Источник рекомендует tuple для неизменяемых наборов.</tspan>
+  </text>
+
+  <rect x="45" y="840" width="825" height="270" rx="18" fill="#fff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="75" y="885" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#21618c">Упражнения 4.1–4.15</text>
+  <text x="75" y="928" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">for: пиццы и животные.</tspan>
+    <tspan x="75" dy="30">range: 20, миллион, нечётные, тройки, кубы.</tspan>
+    <tspan x="75" dy="30">Slices + независимые copies.</tspan>
+    <tspan x="75" dy="30">Tuple menu + TypeError test.</tspan>
+    <tspan x="75" dy="30">PEP 8 review + code cleanup.</tspan>
+    <tspan x="75" dy="36">Персональные данные: [Needs confirmation].</tspan>
+  </text>
+
+  <rect x="915" y="840" width="840" height="270" rx="18" fill="#fff" stroke="#58d68d" stroke-width="2"/>
+  <text x="945" y="885" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#1e8449">Operational boundaries</text>
+  <text x="945" y="928" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="945" dy="0">4.4: миллион строк → high-output workload.</tspan>
+    <tspan x="945" dy="30">Source stop: Ctrl+C / закрыть окно вывода.</tspan>
+    <tspan x="945" dy="40">PEP 8 URL есть в source, но web не открывался.</tspan>
+    <tspan x="945" dy="30">Legacy RAG имеет chunk-boundary clipping.</tspan>
+    <tspan x="945" dy="30">Смысл главы сохранён; rebuild не выполнялся.</tspan>
+  </text>
+
+  <rect x="45" y="1140" width="1710" height="40" rx="12" fill="#17202a"/>
+  <text x="75" y="1167" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#fff">Provenance: e0013:c01–c13 · EPUB spine 13 · OEBPS/Text/978544614112-10.xhtml</text>
+</svg>
