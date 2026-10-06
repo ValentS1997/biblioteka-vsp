@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 6 — Словари</title>
+  <desc id="desc">Ключи и значения, изменение, get, перебор и вложение словарей.</desc>
+  <rect width="1600" height="900" fill="#f6f8fb"/>
+  <rect width="1600" height="108" fill="#17202a"/>
+  <text x="56" y="48" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="36" font-weight="700" fill="#fff">Глава 6 — Словари</text>
+  <text x="56" y="82" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">key:value → access → modify → iterate → nest</text>
+
+  <rect x="50" y="145" width="470" height="250" rx="18" fill="#fff" stroke="#5dade2" stroke-width="2"/>
+  <text x="78" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#1b4f72">Доступ</text>
+  <text x="78" y="230" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">
+    <tspan x="78" dy="0">d[key] → значение</tspan>
+    <tspan x="78" dy="34">нет key → KeyError</tspan>
+    <tspan x="78" dy="34">d.get(key, default)</tspan>
+    <tspan x="78" dy="34">без default → None по source</tspan>
+  </text>
+
+  <rect x="565" y="145" width="470" height="250" rx="18" fill="#fff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="593" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#196f3d">Изменение</text>
+  <text x="593" y="230" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">
+    <tspan x="593" dy="0">d[new_key] = value → добавить</tspan>
+    <tspan x="593" dy="34">d[key] = value → заменить</tspan>
+    <tspan x="593" dy="34">del d[key] → удалить</tspan>
+    <tspan x="593" dy="34">del: source говорит, отмены нет</tspan>
+  </text>
+
+  <rect x="1080" y="145" width="470" height="250" rx="18" fill="#fff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1108" y="188" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#9c640c">Перебор</text>
+  <text x="1108" y="230" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">
+    <tspan x="1108" dy="0">items() → key + value</tspan>
+    <tspan x="1108" dy="34">keys() / dict → ключи</tspan>
+    <tspan x="1108" dy="34">values() → значения</tspan>
+    <tspan x="1108" dy="34">set(values()) → уникальные</tspan>
+  </text>
+
+  <rect x="50" y="445" width="720" height="280" rx="18" fill="#fff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="78" y="488" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#6c3483">Вложение</text>
+  <text x="78" y="531" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#273746">
+    <tspan x="78" dy="0">list of dicts → много объектов</tspan>
+    <tspan x="78" dy="34">list inside dict → много значений ключа</tspan>
+    <tspan x="78" dy="34">dict inside dict → атрибуты именованных объектов</tspan>
+    <tspan x="78" dy="34">Избегать чрезмерной глубины nesting</tspan>
+  </text>
+
+  <rect x="815" y="445" width="735" height="280" rx="18" fill="#fff" stroke="#ec7063" stroke-width="2"/>
+  <text x="843" y="488" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#922b21">Source findings</text>
+  <text x="843" y="531" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="843" dy="0">speed = fast → mismatch</tspan>
+    <tspan x="843" dy="34">Edward: rust/go ↔ Ruby/Go</tspan>
+    <tspan x="843" dy="34">c02–c12: chunk boundary clipping</tspan>
+    <tspan x="843" dy="34">Никакой silent correction</tspan>
+  </text>
+
+  <rect x="50" y="775" width="1500" height="72" rx="14" fill="#17202a"/>
+  <text x="78" y="819" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#fff">Provenance: e0015:c01–c12 · EPUB spine 15 · OEBPS/Text/978544614112-12.xhtml</text>
+</svg>
