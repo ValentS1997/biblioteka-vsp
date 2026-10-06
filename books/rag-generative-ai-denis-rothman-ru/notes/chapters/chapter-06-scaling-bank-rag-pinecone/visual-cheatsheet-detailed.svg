@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1280" viewBox="0 0 1600 1280" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 6 — detailed Pinecone scaling map</title>
+  <desc id="desc">Подробная схема подготовки данных, кластеризации, embeddings, Pinecone upsert/query, target-vector RAG and source issues.</desc>
+  <rect width="1600" height="1280" fill="#ffffff"/>
+  <style>
+    text { font-family: Arial, sans-serif; fill: #111; }
+    .h1 { font-size: 31px; font-weight: 700; }
+    .h2 { font-size: 20px; font-weight: 700; }
+    .body { font-size: 15px; }
+    .small { font-size: 13px; }
+    .box { fill: #f8f8f8; stroke: #222; stroke-width: 2; rx: 12; }
+    .arrow { stroke: #222; stroke-width: 3; fill: none; marker-end: url(#a); }
+  </style>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#222"/>
+    </marker>
+  </defs>
+
+  <text x="55" y="55" class="h1">Глава 6. Scaling Bank RAG with Pinecone — detailed map</text>
+  <text x="55" y="84" class="small">Source: p0161:c01–p0198:c01 · PDF 161–198</text>
+
+  <rect x="55" y="125" width="455" height="220" class="box"/>
+  <text x="80" y="162" class="h2">Component 1 — Data</text>
+  <text x="80" y="198" class="body">Kaggle Bank Customer Churn</text>
+  <text x="80" y="228" class="body">remove selected columns</text>
+  <text x="80" y="258" class="body">EDA / heatmap</text>
+  <text x="80" y="288" class="body">StandardScaler + k-means</text>
+  <text x="80" y="318" class="body">silhouette + Davies–Bouldin</text>
+
+  <rect x="570" y="125" width="455" height="220" class="box"/>
+  <text x="595" y="162" class="h2">Component 2 — Vector scale</text>
+  <text x="595" y="198" class="body">customer row → text chunk</text>
+  <text x="595" y="228" class="body">text-embedding-3-small</text>
+  <text x="595" y="258" class="body">duplicate for scale simulation</text>
+  <text x="595" y="288" class="body">Pinecone serverless / cosine / 1536</text>
+  <text x="595" y="318" class="body">batch upsert + index stats</text>
+
+  <rect x="1085" y="125" width="455" height="220" class="box"/>
+  <text x="1110" y="162" class="h2">Component 3 — RAG</text>
+  <text x="1110" y="198" class="body">target customer profile</text>
+  <text x="1110" y="228" class="body">top-k similar vectors</text>
+  <text x="1110" y="258" class="body">combined metadata context</text>
+  <text x="1110" y="288" class="body">GPT-4o retention email</text>
+  <text x="1110" y="318" class="body">response-time measurement</text>
+
+  <path d="M510 235 H570" class="arrow"/>
+  <path d="M1025 235 H1085" class="arrow"/>
+
+  <text x="55" y="410" class="h2">Operational scaling controls</text>
+
+  <rect x="55" y="445" width="470" height="190" class="box"/>
+  <text x="80" y="482" class="body">OpenAI:</text>
+  <text x="80" y="512" class="body">model capability / cost / input limits</text>
+  <text x="80" y="542" class="body">rate limits / API throughput</text>
+  <text x="80" y="572" class="body">embedding runtime</text>
+
+  <rect x="565" y="445" width="470" height="190" class="box"/>
+  <text x="590" y="482" class="body">Pinecone:</text>
+  <text x="590" y="512" class="body">cloud + region</text>
+  <text x="590" y="542" class="body">read/write units</text>
+  <text x="590" y="572" class="body">storage / backup / pricing</text>
+
+  <rect x="1075" y="445" width="465" height="190" class="box"/>
+  <text x="1100" y="482" class="body">Verification:</text>
+  <text x="1100" y="512" class="body">10k rows = 10k chunks = 10k embeddings</text>
+  <text x="1100" y="542" class="body">vector_count after upsert</text>
+  <text x="1100" y="572" class="body">query score + metadata + latency</text>
+
+  <text x="55" y="710" class="h2">Scale simulation and query</text>
+
+  <rect x="55" y="745" width="455" height="185" class="box"/>
+  <text x="80" y="782" class="body">dsize = 5</text>
+  <text x="80" y="812" class="body">10,000 source chunks → 50,000 vectors</text>
+  <text x="80" y="842" class="small">duplication simulates load, not new evidence</text>
+
+  <rect x="570" y="745" width="455" height="185" class="box"/>
+  <text x="595" y="782" class="body">Pinecone query</text>
+  <text x="595" y="812" class="body">same embedding model</text>
+  <text x="595" y="842" class="body">top_k + metadata</text>
+  <text x="595" y="872" class="body">timed retrieval</text>
+
+  <rect x="1085" y="745" width="455" height="185" class="box"/>
+  <text x="1110" y="782" class="body">RAG prompt</text>
+  <text x="1110" y="812" class="body">instruction + target profile</text>
+  <text x="1110" y="842" class="body">+ similar customer context</text>
+  <text x="1110" y="872" class="body">→ GPT-4o</text>
+
+  <text x="55" y="1005" class="h2">Source issues preserved</text>
+
+  <rect x="55" y="1040" width="1490" height="175" class="box"/>
+  <text x="80" y="1077" class="body">1. 100.29% complain/exited ratio is described in prose as correlation.</text>
+  <text x="80" y="1107" class="body">2. Upsert timing: 50k/560.66s vs prose 10k/~56s.</text>
+  <text x="80" y="1137" class="body">3. query_text is defined, but p193 calls get_embedding(text,...).</text>
+  <text x="80" y="1167" class="body">4. p195 extracts gpt_model string without a visible closing quote.</text>
+</svg>
