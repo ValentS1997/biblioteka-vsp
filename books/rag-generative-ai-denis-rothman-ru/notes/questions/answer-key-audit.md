@@ -89,8 +89,9 @@ For chapter-level `review-answers.md`:
 
 ## Post-correction acceptance
 
-Expected:
+Verified:
 - official polarity aligned: `98/98`;
-- all chapter files retain chapter provenance;
-- appendix provenance is added;
-- mismatches remain documented rather than silently erased.
+- all 10 chapter files retain chapter provenance;
+- appendix provenance is present in all 10 chapter answer files;
+- the two original mismatches are corrected to the official appendix polarity;
+- appendix/chapter tensions remain documented rather than silently erased.
