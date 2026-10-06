@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 8 — Dynamic RAG with Chroma and Llama</title>
+  <desc id="desc">Компактная схема временной Chroma collection, retrieval validation and Llama generation.</desc>
+  <rect width="1200" height="820" fill="#ffffff"/>
+  <style>
+    text { font-family: Arial, sans-serif; fill: #111; }
+    .h1 { font-size: 29px; font-weight: 700; }
+    .h2 { font-size: 20px; font-weight: 700; }
+    .body { font-size: 16px; }
+    .small { font-size: 13px; }
+    .box { fill: #f7f7f7; stroke: #222; stroke-width: 2; rx: 14; }
+    .arrow { stroke: #222; stroke-width: 3; fill: none; marker-end: url(#a); }
+  </style>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#222"/>
+    </marker>
+  </defs>
+
+  <text x="55" y="55" class="h1">Глава 8. Dynamic RAG: Chroma + Hugging Face Llama</text>
+  <text x="55" y="86" class="small">RAG provenance: p0227:c01–p0252:c01 · PDF 227–252</text>
+
+  <rect x="55" y="145" width="300" height="180" class="box"/>
+  <text x="80" y="182" class="h2">1. Fresh data</text>
+  <text x="80" y="220" class="body">SciQ → filter / completion</text>
+  <text x="80" y="250" class="body">10,481 prepared rows</text>
+
+  <rect x="450" y="145" width="300" height="180" class="box"/>
+  <text x="475" y="182" class="h2">2. Temporary Chroma</text>
+  <text x="475" y="220" class="body">documents + embeddings</text>
+  <text x="475" y="250" class="body">all-MiniLM-L6-v2 path</text>
+
+  <rect x="845" y="145" width="300" height="180" class="box"/>
+  <text x="870" y="182" class="h2">3. Meeting-time RAG</text>
+  <text x="870" y="220" class="body">retrieve one document</text>
+  <text x="870" y="250" class="body">augment → Llama 2</text>
+
+  <path d="M355 235 H450" class="arrow"/>
+  <path d="M750 235 H845" class="arrow"/>
+
+  <rect x="150" y="430" width="390" height="140" class="box"/>
+  <text x="175" y="468" class="h2">Validate before meeting</text>
+  <text x="175" y="505" class="body">bulk query + spaCy similarity</text>
+  <text x="175" y="535" class="body">source example threshold &gt; 0.7</text>
+
+  <rect x="660" y="430" width="390" height="140" class="box"/>
+  <text x="685" y="468" class="h2">Lifecycle</text>
+  <text x="685" y="505" class="body">measure session time</text>
+  <text x="685" y="535" class="body">discard collection when finished</text>
+
+  <rect x="230" y="655" width="740" height="105" class="box"/>
+  <text x="255" y="695" class="h2">Boundary</text>
+  <text x="255" y="730" class="body">Fast/cheap/temporary does not remove the need for human review when prompt wording changes.</text>
+</svg>
