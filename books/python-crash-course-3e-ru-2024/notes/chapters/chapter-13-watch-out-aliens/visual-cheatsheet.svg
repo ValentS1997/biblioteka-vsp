@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#f6f8fb"/><rect width="1600" height="105" fill="#17202a"/>
+<text x="55" y="50" font-family="Arial" font-size="36" font-weight="700" fill="white">Глава 13 — Осторожно, пришельцы!</text>
+<text x="55" y="82" font-family="Arial" font-size="20" fill="#d6e4f0">fleet → movement → collisions → stats → game over</text>
+<g font-family="Arial" fill="#273746">
+<rect x="50" y="145" width="470" height="250" rx="18" fill="white" stroke="#5dade2" stroke-width="2"/>
+<text x="78" y="190" font-size="24" font-weight="700">Fleet grid</text><text x="78" y="235" font-size="19">nested while loops</text><text x="78" y="270" font-size="19">_create_alien(x, y)</text><text x="78" y="305" font-size="19">Group.draw / update</text><text x="78" y="340" font-size="19">spacing from Alien.rect.size</text>
+<rect x="565" y="145" width="470" height="250" rx="18" fill="white" stroke="#7dcea0" stroke-width="2"/>
+<text x="593" y="190" font-size="24" font-weight="700">Movement</text><text x="593" y="235" font-size="19">fleet_direction = 1 / -1</text><text x="593" y="270" font-size="19">edge → drop fleet</text><text x="593" y="305" font-size="19">direction *= -1</text><text x="593" y="340" font-size="19">Alien.update() each frame</text>
+<rect x="1080" y="145" width="470" height="250" rx="18" fill="white" stroke="#f5b041" stroke-width="2"/>
+<text x="1108" y="190" font-size="24" font-weight="700">Collisions</text><text x="1108" y="235" font-size="19">groupcollide()</text><text x="1108" y="270" font-size="19">spritecollideany()</text><text x="1108" y="305" font-size="19">empty fleet → respawn</text><text x="1108" y="340" font-size="19">bottom/ship hit → _ship_hit()</text>
+<rect x="50" y="445" width="720" height="280" rx="18" fill="white" stroke="#af7ac5" stroke-width="2"/>
+<text x="78" y="490" font-size="24" font-weight="700">Game state</text><text x="78" y="535" font-size="19">GameStats → ships_left</text><text x="78" y="570" font-size="19">clear aliens + bullets</text><text x="78" y="605" font-size="19">center ship + sleep(0.5)</text><text x="78" y="640" font-size="19">no ships → game_active = False</text>
+<rect x="815" y="445" width="735" height="280" rx="18" fill="white" stroke="#ec7063" stroke-width="2"/>
+<text x="843" y="490" font-size="24" font-weight="700">Source findings</text><text x="843" y="535" font-size="18">change_fleet_direction naming</text><text x="843" y="570" font-size="18">stats.ships_left missing self</text><text x="843" y="605" font-size="18">AlienInvasion __init__ signature</text><text x="843" y="640" font-size="18">coordinate wording + clipping</text>
+</g>
+<rect x="50" y="775" width="1500" height="72" rx="14" fill="#17202a"/>
+<text x="78" y="819" font-family="Arial" font-size="20" font-weight="700" fill="white">Provenance: e0023:c01–c13 · EPUB spine 23 · OEBPS/Text/978544614112-20.xhtml</text>
+</svg>
