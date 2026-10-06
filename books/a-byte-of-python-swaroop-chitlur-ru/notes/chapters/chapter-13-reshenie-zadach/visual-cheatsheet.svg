@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="960" viewBox="0 0 1360 960">
+  <rect width="1360" height="960" fill="white"/>
+  <text x="55" y="62" font-family="sans-serif" font-size="34" font-weight="700">Глава 13 — «Решение задач»</text>
+  <text x="55" y="98" font-family="sans-serif" font-size="18">RAG PDF 99–108 · p0099:c01–p0108:c01</text>
+
+  <rect x="55" y="140" width="390" height="180" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="80" y="180" font-family="sans-serif" font-size="22" font-weight="700">1. Analyze / Design</text>
+  <text x="80" y="220" font-family="sans-serif" font-size="18">source files + backup root</text>
+  <text x="80" y="252" font-family="sans-serif" font-size="18">ZIP + timestamp naming</text>
+  <text x="80" y="284" font-family="sans-serif" font-size="18">external zip dependency</text>
+
+  <rect x="485" y="140" width="390" height="180" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="510" y="180" font-family="sans-serif" font-size="22" font-weight="700">2. Build</text>
+  <text x="510" y="220" font-family="monospace" font-size="18">zip -qr target sources</text>
+  <text x="510" y="252" font-family="monospace" font-size="18">os.system(zip_command)</text>
+  <text x="510" y="284" font-family="sans-serif" font-size="18">state-changing</text>
+
+  <rect x="915" y="140" width="390" height="180" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="940" y="180" font-family="sans-serif" font-size="22" font-weight="700">3. Test / Debug</text>
+  <text x="940" y="220" font-family="monospace" font-size="18">print(zip_command)</text>
+  <text x="940" y="252" font-family="sans-serif" font-size="18">ver3 → SyntaxError</text>
+  <text x="940" y="284" font-family="sans-serif" font-size="18">fix → ver4</text>
+
+  <rect x="55" y="375" width="590" height="210" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="80" y="415" font-family="sans-serif" font-size="22" font-weight="700">Version progression</text>
+  <text x="80" y="455" font-family="sans-serif" font-size="18">v1: timestamp archive</text>
+  <text x="80" y="490" font-family="sans-serif" font-size="18">v2: date directory</text>
+  <text x="80" y="525" font-family="sans-serif" font-size="18">v3/v4: comment in archive name</text>
+
+  <rect x="695" y="375" width="610" height="210" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="720" y="415" font-family="sans-serif" font-size="22" font-weight="700">Improve</text>
+  <text x="720" y="455" font-family="sans-serif" font-size="18">verbosity -v</text>
+  <text x="720" y="490" font-family="sans-serif" font-size="18">sys.argv + list.extend</text>
+  <text x="720" y="525" font-family="sans-serif" font-size="18">zipfile / tarfile instead of os.system</text>
+
+  <rect x="55" y="640" width="1250" height="145" rx="12" fill="#fafafa" stroke="#333"/>
+  <text x="80" y="680" font-family="sans-serif" font-size="22" font-weight="700">Lifecycle</text>
+  <text x="80" y="720" font-family="sans-serif" font-size="18">Analysis → Design → Implementation → Test/Debug → Use → Maintenance</text>
+  <text x="80" y="754" font-family="sans-serif" font-size="17">Next: chapter 14 «Объектно-ориентированное программирование».</text>
+
+  <text x="55" y="850" font-family="sans-serif" font-size="16">Risk: backup examples write directories/archives and execute external shell command.</text>
+  <text x="55" y="882" font-family="sans-serif" font-size="16">Findings: ver2 indentation/output mismatch; zip/os.sep/os.system claims [Needs confirmation].</text>
+</svg>
