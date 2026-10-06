@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1260" viewBox="0 0 1600 1260" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 9 — detailed fine-tuning RAG map</title>
+  <desc id="desc">Подробная схема threshold decision, SciQ preparation, OpenAI fine-tuning, monitoring, generation and metrics.</desc>
+  <rect width="1600" height="1260" fill="#ffffff"/>
+  <style>
+    text { font-family: Arial, sans-serif; fill: #111; }
+    .h1 { font-size: 31px; font-weight: 700; }
+    .h2 { font-size: 20px; font-weight: 700; }
+    .body { font-size: 15px; }
+    .small { font-size: 13px; }
+    .box { fill: #f8f8f8; stroke: #222; stroke-width: 2; rx: 12; }
+    .arrow { stroke: #222; stroke-width: 3; fill: none; marker-end: url(#a); }
+  </style>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#222"/>
+    </marker>
+  </defs>
+
+  <text x="55" y="55" class="h1">Глава 9. Fine-tuning RAG data — detailed map</text>
+  <text x="55" y="84" class="small">Source: p0253:c01–p0270:c01 · PDF 253–270</text>
+
+  <rect x="55" y="125" width="455" height="220" class="box"/>
+  <text x="80" y="162" class="h2">Decision threshold</text>
+  <text x="80" y="198" class="body">processing burden</text>
+  <text x="80" y="228" class="body">storage / retrieval burden</text>
+  <text x="80" y="258" class="body">stable/static data</text>
+  <text x="80" y="288" class="body">→ candidate for fine-tuning</text>
+
+  <rect x="570" y="125" width="455" height="220" class="box"/>
+  <text x="595" y="162" class="h2">Dataset preparation</text>
+  <text x="595" y="198" class="body">SciQ train split</text>
+  <text x="595" y="228" class="body">filter answer/support</text>
+  <text x="595" y="258" class="body">remove distractors</text>
+  <text x="595" y="288" class="body">system/user/assistant examples</text>
+
+  <rect x="1085" y="125" width="455" height="220" class="box"/>
+  <text x="1110" y="162" class="h2">OpenAI fine-tuning</text>
+  <text x="1110" y="198" class="body">upload training file</text>
+  <text x="1110" y="228" class="body">gpt-4o-mini-2024-07-18</text>
+  <text x="1110" y="258" class="body">epochs/batch/LR = auto</text>
+  <text x="1110" y="288" class="body">remote job</text>
+
+  <path d="M510 235 H570" class="arrow"/>
+  <path d="M1025 235 H1085" class="arrow"/>
+
+  <text x="55" y="420" class="h2">Monitoring / validation</text>
+
+  <rect x="55" y="455" width="470" height="205" class="box"/>
+  <text x="80" y="492" class="body">list recent jobs</text>
+  <text x="80" y="522" class="body">status / error / training file</text>
+  <text x="80" y="552" class="body">fine-tuned model ID</text>
+  <text x="80" y="582" class="body">generation only if model exists</text>
+
+  <rect x="565" y="455" width="470" height="205" class="box"/>
+  <text x="590" y="492" class="body">test with known science prompt</text>
+  <text x="590" y="522" class="body">temperature = 0.0</text>
+  <text x="590" y="552" class="body">inspect detailed answer</text>
+  <text x="590" y="582" class="body">compare with source expectation</text>
+
+  <rect x="1075" y="455" width="465" height="205" class="box"/>
+  <text x="1100" y="492" class="body">metrics UI</text>
+  <text x="1100" y="522" class="body">loss / trained tokens</text>
+  <text x="1100" y="552" class="body">epochs / batch / LR / seed</text>
+  <text x="1100" y="582" class="body">usage / cost</text>
+
+  <text x="55" y="735" class="h2">Operational boundary</text>
+
+  <rect x="55" y="770" width="1490" height="165" class="box"/>
+  <text x="80" y="807" class="body">Training file upload and fine-tuning job creation modify remote OpenAI state and can incur cost.</text>
+  <text x="80" y="837" class="body">The chapter does not define universal loss/quality thresholds.</text>
+  <text x="80" y="867" class="body">Dynamic/current knowledge remains a retrieval problem; fine-tuning targets suitable stable data.</text>
+
+  <text x="55" y="1010" class="h2">Source issues</text>
+
+  <rect x="55" y="1045" width="1490" height="150" class="box"/>
+  <text x="80" y="1082" class="body">1. p256 Colab import is malformed by extraction.</text>
+  <text x="80" y="1112" class="body">2. p258 creates df_view, then drops columns from df.</text>
+  <text x="80" y="1142" class="body">3. Training data is described as JSONL but filename ends in .json.</text>
+</svg>
