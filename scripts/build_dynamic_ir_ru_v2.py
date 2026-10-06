@@ -139,7 +139,7 @@ def normalize_body_v2(text: str) -> str:
         text,
         flags=re.MULTILINE,
     )
-    text = text.replace("THIRD_PARTY_REVIEW_REQUIRED", "иллюстрация исключена до проверки прав")
+    text = text.replace("THIRD_PARTY_REVIEW_REQUIRED", "**Иллюстрация не воспроизводится:** требуется отдельная проверка прав на сторонний визуальный материал.")
     text = text.replace("RAG_MISS", "пропуск в извлечённом тексте источника")
     return text.strip() + "\n"
 
@@ -176,7 +176,7 @@ def audit_and_assemble(repo_root: Path, out_dir: Path):
             problems.append(f"chapter {n}: unexpected [Needs confirmation]")
         original_third_party += body.count("THIRD_PARTY_REVIEW_REQUIRED")
         repaired = normalize_body_v2(body)
-        v2_third_party += repaired.count("Иллюстрация не воспроизводится")
+        v2_third_party += repaired.count("требуется отдельная проверка прав на сторонний визуальный материал")
         parts.append(repaired)
         title = next((l.lstrip("# ").strip() for l in repaired.splitlines() if l.startswith("# ")), p.stem)
         rows.append({"chapter": n, "file": p.name, "title": title})
@@ -196,7 +196,7 @@ def audit_and_assemble(repo_root: Path, out_dir: Path):
         original_third_party += abody.count("THIRD_PARTY_REVIEW_REQUIRED")
         abody = normalize_body_v2(abody)
 
-    audit = {
+    if v2_third_party != original_third_party:\n        problems.append(f"third-party marker preservation mismatch: source={original_third_party}, v2={v2_third_party}")\n\n    audit = {
         "book_id": BOOK_ID,
         "edition": "ru-v2-repair",
         "status": "ACCEPTED" if not problems else "BLOCKED",
