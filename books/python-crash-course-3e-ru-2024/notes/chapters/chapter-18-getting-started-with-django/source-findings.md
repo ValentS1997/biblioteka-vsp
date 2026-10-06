@@ -112,43 +112,7 @@ Versions differ.
 
 Current appropriate docs version: `[Needs confirmation]`.
 
-## Finding 6 — date filter format vs prose example
-
-Classification: **[Source format-description mismatch]**
-
-Provenance:
-- chunk: `e0028:c17`
-
-Shown template filter:
-
-~~~django
-{{ entry.date_added|date:'M d, Y H:i' }}
-~~~
-
-Prose describes output with example wording:
-
-~~~text
-January 1, 2022 23:00
-~~~
-
-The shown format token/string and prose example are not fully aligned in representation.
-
-Adjudication: exact intended display format `[Needs confirmation]`.
-
-## Finding 7 — URL pattern described as regular expression
-
-Classification: **[Source terminology inconsistency]**
-
-Provenance:
-- chunk: `e0028:c11`
-
-Chapter describes the first `path()` argument as a URL pattern, but later says Django calls the view when the requested URL matches “this regular expression”.
-
-No regex syntax is shown in the `path('', ...)` example.
-
-Adjudication: wording intent `[Needs confirmation]`.
-
-## Finding 8 — chunk-boundary clipping / overlap
+## Finding 6 — chunk-boundary clipping / overlap
 
 Classification: **[Source extraction issue]**
 
