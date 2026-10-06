@@ -1,0 +1,14 @@
+schema: biblioteka-vsp/reading/v1
+book_id: how-linux-works-brian-ward-3e-ru-2022
+
+status: planned
+scope: full_book
+
+started: null
+completed: null
+current_page: null
+current_chapter: null
+
+notes:
+  - "Canonical PDF was attached for onboarding."
+  - "Reading start has not been explicitly confirmed by the user."
