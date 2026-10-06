@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1160" viewBox="0 0 1600 1160">
+<rect width="1600" height="1160" fill="#fff"/>
+<style>text{font-family:Arial,sans-serif;fill:#111}.h{font-size:35px;font-weight:700}.s{font-size:22px;font-weight:700}.b{font-size:16px}.sm{font-size:14px}.box{fill:#f8f8f8;stroke:#333;stroke-width:2}</style>
+<text x="55" y="55" class="h">Глава 11 — Элементы функционального программирования · detailed</text>
+<text x="55" y="90" class="b">Boundary: PDF 233–243 · page 244 starts «Скоростные и другие сравнения языков»</text>
+
+<rect x="55" y="125" width="475" height="245" rx="14" class="box"/>
+<text x="80" y="165" class="s">1. Higher-order functions</text>
+<text x="80" y="202" class="b">functions treated as values</text>
+<text x="80" y="234" class="b">pass / return / assign</text>
+<text x="80" y="266" class="b">my_transform accepts func(int) int</text>
+<text x="80" y="298" class="b">anonymous function performs operation</text>
+
+<rect x="565" y="125" width="475" height="245" rx="14" class="box"/>
+<text x="590" y="165" class="s">2. Closure state</text>
+<text x="590" y="202" class="b">makeAdder returns function</text>
+<text x="590" y="234" class="b">accumulator captures total</text>
+<text x="590" y="266" class="b">same result across language examples</text>
+<text x="590" y="298" class="sm">“freeze context” wording is broader than examples.</text>
+
+<rect x="1075" y="125" width="470" height="245" rx="14" class="box"/>
+<text x="1100" y="165" class="s">3. Cross-language comparison</text>
+<text x="1100" y="202" class="b">C static state</text>
+<text x="1100" y="234" class="b">GCC nested function</text>
+<text x="1100" y="266" class="b">C++ functor / C++11 lambda</text>
+<text x="1100" y="298" class="b">Go and Python closure variants</text>
+
+<rect x="55" y="405" width="475" height="260" rx="14" class="box"/>
+<text x="80" y="445" class="s">4. Currying</text>
+<text x="80" y="482" class="b">mkAdd(a) returns func(b)</text>
+<text x="80" y="514" class="b">partial state binding</text>
+<text x="80" y="546" class="b">Python and Go examples</text>
+<text x="80" y="578" class="b">verify 7 / 9 output</text>
+
+<rect x="565" y="405" width="475" height="260" rx="14" class="box"/>
+<text x="590" y="445" class="s">5. Recursion</text>
+<text x="590" y="482" class="b">Node left/right pointers</text>
+<text x="590" y="514" class="b">nil base case</text>
+<text x="590" y="546" class="b">in-order Traverse(callback)</text>
+<text x="590" y="578" class="b">result [1 2 3 4 5 6]</text>
+
+<rect x="1075" y="405" width="470" height="260" rx="14" class="box"/>
+<text x="1100" y="445" class="s">6. Memoization</text>
+<text x="1100" y="482" class="b">map[int]int cache</text>
+<text x="1100" y="514" class="b">lookup before recomputation</text>
+<text x="1100" y="546" class="b">fibos vs fibom</text>
+<text x="1100" y="578" class="b">speedup from algorithm restructuring</text>
+
+<rect x="55" y="705" width="720" height="245" rx="14" class="box"/>
+<text x="80" y="745" class="s">7. Pure-function style</text>
+<text x="80" y="782" class="b">Point value receiver</text>
+<text x="80" y="814" class="b">Add returns a new Point value</text>
+<text x="80" y="846" class="b">method chaining without shown mutation</text>
+<text x="80" y="878" class="b">motivated by reducing side effects</text>
+
+<rect x="825" y="705" width="720" height="245" rx="14" class="box"/>
+<text x="850" y="745" class="s">8. Source findings</text>
+<text x="850" y="782" class="b">closure “freeze” wording is over-broad</text>
+<text x="850" y="814" class="b">“all Go functions are closures” not established</text>
+<text x="850" y="846" class="b">reference-counting explanation not demonstrated</text>
+<text x="850" y="878" class="b">Fibonacci timings are environment-specific</text>
+
+<text x="55" y="1040" class="s">Engineering lesson</text>
+<text x="55" y="1075" class="b">Before parallelizing, first eliminate repeated work and make mutable state/capture boundaries explicit.</text>
+</svg>
