@@ -96,8 +96,7 @@ Presentation flow разделяется на три слоя: URL pattern вы�
 3. **[Source URL mismatch]** — один admin example использует `http://localhost/admin/`, тогда как development server ранее работает на `:8000`.
 4. **[Source terminology typo]** — `ForeignKey` в shell explanation написан как `ForeighKey`.
 5. **[Source documentation-version mismatch]** — exercise 18.7 ссылается на Django template docs `en/2.2`, тогда как chapter setup/examples ориентированы на Django 4.1.
-6. **[Source format-description mismatch]** — filter `date:'M d, Y H:i'` описан примером полного месяца, хотя shown format token `M` и example wording не полностью согласованы.
-7. **[Source extraction issue]** — `e0028:c02–c18` имеют boundary clipping/overlap.
+6. **[Source extraction issue]** — `e0028:c02–c18` имеют boundary clipping/overlap.
 
 ## Ограничения
 
