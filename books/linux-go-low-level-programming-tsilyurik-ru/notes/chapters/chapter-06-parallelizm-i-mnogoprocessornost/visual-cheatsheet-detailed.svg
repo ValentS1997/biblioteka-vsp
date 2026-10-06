@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200">
+<rect width="1600" height="1200" fill="#fff"/>
+<style>text{font-family:Arial,sans-serif;fill:#111}.h{font-size:35px;font-weight:700}.s{font-size:22px;font-weight:700}.b{font-size:16px}.sm{font-size:14px}.box{fill:#f8f8f8;stroke:#333;stroke-width:2}</style>
+<text x="55" y="55" class="h">Глава 6 — Параллелизм и многопроцессорность · detailed</text>
+<text x="55" y="90" class="b">Boundary: PDF 147–173 · page 174 starts «Масштабирование»</text>
+
+<rect x="55" y="125" width="475" height="245" rx="14" class="box"/>
+<text x="80" y="165" class="s">1. Process model</text>
+<text x="80" y="202" class="b">fork → parent + child</text>
+<text x="80" y="234" class="b">copy-on-write startup</text>
+<text x="80" y="266" class="b">separate logical address spaces</text>
+<text x="80" y="298" class="b">communication requires IPC</text>
+<text x="80" y="330" class="b">failure isolation is a benefit</text>
+
+<rect x="565" y="125" width="475" height="245" rx="14" class="box"/>
+<text x="590" y="165" class="s">2. Thread model</text>
+<text x="590" y="202" class="b">pthread_create / pthread_join</text>
+<text x="590" y="234" class="b">std::thread abstraction</text>
+<text x="590" y="266" class="b">shared memory/resources</text>
+<text x="590" y="298" class="b">unpredictable scheduling points</text>
+<text x="590" y="330" class="b">shared operations need synchronization</text>
+
+<rect x="1075" y="125" width="470" height="245" rx="14" class="box"/>
+<text x="1100" y="165" class="s">3. Go runtime model</text>
+<text x="1100" y="202" class="b">go statement starts goroutine</text>
+<text x="1100" y="234" class="b">M:N goroutine → OS-thread scheduling</text>
+<text x="1100" y="266" class="b">many goroutines can share process</text>
+<text x="1100" y="298" class="b">runtime balances work</text>
+<text x="1100" y="330" class="sm">Version-sensitive scheduler claims remain source-scoped.</text>
+
+<rect x="55" y="405" width="475" height="260" rx="14" class="box"/>
+<text x="80" y="445" class="s">4. Channels</text>
+<text x="80" y="482" class="b">make(chan T[, N])</text>
+<text x="80" y="514" class="b">ch &lt;- value / value := &lt;-ch</text>
+<text x="80" y="546" class="b">receive-only / send-only parameters</text>
+<text x="80" y="578" class="b">close + v,ok + range</text>
+<text x="80" y="610" class="b">select waits on multiple operations</text>
+<text x="80" y="642" class="b">default enables non-blocking branch</text>
+
+<rect x="565" y="405" width="475" height="260" rx="14" class="box"/>
+<text x="590" y="445" class="s">5. sync package</text>
+<text x="590" y="482" class="b">Mutex / Locker / Cond</text>
+<text x="590" y="514" class="b">RWMutex</text>
+<text x="590" y="546" class="b">Once</text>
+<text x="590" y="578" class="b">Pool</text>
+<text x="590" y="610" class="b">WaitGroup</text>
+<text x="590" y="642" class="b">sync/atomic</text>
+
+<rect x="1075" y="405" width="470" height="260" rx="14" class="box"/>
+<text x="1100" y="445" class="s">6. Correctness hazards</text>
+<text x="1100" y="482" class="b">execution order is nondeterministic</text>
+<text x="1100" y="514" class="b">main can exit before goroutines</text>
+<text x="1100" y="546" class="b">closure capture is version/context-sensitive</text>
+<text x="1100" y="578" class="b">shared state requires synchronization</text>
+<text x="1100" y="610" class="b">deadlock possible with misuse of primitives</text>
+
+<rect x="55" y="705" width="475" height="250" rx="14" class="box"/>
+<text x="80" y="745" class="s">7. Concurrency vs parallelism</text>
+<text x="80" y="782" class="b">concurrency: program structure</text>
+<text x="80" y="814" class="b">parallelism: actual CPU execution</text>
+<text x="80" y="846" class="b">runtime.NumCPU()</text>
+<text x="80" y="878" class="b">runtime.GOMAXPROCS(n)</text>
+<text x="80" y="910" class="sm">Historical defaults explicitly vary in source.</text>
+
+<rect x="565" y="705" width="475" height="250" rx="14" class="box"/>
+<text x="590" y="745" class="s">8. SMP experiments</text>
+<text x="590" y="782" class="b">smp1: atomic.AddUint64 + WaitGroup</text>
+<text x="590" y="814" class="b">smp2: channel → counter goroutine</text>
+<text x="590" y="846" class="b">same logical task, different sync cost</text>
+<text x="590" y="878" class="b">more execution threads may be slower</text>
+<text x="590" y="910" class="b">integer division changes actual work for 3</text>
+
+<rect x="1075" y="705" width="470" height="250" rx="14" class="box"/>
+<text x="1100" y="745" class="s">9. Verification discipline</text>
+<text x="1100" y="782" class="b">verify final count</text>
+<text x="1100" y="814" class="b">repeat runs</text>
+<text x="1100" y="846" class="b">measure synchronization overhead</text>
+<text x="1100" y="878" class="b">do not infer deterministic ordering</text>
+<text x="1100" y="910" class="b">interpret timings cautiously</text>
+
+<rect x="55" y="995" width="1490" height="120" rx="14" class="box"/>
+<text x="80" y="1035" class="s">Source findings</text>
+<text x="80" y="1070" class="b">sync API spelling inconsistencies · unbuffered-channel wording · closure/GOMAXPROCS version scope · benchmark remainder</text>
+</svg>

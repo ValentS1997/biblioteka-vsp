@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="790" viewBox="0 0 1200 790">
+<rect width="1200" height="790" fill="#fff"/>
+<style>text{font-family:Arial,sans-serif;fill:#111}.h{font-size:31px;font-weight:700}.t{font-size:20px;font-weight:700}.b{font-size:16px}.box{fill:#f7f7f7;stroke:#333;stroke-width:2}</style>
+<text x="50" y="55" class="h">Глава 6 — Параллелизм и многопроцессорность</text>
+<text x="50" y="88" class="b">RAG: PDF 147–173 · process → threads → goroutines → channels/sync → SMP</text>
+
+<rect x="50" y="125" width="340" height="190" rx="14" class="box"/>
+<text x="75" y="165" class="t">1. Processes</text>
+<text x="75" y="200" class="b">fork()</text>
+<text x="75" y="230" class="b">isolated address spaces</text>
+<text x="75" y="260" class="b">copy-on-write</text>
+<text x="75" y="290" class="b">IPC for communication</text>
+
+<rect x="430" y="125" width="340" height="190" rx="14" class="box"/>
+<text x="455" y="165" class="t">2. Kernel threads</text>
+<text x="455" y="200" class="b">pthread_t</text>
+<text x="455" y="230" class="b">std::thread</text>
+<text x="455" y="260" class="b">shared process memory</text>
+<text x="455" y="290" class="b">synchronization required</text>
+
+<rect x="810" y="125" width="340" height="190" rx="14" class="box"/>
+<text x="835" y="165" class="t">3. Goroutines</text>
+<text x="835" y="200" class="b">go f(...)</text>
+<text x="835" y="230" class="b">M:N runtime scheduling</text>
+<text x="835" y="260" class="b">main does not auto-wait</text>
+<text x="835" y="290" class="b">order is nondeterministic</text>
+
+<rect x="50" y="355" width="340" height="205" rx="14" class="box"/>
+<text x="75" y="395" class="t">4. Channels</text>
+<text x="75" y="430" class="b">send / receive</text>
+<text x="75" y="460" class="b">buffer / close / range</text>
+<text x="75" y="490" class="b">directional channel params</text>
+<text x="75" y="520" class="b">select + default</text>
+
+<rect x="430" y="355" width="340" height="205" rx="14" class="box"/>
+<text x="455" y="395" class="t">5. sync</text>
+<text x="455" y="430" class="b">Mutex · RWMutex · Cond</text>
+<text x="455" y="460" class="b">Once · Pool · WaitGroup</text>
+<text x="455" y="490" class="b">sync/atomic</text>
+<text x="455" y="520" class="b">correctness before speed</text>
+
+<rect x="810" y="355" width="340" height="205" rx="14" class="box"/>
+<text x="835" y="395" class="t">6. SMP reality</text>
+<text x="835" y="430" class="b">concurrency ≠ parallelism</text>
+<text x="835" y="460" class="b">NumCPU / GOMAXPROCS</text>
+<text x="835" y="490" class="b">atomic vs channel example</text>
+<text x="835" y="520" class="b">more workers may be slower</text>
+
+<text x="50" y="625" class="t">Invariant</text>
+<text x="50" y="660" class="b">Never depend on execution order. Synchronize shared state and completion explicitly.</text>
+<text x="50" y="700" class="b">Measure actual work completed and synchronization cost before claiming speedup.</text>
+<text x="50" y="740" class="b">Source/API/version mismatches are recorded separately; no silent modernization.</text>
+</svg>
