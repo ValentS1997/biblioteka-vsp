@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200">
+<rect width="1600" height="1200" fill="#fff"/>
+<style>text{font-family:Arial,sans-serif;fill:#111}.h{font-size:35px;font-weight:700}.s{font-size:22px;font-weight:700}.b{font-size:16px}.sm{font-size:14px}.box{fill:#f8f8f8;stroke:#333;stroke-width:2}</style>
+<text x="55" y="55" class="h">Глава 8 — Осваиваемся в синтаксисе Go · detailed</text>
+<text x="55" y="90" class="b">Boundary: PDF 197–215 · page 216 starts «Структуры данных, типы и их методы»</text>
+
+<rect x="55" y="125" width="475" height="245" rx="14" class="box"/>
+<text x="80" y="165" class="s">1. CLI / flag</text>
+<text x="80" y="202" class="b">flag.Bool defines -n</text>
+<text x="80" y="234" class="b">flag.Parse reads arguments</text>
+<text x="80" y="266" class="b">NArg / Arg access positional args</text>
+<text x="80" y="298" class="b">invalid option → usage</text>
+<text x="80" y="330" class="b">-h / --help generated in example</text>
+
+<rect x="565" y="125" width="475" height="245" rx="14" class="box"/>
+<text x="590" y="165" class="s">2. Numeric algorithms</text>
+<text x="590" y="202" class="b">Newton sqrt: C vs Go</text>
+<text x="590" y="234" class="b">math/big integer π</text>
+<text x="590" y="266" class="b">big.Float sqrt(2)</text>
+<text x="590" y="298" class="b">one-pass mean/variance</text>
+<text x="590" y="330" class="sm">Timing comparison is confounded by RNG choice.</text>
+
+<rect x="1075" y="125" width="470" height="245" rx="14" class="box"/>
+<text x="1100" y="165" class="s">3. Geometry</text>
+<text x="1100" y="202" class="b">complex128 represents 2D point</text>
+<text x="1100" y="234" class="b">point / shape types</text>
+<text x="1100" y="266" class="b">String methods</text>
+<text x="1100" y="298" class="b">cmplx.Abs / Polar</text>
+<text x="1100" y="330" class="b">interactive input validation</text>
+
+<rect x="55" y="405" width="475" height="260" rx="14" class="box"/>
+<text x="80" y="445" class="s">4. Sequential TCP</text>
+<text x="80" y="482" class="b">server listens on :51500</text>
+<text x="80" y="514" class="b">one client at a time in source flow</text>
+<text x="80" y="546" class="b">nc / socat / telnet interoperability</text>
+<text x="80" y="578" class="b">Go client uses net.Dial</text>
+<text x="80" y="610" class="b">Unicode data is exercised</text>
+
+<rect x="565" y="405" width="475" height="260" rx="14" class="box"/>
+<text x="590" y="445" class="s">5. Concurrent TCP</text>
+<text x="590" y="482" class="b">listen on :51501</text>
+<text x="590" y="514" class="b">Accept connection</text>
+<text x="590" y="546" class="b">go func(cn net.Conn)</text>
+<text x="590" y="578" class="b">defer cn.Close()</text>
+<text x="590" y="610" class="b">multiple independent clients</text>
+
+<rect x="1075" y="405" width="470" height="260" rx="14" class="box"/>
+<text x="1100" y="445" class="s">6. HTTP</text>
+<text x="1100" y="482" class="b">custom Hello type</text>
+<text x="1100" y="514" class="b">ServeHTTP implements Handler</text>
+<text x="1100" y="546" class="b">ListenAndServe localhost:4000</text>
+<text x="1100" y="578" class="b">browser verifies response</text>
+<text x="1100" y="610" class="sm">Source example omits systematic error handling.</text>
+
+<rect x="55" y="705" width="475" height="250" rx="14" class="box"/>
+<text x="80" y="745" class="s">7. Map behavior</text>
+<text x="80" y="782" class="b">iterate same map repeatedly</text>
+<text x="80" y="814" class="b">order observed to vary</text>
+<text x="80" y="846" class="b">do not derive stable ordering</text>
+<text x="80" y="878" class="b">maintain separate order structure if needed</text>
+<text x="80" y="910" class="sm">Exact historical runtime details remain source-scoped.</text>
+
+<rect x="565" y="705" width="475" height="250" rx="14" class="box"/>
+<text x="590" y="745" class="s">8. Operational classes</text>
+<text x="590" y="782" class="b">build: make / go build</text>
+<text x="590" y="814" class="b">CPU workload: numeric examples</text>
+<text x="590" y="846" class="b">network workload: TCP / HTTP</text>
+<text x="590" y="878" class="b">verify binary/output/listener</text>
+<text x="590" y="910" class="b">cleanup workflow mostly unspecified</text>
+
+<rect x="1075" y="705" width="470" height="250" rx="14" class="box"/>
+<text x="1100" y="745" class="s">9. Source findings</text>
+<text x="1100" y="782" class="b">skoc.go ↔ sko.go build mismatch</text>
+<text x="1100" y="814" class="b">flag statement broader than example evidence</text>
+<text x="1100" y="846" class="b">RNG confounds timing comparison</text>
+<text x="1100" y="878" class="b">network examples ignore several errors</text>
+<text x="1100" y="910" class="b">map runtime wording is version-scoped</text>
+
+<rect x="55" y="995" width="1490" height="120" rx="14" class="box"/>
+<text x="80" y="1035" class="s">Chapter takeaway</text>
+<text x="80" y="1070" class="b">The value of the chapter is composition: previously learned syntax is assembled into small complete Linux-oriented Go programs.</text>
+</svg>
