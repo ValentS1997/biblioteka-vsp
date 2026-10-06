@@ -1,0 +1,44 @@
+schema_version: "1.0"
+
+freeze:
+  id: "DYNAMIC-IR-RU-TRANSLATION-FREEZE"
+  status: "FROZEN"
+  effective_date: "2026-10-06"
+  scope:
+    - "Russian translation edits"
+    - "Russian translation QA continuation"
+    - "Russian DOCX/PDF assembly"
+    - "Russian publication artifact regeneration"
+
+reason:
+  summary: >-
+    The translation/publication pipeline is temporarily frozen after repeated
+    assembly and QA instability.
+  verified_not_cause:
+    - "canonical English PDF"
+    - "canonical English source SHA"
+    - "canonical English RAG corpus"
+    - "RAG chunk provenance"
+    - "RAG bounded retrieval"
+  last_verified_failure: >-
+    RU v2 assembly audit reported third-party marker preservation mismatch:
+    source=231, v2=230.
+
+preservation:
+  delete_existing_translation_artifacts: false
+  delete_existing_publication_artifacts: false
+  delete_translation_branches: false
+  modify_canonical_english_rag: false
+
+resume:
+  requires:
+    - "explicit user approval"
+    - "translation/assembly root-cause analysis"
+    - "fix for third-party marker preservation"
+    - "successful end-to-end translation assembly QA"
+  action: "Remove/retire this freeze marker only as part of an approved unfreeze change."
+
+automation:
+  expected_behavior: >-
+    Translation/publication workflows must detect this marker and skip
+    state-changing build/publish work while freeze.status is FROZEN.
