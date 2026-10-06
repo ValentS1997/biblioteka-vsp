@@ -14,13 +14,7 @@ Before running:
 - current directory: `[Needs confirmation]`;
 - interpreter version: `[Needs confirmation]`.
 
-Rollback:
-
-~~~bash
-rm -rf -- ll_env
-~~~
-
-Risk: destructive. Run only after verifying the target path is the intended virtual environment and contains no user data.
+Rollback: source does not provide an exact command. Removing the created virtual-environment directory would be a destructive filesystem action; exact target path and cleanup command are `[Needs confirmation]`.
 
 ## Activate environment
 
