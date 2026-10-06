@@ -41,7 +41,7 @@
 - `p0418:c01` завершает раздел 14.7 «Дополнительно об окружениях рабочего стола».
 - Следующий чанк `p0419:c01` начинается главой 15 «Инструменты разработки».
 - Chapter boundary verified: yes
-- Completion status: `RAG_GROUNDED`
+- Completion status: `ACCEPTED`
 
 ## Содержимое
 
