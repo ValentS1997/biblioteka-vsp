@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="980" viewBox="0 0 1400 980">
+  <rect width="1400" height="980" fill="white"/>
+  <text x="60" y="65" font-family="sans-serif" font-size="36" font-weight="700">Глава 1. Обложка — detailed map</text>
+  <text x="60" y="100" font-family="sans-serif" font-size="18">RAG-only · chunks p0009:c01–p0014:c01 · PDF 9–14 · source SHA ac1abb…d7db5</text>
+
+  <rect x="60" y="145" width="1280" height="110" rx="10" fill="#f5f5f5" stroke="#333"/>
+  <text x="85" y="182" font-family="sans-serif" font-size="23" font-weight="700">1.1 Русская версия</text>
+  <text x="85" y="215" font-family="sans-serif" font-size="18">Автор: Swaroop Chitlur · перевод: Владимир Смоляр · перевод основан на original v2.0 · Russian v2.01</text>
+  <text x="85" y="242" font-family="sans-serif" font-size="18">Позиционирование: свободная книга/учебное пособие для начинающих; в тексте заявлен Python 3.</text>
+
+  <rect x="60" y="285" width="620" height="165" rx="10" fill="#f5f5f5" stroke="#333"/>
+  <text x="85" y="322" font-family="sans-serif" font-size="23" font-weight="700">1.2 Кто читает</text>
+  <text x="85" y="355" font-family="sans-serif" font-size="18">• отзывы начинающих и практикующих читателей</text>
+  <text x="85" y="385" font-family="sans-serif" font-size="18">• упоминаются курсы разных университетов</text>
+  <text x="85" y="415" font-family="sans-serif" font-size="18">• отдельно заявлено использование NASA/JPL</text>
+
+  <rect x="720" y="285" width="620" height="165" rx="10" fill="#f5f5f5" stroke="#333"/>
+  <text x="745" y="322" font-family="sans-serif" font-size="23" font-weight="700">1.3 Лицензия</text>
+  <text x="745" y="355" font-family="sans-serif" font-size="18">• копирование / распространение / передача</text>
+  <text x="745" y="385" font-family="sans-serif" font-size="18">• использование фрагментов и коммерческое использование</text>
+  <text x="745" y="415" font-family="sans-serif" font-size="18">• отдельное условие для программ/скриптов: modified BSD note</text>
+
+  <rect x="60" y="485" width="400" height="175" rx="10" fill="#f5f5f5" stroke="#333"/>
+  <text x="85" y="522" font-family="sans-serif" font-size="23" font-weight="700">1.4 Читать</text>
+  <text x="85" y="558" font-family="sans-serif" font-size="18">Чтение в браузере</text>
+  <text x="85" y="600" font-family="sans-serif" font-size="16">read-only / access</text>
+
+  <rect x="500" y="485" width="400" height="175" rx="10" fill="#f5f5f5" stroke="#333"/>
+  <text x="525" y="522" font-family="sans-serif" font-size="23" font-weight="700">1.5 Купить</text>
+  <text x="525" y="558" font-family="sans-serif" font-size="18">Печатный английский вариант</text>
+  <text x="525" y="588" font-family="sans-serif" font-size="18">как offline/support option</text>
+
+  <rect x="940" y="485" width="400" height="175" rx="10" fill="#f5f5f5" stroke="#333"/>
+  <text x="965" y="522" font-family="sans-serif" font-size="23" font-weight="700">1.6 Скачать</text>
+  <text x="965" y="558" font-family="sans-serif" font-size="18">PDF · EPUB (готовится) · полный исходник</text>
+  <text x="965" y="600" font-family="sans-serif" font-size="16">в главе нет CLI-команд скачивания</text>
+
+  <rect x="60" y="700" width="1280" height="105" rx="10" fill="#f5f5f5" stroke="#333"/>
+  <text x="85" y="738" font-family="sans-serif" font-size="23" font-weight="700">1.7 Книга на вашем родном языке</text>
+  <text x="85" y="773" font-family="sans-serif" font-size="18">Для чтения на других языках или помощи с переводом источник направляет на страницу «Переводы».</text>
+
+  <rect x="60" y="840" width="1280" height="90" rx="10" fill="#fafafa" stroke="#666" stroke-dasharray="7 5"/>
+  <text x="85" y="875" font-family="sans-serif" font-size="21" font-weight="700">Source integrity note</text>
+  <text x="85" y="907" font-family="sans-serif" font-size="17">RAG содержит повреждённые glyphs: Aribution, hp, MaGallivan, StackOverﬂow. Точные варианты не нормализованы молча.</text>
+</svg>
