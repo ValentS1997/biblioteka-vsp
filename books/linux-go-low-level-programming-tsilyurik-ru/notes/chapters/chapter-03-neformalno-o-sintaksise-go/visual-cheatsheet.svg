@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780">
+<rect width="1200" height="780" fill="#fff"/>
+<style>text{font-family:Arial,sans-serif;fill:#111}.h{font-size:32px;font-weight:700}.t{font-size:20px;font-weight:700}.b{font-size:16px}.box{fill:#f7f7f7;stroke:#333;stroke-width:2}</style>
+<text x="50" y="55" class="h">Глава 3 — Неформально о синтаксисе Go</text>
+<text x="50" y="88" class="b">RAG: PDF 66–125 · syntax → data → functions → interfaces → errors → packages</text>
+
+<rect x="50" y="125" width="340" height="190" rx="14" class="box"/>
+<text x="75" y="165" class="t">Syntax &amp; types</text>
+<text x="75" y="200" class="b">newline / semicolon rules</text>
+<text x="75" y="230" class="b">gofmt / go fmt</text>
+<text x="75" y="260" class="b">explicit conversions</text>
+<text x="75" y="290" class="b">zero values · :=</text>
+
+<rect x="430" y="125" width="340" height="190" rx="14" class="box"/>
+<text x="455" y="165" class="t">Data</text>
+<text x="455" y="200" class="b">arrays / slices</text>
+<text x="455" y="230" class="b">new / make</text>
+<text x="455" y="260" class="b">struct / embedding</text>
+<text x="455" y="290" class="b">map</text>
+
+<rect x="810" y="125" width="340" height="190" rx="14" class="box"/>
+<text x="835" y="165" class="t">Functions</text>
+<text x="835" y="200" class="b">multiple returns</text>
+<text x="835" y="230" class="b">variadic</text>
+<text x="835" y="260" class="b">closures / higher-order</text>
+<text x="835" y="290" class="b">defer</text>
+
+<rect x="50" y="355" width="340" height="190" rx="14" class="box"/>
+<text x="75" y="395" class="t">Methods &amp; interfaces</text>
+<text x="75" y="430" class="b">receiver: value / pointer</text>
+<text x="75" y="460" class="b">methods on named types</text>
+<text x="75" y="490" class="b">interface = method set</text>
+<text x="75" y="520" class="b">implicit satisfaction</text>
+
+<rect x="430" y="355" width="340" height="190" rx="14" class="box"/>
+<text x="455" y="395" class="t">Errors</text>
+<text x="455" y="430" class="b">error value</text>
+<text x="455" y="460" class="b">multiple-return error path</text>
+<text x="455" y="490" class="b">panic</text>
+<text x="455" y="520" class="b">defer + recover</text>
+
+<rect x="810" y="355" width="340" height="190" rx="14" class="box"/>
+<text x="835" y="395" class="t">Packages / stdlib</text>
+<text x="835" y="430" class="b">import / visibility</text>
+<text x="835" y="460" class="b">fmt · strings · Unicode</text>
+<text x="835" y="490" class="b">math/big</text>
+<text x="835" y="520" class="b">testing · go test</text>
+
+<text x="50" y="610" class="t">Operational checks</text>
+<text x="50" y="645" class="b">Read-only: which gofmt · gofmt --help · go help fmt</text>
+<text x="50" y="675" class="b">State-changing: formatter write mode · go build</text>
+<text x="50" y="705" class="b">Workload: example binaries · go test</text>
+<text x="50" y="745" class="b">Source mismatch recorded: grouped const/iota example on page 75.</text>
+</svg>
