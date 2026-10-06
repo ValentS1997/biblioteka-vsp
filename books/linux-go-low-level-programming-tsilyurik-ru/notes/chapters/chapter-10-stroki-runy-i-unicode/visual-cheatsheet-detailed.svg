@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1160" viewBox="0 0 1600 1160">
+<rect width="1600" height="1160" fill="#fff"/>
+<style>text{font-family:Arial,sans-serif;fill:#111}.h{font-size:35px;font-weight:700}.s{font-size:22px;font-weight:700}.b{font-size:16px}.sm{font-size:14px}.box{fill:#f8f8f8;stroke:#333;stroke-width:2}</style>
+<text x="55" y="55" class="h">Глава 10 — Строки, руны и UNICODE · detailed</text>
+<text x="55" y="90" class="b">Boundary: PDF 223–232 · page 233 starts separate chapter «Элементы функционального программирования»</text>
+
+<rect x="55" y="125" width="475" height="245" rx="14" class="box"/>
+<text x="80" y="165" class="s">1. Bytes and rune</text>
+<text x="80" y="202" class="b">len(string) reports byte-oriented length</text>
+<text x="80" y="234" class="b">indexing exposes encoded bytes</text>
+<text x="80" y="266" class="b">range yields rune-oriented iteration</text>
+<text x="80" y="298" class="b">[]rune conversion supports comparison</text>
+<text x="80" y="330" class="b">RuneCountInString shown separately</text>
+
+<rect x="565" y="125" width="475" height="245" rx="14" class="box"/>
+<text x="590" y="165" class="s">2. String transformations</text>
+<text x="590" y="202" class="b">strings.Map callback</text>
+<text x="590" y="234" class="b">unicode.IsNumber example</text>
+<text x="590" y="266" class="b">ToLower / ReplaceAll</text>
+<text x="590" y="298" class="b">transformation returns new string value</text>
+<text x="590" y="330" class="sm">Exact memory relocation claim is not proven in chapter.</text>
+
+<rect x="1075" y="125" width="470" height="245" rx="14" class="box"/>
+<text x="1100" y="165" class="s">3. Palindrome evolution</text>
+<text x="1100" y="202" class="b">palindrow: direct []rune compare</text>
+<text x="1100" y="234" class="b">palindrob: lower + remove spaces</text>
+<text x="1100" y="266" class="b">palindrom: replacements + regexp</text>
+<text x="1100" y="298" class="b">stdin or file scanner</text>
+<text x="1100" y="330" class="b">negative file-open path demonstrated</text>
+
+<rect x="55" y="405" width="475" height="260" rx="14" class="box"/>
+<text x="80" y="445" class="s">4. Regexp search</text>
+<text x="80" y="482" class="b">regexp.Compile(d+)</text>
+<text x="80" y="514" class="b">FindAllString</text>
+<text x="80" y="546" class="b">FindAllStringIndex</text>
+<text x="80" y="578" class="b">indexes observed against UTF-8 strings</text>
+<text x="80" y="610" class="b">stdin / redirected-file workflows</text>
+
+<rect x="565" y="405" width="475" height="260" rx="14" class="box"/>
+<text x="590" y="445" class="s">5. Regexp transformation</text>
+<text x="590" y="482" class="b">w+ experiment</text>
+<text x="590" y="514" class="b">language-specific range experiment</text>
+<text x="590" y="546" class="b">S+ experiment</text>
+<text x="590" y="578" class="b">pL+ experiment</text>
+<text x="590" y="610" class="b">ReplaceAllStringFunc → ToLower</text>
+
+<rect x="1075" y="405" width="470" height="260" rx="14" class="box"/>
+<text x="1100" y="445" class="s">6. Critical validation</text>
+<text x="1100" y="482" class="b">allow-list regex is not Unicode-complete</text>
+<text x="1100" y="514" class="b">Greek input may be removed before compare</text>
+<text x="1100" y="546" class="b">final true alone is insufficient</text>
+<text x="1100" y="578" class="b">inspect normalized intermediate value</text>
+<text x="1100" y="610" class="b">test representative scripts/categories</text>
+
+<rect x="55" y="705" width="720" height="245" rx="14" class="box"/>
+<text x="80" y="745" class="s">7. Command boundary</text>
+<text x="80" y="782" class="b">local binaries → workload</text>
+<text x="80" y="814" class="b">go run → compile-and-run workflow</text>
+<text x="80" y="846" class="b">cat / redirection → read-only input</text>
+<text x="80" y="878" class="b">no system config changes shown</text>
+
+<rect x="825" y="705" width="720" height="245" rx="14" class="box"/>
+<text x="850" y="745" class="s">8. Source findings</text>
+<text x="850" y="782" class="b">UTF-8 max-width wording needs adjudication</text>
+<text x="850" y="814" class="b">mixed-script regexp range anomaly</text>
+<text x="850" y="846" class="b">pL+ description broader than evidence</text>
+<text x="850" y="878" class="b">regexp feature-parity wording is too broad for chapter evidence</text>
+
+<text x="55" y="1040" class="s">Transition</text>
+<text x="55" y="1075" class="b">Page 233 begins chapter 11: «Элементы функционального программирования».</text>
+</svg>
