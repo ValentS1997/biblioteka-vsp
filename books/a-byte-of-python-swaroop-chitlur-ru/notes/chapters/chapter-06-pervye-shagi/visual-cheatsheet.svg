@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="880" viewBox="0 0 1280 880">
+  <rect width="1280" height="880" fill="white"/>
+  <text x="55" y="62" font-family="sans-serif" font-size="34" font-weight="700">Глава 6 — «Первые шаги»</text>
+  <text x="55" y="98" font-family="sans-serif" font-size="18">RAG PDF 35–42 · p0035:c01–p0042:c01</text>
+
+  <rect x="55" y="140" width="350" height="150" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="80" y="180" font-family="sans-serif" font-size="22" font-weight="700">1. REPL</text>
+  <text x="80" y="220" font-family="monospace" font-size="19">python3</text>
+  <text x="80" y="252" font-family="monospace" font-size="19">&gt;&gt;&gt; print(...)</text>
+
+  <rect x="465" y="140" width="350" height="150" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="490" y="180" font-family="sans-serif" font-size="22" font-weight="700">2. File</text>
+  <text x="490" y="220" font-family="monospace" font-size="18">helloworld.py</text>
+  <text x="490" y="252" font-family="monospace" font-size="18">python3 helloworld.py</text>
+
+  <rect x="875" y="140" width="350" height="150" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="900" y="180" font-family="sans-serif" font-size="22" font-weight="700">3. Verify</text>
+  <text x="900" y="220" font-family="sans-serif" font-size="18">Expected output?</text>
+  <text x="900" y="252" font-family="sans-serif" font-size="18">case + whitespace check</text>
+
+  <rect x="55" y="345" width="560" height="205" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="80" y="385" font-family="sans-serif" font-size="22" font-weight="700">Unix executable path</text>
+  <text x="80" y="425" font-family="monospace" font-size="18">#!/usr/bin/env python3</text>
+  <text x="80" y="458" font-family="monospace" font-size="18">chmod a+x helloworld.py</text>
+  <text x="80" y="491" font-family="monospace" font-size="18">./helloworld.py</text>
+  <text x="80" y="525" font-family="sans-serif" font-size="16">chmod changes file mode.</text>
+
+  <rect x="665" y="345" width="560" height="205" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="690" y="385" font-family="sans-serif" font-size="22" font-weight="700">PATH + help</text>
+  <text x="690" y="425" font-family="monospace" font-size="18">echo $PATH</text>
+  <text x="690" y="458" font-family="monospace" font-size="18">help(print)</text>
+  <text x="690" y="491" font-family="monospace" font-size="18">help('return')</text>
+  <text x="690" y="525" font-family="sans-serif" font-size="16">q exits help.</text>
+
+  <rect x="55" y="605" width="1170" height="135" rx="12" fill="#fafafa" stroke="#333"/>
+  <text x="80" y="645" font-family="sans-serif" font-size="22" font-weight="700">Operational discipline</text>
+  <text x="80" y="682" font-family="sans-serif" font-size="18">Read/execute → verify output → only then optional mkdir/chmod/cp/PATH changes.</text>
+  <text x="80" y="714" font-family="sans-serif" font-size="17">Rollback for state-changing source operations: [Needs confirmation].</text>
+
+  <text x="55" y="800" font-family="sans-serif" font-size="17">Chapter-end summary present: 6.6. Next: PDF 43 «Основы».</text>
+  <text x="55" y="835" font-family="sans-serif" font-size="16">Finding: Hello World casing differs between prose and REPL example.</text>
+</svg>
