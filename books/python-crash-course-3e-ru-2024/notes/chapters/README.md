@@ -10,3 +10,4 @@ Reviewed chapter-level notes are stored here.
 - [Chapter 6 — Словари](chapter-06-dictionaries/README.md)
 - [Chapter 7 — Ввод данных и циклы while](chapter-07-input-and-while-loops/README.md)
 - [Chapter 8 — Функции](chapter-08-functions/README.md)
+- [Chapter 9 — Классы](chapter-09-classes/README.md)
