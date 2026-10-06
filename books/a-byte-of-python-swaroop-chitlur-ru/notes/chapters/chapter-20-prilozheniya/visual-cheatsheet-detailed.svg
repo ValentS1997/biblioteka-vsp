@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1780" height="1450" viewBox="0 0 1780 1450">
+  <rect width="1780" height="1450" fill="white"/>
+  <text x="55" y="65" font-family="sans-serif" font-size="36" font-weight="700">Глава 20. Приложения — detailed map</text>
+  <text x="55" y="102" font-family="sans-serif" font-size="18">Merged original appendices 20–23 · p0151:c01–p0160:c01 · PDF 151–160 · source end</text>
+
+  <rect x="55" y="140" width="1670" height="120" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="80" y="180" font-family="sans-serif" font-size="23" font-weight="700">Artifact organization</text>
+  <text x="80" y="220" font-family="sans-serif" font-size="18">One final canonical chapter preserves four original appendix identities and includes final PDF back matter for complete source closure.</text>
+
+  <rect x="55" y="305" width="520" height="360" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="80" y="345" font-family="sans-serif" font-size="23" font-weight="700">Appendix 20 — FLOSS</text>
+  <text x="80" y="390" font-family="sans-serif" font-size="18">sharing / use / modify / distribute</text>
+  <text x="80" y="430" font-family="sans-serif" font-size="18">Linux · GNU · Ubuntu · LibreOffice</text>
+  <text x="80" y="470" font-family="sans-serif" font-size="18">Firefox · Mono · Apache · MySQL · VLC</text>
+  <text x="80" y="510" font-family="sans-serif" font-size="18">community/resources</text>
+  <text x="80" y="555" font-family="sans-serif" font-size="16">popularity/market-share claims are source-historical</text>
+  <text x="80" y="600" font-family="sans-serif" font-size="16">PDF 151–152</text>
+
+  <rect x="630" y="305" width="520" height="360" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="655" y="345" font-family="sans-serif" font-size="23" font-weight="700">Appendix 21 — About the book</text>
+  <text x="655" y="390" font-family="sans-serif" font-size="18">Red Hat / Fedora-era authoring history</text>
+  <text x="655" y="430" font-family="sans-serif" font-size="18">KWord → DocBook XML → OpenOffice</text>
+  <text x="655" y="470" font-family="sans-serif" font-size="18">XEmacs / Quanta+ / XSL / CSS</text>
+  <text x="655" y="510" font-family="sans-serif" font-size="18">MediaWiki / Vim → Pandoc / Mac OS X</text>
+  <text x="655" y="555" font-family="sans-serif" font-size="16">“Сейчас” is relative to source edition</text>
+  <text x="655" y="600" font-family="sans-serif" font-size="16">PDF 153–154</text>
+
+  <rect x="1205" y="305" width="520" height="360" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="1230" y="345" font-family="sans-serif" font-size="23" font-weight="700">Appendix 22 — Version history</text>
+  <text x="1230" y="390" font-family="monospace" font-size="17">0.10 · 14/11/2003</text>
+  <text x="1230" y="430" font-family="monospace" font-size="17">1.00 · 08/03/2004</text>
+  <text x="1230" y="470" font-family="monospace" font-size="17">1.20 · 13/01/2005</text>
+  <text x="1230" y="510" font-family="monospace" font-size="17">1.90 · 04/09/2008</text>
+  <text x="1230" y="550" font-family="monospace" font-size="17">2.0 · 20/10/2012</text>
+  <text x="1230" y="600" font-family="sans-serif" font-size="16">PDF 155–158 · p158 footer-only</text>
+
+  <rect x="55" y="715" width="800" height="270" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="80" y="755" font-family="sans-serif" font-size="23" font-weight="700">Appendix 23 — Translation</text>
+  <text x="80" y="800" font-family="sans-serif" font-size="18">source Git repository</text>
+  <text x="80" y="840" font-family="sans-serif" font-size="18">fork → download → edit .pd files</text>
+  <text x="80" y="880" font-family="sans-serif" font-size="18">read Pandoc README → install build dependencies</text>
+  <text x="80" y="920" font-family="sans-serif" font-size="17">exact Git/install/build commands absent → [Needs confirmation]</text>
+  <text x="80" y="955" font-family="sans-serif" font-size="16">PDF 159</text>
+
+  <rect x="905" y="715" width="820" height="270" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="930" y="755" font-family="sans-serif" font-size="23" font-weight="700">Final back matter / source end</text>
+  <text x="930" y="800" font-family="sans-serif" font-size="18">PDF 160: short Swaroop C H biography</text>
+  <text x="930" y="840" font-family="sans-serif" font-size="18">current-role wording is source-edition-relative</text>
+  <text x="930" y="880" font-family="sans-serif" font-size="18">no Appendix 23 heading on this page</text>
+  <text x="930" y="920" font-family="monospace" font-size="17">p0160:c01 = last canonical chunk/page</text>
+  <text x="930" y="955" font-family="sans-serif" font-size="16">included only for complete source coverage</text>
+
+  <rect x="55" y="1035" width="1670" height="280" rx="10" fill="#fafafa" stroke="#666" stroke-dasharray="7 5"/>
+  <text x="80" y="1075" font-family="sans-serif" font-size="22" font-weight="700">Integrity findings</text>
+  <text x="80" y="1115" font-family="sans-serif" font-size="17">• Appendix 22 says metaclasses were removed in 2.0, but this Russian source contains chapter 14.7 Metaclasses</text>
+  <text x="80" y="1150" font-family="sans-serif" font-size="17">• project names and URLs contain extraction/font corruption (hp, LibreOﬃce, etc.)</text>
+  <text x="80" y="1185" font-family="sans-serif" font-size="17">• popularity, market-share, platform and “currently” claims are not current-verified facts</text>
+  <text x="80" y="1220" font-family="sans-serif" font-size="17">• translation appendix describes actions but provides no exact operational commands</text>
+  <text x="80" y="1255" font-family="sans-serif" font-size="17">• no common explicit source summary exists across appendices 20–23</text>
+  <text x="80" y="1290" font-family="sans-serif" font-size="17">• reading status remains separate and unchanged</text>
+
+  <text x="55" y="1370" font-family="sans-serif" font-size="18">Chapter-analysis coverage complete: chapters 1–19 + merged chapter 20 through PDF 160.</text>
+  <text x="55" y="1405" font-family="sans-serif" font-size="17">No canonical source page remains after p0160:c01.</text>
+</svg>
