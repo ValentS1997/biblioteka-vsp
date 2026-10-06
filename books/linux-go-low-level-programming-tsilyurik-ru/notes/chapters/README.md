@@ -9,3 +9,4 @@ Current chapter workflow:
 
 - [Chapter 1 — «Предыстория Go»](chapter-01-predystoriya-go/) — `RAG_GROUNDED`
 - [Chapter 2 — «Разворачиваем экосистему Go»](chapter-02-razvorachivaem-ekosistemu-go/) — `RAG_GROUNDED`
+- [Chapter 3 — «Неформально о синтаксисе Go»](chapter-03-neformalno-o-sintaksise-go/) — `RAG_GROUNDED`
