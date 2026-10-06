@@ -18,5 +18,7 @@
 
 - [Глава 9. Улучшение моделей ИИ: тонкая настройка данных RAG и обратная связь](./chapter-09-fine-tuning-rag-data-feedback/) — `RAG_GROUNDED`, PDF 253–270.
 
+- [Глава 10. RAG для создания стоковых видео с помощью Pinecone и OpenAI](./chapter-10-stock-video-rag-pinecone-openai/) — `RAG_GROUNDED`, PDF 271–306.
+
 Book-level readiness must be `READY` before running
 `BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.6`.
