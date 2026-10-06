@@ -8,4 +8,4 @@ Current chapter workflow:
 ## RAG-grounded chapter work
 
 - [Chapter 1 — «Обложка»](chapter-01-oblozhka/) — `RAG_GROUNDED`
-
+- [Chapter 2 — «Переводы»](chapter-02-perevody/) — `RAG_GROUNDED`
