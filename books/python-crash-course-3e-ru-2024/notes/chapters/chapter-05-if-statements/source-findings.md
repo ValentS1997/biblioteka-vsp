@@ -8,9 +8,9 @@ Provenance:
 
 - EPUB spine item: `14`
 - locator: `OEBPS/Text/978544614112-11.xhtml`
-- affected starts observed: `e0014:c03`, `c05`, `c06`, `c07`, `c08`, `c09`, `c10`, `c11`
+- affected starts observed: `e0014:c02`–`e0014:c11`
 
-Observed fragments include starts such as `кольких условий...`, `ыполняются...`, `thon выполняет...`, `но условие...`, continuation text from exercise 5.4, `eese']...`, `g your pizza!...` and `thon; они...`.
+Observed boundaries include duplicated/partial starts such as `два значения...`, `кольких условий...`, `черный список...`, `ыполняются...`, `thon выполняет...`, `но условие...`, continuation text from exercise 5.4, `eese']...`, `g your pizza!...` and `thon; они...`.
 
 Cross-check:
 
