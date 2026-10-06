@@ -11,3 +11,4 @@ Reviewed chapter-level notes are stored here.
 - [Chapter 7 — Дообучение, или Тонкая настройка](chapter-07-finetuning/README.md)
 - [Chapter 8 — Проектирование наборов данных](chapter-08-dataset-design/README.md)
 - [Chapter 9 — Оптимизация вывода](chapter-09-inference-optimization/README.md)
+- [Chapter 10 — Архитектура AI-инженерии и обратная связь от пользователей](chapter-10-ai-engineering-architecture-user-feedback/README.md)

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1280" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 10 — подробная визуальная шпаргалка</title>
+  <desc id="desc">Architecture progression, guardrails, routing/gateway, caching, observability, orchestration and user feedback.</desc>
+  <rect width="1600" height="1280" fill="#f7f8fa"/>
+  <rect width="1600" height="112" fill="#17202a"/>
+  <text x="58" y="49" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="32" font-weight="700" fill="#ffffff">Глава 10 — Архитектура AI-инженерии и обратная связь</text>
+  <text x="58" y="84" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" fill="#d6e4f0">context · guardrails · routing · gateway · caching · agents · observability · orchestration · feedback</text>
+
+  <rect x="50" y="145" width="470" height="245" rx="18" fill="#ffffff" stroke="#5dade2" stroke-width="2"/>
+  <text x="78" y="185" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#1b4f72">1. Progressive architecture</text>
+  <text x="78" y="223" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="78" dy="0">Start: request → model → response.</tspan>
+    <tspan x="78" dy="28">Add context only for information needs.</tspan>
+    <tspan x="78" dy="28">Add components as failure modes appear.</tspan>
+    <tspan x="78" dy="36">Complexity is a cost and a new failure surface.</tspan>
+  </text>
+
+  <rect x="565" y="145" width="470" height="245" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="593" y="185" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#196f3d">2. Guardrails</text>
+  <text x="593" y="223" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="593" dy="0">Input: PII/secrets + prompt attacks.</tspan>
+    <tspan x="593" dy="28">Output: format · facts · safety · privacy.</tspan>
+    <tspan x="593" dy="28">Retry / alternative / human escalation.</tspan>
+    <tspan x="593" dy="36">Trade-off: safety/reliability vs latency/cost.</tspan>
+  </text>
+
+  <rect x="1080" y="145" width="470" height="245" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1108" y="185" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#9c640c">3. Router + gateway</text>
+  <text x="1108" y="223" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="1108" dy="0">Route by intent / cost / capability.</tspan>
+    <tspan x="1108" dy="28">Gateway = unified model control plane.</tspan>
+    <tspan x="1108" dy="28">Access · rate · cost · failover · logs.</tspan>
+    <tspan x="1108" dy="36">Common path: route → retrieve → generate → evaluate.</tspan>
+  </text>
+
+  <rect x="50" y="420" width="720" height="285" rx="18" fill="#ffffff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="78" y="460" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#6c3483">4. Cache + agents</text>
+  <text x="78" y="498" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="78" dy="0">Exact cache: identical key; LRU/LFU/FIFO.</tspan>
+    <tspan x="78" dy="28">Semantic cache: embedding → nearest match → threshold.</tspan>
+    <tspan x="78" dy="28">Wrong cache hit can be worse than a miss; privacy isolation matters.</tspan>
+    <tspan x="78" dy="28">Agent loops add search/retry/branching.</tspan>
+    <tspan x="78" dy="28">Write actions change external state → strongest safety boundary.</tspan>
+  </text>
+
+  <rect x="810" y="420" width="740" height="285" rx="18" fill="#ffffff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="838" y="460" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#21618c">5. Observability + orchestration</text>
+  <text x="838" y="498" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="838" dy="0">MTTD · MTTR · CFR.</tspan>
+    <tspan x="838" dy="28">Metrics detect; logs explain events; traces reconstruct request path.</tspan>
+    <tspan x="838" dy="28">Monitor prompt/user/model drift.</tspan>
+    <tspan x="838" dy="28">Evaluation ↔ monitoring should form one loop.</tspan>
+    <tspan x="838" dy="28">Orchestrator helps only after component boundaries are understood.</tspan>
+  </text>
+
+  <rect x="50" y="735" width="470" height="280" rx="18" fill="#ffffff" stroke="#ec7063" stroke-width="2"/>
+  <text x="78" y="775" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#922b21">6. Feedback signals</text>
+  <text x="78" y="813" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="78" dy="0">Explicit: rating · thumbs · comparison.</tspan>
+    <tspan x="78" dy="28">Implicit: regenerate · edit · delete/share.</tspan>
+    <tspan x="78" dy="28">Conversation: correction · preference · frustration.</tspan>
+    <tspan x="78" dy="28">Use for evaluation · product · personalization · training.</tspan>
+  </text>
+
+  <rect x="565" y="735" width="470" height="280" rx="18" fill="#ffffff" stroke="#f5b041" stroke-width="2"/>
+  <text x="593" y="775" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#9c640c">7. Feedback design</text>
+  <text x="593" y="813" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="593" dy="0">Collect throughout user journey.</tspan>
+    <tspan x="593" dy="28">Especially after failures / uncertainty.</tspan>
+    <tspan x="593" dy="28">Minimize friction; integrate into user action.</tspan>
+    <tspan x="593" dy="28">Explain how data is used; respect consent/privacy.</tspan>
+  </text>
+
+  <rect x="1080" y="735" width="470" height="280" rx="18" fill="#ffffff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="1108" y="775" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#196f3d">8. Feedback limits</text>
+  <text x="1108" y="813" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#273746">
+    <tspan x="1108" dy="0">Inflated ratings · random clicks.</tspan>
+    <tspan x="1108" dy="28">Position / recency / preference bias.</tspan>
+    <tspan x="1108" dy="28">Exposure shapes the data you receive.</tspan>
+    <tspan x="1108" dy="28">Degenerate feedback loops can amplify bias.</tspan>
+  </text>
+
+  <rect x="50" y="1050" width="1500" height="155" rx="16" fill="#17202a"/>
+  <text x="78" y="1090" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#ffffff">Operational sequence</text>
+  <text x="78" y="1125" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="17" fill="#d6e4f0">
+    <tspan x="78" dy="0">start simple → add component for observed failure → instrument it → measure latency/cost/quality/security</tspan>
+    <tspan x="78" dy="29">→ collect feedback with context + consent → independent evaluation → iterate without allowing feedback to become the sole objective</tspan>
+  </text>
+
+  <text x="50" y="1245" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="15" fill="#566573">Provenance: RAG p0508:c01–p0555:c01 · PDF/printed pages 508–555 · source SHA-256 850c3652…62fba</text>
+</svg>
