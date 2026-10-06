@@ -86,7 +86,7 @@ RAG readiness и reading progress — разные состояния. Нали�
 
 - [Templates index](templates/README.md)
 - [Git execution policy v1.0](templates/git-execution-policy-v1.0.yaml)
-- [New book branch bootstrap v1.2](templates/book-branch-bootstrap-v1.3.yaml)
+- [New book branch bootstrap v1.3](templates/book-branch-bootstrap-v1.3.yaml)
 - [Book onboarding v1.3](templates/book-onboarding-v1.3.yaml)
 - [RAG ingestion acceptance v1.0](templates/rag-ingestion-acceptance-v1.0.yaml)
 - [Book readiness v1.3](templates/book-readiness-v1.3.yaml)
