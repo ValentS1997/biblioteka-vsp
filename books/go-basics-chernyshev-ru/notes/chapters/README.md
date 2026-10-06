@@ -8,5 +8,7 @@
 
 - [Глава 4. Обработка ошибок и паник в Go](./chapter-04-errors-and-panics/) — `RAG_GROUNDED`, PDF 199–212.
 
+- [Глава 5. Работа с файлами и каталогами. Сборка приложения](./chapter-05-files-directories-build/) — `RAG_GROUNDED`, PDF 213–307.
+
 Book-level readiness must be `READY` before running
 `BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.6`.
