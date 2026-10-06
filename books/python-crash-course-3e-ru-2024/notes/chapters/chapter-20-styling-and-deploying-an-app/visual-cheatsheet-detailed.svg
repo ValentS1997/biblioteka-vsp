@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1100" viewBox="0 0 1500 1100">
+  <rect width="1500" height="1100" fill="#ffffff"/>
+  <text x="55" y="65" font-family="sans-serif" font-size="34" font-weight="700">Глава 20 — подробная визуальная шпаргалка</text>
+  <text x="55" y="102" font-family="sans-serif" font-size="18">Оформление → конфигурация → Git snapshot → Platform.sh → hardening → controlled updates</text>
+
+  <rect x="55" y="145" width="430" height="300" rx="16" fill="#f5f5f5" stroke="#333"/>
+  <text x="80" y="185" font-family="sans-serif" font-size="24" font-weight="700">A. Bootstrap layer</text>
+  <text x="80" y="225" font-family="sans-serif" font-size="17">pip install django-bootstrap5</text>
+  <text x="80" y="255" font-family="sans-serif" font-size="17">INSTALLED_APPS → django_bootstrap5</text>
+  <text x="80" y="285" font-family="sans-serif" font-size="17">base.html:</text>
+  <text x="100" y="315" font-family="sans-serif" font-size="17">• bootstrap_css + bootstrap_javascript</text>
+  <text x="100" y="345" font-family="sans-serif" font-size="17">• responsive navbar</text>
+  <text x="100" y="375" font-family="sans-serif" font-size="17">• account links + logout form</text>
+  <text x="100" y="405" font-family="sans-serif" font-size="17">• page_header + content blocks</text>
+
+  <rect x="535" y="145" width="430" height="300" rx="16" fill="#f5f5f5" stroke="#333"/>
+  <text x="560" y="185" font-family="sans-serif" font-size="24" font-weight="700">B. Page styling</text>
+  <text x="560" y="225" font-family="sans-serif" font-size="17">index → lead/jumbotron-style block</text>
+  <text x="560" y="255" font-family="sans-serif" font-size="17">login → bootstrap_form + button</text>
+  <text x="560" y="285" font-family="sans-serif" font-size="17">topics → list-group</text>
+  <text x="560" y="315" font-family="sans-serif" font-size="17">topic entries → cards</text>
+  <text x="560" y="355" font-family="sans-serif" font-size="17">Acceptance:</text>
+  <text x="580" y="385" font-family="sans-serif" font-size="17">• existing Django behavior retained</text>
+  <text x="580" y="415" font-family="sans-serif" font-size="17">• responsive navbar works</text>
+
+  <rect x="1015" y="145" width="430" height="300" rx="16" fill="#f5f5f5" stroke="#333"/>
+  <text x="1040" y="185" font-family="sans-serif" font-size="24" font-weight="700">C. Deployment inputs</text>
+  <text x="1040" y="225" font-family="sans-serif" font-size="17">pip freeze → requirements.txt</text>
+  <text x="1040" y="255" font-family="sans-serif" font-size="17">requirements_remote.txt:</text>
+  <text x="1060" y="285" font-family="sans-serif" font-size="17">• gunicorn</text>
+  <text x="1060" y="315" font-family="sans-serif" font-size="17">• psycopg2</text>
+  <text x="1040" y="355" font-family="sans-serif" font-size="17">Config files:</text>
+  <text x="1060" y="385" font-family="sans-serif" font-size="17">• .platform.app.yaml</text>
+  <text x="1060" y="415" font-family="sans-serif" font-size="17">• routes.yaml + services.yaml</text>
+
+  <line x1="485" y1="295" x2="535" y2="295" stroke="#333" stroke-width="3"/>
+  <polygon points="535,295 523,287 523,303" fill="#333"/>
+  <line x1="965" y1="295" x2="1015" y2="295" stroke="#333" stroke-width="3"/>
+  <polygon points="1015,295 1003,287 1003,303" fill="#333"/>
+
+  <rect x="55" y="495" width="430" height="270" rx="16" fill="#f5f5f5" stroke="#333"/>
+  <text x="80" y="535" font-family="sans-serif" font-size="24" font-weight="700">D. Platform settings</text>
+  <text x="80" y="575" font-family="sans-serif" font-size="17">platformshconfig.Config</text>
+  <text x="80" y="605" font-family="sans-serif" font-size="17">if config.is_valid_platform():</text>
+  <text x="100" y="635" font-family="sans-serif" font-size="17">• ALLOWED_HOSTS</text>
+  <text x="100" y="665" font-family="sans-serif" font-size="17">• STATIC_ROOT</text>
+  <text x="100" y="695" font-family="sans-serif" font-size="17">• SECRET_KEY</text>
+  <text x="100" y="725" font-family="sans-serif" font-size="17">• Postgres DATABASES</text>
+
+  <rect x="535" y="495" width="430" height="270" rx="16" fill="#f5f5f5" stroke="#333"/>
+  <text x="560" y="535" font-family="sans-serif" font-size="24" font-weight="700">E. Git gate</text>
+  <text x="560" y="575" font-family="sans-serif" font-size="17">.gitignore:</text>
+  <text x="580" y="605" font-family="sans-serif" font-size="17">ll_env/ · __pycache__/ · *.sqlite3</text>
+  <text x="560" y="645" font-family="sans-serif" font-size="17">git init → git add . → commit</text>
+  <text x="560" y="685" font-family="sans-serif" font-size="17">git status</text>
+  <text x="580" y="715" font-family="sans-serif" font-size="17">Acceptance: working tree clean</text>
+
+  <rect x="1015" y="495" width="430" height="270" rx="16" fill="#f5f5f5" stroke="#333"/>
+  <text x="1040" y="535" font-family="sans-serif" font-size="24" font-weight="700">F. Deploy and verify</text>
+  <text x="1040" y="575" font-family="sans-serif" font-size="17">platform login → platform create</text>
+  <text x="1040" y="605" font-family="sans-serif" font-size="17">platform push</text>
+  <text x="1040" y="635" font-family="sans-serif" font-size="17">build: install + collectstatic</text>
+  <text x="1040" y="665" font-family="sans-serif" font-size="17">deploy: migrate</text>
+  <text x="1040" y="695" font-family="sans-serif" font-size="17">platform url → open app</text>
+  <text x="1040" y="725" font-family="sans-serif" font-size="17">SSH → createsuperuser</text>
+
+  <line x1="485" y1="630" x2="535" y2="630" stroke="#333" stroke-width="3"/>
+  <polygon points="535,630 523,622 523,638" fill="#333"/>
+  <line x1="965" y1="630" x2="1015" y2="630" stroke="#333" stroke-width="3"/>
+  <polygon points="1015,630 1003,622 1003,638" fill="#333"/>
+
+  <rect x="55" y="815" width="670" height="205" rx="16" fill="#f5f5f5" stroke="#333"/>
+  <text x="80" y="855" font-family="sans-serif" font-size="24" font-weight="700">G. Production hardening</text>
+  <text x="80" y="895" font-family="sans-serif" font-size="17">DEBUG = False only in Platform.sh environment</text>
+  <text x="80" y="925" font-family="sans-serif" font-size="17">commit → git status → platform push</text>
+  <text x="80" y="955" font-family="sans-serif" font-size="17">Verify /topics/999/: generic 500, no debug detail</text>
+  <text x="80" y="985" font-family="sans-serif" font-size="17">Add root templates/404.html + 500.html and redeploy</text>
+
+  <rect x="775" y="815" width="670" height="205" rx="16" fill="#f5f5f5" stroke="#333"/>
+  <text x="800" y="855" font-family="sans-serif" font-size="24" font-weight="700">H. Controlled lifecycle</text>
+  <text x="800" y="895" font-family="sans-serif" font-size="17">Update: local change → add if needed → commit → push → verify</text>
+  <text x="800" y="925" font-family="sans-serif" font-size="17">Failure path: correct code/config → new commit → push again</text>
+  <text x="800" y="955" font-family="sans-serif" font-size="17">Cleanup: delete remote project when no longer needed</text>
+  <text x="800" y="985" font-family="sans-serif" font-size="17">Optional: remove Platform.sh Git remote reference</text>
+
+  <text x="55" y="1060" font-family="sans-serif" font-size="15">Source boundary: e0030:c01–c19; e0031:c01 = «Приложения». Environment-specific values require confirmation.</text>
+</svg>
