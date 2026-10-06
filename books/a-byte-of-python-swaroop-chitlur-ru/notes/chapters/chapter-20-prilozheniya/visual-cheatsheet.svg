@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="980" viewBox="0 0 1360 980">
+  <rect width="1360" height="980" fill="white"/>
+  <text x="55" y="62" font-family="sans-serif" font-size="34" font-weight="700">Глава 20 — «Приложения»</text>
+  <text x="55" y="98" font-family="sans-serif" font-size="18">Merged original appendices 20–23 · RAG PDF 151–160 · end of source</text>
+
+  <rect x="55" y="140" width="285" height="210" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="80" y="180" font-family="sans-serif" font-size="22" font-weight="700">Original 20</text>
+  <text x="80" y="215" font-family="sans-serif" font-size="18">FLOSS</text>
+  <text x="80" y="250" font-family="sans-serif" font-size="18">community / sharing</text>
+  <text x="80" y="285" font-family="sans-serif" font-size="18">software examples</text>
+  <text x="80" y="320" font-family="sans-serif" font-size="16">PDF 151–152</text>
+
+  <rect x="375" y="140" width="285" height="210" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="400" y="180" font-family="sans-serif" font-size="22" font-weight="700">Original 21</text>
+  <text x="400" y="215" font-family="sans-serif" font-size="18">About the book</text>
+  <text x="400" y="250" font-family="sans-serif" font-size="18">authoring tools</text>
+  <text x="400" y="285" font-family="sans-serif" font-size="18">format evolution</text>
+  <text x="400" y="320" font-family="sans-serif" font-size="16">PDF 153–154</text>
+
+  <rect x="695" y="140" width="285" height="210" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="720" y="180" font-family="sans-serif" font-size="22" font-weight="700">Original 22</text>
+  <text x="720" y="215" font-family="sans-serif" font-size="18">Version history</text>
+  <text x="720" y="250" font-family="sans-serif" font-size="18">0.10 → 2.0</text>
+  <text x="720" y="285" font-family="sans-serif" font-size="18">2003 → 2012</text>
+  <text x="720" y="320" font-family="sans-serif" font-size="16">PDF 155–158</text>
+
+  <rect x="1015" y="140" width="290" height="210" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="1040" y="180" font-family="sans-serif" font-size="22" font-weight="700">Original 23</text>
+  <text x="1040" y="215" font-family="sans-serif" font-size="18">Translation</text>
+  <text x="1040" y="250" font-family="sans-serif" font-size="18">Git / .pd / Pandoc</text>
+  <text x="1040" y="285" font-family="sans-serif" font-size="18">no exact commands</text>
+  <text x="1040" y="320" font-family="sans-serif" font-size="16">PDF 159</text>
+
+  <rect x="55" y="405" width="590" height="220" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="80" y="445" font-family="sans-serif" font-size="22" font-weight="700">Integrity</text>
+  <text x="80" y="485" font-family="sans-serif" font-size="18">historical/current-looking claims → [Needs confirmation]</text>
+  <text x="80" y="525" font-family="sans-serif" font-size="18">URL/project-name extraction corruption</text>
+  <text x="80" y="565" font-family="sans-serif" font-size="18">version-history ↔ metaclass source contradiction</text>
+
+  <rect x="695" y="405" width="610" height="220" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="720" y="445" font-family="sans-serif" font-size="22" font-weight="700">Source closure</text>
+  <text x="720" y="485" font-family="sans-serif" font-size="18">PDF 160 = final author bio/back matter</text>
+  <text x="720" y="525" font-family="sans-serif" font-size="18">not treated as Appendix 23 content</text>
+  <text x="720" y="565" font-family="sans-serif" font-size="18">p0160:c01 = final canonical source page</text>
+
+  <rect x="55" y="680" width="1250" height="140" rx="12" fill="#fafafa" stroke="#333"/>
+  <text x="80" y="720" font-family="sans-serif" font-size="22" font-weight="700">Book analysis completion</text>
+  <text x="80" y="758" font-family="sans-serif" font-size="18">chapters 1–19 + merged chapter 20 → source coverage closed through PDF 160</text>
+  <text x="80" y="792" font-family="sans-serif" font-size="17">Reading-state metadata remains unchanged.</text>
+
+  <text x="55" y="875" font-family="sans-serif" font-size="16">No common source summary; no synthetic Git/build commands; no external freshness verification.</text>
+</svg>
