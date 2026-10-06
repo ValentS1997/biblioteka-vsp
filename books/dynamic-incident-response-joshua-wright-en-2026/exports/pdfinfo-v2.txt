@@ -2,7 +2,7 @@ Title:           Динамическое реагирование на инци
 Author:          Joshua Wright
 Creator:         Writer
 Producer:        LibreOffice 24.2
-CreationDate:    Tue Oct  6 08:02:02 2026 UTC
+CreationDate:    Tue Oct  6 10:13:12 2026 UTC
 Custom Metadata: no
 Metadata Stream: no
 Tagged:          yes
@@ -14,6 +14,6 @@ Pages:           706
 Encrypted:       no
 Page size:       595.304 x 841.89 pts (A4)
 Page rot:        0
-File size:       5807232 bytes
+File size:       5813605 bytes
 Optimized:       no
 PDF version:     1.7
