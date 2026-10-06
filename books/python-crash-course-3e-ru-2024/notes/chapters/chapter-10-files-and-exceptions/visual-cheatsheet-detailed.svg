@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 10 — Файлы и исключения: подробная шпаргалка</title>
+  <desc id="desc">Чтение/запись файлов, пути, исключения, анализ текста, JSON и рефакторинг.</desc>
+  <rect width="1800" height="1200" fill="#f5f7fa"/>
+  <rect width="1800" height="116" fill="#17202a"/>
+  <text x="56" y="50" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="38" font-weight="700" fill="#fff">Глава 10 — Файлы и исключения</text>
+  <text x="56" y="86" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">persistent data, controlled failure и recovery flow</text>
+
+  <rect x="45" y="150" width="540" height="300" rx="18" fill="#fff" stroke="#5dade2" stroke-width="2"/>
+  <text x="75" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#1b4f72">Read files</text>
+  <text x="75" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">Path('file.txt') → path object.</tspan>
+    <tspan x="75" dy="31">read_text() → entire text as string.</tspan>
+    <tspan x="75" dy="31">rstrip()/strip() → whitespace cleanup.</tspan>
+    <tspan x="75" dy="31">splitlines() → line-oriented processing.</tspan>
+    <tspan x="75" dy="31">Text numbers remain strings until conversion.</tspan>
+  </text>
+
+  <rect x="630" y="150" width="540" height="300" rx="18" fill="#fff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="660" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#196f3d">Write boundary</text>
+  <text x="660" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="660" dy="0">write_text(string) → persistent write.</tspan>
+    <tspan x="660" dy="31">Missing target → source says file is created.</tspan>
+    <tspan x="660" dy="31">Existing target → content overwritten.</tspan>
+    <tspan x="660" dy="31">Numbers must be converted to strings for text files.</tspan>
+    <tspan x="660" dy="31">Verify by reading target after write.</tspan>
+  </text>
+
+  <rect x="1215" y="150" width="540" height="300" rx="18" fill="#fff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1245" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#9c640c">Exception flow</text>
+  <text x="1245" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1245" dy="0">try → only potentially failing code.</tspan>
+    <tspan x="1245" dy="31">except → specific exception response.</tspan>
+    <tspan x="1245" dy="31">else → dependent success code.</tspan>
+    <tspan x="1245" dy="31">pass → handle silently.</tspan>
+    <tspan x="1245" dy="31">Shown: ZeroDivisionError / FileNotFoundError / ValueError.</tspan>
+  </text>
+
+  <rect x="45" y="495" width="825" height="300" rx="18" fill="#fff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="75" y="540" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#6c3483">Text analysis / resilience</text>
+  <text x="75" y="583" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">contents.split() → word-like tokens.</tspan>
+    <tspan x="75" dy="31">len(words) → approximate word count.</tspan>
+    <tspan x="75" dy="31">Missing one file need not stop remaining files.</tspan>
+    <tspan x="75" dy="31">Source: traceback can reveal internal details.</tspan>
+    <tspan x="75" dy="31">Notification level depends on user expectations.</tspan>
+  </text>
+
+  <rect x="915" y="495" width="840" height="300" rx="18" fill="#fff" stroke="#ec7063" stroke-width="2"/>
+  <text x="945" y="540" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#922b21">JSON / remember_me</text>
+  <text x="945" y="583" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="945" dy="0">json.dumps(data) → JSON-formatted string.</tspan>
+    <tspan x="945" dy="31">Path.write_text(contents) → persist.</tspan>
+    <tspan x="945" dy="31">Path.read_text() → json.loads(contents).</tspan>
+    <tspan x="945" dy="31">exists() selects stored-vs-new flow.</tspan>
+    <tspan x="945" dy="31">Refactor: stored lookup / new input / greeting.</tspan>
+  </text>
+
+  <rect x="45" y="840" width="825" height="270" rx="18" fill="#fff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="75" y="885" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#21618c">Упражнения 10.1–10.14</text>
+  <text x="75" y="928" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">Read/replace/simplify file code.</tspan>
+    <tspan x="75" dy="30">Guest file and guest book.</tspan>
+    <tspan x="75" dy="30">ValueError calculator; missing files; silent errors.</tspan>
+    <tspan x="75" dy="30">Common words with external Gutenberg texts.</tspan>
+    <tspan x="75" dy="30">Favourite number, user dict, identity check.</tspan>
+  </text>
+
+  <rect x="915" y="840" width="840" height="270" rx="18" fill="#fff" stroke="#58d68d" stroke-width="2"/>
+  <text x="945" y="885" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#1e8449">Source findings</text>
+  <text x="945" y="928" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="945" dy="0">1. count_words docstring says lines, code counts words.</tspan>
+    <tspan x="945" dy="30">2. Exercise 10.7 cross-reference mismatch.</tspan>
+    <tspan x="945" dy="30">3. Exercise 10.9 cross-reference mismatch.</tspan>
+    <tspan x="945" dy="30">4. json.dumps prose conflicts with shown data flow.</tspan>
+    <tspan x="945" dy="30">5. e0019:c02–c15 boundary clipping/overlap.</tspan>
+  </text>
+
+  <rect x="45" y="1140" width="1710" height="40" rx="12" fill="#17202a"/>
+  <text x="75" y="1167" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#fff">Provenance: e0019:c01–c15 · EPUB spine 19 · OEBPS/Text/978544614112-16.xhtml</text>
+</svg>
