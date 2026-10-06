@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 8 — Функции: подробная шпаргалка</title>
+  <desc id="desc">Функции, аргументы, значения по умолчанию, return, списки, variadic arguments, modules и formatting.</desc>
+  <rect width="1800" height="1200" fill="#f5f7fa"/>
+  <rect width="1800" height="116" fill="#17202a"/>
+  <text x="56" y="50" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="38" font-weight="700" fill="#fff">Глава 8 — Функции</text>
+  <text x="56" y="86" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">одна задача, ясный интерфейс, предсказуемый результат и повторное использование</text>
+
+  <rect x="45" y="150" width="540" height="300" rx="18" fill="#fff" stroke="#5dade2" stroke-width="2"/>
+  <text x="75" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#1b4f72">Definition & call</text>
+  <text x="75" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">def name(params):</tspan>
+    <tspan x="75" dy="31">Docstring сразу после определения.</tspan>
+    <tspan x="75" dy="31">Parameters описывают вход.</tspan>
+    <tspan x="75" dy="31">Arguments передают конкретные значения.</tspan>
+    <tspan x="75" dy="31">Function body выполняется при call.</tspan>
+  </text>
+
+  <rect x="630" y="150" width="540" height="300" rx="18" fill="#fff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="660" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#196f3d">Arguments</text>
+  <text x="660" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="660" dy="0">Positional → порядок имеет значение.</tspan>
+    <tspan x="660" dy="31">Keyword → имя должно совпасть с parameter.</tspan>
+    <tspan x="660" dy="31">Default → аргумент можно опустить.</tspan>
+    <tspan x="660" dy="31">Default parameters идут после required.</tspan>
+    <tspan x="660" dy="31">Mismatch → TypeError + traceback.</tspan>
+  </text>
+
+  <rect x="1215" y="150" width="540" height="300" rx="18" fill="#fff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1245" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#9c640c">Return</text>
+  <text x="1245" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1245" dy="0">return отправляет value caller-у.</tspan>
+    <tspan x="1245" dy="31">Можно вернуть string.</tspan>
+    <tspan x="1245" dy="31">Можно вернуть dictionary.</tspan>
+    <tspan x="1245" dy="31">Optional data → default + if.</tspan>
+    <tspan x="1245" dy="31">Returned value сохраняется переменной caller.</tspan>
+  </text>
+
+  <rect x="45" y="495" width="825" height="300" rx="18" fill="#fff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="75" y="540" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#6c3483">Lists & variadic args</text>
+  <text x="75" y="583" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">Переданный list может быть изменён функцией.</tspan>
+    <tspan x="75" dy="31">list[:] → copy, если original нужно сохранить.</tspan>
+    <tspan x="75" dy="42">*toppings / *args → tuple positional values.</tspan>
+    <tspan x="75" dy="31">**user_info / **kwargs → dict keyword values.</tspan>
+    <tspan x="75" dy="42">Required positional params размещаются раньше variadic.</tspan>
+  </text>
+
+  <rect x="915" y="495" width="840" height="300" rx="18" fill="#fff" stroke="#ec7063" stroke-width="2"/>
+  <text x="945" y="540" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#922b21">Modules</text>
+  <text x="945" y="583" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="945" dy="0">import pizza → pizza.make_pizza().</tspan>
+    <tspan x="945" dy="31">from pizza import make_pizza → direct call.</tspan>
+    <tspan x="945" dy="31">function/module aliases через as.</tspan>
+    <tspan x="945" dy="31">from module import * показан, но не рекомендуется.</tspan>
+    <tspan x="945" dy="31">Imports source размещает в начале файла.</tspan>
+  </text>
+
+  <rect x="45" y="840" width="825" height="270" rx="18" fill="#fff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="75" y="885" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#21618c">Упражнения 8.1–8.17</text>
+  <text x="75" y="928" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">Simple functions, shirts, cities.</tspan>
+    <tspan x="75" dy="30">Return values, albums, while input.</tspan>
+    <tspan x="75" dy="30">Messages and list copies.</tspan>
+    <tspan x="75" dy="30">*args / **kwargs, profiles, cars.</tspan>
+    <tspan x="75" dy="30">Modules, five import forms, formatting.</tspan>
+  </text>
+
+  <rect x="915" y="840" width="840" height="270" rx="18" fill="#fff" stroke="#58d68d" stroke-width="2"/>
+  <text x="945" y="885" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#1e8449">Source findings</text>
+  <text x="945" y="928" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="945" dy="0">1. build_person age: code '' ↔ prose None.</tspan>
+    <tspan x="945" dy="30">2. while greeting indentation conflicts with described flow.</tspan>
+    <tspan x="945" dy="40">3. e0017:c02–c16 boundary clipping/overlap.</tspan>
+    <tspan x="945" dy="40">Findings preserved; no silent correction.</tspan>
+  </text>
+
+  <rect x="45" y="1140" width="1710" height="40" rx="12" fill="#17202a"/>
+  <text x="75" y="1167" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#fff">Provenance: e0017:c01–c16 · EPUB spine 17 · OEBPS/Text/978544614112-14.xhtml</text>
+</svg>
