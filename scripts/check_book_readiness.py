@@ -14,7 +14,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 INDEX = ROOT / "books" / "index.yaml"
-CHAPTER_TEMPLATE = ROOT / "templates" / "chapter-artifact-collection-v1.6.yaml"
+CHAPTER_TEMPLATE = ROOT / "templates" / "chapter-artifact-collection-v1.7.yaml"
 
 READY_RE = re.compile(r"^READY")
 TOKEN_RE = re.compile(r"[0-9a-zа-я]+", flags=re.IGNORECASE)
@@ -31,6 +31,7 @@ NEXT_ACTIONS = {
     "RAG_ID_MISMATCH": "rebuild/fix RAG so manifest book_id matches the book",
     "RAG_SOURCE_MISMATCH": "rebuild/fix RAG so manifest source path and checksum match the canonical source",
     "RAG_VALIDATION_NOT_READY": "resolve RAG validation failures and rebuild if required",
+    "RAG_INGESTION_ACCEPTANCE_FAILED": "run/fix strict RAG ingestion acceptance for the current generation",
     "CHUNK_INDEX_MISSING": "generate rag/chunk-index.jsonl",
     "ADDRESSABLE_CHUNKS_MISSING": "generate addressable rag/chunks files",
     "RETRIEVAL_INDEX_MISSING": "generate rag/search-index including manifest.json",
@@ -366,6 +367,42 @@ def compute_readiness(book_id: str) -> dict[str, Any]:
         str(manifest_rel or "[undeclared]"), None if rag_ready else "RAG_VALIDATION_NOT_READY",
     ))
 
+    generation = manifest.get("generation") or {}
+    if not isinstance(generation, dict):
+        generation = {}
+    corpus_generation_id = generation.get("corpus_generation_id")
+    index_generation_id = generation.get("index_generation_id")
+    generation_aware = bool(corpus_generation_id or index_generation_id)
+    acceptance_path = book_dir / "rag" / "acceptance.yaml"
+    acceptance_ok = True
+    acceptance_evidence: Any = "legacy RAG compatibility path; strict acceptance applies on next rebuild"
+    if generation_aware:
+        acceptance_ok = False
+        acceptance_evidence = str(acceptance_path.relative_to(ROOT))
+        if acceptance_path.is_file() and corpus_generation_id and index_generation_id and source_sha:
+            acceptance = load_yaml(acceptance_path)
+            acceptance_ok = bool(
+                acceptance.get("status") == "ACCEPTED"
+                and acceptance.get("book_id") == book_id
+                and str(acceptance.get("source_sha256", "")).lower() == source_sha
+                and acceptance.get("corpus_generation_id") == corpus_generation_id
+                and acceptance.get("index_generation_id") == index_generation_id
+            )
+            acceptance_evidence = {
+                "path": str(acceptance_path.relative_to(ROOT)),
+                "status": acceptance.get("status"),
+                "source_sha256": acceptance.get("source_sha256"),
+                "corpus_generation_id": acceptance.get("corpus_generation_id"),
+                "index_generation_id": acceptance.get("index_generation_id"),
+            }
+    checks.append(result_check(
+        "rag_ingestion_acceptance_passed", acceptance_ok,
+        "ACCEPTED for current source/corpus/index generation, or legacy compatibility",
+        acceptance_evidence,
+        str(acceptance_path.relative_to(ROOT)),
+        None if acceptance_ok else "RAG_INGESTION_ACCEPTANCE_FAILED",
+    ))
+
     chunk_index_rel = paths.get("rag_chunk_index")
     chunk_index_path = ROOT / chunk_index_rel if isinstance(chunk_index_rel, str) else None
     chunk_index_exists = bool(chunk_index_path and chunk_index_path.is_file())
@@ -442,11 +479,11 @@ def compute_readiness(book_id: str) -> dict[str, Any]:
         chapter_template_ok = bool(
             isinstance(template, dict)
             and template.get("id") == "BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION"
-            and str(template.get("version")) == "1.6"
+            and str(template.get("version")) == "1.7"
             and template.get("status") == "ACCEPTED"
         )
     checks.append(result_check(
-        "chapter_template_available", chapter_template_ok, "ACCEPTED v1.6",
+        "chapter_template_available", chapter_template_ok, "ACCEPTED v1.7",
         chapter_template_ok, template_evidence,
         None if chapter_template_ok else "CHAPTER_TEMPLATE_MISSING",
     ))
