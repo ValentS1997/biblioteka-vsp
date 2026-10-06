@@ -14,3 +14,4 @@ Reviewed chapter-level notes are stored here.
 - [Chapter 10 — Файлы и исключения](chapter-10-files-and-exceptions/README.md)
 - [Chapter 11 — Тестирование кода](chapter-11-testing-code/README.md)
 - [Chapter 12 — Атакующий корабль](chapter-12-attacking-ship/README.md)
+- [Chapter 13 — Осторожно, пришельцы!](chapter-13-watch-out-aliens/README.md)
