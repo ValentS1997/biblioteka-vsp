@@ -63,3 +63,4 @@ Canonical readiness command:
 - [Глава 7 — Ввод данных и циклы while](notes/chapters/chapter-07-input-and-while-loops/README.md)
 - [Глава 8 — Функции](notes/chapters/chapter-08-functions/README.md)
 - [Глава 9 — Классы](notes/chapters/chapter-09-classes/README.md)
+- [Глава 10 — Файлы и исключения](notes/chapters/chapter-10-files-and-exceptions/README.md)
