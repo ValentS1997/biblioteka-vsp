@@ -16,5 +16,7 @@
 
 - [Глава 8. Создание динамических RAG с помощью Chroma и Hugging Face Llama](./chapter-08-dynamic-rag-chroma-huggingface-llama/) — `RAG_GROUNDED`, PDF 227–252.
 
+- [Глава 9. Улучшение моделей ИИ: тонкая настройка данных RAG и обратная связь](./chapter-09-fine-tuning-rag-data-feedback/) — `RAG_GROUNDED`, PDF 253–270.
+
 Book-level readiness must be `READY` before running
 `BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.6`.
