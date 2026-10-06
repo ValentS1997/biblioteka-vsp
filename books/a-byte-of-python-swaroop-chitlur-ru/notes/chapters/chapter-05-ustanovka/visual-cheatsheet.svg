@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="860" viewBox="0 0 1280 860">
+  <rect width="1280" height="860" fill="white"/>
+  <text x="55" y="62" font-family="sans-serif" font-size="34" font-weight="700">Глава 5 — «Установка»</text>
+  <text x="55" y="98" font-family="sans-serif" font-size="18">RAG PDF 31–34 · p0031:c01–p0034:c01</text>
+
+  <rect x="55" y="140" width="1170" height="105" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="80" y="178" font-family="sans-serif" font-size="22" font-weight="700">1. Сначала проверить</text>
+  <text x="80" y="215" font-family="monospace" font-size="20">python -V      python3 -V</text>
+
+  <rect x="55" y="290" width="350" height="205" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="80" y="330" font-family="sans-serif" font-size="22" font-weight="700">GNU/Linux / BSD</text>
+  <text x="80" y="370" font-family="sans-serif" font-size="18">Часто уже установлен</text>
+  <text x="80" y="405" font-family="sans-serif" font-size="18">Если нет:</text>
+  <text x="80" y="438" font-family="sans-serif" font-size="17">• compile from source</text>
+  <text x="80" y="468" font-family="sans-serif" font-size="17">• package manager</text>
+
+  <rect x="465" y="290" width="350" height="205" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="490" y="330" font-family="sans-serif" font-size="22" font-weight="700">Windows</text>
+  <text x="490" y="370" font-family="sans-serif" font-size="18">Installer</text>
+  <text x="490" y="405" font-family="sans-serif" font-size="18">PATH → C:\Python33</text>
+  <text x="490" y="438" font-family="sans-serif" font-size="17">После настройки:</text>
+  <text x="490" y="468" font-family="monospace" font-size="18">python3 -V</text>
+
+  <rect x="875" y="290" width="350" height="205" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="900" y="330" font-family="sans-serif" font-size="22" font-weight="700">Mac OS X</text>
+  <text x="900" y="370" font-family="sans-serif" font-size="18">Source path:</text>
+  <text x="900" y="405" font-family="sans-serif" font-size="17">Homebrew installation</text>
+  <text x="900" y="438" font-family="monospace" font-size="18">brew install python3</text>
+  <text x="900" y="468" font-family="monospace" font-size="18">python3 -V</text>
+
+  <rect x="55" y="545" width="1170" height="140" rx="12" fill="#fafafa" stroke="#333"/>
+  <text x="80" y="585" font-family="sans-serif" font-size="22" font-weight="700">Acceptance</text>
+  <text x="80" y="623" font-family="sans-serif" font-size="19">Version command возвращает информацию о Python → installation path завершён.</text>
+  <text x="80" y="655" font-family="sans-serif" font-size="17">Глава 6: перейти к первой программе.</text>
+
+  <rect x="55" y="725" width="1170" height="85" rx="12" fill="#fafafa" stroke="#666" stroke-dasharray="7 5"/>
+  <text x="80" y="762" font-family="sans-serif" font-size="18">Risk boundary: remote Homebrew command downloads and executes code; rollback not supplied by source.</text>
+  <text x="80" y="792" font-family="sans-serif" font-size="16">Historical instructions are not externally validated for current systems.</text>
+</svg>

@@ -11,3 +11,4 @@ Current chapter workflow:
 - [Chapter 2 — «Переводы»](chapter-02-perevody/) — `RAG_GROUNDED`
 - [Chapter 3 — «Предисловие»](chapter-03-predislovie/) — `RAG_GROUNDED`
 - [Chapter 4 — «Введение»](chapter-04-vvedenie/) — `RAG_GROUNDED`
+- [Chapter 5 — «Установка»](chapter-05-ustanovka/) — `RAG_GROUNDED`

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1210" viewBox="0 0 1600 1210">
+  <rect width="1600" height="1210" fill="white"/>
+  <text x="55" y="65" font-family="sans-serif" font-size="36" font-weight="700">Глава 5. Установка — detailed map</text>
+  <text x="55" y="102" font-family="sans-serif" font-size="18">RAG-only · p0031:c01–p0034:c01 · PDF 31–34 · source SHA ac1abb…d7db5</text>
+
+  <rect x="55" y="140" width="1490" height="125" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="80" y="178" font-family="sans-serif" font-size="23" font-weight="700">Preflight — read only</text>
+  <text x="80" y="218" font-family="monospace" font-size="20">python -V        python3 -V</text>
+  <text x="600" y="218" font-family="sans-serif" font-size="18">Version shown → Python is available. Failure → choose platform path.</text>
+
+  <rect x="55" y="310" width="470" height="330" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="80" y="350" font-family="sans-serif" font-size="23" font-weight="700">5.1 GNU/Linux / BSD</text>
+  <text x="80" y="392" font-family="sans-serif" font-size="18">Likely already installed</text>
+  <text x="80" y="432" font-family="sans-serif" font-size="18">If absent:</text>
+  <text x="80" y="470" font-family="sans-serif" font-size="17">• compile source + install</text>
+  <text x="80" y="505" font-family="sans-serif" font-size="17">• binary packages via OS manager</text>
+  <text x="80" y="550" font-family="sans-serif" font-size="16">Named tools only: apt-get, yum, pkg_add</text>
+  <text x="80" y="585" font-family="sans-serif" font-size="16">No concrete install syntax supplied.</text>
+
+  <rect x="565" y="310" width="470" height="330" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="590" y="350" font-family="sans-serif" font-size="23" font-weight="700">5.2 Windows</text>
+  <text x="590" y="392" font-family="sans-serif" font-size="18">Installer path</text>
+  <text x="590" y="432" font-family="sans-serif" font-size="18">Do not disable optional components</text>
+  <text x="590" y="472" font-family="sans-serif" font-size="18">Configure PATH if needed</text>
+  <text x="590" y="512" font-family="monospace" font-size="17">;C:\Python33</text>
+  <text x="590" y="550" font-family="sans-serif" font-size="16">Historical AUTOEXEC/Vista/Win7 procedures</text>
+  <text x="590" y="585" font-family="monospace" font-size="17">python3 -V</text>
+
+  <rect x="1075" y="310" width="470" height="330" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="1100" y="350" font-family="sans-serif" font-size="23" font-weight="700">5.3 Mac OS X</text>
+  <text x="1100" y="392" font-family="sans-serif" font-size="18">Source assumes Python often exists</text>
+  <text x="1100" y="432" font-family="sans-serif" font-size="18">If absent: Homebrew path</text>
+  <text x="1100" y="470" font-family="sans-serif" font-size="16">remote script → Ruby execution</text>
+  <text x="1100" y="510" font-family="monospace" font-size="17">brew install python3</text>
+  <text x="1100" y="550" font-family="monospace" font-size="17">python3 -V</text>
+  <text x="1100" y="590" font-family="sans-serif" font-size="16">Rollback: [Needs confirmation]</text>
+
+  <rect x="55" y="690" width="1490" height="175" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="80" y="730" font-family="sans-serif" font-size="23" font-weight="700">Change discipline</text>
+  <text x="80" y="770" font-family="sans-serif" font-size="18">Observe first → choose platform-specific modification → re-run version check.</text>
+  <text x="80" y="808" font-family="sans-serif" font-size="18">PATH/install operations change system state; source provides no explicit rollback procedure.</text>
+  <text x="80" y="840" font-family="sans-serif" font-size="17">Remote Homebrew command executes downloaded content without an inspect step in the chapter.</text>
+
+  <rect x="55" y="910" width="1490" height="120" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="80" y="950" font-family="sans-serif" font-size="23" font-weight="700">5.4 Резюме / acceptance</text>
+  <text x="80" y="990" font-family="sans-serif" font-size="18">Книга считает Python 3 установленным prerequisite и переходит к первой программе.</text>
+
+  <rect x="55" y="1075" width="1490" height="85" rx="10" fill="#fafafa" stroke="#666" stroke-dasharray="7 5"/>
+  <text x="80" y="1110" font-family="sans-serif" font-size="18">Integrity findings: hp URL; python/Python casing mismatch; historical commands require current applicability check.</text>
+  <text x="80" y="1142" font-family="sans-serif" font-size="17">Next boundary: p0035:c01 / PDF 35 — chapter 6 «Первые шаги».</text>
+</svg>
