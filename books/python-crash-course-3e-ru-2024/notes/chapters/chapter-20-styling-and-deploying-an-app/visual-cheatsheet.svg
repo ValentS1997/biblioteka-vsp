@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <rect width="1200" height="760" fill="#ffffff"/>
+  <text x="60" y="70" font-family="sans-serif" font-size="34" font-weight="700">Глава 20 — Оформление и развертывание приложения</text>
+  <text x="60" y="108" font-family="sans-serif" font-size="18">RAG: e0030:c01–c19 · EPUB spine 30 · Learning Log</text>
+
+  <rect x="60" y="150" width="330" height="220" rx="18" fill="#f4f4f4" stroke="#333"/>
+  <text x="85" y="190" font-family="sans-serif" font-size="24" font-weight="700">1. Styling</text>
+  <text x="85" y="230" font-family="sans-serif" font-size="18">django-bootstrap5</text>
+  <text x="85" y="262" font-family="sans-serif" font-size="18">base.html → navbar</text>
+  <text x="85" y="294" font-family="sans-serif" font-size="18">page_header + content</text>
+  <text x="85" y="326" font-family="sans-serif" font-size="18">forms / list-group / cards</text>
+
+  <rect x="435" y="150" width="330" height="220" rx="18" fill="#f4f4f4" stroke="#333"/>
+  <text x="460" y="190" font-family="sans-serif" font-size="24" font-weight="700">2. Deployment config</text>
+  <text x="460" y="230" font-family="sans-serif" font-size="18">requirements*.txt</text>
+  <text x="460" y="262" font-family="sans-serif" font-size="18">.platform.app.yaml</text>
+  <text x="460" y="294" font-family="sans-serif" font-size="18">routes.yaml + services.yaml</text>
+  <text x="460" y="326" font-family="sans-serif" font-size="18">Platform-specific settings.py</text>
+
+  <rect x="810" y="150" width="330" height="220" rx="18" fill="#f4f4f4" stroke="#333"/>
+  <text x="835" y="190" font-family="sans-serif" font-size="24" font-weight="700">3. Git → Platform.sh</text>
+  <text x="835" y="230" font-family="sans-serif" font-size="18">git add / commit / status</text>
+  <text x="835" y="262" font-family="sans-serif" font-size="18">clean working tree</text>
+  <text x="835" y="294" font-family="sans-serif" font-size="18">platform create / push</text>
+  <text x="835" y="326" font-family="sans-serif" font-size="18">platform url → verify</text>
+
+  <line x1="390" y1="260" x2="435" y2="260" stroke="#333" stroke-width="3"/>
+  <polygon points="435,260 423,252 423,268" fill="#333"/>
+  <line x1="765" y1="260" x2="810" y2="260" stroke="#333" stroke-width="3"/>
+  <polygon points="810,260 798,252 798,268" fill="#333"/>
+
+  <rect x="60" y="420" width="520" height="230" rx="18" fill="#f4f4f4" stroke="#333"/>
+  <text x="85" y="462" font-family="sans-serif" font-size="24" font-weight="700">Production boundary</text>
+  <text x="85" y="505" font-family="sans-serif" font-size="18">DEBUG = False only on deployed environment</text>
+  <text x="85" y="539" font-family="sans-serif" font-size="18">remote superuser via SSH session</text>
+  <text x="85" y="573" font-family="sans-serif" font-size="18">custom 404 / 500 templates</text>
+  <text x="85" y="607" font-family="sans-serif" font-size="18">verify error page does not expose debug details</text>
+
+  <rect x="620" y="420" width="520" height="230" rx="18" fill="#f4f4f4" stroke="#333"/>
+  <text x="645" y="462" font-family="sans-serif" font-size="24" font-weight="700">Repeatable update loop</text>
+  <text x="645" y="505" font-family="sans-serif" font-size="18">local change</text>
+  <text x="645" y="539" font-family="sans-serif" font-size="18">→ git add if new files</text>
+  <text x="645" y="573" font-family="sans-serif" font-size="18">→ commit → platform push</text>
+  <text x="645" y="607" font-family="sans-serif" font-size="18">→ visit deployed app → verify</text>
+
+  <text x="60" y="710" font-family="sans-serif" font-size="16">Boundary: e0031:c01 begins «Приложения». External docs/runtime not used.</text>
+</svg>
