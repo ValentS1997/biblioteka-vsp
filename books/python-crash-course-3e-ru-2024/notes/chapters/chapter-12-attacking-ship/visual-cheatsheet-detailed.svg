@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 12 — Атакующий корабль: подробная шпаргалка</title>
+  <desc id="desc">Pygame setup, game loop, settings, ship movement, boundaries, bullets, cleanup and refactoring.</desc>
+  <rect width="1800" height="1200" fill="#f5f7fa"/>
+  <rect width="1800" height="116" fill="#17202a"/>
+  <text x="56" y="50" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="38" font-weight="700" fill="#fff">Глава 12 — Атакующий корабль</text>
+  <text x="56" y="86" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" fill="#d6e4f0">первый крупный проект: event-driven loop, stateful movement и object lifecycle</text>
+
+  <rect x="45" y="150" width="540" height="300" rx="18" fill="#fff" stroke="#5dade2" stroke-width="2"/>
+  <text x="75" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#1b4f72">Pygame / screen</text>
+  <text x="75" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">pygame.init()</tspan>
+    <tspan x="75" dy="31">display.set_mode() → main Surface.</tspan>
+    <tspan x="75" dy="31">event.get() → pending input events.</tspan>
+    <tspan x="75" dy="31">display.flip() → show latest frame.</tspan>
+    <tspan x="75" dy="31">Clock.tick(60) → frame pacing target.</tspan>
+  </text>
+
+  <rect x="630" y="150" width="540" height="300" rx="18" fill="#fff" stroke="#7dcea0" stroke-width="2"/>
+  <text x="660" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#196f3d">Settings / Ship</text>
+  <text x="660" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="660" dy="0">Settings centralizes screen/bg/speeds.</tspan>
+    <tspan x="660" dy="31">Ship stores screen + rect + image.</tspan>
+    <tspan x="660" dy="31">midbottom aligns ship at bottom center.</tspan>
+    <tspan x="660" dy="31">self.x stores fractional horizontal state.</tspan>
+    <tspan x="660" dy="31">Rect stays integer-facing render geometry.</tspan>
+  </text>
+
+  <rect x="1215" y="150" width="540" height="300" rx="18" fill="#fff" stroke="#f5b041" stroke-width="2"/>
+  <text x="1245" y="195" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#9c640c">Input / boundaries</text>
+  <text x="1245" y="238" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="1245" dy="0">KEYDOWN/KEYUP drive movement flags.</tspan>
+    <tspan x="1245" dy="31">Two independent if blocks allow opposing keys.</tspan>
+    <tspan x="1245" dy="31">rect.right &lt; screen.right.</tspan>
+    <tspan x="1245" dy="31">rect.left &gt; 0.</tspan>
+    <tspan x="1245" dy="31">Q exit must work before fullscreen mode.</tspan>
+  </text>
+
+  <rect x="45" y="495" width="825" height="300" rx="18" fill="#fff" stroke="#af7ac5" stroke-width="2"/>
+  <text x="75" y="540" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#6c3483">Bullet lifecycle</text>
+  <text x="75" y="583" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">Space → _fire_bullet().</tspan>
+    <tspan x="75" dy="31">Bullet inherits Sprite; Group owns active bullets.</tspan>
+    <tspan x="75" dy="31">Group.update() dispatches Bullet.update().</tspan>
+    <tspan x="75" dy="31">Off-screen object must be removed, not merely invisible.</tspan>
+    <tspan x="75" dy="31">Iterate bullets.copy() while removing originals.</tspan>
+  </text>
+
+  <rect x="915" y="495" width="840" height="300" rx="18" fill="#fff" stroke="#ec7063" stroke-width="2"/>
+  <text x="945" y="540" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#922b21">Refactoring / project shape</text>
+  <text x="945" y="583" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="945" dy="0">Start simple, then refactor after behavior works.</tspan>
+    <tspan x="945" dy="31">_check_events() isolates event loop.</tspan>
+    <tspan x="945" dy="31">_update_screen() isolates rendering.</tspan>
+    <tspan x="945" dy="31">_update_bullets() isolates update + cleanup.</tspan>
+    <tspan x="945" dy="31">Main loop remains readable as project grows.</tspan>
+  </text>
+
+  <rect x="45" y="840" width="825" height="270" rx="18" fill="#fff" stroke="#85c1e9" stroke-width="2"/>
+  <text x="75" y="885" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#21618c">Упражнения 12.1–12.6</text>
+  <text x="75" y="928" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="75" dy="0">Blue screen; centered custom character.</tspan>
+    <tspan x="75" dy="30">Browse Pygame documentation.</tspan>
+    <tspan x="75" dy="30">Four-direction rocket with boundaries.</tspan>
+    <tspan x="75" dy="30">Print KEYDOWN event.key values.</tspan>
+    <tspan x="75" dy="30">Side shooter with right-moving bullet cleanup.</tspan>
+  </text>
+
+  <rect x="915" y="840" width="840" height="270" rx="18" fill="#fff" stroke="#58d68d" stroke-width="2"/>
+  <text x="945" y="885" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700" fill="#1e8449">Findings / constraints</text>
+  <text x="945" y="928" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" fill="#273746">
+    <tspan x="945" dy="0">Ship(screen) conflicts with game-instance interface.</tspan>
+    <tspan x="945" dy="30">check_events loses underscore in one listing.</tspan>
+    <tspan x="945" dy="30">Bullet cleanup indentation conflicts with described loop.</tspan>
+    <tspan x="945" dy="30">draw_rect prose vs pygame.draw.rect code.</tspan>
+    <tspan x="945" dy="30">e0022:c02–c16 boundary clipping/overlap.</tspan>
+  </text>
+
+  <rect x="45" y="1140" width="1710" height="40" rx="12" fill="#17202a"/>
+  <text x="75" y="1167" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#fff">Provenance: e0022:c01–c16 · EPUB spine 22 · OEBPS/Text/978544614112-19.xhtml</text>
+</svg>
