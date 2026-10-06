@@ -414,6 +414,7 @@ HEADING_REPLACEMENTS = {
 }
 
 EXTERNAL_HEADING_MAP = {}
+SECTION_PATCHES = {}
 
 PHRASE_REPLACEMENTS = [
     ("incident response", "реагирование на инциденты"),
@@ -431,6 +432,33 @@ PHRASE_REPLACEMENTS = [
     ("Runtime visibility", "наблюдаемость времени выполнения"),
     ("Multi-cloud visibility", "сквозная видимость multi-cloud"),
 ]
+
+def load_section_patches(repo_root: Path):
+    global SECTION_PATCHES
+    p = repo_root / "books" / BOOK_ID / "translation" / "ru" / "V2-SECTION-PATCHES.yaml"
+    if not p.exists():
+        SECTION_PATCHES = {}
+        return
+    data = yaml.safe_load(p.read_text(encoding="utf-8")) or {}
+    SECTION_PATCHES = data.get("chapters") or {}
+
+
+def apply_section_patches(text: str, chapter: int) -> str:
+    patches = SECTION_PATCHES.get(chapter) or SECTION_PATCHES.get(str(chapter)) or []
+    for patch in patches:
+        start = str(patch.get("start", ""))
+        end = patch.get("end")
+        replacement = str(patch.get("replacement", "")).strip()
+        if not start or start not in text:
+            continue
+        s = text.index(start)
+        if end and str(end) in text[s + len(start):]:
+            e = text.index(str(end), s + len(start))
+            text = text[:s] + replacement + "\n\n" + text[e:]
+        else:
+            text = text[:s] + replacement + "\n"
+    return text
+
 
 def load_external_heading_map(repo_root: Path):
     global EXTERNAL_HEADING_MAP
@@ -525,6 +553,7 @@ def normalize_body_v2(text: str) -> str:
 
 def audit_and_assemble(repo_root: Path, out_dir: Path):
     load_external_heading_map(repo_root)
+    load_section_patches(repo_root)
     tr_root = repo_root / "books" / BOOK_ID / "translation" / "ru"
     chapters_dir = tr_root / "chapters"
     chapter_files = sorted(
@@ -559,6 +588,7 @@ def audit_and_assemble(repo_root: Path, out_dir: Path):
             problems.append(f"chapter {n}: unexpected [Needs confirmation]")
         original_third_party += body.count("THIRD_PARTY_REVIEW_REQUIRED")
         repaired = normalize_body_v2(body)
+        repaired = apply_section_patches(repaired, n)
         v2_third_party += repaired.count("требуется отдельная проверка прав на сторонний визуальный материал")
 
         note_root = repo_root / "books" / BOOK_ID / "notes" / "chapters"
