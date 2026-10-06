@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1180" viewBox="0 0 1600 1180">
+<rect width="1600" height="1180" fill="white"/>
+<style>
+text{font-family:Arial,sans-serif;fill:#111}.h{font-size:36px;font-weight:700}.s{font-size:23px;font-weight:700}.b{font-size:17px}.sm{font-size:14px}.box{fill:#f8f8f8;stroke:#333;stroke-width:2}
+</style>
+<text x="55" y="55" class="h">Глава 2 — Разворачиваем экосистему Go · detailed</text>
+<text x="55" y="90" class="b">Source boundary: PDF 26–65 · next chapter starts at 66</text>
+
+<rect x="55" y="125" width="475" height="255" rx="14" class="box"/>
+<text x="80" y="165" class="s">Installation</text>
+<text x="80" y="202" class="b">aptitude search golang / gccgo</text>
+<text x="80" y="234" class="b">sudo apt install golang / gccgo</text>
+<text x="80" y="266" class="b">which go · go version</text>
+<text x="80" y="298" class="b">multiple packaged versions possible</text>
+<text x="80" y="330" class="b">update-alternatives selects active Go</text>
+
+<rect x="565" y="125" width="475" height="255" rx="14" class="box"/>
+<text x="590" y="165" class="s">Build from source</text>
+<text x="590" y="202" class="b">git clone go.googlesource.com/go goroot</text>
+<text x="590" y="234" class="b">git fetch</text>
+<text x="590" y="266" class="b">cd src · time ./all.bash</text>
+<text x="590" y="298" class="b">bootstrap toolchain stages</text>
+<text x="590" y="330" class="sm">Source describes this as CPU-intensive.</text>
+
+<rect x="1075" y="125" width="470" height="255" rx="14" class="box"/>
+<text x="1100" y="165" class="s">First program &amp; linkage</text>
+<text x="1100" y="202" class="b">go build hello.go</text>
+<text x="1100" y="234" class="b">gccgo -g hello.go -o hello.1</text>
+<text x="1100" y="266" class="b">-compiler gc / gccgo</text>
+<text x="1100" y="298" class="b">file + ldd classify artifacts</text>
+<text x="1100" y="330" class="b">go run for compile-and-execute</text>
+
+<rect x="55" y="415" width="475" height="255" rx="14" class="box"/>
+<text x="80" y="455" class="s">Help &amp; environment</text>
+<text x="80" y="492" class="b">go help → hierarchical help tree</text>
+<text x="80" y="524" class="b">go help mod / environment / tool</text>
+<text x="80" y="556" class="b">go env → effective configuration</text>
+<text x="80" y="588" class="b">GOPATH · GOROOT · GOTOOLDIR</text>
+<text x="80" y="620" class="b">system env can override Go behavior</text>
+
+<rect x="565" y="415" width="475" height="255" rx="14" class="box"/>
+<text x="590" y="455" class="s">Cross-compilation</text>
+<text x="590" y="492" class="b">GOOS=windows GOARCH=386/amd64</text>
+<text x="590" y="524" class="b">GOARCH=arm</text>
+<text x="590" y="556" class="b">output checked by file</text>
+<text x="590" y="588" class="b">then executed on target Windows/ARM</text>
+<text x="590" y="620" class="sm">Target runtime test is part of the demonstrated verification.</text>
+
+<rect x="1075" y="415" width="470" height="255" rx="14" class="box"/>
+<text x="1100" y="455" class="s">Project workflow</text>
+<text x="1100" y="492" class="b">go fmt → rewrites source formatting</text>
+<text x="1100" y="524" class="b">go build → produces artifact</text>
+<text x="1100" y="556" class="b">go clean → removes build product</text>
+<text x="1100" y="588" class="b">go get → network/project retrieval</text>
+<text x="1100" y="620" class="b">legacy GOPATH context in source</text>
+
+<rect x="55" y="705" width="475" height="260" rx="14" class="box"/>
+<text x="80" y="745" class="s">Low-level tools</text>
+<text x="80" y="782" class="b">go tool</text>
+<text x="80" y="814" class="b">compile → object/archive output</text>
+<text x="80" y="846" class="b">link → executable</text>
+<text x="80" y="878" class="b">objdump → low-level inspection</text>
+<text x="80" y="910" class="b">compile -m → escape-related diagnostics</text>
+
+<rect x="565" y="705" width="475" height="260" rx="14" class="box"/>
+<text x="590" y="745" class="s">Cgo</text>
+<text x="590" y="782" class="b">import "C"</text>
+<text x="590" y="814" class="b">C.CString / C.GoString / C.GoBytes</text>
+<text x="590" y="846" class="b">#cgo CFLAGS / LDFLAGS / pkg-config</text>
+<text x="590" y="878" class="b">go tool cgo generates _obj artifacts</text>
+<text x="590" y="910" class="sm">Filename mismatch in source recorded separately.</text>
+
+<rect x="1075" y="705" width="470" height="260" rx="14" class="box"/>
+<text x="1100" y="745" class="s">Additional tooling</text>
+<text x="1100" y="782" class="b">Go Playground</text>
+<text x="1100" y="814" class="b">Geany</text>
+<text x="1100" y="846" class="b">Delve: apt install delve</text>
+<text x="1100" y="878" class="b">which dlv · dlv --help</text>
+<text x="1100" y="910" class="b">debugger details deferred by source</text>
+
+<rect x="55" y="1005" width="1490" height="110" rx="14" class="box"/>
+<text x="80" y="1045" class="s">Operational discipline from the chapter</text>
+<text x="80" y="1080" class="b">Read-only baseline → controlled modification → explicit verification. Rollback is recorded only where the source provides it.</text>
+</svg>

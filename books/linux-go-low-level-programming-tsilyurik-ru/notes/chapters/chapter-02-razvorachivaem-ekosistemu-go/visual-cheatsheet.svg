@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<rect width="1200" height="760" fill="white"/>
+<style>
+text{font-family:Arial,sans-serif;fill:#111}.h{font-size:34px;font-weight:700}.t{font-size:21px;font-weight:700}.b{font-size:17px}.box{fill:#f7f7f7;stroke:#333;stroke-width:2}
+</style>
+<text x="55" y="55" class="h">Глава 2 — Разворачиваем экосистему Go</text>
+<text x="55" y="88" class="b">RAG: PDF 26–65 · toolchain / env / cross-build / tools / Cgo</text>
+
+<rect x="55" y="125" width="340" height="210" rx="14" class="box"/>
+<text x="80" y="165" class="t">1. Install &amp; select</text>
+<text x="80" y="200" class="b">aptitude search</text>
+<text x="80" y="230" class="b">apt install golang / gccgo</text>
+<text x="80" y="260" class="b">which go · go version</text>
+<text x="80" y="290" class="b">update-alternatives</text>
+
+<rect x="430" y="125" width="340" height="210" rx="14" class="box"/>
+<text x="455" y="165" class="t">2. Verify toolchain</text>
+<text x="455" y="200" class="b">hello.go → go build / gccgo</text>
+<text x="455" y="230" class="b">file · ldd · execute</text>
+<text x="455" y="260" class="b">go run</text>
+<text x="455" y="290" class="b">static / dynamic comparison</text>
+
+<rect x="805" y="125" width="340" height="210" rx="14" class="box"/>
+<text x="830" y="165" class="t">3. Know the environment</text>
+<text x="830" y="200" class="b">go help</text>
+<text x="830" y="230" class="b">go env</text>
+<text x="830" y="260" class="b">GOPATH · GOTOOLDIR</text>
+<text x="830" y="290" class="b">GOOS · GOARCH</text>
+
+<rect x="55" y="375" width="340" height="220" rx="14" class="box"/>
+<text x="80" y="415" class="t">4. Cross-build</text>
+<text x="80" y="450" class="b">GOOS=windows GOARCH=...</text>
+<text x="80" y="480" class="b">GOARCH=arm</text>
+<text x="80" y="510" class="b">verify with file</text>
+<text x="80" y="540" class="b">run on target platform</text>
+
+<rect x="430" y="375" width="340" height="220" rx="14" class="box"/>
+<text x="455" y="415" class="t">5. Daily manager commands</text>
+<text x="455" y="450" class="b">fmt · build · clean · run</text>
+<text x="455" y="480" class="b">get · help · tool</text>
+<text x="455" y="510" class="b">compile · link · objdump</text>
+<text x="455" y="540" class="b">state changes need verification</text>
+
+<rect x="805" y="375" width="340" height="220" rx="14" class="box"/>
+<text x="830" y="415" class="t">6. Integration tooling</text>
+<text x="830" y="450" class="b">Cgo → C / POSIX interfaces</text>
+<text x="830" y="480" class="b">go tool cgo</text>
+<text x="830" y="510" class="b">Delve → dlv --help</text>
+<text x="830" y="540" class="b">extra tools: source-grounded only</text>
+
+<text x="55" y="650" class="t">Safe pattern</text>
+<text x="55" y="685" class="b">observe → change → verify → keep / source-supported rollback</text>
+<text x="55" y="720" class="b">Versions and paths are examples from the author's environment, not current guarantees.</text>
+</svg>
