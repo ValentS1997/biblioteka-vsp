@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1200">
+<rect width="1800" height="1200" fill="#f5f7fa"/><rect width="1800" height="115" fill="#17202a"/>
+<text x="55" y="50" font-family="Arial" font-size="38" font-weight="700" fill="white">Глава 13 — Осторожно, пришельцы!</text>
+<text x="55" y="85" font-family="Arial" font-size="20" fill="#d6e4f0">grid generation, fleet state, collisions and terminal gameplay state</text>
+<g font-family="Arial" fill="#273746">
+<rect x="45" y="150" width="540" height="300" rx="18" fill="white" stroke="#5dade2" stroke-width="2"/>
+<text x="75" y="195" font-size="25" font-weight="700">Create fleet</text><text x="75" y="240" font-size="18">Alien.rect.size → width/height</text><text x="75" y="273" font-size="18">nested while loops → rows</text><text x="75" y="306" font-size="18">_create_alien(x, y)</text><text x="75" y="339" font-size="18">Group stores fleet sprites</text>
+<rect x="630" y="150" width="540" height="300" rx="18" fill="white" stroke="#7dcea0" stroke-width="2"/>
+<text x="660" y="195" font-size="25" font-weight="700">Move fleet</text><text x="660" y="240" font-size="18">alien_speed × fleet_direction</text><text x="660" y="273" font-size="18">check_edges() detects both sides</text><text x="660" y="306" font-size="18">drop every alien on edge</text><text x="660" y="339" font-size="18">invert direction once</text>
+<rect x="1215" y="150" width="540" height="300" rx="18" fill="white" stroke="#f5b041" stroke-width="2"/>
+<text x="1245" y="195" font-size="25" font-weight="700">Collision lifecycle</text><text x="1245" y="240" font-size="18">groupcollide(bullets, aliens,...)</text><text x="1245" y="273" font-size="18">empty fleet → bullets.empty()</text><text x="1245" y="306" font-size="18">then _create_fleet()</text><text x="1245" y="339" font-size="18">temporary wide bullets aid testing</text>
+<rect x="45" y="495" width="825" height="300" rx="18" fill="white" stroke="#af7ac5" stroke-width="2"/>
+<text x="75" y="540" font-size="25" font-weight="700">Ship loss / game over</text><text x="75" y="585" font-size="18">spritecollideany() or alien reaches bottom</text><text x="75" y="618" font-size="18">_ship_hit() → decrement ships_left</text><text x="75" y="651" font-size="18">clear groups → new fleet → center ship</text><text x="75" y="684" font-size="18">sleep(0.5) → feedback pause</text><text x="75" y="717" font-size="18">no ships → game_active = False</text>
+<rect x="915" y="495" width="840" height="300" rx="18" fill="white" stroke="#ec7063" stroke-width="2"/>
+<text x="945" y="540" font-size="25" font-weight="700">Exercises 13.1–13.6</text><text x="945" y="585" font-size="18">star grid + random offsets</text><text x="945" y="618" font-size="18">falling drops + recurring rain</text><text x="945" y="651" font-size="18">side-shooter fleet + collisions</text><text x="945" y="684" font-size="18">track aliens hit / ship hits</text><text x="945" y="717" font-size="18">user-defined game-over condition</text>
+<rect x="45" y="840" width="1710" height="270" rx="18" fill="white" stroke="#58d68d" stroke-width="2"/>
+<text x="75" y="885" font-size="25" font-weight="700">Quality boundary</text>
+<text x="75" y="930" font-size="18">Findings: missing underscore in fleet-direction call; missing self in stats access; constructor signature mismatch;</text>
+<text x="75" y="965" font-size="18">coordinate-order prose/code mismatch; extracted indentation ambiguity; e0023:c02–c13 clipping/overlap.</text>
+<text x="75" y="1010" font-size="18">Temporary gameplay settings are test aids only and should be restored after verification.</text>
+<text x="75" y="1050" font-size="18">Assets and system-specific tuning remain [Needs confirmation].</text>
+</g>
+<rect x="45" y="1140" width="1710" height="40" rx="12" fill="#17202a"/>
+<text x="75" y="1167" font-family="Arial" font-size="18" font-weight="700" fill="white">Provenance: e0023:c01–c13 · EPUB spine 23 · OEBPS/Text/978544614112-20.xhtml</text>
+</svg>
