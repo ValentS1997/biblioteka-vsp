@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="900" viewBox="0 0 1320 900">
+  <rect width="1320" height="900" fill="white"/>
+  <text x="55" y="62" font-family="sans-serif" font-size="34" font-weight="700">Глава 9 — «Поток команд»</text>
+  <text x="55" y="98" font-family="sans-serif" font-size="18">RAG PDF 59–66 · p0059:c01–p0066:c01</text>
+
+  <rect x="55" y="140" width="370" height="180" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="80" y="180" font-family="sans-serif" font-size="22" font-weight="700">if</text>
+  <text x="80" y="220" font-family="sans-serif" font-size="18">if / elif / else</text>
+  <text x="80" y="252" font-family="sans-serif" font-size="18">condition → one branch</text>
+  <text x="80" y="284" font-family="sans-serif" font-size="18">colon + indentation</text>
+
+  <rect x="475" y="140" width="370" height="180" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="500" y="180" font-family="sans-serif" font-size="22" font-weight="700">while</text>
+  <text x="500" y="220" font-family="sans-serif" font-size="18">repeat while condition True</text>
+  <text x="500" y="252" font-family="sans-serif" font-size="18">optional else</text>
+  <text x="500" y="284" font-family="sans-serif" font-size="18">break suppresses else</text>
+
+  <rect x="895" y="140" width="370" height="180" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="920" y="180" font-family="sans-serif" font-size="22" font-weight="700">for</text>
+  <text x="920" y="220" font-family="sans-serif" font-size="18">iterate sequence</text>
+  <text x="920" y="252" font-family="monospace" font-size="18">range(1, 5)</text>
+  <text x="920" y="284" font-family="sans-serif" font-size="18">optional else</text>
+
+  <rect x="55" y="375" width="570" height="195" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="80" y="415" font-family="sans-serif" font-size="22" font-weight="700">break</text>
+  <text x="80" y="455" font-family="sans-serif" font-size="18">terminate current loop immediately</text>
+  <text x="80" y="490" font-family="sans-serif" font-size="18">for/while else will not execute</text>
+  <text x="80" y="525" font-family="monospace" font-size="17">input == 'выход' → break</text>
+
+  <rect x="675" y="375" width="590" height="195" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="700" y="415" font-family="sans-serif" font-size="22" font-weight="700">continue</text>
+  <text x="700" y="455" font-family="sans-serif" font-size="18">skip remaining current iteration</text>
+  <text x="700" y="490" font-family="sans-serif" font-size="18">continue with next iteration</text>
+  <text x="700" y="525" font-family="monospace" font-size="17">len(s) &lt; 3 → continue</text>
+
+  <rect x="55" y="625" width="1210" height="125" rx="12" fill="#fafafa" stroke="#333"/>
+  <text x="80" y="665" font-family="sans-serif" font-size="22" font-weight="700">Control-flow invariant</text>
+  <text x="80" y="703" font-family="sans-serif" font-size="18">condition / sequence decides path; indentation defines blocks; break and continue alter loop progression.</text>
+  <text x="80" y="733" font-family="sans-serif" font-size="17">Next: chapter 10 «Функции».</text>
+
+  <text x="55" y="825" font-family="sans-serif" font-size="16">Findings: while.py output differs from code strings; if.py punctuation differs; range/Boolean claims kept source-grounded.</text>
+  <text x="55" y="855" font-family="sans-serif" font-size="16">Chapter-end summary present: 9.6.</text>
+</svg>
