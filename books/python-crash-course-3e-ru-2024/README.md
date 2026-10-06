@@ -73,3 +73,4 @@ Canonical readiness command:
 - [Глава 17 — Работа с API](notes/chapters/chapter-17-working-with-apis/README.md)
 - [Глава 18 — Знакомство с Django](notes/chapters/chapter-18-getting-started-with-django/README.md)
 - [Глава 19 — Учетные записи пользователей](notes/chapters/chapter-19-user-accounts/README.md)
+- [Глава 20 — Оформление и развертывание приложения](notes/chapters/chapter-20-styling-and-deploying-an-app/README.md)
