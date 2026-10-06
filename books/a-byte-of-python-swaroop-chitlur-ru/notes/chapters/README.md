@@ -18,3 +18,4 @@ Current chapter workflow:
 - [Chapter 9 — «Поток команд»](chapter-09-potok-komand/) — `RAG_GROUNDED`
 - [Chapter 10 — «Функции»](chapter-10-funktsii/) — `RAG_GROUNDED`
 - [Chapter 11 — «Модули»](chapter-11-moduli/) — `RAG_GROUNDED`
+- [Chapter 12 — «Структуры данных»](chapter-12-struktury-dannykh/) — `RAG_GROUNDED`

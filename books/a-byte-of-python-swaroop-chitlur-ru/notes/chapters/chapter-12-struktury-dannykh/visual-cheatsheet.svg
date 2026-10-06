@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="960" viewBox="0 0 1360 960">
+  <rect width="1360" height="960" fill="white"/>
+  <text x="55" y="62" font-family="sans-serif" font-size="34" font-weight="700">Глава 12 — «Структуры данных»</text>
+  <text x="55" y="98" font-family="sans-serif" font-size="18">RAG PDF 87–98 · p0087:c01–p0098:c01</text>
+
+  <rect x="55" y="140" width="285" height="190" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="80" y="180" font-family="sans-serif" font-size="22" font-weight="700">list</text>
+  <text x="80" y="220" font-family="sans-serif" font-size="18">sequence</text>
+  <text x="80" y="252" font-family="sans-serif" font-size="18">mutable</text>
+  <text x="80" y="284" font-family="sans-serif" font-size="18">append / sort / del</text>
+
+  <rect x="375" y="140" width="285" height="190" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="400" y="180" font-family="sans-serif" font-size="22" font-weight="700">tuple</text>
+  <text x="400" y="220" font-family="sans-serif" font-size="18">sequence</text>
+  <text x="400" y="252" font-family="sans-serif" font-size="18">immutable</text>
+  <text x="400" y="284" font-family="monospace" font-size="18">(2,)</text>
+
+  <rect x="695" y="140" width="285" height="190" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="720" y="180" font-family="sans-serif" font-size="22" font-weight="700">dict</text>
+  <text x="720" y="220" font-family="sans-serif" font-size="18">key → value</text>
+  <text x="720" y="252" font-family="sans-serif" font-size="18">lookup / add / del</text>
+  <text x="720" y="284" font-family="monospace" font-size="18">items()</text>
+
+  <rect x="1015" y="140" width="290" height="190" rx="12" fill="#f3f3f3" stroke="#333"/>
+  <text x="1040" y="180" font-family="sans-serif" font-size="22" font-weight="700">set</text>
+  <text x="1040" y="220" font-family="sans-serif" font-size="18">unordered</text>
+  <text x="1040" y="252" font-family="sans-serif" font-size="18">membership</text>
+  <text x="1040" y="284" font-family="sans-serif" font-size="18">add/remove/intersection</text>
+
+  <rect x="55" y="385" width="590" height="210" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="80" y="425" font-family="sans-serif" font-size="22" font-weight="700">Sequences</text>
+  <text x="80" y="465" font-family="monospace" font-size="18">x[0]  x[-1]</text>
+  <text x="80" y="500" font-family="monospace" font-size="18">x[1:3]  x[:]  x[::-1]</text>
+  <text x="80" y="535" font-family="sans-serif" font-size="18">start included · end excluded</text>
+
+  <rect x="695" y="385" width="610" height="210" rx="12" fill="#f7f7f7" stroke="#333"/>
+  <text x="720" y="425" font-family="sans-serif" font-size="22" font-weight="700">References</text>
+  <text x="720" y="465" font-family="monospace" font-size="18">mylist = shoplist</text>
+  <text x="720" y="500" font-family="sans-serif" font-size="18">same object in source example</text>
+  <text x="720" y="535" font-family="monospace" font-size="18">mylist = shoplist[:] → copy example</text>
+
+  <rect x="55" y="650" width="1250" height="140" rx="12" fill="#fafafa" stroke="#333"/>
+  <text x="80" y="690" font-family="sans-serif" font-size="22" font-weight="700">Strings as objects</text>
+  <text x="80" y="728" font-family="monospace" font-size="18">startswith · in · find · join</text>
+  <text x="80" y="762" font-family="sans-serif" font-size="17">Next: chapter 13 «Решение задач».</text>
+
+  <text x="55" y="855" font-family="sans-serif" font-size="16">Findings: dict.items/order/key claims [Needs confirmation]; set output order not treated as guaranteed.</text>
+  <text x="55" y="888" font-family="sans-serif" font-size="16">Chapter-end summary present: 12.9.</text>
+</svg>
