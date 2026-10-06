@@ -5,6 +5,10 @@ Book-level readiness: `READY`.
 Current chapter workflow:
 `BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.7`.
 
+Chapter-analysis state: `COMPLETE`.
+
+Coverage: chapters 1–19 plus merged Chapter 20 (original appendices 20–23 and final back matter), through canonical PDF page 160.
+
 ## RAG-grounded chapter work
 
 - [Chapter 1 — «Обложка»](chapter-01-oblozhka/) — `RAG_GROUNDED`
@@ -26,3 +30,4 @@ Current chapter workflow:
 - [Chapter 17 — «Стандартная библиотека»](chapter-17-standartnaya-biblioteka/) — `RAG_GROUNDED`
 - [Chapter 18 — «Дополнительно»](chapter-18-dopolnitelno/) — `RAG_GROUNDED`
 - [Chapter 19 — «Что дальше»](chapter-19-chto-dalshe/) — `RAG_GROUNDED`
+- [Chapter 20 — «Приложения»](chapter-20-prilozheniya/) — `RAG_GROUNDED` — merged original appendices 20–23 + final back matter
