@@ -18,6 +18,7 @@ source_policy:
     - books/index.yaml
     - books/*/metadata.yaml
     - books/*/rag/manifest.yaml
+    - books/*/rag/acceptance.yaml
     - books/*/rag/search-index/manifest.json
     - books/*/rag/search-index/**/*.json
     - books/*/rag/chunks/**/*.md
@@ -73,12 +74,15 @@ retrieval:
     required_current_fields:
       - book_id
       - chunk_id
+      - chunk_uid
       - source_format
       - source_unit_type
       - source_unit
       - source_locator
       - source_path
       - source_sha256
+      - text_sha256
+      - chunking_policy_id
       - chunk_path
     format_rules:
       pdf:
@@ -88,9 +92,19 @@ retrieval:
         source_unit_type: epub_spine_item
         locator: "ZIP member path of the spine XHTML resource"
         forbidden_inference: "EPUB spine ordinal or XHTML locator is not a printed/PDF page number"
+    generation_binding:
+      current_generation_requires:
+        - "rag/manifest.yaml generation.corpus_generation_id"
+        - "rag/manifest.yaml generation.index_generation_id"
+        - "rag/acceptance.yaml status == ACCEPTED"
+      rule: >-
+        For a current-generation RAG, acceptance must be bound to the same
+        source SHA, corpus_generation_id and index_generation_id before the book
+        is chapter-analysis READY.
     legacy_compatibility: >-
-      Existing biblioteka-vsp/chunk/v1 PDF chunks remain valid. For them,
-      pdf_page is the source locator and no rebuild is required solely for v2 adoption.
+      Existing biblioteka-vsp/chunk/v1 PDF chunks and pre-generation v2 chunks
+      remain valid. No rebuild is required solely to adopt chunk_uid/generation
+      metadata; strict acceptance becomes mandatory on their next controlled rebuild.
 
   exact_term_queries:
     rule: >-
