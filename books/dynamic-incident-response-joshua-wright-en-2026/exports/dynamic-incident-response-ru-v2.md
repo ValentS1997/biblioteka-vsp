@@ -27,7 +27,7 @@ lang: ru-RU
 - Глава 17. Реагирование на инциденты с программами-вымогателями
 - Глава 18. Реагирование на инциденты в облачных системах
 - Глава 19. Реагирование на инциденты в операционных технологиях
-- Глава 20. Интеграция DAIR с NIST CSF 2.0
+- ГЛАВА 20. ИНТЕГРАЦИЯ DAIR С NIST CSF 2.0
 - Послесловие
 
 # Сведения об издании
@@ -698,7 +698,7 @@ ls: cannot access '/home/jm/.config/autostart/': No such file or directory ②
 
 Вместо этого книга предлагает практические идеи по реагированию на инциденты и стратегии, которые специалисты могут использовать для существенного снижения воздействия инцидентов на организацию. Книга рассчитана на технических аналитиков и incident responders и предлагает понятный путь к пониманию процесса реагирования. В ней рассматривается, как минимизировать ошибки, повышать эффективность реагирования, использовать информационные ресурсы для обоснования решений и готовить организации к изменяющимся Tactics, Techniques, and Procedures (TTPs) атакующих.
 
-## МЕНЯЮЩИЕСЯ ТРЕБОВАНИЯ К ФУНКЦИИ INCIDENT RESPONSE
+## МЕНЯЮЩИЕСЯ ТРЕБОВАНИЯ К ФУНКЦИИ РЕАГИРОВАНИЯ НА ИНЦИДЕНТЫ
 
 За последние несколько десятилетий потребности организаций в реагировании на инциденты существенно изменились. То, что когда-то было процессом реагирования на компьютерный вирус или нарушение acceptable use policy, превратилось в сложные общекорпоративные инициативы, направленные на ограничение последствий киберугроз и соблюдение нормативных требований.
 
@@ -799,7 +799,7 @@ FUNCTION exploit_sendmail_debug(target):
 
 Возможно, ещё интереснее самого Morris worm — последствия этого инцидента. Киберинциденты были известны и раньше, но именно Morris worm впервые получил широкое освещение в СМИ и привлёк общественное внимание. Инцидент показал уязвимость взаимосвязанных систем и потенциал масштабных нарушений, что подтолкнуло к созданию организаций, специализирующихся на реагировании на киберинциденты.
 
-### CERT и CIAC
+### CERT И CIAC
 
 Defense Advanced Research Projects Agency (DARPA) сформировало первую Computer Emergency Response Team (CERT) в Carnegie Mellon University (CMU) 17 ноября 1988 года — всего через две недели после Morris worm. DARPA, финансировавшее ARPANET, из которого развился интернет, признало, что Morris worm выявил критический пробел интернет-инфраструктуры: не существовало координированного механизма реагирования на сетевые чрезвычайные ситуации в области безопасности. Во время кризиса с Morris worm системные администраторы не имели централизованного ресурса для координации действий или распространения исправлений, что усугубило последствия. Впервые DARPA выделило финансирование на создание CERT при Software Engineering Institute (SEI) CMU, выбрав CMU как за техническую экспертизу, так и потому, что университет серьёзно пострадал от червя.
 
@@ -813,7 +813,7 @@ CIAC, основанный доктором E. Eugene Schultz Jr., фундам�
 
 Фреймворк Schultz придал структуру развивавшейся специальности cybersecurity incident response, которая до этого во многом опиралась на инстинкт и импровизацию. Документируя реальный опыт CIAC и превращая его в воспроизводимые процессы, эта работа перевела incident response из искусства, которым владели немногие специалисты, в дисциплину, которую могли внедрять организации по всему миру. Руководства, разработанные в CIAC, стали фундаментом практически всех последующих планов реагирования на инциденты и заложили принципы, которые остаются центральными для cybersecurity operations спустя более трёх десятилетий.
 
-### Дальнейшее развитие: US Navy, SANS и NIST
+### ДАЛЬНЕЙШЕЕ РАЗВИТИЕ: ВМС США, SANS И NIST
 
 В 1996 году US Navy Staff Office опубликовал *Computer Incident Response Guidebook P-5239-19*. Развивая раннюю работу Schultz, руководство ВМС расширило фреймворк подробными процедурами и best practices для военного контекста. Хотя документ создавался для Department of the Navy, P-5239-19 оказал влияние на государственные агентства и частный сектор и стал прямой основой для *Computer Security Incident Handling Step-by-Step Guide* от SANS Institute.
 
@@ -1051,7 +1051,7 @@ tags:
 
 IOC — это intelligence, который аналитики могут превратить в практическое действие. Независимо от того, применяется ли он через Sigma rules для log detection, Endpoint Detection and Response (EDR), Network Detection and Response (NDR) или другой инструмент, IOC представляет actionable insight, необходимый для выявления инцидентов.
 
-### Что насчёт Indicators of Attack (IOA)?
+### ЧТО НАСЧЁТ ИНДИКАТОРОВ АТАКИ (IOA)?
 
 Indicator of Attack (IOA) — термин, популяризированный CrowdStrike для описания detection capabilities, основанных на поведении атакующего. Источник книги приводит прямую цитату CrowdStrike, объясняющую IOA.
 
@@ -1061,7 +1061,7 @@ CrowdStrike использует IOA для выявления присутст�
 
 На практике различие между IOA и behavioral IOC невелико. Более простые механизмы detection — atomic IOC и computed IOC — остаются полезными для выявления известных угроз, тогда как IOA и behavioral IOC дают более развитые возможности обнаружения как известных, так и неизвестных угроз. Независимо от того, использует аналитик термин IOA или behavioral IOC, базовая идея одна: обнаруживать присутствие атакующего по его поведению, а не ограничиваться конкретными atomic или computed IOC.
 
-## MEAN TIME TO DETECT
+## СРЕДНЕЕ ВРЕМЯ ОБНАРУЖЕНИЯ (MTTD)
 
 Mean Time to Detect (MTTD) — метрика, измеряющая среднее время, необходимое для обнаружения security incident. Она используется для оценки работы SOC и incident response team.
 
@@ -1079,7 +1079,7 @@ MTTD — широкая метрика, которая сильно зависи
 
 Чтобы MTTD был полезен, его следует отслеживать во времени и определять единообразно для всей организации. Необходимо установить ясные критерии того, что считается incident, и обеспечивать точные timestamps возникновения и обнаружения каждого инцидента. Наблюдая MTTD в динамике, организация может выявлять тенденции, оценивать эффективность detection capabilities и принимать решения об инвестициях в улучшение security posture.
 
-## MEAN TIME TO RESPOND
+## СРЕДНЕЕ ВРЕМЯ РЕАГИРОВАНИЯ (MTTR)
 
 Mean Time to Respond (MTTR) — метрика, измеряющая среднее время между обнаружением security incident и выполнением реагирования с его разрешением. Если MTTD отражает эффективность detection processes, то MTTR показывает эффективность incident response capabilities.
 
@@ -1146,7 +1146,7 @@ Quality score позволяет увидеть закономерности, к
 
 Совместное отслеживание quality score и MTTR даёт более полную картину response effectiveness. Если quality scores улучшаются при стабильном MTTR, команда действительно становится лучше. Если MTTR снижается одновременно с ухудшением quality scores, скорость достигается за счёт глубины.
 
-## INCIDENT MANAGEMENT И INCIDENT RESPONSE
+## УПРАВЛЕНИЕ ИНЦИДЕНТАМИ И РЕАГИРОВАНИЕ НА ИНЦИДЕНТЫ
 
 Термины incident management и incident response часто используются как взаимозаменяемые, однако означают разные вещи. Понимание различий помогает командам определить роли и ответственность в общем процессе работы с security incidents. Рисунок 15 показывает их отдельные и пересекающиеся области ответственности.
 
@@ -1262,7 +1262,7 @@ PICERL даёт организациям понятный framework реагир
 
 Модель NIST похожа на PICERL, но задаёт более гибкий подход к действиям после обнаружения incident, объединяя containment, eradication и recovery из PICERL в одну фазу. SP 800-61r2 подробнее рассматривает detection и analysis, а post-incident activity включает не только lessons learned, но и сбор и анализ metrics для будущего распределения ресурсов, а также обмен incident information с более широким сообществом. Вместе с тем Revision 2 значительно сокращает уровень детализации по сравнению с более ранними руководствами и содержит заметно меньше конкретных рекомендаций о том, как организациям следует выполнять recovery после инцидента.
 
-## NIST SP 800-61 REVISION 3 И CYBERSECURITY FRAMEWORK
+## NIST SP 800-61 REVISION 3 И CYBERSECURITY FRAMEWORK (CSF)
 
 Переход от NIST SP 800-61 Revision 2 к Revision 3 отражает структурное изменение в том, как NIST размещает incident response внутри организационной cybersecurity program. Revision 2 содержал тактическое руководство по incident handling, тогда как Revision 3 рассматривает incident response как интегрированную часть более широкой системы cybersecurity risk management и отказывается от прежней четырёхфазной модели Incident Response Life Cycle.
 
@@ -1355,7 +1355,7 @@ NIST SP 800-61 подчёркивает нелинейность подхода:
 
 Verification неявно присутствует в Detection and Analysis NIST SP 800-61 и Identification PICERL, однако ни одна модель явно не требует подтверждать, что наблюдаемое event действительно является incident, требующим реагирования. Это может приводить к неэффективному расходованию ресурсов и дорогостоящему response на события, которые отвлекают команду от другой важной работы.
 
-### Отсутствие root cause analysis
+### ОТСУТСТВИЕ АНАЛИЗА КОРНЕВОЙ ПРИЧИНЫ
 
 Понимание root cause инцидента важно для эффективного устранения будущих vulnerabilities. Без root cause организация может многократно реагировать на один и тот же тип incident или не устранить уязвимость, которая к нему привела.
 
@@ -1722,7 +1722,7 @@ Incident communications охватывают множество audiences, chann
 
 Единый governed incident communications plan объединяет эти элементы. Следующие sections рассматривают его components: channels для coordination, contact information для stakeholders, reporting procedures для информирования leadership и emergency communication plan, управляющий public и regulatory messaging. В совокупности эти components должны поддерживаться как развивающийся документ, review не реже одного раза в год и test во время tabletop exercises.
 
-### C4: МОДЕЛЬ ИЗ SOFTWARE DEVELOPMENT
+### C4: МОДЕЛЬ ИЗ РАЗРАБОТКИ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ
 
 C4 model — широко применяемый framework для visualizing и documenting software architecture. Созданная Simon Brown модель предназначена для того, чтобы придать architectural diagrams structure, clarity и consistency. Она использует hierarchical approach, помогающий teams не теряться в technical details, сохраняя при этом достаточную детализацию для effective communication.
 
@@ -1877,7 +1877,7 @@ ECP должен охватывать несколько элементов inte
 
 Templates можно комбинировать для hybrid cases, например third-party ransomware incident. Source подчёркивает, что это example list, а не exhaustive taxonomy; организации могут добавить categories с учётом industry, regulatory environment и risk profile.
 
-### REGULATORY NOTIFICATION REQUIREMENTS
+### ТРЕБОВАНИЯ К РЕГУЛЯТОРНЫМ УВЕДОМЛЕНИЯМ
 
 Многие regulatory frameworks устанавливают specific notification requirements после security incidents. Требования зависят от jurisdiction, industry и nature of data. Их следует документировать во время preparation и включать в ECP.
 
@@ -1894,7 +1894,7 @@ Canonical source перечисляет:
 
 Список не exhaustive. Organizations в нескольких jurisdictions или regulated industries могут иметь дополнительные obligations; legal counsel должен review applicable requirements.
 
-## ПРИМЕР: POWERSCHOOL BREACH 2025
+## ПРИМЕР: КОМПРОМЕТАЦИЯ POWERSCHOOL В 2025 ГОДУ
 
 ECP напрямую влияет на reputation и stakeholder confidence после incident. Source рассматривает breach PowerSchool.
 
@@ -1963,7 +1963,7 @@ Purpose-built platforms специально рассчитаны на incident 
 
 > Для некоторых организаций shared document или spreadsheet может быть достаточным для incident tracking, особенно при небольшом числе incidents или ограниченных resources. Можно создать spreadsheet template с fields для incident details, status, assigned personnel и notes, а затем копировать его как starting point для каждого нового incident.
 
-### STANDARDIZED VOCABULARY WITH MITRE ATT&CK
+### СТАНДАРТИЗИРОВАННАЯ ТЕРМИНОЛОГИЯ С MITRE ATT&CK
 
 Ясность incident documentation важна и для effective communication во время incident, и для post-incident analysis. Inconsistent terminology и разные definitions — распространённая проблема cybersecurity: разные teams могут использовать разные названия одного attacker behavior. Отсутствие стандартизации приводит к confusion и miscommunication, особенно при coordination между internal teams или с external partners.
 
@@ -2006,7 +2006,7 @@ Risk incomplete investigation может значительно превышат
 
 > Многие cyber insurance policies включают pre-breach services, которые policyholders редко используют: tabletop exercises, vulnerability assessments и reviews incident response plans. Следует спросить carrier/broker о доступных services и использовать carrier-facilitated tabletop exercises для выстраивания отношений с panel providers до реального incident.
 
-### CYBER SAFE HARBOR LEGISLATION
+### ЗАКОНОДАТЕЛЬСТВО О КИБЕРБЕЗОПАСНОЙ ГАВАНИ
 
 Всё больше U.S. states принимают cyber safe harbor laws, предоставляющие организациям affirmative legal defense против некоторых claims после data breach при условии, что организация демонстрирует compliance с признанным cybersecurity framework.[14]
 
@@ -2041,7 +2041,7 @@ Training становится эффективнее, когда включае�
 
 Если предыдущий раздел был сосредоточен на organizational structure/policy, здесь соединяются people, process и technology: team training, playbook development, tools и access для response operations.
 
-### ОБУЧЕНИЕ INCIDENT RESPONSE TEAM
+### ОБУЧЕНИЕ КОМАНДЫ РЕАГИРОВАНИЯ НА ИНЦИДЕНТЫ
 
 Technical competence — фундамент эффективного incident response. Members должны иметь skills для detection threats, collection evidence, analysis attacker activity и выполнения containment/eradication actions. Training programs должны включать foundational skills и advanced techniques, соответствующие roles.
 
@@ -2116,7 +2116,7 @@ Important contacts:
 
 Relationships нужно строить через regular interaction, а не ждать incident. Key contacts следует привлекать к tabletop exercises, делиться relevant threat intelligence и получать их input во время preparation. Тогда при incident established relationships ускоряют coordination и уменьшают friction.
 
-### CLARIFYING ROLES WITH A RACI MATRIX
+### УТОЧНЕНИЕ РОЛЕЙ С ПОМОЩЬЮ МАТРИЦЫ RACI
 
 RACI matrix уточняет ответственность при incident response и снижает confusion при collaboration нескольких teams.
 
@@ -2208,7 +2208,7 @@ Playbooks следует review/update после каждого incident, гд�
 
 Incident response team нужен доступ к range tools/resources для эффективного response. Они обеспечивают technical capabilities для containment systems, collection data, investigation threats, eradication и recovery.
 
-### Forensic Workstations
+### ФОРЕНЗИК-РАБОЧИЕ СТАНЦИИ
 
 Dedicated analysis systems с investigation tools, изолированные от production networks. Forensic workstations должны иметь достаточные processing power и storage для large evidence files, memory dumps и disk images.
 
@@ -2216,11 +2216,11 @@ Dedicated analysis systems с investigation tools, изолированные о
 
 Организации с существенной cloud infrastructure могут использовать cloud-based forensic workstations, размещая analysis capability ближе к data и уменьшая время transfer больших evidence sets.
 
-### Evidence Collection Tools
+### ИНСТРУМЕНТЫ СБОРА ДОКАЗАТЕЛЬСТВ
 
 Software для acquisition forensic images и volatile data с compromised systems. Source приводит memory acquisition tools **WinPMEM** и **LiME**, disk imaging tools и endpoint collection agents. Tools должны быть tested и readily accessible до incident.
 
-### Analysis Tools
+### ИНСТРУМЕНТЫ АНАЛИЗА
 
 Software для examination collected evidence, включая:
 
@@ -2236,15 +2236,15 @@ Software для examination collected evidence, включая:
 
 Analysts должны быть знакомы с tools до incident: обучение новому tool во время active response замедляет investigation.
 
-### Evidence Storage
+### ХРАНИЛИЩЕ ДОКАЗАТЕЛЬСТВ
 
 Secure storage для forensic images/artifacts с appropriate access controls, integrity verification и retention management. Доступная ёмкость должна учитывать worst-case data volume и retention duration.
 
-### Jump Bag / Go Kit
+### НАБОР ДЛЯ ВЫЕЗДНОГО РЕАГИРОВАНИЯ (JUMP BAG / GO KIT)
 
 Portable incident response equipment для on-site investigations: bootable USB drives с forensic tools, write blockers, portable storage, network cables и documentation templates.
 
-### COMMERCIAL VS. OPEN-SOURCE FORENSIC TOOLS
+### КОММЕРЧЕСКИЕ И OPEN-SOURCE ФОРЕНЗИК-ИНСТРУМЕНТЫ
 
 Организации должны решить, инвестировать ли в commercial forensic tools или использовать open-source alternatives.
 
@@ -2303,7 +2303,7 @@ Tabletop должен test не только technical procedures, но и **aut
 
 Раздел 16.4.3 рассматривает применение AI для generation tabletop scenarios на основе specific IOC или attack techniques.
 
-### TABLETOP EXERCISE GAME PLAY: BACKDOORS & BREACHES
+### ИГРОВОЕ НАСТОЛЬНОЕ УЧЕНИЕ: BACKDOORS & BREACHES
 
 Card game **Backdoors & Breaches**, published by Black Hills Information Security, предлагает engaging способ practice incident response. Activity-based cards используются для exploration attack paths и practice decision-making.
 
@@ -2315,7 +2315,7 @@ Source описывает использование twenty-sided die для ran
 
 Game подходит разным skill levels. Cards доступны на English/Spanish, включая core set и expansion packs; source также указывает free download для printing/digital use.
 
-### NCSC EXERCISE TOOLKIT
+### НАБОР МАТЕРИАЛОВ NCSC ДЛЯ УЧЕНИЙ
 
 Ещё один resource — **NCSC Exercise Toolkit** от UK National Cyber Security Centre. Он включает pre-planned micro exercises и full tabletop exercises по scenarios: ransomware, Wi-Fi breach, remote work compromise, insider data breach и др.
 
@@ -2365,7 +2365,7 @@ Threat intelligence можно получать из:
 
 > Threat intelligence имеет ценность только если operationalized для organization и IRT. Нужны processes review incoming intelligence, assess relevance и take action. Intelligence, которую никто не читает, не даёт actionable security benefit.
 
-### STANDARDIZED THREAT INTELLIGENCE WITH STIX
+### СТАНДАРТИЗИРОВАННАЯ КИБЕРРАЗВЕДКА С STIX
 
 **Structured Threat Information eXpression (STIX)** — open standard для machine-readable cyber threat intelligence. Он позволяет consistent sharing/consumption threat data across platforms/tools. Если ISAC распространяет IOC или commercial feed отдаёт intelligence, STIX задаёт common data structure для automated ingestion/correlation.
 
@@ -2397,7 +2397,7 @@ STIX 2.1 определяет множество object types. Domain objects в
 
 Такая interconnected structure позволяет intelligence рассказывать целостную историю activity, а не давать isolated data points. STIX bundle новой ransomware campaign может дать analysts не только IOC, но и attacker tactics, targeted vulnerabilities и recommended defensive actions.
 
-### CTI PLATFORMS
+### ПЛАТФОРМЫ CTI
 
 Без dedicated platform управление multiple feeds, correlation indicators и context over time усложняются. CTI platform даёт centralized environment для ingest, enrichment, analysis и sharing intelligence.
 
@@ -2441,7 +2441,7 @@ CTI platforms вроде OpenCTI дают valuable capabilities для managemen
 
 > Formal inventory часто пропускает shadow IT: SaaS, cloud services и licenses, приобретённые вне approved procurement. Практический discovery method — review recurring billing statements и expense reports. Shadow services расширяют attack surface и создают gaps при scoping, особенно когда monitoring/hardening отсутствуют.
 
-### SUPPLY CHAIN SECURITY И END-OF-LIFE
+### БЕЗОПАСНОСТЬ ЦЕПОЧКИ ПОСТАВОК И ОКОНЧАНИЕ ЖИЗНЕННОГО ЦИКЛА
 
 Modern software собирается из множества open-source libraries, third-party SDKs и developer packages. Каждая upstream dependency — дополнительная organization/maintainer/project, compromise которой может стать путём к downstream targets.
 
@@ -2451,7 +2451,7 @@ Supply-chain risk следует включать в software management. SBOM �
 
 End-of-life management отслеживает software около или после vendor support date. Software без security updates создаёт ongoing risk. Нужны migration/replacement/compensating controls. Во время incidents EOL systems особенно вероятны как attack vector из-за permanently unpatched known vulnerabilities.
 
-### PATCH MANAGEMENT AND PRIORITIZATION EFFORTS
+### УПРАВЛЕНИЕ ПАТЧАМИ И ИХ ПРИОРИТИЗАЦИЯ
 
 Основной challenge patch management для многих organizations — prioritization. Monthly patch volume велик, а отставание накапливается: чем больше delay, тем сложнее catch up.
 
@@ -2501,7 +2501,7 @@ EDR platforms собирают telemetry: process execution, file-system changes
 
 EDR effectiveness зависит от proper configuration и alert tuning. Detection rules нужно адаптировать к environment, снижая false positives без потери sensitivity. EDR alerts должны prompt review/investigation; delay даёт attacker дополнительное время.
 
-### EDR AS A SUCCESS STORY
+### EDR КАК ПРИМЕР УСПЕШНОГО ПОДХОДА
 
 Автор пишет с позиции professional penetration tester: основная challenge — не initial access, а сохранение доступа достаточно долго для достижения objectives без detection/removal endpoint protection.
 
@@ -2511,7 +2511,7 @@ Source рассматривает это как genuine success: mature EDR depl
 
 Attackers адаптировались: supply-chain compromises, cloud token theft и social engineering techniques, bypass endpoint protection, стали заметнее. Это evidence эффективности EDR, но одновременно reminder, что defense не должна быть static.
 
-## SYSMON ДЛЯ ENHANCED WINDOWS TELEMETRY
+## SYSMON ДЛЯ РАСШИРЕННОЙ ТЕЛЕМЕТРИИ WINDOWS
 
 System Monitor (Sysmon) — free tool Microsoft Sysinternals, расширяющий default Windows event logging high-fidelity telemetry.[17] Sysmon фиксирует process creation с full command line и parent process, network connections, file creation timestamps, registry modifications, driver/DLL loading.
 
@@ -2531,13 +2531,13 @@ Network monitoring даёт visibility communications между systems и exte
 
 Есть несколько complementary approaches с tradeoffs visibility, storage и analytical capability. Выбор зависит от needs, budget и technical capacity.
 
-### FULL PACKET CAPTURE
+### ПОЛНЫЙ ЗАХВАТ ПАКЕТОВ
 
 Full Packet Capture (FPC) много лет считался gold standard. Organizations инвестировали в capture/storage complete traffic для retrospective analysis, threat hunting и incident investigation.
 
 Но investment дорог: volume data перегружает analysts, transport encryption ограничивает value без decryption, а storage/processing cost растёт с bandwidth, device count и cloud/SaaS traffic.
 
-### STRATEGIC PACKET CAPTURE
+### ЦЕЛЕВОЙ ЗАХВАТ ПАКЕТОВ
 
 Для organizations, сохраняющих packet capture, source приводит practical guidance Phil Hagen по optimization.
 
@@ -2553,7 +2553,7 @@ Source рекомендует:
 
 Эти approaches могут откладываться из-за cost, complexity, sensitivity или legal reasons, но остаются valuable для limited use или targeted visibility во время active incident.
 
-### NETWORK FLOW MONITORING
+### МОНИТОРИНГ СЕТЕВЫХ ПОТОКОВ
 
 Network flow monitoring даёт summary network communications без storage burden FPC и подходит для long-term retention/broad deployment. Если FPC отвечает «что именно было передано», flow data отвечает «кто с кем говорил, когда и сколько» — часто этого достаточно для detection и initial investigation.
 
@@ -2580,7 +2580,7 @@ Source перечисляет Cisco NetFlow, IPFIX и sFlow.
 
 Cloud environments предлагают AWS VPC Flow Logs, Azure NSG Flow Logs и Google Cloud VPC Flow Logs. Несмотря на различие formats, core value — lightweight metadata без full packet capture cost.
 
-### EXTENDED BERKELEY PACKET FILTER (eBPF)
+### РАСШИРЕННЫЙ BERKELEY PACKET FILTER (eBPF)
 
 eBPF развивается из original BPF, introduced early 1990s для packet filtering. eBPF превращает этот подход в general-purpose programmable framework для безопасного execution custom code внутри OS kernel.
 
@@ -2592,7 +2592,7 @@ Open-source projects **Cilium, Falco и Tetragon** используют eBPF д�
 
 Microsoft развивает **eBPF for Windows**.[18], расширяя framework за пределы Linux. Cross-platform adoption может дать unified observability network/host/container workloads.
 
-### NETWORK DETECTION AND RESPONSE (NDR)
+### СЕТЕВОЕ ОБНАРУЖЕНИЕ И РЕАГИРОВАНИЕ (NDR)
 
 NDR platforms анализируют network traffic через behavioral analysis, signature detection и threat intelligence integration. Near-real-time processing и ML помогают выявлять anomalous patterns и known threat signatures, уменьшая manual burden и MTTD.
 
@@ -2636,7 +2636,7 @@ Program обычно включает:
 
 Начать можно с небольшого high-priority hypothesis set и расширять catalog по мере роста expertise. Documentation защищает investment от staff turnover: следующий analyst получает history/catalog и может продолжить работу.
 
-## CATALOG ALL CRITICAL DATA, SYSTEMS, AND INFRASTRUCTURE
+## КАТАЛОГИЗИРУЙТЕ ВСЕ КРИТИЧЕСКИЕ ДАННЫЕ, СИСТЕМЫ И ИНФРАСТРУКТУРУ
 
 Comprehensive asset inventory ускоряет scoping и помогает обеспечивать appropriate protection critical systems. Если responders быстро знают, какие systems существуют, кто owner и как они связаны, scoping становится быстрее и точнее. Без inventory team тратит время и может пропустить unknown/forgotten assets.
 
@@ -2668,7 +2668,7 @@ Asset inventory показывает то, что organization знает о с�
 
 Inventory отвечает: **what do we have?** ASM: **what can an attacker see?**
 
-### THE MODERN ATTACK SURFACE
+### СОВРЕМЕННАЯ ПОВЕРХНОСТЬ АТАКИ
 
 Canonical source приводит две прямые цитаты Ron Eddings и MJ Kaufmann из *Attack Surface Management*.[19]
 
@@ -2689,7 +2689,7 @@ ASM обнаруживает externally accessible assets, которых нет
 
 Smaller teams могут начать с periodic external scanning open-source tools и compare inventory. Larger organizations — dedicated ASM platforms continuous monitoring/change alerting/vulnerability workflow integration. Results должны feed back в asset inventory/hardening, замыкая discovery→remediation loop.
 
-## ASSESS SECURITY POSTURE THROUGH ADVERSARY SIMULATION
+## ОЦЕНИВАЙТЕ СОСТОЯНИЕ ЗАЩИТЫ ЧЕРЕЗ МОДЕЛИРОВАНИЕ ДЕЙСТВИЙ ПРОТИВНИКА
 
 Security posture нельзя оценить только known vulnerabilities. Vulnerability scanning выявляет missing patches/misconfigurations, но не показывает, работают ли detection/response после initial access. Post-exploitation gaps — undetected lateral movement, missed credential harvesting, silent persistence — в scan results не появляются.
 
@@ -2720,7 +2720,7 @@ BAS дополняет manual simulation/penetration testing, а не замен
 
 Все findings должны feed back в patch/hardening; remediation progress track, persistent vulnerabilities escalate above acceptable risk.
 
-### CVSS FOR VULNERABILITY PRIORITIZATION
+### CVSS ДЛЯ ПРИОРИТИЗАЦИИ УЯЗВИМОСТЕЙ
 
 Common Vulnerability Scoring System (CVSS), maintained FIRST, standardizes severity scoring **0–10**. Higher scores обычно используются для remediation prioritization.
 
@@ -2761,7 +2761,7 @@ Comprehensive logging — data foundation threat detection и incident investiga
 
 Systems должны capture security-relevant events: process creation with command-line Windows, successful/failed authentication, network connections и DNS queries where feasible.
 
-### FEAR THE DARK: WHEN LOGS GO MISSING
+### БОЙТЕСЬ ТЕМНОТЫ: КОГДА ПРОПАДАЮТ ЖУРНАЛЫ
 
 Canonical source пересказывает guidance Heather Barnhart, SANS Institute Head of Faculty, о **dark periods** — временных gaps без reliable digital evidence.[22]
 
@@ -2790,7 +2790,7 @@ Retention periods зависят от investigation needs, compliance и storage
 
 > Logs следует защищать от tampering/deletion. Forward central collection promptly и применять access controls. Attackers часто пытаются delete/modify logs, чтобы скрыть activity.
 
-### SIEM OR SINK?
+### SIEM ИЛИ ПРОСТО СВАЛКА ЖУРНАЛОВ?
 
 SIEM aggregates logs, normalizes data и enables correlation. Properly operated SIEM valuable для detection/investigation.
 
@@ -2833,14 +2833,14 @@ Budget constraints — отдельный related challenge: training, forensic 
 
 Source начинает список подходов к resource constraints; продолжение находится в следующем canonical segment.
 
-## ПРОДОЛЖЕНИЕ: RESOURCE CONSTRAINTS
+## ПРОДОЛЖЕНИЕ: ОГРАНИЧЕНИЯ РЕСУРСОВ
 
 Команды могут работать с resource constraints несколькими способами:
 
 - **Приоритизировать high-impact activities.** Сосредоточиться на наиболее вероятных incident scenarios, самых critical systems и наиболее значимых capability gaps.
 - **Использовать существующие meetings.** Проводить пятнадцатиминутные tabletop discussions или playbook reviews в рамках регулярных team meetings вместо отдельных preparation sessions.
 
-### TURNING INCIDENTS INTO PREPARATION FUNDING
+### КАК ПРЕВРАТИТЬ ИНЦИДЕНТЫ В АРГУМЕНТ ДЛЯ ФИНАНСИРОВАНИЯ ПОДГОТОВКИ
 
 Для incident response team особенно неприятна ситуация, когда missing capability или underfunded tool были отмечены заранее, request месяцами лежал в backlog, а затем именно этот gap замедлил active response. Когда такое происходит, delay и его impact на incident timeline необходимо документировать.
 
@@ -2862,7 +2862,7 @@ Decision makers, только что увидевшие, как missing tool/pro
 
 Следует rotating team members между различными roles, чтобы развивать depth и избегать single points of failure. Analyst, который всегда выполняет evidence collection в drills, должен периодически отрабатывать coordination или communication roles. Team leads также следует иногда выполнять technical procedures, чтобы сохранять hands-on familiarity.
 
-### INCIDENT RESPONSE INVESTIGATION CHALLENGES
+### СЛОЖНОСТИ РАССЛЕДОВАНИЙ ПРИ РЕАГИРОВАНИИ НА ИНЦИДЕНТЫ
 
 Один из способов сохранять incident response skills — выделять время на continued professional development. Обычно это training courses или on-the-job work, но полезной альтернативой являются Capture the Flag (CTF) competitions. Они имитируют real-world incident scenarios и требуют анализировать logs, reverse-engineer malware и reconstruct attack timelines.
 
@@ -2900,7 +2900,7 @@ Personnel changes могут ослабить preparation, когда institutio
 
 Turnover влияет и на relationships: legal counsel, HR partners и business unit leaders должны заново научиться доверять новым team members. Меняется response dynamics, communication patterns и role assignments.
 
-### TABLETOP INJECT: SARAH’S DEPARTURE
+### ВВОДНАЯ ДЛЯ НАСТОЛЬНОГО УЧЕНИЯ: УХОД САРЫ
 
 Автор описывает tabletop exercise в крупной media company. Team демонстрировала strong decision-making и communication, но заметно зависела от IRT leader Sarah, обладавшей глубоким institutional knowledge.
 
@@ -2943,7 +2943,7 @@ Cybersecurity leaders сложно обосновывать preparation budget, 
 
 Tracking этих metrics со временем даёт tangible evidence progress и поддерживает budget/resource allocation decisions.
 
-### BENCHMARKING PREPARATION INVESTMENTS
+### СРАВНИТЕЛЬНАЯ ОЦЕНКА ИНВЕСТИЦИЙ В ПОДГОТОВКУ
 
 External reference points помогают обосновывать investment levels.
 
@@ -2964,7 +2964,7 @@ Value preparation трудно выразить точно, но organizations, 
 
 Следующие examples иллюстрируют значение preparation.
 
-### BUILDING THE BRIDGE BEFORE THE FLOOD
+### СТРОИТЬ МОСТ ДО НАВОДНЕНИЯ
 
 Dana присоединилась к **Meridian Financial** как incident response team lead восемь месяцев назад. Её predecessor сосредоточился на technical capabilities: впечатляющей forensic lab и advanced detection tools. Но в первый месяц Dana заметила тревожный gap: когда требовалась coordination с другими departments, она впервые представлялась людям, которые должны были быть близкими partners.
 
@@ -3004,7 +3004,7 @@ Vincent сообщил Dana, что Thomas недавно подал resignation
 
 Investment Dana в relationships превратил potential crisis в coordinated action. Эти relationships были не просто professional courtesy — они стали foundation effective response, столь же важным, как forensic tools и detection systems.
 
-### INTELLIGENCE-DRIVEN DETECTION
+### ОБНАРУЖЕНИЕ НА ОСНОВЕ КИБЕРРАЗВЕДКИ
 
 Isaac Morgan получил три недели на завершение integration threat intelligence feeds в NDR platform **Warren Health**. Healthcare organization была подписана на healthcare-specific ISAC feed; Isaac настроил NDR correlation network traffic с known IOC. Manager сомневался в оправданности времени, но Isaac понимал: detection без context — просто noise.
 
@@ -3042,11 +3042,11 @@ Isaac открыл alert в **AC-Hunter**, network threat detection platform. Co
 
 Early detection благодаря CTI integration превратил потенциальный ransomware incident в contained compromise. Preparation Isaac окупилась в avoided downtime, preserved patient data и incident costs, которые не materialized.
 
-## PREPARE: STEP-BY-STEP
+## ПОДГОТОВКА: ПОШАГОВО
 
 Следующие steps представляют condensed reference preparation activities. Каждый step соответствует темам, рассмотренным ранее в этой главе.
 
-## PREPARE: STEP-BY-STEP
+## ПОДГОТОВКА: ПОШАГОВО
 
 Этот step-by-step guide суммирует темы, рассмотренные ранее в Chapter 7, и предназначен для использования при создании organizational readiness, обучении incident response team и усилении proactive defenses.
 
@@ -4104,7 +4104,7 @@ portal.com/api/v2/status - ORIGINAL_DST/198.51.100.47 application/json
 
 Traffic показывает workstation, connecting domain, loading JavaScript и выполняющий periodic API calls. Без additional context analyst должен решить, требует ли это escalation.
 
-#### Interpretation 1: Assessment Without CTI Enrichment
+#### ИНТЕРПРЕТАЦИЯ 1: ОЦЕНКА БЕЗ ОБОГАЩЕНИЯ CTI
 
 Analyst использует доступный context. WHOIS показывает registration 36 hours ago, но newly registered domains обычны для SaaS vendors, создающих customer-specific infrastructure. Domain name выглядит consistent с legitimate secure document-transfer service.
 
@@ -4114,7 +4114,7 @@ Analyst делает defensible conclusion: вероятно, это новый 
 
 **Risk Classification: Low — legitimate business activity, no further action.**
 
-#### Interpretation 2: Assessment With CTI Enrichment
+#### ИНТЕРПРЕТАЦИЯ 2: ОЦЕНКА С ОБОГАЩЕНИЕМ CTI
 
 Второй analyst review тот же finding, но перед closure query CTI. Картина меняется.
 
@@ -5575,7 +5575,7 @@ Examples:
 
 В таких случаях behavioral analysis и memory forensics часто effective than signature matching.
 
-### LIVING OFF THE LAND
+### ИСПОЛЬЗОВАНИЕ ШТАТНЫХ СРЕДСТВ (LIVING OFF THE LAND)
 
 Attackers используют legitimate system tools:
 
@@ -13087,7 +13087,7 @@ Source highlights four recurring challenges:
 3. legitimate RMM abuse;
 4. cross-trust-boundary threats.
 
-# LIVING OFF THE LAND
+# ИСПОЛЬЗОВАНИЕ ШТАТНЫХ СРЕДСТВ (LIVING OFF THE LAND)
 
 Attackers use legitimate binaries/scripts/libraries — LOLBins — so defenders cannot simply remove the tool.
 
@@ -21772,7 +21772,7 @@ Ransomware-specific debrief should address:
 - What detection opportunities existed?
 - Could earlier detection have reduced/prevented encryption?
 
-## Data Exfiltration
+## ЭКСФИЛЬТРАЦИЯ ДАННЫХ
 
 - Can organization determine what data was accessed/exfiltrated?
 - What logging gaps created uncertainty?
@@ -22316,11 +22316,11 @@ Preventive foundations include:
 
 Это остаются наиболее распространенными целями cloud-focused threat actors. Облачные среды хранят большие объемы sensitive data в storage services, базах данных и SaaS-платформах, нередко доступных через одну скомпрометированную identity. Получив доступ к привилегированной учетной записи, злоумышленник потенциально может получить доступ к данным всей организации, не взаимодействуя ни с одним endpoint. Это делает облако привлекательной целью для extortion campaigns, где украденные данные используются для давления на жертву, иногда вообще без развертывания ransomware.
 
-## Ransomware
+## ПРОГРАММЫ-ВЫМОГАТЕЛИ (RANSOMWARE)
 
 Cloud-based ransomware отличается от on-premises ransomware. Вместо шифрования локальных дисков злоумышленники могут удалять snapshots и backups, изменять storage lifecycle policies для уничтожения данных или блокировать доступ администраторов через манипуляции с IAM. Последствия могут быть столь же тяжелыми, особенно если у организации нет offline backups облачных данных.
 
-## Cryptomining
+## НЕСАНКЦИОНИРОВАННЫЙ МАЙНИНГ
 
 Это распространенный результат компрометации учетных записей с правами на создание compute resources. Создание GPU-enabled virtual machines сразу в нескольких регионах может генерировать большие расходы для жертвы и одновременно приносить криптовалюту атакующему. Некоторые организации обнаруживают компрометацию только после получения неожиданно большого счета за облачные ресурсы.
 
@@ -22528,7 +22528,7 @@ Findings содержат affected resource, detection source и recommended rem
 
 SCC также поддерживает automated playbooks for remediation, позволяя выполнять response actions при появлении определенных типов findings.
 
-# Что пропускают Cloud-Native Detection Services
+# ЧТО МОГУТ ПРОПУСТИТЬ ВСТРОЕННЫЕ ОБЛАЧНЫЕ СЕРВИСЫ ОБНАРУЖЕНИЯ
 
 Cloud-native detection services полезны, но имеют ограничения.
 
@@ -22682,7 +22682,7 @@ Direct role assignments — не единственный механизм, оп
 
 нужно собрать и проанализировать дополнительные logs, чтобы проверить, не распространилась ли компрометация на связанные среды.
 
-# SIDEBAR: CIRCLECI — КОГДА УКРАДЕННЫЙ SESSION TOKEN КОМПРОМЕТИРУЕТ SUPPLY CHAIN
+# ВРЕЗКА: CIRCLECI — КОГДА УКРАДЕННЫЙ ТОКЕН СЕССИИ КОМПРОМЕТИРУЕТ ЦЕПОЧКУ ПОСТАВОК
 
 В январе 2023 года CircleCI, платформа continuous integration, сообщила, что злоумышленник скомпрометировал laptop инженера malware и украл действующий SSO session token.[6]
 
@@ -22834,7 +22834,7 @@ Control-plane и data-plane logs вместе позволяют прослед�
 - virtual machines;
 - storage accounts/buckets.
 
-## Изоляция Virtual Machine
+## ИЗОЛЯЦИЯ ВИРТУАЛЬНОЙ МАШИНЫ
 
 После compromise VM может показаться, что единственный вариант — выключить host. Более полезный подход позволяет сохранить host для deeper analysis и наблюдения за intent злоумышленника.
 
@@ -22921,7 +22921,7 @@ Anonymous read access для Azure storage resource может быть наст
 
 Container-level settings имеют приоритет над blob-level settings. Пользователь с permissions на `AllowBlobAnonymousAccess` должен отключить anonymous access для containers, которые не должны быть публичными.
 
-## Google Cloud
+## GOOGLE CLOUD
 
 Permissions на Google Cloud buckets контролируются через:
 
@@ -22940,7 +22940,7 @@ Permissions на Google Cloud buckets контролируются через:
 
 При exposed storage сначала следует ограничить доступ, а уже затем проводить полное исследование того, что было прочитано. Чем больше задержка между discovery и remediation, тем больше потенциальный объем exposure.
 
-# Искоренение Cloud Persistence
+# УСТРАНЕНИЕ ЗАКРЕПЛЕНИЯ В ОБЛАЧНОЙ СРЕДЕ
 
 Cloud environments дают злоумышленнику множество способов закрепиться в зависимости от полученного уровня доступа. Полный каталог persistence techniques выходит за рамки главы; здесь рассматриваются ключевые области для eradication.
 
@@ -23070,7 +23070,7 @@ done
 
 Поэтому investigation часто требует host forensics либо manual review ресурсов в cloud console.
 
-# Networking
+# СЕТЕВАЯ ИНФРАСТРУКТУРА
 
 Network resources — критически важные security controls. Небольшое изменение может открыть доступ как исходному threat actor, так и новым атакующим.
 
@@ -23085,11 +23085,11 @@ Network resources — критически важные security controls. Не�
 
 Общая особенность cloud persistence: зачастую достаточно API-level access, а host-level compromise не требуется. Поэтому закрепление может выполняться быстрее и быть менее заметным для traditional endpoint monitoring.
 
-# SIDEBAR: РАСПРОСТРАНЕННЫЕ ОШИБКИ CLOUD IR
+# ВРЕЗКА: РАСПРОСТРАНЁННЫЕ ОШИБКИ ОБЛАЧНОГО IR
 
 Несколько ошибок регулярно повторяются при cloud incident response.
 
-## 1. Выключение compromised instance до его фиксации
+## 1. ВЫКЛЮЧЕНИЕ СКОМПРОМЕТИРОВАННОГО ИНСТАНСА ДО ФИКСАЦИИ ДОКАЗАТЕЛЬСТВ
 
 После termination instance volatile data теряются безвозвратно:
 
@@ -23099,7 +23099,7 @@ Network resources — критически важные security controls. Не�
 
 Перед containment action следует сначала сохранить snapshot.
 
-## 2. Rotation credentials без revoke active sessions
+## 2. РОТАЦИЯ УЧЁТНЫХ ДАННЫХ БЕЗ ОТЗЫВА АКТИВНЫХ СЕССИЙ
 
 Новый password или access key не делает существующие tokens недействительными. Если у атакующего есть valid session token, он может продолжать работу после rotation credentials.
 
@@ -23185,19 +23185,19 @@ Debrief — возможность превратить эти gaps в конк�
 - Соответствовали ли identities принципу least privilege?
 - Какие identity controls нужны для уменьшения blast radius?
 
-## Resources
+## РЕСУРСЫ
 
 - Какие resources были compromised?
 - Действительно ли identities, через которые был получен доступ, должны были иметь права на эти resources?
 - Нужно ли применить более restrictive policies?
 
-## Networking
+## СЕТЕВАЯ ИНФРАСТРУКТУРА
 
 - Обошел ли threat actor network controls?
 - Были ли network rules слишком permissive или misconfigured?
 - Какие дополнительные network controls предотвратят unauthorized access без нарушения functionality?
 
-## Data exfiltration
+## ЭКСФИЛЬТРАЦИЯ ДАННЫХ
 
 - Есть ли внутри blast radius resources с sensitive data: buckets, VMs, databases и т.д.?
 - Получал ли threat actor доступ к ним?
@@ -23393,7 +23393,7 @@ Cross-cloud correlation также усложняется из-за различ
 - log formats;
 - provider-specific semantics.
 
-## 2. Cloud architecture влияет на scope
+## 2. ОБЛАЧНАЯ АРХИТЕКТУРА ВЛИЯЕТ НА МАСШТАБ РАССЛЕДОВАНИЯ
 
 Если cloud environments полностью изолированы друг от друга, scope incident относительно понятен.
 
@@ -23655,7 +23655,7 @@ OT systems управляют physical processes в реальном време�
 
 Response decisions оцениваются не только по cybersecurity value, но и по impact на physical process.
 
-# Требуемые Skill Sets для OT Defenders и Responders
+# НЕОБХОДИМЫЕ КОМПЕТЕНЦИИ СПЕЦИАЛИСТОВ ПО ЗАЩИТЕ И РЕАГИРОВАНИЮ В OT
 
 Engineering understanding — часть OT IR role.
 
@@ -23710,7 +23710,7 @@ OT assets могут эксплуатироваться 10 лет и дольш�
 
 Shutdown может занимать часы или дни, а restart — требовать значительных engineering усилий. Containment и remediation необходимо поэтапно согласовывать с engineering и operations. Vendor support особенно важен при recovery.
 
-# Различия Industrial System Design и Network Architecture
+# РАЗЛИЧИЯ В ПРОЕКТИРОВАНИИ ПРОМЫШЛЕННЫХ СИСТЕМ И СЕТЕВОЙ АРХИТЕКТУРЕ
 
 OT networks часто строятся по Purdue-like architecture и используют industrial protocols:
 
@@ -23732,7 +23732,7 @@ Responders должны понимать роль:
 - RTU;
 - protection relay.
 
-# SIDEBAR: PURDUE MODEL ДЛЯ INDUSTRIAL NETWORK ARCHITECTURE
+# ВРЕЗКА: МОДЕЛЬ PURDUE ДЛЯ АРХИТЕКТУРЫ ПРОМЫШЛЕННОЙ СЕТИ
 
 Purdue Enterprise Reference Architecture (PERA), обычно называемая Purdue model, — наиболее распространенная модель сегментации OT network.
 
@@ -23787,7 +23787,7 @@ OT environments имеют крайне низкую tolerance к false positive
 
 Containment decision влияет сразу на все эти области.
 
-# SIDEBAR: ПОЧЕМУ СТАНДАРТНЫЙ IT CONTAINMENT МОЖЕТ БЫТЬ ОПАСЕН В OT
+# ВРЕЗКА: ПОЧЕМУ СТАНДАРТНОЕ IT-СДЕРЖИВАНИЕ МОЖЕТ БЫТЬ ОПАСНО В OT
 
 Rapid isolation, aggressive blocking и full rebuild могут создать operational risk.
 
@@ -23798,7 +23798,7 @@ Rapid isolation, aggressive blocking и full rebuild могут создать o
 
 IT response action способен причинить больше ущерба, чем threat. Containment и eradication должны быть validated с engineering и operations.
 
-# CASE: КОГДА IT CONTAINMENT САМ СОЗДАЕТ OT INCIDENT
+# ПРИМЕР: КОГДА IT-СДЕРЖИВАНИЕ САМО СОЗДАЁТ OT-ИНЦИДЕНТ
 
 На refinery OT monitoring обнаружил аномальные outbound connections от недавно развернутого Windows-based HMI к нескольким internet C2 servers.
 
@@ -23835,7 +23835,7 @@ Operators пришлось выйти на plant floor в PPE для восст�
 
 Вывод: aggressive containment без engineering context может быть опаснее threat. OT response должен учитывать process knowledge, network architecture и coordination с engineering.
 
-# Потенциальные последствия IT и OT Incidents
+# ПОТЕНЦИАЛЬНЫЕ ПОСЛЕДСТВИЯ IT- И OT-ИНЦИДЕНТОВ
 
 ## Таблица 57. Сравнение последствий инцидентов: IT и OT
 
@@ -23880,7 +23880,7 @@ Industrial incidents часто используют living-off-the-land:
 
 пока incident исследуется и устраняется, не создавая дополнительного safety impact.
 
-# Распространенные OT Assets
+# ТИПОВЫЕ OT-АКТИВЫ
 
 OT environment включает purpose-built systems для monitoring, control и protection physical processes.
 
@@ -23917,7 +23917,7 @@ Remote Terminal Units обеспечивают telemetry и control geographical
 - compressor stations;
 - remote well sites.
 
-## Protection Relays
+## РЕЛЕЙНАЯ ЗАЩИТА
 
 Protection relays защищают:
 
@@ -23938,7 +23938,7 @@ Protection relays защищают:
 
 Variable Frequency Drives регулируют motor speed.
 
-## SIS и Emergency Shutdown
+## SIS И АВАРИЙНОЕ ОТКЛЮЧЕНИЕ
 
 Safety Instrumented Systems и emergency shutdown systems образуют independent protective layers и должны переводить process в safe state при hazardous conditions.[2]
 
@@ -23958,7 +23958,7 @@ Human-Machine Interface дает operators real-time visibility:
 
 > **Иллюстрация не воспроизводится:** требуется отдельная проверка прав на сторонний визуальный материал. .
 
-## Engineering Workstation
+## ИНЖЕНЕРНАЯ РАБОЧАЯ СТАНЦИЯ
 
 Используется для:
 
@@ -23966,7 +23966,7 @@ Human-Machine Interface дает operators real-time visibility:
 - troubleshooting;
 - programming PLC и других industrial devices.
 
-## Historian
+## АРХИВ ТЕХНОЛОГИЧЕСКИХ ДАННЫХ (HISTORIAN)
 
 Data historian хранит time-series operational data:
 
@@ -24040,7 +24040,7 @@ DAIR помогает:
 - спланировать response actions;
 - сохранить operational control.
 
-# SIDEBAR: FIGHTING THROUGH THE ATTACK
+# ВРЕЗКА: ПРОДОЛЖЕНИЕ БЕЗОПАСНОЙ РАБОТЫ ВО ВРЕМЯ АТАКИ
 
 В OT immediate objective не всегда состоит в shutdown systems.
 
@@ -24052,7 +24052,7 @@ DAIR помогает:
 
 Это позволяет сохранить visibility/control и уменьшить риск того, что response сам вызовет instability.
 
-# CASE: FIGHTING THROUGH THE ATTACK, ЧТОБЫ СОХРАНИТЬ POWER GENERATION
+# ПРИМЕР: ПРОДОЛЖЕНИЕ РАБОТЫ ВО ВРЕМЯ АТАКИ ДЛЯ СОХРАНЕНИЯ ГЕНЕРАЦИИ ЭЛЕКТРОЭНЕРГИИ
 
 На hydroelectric power generation facility возник выбор:
 
@@ -24079,7 +24079,7 @@ Operations продолжились через embedded HMI panels на dedicate
 - провести forensic analysis;
 - подготовить recovery.
 
-# Распространенные типы OT Incidents
+# ТИПОВЫЕ OT-ИНЦИДЕНТЫ
 
 Ранее critical infrastructure incidents часто считались High-Impact, Low-Frequency (HILF).[3]
 
@@ -24166,7 +24166,7 @@ Verify/Triage должны выполняться:
 3. оценивает operational impact вместе с engineering/operations;
 4. определяет, можно ли стабилизировать system или перевести его в controlled condition.
 
-# CASE: OPERATOR VISIBILITY КАК ПОСЛЕДНЯЯ ЛИНИЯ ЗАЩИТЫ
+# ПРИМЕР: НАБЛЮДАЕМОСТЬ ОПЕРАТОРА КАК ПОСЛЕДНЯЯ ЛИНИЯ ЗАЩИТЫ
 
 5 февраля 2021 года operator Oldsmar water treatment plant во Florida увидел движение mouse cursor на HMI без собственного input.[4]
 
@@ -24337,11 +24337,11 @@ Scoping строится вокруг monitoring key collection points:
 
 Responders используют:
 
-## Firewall/Security Control Logs
+## ЖУРНАЛЫ МЕЖСЕТЕВЫХ ЭКРАНОВ И СРЕДСТВ ЗАЩИТЫ
 
 Показывают, инициировал ли compromised system connections в control zones или PLC subnets по EtherNet/IP, Modbus, PROFINET.
 
-## Packet Capture / Flow Logs / Protocol Analysis
+## ЗАХВАТ ПАКЕТОВ / ЖУРНАЛЫ ПОТОКОВ / АНАЛИЗ ПРОТОКОЛОВ
 
 Позволяют обнаружить:
 
@@ -24605,13 +24605,13 @@ OT debrief — structured technical review того, как:
 
 Кроме generic post-incident review следует задать вопросы, на которые могут ответить только engineering/operations.
 
-## Cyber-Safe Position и Island Mode
+## КИБЕРБЕЗОПАСНОЕ СОСТОЯНИЕ И АВТОНОМНЫЙ РЕЖИМ
 
 - Рассматривался ли cyber-safe mode/manual operations/island mode?
 - Если применялся — помог ли containment/scoping/eradication?
 - Если нет — что помешало transition?
 
-## Engineering System Exposure
+## КОМПРОМЕТАЦИЯ ИНЖЕНЕРНЫХ СИСТЕМ
 
 - Были ли exposed engineering workstations?
 - project repositories?
@@ -24619,13 +24619,13 @@ OT debrief — structured technical review того, как:
 - получил ли adversary доступ к PLC engineering tools?
 - мог ли modify project files?
 
-## Controller Integrity Verification
+## ПРОВЕРКА ЦЕЛОСТНОСТИ КОНТРОЛЛЕРОВ
 
 - Проверялась ли controller logic during recovery?
 - Были ли baseline files available и trustworthy?
 - можно ли было быстро подтвердить integrity через engineering tools/offline comparison?
 
-## Protocol-Level Visibility
+## НАБЛЮДАЕМОСТЬ НА УРОВНЕ ПРОТОКОЛОВ
 
 Была ли достаточная visibility по:
 
@@ -24636,12 +24636,12 @@ OT debrief — structured technical review того, как:
 
 Можно ли было определить unauthorized control commands или configuration changes?
 
-## Operational Impact Awareness
+## ПОНИМАНИЕ ОПЕРАЦИОННОГО ВЛИЯНИЯ
 
 - Как быстро responders поняли, затронут ли physical process?
 - Было ли достаточно HMI/historian/alarm visibility?
 
-## Backup Access and Validation
+## ДОСТУП К РЕЗЕРВНЫМ КОПИЯМ И ИХ ПРОВЕРКА
 
 Были ли backups для:
 
@@ -24651,7 +24651,7 @@ OT debrief — structured technical review того, как:
 
 которые можно использовать для validation/recovery при compromise primary access?
 
-## Architectural Trust Relationships
+## АРХИТЕКТУРНЫЕ ДОВЕРИТЕЛЬНЫЕ СВЯЗИ
 
 Какие решения позволили adversary access/lateral movement?
 
@@ -24662,7 +24662,7 @@ OT debrief — structured technical review того, как:
 - flat Level 3 network;
 - слабая IT/OT segmentation.
 
-## Containment and Operational Risk Decisions
+## РЕШЕНИЯ ПО СДЕРЖИВАНИЮ И ОПЕРАЦИОННОМУ РИСКУ
 
 - Были ли containment actions delayed, modified или sequenced ради controlled operations?
 - Был ли engineering context, чтобы понимать последствия isolation?
@@ -24673,7 +24673,7 @@ OT debrief — structured technical review того, как:
 - protocol-monitoring blind spots;
 - trust relationships.
 
-# Engineering and Architecture Improvements
+# ИНЖЕНЕРНЫЕ И АРХИТЕКТУРНЫЕ УЛУЧШЕНИЯ
 
 OT debrief должен приводить к actionable improvements:
 
@@ -24842,7 +24842,7 @@ Remediation может быть:
 [9] SANS Institute, "The Five ICS Cybersecurity Critical Controls," www.sans.org/white-papers/five-ics-cybersecurity-critical-controls/
 
 
-# Глава 20. Интеграция DAIR с NIST CSF 2.0
+# ГЛАВА 20. ИНТЕГРАЦИЯ DAIR С NIST CSF 2.0
 
 ![Дополнительная схема к главе 20](visuals/chapter-20-visual-cheatsheet.svg)
 
@@ -24866,7 +24866,7 @@ Dynamic Approach to Incident Response (DAIR) предоставляет tactical
 
 Интеграция DAIR и CSF 2.0 создает practical framework, где compliance достигается через effective response activities, а не существует как отдельная administrative burden.
 
-# Понимание NIST SP 800-61 R3 и CSF 2.0
+# ПОНИМАНИЕ NIST SP 800-61 R3 И CSF 2.0
 
 NIST SP 800-61 Revision 3 существенно меняет место incident response внутри cybersecurity program.
 
@@ -24888,7 +24888,7 @@ CSF 2.0 описывает эти взаимозависимости через 
 
 # Шесть функций CSF
 
-## Govern (GV)
+## УПРАВЛЕНИЕ (GOVERN, GV)
 
 Govern задает organizational context для cybersecurity activities.
 
@@ -24908,7 +24908,7 @@ Govern задает organizational context для cybersecurity activities.
 
 Compliance демонстрируется через documentation того, как response decisions соответствуют organizational risk tolerance и strategic objectives.
 
-## Identify (ID)
+## ИДЕНТИФИКАЦИЯ (IDENTIFY, ID)
 
 Identify требует понимания текущих cybersecurity risks.
 
@@ -24927,7 +24927,7 @@ Effective incident response зависит от знания:
 
 Identify также включает threat intelligence, влияющий на detection strategy и response priorities.
 
-## Protect (PR)
+## ЗАЩИТА (PROTECT, PR)
 
 Protect охватывает safeguards, управляющие cybersecurity risks до incidents.
 
@@ -24945,7 +24945,7 @@ Protect охватывает safeguards, управляющие cybersecurity ri
 
 Они ограничивают incident scope и помогают сохранять forensic artifacts.
 
-## Detect (DE)
+## ОБНАРУЖЕНИЕ (DETECT, DE)
 
 Detect охватывает capabilities для поиска и анализа cyber attacks и compromises.
 
@@ -24962,7 +24962,7 @@ Detection capabilities определяют:
 - насколько быстро incident обнаружен;
 - сколько context доступно responders на старте.
 
-## Respond (RS)
+## РЕАГИРОВАНИЕ (RESPOND, RS)
 
 Respond охватывает actions после обнаружения incident.
 
@@ -24975,7 +24975,7 @@ Respond охватывает actions после обнаружения incident.
 
 CSF 2.0 прямо признает необходимость iterative response, который адаптируется к новой информации.
 
-## Recover (RC)
+## ВОССТАНОВЛЕНИЕ (RECOVER, RC)
 
 Recover фокусируется на restoration assets и operations.
 
@@ -24989,7 +24989,7 @@ Recover фокусируется на restoration assets и operations.
 
 Эти шесть functions формируют структуру, через которую организации демонстрируют maturity и compliance incident response capability.
 
-# Что требует Compliance
+# ЧТО ТРЕБУЕТ СООТВЕТСТВИЕ ТРЕБОВАНИЯМ
 
 ## Таблица 60. Требования CSF 2.0 к реагирование на инциденты Compliance
 
@@ -25004,7 +25004,7 @@ Recover фокусируется на restoration assets и operations.
 
 CSF 2.0 дает strategic framework, но требуется tactical methodology.
 
-# DAIR как Implementation CSF 2.0
+# DAIR КАК ПРАКТИЧЕСКАЯ РЕАЛИЗАЦИЯ CSF 2.0
 
 DAIR предоставляет tactical methodology для выполнения требований CSF 2.0.
 
@@ -25012,7 +25012,7 @@ DAIR activities напрямую сопоставляются с CSF functions, 
 
 Когда организации внедряют effective IR practices, compliance часто становится естественным результатом. CSF 2.0 codifies то, что experienced practitioners уже делают, а DAIR formalizes эти practices и облегчает demonstration compliance.
 
-# Mapping DAIR Activities to CSF Functions
+# СОПОСТАВЛЕНИЕ ЭТАПОВ DAIR С ФУНКЦИЯМИ CSF
 
 Figure 200 показывает alignment шести CSF functions с DAIR structure.
 
@@ -25034,7 +25034,7 @@ Figure 200 показывает alignment шести CSF functions с DAIR struc
 
 Остается документировать их так, чтобы compliance была видима assessor/auditor.
 
-# Value of Iterative Response for Compliance
+# ЦЕННОСТЬ ИТЕРАТИВНОГО РЕАГИРОВАНИЯ ДЛЯ СООТВЕТСТВИЯ ТРЕБОВАНИЯМ
 
 Iterative Response Actions Loop особенно полезен для CSF 2.0 compliance.
 
@@ -25069,7 +25069,7 @@ Iteration count можно показывать как positive metric, а не 
 - appropriately expands scope;
 - improves overall response effectiveness.
 
-# Decision Maker Integration и Govern Function
+# ИНТЕГРАЦИЯ ЛИЦ, ПРИНИМАЮЩИХ РЕШЕНИЯ, И ФУНКЦИЯ GOVERN
 
 DAIR emphasis на Decision Maker coordination соответствует Govern function на протяжении всего lifecycle.
 
@@ -25088,7 +25088,7 @@ Decision Makers участвуют не только в начале или ко
 
 ## Таблица 62. DAIR Activities Mapped to CSF 2.0 Govern Categories
 
-### GV.OC — Organizational Context
+### GV.OC — ОРГАНИЗАЦИОННЫЙ КОНТЕКСТ
 
 Assessor ожидает documentation того, что response decisions учитывают:
 
@@ -25103,7 +25103,7 @@ DAIR artifacts:
 - triage decision records;
 - regulatory notification trigger log.
 
-### GV.RM — Risk Management Strategy
+### GV.RM — СТРАТЕГИЯ УПРАВЛЕНИЯ РИСКАМИ
 
 Нужно evidence, что residual risk при closure:
 
@@ -25117,9 +25117,9 @@ DAIR artifacts:
 - debrief report с risk register recommendations;
 - recovery metrics/trend data.
 
-## Продолжение таблицы 62. Govern Categories
+## ПРОДОЛЖЕНИЕ ТАБЛИЦЫ 62. КАТЕГОРИИ GOVERN
 
-### GV.RR — Roles, Responsibilities, and Authorities
+### GV.RR — РОЛИ, ОБЯЗАННОСТИ И ПОЛНОМОЧИЯ
 
 Assessor ожидает defined authority matrix для incident response, включая:
 
@@ -25145,7 +25145,7 @@ Artifacts:
 - escalation procedure documentation;
 - named role assignments по incident type или severity tier.
 
-### GV.PO — Policy
+### GV.PO — ПОЛИТИКА
 
 Нужны documented cybersecurity policies, отражающие organizational context.
 
@@ -25170,7 +25170,7 @@ Artifacts:
 - scenario-specific playbooks;
 - communication plan с last-reviewed timestamp.
 
-### GV.SC — Supply Chain Risk Management
+### GV.SC — УПРАВЛЕНИЕ РИСКАМИ ЦЕПОЧКИ ПОСТАВОК
 
 Assessor ожидает evidence, что:
 
@@ -25195,7 +25195,7 @@ Artifacts:
 
 Такой category-level documentation показывает, что incident response встроен в enterprise risk management framework.
 
-# Meeting Compliance Through DAIR Activities
+# ОБЕСПЕЧЕНИЕ СООТВЕТСТВИЯ ЧЕРЕЗ ЭТАПЫ DAIR
 
 Effective incident response естественным образом генерирует значительный объем documentation.
 
@@ -25206,7 +25206,7 @@ Effective incident response естественным образом генери
 - распознать compliance artifacts, уже возникающие в DAIR operations;
 - оформить их в ожидаемом assessment format.
 
-# Compliance Artifacts from DAIR Activities
+# АРТЕФАКТЫ СООТВЕТСТВИЯ ИЗ ЭТАПОВ DAIR
 
 Assessors требуют tangible evidence того, что IR capabilities:
 
@@ -25236,7 +25236,7 @@ Tracking implementation of debrief recommendations дополнительно п
 
 Важно документировать не только actions, но и rationale decision-making.
 
-# Demonstrating Control Effectiveness
+# ПОДТВЕРЖДЕНИЕ ЭФФЕКТИВНОСТИ МЕР КОНТРОЛЯ
 
 CSF 2.0 требует показать, что controls работают, а не просто существуют.
 
@@ -25252,7 +25252,7 @@ DAIR дает возможность продемонстрировать effect
 
 Каждая iteration Response Actions Loop усиливает evidence эффективности, поскольку показывает adaptation к новым findings.
 
-# Satisfying Audit Requirements
+# ВЫПОЛНЕНИЕ ТРЕБОВАНИЙ АУДИТА
 
 Audit/assessment обычно включает:
 
@@ -25288,7 +25288,7 @@ Auditors обычно запрашивают:
 
 Интеграция compliance в routine DAIR operations устраняет необходимость собирать evidence постфактум.
 
-# Incident Tracking Platform Configuration
+# НАСТРОЙКА ПЛАТФОРМЫ УЧЁТА ИНЦИДЕНТОВ
 
 Incident tracking tooling можно настроить одновременно для:
 
@@ -25297,7 +25297,7 @@ Incident tracking tooling можно настроить одновременно
 
 Хорошая configuration уменьшает manual effort и обеспечивает consistent generation artifacts.
 
-# Ticketing and Case Management
+# ТИКЕТИНГ И УПРАВЛЕНИЕ КЕЙСАМИ
 
 Primary documentation platform может быть:
 
@@ -25329,7 +25329,7 @@ Workflow должен позволять incidents многократно про
 
 Evidence artifacts следует связывать с конкретными incident records и сохранять согласно retention policies.
 
-# Communication Templates
+# ШАБЛОНЫ КОММУНИКАЦИЙ
 
 Communication templates должны быть разработаны during Prepare в рамках Emergency Communication Plan.
 
@@ -25351,13 +25351,13 @@ Consistent vocabulary демонстрирует organizational fluency и со�
 
 Нужны variants для разных audiences:
 
-## Executive
+## ДЛЯ РУКОВОДСТВА
 
 - impact;
 - progress;
 - concise decision-relevant information.
 
-## Technical
+## ТЕХНИЧЕСКИЙ УРОВЕНЬ
 
 - detailed activities;
 - DAIR waypoint terminology.
@@ -25370,7 +25370,7 @@ Clear expectations к note-taking уменьшают manual effort и повыш
 
 Tooling нужно регулярно review, чтобы оно продолжало поддерживать operational и compliance needs.
 
-# Integrating DAIR with NIST CSF 2.0
+# ИНТЕГРАЦИЯ DAIR С NIST CSF 2.0
 
 Интеграция DAIR и CSF 2.0 показывает, что compliance и operational effectiveness усиливают друг друга.
 

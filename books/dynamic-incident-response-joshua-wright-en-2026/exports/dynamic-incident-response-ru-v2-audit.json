@@ -101,217 +101,41 @@
     {
       "chapter": 20,
       "file": "chapter-20-integrating-dair-with-nist-csf-2-0.md",
-      "title": "Глава 20. Интеграция DAIR с NIST CSF 2.0"
+      "title": "ГЛАВА 20. ИНТЕГРАЦИЯ DAIR С NIST CSF 2.0"
     }
   ],
   "third_party_markers_source": 231,
   "third_party_callouts_v2": 231,
   "project_visuals_included": 20,
-  "mixed_heading_candidate_count": 775,
+  "mixed_heading_candidate_count": 669,
   "mixed_heading_candidates": [
     {
-      "chapter": 2,
-      "heading": "МЕНЯЮЩИЕСЯ ТРЕБОВАНИЯ К ФУНКЦИИ INCIDENT RESPONSE"
-    },
-    {
       "chapter": 3,
-      "heading": "CERT и CIAC"
-    },
-    {
-      "chapter": 3,
-      "heading": "Дальнейшее развитие: US Navy, SANS и NIST"
-    },
-    {
-      "chapter": 4,
-      "heading": "Что насчёт Indicators of Attack (IOA)?"
-    },
-    {
-      "chapter": 4,
-      "heading": "MEAN TIME TO DETECT"
-    },
-    {
-      "chapter": 4,
-      "heading": "MEAN TIME TO RESPOND"
-    },
-    {
-      "chapter": 4,
-      "heading": "INCIDENT MANAGEMENT И INCIDENT RESPONSE"
+      "heading": "CERT И CIAC"
     },
     {
       "chapter": 5,
-      "heading": "NIST SP 800-61 REVISION 3 И CYBERSECURITY FRAMEWORK"
-    },
-    {
-      "chapter": 5,
-      "heading": "Отсутствие root cause analysis"
+      "heading": "NIST SP 800-61 REVISION 3 И CYBERSECURITY FRAMEWORK (CSF)"
     },
     {
       "chapter": 7,
-      "heading": "C4: МОДЕЛЬ ИЗ SOFTWARE DEVELOPMENT"
+      "heading": "ПРИМЕР: КОМПРОМЕТАЦИЯ POWERSCHOOL В 2025 ГОДУ"
     },
     {
       "chapter": 7,
-      "heading": "REGULATORY NOTIFICATION REQUIREMENTS"
+      "heading": "ИГРОВОЕ НАСТОЛЬНОЕ УЧЕНИЕ: BACKDOORS & BREACHES"
     },
     {
       "chapter": 7,
-      "heading": "ПРИМЕР: POWERSCHOOL BREACH 2025"
+      "heading": "SYSMON ДЛЯ РАСШИРЕННОЙ ТЕЛЕМЕТРИИ WINDOWS"
     },
     {
       "chapter": 7,
-      "heading": "STANDARDIZED VOCABULARY WITH MITRE ATT&CK"
-    },
-    {
-      "chapter": 7,
-      "heading": "CYBER SAFE HARBOR LEGISLATION"
-    },
-    {
-      "chapter": 7,
-      "heading": "ОБУЧЕНИЕ INCIDENT RESPONSE TEAM"
-    },
-    {
-      "chapter": 7,
-      "heading": "CLARIFYING ROLES WITH A RACI MATRIX"
-    },
-    {
-      "chapter": 7,
-      "heading": "Forensic Workstations"
-    },
-    {
-      "chapter": 7,
-      "heading": "Evidence Collection Tools"
-    },
-    {
-      "chapter": 7,
-      "heading": "Analysis Tools"
-    },
-    {
-      "chapter": 7,
-      "heading": "Evidence Storage"
-    },
-    {
-      "chapter": 7,
-      "heading": "Jump Bag / Go Kit"
-    },
-    {
-      "chapter": 7,
-      "heading": "COMMERCIAL VS. OPEN-SOURCE FORENSIC TOOLS"
-    },
-    {
-      "chapter": 7,
-      "heading": "TABLETOP EXERCISE GAME PLAY: BACKDOORS & BREACHES"
-    },
-    {
-      "chapter": 7,
-      "heading": "NCSC EXERCISE TOOLKIT"
-    },
-    {
-      "chapter": 7,
-      "heading": "STANDARDIZED THREAT INTELLIGENCE WITH STIX"
-    },
-    {
-      "chapter": 7,
-      "heading": "CTI PLATFORMS"
-    },
-    {
-      "chapter": 7,
-      "heading": "SUPPLY CHAIN SECURITY И END-OF-LIFE"
-    },
-    {
-      "chapter": 7,
-      "heading": "PATCH MANAGEMENT AND PRIORITIZATION EFFORTS"
-    },
-    {
-      "chapter": 7,
-      "heading": "EDR AS A SUCCESS STORY"
-    },
-    {
-      "chapter": 7,
-      "heading": "SYSMON ДЛЯ ENHANCED WINDOWS TELEMETRY"
-    },
-    {
-      "chapter": 7,
-      "heading": "FULL PACKET CAPTURE"
-    },
-    {
-      "chapter": 7,
-      "heading": "STRATEGIC PACKET CAPTURE"
-    },
-    {
-      "chapter": 7,
-      "heading": "NETWORK FLOW MONITORING"
-    },
-    {
-      "chapter": 7,
-      "heading": "EXTENDED BERKELEY PACKET FILTER (eBPF)"
-    },
-    {
-      "chapter": 7,
-      "heading": "NETWORK DETECTION AND RESPONSE (NDR)"
+      "heading": "РАСШИРЕННЫЙ BERKELEY PACKET FILTER (eBPF)"
     },
     {
       "chapter": 7,
       "heading": "ИНВЕСТИРУЙТЕ В DETECTION ENGINEERING"
-    },
-    {
-      "chapter": 7,
-      "heading": "CATALOG ALL CRITICAL DATA, SYSTEMS, AND INFRASTRUCTURE"
-    },
-    {
-      "chapter": 7,
-      "heading": "THE MODERN ATTACK SURFACE"
-    },
-    {
-      "chapter": 7,
-      "heading": "ASSESS SECURITY POSTURE THROUGH ADVERSARY SIMULATION"
-    },
-    {
-      "chapter": 7,
-      "heading": "CVSS FOR VULNERABILITY PRIORITIZATION"
-    },
-    {
-      "chapter": 7,
-      "heading": "FEAR THE DARK: WHEN LOGS GO MISSING"
-    },
-    {
-      "chapter": 7,
-      "heading": "SIEM OR SINK?"
-    },
-    {
-      "chapter": 7,
-      "heading": "ПРОДОЛЖЕНИЕ: RESOURCE CONSTRAINTS"
-    },
-    {
-      "chapter": 7,
-      "heading": "TURNING INCIDENTS INTO PREPARATION FUNDING"
-    },
-    {
-      "chapter": 7,
-      "heading": "INCIDENT RESPONSE INVESTIGATION CHALLENGES"
-    },
-    {
-      "chapter": 7,
-      "heading": "TABLETOP INJECT: SARAH’S DEPARTURE"
-    },
-    {
-      "chapter": 7,
-      "heading": "BENCHMARKING PREPARATION INVESTMENTS"
-    },
-    {
-      "chapter": 7,
-      "heading": "BUILDING THE BRIDGE BEFORE THE FLOOD"
-    },
-    {
-      "chapter": 7,
-      "heading": "INTELLIGENCE-DRIVEN DETECTION"
-    },
-    {
-      "chapter": 7,
-      "heading": "PREPARE: STEP-BY-STEP"
-    },
-    {
-      "chapter": 7,
-      "heading": "PREPARE: STEP-BY-STEP"
     },
     {
       "chapter": 7,
@@ -364,14 +188,6 @@
     {
       "chapter": 8,
       "heading": "Шаг 8. Continuously Improve Detection Capabilities"
-    },
-    {
-      "chapter": 9,
-      "heading": "Interpretation 1: Assessment Without CTI Enrichment"
-    },
-    {
-      "chapter": 9,
-      "heading": "Interpretation 2: Assessment With CTI Enrichment"
     },
     {
       "chapter": 9,
@@ -439,7 +255,7 @@
     },
     {
       "chapter": 11,
-      "heading": "LIVING OFF THE LAND"
+      "heading": "ИСПОЛЬЗОВАНИЕ ШТАТНЫХ СРЕДСТВ (LIVING OFF THE LAND)"
     },
     {
       "chapter": 11,
@@ -1475,7 +1291,7 @@
     },
     {
       "chapter": 13,
-      "heading": "LIVING OFF THE LAND"
+      "heading": "ИСПОЛЬЗОВАНИЕ ШТАТНЫХ СРЕДСТВ (LIVING OFF THE LAND)"
     },
     {
       "chapter": 13,
@@ -2815,10 +2631,6 @@
     },
     {
       "chapter": 17,
-      "heading": "Data Exfiltration"
-    },
-    {
-      "chapter": 17,
       "heading": "Ransom Decision"
     },
     {
@@ -2907,11 +2719,7 @@
     },
     {
       "chapter": 18,
-      "heading": "Ransomware"
-    },
-    {
-      "chapter": 18,
-      "heading": "Cryptomining"
+      "heading": "ПРОГРАММЫ-ВЫМОГАТЕЛИ (RANSOMWARE)"
     },
     {
       "chapter": 18,
@@ -2919,55 +2727,11 @@
     },
     {
       "chapter": 18,
-      "heading": "Что пропускают Cloud-Native Detection Services"
-    },
-    {
-      "chapter": 18,
-      "heading": "SIDEBAR: CIRCLECI — КОГДА УКРАДЕННЫЙ SESSION TOKEN КОМПРОМЕТИРУЕТ SUPPLY CHAIN"
-    },
-    {
-      "chapter": 18,
-      "heading": "Изоляция Virtual Machine"
-    },
-    {
-      "chapter": 18,
       "heading": "ИСПРАВЛЕНИЕ STORAGE ACCOUNT И BUCKET"
     },
     {
       "chapter": 18,
-      "heading": "Google Cloud"
-    },
-    {
-      "chapter": 18,
-      "heading": "Искоренение Cloud Persistence"
-    },
-    {
-      "chapter": 18,
-      "heading": "Networking"
-    },
-    {
-      "chapter": 18,
-      "heading": "SIDEBAR: РАСПРОСТРАНЕННЫЕ ОШИБКИ CLOUD IR"
-    },
-    {
-      "chapter": 18,
-      "heading": "1. Выключение compromised instance до его фиксации"
-    },
-    {
-      "chapter": 18,
-      "heading": "2. Rotation credentials без revoke active sessions"
-    },
-    {
-      "chapter": 18,
-      "heading": "Resources"
-    },
-    {
-      "chapter": 18,
-      "heading": "Networking"
-    },
-    {
-      "chapter": 18,
-      "heading": "Data exfiltration"
+      "heading": "GOOGLE CLOUD"
     },
     {
       "chapter": 18,
@@ -2975,71 +2739,7 @@
     },
     {
       "chapter": 18,
-      "heading": "2. Cloud architecture влияет на scope"
-    },
-    {
-      "chapter": 18,
       "heading": "сквозная видимость multi-cloud"
-    },
-    {
-      "chapter": 19,
-      "heading": "Требуемые Skill Sets для OT Defenders и Responders"
-    },
-    {
-      "chapter": 19,
-      "heading": "Различия Industrial System Design и Network Architecture"
-    },
-    {
-      "chapter": 19,
-      "heading": "SIDEBAR: PURDUE MODEL ДЛЯ INDUSTRIAL NETWORK ARCHITECTURE"
-    },
-    {
-      "chapter": 19,
-      "heading": "SIDEBAR: ПОЧЕМУ СТАНДАРТНЫЙ IT CONTAINMENT МОЖЕТ БЫТЬ ОПАСЕН В OT"
-    },
-    {
-      "chapter": 19,
-      "heading": "CASE: КОГДА IT CONTAINMENT САМ СОЗДАЕТ OT INCIDENT"
-    },
-    {
-      "chapter": 19,
-      "heading": "Потенциальные последствия IT и OT Incidents"
-    },
-    {
-      "chapter": 19,
-      "heading": "Распространенные OT Assets"
-    },
-    {
-      "chapter": 19,
-      "heading": "Protection Relays"
-    },
-    {
-      "chapter": 19,
-      "heading": "SIS и Emergency Shutdown"
-    },
-    {
-      "chapter": 19,
-      "heading": "Engineering Workstation"
-    },
-    {
-      "chapter": 19,
-      "heading": "Historian"
-    },
-    {
-      "chapter": 19,
-      "heading": "SIDEBAR: FIGHTING THROUGH THE ATTACK"
-    },
-    {
-      "chapter": 19,
-      "heading": "CASE: FIGHTING THROUGH THE ATTACK, ЧТОБЫ СОХРАНИТЬ POWER GENERATION"
-    },
-    {
-      "chapter": 19,
-      "heading": "Распространенные типы OT Incidents"
-    },
-    {
-      "chapter": 19,
-      "heading": "CASE: OPERATOR VISIBILITY КАК ПОСЛЕДНЯЯ ЛИНИЯ ЗАЩИТЫ"
     },
     {
       "chapter": 19,
@@ -3047,167 +2747,43 @@
     },
     {
       "chapter": 19,
-      "heading": "Firewall/Security Control Logs"
-    },
-    {
-      "chapter": 19,
-      "heading": "Packet Capture / Flow Logs / Protocol Analysis"
-    },
-    {
-      "chapter": 19,
       "heading": "АВТОНОМНЫЙ РЕЖИМ (ISLAND MODE)"
     },
     {
-      "chapter": 19,
-      "heading": "Cyber-Safe Position и Island Mode"
-    },
-    {
-      "chapter": 19,
-      "heading": "Engineering System Exposure"
-    },
-    {
-      "chapter": 19,
-      "heading": "Controller Integrity Verification"
-    },
-    {
-      "chapter": 19,
-      "heading": "Protocol-Level Visibility"
-    },
-    {
-      "chapter": 19,
-      "heading": "Operational Impact Awareness"
-    },
-    {
-      "chapter": 19,
-      "heading": "Backup Access and Validation"
-    },
-    {
-      "chapter": 19,
-      "heading": "Architectural Trust Relationships"
-    },
-    {
-      "chapter": 19,
-      "heading": "Containment and Operational Risk Decisions"
-    },
-    {
-      "chapter": 19,
-      "heading": "Engineering and Architecture Improvements"
+      "chapter": 20,
+      "heading": "ГЛАВА 20. ИНТЕГРАЦИЯ DAIR С NIST CSF 2.0"
     },
     {
       "chapter": 20,
-      "heading": "Глава 20. Интеграция DAIR с NIST CSF 2.0"
+      "heading": "ПОНИМАНИЕ NIST SP 800-61 R3 И CSF 2.0"
     },
     {
       "chapter": 20,
-      "heading": "Понимание NIST SP 800-61 R3 и CSF 2.0"
+      "heading": "УПРАВЛЕНИЕ (GOVERN, GV)"
     },
     {
       "chapter": 20,
-      "heading": "Govern (GV)"
+      "heading": "ИДЕНТИФИКАЦИЯ (IDENTIFY, ID)"
     },
     {
       "chapter": 20,
-      "heading": "Identify (ID)"
+      "heading": "ЗАЩИТА (PROTECT, PR)"
     },
     {
       "chapter": 20,
-      "heading": "Protect (PR)"
+      "heading": "ОБНАРУЖЕНИЕ (DETECT, DE)"
     },
     {
       "chapter": 20,
-      "heading": "Detect (DE)"
+      "heading": "РЕАГИРОВАНИЕ (RESPOND, RS)"
     },
     {
       "chapter": 20,
-      "heading": "Respond (RS)"
+      "heading": "ВОССТАНОВЛЕНИЕ (RECOVER, RC)"
     },
     {
       "chapter": 20,
-      "heading": "Recover (RC)"
-    },
-    {
-      "chapter": 20,
-      "heading": "Что требует Compliance"
-    },
-    {
-      "chapter": 20,
-      "heading": "DAIR как Implementation CSF 2.0"
-    },
-    {
-      "chapter": 20,
-      "heading": "Mapping DAIR Activities to CSF Functions"
-    },
-    {
-      "chapter": 20,
-      "heading": "Value of Iterative Response for Compliance"
-    },
-    {
-      "chapter": 20,
-      "heading": "Decision Maker Integration и Govern Function"
-    },
-    {
-      "chapter": 20,
-      "heading": "GV.OC — Organizational Context"
-    },
-    {
-      "chapter": 20,
-      "heading": "GV.RM — Risk Management Strategy"
-    },
-    {
-      "chapter": 20,
-      "heading": "Продолжение таблицы 62. Govern Categories"
-    },
-    {
-      "chapter": 20,
-      "heading": "GV.RR — Roles, Responsibilities, and Authorities"
-    },
-    {
-      "chapter": 20,
-      "heading": "GV.PO — Policy"
-    },
-    {
-      "chapter": 20,
-      "heading": "GV.SC — Supply Chain Risk Management"
-    },
-    {
-      "chapter": 20,
-      "heading": "Meeting Compliance Through DAIR Activities"
-    },
-    {
-      "chapter": 20,
-      "heading": "Compliance Artifacts from DAIR Activities"
-    },
-    {
-      "chapter": 20,
-      "heading": "Demonstrating Control Effectiveness"
-    },
-    {
-      "chapter": 20,
-      "heading": "Satisfying Audit Requirements"
-    },
-    {
-      "chapter": 20,
-      "heading": "Incident Tracking Platform Configuration"
-    },
-    {
-      "chapter": 20,
-      "heading": "Ticketing and Case Management"
-    },
-    {
-      "chapter": 20,
-      "heading": "Communication Templates"
-    },
-    {
-      "chapter": 20,
-      "heading": "Executive"
-    },
-    {
-      "chapter": 20,
-      "heading": "Technical"
-    },
-    {
-      "chapter": 20,
-      "heading": "Integrating DAIR with NIST CSF 2.0"
+      "heading": "ИНТЕГРАЦИЯ DAIR С NIST CSF 2.0"
     }
   ],
   "problems": [],
