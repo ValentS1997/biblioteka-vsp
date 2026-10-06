@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120">
+<rect width="1600" height="1120" fill="#f4f7fb"/>
+<rect x="12" y="12" width="1576" height="78" rx="14" fill="#26384d"/>
+<text x="800" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">Основы Go — глава 7: detailed map</text>
+<text x="800" y="72" font-family="Arial, sans-serif" font-size="15.5" fill="#dce8f4" text-anchor="middle">goroutine lifecycle → channels/select → races/synchronization → patterns → project v.6</text>
+<rect x="14" y="110" width="382" height="270" rx="12" fill="#f7fbff" stroke="#5b98cf" stroke-width="2"/>
+<text x="32" y="140" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#173d64">1. Execution model</text>
+<text x="36" y="171" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="36" dy="0">Process owns program resources.</tspan>
+<tspan x="36" dy="20">Threads execute inside process.</tspan>
+<tspan x="36" dy="20">Goroutines are scheduled by Go runtime.</tspan>
+<tspan x="36" dy="20">Concurrency can interleave; parallelism is simultaneous.</tspan>
+<tspan x="36" dy="20">Application exit ends remaining goroutines.</tspan>
+</text>
+<rect x="408" y="110" width="382" height="270" rx="12" fill="#f6fff8" stroke="#58ad79" stroke-width="2"/>
+<text x="426" y="140" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#18572f">2. Completion coordination</text>
+<text x="430" y="171" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="430" dy="0">go statement starts concurrent work.</tspan>
+<tspan x="430" dy="20">WaitGroup counts outstanding goroutines.</tspan>
+<tspan x="430" dy="20">Add increments; Done decrements; Wait blocks.</tspan>
+<tspan x="430" dy="20">Too many Add calls can deadlock.</tspan>
+<tspan x="430" dy="20">Too many Done calls panic.</tspan>
+</text>
+<rect x="802" y="110" width="382" height="270" rx="12" fill="#fff9f4" stroke="#d49a4c" stroke-width="2"/>
+<text x="820" y="140" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#714500">3. Channels</text>
+<text x="824" y="171" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="824" dy="0">Typed conduit between goroutines.</tspan>
+<tspan x="824" dy="20">Buffered channel exposes len/cap.</tspan>
+<tspan x="824" dy="20">Directional types express producer/consumer roles.</tspan>
+<tspan x="824" dy="20">close + comma-ok indicate completion state.</tspan>
+<tspan x="824" dy="20">range waits until channel is closed.</tspan>
+</text>
+<rect x="1196" y="110" width="390" height="270" rx="12" fill="#fff7fb" stroke="#cf6d99" stroke-width="2"/>
+<text x="1214" y="140" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#842044">4. select / nil channel</text>
+<text x="1218" y="171" font-family="Arial, sans-serif" font-size="12.7" fill="#19324a">
+<tspan x="1218" dy="0">select waits on multiple channel operations.</tspan>
+<tspan x="1218" dy="20">time.After implements timeout in source examples.</tspan>
+<tspan x="1218" dy="20">default is non-blocking but source calls it less safe.</tspan>
+<tspan x="1218" dy="20">select {} blocks forever.</tspan>
+<tspan x="1218" dy="20">nil channel disables that path by blocking forever.</tspan>
+</text>
+<rect x="14" y="398" width="502" height="290" rx="12" fill="#f7f7ff" stroke="#8179d6" stroke-width="2"/>
+<text x="32" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#474092">5. Shared-state safety</text>
+<text x="36" y="459" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="36" dy="0">Race = ordering-dependent shared-memory result.</tspan>
+<tspan x="36" dy="20">go run -race reports conflicting accesses.</tspan>
+<tspan x="36" dy="20">Mutex gives exclusive critical-section access.</tspan>
+<tspan x="36" dy="20">RWMutex permits many readers but one writer.</tspan>
+<tspan x="36" dy="20">Consistent lock ordering avoids deadlock examples.</tspan>
+</text>
+<rect x="528" y="398" width="502" height="290" rx="12" fill="#f5fff7" stroke="#58ad79" stroke-width="2"/>
+<text x="546" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#18572f">6. Atomic / runtime</text>
+<text x="550" y="459" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="550" dy="0">sync/atomic provides indivisible operations.</tspan>
+<tspan x="550" dy="20">AddInt64 / LoadInt64 power atomic counter example.</tspan>
+<tspan x="550" dy="20">GOMAXPROCS limits simultaneous OS threads for Go code.</tspan>
+<tspan x="550" dy="20">Source links default to logical CPU count.</tspan>
+<tspan x="550" dy="20">Performance must be measured, not assumed.</tspan>
+</text>
+<rect x="1042" y="398" width="544" height="290" rx="12" fill="#fffdf3" stroke="#d5ad37" stroke-width="2"/>
+<text x="1060" y="428" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#714500">7. Concurrency patterns</text>
+<text x="1064" y="459" font-family="Arial, sans-serif" font-size="12.8" fill="#19324a">
+<tspan x="1064" dy="0">Generator: lazy values.</tspan>
+<tspan x="1064" dy="20">Pipeline: staged transformations.</tspan>
+<tspan x="1064" dy="20">Queuing: N tasks across M goroutines.</tspan>
+<tspan x="1064" dy="20">Fan-in: many inputs → one output.</tspan>
+<tspan x="1064" dy="20">Fan-out: one input → many outputs.</tspan>
+<tspan x="1064" dy="20">Worker Pool: fixed worker group.</tspan>
+</text>
+<rect x="14" y="706" width="760" height="278" rx="12" fill="#f4fbff" stroke="#6d9fc8" stroke-width="2"/>
+<text x="32" y="736" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#174d70">8. Tic-tac-toe v.6 — compute path</text>
+<text x="36" y="768" font-family="Arial, sans-serif" font-size="12.7" fill="#19324a">
+<tspan x="36" dy="0">High difficulty adds parallel heuristic, limited minimax and zone analysis.</tspan>
+<tspan x="36" dy="20">3×3 minimax candidate moves are also evaluated concurrently.</tspan>
+<tspan x="36" dy="20">Each candidate uses copied board state to avoid races in source example.</tspan>
+<tspan x="36" dy="20">Large-board win checks split row/column and diagonal work.</tspan>
+<tspan x="36" dy="20">WaitGroup closes result channel after all checks finish.</tspan>
+</text>
+<rect x="786" y="706" width="800" height="278" rx="12" fill="#fff8f2" stroke="#d17e4f" stroke-width="2"/>
+<text x="804" y="736" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#7b3e1e">9. Tic-tac-toe v.6 — I/O path</text>
+<text x="808" y="768" font-family="Arial, sans-serif" font-size="12.7" fill="#19324a">
+<tspan x="808" dy="0">SaveSnapshot / SaveFinishedGame run in background goroutines.</tspan>
+<tspan x="808" dy="20">Load snapshots and finished games through result channels.</tspan>
+<tspan x="808" dy="20">UI shows progress while DB operation is in flight.</tspan>
+<tspan x="808" dy="20">Source notes snapshots could copy board state more rigorously.</tspan>
+<tspan x="808" dy="20">Functional behavior remains same while blocking is reduced.</tspan>
+</text>
+<rect x="14" y="1004" width="1572" height="88" rx="10" fill="#26384d"/>
+<text x="800" y="1031" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Acceptance: explain goroutines/channels, detect races, choose synchronization, and map all six concurrency patterns.</text>
+<text x="800" y="1058" font-family="Arial, sans-serif" font-size="14.5" fill="#dce8f4" text-anchor="middle">Project acceptance: explain parallel AI evaluation, win checks and asynchronous persistence in v.6.</text>
+<text x="800" y="1082" font-family="Arial, sans-serif" font-size="13.5" fill="#dce8f4" text-anchor="middle">RAG-only • PDF 363–416 • summary p0415 • questions p0415–p0416</text>
+</svg>
