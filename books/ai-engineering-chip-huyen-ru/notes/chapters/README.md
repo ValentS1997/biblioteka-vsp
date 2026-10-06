@@ -9,3 +9,4 @@ Reviewed chapter-level notes are stored here.
 - [Chapter 5 — Промт-инжиниринг](chapter-05-prompt-engineering/README.md)
 - [Chapter 6 — RAG и агенты](chapter-06-rag-and-agents/README.md)
 - [Chapter 7 — Дообучение, или Тонкая настройка](chapter-07-finetuning/README.md)
+- [Chapter 8 — Проектирование наборов данных](chapter-08-dataset-design/README.md)
