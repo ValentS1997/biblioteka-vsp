@@ -20,3 +20,4 @@ Current chapter workflow:
 - [Chapter 11 — «Модули»](chapter-11-moduli/) — `RAG_GROUNDED`
 - [Chapter 12 — «Структуры данных»](chapter-12-struktury-dannykh/) — `RAG_GROUNDED`
 - [Chapter 13 — «Решение задач»](chapter-13-reshenie-zadach/) — `RAG_GROUNDED`
+- [Chapter 14 — «Объектно-ориентированное программирование»](chapter-14-oop/) — `RAG_GROUNDED`

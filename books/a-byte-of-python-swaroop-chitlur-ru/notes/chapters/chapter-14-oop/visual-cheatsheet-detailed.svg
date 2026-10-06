@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1760" height="1400" viewBox="0 0 1760 1400">
+  <rect width="1760" height="1400" fill="white"/>
+  <text x="55" y="65" font-family="sans-serif" font-size="36" font-weight="700">Глава 14. ООП — detailed map</text>
+  <text x="55" y="102" font-family="sans-serif" font-size="18">RAG-only · p0109:c01–p0120:c01 · PDF 109–120 · source SHA ac1abb…d7db5</text>
+
+  <rect x="55" y="140" width="1650" height="120" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="80" y="180" font-family="sans-serif" font-size="23" font-weight="700">Core model</text>
+  <text x="80" y="220" font-family="sans-serif" font-size="18">Class defines type · object is instance · fields store data · methods provide behavior · together they are attributes.</text>
+
+  <rect x="55" y="305" width="510" height="355" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="80" y="345" font-family="sans-serif" font-size="23" font-weight="700">14.1–14.4 Instance basics</text>
+  <text x="80" y="390" font-family="monospace" font-size="17">self</text>
+  <text x="80" y="430" font-family="monospace" font-size="17">class Person: pass</text>
+  <text x="80" y="470" font-family="monospace" font-size="17">p = Person()</text>
+  <text x="80" y="510" font-family="monospace" font-size="17">p.sayHi()</text>
+  <text x="80" y="550" font-family="monospace" font-size="17">__init__(self, name)</text>
+  <text x="80" y="590" font-family="monospace" font-size="17">self.name = name</text>
+
+  <rect x="625" y="305" width="510" height="355" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="650" y="345" font-family="sans-serif" font-size="23" font-weight="700">14.5 Class/object state</text>
+  <text x="650" y="390" font-family="monospace" font-size="17">Robot.population</text>
+  <text x="650" y="430" font-family="monospace" font-size="17">self.name</text>
+  <text x="650" y="470" font-family="monospace" font-size="17">@staticmethod</text>
+  <text x="650" y="510" font-family="monospace" font-size="17">Robot.__doc__</text>
+  <text x="650" y="550" font-family="monospace" font-size="17">Robot.sayHi.__doc__</text>
+  <text x="650" y="590" font-family="monospace" font-size="17">del droid1 / __del__</text>
+
+  <rect x="1195" y="305" width="510" height="355" rx="10" fill="#fafafa" stroke="#444"/>
+  <text x="1220" y="345" font-family="sans-serif" font-size="23" font-weight="700">14.6 Inheritance</text>
+  <text x="1220" y="390" font-family="monospace" font-size="17">SchoolMember</text>
+  <text x="1220" y="430" font-family="monospace" font-size="17">Teacher(SchoolMember)</text>
+  <text x="1220" y="470" font-family="monospace" font-size="17">Student(SchoolMember)</text>
+  <text x="1220" y="510" font-family="sans-serif" font-size="17">override tell()</text>
+  <text x="1220" y="550" font-family="sans-serif" font-size="17">base method explicit calls</text>
+  <text x="1220" y="590" font-family="sans-serif" font-size="17">polymorphism + multiple inheritance mention</text>
+
+  <rect x="55" y="710" width="800" height="255" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="80" y="750" font-family="sans-serif" font-size="23" font-weight="700">14.7 Metaclasses / ABC</text>
+  <text x="80" y="795" font-family="monospace" font-size="17">from abc import *</text>
+  <text x="80" y="835" font-family="monospace" font-size="17">class SchoolMember(metaclass=ABCMeta)</text>
+  <text x="80" y="875" font-family="monospace" font-size="17">@abstractmethod</text>
+  <text x="80" y="915" font-family="sans-serif" font-size="16">Translator notes section was hidden/commented in original version.</text>
+
+  <rect x="905" y="710" width="800" height="255" rx="10" fill="#f4f4f4" stroke="#333"/>
+  <text x="930" y="750" font-family="sans-serif" font-size="23" font-weight="700">Acceptance</text>
+  <text x="930" y="795" font-family="sans-serif" font-size="18">class vs instance</text>
+  <text x="930" y="835" font-family="sans-serif" font-size="18">instance state vs class state</text>
+  <text x="930" y="875" font-family="sans-serif" font-size="18">inheritance + override + substitutability</text>
+  <text x="930" y="915" font-family="sans-serif" font-size="18">ABC awareness</text>
+
+  <rect x="55" y="1015" width="1650" height="250" rx="10" fill="#fafafa" stroke="#666" stroke-dasharray="7 5"/>
+  <text x="80" y="1055" font-family="sans-serif" font-size="22" font-weight="700">Source integrity findings</text>
+  <text x="80" y="1095" font-family="sans-serif" font-size="17">• abstract example file says inherit_abc.py but output command says python3 inherit.py</text>
+  <text x="80" y="1130" font-family="sans-serif" font-size="17">• abstract example shebang uses /usr/bin/env python while chapter commands use python3</text>
+  <text x="80" y="1165" font-family="sans-serif" font-size="17">• __del__ lifecycle and public/private/virtual claims retained as historical source claims</text>
+  <text x="80" y="1200" font-family="sans-serif" font-size="17">• broad base-__init__ statement kept scoped to the shown explicit-call pattern</text>
+  <text x="80" y="1235" font-family="sans-serif" font-size="17">• exact object address is variable by source's own note</text>
+
+  <text x="55" y="1320" font-family="sans-serif" font-size="18">14.8 summary: OOP concepts/terminology prepare the reader for later Python work.</text>
+  <text x="55" y="1355" font-family="sans-serif" font-size="17">Next boundary: p0121:c01 / PDF 121 — chapter 15 «Ввод-вывод».</text>
+</svg>
