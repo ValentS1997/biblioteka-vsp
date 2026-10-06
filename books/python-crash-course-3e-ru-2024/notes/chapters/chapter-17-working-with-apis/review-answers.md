@@ -81,35 +81,35 @@ fig.show()
 
 ## 17.3. Тестирование python_repos.py
 
-Минимальная source-required проверка:
+Самодостаточный вариант с общим request helper:
 
 ~~~python
 import requests
 
-def test_status_code():
+def get_response():
     url = "https://api.github.com/search/repositories"
     url += "?q=language:python+sort:stars+stars:>10000"
     headers = {
         "Accept": "application/vnd.github.v3+json"
     }
 
-    r = requests.get(url, headers=headers)
+    return requests.get(url, headers=headers)
 
+def test_status_code():
+    r = get_response()
     assert r.status_code == 200
-~~~
 
-Это **live network test**, поэтому результат зависит от доступности API, current API contract и rate-limit state.
-
-Дополнительная source-suggested check без выдумывания фиксированного числа:
-
-~~~python
 def test_response_has_items():
-    # request setup as above
+    r = get_response()
     response_dict = r.json()
 
     assert 'items' in response_dict
     assert len(response_dict['items']) > 0
 ~~~
+
+Первый test — обязательная source check. Второй использует только структуру response, уже показанную в главе, и не фиксирует динамический repository count.
+
+Это **live network test**, поэтому результат зависит от доступности API, current API contract и rate-limit state. Каждый test выше выполняет отдельный request и расходует соответствующую квоту.
 
 Source предлагает также проверить expected item count и total-count threshold, но конкретные значения не задаёт: `[Needs confirmation]`.
 
