@@ -12,5 +12,7 @@
 
 | 6 | [Разложение на составляющие](chapter-06-decomposition/README.md) | spine 28–30, `OPS/ch1-26.xhtml` → `OPS/ch1-28.xhtml` | README, cheatsheet, commands, diagram, 2×SVG, summary, source-findings |
 
+| 7 | [Калиброванные оценки: что вам известно уже сейчас?](chapter-07-calibrated-estimates/README.md) | spine 31–33, `OPS/ch1-29.xhtml` → `OPS/ch1-31.xhtml` | README, cheatsheet, commands, diagram, 2×SVG, review questions/answers, source-findings |
 
-Глава 7 начинается в EPUB spine 31, `OPS/ch1-29.xhtml`; её анализ пока не проводился.
+
+Глава 8 начинается в EPUB spine 34, `OPS/ch1-32.xhtml`; её анализ пока не проводился.
