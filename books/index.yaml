@@ -322,6 +322,7 @@ books:
       rag_chunks: books/modern-operating-systems-tanenbaum-bos-4e-ru/rag/chunks/
       rag_chunk_index: books/modern-operating-systems-tanenbaum-bos-4e-ru/rag/chunk-index.jsonl
       rag_search_index: books/modern-operating-systems-tanenbaum-bos-4e-ru/rag/search-index/
+      reading_progress: books/modern-operating-systems-tanenbaum-bos-4e-ru/reading/progress.yaml
       notes: books/modern-operating-systems-tanenbaum-bos-4e-ru/notes/
       diagrams: books/modern-operating-systems-tanenbaum-bos-4e-ru/diagrams/
 
