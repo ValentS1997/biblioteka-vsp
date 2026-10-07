@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="980" viewBox="0 0 1360 980" role="img" aria-label="Глава 8 SQL. Расширенные концепции запросов">
+<rect width="1360" height="980" fill="#EEF4F8"/>
+<text x="30" y="53" font-family="DejaVu Sans,Arial,sans-serif" font-size="29" fill="#083B5A" font-weight="700">ГЛАВА 8 · РАСШИРЕННЫЕ КОНЦЕПЦИИ ЗАПРОСОВ</text>
+<text x="32" y="84" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#506D80" >Элис Жао · PDF 244–272 · RAG p0244:c01–p0272:c01</text>
+<rect x="27" y="111" width="407" height="225" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="149" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">01 / CASE</text>
+<text x="45" y="185" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Simple CASE: one expression</text>
+<text x="45" y="215" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Searched CASE: predicates</text>
+<text x="45" y="245" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >First matching WHEN wins</text>
+<text x="45" y="275" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >ELSE fallback</text>
+<text x="45" y="305" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >SELECT does not persist values</text>
+<rect x="477" y="111" width="407" height="225" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="495" y="149" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">02 / GROUPING</text>
+<text x="495" y="185" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >GROUP BY collapses rows</text>
+<text x="495" y="215" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >ROLLUP → subtotals/total</text>
+<text x="495" y="245" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >CUBE → combinations</text>
+<text x="495" y="275" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >GROUPING SETS → selected groups</text>
+<text x="495" y="305" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >List aggregates vary by RDBMS</text>
+<rect x="927" y="111" width="406" height="225" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="945" y="149" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">03 / WINDOWS</text>
+<text x="945" y="185" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >OVER(...) preserves rows</text>
+<text x="945" y="215" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >PARTITION BY defines groups</text>
+<text x="945" y="245" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >ORDER BY defines sequence</text>
+<text x="945" y="275" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >ROWS/RANGE define frame</text>
+<text x="945" y="305" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Ranking/navigation/aggregates</text>
+<rect x="27" y="363" width="627" height="244" rx="17" fill="#FAFDFF" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="401" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">04 / RANK &amp; FRAMES</text>
+<text x="45" y="437" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >ROW_NUMBER: unique sequence</text>
+<text x="45" y="467" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >RANK: ties + gaps</text>
+<text x="45" y="497" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >DENSE_RANK: ties, no gaps</text>
+<text x="45" y="527" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >LAG / FIRST_VALUE / NTH_VALUE</text>
+<text x="45" y="557" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Moving average / running total</text>
+<rect x="686" y="363" width="647" height="244" rx="17" fill="#FAFDFF" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="704" y="401" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">05 / RESHAPE</text>
+<text x="704" y="437" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >PIVOT: values → columns</text>
+<text x="704" y="467" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >UNPIVOT: columns → rows</text>
+<text x="704" y="497" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Oracle / SQL Server source syntax</text>
+<text x="704" y="527" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >CASE alternative for PIVOT</text>
+<text x="704" y="557" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >UNION ALL alternative for UNPIVOT</text>
+<rect x="27" y="635" width="1306" height="176" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="673" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">06 / SOURCE FINDINGS</text>
+<text x="45" y="709" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >spendings input/output mismatch · GROUPING SETS repeated 2019 · WITH ROLLUP wording</text>
+<text x="45" y="739" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >SQL Server UNPIVOT rank mismatch · fruit_thr vs fruit_three · MySQL constant-column claim</text>
+<text x="45" y="769" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Window/list-aggregate support/defaults remain [Needs confirmation]</text>
+<rect x="27" y="838" width="1306" height="111" rx="14" fill="#D8EAF3"/>
+<text x="48" y="872" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#164A64" font-weight="700">RULE: validate totals/ties/frames/output shape on target RDBMS before reusing advanced SQL</text>
+<text x="48" y="905" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#214E66" >All chapter examples treated as read-only · no SQL executed · rag_only</text>
+</svg>
