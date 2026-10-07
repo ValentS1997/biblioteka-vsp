@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 7 — Scatter/Gather</title>
+  <desc id="desc">Компактная схема Scatter/Gather, fan-out, aggregation, straggler effect and replicated shards.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #111827; }
+      .title { font-size: 30px; font-weight: 700; }
+      .sub { font-size: 14px; fill: #4b5563; }
+      .h { font-size: 18px; font-weight: 700; }
+      .b { font-size: 15px; }
+      .small { font-size: 13px; fill: #374151; }
+      .blue { fill: #eff6ff; stroke: #1d4ed8; stroke-width: 2; rx: 14; }
+      .green { fill: #ecfdf5; stroke: #047857; stroke-width: 2; rx: 14; }
+      .violet { fill: #f5f3ff; stroke: #6d28d9; stroke-width: 2; rx: 14; }
+      .orange { fill: #fff7ed; stroke: #c2410c; stroke-width: 2; rx: 14; }
+      .box { fill: #f9fafb; stroke: #374151; stroke-width: 2; rx: 14; }
+      .arrow { stroke: #374151; stroke-width: 2.2; fill: none; marker-end: url(#m); }
+    </style>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#374151"/>
+    </marker>
+  </defs>
+
+  <text x="45" y="50" class="title">Глава 7 — Scatter/Gather</text>
+  <text x="45" y="78" class="sub">RAG p0122:c01–p0133:c01 · PDF 122–133 · rag_only</text>
+
+  <rect x="80" y="120" width="260" height="110" class="blue"/>
+  <text x="105" y="155" class="h">Client request</text>
+  <text x="105" y="186" class="b">one expensive operation</text>
+
+  <rect x="470" y="120" width="260" height="110" class="green"/>
+  <text x="495" y="155" class="h">Root node</text>
+  <text x="495" y="186" class="b">scatter + gather</text>
+
+  <rect x="860" y="120" width="260" height="110" class="violet"/>
+  <text x="885" y="155" class="h">Leaf nodes</text>
+  <text x="885" y="186" class="b">parallel partial work</text>
+
+  <path d="M340,175 L470,175" class="arrow"/>
+  <path d="M730,175 L860,175" class="arrow"/>
+
+  <rect x="80" y="315" width="300" height="145" class="blue"/>
+  <text x="105" y="350" class="h">Aggregation semantics</text>
+  <text x="105" y="382" class="b">term workers → intersection</text>
+  <text x="105" y="412" class="b">data shards → union</text>
+
+  <rect x="450" y="315" width="300" height="145" class="orange"/>
+  <text x="475" y="350" class="h">Straggler effect</text>
+  <text x="475" y="382" class="b">root waits for slowest</text>
+  <text x="475" y="412" class="b">tail latency amplifies</text>
+
+  <rect x="820" y="315" width="300" height="145" class="green"/>
+  <text x="845" y="350" class="h">Replicated shards</text>
+  <text x="845" y="382" class="b">logical shard stays available</text>
+  <text x="845" y="412" class="b">rolling updates possible</text>
+
+  <rect x="160" y="555" width="880" height="120" class="box"/>
+  <text x="190" y="592" class="h">Performance rule</text>
+  <text x="190" y="624" class="b">More leaves reduce useful work per leaf, but increase coordination overhead</text>
+  <text x="190" y="654" class="b">and exposure to slow/failing nodes. Parallelism therefore has diminishing returns.</text>
+
+  <rect x="205" y="715" width="790" height="50" class="orange"/>
+  <text x="235" y="747" class="b">Source finding: p0131 shows 0.99^5≈0.95; ~5% straggler probability is the complement.</text>
+
+  <text x="45" y="790" class="small">No explicit CLI/deployment sequence is present in chapter 7.</text>
+</svg>
