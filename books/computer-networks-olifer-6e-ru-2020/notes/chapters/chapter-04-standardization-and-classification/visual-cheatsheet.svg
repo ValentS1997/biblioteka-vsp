@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="860" viewBox="0 0 1200 860" role="img" aria-labelledby="t d">
+<title id="t">Chapter 4 — standardization and classification</title>
+<desc id="d">Compact RAG-grounded map of layering, OSI, standards, planes and network classification.</desc>
+<rect width="1200" height="860" fill="#ffffff"/>
+<text x="60" y="60" font-family="sans-serif" font-size="34" font-weight="700">Chapter 4 — Standards and Classification</text>
+<text x="60" y="96" font-family="sans-serif" font-size="18">PDF 103–133 · printed 102–132 · RAG only</text>
+
+<rect x="70" y="145" width="1060" height="100" rx="16" fill="#eef2f7" stroke="#27364a" stroke-width="2"/>
+<text x="105" y="187" font-family="sans-serif" font-size="24" font-weight="700">Decomposition → Layers</text>
+<text x="105" y="220" font-family="sans-serif" font-size="18">adjacent-layer interface · peer protocol · protocol stack</text>
+
+<path d="M600 245 L600 300" stroke="#27364a" stroke-width="3"/>
+
+<rect x="70" y="300" width="500" height="210" rx="16" fill="#f7f7f7" stroke="#27364a" stroke-width="2"/>
+<text x="105" y="342" font-family="sans-serif" font-size="24" font-weight="700">OSI vertical model</text>
+<text x="105" y="378" font-family="sans-serif" font-size="18">7 Application · 6 Presentation · 5 Session</text>
+<text x="105" y="410" font-family="sans-serif" font-size="18">4 Transport · 3 Network</text>
+<text x="105" y="442" font-family="sans-serif" font-size="18">2 Data Link · 1 Physical</text>
+<text x="105" y="478" font-family="sans-serif" font-size="18">PDU encapsulation across layers</text>
+
+<rect x="630" y="300" width="500" height="210" rx="16" fill="#f7f7f7" stroke="#27364a" stroke-width="2"/>
+<text x="665" y="342" font-family="sans-serif" font-size="24" font-weight="700">Horizontal planes</text>
+<text x="665" y="382" font-family="sans-serif" font-size="18">User plane — user traffic</text>
+<text x="665" y="418" font-family="sans-serif" font-size="18">Control plane — network operation</text>
+<text x="665" y="454" font-family="sans-serif" font-size="18">Management plane — administration</text>
+
+<path d="M320 510 L470 580" stroke="#27364a" stroke-width="3" fill="none"/>
+<path d="M880 510 L730 580" stroke="#27364a" stroke-width="3" fill="none"/>
+
+<rect x="250" y="580" width="700" height="105" rx="16" fill="#eef2f7" stroke="#27364a" stroke-width="2"/>
+<text x="285" y="622" font-family="sans-serif" font-size="24" font-weight="700">Open standards → interoperability</text>
+<text x="285" y="656" font-family="sans-serif" font-size="18">open specifications · RFC process · protocol stacks</text>
+
+<path d="M600 685 L600 735" stroke="#27364a" stroke-width="3"/>
+
+<rect x="150" y="735" width="900" height="85" rx="16" fill="#f7f7f7" stroke="#27364a" stroke-width="2"/>
+<text x="185" y="775" font-family="sans-serif" font-size="22" font-weight="700">Classify networks by several independent dimensions</text>
+<text x="185" y="804" font-family="sans-serif" font-size="16">scope · medium · switching · topology · users · functional role · primary/overlay</text>
+</svg>
