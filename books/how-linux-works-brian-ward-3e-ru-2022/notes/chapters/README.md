@@ -11,3 +11,4 @@
 - [Глава 9 — Сеть и ее конфигурация](chapter-09-networking-and-configuration/README.md) — PDF/печатные страницы 270–319, RAG chunks p0270:c01–p0319:c01.
 - [Глава 10 — Сетевые приложения и службы](chapter-10-network-applications-and-services/README.md) — PDF/печатные страницы 320–343, RAG chunks p0320:c01–p0343:c01.
 - [Глава 11 — Сценарии оболочки](chapter-11-shell-scripts/README.md) — PDF/печатные страницы 344–367, RAG chunks p0344:c01–p0367:c01.
+- [Глава 12 — Передача файлов по сети и доступ к ним](chapter-12-network-file-transfer-and-access/README.md) — PDF/печатные страницы 368–389, RAG chunks p0368:c01–p0389:c01.
