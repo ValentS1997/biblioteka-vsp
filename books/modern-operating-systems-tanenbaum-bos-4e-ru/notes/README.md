@@ -16,3 +16,4 @@ chapter-analysis readiness passes.
 - [Глава 7 — Виртуализация и облако](chapters/chapter-07-virtualization-cloud/README.md)
 - [Глава 8 — Многопроцессорные системы](chapters/chapter-08-multiprocessor-systems/README.md)
 - [Глава 9 — Безопасность](chapters/chapter-09-security/README.md)
+- [Глава 10 — Изучение конкретных примеров: Unix, Linux и Android](chapters/chapter-10-unix-linux-android/README.md)
