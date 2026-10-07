@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="960" viewBox="0 0 1500 960">
+<rect width="1500" height="960" fill="#f8fafb"/>
+<text x="50" y="58" font-family="Arial,DejaVu Sans,sans-serif" font-size="34" font-weight="700" fill="#183247">Глава 15 · TCP и UDP</text>
+<text x="50" y="92" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#52697a">RAG p0442:c01–p0471:c01 · PDF 442–471 · printed 441–470 · 30 chunks</text>
+
+<rect x="55" y="135" width="430" height="225" rx="18" fill="#e8eff5" stroke="#b9cbd8"/>
+<text x="83" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#234b64">1 · Ports / sockets</text>
+<text x="83" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">multiplex / demultiplex</text>
+<text x="83" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">socket = IP + transport port</text>
+<text x="83" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">TCP connection = socket pair</text>
+
+<rect x="535" y="135" width="430" height="225" rx="18" fill="#eef4e8" stroke="#c4d4b9"/>
+<text x="563" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#365b31">2 · UDP</text>
+<text x="563" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">message-oriented datagrams</text>
+<text x="563" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">8-byte header · checksum</text>
+<text x="563" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">best effort · no retransmission</text>
+
+<rect x="1015" y="135" width="430" height="225" rx="18" fill="#f8efe2" stroke="#ddc9aa"/>
+<text x="1043" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#78532e">3 · TCP reliability</text>
+<text x="1043" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">byte stream · SYN / ACK / FIN</text>
+<text x="1043" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">sequence + cumulative ACK</text>
+<text x="1043" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">timers + retransmission + SACK</text>
+
+<rect x="95" y="420" width="620" height="215" rx="18" fill="#eee8f6" stroke="#c9bad9"/>
+<text x="125" y="465" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#593f73">4 · Sliding windows</text>
+<text x="125" y="510" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">Stop-and-Wait → Go-Back-N → Selective Repeat</text>
+<text x="125" y="550" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">TCP window is measured in bytes</text>
+<text x="125" y="590" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#756486">rwnd protects receiver buffer</text>
+
+<rect x="785" y="420" width="620" height="215" rx="18" fill="#e5edf7" stroke="#bdcce0"/>
+<text x="815" y="465" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#2b4e78">5 · Congestion control</text>
+<text x="815" y="510" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">cwnd protects the network</text>
+<text x="815" y="550" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">effective limit ≈ min(rwnd, cwnd)</text>
+<text x="815" y="590" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#5c7290">Slow Start · duplicate ACK · ECN</text>
+
+<rect x="180" y="700" width="1140" height="150" rx="18" fill="#fff3dd" stroke="#dfca9b"/>
+<text x="210" y="745" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#785f2d">Troubleshooting sequence</text>
+<text x="210" y="790" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6c5c3a">socket pair → handshake → seq/ACK → rwnd → RTO/retransmits → congestion/ECN</text>
+<text x="210" y="827" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#6c5c3a">No executable CLI in chapter; current OS TCP state is [Needs confirmation].</text>
+
+<text x="50" y="920" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#63798a">Chapter 16 begins at p0472:c01 · reading state unchanged.</text>
+</svg>
