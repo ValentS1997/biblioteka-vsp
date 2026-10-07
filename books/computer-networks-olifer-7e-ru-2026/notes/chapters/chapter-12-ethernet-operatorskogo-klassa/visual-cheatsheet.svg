@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="960" viewBox="0 0 1500 960">
+<rect width="1500" height="960" fill="#f8fafb"/>
+<text x="50" y="58" font-family="Arial,DejaVu Sans,sans-serif" font-size="34" font-weight="700" fill="#183247">Глава 12 · Ethernet операторского класса</text>
+<text x="50" y="92" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#52697a">RAG p0351:c01–p0360:c01 · PDF 351–360 · printed 350–359 · 10 chunks</text>
+
+<rect x="55" y="135" width="430" height="225" rx="18" fill="#e8eff5" stroke="#b9cbd8"/>
+<text x="83" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#234b64">1 · Carrier requirements</text>
+<text x="83" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">reliability · scalability</text>
+<text x="83" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">traffic engineering · OAM</text>
+<text x="83" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">customer/provider separation</text>
+<text x="83" y="325" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#5a7180">UNI = customer/provider boundary</text>
+
+<rect x="535" y="135" width="430" height="225" rx="18" fill="#eef4e8" stroke="#c4d4b9"/>
+<text x="563" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#365b31">2 · CFM / OAM</text>
+<text x="563" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">MEP ↔ CCM ↔ MEP</text>
+<text x="563" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">MIP localizes fault segment</text>
+<text x="563" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">hierarchical maintenance domains</text>
+<text x="563" y="325" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#63755d">active continuity monitoring</text>
+
+<rect x="1015" y="135" width="430" height="225" rx="18" fill="#f8efe2" stroke="#ddc9aa"/>
+<text x="1043" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#78532e">3 · Performance / service</text>
+<text x="1043" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">Y.1731 → delay / variation / loss</text>
+<text x="1043" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">E-LMI → status / parameters</text>
+<text x="1043" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">remote loopback → disruptive</text>
+
+<rect x="95" y="420" width="620" height="215" rx="18" fill="#eee8f6" stroke="#c9bad9"/>
+<text x="125" y="465" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#593f73">4 · Provider Bridge / Q-in-Q</text>
+<text x="125" y="510" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">customer C-VID preserved</text>
+<text x="125" y="550" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">provider edge pushes S-VID</text>
+<text x="125" y="590" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#756486">provider core forwards using service context</text>
+
+<rect x="785" y="420" width="620" height="215" rx="18" fill="#e5edf7" stroke="#bdcce0"/>
+<text x="815" y="465" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#2b4e78">5 · Remaining limits</text>
+<text x="815" y="510" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">customer MAC learning persists</text>
+<text x="815" y="550" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">12-bit provider service ID space</text>
+<text x="815" y="590" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#5c7290">STP-based traffic-engineering limits</text>
+
+<rect x="180" y="700" width="1140" height="150" rx="18" fill="#fff3dd" stroke="#dfca9b"/>
+<text x="210" y="745" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#785f2d">Troubleshooting sequence</text>
+<text x="210" y="790" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6c5c3a">UNI/service → CFM MEP/MIP → Y.1731 → C-VID/S-VID → provider path → scheduled loopback</text>
+<text x="210" y="827" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#6c5c3a">No vendor CLI in chapter · loopback requires maintenance window.</text>
+
+<text x="50" y="920" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#63798a">Part-III questions start at p0361:c01 · reading state unchanged.</text>
+</svg>

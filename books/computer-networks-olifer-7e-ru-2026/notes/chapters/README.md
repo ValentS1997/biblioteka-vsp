@@ -15,5 +15,6 @@ Book ID: `computer-networks-olifer-7e-ru-2026`. Индекс ведёт толь
 | 9 — Технология первичных сетей DWDM | 268–281 | 267–280 | [Глава 9](chapter-09-tehnologiya-pervichnyh-setey-dwdm/README.md) |
 | 10 — Ethernet в локальных сетях | 287–325 | 286–324 | [Глава 10](chapter-10-ethernet-v-lokalnyh-setyah/README.md) |
 | 11 — Отказоустойчивые и виртуальные локальные сети | 326–350 | 325–349 | [Глава 11](chapter-11-otkazoustoychivye-i-virtualnye-lokalnye-seti/README.md) |
+| 12 — Ethernet операторского класса | 351–360 | 350–359 | [Глава 12](chapter-12-ethernet-operatorskogo-klassa/README.md) |
 
 Дальнейшие главы: **[Needs confirmation]** до индивидуального анализа. Reading state книги остаётся независимым от RAG.
