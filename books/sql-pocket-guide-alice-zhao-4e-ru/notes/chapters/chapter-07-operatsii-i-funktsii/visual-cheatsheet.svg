@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="980" viewBox="0 0 1360 980" role="img" aria-label="Глава 7 SQL. Операции и функции">
+<rect width="1360" height="980" fill="#EEF4F8"/>
+<text x="30" y="53" font-family="DejaVu Sans,Arial,sans-serif" font-size="30" fill="#083B5A" font-weight="700">ГЛАВА 7 · ОПЕРАЦИИ И ФУНКЦИИ</text>
+<text x="32" y="84" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#506D80" >Элис Жао · PDF 190–243 · RAG p0190:c01–p0243:c01</text>
+<rect x="27" y="111" width="407" height="225" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="149" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">01 / OPERATIONS</text>
+<text x="45" y="185" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >AND / OR / NOT</text>
+<text x="45" y="215" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >= &lt;&gt; &lt; &lt;= &gt; &gt;=</text>
+<text x="45" y="245" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >BETWEEN / EXISTS / IN</text>
+<text x="45" y="275" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >IS NULL / LIKE</text>
+<text x="45" y="305" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >+ - * / %</text>
+<rect x="477" y="111" width="407" height="225" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="495" y="149" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">02 / FUNCTIONS</text>
+<text x="495" y="185" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Aggregate: COUNT/SUM/AVG</text>
+<text x="495" y="215" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Numeric: ABS/ROUND/CAST</text>
+<text x="495" y="245" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >String: TRIM/SUBSTR/REPLACE</text>
+<text x="495" y="275" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Date/time: EXTRACT/DATEDIFF</text>
+<text x="495" y="305" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >NULL: COALESCE</text>
+<rect x="927" y="111" width="406" height="225" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="945" y="149" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">03 / NULL</text>
+<text x="945" y="185" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >TRUE / FALSE / NULL logic</text>
+<text x="945" y="215" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >NOT IN sensitive to NULL</text>
+<text x="945" y="245" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >IS NULL / IS NOT NULL</text>
+<text x="945" y="275" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >NOT EXISTS alternative</text>
+<text x="945" y="305" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >COUNT(*) counts rows</text>
+<rect x="27" y="363" width="627" height="244" rx="17" fill="#FAFDFF" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="401" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">04 / DIALECT</text>
+<text x="45" y="437" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >LIKE case behavior differs</text>
+<text x="45" y="467" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >LENGTH vs LEN</text>
+<text x="45" y="497" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >REGEXP / SIMILAR TO / ~ / LIKE</text>
+<text x="45" y="527" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >RAND vs RANDOM</text>
+<text x="45" y="557" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Date/time APIs vary</text>
+<rect x="686" y="363" width="647" height="244" rx="17" fill="#FAFDFF" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="704" y="401" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">05 / SAFETY</text>
+<text x="704" y="437" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >SELECT examples are read-only</text>
+<text x="704" y="467" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Regex/aggregate can be expensive</text>
+<text x="704" y="497" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >CREATE/INSERT on PDF 228 change state</text>
+<text x="704" y="527" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >DML reuse needs change control</text>
+<text x="704" y="557" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Rollback: [Needs confirmation]</text>
+<rect x="27" y="635" width="1306" height="176" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="673" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">06 / SOURCE FINDINGS</text>
+<text x="45" y="709" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Undefined alias e · RANDOM/RAND scope · CONCAT extraction artifact</text>
+<text x="45" y="739" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Missing time-diff operators · interval-vs-hours/days mismatch · SQL Server CONVERT mismatch</text>
+<text x="45" y="769" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >SQLite date-functions contradiction · version/collation claims remain [Needs confirmation]</text>
+<rect x="27" y="838" width="1306" height="111" rx="14" fill="#D8EAF3"/>
+<text x="48" y="872" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#164A64" font-weight="700">RULE: identify dialect → test NULL/boundaries → verify output → only then reuse expression</text>
+<text x="48" y="905" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#214E66" >No SQL executed · source/RAG/reading unchanged · rag_only</text>
+</svg>
