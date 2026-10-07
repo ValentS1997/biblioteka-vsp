@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1940" viewBox="0 0 1600 1940" role="img" aria-label="Подробная шпаргалка главы 10 SQL: практические задачи">
+<rect width="1600" height="1940" fill="#EEF4F8"/>
+<text x="30" y="57" font-family="DejaVu Sans,Arial,sans-serif" font-size="31" fill="#073E60" font-weight="700">SQL · ГЛАВА 10 / КАК МНЕ?..</text>
+<text x="32" y="89" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#526F82" >Элис Жао · 4-е изд. · PDF 304–315 · RAG p0304:c01–p0315:c01</text>
+<rect x="27" y="117" width="500" height="230" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="155" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">01 / DISTINCT [304–305]</text>
+<text x="45" y="191" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Unique tea/temperature combinations</text>
+<text x="45" y="221" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >SELECT DISTINCT tea, temperature</text>
+<text x="45" y="251" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Removes duplicate result rows</text>
+<text x="45" y="281" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >COUNT + DISTINCT mentioned as extension</text>
+<text x="45" y="311" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Read-only</text>
+<rect x="550" y="117" width="500" height="230" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="568" y="155" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">02 / DUPLICATE ROWS [305–307]</text>
+<text x="568" y="191" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >CTE dup_rows</text>
+<text x="568" y="221" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >GROUP BY tea, temperature</text>
+<text x="568" y="251" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >HAVING COUNT(*) &gt; 1</text>
+<text x="568" y="281" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >JOIN back to recover id</text>
+<text x="568" y="311" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >NULL-key behavior not demonstrated</text>
+<rect x="1073" y="117" width="500" height="230" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="1091" y="155" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">03 / MAX PER GROUP [307–309]</text>
+<text x="1091" y="191" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >GROUP BY employee</text>
+<text x="1091" y="221" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >MAX(date) as recent_date</text>
+<text x="1091" y="251" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >JOIN back to sales</text>
+<text x="1091" y="281" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Return id + sales</text>
+<text x="1091" y="311" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Ties not covered</text>
+<rect x="27" y="375" width="758" height="260" rx="17" fill="#FAFDFF" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="413" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">04 / CONCAT [309–311]</text>
+<text x="45" y="449" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >CONCAT(id,&apos;_&apos;,name)</text>
+<text x="45" y="479" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >id || &apos;_&apos; || name</text>
+<text x="45" y="509" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >GROUP_CONCAT</text>
+<text x="45" y="539" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >LISTAGG / ARRAY_AGG / STRING_AGG</text>
+<text x="45" y="569" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Output type/order differs by product</text>
+<text x="45" y="599" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >All examples read-only</text>
+<rect x="812" y="375" width="761" height="260" rx="17" fill="#FAFDFF" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="830" y="413" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">05 / METADATA SEARCH [311–313]</text>
+<text x="830" y="449" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >information_schema.columns</text>
+<text x="830" y="479" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Oracle all_tab_columns</text>
+<text x="830" y="509" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Optional catalog/schema/owner filter</text>
+<text x="830" y="539" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >SQLite .tables + pragma table_info</text>
+<text x="830" y="569" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Visibility depends on privileges/session</text>
+<text x="830" y="599" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Read-only metadata</text>
+<rect x="27" y="663" width="758" height="280" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="701" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">06 / UPDATE [313–315]</text>
+<text x="45" y="737" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Copy products.name into deals.name</text>
+<text x="45" y="767" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >MySQL / Oracle / PostgreSQL/SQLite / SQL Server</text>
+<text x="45" y="797" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Different syntax per engine</text>
+<text x="45" y="827" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Only state-changing section</text>
+<text x="45" y="857" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Preview + affected-row count required</text>
+<text x="45" y="887" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Verify before COMMIT</text>
+<rect x="812" y="663" width="761" height="280" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="830" y="701" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">07 / TRANSACTION BOUNDARY</text>
+<text x="830" y="737" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Source warns UPDATE cannot simply be undone</text>
+<text x="830" y="767" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Exception: transaction started before UPDATE</text>
+<text x="830" y="797" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Exact autocommit semantics: confirm</text>
+<text x="830" y="827" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >ROLLBACK only while still available</text>
+<text x="830" y="857" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >No production authorization in artifact</text>
+<text x="830" y="887" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Owner/approval/backup: [Needs confirmation]</text>
+<rect x="27" y="971" width="758" height="260" rx="17" fill="#FAFDFF" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="1009" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">08 / SOURCE FINDINGS</text>
+<text x="45" y="1045" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >F-01 duplicate NULL keys not covered</text>
+<text x="45" y="1075" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >F-02 max-date ties not covered</text>
+<text x="45" y="1105" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >F-03 ARRAY_AGG output shape unclear</text>
+<text x="45" y="1135" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >F-04 metadata all-tables scope</text>
+<text x="45" y="1165" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >F-05 SQLite metadata version claim</text>
+<text x="45" y="1195" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >F-06 Oracle unmatched UPDATE scope</text>
+<rect x="812" y="971" width="761" height="260" rx="17" fill="#FAFDFF" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="830" y="1009" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">09 / UPDATE FINDINGS</text>
+<text x="830" y="1045" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >F-07 target deals repeated in FROM</text>
+<text x="830" y="1075" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >F-08 multiple product matches not covered</text>
+<text x="830" y="1105" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >F-09 rollback depends on transaction</text>
+<text x="830" y="1135" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Target semantics require verification</text>
+<text x="830" y="1165" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >No silent SQL correction</text>
+<text x="830" y="1195" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Canonical source unchanged</text>
+<rect x="27" y="1259" width="1546" height="250" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="1297" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">10 / ACCEPTANCE</text>
+<text x="45" y="1333" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Duplicate key definition known</text>
+<text x="45" y="1363" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >NULL and tie cases tested</text>
+<text x="45" y="1393" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Concat output/order verified</text>
+<text x="45" y="1423" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Metadata visibility understood</text>
+<text x="45" y="1453" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >UPDATE preview exact ids/count</text>
+<text x="45" y="1483" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Post-update values checked before COMMIT</text>
+<rect x="27" y="1537" width="1546" height="230" rx="17" fill="#FAFDFF" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="1575" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">11 / ЗАКЛЮЧИТЕЛЬНЫЕ СЛОВА [315]</text>
+<text x="45" y="1611" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Book covers popular SQL concepts, not the whole language</text>
+<text x="45" y="1641" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >SQL supports many approaches to tasks</text>
+<text x="45" y="1671" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Author encourages continued learning and exploration</text>
+<text x="45" y="1701" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Syntax varies substantially across RDBMSs</text>
+<text x="45" y="1731" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Practice and patience are required</text>
+<rect x="27" y="1798" width="1546" height="109" rx="18" fill="#D9EAF4"/>
+<text x="48" y="1835" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#104A67" font-weight="700">RAG_ONLY / FINAL CHAPTER</text>
+<text x="48" y="1870" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28526A" >No SQL executed. Source findings preserved; source/RAG/reading remain unchanged.</text>
+</svg>
