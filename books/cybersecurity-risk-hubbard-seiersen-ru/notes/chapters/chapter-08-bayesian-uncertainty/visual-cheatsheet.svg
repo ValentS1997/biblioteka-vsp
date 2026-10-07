@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="840" viewBox="0 0 1200 840" role="img" aria-labelledby="t d">
+<title id="t">Глава 8 — байесовское обновление риска</title>
+<desc id="d">Компактная схема prior, evidence, conditional probabilities и posterior на примере penetration test.</desc>
+<rect x="0" y="0" width="1200" height="840" rx="0" fill="#0c1929" stroke="#0c1929" stroke-width="1.5"/>
+<text x="52" y="48" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#82d0f7" font-weight="bold">BIBLIOTEKA-VSP / CYBER RISK</text>
+<text x="52" y="96" font-family="DejaVu Sans,Arial,sans-serif" font-size="32" fill="#fbfdff" font-weight="bold">Глава 8 · Уменьшение неопределённости</text>
+<text x="52" y="132" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#b9d1e2" font-weight="normal">Prior + evidence → posterior</text>
+<text x="52" y="182" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#82d0f7" font-weight="bold">Учебная модель</text>
+<rect x="52" y="200" width="342" height="164" rx="14" fill="#183149" stroke="#8dcdf1" stroke-width="1.5"/>
+<rect x="66" y="217" width="6" height="34" rx="3" fill="#8dcdf1" stroke="#8dcdf1" stroke-width="1.5"/>
+<text x="89" y="243" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Prior</text>
+<text x="72" y="282" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Калиброванная экспертная</text>
+<text x="72" y="310" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">оценка до нового</text>
+<text x="72" y="338" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">наблюдения</text>
+<rect x="429" y="200" width="342" height="164" rx="14" fill="#183149" stroke="#91d6bd" stroke-width="1.5"/>
+<rect x="443" y="217" width="6" height="34" rx="3" fill="#91d6bd" stroke="#91d6bd" stroke-width="1.5"/>
+<text x="466" y="243" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Evidence</text>
+<text x="449" y="282" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">ПТП / ~ПТП</text>
+<text x="449" y="310" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Наблюдаемый результат</text>
+<text x="449" y="338" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">penetration test</text>
+<rect x="806" y="200" width="342" height="164" rx="14" fill="#183149" stroke="#e7c18c" stroke-width="1.5"/>
+<rect x="820" y="217" width="6" height="34" rx="3" fill="#e7c18c" stroke="#e7c18c" stroke-width="1.5"/>
+<text x="843" y="243" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Posterior</text>
+<text x="826" y="282" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Обновлённая вероятность</text>
+<text x="826" y="310" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">после учёта</text>
+<text x="826" y="338" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">evidence</text>
+<text x="592" y="395" font-family="DejaVu Sans,Arial,sans-serif" font-size="34" fill="#7ccdf4" font-weight="bold">↓</text>
+<rect x="164" y="414" width="872" height="96" rx="14" fill="#213d55" stroke="#77cff6" stroke-width="1.5"/>
+<text x="252" y="454" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" fill="#f8fbff" font-weight="bold">Bayes связывает P(A|B) и P(B|A)</text>
+<text x="252" y="485" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#d0e6f3" font-weight="normal">Base rates важны; условные вероятности не взаимозаменяемы</text>
+<text x="592" y="548" font-family="DejaVu Sans,Arial,sans-serif" font-size="34" fill="#7ccdf4" font-weight="bold">↓</text>
+<rect x="52" y="570" width="521" height="164" rx="14" fill="#183149" stroke="#efbd9b" stroke-width="1.5"/>
+<rect x="66" y="587" width="6" height="34" rx="3" fill="#efbd9b" stroke="#efbd9b" stroke-width="1.5"/>
+<text x="89" y="613" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Positive test</text>
+<text x="72" y="652" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">P(КУД|ПТП)=23,8%</text>
+<text x="72" y="680" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Выше prior 1,24%</text>
+<text x="72" y="708" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Риск-оценка растёт</text>
+<rect x="626" y="570" width="522" height="164" rx="14" fill="#183149" stroke="#89d9bd" stroke-width="1.5"/>
+<rect x="640" y="587" width="6" height="34" rx="3" fill="#89d9bd" stroke="#89d9bd" stroke-width="1.5"/>
+<text x="663" y="613" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Negative test</text>
+<text x="646" y="652" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">P(КУД|~ПТП)=1,01%</text>
+<text x="646" y="680" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Ниже prior 1,24%</text>
+<text x="646" y="708" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Риск-оценка немного снижается</text>
+<rect x="52" y="753" width="1096" height="49" rx="14" fill="#2c2a38" stroke="#9c8ba4" stroke-width="1.5"/>
+<text x="74" y="784" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#eadce8" font-weight="normal">Boundary: пример гипотетический; pentest scope/authorization в главе не заданы</text>
+<text x="52" y="827" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" fill="#91aec4" font-weight="normal">RAG: e0034–e0035 · EPUB spine 34–35 · OPS/ch1-32.xhtml — OPS/ch1-33.xhtml</text>
+</svg>
