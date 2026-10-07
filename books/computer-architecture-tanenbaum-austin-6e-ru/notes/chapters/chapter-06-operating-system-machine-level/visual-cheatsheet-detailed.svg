@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100">
+<rect width="1600" height="1100" fill="#f4f6f8"/>
+<rect width="1600" height="120" fill="#1e293b"/>
+<text x="45" y="52" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="white">ГЛАВА 6 · ОС КАК МАШИНА ВИРТУАЛЬНЫХ АБСТРАКЦИЙ</text>
+<text x="45" y="88" font-family="Arial,sans-serif" font-size="19" fill="#dbe5ef">paging • segmentation • files • process state • race control • hypervisor</text>
+<g font-family="Arial,sans-serif" fill="#243447">
+
+<rect x="40" y="150" width="480" height="210" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="65" y="192" font-size="21" font-weight="700" fill="#365f91">01 · SYSTEM-CALL LEVEL</text>
+<text x="65" y="235" font-size="17">ISA instructions execute below OS</text>
+<text x="65" y="266" font-size="17">OS interprets added virtual commands</text>
+<text x="65" y="297" font-size="17">protection hides direct device complexity</text>
+<text x="65" y="328" font-size="17">main services: memory • I/O • parallelism</text>
+
+<rect x="560" y="150" width="480" height="210" rx="14" fill="white" stroke="#2d7d63" stroke-width="2"/>
+<text x="585" y="192" font-size="21" font-weight="700" fill="#2d7d63">02 · PAGING</text>
+<text x="585" y="235" font-size="17">VPN + offset → PTE → frame + offset</text>
+<text x="585" y="266" font-size="17">absent page → fault → OS reload</text>
+<text x="585" y="297" font-size="17">working set + locality reduce faults</text>
+<text x="585" y="328" font-size="17">LRU / FIFO / dirty-page writeback</text>
+
+<rect x="1080" y="150" width="480" height="210" rx="14" fill="white" stroke="#7656a5" stroke-width="2"/>
+<text x="1105" y="192" font-size="21" font-weight="700" fill="#7656a5">03 · PAGE SIZE / TLB</text>
+<text x="1105" y="235" font-size="17">small page → less internal waste</text>
+<text x="1105" y="266" font-size="17">large page → less translation overhead</text>
+<text x="1105" y="297" font-size="17">TLB hit ≠ miss ≠ page fault</text>
+<text x="1105" y="328" font-size="17">thrashing when working set exceeds frames</text>
+
+<rect x="40" y="395" width="480" height="210" rx="14" fill="white" stroke="#b15d45" stroke-width="2"/>
+<text x="65" y="437" font-size="21" font-weight="700" fill="#b15d45">04 · SEGMENTATION</text>
+<text x="65" y="480" font-size="17">multiple logical address spaces</text>
+<text x="65" y="511" font-size="17">variable-size region + protection</text>
+<text x="65" y="542" font-size="17">pure segmentation → external holes</text>
+<text x="65" y="573" font-size="17">coalescing / compaction / page segments</text>
+
+<rect x="560" y="395" width="480" height="210" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="585" y="437" font-size="21" font-weight="700" fill="#365f91">05 · FILE SYSTEM</text>
+<text x="585" y="480" font-size="17">file = virtual byte-stream abstraction</text>
+<text x="585" y="511" font-size="17">descriptor → metadata → blocks/extents</text>
+<text x="585" y="542" font-size="17">free list / bitmap track free space</text>
+<text x="585" y="573" font-size="17">directories map names to metadata</text>
+
+<rect x="1080" y="395" width="480" height="210" rx="14" fill="white" stroke="#2d7d63" stroke-width="2"/>
+<text x="1105" y="437" font-size="21" font-weight="700" fill="#2d7d63">06 · PROCESS / THREAD</text>
+<text x="1105" y="480" font-size="17">PC • registers • stack • address space</text>
+<text x="1105" y="511" font-size="17">multiple CPUs or time-sharing</text>
+<text x="1105" y="542" font-size="17">threads share process resources</text>
+<text x="1105" y="573" font-size="17">shared mutable state requires protocol</text>
+
+<rect x="40" y="640" width="480" height="210" rx="14" fill="white" stroke="#7656a5" stroke-width="2"/>
+<text x="65" y="682" font-size="21" font-weight="700" fill="#7656a5">07 · RACE / SEMAPHORE</text>
+<text x="65" y="725" font-size="17">race = outcome depends on interleaving</text>
+<text x="65" y="756" font-size="17">check + action must be atomic</text>
+<text x="65" y="787" font-size="17">down blocks at zero</text>
+<text x="65" y="818" font-size="17">up preserves wakeup / releases waiter</text>
+
+<rect x="560" y="640" width="480" height="210" rx="14" fill="white" stroke="#b15d45" stroke-width="2"/>
+<text x="585" y="682" font-size="21" font-weight="700" fill="#b15d45">08 · UNIX / WINDOWS</text>
+<text x="585" y="725" font-size="17">UNIX: fd, inode, fork/exec, pthreads</text>
+<text x="585" y="756" font-size="17">Windows: handles, ACL, kernel objects</text>
+<text x="585" y="787" font-size="17">both: mmap-like sharing + threads</text>
+<text x="585" y="818" font-size="17">API differs; abstractions correspond</text>
+
+<rect x="1080" y="640" width="480" height="210" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="1105" y="682" font-size="21" font-weight="700" fill="#365f91">09 · VIRTUALIZATION</text>
+<text x="1105" y="725" font-size="17">multiple guest OS on one host</text>
+<text x="1105" y="756" font-size="17">hypervisor arbitrates resources</text>
+<text x="1105" y="787" font-size="17">memory needs second mapping layer</text>
+<text x="1105" y="818" font-size="17">I/O access traps/virtualizes policy</text>
+
+<rect x="40" y="890" width="1520" height="150" rx="14" fill="#e8eef5" stroke="#9aa9ba"/>
+<text x="65" y="935" font-size="21" font-weight="700">OPERATING-SYSTEM EQUATION</text>
+<text x="65" y="973" font-size="18">hardware mechanisms + privileged interpreter + persistent metadata + atomic synchronization</text>
+<text x="65" y="1005" font-size="18">→ safe virtual machine for applications</text>
+</g>
+</svg>
