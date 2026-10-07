@@ -157,26 +157,6 @@ books:
       notes: books/kubernetes-in-action-marko-luksa-ru/notes/
       diagrams: books/kubernetes-in-action-marko-luksa-ru/diagrams/
 
-  - id: computer-networks-olifer-6e-ru-2020
-    title: "Компьютерные сети. Принципы, технологии, протоколы: Юбилейное издание"
-    authors:
-      - "Виктор Олифер"
-      - "Наталья Олифер"
-    language: ru
-    edition: 6
-    publication_year: 2020
-    isbn: "978-5-4461-1426-9"
-    paths:
-      metadata: books/computer-networks-olifer-6e-ru-2020/metadata.yaml
-      source: books/computer-networks-olifer-6e-ru-2020/source/book.pdf
-      rag_manifest: books/computer-networks-olifer-6e-ru-2020/rag/manifest.yaml
-      rag_chunks: books/computer-networks-olifer-6e-ru-2020/rag/chunks/
-      rag_chunk_index: books/computer-networks-olifer-6e-ru-2020/rag/chunk-index.jsonl
-      rag_search_index: books/computer-networks-olifer-6e-ru-2020/rag/search-index/
-      reading_progress: books/computer-networks-olifer-6e-ru-2020/reading/progress.yaml
-      notes: books/computer-networks-olifer-6e-ru-2020/notes/
-      diagrams: books/computer-networks-olifer-6e-ru-2020/diagrams/
-
   - id: a-byte-of-python-swaroop-chitlur-ru
     title: "A Byte of Python / Укус Питона"
     authors:
