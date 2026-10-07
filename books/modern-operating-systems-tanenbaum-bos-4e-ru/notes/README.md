@@ -18,3 +18,4 @@ chapter-analysis readiness passes.
 - [Глава 9 — Безопасность](chapters/chapter-09-security/README.md)
 - [Глава 10 — Изучение конкретных примеров: Unix, Linux и Android](chapters/chapter-10-unix-linux-android/README.md)
 - [Глава 11 — Изучение конкретных примеров: Windows 8](chapters/chapter-11-windows-8/README.md)
+- [Глава 12 — Разработка операционных систем](chapters/chapter-12-operating-system-design/README.md)
