@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="840" viewBox="0 0 1200 840">
+<style>
+text{font-family:Arial,sans-serif;fill:#111827}.t{font-size:30px;font-weight:700}.s{font-size:14px;fill:#4b5563}.h{font-size:18px;font-weight:700}.b{font-size:15px}.box{fill:#f9fafb;stroke:#374151;stroke-width:2;rx:14}.blue{fill:#eff6ff;stroke:#1d4ed8;stroke-width:2;rx:14}.green{fill:#ecfdf5;stroke:#047857;stroke-width:2;rx:14}.violet{fill:#f5f3ff;stroke:#6d28d9;stroke-width:2;rx:14}.orange{fill:#fff7ed;stroke:#c2410c;stroke-width:2;rx:14}.a{stroke:#374151;stroke-width:2;fill:none;marker-end:url(#m)}
+</style><defs><marker id="m" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#374151"/></marker></defs>
+<text x="45" y="50" class="t">Глава 11 — Событийно-ориентированная пакетная обработка</text>
+<text x="45" y="78" class="s">RAG p0189:c01–p0204:c01 · PDF 189–204 · rag_only</text>
+
+<rect x="55" y="120" width="200" height="105" class="blue"/><text x="80" y="155" class="h">Copier</text><text x="80" y="187" class="b">1 → many</text>
+<rect x="280" y="120" width="200" height="105" class="green"/><text x="305" y="155" class="h">Filter</text><text x="305" y="187" class="b">keep subset</text>
+<rect x="505" y="120" width="200" height="105" class="violet"/><text x="530" y="155" class="h">Splitter</text><text x="530" y="187" class="b">route subsets</text>
+<rect x="730" y="120" width="200" height="105" class="orange"/><text x="755" y="155" class="h">Sharder</text><text x="755" y="187" class="b">partition</text>
+<rect x="955" y="120" width="200" height="105" class="box"/><text x="980" y="155" class="h">Merger</text><text x="980" y="187" class="b">many → 1</text>
+
+<rect x="90" y="330" width="430" height="150" class="blue"/><text x="120" y="367" class="h">User-registration flow</text><text x="120" y="399" class="b">geographic Sharder → verification</text><text x="120" y="429" class="b">Copier → welcome + notifications</text><text x="120" y="459" class="b">Filter/Splitter → email / SMS</text>
+
+<rect x="680" y="330" width="430" height="150" class="green"/><text x="710" y="367" class="h">Pub/Sub data plane</text><text x="710" y="399" class="b">publisher → topic → subscriber</text><text x="710" y="429" class="b">durable handoff between stages</text><text x="710" y="459" class="b">Kafka used in practical</text>
+
+<rect x="165" y="565" width="870" height="115" class="box"/><text x="195" y="602" class="h">DAG rule</text><text x="195" y="634" class="b">Document branch/fan-in semantics explicitly; topology is part of operability.</text><text x="195" y="662" class="b">Merger combines streams but does not provide a completeness barrier.</text>
+
+<rect x="190" y="735" width="820" height="50" class="orange"/><text x="220" y="767" class="b">Source practical is historical: Helm/Tiller + Kafka 0.11; topic loop extraction is not copy/paste-safe.</text>
+</svg>
