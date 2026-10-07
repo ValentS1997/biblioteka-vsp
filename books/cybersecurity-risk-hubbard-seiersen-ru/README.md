@@ -63,3 +63,4 @@ Canonical readiness command:
 - [Глава 1 — Самая нужная «заплатка» в кибербезопасности](notes/chapters/chapter-01-most-important-cybersecurity-patch/README.md) — EPUB spine 13–14; chapter-artifact-collection v1.7; source-grounded review. Reading remains `planned`.
 - [Глава 2 — Руководство по измерениям для сферы кибербезопасности](notes/chapters/chapter-02-measurement-guide-cybersecurity/README.md) — EPUB spine 15–17, контракт v1.7. Reading: `planned`.
 - [Глава 3 — Моделируем немедленно!](notes/chapters/chapter-03-model-now/README.md) — EPUB spine 18–20, контракт v1.7; reading remains `planned`.
+- [Глава 4 — Самое важное измерение в области кибербезопасности](notes/chapters/chapter-04-most-important-measurement/README.md) — EPUB spine 21–23, chapter artifacts v1.7 + explicit summary; reading remains `planned`.
