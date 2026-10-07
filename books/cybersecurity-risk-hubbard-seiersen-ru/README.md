@@ -72,3 +72,12 @@ Canonical readiness command:
 - [Глава 10 — На пути к зрелости метрик безопасности](notes/chapters/chapter-10-security-metrics-maturity/README.md) — EPUB spine 41–42; artifacts v1.7; reading remains `planned`.
 - [Глава 11 — Насколько эффективно взаимодействуют мои вложения в безопасность?](notes/chapters/chapter-11-security-investments-interaction/README.md) — EPUB spine 43–44; artifacts v1.7; reading remains `planned`.
 - [Глава 12 — Призыв к действию](notes/chapters/chapter-12-call-to-action/README.md) — EPUB spine 45; artifacts v1.7; main chapters 1–12 analyzed; reading remains `planned`.
+
+## Analysis closure
+
+Status: `ANALYSIS_CLOSED`.
+
+- main chapters: 12/12 analyzed;
+- Appendix A (spine 46), Appendix B / guest authors (spine 47) and final notes (spine 48) consolidated into one [final conclusion](notes/final-conclusion.md);
+- canonical source and RAG unchanged;
+- reading tracking remains independent and stays `planned`.
