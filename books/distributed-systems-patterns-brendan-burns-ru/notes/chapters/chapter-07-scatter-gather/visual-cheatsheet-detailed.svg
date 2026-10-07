@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1050" viewBox="0 0 1500 1050">
+  <style>
+    text { font-family: Arial, sans-serif; fill: #111827; }
+    .t { font-size: 32px; font-weight: 700; }
+    .s { font-size: 15px; fill: #4b5563; }
+    .h { font-size: 18px; font-weight: 700; }
+    .b { font-size: 14px; }
+    .box { fill: #f9fafb; stroke: #4b5563; stroke-width: 2; rx: 12; }
+    .blue { fill: #eff6ff; stroke: #1d4ed8; stroke-width: 2; rx: 12; }
+    .green { fill: #ecfdf5; stroke: #047857; stroke-width: 2; rx: 12; }
+    .orange { fill: #fff7ed; stroke: #c2410c; stroke-width: 2; rx: 12; }
+    .arrow { stroke: #374151; stroke-width: 2; fill: none; marker-end: url(#m); }
+  </style>
+  <defs><marker id="m" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#374151"/></marker></defs>
+
+  <text x="50" y="50" class="t">Глава 7 — Scatter/Gather</text>
+  <text x="50" y="78" class="s">RAG p0122:c01–p0133:c01 · PDF 122–133</text>
+
+  <rect x="80" y="120" width="340" height="110" class="blue"/>
+  <text x="110" y="158" class="h">Client request</text>
+  <text x="110" y="190" class="b">expensive work</text>
+
+  <rect x="580" y="120" width="340" height="110" class="green"/>
+  <text x="610" y="158" class="h">Root</text>
+  <text x="610" y="190" class="b">scatter work / gather results</text>
+
+  <rect x="1080" y="120" width="340" height="110" class="blue"/>
+  <text x="1110" y="158" class="h">Leaf nodes</text>
+  <text x="1110" y="190" class="b">parallel partial work</text>
+
+  <path d="M420,175 L580,175" class="arrow"/>
+  <path d="M920,175 L1080,175" class="arrow"/>
+
+  <rect x="80" y="300" width="620" height="150" class="box"/>
+  <text x="110" y="338" class="h">Replicated-compute search</text>
+  <text x="110" y="370" class="b">different workers process different terms</text>
+  <text x="110" y="400" class="b">root combines results with set intersection</text>
+
+  <rect x="800" y="300" width="620" height="150" class="box"/>
+  <text x="830" y="338" class="h">Sharded-data search</text>
+  <text x="830" y="370" class="b">each shard evaluates the full query on local data</text>
+  <text x="830" y="400" class="b">root combines shard results with set union</text>
+
+  <rect x="80" y="520" width="390" height="170" class="orange"/>
+  <text x="110" y="558" class="h">Overhead</text>
+  <text x="110" y="590" class="b">fan-out increases network and coordination cost</text>
+  <text x="110" y="620" class="b">speedup becomes asymptotic</text>
+
+  <rect x="555" y="520" width="390" height="170" class="orange"/>
+  <text x="585" y="558" class="h">Straggler effect</text>
+  <text x="585" y="590" class="b">root waits for the slowest required leaf</text>
+  <text x="585" y="620" class="b">tail latency worsens as fan-out grows</text>
+
+  <rect x="1030" y="520" width="390" height="170" class="orange"/>
+  <text x="1060" y="558" class="h">Availability</text>
+  <text x="1060" y="590" class="b">more mandatory leaves</text>
+  <text x="1060" y="620" class="b">increase chance one required leaf is unavailable</text>
+
+  <rect x="220" y="760" width="460" height="150" class="green"/>
+  <text x="250" y="798" class="h">Replicated logical shard A</text>
+  <text x="250" y="830" class="b">A1 + A2</text>
+  <text x="250" y="860" class="b">one replica can fail/update</text>
+
+  <rect x="820" y="760" width="460" height="150" class="green"/>
+  <text x="850" y="798" class="h">Replicated logical shard B</text>
+  <text x="850" y="830" class="b">B1 + B2</text>
+  <text x="850" y="860" class="b">required shard stays available</text>
+
+  <rect x="170" y="955" width="1160" height="55" class="box"/>
+  <text x="200" y="990" class="h">Choose fan-out by measured end-to-end benefit; replicate required shards instead of endlessly increasing shard count.</text>
+
+  <text x="50" y="1035" class="s">p0131 probability presentation mismatch is recorded in source-findings.md.</text>
+</svg>
