@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="1450" viewBox="0 0 1680 1450" role="img" aria-labelledby="title desc">
+<title id="title">Глава 4 — подробная визуальная памятка по OSINT, DNS, пассивной разведке</title>
+<desc id="desc">Глубокая схема источников, протоколов, команд и рисков разведки, с контролями неопределённости на основе RAG.</desc>
+<rect width="1680" height="1450" fill="#eef5f8"/>
+<rect width="1680" height="173" fill="#173349"/>
+<text x="47" y="72" font-family="DejaVu Sans,Arial,sans-serif" font-size="40" fill="#fff" font-weight="700">Глава 4 | OSINT → DNS → веб-технологии → IoT</text>
+<text x="49" y="123" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" fill="#d4e9f0" font-weight="400">А. В. Чумилин · PDF pp. 72–98 · 27 страниц / 34 RAG chunks</text>
+
+<rect x="38" y="205" width="513" height="405" rx="16" fill="#fff" stroke="#cbdde5" stroke-width="2"/>
+<text x="63" y="253" font-family="DejaVu Sans,Arial,sans-serif" font-size="28" fill="#267587" font-weight="700">4.1 · Источники</text>
+<text x="65" y="297" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#305064" font-weight="400">EDGAR: отчёты компаний</text>
+<text x="65" y="339" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#305064" font-weight="400">WHOIS: регистрация и NS</text>
+<text x="65" y="381" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#305064" font-weight="400">RIR: распределение IP-блоков</text>
+<text x="65" y="423" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#305064" font-weight="400">theHarvester: хосты / контакты</text>
+<text x="65" y="465" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#305064" font-weight="400">Sherlock: совпадения username</text>
+<text x="65" y="507" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#305064" font-weight="400">Вакансии: гипотезы о технологиях</text>
+<text x="65" y="549" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#895c3e" font-weight="400">Данные могут быть скрыты и старыми</text>
+<rect x="582" y="205" width="516" height="405" rx="16" fill="#fff" stroke="#cbdde5" stroke-width="2"/>
+<text x="607" y="253" font-family="DejaVu Sans,Arial,sans-serif" font-size="28" fill="#486da4" font-weight="700">4.1 · DNS</text>
+<text x="609" y="297" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#305064" font-weight="400">FQDN / рекурсивный резолвер</text>
+<text x="609" y="339" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#305064" font-weight="400">A, AAAA: адреса</text>
+<text x="609" y="381" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#305064" font-weight="400">MX: почта · NS / SOA: зона</text>
+<text x="609" y="423" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#305064" font-weight="400">CNAME: алиас · PTR: обратный поиск</text>
+<text x="609" y="465" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#305064" font-weight="400">host / nslookup / dig</text>
+<text x="609" y="507" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#305064" font-weight="400">AXFR: передача DNS-зоны</text>
+<text x="609" y="549" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#895c3e" font-weight="400">dnsrecon brt: wordlist-запросы</text>
+<rect x="1128" y="205" width="512" height="405" rx="16" fill="#fff" stroke="#cbdde5" stroke-width="2"/>
+<text x="1153" y="253" font-family="DejaVu Sans,Arial,sans-serif" font-size="28" fill="#9a6b3f" font-weight="700">4.2 · Веб / IoT</text>
+<text x="1155" y="297" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#305064" font-weight="400">p0f: наблюдение за сетью</text>
+<text x="1155" y="339" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#305064" font-weight="400">Wappalyzer / DevTools: веб-стек</text>
+<text x="1155" y="381" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#305064" font-weight="400">Netcraft: сведения о хостинге</text>
+<text x="1155" y="423" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#305064" font-weight="400">HTTrack: копирование сайта</text>
+<text x="1155" y="465" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#305064" font-weight="400">Google: site, inurl, filetype</text>
+<text x="1155" y="507" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#305064" font-weight="400">Shodan: индекс IoT / ICS</text>
+<text x="1155" y="549" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#895c3e" font-weight="400">Индекс не даёт доступ к объекту</text>
+<rect x="38" y="641" width="791" height="354" rx="16" fill="#fff" stroke="#cbdde5" stroke-width="2"/>
+<text x="63" y="689" font-family="DejaVu Sans,Arial,sans-serif" font-size="28" fill="#267587" font-weight="700">Классификация эффектов</text>
+<text x="65" y="733" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#305064" font-weight="400">LOCAL READ: ipconfig /displaydns</text>
+<text x="65" y="775" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#305064" font-weight="400">CAPTURE: p0f на разрешённом интерфейсе</text>
+<text x="65" y="817" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#305064" font-weight="400">REMOTE LOOKUP: whois, host, dig, nslookup</text>
+<text x="65" y="859" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#305064" font-weight="400">WORKLOAD: theHarvester, Sherlock</text>
+<text x="65" y="901" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#305064" font-weight="400">GREATER WORKLOAD: dnsrecon, AXFR, HTTrack</text>
+<text x="65" y="943" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#895c3e" font-weight="400">Scope и ограничения запросов неизвестны</text>
+<rect x="862" y="641" width="778" height="354" rx="16" fill="#fff" stroke="#cbdde5" stroke-width="2"/>
+<text x="887" y="689" font-family="DejaVu Sans,Arial,sans-serif" font-size="28" fill="#486da4" font-weight="700">Задание автора и критерии</text>
+<text x="889" y="733" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#305064" font-weight="400">Практика p. 81: изучить theHarvester</text>
+<text x="889" y="775" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#305064" font-weight="400">Выбрать домен, на который есть права</text>
+<text x="889" y="817" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#305064" font-weight="400">Источник запроса: Bing (пример p. 80)</text>
+<text x="889" y="859" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#305064" font-weight="400">Версия/API и результаты не проверены</text>
+<text x="889" y="901" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#305064" font-weight="400">Приёмка: provenance + scope + осторожность</text>
+<text x="889" y="943" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#895c3e" font-weight="400">Никаких сетевых запусков не выполнено</text>
+<rect x="38" y="1026" width="1602" height="326" rx="17" fill="#deebf1" stroke="#bcd8e3" stroke-width="2"/>
+<text x="66" y="1072" font-family="DejaVu Sans,Arial,sans-serif" font-size="30" fill="#173349" font-weight="700">Source findings / предупреждения</text>
+<text x="68" y="1117" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">F-01 · p79: WHOIS 63.97.118.0/23; абзац указывает 63.197.118.0 — расхождение.</text>
+<text x="68" y="1162" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">F-02 · p84 PTR: IP → FQDN; p86 — обратная формулировка. Не исправлять источник молча.</text>
+<text x="68" y="1207" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">F-03 · вакансии/соцсети: сведения не доказывают полноту инфраструктуры или личность.</text>
+<text x="68" y="1252" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">F-04 · исторические WHOIS/веб-результаты 2021–2023 не равны данным 2026 года.</text>
+<text x="68" y="1297" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#895c3e" font-weight="700">Rollback / approved rate / actual target: [Needs confirmation]</text>
+<text x="49" y="1413" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#547080" font-weight="400">RAG-only · p0072:c01–p0098:c01 · исходные рисунки не воспроизводятся · reading not activated</text>
+</svg>
