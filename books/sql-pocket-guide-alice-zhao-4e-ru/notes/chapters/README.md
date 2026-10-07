@@ -20,4 +20,6 @@ Book ID: `sql-pocket-guide-alice-zhao-4e-ru`.
 
 | 07 | [Операции и функции](chapter-07-operatsii-i-funktsii/README.md) | PDF 190–243; `p0190:c01`–`p0243:c01` | [cheatsheet](chapter-07-operatsii-i-funktsii/cheatsheet.md) · [commands](chapter-07-operatsii-i-funktsii/commands.md) · [diagram](chapter-07-operatsii-i-funktsii/diagram.md) · [compact SVG](chapter-07-operatsii-i-funktsii/visual-cheatsheet.svg) · [detailed SVG](chapter-07-operatsii-i-funktsii/visual-cheatsheet-detailed.svg) · [source findings](chapter-07-operatsii-i-funktsii/source-findings.md) |
 
+| 08 | [Расширенные концепции запросов](chapter-08-rasshirennye-kontseptsii-zaprosov/README.md) | PDF 244–272; `p0244:c01`–`p0272:c01` | [cheatsheet](chapter-08-rasshirennye-kontseptsii-zaprosov/cheatsheet.md) · [commands](chapter-08-rasshirennye-kontseptsii-zaprosov/commands.md) · [diagram](chapter-08-rasshirennye-kontseptsii-zaprosov/diagram.md) · [compact SVG](chapter-08-rasshirennye-kontseptsii-zaprosov/visual-cheatsheet.svg) · [detailed SVG](chapter-08-rasshirennye-kontseptsii-zaprosov/visual-cheatsheet-detailed.svg) · [source findings](chapter-08-rasshirennye-kontseptsii-zaprosov/source-findings.md) |
+
 Reading status сохраняется независимо от создания chapter artifacts.
