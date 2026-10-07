@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1780" height="1400" viewBox="0 0 1780 1400">
+<rect width="1780" height="1400" fill="#f8fafb"/>
+<text x="55" y="58" font-family="Arial,DejaVu Sans,sans-serif" font-size="36" font-weight="700" fill="#173246">Глава 4 · Стандартизация и классификация сетей</text>
+<text x="55" y="94" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#536b7d">Олифер, 7-е изд. · RAG p0108:c01–p0130:c01 · PDF 108–130 · printed 107–129</text>
+
+<rect x="55" y="135" width="805" height="285" rx="18" fill="#eaf0f5" stroke="#b9cbd8"/>
+<text x="82" y="180" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#234b64">1 · Decomposition and protocol stack</text>
+<text x="82" y="223" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">Complex interaction → modules → hierarchical layers</text>
+<text x="82" y="261" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">Service interface: adjacent layers inside one node</text>
+<text x="82" y="299" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">Protocol: same-level peer entities on different nodes</text>
+<text x="82" y="337" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">Stack: enough hierarchically organized protocols for interaction</text>
+<text x="82" y="380" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#5d7381">Model says what · protocol says how · implementation realizes it</text>
+
+<rect x="915" y="135" width="810" height="285" rx="18" fill="#eef4e8" stroke="#c3d4b8"/>
+<text x="942" y="180" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#365b31">2 · OSI seven-layer reference model</text>
+<text x="942" y="223" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">7 Application · user-facing network services</text>
+<text x="942" y="256" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">6 Presentation · data representation / syntax / encryption</text>
+<text x="942" y="289" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">5 Session · dialogue / synchronization checkpoints</text>
+<text x="942" y="322" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">4 Transport · required transport-service quality</text>
+<text x="942" y="355" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">3 Network · end-to-end nodes / forwarding / route</text>
+<text x="942" y="388" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">2 Data Link · adjacent nodes / frames · 1 Physical · signals/bits</text>
+
+<rect x="55" y="465" width="805" height="285" rx="18" fill="#f8efe2" stroke="#ddc9aa"/>
+<text x="82" y="510" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#78532e">3 · Encapsulation and node roles</text>
+<text x="82" y="553" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">Sender: message moves down, each layer adds service information</text>
+<text x="82" y="591" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">Receiver: each layer processes/removes its header, passes data upward</text>
+<text x="82" y="629" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">End host → full stack</text>
+<text x="82" y="667" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">Repeater → physical · LAN switch → physical+link</text>
+<text x="82" y="705" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">Router → physical+link+network · additional service protocols may exist</text>
+
+<rect x="915" y="465" width="810" height="285" rx="18" fill="#eee8f6" stroke="#c9bad9"/>
+<text x="942" y="510" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#593f73">4 · Vertical layers + horizontal planes</text>
+<text x="942" y="553" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">User plane → user traffic</text>
+<text x="942" y="591" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">Control plane → routing / connection setup / naming information</text>
+<text x="942" y="629" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">Management plane → administration / monitoring information</text>
+<text x="942" y="667" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">Source example: RIP/OSPF show strict OSI layer mapping can be awkward</text>
+<text x="942" y="705" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#756486">OSI works better as reference vocabulary than literal implementation template</text>
+
+<rect x="55" y="795" width="805" height="300" rx="18" fill="#e5edf7" stroke="#bdcce0"/>
+<text x="82" y="840" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#2b4e78">5 · Standardization and openness</text>
+<text x="82" y="883" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">Open specification = published + public + agreed standard specification</text>
+<text x="82" y="921" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">Benefits: multi-vendor interoperability · component replacement · network coupling</text>
+<text x="82" y="959" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">Sources: vendor · committees/associations · national · international</text>
+<text x="82" y="997" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">Internet: RFC process · ISOC / IAB / IRTF / IETF in source description</text>
+<text x="82" y="1035" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">TCP/IP: many upper/lower choices · IP as common narrow waist</text>
+<text x="82" y="1073" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#5c7290">Current-status claims remain source snapshots under RAG-only policy</text>
+
+<rect x="915" y="795" width="810" height="300" rx="18" fill="#f4ece7" stroke="#dbc6b9"/>
+<text x="942" y="840" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#714b38">6 · Classification: independent axes</text>
+<text x="942" y="883" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Coverage → LAN / MAN / WAN</text>
+<text x="942" y="921" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Medium → wired / wireless</text>
+<text x="942" y="959" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Switching → packets / circuits · forwarding variant</text>
+<text x="942" y="997" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Topology → full mesh / tree / star / ring / mixed</text>
+<text x="942" y="1035" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Users → carrier / corporate / personal</text>
+<text x="942" y="1073" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Role → access / aggregation / backbone · primary / overlay</text>
+
+<rect x="55" y="1140" width="1670" height="175" rx="16" fill="#fff3dd" stroke="#dfca9b"/>
+<text x="82" y="1183" font-family="Arial,DejaVu Sans,sans-serif" font-size="24" font-weight="700" fill="#785f2d">Practical reading rule</text>
+<text x="82" y="1223" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6c5c3a">Do not ask “what OSI layer is this?” before identifying the actual function, protocol and node role.</text>
+<text x="82" y="1260" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6c5c3a">Do not classify a network by one label only: geographic scope, medium, switching, ownership and role are different axes.</text>
+<text x="82" y="1297" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#6c5c3a">No executable CLI is supplied by the chapter.</text>
+<text x="55" y="1365" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#607789">Chapter 5 starts at p0131:c01 · reading state unchanged · source extraction findings recorded separately.</text>
+</svg>

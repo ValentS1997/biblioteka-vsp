@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="930" viewBox="0 0 1500 930">
+<rect width="1500" height="930" fill="#f8fafb"/>
+<text x="50" y="58" font-family="Arial,DejaVu Sans,sans-serif" font-size="34" font-weight="700" fill="#183247">Глава 4 · Стандартизация и классификация сетей</text>
+<text x="50" y="92" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#52697a">RAG p0108:c01–p0130:c01 · PDF 108–130 · printed 107–129</text>
+
+<rect x="60" y="135" width="420" height="220" rx="18" fill="#e8eff5" stroke="#b9cbd8"/>
+<text x="88" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#234b64">1 · Layering</text>
+<text x="88" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">Modules → layers</text>
+<text x="88" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">Service interface: vertical</text>
+<text x="88" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">Protocol: peer-to-peer logical rules</text>
+<text x="88" y="325" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#5a7180">p0108–p0111</text>
+
+<rect x="540" y="135" width="420" height="220" rx="18" fill="#eef4e8" stroke="#c4d4b9"/>
+<text x="568" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#365b31">2 · OSI reference</text>
+<text x="568" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">7 layers · PDU · encapsulation</text>
+<text x="568" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">End nodes: full stack</text>
+<text x="568" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">Transit nodes: needed lower layers</text>
+<text x="568" y="325" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#63755d">p0112–p0121</text>
+
+<rect x="1020" y="135" width="420" height="220" rx="18" fill="#f8efe2" stroke="#ddc9aa"/>
+<text x="1048" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#78532e">3 · Standards</text>
+<text x="1048" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">Open specifications</text>
+<text x="1048" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">RFC / Internet standards ecosystem</text>
+<text x="1048" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">TCP/IP · IP = narrow waist</text>
+<text x="1048" y="325" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#806d55">p0122–p0126</text>
+
+<path d="M480 245 H540 M960 245 H1020" stroke="#718798" stroke-width="4" marker-end="url(#a)"/>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#718798"/></marker></defs>
+
+<rect x="145" y="420" width="1210" height="185" rx="18" fill="#eee8f6" stroke="#c9bad9"/>
+<text x="175" y="465" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#593f73">Horizontal view: protocol planes</text>
+<text x="175" y="515" font-family="Arial,DejaVu Sans,sans-serif" font-size="22" fill="#624f74">User plane · carries user data</text>
+<text x="600" y="515" font-family="Arial,DejaVu Sans,sans-serif" font-size="22" fill="#624f74">Control plane · routing / connection / naming data</text>
+<text x="175" y="558" font-family="Arial,DejaVu Sans,sans-serif" font-size="22" fill="#624f74">Management plane · network administration data</text>
+
+<rect x="145" y="665" width="1210" height="180" rx="18" fill="#e5edf7" stroke="#bdcce0"/>
+<text x="175" y="710" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#2b4e78">4 · Classification = several independent axes</text>
+<text x="175" y="755" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">LAN / MAN / WAN · wired / wireless · packet / circuit · topology</text>
+<text x="175" y="795" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">carrier / corporate / personal · access / aggregation / backbone · primary / overlay</text>
+
+<text x="50" y="895" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#63798a">No executable CLI in chapter · current-status standards claims remain source snapshots under RAG-only policy</text>
+</svg>
