@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 2 — Паттерн Sidecar: компактная шпаргалка</title>
+  <desc id="desc">RAG-grounded схема Sidecar, вариантов использования и требований к reusable container.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #111827; }
+      .title { font-size: 30px; font-weight: 700; }
+      .sub { font-size: 14px; fill: #4b5563; }
+      .h { font-size: 18px; font-weight: 700; }
+      .b { font-size: 15px; }
+      .small { font-size: 13px; fill: #374151; }
+      .box { fill: #f9fafb; stroke: #374151; stroke-width: 2; rx: 14; }
+      .app { fill: #eff6ff; stroke: #1d4ed8; stroke-width: 2; rx: 14; }
+      .side { fill: #ecfdf5; stroke: #047857; stroke-width: 2; rx: 14; }
+      .use { fill: #f5f3ff; stroke: #6d28d9; stroke-width: 2; rx: 14; }
+      .warn { fill: #fff7ed; stroke: #c2410c; stroke-width: 2; rx: 14; }
+      .arrow { stroke: #374151; stroke-width: 2.3; fill: none; marker-end: url(#m); }
+    </style>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#374151"/>
+    </marker>
+  </defs>
+
+  <text x="45" y="50" class="title">Глава 2 — Паттерн Sidecar</text>
+  <text x="45" y="78" class="sub">RAG p0034:c01–p0049:c01 · PDF 34–49 · rag_only</text>
+
+  <rect x="100" y="120" width="350" height="120" class="app"/>
+  <text x="125" y="157" class="h">Application container</text>
+  <text x="125" y="188" class="b">основная логика приложения</text>
+  <text x="125" y="216" class="b">может оставаться без изменений</text>
+
+  <rect x="750" y="120" width="350" height="120" class="side"/>
+  <text x="775" y="157" class="h">Sidecar container</text>
+  <text x="775" y="188" class="b">добавляет capability</text>
+  <text x="775" y="216" class="b">работает рядом на одном узле</text>
+
+  <path d="M450,180 L750,180" class="arrow"/>
+  <text x="515" y="165" class="small">shared namespace / filesystem</text>
+
+  <rect x="60" y="315" width="250" height="125" class="use"/>
+  <text x="82" y="350" class="h">HTTPS legacy</text>
+  <text x="82" y="380" class="b">nginx sidecar</text>
+  <text x="82" y="408" class="b">HTTPS → localhost HTTP</text>
+
+  <rect x="345" y="315" width="250" height="125" class="use"/>
+  <text x="367" y="350" class="h">Dynamic config</text>
+  <text x="367" y="380" class="b">API → shared file</text>
+  <text x="367" y="408" class="b">reload / restart</text>
+
+  <rect x="630" y="315" width="250" height="125" class="use"/>
+  <text x="652" y="350" class="h">topz</text>
+  <text x="652" y="380" class="b">shared PID namespace</text>
+  <text x="652" y="408" class="b">HTTP /topz</text>
+
+  <rect x="915" y="315" width="225" height="125" class="use"/>
+  <text x="937" y="350" class="h">Git-sync PaaS</text>
+  <text x="937" y="380" class="b">git pull loop</text>
+  <text x="937" y="408" class="b">shared files</text>
+
+  <path d="M275,240 L185,315" class="arrow"/>
+  <path d="M430,240 L470,315" class="arrow"/>
+  <path d="M820,240 L755,315" class="arrow"/>
+  <path d="M925,240 L1025,315" class="arrow"/>
+
+  <rect x="160" y="520" width="880" height="135" class="box"/>
+  <text x="190" y="557" class="h">Reusable Sidecar = 3 обязательных дисциплины</text>
+  <text x="190" y="592" class="b">1. Parameterization — environment / startup inputs</text>
+  <text x="190" y="620" class="b">2. Stable API — names + behavior/semantics</text>
+  <text x="190" y="648" class="b">3. Documentation — EXPOSE / ENV / LABEL + explanations</text>
+
+  <rect x="250" y="700" width="700" height="55" class="warn"/>
+  <text x="280" y="734" class="b">Source warning: topz command has damaged “-  p” option → [Source extraction issue]</text>
+
+  <text x="45" y="785" class="small">Production security policy, Kubernetes manifests and universal rollback are not defined in this chapter.</text>
+</svg>
