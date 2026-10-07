@@ -63,3 +63,4 @@ Canonical readiness command:
 ## Chapter artifacts
 
 - [Глава 1 — Введение](notes/chapters/chapter-01-introduction/README.md) — RAG-grounded, PDF source locators 22–110.
+- [Глава 2 — Процессы и потоки](notes/chapters/chapter-02-processes-and-threads/README.md) — RAG-grounded, PDF source locators 111–213.
