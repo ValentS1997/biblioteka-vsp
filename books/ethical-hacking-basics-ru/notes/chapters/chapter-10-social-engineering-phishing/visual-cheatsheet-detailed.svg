@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="1420" viewBox="0 0 1680 1420">
+<rect width="1680" height="1420" fill="#eef5f8"/><rect width="1680" height="170" fill="#173349"/>
+<text x="48" y="72" font-family="DejaVu Sans,Arial" font-size="40" fill="#fff" font-weight="700">Глава 10 | Trust pressure → independent verification → containment</text>
+<text x="50" y="122" font-family="DejaVu Sans,Arial" font-size="23" fill="#d4e9f0">Influence, pretexting, phishing, physical access, wireless deception and automation concepts</text>
+<g font-family="DejaVu Sans,Arial">
+<rect x="38" y="205" width="510" height="430" rx="18" fill="#fff" stroke="#cbdde5"/>
+<text x="65" y="250" font-size="29" fill="#267587" font-weight="700">Influence + pretexting</text>
+<text x="65" y="298" font-size="20" fill="#315166">Reciprocity / commitment</text>
+<text x="65" y="340" font-size="20" fill="#315166">Social proof / authority</text>
+<text x="65" y="382" font-size="20" fill="#315166">Liking / scarcity</text>
+<text x="65" y="424" font-size="20" fill="#315166">Pretext = planned story</text>
+<text x="65" y="466" font-size="20" fill="#315166">Goal may be data, access or action</text>
+<text x="65" y="508" font-size="20" fill="#8b5b3c">Pressure is not identity proof</text>
+<rect x="585" y="205" width="510" height="430" rx="18" fill="#fff" stroke="#cbdde5"/>
+<text x="612" y="250" font-size="29" fill="#4a6ea5" font-weight="700">Phishing / identity review</text>
+<text x="612" y="298" font-size="20" fill="#315166">Sender and real domain</text>
+<text x="612" y="340" font-size="20" fill="#315166">Visible link vs destination</text>
+<text x="612" y="382" font-size="20" fill="#315166">Attachment + business context</text>
+<text x="612" y="424" font-size="20" fill="#315166">Known account can be compromised</text>
+<text x="612" y="466" font-size="20" fill="#315166">Verify via known channel</text>
+<text x="612" y="508" font-size="20" fill="#8b5b3c">Logo/display name ≠ authentication</text>
+<rect x="1132" y="205" width="510" height="430" rx="18" fill="#fff" stroke="#cbdde5"/>
+<text x="1158" y="250" font-size="29" fill="#95633e" font-weight="700">Physical / wireless / automation</text>
+<text x="1158" y="298" font-size="20" fill="#315166">Tailgating / baiting</text>
+<text x="1158" y="340" font-size="20" fill="#315166">Badges / controlled entry / biometrics</text>
+<text x="1158" y="382" font-size="20" fill="#315166">Rogue or imitated AP concepts</text>
+<text x="1158" y="424" font-size="20" fill="#315166">Campaign automation tooling</text>
+<text x="1158" y="466" font-size="20" fill="#315166">Payload delivery exists in source</text>
+<text x="1158" y="508" font-size="20" fill="#8b5b3c">High-risk details not operationalized</text></g>
+<rect x="38" y="675" width="1604" height="520" rx="18" fill="#dfeef3" stroke="#bdd8e3"/>
+<text x="68" y="725" font-family="DejaVu Sans,Arial" font-size="30" fill="#173349" font-weight="700">Evidence, controls and source caveats</text>
+<text x="68" y="775" font-family="DejaVu Sans,Arial" font-size="21" fill="#315166">1. Verify sensitive requests using an independent callback/contact directory.</text>
+<text x="68" y="818" font-family="DejaVu Sans,Arial" font-size="21" fill="#315166">2. Never treat passwords, OTPs or MFA approvals as support-verification material.</text>
+<text x="68" y="861" font-family="DejaVu Sans,Arial" font-size="21" fill="#315166">3. Enforce individual physical access; do not rely on courtesy at controlled doors.</text>
+<text x="68" y="904" font-family="DejaVu Sans,Arial" font-size="21" fill="#315166">4. Known social identities and SSIDs can be cloned or compromised.</text>
+<text x="68" y="947" font-family="DejaVu Sans,Arial" font-size="21" fill="#315166">5. Awareness must be backed by technical and process controls.</text>
+<text x="68" y="1005" font-family="DejaVu Sans,Arial" font-size="20" fill="#8b5b3c">F-01: “80% of attacks” is an unverified source statistic.</text>
+<text x="68" y="1048" font-family="DejaVu Sans,Arial" font-size="20" fill="#8b5b3c">F-02/F-03: tailgating wording varies; Wifiphisher name is split in extraction.</text>
+<text x="68" y="1110" font-family="DejaVu Sans,Arial" font-size="20" fill="#315166">Campaign authorization, data handling and stop conditions: [Needs confirmation]</text>
+<text x="49" y="1380" font-family="DejaVu Sans,Arial" font-size="19" fill="#526e7e">RAG-only · p0274:c01–p0297:c01 · no phishing/rogue-AP/payload action executed</text>
+</svg>

@@ -13,5 +13,6 @@ Book ID: `ethical-hacking-basics-ru`. Индекс создан для пере�
 | 7 — Эксплуатация, пароли и постэксплуатация | 169–209 | [Глава 7](chapter-07-exploitation-post-exploitation/README.md) |
 | 8 — Malware: типы, анализ и инфраструктура | 210–245 | [Глава 8](chapter-08-malware-analysis-infrastructure/README.md) |
 | 9 — Перехват пакетов, spoofing и обнаружение | 246–273 | [Глава 9](chapter-09-packet-capture-spoofing-defense/README.md) |
+| 10 — Социальная инженерия, фишинг и физический доступ | 274–297 | [Глава 10](chapter-10-social-engineering-phishing/README.md) |
 
 Дальнейшие главы: **[Needs confirmation]** до их индивидуального анализа. Состояние чтения независимо от RAG.
