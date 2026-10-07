@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 4 — Адаптеры</title>
+  <desc id="desc">RAG-grounded компактная схема Adapter: monitoring, logging and health interfaces.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #111827; }
+      .title { font-size: 30px; font-weight: 700; }
+      .sub { font-size: 14px; fill: #4b5563; }
+      .h { font-size: 18px; font-weight: 700; }
+      .b { font-size: 15px; }
+      .small { font-size: 13px; fill: #374151; }
+      .box { fill: #f9fafb; stroke: #374151; stroke-width: 2; rx: 14; }
+      .native { fill: #fff7ed; stroke: #c2410c; stroke-width: 2; rx: 14; }
+      .adapter { fill: #ecfdf5; stroke: #047857; stroke-width: 2; rx: 14; }
+      .uniform { fill: #eff6ff; stroke: #1d4ed8; stroke-width: 2; rx: 14; }
+      .use { fill: #f5f3ff; stroke: #6d28d9; stroke-width: 2; rx: 14; }
+      .arrow { stroke: #374151; stroke-width: 2.3; fill: none; marker-end: url(#m); }
+    </style>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#374151"/>
+    </marker>
+  </defs>
+
+  <text x="45" y="50" class="title">Глава 4 — Адаптеры</text>
+  <text x="45" y="78" class="sub">RAG p0064:c01–p0076:c01 · PDF 64–76 · rag_only</text>
+
+  <rect x="60" y="125" width="310" height="125" class="native"/>
+  <text x="85" y="162" class="h">Native application interface</text>
+  <text x="85" y="193" class="b">разные metrics / logs</text>
+  <text x="85" y="221" class="b">разные health semantics</text>
+
+  <rect x="445" y="125" width="310" height="125" class="adapter"/>
+  <text x="470" y="162" class="h">Adapter container</text>
+  <text x="470" y="193" class="b">преобразует interface</text>
+  <text x="470" y="221" class="b">не меняя base app</text>
+
+  <rect x="830" y="125" width="310" height="125" class="uniform"/>
+  <text x="855" y="162" class="h">Uniform contract</text>
+  <text x="855" y="193" class="b">common tooling</text>
+  <text x="855" y="221" class="b">monitor / log / health</text>
+
+  <path d="M370,187 L445,187" class="arrow"/>
+  <path d="M755,187 L830,187" class="arrow"/>
+
+  <rect x="60" y="330" width="320" height="150" class="use"/>
+  <text x="85" y="366" class="h">Monitoring</text>
+  <text x="85" y="398" class="b">Redis</text>
+  <text x="85" y="426" class="b">→ redis_exporter</text>
+  <text x="85" y="454" class="b">→ Prometheus interface</text>
+
+  <rect x="440" y="330" width="320" height="150" class="use"/>
+  <text x="465" y="366" class="h">Logging</text>
+  <text x="465" y="398" class="b">Redis SLOWLOG / Storm API</text>
+  <text x="465" y="426" class="b">→ fluentd Adapter</text>
+  <text x="465" y="454" class="b">→ normalized logs</text>
+
+  <rect x="820" y="330" width="320" height="150" class="use"/>
+  <text x="845" y="366" class="h">Health</text>
+  <text x="845" y="398" class="b">DB diagnostic query</text>
+  <text x="845" y="426" class="b">→ HTTP 200 / 500</text>
+  <text x="845" y="454" class="b">→ orchestrator decision</text>
+
+  <rect x="150" y="560" width="900" height="120" class="box"/>
+  <text x="180" y="598" class="h">Decision rule</text>
+  <text x="180" y="630" class="b">Owned app + cheap change → direct adaptation may be valid</text>
+  <text x="180" y="658" class="b">Third-party / reusable / separate ownership → Adapter candidate</text>
+
+  <rect x="185" y="720" width="830" height="55" class="native"/>
+  <text x="215" y="754" class="b">Source caution: PDF-extracted Go/YAML snippets are not treated as production copy/paste-safe.</text>
+
+  <text x="45" y="808" class="small">Exact rollout/rollback, resource sizing and current tool compatibility are outside chapter 4.</text>
+</svg>
