@@ -17,15 +17,15 @@ Translators/editors from the canonical registry:
 - М. Малышева
 - Н. Вильчинский
 
-Publisher, publication year, ISBN and publication page count: [Needs confirmation].
+Russian edition: ООО Издательство «Питер», 2015. ISBN `978-5-496-01395-6`. Publication extent: `1120` pages. Original-edition ISBN: `978-0133591620`.
 
 ## Reading state
 
-Technical onboarding does not activate reading progress.
+The user explicitly declared the complete book finished on `2026-10-08`.
 
-Requested reading activation: `false`.
+Canonical reading state: [reading/progress.yaml](reading/progress.yaml).
 
-No canonical `reading/progress.yaml` was created or modified by this bootstrap.
+The exact reading start date was not previously recorded and remains `[Needs confirmation]`.
 
 ## Source
 
@@ -75,3 +75,27 @@ Canonical readiness command:
 - [Глава 11 — Изучение конкретных примеров: Windows 8](notes/chapters/chapter-11-windows-8/README.md) — RAG-grounded, PDF source locators 931–1057.
 - [Глава 12 — Разработка операционных систем](notes/chapters/chapter-12-operating-system-design/README.md) — RAG-grounded, PDF source locators 1058–1109.
 - [Глава 13 — Библиография](notes/chapters/chapter-13-bibliography/README.md) — RAG-grounded, PDF source locators 1110–1119.
+
+## Completion audit
+
+Completion declared: `2026-10-08`.
+
+Repository-wide verification at closure:
+
+- numbered chapters present: `13/13`;
+- chapter-analysis coverage: PDF pages `22–1119`, contiguous with no gaps between numbered chapters;
+- front matter before Chapter 1 remains outside chapter artifacts by design;
+- PDF page `1120` is publisher colophon/end matter, not another numbered chapter;
+- chapter directories: `13`;
+- chapter artifact files: `129` total;
+- Chapter 7 correctly has no `summary.md` because the source contains no separate chapter-end summary;
+- all chapter READMEs report `RAG_GROUNDED`;
+- review questions: `580/580` across Chapters 1–12;
+- RAG-grounded review answers: `580/580`;
+- Chapter 13 contains no source review questions and is recorded as `0/0`;
+- canonical full-book RAG remains `READY_WITH_KNOWN_LIMITATIONS`;
+- full-book RAG: `1119` source units with text, `1` blank source unit, `1130` addressable chunks;
+- canonical source SHA-256 remains `57b4906fe976351be3cc7ba692bdcee069036667b5f1d042517aea04d37a3bbd`;
+- source/RAG derived state was not rebuilt or rewritten during completion.
+
+Book status: **COMPLETED**.
