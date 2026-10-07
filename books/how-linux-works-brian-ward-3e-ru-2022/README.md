@@ -44,3 +44,8 @@ Strict RAG ingestion acceptance: `ACCEPTED`.
 Canonical readiness command:
 
 `python scripts/check_book_readiness.py --book-id how-linux-works-brian-ward-3e-ru-2022 --capability chapter-analysis`
+
+## Анализ глав
+
+- [Индекс глав](notes/chapters/README.md)
+- [Глава 1 — Общая картина](notes/chapters/chapter-01-big-picture/README.md)
