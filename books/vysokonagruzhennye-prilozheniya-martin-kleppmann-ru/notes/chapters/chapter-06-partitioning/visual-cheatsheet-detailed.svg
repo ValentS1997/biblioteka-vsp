@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1120" viewBox="0 0 1400 1120">
+<rect width="1400" height="1120" fill="#f8fafc"/>
+<text x="55" y="65" fill="#0f172a" font-family="sans-serif" font-size="34" font-weight="700">Глава 6 — Секционирование</text>
+<text x="55" y="102" fill="#475569" font-family="sans-serif" font-size="18">Canonical RAG · PDF 239–263 · source SHA 495e75f185c758a8…</text>
+
+<rect x="55" y="140" width="1290" height="110" rx="18" fill="#e2e8f0"/>
+<text x="85" y="184" fill="#0f172a" font-family="sans-serif" font-size="23" font-weight="700">Goal: distribute data and request load evenly, while avoiding hot spots.</text>
+<text x="85" y="220" fill="#334155" font-family="sans-serif" font-size="18">Partition key controls placement, locality, secondary-index cost and routing.</text>
+
+<rect x="55" y="285" width="400" height="500" rx="18" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+<text x="85" y="330" fill="#075985" font-family="sans-serif" font-size="26" font-weight="700">6.2 Data partitioning</text>
+<text x="85" y="372" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Range</text>
+<text x="85" y="402" fill="#334155" font-family="sans-serif" font-size="16">ordered ranges · efficient scans</text>
+<text x="85" y="432" fill="#334155" font-family="sans-serif" font-size="16">risk: sequential/time hot spots</text>
+<text x="85" y="472" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Hash</text>
+<text x="85" y="502" fill="#334155" font-family="sans-serif" font-size="16">more uniform key distribution</text>
+<text x="85" y="532" fill="#334155" font-family="sans-serif" font-size="16">range locality lost</text>
+<text x="85" y="572" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Hot keys</text>
+<text x="85" y="602" fill="#334155" font-family="sans-serif" font-size="16">application may spread one hot key</text>
+<text x="85" y="632" fill="#334155" font-family="sans-serif" font-size="16">reads then merge derived keys</text>
+<text x="85" y="680" fill="#075985" font-family="sans-serif" font-size="16">Composite key can combine placement + sort</text>
+
+<rect x="500" y="285" width="400" height="500" rx="18" fill="#f3e8ff" stroke="#7e22ce" stroke-width="2"/>
+<text x="530" y="330" fill="#6b21a8" font-family="sans-serif" font-size="26" font-weight="700">6.3–6.4 Index &amp; rebalance</text>
+<text x="530" y="372" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Secondary indexes</text>
+<text x="530" y="402" fill="#334155" font-family="sans-serif" font-size="16">local: one-partition write, scatter/gather read</text>
+<text x="530" y="432" fill="#334155" font-family="sans-serif" font-size="16">global: targeted read, multi-partition write</text>
+<text x="530" y="472" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Rebalancing</text>
+<text x="530" y="502" fill="#334155" font-family="sans-serif" font-size="16">do not use hash(key) mod N</text>
+<text x="530" y="532" fill="#334155" font-family="sans-serif" font-size="16">fixed partition count</text>
+<text x="530" y="562" fill="#334155" font-family="sans-serif" font-size="16">dynamic split / merge</text>
+<text x="530" y="592" fill="#334155" font-family="sans-serif" font-size="16">partitions proportional to nodes</text>
+<text x="530" y="642" fill="#334155" font-family="sans-serif" font-size="16">keep reads/writes available during movement</text>
+<text x="530" y="672" fill="#6b21a8" font-family="sans-serif" font-size="16">Human-in-loop can avoid cascading overload</text>
+
+<rect x="945" y="285" width="400" height="500" rx="18" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="975" y="330" fill="#166534" font-family="sans-serif" font-size="26" font-weight="700">6.5 Request routing</text>
+<text x="975" y="372" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Three patterns</text>
+<text x="975" y="402" fill="#334155" font-family="sans-serif" font-size="16">1. any node + forwarding</text>
+<text x="975" y="432" fill="#334155" font-family="sans-serif" font-size="16">2. dedicated routing tier</text>
+<text x="975" y="462" fill="#334155" font-family="sans-serif" font-size="16">3. partition-aware client</text>
+<text x="975" y="512" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Control plane</text>
+<text x="975" y="542" fill="#334155" font-family="sans-serif" font-size="16">ZooKeeper / Helix examples</text>
+<text x="975" y="572" fill="#334155" font-family="sans-serif" font-size="16">gossip as alternative</text>
+<text x="975" y="602" fill="#334155" font-family="sans-serif" font-size="16">DNS for relatively stable node addresses</text>
+<text x="975" y="652" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">MPP queries</text>
+<text x="975" y="682" fill="#334155" font-family="sans-serif" font-size="16">split complex query into parallel stages</text>
+
+<rect x="55" y="825" width="1290" height="210" rx="18" fill="#0f172a"/>
+<text x="85" y="870" fill="#f8fafc" font-family="sans-serif" font-size="23" font-weight="700">Acceptance checklist</text>
+<text x="85" y="910" fill="#cbd5e1" font-family="sans-serif" font-size="18">1. Data and request load are acceptably balanced; no uncontrolled hot partition.</text>
+<text x="85" y="945" fill="#cbd5e1" font-family="sans-serif" font-size="18">2. Rebalancing preserves service availability and avoids unnecessary data movement.</text>
+<text x="85" y="980" fill="#cbd5e1" font-family="sans-serif" font-size="18">3. Secondary-index read/write trade-off matches workload.</text>
+<text x="85" y="1015" fill="#cbd5e1" font-family="sans-serif" font-size="18">4. Routing metadata changes propagate before requests depend on new placement.</text>
+
+<text x="245" y="1090" fill="#0f172a" font-family="sans-serif" font-size="22" font-weight="700">Partitioning is workload distribution plus a consistency-sensitive routing control plane.</text>
+</svg>
