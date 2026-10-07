@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+<title id="title">Глава 4 — самое важное измерение в кибербезопасности</title>
+<desc id="desc">Проверка работы самого метода оценки риска по объективным исходам и сравнение компонентов экспертов и алгоритмов.</desc>
+<rect x="0" y="0" width="1200" height="820" rx="13" fill="#0c182a" stroke="#0c182a" stroke-width="2"/>
+<text x="50" y="50" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#86d5fd" font-weight="bold">BIBLIOTEKA-VSP / HUBBARD + SEIERSEN</text>
+<text x="50" y="97" font-family="DejaVu Sans,Arial,sans-serif" font-size="32" fill="#f8fafc" font-weight="bold">Глава 4 · Измеряем сам метод оценки риска</text>
+<text x="50" y="131" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#bfd3e5" font-weight="normal">Популярность и уверенность ≠ доказанное качество решений</text>
+<text x="50" y="182" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#85d2fc" font-weight="bold">Критерий авторов</text>
+<rect x="50" y="198" width="1100" height="92" rx="13" fill="#24425b" stroke="#76d5fc" stroke-width="2"/>
+<text x="77" y="237" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" fill="#f8fbff" font-weight="bold">Измеримое улучшение управления риском</text>
+<text x="77" y="270" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#d4eafa" font-weight="normal">по сравнению с альтернативой при сопоставимых ресурсах</text>
+<text x="595" y="321" font-family="DejaVu Sans,Arial,sans-serif" font-size="35" fill="#77cfff" font-weight="bold">↓</text>
+<rect x="50" y="345" width="350" height="156" rx="13" fill="#19324a" stroke="#f2bba6" stroke-width="2"/>
+<text x="69" y="384" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#f7faff" font-weight="bold">Метод vs впечатление</text>
+<text x="69" y="425" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#d1e3f0" font-weight="normal">Аналитическое плацебо:</text>
+<text x="69" y="454" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#d1e3f0" font-weight="normal">уверенность может расти,</text>
+<text x="69" y="483" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#d1e3f0" font-weight="normal">а точность — нет.</text>
+<rect x="425" y="345" width="350" height="156" rx="13" fill="#19324a" stroke="#82d9b8" stroke-width="2"/>
+<text x="444" y="384" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#f7faff" font-weight="bold">Измеримые компоненты</text>
+<text x="444" y="425" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#d1e3f0" font-weight="normal">Алгоритмы и экспертные</text>
+<text x="444" y="454" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#d1e3f0" font-weight="normal">прогнозы; калибровка,</text>
+<text x="444" y="483" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#d1e3f0" font-weight="normal">стабильность, консенсус.</text>
+<rect x="800" y="345" width="350" height="156" rx="13" fill="#19324a" stroke="#abc1ff" stroke-width="2"/>
+<text x="819" y="384" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#f7faff" font-weight="bold">Улучшение метода</text>
+<text x="819" y="425" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#d1e3f0" font-weight="normal">Независимые оценки,</text>
+<text x="819" y="454" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#d1e3f0" font-weight="normal">усреднение, проверяемая</text>
+<text x="819" y="483" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#d1e3f0" font-weight="normal">декомпозиция.</text>
+<text x="595" y="542" font-family="DejaVu Sans,Arial,sans-serif" font-size="35" fill="#77cfff" font-weight="bold">↓</text>
+<rect x="50" y="566" width="1100" height="121" rx="13" fill="#183d40" stroke="#72dcc0" stroke-width="2"/>
+<text x="76" y="609" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#f8fbff" font-weight="bold">Acceptance: сравнить оценки с исходами и альтернативами</text>
+<text x="76" y="641" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#cee9e3" font-weight="normal">Согласие экспертов не заменяет проверку точности.</text>
+<text x="76" y="667" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#cee9e3" font-weight="normal">Опыт полезен при регулярной, быстрой, однозначной обратной связи.</text>
+<rect x="50" y="717" width="1100" height="63" rx="13" fill="#2a2c3b" stroke="#9d8ba9" stroke-width="2"/>
+<text x="74" y="744" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#eadce9" font-weight="normal">Контроль источника: рис. 4.1–4.2 не доступны как RAG-изображения.</text>
+<text x="74" y="770" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#eadce9" font-weight="normal">Процедуры изменения production и rollback: [Needs confirmation]</text>
+<text x="50" y="805" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" fill="#92b0c6" font-weight="normal">RAG: e0021–e0023 · EPUB spine 21–23 · OPS/ch1-19.xhtml — OPS/ch1-21.xhtml</text>
+</svg>
