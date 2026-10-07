@@ -67,3 +67,5 @@ Canonical readiness command:
 - [Глава 7 — Уровень ассемблера](notes/chapters/chapter-07-assembly-language-level/README.md) — RAG-grounded analysis; PDF pages 555–589.
 
 - [Глава 8 — Параллельные компьютерные архитектуры](notes/chapters/chapter-08-parallel-computer-architectures/README.md) — RAG-grounded analysis; PDF 590–698.
+
+- [Глава 9 — Библиография](notes/chapters/chapter-09-bibliography/README.md) — RAG-grounded bibliography map; PDF pages 699–707.
