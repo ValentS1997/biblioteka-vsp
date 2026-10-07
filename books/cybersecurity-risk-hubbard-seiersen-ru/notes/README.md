@@ -11,3 +11,4 @@ Chapter artifacts are created only after book-level chapter-analysis readiness i
 - [Глава 3 — Моделируем немедленно!](chapters/chapter-03-model-now/README.md) — RAG-grounded, EPUB spine 18–20; reading progress не изменён.
 - [Глава 4 — Самое важное измерение в области кибербезопасности](chapters/chapter-04-most-important-measurement/README.md) — RAG-grounded, EPUB spine 21–23; reading status не изменён.
 - [Глава 5 — Матрицы риска, факторы лжи и другие препятствия](chapters/chapter-05-risk-matrices-fallacies/README.md) — RAG-grounded, EPUB spine 24–26; reading progress не изменён.
+- [Глава 6 — Разложение на составляющие](chapters/chapter-06-decomposition/README.md) — RAG-grounded, EPUB spine 28–30; reading progress не изменён.
