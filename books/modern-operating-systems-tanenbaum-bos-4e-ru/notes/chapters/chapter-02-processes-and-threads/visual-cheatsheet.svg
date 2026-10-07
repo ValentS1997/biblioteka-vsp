@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780">
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+    <style>
+      .title{font:700 34px sans-serif;fill:#0f172a}.h{font:700 20px sans-serif;fill:#0f172a}.t{font:15px sans-serif;fill:#1e293b}.s{font:13px sans-serif;fill:#475569}
+      .b{fill:#f8fafc;stroke:#475569;stroke-width:2;rx:14}.p{fill:#dbeafe;stroke:#1d4ed8;stroke-width:2;rx:14}.w{fill:#fef3c7;stroke:#a16207;stroke-width:2;rx:14}.ln{stroke:#475569;stroke-width:2;marker-end:url(#a)}
+    </style>
+  </defs>
+  <rect width="1200" height="780" fill="#fff"/>
+  <text x="45" y="55" class="title">Глава 2 — Процессы и потоки</text>
+  <text x="45" y="83" class="s">RAG-grounded · PDF 111–213 · 103 chunks</text>
+
+  <rect x="430" y="120" width="340" height="100" class="p"/>
+  <text x="600" y="155" text-anchor="middle" class="h">Процесс</text>
+  <text x="600" y="185" text-anchor="middle" class="t">адресное пространство + ресурсы + состояние ОС</text>
+
+  <rect x="100" y="295" width="340" height="125" class="b"/>
+  <text x="270" y="330" text-anchor="middle" class="h">Состояния</text>
+  <text x="270" y="360" text-anchor="middle" class="t">Running · Ready · Blocked</text>
+  <text x="270" y="390" text-anchor="middle" class="s">scheduler + события переводят процесс между ними</text>
+
+  <rect x="760" y="295" width="340" height="125" class="b"/>
+  <text x="930" y="330" text-anchor="middle" class="h">Потоки</text>
+  <text x="930" y="360" text-anchor="middle" class="t">свой PC · регистры · стек</text>
+  <text x="930" y="390" text-anchor="middle" class="s">общие address space и ресурсы процесса</text>
+
+  <line x1="500" y1="220" x2="340" y2="295" class="ln"/>
+  <line x1="700" y1="220" x2="860" y2="295" class="ln"/>
+
+  <rect x="80" y="525" width="300" height="130" class="w"/>
+  <text x="230" y="560" text-anchor="middle" class="h">Race / critical section</text>
+  <text x="230" y="590" text-anchor="middle" class="t">общие данные + опасное чередование</text>
+  <text x="230" y="617" text-anchor="middle" class="s">mutual exclusion + progress + bounded wait</text>
+
+  <rect x="450" y="525" width="300" height="130" class="p"/>
+  <text x="600" y="560" text-anchor="middle" class="h">Синхронизация</text>
+  <text x="600" y="590" text-anchor="middle" class="t">semaphore · mutex · condition</text>
+  <text x="600" y="617" text-anchor="middle" class="s">monitor · message · barrier · RCU</text>
+
+  <rect x="820" y="525" width="300" height="130" class="b"/>
+  <text x="970" y="560" text-anchor="middle" class="h">Планирование</text>
+  <text x="970" y="590" text-anchor="middle" class="t">batch · interactive · real-time</text>
+  <text x="970" y="617" text-anchor="middle" class="s">throughput · response · deadlines</text>
+
+  <line x1="380" y1="590" x2="450" y2="590" class="ln"/>
+  <line x1="750" y1="590" x2="820" y2="590" class="ln"/>
+
+  <text x="45" y="720" class="s">Диагностический вопрос: blocked, ready, spinning или deadlocked/starved?</text>
+</svg>
