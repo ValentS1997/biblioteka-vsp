@@ -11,3 +11,4 @@ Canonical chapter-level learning and operational artifacts.
 | 5 | [Ввод и вывод информации](chapter-05-input-output/README.md) | RAG_GROUNDED | PDF pages 380–487 |
 | 6 | [Взаимоблокировка](chapter-06-deadlock/README.md) | RAG_GROUNDED | PDF pages 488–526 |
 | 7 | [Виртуализация и облако](chapter-07-virtualization-cloud/README.md) | RAG_GROUNDED | PDF pages 527–575 |
+| 8 | [Многопроцессорные системы](chapter-08-multiprocessor-systems/README.md) | RAG_GROUNDED | PDF pages 576–658 |
