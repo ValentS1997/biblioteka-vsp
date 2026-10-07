@@ -60,3 +60,4 @@ Canonical readiness command:
 - [Глава 10 — Сетевые приложения и службы](notes/chapters/chapter-10-network-applications-and-services/README.md) — RAG-only, PDF/печатные с. 320–343.
 - [Глава 11 — Сценарии оболочки](notes/chapters/chapter-11-shell-scripts/README.md) — RAG-only, PDF/печатные с. 344–367.
 - [Глава 12 — Передача файлов по сети и доступ к ним](notes/chapters/chapter-12-network-file-transfer-and-access/README.md) — RAG-only, PDF/печатные с. 368–389.
+- [Глава 13 — Пользовательское окружение](notes/chapters/chapter-13-user-environment/README.md) — RAG-only, PDF/печатные с. 390–401.
