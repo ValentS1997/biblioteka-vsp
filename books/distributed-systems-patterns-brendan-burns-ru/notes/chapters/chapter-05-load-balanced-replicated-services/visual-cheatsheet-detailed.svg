@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 5 — Реплицированные сервисы: подробная шпаргалка</title>
+  <desc id="desc">RAG-grounded detailed map of load-balanced replicas, readiness, sticky sessions, caching, rate limiting and SSL bridge.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #111827; }
+      .title { font-size: 34px; font-weight: 700; }
+      .sub { font-size: 15px; fill: #4b5563; }
+      .section { font-size: 22px; font-weight: 700; }
+      .h { font-size: 17px; font-weight: 700; }
+      .b { font-size: 14px; }
+      .small { font-size: 12px; fill: #374151; }
+      .blue { fill: #eff6ff; stroke: #1d4ed8; stroke-width: 2; rx: 12; }
+      .green { fill: #ecfdf5; stroke: #047857; stroke-width: 2; rx: 12; }
+      .violet { fill: #f5f3ff; stroke: #6d28d9; stroke-width: 2; rx: 12; }
+      .orange { fill: #fff7ed; stroke: #c2410c; stroke-width: 2; rx: 12; }
+      .box { fill: #f9fafb; stroke: #4b5563; stroke-width: 2; rx: 12; }
+      .arrow { stroke: #374151; stroke-width: 2.2; fill: none; marker-end: url(#m); }
+    </style>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#374151"/>
+    </marker>
+  </defs>
+
+  <text x="50" y="52" class="title">Глава 5 — Реплицированные сервисы с распределением нагрузки</text>
+  <text x="50" y="82" class="sub">RAG p0082:c01–p0101:c01 · PDF 82–101 · source policy: rag_only</text>
+
+  <text x="50" y="125" class="section">A. Basic replicated stateless service</text>
+
+  <rect x="80" y="155" width="360" height="125" class="blue"/>
+  <text x="105" y="192" class="h">Client traffic</text>
+  <text x="105" y="224" class="b">requests do not require per-instance state</text>
+  <text x="105" y="252" class="b">any ready replica can serve</text>
+
+  <rect x="620" y="155" width="360" height="125" class="green"/>
+  <text x="645" y="192" class="h">Load balancer / Service</text>
+  <text x="645" y="224" class="b">stable network abstraction</text>
+  <text x="645" y="252" class="b">round-robin or affinity variants</text>
+
+  <rect x="1160" y="155" width="360" height="125" class="violet"/>
+  <text x="1185" y="192" class="h">Replicas</text>
+  <text x="1185" y="224" class="b">redundancy + horizontal capacity</text>
+  <text x="1185" y="252" class="b">updates/failures absorbed by peers</text>
+
+  <path d="M440,217 L620,217" class="arrow"/>
+  <path d="M980,217 L1160,217" class="arrow"/>
+
+  <text x="50" y="340" class="section">B. Readiness and sticky sessions</text>
+
+  <rect x="90" y="375" width="660" height="165" class="orange"/>
+  <text x="120" y="412" class="h">Readiness gate</text>
+  <text x="120" y="444" class="b">process alive can still be not ready</text>
+  <text x="120" y="474" class="b">dictionary-server loads data before declaring readiness</text>
+  <text x="120" y="504" class="b">source example: /ready · initialDelay=5 · period=5</text>
+
+  <rect x="850" y="375" width="660" height="165" class="violet"/>
+  <text x="880" y="412" class="h">Session affinity</text>
+  <text x="880" y="444" class="b">use when cache locality or cross-request state matters</text>
+  <text x="880" y="474" class="b">consistent hashing reduces remapping when replica count changes</text>
+  <text x="880" y="504" class="b">external IP affinity is weak behind NAT; app-level cookies preferred</text>
+
+  <text x="50" y="600" class="section">C. Independent cache layer</text>
+
+  <rect x="60" y="635" width="400" height="160" class="blue"/>
+  <text x="85" y="672" class="h">Client / upstream</text>
+  <text x="85" y="704" class="b">repeated HTTP requests</text>
+  <text x="85" y="734" class="b">expensive app/database work behind service</text>
+
+  <rect x="600" y="635" width="400" height="160" class="green"/>
+  <text x="625" y="672" class="h">Replicated Varnish tier</text>
+  <text x="625" y="704" class="b">fewer, larger-memory replicas</text>
+  <text x="625" y="734" class="b">cache + optional rate policy</text>
+  <text x="625" y="764" class="b">backend: dictionary-server-service:8080</text>
+
+  <rect x="1140" y="635" width="400" height="160" class="violet"/>
+  <text x="1165" y="672" class="h">Replicated app tier</text>
+  <text x="1165" y="704" class="b">many smaller service replicas</text>
+  <text x="1165" y="734" class="b">independent scaling from cache</text>
+
+  <path d="M460,715 L600,715" class="arrow"/>
+  <path d="M1000,715 L1140,715" class="arrow"/>
+
+  <text x="50" y="855" class="section">D. Edge policy and SSL bridge</text>
+
+  <rect x="65" y="890" width="360" height="170" class="orange"/>
+  <text x="90" y="927" class="h">Rate limiting</text>
+  <text x="90" y="959" class="b">protect against accidental/hostile overload</text>
+  <text x="90" y="989" class="b">HTTP 429 after limit</text>
+  <text x="90" y="1019" class="b">remaining quota header may be exposed</text>
+
+  <rect x="495" y="890" width="360" height="170" class="blue"/>
+  <text x="520" y="927" class="h">Replicated nginx SSL tier</text>
+  <text x="520" y="959" class="b">TLS Secret + nginx ConfigMap</text>
+  <text x="520" y="989" class="b">HTTPS on 443</text>
+  <text x="520" y="1019" class="b">proxy to varnish-service:80</text>
+
+  <rect x="925" y="890" width="280" height="170" class="green"/>
+  <text x="950" y="927" class="h">Varnish</text>
+  <text x="950" y="959" class="b">HTTP cache</text>
+  <text x="950" y="989" class="b">independent tier</text>
+
+  <rect x="1275" y="890" width="280" height="170" class="violet"/>
+  <text x="1300" y="927" class="h">Application</text>
+  <text x="1300" y="959" class="b">replicated service</text>
+  <text x="1300" y="989" class="b">ready instances only</text>
+
+  <path d="M855,975 L925,975" class="arrow"/>
+  <path d="M1205,975 L1275,975" class="arrow"/>
+
+  <rect x="180" y="1110" width="1240" height="55" class="box"/>
+  <text x="210" y="1144" class="h">Full source pattern: replicated SSL tier → replicated cache tier → replicated application tier, each with its own load-balancing Service.</text>
+
+  <text x="50" y="1190" class="small">Boundaries: no source rollback sequence; PDF-extracted YAML and wrapped command text require additional verification before execution.</text>
+</svg>
