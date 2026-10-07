@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1080" viewBox="0 0 1500 1080">
+<style>
+text{font-family:Arial,sans-serif;fill:#111827}.t{font-size:32px;font-weight:700}.s{font-size:14px;fill:#4b5563}.h{font-size:18px;font-weight:700}.b{font-size:14px}.blue{fill:#eff6ff;stroke:#1d4ed8;stroke-width:2;rx:12}.green{fill:#ecfdf5;stroke:#047857;stroke-width:2;rx:12}.violet{fill:#f5f3ff;stroke:#6d28d9;stroke-width:2;rx:12}.orange{fill:#fff7ed;stroke:#c2410c;stroke-width:2;rx:12}.box{fill:#f9fafb;stroke:#4b5563;stroke-width:2;rx:12}.a{stroke:#374151;stroke-width:2;fill:none;marker-end:url(#m)}
+</style><defs><marker id="m" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#374151"/></marker></defs>
+<text x="50" y="50" class="t">Глава 13 — Заключение — новое начало?</text>
+<text x="50" y="78" class="s">RAG p0217:c01–p0219:c01 · PDF 217–219</text>
+
+<text x="50" y="125" class="h">A. Pressure</text>
+<rect x="70" y="155" width="620" height="150" class="orange"/>
+<text x="100" y="192" class="h">More responsibility</text>
+<text x="100" y="224" class="b">redundancy · fault tolerance · high availability</text>
+<text x="100" y="254" class="b">APIs for mobile, IoT and connected systems</text>
+<rect x="810" y="155" width="620" height="150" class="blue"/>
+<text x="840" y="192" class="h">More agility</text>
+<text x="840" y="224" class="b">faster development and deployment</text>
+<text x="840" y="254" class="b">experiments with new interfaces and services</text>
+
+<text x="50" y="365" class="h">B. Historical response to complexity</text>
+<rect x="70" y="395" width="400" height="155" class="box"/>
+<text x="100" y="432" class="h">Expert techniques</text>
+<text x="100" y="464" class="b">complex and scarce knowledge</text>
+<rect x="550" y="395" width="400" height="155" class="green"/>
+<text x="580" y="432" class="h">Abstractions + patterns</text>
+<text x="580" y="464" class="b">crystallize reusable knowledge</text>
+<rect x="1030" y="395" width="400" height="155" class="violet"/>
+<text x="1060" y="432" class="h">Broader adoption</text>
+<text x="1060" y="464" class="b">more developers build on the platform</text>
+<path d="M470,472 L550,472" class="a"/><path d="M950,472 L1030,472" class="a"/>
+
+<text x="50" y="620" class="h">C. Distributed-system foundation</text>
+<rect x="70" y="650" width="410" height="170" class="blue"/>
+<text x="100" y="687" class="h">Tools</text>
+<text x="100" y="719" class="b">containers</text>
+<text x="100" y="749" class="b">orchestration systems</text>
+<text x="100" y="779" class="b">deployment substrate</text>
+<rect x="545" y="650" width="410" height="170" class="green"/>
+<text x="575" y="687" class="h">Patterns</text>
+<text x="575" y="719" class="b">Sidecar · Ambassador · sharding</text>
+<text x="575" y="749" class="b">FaaS · queues · coordination</text>
+<text x="575" y="779" class="b">shared vocabulary</text>
+<rect x="1020" y="650" width="410" height="170" class="violet"/>
+<text x="1050" y="687" class="h">Reusable implementations</text>
+<text x="1050" y="719" class="b">shared across teams</text>
+<text x="1050" y="749" class="b">less bespoke mechanism code</text>
+<text x="1050" y="779" class="b">expertise transferred through components</text>
+
+<text x="50" y="880" class="h">D. Book-level progression</text>
+<rect x="90" y="910" width="1320" height="115" class="box"/>
+<text x="120" y="947" class="b">single-node composition → replicated/sharded services → event/FaaS → ownership → task queues</text>
+<text x="120" y="977" class="b">→ event-driven batch DAG → Join/Reduce → reusable pattern ecosystem</text>
+
+<rect x="180" y="1040" width="1140" height="35" class="green"/>
+<text x="210" y="1064" class="b">Conclusion: canonical patterns should become shared building blocks, not repeated one-off implementations.</text>
+</svg>
