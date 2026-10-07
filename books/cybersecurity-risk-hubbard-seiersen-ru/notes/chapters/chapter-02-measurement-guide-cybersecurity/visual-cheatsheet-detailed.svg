@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1050" viewBox="0 0 1500 1050" role="img" aria-labelledby="t d">
+<title id="t">Глава 2 — детальная визуальная шпаргалка об измерениях</title>
+<desc id="d">Измерение как уменьшение неопределённости, COM, типы шкал, байесовская интерпретация, уточнение объекта, метод выборок и правило пяти.</desc>
+<rect width="1500" height="1050" fill="#101d2e"/>
+<g font-family="DejaVu Sans,Arial,sans-serif">
+<text x="52" y="52" font-size="34" font-weight="bold" fill="#f8fcff">Глава 2 · Измерения в кибербезопасности</text>
+<text x="52" y="89" font-size="22" fill="#b5d6e6">Определение авторов: измерение уменьшает неопределённость на основе наблюдений.</text>
+<text x="52" y="138" font-size="21" font-weight="bold" fill="#7dd3fc">I. Почему кажется, что измерить нельзя? (COM)</text>
+<rect x="52" y="161" width="447" height="132" rx="14" fill="#1c3550" stroke="#72c6ef"/>
+<rect x="527" y="161" width="446" height="132" rx="14" fill="#1c3550" stroke="#86d8bc"/>
+<rect x="1001" y="161" width="447" height="132" rx="14" fill="#1c3550" stroke="#c7b6ee"/>
+<text x="77" y="200" font-size="24" font-weight="bold" fill="#f8fcff">Concept</text>
+<text x="77" y="236" font-size="18" fill="#d7e7f5">Путают измерение с точным числом.</text>
+<text x="77" y="267" font-size="18" fill="#d7e7f5">Достаточно уменьшить неопределённость.</text>
+<text x="552" y="200" font-size="24" font-weight="bold" fill="#f8fcff">Object</text>
+<text x="552" y="236" font-size="18" fill="#d7e7f5">«Репутация» / «угроза» — что значит?</text>
+<text x="552" y="267" font-size="18" fill="#d7e7f5">Найти наблюдаемые последствия.</text>
+<text x="1026" y="200" font-size="24" font-weight="bold" fill="#f8fcff">Method</text>
+<text x="1026" y="236" font-size="18" fill="#d7e7f5">Малая случайная выборка,</text>
+<text x="1026" y="267" font-size="18" fill="#d7e7f5">косвенный признак, контроль.</text>
+<text x="52" y="350" font-size="21" font-weight="bold" fill="#7dd3fc">II. Качество шкалы определяет допустимую математику</text>
+<rect x="52" y="372" width="1396" height="122" rx="12" fill="#1d3550" stroke="#5e84a3"/>
+<text x="78" y="412" font-size="21" fill="#e8f6ff">Номинальная: категории без порядка</text>
+<text x="759" y="412" font-size="21" fill="#e8f6ff">Порядковая: ранг без интервала</text>
+<text x="78" y="456" font-size="21" fill="#e8f6ff">Интервальная: разности, условный ноль</text>
+<text x="759" y="456" font-size="21" fill="#e8f6ff">Отношений: осмысленные отношения</text>
+<text x="52" y="536" font-size="21" font-weight="bold" fill="#7dd3fc">III. Уточнить объект и описать риск</text>
+<rect x="52" y="558" width="675" height="155" rx="12" fill="#1d3550" stroke="#86d8bc"/>
+<rect x="752" y="558" width="696" height="155" rx="12" fill="#1d3550" stroke="#f2c78a"/>
+<text x="78" y="597" font-size="22" fill="#ffffff" font-weight="bold">Цепочка разъяснений</text>
+<text x="78" y="633" font-size="19" fill="#d7e7f5">Важно → наблюдаемо → имеет величину</text>
+<text x="78" y="668" font-size="19" fill="#d7e7f5">Решение подсказывает, что измерять.</text>
+<text x="778" y="597" font-size="22" fill="#ffffff" font-weight="bold">Измерение риска</text>
+<text x="778" y="633" font-size="19" fill="#d7e7f5">Возможные исходы и их вероятности</text>
+<text x="778" y="668" font-size="19" fill="#d7e7f5">+ выраженные количественно потери.</text>
+<text x="52" y="756" font-size="21" font-weight="bold" fill="#7dd3fc">IV. Методы наблюдения и «правило пяти»</text>
+<rect x="52" y="780" width="675" height="167" rx="12" fill="#1d3550" stroke="#86d8bc"/>
+<rect x="752" y="780" width="696" height="167" rx="12" fill="#1d3550" stroke="#86d8bc"/>
+<text x="78" y="819" font-size="21" fill="#ffffff" font-weight="bold">Байесовская перспектива</text>
+<text x="78" y="855" font-size="18" fill="#d7e7f5">Предшествующая вероятность → наблюдение</text>
+<text x="78" y="886" font-size="18" fill="#d7e7f5">→ изменение степени неопределённости.</text>
+<text x="78" y="920" font-size="17" fill="#b7d4e4">Субъективные вероятности должны быть согласованы.</text>
+<text x="778" y="819" font-size="21" fill="#ffffff" font-weight="bold">Пять случайных наблюдений</text>
+<text x="778" y="855" font-size="18" fill="#d7e7f5">Обе крайности: 2 × (1/2)^5 = 6,25%</text>
+<text x="778" y="886" font-size="18" fill="#d7e7f5">Охват медианы: 1 − 0,0625 = 93,75%</text>
+<text x="778" y="920" font-size="17" fill="#b7d4e4">Не гарантия узкого интервала и не прогноз атаки.</text>
+<text x="52" y="997" font-size="17" fill="#d1e3ed">Критерий: новая информация должна уменьшать неопределённость и помогать решению.</text>
+<text x="52" y="1027" font-size="14" fill="#93b3c9">RAG: EPUB spine 15–17 · OPS/ch1-13.xhtml → OPS/ch1-15.xhtml · команды и rollback не даны</text>
+</g></svg>
