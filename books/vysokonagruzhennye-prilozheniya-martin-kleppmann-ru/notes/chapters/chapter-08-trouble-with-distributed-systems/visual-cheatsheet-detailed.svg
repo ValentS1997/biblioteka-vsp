@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1120" viewBox="0 0 1400 1120">
+<rect width="1400" height="1120" fill="#f8fafc"/>
+<text x="55" y="65" fill="#0f172a" font-family="sans-serif" font-size="34" font-weight="700">Глава 8 — Проблемы распределенных систем</text>
+<text x="55" y="102" fill="#475569" font-family="sans-serif" font-size="18">Canonical RAG · PDF 323–373 · source SHA 495e75f185c758a8…</text>
+
+<rect x="55" y="140" width="1290" height="110" rx="18" fill="#e2e8f0"/>
+<text x="85" y="184" fill="#0f172a" font-family="sans-serif" font-size="23" font-weight="700">Partial failure means local observations do not uniquely identify global state.</text>
+<text x="85" y="220" fill="#334155" font-family="sans-serif" font-size="18">Correctness requires explicit assumptions, quorum/coordination, fencing and fault testing.</text>
+
+<rect x="55" y="285" width="400" height="500" rx="18" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+<text x="85" y="330" fill="#075985" font-family="sans-serif" font-size="26" font-weight="700">8.1–8.2 Failures &amp; network</text>
+<text x="85" y="372" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Partial failure</text>
+<text x="85" y="402" fill="#334155" font-family="sans-serif" font-size="16">some nodes work while others fail/slow</text>
+<text x="85" y="442" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Async packet network</text>
+<text x="85" y="472" fill="#334155" font-family="sans-serif" font-size="16">request/reply may be lost or delayed</text>
+<text x="85" y="502" fill="#334155" font-family="sans-serif" font-size="16">queues create unbounded latency spikes</text>
+<text x="85" y="542" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Failure detector</text>
+<text x="85" y="572" fill="#334155" font-family="sans-serif" font-size="16">timeout is suspicion, not certainty</text>
+<text x="85" y="602" fill="#334155" font-family="sans-serif" font-size="16">short timeout → false failover risk</text>
+<text x="85" y="632" fill="#334155" font-family="sans-serif" font-size="16">adaptive detector uses latency/jitter</text>
+<text x="85" y="682" fill="#075985" font-family="sans-serif" font-size="16">Application ack is stronger than transport delivery</text>
+
+<rect x="500" y="285" width="400" height="500" rx="18" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="530" y="330" fill="#92400e" font-family="sans-serif" font-size="26" font-weight="700">8.3 Clocks &amp; pauses</text>
+<text x="530" y="372" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Real-time clock</text>
+<text x="530" y="402" fill="#334155" font-family="sans-serif" font-size="16">calendar time · NTP-adjusted · may jump</text>
+<text x="530" y="442" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Monotonic clock</text>
+<text x="530" y="472" fill="#334155" font-family="sans-serif" font-size="16">elapsed duration · local only</text>
+<text x="530" y="512" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Physical timestamp limits</text>
+<text x="530" y="542" fill="#334155" font-family="sans-serif" font-size="16">unknown uncertainty can break LWW order</text>
+<text x="530" y="572" fill="#334155" font-family="sans-serif" font-size="16">logical clocks capture relative order</text>
+<text x="530" y="612" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Process pauses</text>
+<text x="530" y="642" fill="#334155" font-family="sans-serif" font-size="16">GC / scheduling / VM pause</text>
+<text x="530" y="672" fill="#334155" font-family="sans-serif" font-size="16">stale leader may resume after lease expiry</text>
+<text x="530" y="712" fill="#92400e" font-family="sans-serif" font-size="16">Lease alone is not end-to-end exclusion</text>
+
+<rect x="945" y="285" width="400" height="500" rx="18" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="975" y="330" fill="#166534" font-family="sans-serif" font-size="26" font-weight="700">8.4 Knowledge &amp; models</text>
+<text x="975" y="372" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Quorum</text>
+<text x="975" y="402" fill="#334155" font-family="sans-serif" font-size="16">global decision needs multiple nodes</text>
+<text x="975" y="442" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Fencing</text>
+<text x="975" y="472" fill="#334155" font-family="sans-serif" font-size="16">monotonic token protects resource</text>
+<text x="975" y="512" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">System models</text>
+<text x="975" y="542" fill="#334155" font-family="sans-serif" font-size="16">sync · partial sync · async</text>
+<text x="975" y="572" fill="#334155" font-family="sans-serif" font-size="16">crash-stop · crash-recovery · Byzantine</text>
+<text x="975" y="612" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Correctness</text>
+<text x="975" y="642" fill="#334155" font-family="sans-serif" font-size="16">safety: never violate invariant</text>
+<text x="975" y="672" fill="#334155" font-family="sans-serif" font-size="16">liveness: eventually make progress</text>
+<text x="975" y="712" fill="#166534" font-family="sans-serif" font-size="16">Proof + empirical fault testing</text>
+
+<rect x="55" y="825" width="1290" height="210" rx="18" fill="#0f172a"/>
+<text x="85" y="870" fill="#f8fafc" font-family="sans-serif" font-size="23" font-weight="700">Acceptance checklist</text>
+<text x="85" y="910" fill="#cbd5e1" font-family="sans-serif" font-size="18">1. Timeouts are tuned from measured distributions and do not cause cascading failover under load.</text>
+<text x="85" y="945" fill="#cbd5e1" font-family="sans-serif" font-size="18">2. Elapsed-time logic uses monotonic clocks; physical timestamps are not treated as causal truth.</text>
+<text x="85" y="980" fill="#cbd5e1" font-family="sans-serif" font-size="18">3. Stale lease/leader holders are fenced at the protected resource.</text>
+<text x="85" y="1015" fill="#cbd5e1" font-family="sans-serif" font-size="18">4. Safety/liveness are verified against the documented timing and failure model.</text>
+
+<text x="245" y="1090" fill="#0f172a" font-family="sans-serif" font-size="22" font-weight="700">Design for uncertainty explicitly; never promote an observation into certainty without a protocol.</text>
+</svg>
