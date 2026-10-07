@@ -12,5 +12,6 @@ Book ID: `ethical-hacking-basics-ru`. Индекс создан для пере�
 | 6 — Перечисление сервисов и прикладная разведка | 140–168 | [Глава 6](chapter-06-service-enumeration/README.md) |
 | 7 — Эксплуатация, пароли и постэксплуатация | 169–209 | [Глава 7](chapter-07-exploitation-post-exploitation/README.md) |
 | 8 — Malware: типы, анализ и инфраструктура | 210–245 | [Глава 8](chapter-08-malware-analysis-infrastructure/README.md) |
+| 9 — Перехват пакетов, spoofing и обнаружение | 246–273 | [Глава 9](chapter-09-packet-capture-spoofing-defense/README.md) |
 
 Дальнейшие главы: **[Needs confirmation]** до их индивидуального анализа. Состояние чтения независимо от RAG.
