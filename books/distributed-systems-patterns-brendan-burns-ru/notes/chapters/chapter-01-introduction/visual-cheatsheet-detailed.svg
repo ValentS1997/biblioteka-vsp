@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 1 — Введение: подробная визуальная шпаргалка</title>
+  <desc id="desc">RAG-grounded схема истории распределенных систем, истории паттернов, технологических строительных блоков и ценности паттернов.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #111827; }
+      .title { font-size: 34px; font-weight: 700; }
+      .sub { font-size: 15px; fill: #4b5563; }
+      .section { font-size: 22px; font-weight: 700; }
+      .h { font-size: 17px; font-weight: 700; }
+      .b { font-size: 15px; }
+      .small { font-size: 13px; fill: #374151; }
+      .box { fill: #f9fafb; stroke: #4b5563; stroke-width: 2; rx: 12; }
+      .hist { fill: #eff6ff; stroke: #1d4ed8; stroke-width: 2; rx: 12; }
+      .pat { fill: #f5f3ff; stroke: #6d28d9; stroke-width: 2; rx: 12; }
+      .val { fill: #ecfdf5; stroke: #047857; stroke-width: 2; rx: 12; }
+      .warn { fill: #fff7ed; stroke: #c2410c; stroke-width: 2; rx: 12; }
+      .arrow { stroke: #374151; stroke-width: 2.2; fill: none; marker-end: url(#m); }
+      .soft { stroke: #6b7280; stroke-width: 1.8; fill: none; marker-end: url(#m2); }
+    </style>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#374151"/>
+    </marker>
+    <marker id="m2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#6b7280"/>
+    </marker>
+  </defs>
+
+  <text x="50" y="52" class="title">Глава 1 — Введение</text>
+  <text x="50" y="82" class="sub">«Распределенные системы. Паттерны проектирования» · RAG p0018:c01–p0028:c01 · PDF 18–28</text>
+
+  <text x="50" y="125" class="section">A. Как появились массовые distributed systems</text>
+
+  <rect x="50" y="155" width="210" height="90" class="hist"/>
+  <text x="70" y="188" class="h">Single-purpose</text>
+  <text x="70" y="216" class="b">специализированные машины</text>
+
+  <rect x="305" y="155" width="210" height="90" class="hist"/>
+  <text x="325" y="188" class="h">General-purpose</text>
+  <text x="325" y="216" class="b">программируемые системы</text>
+
+  <rect x="560" y="155" width="210" height="90" class="hist"/>
+  <text x="580" y="188" class="h">Time-sharing</text>
+  <text x="580" y="216" class="b">много программ / host</text>
+
+  <rect x="815" y="155" width="210" height="90" class="hist"/>
+  <text x="835" y="188" class="h">Networks</text>
+  <text x="835" y="216" class="b">client/server</text>
+
+  <rect x="1070" y="155" width="210" height="90" class="hist"/>
+  <text x="1090" y="188" class="h">Internet + ЦОД</text>
+  <text x="1090" y="216" class="b">тысячи сетевых машин</text>
+
+  <rect x="1325" y="155" width="225" height="90" class="hist"/>
+  <text x="1345" y="188" class="h">Distributed app</text>
+  <text x="1345" y="216" class="b">несколько компонентов</text>
+
+  <path d="M260,200 L305,200" class="arrow"/>
+  <path d="M515,200 L560,200" class="arrow"/>
+  <path d="M770,200 L815,200" class="arrow"/>
+  <path d="M1025,200 L1070,200" class="arrow"/>
+  <path d="M1280,200 L1325,200" class="arrow"/>
+
+  <rect x="120" y="285" width="560" height="110" class="box"/>
+  <text x="145" y="320" class="h">Modern pressure</text>
+  <text x="145" y="350" class="b">always-on applications + API + быстрый рост нагрузки</text>
+  <text x="145" y="378" class="b">→ распределенность становится обычным требованием</text>
+
+  <rect x="920" y="285" width="560" height="110" class="warn"/>
+  <text x="945" y="320" class="h">Engineering cost</text>
+  <text x="945" y="350" class="b">design / build / debugging становятся сложнее</text>
+  <text x="945" y="378" class="b">→ нужны инструменты, практики, паттерны</text>
+
+  <path d="M1435,245 L1200,285" class="soft"/>
+  <path d="M1435,245 L400,285" class="soft"/>
+
+  <text x="50" y="450" class="section">B. История formalization и reuse</text>
+
+  <rect x="50" y="480" width="300" height="105" class="pat"/>
+  <text x="75" y="515" class="h">Алгоритмы</text>
+  <text x="75" y="544" class="b">универсальные идеи</text>
+  <text x="75" y="568" class="b">не привязаны к одной машине</text>
+
+  <rect x="425" y="480" width="300" height="105" class="pat"/>
+  <text x="450" y="515" class="h">OOP design patterns</text>
+  <text x="450" y="544" class="b">общий язык + interfaces</text>
+  <text x="450" y="568" class="b">→ reusable libraries</text>
+
+  <rect x="800" y="480" width="300" height="105" class="pat"/>
+  <text x="825" y="515" class="h">Open source</text>
+  <text x="825" y="544" class="b">collective development</text>
+  <text x="825" y="568" class="b">sharing code / practice</text>
+
+  <rect x="1175" y="480" width="375" height="105" class="pat"/>
+  <text x="1200" y="515" class="h">Distributed-system patterns</text>
+  <text x="1200" y="544" class="b">generalized architecture</text>
+  <text x="1200" y="568" class="b">для разных stacks / applications</text>
+
+  <path d="M350,532 L425,532" class="arrow"/>
+  <path d="M725,532 L800,532" class="arrow"/>
+  <path d="M1100,532 L1175,532" class="arrow"/>
+
+  <text x="50" y="640" class="section">C. Строительные блоки и definition boundary</text>
+
+  <rect x="70" y="675" width="430" height="125" class="hist"/>
+  <text x="95" y="710" class="h">Containers + images + orchestrators</text>
+  <text x="95" y="740" class="b">стандартизованные building blocks</text>
+  <text x="95" y="768" class="b">для reusable components</text>
+
+  <rect x="585" y="675" width="430" height="125" class="pat"/>
+  <text x="610" y="710" class="h">Pattern</text>
+  <text x="610" y="740" class="b">обобщенная схема организации системы</text>
+  <text x="610" y="768" class="b">+ ориентировочная architecture structure</text>
+
+  <rect x="1100" y="675" width="430" height="125" class="warn"/>
+  <text x="1125" y="710" class="h">Не pattern</text>
+  <text x="1125" y="740" class="b">product installation instructions</text>
+  <text x="1125" y="768" class="b">technology-specific stack rules</text>
+
+  <path d="M500,737 L585,737" class="arrow"/>
+  <path d="M1015,737 L1100,737" class="soft"/>
+
+  <text x="50" y="855" class="section">D. Три вида ценности</text>
+
+  <rect x="50" y="890" width="460" height="125" class="val"/>
+  <text x="75" y="925" class="h">1. Learn from others</text>
+  <text x="75" y="955" class="b">использовать накопленный опыт</text>
+  <text x="75" y="983" class="b">вместо повторения уже известных ошибок</text>
+
+  <rect x="570" y="890" width="460" height="125" class="val"/>
+  <text x="595" y="925" class="h">2. Shared vocabulary</text>
+  <text x="595" y="955" class="b">общее имя → общее понимание</text>
+  <text x="595" y="983" class="b">→ быстрее к implementation details</text>
+
+  <rect x="1090" y="890" width="460" height="125" class="val"/>
+  <text x="1115" y="925" class="h">3. Reusable components</text>
+  <text x="1115" y="955" class="b">implement once → reuse broadly</text>
+  <text x="1115" y="983" class="b">→ больше feedback → defects заметнее</text>
+
+  <rect x="190" y="1040" width="1220" height="55" class="box"/>
+  <text x="220" y="1074" class="h">Main idea: recurring architecture problem → generalized pattern → shared language → reusable component</text>
+
+  <text x="50" y="1110" class="small">Boundary: chapter 1 contains no executable CLI, deployment recipe, SLO or quantitative acceptance thresholds.</text>
+</svg>
