@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1460" height="1160" viewBox="0 0 1460 1160">
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+    <style>
+      .title{font:700 34px sans-serif;fill:#0f172a}.h{font:700 18px sans-serif;fill:#0f172a}
+      .t{font:14px sans-serif;fill:#1e293b}.s{font:12px sans-serif;fill:#475569}
+      .b{fill:#f8fafc;stroke:#475569;stroke-width:1.8;rx:13}.blue{fill:#dbeafe;stroke:#1d4ed8;stroke-width:1.8;rx:13}
+      .green{fill:#dcfce7;stroke:#15803d;stroke-width:1.8;rx:13}.amber{fill:#fef3c7;stroke:#a16207;stroke-width:1.8;rx:13}
+      .red{fill:#fee2e2;stroke:#b91c1c;stroke-width:1.8;rx:13}.ln{stroke:#475569;stroke-width:1.7;marker-end:url(#a)}
+    </style>
+  </defs>
+  <rect width="1460" height="1160" fill="#fff"/>
+  <text x="45" y="55" class="title">Глава 5 — подробная карта I/O</text>
+  <text x="45" y="82" class="s">RAG · PDF 380–487 · boundary verified</text>
+
+  <rect x="540" y="110" width="380" height="90" class="blue"/>
+  <text x="730" y="145" text-anchor="middle" class="h">User request / library</text>
+  <text x="730" y="174" text-anchor="middle" class="t">read · write · printf/scanf · spool job</text>
+
+  <rect x="70" y="265" width="350" height="200" class="b"/>
+  <text x="245" y="300" text-anchor="middle" class="h">Hardware access</text>
+  <text x="95" y="337" class="t">port I/O: IN / OUT</text>
+  <text x="95" y="364" class="t">MMIO: registers mapped as memory</text>
+  <text x="95" y="391" class="t">controller buffer + status/ECC</text>
+  <text x="95" y="418" class="s">MMIO control pages must avoid stale caching</text>
+
+  <rect x="555" y="265" width="350" height="200" class="green"/>
+  <text x="730" y="300" text-anchor="middle" class="h">Transfer / completion</text>
+  <text x="580" y="337" class="t">programmed I/O → busy wait</text>
+  <text x="580" y="364" class="t">interrupt-driven → per event/unit</text>
+  <text x="580" y="391" class="t">DMA → block transfer + completion IRQ</text>
+  <text x="580" y="418" class="s">precise state makes OS restart tractable</text>
+
+  <rect x="1040" y="265" width="350" height="200" class="amber"/>
+  <text x="1215" y="300" text-anchor="middle" class="h">Four software layers</text>
+  <text x="1065" y="337" class="t">interrupt handler</text>
+  <text x="1065" y="364" class="t">device driver</text>
+  <text x="1065" y="391" class="t">device-independent I/O</text>
+  <text x="1065" y="418" class="t">user libraries / spooling</text>
+
+  <line x1="620" y1="200" x2="335" y2="265" class="ln"/>
+  <line x1="730" y1="200" x2="730" y2="265" class="ln"/>
+  <line x1="840" y1="200" x2="1125" y2="265" class="ln"/>
+
+  <rect x="40" y="555" width="285" height="210" class="blue"/>
+  <text x="182" y="590" text-anchor="middle" class="h">Buffering</text>
+  <text x="65" y="627" class="t">kernel buffer</text>
+  <text x="65" y="654" class="t">double buffer</text>
+  <text x="65" y="681" class="t">ring buffer</text>
+  <text x="65" y="708" class="s">decouple rates, but copies cost throughput</text>
+
+  <rect x="350" y="555" width="335" height="210" class="red"/>
+  <text x="517" y="590" text-anchor="middle" class="h">Disk path</text>
+  <text x="375" y="627" class="t">RAID: striping / mirror / parity</text>
+  <text x="375" y="654" class="t">FCFS · SSF · elevator / circular</text>
+  <text x="375" y="681" class="t">bad-sector remap / error handling</text>
+  <text x="375" y="708" class="s">stable storage: verified paired copies</text>
+
+  <rect x="710" y="555" width="335" height="210" class="amber"/>
+  <text x="877" y="590" text-anchor="middle" class="h">Clock / timer</text>
+  <text x="735" y="627" class="t">time of day · process quantum</text>
+  <text x="735" y="654" class="t">CPU accounting · alarm</text>
+  <text x="735" y="681" class="t">watchdog · profiling</text>
+  <text x="735" y="708" class="s">delta-list multiplexes virtual timers</text>
+
+  <rect x="1070" y="555" width="350" height="210" class="green"/>
+  <text x="1245" y="590" text-anchor="middle" class="h">Terminal / GUI</text>
+  <text x="1095" y="627" class="t">canonical / noncanonical keyboard input</text>
+  <text x="1095" y="654" class="t">ANSI cursor/edit escape sequences</text>
+  <text x="1095" y="681" class="t">X client/server · event loop</text>
+  <text x="1095" y="708" class="t">Windows messages · GDI context</text>
+
+  <line x1="325" y1="660" x2="350" y2="660" class="ln"/>
+  <line x1="685" y1="660" x2="710" y2="660" class="ln"/>
+  <line x1="1045" y1="660" x2="1070" y2="660" class="ln"/>
+
+  <rect x="120" y="865" width="360" height="185" class="b"/>
+  <text x="300" y="900" text-anchor="middle" class="h">Error boundary</text>
+  <text x="145" y="937" class="t">recover closest to hardware when possible</text>
+  <text x="145" y="964" class="t">retry/remap in controller or driver</text>
+  <text x="145" y="991" class="s">propagate upward only when lower layer fails</text>
+
+  <rect x="550" y="865" width="360" height="185" class="blue"/>
+  <text x="730" y="900" text-anchor="middle" class="h">Device independence</text>
+  <text x="575" y="937" class="t">uniform driver interface</text>
+  <text x="575" y="964" class="t">naming · protection · logical block size</text>
+  <text x="575" y="991" class="s">hide device-specific command sequences</text>
+
+  <rect x="980" y="865" width="360" height="185" class="green"/>
+  <text x="1160" y="900" text-anchor="middle" class="h">Power management</text>
+  <text x="1005" y="937" class="t">sleep display/disk/radio/CPU</text>
+  <text x="1005" y="964" class="t">lower voltage/frequency when slack exists</text>
+  <text x="1005" y="991" class="s">application may trade quality for energy</text>
+
+  <line x1="517" y1="765" x2="300" y2="865" class="ln"/>
+  <line x1="877" y1="765" x2="730" y2="865" class="ln"/>
+  <line x1="1245" y1="765" x2="1160" y2="865" class="ln"/>
+
+  <text x="45" y="1110" class="s">Operational rule: isolate the failing layer before changing driver, controller, disk, timer or power state.</text>
+</svg>
