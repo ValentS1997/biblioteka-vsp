@@ -20,5 +20,7 @@
 
 | 10 | [На пути к зрелости метрик безопасности](chapter-10-security-metrics-maturity/README.md) | spine 41–42, `OPS/ch1-39.xhtml` → `OPS/ch1-40.xhtml` | README, cheatsheet, commands, diagram, 2×SVG, source-findings |
 
+| 11 | [Насколько эффективно взаимодействуют мои вложения в безопасность?](chapter-11-security-investments-interaction/README.md) | spine 43–44, `OPS/ch1-41.xhtml` → `OPS/ch1-42.xhtml` | README, cheatsheet, commands, diagram, 2×SVG, source-findings |
 
-Глава 11 начинается в EPUB spine 43, `OPS/ch1-41.xhtml`; её анализ пока не проводился.
+
+Глава 12 начинается в EPUB spine 45, `OPS/ch1-43.xhtml`; её анализ пока не проводился.
