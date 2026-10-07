@@ -6,5 +6,6 @@ Book ID: `computer-networks-olifer-7e-ru-2026`. Индекс ведёт толь
 | --- | ---: | ---: | --- |
 | 1 — Эволюция компьютерных сетей | 28–45 | 27–44 | [Глава 1](chapter-01-evolyutsiya-kompyuternyh-setey/README.md) |
 | 2 — Общие принципы построения сетей | 46–80 | 45–79 | [Глава 2](chapter-02-obshchie-principy-postroeniya-setey/README.md) |
+| 3 — Коммутация каналов и пакетов | 81–107 | 80–106 | [Глава 3](chapter-03-kommutaciya-kanalov-i-paketov/README.md) |
 
 Дальнейшие главы: **[Needs confirmation]** до индивидуального анализа. Reading state книги остаётся независимым от RAG.

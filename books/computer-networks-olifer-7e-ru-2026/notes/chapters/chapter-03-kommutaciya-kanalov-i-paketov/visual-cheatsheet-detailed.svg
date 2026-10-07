@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1780" height="1360" viewBox="0 0 1780 1360">
+<rect width="1780" height="1360" fill="#f8fafb"/>
+<text x="55" y="58" font-family="Arial,DejaVu Sans,sans-serif" font-size="36" font-weight="700" fill="#173246">Глава 3 · Коммутация каналов и пакетов</text>
+<text x="55" y="94" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#536b7d">Олифер, 7-е изд. · RAG p0081:c01–p0107:c01 · PDF 81–107 · printed 80–106</text>
+
+<rect x="55" y="135" width="805" height="310" rx="18" fill="#eaf0f5" stroke="#b9cbd8"/>
+<text x="82" y="180" font-family="Arial,DejaVu Sans,sans-serif" font-size="29" font-weight="700" fill="#234b64">Circuit switching · reservation first</text>
+<text x="82" y="225" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">Elementary channel = fixed unit of capacity</text>
+<text x="82" y="263" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">Composite circuit = same number of elementary channels on every link</text>
+<text x="82" y="301" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">Setup checks all links → reserve → transfer → release</text>
+<text x="82" y="339" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">If any link lacks free channel → connection rejected</text>
+<text x="82" y="377" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">After setup: fixed capacity, no packet queues, deterministic transfer</text>
+<text x="82" y="415" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#5d7381">Trade-off: burst pauses waste reserved resource · p0081–p0089</text>
+
+<rect x="915" y="135" width="810" height="310" rx="18" fill="#eef4e8" stroke="#c3d4b8"/>
+<text x="942" y="180" font-family="Arial,DejaVu Sans,sans-serif" font-size="29" font-weight="700" fill="#365b31">Packet switching · dynamic sharing</text>
+<text x="942" y="225" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">Message → packets + header (+ optional trailer)</text>
+<text x="942" y="263" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">Packets share links statistically; bursts from flows can smooth in aggregate</text>
+<text x="942" y="301" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">Store-and-forward needs packet buffers</text>
+<text x="942" y="339" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">Rate mismatch / switch bottleneck → queues</text>
+<text x="942" y="377" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">Finite buffers → possible loss; delays depend on current load</text>
+<text x="942" y="415" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#65775e">Trade-off: better utilization ↔ uncertainty · p0089–p0093</text>
+
+<rect x="55" y="490" width="520" height="285" rx="18" fill="#f8efe2" stroke="#ddc9aa"/>
+<text x="82" y="535" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#78532e">Datagram</text>
+<text x="82" y="578" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">No prior exchange state required</text>
+<text x="82" y="615" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">Each packet classified independently</text>
+<text x="82" y="652" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">Destination address drives forwarding</text>
+<text x="82" y="689" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">Multiple next hops may support load balance</text>
+<text x="82" y="726" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">Delivery: best effort</text>
+<text x="82" y="757" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#806d55">p0093–p0094</text>
+
+<rect x="630" y="490" width="520" height="285" rx="18" fill="#eee8f6" stroke="#c9bad9"/>
+<text x="657" y="535" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#593f73">Logical connection</text>
+<text x="657" y="578" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#624f74">Setup negotiates connection parameters</text>
+<text x="657" y="615" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#624f74">Endpoints keep history / packet numbers / state</text>
+<text x="657" y="652" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#624f74">Can support reorder / duplicate removal / retry</text>
+<text x="657" y="689" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#624f74">Route is not necessarily fixed</text>
+<text x="657" y="726" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#624f74">More capability, more setup/state overhead</text>
+<text x="657" y="757" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#756486">p0095–p0096</text>
+
+<rect x="1205" y="490" width="520" height="285" rx="18" fill="#e5edf7" stroke="#bdcce0"/>
+<text x="1232" y="535" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#2b4e78">Virtual circuit</text>
+<text x="1232" y="578" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#3c5878">A logical connection with fixed path</text>
+<text x="1232" y="615" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#3c5878">Setup installs per-flow entries in switches</text>
+<text x="1232" y="652" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#3c5878">Packets carry compact label instead of full address</text>
+<text x="1232" y="689" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#3c5878">Smaller table than all-destination datagram table</text>
+<text x="1232" y="726" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#3c5878">Important: still packet switching</text>
+<text x="1232" y="757" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#5c7290">p0097–p0098</text>
+
+<rect x="55" y="820" width="805" height="315" rx="18" fill="#f4ece7" stroke="#dbc6b9"/>
+<text x="82" y="865" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#714b38">Delay structure</text>
+<text x="82" y="908" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Propagation: distance / signal speed</text>
+<text x="82" y="946" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Serialization: message bits / channel capacity</text>
+<text x="82" y="984" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Packetization: source-side packet formation</text>
+<text x="82" y="1022" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Buffering + queueing: store-and-forward and contention</text>
+<text x="82" y="1060" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Switching: processing / transfer to output</text>
+<text x="82" y="1098" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#806b5f">Queueing varies with load → exact packet delay is not known in advance</text>
+
+<rect x="915" y="820" width="810" height="315" rx="18" fill="#fff3dd" stroke="#dfca9b"/>
+<text x="942" y="865" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#785f2d">Ethernet example</text>
+<text x="942" y="908" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6c5c3a">Shared-medium Ethernet: common half-duplex medium + distributed access</text>
+<text x="942" y="946" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6c5c3a">Switched Ethernet: tree of switches + duplex links</text>
+<text x="942" y="984" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6c5c3a">Datagram frames · flat MAC addresses</text>
+<text x="942" y="1022" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6c5c3a">Checksum detects damaged frame; Ethernet itself does not retransmit it</text>
+<text x="942" y="1060" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6c5c3a">Busy medium / output contention → queued frames → variable delay</text>
+<text x="942" y="1098" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#806b5f">p0105–p0107</text>
+
+<rect x="55" y="1180" width="1670" height="115" rx="16" fill="#eef1f3" stroke="#c7d1d7"/>
+<text x="82" y="1223" font-family="Arial,DejaVu Sans,sans-serif" font-size="23" font-weight="700" fill="#3d5565">Operational boundary</text>
+<text x="82" y="1260" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#566d7b">No executable CLI in source. Quantitative delay example is scenario-specific; real network load/buffers/latency are [Needs confirmation].</text>
+<text x="55" y="1330" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#607789">Chapter 4 starts at p0108:c01 · reading state unchanged · source extraction findings recorded separately.</text>
+</svg>
