@@ -59,3 +59,5 @@ Canonical readiness command:
 - [Глава 3 — Цифровой логический уровень](notes/chapters/chapter-03-digital-logic-level/README.md) — RAG-grounded analysis; PDF pages 172–269.
 
 - [Глава 4 — Уровень микроархитектуры](notes/chapters/chapter-04-microarchitecture-level/README.md) — RAG-grounded analysis; PDF pages 270–376.
+
+- [Глава 5 — Уровень архитектуры набора команд](notes/chapters/chapter-05-instruction-set-architecture-level/README.md) — RAG-grounded analysis; PDF pages 377–474.
