@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 3 — Паттерн Ambassador</title>
+  <desc id="desc">RAG-grounded компактная схема Ambassador: sharding, service broker, request splitting.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #111827; }
+      .title { font-size: 30px; font-weight: 700; }
+      .sub { font-size: 14px; fill: #4b5563; }
+      .h { font-size: 18px; font-weight: 700; }
+      .b { font-size: 15px; }
+      .small { font-size: 13px; fill: #374151; }
+      .box { fill: #f9fafb; stroke: #374151; stroke-width: 2; rx: 14; }
+      .app { fill: #eff6ff; stroke: #1d4ed8; stroke-width: 2; rx: 14; }
+      .amb { fill: #ecfdf5; stroke: #047857; stroke-width: 2; rx: 14; }
+      .use { fill: #f5f3ff; stroke: #6d28d9; stroke-width: 2; rx: 14; }
+      .warn { fill: #fff7ed; stroke: #c2410c; stroke-width: 2; rx: 14; }
+      .arrow { stroke: #374151; stroke-width: 2.3; fill: none; marker-end: url(#m); }
+    </style>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#374151"/>
+    </marker>
+  </defs>
+
+  <text x="45" y="50" class="title">Глава 3 — Паттерн Ambassador</text>
+  <text x="45" y="78" class="sub">RAG p0050:c01–p0063:c01 · PDF 50–63 · rag_only</text>
+
+  <rect x="70" y="125" width="300" height="115" class="app"/>
+  <text x="95" y="162" class="h">Application</text>
+  <text x="95" y="192" class="b">работает через стабильный</text>
+  <text x="95" y="218" class="b">local endpoint</text>
+
+  <rect x="450" y="125" width="300" height="115" class="amb"/>
+  <text x="475" y="162" class="h">Ambassador</text>
+  <text x="475" y="192" class="b">routing / discovery</text>
+  <text x="475" y="218" class="b">traffic policy</text>
+
+  <rect x="830" y="125" width="300" height="115" class="box"/>
+  <text x="855" y="162" class="h">External services</text>
+  <text x="855" y="192" class="b">shards / dependencies</text>
+  <text x="855" y="218" class="b">prod + experiment</text>
+
+  <path d="M370,182 L450,182" class="arrow"/>
+  <path d="M750,182 L830,182" class="arrow"/>
+
+  <rect x="60" y="330" width="320" height="150" class="use"/>
+  <text x="85" y="365" class="h">Sharding</text>
+  <text x="85" y="397" class="b">localhost Redis-like endpoint</text>
+  <text x="85" y="425" class="b">→ twemproxy</text>
+  <text x="85" y="453" class="b">→ Redis shards</text>
+
+  <rect x="440" y="330" width="320" height="150" class="use"/>
+  <text x="465" y="365" class="h">Service broker</text>
+  <text x="465" y="397" class="b">environment discovery</text>
+  <text x="465" y="425" class="b">discover / create target</text>
+  <text x="465" y="453" class="b">application stays portable</text>
+
+  <rect x="820" y="330" width="320" height="150" class="use"/>
+  <text x="845" y="365" class="h">Request splitting</text>
+  <text x="845" y="397" class="b">web weight=9</text>
+  <text x="845" y="425" class="b">experiment ≈ 10%</text>
+  <text x="845" y="453" class="b">ip_hash for consistency</text>
+
+  <path d="M520,240 L220,330" class="arrow"/>
+  <path d="M600,240 L600,330" class="arrow"/>
+  <path d="M680,240 L980,330" class="arrow"/>
+
+  <rect x="150" y="555" width="900" height="125" class="box"/>
+  <text x="180" y="592" class="h">Главный trade-off</text>
+  <text x="180" y="625" class="b">Client-side Ambassador → сложнее deployment клиента, но local reusable abstraction</text>
+  <text x="180" y="655" class="b">Separate service → проще client, но появляется отдельный service для operation/scale/monitoring</text>
+
+  <rect x="220" y="720" width="760" height="55" class="warn"/>
+  <text x="250" y="754" class="b">Source warnings: Redis manifest sequence ambiguous; experiment ConfigMap naming mismatch.</text>
+
+  <text x="45" y="807" class="small">Exact rollback, current Kubernetes compatibility and production hardening are not defined by chapter 3.</text>
+</svg>
