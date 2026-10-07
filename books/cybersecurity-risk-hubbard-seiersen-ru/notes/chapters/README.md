@@ -8,5 +8,7 @@
 | 2 | [Руководство по измерениям для сферы кибербезопасности](chapter-02-measurement-guide-cybersecurity/README.md) | spine 15–17, `OPS/ch1-13.xhtml` → `OPS/ch1-15.xhtml` | README, cheatsheet, commands, diagram, 2×SVG, source-findings |
 | 3 | [Моделируем немедленно!](chapter-03-model-now/README.md) | spine 18–20, `OPS/ch1-16.xhtml` → `OPS/ch1-18.xhtml` | README, cheatsheet, commands, diagram, 2×SVG, source-findings |
 | 4 | [Самое важное измерение в области кибербезопасности](chapter-04-most-important-measurement/README.md) | spine 21–23, `OPS/ch1-19.xhtml` → `OPS/ch1-21.xhtml` | README, cheatsheet, commands, diagram, 2×SVG, summary, source-findings |
+| 5 | [Матрицы риска, факторы лжи и другие препятствия](chapter-05-risk-matrices-fallacies/README.md) | spine 24–26, `OPS/ch1-22.xhtml` → `OPS/ch1-24.xhtml` | README, cheatsheet, commands, diagram, 2×SVG, summary, source-findings |
 
-Глава 5 начинается в EPUB spine 24, `OPS/ch1-22.xhtml`; её анализ пока не проводился.
+
+Глава 6 начинается в EPUB spine 28, `OPS/ch1-26.xhtml`; spine 27 — титул части II.
