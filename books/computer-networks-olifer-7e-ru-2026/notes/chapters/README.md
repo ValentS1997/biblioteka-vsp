@@ -11,5 +11,6 @@ Book ID: `computer-networks-olifer-7e-ru-2026`. Индекс ведёт толь
 | 5 — Сетевые характеристики и качество обслуживания | 131–177 | 130–176 | [Глава 5](chapter-05-setevye-harakteristiki-i-kachestvo-obsluzhivaniya/README.md) |
 | 6 — Линии связи | 183–214 | 182–213 | [Глава 6](chapter-06-linii-svyazi/README.md) |
 | 7 — Кодирование и мультиплексирование данных | 215–241 | 214–240 | [Глава 7](chapter-07-kodirovanie-i-multipleksirovanie-dannyh/README.md) |
+| 8 — Технология первичных сетей OTN | 242–267 | 241–266 | [Глава 8](chapter-08-tehnologiya-pervichnyh-setey-otn/README.md) |
 
 Дальнейшие главы: **[Needs confirmation]** до индивидуального анализа. Reading state книги остаётся независимым от RAG.
