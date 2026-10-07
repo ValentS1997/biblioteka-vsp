@@ -14,3 +14,4 @@
 - [Глава 12 — Передача файлов по сети и доступ к ним](chapter-12-network-file-transfer-and-access/README.md) — PDF/печатные страницы 368–389, RAG chunks p0368:c01–p0389:c01.
 - [Глава 13 — Пользовательское окружение](chapter-13-user-environment/README.md) — PDF/печатные страницы 390–401, RAG chunks p0390:c01–p0401:c01.
 - [Глава 14 — Краткий обзор рабочего стола Linux. Вывод на печать](chapter-14-linux-desktop-and-printing/README.md) — PDF/печатные страницы 402–418, RAG chunks p0402:c01–p0418:c01.
+- [Глава 15 — Инструменты разработки](chapter-15-development-tools/README.md) — PDF/печатные страницы 419–441, RAG chunks p0419:c01–p0441:c01.
