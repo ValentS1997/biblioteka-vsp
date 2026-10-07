@@ -10,5 +10,7 @@
 | 4 | [Самое важное измерение в области кибербезопасности](chapter-04-most-important-measurement/README.md) | spine 21–23, `OPS/ch1-19.xhtml` → `OPS/ch1-21.xhtml` | README, cheatsheet, commands, diagram, 2×SVG, summary, source-findings |
 | 5 | [Матрицы риска, факторы лжи и другие препятствия](chapter-05-risk-matrices-fallacies/README.md) | spine 24–26, `OPS/ch1-22.xhtml` → `OPS/ch1-24.xhtml` | README, cheatsheet, commands, diagram, 2×SVG, summary, source-findings |
 
+| 6 | [Разложение на составляющие](chapter-06-decomposition/README.md) | spine 28–30, `OPS/ch1-26.xhtml` → `OPS/ch1-28.xhtml` | README, cheatsheet, commands, diagram, 2×SVG, summary, source-findings |
 
-Глава 6 начинается в EPUB spine 28, `OPS/ch1-26.xhtml`; spine 27 — титул части II.
+
+Глава 7 начинается в EPUB spine 31, `OPS/ch1-29.xhtml`; её анализ пока не проводился.
