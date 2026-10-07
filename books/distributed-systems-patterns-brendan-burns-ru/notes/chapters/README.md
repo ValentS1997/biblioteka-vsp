@@ -7,3 +7,4 @@ RAG-grounded chapter artifacts for `distributed-systems-patterns-brendan-burns-r
 - [Глава 3 — Паттерн Ambassador](chapter-03-ambassador-pattern/README.md) — `RAG_GROUNDED`, RAG `p0050:c01–p0063:c01`, PDF `50–63`.
 - [Глава 4 — Адаптеры](chapter-04-adapter-pattern/README.md) — `RAG_GROUNDED`, RAG `p0064:c01–p0076:c01`, PDF `64–76`.
 - [Глава 5 — Реплицированные сервисы с распределением нагрузки](chapter-05-load-balanced-replicated-services/README.md) — `RAG_GROUNDED`, RAG `p0082:c01–p0101:c01`, PDF `82–101`.
+- [Глава 6 — Шардированные сервисы](chapter-06-sharded-services/README.md) — `RAG_GROUNDED`, RAG `p0102:c01–p0121:c01`, PDF `102–121`.
