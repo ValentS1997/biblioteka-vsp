@@ -35,19 +35,13 @@ flowchart LR
 ## 3. Модель студентов и оценок (PDF 30–32)
 
 ```mermaid
-erDiagram
-  Students ||--o{ Grades : "один студент — много оценок"
-  Students {
-    integer student_id PK
-    string student_name
-    date date_of_birth
-  }
-  Grades {
-    integer student_id FK
-  }
+flowchart LR
+  S["Students: student_id (PK); student_name; date_of_birth"]
+  G["Grades: student_id (FK)"]
+  S -- "один ко многим" --> G
 ```
 
-**Граница реконструкции:** имена полей `student_id`, `student_name`, `date_of_birth` и семантика PK/FK подтверждены `p0031:c01`. Отношение 1:N подтверждено `p0032:c01`. Типы в Mermaid (`integer`, `string`, `date`) — **схематические метки диаграммы, не подтверждённые SQL-типы исходной модели**; реальное определение типов — [Needs confirmation]. Точное изображение рис. 1.3 недоступно текстовому RAG; см. `source-findings.md`.
+**Граница реконструкции:** имена полей `student_id`, `student_name`, `date_of_birth` и семантика PK/FK подтверждены `p0031:c01`. Отношение 1:N подтверждено `p0032:c01`. SQL-типы столбцов в извлечённом описании модели отсутствуют: [Needs confirmation]. Точное изображение рис. 1.3 недоступно текстовому RAG; см. `source-findings.md`.
 
 ## Правила проверки
 
