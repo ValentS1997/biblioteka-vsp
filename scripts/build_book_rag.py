@@ -27,10 +27,13 @@ SEARCH_KEY_CHARS = 4
 SEARCH_PREFIX_CHARS = 3
 SEARCH_POSTINGS_MAX = 32
 SEARCH_SHARD_MAX_BYTES = 262144
+REPEATED_PDF_BOILERPLATE_MIN_UNITS = 20
+REPEATED_PDF_BOILERPLATE_MIN_FRACTION = 0.20
+REPEATED_PDF_BOILERPLATE_MAX_LINE_CHARS = 200
 SUPPORTED_SOURCES = {"book.pdf": "pdf", "book.epub": "epub"}
 
 PIPELINE_VERSION = "1.0"
-NORMALIZATION_POLICY_ID = "text-normalization-v1"
+NORMALIZATION_POLICY_ID = "text-normalization-v2"
 CHUNKING_POLICY_ID = "source-unit-char-window-v1"
 RETRIEVAL_POLICY_ID = "deterministic-lexical-shards-v2"
 
@@ -331,6 +334,61 @@ def extract_units(source: Path, source_format: str) -> tuple[list[dict], dict]:
     raise RuntimeError(f"Unsupported source format: {source_format}")
 
 
+def suppress_repeated_pdf_boilerplate(units: list[dict]) -> tuple[list[dict], dict]:
+    """Remove short lines repeated across many PDF pages as deterministic boilerplate."""
+    total_units = len(units)
+    metadata = {
+        "enabled": True,
+        "min_units": REPEATED_PDF_BOILERPLATE_MIN_UNITS,
+        "min_fraction": REPEATED_PDF_BOILERPLATE_MIN_FRACTION,
+        "max_line_chars": REPEATED_PDF_BOILERPLATE_MAX_LINE_CHARS,
+        "threshold_units": None,
+        "suppressed_line_count": 0,
+        "suppressed_occurrences": 0,
+    }
+    if total_units < REPEATED_PDF_BOILERPLATE_MIN_UNITS:
+        return units, metadata
+
+    threshold_units = max(
+        REPEATED_PDF_BOILERPLATE_MIN_UNITS,
+        int(total_units * REPEATED_PDF_BOILERPLATE_MIN_FRACTION + 0.999999),
+    )
+    metadata["threshold_units"] = threshold_units
+
+    occurrences: Counter[str] = Counter()
+    for unit in units:
+        candidates = {
+            line.strip()
+            for line in str(unit.get("text", "")).splitlines()
+            if line.strip() and len(line.strip()) <= REPEATED_PDF_BOILERPLATE_MAX_LINE_CHARS
+        }
+        occurrences.update(candidates)
+
+    repeated_lines = {
+        line for line, count in occurrences.items()
+        if count >= threshold_units
+    }
+    if not repeated_lines:
+        return units, metadata
+
+    cleaned_units: list[dict] = []
+    suppressed_occurrences = 0
+    for unit in units:
+        kept_lines: list[str] = []
+        for raw_line in str(unit.get("text", "")).splitlines():
+            if raw_line.strip() in repeated_lines:
+                suppressed_occurrences += 1
+                continue
+            kept_lines.append(raw_line)
+        cleaned = dict(unit)
+        cleaned["text"] = normalize_text("\n".join(kept_lines))
+        cleaned_units.append(cleaned)
+
+    metadata["suppressed_line_count"] = len(repeated_lines)
+    metadata["suppressed_occurrences"] = suppressed_occurrences
+    return cleaned_units, metadata
+
+
 def build_lexical_search_index(
     *,
     book_dir: Path,
@@ -590,6 +648,19 @@ def build(book_dir: Path) -> dict:
     retrieval_dir.mkdir(parents=True, exist_ok=True)
 
     units, extraction = extract_units(source, source_format)
+    if source_format == "pdf":
+        units, repeated_boilerplate = suppress_repeated_pdf_boilerplate(units)
+    else:
+        repeated_boilerplate = {
+            "enabled": False,
+            "min_units": REPEATED_PDF_BOILERPLATE_MIN_UNITS,
+            "min_fraction": REPEATED_PDF_BOILERPLATE_MIN_FRACTION,
+            "max_line_chars": REPEATED_PDF_BOILERPLATE_MAX_LINE_CHARS,
+            "threshold_units": None,
+            "suppressed_line_count": 0,
+            "suppressed_occurrences": 0,
+        }
+    extraction["repeated_pdf_boilerplate"] = repeated_boilerplate
 
     corpus_generation_payload = {
         "pipeline_version": PIPELINE_VERSION,
@@ -603,6 +674,11 @@ def build(book_dir: Path) -> dict:
         "chunking_policy_id": CHUNKING_POLICY_ID,
         "target_chars": TARGET_CHARS,
         "overlap_chars": OVERLAP_CHARS,
+        "repeated_pdf_boilerplate": {
+            "min_units": REPEATED_PDF_BOILERPLATE_MIN_UNITS,
+            "min_fraction": REPEATED_PDF_BOILERPLATE_MIN_FRACTION,
+            "max_line_chars": REPEATED_PDF_BOILERPLATE_MAX_LINE_CHARS,
+        },
     }
     corpus_generation_id = sha256_json(corpus_generation_payload)
     index_generation_id = sha256_json(
@@ -772,6 +848,7 @@ extraction:
     - remove_soft_hyphen_marker
     - normalize_line_endings
     - trim_trailing_horizontal_whitespace
+    - suppress_repeated_short_pdf_boilerplate_lines
 
 chunking:
   scope: per_source_unit
@@ -799,6 +876,8 @@ statistics:
   blank_source_units: {len(blank_units)}
   blank_source_unit_numbers: {json.dumps(blank_units)}
   extracted_characters: {extracted_characters}
+  suppressed_repeated_boilerplate_lines: {repeated_boilerplate["suppressed_line_count"]}
+  suppressed_repeated_boilerplate_occurrences: {repeated_boilerplate["suppressed_occurrences"]}
   chunks: {len(chunk_records)}
   retrieval_chunk_files: {len(index_records)}
   search_index_shards: {search_index['shards']}
@@ -844,6 +923,8 @@ known_limitations:
         "source_units_with_text": len(units) - len(blank_units),
         "blank_source_units": blank_units,
         "extracted_characters": extracted_characters,
+        "suppressed_repeated_boilerplate_lines": repeated_boilerplate["suppressed_line_count"],
+        "suppressed_repeated_boilerplate_occurrences": repeated_boilerplate["suppressed_occurrences"],
         "chunks": len(chunk_records),
         "retrieval_chunk_files": len(index_records),
         "chunk_ids_unique": ids_unique,

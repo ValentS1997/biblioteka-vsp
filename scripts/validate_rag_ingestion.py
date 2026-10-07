@@ -197,6 +197,11 @@ def validate_book(book_dir: Path) -> dict[str, Any]:
         "chunking_policy_id": builder.CHUNKING_POLICY_ID,
         "target_chars": chunking.get("target_chars"),
         "overlap_chars": chunking.get("overlap_chars"),
+        "repeated_pdf_boilerplate": {
+            "min_units": builder.REPEATED_PDF_BOILERPLATE_MIN_UNITS,
+            "min_fraction": builder.REPEATED_PDF_BOILERPLATE_MIN_FRACTION,
+            "max_line_chars": builder.REPEATED_PDF_BOILERPLATE_MAX_LINE_CHARS,
+        },
     }
     expected_corpus_generation = builder.sha256_json(corpus_payload)
     expected_index_generation = builder.sha256_json(
