@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1230" viewBox="0 0 1600 1230" role="img" aria-labelledby="title desc">
+<title id="title">Глава 6 — подробная схема информативного разложения риска</title>
+<desc id="desc">Разложение воздействия, критерии Ховарда, симуляционная проверка, зависимости компонентов и репутационные расходы.</desc>
+<rect x="0" y="0" width="1600" height="1230" rx="0" fill="#0b1829" stroke="#0b1829" stroke-width="1.5"/>
+<text x="56" y="48" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#7fcaf4" font-weight="bold">BIBLIOTEKA-VSP / CHAPTER 06 / CYBER RISK</text>
+<text x="56" y="100" font-family="DejaVu Sans,Arial,sans-serif" font-size="34" fill="#fafcff" font-weight="bold">Информативная декомпозиция вместо лишней сложности</text>
+<text x="56" y="138" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#bcd2e3" font-weight="normal">Правило: компонент должен быть яснее, наблюдаемее и полезнее исходной агрегированной оценки</text>
+<text x="56" y="190" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#88d0f8" font-weight="bold">I · От базовой модели к компонентам</text>
+<rect x="56" y="209" width="475" height="164" rx="14" fill="#183149" stroke="#8dcdf1" stroke-width="1.5"/>
+<rect x="70" y="226" width="6" height="34" rx="3" fill="#8dcdf1" stroke="#8dcdf1" stroke-width="1.5"/>
+<text x="93" y="252" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Исходная модель</text>
+<text x="76" y="291" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">P(событие)</text>
+<text x="76" y="319" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">90%-ный диапазон потерь</text>
+<text x="76" y="347" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Прямая экспертная оценка</text>
+<rect x="562" y="209" width="475" height="164" rx="14" fill="#183149" stroke="#91d6bd" stroke-width="1.5"/>
+<rect x="576" y="226" width="6" height="34" rx="3" fill="#91d6bd" stroke="#91d6bd" stroke-width="1.5"/>
+<text x="599" y="252" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Пример decomposition</text>
+<text x="582" y="291" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Тип события / CIA</text>
+<text x="582" y="319" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Время простоя</text>
+<text x="582" y="347" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Стоимость часа / категории затрат</text>
+<rect x="1068" y="209" width="476" height="164" rx="14" fill="#183149" stroke="#e7c18c" stroke-width="1.5"/>
+<rect x="1082" y="226" width="6" height="34" rx="3" fill="#e7c18c" stroke="#e7c18c" stroke-width="1.5"/>
+<text x="1105" y="252" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Portfolio view</text>
+<text x="1088" y="291" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Сценарии Monte Carlo</text>
+<text x="1088" y="319" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Сумма потерь по испытанию</text>
+<text x="1088" y="347" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Кривая распределения риска</text>
+<text x="56" y="428" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#88d0f8" font-weight="bold">II · Проверка компонента</text>
+<rect x="56" y="447" width="475" height="164" rx="14" fill="#183149" stroke="#8dcdf1" stroke-width="1.5"/>
+<rect x="70" y="464" width="6" height="34" rx="3" fill="#8dcdf1" stroke="#8dcdf1" stroke-width="1.5"/>
+<text x="93" y="490" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Howard test</text>
+<text x="76" y="529" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Понятность</text>
+<text x="76" y="557" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Наблюдаемость</text>
+<text x="76" y="585" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Полезность для решения</text>
+<rect x="562" y="447" width="475" height="164" rx="14" fill="#183149" stroke="#91d6bd" stroke-width="1.5"/>
+<rect x="576" y="464" width="6" height="34" rx="3" fill="#91d6bd" stroke="#91d6bd" stroke-width="1.5"/>
+<text x="599" y="490" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Information test</text>
+<text x="582" y="529" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Компонент известен лучше?</text>
+<text x="582" y="557" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Есть данные / доступ к ним?</text>
+<text x="582" y="585" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Не абстрактнее исходной величины?</text>
+<rect x="1068" y="447" width="476" height="164" rx="14" fill="#183149" stroke="#e7c18c" stroke-width="1.5"/>
+<rect x="1082" y="464" width="6" height="34" rx="3" fill="#e7c18c" stroke="#e7c18c" stroke-width="1.5"/>
+<text x="1105" y="490" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Dependency test</text>
+<text x="1088" y="529" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Независимы ли величины?</text>
+<text x="1088" y="557" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Есть корреляция / обратная связь?</text>
+<text x="1088" y="585" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Нужно ли моделировать зависимость?</text>
+<text x="56" y="666" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#88d0f8" font-weight="bold">III · Simulation check</text>
+<rect x="56" y="687" width="704" height="190" rx="14" fill="#183149" stroke="#8dd9bd" stroke-width="1.5"/>
+<text x="82" y="726" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Прямая оценка downtime impact</text>
+<text x="82" y="764" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#d1e6f1" font-weight="normal">$150k – $7m</text>
+<text x="82" y="801" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#d1e6f1" font-weight="normal">0,25–4h × $200k–$5m/hour</text>
+<text x="82" y="838" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#d1e6f1" font-weight="normal">Simulation ≈ $100k – $8m (пример авторов)</text>
+<rect x="790" y="687" width="754" height="190" rx="14" fill="#183149" stroke="#efbd9b" stroke-width="1.5"/>
+<text x="816" y="726" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Почему нельзя просто перемножить границы</text>
+<text x="816" y="764" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#d1e6f1" font-weight="normal">$50k – $20m предполагает особую зависимость</text>
+<text x="816" y="801" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#d1e6f1" font-weight="normal">Для случайных величин распределение произведения</text>
+<text x="816" y="838" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#d1e6f1" font-weight="normal">нужно моделировать с учётом зависимости</text>
+<text x="56" y="932" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#88d0f8" font-weight="bold">IV · «Репутация» → наблюдаемые последствия</text>
+<rect x="56" y="951" width="360" height="164" rx="14" fill="#183149" stroke="#8dcdf1" stroke-width="1.5"/>
+<rect x="70" y="968" width="6" height="34" rx="3" fill="#8dcdf1" stroke="#8dcdf1" stroke-width="1.5"/>
+<text x="93" y="994" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Продажи / акции</text>
+<text x="76" y="1033" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Сравнить с исторической</text>
+<text x="76" y="1061" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">волатильностью, а не</text>
+<text x="76" y="1089" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">только моментом инцидента</text>
+<rect x="438" y="951" width="360" height="164" rx="14" fill="#183149" stroke="#91d6bd" stroke-width="1.5"/>
+<rect x="452" y="968" width="6" height="34" rx="3" fill="#91d6bd" stroke="#91d6bd" stroke-width="1.5"/>
+<text x="475" y="994" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Проекты по искуплению</text>
+<text x="458" y="1033" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Security investment</text>
+<text x="458" y="1061" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">PR / коммуникации</text>
+<text x="458" y="1089" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">маркетинг</text>
+<rect x="820" y="951" width="360" height="164" rx="14" fill="#183149" stroke="#e7c18c" stroke-width="1.5"/>
+<rect x="834" y="968" width="6" height="34" rx="3" fill="#e7c18c" stroke="#e7c18c" stroke-width="1.5"/>
+<text x="857" y="994" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Оргизменения</text>
+<text x="840" y="1033" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Смена руководителей</text>
+<text x="840" y="1061" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">реакция на инцидент</text>
+<text x="840" y="1089" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">конкретные расходы</text>
+<rect x="1202" y="951" width="342" height="164" rx="14" fill="#183149" stroke="#b7b4ef" stroke-width="1.5"/>
+<rect x="1216" y="968" width="6" height="34" rx="3" fill="#b7b4ef" stroke="#b7b4ef" stroke-width="1.5"/>
+<text x="1239" y="994" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Boundary</text>
+<text x="1222" y="1033" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Эффект не обязан быть нулём</text>
+<text x="1222" y="1061" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Авторы находят слабый сигнал</text>
+<text x="1222" y="1089" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">в рассмотренных данных</text>
+<rect x="56" y="1137" width="1488" height="55" rx="14" fill="#2c2a38" stroke="#9a889f" stroke-width="1.5"/>
+<text x="82" y="1171" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#f0dce8" font-weight="normal">SOURCE: формула выбора типа события содержит два СЛЧИС() и не совпадает с заявленными вероятностями — не исправлена</text>
+<text x="56" y="1216" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" fill="#90aec4" font-weight="normal">RAG e0028:c01–c04 / e0029:c01–c05 / e0030:c01–c05 · EPUB spine 28–30 · не production-runbook</text>
+</svg>
