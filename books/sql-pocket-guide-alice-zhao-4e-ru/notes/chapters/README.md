@@ -14,4 +14,6 @@ Book ID: `sql-pocket-guide-alice-zhao-4e-ru`.
 
 | 04 | [Основы работы с запросами](chapter-04-osnovy-raboty-s-zaprosami/README.md) | PDF 70–104; `p0070:c01`–`p0104:c01` | [cheatsheet](chapter-04-osnovy-raboty-s-zaprosami/cheatsheet.md) · [commands](chapter-04-osnovy-raboty-s-zaprosami/commands.md) · [diagram](chapter-04-osnovy-raboty-s-zaprosami/diagram.md) · [compact SVG](chapter-04-osnovy-raboty-s-zaprosami/visual-cheatsheet.svg) · [detailed SVG](chapter-04-osnovy-raboty-s-zaprosami/visual-cheatsheet-detailed.svg) · [source findings](chapter-04-osnovy-raboty-s-zaprosami/source-findings.md) |
 
+| 05 | [Создание, обновление и удаление](chapter-05-sozdanie-obnovlenie-i-udalenie/README.md) | PDF 105–154; `p0105:c01`–`p0154:c01` | [cheatsheet](chapter-05-sozdanie-obnovlenie-i-udalenie/cheatsheet.md) · [commands](chapter-05-sozdanie-obnovlenie-i-udalenie/commands.md) · [diagram](chapter-05-sozdanie-obnovlenie-i-udalenie/diagram.md) · [compact SVG](chapter-05-sozdanie-obnovlenie-i-udalenie/visual-cheatsheet.svg) · [detailed SVG](chapter-05-sozdanie-obnovlenie-i-udalenie/visual-cheatsheet-detailed.svg) · [source findings](chapter-05-sozdanie-obnovlenie-i-udalenie/source-findings.md) |
+
 Reading status сохраняется независимо от создания chapter artifacts.

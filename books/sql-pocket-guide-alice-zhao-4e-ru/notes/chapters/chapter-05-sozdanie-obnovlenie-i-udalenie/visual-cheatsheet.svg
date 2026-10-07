@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1340" height="1000" viewBox="0 0 1340 1000" role="img" aria-label="Глава 5 SQL. Создание обновление и удаление: rollback-first шпаргалка">
+<rect width="1340" height="1000" fill="#EEF4F8"/>
+<text x="30" y="53" font-family="DejaVu Sans,Arial,sans-serif" font-size="29" fill="#083B5A" font-weight="700">ГЛАВА 5 · СОЗДАНИЕ, ОБНОВЛЕНИЕ И УДАЛЕНИЕ</text>
+<text x="32" y="84" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#506D80" >Элис Жао · PDF 105–154 · RAG p0105:c01–p0154:c01</text>
+<rect x="27" y="111" width="406" height="225" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="149" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">01 / BASELINE</text>
+<text x="45" y="185" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Проверить текущую БД</text>
+<text x="45" y="215" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Список таблиц / columns / constraints</text>
+<text x="45" y="245" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >SELECT preview перед UPDATE/DELETE</text>
+<text x="45" y="275" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Права и target: [Needs confirmation]</text>
+<text x="45" y="305" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Backup / restore point до DROP</text>
+<rect x="467" y="111" width="406" height="225" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="485" y="149" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">02 / STATE CHANGE</text>
+<text x="485" y="185" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >DDL: CREATE / ALTER / DROP</text>
+<text x="485" y="215" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >DML: INSERT / UPDATE / DELETE</text>
+<text x="485" y="245" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Indexes и views — объекты schema</text>
+<text x="485" y="275" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >CSV import меняет данные</text>
+<text x="485" y="305" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >CASCADE расширяет blast radius</text>
+<rect x="907" y="111" width="406" height="225" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="925" y="149" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">03 / TRANSACTION</text>
+<text x="925" y="185" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >BEGIN / START TRANSACTION</text>
+<text x="925" y="215" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Выполнить узкое изменение</text>
+<text x="925" y="245" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >SELECT verification</text>
+<text x="925" y="275" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >COMMIT — зафиксировать</text>
+<text x="925" y="305" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >ROLLBACK — отменить до COMMIT</text>
+<rect x="27" y="362" width="626" height="245" rx="17" fill="#FAFDFF" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="400" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">04 / ГЛАВНЫЕ РИСКИ</text>
+<text x="45" y="436" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >UPDATE без WHERE → вся таблица</text>
+<text x="45" y="466" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >DELETE FROM table → все строки</text>
+<text x="45" y="496" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >DROP DATABASE/TABLE → data loss</text>
+<text x="45" y="526" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >ALTER/DROP COLUMN → schema/data risk</text>
+<text x="45" y="556" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >SET GLOBAL local_infile=1 → server setting</text>
+<text x="45" y="586" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Source commands не запускались</text>
+<rect x="687" y="362" width="626" height="245" rx="17" fill="#FAFDFF" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="705" y="400" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">05 / OBJECTS</text>
+<text x="705" y="436" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Database → tables → columns/constraints</text>
+<text x="705" y="466" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >PRIMARY KEY / FOREIGN KEY</text>
+<text x="705" y="496" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >INDEX → ускорение чтения, overhead записи</text>
+<text x="705" y="526" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >VIEW → сохранённое определение SELECT</text>
+<text x="705" y="556" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >CREATE VIEW / DROP VIEW</text>
+<text x="705" y="586" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Реальный performance: [Needs confirmation]</text>
+<rect x="27" y="633" width="1286" height="175" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="671" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">06 / SOURCE FINDINGS</text>
+<text x="45" y="707" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >DELETE privilege vs DROP DATABASE · &apos; US&apos; vs &apos;US&apos; · SQL Server identifier «страна»</text>
+<text x="45" y="737" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Oracle CREATE INDEX с &apos;LOG_DATE&apos; · transaction wording · DELETE all rows ≠ DROP table</text>
+<text x="45" y="767" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Версионные claims SQLite/MySQL/Oracle: [Needs confirmation]</text>
+<rect x="27" y="835" width="1286" height="132" rx="14" fill="#D8EAF3"/>
+<text x="48" y="870" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#164A64" font-weight="700">ROLLBACK-FIRST: read-only baseline → narrow change → SELECT verify → COMMIT | ROLLBACK</text>
+<text x="48" y="904" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#214E66" >После COMMIT source говорит: rollback этой transaction невозможен. Для DROP/ALTER универсальный rollback не дан.</text>
+<text x="48" y="938" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#214E66" >Никакая команда в этой шпаргалке не является authorization на production change.</text>
+</svg>

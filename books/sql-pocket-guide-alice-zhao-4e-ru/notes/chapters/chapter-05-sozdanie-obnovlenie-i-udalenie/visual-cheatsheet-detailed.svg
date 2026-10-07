@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1980" viewBox="0 0 1600 1980" role="img" aria-label="Подробная RAG шпаргалка главы 5 SQL: создание обновление удаление транзакции">
+<rect width="1600" height="1980" fill="#EEF4F8"/>
+<text x="30" y="57" font-family="DejaVu Sans,Arial,sans-serif" font-size="31" fill="#073E60" font-weight="700">SQL · ГЛАВА 5 / СОЗДАНИЕ, ОБНОВЛЕНИЕ И УДАЛЕНИЕ</text>
+<text x="32" y="89" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#526F82" >Элис Жао · 4-е изд. · PDF 105–154 · RAG p0105:c01–p0154:c01</text>
+<rect x="27" y="117" width="500" height="233" rx="17" fill="#fff" stroke="#BED1DE" stroke-width="1.5"/>
+<text x="46" y="156" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0B4968" font-weight="700">01 / DATABASES [105–111]</text>
+<text x="46" y="195" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >Показать существующие / текущую БД</text>
+<text x="46" y="224" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >USE / \c / .open — смена контекста</text>
+<text x="46" y="253" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >CREATE DATABASE — создаёт объект</text>
+<text x="46" y="282" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >DROP DATABASE — destructive</text>
+<text x="46" y="311" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >Backup обязателен по предупреждению книги</text>
+<rect x="550" y="117" width="500" height="233" rx="17" fill="#fff" stroke="#BED1DE" stroke-width="1.5"/>
+<text x="569" y="156" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0B4968" font-weight="700">02 / TABLE + INSERT [111–114]</text>
+<text x="569" y="195" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >CREATE TABLE → структура</text>
+<text x="569" y="224" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >INSERT INTO → строки</text>
+<text x="569" y="253" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >SHOW / \dt / information_schema / .tables</text>
+<text x="569" y="282" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >IF NOT EXISTS — часть диалектов</text>
+<text x="569" y="311" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >Проверить privilege CREATE</text>
+<rect x="1073" y="117" width="500" height="233" rx="17" fill="#fff" stroke="#BED1DE" stroke-width="1.5"/>
+<text x="1092" y="156" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0B4968" font-weight="700">03 / CONSTRAINTS [115–123]</text>
+<text x="1092" y="195" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >NOT NULL / DEFAULT / CHECK / UNIQUE</text>
+<text x="1092" y="224" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >PRIMARY KEY / FOREIGN KEY</text>
+<text x="1092" y="253" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >Composite key — несколько columns</text>
+<text x="1092" y="282" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >Auto ID: syntax зависит от РСУБД</text>
+<text x="1092" y="311" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >Schema compatibility: [Needs confirmation]</text>
+<rect x="27" y="378" width="758" height="258" rx="17" fill="#FAFDFF" stroke="#BED1DE" stroke-width="1.5"/>
+<text x="46" y="417" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0B4968" font-weight="700">04 / DATA LOAD [123–128]</text>
+<text x="46" y="456" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >INSERT ... SELECT копирует результат</text>
+<text x="46" y="485" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >CSV: LOAD DATA / \copy / BULK INSERT / .import</text>
+<text x="46" y="514" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >NULL из CSV трактуется по-разному</text>
+<text x="46" y="543" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >SET GLOBAL local_infile=1 меняет server setting</text>
+<text x="46" y="572" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >File path / delimiter / encoding проверить</text>
+<text x="46" y="601" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >Bulk load rollback: [Needs confirmation]</text>
+<rect x="812" y="378" width="761" height="258" rx="17" fill="#FAFDFF" stroke="#BED1DE" stroke-width="1.5"/>
+<text x="831" y="417" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0B4968" font-weight="700">05 / ALTER TABLE [128–137]</text>
+<text x="831" y="456" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >RENAME table / column</text>
+<text x="831" y="485" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >ADD / DROP COLUMN</text>
+<text x="831" y="514" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >ADD / MODIFY / DROP CONSTRAINT</text>
+<text x="831" y="543" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >SQLite workaround: rebuild + copy + DROP + rename</text>
+<text x="831" y="572" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >Structural changes source считает permanent</text>
+<text x="831" y="601" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >Backup / rollback plan: [Needs confirmation]</text>
+<rect x="27" y="664" width="758" height="258" rx="17" fill="#fff" stroke="#BED1DE" stroke-width="1.5"/>
+<text x="46" y="703" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0B4968" font-weight="700">06 / DML [132–140]</text>
+<text x="46" y="742" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >INSERT → добавить строки</text>
+<text x="46" y="771" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >DELETE ... WHERE → удалить subset</text>
+<text x="46" y="800" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >DELETE FROM table → удалить все строки</text>
+<text x="46" y="829" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >UPDATE ... SET → изменить rows</text>
+<text x="46" y="858" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >WHERE определяет blast radius</text>
+<text x="46" y="887" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >Preview SELECT перед UPDATE/DELETE</text>
+<rect x="812" y="664" width="761" height="258" rx="17" fill="#fff" stroke="#BED1DE" stroke-width="1.5"/>
+<text x="831" y="703" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0B4968" font-weight="700">07 / DROP + CASCADE [140–141]</text>
+<text x="831" y="742" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >DROP TABLE → object + data loss</text>
+<text x="831" y="771" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >CASCADE может затронуть dependencies</text>
+<text x="831" y="800" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >Foreign-key references требуют проверки</text>
+<text x="831" y="829" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >Книга предупреждает: 100% certainty</text>
+<text x="831" y="858" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >Undo без backup не обещан</text>
+<text x="831" y="887" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >Не исполнять по шпаргалке</text>
+<rect x="27" y="950" width="758" height="258" rx="17" fill="#FAFDFF" stroke="#BED1DE" stroke-width="1.5"/>
+<text x="46" y="989" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0B4968" font-weight="700">08 / INDEXES [141–145]</text>
+<text x="46" y="1028" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >CREATE INDEX my_index ON ...</text>
+<text x="46" y="1057" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >Composite index: order columns важен по книге</text>
+<text x="46" y="1086" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >Ожидается ускорение фильтрации</text>
+<text x="46" y="1115" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >Цена: disk + maintenance on writes</text>
+<text x="46" y="1144" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >DROP INDEX — state-changing</text>
+<text x="46" y="1173" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >Benchmark / EXPLAIN source не даёт</text>
+<rect x="812" y="950" width="761" height="258" rx="17" fill="#FAFDFF" stroke="#BED1DE" stroke-width="1.5"/>
+<text x="831" y="989" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0B4968" font-weight="700">09 / VIEWS [145–149]</text>
+<text x="831" y="1028" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >View = saved query definition</text>
+<text x="831" y="1057" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >CREATE VIEW / SELECT FROM view</text>
+<text x="831" y="1086" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >CREATE OR REPLACE / CREATE OR ALTER</text>
+<text x="831" y="1115" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >SQLite: DROP VIEW + CREATE VIEW</text>
+<text x="831" y="1144" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >DROP VIEW source называет irreversible</text>
+<text x="831" y="1173" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >Underlying data остаётся в tables</text>
+<rect x="27" y="1236" width="758" height="286" rx="17" fill="#fff" stroke="#BED1DE" stroke-width="1.5"/>
+<text x="46" y="1275" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0B4968" font-weight="700">10 / TRANSACTION [149–154]</text>
+<text x="46" y="1314" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >START TRANSACTION / BEGIN</text>
+<text x="46" y="1343" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >BEGIN TRANSACTION — SQL Server/SQLite</text>
+<text x="46" y="1372" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >SELECT baseline</text>
+<text x="46" y="1401" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >DELETE / UPDATE внутри transaction</text>
+<text x="46" y="1430" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >SELECT verify</text>
+<text x="46" y="1459" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >COMMIT → permanent; ROLLBACK → undo pre-COMMIT</text>
+<rect x="812" y="1236" width="761" height="286" rx="17" fill="#fff" stroke="#BED1DE" stroke-width="1.5"/>
+<text x="831" y="1275" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0B4968" font-weight="700">11 / ACCEPTANCE BEFORE COMMIT</text>
+<text x="831" y="1314" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >Target DB/schema verified</text>
+<text x="831" y="1343" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >Expected rows identified by SELECT</text>
+<text x="831" y="1372" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >WHERE scope matches change request</text>
+<text x="831" y="1401" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >Post-change SELECT matches expectation</text>
+<text x="831" y="1430" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >Backup/restore known for destructive DDL</text>
+<text x="831" y="1459" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >Only then COMMIT; otherwise ROLLBACK</text>
+<rect x="27" y="1550" width="1546" height="230" rx="17" fill="#FAFDFF" stroke="#BED1DE" stroke-width="1.5"/>
+<text x="46" y="1589" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0B4968" font-weight="700">12 / SOURCE FINDINGS</text>
+<text x="46" y="1628" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >F-01: DELETE privilege wording before DROP DATABASE</text>
+<text x="46" y="1657" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >F-02: prose &apos; US&apos; vs CHECK code &apos;US&apos; · F-03: SQL Server identifier «страна»</text>
+<text x="46" y="1686" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >F-04: Oracle index code uses &apos;LOG_DATE&apos; · F-05: transaction wording conflict</text>
+<text x="46" y="1715" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >F-06: DELETE all rows called deleting table · F-07: truncate terminology maps to DELETE</text>
+<text x="46" y="1744" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28485B" >F-08: version-sensitive behavior remains [Needs confirmation]</text>
+<rect x="27" y="1810" width="1546" height="136" rx="18" fill="#D9EAF4"/>
+<text x="48" y="1846" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#104A67" font-weight="700">SECURITY BOUNDARY / NO CASUAL CHANGES</text>
+<text x="48" y="1882" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#28526A" >Это source-grounded study artifact, не change authorization. Никакие команды не выполнялись.</text>
+<text x="48" y="1916" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28526A" >Неизвестные host/db/schema/version/owner/backup/expected rows/rollback остаются [Needs confirmation].</text>
+</svg>
