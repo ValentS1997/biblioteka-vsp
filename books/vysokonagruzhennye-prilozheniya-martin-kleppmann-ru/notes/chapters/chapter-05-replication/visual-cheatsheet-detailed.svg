@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1120" viewBox="0 0 1400 1120">
+<rect width="1400" height="1120" fill="#f8fafc"/>
+<text x="55" y="65" fill="#0f172a" font-family="sans-serif" font-size="34" font-weight="700">Глава 5 — Репликация</text>
+<text x="55" y="102" fill="#475569" font-family="sans-serif" font-size="18">Canonical RAG · PDF 185–237 · source SHA 495e75f185c758a8…</text>
+
+<rect x="55" y="140" width="1290" height="110" rx="18" fill="#e2e8f0"/>
+<text x="85" y="184" fill="#0f172a" font-family="sans-serif" font-size="23" font-weight="700">Replication = multiple copies + failures + delay + concurrency</text>
+<text x="85" y="220" fill="#334155" font-family="sans-serif" font-size="18">Correctness depends on acknowledgment, read guarantees, failover and conflict semantics.</text>
+
+<rect x="55" y="285" width="400" height="500" rx="18" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+<text x="85" y="330" fill="#075985" font-family="sans-serif" font-size="26" font-weight="700">5.1–5.2 Single-leader</text>
+<text x="85" y="370" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Write path</text>
+<text x="85" y="400" fill="#334155" font-family="sans-serif" font-size="16">client → leader → replication log → followers</text>
+<text x="85" y="435" fill="#334155" font-family="sans-serif" font-size="16">sync ↔ async replication</text>
+<text x="85" y="480" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Operations</text>
+<text x="85" y="510" fill="#334155" font-family="sans-serif" font-size="16">snapshot + log catch-up for new follower</text>
+<text x="85" y="540" fill="#334155" font-family="sans-serif" font-size="16">failover: detect → elect → reroute → demote old</text>
+<text x="85" y="585" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Lag anomalies</text>
+<text x="85" y="615" fill="#334155" font-family="sans-serif" font-size="16">read-after-write</text>
+<text x="85" y="645" fill="#334155" font-family="sans-serif" font-size="16">monotonic reads</text>
+<text x="85" y="675" fill="#334155" font-family="sans-serif" font-size="16">consistent prefix reads</text>
+<text x="85" y="730" fill="#075985" font-family="sans-serif" font-size="16">Monitor replication position / lag</text>
+
+<rect x="500" y="285" width="400" height="500" rx="18" fill="#f3e8ff" stroke="#7e22ce" stroke-width="2"/>
+<text x="530" y="330" fill="#6b21a8" font-family="sans-serif" font-size="26" font-weight="700">5.3 Multi-leader</text>
+<text x="530" y="370" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Use cases</text>
+<text x="530" y="400" fill="#334155" font-family="sans-serif" font-size="16">multiple datacenters</text>
+<text x="530" y="430" fill="#334155" font-family="sans-serif" font-size="16">offline clients</text>
+<text x="530" y="460" fill="#334155" font-family="sans-serif" font-size="16">collaborative editing</text>
+<text x="530" y="505" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Cost</text>
+<text x="530" y="535" fill="#334155" font-family="sans-serif" font-size="16">concurrent writes</text>
+<text x="530" y="565" fill="#334155" font-family="sans-serif" font-size="16">conflict resolution</text>
+<text x="530" y="595" fill="#334155" font-family="sans-serif" font-size="16">causal ordering problems</text>
+<text x="530" y="625" fill="#334155" font-family="sans-serif" font-size="16">topology failure modes</text>
+<text x="530" y="680" fill="#6b21a8" font-family="sans-serif" font-size="16">Avoid unless benefits justify complexity</text>
+
+<rect x="945" y="285" width="400" height="500" rx="18" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="975" y="330" fill="#166534" font-family="sans-serif" font-size="26" font-weight="700">5.4 Leaderless</text>
+<text x="975" y="370" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Quorum</text>
+<text x="975" y="400" fill="#334155" font-family="sans-serif" font-size="16">n replicas · wait for w writes · r reads</text>
+<text x="975" y="430" fill="#334155" font-family="sans-serif" font-size="16">w + r &gt; n → intersecting sets</text>
+<text x="975" y="475" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Repair</text>
+<text x="975" y="505" fill="#334155" font-family="sans-serif" font-size="16">read repair · anti-entropy</text>
+<text x="975" y="535" fill="#334155" font-family="sans-serif" font-size="16">sloppy quorum · hinted handoff</text>
+<text x="975" y="580" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Conflicts</text>
+<text x="975" y="610" fill="#334155" font-family="sans-serif" font-size="16">LWW converges but may lose writes</text>
+<text x="975" y="640" fill="#334155" font-family="sans-serif" font-size="16">siblings + merge + tombstones</text>
+<text x="975" y="670" fill="#334155" font-family="sans-serif" font-size="16">version vectors track causality</text>
+<text x="975" y="730" fill="#166534" font-family="sans-serif" font-size="16">Quorum is not an absolute freshness guarantee</text>
+
+<rect x="55" y="825" width="1290" height="210" rx="18" fill="#0f172a"/>
+<text x="85" y="870" fill="#f8fafc" font-family="sans-serif" font-size="23" font-weight="700">Acceptance checklist</text>
+<text x="85" y="910" fill="#cbd5e1" font-family="sans-serif" font-size="18">1. Replication lag is measurable and within the application’s stale-read tolerance.</text>
+<text x="85" y="945" fill="#cbd5e1" font-family="sans-serif" font-size="18">2. Failover leaves exactly one active leader and does not silently violate durability assumptions.</text>
+<text x="85" y="980" fill="#cbd5e1" font-family="sans-serif" font-size="18">3. User-visible read guarantees are explicitly tested.</text>
+<text x="85" y="1015" fill="#cbd5e1" font-family="sans-serif" font-size="18">4. Concurrent updates have a deliberate merge/loss policy.</text>
+
+<text x="265" y="1090" fill="#0f172a" font-family="sans-serif" font-size="22" font-weight="700">Choose replication by failure semantics, not by topology name alone.</text>
+</svg>
