@@ -27,7 +27,10 @@ jobs:
               f=d/name
               assert f.is_file() and f.stat().st_size>500,name
               s=f.read_text(encoding="utf-8")
-              assert "p0102:c01" in s and "p0155:c01" in s,name
+              if name == "summary.md":
+                  assert "p0149:c01" in s and "p0150:c01" in s,name
+              else:
+                  assert "p0102:c01" in s and "p0155:c01" in s,name
               if name.endswith(".svg"):
                   root=ET.parse(f).getroot()
                   assert root.tag.endswith("svg")
