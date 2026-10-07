@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1260" role="img" aria-labelledby="title desc">
+<title id="title">Глава 1 — Подробная карта введения в архитектуру компьютера</title>
+<desc id="desc">Detailed source-grounded map of levels, execution models, architecture versus implementation, history, computer classes, ISA examples and measurement units.</desc>
+<rect width="1800" height="1260" rx="18" fill="#f4f6f8"/>
+<rect width="1800" height="132" rx="18" fill="#1e293b"/>
+<text x="50" y="58" font-family="DejaVu Sans,Arial,sans-serif" font-size="35" font-weight="700" fill="#ffffff">ГЛАВА 1 · АРХИТЕКТУРА КАК СИСТЕМА УРОВНЕЙ</text>
+<text x="50" y="101" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#dbe5ef">abstraction • translation / interpretation • evolution • economics • computer spectrum</text>
+
+<rect x="42" y="160" width="550" height="240" rx="16" fill="#ffffff" stroke="#365f91" stroke-width="2"/>
+<text x="67" y="208" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#365f91">01 · LEVEL STACK</text>
+<text x="67" y="255" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">High-level languages</text>
+<text x="67" y="286" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">Assembly → OS level → ISA</text>
+<text x="67" y="317" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">Microarchitecture → digital logic</text>
+<text x="67" y="348" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">Physical devices below studied logic</text>
+
+<rect x="625" y="160" width="550" height="240" rx="16" fill="#ffffff" stroke="#2d7d63" stroke-width="2"/>
+<text x="650" y="208" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#2d7d63">02 · LANGUAGE ↔ MACHINE</text>
+<text x="650" y="255" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">Each language defines a virtual machine</text>
+<text x="650" y="286" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">Translation: complete lower-level program</text>
+<text x="650" y="317" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">Interpretation: execute command-by-command</text>
+<text x="650" y="348" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">Upper-level user can ignore lower machinery</text>
+
+<rect x="1208" y="160" width="550" height="240" rx="16" fill="#ffffff" stroke="#7656a5" stroke-width="2"/>
+<text x="1233" y="208" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#7656a5">03 · ARCHITECTURE</text>
+<text x="1233" y="255" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">Visible types + operations + properties</text>
+<text x="1233" y="286" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">Implementation lives below the interface</text>
+<text x="1233" y="317" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">OS level is explicitly hybrid</text>
+<text x="1233" y="348" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">Hardware/software boundary is movable</text>
+
+<rect x="42" y="430" width="550" height="240" rx="16" fill="#ffffff" stroke="#b15d45" stroke-width="2"/>
+<text x="67" y="478" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#b15d45">04 · HISTORY</text>
+<text x="67" y="525" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">mechanical → tubes → transistors</text>
+<text x="67" y="556" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">→ integrated circuits → VLSI</text>
+<text x="67" y="587" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">→ portable / embedded / invisible systems</text>
+<text x="67" y="618" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">Stored program becomes foundational model</text>
+
+<rect x="625" y="430" width="550" height="240" rx="16" fill="#ffffff" stroke="#365f91" stroke-width="2"/>
+<text x="650" y="478" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#365f91">05 · IDEAS THAT ACCUMULATE</text>
+<text x="650" y="525" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">microprogramming • operating systems</text>
+<text x="650" y="556" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">compatible families • common buses</text>
+<text x="650" y="587" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">RISC • superscalar • FPGA</text>
+<text x="650" y="618" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">multicore shifts burden toward parallel SW</text>
+
+<rect x="1208" y="430" width="550" height="240" rx="16" fill="#ffffff" stroke="#2d7d63" stroke-width="2"/>
+<text x="1233" y="478" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#2d7d63">06 · ECONOMICS / PHYSICS</text>
+<text x="1233" y="525" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">Moore: empirical technology trend</text>
+<text x="1233" y="556" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">better + cheaper → new markets → competition</text>
+<text x="1233" y="587" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">power / heat limit frequency growth</text>
+<text x="1233" y="618" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">performance also depends on parallelism / I/O</text>
+
+<rect x="42" y="700" width="550" height="240" rx="16" fill="#ffffff" stroke="#7656a5" stroke-width="2"/>
+<text x="67" y="748" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#7656a5">07 · COMPUTER SPECTRUM</text>
+<text x="67" y="795" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">RFID / disposable → microcontroller</text>
+<text x="67" y="826" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">→ mobile/game → PC → server</text>
+<text x="67" y="857" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">→ cluster/data center → mainframe</text>
+<text x="67" y="888" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">Purpose and constraints define architecture</text>
+
+<rect x="625" y="700" width="550" height="240" rx="16" fill="#ffffff" stroke="#b15d45" stroke-width="2"/>
+<text x="650" y="748" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#b15d45">08 · CENTRALIZATION CYCLE</text>
+<text x="650" y="795" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">mainframe + terminal</text>
+<text x="650" y="826" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">→ personal/local computing</text>
+<text x="650" y="857" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">→ clusters / cloud / data centers</text>
+<text x="650" y="888" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">Architecture revisits old trade-offs</text>
+
+<rect x="1208" y="700" width="550" height="240" rx="16" fill="#ffffff" stroke="#365f91" stroke-width="2"/>
+<text x="1233" y="748" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#365f91">09 · COMPARATIVE ISA</text>
+<text x="1233" y="795" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">x86 → personal computers / servers</text>
+<text x="1233" y="826" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">ARM → mobile systems</text>
+<text x="1233" y="857" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">AVR → embedded microcontrollers</text>
+<text x="1233" y="888" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">Use contrast to expose design choices</text>
+
+<rect x="42" y="970" width="838" height="205" rx="16" fill="#ffffff" stroke="#2d7d63" stroke-width="2"/>
+<text x="67" y="1018" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#2d7d63">10 · UNITS</text>
+<text x="67" y="1065" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">Memory capacity: chapter uses 2¹⁰ / 2²⁰ / 2³⁰ / 2⁴⁰</text>
+<text x="67" y="1098" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">Bit-rate: 10³ / 10⁶ / 10⁹ / 10¹²</text>
+<text x="67" y="1131" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">Table 1.6 extraction has inconsistent rows → source-findings.md</text>
+
+<rect x="920" y="970" width="838" height="205" rx="16" fill="#e8eef5" stroke="#9aa9ba" stroke-width="2"/>
+<text x="945" y="1018" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#1e293b">ANALYSIS RULE</text>
+<text x="945" y="1065" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">1. Identify level and visible interface</text>
+<text x="945" y="1098" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">2. Identify lower implementation / execution path</text>
+<text x="945" y="1131" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#243447">3. Evaluate cost • speed • power • reliability • compatibility</text>
+</svg>
