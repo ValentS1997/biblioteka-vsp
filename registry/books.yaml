@@ -25,6 +25,7 @@ books:
     direction: "Kubernetes / Containers"
   - number: 3
     inventory_number: "0003"
+    knowledge_id: "computer-networks-olifer-7e-ru-2026"
     title: "Компьютерные сети. Принципы, технологии, протоколы. 7-е издание"
     authors_raw: "Виктор Григорьевич Олифер; Наталья Алексеевна Олифер"
     translators_editors_raw: "оригинал на русском"
@@ -341,8 +342,8 @@ verification_sources:
 electronic_holdings:
   source: "user-provided local file inventory + uploaded file confirmation"
   observed_date: "2026-10-07"
-  file_count: 21
-  matched_unambiguous: 20
+  file_count: 22
+  matched_unambiguous: 21
   needs_confirmation: 0
   unregistered: 1
   files:
@@ -404,6 +405,11 @@ electronic_holdings:
       format: "epub"
       match_status: "matched"
       inventory_numbers: ["0023"]
+    - filename: "Компьютерные_сети_Принципы,_технологии,_протоколы_7_е_издание_Наталья.pdf"
+      format: "pdf"
+      match_status: "matched"
+      inventory_numbers: ["0003"]
+      knowledge_id: "computer-networks-olifer-7e-ru-2026"
     - filename: "Компьютерные сети. Таненбаум, Фимстер, Уэзерполл.pdf"
       format: "pdf"
       match_status: "matched"

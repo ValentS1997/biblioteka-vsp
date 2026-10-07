@@ -1,6 +1,6 @@
 schema: biblioteka-vsp/books/v1
 protocol: biblioteka-vsp/v1
-updated: 2026-10-06
+updated: 2026-10-07
 
 books:
   - id: computer-networks-6e-ru-2023
@@ -378,3 +378,23 @@ books:
       reading_progress: books/how-linux-works-brian-ward-3e-ru-2022/reading/progress.yaml
       notes: books/how-linux-works-brian-ward-3e-ru-2022/notes/
       diagrams: books/how-linux-works-brian-ward-3e-ru-2022/diagrams/
+
+  - id: computer-networks-olifer-7e-ru-2026
+    title: "Компьютерные сети. Принципы, технологии, протоколы"
+    authors:
+      - "Виктор Олифер"
+      - "Наталья Олифер"
+    language: ru
+    edition: 7
+    publication_year: 2026
+    isbn: "978-5-4461-4566-9"
+    paths:
+      metadata: books/computer-networks-olifer-7e-ru-2026/metadata.yaml
+      source: books/computer-networks-olifer-7e-ru-2026/source/book.pdf
+      rag_manifest: books/computer-networks-olifer-7e-ru-2026/rag/manifest.yaml
+      rag_chunks: books/computer-networks-olifer-7e-ru-2026/rag/chunks/
+      rag_chunk_index: books/computer-networks-olifer-7e-ru-2026/rag/chunk-index.jsonl
+      rag_search_index: books/computer-networks-olifer-7e-ru-2026/rag/search-index/
+      reading_progress: books/computer-networks-olifer-7e-ru-2026/reading/progress.yaml
+      notes: books/computer-networks-olifer-7e-ru-2026/notes/
+      diagrams: books/computer-networks-olifer-7e-ru-2026/diagrams/
