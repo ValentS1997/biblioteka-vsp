@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Глава 3 — Цифровой логический уровень</title>
+<desc id="desc">Compact RAG-grounded overview of gates, state, memory, buses, FPGA, PCIe and address decoding.</desc>
+<rect width="1600" height="900" rx="18" fill="#f4f6f8"/>
+<rect width="1600" height="126" rx="18" fill="#1e293b"/>
+<text x="48" y="55" font-family="DejaVu Sans,Arial,sans-serif" font-size="34" font-weight="700" fill="#ffffff">ГЛАВА 3 · ЦИФРОВОЙ ЛОГИЧЕСКИЙ УРОВЕНЬ</text>
+<text x="48" y="96" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#dbe5ef">Boolean logic • state • memory • buses • interfaces</text>
+
+<rect x="45" y="155" width="485" height="250" rx="16" fill="#ffffff" stroke="#365f91" stroke-width="2"/>
+<text x="70" y="205" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="700" fill="#365f91">01 · LOGIC</text>
+<text x="70" y="254" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">transistor → gate → Boolean function</text>
+<text x="70" y="289" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">NAND / NOR are functionally complete</text>
+<text x="70" y="324" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">mux • decoder • comparator • adder</text>
+<text x="70" y="359" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">equivalence enables simpler circuits</text>
+
+<rect x="557" y="155" width="485" height="250" rx="16" fill="#ffffff" stroke="#2d7d63" stroke-width="2"/>
+<text x="582" y="205" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="700" fill="#2d7d63">02 · STATE / MEMORY</text>
+<text x="582" y="254" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">latch = level-sensitive</text>
+<text x="582" y="289" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">flip-flop = edge-sensitive</text>
+<text x="582" y="324" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">registers combine stored bits</text>
+<text x="582" y="359" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">SRAM ↔ speed · DRAM ↔ density</text>
+
+<rect x="1069" y="155" width="485" height="250" rx="16" fill="#ffffff" stroke="#7656a5" stroke-width="2"/>
+<text x="1094" y="205" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="700" fill="#7656a5">03 · TIMING</text>
+<text x="1094" y="254" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">propagation delay matters</text>
+<text x="1094" y="289" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">clock defines sampling windows</text>
+<text x="1094" y="324" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">sync bus → timing contract / WAIT</text>
+<text x="1094" y="359" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">async bus → MSYN / SSYN handshake</text>
+
+<rect x="45" y="440" width="485" height="250" rx="16" fill="#ffffff" stroke="#b15d45" stroke-width="2"/>
+<text x="70" y="490" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="700" fill="#b15d45">04 · SHARED BUS</text>
+<text x="70" y="539" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">address • data • control</text>
+<text x="70" y="574" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">multiple masters → arbitration</text>
+<text x="70" y="609" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">block transfer amortizes setup</text>
+<text x="70" y="644" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">ownership + timing prevent contention</text>
+
+<rect x="557" y="440" width="485" height="250" rx="16" fill="#ffffff" stroke="#365f91" stroke-width="2"/>
+<text x="582" y="490" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="700" fill="#365f91">05 · INTERFACES</text>
+<text x="582" y="539" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">CS • RD • OE select / control</text>
+<text x="582" y="574" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">memory-mapped I/O</text>
+<text x="582" y="609" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">full decode → unique range</text>
+<text x="582" y="644" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">partial decode → aliases</text>
+
+<rect x="1069" y="440" width="485" height="250" rx="16" fill="#ffffff" stroke="#2d7d63" stroke-width="2"/>
+<text x="1094" y="490" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="700" fill="#2d7d63">06 · RECONFIG / FABRIC</text>
+<text x="1094" y="539" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">FPGA = LUT + programmable links</text>
+<text x="1094" y="574" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">PCI → shared parallel bus</text>
+<text x="1094" y="609" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">PCIe → switched packet links</text>
+<text x="1094" y="644" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">USB → host/root-hub frames</text>
+
+<rect x="45" y="728" width="1509" height="116" rx="16" fill="#e8eef5" stroke="#9aa9ba"/>
+<text x="70" y="772" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="700" fill="#1e293b">CORE RULE</text>
+<text x="70" y="810" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#243447">Correct function is not enough: signals must also be valid at the right time, on the right wires, for the right selected device.</text>
+</svg>
