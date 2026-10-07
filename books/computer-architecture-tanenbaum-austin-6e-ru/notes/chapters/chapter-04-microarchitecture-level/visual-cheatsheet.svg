@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 820">
+<rect width="1400" height="820" fill="#f4f6f8"/>
+<rect width="1400" height="110" fill="#1e293b"/>
+<text x="45" y="50" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="white">ГЛАВА 4 · УРОВЕНЬ МИКРОАРХИТЕКТУРЫ</text>
+<text x="45" y="86" font-family="Arial,sans-serif" font-size="19" fill="#dbe5ef">microcode • datapath • pipeline • cache • prediction • OoO</text>
+<g font-family="Arial,sans-serif" fill="#243447">
+<rect x="40" y="145" width="410" height="230" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="65" y="190" font-size="22" font-weight="700" fill="#365f91">MIC-1</text>
+<text x="65" y="235" font-size="18">register → B bus → ALU/shifter</text>
+<text x="65" y="270" font-size="18">C bus → register write-back</text>
+<text x="65" y="305" font-size="18">microinstruction controls one cycle</text>
+<text x="65" y="340" font-size="18">MBR/JAM select next microstep</text>
+
+<rect x="495" y="145" width="410" height="230" rx="14" fill="white" stroke="#2d7d63" stroke-width="2"/>
+<text x="520" y="190" font-size="22" font-weight="700" fill="#2d7d63">IJVM / IFU</text>
+<text x="520" y="235" font-size="18">stack machine + byte opcodes</text>
+<text x="520" y="270" font-size="18">Mic-2 adds instruction fetch unit</text>
+<text x="520" y="305" font-size="18">MBR1 / MBR2 prefetch operands</text>
+<text x="520" y="340" font-size="18">shorter common instruction paths</text>
+
+<rect x="950" y="145" width="410" height="230" rx="14" fill="white" stroke="#7656a5" stroke-width="2"/>
+<text x="975" y="190" font-size="22" font-weight="700" fill="#7656a5">PIPELINE</text>
+<text x="975" y="235" font-size="18">Mic-3 overlaps datapath stages</text>
+<text x="975" y="270" font-size="18">Mic-4 deepens decode / queue</text>
+<text x="975" y="305" font-size="18">shorter stages → higher clock</text>
+<text x="975" y="340" font-size="18">hazards / branches cause stalls</text>
+
+<rect x="40" y="415" width="410" height="230" rx="14" fill="white" stroke="#b15d45" stroke-width="2"/>
+<text x="65" y="460" font-size="22" font-weight="700" fill="#b15d45">CACHE</text>
+<text x="65" y="505" font-size="18">split L1-I / L1-D</text>
+<text x="65" y="540" font-size="18">L2 / L3 trade latency for capacity</text>
+<text x="65" y="575" font-size="18">locality drives hit ratio</text>
+<text x="65" y="610" font-size="18">write-through / write-back</text>
+
+<rect x="495" y="415" width="410" height="230" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="520" y="460" font-size="22" font-weight="700" fill="#365f91">PREDICTION / OoO</text>
+<text x="520" y="505" font-size="18">branch predictor protects pipeline</text>
+<text x="520" y="540" font-size="18">RAW = true dependency</text>
+<text x="520" y="575" font-size="18">WAR / WAW → register renaming</text>
+<text x="520" y="610" font-size="18">issue independent work early</text>
+
+<rect x="950" y="415" width="410" height="230" rx="14" fill="white" stroke="#2d7d63" stroke-width="2"/>
+<text x="975" y="460" font-size="22" font-weight="700" fill="#2d7d63">SPECULATION</text>
+<text x="975" y="505" font-size="18">execute before path is certain</text>
+<text x="975" y="540" font-size="18">delay irreversible effects</text>
+<text x="975" y="575" font-size="18">wrong path → discard / recover</text>
+<text x="975" y="610" font-size="18">commit preserves architectural state</text>
+
+<rect x="40" y="685" width="1320" height="90" rx="14" fill="#e8eef5" stroke="#9aa9ba"/>
+<text x="65" y="725" font-size="19" font-weight="700">CORE RULE</text>
+<text x="65" y="757" font-size="18">Same ISA semantics can be implemented by very different datapaths, control logic and performance trade-offs.</text>
+</g>
+</svg>
