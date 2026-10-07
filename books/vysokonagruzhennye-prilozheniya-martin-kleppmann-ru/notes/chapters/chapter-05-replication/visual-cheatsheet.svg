@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780">
+<rect width="1200" height="780" fill="#0f172a"/>
+<text x="55" y="66" fill="#f8fafc" font-family="sans-serif" font-size="34" font-weight="700">Глава 5 — Репликация</text>
+<text x="55" y="104" fill="#cbd5e1" font-family="sans-serif" font-size="18">RAG-only · PDF 185–237 · single-leader ↔ multi-leader ↔ leaderless</text>
+
+<rect x="55" y="145" width="335" height="390" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+<text x="85" y="195" fill="#38bdf8" font-family="sans-serif" font-size="26" font-weight="700">Single-leader</text>
+<text x="85" y="235" fill="#f8fafc" font-family="sans-serif" font-size="18">writes → leader</text>
+<text x="85" y="268" fill="#cbd5e1" font-family="sans-serif" font-size="17">followers replay replication log</text>
+<text x="85" y="305" fill="#cbd5e1" font-family="sans-serif" font-size="17">sync ↔ async</text>
+<text x="85" y="342" fill="#cbd5e1" font-family="sans-serif" font-size="17">lag → stale reads</text>
+<text x="85" y="385" fill="#f8fafc" font-family="sans-serif" font-size="18">Read guarantees:</text>
+<text x="85" y="417" fill="#cbd5e1" font-family="sans-serif" font-size="16">read-after-write</text>
+<text x="85" y="445" fill="#cbd5e1" font-family="sans-serif" font-size="16">monotonic reads</text>
+<text x="85" y="473" fill="#cbd5e1" font-family="sans-serif" font-size="16">consistent prefix</text>
+
+<rect x="432" y="145" width="335" height="390" rx="18" fill="#1e293b" stroke="#a78bfa" stroke-width="3"/>
+<text x="462" y="195" fill="#a78bfa" font-family="sans-serif" font-size="26" font-weight="700">Multi-leader</text>
+<text x="462" y="235" fill="#f8fafc" font-family="sans-serif" font-size="18">multiple write leaders</text>
+<text x="462" y="280" fill="#cbd5e1" font-family="sans-serif" font-size="17">multi-DC</text>
+<text x="462" y="314" fill="#cbd5e1" font-family="sans-serif" font-size="17">offline clients</text>
+<text x="462" y="348" fill="#cbd5e1" font-family="sans-serif" font-size="17">concurrent writes</text>
+<text x="462" y="392" fill="#f8fafc" font-family="sans-serif" font-size="18">Need:</text>
+<text x="462" y="424" fill="#cbd5e1" font-family="sans-serif" font-size="16">conflict detection</text>
+<text x="462" y="452" fill="#cbd5e1" font-family="sans-serif" font-size="16">conflict resolution</text>
+<text x="462" y="480" fill="#cbd5e1" font-family="sans-serif" font-size="16">causal ordering awareness</text>
+
+<rect x="809" y="145" width="335" height="390" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="3"/>
+<text x="839" y="195" fill="#34d399" font-family="sans-serif" font-size="26" font-weight="700">Leaderless</text>
+<text x="839" y="235" fill="#f8fafc" font-family="sans-serif" font-size="18">write/read multiple replicas</text>
+<text x="839" y="280" fill="#cbd5e1" font-family="sans-serif" font-size="17">n · w · r</text>
+<text x="839" y="314" fill="#cbd5e1" font-family="sans-serif" font-size="17">w + r &gt; n</text>
+<text x="839" y="348" fill="#cbd5e1" font-family="sans-serif" font-size="17">read repair · anti-entropy</text>
+<text x="839" y="382" fill="#cbd5e1" font-family="sans-serif" font-size="17">sloppy quorum · hinted handoff</text>
+<text x="839" y="425" fill="#f8fafc" font-family="sans-serif" font-size="18">Conflicts:</text>
+<text x="839" y="457" fill="#cbd5e1" font-family="sans-serif" font-size="16">LWW may lose writes</text>
+<text x="839" y="485" fill="#cbd5e1" font-family="sans-serif" font-size="16">version vectors / siblings</text>
+
+<rect x="55" y="585" width="1089" height="125" rx="18" fill="#111827" stroke="#64748b" stroke-width="2"/>
+<text x="85" y="630" fill="#f8fafc" font-family="sans-serif" font-size="23" font-weight="700">Operational rule</text>
+<text x="85" y="668" fill="#cbd5e1" font-family="sans-serif" font-size="19">Topology alone is not enough: define write ack, stale-read tolerance, failover and conflict semantics.</text>
+<text x="245" y="752" fill="#f8fafc" font-family="sans-serif" font-size="21" font-weight="700">topology → lag/failure model → guarantee → test → keep/rollback</text>
+</svg>
