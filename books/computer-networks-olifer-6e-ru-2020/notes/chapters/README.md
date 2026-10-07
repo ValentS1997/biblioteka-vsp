@@ -11,3 +11,5 @@ Chapter artifacts are created only after book-level chapter-analysis readiness i
 3. [Глава 3. Коммутация каналов и пакетов](chapter-03-circuit-and-packet-switching/) — `RAG_GROUNDED`; PDF 75–102, без blank source units; формулы задержек имеют extraction limitations.
 
 4. [Глава 4. Стандартизация и классификация сетей](chapter-04-standardization-and-classification/) — `RAG_GROUNDED`; PDF 103–133, без blank source units.
+
+5. [Глава 5. Сетевые характеристики и качество обслуживания](chapter-05-network-characteristics-and-qos/) — `RAG_GROUNDED`; PDF 134–180, без blank source units; математическая нотация имеет extraction limitations.
