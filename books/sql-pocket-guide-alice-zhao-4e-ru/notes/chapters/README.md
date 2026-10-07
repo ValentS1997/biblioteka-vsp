@@ -10,4 +10,6 @@ Book ID: `sql-pocket-guide-alice-zhao-4e-ru`.
 
 | 02 | [Где можно писать SQL-код](chapter-02-gde-mozhno-pisat-sql-kod/README.md) | PDF 33–54; `p0033:c01`–`p0054:c01` | [cheatsheet](chapter-02-gde-mozhno-pisat-sql-kod/cheatsheet.md) · [commands](chapter-02-gde-mozhno-pisat-sql-kod/commands.md) · [diagram](chapter-02-gde-mozhno-pisat-sql-kod/diagram.md) · [compact SVG](chapter-02-gde-mozhno-pisat-sql-kod/visual-cheatsheet.svg) · [detailed SVG](chapter-02-gde-mozhno-pisat-sql-kod/visual-cheatsheet-detailed.svg) · [source findings](chapter-02-gde-mozhno-pisat-sql-kod/source-findings.md) |
 
+| 03 | [Язык SQL](chapter-03-yazyk-sql/README.md) | PDF 55–69; `p0055:c01`–`p0069:c01` | [cheatsheet](chapter-03-yazyk-sql/cheatsheet.md) · [commands](chapter-03-yazyk-sql/commands.md) · [diagram](chapter-03-yazyk-sql/diagram.md) · [compact SVG](chapter-03-yazyk-sql/visual-cheatsheet.svg) · [detailed SVG](chapter-03-yazyk-sql/visual-cheatsheet-detailed.svg) · [summary](chapter-03-yazyk-sql/summary.md) · [source findings](chapter-03-yazyk-sql/source-findings.md) |
+
 Reading status сохраняется независимо от создания chapter artifacts.
