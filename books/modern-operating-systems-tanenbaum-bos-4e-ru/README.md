@@ -64,3 +64,4 @@ Canonical readiness command:
 
 - [Глава 1 — Введение](notes/chapters/chapter-01-introduction/README.md) — RAG-grounded, PDF source locators 22–110.
 - [Глава 2 — Процессы и потоки](notes/chapters/chapter-02-processes-and-threads/README.md) — RAG-grounded, PDF source locators 111–213.
+- [Глава 3 — Управление памятью](notes/chapters/chapter-03-memory-management/README.md) — RAG-grounded, PDF source locators 214–300.

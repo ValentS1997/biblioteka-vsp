@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1450" height="1100" viewBox="0 0 1450 1100">
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#334155"/>
+    </marker>
+    <style>
+      .title{font:700 34px sans-serif;fill:#0f172a}
+      .h{font:700 18px sans-serif;fill:#0f172a}
+      .t{font:14px sans-serif;fill:#1e293b}
+      .s{font:12px sans-serif;fill:#475569}
+      .b{fill:#f8fafc;stroke:#475569;stroke-width:1.8;rx:13}
+      .blue{fill:#dbeafe;stroke:#1d4ed8;stroke-width:1.8;rx:13}
+      .amber{fill:#fef3c7;stroke:#a16207;stroke-width:1.8;rx:13}
+      .green{fill:#dcfce7;stroke:#15803d;stroke-width:1.8;rx:13}
+      .red{fill:#fee2e2;stroke:#b91c1c;stroke-width:1.8;rx:13}
+      .ln{stroke:#475569;stroke-width:1.7;marker-end:url(#a)}
+    </style>
+  </defs>
+  <rect width="1450" height="1100" fill="#fff"/>
+  <text x="45" y="55" class="title">Глава 3 — подробная карта управления памятью</text>
+  <text x="45" y="82" class="s">Источник: RAG · PDF 214–300 · boundary verified</text>
+
+  <rect x="535" y="115" width="380" height="90" class="blue"/>
+  <text x="725" y="150" text-anchor="middle" class="h">Virtual address</text>
+  <text x="725" y="178" text-anchor="middle" class="t">virtual page number + page offset</text>
+
+  <rect x="70" y="270" width="360" height="175" class="b"/>
+  <text x="250" y="305" text-anchor="middle" class="h">MMU + page table</text>
+  <text x="95" y="340" class="t">PTE → frame number · present · protection</text>
+  <text x="95" y="367" class="t">R = referenced · M = modified</text>
+  <text x="95" y="394" class="t">multilevel tables save sparse-table memory</text>
+  <text x="95" y="421" class="s">inverted table: one entry per physical frame</text>
+
+  <rect x="545" y="270" width="360" height="175" class="green"/>
+  <text x="725" y="305" text-anchor="middle" class="h">TLB</text>
+  <text x="570" y="340" class="t">associative cache of recent translations</text>
+  <text x="570" y="367" class="t">hit → frame directly</text>
+  <text x="570" y="394" class="t">miss → page-table/software lookup</text>
+  <text x="570" y="421" class="s">protection is checked on the translation path</text>
+
+  <rect x="1020" y="270" width="360" height="175" class="amber"/>
+  <text x="1200" y="305" text-anchor="middle" class="h">Fault classification</text>
+  <text x="1045" y="340" class="t">minor: page resident, mapping absent</text>
+  <text x="1045" y="367" class="t">major: backing-store read required</text>
+  <text x="1045" y="394" class="t">invalid address / protection → separate error</text>
+  <text x="1045" y="421" class="s">faulting instruction must be restartable</text>
+
+  <line x1="620" y1="205" x2="350" y2="270" class="ln"/>
+  <line x1="725" y1="205" x2="725" y2="270" class="ln"/>
+  <line x1="830" y1="205" x2="1100" y2="270" class="ln"/>
+
+  <rect x="50" y="525" width="260" height="200" class="b"/>
+  <text x="180" y="560" text-anchor="middle" class="h">Free memory</text>
+  <text x="75" y="595" class="t">bitmap</text>
+  <text x="75" y="622" class="t">linked free/used segments</text>
+  <text x="75" y="649" class="t">first / next / best / worst fit</text>
+  <text x="75" y="676" class="s">variable-size allocation can fragment</text>
+
+  <rect x="340" y="525" width="300" height="200" class="blue"/>
+  <text x="490" y="560" text-anchor="middle" class="h">Replacement algorithms</text>
+  <text x="365" y="595" class="t">Optimal · NRU · FIFO · second chance</text>
+  <text x="365" y="622" class="t">Clock · LRU · NFU · aging</text>
+  <text x="365" y="649" class="t">working set · WSClock</text>
+  <text x="365" y="676" class="s">practical emphasis: aging + WSClock</text>
+
+  <rect x="670" y="525" width="300" height="200" class="red"/>
+  <text x="820" y="560" text-anchor="middle" class="h">Thrashing</text>
+  <text x="695" y="595" class="t">working set does not fit resident frames</text>
+  <text x="695" y="622" class="t">faults dominate useful execution</text>
+  <text x="695" y="649" class="t">PFF / load control detect pressure</text>
+  <text x="695" y="676" class="s">swap out processes to reduce demand</text>
+
+  <rect x="1000" y="525" width="400" height="200" class="green"/>
+  <text x="1200" y="560" text-anchor="middle" class="h">Sharing / I/O safety</text>
+  <text x="1025" y="595" class="t">copy-on-write after fork</text>
+  <text x="1025" y="622" class="t">shared libraries → position-independent code</text>
+  <text x="1025" y="649" class="t">mapped files → file-backed memory + IPC</text>
+  <text x="1025" y="676" class="t">pin DMA/I/O pages so replacement cannot reuse frame</text>
+
+  <line x1="310" y1="625" x2="340" y2="625" class="ln"/>
+  <line x1="640" y1="625" x2="670" y2="625" class="ln"/>
+  <line x1="970" y1="625" x2="1000" y2="625" class="ln"/>
+
+  <rect x="80" y="825" width="360" height="175" class="b"/>
+  <text x="260" y="860" text-anchor="middle" class="h">Swapping / backing store</text>
+  <text x="105" y="895" class="t">whole processes may move RAM ↔ disk</text>
+  <text x="105" y="922" class="t">dirty anonymous pages need backing storage</text>
+  <text x="105" y="949" class="s">clean program text can be reread from executable</text>
+
+  <rect x="545" y="825" width="360" height="175" class="blue"/>
+  <text x="725" y="860" text-anchor="middle" class="h">Policy vs mechanism</text>
+  <text x="570" y="895" class="t">MMU-dependent low-level mechanism</text>
+  <text x="570" y="922" class="t">kernel page-fault handler</text>
+  <text x="570" y="949" class="t">external user-space pager may hold policy</text>
+
+  <rect x="1010" y="825" width="360" height="175" class="amber"/>
+  <text x="1190" y="860" text-anchor="middle" class="h">Segmentation</text>
+  <text x="1035" y="895" class="t">multiple logical, variable-size address spaces</text>
+  <text x="1035" y="922" class="t">sharing + differentiated protection</text>
+  <text x="1035" y="949" class="s">external fragmentation; can combine with paging</text>
+
+  <line x1="490" y1="725" x2="260" y2="825" class="ln"/>
+  <line x1="820" y1="725" x2="725" y2="825" class="ln"/>
+  <line x1="1200" y1="725" x2="1190" y2="825" class="ln"/>
+
+  <text x="45" y="1060" class="s">Operational boundary: invalid/protection ≠ TLB miss ≠ minor fault ≠ major fault ≠ replacement pressure ≠ thrashing.</text>
+</svg>
