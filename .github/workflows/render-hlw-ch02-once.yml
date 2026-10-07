@@ -1,0 +1,50 @@
+name: Render HLW Chapter 2 Visuals Once
+
+on:
+  push:
+    branches:
+      - chapter/how-linux-works-brian-ward-3e-ru-2022-ch02
+    paths:
+      - ".github/workflows/render-hlw-ch02-once.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  render-visuals:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout chapter branch
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Render two SVG summaries
+        run: python scripts/render_hlw_ch02_visuals.py
+      - name: Verify XML and content
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from xml.etree import ElementTree as ET
+          base = Path("books/how-linux-works-brian-ward-3e-ru-2022/notes/chapters/chapter-02-basic-commands-and-directory-hierarchy")
+          for file in ["visual-cheatsheet.svg", "visual-cheatsheet-detailed.svg"]:
+              target = base / file
+              svg = ET.parse(target).getroot()
+              assert svg.tag.endswith("svg")
+              assert target.stat().st_size > 3000
+              texts = " ".join(node.text or "" for node in svg.iter() if node.tag.endswith("text"))
+              assert "sudo" in texts.lower() or "SUDO" in texts
+              print(f"VALID {file}: {target.stat().st_size} bytes")
+          PY
+      - name: Commit generated SVGs only
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          DIR="books/how-linux-works-brian-ward-3e-ru-2022/notes/chapters/chapter-02-basic-commands-and-directory-hierarchy"
+          git add -- "$DIR/visual-cheatsheet.svg" "$DIR/visual-cheatsheet-detailed.svg"
+          test "$(git diff --cached --name-only | wc -l)" -eq 2
+          git commit -m "docs(ch02): add compact and detailed SVG summaries"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
