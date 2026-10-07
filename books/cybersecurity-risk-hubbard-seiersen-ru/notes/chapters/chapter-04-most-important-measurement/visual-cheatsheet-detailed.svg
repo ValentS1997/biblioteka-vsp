@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1250" viewBox="0 0 1600 1250" role="img" aria-labelledby="title desc">
+<title id="title">Глава 4 — детальная визуальная шпаргалка по проверке эффективности методов риска</title>
+<desc id="desc">Аргументация об аналитическом плацебо, объективном сравнении методов, калибровке вероятностей, стабильности, консенсусе, усреднении и декомпозиции.</desc>
+<rect x="0" y="0" width="1600" height="1250" rx="14" fill="#0b192a" stroke="#0b192a" stroke-width="1.8"/>
+<text x="55" y="46" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="bold" fill="#7dccf6">BIBLIOTEKA-VSP / CHAPTER 04 / CYBER RISK</text>
+<text x="55" y="99" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" font-weight="bold" fill="#f9fbfe">Самое важное измерение — эффективность метода</text>
+<text x="55" y="135" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="normal" fill="#bed4e5">Авторская позиция: сопоставимый риск после решений vs альтернатива при тех же ресурсах</text>
+<text x="55" y="190" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="bold" fill="#91d4fc">I · Аналитическое плацебо и требование доказательств</text>
+<rect x="55" y="207" width="713" height="181" rx="14" fill="#172f47" stroke="#eac6aa" stroke-width="1.8"/>
+<rect x="70" y="225" width="6" height="33" rx="14" fill="#eac6aa" stroke="#eac6aa" stroke-width="1.8"/>
+<text x="93" y="250" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="bold" fill="#f8fbff">Уверенность ≠ результат</text>
+<text x="74" y="288" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#cbdeed">«Лучшей практики» и группового консенсуса недостаточно.</text>
+<text x="74" y="318" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#cbdeed">Дополнительная информация может повышать уверенность,</text>
+<text x="74" y="348" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#cbdeed">не повышая реальную точность прогнозов.</text>
+<rect x="791" y="207" width="754" height="181" rx="14" fill="#172f47" stroke="#90d5b5" stroke-width="1.8"/>
+<rect x="806" y="225" width="6" height="33" rx="14" fill="#90d5b5" stroke="#90d5b5" stroke-width="1.8"/>
+<text x="829" y="250" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="bold" fill="#f8fbff">Подтверждать сравнением</text>
+<text x="810" y="288" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#cbdeed">Наблюдаемые исходы и объективная проверка прогнозов.</text>
+<text x="810" y="318" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#cbdeed">Контроль альтернативного метода при схожих ресурсах.</text>
+<text x="810" y="348" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#cbdeed">Проверка отдельных компонентов при редких событиях.</text>
+<text x="55" y="441" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="bold" fill="#91d4fc">II · Компоненты, которые авторы предлагают измерять</text>
+<rect x="55" y="459" width="480" height="183" rx="14" fill="#172f47" stroke="#96c8ff" stroke-width="1.8"/>
+<rect x="70" y="477" width="6" height="33" rx="14" fill="#96c8ff" stroke="#96c8ff" stroke-width="1.8"/>
+<text x="93" y="502" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="bold" fill="#f8fbff">Алгоритм vs эксперт</text>
+<text x="74" y="540" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#cbdeed">Мил, Доус, Тетлок: в приведённых исследованиях</text>
+<text x="74" y="570" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#cbdeed">объективные модели часто точнее интуиции.</text>
+<text x="74" y="600" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#cbdeed">Применимость к среде требует оценки.</text>
+<rect x="559" y="459" width="479" height="183" rx="14" fill="#172f47" stroke="#f5d09c" stroke-width="1.8"/>
+<rect x="574" y="477" width="6" height="33" rx="14" fill="#f5d09c" stroke="#f5d09c" stroke-width="1.8"/>
+<text x="597" y="502" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="bold" fill="#f8fbff">Калибровка вероятностей</text>
+<text x="578" y="540" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#cbdeed">Измерять совпадение уверенности и частоты исходов.</text>
+<text x="578" y="570" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#cbdeed">Пример CFO: 80%-ные интервалы покрыли 33%.</text>
+<text x="578" y="600" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#cbdeed">Не использовать как универсальный норматив.</text>
+<rect x="1062" y="459" width="483" height="183" rx="14" fill="#172f47" stroke="#98dfc5" stroke-width="1.8"/>
+<rect x="1077" y="477" width="6" height="33" rx="14" fill="#98dfc5" stroke="#98dfc5" stroke-width="1.8"/>
+<text x="1100" y="502" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="bold" fill="#f8fbff">Проверять согласованность</text>
+<text x="1081" y="540" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#cbdeed">Стабильность: один эксперт, те же данные.</text>
+<text x="1081" y="570" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#cbdeed">Консенсус: разные эксперты, те же данные.</text>
+<text x="1081" y="600" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#cbdeed">Совпадение ответов ещё не доказывает точность.</text>
+<text x="55" y="697" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="bold" fill="#91d4fc">III · Числа из исследования экспертов по кибербезопасности</text>
+<rect x="55" y="717" width="1490" height="106" rx="14" fill="#224258" stroke="#8ad0f4" stroke-width="1.8"/>
+<text x="81" y="754" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" font-weight="bold" fill="#f7fbff">54 эксперта</text>
+<text x="368" y="754" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" font-weight="bold" fill="#f7fbff">&gt;30 000 оценок</text>
+<text x="747" y="754" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" font-weight="bold" fill="#f7fbff">2428 пар дублей</text>
+<text x="1115" y="754" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" font-weight="bold" fill="#f7fbff">26%: &gt;10 п.п.</text>
+<text x="81" y="792" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="normal" fill="#d6eaf5">2,7% пар: расхождение &gt;50 п.п. · результаты авторских проектов, не показатели вашей организации</text>
+<text x="55" y="879" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="bold" fill="#91d4fc">IV · Как повысить качество суждений</text>
+<rect x="55" y="897" width="480" height="178" rx="14" fill="#172f47" stroke="#98dfc5" stroke-width="1.8"/>
+<rect x="70" y="915" width="6" height="33" rx="14" fill="#98dfc5" stroke="#98dfc5" stroke-width="1.8"/>
+<text x="93" y="940" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="bold" fill="#f8fbff">Обратная связь</text>
+<text x="74" y="978" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#cbdeed">Регулярная, относительно быстрая,</text>
+<text x="74" y="1008" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#cbdeed">однозначная; обучение на реальных исходах.</text>
+<text x="74" y="1038" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#cbdeed">Один стаж не подтверждает навык прогнозов.</text>
+<rect x="559" y="897" width="479" height="178" rx="14" fill="#172f47" stroke="#96c8ff" stroke-width="1.8"/>
+<rect x="574" y="915" width="6" height="33" rx="14" fill="#96c8ff" stroke="#96c8ff" stroke-width="1.8"/>
+<text x="597" y="940" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="bold" fill="#f8fbff">Независимое усреднение</text>
+<text x="578" y="978" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#cbdeed">Индивидуальные прогнозы до обсуждения.</text>
+<text x="578" y="1008" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#cbdeed">Агрегирование может снизить шум.</text>
+<text x="578" y="1038" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#cbdeed">Принудительный консенсус не является целью.</text>
+<rect x="1062" y="897" width="483" height="178" rx="14" fill="#172f47" stroke="#f5d09c" stroke-width="1.8"/>
+<rect x="1077" y="915" width="6" height="33" rx="14" fill="#f5d09c" stroke="#f5d09c" stroke-width="1.8"/>
+<text x="1100" y="940" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="bold" fill="#f8fbff">Декомпозиция</text>
+<text x="1081" y="978" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#cbdeed">Помогает при лучше известных компонентах.</text>
+<text x="1081" y="1008" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#cbdeed">Расчёт выполнять явно, а не в уме.</text>
+<text x="1081" y="1038" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#cbdeed">Неинформативное разложение может навредить.</text>
+<rect x="55" y="1102" width="1490" height="92" rx="14" fill="#2d2a37" stroke="#9a879d" stroke-width="1.8"/>
+<text x="81" y="1136" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="bold" fill="#f6d3c9">SOURCE BOUNDARY</text>
+<text x="81" y="1167" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="normal" fill="#f0dce1">Рис. 4.1–4.2 не воспроизводились; точные оси/точки отсутствуют в текстовом RAG.</text>
+<text x="55" y="1226" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="normal" fill="#95b1c8">RAG e0021:c01–c05 / e0022:c01–c04 / e0023:c01–c11  · EPUB spine 21–23 · Не готовый production-runbook</text>
+</svg>
