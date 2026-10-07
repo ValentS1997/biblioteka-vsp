@@ -49,3 +49,7 @@ Validation status: `READY_WITH_KNOWN_LIMITATIONS`.
 Canonical readiness command:
 
 `python scripts/check_book_readiness.py --book-id computer-architecture-tanenbaum-austin-6e-ru --capability chapter-analysis`
+
+## Chapter artifacts
+
+- [Глава 1 — Введение](notes/chapters/chapter-01-introduction/README.md) — RAG-grounded analysis; PDF pages 20–75.
