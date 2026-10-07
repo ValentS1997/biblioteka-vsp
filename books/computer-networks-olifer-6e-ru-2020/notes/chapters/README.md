@@ -9,3 +9,5 @@ Chapter artifacts are created only after book-level chapter-analysis readiness i
 2. [Глава 2](chapter-02-general-network-principles/) — `RAG_GROUNDED`; PDF 41–74, с зарегистрированным RAG-gap на PDF 47.
 
 3. [Глава 3. Коммутация каналов и пакетов](chapter-03-circuit-and-packet-switching/) — `RAG_GROUNDED`; PDF 75–102, без blank source units; формулы задержек имеют extraction limitations.
+
+4. [Глава 4. Стандартизация и классификация сетей](chapter-04-standardization-and-classification/) — `RAG_GROUNDED`; PDF 103–133, без blank source units.
