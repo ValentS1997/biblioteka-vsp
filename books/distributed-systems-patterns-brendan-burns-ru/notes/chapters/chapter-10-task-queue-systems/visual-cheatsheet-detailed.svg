@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1120" viewBox="0 0 1500 1120" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 10 — Очереди задач: подробная шпаргалка</title>
+  <desc id="desc">Detailed RAG-grounded map of generic task queue, source/worker interfaces, Kubernetes Jobs, dynamic scaling and Multi-Worker.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #111827; }
+      .t { font-size: 32px; font-weight: 700; }
+      .s { font-size: 14px; fill: #4b5563; }
+      .h { font-size: 18px; font-weight: 700; }
+      .b { font-size: 14px; }
+      .blue { fill: #eff6ff; stroke: #1d4ed8; stroke-width: 2; rx: 12; }
+      .green { fill: #ecfdf5; stroke: #047857; stroke-width: 2; rx: 12; }
+      .violet { fill: #f5f3ff; stroke: #6d28d9; stroke-width: 2; rx: 12; }
+      .orange { fill: #fff7ed; stroke: #c2410c; stroke-width: 2; rx: 12; }
+      .box { fill: #f9fafb; stroke: #4b5563; stroke-width: 2; rx: 12; }
+      .arrow { stroke: #374151; stroke-width: 2; fill: none; marker-end: url(#m); }
+    </style>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#374151"/></marker>
+  </defs>
+
+  <text x="50" y="50" class="t">Глава 10 — Системы на основе очередей задач</text>
+  <text x="50" y="78" class="s">RAG p0173:c01–p0188:c01 · PDF 173–188</text>
+
+  <rect x="70" y="120" width="400" height="145" class="blue"/>
+  <text x="100" y="158" class="h">Application-specific source</text>
+  <text x="100" y="190" class="b">discovers items</text>
+  <text x="100" y="220" class="b">exposes versioned local API</text>
+
+  <rect x="550" y="120" width="400" height="145" class="green"/>
+  <text x="580" y="158" class="h">Generic queue manager</text>
+  <text x="580" y="190" class="b">compare source items with Jobs</text>
+  <text x="580" y="220" class="b">create Jobs for pending items</text>
+
+  <rect x="1030" y="120" width="400" height="145" class="violet"/>
+  <text x="1060" y="158" class="h">One-shot worker</text>
+  <text x="1060" y="190" class="b">receives work item via file/interface</text>
+  <text x="1060" y="220" class="b">runs until task completion</text>
+
+  <path d="M470,192 L550,192" class="arrow"/>
+  <path d="M950,192 L1030,192" class="arrow"/>
+
+  <text x="50" y="325" class="h">Queue reconciliation</text>
+
+  <rect x="70" y="355" width="300" height="145" class="box"/>
+  <text x="100" y="392" class="h">1. List source items</text>
+  <text x="100" y="424" class="b">current work inventory</text>
+
+  <rect x="410" y="355" width="300" height="145" class="box"/>
+  <text x="440" y="392" class="h">2. List Jobs</text>
+  <text x="440" y="424" class="b">running/completed state</text>
+
+  <rect x="750" y="355" width="300" height="145" class="box"/>
+  <text x="780" y="392" class="h">3. Diff</text>
+  <text x="780" y="424" class="b">identify unprocessed items</text>
+
+  <rect x="1090" y="355" width="300" height="145" class="green"/>
+  <text x="1120" y="392" class="h">4. Create Job</text>
+  <text x="1120" y="424" class="b">launch worker</text>
+
+  <path d="M370,427 L410,427" class="arrow"/>
+  <path d="M710,427 L750,427" class="arrow"/>
+  <path d="M1050,427 L1090,427" class="arrow"/>
+
+  <text x="50" y="565" class="h">Dynamic scaling</text>
+
+  <rect x="70" y="595" width="620" height="180" class="orange"/>
+  <text x="100" y="633" class="h">Observe two rates</text>
+  <text x="100" y="665" class="b">average inter-arrival interval</text>
+  <text x="100" y="695" class="b">average task processing time</text>
+  <text x="100" y="725" class="b">effective processing ≈ duration / parallelism</text>
+
+  <rect x="810" y="595" width="620" height="180" class="green"/>
+  <text x="840" y="633" class="h">Stability / scaling decision</text>
+  <text x="840" y="665" class="b">effective processing &lt; inter-arrival interval</text>
+  <text x="840" y="695" class="b">otherwise backlog and wait time grow</text>
+  <text x="840" y="725" class="b">scale down with reserve; source gives 90% heuristic</text>
+
+  <text x="50" y="835" class="h">Reusable worker composition</text>
+
+  <rect x="90" y="865" width="360" height="145" class="violet"/>
+  <text x="120" y="903" class="h">Worker facade</text>
+  <text x="120" y="935" class="b">one queue-worker interface</text>
+  <text x="120" y="965" class="b">Multi-Worker as Adapter variant</text>
+
+  <rect x="570" y="865" width="360" height="145" class="blue"/>
+  <text x="600" y="903" class="h">Reusable processors</text>
+  <text x="600" y="935" class="b">worker A · worker B · worker C</text>
+  <text x="600" y="965" class="b">combine specialized behaviors</text>
+
+  <rect x="1050" y="865" width="360" height="145" class="green"/>
+  <text x="1080" y="903" class="h">System effect</text>
+  <text x="1080" y="935" class="b">less duplicated implementation</text>
+  <text x="1080" y="965" class="b">more reusable batch components</text>
+
+  <path d="M450,937 L570,937" class="arrow"/>
+  <path d="M930,937 L1050,937" class="arrow"/>
+
+  <rect x="170" y="1050" width="1160" height="45" class="orange"/>
+  <text x="200" y="1079" class="b">Source API/path/port and ffmpeg output inconsistencies are preserved in source-findings.md; no silent correction.</text>
+</svg>

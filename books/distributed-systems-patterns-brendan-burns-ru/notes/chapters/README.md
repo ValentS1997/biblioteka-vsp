@@ -11,3 +11,4 @@ RAG-grounded chapter artifacts for `distributed-systems-patterns-brendan-burns-r
 - [Глава 7 — Паттерн Scatter/Gather](chapter-07-scatter-gather/README.md) — `RAG_GROUNDED`, RAG `p0122:c01–p0133:c01`, PDF `122–133`.
 - [Глава 8 — Функции и событийно-ориентированная обработка](chapter-08-functions-event-driven-processing/README.md) — `RAG_GROUNDED`, RAG `p0134:c01–p0150:c01`, PDF `134–150`.
 - [Глава 9 — Выбор владельца](chapter-09-owner-election/README.md) — `RAG_GROUNDED`, RAG `p0151:c01–p0170:c01`, PDF `151–170`.
+- [Глава 10 — Системы на основе очередей задач](chapter-10-task-queue-systems/README.md) — `RAG_GROUNDED`, RAG `p0173:c01–p0188:c01`, PDF `173–188`.
