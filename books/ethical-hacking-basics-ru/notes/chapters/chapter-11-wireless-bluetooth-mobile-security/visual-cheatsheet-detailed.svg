@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="1420" viewBox="0 0 1680 1420">
+<rect width="1680" height="1420" fill="#eef5f8"/><rect width="1680" height="170" fill="#173349"/>
+<text x="48" y="72" font-family="DejaVu Sans,Arial" font-size="40" fill="#fff" font-weight="700">Глава 11 | Wireless evidence → controlled validation → recovery</text>
+<text x="50" y="122" font-family="DejaVu Sans,Arial" font-size="23" fill="#d4e9f0">Wi‑Fi authentication/encryption, BYOD, Bluetooth, mobile threats and lab safety</text>
+<g font-family="DejaVu Sans,Arial">
+<rect x="38" y="205" width="510" height="430" rx="18" fill="#fff" stroke="#cbdde5"/>
+<text x="65" y="250" font-size="29" fill="#267587" font-weight="700">Wi‑Fi state/evidence</text>
+<text x="65" y="298" font-size="20" fill="#315166">SSID / BSSID / probe</text>
+<text x="65" y="340" font-size="20" fill="#315166">Authentication / association</text>
+<text x="65" y="382" font-size="20" fill="#315166">WEP → WPA → WPA2 → WPA3</text>
+<text x="65" y="424" font-size="20" fill="#315166">Monitor mode / radio headers</text>
+<text x="65" y="466" font-size="20" fill="#315166">Channel-specific visibility</text>
+<text x="65" y="508" font-size="20" fill="#8b5b3c">Monitor mode changes local state</text>
+<rect x="585" y="205" width="510" height="430" rx="18" fill="#fff" stroke="#cbdde5"/>
+<text x="612" y="250" font-size="29" fill="#4a6ea5" font-weight="700">Disruptive boundary</text>
+<text x="612" y="298" font-size="20" fill="#315166">Deauthentication</text>
+<text x="612" y="340" font-size="20" fill="#315166">Evil twin / rogue AP</text>
+<text x="612" y="382" font-size="20" fill="#315166">Key/capture concepts</text>
+<text x="612" y="424" font-size="20" fill="#315166">Owned AP/client only</text>
+<text x="612" y="466" font-size="20" fill="#315166">Outage/recovery required</text>
+<text x="612" y="508" font-size="20" fill="#8b5b3c">No runnable attack commands</text>
+<rect x="1132" y="205" width="510" height="430" rx="18" fill="#fff" stroke="#cbdde5"/>
+<text x="1158" y="250" font-size="29" fill="#95633e" font-weight="700">Bluetooth / mobile</text>
+<text x="1158" y="298" font-size="20" fill="#315166">Discovery / pairing surface</text>
+<text x="1158" y="340" font-size="20" fill="#315166">Bluejacking / bluesnarfing</text>
+<text x="1158" y="382" font-size="20" fill="#315166">Bluebugging / bluesmack</text>
+<text x="1158" y="424" font-size="20" fill="#315166">App provenance / smishing</text>
+<text x="1158" y="466" font-size="20" fill="#315166">Public/rogue Wi‑Fi risk</text>
+<text x="1158" y="508" font-size="20" fill="#8b5b3c">Historic applicability varies</text></g>
+<rect x="38" y="675" width="1604" height="520" rx="18" fill="#dfeef3" stroke="#bdd8e3"/>
+<text x="68" y="725" font-family="DejaVu Sans,Arial" font-size="30" fill="#173349" font-weight="700">Evidence, acceptance and source caveats</text>
+<text x="68" y="775" font-family="DejaVu Sans,Arial" font-size="21" fill="#315166">1. Inventory owned AP/BSSID/client/device before testing.</text>
+<text x="68" y="818" font-family="DejaVu Sans,Arial" font-size="21" fill="#315166">2. Channel hopping can miss traffic; capture context matters.</text>
+<text x="68" y="861" font-family="DejaVu Sans,Arial" font-size="21" fill="#315166">3. Monitor mode may interrupt NetworkManager/wpa_supplicant connectivity.</text>
+<text x="68" y="904" font-family="DejaVu Sans,Arial" font-size="21" fill="#315166">4. Deauth exercise requires isolated owned lab and accepted outage.</text>
+<text x="68" y="947" font-family="DejaVu Sans,Arial" font-size="21" fill="#315166">5. Bluetooth attack names do not prove current device vulnerability.</text>
+<text x="68" y="1005" font-family="DejaVu Sans,Arial" font-size="20" fill="#8b5b3c">F-03: KRACK wording is historical/current-state uncertain.</text>
+<text x="68" y="1048" font-family="DejaVu Sans,Arial" font-size="20" fill="#8b5b3c">F-04/F-07: BYOD and Wi‑Fi security requirements are environment/current-standard dependent.</text>
+<text x="68" y="1110" font-family="DejaVu Sans,Arial" font-size="20" fill="#315166">Actual AP/device/channel/outage/recovery: [Needs confirmation]</text>
+<text x="49" y="1380" font-family="DejaVu Sans,Arial" font-size="19" fill="#526e7e">RAG-only · p0298:c01–p0323:c01 · no disruptive wireless/Bluetooth attack executed</text>
+</svg>
