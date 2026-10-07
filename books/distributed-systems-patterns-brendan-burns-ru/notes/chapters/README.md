@@ -13,3 +13,4 @@ RAG-grounded chapter artifacts for `distributed-systems-patterns-brendan-burns-r
 - [Глава 9 — Выбор владельца](chapter-09-owner-election/README.md) — `RAG_GROUNDED`, RAG `p0151:c01–p0170:c01`, PDF `151–170`.
 - [Глава 10 — Системы на основе очередей задач](chapter-10-task-queue-systems/README.md) — `RAG_GROUNDED`, RAG `p0173:c01–p0188:c01`, PDF `173–188`.
 - [Глава 11 — Событийно-ориентированная пакетная обработка](chapter-11-event-driven-batch-processing/README.md) — `RAG_GROUNDED`, RAG `p0189:c01–p0204:c01`, PDF `189–204`.
+- [Глава 12 — Координированная пакетная обработка](chapter-12-coordinated-batch-processing/README.md) — `RAG_GROUNDED`, RAG `p0205:c01–p0216:c01`, PDF `205–216`.

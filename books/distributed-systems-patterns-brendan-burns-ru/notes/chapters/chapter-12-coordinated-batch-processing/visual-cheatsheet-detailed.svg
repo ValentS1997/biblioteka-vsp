@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1100" viewBox="0 0 1500 1100">
+<style>
+text{font-family:Arial,sans-serif;fill:#111827}.t{font-size:32px;font-weight:700}.s{font-size:14px;fill:#4b5563}.h{font-size:18px;font-weight:700}.b{font-size:14px}.box{fill:#f9fafb;stroke:#4b5563;stroke-width:2;rx:12}.blue{fill:#eff6ff;stroke:#1d4ed8;stroke-width:2;rx:12}.green{fill:#ecfdf5;stroke:#047857;stroke-width:2;rx:12}.violet{fill:#f5f3ff;stroke:#6d28d9;stroke-width:2;rx:12}.orange{fill:#fff7ed;stroke:#c2410c;stroke-width:2;rx:12}.a{stroke:#374151;stroke-width:2;fill:none;marker-end:url(#m)}
+</style><defs><marker id="m" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#374151"/></marker></defs>
+<text x="50" y="50" class="t">Глава 12 — Координированная пакетная обработка</text>
+<text x="50" y="78" class="s">RAG p0205:c01–p0216:c01 · PDF 205–216</text>
+
+<text x="50" y="125" class="h">A. Join vs Merger</text>
+<rect x="70" y="155" width="630" height="145" class="blue"/>
+<text x="100" y="192" class="h">Merger</text><text x="100" y="224" class="b">combines several streams into one</text><text x="100" y="254" class="b">does not guarantee all upstream data is ready</text>
+<rect x="800" y="155" width="630" height="145" class="orange"/>
+<text x="830" y="192" class="h">Join</text><text x="830" y="224" class="b">barrier synchronization</text><text x="830" y="254" class="b">releases only after complete required set is ready</text>
+
+<text x="50" y="360" class="h">B. Reduce</text>
+<rect x="80" y="390" width="420" height="160" class="violet"/>
+<text x="110" y="427" class="h">Partial outputs</text><text x="110" y="459" class="b">counts, sums, histograms</text><text x="110" y="489" class="b">compatible intermediate representation</text>
+<rect x="540" y="390" width="420" height="160" class="green"/>
+<text x="570" y="427" class="h">Repeated reduction</text><text x="570" y="459" class="b">combine several inputs into one</text><text x="570" y="489" class="b">can start before all upstream work finishes</text>
+<rect x="1000" y="390" width="420" height="160" class="blue"/>
+<text x="1030" y="427" class="h">Final aggregate</text><text x="1030" y="459" class="b">one representative output</text><text x="1030" y="489" class="b">for full dataset</text>
+<path d="M500,470 L540,470" class="a"/><path d="M960,470 L1000,470" class="a"/>
+
+<text x="50" y="620" class="h">C. Image-processing pipeline</text>
+<rect x="50" y="650" width="250" height="130" class="blue"/><text x="80" y="687" class="h">Sharder</text><text x="80" y="719" class="b">parallel images</text>
+<rect x="340" y="650" width="250" height="130" class="violet"/><text x="370" y="687" class="h">Multi-Worker</text><text x="370" y="719" class="b">detect + blur plate</text>
+<rect x="630" y="650" width="250" height="130" class="orange"/><text x="660" y="687" class="h">Join</text><text x="660" y="719" class="b">all images complete</text>
+<rect x="920" y="650" width="250" height="130" class="green"/><text x="950" y="687" class="h">Copier</text><text x="950" y="719" class="b">cleanup + analysis</text>
+<rect x="1210" y="650" width="250" height="130" class="blue"/><text x="1240" y="687" class="h">Reduce</text><text x="1240" y="719" class="b">global counts</text>
+<path d="M300,715 L340,715" class="a"/><path d="M590,715 L630,715" class="a"/><path d="M880,715 L920,715" class="a"/><path d="M1170,715 L1210,715" class="a"/>
+
+<text x="50" y="845" class="h">D. Operational meaning</text>
+<rect x="70" y="875" width="650" height="145" class="orange"/>
+<text x="100" y="912" class="h">Join cost</text><text x="100" y="944" class="b">slowest/missing branch blocks progress</text><text x="100" y="974" class="b">completeness is traded for latency</text>
+<rect x="780" y="875" width="650" height="145" class="green"/>
+<text x="810" y="912" class="h">Reduce advantage</text><text x="810" y="944" class="b">aggregation overlaps remaining upstream work</text><text x="810" y="974" class="b">preserves more parallelism than a full barrier</text>
+
+<rect x="175" y="1045" width="1150" height="40" class="box"/>
+<text x="205" y="1072" class="b">Design rule: use Join for completeness, Reduce for incremental aggregation, and never confuse a simple Merger with a barrier.</text>
+</svg>
