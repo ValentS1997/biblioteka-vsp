@@ -13,3 +13,4 @@ Chapter-level artifacts are created only after book readiness is `READY` and a c
 - [Chapter 9 — Согласованность и консенсус](chapter-09-consistency-and-consensus/README.md)
 - [Chapter 10 — Пакетная обработка](chapter-10-batch-processing/README.md)
 - [Chapter 11 — Потоковая обработка](chapter-11-stream-processing/README.md)
+- [Chapter 12 — Будущее информационных систем](chapter-12-future-of-data-systems/README.md)
