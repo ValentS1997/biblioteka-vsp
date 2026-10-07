@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="830" viewBox="0 0 1500 830" role="img" aria-labelledby="title desc">
+<title id="title">Глава 4. OSINT, DNS и пассивная разведка — компактная памятка</title>
+<desc id="desc">Публичные источники, DNS-данные, веб и IoT, различие чтения и генерируемой нагрузки. Только RAG главы 4.</desc>
+<rect width="1500" height="830" fill="#eef5f8"/>
+<rect width="1500" height="168" fill="#173349"/>
+<text x="42" y="75" font-family="DejaVu Sans,Arial,sans-serif" font-size="40" fill="#fff" font-weight="700">Глава 4 · OSINT, DNS, пассивная разведка</text>
+<text x="45" y="122" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" fill="#d4e9f0" font-weight="400">Источник: PDF 72–98 · 34 RAG-chunks · только материалы книги</text>
+<rect x="35" y="200" width="455" height="339" rx="16" fill="#fff" stroke="#cbdde5" stroke-width="2"/>
+<rect x="55" y="221" width="46" height="43" rx="10" fill="#2b7788" stroke="#2b7788" stroke-width="2"/>
+<text x="66" y="251" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#fff" font-weight="700">A</text>
+<text x="117" y="252" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" fill="#19364a" font-weight="700">Открытые источники</text>
+<text x="61" y="307" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">Отчёты SEC / EDGAR, WHOIS / RIR</text>
+<text x="61" y="350" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">Вакансии, соцсети, theHarvester</text>
+<text x="61" y="393" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">Данные могут быть устаревшими</text>
+<text x="61" y="436" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">Username не доказывает личность</text>
+<rect x="522" y="200" width="455" height="339" rx="16" fill="#fff" stroke="#cbdde5" stroke-width="2"/>
+<rect x="542" y="221" width="46" height="43" rx="10" fill="#4d70a5" stroke="#4d70a5" stroke-width="2"/>
+<text x="553" y="251" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#fff" font-weight="700">B</text>
+<text x="604" y="252" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" fill="#19364a" font-weight="700">DNS / локальный кэш</text>
+<text x="548" y="307" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">A / AAAA / MX / NS / SOA / PTR</text>
+<text x="548" y="350" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">host · nslookup · dig · whois</text>
+<text x="548" y="393" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">AXFR и dnsrecon создают запросы</text>
+<text x="548" y="436" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">ipconfig /displaydns — локально</text>
+<rect x="1009" y="200" width="455" height="339" rx="16" fill="#fff" stroke="#cbdde5" stroke-width="2"/>
+<rect x="1029" y="221" width="46" height="43" rx="10" fill="#9d6d42" stroke="#9d6d42" stroke-width="2"/>
+<text x="1040" y="251" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#fff" font-weight="700">C</text>
+<text x="1091" y="252" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" fill="#19364a" font-weight="700">Веб / IoT / индексы</text>
+<text x="1035" y="307" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">p0f · Wappalyzer · Netcraft</text>
+<text x="1035" y="350" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">HTTrack может создавать нагрузку</text>
+<text x="1035" y="393" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">Google: site / inurl / filetype</text>
+<text x="1035" y="436" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">Shodan: индекс сетевых устройств</text>
+<rect x="35" y="571" width="1429" height="157" rx="16" fill="#deebf1" stroke="#bcd8e3" stroke-width="2"/>
+<text x="62" y="617" font-family="DejaVu Sans,Arial,sans-serif" font-size="29" fill="#1d3b4f" font-weight="700">Операционная граница</text>
+<text x="64" y="657" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#28465a" font-weight="400">Публичная находка ≠ разрешение тестировать ресурс. Проверить scope, источник и дату.</text>
+<text x="64" y="696" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#8a5637" font-weight="400">Нагрузка и quota: [Needs confirmation] · Реальные результаты: [Needs confirmation]</text>
+<text x="45" y="794" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#4e6e7e" font-weight="400">Source findings: WHOIS-диапазон и PTR имеют расхождения · next chapter starts at PDF p. 99</text>
+</svg>
