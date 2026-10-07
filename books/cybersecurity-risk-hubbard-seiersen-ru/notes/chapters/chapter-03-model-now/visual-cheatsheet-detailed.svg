@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1200" viewBox="0 0 1500 1200" role="img" aria-labelledby="title description">
+<title id="title">Глава 3 — подробная визуальная схема Монте-Карло и выбора контроля</title>
+<desc id="description">Экспертная количественная постановка риска, моделирование условных потерь, кривые превышения и финансовый выбор с проверками исходных данных и ограничениями извлечения.</desc>
+<rect x="0" y="0" width="1500" height="1200" rx="14" fill="#0b1929" stroke="#0b1929" stroke-width="1.5"/>
+<text x="55" y="46" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#86d0fb" font-weight="bold">CYBER RISK / BIBLIOTEKA-VSP / CHAPTER 03</text>
+<text x="55" y="100" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" fill="#fcfdff" font-weight="bold">«Моделируем немедленно!» — простая модель риска</text>
+<text x="55" y="139" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#b3ccdf">Главный результат: вероятность и распределение потерь вместо балльного ранга</text>
+<text x="55" y="188" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#80cff7" font-weight="bold">I. Постановка и оценивание — spine 18</text>
+<rect x="55" y="206" width="448" height="188" rx="14" fill="#172e46" stroke="#7dc8f5" stroke-width="1.5"/>
+<rect x="72" y="226" width="6" height="32" rx="14" fill="#7dc8f5" stroke="#7dc8f5" stroke-width="1.5"/>
+<text x="95" y="251" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#fbfdff" font-weight="bold">Экспертный вход</text>
+<text x="77" y="289" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">Список событий и временной горизонт</text>
+<text x="77" y="320" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">P(событие) 0–100%</text>
+<text x="77" y="351" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">90%-ный интервал условного ущерба</text>
+<rect x="527" y="206" width="448" height="188" rx="14" fill="#172e46" stroke="#8cddc1" stroke-width="1.5"/>
+<rect x="544" y="226" width="6" height="32" rx="14" fill="#8cddc1" stroke="#8cddc1" stroke-width="1.5"/>
+<text x="567" y="251" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#fbfdff" font-weight="bold">Независимые оценки</text>
+<text x="549" y="289" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">Уточнить общее понимание события</text>
+<text x="549" y="320" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">Не принуждать к групповому консенсусу</text>
+<text x="549" y="351" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">При одинаковом смысле усреднить оценки</text>
+<rect x="999" y="206" width="446" height="188" rx="14" fill="#172e46" stroke="#e9c88c" stroke-width="1.5"/>
+<rect x="1016" y="226" width="6" height="32" rx="14" fill="#e9c88c" stroke="#e9c88c" stroke-width="1.5"/>
+<text x="1039" y="251" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#fbfdff" font-weight="bold">Проверка пределов</text>
+<text x="1021" y="289" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">Верх интервала — не максимум</text>
+<text x="1021" y="320" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">Логнормальное: возможен правый хвост</text>
+<text x="1021" y="351" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">Модель ещё не сокращает неопределённость</text>
+<text x="55" y="447" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#80cff7" font-weight="bold">II. Монте-Карло в Excel — spine 19</text>
+<rect x="55" y="463" width="448" height="183" rx="14" fill="#172e46" stroke="#7dc8f5" stroke-width="1.5"/>
+<rect x="72" y="483" width="6" height="32" rx="14" fill="#7dc8f5" stroke="#7dc8f5" stroke-width="1.5"/>
+<text x="95" y="508" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#fbfdff" font-weight="bold">Моделировать наступление</text>
+<text x="77" y="546" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">СЛЧИС() + ЕСЛИ() → 0 или 1</text>
+<text x="77" y="577" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">Первичная модель: не чаще 1 раза/год</text>
+<text x="77" y="608" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">Случайный пересчёт по сценариям</text>
+<rect x="527" y="463" width="448" height="183" rx="14" fill="#172e46" stroke="#e9c88c" stroke-width="1.5"/>
+<rect x="544" y="483" width="6" height="32" rx="14" fill="#e9c88c" stroke="#e9c88c" stroke-width="1.5"/>
+<text x="567" y="508" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#fbfdff" font-weight="bold">Моделировать ущерб</text>
+<text x="549" y="546" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">ЛОГНОРМОБР для положительных потерь</text>
+<text x="549" y="577" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">Параметры из границ 90%-ного интервала</text>
+<text x="549" y="608" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">Экстремальные исходы требуют анализа</text>
+<rect x="999" y="463" width="446" height="183" rx="14" fill="#172e46" stroke="#8cddc1" stroke-width="1.5"/>
+<rect x="1016" y="483" width="6" height="32" rx="14" fill="#8cddc1" stroke="#8cddc1" stroke-width="1.5"/>
+<text x="1039" y="508" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#fbfdff" font-weight="bold">Совместные сценарии</text>
+<text x="1021" y="546" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">По сценарию сложить потери событий</text>
+<text x="1021" y="577" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">Тысячи испытаний / таблица данных</text>
+<text x="1021" y="608" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">Редкие исходы: оценить стабильность</text>
+<text x="55" y="698" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#80cff7" font-weight="bold">III. Визуализация и решение — spine 20</text>
+<rect x="55" y="714" width="448" height="205" rx="14" fill="#172e46" stroke="#7dc8f5" stroke-width="1.5"/>
+<rect x="72" y="734" width="6" height="32" rx="14" fill="#7dc8f5" stroke="#7dc8f5" stroke-width="1.5"/>
+<text x="95" y="759" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#fbfdff" font-weight="bold">Кривая превышения</text>
+<text x="77" y="797" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">Для каждого порога: доля сценариев</text>
+<text x="77" y="828" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">с потерями выше этого порога</text>
+<text x="77" y="859" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">X,Y-диаграмма и сравнение кривых</text>
+<text x="77" y="890" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">Порог «&gt;» отличается от «≥»</text>
+<rect x="527" y="714" width="448" height="205" rx="14" fill="#172e46" stroke="#8cddc1" stroke-width="1.5"/>
+<rect x="544" y="734" width="6" height="32" rx="14" fill="#8cddc1" stroke="#8cddc1" stroke-width="1.5"/>
+<text x="567" y="759" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#fbfdff" font-weight="bold">Риск и приемлемость</text>
+<text x="549" y="797" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">Неотъемлемый риск → контроль</text>
+<text x="549" y="828" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">→ остаточный риск</text>
+<text x="549" y="859" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">Утверждённая кривая рискоустойчивости</text>
+<text x="549" y="890" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">Сравнивать сопоставимые горизонты</text>
+<rect x="999" y="714" width="446" height="205" rx="14" fill="#172e46" stroke="#e9c88c" stroke-width="1.5"/>
+<rect x="1016" y="734" width="6" height="32" rx="14" fill="#e9c88c" stroke="#e9c88c" stroke-width="1.5"/>
+<text x="1039" y="759" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#fbfdff" font-weight="bold">Рентабельность контроля</text>
+<text x="1021" y="797" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">Оценить убытки до и после контроля</text>
+<text x="1021" y="828" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">Учесть цену контроля и срок эффекта</text>
+<text x="1021" y="859" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">Формула ROI не извлечена в текст RAG</text>
+<text x="1021" y="890" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#c8deeb">Точные расчёты — [Needs confirmation]</text>
+<rect x="55" y="956" width="1390" height="153" rx="14" fill="#2b2a39" stroke="#9d8ba8" stroke-width="1.5"/>
+<text x="78" y="992" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#ffd3c4" font-weight="bold">SOURCE / ACCEPTANCE BOUNDARY</text>
+<text x="78" y="1028" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#f0dbe2">• Таблицы 3.1–3.4 и рисунки 3.1–3.3 не представлены как отдельные изображения.</text>
+<text x="78" y="1059" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#f0dbe2">• СЧЁТЕСЛИ с «&gt;» не совпадает с фразой «равно или больше» в пояснении.</text>
+<text x="78" y="1090" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#f0dbe2">• Исходные скобки формулы логнормального распределения требуют проверки.</text>
+<text x="55" y="1145" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#95b4ca">Provenance: EPUB spine 18–20 · OPS/ch1-16.xhtml → OPS/ch1-18.xhtml · RAG chunks e0018–e0020</text>
+<text x="55" y="1172" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#95b4ca">Авторская методика, не проверенная модель пользовательской среды; source EPUB и canonical RAG неизменны.</text>
+</svg>
