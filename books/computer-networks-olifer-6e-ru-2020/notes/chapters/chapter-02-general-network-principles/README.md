@@ -1,3 +1,3 @@
 # Chapter 2
 
-RAG-grounded chapter analysis.
+Verified RAG-grounded analysis.
