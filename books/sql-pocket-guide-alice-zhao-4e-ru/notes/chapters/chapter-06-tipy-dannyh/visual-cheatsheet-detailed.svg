@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1940" viewBox="0 0 1600 1940" role="img" aria-label="Подробная RAG-шпаргалка главы 6 SQL: типы данных">
+<rect width="1600" height="1940" fill="#EEF4F8"/>
+<text x="30" y="57" font-family="DejaVu Sans,Arial,sans-serif" font-size="31" fill="#073E60" font-weight="700">SQL · ГЛАВА 6 / ТИПЫ ДАННЫХ</text>
+<text x="32" y="89" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#526F82" >Элис Жао · 4-е изд. · PDF 155–189 · RAG p0155:c01–p0189:c01</text>
+<rect x="27" y="117" width="500" height="230" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="155" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">01 / INTEGER [157–162]</text>
+<text x="45" y="191" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Range и storage — основной tradeoff</text>
+<text x="45" y="221" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >MySQL: TINY/SMALL/MEDIUM/INT/BIGINT</text>
+<text x="45" y="251" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >PostgreSQL: SMALLINT/INT/BIGINT</text>
+<text x="45" y="281" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >SERIAL family — auto-generated integers</text>
+<text x="45" y="311" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Oracle NUMBER · SQLite INTEGER</text>
+<rect x="550" y="117" width="500" height="230" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="568" y="155" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">02 / DECIMAL [162–163]</text>
+<text x="568" y="191" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Fixed-point / exact в объяснении</text>
+<text x="568" y="221" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >DECIMAL(5,2): precision=5</text>
+<text x="568" y="251" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >scale=2</text>
+<text x="568" y="281" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Money example → decimal</text>
+<text x="568" y="311" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Limits различаются по РСУБД</text>
+<rect x="1073" y="117" width="500" height="230" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="1091" y="155" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">03 / FLOAT [163–165]</text>
+<text x="1091" y="191" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Approximate representation</text>
+<text x="1091" y="221" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Single vs double precision</text>
+<text x="1091" y="251" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Comparison may differ</text>
+<text x="1091" y="281" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Fixed decimals → prefer DECIMAL</text>
+<text x="1091" y="311" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Oracle: BINARY_FLOAT/DOUBLE in source</text>
+<rect x="27" y="375" width="758" height="260" rx="17" fill="#FAFDFF" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="413" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">04 / STRINGS [166–170]</text>
+<text x="45" y="449" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >&apos;string&apos; — value literal</text>
+<text x="45" y="479" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Escaped quote: &apos;You&apos;&apos;re welcome.&apos;</text>
+<text x="45" y="509" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Oracle Q-quote · PostgreSQL dollar quote</text>
+<text x="45" y="539" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >CHAR fixed · VARCHAR variable · TEXT long</text>
+<text x="45" y="569" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Escape sequences shown for MySQL/PostgreSQL</text>
+<text x="45" y="599" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Type-name tokens in tables may be split</text>
+<rect x="812" y="375" width="761" height="260" rx="17" fill="#FAFDFF" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="830" y="413" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">05 / UNICODE [171–172]</text>
+<text x="830" y="449" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >NVARCHAR/NCHAR in selected products</text>
+<text x="830" y="479" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >PostgreSQL/SQLite mappings differ</text>
+<text x="830" y="509" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >N&apos;赵欣婉&apos; example</text>
+<text x="830" y="539" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >ASCII/Unicode numeric notation damaged</text>
+<text x="830" y="569" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Do not infer missing exponents</text>
+<text x="830" y="599" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Round-trip behavior: [Needs confirmation]</text>
+<rect x="27" y="663" width="758" height="280" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="701" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">06 / DATE &amp; TIME LITERALS [173–176]</text>
+<text x="45" y="737" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >DATE &apos;2021-02-25&apos; / CAST(... AS DATE)</text>
+<text x="45" y="767" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >TIME and TIMESTAMP forms vary</text>
+<text x="45" y="797" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Oracle examples use FROM dual</text>
+<text x="45" y="827" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Format text has YYYYMM-DD mismatch</text>
+<text x="45" y="857" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Timezone literals appear in source</text>
+<text x="45" y="887" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Typed conversion preferred over guesswork</text>
+<rect x="812" y="663" width="761" height="280" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="830" y="701" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">07 / PRODUCT DATETIME TYPES [177–183]</text>
+<text x="830" y="737" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >MySQL: DATE/TIME/DATETIME/TIMESTAMP/YEAR</text>
+<text x="830" y="767" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Oracle: DATE/TIMESTAMP + timezone variants</text>
+<text x="830" y="797" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >PostgreSQL: TIME/TIMESTAMP WITH TIME ZONE</text>
+<text x="830" y="827" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >SQL Server: SMALLDATETIME/DATETIME2/OFFSET</text>
+<text x="830" y="857" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >SQLite: TEXT/REAL/INTEGER model</text>
+<text x="830" y="887" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Two source demos conflict with shown output</text>
+<rect x="27" y="971" width="758" height="260" rx="17" fill="#FAFDFF" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="1009" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">08 / BOOLEAN [184]</text>
+<text x="45" y="1045" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >TRUE / FALSE literals</text>
+<text x="45" y="1075" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >MySQL/PostgreSQL/SQLite: BOOLEAN per source</text>
+<text x="45" y="1105" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Oracle: CHAR(1) or NUMBER(1) workaround</text>
+<text x="45" y="1135" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >SQL Server: BIT</text>
+<text x="45" y="1165" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Shown 1/0 output scope is ambiguous</text>
+<text x="45" y="1195" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Current version behavior: [Needs confirmation]</text>
+<rect x="812" y="971" width="761" height="260" rx="17" fill="#FAFDFF" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="830" y="1009" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">09 / BINARY &amp; FILES [185–189]</text>
+<text x="830" y="1045" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Path/reference outside DB</text>
+<text x="830" y="1075" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >or binary content inside DB</text>
+<text x="830" y="1105" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >BLOB / RAW / BYTEA / VARBINARY</text>
+<text x="830" y="1135" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Hex literals differ by product</text>
+<text x="830" y="1165" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >1 MB rule is book heuristic</text>
+<text x="830" y="1195" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Storage/backup architecture: confirm</text>
+<rect x="27" y="1259" width="758" height="250" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="1297" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">10 / READ-ONLY CHECKS</text>
+<text x="45" y="1333" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >SELECT DATE / TIME / TIMESTAMP examples</text>
+<text x="45" y="1363" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >CAST text to typed value</text>
+<text x="45" y="1393" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >SELECT TRUE/FALSE</text>
+<text x="45" y="1423" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >TO_NUMBER / RAWTOHEX / CONVERT snippets</text>
+<text x="45" y="1453" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Use only exact source dialect</text>
+<text x="45" y="1483" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Actual output: [Not executed]</text>
+<rect x="812" y="1259" width="761" height="250" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="830" y="1297" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">11 / STATE-CHANGING</text>
+<text x="830" y="1333" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >CREATE TABLE</text>
+<text x="830" y="1363" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >INSERT INTO</text>
+<text x="830" y="1393" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >ALTER SESSION NLS_DATE_FORMAT</text>
+<text x="830" y="1423" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Schema/data/session effects</text>
+<text x="830" y="1453" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Verify via SELECT / metadata</text>
+<text x="830" y="1483" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Rollback: [Needs confirmation]</text>
+<rect x="27" y="1537" width="1546" height="230" rx="17" fill="#FAFDFF" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="1575" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">12 / SOURCE FINDINGS / ACCEPTANCE</text>
+<text x="45" y="1611" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >F-01 damaged powers · F-02 MySQL datetime order · F-03 date format mismatch</text>
+<text x="45" y="1641" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >F-04 SQLite datetime storage demo · F-05 split type tokens · F-06 BOOLEAN output scope</text>
+<text x="45" y="1671" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >F-07 byte/character wording · F-08 version-sensitive limits · F-09 1 MB heuristic</text>
+<text x="45" y="1701" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Design acceptance: min/max/precision/scale/length/timezone/Unicode known</text>
+<text x="45" y="1731" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Only after round-trip test should a type move to real schema review</text>
+<rect x="27" y="1800" width="1546" height="107" rx="18" fill="#D9EAF4"/>
+<text x="48" y="1837" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#104A67" font-weight="700">RAG_ONLY / NO SILENT CORRECTIONS</text>
+<text x="48" y="1872" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28526A" >Source assertions are not current-version guarantees. No SQL was executed; source/RAG/reading remain unchanged.</text>
+</svg>
