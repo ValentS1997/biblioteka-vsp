@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="960" viewBox="0 0 1500 960">
+<rect width="1500" height="960" fill="#f8fafb"/>
+<text x="50" y="58" font-family="Arial,DejaVu Sans,sans-serif" font-size="34" font-weight="700" fill="#183247">Глава 16 · Routing, SDN и NFV</text>
+<text x="50" y="92" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#52697a">RAG p0472:c01–p0513:c01 · PDF 472–513 · printed 471–512 · 42 chunks</text>
+
+<rect x="55" y="135" width="430" height="225" rx="18" fill="#e8eff5" stroke="#b9cbd8"/>
+<text x="83" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#234b64">1 · RIP / Distance Vector</text>
+<text x="83" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">neighbor vectors · hop metric</text>
+<text x="83" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">count-to-infinity / loops</text>
+<text x="83" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">split horizon · triggered · hold-down</text>
+
+<rect x="535" y="135" width="430" height="225" rx="18" fill="#eef4e8" stroke="#c4d4b9"/>
+<text x="563" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#365b31">2 · OSPF / Link State</text>
+<text x="563" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">HELLO → LSA → LSDB</text>
+<text x="563" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">Dijkstra / SPF</text>
+<text x="563" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">areas · ABR · backbone</text>
+
+<rect x="1015" y="135" width="430" height="225" rx="18" fill="#f8efe2" stroke="#ddc9aa"/>
+<text x="1043" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#78532e">3 · BGP / Path Vector</text>
+<text x="1043" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">AS path + policy</text>
+<text x="1043" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">eBGP · iBGP</text>
+<text x="1043" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">route reflector</text>
+
+<rect x="55" y="420" width="430" height="215" rx="18" fill="#eee8f6" stroke="#c9bad9"/>
+<text x="85" y="465" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#593f73">4 · Multicast</text>
+<text x="85" y="510" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">IGMP membership</text>
+<text x="85" y="550" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">dense / sparse trees</text>
+<text x="85" y="590" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#756486">RPF checks reverse path to source</text>
+
+<rect x="535" y="420" width="430" height="215" rx="18" fill="#e5edf7" stroke="#bdcce0"/>
+<text x="565" y="465" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#2b4e78">5 · SDN / OpenFlow / P4</text>
+<text x="565" y="510" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">controller ↔ forwarding plane</text>
+<text x="565" y="550" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">match → action → counters</text>
+<text x="565" y="590" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#5c7290">programmable packet pipeline</text>
+
+<rect x="1015" y="420" width="430" height="215" rx="18" fill="#f4ece7" stroke="#dbc6b9"/>
+<text x="1045" y="465" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#714b38">6 · NFV / MANO</text>
+<text x="1045" y="510" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">network function → VNF</text>
+<text x="1045" y="550" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">VNF chain → service</text>
+<text x="1045" y="590" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#806b5f">orchestration / lifecycle management</text>
+
+<rect x="180" y="700" width="1140" height="150" rx="18" fill="#fff3dd" stroke="#dfca9b"/>
+<text x="210" y="745" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#785f2d">Operational sequence</text>
+<text x="210" y="790" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6c5c3a">session/neighbor → protocol DB → selected route/rule → forwarding state → counters</text>
+<text x="210" y="827" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#6c5c3a">No executable vendor CLI in chapter; real control-plane state is [Needs confirmation].</text>
+
+<text x="50" y="920" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#63798a">Chapter 17 begins at p0514:c01 · reading state unchanged.</text>
+</svg>
