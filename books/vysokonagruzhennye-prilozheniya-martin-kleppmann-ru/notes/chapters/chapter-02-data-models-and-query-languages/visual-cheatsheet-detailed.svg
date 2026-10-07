@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1080" viewBox="0 0 1400 1080">
+<rect width="1400" height="1080" fill="#f8fafc"/>
+<text x="55" y="65" fill="#0f172a" font-family="sans-serif" font-size="34" font-weight="700">Глава 2 — Модели данных и языки запросов</text>
+<text x="55" y="102" fill="#475569" font-family="sans-serif" font-size="18">Canonical RAG · PDF 53–95 · source SHA 495e75f185c758a8…</text>
+
+<rect x="55" y="140" width="1290" height="115" rx="18" fill="#e2e8f0"/>
+<text x="85" y="184" fill="#0f172a" font-family="sans-serif" font-size="23" font-weight="700">Data model = abstraction boundary</text>
+<text x="85" y="219" fill="#334155" font-family="sans-serif" font-size="18">Application objects → general data model → DB representation → bytes/hardware</text>
+<text x="85" y="244" fill="#334155" font-family="sans-serif" font-size="17">Each model makes some operations natural and others awkward.</text>
+
+<rect x="55" y="290" width="400" height="405" rx="18" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+<text x="85" y="335" fill="#075985" font-family="sans-serif" font-size="26" font-weight="700">2.1 Relational ↔ Document</text>
+<text x="85" y="375" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Relational</text>
+<text x="85" y="405" fill="#334155" font-family="sans-serif" font-size="16">tables · IDs · joins · normalization</text>
+<text x="85" y="438" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Document</text>
+<text x="85" y="468" fill="#334155" font-family="sans-serif" font-size="16">JSON · tree structure · locality</text>
+<text x="85" y="498" fill="#334155" font-family="sans-serif" font-size="16">weak joins can move work to app code</text>
+<text x="85" y="543" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Schema</text>
+<text x="85" y="573" fill="#334155" font-family="sans-serif" font-size="16">schema-on-write ↔ schema-on-read</text>
+<text x="85" y="603" fill="#334155" font-family="sans-serif" font-size="16">“schemaless” still has expected structure</text>
+<text x="85" y="648" fill="#075985" font-family="sans-serif" font-size="16">Choose by relationships + access pattern</text>
+
+<rect x="500" y="290" width="400" height="405" rx="18" fill="#f3e8ff" stroke="#7e22ce" stroke-width="2"/>
+<text x="530" y="335" fill="#6b21a8" font-family="sans-serif" font-size="26" font-weight="700">2.2 Query languages</text>
+<text x="530" y="378" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Declarative</text>
+<text x="530" y="408" fill="#334155" font-family="sans-serif" font-size="16">describe result/pattern</text>
+<text x="530" y="438" fill="#334155" font-family="sans-serif" font-size="16">optimizer chooses indexes/order/parallelism</text>
+<text x="530" y="478" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Imperative</text>
+<text x="530" y="508" fill="#334155" font-family="sans-serif" font-size="16">explicit execution mechanics</text>
+<text x="530" y="548" fill="#334155" font-family="sans-serif" font-size="16">SQL vs procedural loop</text>
+<text x="530" y="578" fill="#334155" font-family="sans-serif" font-size="16">MapReduce: pure map/reduce functions</text>
+<text x="530" y="608" fill="#334155" font-family="sans-serif" font-size="16">Aggregation pipeline: declarative form</text>
+<text x="530" y="648" fill="#6b21a8" font-family="sans-serif" font-size="16">Less execution detail → more optimizer freedom</text>
+
+<rect x="945" y="290" width="400" height="405" rx="18" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="975" y="335" fill="#166534" font-family="sans-serif" font-size="26" font-weight="700">2.3 Graph-like models</text>
+<text x="975" y="378" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Property graph</text>
+<text x="975" y="408" fill="#334155" font-family="sans-serif" font-size="16">vertices + edges + labels/properties</text>
+<text x="975" y="438" fill="#334155" font-family="sans-serif" font-size="16">incoming/outgoing traversal</text>
+<text x="975" y="478" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Query models</text>
+<text x="975" y="508" fill="#334155" font-family="sans-serif" font-size="16">Cypher: graph pattern + *0.. paths</text>
+<text x="975" y="538" fill="#334155" font-family="sans-serif" font-size="16">RDF: subject–predicate–object</text>
+<text x="975" y="568" fill="#334155" font-family="sans-serif" font-size="16">SPARQL: RDF pattern query</text>
+<text x="975" y="598" fill="#334155" font-family="sans-serif" font-size="16">Datalog: facts + recursive rules</text>
+<text x="975" y="648" fill="#166534" font-family="sans-serif" font-size="16">Natural for complex many-to-many</text>
+
+<rect x="55" y="735" width="1290" height="255" rx="18" fill="#0f172a"/>
+<text x="85" y="780" fill="#f8fafc" font-family="sans-serif" font-size="23" font-weight="700">Decision checklist</text>
+<text x="85" y="820" fill="#cbd5e1" font-family="sans-serif" font-size="18">1. Shape: document tree, relations, or graph?</text>
+<text x="85" y="855" fill="#cbd5e1" font-family="sans-serif" font-size="18">2. Cardinality: one-to-many or many-to-many?</text>
+<text x="85" y="890" fill="#cbd5e1" font-family="sans-serif" font-size="18">3. Access: whole-document locality, joins, aggregation, or variable traversal?</text>
+<text x="85" y="925" fill="#cbd5e1" font-family="sans-serif" font-size="18">4. Schema: enforce on write or interpret on read?</text>
+<text x="85" y="960" fill="#cbd5e1" font-family="sans-serif" font-size="18">5. Query: describe WHAT and let optimizer choose HOW when possible.</text>
+
+<text x="315" y="1040" fill="#0f172a" font-family="sans-serif" font-size="22" font-weight="700">No universal model → make frequent operations natural</text>
+</svg>
