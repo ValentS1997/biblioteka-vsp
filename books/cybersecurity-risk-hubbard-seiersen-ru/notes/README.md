@@ -17,3 +17,4 @@ Chapter artifacts are created only after book-level chapter-analysis readiness i
 - [Глава 9 — Эффективные методы на основе формулы Байеса](chapters/chapter-09-effective-bayesian-methods/README.md) — RAG-grounded, EPUB spine 36–39; reading progress не изменён.
 - [Глава 10 — На пути к зрелости метрик безопасности](chapters/chapter-10-security-metrics-maturity/README.md) — RAG-grounded, EPUB spine 41–42; includes source R example boundaries.
 - [Глава 11 — Насколько эффективно взаимодействуют мои вложения в безопасность?](chapters/chapter-11-security-investments-interaction/README.md) — RAG-grounded, EPUB spine 43–44; dimensional modeling, survival and process metrics.
+- [Глава 12 — Призыв к действию](chapters/chapter-12-call-to-action/README.md) — RAG-grounded, EPUB spine 45; final main chapter; appendices begin at spine 46.

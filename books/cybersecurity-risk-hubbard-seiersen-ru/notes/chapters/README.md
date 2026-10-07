@@ -22,5 +22,7 @@
 
 | 11 | [Насколько эффективно взаимодействуют мои вложения в безопасность?](chapter-11-security-investments-interaction/README.md) | spine 43–44, `OPS/ch1-41.xhtml` → `OPS/ch1-42.xhtml` | README, cheatsheet, commands, diagram, 2×SVG, source-findings |
 
+| 12 | [Призыв к действию](chapter-12-call-to-action/README.md) | spine 45, `OPS/ch1-43.xhtml` | README, cheatsheet, commands, diagram, 2×SVG, source-findings |
 
-Глава 12 начинается в EPUB spine 45, `OPS/ch1-43.xhtml`; её анализ пока не проводился.
+
+Основные главы 1–12 проанализированы. EPUB spine 46 (`OPS/ch1-44.xhtml`) начинает приложения книги.

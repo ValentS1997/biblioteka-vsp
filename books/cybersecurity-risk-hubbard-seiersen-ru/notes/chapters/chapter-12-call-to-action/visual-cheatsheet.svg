@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="t d">
+<title id="t">Глава 12 — программа управления киберрисками</title><desc id="d">Хартия УРК, количественный анализ, обучение, аналитическая технология, program management и аудит моделей.</desc>
+<rect width="1200" height="820" fill="#0c1929"/>
+<text x="52" y="55" fill="#82d0f7" font-family="Arial" font-size="16" font-weight="bold">BIBLIOTEKA-VSP / CHAPTER 12</text>
+<text x="52" y="105" fill="#ffffff" font-family="Arial" font-size="32" font-weight="bold">Призыв к действию: от методов к программе УРК</text>
+<text x="52" y="145" fill="#bfd6e5" font-family="Arial" font-size="19">Quantitative risk management как организационная capability</text>
+<rect x="70" y="200" width="1060" height="82" rx="14" fill="#203d54" stroke="#78cbf2"/>
+<text x="95" y="235" fill="#ffffff" font-family="Arial" font-size="22" font-weight="bold">CEO / Board → Cyber Risk Management charter</text>
+<text x="95" y="264" fill="#d5e8f2" font-family="Arial" font-size="17">Technology investments · risk tolerance · exceptions · insurance · ongoing control effectiveness</text>
+<g font-family="Arial">
+<rect x="60" y="340" width="245" height="150" rx="14" fill="#183149" stroke="#8dcdf1"/><text x="82" y="380" fill="#fff" font-size="21" font-weight="bold">Quant analysis</text><text x="82" y="418" fill="#cee2ee" font-size="17">Models</text><text x="82" y="446" fill="#cee2ee" font-size="17">Probability / loss</text>
+<rect x="330" y="340" width="245" height="150" rx="14" fill="#183149" stroke="#91d6bd"/><text x="352" y="380" fill="#fff" font-size="21" font-weight="bold">Training</text><text x="352" y="418" fill="#cee2ee" font-size="17">Scale skills</text><text x="352" y="446" fill="#cee2ee" font-size="17">Build adoption</text>
+<rect x="600" y="340" width="245" height="150" rx="14" fill="#183149" stroke="#b7b4ef"/><text x="622" y="380" fill="#fff" font-size="21" font-weight="bold">Technology</text><text x="622" y="418" fill="#cee2ee" font-size="17">Data / telemetry</text><text x="622" y="446" fill="#cee2ee" font-size="17">Analytics platform</text>
+<rect x="870" y="340" width="245" height="150" rx="14" fill="#183149" stroke="#e7c18c"/><text x="892" y="380" fill="#fff" font-size="21" font-weight="bold">Program mgmt</text><text x="892" y="418" fill="#cee2ee" font-size="17">Cross-function</text><text x="892" y="446" fill="#cee2ee" font-size="17">Delivery / change</text>
+</g>
+<rect x="165" y="555" width="870" height="110" rx="14" fill="#213d55" stroke="#efbd9b"/>
+<text x="205" y="597" fill="#fff" font-family="Arial" font-size="22" font-weight="bold">Model audit: одинаковая строгость для всех методов</text>
+<text x="205" y="631" fill="#d2e8f3" font-family="Arial" font-size="18">Intuition · scorecards · heat maps · deterministic · stochastic → evidence of fitness</text>
+<rect x="52" y="718" width="1096" height="48" rx="10" fill="#2c2a38" stroke="#9a889f"/>
+<text x="74" y="749" fill="#f0dce8" font-family="Arial" font-size="16">Boundary: reporting line, staffing, audit policy и ecosystem prescriptions — source recommendations, не local policy</text>
+<text x="52" y="805" fill="#91aec4" font-family="Arial" font-size="14">RAG e0045:c01–c08 · EPUB spine 45 · OPS/ch1-43.xhtml</text>
+</svg>
