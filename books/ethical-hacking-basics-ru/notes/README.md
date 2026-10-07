@@ -13,3 +13,4 @@ chapter-analysis readiness passes.
 - [Глава 4 — OSINT, DNS и пассивная разведка](chapters/chapter-04-osint-dns-passive-recon/README.md) — PDF pp. 72–98; 34 RAG-chunks; author summary, practical exercise, source-findings, две SVG; reading state unchanged.
 - [Глава 5 — активное сканирование и оценка уязвимостей](chapters/chapter-05-active-scanning-vulnerability-assessment/README.md) — PDF pp. 99–139; 53 RAG chunks; author summary, two practical exercises, source-findings, две SVG; reading state unchanged.
 - [Глава 6 — перечисление сервисов и прикладной разведки](chapters/chapter-06-service-enumeration/README.md) — PDF pp. 140–168; 32 RAG chunks; source summary, source-findings, две SVG; reading state unchanged.
+- [Глава 7 — эксплуатация, пароли и постэксплуатация](chapters/chapter-07-exploitation-post-exploitation/README.md) — PDF pp. 169–209; 50 RAG chunks; source summary, one practical exercise, source-findings, две SVG; reading state unchanged.
