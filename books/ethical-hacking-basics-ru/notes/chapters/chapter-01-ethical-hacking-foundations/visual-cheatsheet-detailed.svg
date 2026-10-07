@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1350" viewBox="0 0 1600 1350" role="img" aria-labelledby="title description">
+<title id="title">Глава 1 — подробная памятка по этичному хакингу</title>
+<desc id="description">Этика и правовые границы, определения, модели атак, фазы методологии и контрольные вопросы из PDF-страниц 2–14.</desc>
+<rect width="1600" height="1350" fill="#edf4f7"/>
+<rect width="1600" height="170" fill="#152d42"/>
+<text x="55" y="72" font-family="Arial,DejaVu Sans,sans-serif" font-size="40" fill="#fff" font-weight="700">Глава 1  |  Этика, модели атак и методология</text>
+<text x="55" y="123" font-family="Arial,DejaVu Sans,sans-serif" font-size="24" fill="#cae4ef" font-weight="400">Источник: «Основы этичного хакинга», А. В. Чумилин · PDF pp. 2–14 · RAG-only</text>
+<rect x="40" y="197" width="745" height="278" rx="20" fill="#fff" stroke="#d5e2e8" stroke-width="2"/>
+<text x="67" y="243" font-family="Arial,DejaVu Sans,sans-serif" font-size="30" fill="#1e6472" font-weight="700">1. Этические границы</text>
+<text x="70" y="292" font-family="Arial,DejaVu Sans,sans-serif" font-size="23" fill="#163247" font-weight="400">• Заказчик согласует цели, системы и методы</text>
+<text x="70" y="330" font-family="Arial,DejaVu Sans,sans-serif" font-size="23" fill="#163247" font-weight="400">• Чувствительные сведения не разглашать</text>
+<text x="70" y="368" font-family="Arial,DejaVu Sans,sans-serif" font-size="23" fill="#163247" font-weight="400">• Сбои сообщать ответственным лицам</text>
+<text x="70" y="406" font-family="Arial,DejaVu Sans,sans-serif" font-size="23" fill="#163247" font-weight="400">• Результат документировать и передавать</text>
+<text x="70" y="445" font-family="Arial,DejaVu Sans,sans-serif" font-size="23" fill="#163247" font-weight="400">• Раскрытие уязвимостей: координировать</text>
+<rect x="810" y="197" width="750" height="278" rx="20" fill="#fff" stroke="#d5e2e8" stroke-width="2"/>
+<text x="840" y="243" font-family="Arial,DejaVu Sans,sans-serif" font-size="30" fill="#45629a" font-weight="700">2. Основные понятия</text>
+<text x="841" y="292" font-family="Arial,DejaVu Sans,sans-serif" font-size="23" fill="#163247" font-weight="400">Уязвимость — слабость в системе</text>
+<text x="841" y="330" font-family="Arial,DejaVu Sans,sans-serif" font-size="23" fill="#163247" font-weight="400">Угроза — потенциальное действие / событие</text>
+<text x="841" y="368" font-family="Arial,DejaVu Sans,sans-serif" font-size="23" fill="#163247" font-weight="400">Атака — намеренное воздействие на цель</text>
+<text x="841" y="406" font-family="Arial,DejaVu Sans,sans-serif" font-size="23" fill="#163247" font-weight="400">Активная / пассивная; внутренняя / внешняя</text>
+<text x="841" y="445" font-family="Arial,DejaVu Sans,sans-serif" font-size="22" fill="#163247" font-weight="400">Безопасность ↔ функциональность / удобство</text>
+<rect x="40" y="499" width="485" height="277" rx="20" fill="#fff" stroke="#d5e2e8" stroke-width="2"/>
+<text x="65" y="548" font-family="Arial,DejaVu Sans,sans-serif" font-size="29" fill="#45629a" font-weight="700">Cyber Kill Chain</text>
+<text x="66" y="594" font-family="Arial,DejaVu Sans,sans-serif" font-size="22" fill="#163247" font-weight="400">Разведка → вооружение</text>
+<text x="66" y="630" font-family="Arial,DejaVu Sans,sans-serif" font-size="22" fill="#163247" font-weight="400">→ доставка → эксплуатация</text>
+<text x="66" y="666" font-family="Arial,DejaVu Sans,sans-serif" font-size="22" fill="#163247" font-weight="400">→ установка → C2</text>
+<text x="66" y="702" font-family="Arial,DejaVu Sans,sans-serif" font-size="22" fill="#163247" font-weight="400">→ действия по целям</text>
+<text x="66" y="744" font-family="Arial,DejaVu Sans,sans-serif" font-size="21" fill="#63788a" font-weight="400">Линейная модель атаки</text>
+<rect x="557" y="499" width="486" height="277" rx="20" fill="#fff" stroke="#d5e2e8" stroke-width="2"/>
+<text x="581" y="548" font-family="Arial,DejaVu Sans,sans-serif" font-size="29" fill="#45629a" font-weight="700">Attack lifecycle</text>
+<text x="581" y="594" font-family="Arial,DejaVu Sans,sans-serif" font-size="22" fill="#163247" font-weight="400">Первичный доступ</text>
+<text x="581" y="630" font-family="Arial,DejaVu Sans,sans-serif" font-size="22" fill="#163247" font-weight="400">→ закрепление / расширение</text>
+<text x="581" y="666" font-family="Arial,DejaVu Sans,sans-serif" font-size="22" fill="#163247" font-weight="400">→ внутренняя разведка</text>
+<text x="581" y="702" font-family="Arial,DejaVu Sans,sans-serif" font-size="22" fill="#163247" font-weight="400">↻ боковое перемещение</text>
+<text x="581" y="744" font-family="Arial,DejaVu Sans,sans-serif" font-size="21" fill="#63788a" font-weight="400">Петли внутри периметра</text>
+<rect x="1075" y="499" width="485" height="277" rx="20" fill="#fff" stroke="#d5e2e8" stroke-width="2"/>
+<text x="1102" y="548" font-family="Arial,DejaVu Sans,sans-serif" font-size="29" fill="#45629a" font-weight="700">MITRE ATT&amp;CK</text>
+<text x="1102" y="594" font-family="Arial,DejaVu Sans,sans-serif" font-size="22" fill="#163247" font-weight="400">Категории TTP:</text>
+<text x="1102" y="630" font-family="Arial,DejaVu Sans,sans-serif" font-size="22" fill="#163247" font-weight="400">доступ, выполнение, C2,</text>
+<text x="1102" y="666" font-family="Arial,DejaVu Sans,sans-serif" font-size="22" fill="#163247" font-weight="400">разведка, перемещение,</text>
+<text x="1102" y="702" font-family="Arial,DejaVu Sans,sans-serif" font-size="22" fill="#163247" font-weight="400">эксфильтрация / влияние</text>
+<text x="1102" y="744" font-family="Arial,DejaVu Sans,sans-serif" font-size="21" fill="#63788a" font-weight="400">НЕ готовая инструкция атаки</text>
+<rect x="40" y="799" width="1520" height="277" rx="20" fill="#fff" stroke="#d5e2e8" stroke-width="2"/>
+<text x="70" y="847" font-family="Arial,DejaVu Sans,sans-serif" font-size="31" fill="#94603a" font-weight="700">3. Методология из раздела 1.3</text>
+
+<rect x="70" y="877" width="264" height="103" rx="15" fill="#e7f1f5" stroke="#c9e1ec" stroke-width="2"/>
+<text x="86" y="915" font-family="Arial,DejaVu Sans,sans-serif" font-size="23" fill="#244c61" font-weight="700">Разведка</text>
+<text x="86" y="953" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#4b6778" font-weight="400">Цифровые следы</text>
+<text x="342" y="937" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" fill="#638093" font-weight="700">→</text>
+<rect x="370" y="877" width="264" height="103" rx="15" fill="#e7f1f5" stroke="#c9e1ec" stroke-width="2"/>
+<text x="386" y="915" font-family="Arial,DejaVu Sans,sans-serif" font-size="23" fill="#244c61" font-weight="700">Сканирование</text>
+<text x="386" y="953" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#4b6778" font-weight="400">Хосты / службы</text>
+<text x="642" y="937" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" fill="#638093" font-weight="700">→</text>
+<rect x="670" y="877" width="264" height="103" rx="15" fill="#e7f1f5" stroke="#c9e1ec" stroke-width="2"/>
+<text x="686" y="915" font-family="Arial,DejaVu Sans,sans-serif" font-size="23" fill="#244c61" font-weight="700">Доступ</text>
+<text x="686" y="953" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#4b6778" font-weight="400">Доказательства</text>
+<text x="942" y="937" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" fill="#638093" font-weight="700">→</text>
+<rect x="970" y="877" width="264" height="103" rx="15" fill="#fff1e3" stroke="#ead4bb" stroke-width="2"/>
+<text x="986" y="915" font-family="Arial,DejaVu Sans,sans-serif" font-size="23" fill="#82532b" font-weight="700">Закрепление</text>
+<text x="986" y="953" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#4b6778" font-weight="400">Описано в книге</text>
+<text x="1242" y="937" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" fill="#638093" font-weight="700">→</text>
+<rect x="1270" y="877" width="264" height="103" rx="15" fill="#fff1e3" stroke="#ead4bb" stroke-width="2"/>
+<text x="1286" y="915" font-family="Arial,DejaVu Sans,sans-serif" font-size="23" fill="#82532b" font-weight="700">Сокрытие</text>
+<text x="1286" y="953" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#4b6778" font-weight="400">Описано в книге</text>
+<text x="72" y="1030" font-family="Arial,DejaVu Sans,sans-serif" font-size="23" fill="#8c4c25" font-weight="600">Описанные фазы изменения среды не дают права на их выполнение без согласованного scope.</text>
+<rect x="40" y="1100" width="1520" height="166" rx="17" fill="#dceaf0" stroke="#c2dce7" stroke-width="2"/>
+<text x="70" y="1145" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" fill="#152d42" font-weight="700">4. Три фундаментальных вопроса</text>
+<text x="72" y="1190" font-family="Arial,DejaVu Sans,sans-serif" font-size="23" fill="#244c61" font-weight="400">Что увидит злоумышленник?   •   Как использует сведения?   •   Как распознать его действия?</text>
+<text x="72" y="1231" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#466074" font-weight="400">Проверка: доказательства, границы тестирования, отчёт заказчику; процедура rollback в главе не дана.</text>
+<text x="52" y="1323" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#466074" font-weight="400">Provenance: p0002:c01–p0014:c01 | PDF pp. 2–14 | нет CLI-команд | статистика без внешней верификации</text>
+</svg>
