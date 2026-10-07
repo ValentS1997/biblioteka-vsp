@@ -18,4 +18,6 @@ Book ID: `sql-pocket-guide-alice-zhao-4e-ru`.
 
 | 06 | [Типы данных](chapter-06-tipy-dannyh/README.md) | PDF 155–189; `p0155:c01`–`p0189:c01` | [cheatsheet](chapter-06-tipy-dannyh/cheatsheet.md) · [commands](chapter-06-tipy-dannyh/commands.md) · [diagram](chapter-06-tipy-dannyh/diagram.md) · [compact SVG](chapter-06-tipy-dannyh/visual-cheatsheet.svg) · [detailed SVG](chapter-06-tipy-dannyh/visual-cheatsheet-detailed.svg) · [source findings](chapter-06-tipy-dannyh/source-findings.md) |
 
+| 07 | [Операции и функции](chapter-07-operatsii-i-funktsii/README.md) | PDF 190–243; `p0190:c01`–`p0243:c01` | [cheatsheet](chapter-07-operatsii-i-funktsii/cheatsheet.md) · [commands](chapter-07-operatsii-i-funktsii/commands.md) · [diagram](chapter-07-operatsii-i-funktsii/diagram.md) · [compact SVG](chapter-07-operatsii-i-funktsii/visual-cheatsheet.svg) · [detailed SVG](chapter-07-operatsii-i-funktsii/visual-cheatsheet-detailed.svg) · [source findings](chapter-07-operatsii-i-funktsii/source-findings.md) |
+
 Reading status сохраняется независимо от создания chapter artifacts.
