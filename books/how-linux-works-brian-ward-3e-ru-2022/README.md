@@ -63,3 +63,4 @@ Canonical readiness command:
 - [Глава 13 — Пользовательское окружение](notes/chapters/chapter-13-user-environment/README.md) — RAG-only, PDF/печатные с. 390–401.
 - [Глава 14 — Краткий обзор рабочего стола Linux. Вывод на печать](notes/chapters/chapter-14-linux-desktop-and-printing/README.md) — RAG-only, PDF/печатные с. 402–418.
 - [Глава 15 — Инструменты разработки](notes/chapters/chapter-15-development-tools/README.md) — RAG-only, PDF/печатные с. 419–441.
+- [Глава 16 — Компиляция программ из исходного кода на языке C](notes/chapters/chapter-16-building-c-programs-from-source/README.md) — RAG-only, PDF/печатные с. 442–457.
