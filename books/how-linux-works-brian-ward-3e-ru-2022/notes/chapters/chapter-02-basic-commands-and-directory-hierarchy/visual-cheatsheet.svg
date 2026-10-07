@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 950" width="1600" height="950" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 2 — Основные команды Linux</title>
+  <desc id="desc">Обзор shell, read-only проверок, потоков, изменений и каталогов.</desc>
+  <rect x="0" y="0" width="1600" height="950" rx="0" fill="#f3f7fc" />
+  <rect x="0" y="0" width="1600" height="139" rx="0" fill="#172a43" />
+  <text x="54" y="59" font-family="DejaVu Sans,Arial,sans-serif" font-size="37" font-weight="700" fill="#ffffff">Глава 2 — Основные команды Linux</text>
+  <text x="54" y="104" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="400" fill="#d3e7ff">От shell и файлов — к процессам, правам и sudo</text>
+  <rect x="48" y="174" width="482" height="232" rx="18" fill="#ffffff" stroke="#2a7397" stroke-width="2" />
+  <rect x="48" y="174" width="482" height="9" rx="4" fill="#2a7397" />
+  <text x="74" y="223" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="700" fill="#2a7397">SHELL И ПУТИ</text>
+  <text x="74" y="273" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#233c54">cd / pwd / PATH / export</text>
+  <text x="74" y="308" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#233c54">Абсолютные и относительные пути</text>
+  <text x="74" y="343" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#233c54">Globbing: * и ? до выполнения</text>
+  <text x="74" y="378" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#233c54">cat: stdin → stdout; Ctrl+D = EOF</text>
+  <rect x="559" y="174" width="482" height="232" rx="18" fill="#ffffff" stroke="#23805d" stroke-width="2" />
+  <rect x="559" y="174" width="482" height="9" rx="4" fill="#23805d" />
+  <text x="585" y="223" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="700" fill="#23805d">НАБЛЮДЕНИЕ</text>
+  <text x="585" y="273" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#233c54">ls -l / file / find / grep</text>
+  <text x="585" y="308" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#233c54">man / info / diff / less</text>
+  <text x="585" y="343" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#233c54">ps / jobs / groups</text>
+  <text x="585" y="378" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#233c54">journalctl ... sudo</text>
+  <rect x="1070" y="174" width="482" height="232" rx="18" fill="#ffffff" stroke="#6955a1" stroke-width="2" />
+  <rect x="1070" y="174" width="482" height="9" rx="4" fill="#6955a1" />
+  <text x="1096" y="223" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="700" fill="#6955a1">ПОТОКИ И ОШИБКИ</text>
+  <text x="1096" y="273" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#233c54">| соединяет stdout → stdin</text>
+  <text x="1096" y="308" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#233c54">&gt; перезаписывает; &gt;&gt; добавляет</text>
+  <text x="1096" y="343" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#233c54">2&gt; = stderr, 2&gt;&amp;1 = вместе</text>
+  <text x="1096" y="378" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#233c54">Сначала читай первую ошибку</text>
+  <rect x="48" y="447" width="482" height="247" rx="18" fill="#ffffff" stroke="#bd682f" stroke-width="2" />
+  <rect x="48" y="447" width="482" height="9" rx="4" fill="#bd682f" />
+  <text x="74" y="496" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="700" fill="#bd682f">ИЗМЕНЕНИЕ ФАЙЛОВ</text>
+  <text x="74" y="546" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#233c54">cp / mv / touch / mkdir</text>
+  <text x="74" y="581" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#233c54">rm и особенно rm -r: риск</text>
+  <text x="74" y="616" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#233c54">chmod / umask / ln -s</text>
+  <text x="74" y="651" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#233c54">До изменения: путь и права</text>
+  <rect x="559" y="447" width="482" height="247" rx="18" fill="#ffffff" stroke="#2b6e9f" stroke-width="2" />
+  <rect x="559" y="447" width="482" height="9" rx="4" fill="#2b6e9f" />
+  <text x="585" y="496" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="700" fill="#2b6e9f">ПРОЦЕССЫ И АРХИВЫ</text>
+  <text x="585" y="546" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#233c54">ps → PID; kill → сигнал</text>
+  <text x="585" y="581" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#233c54">STOP / CONT / TERM / KILL</text>
+  <text x="585" y="616" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#233c54">tar t перед tar x</text>
+  <text x="585" y="651" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#233c54">gzip и tar — разные действия</text>
+  <rect x="1070" y="447" width="482" height="247" rx="18" fill="#ffffff" stroke="#6a599b" stroke-width="2" />
+  <rect x="1070" y="447" width="482" height="9" rx="4" fill="#6a599b" />
+  <text x="1096" y="496" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="700" fill="#6a599b">ИЕРАРХИЯ И ROOT</text>
+  <text x="1096" y="546" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#233c54">/etc — конфиги; /proc — процессы</text>
+  <text x="1096" y="581" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#233c54">/var — журналы; /run — runtime</text>
+  <text x="1096" y="616" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#233c54">/usr — программы; /home — данные</text>
+  <text x="1096" y="651" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#233c54">sudo / visudo — привилегии</text>
+  <rect x="48" y="739" width="1504" height="132" rx="18" fill="#fcece9" stroke="#d08063" stroke-width="2" />
+  <text x="75" y="778" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" font-weight="700" fill="#a13e2c">SAFETY BOUNDARY</text>
+  <text x="75" y="815" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#233c54">Не выполнять rm -r, kill -KILL, tar x, chmod или sudo без проверки цели и rollback.</text>
+  <text x="75" y="846" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="400" fill="#233c54">NOPASSWD: ALL — широкий доступ; пример книги НЕ является конфигурационной рекомендацией.</text>
+  <text x="52" y="918" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="400" fill="#49627a">Источник: Уорд · гл. 2 · PDF/печатные с. 39–78 · RAG p0039:c01–p0078:c01 · только текстовая реконструкция</text>
+</svg>
