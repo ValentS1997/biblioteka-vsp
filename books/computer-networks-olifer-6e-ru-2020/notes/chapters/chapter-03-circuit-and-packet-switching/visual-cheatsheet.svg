@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="t d">
+<title id="t">Chapter 3 — circuit and packet switching</title>
+<desc id="d">Compact RAG-grounded comparison of circuit switching and packet switching.</desc>
+<rect width="1200" height="820" fill="#ffffff"/>
+<text x="60" y="60" font-family="sans-serif" font-size="34" font-weight="700">Chapter 3 — Circuit vs Packet Switching</text>
+<text x="60" y="96" font-family="sans-serif" font-size="18">PDF 75–102 · printed 74–101 · RAG only</text>
+
+<rect x="70" y="150" width="500" height="260" rx="16" fill="#eef2f7" stroke="#27364a" stroke-width="2"/>
+<text x="105" y="195" font-family="sans-serif" font-size="25" font-weight="700">Circuit switching</text>
+<text x="105" y="235" font-family="sans-serif" font-size="18">reserve resources before transfer</text>
+<text x="105" y="270" font-family="sans-serif" font-size="18">fixed composite channel</text>
+<text x="105" y="305" font-family="sans-serif" font-size="18">predictable bandwidth / delay</text>
+<text x="105" y="340" font-family="sans-serif" font-size="18">setup may fail when channels are busy</text>
+<text x="105" y="375" font-family="sans-serif" font-size="18">inefficient for bursty traffic</text>
+
+<rect x="630" y="150" width="500" height="260" rx="16" fill="#f7f7f7" stroke="#27364a" stroke-width="2"/>
+<text x="665" y="195" font-family="sans-serif" font-size="25" font-weight="700">Packet switching</text>
+<text x="665" y="235" font-family="sans-serif" font-size="18">split data into packets</text>
+<text x="665" y="270" font-family="sans-serif" font-size="18">share links statistically</text>
+<text x="665" y="305" font-family="sans-serif" font-size="18">buffers + queues + store-and-forward</text>
+<text x="665" y="340" font-family="sans-serif" font-size="18">variable delay and possible loss</text>
+<text x="665" y="375" font-family="sans-serif" font-size="18">efficient for bursty computer traffic</text>
+
+<text x="60" y="475" font-family="sans-serif" font-size="25" font-weight="700">Packet forwarding modes</text>
+
+<rect x="70" y="515" width="320" height="150" rx="14" fill="#eef2f7" stroke="#27364a" stroke-width="2"/>
+<text x="105" y="555" font-family="sans-serif" font-size="22" font-weight="700">Datagram</text>
+<text x="105" y="590" font-family="sans-serif" font-size="17">independent packets</text>
+<text x="105" y="620" font-family="sans-serif" font-size="17">best effort</text>
+
+<rect x="440" y="515" width="320" height="150" rx="14" fill="#eef2f7" stroke="#27364a" stroke-width="2"/>
+<text x="475" y="555" font-family="sans-serif" font-size="22" font-weight="700">Logical connection</text>
+<text x="475" y="590" font-family="sans-serif" font-size="17">end systems keep state</text>
+<text x="475" y="620" font-family="sans-serif" font-size="17">route can still vary</text>
+
+<rect x="810" y="515" width="320" height="150" rx="14" fill="#eef2f7" stroke="#27364a" stroke-width="2"/>
+<text x="845" y="555" font-family="sans-serif" font-size="22" font-weight="700">Virtual circuit</text>
+<text x="845" y="590" font-family="sans-serif" font-size="17">fixed packet route</text>
+<text x="845" y="620" font-family="sans-serif" font-size="17">compact flow label</text>
+
+<text x="60" y="745" font-family="sans-serif" font-size="17">Virtual circuit ≠ circuit switching: packets remain discrete and buffered.</text>
+<text x="60" y="780" font-family="sans-serif" font-size="15">Source caveat: equation typography on PDF 95–100 is extraction-damaged.</text>
+</svg>
