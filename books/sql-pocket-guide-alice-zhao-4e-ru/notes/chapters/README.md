@@ -24,4 +24,6 @@ Book ID: `sql-pocket-guide-alice-zhao-4e-ru`.
 
 | 09 | [Работа с несколькими таблицами и запросами](chapter-09-rabota-s-neskolkimi-tablitsami-i-zaprosami/README.md) | PDF 273–303; `p0273:c01`–`p0303:c01` | [cheatsheet](chapter-09-rabota-s-neskolkimi-tablitsami-i-zaprosami/cheatsheet.md) · [commands](chapter-09-rabota-s-neskolkimi-tablitsami-i-zaprosami/commands.md) · [diagram](chapter-09-rabota-s-neskolkimi-tablitsami-i-zaprosami/diagram.md) · [compact SVG](chapter-09-rabota-s-neskolkimi-tablitsami-i-zaprosami/visual-cheatsheet.svg) · [detailed SVG](chapter-09-rabota-s-neskolkimi-tablitsami-i-zaprosami/visual-cheatsheet-detailed.svg) · [source findings](chapter-09-rabota-s-neskolkimi-tablitsami-i-zaprosami/source-findings.md) |
 
+| 10 | [Как мне?..](chapter-10-kak-mne/README.md) | PDF 304–315; `p0304:c01`–`p0315:c01` | [cheatsheet](chapter-10-kak-mne/cheatsheet.md) · [commands](chapter-10-kak-mne/commands.md) · [diagram](chapter-10-kak-mne/diagram.md) · [compact SVG](chapter-10-kak-mne/visual-cheatsheet.svg) · [detailed SVG](chapter-10-kak-mne/visual-cheatsheet-detailed.svg) · [summary](chapter-10-kak-mne/summary.md) · [source findings](chapter-10-kak-mne/source-findings.md) |
+
 Reading status сохраняется независимо от создания chapter artifacts.
