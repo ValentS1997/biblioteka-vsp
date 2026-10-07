@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 820">
+<rect width="1400" height="820" fill="#f4f6f8"/>
+<rect width="1400" height="110" fill="#1e293b"/>
+<text x="45" y="50" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="white">ГЛАВА 7 · УРОВЕНЬ АССЕМБЛЕРА</text>
+<text x="45" y="86" font-family="Arial,sans-serif" font-size="19" fill="#dbe5ef">symbols • macros • two passes • relocation • linking • shared libraries</text>
+<g font-family="Arial,sans-serif" fill="#243447">
+<rect x="40" y="145" width="410" height="230" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="65" y="190" font-size="22" font-weight="700" fill="#365f91">ASSEMBLY SOURCE</text>
+<text x="65" y="235" font-size="18">label • opcode/directive • operands</text>
+<text x="65" y="270" font-size="18">symbolic form of machine language</text>
+<text x="65" y="305" font-size="18">direct access to machine resources</text>
+<text x="65" y="340" font-size="18">translated before execution</text>
+
+<rect x="495" y="145" width="410" height="230" rx="14" fill="white" stroke="#2d7d63" stroke-width="2"/>
+<text x="520" y="190" font-size="22" font-weight="700" fill="#2d7d63">MACROS</text>
+<text x="520" y="235" font-size="18">definition → call → expansion</text>
+<text x="520" y="270" font-size="18">formal → actual parameter strings</text>
+<text x="520" y="305" font-size="18">LOCAL avoids label collisions</text>
+<text x="520" y="340" font-size="18">recursive expansion needs base case</text>
+
+<rect x="950" y="145" width="410" height="230" rx="14" fill="white" stroke="#7656a5" stroke-width="2"/>
+<text x="975" y="190" font-size="22" font-weight="700" fill="#7656a5">TWO PASSES</text>
+<text x="975" y="235" font-size="18">pass 1 → ILC + symbols</text>
+<text x="975" y="270" font-size="18">forward references become known</text>
+<text x="975" y="305" font-size="18">pass 2 → object code</text>
+<text x="975" y="340" font-size="18">emit relocation/link metadata</text>
+
+<rect x="40" y="415" width="410" height="230" rx="14" fill="white" stroke="#b15d45" stroke-width="2"/>
+<text x="65" y="460" font-size="22" font-weight="700" fill="#b15d45">SYMBOL TABLE</text>
+<text x="65" y="505" font-size="18">linear search: simple / slow</text>
+<text x="65" y="540" font-size="18">sorted table: binary search</text>
+<text x="65" y="575" font-size="18">hash table: near O(1) average</text>
+<text x="65" y="610" font-size="18">collisions → bucket chain</text>
+
+<rect x="495" y="415" width="410" height="230" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="520" y="460" font-size="22" font-weight="700" fill="#365f91">LINKER</text>
+<text x="520" y="505" font-size="18">assign module bases</text>
+<text x="520" y="540" font-size="18">relocate address-sensitive fields</text>
+<text x="520" y="575" font-size="18">resolve external names</text>
+<text x="520" y="610" font-size="18">build one executable address space</text>
+
+<rect x="950" y="415" width="410" height="230" rx="14" fill="white" stroke="#2d7d63" stroke-width="2"/>
+<text x="975" y="460" font-size="22" font-weight="700" fill="#2d7d63">DYNAMIC LINKING</text>
+<text x="975" y="505" font-size="18">bind at load / first call</text>
+<text x="975" y="540" font-size="18">DLL / shared library</text>
+<text x="975" y="575" font-size="18">share code between processes</text>
+<text x="975" y="610" font-size="18">position independence helps relocation</text>
+
+<rect x="40" y="685" width="1320" height="90" rx="14" fill="#e8eef5" stroke="#9aa9ba"/>
+<text x="65" y="725" font-size="19" font-weight="700">CORE RULE</text>
+<text x="65" y="757" font-size="18">Symbols become executable only after address assignment, encoding, relocation and external-name resolution.</text>
+</g>
+</svg>

@@ -63,3 +63,5 @@ Canonical readiness command:
 - [Глава 5 — Уровень архитектуры набора команд](notes/chapters/chapter-05-instruction-set-architecture-level/README.md) — RAG-grounded analysis; PDF pages 377–474.
 
 - [Глава 6 — Уровень операционной системы](notes/chapters/chapter-06-operating-system-machine-level/README.md) — RAG-grounded analysis; PDF pages 475–554.
+
+- [Глава 7 — Уровень ассемблера](notes/chapters/chapter-07-assembly-language-level/README.md) — RAG-grounded analysis; PDF pages 555–589.

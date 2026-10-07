@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100">
+<rect width="1600" height="1100" fill="#f4f6f8"/>
+<rect width="1600" height="120" fill="#1e293b"/>
+<text x="45" y="52" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="white">ГЛАВА 7 · SOURCE → OBJECT → EXECUTABLE</text>
+<text x="45" y="88" font-family="Arial,sans-serif" font-size="19" fill="#dbe5ef">macro processing • symbol resolution • relocation • binding • dynamic libraries</text>
+<g font-family="Arial,sans-serif" fill="#243447">
+<rect x="40" y="150" width="480" height="210" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="65" y="192" font-size="21" font-weight="700" fill="#365f91">TRANSLATION</text>
+<text x="65" y="235" font-size="17">assembly source is translated first</text>
+<text x="65" y="266" font-size="17">object code executes afterwards</text>
+<text x="65" y="297" font-size="17">assembler ≠ interpreter</text>
+
+<rect x="560" y="150" width="480" height="210" rx="14" fill="white" stroke="#2d7d63" stroke-width="2"/>
+<text x="585" y="192" font-size="21" font-weight="700" fill="#2d7d63">SOURCE MODEL</text>
+<text x="585" y="235" font-size="17">label • operation • operands • comment</text>
+<text x="585" y="266" font-size="17">opcode → CPU instruction</text>
+<text x="585" y="297" font-size="17">directive → assembler action</text>
+
+<rect x="1080" y="150" width="480" height="210" rx="14" fill="white" stroke="#7656a5" stroke-width="2"/>
+<text x="1105" y="192" font-size="21" font-weight="700" fill="#7656a5">MACROS</text>
+<text x="1105" y="235" font-size="17">definition + formal parameters</text>
+<text x="1105" y="266" font-size="17">actual parameters substitute strings</text>
+<text x="1105" y="297" font-size="17">LOCAL prevents label collisions</text>
+
+<rect x="40" y="395" width="480" height="210" rx="14" fill="white" stroke="#b15d45" stroke-width="2"/>
+<text x="65" y="437" font-size="21" font-weight="700" fill="#b15d45">PASS 1</text>
+<text x="65" y="480" font-size="17">track Instruction Location Counter</text>
+<text x="65" y="511" font-size="17">discover labels / EQU values</text>
+<text x="65" y="542" font-size="17">expand macros</text>
+
+<rect x="560" y="395" width="480" height="210" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="585" y="437" font-size="21" font-weight="700" fill="#365f91">PASS 2</text>
+<text x="585" y="480" font-size="17">resolve symbols</text>
+<text x="585" y="511" font-size="17">encode instructions/constants</text>
+<text x="585" y="542" font-size="17">emit object + relocation metadata</text>
+
+<rect x="1080" y="395" width="480" height="210" rx="14" fill="white" stroke="#2d7d63" stroke-width="2"/>
+<text x="1105" y="437" font-size="21" font-weight="700" fill="#2d7d63">SYMBOL TABLE</text>
+<text x="1105" y="480" font-size="17">linear → O(n)</text>
+<text x="1105" y="511" font-size="17">binary → O(log n)</text>
+<text x="1105" y="542" font-size="17">hash → near O(1) average</text>
+
+<rect x="40" y="640" width="480" height="210" rx="14" fill="white" stroke="#7656a5" stroke-width="2"/>
+<text x="65" y="682" font-size="21" font-weight="700" fill="#7656a5">LINKER</text>
+<text x="65" y="725" font-size="17">assign module bases</text>
+<text x="65" y="756" font-size="17">relocate internal references</text>
+<text x="65" y="787" font-size="17">resolve external symbols</text>
+
+<rect x="560" y="640" width="480" height="210" rx="14" fill="white" stroke="#b15d45" stroke-width="2"/>
+<text x="585" y="682" font-size="21" font-weight="700" fill="#b15d45">BINDING / PIC</text>
+<text x="585" y="725" font-size="17">translate → link → load → runtime</text>
+<text x="585" y="756" font-size="17">later binding increases mobility</text>
+<text x="585" y="787" font-size="17">PC-relative code helps relocation</text>
+
+<rect x="1080" y="640" width="480" height="210" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="1105" y="682" font-size="21" font-weight="700" fill="#365f91">DYNAMIC LINKING</text>
+<text x="1105" y="725" font-size="17">MULTICS first-use linkage</text>
+<text x="1105" y="756" font-size="17">Windows DLL / UNIX shared library</text>
+<text x="1105" y="787" font-size="17">shared code + independent updates</text>
+
+<rect x="40" y="890" width="1520" height="150" rx="14" fill="#e8eef5" stroke="#9aa9ba"/>
+<text x="65" y="935" font-size="21" font-weight="700">ASSEMBLY PIPELINE</text>
+<text x="65" y="973" font-size="18">symbols → addresses → object code → relocation → executable → optional runtime binding</text>
+</g>
+</svg>
