@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1250" viewBox="0 0 1600 1250" role="img" aria-labelledby="title desc">
+<title id="title">Глава 10 — подробная схема модели зрелости метрик безопасности</title>
+<desc id="desc">Sparse Data Analysis, functional metrics, data marts, prescriptive analytics и R Bayesian audit example.</desc>
+<rect x="0" y="0" width="1600" height="1250" rx="0" fill="#0b1829" stroke="#0b1829" stroke-width="1.5"/>
+<text x="56" y="48" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#7fcaf4" font-weight="bold">BIBLIOTEKA-VSP / CHAPTER 10 / CYBER RISK</text>
+<text x="56" y="100" font-family="DejaVu Sans,Arial,sans-serif" font-size="34" fill="#fafcff" font-weight="bold">От решения при скудных данных к prescriptive analytics</text>
+<text x="56" y="138" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#bcd2e3" font-weight="normal">Метрики зрелы, когда они измеримы, воспроизводимы и связаны с действием</text>
+<text x="56" y="190" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#88d0f8" font-weight="bold">I · Maturity model</text>
+<rect x="56" y="209" width="350" height="164" rx="14" fill="#183149" stroke="#8dcdf1" stroke-width="1.5"/>
+<rect x="70" y="226" width="6" height="34" rx="3" fill="#8dcdf1" stroke="#8dcdf1" stroke-width="1.5"/>
+<text x="93" y="252" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Sparse Data Analysis</text>
+<text x="76" y="291" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Risk before investment</text>
+<text x="76" y="319" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Expert + limited data</text>
+<text x="76" y="347" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Quantify uncertainty</text>
+<rect x="428" y="209" width="350" height="164" rx="14" fill="#183149" stroke="#91d6bd" stroke-width="1.5"/>
+<rect x="442" y="226" width="6" height="34" rx="3" fill="#91d6bd" stroke="#91d6bd" stroke-width="1.5"/>
+<text x="465" y="252" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Functional metrics</text>
+<text x="448" y="291" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Coverage/configuration</text>
+<text x="448" y="319" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Mitigation speed</text>
+<text x="448" y="347" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Operational evidence</text>
+<rect x="800" y="209" width="350" height="164" rx="14" fill="#183149" stroke="#b7b4ef" stroke-width="1.5"/>
+<rect x="814" y="226" width="6" height="34" rx="3" fill="#b7b4ef" stroke="#b7b4ef" stroke-width="1.5"/>
+<text x="837" y="252" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Security data marts</text>
+<text x="820" y="291" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Cross-program joins</text>
+<text x="820" y="319" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Residual risk duration</text>
+<text x="820" y="347" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Shared risk questions</text>
+<rect x="1172" y="209" width="372" height="164" rx="14" fill="#183149" stroke="#e7c18c" stroke-width="1.5"/>
+<rect x="1186" y="226" width="6" height="34" rx="3" fill="#e7c18c" stroke="#e7c18c" stroke-width="1.5"/>
+<text x="1209" y="252" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Prescriptive</text>
+<text x="1192" y="291" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Predictive + decision models</text>
+<text x="1192" y="319" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Prioritize actions</text>
+<text x="1192" y="347" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Feedback into models</text>
+<text x="56" y="428" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#88d0f8" font-weight="bold">II · Functional measurement</text>
+<rect x="56" y="447" width="475" height="164" rx="14" fill="#183149" stroke="#8dcdf1" stroke-width="1.5"/>
+<rect x="70" y="464" width="6" height="34" rx="3" fill="#8dcdf1" stroke="#8dcdf1" stroke-width="1.5"/>
+<text x="93" y="490" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Coverage / configuration</text>
+<text x="76" y="529" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Is control active?</text>
+<text x="76" y="557" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Is config effective?</text>
+<text x="76" y="585" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Logs and alerts really flow?</text>
+<rect x="562" y="447" width="475" height="164" rx="14" fill="#183149" stroke="#91d6bd" stroke-width="1.5"/>
+<rect x="576" y="464" width="6" height="34" rx="3" fill="#91d6bd" stroke="#91d6bd" stroke-width="1.5"/>
+<text x="599" y="490" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Quality / workflow</text>
+<text x="582" y="529" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">False positives / negatives</text>
+<text x="582" y="557" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Response process</text>
+<text x="582" y="585" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Evidence of actual operation</text>
+<rect x="1068" y="447" width="476" height="164" rx="14" fill="#183149" stroke="#efbd9b" stroke-width="1.5"/>
+<rect x="1082" y="464" width="6" height="34" rx="3" fill="#efbd9b" stroke="#efbd9b" stroke-width="1.5"/>
+<text x="1105" y="490" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Residual exposure</text>
+<text x="1088" y="529" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Time risk exists</text>
+<text x="1088" y="557" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Time to detect</text>
+<text x="1088" y="585" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Time to mitigate</text>
+<text x="56" y="666" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#88d0f8" font-weight="bold">III · R sparse-data example</text>
+<rect x="56" y="687" width="1488" height="190" rx="14" fill="#183149" stroke="#8dd9bd" stroke-width="1.5"/>
+<text x="82" y="727" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#f8fbff" font-weight="bold">Prior belief</text>
+<text x="82" y="765" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#d1e6f1" font-weight="normal">P(control coverage &lt; 40%) = 50%   ·   P(control coverage &lt; 60%) = 90%</text>
+<text x="82" y="807" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#f8fbff" font-weight="bold">Observed sample</text>
+<text x="82" y="845" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#d1e6f1" font-weight="normal">5 successes / 30 failures → source 90% posterior interval ≈ 11.5%–30.8%</text>
+<text x="56" y="932" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#88d0f8" font-weight="bold">IV · Prescriptive layer and source boundaries</text>
+<rect x="56" y="951" width="713" height="164" rx="14" fill="#183149" stroke="#91d6bd" stroke-width="1.5"/>
+<rect x="70" y="968" width="6" height="34" rx="3" fill="#91d6bd" stroke="#91d6bd" stroke-width="1.5"/>
+<text x="93" y="994" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Decision architecture</text>
+<text x="76" y="1033" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Descriptive: what happened</text>
+<text x="76" y="1061" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Predictive: what may happen</text>
+<text x="76" y="1089" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Prescriptive: what should we do</text>
+<rect x="791" y="951" width="753" height="164" rx="14" fill="#183149" stroke="#efbd9b" stroke-width="1.5"/>
+<rect x="805" y="968" width="6" height="34" rx="3" fill="#efbd9b" stroke="#efbd9b" stroke-width="1.5"/>
+<text x="828" y="994" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Source integrity</text>
+<text x="811" y="1033" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">rbeta line internally inconsistent</text>
+<text x="811" y="1061" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">qbeta variable name split</text>
+<text x="811" y="1089" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Figures 10.1–10.3 not reconstructed</text>
+<rect x="56" y="1150" width="1488" height="48" rx="14" fill="#2c2a38" stroke="#9a889f" stroke-width="1.5"/>
+<text x="82" y="1181" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#f0dce8" font-weight="normal">Acceptance: reproducible metric definition, verified data path, versioned model, independent execution check before automation</text>
+<text x="56" y="1234" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" fill="#90aec4" font-weight="normal">RAG e0041:c01–c04 / e0042:c01–c05 · EPUB spine 41–42 · not a production automation runbook</text>
+</svg>
