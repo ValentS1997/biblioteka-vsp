@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="960" viewBox="0 0 1500 960">
+<rect width="1500" height="960" fill="#f8fafb"/>
+<text x="50" y="58" font-family="Arial,DejaVu Sans,sans-serif" font-size="34" font-weight="700" fill="#183247">Глава 14 · Протокол межсетевого взаимодействия IP</text>
+<text x="50" y="92" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#52697a">RAG p0399:c01–p0441:c01 · PDF 399–441 · printed 398–440 · 46 chunks</text>
+
+<rect x="55" y="135" width="430" height="220" rx="18" fill="#e8eff5" stroke="#b9cbd8"/>
+<text x="83" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#234b64">1 · IPv4 forwarding</text>
+<text x="83" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">best effort · independent packets</text>
+<text x="83" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">TTL · protocol · checksum</text>
+<text x="83" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">source / destination IPv4</text>
+
+<rect x="535" y="135" width="430" height="220" rx="18" fill="#eef4e8" stroke="#c4d4b9"/>
+<text x="563" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#365b31">2 · Route lookup</text>
+<text x="563" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">destination prefix</text>
+<text x="563" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">next hop + output interface</text>
+<text x="563" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">longest-prefix match</text>
+<text x="563" y="325" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#63755d">default = 0.0.0.0/0</text>
+
+<rect x="1015" y="135" width="430" height="220" rx="18" fill="#f8efe2" stroke="#ddc9aa"/>
+<text x="1043" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#78532e">3 · MTU / fragments</text>
+<text x="1043" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">ID · offset · MF · DF</text>
+<text x="1043" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">router can fragment IPv4</text>
+<text x="1043" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">destination reassembles</text>
+
+<rect x="95" y="420" width="620" height="215" rx="18" fill="#eee8f6" stroke="#c9bad9"/>
+<text x="125" y="465" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#593f73">4 · ICMP diagnostics</text>
+<text x="125" y="510" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">reports errors; does not repair them</text>
+<text x="125" y="550" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">ping → echo · traceroute → TTL expiry</text>
+<text x="125" y="590" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#756486">RTT to hop ≠ delay between adjacent routers</text>
+
+<rect x="785" y="420" width="620" height="215" rx="18" fill="#e5edf7" stroke="#bdcce0"/>
+<text x="815" y="465" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#2b4e78">5 · QoS</text>
+<text x="815" y="510" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">IntServ / RSVP → per-flow reservation</text>
+<text x="815" y="550" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">DiffServ → DSCP + per-hop behavior</text>
+<text x="815" y="590" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#5c7290">EF · AF · LE · best effort</text>
+
+<rect x="180" y="700" width="1140" height="150" rx="18" fill="#fff3dd" stroke="#dfca9b"/>
+<text x="210" y="745" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#785f2d">Troubleshooting sequence</text>
+<text x="210" y="790" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6c5c3a">route → next hop → ARP/link → TTL → MTU/DF → ICMP → ping/traceroute → DSCP</text>
+<text x="210" y="827" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#6c5c3a">Source contains a DF contradiction; recorded in source-findings.</text>
+
+<text x="50" y="920" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#63798a">Chapter 15 begins at p0442:c01 · reading state unchanged.</text>
+</svg>

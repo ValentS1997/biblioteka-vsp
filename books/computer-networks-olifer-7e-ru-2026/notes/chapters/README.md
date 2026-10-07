@@ -17,5 +17,6 @@ Book ID: `computer-networks-olifer-7e-ru-2026`. Индекс ведёт толь
 | 11 — Отказоустойчивые и виртуальные локальные сети | 326–350 | 325–349 | [Глава 11](chapter-11-otkazoustoychivye-i-virtualnye-lokalnye-seti/README.md) |
 | 12 — Ethernet операторского класса | 351–360 | 350–359 | [Глава 12](chapter-12-ethernet-operatorskogo-klassa/README.md) |
 | 13 — Стек протоколов TCP/IP. Адресация | 365–398 | 364–397 | [Глава 13](chapter-13-stek-tcp-ip-adresaciya/README.md) |
+| 14 — Протокол межсетевого взаимодействия IP | 399–441 | 398–440 | [Глава 14](chapter-14-protokol-mezhsetevogo-vzaimodeystviya-ip/README.md) |
 
 Дальнейшие главы: **[Needs confirmation]** до индивидуального анализа. Reading state книги остаётся независимым от RAG.
