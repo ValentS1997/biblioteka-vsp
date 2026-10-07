@@ -10,7 +10,7 @@ Only commands/directives explicitly present in RAG `p0034:c01–p0049:c01`.
 | `docker ps` | read-only | показать запущенные containers / найти ID | container appears in list | Not applicable |
 | extracted topz `docker run ...` | state-changing | запустить topz beside application in same PID namespace | `http://localhost:8080/topz` | `[Needs confirmation]` |
 | `git pull` | state-changing | обновить shared filesystem из Git repository | file update / application reaction: `[Needs confirmation]` | `[Needs confirmation]` |
-| `sleep 10` | read-only/non-persistent | задержка между Git sync iterations | loop interval observable | Not applicable |
+| `sleep 10` | read-only | задержка между Git sync iterations; persistent configuration/data не меняет | loop interval observable | Not applicable |
 | `docker run -e=PORT=<порт> -d <образ>` | state-changing | передать parameter через environment variable и запустить container | container-specific: `[Needs confirmation]` | `[Needs confirmation]` |
 | `docker run -e=PROXY_PORT=8080 -e=CERTIFICATE_PATH=/путь/к/сертификату.crt ...` | state-changing | передать proxy port и certificate path | generated nginx config: `[Needs confirmation]` | `[Needs confirmation]` |
 
