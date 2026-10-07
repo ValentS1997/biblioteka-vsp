@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1450" viewBox="0 0 1800 1450">
+<rect width="1800" height="1450" fill="#f8fafb"/>
+<text x="55" y="58" font-family="Arial,DejaVu Sans,sans-serif" font-size="36" font-weight="700" fill="#173246">Глава 14 · Протокол межсетевого взаимодействия IP</text>
+<text x="55" y="94" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#536b7d">Олифер, 7-е изд. · RAG p0399:c01–p0441:c01 · PDF 399–441 · printed 398–440</text>
+
+<rect x="55" y="135" width="820" height="300" rx="18" fill="#eaf0f5" stroke="#b9cbd8"/>
+<text x="82" y="180" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#234b64">1 · IPv4 packet semantics</text>
+<text x="82" y="223" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">Connectionless best effort → each packet processed independently</text>
+<text x="82" y="261" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">TTL bounds lifetime / loop persistence</text>
+<text x="82" y="299" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">Protocol field identifies upper payload: TCP / UDP / ICMP source examples</text>
+<text x="82" y="337" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">Header checksum is recomputed as mutable fields change</text>
+<text x="82" y="375" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#5d7381">Fragment metadata shares the IPv4 header with source/destination addressing</text>
+
+<rect x="925" y="135" width="820" height="300" rx="18" fill="#eef4e8" stroke="#c3d4b8"/>
+<text x="952" y="180" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#365b31">2 · Routing-table decision</text>
+<text x="952" y="223" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">Destination network/prefix → next-hop router → outgoing interface</text>
+<text x="952" y="261" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">Route sources → connected/stack · static/admin · dynamic protocol</text>
+<text x="952" y="299" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">Host-specific /32 can override a broader network route</text>
+<text x="952" y="337" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">Several prefix matches → choose longest / most specific</text>
+<text x="952" y="375" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#65775e">0.0.0.0/0 is the least-specific fallback route</text>
+
+<rect x="55" y="480" width="820" height="305" rx="18" fill="#f8efe2" stroke="#ddc9aa"/>
+<text x="82" y="525" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#78532e">3 · Prefix planning and aggregation</text>
+<text x="82" y="568" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">Fixed-length subnetting → equal subnets</text>
+<text x="82" y="606" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">VLSM → different prefix lengths for different capacity needs</text>
+<text x="82" y="644" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">Mask is not carried in an IPv4 packet → routing state must know prefixes</text>
+<text x="82" y="682" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">CIDR aggregation → several contiguous networks summarized by one prefix</text>
+<text x="82" y="720" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">Address locality enables useful aggregation in provider/core tables</text>
+<text x="82" y="758" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#806d55">Source contrasts RIPv2/OSPF mask carriage with old RIP</text>
+
+<rect x="925" y="480" width="820" height="305" rx="18" fill="#eee8f6" stroke="#c9bad9"/>
+<text x="952" y="525" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#593f73">4 · MTU and fragmentation</text>
+<text x="952" y="568" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">Smaller next-link MTU can force IPv4 router fragmentation</text>
+<text x="952" y="606" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">Identification groups fragments · offset places fragment · MF marks more</text>
+<text x="952" y="644" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">DF forbids fragmentation according to explicit source definition</text>
+<text x="952" y="682" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">Routers do not reassemble fragments; destination host does</text>
+<text x="952" y="720" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">Missing fragment → incomplete set eventually discarded</text>
+<text x="952" y="758" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#756486">Source example later contradicts its DF definition; finding recorded separately</text>
+
+<rect x="55" y="830" width="820" height="300" rx="18" fill="#e5edf7" stroke="#bdcce0"/>
+<text x="82" y="875" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#2b4e78">5 · ICMP and active diagnostics</text>
+<text x="82" y="918" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">ICMP → report conditions; no lost-packet repair</text>
+<text x="82" y="956" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">Destination unreachable → type/code refines cause in source examples</text>
+<text x="82" y="994" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">traceroute/tracert → increasing TTL + time-exceeded responses</text>
+<text x="82" y="1032" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">ping → echo request/reply + loss/RTT sample</text>
+<text x="82" y="1070" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#5c7290">Traceroute hop RTT is source↔hop round trip, not inter-router link delay</text>
+
+<rect x="925" y="830" width="820" height="300" rx="18" fill="#f4ece7" stroke="#dbc6b9"/>
+<text x="952" y="875" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#714b38">6 · Mobility and QoS extensions</text>
+<text x="952" y="918" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Mobile IPv4 → home address + home/foreign agent + care-of address + tunnel</text>
+<text x="952" y="956" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">IntServ / RSVP → per-flow end-to-end reservation</text>
+<text x="952" y="994" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">DiffServ → aggregate traffic classes + DSCP marking</text>
+<text x="952" y="1032" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">PHB examples → EF / AF / LE / best effort</text>
+<text x="952" y="1070" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#806b5f">Source says DiffServ is commonly scoped to one administrative domain</text>
+
+<rect x="55" y="1175" width="1690" height="180" rx="16" fill="#fff3dd" stroke="#dfca9b"/>
+<text x="82" y="1218" font-family="Arial,DejaVu Sans,sans-serif" font-size="24" font-weight="700" fill="#785f2d">Operational reading rule</text>
+<text x="82" y="1258" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6c5c3a">Path failure → route/LPM → next hop → link/ARP → TTL → MTU/DF → ICMP evidence → active probes → QoS marking/policy.</text>
+<text x="82" y="1295" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6c5c3a">Do not modify routes or MTU until the failing layer is identified and before-state is captured.</text>
+<text x="82" y="1332" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#6c5c3a">No current platform-specific route/QoS syntax is supplied by the chapter.</text>
+<text x="55" y="1415" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#607789">Chapter 15 starts at p0442:c01 · reading state unchanged · source findings recorded separately.</text>
+</svg>
