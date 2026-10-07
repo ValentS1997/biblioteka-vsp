@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Глава 2 — Организация компьютерных систем</title>
+<desc id="desc">Compact RAG-grounded overview of processor, memory hierarchy, storage, I/O, DMA and interconnects.</desc>
+<rect width="1600" height="900" rx="18" fill="#f4f6f8"/>
+<rect width="1600" height="126" rx="18" fill="#1e293b"/>
+<text x="48" y="55" font-family="DejaVu Sans,Arial,sans-serif" font-size="34" font-weight="700" fill="#ffffff">ГЛАВА 2 · ОРГАНИЗАЦИЯ КОМПЬЮТЕРНЫХ СИСТЕМ</text>
+<text x="48" y="96" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#dbe5ef">CPU • memory hierarchy • storage • I/O • interconnect</text>
+
+<rect x="45" y="155" width="485" height="250" rx="16" fill="#ffffff" stroke="#365f91" stroke-width="2"/>
+<text x="70" y="205" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="700" fill="#365f91">01 · PROCESSOR</text>
+<text x="70" y="254" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">fetch → decode → execute</text>
+<text x="70" y="289" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">pipeline → throughput</text>
+<text x="70" y="324" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">superscalar → parallel units</text>
+<text x="70" y="359" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">SIMD • multiprocessor • multicomputer</text>
+
+<rect x="557" y="155" width="485" height="250" rx="16" fill="#ffffff" stroke="#2d7d63" stroke-width="2"/>
+<text x="582" y="205" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="700" fill="#2d7d63">02 · MAIN MEMORY</text>
+<text x="582" y="254" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">registers → cache → RAM</text>
+<text x="582" y="289" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">locality drives cache hits</text>
+<text x="582" y="324" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">cache line, hit ratio, latency</text>
+<text x="582" y="359" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">Hamming/ECC → reliability</text>
+
+<rect x="1069" y="155" width="485" height="250" rx="16" fill="#ffffff" stroke="#7656a5" stroke-width="2"/>
+<text x="1094" y="205" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="700" fill="#7656a5">03 · STORAGE</text>
+<text x="1094" y="254" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">seek + rotation + transfer</text>
+<text x="1094" y="289" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">SSD removes mechanical seek</text>
+<text x="1094" y="324" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">RAID = layout trade-offs</text>
+<text x="1094" y="359" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">CD / DVD / Blu-ray hierarchy</text>
+
+<rect x="45" y="440" width="485" height="250" rx="16" fill="#ffffff" stroke="#b15d45" stroke-width="2"/>
+<text x="70" y="490" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="700" fill="#b15d45">04 · I/O PATH</text>
+<text x="70" y="539" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">device ↔ controller</text>
+<text x="70" y="574" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">DMA ↔ memory</text>
+<text x="70" y="609" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">interrupt → CPU completion</text>
+<text x="70" y="644" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">arbiter resolves contention</text>
+
+<rect x="557" y="440" width="485" height="250" rx="16" fill="#ffffff" stroke="#365f91" stroke-width="2"/>
+<text x="582" y="490" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="700" fill="#365f91">05 · INTERCONNECT</text>
+<text x="582" y="539" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">shared bus → cycle stealing</text>
+<text x="582" y="574" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">PCI = parallel shared bus</text>
+<text x="582" y="609" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">PCIe = serial point-to-point</text>
+<text x="582" y="644" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">lanes + switches + packets</text>
+
+<rect x="1069" y="440" width="485" height="250" rx="16" fill="#ffffff" stroke="#2d7d63" stroke-width="2"/>
+<text x="1094" y="490" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="700" fill="#2d7d63">06 · SYSTEM RULE</text>
+<text x="1094" y="539" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">Latency ≠ throughput</text>
+<text x="1094" y="574" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">Find serialization first</text>
+<text x="1094" y="609" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">Use locality + parallelism</text>
+<text x="1094" y="644" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#243447">Balance speed / cost / reliability</text>
+
+<rect x="45" y="728" width="1509" height="116" rx="16" fill="#e8eef5" stroke="#9aa9ba"/>
+<text x="70" y="772" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="700" fill="#1e293b">CORE MODEL</text>
+<text x="70" y="810" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#243447">CPU throughput + memory locality + storage latency + I/O bandwidth determine system behavior.</text>
+</svg>
