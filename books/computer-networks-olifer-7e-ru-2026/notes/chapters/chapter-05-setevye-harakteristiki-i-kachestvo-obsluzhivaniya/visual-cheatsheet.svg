@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="950" viewBox="0 0 1500 950">
+<rect width="1500" height="950" fill="#f8fafb"/>
+<text x="50" y="58" font-family="Arial,DejaVu Sans,sans-serif" font-size="34" font-weight="700" fill="#183247">Глава 5 · Сетевые характеристики и QoS</text>
+<text x="50" y="92" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#52697a">RAG p0131:c01–p0177:c01 · PDF 131–177 · printed 130–176 · 48 chunks</text>
+
+<rect x="60" y="135" width="420" height="205" rx="18" fill="#e8eff5" stroke="#b9cbd8"/>
+<text x="88" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#234b64">1 · Measure</text>
+<text x="88" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">OWD · jitter · RTT · response</text>
+<text x="88" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">SIR · IIR · PIR · burst</text>
+<text x="88" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">loss · availability · quantiles</text>
+<text x="88" y="322" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#5a7180">active / passive measurement</text>
+
+<rect x="540" y="135" width="420" height="205" rx="18" fill="#eef4e8" stroke="#c4d4b9"/>
+<text x="568" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#365b31">2 · Understand load</text>
+<text x="568" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">utilization ρ + burstiness CV</text>
+<text x="568" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">near saturation → queue delay ↑</text>
+<text x="568" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">app sensitivity defines class</text>
+<text x="568" y="322" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#63755d">delay / jitter / loss trade-offs</text>
+
+<rect x="1020" y="135" width="420" height="205" rx="18" fill="#f8efe2" stroke="#ddc9aa"/>
+<text x="1048" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#78532e">3 · Manage queues</text>
+<text x="1048" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">FIFO · priority · weighted</text>
+<text x="1048" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">priority → low latency / starvation risk</text>
+<text x="1048" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">weighted → minimum capacity share</text>
+
+<path d="M480 235 H540 M960 235 H1020" stroke="#718798" stroke-width="4" marker-end="url(#a)"/>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#718798"/></marker></defs>
+
+<rect x="95" y="405" width="1310" height="225" rx="18" fill="#eee8f6" stroke="#c9bad9"/>
+<text x="125" y="450" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#593f73">4 · Prevent congestion / guarantee service</text>
+<text x="125" y="497" font-family="Arial,DejaVu Sans,sans-serif" font-size="21" fill="#624f74">Policing/profiling → drop excess · Shaping → buffer/delay excess</text>
+<text x="125" y="538" font-family="Arial,DejaVu Sans,sans-serif" font-size="21" fill="#624f74">Feedback → ask source/upstream to reduce rate</text>
+<text x="125" y="579" font-family="Arial,DejaVu Sans,sans-serif" font-size="21" fill="#624f74">Admission control + reservation · Traffic engineering · Overprovisioning</text>
+
+<rect x="170" y="690" width="1160" height="150" rx="18" fill="#e5edf7" stroke="#bdcce0"/>
+<text x="200" y="735" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#2b4e78">Operational loop</text>
+<text x="200" y="780" font-family="Arial,DejaVu Sans,sans-serif" font-size="21" fill="#3c5878">SLA → measure → classify → locate queue/bottleneck → apply mechanism → re-measure</text>
+<text x="200" y="816" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#5c7290">No CLI in chapter; numeric thresholds are source examples, not production defaults.</text>
+
+<text x="50" y="910" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#63798a">Questions to Part 1 start at PDF 178 and are outside chapter-5 boundary.</text>
+</svg>
