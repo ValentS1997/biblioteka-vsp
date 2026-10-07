@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1080" viewBox="0 0 1400 1080">
+<rect width="1400" height="1080" fill="#0f172a"/>
+<text x="60" y="68" fill="#f8fafc" font-family="sans-serif" font-size="36" font-weight="700">Высоконагруженные приложения — book-level synthesis</text>
+<text x="60" y="108" fill="#cbd5e1" font-family="sans-serif" font-size="19">0035 · Distributed Systems / Data · 12 chapter analyses merged</text>
+
+<rect x="55" y="150" width="400" height="290" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+<text x="85" y="198" fill="#38bdf8" font-family="sans-serif" font-size="26" font-weight="700">Part I — foundations</text>
+<text x="85" y="240" fill="#f8fafc" font-family="sans-serif" font-size="18">1. Reliability / scalability / maintainability</text>
+<text x="85" y="275" fill="#cbd5e1" font-family="sans-serif" font-size="17">2. Data models / queries</text>
+<text x="85" y="310" fill="#cbd5e1" font-family="sans-serif" font-size="17">3. Storage / indexes / OLTP / OLAP</text>
+<text x="85" y="345" fill="#cbd5e1" font-family="sans-serif" font-size="17">4. Encoding / schema evolution</text>
+<text x="85" y="397" fill="#f8fafc" font-family="sans-serif" font-size="18">Question: how should data live and evolve?</text>
+
+<rect x="500" y="150" width="400" height="290" rx="18" fill="#1e293b" stroke="#a78bfa" stroke-width="3"/>
+<text x="530" y="198" fill="#a78bfa" font-family="sans-serif" font-size="26" font-weight="700">Part II — distributed state</text>
+<text x="530" y="240" fill="#f8fafc" font-family="sans-serif" font-size="18">5. Replication · 6. Partitioning</text>
+<text x="530" y="275" fill="#cbd5e1" font-family="sans-serif" font-size="17">7. Transactions / isolation</text>
+<text x="530" y="310" fill="#cbd5e1" font-family="sans-serif" font-size="17">8. Network / clocks / pauses</text>
+<text x="530" y="345" fill="#cbd5e1" font-family="sans-serif" font-size="17">9. Consistency / ordering / consensus</text>
+<text x="530" y="397" fill="#f8fafc" font-family="sans-serif" font-size="18">Question: what can nodes safely agree on?</text>
+
+<rect x="945" y="150" width="400" height="290" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="3"/>
+<text x="975" y="198" fill="#34d399" font-family="sans-serif" font-size="26" font-weight="700">Part III — derived state</text>
+<text x="975" y="240" fill="#f8fafc" font-family="sans-serif" font-size="18">10. Batch / immutable replay</text>
+<text x="975" y="275" fill="#cbd5e1" font-family="sans-serif" font-size="17">11. Streams / CDC / offsets / state</text>
+<text x="975" y="310" fill="#cbd5e1" font-family="sans-serif" font-size="17">12. Integration / integrity / audit</text>
+<text x="975" y="345" fill="#cbd5e1" font-family="sans-serif" font-size="17">Rebuildable projections · minimal coordination</text>
+<text x="975" y="397" fill="#f8fafc" font-family="sans-serif" font-size="18">Question: can derived state be rebuilt safely?</text>
+
+<rect x="55" y="485" width="1290" height="170" rx="18" fill="#111827" stroke="#64748b" stroke-width="2"/>
+<text x="85" y="530" fill="#f8fafc" font-family="sans-serif" font-size="25" font-weight="700">Core engineering loop</text>
+<text x="85" y="575" fill="#cbd5e1" font-family="sans-serif" font-size="20">workload / invariant → data model → storage / contract → distribution → failure model → coordination → replayable derived state</text>
+<text x="85" y="615" fill="#cbd5e1" font-family="sans-serif" font-size="19">Design goal: bounded blast radius, explicit guarantees, safe retries, observable recovery and rollback.</text>
+
+<rect x="55" y="700" width="620" height="265" rx="18" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+<text x="85" y="748" fill="#f59e0b" font-family="sans-serif" font-size="25" font-weight="700">Operational value</text>
+<text x="85" y="792" fill="#f8fafc" font-family="sans-serif" font-size="18">• timeout is suspicion, not proof</text>
+<text x="85" y="827" fill="#cbd5e1" font-family="sans-serif" font-size="17">• replication lag / skew / consumer lag are first-class signals</text>
+<text x="85" y="862" fill="#cbd5e1" font-family="sans-serif" font-size="17">• invariant before lock / transaction / consensus</text>
+<text x="85" y="897" fill="#cbd5e1" font-family="sans-serif" font-size="17">• replay + idempotence + fencing simplify recovery</text>
+<text x="85" y="932" fill="#cbd5e1" font-family="sans-serif" font-size="17">• integrity must be checked end-to-end</text>
+
+<rect x="725" y="700" width="620" height="265" rx="18" fill="#1e293b" stroke="#22c55e" stroke-width="2"/>
+<text x="755" y="748" fill="#22c55e" font-family="sans-serif" font-size="25" font-weight="700">Place in biblioteka-vsp</text>
+<text x="755" y="792" fill="#f8fafc" font-family="sans-serif" font-size="18">Core architecture bridge</text>
+<text x="755" y="827" fill="#cbd5e1" font-family="sans-serif" font-size="17">Linux / Networks / SQL → Kleppmann → distributed patterns</text>
+<text x="755" y="862" fill="#cbd5e1" font-family="sans-serif" font-size="17">Kubernetes / containers gain failure-semantics context</text>
+<text x="755" y="897" fill="#cbd5e1" font-family="sans-serif" font-size="17">Prometheus / Zabbix gain better signal selection</text>
+<text x="755" y="932" fill="#cbd5e1" font-family="sans-serif" font-size="17">ML / AI systems gain data-pipeline / integrity foundations</text>
+
+<text x="235" y="1030" fill="#f8fafc" font-family="sans-serif" font-size="23" font-weight="700">Not a product runbook: a mental model for system-wide correctness under change and failure.</text>
+</svg>
