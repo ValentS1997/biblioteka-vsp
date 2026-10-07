@@ -20,5 +20,6 @@ Book ID: `computer-networks-olifer-7e-ru-2026`. Индекс ведёт толь
 | 14 — Протокол межсетевого взаимодействия IP | 399–441 | 398–440 | [Глава 14](chapter-14-protokol-mezhsetevogo-vzaimodeystviya-ip/README.md) |
 | 15 — Протоколы транспортного уровня TCP и UDP | 442–471 | 441–470 | [Глава 15](chapter-15-protokoly-transportnogo-urovnya-tcp-i-udp/README.md) |
 | 16 — Протоколы маршрутизации и технология SDN | 472–513 | 471–512 | [Глава 16](chapter-16-protokoly-marshrutizacii-i-tehnologiya-sdn/README.md) |
+| 17 — IPv6 как развитие стека TCP/IP | 514–545 | 513–544 | [Глава 17](chapter-17-ipv6-kak-razvitie-steka-tcp-ip/README.md) |
 
 Дальнейшие главы: **[Needs confirmation]** до индивидуального анализа. Reading state книги остаётся независимым от RAG.
