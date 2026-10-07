@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="850" viewBox="0 0 1200 850" role="img" aria-labelledby="t d">
+<title id="t">Глава 11 — взаимодействие вложений в безопасность</title>
+<desc id="d">Компактная схема dimensional modeling, conformed dimensions, survival analysis и process snapshots.</desc>
+<rect x="0" y="0" width="1200" height="850" rx="0" fill="#0c1929" stroke="#0c1929" stroke-width="1.5"/>
+<text x="52" y="48" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#82d0f7" font-weight="bold">BIBLIOTEKA-VSP / CYBER RISK</text>
+<text x="52" y="96" font-family="DejaVu Sans,Arial,sans-serif" font-size="31" fill="#fbfdff" font-weight="bold">Глава 11 · Как взаимодействуют security investments</text>
+<text x="52" y="132" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#b9d1e2" font-weight="normal">После инвестиции нужно измерять совместный эффект controls</text>
+<text x="52" y="182" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#82d0f7" font-weight="bold">Dimensional model</text>
+<rect x="52" y="200" width="342" height="164" rx="14" fill="#183149" stroke="#8dcdf1" stroke-width="1.5"/>
+<rect x="66" y="217" width="6" height="34" rx="3" fill="#8dcdf1" stroke="#8dcdf1" stroke-width="1.5"/>
+<text x="89" y="243" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Facts</text>
+<text x="72" y="282" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Событие / состояние</text>
+<text x="72" y="310" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Atomic grain</text>
+<text x="72" y="338" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Countable security facts</text>
+<rect x="429" y="200" width="342" height="164" rx="14" fill="#183149" stroke="#91d6bd" stroke-width="1.5"/>
+<rect x="443" y="217" width="6" height="34" rx="3" fill="#91d6bd" stroke="#91d6bd" stroke-width="1.5"/>
+<text x="466" y="243" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Dimensions</text>
+<text x="449" y="282" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Date / time</text>
+<text x="449" y="310" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Asset / value</text>
+<text x="449" y="338" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Risk / control / threat</text>
+<rect x="806" y="200" width="342" height="164" rx="14" fill="#183149" stroke="#e7c18c" stroke-width="1.5"/>
+<rect x="820" y="217" width="6" height="34" rx="3" fill="#e7c18c" stroke="#e7c18c" stroke-width="1.5"/>
+<text x="843" y="243" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Conformed</text>
+<text x="826" y="282" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Общие asset/date keys</text>
+<text x="826" y="310" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Cross-drill между marts</text>
+<text x="826" y="338" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Сравнение controls</text>
+<text x="592" y="397" font-family="DejaVu Sans,Arial,sans-serif" font-size="34" fill="#7ccdf4" font-weight="bold">↓</text>
+<rect x="164" y="416" width="872" height="96" rx="14" fill="#213d55" stroke="#77cff6" stroke-width="1.5"/>
+<text x="226" y="456" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" fill="#f8fbff" font-weight="bold">Facts + shared dimensions → cross-control evidence</text>
+<text x="226" y="487" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#d0e6f3" font-weight="normal">Не продукт отдельно, а measured contribution to risk reduction</text>
+<text x="592" y="550" font-family="DejaVu Sans,Arial,sans-serif" font-size="34" fill="#7ccdf4" font-weight="bold">↓</text>
+<rect x="52" y="572" width="521" height="164" rx="14" fill="#183149" stroke="#89d9bd" stroke-width="1.5"/>
+<rect x="66" y="589" width="6" height="34" rx="3" fill="#89d9bd" stroke="#89d9bd" stroke-width="1.5"/>
+<text x="89" y="615" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Survival / exposure</text>
+<text x="72" y="654" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">First seen → detected → mitigated</text>
+<text x="72" y="682" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Measure dwell time</text>
+<text x="72" y="710" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Compare vendors / controls</text>
+<rect x="626" y="572" width="522" height="164" rx="14" fill="#183149" stroke="#efbd9b" stroke-width="1.5"/>
+<rect x="640" y="589" width="6" height="34" rx="3" fill="#efbd9b" stroke="#efbd9b" stroke-width="1.5"/>
+<text x="663" y="615" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Process snapshot</text>
+<text x="646" y="654" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Milestone dates</text>
+<text x="646" y="682" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Stage durations</text>
+<text x="646" y="710" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Remediation / SDL / CI-CD</text>
+<rect x="52" y="758" width="1096" height="50" rx="14" fill="#2c2a38" stroke="#9c8ba4" stroke-width="1.5"/>
+<text x="74" y="790" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#eadce8" font-weight="normal">Boundary: logical model ≠ mandatory physical schema; no SQL/DDL inferred</text>
+<text x="52" y="838" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" fill="#91aec4" font-weight="normal">RAG: e0043–e0044 · EPUB spine 43–44 · OPS/ch1-41.xhtml — OPS/ch1-42.xhtml</text>
+</svg>
