@@ -70,3 +70,4 @@ Canonical readiness command:
 - [Глава 6 — Взаимоблокировка](notes/chapters/chapter-06-deadlock/README.md) — RAG-grounded, PDF source locators 488–526.
 - [Глава 7 — Виртуализация и облако](notes/chapters/chapter-07-virtualization-cloud/README.md) — RAG-grounded, PDF source locators 527–575.
 - [Глава 8 — Многопроцессорные системы](notes/chapters/chapter-08-multiprocessor-systems/README.md) — RAG-grounded, PDF source locators 576–658.
+- [Глава 9 — Безопасность](notes/chapters/chapter-09-security/README.md) — RAG-grounded, PDF source locators 659–783.
