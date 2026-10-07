@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1160" viewBox="0 0 1400 1160">
+<rect width="1400" height="1160" fill="#f8fafc"/>
+<text x="55" y="65" fill="#0f172a" font-family="sans-serif" font-size="34" font-weight="700">Глава 10 — Пакетная обработка</text>
+<text x="55" y="102" fill="#475569" font-family="sans-serif" font-size="18">Canonical RAG · PDF 449–503 · source SHA 495e75f185c758a8…</text>
+
+<rect x="55" y="140" width="1290" height="110" rx="18" fill="#e2e8f0"/>
+<text x="85" y="184" fill="#0f172a" font-family="sans-serif" font-size="23" font-weight="700">Batch processing gains reliability by separating immutable input from recomputable derived output.</text>
+<text x="85" y="220" fill="#334155" font-family="sans-serif" font-size="18">Frameworks then hide partitioning, network movement, retries and part of failure recovery.</text>
+
+<rect x="55" y="285" width="400" height="525" rx="18" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+<text x="85" y="330" fill="#075985" font-family="sans-serif" font-size="26" font-weight="700">10.1 Unix philosophy</text>
+<text x="85" y="372" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Composition</text>
+<text x="85" y="402" fill="#334155" font-family="sans-serif" font-size="16">stdin/stdout · files · pipelines</text>
+<text x="85" y="432" fill="#334155" font-family="sans-serif" font-size="16">small tools that do one thing well</text>
+<text x="85" y="472" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Transparency</text>
+<text x="85" y="502" fill="#334155" font-family="sans-serif" font-size="16">input files usually unchanged</text>
+<text x="85" y="532" fill="#334155" font-family="sans-serif" font-size="16">inspect intermediate results</text>
+<text x="85" y="562" fill="#334155" font-family="sans-serif" font-size="16">save/reuse a pipeline stage</text>
+<text x="85" y="602" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Source pipeline</text>
+<text x="85" y="632" fill="#334155" font-family="sans-serif" font-size="16">cat → awk → sort → uniq → sort → head</text>
+<text x="85" y="682" fill="#075985" font-family="sans-serif" font-size="16">Separation of logic from transport is the reusable idea</text>
+
+<rect x="500" y="285" width="400" height="525" rx="18" fill="#f3e8ff" stroke="#7e22ce" stroke-width="2"/>
+<text x="530" y="330" fill="#6b21a8" font-family="sans-serif" font-size="26" font-weight="700">10.2 MapReduce + HDFS</text>
+<text x="530" y="372" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Execution</text>
+<text x="530" y="402" fill="#334155" font-family="sans-serif" font-size="16">map record → key/value</text>
+<text x="530" y="432" fill="#334155" font-family="sans-serif" font-size="16">partition + shuffle + sort</text>
+<text x="530" y="462" fill="#334155" font-family="sans-serif" font-size="16">reduce grouped key</text>
+<text x="530" y="502" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Joins</text>
+<text x="530" y="532" fill="#334155" font-family="sans-serif" font-size="16">sort-merge: co-locate by join key</text>
+<text x="530" y="562" fill="#334155" font-family="sans-serif" font-size="16">broadcast hash: replicate small side</text>
+<text x="530" y="592" fill="#334155" font-family="sans-serif" font-size="16">partitioned hash: compatible partitions</text>
+<text x="530" y="632" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Fault tolerance</text>
+<text x="530" y="662" fill="#334155" font-family="sans-serif" font-size="16">retry task · discard failed output</text>
+<text x="530" y="692" fill="#334155" font-family="sans-serif" font-size="16">materialized files aid recovery</text>
+
+<rect x="945" y="285" width="400" height="525" rx="18" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="975" y="330" fill="#166534" font-family="sans-serif" font-size="26" font-weight="700">10.3 Dataflow engines</text>
+<text x="975" y="372" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Spark · Tez · Flink</text>
+<text x="975" y="402" fill="#334155" font-family="sans-serif" font-size="16">whole workflow as operator graph</text>
+<text x="975" y="432" fill="#334155" font-family="sans-serif" font-size="16">pipeline when sort/materialization unnecessary</text>
+<text x="975" y="462" fill="#334155" font-family="sans-serif" font-size="16">local memory/disk intermediate state</text>
+<text x="975" y="502" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Recovery</text>
+<text x="975" y="532" fill="#334155" font-family="sans-serif" font-size="16">Spark lineage / RDD</text>
+<text x="975" y="562" fill="#334155" font-family="sans-serif" font-size="16">Flink operator state/checkpoints</text>
+<text x="975" y="592" fill="#334155" font-family="sans-serif" font-size="16">deterministic operators reduce recovery ambiguity</text>
+<text x="975" y="632" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Higher level</text>
+<text x="975" y="662" fill="#334155" font-family="sans-serif" font-size="16">optimizer selects join/order strategy</text>
+<text x="975" y="692" fill="#334155" font-family="sans-serif" font-size="16">batch engines converge toward MPP capabilities</text>
+
+<rect x="55" y="850" width="1290" height="220" rx="18" fill="#0f172a"/>
+<text x="85" y="895" fill="#f8fafc" font-family="sans-serif" font-size="23" font-weight="700">Acceptance checklist</text>
+<text x="85" y="935" fill="#cbd5e1" font-family="sans-serif" font-size="18">1. Source input is bounded and remains unchanged; final output is a separate derived dataset.</text>
+<text x="85" y="970" fill="#cbd5e1" font-family="sans-serif" font-size="18">2. Join/partitioning strategy matches data sizes and key distribution without uncontrolled skew.</text>
+<text x="85" y="1005" fill="#cbd5e1" font-family="sans-serif" font-size="18">3. Worker failure is recoverable by task retry, recomputation or checkpoint without duplicate visible effects.</text>
+<text x="85" y="1040" fill="#cbd5e1" font-family="sans-serif" font-size="18">4. Corrected code can rerun the same input and replace a bad derived result.</text>
+
+<text x="205" y="1130" fill="#0f172a" font-family="sans-serif" font-size="22" font-weight="700">The key abstraction is replayable dataflow: partition, transform, recover, publish — without mutating the source.</text>
+</svg>

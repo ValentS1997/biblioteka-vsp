@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<rect width="1200" height="800" fill="#0f172a"/>
+<text x="55" y="66" fill="#f8fafc" font-family="sans-serif" font-size="34" font-weight="700">Глава 10 — Пакетная обработка</text>
+<text x="55" y="104" fill="#cbd5e1" font-family="sans-serif" font-size="18">RAG-only · PDF 449–503 · bounded input → derived output</text>
+
+<rect x="55" y="145" width="335" height="410" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+<text x="85" y="195" fill="#38bdf8" font-family="sans-serif" font-size="26" font-weight="700">Unix model</text>
+<text x="85" y="238" fill="#f8fafc" font-family="sans-serif" font-size="18">small tools · one job</text>
+<text x="85" y="275" fill="#cbd5e1" font-family="sans-serif" font-size="16">stdin → transform → stdout</text>
+<text x="85" y="309" fill="#cbd5e1" font-family="sans-serif" font-size="16">immutable input</text>
+<text x="85" y="343" fill="#cbd5e1" font-family="sans-serif" font-size="16">inspect / compose / rerun</text>
+<text x="85" y="392" fill="#f8fafc" font-family="sans-serif" font-size="18">Example</text>
+<text x="85" y="427" fill="#cbd5e1" font-family="sans-serif" font-size="16">cat · awk · sort · uniq · head</text>
+<text x="85" y="475" fill="#38bdf8" font-family="sans-serif" font-size="16">Logic separated from data plumbing</text>
+
+<rect x="432" y="145" width="335" height="410" rx="18" fill="#1e293b" stroke="#a78bfa" stroke-width="3"/>
+<text x="462" y="195" fill="#a78bfa" font-family="sans-serif" font-size="26" font-weight="700">MapReduce</text>
+<text x="462" y="238" fill="#f8fafc" font-family="sans-serif" font-size="18">HDFS + cluster execution</text>
+<text x="462" y="275" fill="#cbd5e1" font-family="sans-serif" font-size="16">map → shuffle/sort → reduce</text>
+<text x="462" y="309" fill="#cbd5e1" font-family="sans-serif" font-size="16">partition by key</text>
+<text x="462" y="343" fill="#cbd5e1" font-family="sans-serif" font-size="16">retry failed tasks</text>
+<text x="462" y="392" fill="#f8fafc" font-family="sans-serif" font-size="18">Joins</text>
+<text x="462" y="427" fill="#cbd5e1" font-family="sans-serif" font-size="16">sort-merge</text>
+<text x="462" y="457" fill="#cbd5e1" font-family="sans-serif" font-size="16">broadcast hash</text>
+<text x="462" y="487" fill="#cbd5e1" font-family="sans-serif" font-size="16">partitioned hash</text>
+
+<rect x="809" y="145" width="335" height="410" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="3"/>
+<text x="839" y="195" fill="#34d399" font-family="sans-serif" font-size="26" font-weight="700">Beyond MapReduce</text>
+<text x="839" y="238" fill="#f8fafc" font-family="sans-serif" font-size="18">Spark · Tez · Flink</text>
+<text x="839" y="275" fill="#cbd5e1" font-family="sans-serif" font-size="16">operator DAG / pipelining</text>
+<text x="839" y="309" fill="#cbd5e1" font-family="sans-serif" font-size="16">less mandatory materialization</text>
+<text x="839" y="343" fill="#cbd5e1" font-family="sans-serif" font-size="16">lineage / checkpoints</text>
+<text x="839" y="392" fill="#f8fafc" font-family="sans-serif" font-size="18">Recovery</text>
+<text x="839" y="427" fill="#cbd5e1" font-family="sans-serif" font-size="16">recompute lost state</text>
+<text x="839" y="457" fill="#cbd5e1" font-family="sans-serif" font-size="16">determinism matters</text>
+<text x="839" y="487" fill="#cbd5e1" font-family="sans-serif" font-size="16">materialize when cheaper</text>
+
+<rect x="55" y="600" width="1089" height="125" rx="18" fill="#111827" stroke="#64748b" stroke-width="2"/>
+<text x="85" y="645" fill="#f8fafc" font-family="sans-serif" font-size="23" font-weight="700">Batch contract</text>
+<text x="85" y="683" fill="#cbd5e1" font-family="sans-serif" font-size="19">bounded immutable input → retryable transformation → separate durable derived output</text>
+<text x="270" y="768" fill="#f8fafc" font-family="sans-serif" font-size="21" font-weight="700">Partition related data together; make failures safe to replay.</text>
+</svg>
