@@ -14,3 +14,4 @@ Canonical chapter-level learning and operational artifacts.
 | 8 | [Многопроцессорные системы](chapter-08-multiprocessor-systems/README.md) | RAG_GROUNDED | PDF pages 576–658 |
 | 9 | [Безопасность](chapter-09-security/README.md) | RAG_GROUNDED | PDF pages 659–783 |
 | 10 | [Изучение конкретных примеров: Unix, Linux и Android](chapter-10-unix-linux-android/README.md) | RAG_GROUNDED | PDF pages 784–930 |
+| 11 | [Изучение конкретных примеров: Windows 8](chapter-11-windows-8/README.md) | RAG_GROUNDED | PDF pages 931–1057 |
