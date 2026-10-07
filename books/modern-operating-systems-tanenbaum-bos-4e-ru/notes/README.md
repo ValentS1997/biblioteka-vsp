@@ -9,3 +9,4 @@ chapter-analysis readiness passes.
 
 - [Глава 1 — Введение](chapters/chapter-01-introduction/README.md)
 - [Глава 2 — Процессы и потоки](chapters/chapter-02-processes-and-threads/README.md)
+- [Глава 3 — Управление памятью](chapters/chapter-03-memory-management/README.md)
