@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1120" viewBox="0 0 1400 1120">
+<rect width="1400" height="1120" fill="#f8fafc"/>
+<text x="55" y="65" fill="#0f172a" font-family="sans-serif" font-size="34" font-weight="700">Глава 7 — Транзакции</text>
+<text x="55" y="102" fill="#475569" font-family="sans-serif" font-size="18">Canonical RAG · PDF 265–321 · source SHA 495e75f185c758a8…</text>
+
+<rect x="55" y="140" width="1290" height="110" rx="18" fill="#e2e8f0"/>
+<text x="85" y="184" fill="#0f172a" font-family="sans-serif" font-size="23" font-weight="700">Transactions reduce a wide failure/concurrency space to commit or abort — but isolation guarantees differ.</text>
+<text x="85" y="220" fill="#334155" font-family="sans-serif" font-size="18">Correctness starts from application invariants, not from an ACID label.</text>
+
+<rect x="55" y="285" width="400" height="500" rx="18" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+<text x="85" y="330" fill="#075985" font-family="sans-serif" font-size="26" font-weight="700">7.1 Transaction contract</text>
+<text x="85" y="372" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Atomicity</text>
+<text x="85" y="402" fill="#334155" font-family="sans-serif" font-size="16">abort partial writes on failure</text>
+<text x="85" y="442" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Consistency</text>
+<text x="85" y="472" fill="#334155" font-family="sans-serif" font-size="16">application invariants</text>
+<text x="85" y="512" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Isolation</text>
+<text x="85" y="542" fill="#334155" font-family="sans-serif" font-size="16">concurrent histories / serializable ideal</text>
+<text x="85" y="582" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Durability</text>
+<text x="85" y="612" fill="#334155" font-family="sans-serif" font-size="16">committed data survives promised failures</text>
+<text x="85" y="662" fill="#334155" font-family="sans-serif" font-size="16">Retry: transient only; dedupe ambiguous commit</text>
+<text x="85" y="692" fill="#334155" font-family="sans-serif" font-size="16">external side effects are not auto-rolled back</text>
+
+<rect x="500" y="285" width="400" height="500" rx="18" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="530" y="330" fill="#92400e" font-family="sans-serif" font-size="26" font-weight="700">7.2 Weak isolation</text>
+<text x="530" y="372" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Read committed</text>
+<text x="530" y="402" fill="#334155" font-family="sans-serif" font-size="16">no dirty reads · no dirty writes</text>
+<text x="530" y="442" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Snapshot isolation / MVCC</text>
+<text x="530" y="472" fill="#334155" font-family="sans-serif" font-size="16">consistent snapshot</text>
+<text x="530" y="502" fill="#334155" font-family="sans-serif" font-size="16">readers do not block writers</text>
+<text x="530" y="542" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Remaining races</text>
+<text x="530" y="572" fill="#334155" font-family="sans-serif" font-size="16">lost update</text>
+<text x="530" y="602" fill="#334155" font-family="sans-serif" font-size="16">write skew</text>
+<text x="530" y="632" fill="#334155" font-family="sans-serif" font-size="16">phantoms</text>
+<text x="530" y="682" fill="#92400e" font-family="sans-serif" font-size="16">Controls: atomic update · FOR UPDATE · stronger isolation</text>
+
+<rect x="945" y="285" width="400" height="500" rx="18" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="975" y="330" fill="#166534" font-family="sans-serif" font-size="26" font-weight="700">7.3 Serializability</text>
+<text x="975" y="372" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Serial execution</text>
+<text x="975" y="402" fill="#334155" font-family="sans-serif" font-size="16">one transaction at a time</text>
+<text x="975" y="432" fill="#334155" font-family="sans-serif" font-size="16">stored procedures keep execution short</text>
+<text x="975" y="472" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">2PL</text>
+<text x="975" y="502" fill="#334155" font-family="sans-serif" font-size="16">shared/exclusive locks</text>
+<text x="975" y="532" fill="#334155" font-family="sans-serif" font-size="16">deadlocks · long tail latency</text>
+<text x="975" y="562" fill="#334155" font-family="sans-serif" font-size="16">predicate / index-range locks for phantoms</text>
+<text x="975" y="602" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">SSI</text>
+<text x="975" y="632" fill="#334155" font-family="sans-serif" font-size="16">MVCC snapshot + optimistic conflict detection</text>
+<text x="975" y="662" fill="#334155" font-family="sans-serif" font-size="16">unsafe transaction aborts before commit</text>
+<text x="975" y="712" fill="#166534" font-family="sans-serif" font-size="16">Contention controls abort/retry cost</text>
+
+<rect x="55" y="825" width="1290" height="210" rx="18" fill="#0f172a"/>
+<text x="85" y="870" fill="#f8fafc" font-family="sans-serif" font-size="23" font-weight="700">Acceptance checklist</text>
+<text x="85" y="910" fill="#cbd5e1" font-family="sans-serif" font-size="18">1. Define invariant and reproduce the concurrent scenario that could violate it.</text>
+<text x="85" y="945" fill="#cbd5e1" font-family="sans-serif" font-size="18">2. Prefer atomic DB operations; otherwise lock the actual rows/predicates or require serializability.</text>
+<text x="85" y="980" fill="#cbd5e1" font-family="sans-serif" font-size="18">3. Verify correctness and measure lock waits, deadlocks, serialization aborts and retry load.</text>
+<text x="85" y="1015" fill="#cbd5e1" font-family="sans-serif" font-size="18">4. Keep only if invariants hold without unacceptable contention.</text>
+
+<text x="245" y="1090" fill="#0f172a" font-family="sans-serif" font-size="22" font-weight="700">Isolation is a contract over concurrent histories — test the history you actually permit.</text>
+</svg>
