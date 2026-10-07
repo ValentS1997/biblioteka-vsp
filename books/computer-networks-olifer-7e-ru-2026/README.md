@@ -40,4 +40,4 @@ Verified generation:
 - corpus generation: `08d350bc22d24a1b1a61fe5d295baa093c3f9fbc97cf9ae0a5904d81cd5f3daf`;
 - index generation: `1bb819e9024819bd8ca55f6d77246ad398c7efa0ed33593fafb1cc03fba161e3`.
 
-Chapter-analysis readiness is pending the final repository readiness check on this branch.
+Chapter-analysis readiness: `READY` under `BIBLIOTEKA-VSP-BOOK-READINESS v1.3`. Verified by GitHub Actions run `37634874590` after strict RAG acceptance and canonical source provenance checks.
