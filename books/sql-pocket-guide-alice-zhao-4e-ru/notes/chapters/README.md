@@ -16,4 +16,6 @@ Book ID: `sql-pocket-guide-alice-zhao-4e-ru`.
 
 | 05 | [Создание, обновление и удаление](chapter-05-sozdanie-obnovlenie-i-udalenie/README.md) | PDF 105–154; `p0105:c01`–`p0154:c01` | [cheatsheet](chapter-05-sozdanie-obnovlenie-i-udalenie/cheatsheet.md) · [commands](chapter-05-sozdanie-obnovlenie-i-udalenie/commands.md) · [diagram](chapter-05-sozdanie-obnovlenie-i-udalenie/diagram.md) · [compact SVG](chapter-05-sozdanie-obnovlenie-i-udalenie/visual-cheatsheet.svg) · [detailed SVG](chapter-05-sozdanie-obnovlenie-i-udalenie/visual-cheatsheet-detailed.svg) · [source findings](chapter-05-sozdanie-obnovlenie-i-udalenie/source-findings.md) |
 
+| 06 | [Типы данных](chapter-06-tipy-dannyh/README.md) | PDF 155–189; `p0155:c01`–`p0189:c01` | [cheatsheet](chapter-06-tipy-dannyh/cheatsheet.md) · [commands](chapter-06-tipy-dannyh/commands.md) · [diagram](chapter-06-tipy-dannyh/diagram.md) · [compact SVG](chapter-06-tipy-dannyh/visual-cheatsheet.svg) · [detailed SVG](chapter-06-tipy-dannyh/visual-cheatsheet-detailed.svg) · [source findings](chapter-06-tipy-dannyh/source-findings.md) |
+
 Reading status сохраняется независимо от создания chapter artifacts.
