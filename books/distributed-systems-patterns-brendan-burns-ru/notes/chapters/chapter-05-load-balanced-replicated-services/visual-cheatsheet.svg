@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="840" viewBox="0 0 1200 840" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 5 — Реплицированные сервисы с распределением нагрузки</title>
+  <desc id="desc">RAG-grounded компактная схема replicated stateless service, readiness, cache tier and SSL bridge.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #111827; }
+      .title { font-size: 29px; font-weight: 700; }
+      .sub { font-size: 14px; fill: #4b5563; }
+      .h { font-size: 18px; font-weight: 700; }
+      .b { font-size: 15px; }
+      .small { font-size: 13px; fill: #374151; }
+      .blue { fill: #eff6ff; stroke: #1d4ed8; stroke-width: 2; rx: 14; }
+      .green { fill: #ecfdf5; stroke: #047857; stroke-width: 2; rx: 14; }
+      .violet { fill: #f5f3ff; stroke: #6d28d9; stroke-width: 2; rx: 14; }
+      .orange { fill: #fff7ed; stroke: #c2410c; stroke-width: 2; rx: 14; }
+      .box { fill: #f9fafb; stroke: #374151; stroke-width: 2; rx: 14; }
+      .arrow { stroke: #374151; stroke-width: 2.2; fill: none; marker-end: url(#m); }
+    </style>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#374151"/>
+    </marker>
+  </defs>
+
+  <text x="45" y="50" class="title">Глава 5 — Реплицированные сервисы с распределением нагрузки</text>
+  <text x="45" y="78" class="sub">RAG p0082:c01–p0101:c01 · PDF 82–101 · rag_only</text>
+
+  <rect x="60" y="120" width="300" height="115" class="blue"/>
+  <text x="85" y="157" class="h">Clients</text>
+  <text x="85" y="188" class="b">requests to stable endpoint</text>
+
+  <rect x="450" y="120" width="300" height="115" class="green"/>
+  <text x="475" y="157" class="h">Load balancer / Service</text>
+  <text x="475" y="188" class="b">routes only to ready replicas</text>
+
+  <rect x="840" y="120" width="300" height="115" class="violet"/>
+  <text x="865" y="157" class="h">Replicated app tier</text>
+  <text x="865" y="188" class="b">replica 1 · replica 2 · replica N</text>
+
+  <path d="M360,177 L450,177" class="arrow"/>
+  <path d="M750,177 L840,177" class="arrow"/>
+
+  <rect x="110" y="315" width="300" height="135" class="orange"/>
+  <text x="135" y="352" class="h">Readiness</text>
+  <text x="135" y="383" class="b">healthy != ready</text>
+  <text x="135" y="411" class="b">example: /ready, 5s / 5s</text>
+
+  <rect x="450" y="315" width="300" height="135" class="violet"/>
+  <text x="475" y="352" class="h">Sticky sessions</text>
+  <text x="475" y="383" class="b">consistent mapping when needed</text>
+  <text x="475" y="411" class="b">NAT makes external IP affinity weak</text>
+
+  <rect x="790" y="315" width="300" height="135" class="green"/>
+  <text x="815" y="352" class="h">Horizontal scale</text>
+  <text x="815" y="383" class="b">add replicas for capacity</text>
+  <text x="815" y="411" class="b">independent layer scaling</text>
+
+  <rect x="90" y="535" width="310" height="140" class="blue"/>
+  <text x="115" y="572" class="h">nginx SSL tier</text>
+  <text x="115" y="603" class="b">HTTPS termination</text>
+  <text x="115" y="631" class="b">replicated edge layer</text>
+
+  <rect x="445" y="535" width="310" height="140" class="green"/>
+  <text x="470" y="572" class="h">Varnish cache tier</text>
+  <text x="470" y="603" class="b">cache + rate policy</text>
+  <text x="470" y="631" class="b">replicated independently</text>
+
+  <rect x="800" y="535" width="310" height="140" class="violet"/>
+  <text x="825" y="572" class="h">Application tier</text>
+  <text x="825" y="603" class="b">dictionary-server replicas</text>
+  <text x="825" y="631" class="b">stable Service abstraction</text>
+
+  <path d="M400,605 L445,605" class="arrow"/>
+  <path d="M755,605 L800,605" class="arrow"/>
+
+  <rect x="175" y="735" width="850" height="55" class="box"/>
+  <text x="205" y="769" class="b">Main rule: replicate stateless responsibilities, gate by readiness, expose stable endpoints, scale tiers independently.</text>
+
+  <text x="45" y="826" class="small">Source cautions: YAML indentation and one wrapped ConfigMap command are not treated as copy/paste-safe.</text>
+</svg>
