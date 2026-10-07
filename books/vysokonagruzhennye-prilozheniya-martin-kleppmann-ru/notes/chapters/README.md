@@ -10,3 +10,4 @@ Chapter-level artifacts are created only after book readiness is `READY` and a c
 - [Chapter 6 — Секционирование](chapter-06-partitioning/README.md)
 - [Chapter 7 — Транзакции](chapter-07-transactions/README.md)
 - [Chapter 8 — Проблемы распределенных систем](chapter-08-trouble-with-distributed-systems/README.md)
+- [Chapter 9 — Согласованность и консенсус](chapter-09-consistency-and-consensus/README.md)
