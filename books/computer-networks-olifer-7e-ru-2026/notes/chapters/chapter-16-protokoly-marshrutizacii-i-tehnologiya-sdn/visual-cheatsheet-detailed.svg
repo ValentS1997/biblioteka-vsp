@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1450" viewBox="0 0 1800 1450">
+<rect width="1800" height="1450" fill="#f8fafb"/>
+<text x="55" y="58" font-family="Arial,DejaVu Sans,sans-serif" font-size="36" font-weight="700" fill="#173246">Глава 16 · Протоколы маршрутизации и технология SDN</text>
+<text x="55" y="94" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#536b7d">Олифер, 7-е изд. · RAG p0472:c01–p0513:c01 · PDF 472–513 · printed 471–512</text>
+
+<rect x="55" y="135" width="820" height="300" rx="18" fill="#eaf0f5" stroke="#b9cbd8"/>
+<text x="82" y="180" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#234b64">1 · Routing control families</text>
+<text x="82" y="223" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">Static ↔ dynamic · distributed ↔ centralized</text>
+<text x="82" y="261" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">Proactive ↔ reactive · unicast ↔ multicast</text>
+<text x="82" y="299" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">DV → distance from neighbors · LS → full topology graph · PV → AS path/policy</text>
+<text x="82" y="337" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">Convergence = restore consistent routing state after topology change</text>
+<text x="82" y="375" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#5d7381">Forwarding uses the state produced by the control plane</text>
+
+<rect x="925" y="135" width="820" height="300" rx="18" fill="#eef4e8" stroke="#c3d4b8"/>
+<text x="952" y="180" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#365b31">2 · RIP and OSPF</text>
+<text x="952" y="223" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">RIP → periodic neighbor vectors · hop metric · metric 16 unreachable in source</text>
+<text x="952" y="261" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">RIP failure mode → stale vectors / count-to-infinity / loops</text>
+<text x="952" y="299" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">Mitigation → split horizon · triggered updates · hold-down</text>
+<text x="952" y="337" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">OSPF → HELLO → LSA flood → LSDB → Dijkstra/SPF</text>
+<text x="952" y="375" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#65775e">Areas/ABR/backbone bound the topology database and SPF scope</text>
+
+<rect x="55" y="480" width="820" height="305" rx="18" fill="#f8efe2" stroke="#ddc9aa"/>
+<text x="82" y="525" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#78532e">3 · BGP and routing hierarchy</text>
+<text x="82" y="568" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">AS → one administrative routing-policy domain</text>
+<text x="82" y="606" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">IGP inside AS · BGP as external gateway protocol between ASes</text>
+<text x="82" y="644" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">BGP peers are explicitly configured; source transport = TCP/179</text>
+<text x="82" y="682" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">UPDATE → prefix + next hop + AS path; own AS in path → reject loop</text>
+<text x="82" y="720" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">iBGP propagation scales from full mesh toward route reflectors</text>
+<text x="82" y="758" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#806d55">Policy can intentionally prefer a path that is not shortest by a simple metric</text>
+
+<rect x="925" y="480" width="820" height="305" rx="18" fill="#eee8f6" stroke="#c9bad9"/>
+<text x="952" y="525" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#593f73">4 · Multicast routing</text>
+<text x="952" y="568" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">One source copy is replicated only at distribution-tree branches</text>
+<text x="952" y="606" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">IGMP → host membership on directly attached subnet</text>
+<text x="952" y="644" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">DVMRP / MOSPF / PIM → routing-tree examples in source</text>
+<text x="952" y="682" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">Dense → flood/prune · Sparse → explicit join via rendezvous-point concept</text>
+<text x="952" y="720" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">RPF validates arrival interface using reverse unicast path toward source</text>
+<text x="952" y="758" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#756486">Membership alone is insufficient for end-to-end multicast delivery</text>
+
+<rect x="55" y="830" width="820" height="300" rx="18" fill="#e5edf7" stroke="#bdcce0"/>
+<text x="82" y="875" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#2b4e78">5 · SDN / OpenFlow / P4</text>
+<text x="82" y="918" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">SDN → separate control logic from packet-forwarding devices</text>
+<text x="82" y="956" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">Controller collects state and programs forwarding behavior</text>
+<text x="82" y="994" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">OpenFlow rule → match conditions + actions + counters</text>
+<text x="82" y="1032" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">Table pipeline handles rule scale/processing stages</text>
+<text x="82" y="1070" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#5c7290">P4 → program packet-processing architecture, then install runtime rules</text>
+
+<rect x="925" y="830" width="820" height="300" rx="18" fill="#f4ece7" stroke="#dbc6b9"/>
+<text x="952" y="875" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#714b38">6 · NFV / MANO</text>
+<text x="952" y="918" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Network function → software VNF on general-purpose compute</text>
+<text x="952" y="956" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">VNF chain → virtual network service</text>
+<text x="952" y="994" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Orchestration → instantiate/connect/manage service functions</text>
+<text x="952" y="1032" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">MANO → infrastructure manager + VNF manager + orchestrator</text>
+<text x="952" y="1070" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#806b5f">SDN controls forwarding; NFV virtualizes functions — complementary, not identical</text>
+
+<rect x="55" y="1175" width="1690" height="180" rx="16" fill="#fff3dd" stroke="#dfca9b"/>
+<text x="82" y="1218" font-family="Arial,DejaVu Sans,sans-serif" font-size="24" font-weight="700" fill="#785f2d">Operational reading rule</text>
+<text x="82" y="1258" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6c5c3a">Routing incident → neighbor/session → protocol DB → route selection/policy → installed forwarding state → next hop.</text>
+<text x="82" y="1295" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6c5c3a">SDN/NFV incident → intended controller/orchestrator state → programmed device/VNF state → counters/health → packet result.</text>
+<text x="82" y="1332" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#6c5c3a">OpenFlow source example contains a TCP-port mismatch; see source-findings.</text>
+<text x="55" y="1415" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#607789">Chapter 17 starts at p0514:c01 · reading state unchanged · source findings recorded separately.</text>
+</svg>
