@@ -15,3 +15,4 @@ chapter-analysis readiness passes.
 - [Глава 6 — перечисление сервисов и прикладной разведки](chapters/chapter-06-service-enumeration/README.md) — PDF pp. 140–168; 32 RAG chunks; source summary, source-findings, две SVG; reading state unchanged.
 - [Глава 7 — эксплуатация, пароли и постэксплуатация](chapters/chapter-07-exploitation-post-exploitation/README.md) — PDF pp. 169–209; 50 RAG chunks; source summary, one practical exercise, source-findings, две SVG; reading state unchanged.
 - [Глава 8 — malware: типы, анализ и инфраструктура](chapters/chapter-08-malware-analysis-infrastructure/README.md) — PDF pp. 210–245; 49 RAG chunks; source summary, one Ghidra exercise, source-findings, две SVG; reading state unchanged.
+- [Глава 9 — перехват пакетов, spoofing и обнаружение](chapters/chapter-09-packet-capture-spoofing-defense/README.md) — PDF pp. 246–273; 39 RAG chunks; source summary, two packet-analysis exercises, source-findings, две SVG; reading state unchanged.
