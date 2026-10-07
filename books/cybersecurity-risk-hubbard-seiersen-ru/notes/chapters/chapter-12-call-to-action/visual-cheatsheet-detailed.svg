@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1180" viewBox="0 0 1600 1180" role="img" aria-labelledby="t d">
+<title id="t">Глава 12 — подробная governance-схема УРК</title><desc id="d">Стратегическая хартия, функции программы, audit principles и ecosystem change.</desc>
+<rect width="1600" height="1180" fill="#0b1829"/>
+<text x="56" y="55" fill="#7fcaf4" font-family="Arial" font-size="16" font-weight="bold">BIBLIOTEKA-VSP / CHAPTER 12 / CYBER RISK</text>
+<text x="56" y="108" fill="#fff" font-family="Arial" font-size="34" font-weight="bold">Программа управления рисками кибербезопасности</text>
+<text x="56" y="148" fill="#bcd2e3" font-family="Arial" font-size="19">Финальная глава: governance, capability building и model assurance</text>
+<rect x="56" y="205" width="1488" height="105" rx="14" fill="#203d54" stroke="#78cbf2"/>
+<text x="82" y="247" fill="#fff" font-family="Arial" font-size="23" font-weight="bold">Strategic charter</text>
+<text x="82" y="282" fill="#d1e6f1" font-family="Arial" font-size="18">Executive accountability · technology initiative review · risk tolerance · exceptions · ongoing investment monitoring · cyber insurance</text>
+<g font-family="Arial">
+<rect x="56" y="365" width="350" height="165" rx="14" fill="#183149" stroke="#8dcdf1"/><text x="80" y="407" fill="#fff" font-size="21" font-weight="bold">Quantitative analysis</text><text x="80" y="444" fill="#cee2ee" font-size="17">Decision analysis</text><text x="80" y="473" fill="#cee2ee" font-size="17">R / Python / statistics</text><text x="80" y="502" fill="#cee2ee" font-size="17">Portfolio monitoring</text>
+<rect x="428" y="365" width="350" height="165" rx="14" fill="#183149" stroke="#91d6bd"/><text x="452" y="407" fill="#fff" font-size="21" font-weight="bold">Training & development</text><text x="452" y="444" fill="#cee2ee" font-size="17">Scale quantitative skills</text><text x="452" y="473" fill="#cee2ee" font-size="17">Content + enablement</text><text x="452" y="502" fill="#cee2ee" font-size="17">Distributed adoption</text>
+<rect x="800" y="365" width="350" height="165" rx="14" fill="#183149" stroke="#b7b4ef"/><text x="824" y="407" fill="#fff" font-size="21" font-weight="bold">Analytics technology</text><text x="824" y="444" fill="#cee2ee" font-size="17">Big data / streaming / cloud</text><text x="824" y="473" fill="#cee2ee" font-size="17">Telemetry deployment</text><text x="824" y="502" fill="#cee2ee" font-size="17">Engineering support</text>
+<rect x="1172" y="365" width="372" height="165" rx="14" fill="#183149" stroke="#e7c18c"/><text x="1196" y="407" fill="#fff" font-size="21" font-weight="bold">Program management</text><text x="1196" y="444" fill="#cee2ee" font-size="17">Cross-functional coordination</text><text x="1196" y="473" fill="#cee2ee" font-size="17">Roadmap / rollout</text><text x="1196" y="502" fill="#cee2ee" font-size="17">Change management</text>
+</g>
+<text x="56" y="600" fill="#88d0f8" font-family="Arial" font-size="21" font-weight="bold">Audit: не создавать incentive оставаться на мягких моделях</text>
+<rect x="56" y="625" width="1488" height="155" rx="14" fill="#213d55" stroke="#efbd9b"/>
+<text x="82" y="666" fill="#fff" font-family="Arial" font-size="20">Audit every decision model — включая intuition, ordinal scores и heat maps</text>
+<text x="82" y="703" fill="#d2e8f3" font-family="Arial" font-size="18">Проверять не только арифметику внутри модели, но и пригодность самого подхода</text>
+<text x="82" y="739" fill="#d2e8f3" font-family="Arial" font-size="18">Требовать comparative evidence относительно доступных альтернатив</text>
+<text x="56" y="850" fill="#88d0f8" font-family="Arial" font-size="21" font-weight="bold">Ecosystem change requested by authors</text>
+<rect x="56" y="875" width="1488" height="150" rx="14" fill="#183149" stroke="#91d6bd"/>
+<text x="82" y="916" fill="#fff" font-family="Arial" font-size="18">Standards bodies · certification · auditors · regulators · vendors · consultants · insurers</text>
+<text x="82" y="954" fill="#d1e6f1" font-family="Arial" font-size="18">Shift toward empirically supported methods and equal scrutiny of competing risk models</text>
+<text x="82" y="992" fill="#d1e6f1" font-family="Arial" font-size="18">Final systemic-risk argument: interconnected organizations require models beyond unaided intuition</text>
+<rect x="56" y="1070" width="1488" height="50" rx="10" fill="#2c2a38" stroke="#9a889f"/>
+<text x="82" y="1102" fill="#f0dce8" font-family="Arial" font-size="16">Source boundary: Fig. 12.1 unavailable as original; governance/staffing/policy points remain author recommendations</text>
+<text x="56" y="1165" fill="#90aec4" font-family="Arial" font-size="14">RAG e0045:c01–c08 · EPUB spine 45 · next source unit: Appendix A at spine 46</text>
+</svg>
