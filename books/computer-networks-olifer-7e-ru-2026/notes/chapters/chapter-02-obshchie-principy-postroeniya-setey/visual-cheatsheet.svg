@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1450" height="900" viewBox="0 0 1450 900">
+<rect width="1450" height="900" fill="#f8fafb"/>
+<text x="50" y="58" font-family="Arial,DejaVu Sans,sans-serif" font-size="34" font-weight="700" fill="#183247">Глава 2 · Общие принципы построения сетей</text>
+<text x="50" y="92" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#52697a">RAG p0046:c01–p0080:c01 · PDF 46–80 · printed 45–79</text>
+
+<rect x="50" y="135" width="400" height="170" rx="16" fill="#e8eff5" stroke="#b9cbd8"/>
+<text x="78" y="180" font-family="Arial,DejaVu Sans,sans-serif" font-size="25" font-weight="700" fill="#234b64">1 · Resource → service</text>
+<text x="78" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">Client ↔ protocol ↔ server</text>
+<text x="78" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">Network OS = services + transport</text>
+<text x="78" y="288" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#5a7180">p0046–p0057</text>
+
+<rect x="525" y="135" width="400" height="170" rx="16" fill="#eef4e8" stroke="#c4d4b9"/>
+<text x="553" y="180" font-family="Arial,DejaVu Sans,sans-serif" font-size="25" font-weight="700" fill="#365b31">2 · Physical transfer</text>
+<text x="553" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">Encoding · sync · checksum / ACK</text>
+<text x="553" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">load · capacity · throughput</text>
+<text x="553" y="288" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#63755d">p0058–p0061</text>
+
+<rect x="1000" y="135" width="400" height="170" rx="16" fill="#f8efe2" stroke="#ddc9aa"/>
+<text x="1028" y="180" font-family="Arial,DejaVu Sans,sans-serif" font-size="25" font-weight="700" fill="#78532e">3 · Many nodes</text>
+<text x="1028" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">Topology + addressing</text>
+<text x="1028" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">unicast / multicast / broadcast / anycast</text>
+<text x="1028" y="288" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#806d55">p0062–p0067</text>
+
+<path d="M450 220 H525 M925 220 H1000" stroke="#718798" stroke-width="4" marker-end="url(#a)"/>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#718798"/></marker></defs>
+
+<rect x="120" y="370" width="1210" height="235" rx="18" fill="#e5eef6" stroke="#bdcddd"/>
+<text x="150" y="414" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#244d71">4 · Обобщённая задача коммутации</text>
+<text x="155" y="468" font-family="Arial,DejaVu Sans,sans-serif" font-size="22" fill="#365b76">① Определить поток / descriptor</text>
+<text x="155" y="510" font-family="Arial,DejaVu Sans,sans-serif" font-size="22" fill="#365b76">② Routing: выбрать маршрут и распространить state</text>
+<text x="725" y="468" font-family="Arial,DejaVu Sans,sans-serif" font-size="22" fill="#365b76">③ Forwarding: lookup → output interface</text>
+<text x="725" y="510" font-family="Arial,DejaVu Sans,sans-serif" font-size="22" fill="#365b76">④ Multiplex / demultiplex flows</text>
+<text x="155" y="558" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#5a7180">p0068–p0076 · routing ≠ forwarding</text>
+
+<rect x="120" y="655" width="565" height="155" rx="18" fill="#eee8f6" stroke="#cabbd9"/>
+<text x="150" y="700" font-family="Arial,DejaVu Sans,sans-serif" font-size="25" font-weight="700" fill="#593f73">Shared medium</text>
+<text x="150" y="740" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#624f74">Несколько transmitters → один medium</text>
+<text x="150" y="775" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#624f74">Нужен centralized/decentralized access control</text>
+
+<rect x="765" y="655" width="565" height="155" rx="18" fill="#f4ece7" stroke="#dbc6b9"/>
+<text x="795" y="700" font-family="Arial,DejaVu Sans,sans-serif" font-size="25" font-weight="700" fill="#714b38">Ключевая метрика</text>
+<text x="795" y="740" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6a5649">Throughput ≤ capacity канала</text>
+<text x="795" y="775" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6a5649">Составной путь ограничен bottleneck</text>
+
+<text x="50" y="865" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#63798a">No executable CLI in chapter · OCR/footer findings recorded separately · SVG is a new RAG-grounded synthesis</text>
+</svg>

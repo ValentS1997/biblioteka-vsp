@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1750" height="1320" viewBox="0 0 1750 1320">
+<rect width="1750" height="1320" fill="#f8fafb"/>
+<text x="55" y="58" font-family="Arial,DejaVu Sans,sans-serif" font-size="36" font-weight="700" fill="#173246">Глава 2 · Общие принципы построения сетей</text>
+<text x="55" y="94" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#536b7d">Олифер, 7-е изд. · RAG p0046:c01–p0080:c01 · PDF 46–80 · printed 45–79</text>
+
+<rect x="55" y="135" width="525" height="250" rx="18" fill="#eaf0f5" stroke="#b9cbd8"/>
+<text x="82" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#234b64">1 · Два компьютера</text>
+<text x="82" y="221" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#36566a">Resource sharing: device / data / compute</text>
+<text x="82" y="258" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#36566a">Physical interface = signals / connector / line</text>
+<text x="82" y="295" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#36566a">Logical interface = protocol / messages / rules</text>
+<text x="82" y="332" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#36566a">NIC + driver move bytes between computers</text>
+<text x="82" y="366" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#5d7381">p0046–p0050</text>
+
+<rect x="612" y="135" width="525" height="250" rx="18" fill="#eef4e8" stroke="#c3d4b8"/>
+<text x="639" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#365b31">2 · Network software</text>
+<text x="639" y="221" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">Client + server = network service</text>
+<text x="639" y="258" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">Service provides one or more services</text>
+<text x="639" y="295" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">Network OS = local mgmt + services + transport</text>
+<text x="639" y="332" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">Distributed app = interacting functional parts</text>
+<text x="639" y="366" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#65775e">p0051–p0057</text>
+
+<rect x="1169" y="135" width="525" height="250" rx="18" fill="#f8efe2" stroke="#ddc9aa"/>
+<text x="1196" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#78532e">3 · Physical transfer</text>
+<text x="1196" y="221" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">Encoding: potential / pulse / modulation</text>
+<text x="1196" y="258" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">Synchronization + checksum + acknowledgement</text>
+<text x="1196" y="295" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">Offered load · capacity · throughput</text>
+<text x="1196" y="332" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">Duplex · half-duplex · simplex</text>
+<text x="1196" y="366" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#806d55">p0058–p0061</text>
+
+<rect x="55" y="430" width="800" height="300" rx="18" fill="#e5f0f3" stroke="#b4d0d7"/>
+<text x="82" y="474" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#245d6b">4 · Topology + addressing</text>
+<text x="82" y="517" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#355f69">Topology = graph: end nodes + transit devices + links</text>
+<text x="82" y="555" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#355f69">Full mesh: N(N−1)/2 duplex links → poor scalability</text>
+<text x="82" y="593" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#355f69">Mesh · ring · star/tree · bus · mixed topology</text>
+<text x="82" y="631" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#355f69">Address scope: unicast / multicast / broadcast / anycast</text>
+<text x="82" y="669" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#355f69">Flat hardware address vs hierarchical network address</text>
+<text x="82" y="707" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#52717b">ARP example: distributed address resolution · TCP/UDP port: process address</text>
+
+<rect x="900" y="430" width="794" height="300" rx="18" fill="#eee8f6" stroke="#c9bad9"/>
+<text x="927" y="474" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#593f73">5 · Switching decomposition</text>
+<text x="927" y="517" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">1. Flow identification — descriptor / destination address</text>
+<text x="927" y="555" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">2. Routing — choose path using metric / constraints</text>
+<text x="927" y="593" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">3. Build/distribute forwarding table state</text>
+<text x="927" y="631" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">4. Forwarding — classify → lookup → modify if needed → output</text>
+<text x="927" y="669" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">5. Multiplex / demultiplex traffic on shared links</text>
+<text x="927" y="707" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#756486">p0068–p0076 · routing and forwarding are independent functions</text>
+
+<rect x="55" y="775" width="800" height="295" rx="18" fill="#f4ece7" stroke="#dbc6b9"/>
+<text x="82" y="819" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#714b38">6 · Metrics and bottlenecks</text>
+<text x="82" y="862" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Offered load: source intensity independent of channel properties</text>
+<text x="82" y="900" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Capacity: maximum possible rate for this channel/technology</text>
+<text x="82" y="938" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Throughput: actual passed data / observation interval</text>
+<text x="82" y="976" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Composite path capacity is limited by minimum-capacity element</text>
+<text x="82" y="1014" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Routing metric may combine hops / bandwidth / delay / reliability</text>
+<text x="82" y="1050" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#806b5f">p0060–p0061 · p0070–p0072</text>
+
+<rect x="900" y="775" width="794" height="295" rx="18" fill="#e5edf7" stroke="#bdcce0"/>
+<text x="927" y="819" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#2b4e78">7 · Shared medium</text>
+<text x="927" y="862" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">Multiple transmitters attach to one physical medium</text>
+<text x="927" y="900" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">Only one transmitter uses it at a given moment</text>
+<text x="927" y="938" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">Access control can be centralized (arbiter) or distributed</text>
+<text x="927" y="976" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">Wired LANs moved away from shared medium toward switches</text>
+<text x="927" y="1014" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">Wireless LANs retain natural shared radio medium</text>
+<text x="927" y="1050" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#5c7290">p0077–p0079 · p0080 gives postal-service analogy</text>
+
+<rect x="55" y="1115" width="1639" height="130" rx="16" fill="#fff3dd" stroke="#dfca9b"/>
+<text x="82" y="1157" font-family="Arial,DejaVu Sans,sans-serif" font-size="23" font-weight="700" fill="#785f2d">Operational boundary</text>
+<text x="82" y="1195" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#6c5c3a">No executable CLI is given. Manual route/table modification is described only conceptually: exact syntax, verification and rollback are [Needs confirmation].</text>
+<text x="82" y="1228" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#6c5c3a">OCR/footer contamination and non-multimodal figure extraction are recorded in source-findings.md.</text>
+<text x="55" y="1292" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#607789">Chapter 3 starts at p0081:c01 · reading state unchanged · SVG is a new RAG-grounded synthesis.</text>
+</svg>
