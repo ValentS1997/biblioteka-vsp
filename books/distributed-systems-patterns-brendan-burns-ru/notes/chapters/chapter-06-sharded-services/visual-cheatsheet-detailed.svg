@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 6 — Шардированные сервисы: подробная шпаргалка</title>
+  <desc id="desc">RAG-grounded detailed map of sharded caches, replicated shards, memcache/twemproxy routing, sharding keys, consistent hashing and hot sharding.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #111827; }
+      .title { font-size: 34px; font-weight: 700; }
+      .sub { font-size: 15px; fill: #4b5563; }
+      .section { font-size: 22px; font-weight: 700; }
+      .h { font-size: 17px; font-weight: 700; }
+      .b { font-size: 14px; }
+      .small { font-size: 12px; fill: #374151; }
+      .blue { fill: #eff6ff; stroke: #1d4ed8; stroke-width: 2; rx: 12; }
+      .green { fill: #ecfdf5; stroke: #047857; stroke-width: 2; rx: 12; }
+      .violet { fill: #f5f3ff; stroke: #6d28d9; stroke-width: 2; rx: 12; }
+      .orange { fill: #fff7ed; stroke: #c2410c; stroke-width: 2; rx: 12; }
+      .box { fill: #f9fafb; stroke: #4b5563; stroke-width: 2; rx: 12; }
+      .arrow { stroke: #374151; stroke-width: 2.2; fill: none; marker-end: url(#m); }
+    </style>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#374151"/>
+    </marker>
+  </defs>
+
+  <text x="50" y="52" class="title">Глава 6 — Шардированные сервисы</text>
+  <text x="50" y="82" class="sub">«Распределенные системы. Паттерны проектирования» · RAG p0102:c01–p0121:c01 · PDF 102–121</text>
+
+  <text x="50" y="125" class="section">A. Replication vs sharding</text>
+
+  <rect x="80" y="155" width="650" height="130" class="blue"/>
+  <text x="110" y="192" class="h">Replication</text>
+  <text x="110" y="224" class="b">same responsibility repeated</text>
+  <text x="110" y="252" class="b">availability + request capacity</text>
+
+  <rect x="870" y="155" width="650" height="130" class="green"/>
+  <text x="900" y="192" class="h">Sharding</text>
+  <text x="900" y="224" class="b">different subsets of responsibility/data</text>
+  <text x="900" y="252" class="b">aggregate data / working-set capacity</text>
+
+  <text x="50" y="345" class="section">B. Cache dependency and replicated shards</text>
+
+  <rect x="65" y="380" width="420" height="170" class="orange"/>
+  <text x="90" y="417" class="h">Sharded cache failure</text>
+  <text x="90" y="449" class="b">mapped traffic misses until shard returns</text>
+  <text x="90" y="479" class="b">backend sees more requests</text>
+  <text x="90" y="509" class="b">latency / queues / errors can rise</text>
+
+  <rect x="590" y="380" width="420" height="170" class="green"/>
+  <text x="615" y="417" class="h">Replicate each shard</text>
+  <text x="615" y="449" class="b">A → A1 + A2</text>
+  <text x="615" y="479" class="b">shard remains available after replica loss</text>
+  <text x="615" y="509" class="b">independent shard scaling</text>
+
+  <rect x="1115" y="380" width="420" height="170" class="blue"/>
+  <text x="1140" y="417" class="h">Capacity validation</text>
+  <text x="1140" y="449" class="b">measure hit ratio</text>
+  <text x="1140" y="479" class="b">load-test with cache</text>
+  <text x="1140" y="509" class="b">load-test without cache</text>
+
+  <path d="M485,465 L590,465" class="arrow"/>
+  <path d="M1010,465 L1115,465" class="arrow"/>
+
+  <text x="50" y="610" class="section">C. memcache/twemproxy routing</text>
+
+  <rect x="60" y="645" width="320" height="160" class="violet"/>
+  <text x="85" y="682" class="h">Application</text>
+  <text x="85" y="714" class="b">stable proxy endpoint</text>
+  <text x="85" y="744" class="b">does not route shards itself</text>
+
+  <rect x="460" y="645" width="320" height="160" class="green"/>
+  <text x="485" y="682" class="h">twemproxy</text>
+  <text x="485" y="714" class="b">Ambassador or shared router</text>
+  <text x="485" y="744" class="b">fnv1a_64 + ketama in source</text>
+
+  <rect x="860" y="625" width="290" height="100" class="blue"/>
+  <text x="885" y="662" class="h">memcache-0</text>
+  <text x="885" y="694" class="b">port 11211</text>
+
+  <rect x="860" y="745" width="290" height="100" class="blue"/>
+  <text x="885" y="782" class="h">memcache-1</text>
+  <text x="885" y="814" class="b">port 11211</text>
+
+  <rect x="1230" y="685" width="290" height="100" class="blue"/>
+  <text x="1255" y="722" class="h">memcache-2</text>
+  <text x="1255" y="754" class="b">port 11211</text>
+
+  <path d="M380,725 L460,725" class="arrow"/>
+  <path d="M780,700 L860,675" class="arrow"/>
+  <path d="M780,735 L860,795" class="arrow"/>
+  <path d="M780,725 L1230,735" class="arrow"/>
+
+  <text x="50" y="900" class="section">D. Key design, consistent hashing, hot shards</text>
+
+  <rect x="60" y="935" width="430" height="175" class="violet"/>
+  <text x="85" y="972" class="h">Semantic sharding key</text>
+  <text x="85" y="1004" class="b">too broad → mixes different responses</text>
+  <text x="85" y="1034" class="b">too specific → breaks locality</text>
+  <text x="85" y="1064" class="b">key must reflect domain behavior</text>
+
+  <rect x="585" y="935" width="430" height="175" class="green"/>
+  <text x="610" y="972" class="h">Consistent hashing</text>
+  <text x="610" y="1004" class="b">topology changes remap fewer keys</text>
+  <text x="610" y="1034" class="b">avoids large cache churn</text>
+  <text x="610" y="1064" class="b">source example: 10 → 11 shards</text>
+
+  <rect x="1110" y="935" width="430" height="175" class="orange"/>
+  <text x="1135" y="972" class="h">Hot sharding</text>
+  <text x="1135" y="1004" class="b">uniform hash != uniform demand</text>
+  <text x="1135" y="1034" class="b">popular key overloads one shard</text>
+  <text x="1135" y="1064" class="b">replicate/scale that shard separately</text>
+
+  <rect x="180" y="1140" width="1240" height="45" class="box"/>
+  <text x="210" y="1169" class="h">Design rule: choose the right partition key, model failure, replicate critical shards, minimize remapping, then react to real per-shard load.</text>
+
+  <text x="50" y="1196" class="small">Source contradictions and extraction-sensitive commands/manifests are recorded in source-findings.md; no silent correction is applied.</text>
+</svg>
