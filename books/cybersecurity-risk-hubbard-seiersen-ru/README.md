@@ -64,3 +64,4 @@ Canonical readiness command:
 - [Глава 2 — Руководство по измерениям для сферы кибербезопасности](notes/chapters/chapter-02-measurement-guide-cybersecurity/README.md) — EPUB spine 15–17, контракт v1.7. Reading: `planned`.
 - [Глава 3 — Моделируем немедленно!](notes/chapters/chapter-03-model-now/README.md) — EPUB spine 18–20, контракт v1.7; reading remains `planned`.
 - [Глава 4 — Самое важное измерение в области кибербезопасности](notes/chapters/chapter-04-most-important-measurement/README.md) — EPUB spine 21–23, chapter artifacts v1.7 + explicit summary; reading remains `planned`.
+- [Глава 5 — Матрицы риска, факторы лжи и другие препятствия](notes/chapters/chapter-05-risk-matrices-fallacies/README.md) — EPUB spine 24–26; artifacts v1.7 + explicit conclusion summary; reading remains `planned`.
