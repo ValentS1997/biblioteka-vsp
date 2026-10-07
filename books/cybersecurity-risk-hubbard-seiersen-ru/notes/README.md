@@ -10,3 +10,4 @@ Chapter artifacts are created only after book-level chapter-analysis readiness i
 - [Глава 2 — Руководство по измерениям для сферы кибербезопасности](chapters/chapter-02-measurement-guide-cybersecurity/README.md) — RAG-grounded, EPUB spine 15–17; reading status не изменён.
 - [Глава 3 — Моделируем немедленно!](chapters/chapter-03-model-now/README.md) — RAG-grounded, EPUB spine 18–20; reading progress не изменён.
 - [Глава 4 — Самое важное измерение в области кибербезопасности](chapters/chapter-04-most-important-measurement/README.md) — RAG-grounded, EPUB spine 21–23; reading status не изменён.
+- [Глава 5 — Матрицы риска, факторы лжи и другие препятствия](chapters/chapter-05-risk-matrices-fallacies/README.md) — RAG-grounded, EPUB spine 24–26; reading progress не изменён.
