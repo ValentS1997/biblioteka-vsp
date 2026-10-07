@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="980" viewBox="0 0 1360 980" role="img" aria-label="Глава 9 SQL. Работа с несколькими таблицами и запросами">
+<rect width="1360" height="980" fill="#EEF4F8"/>
+<text x="30" y="53" font-family="DejaVu Sans,Arial,sans-serif" font-size="29" fill="#083B5A" font-weight="700">ГЛАВА 9 · НЕСКОЛЬКО ТАБЛИЦ И ЗАПРОСОВ</text>
+<text x="32" y="84" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#506D80" >Элис Жао · PDF 273–303 · RAG p0273:c01–p0303:c01</text>
+<rect x="27" y="111" width="407" height="225" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="149" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">01 / JOIN</text>
+<text x="45" y="185" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >INNER → only matches</text>
+<text x="45" y="215" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >LEFT / RIGHT / FULL</text>
+<text x="45" y="245" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >USING / NATURAL JOIN</text>
+<text x="45" y="275" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >CROSS → Cartesian product</text>
+<text x="45" y="305" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >SELF JOIN → same table twice</text>
+<rect x="477" y="111" width="407" height="225" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="495" y="149" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">02 / SET OPS</text>
+<text x="495" y="185" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >UNION removes duplicates</text>
+<text x="495" y="215" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >UNION ALL preserves duplicates</text>
+<text x="495" y="245" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >EXCEPT / MINUS = difference</text>
+<text x="495" y="275" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >INTERSECT = overlap</text>
+<text x="495" y="305" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Column count/types must align</text>
+<rect x="927" y="111" width="406" height="225" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="945" y="149" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">03 / CTE</text>
+<text x="945" y="185" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >WITH = named result set</text>
+<text x="945" y="215" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Non-recursive CTE</text>
+<text x="945" y="245" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Recursive CTE</text>
+<text x="945" y="275" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Anchor + UNION ALL + recursion</text>
+<text x="945" y="305" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Termination must be explicit</text>
+<rect x="27" y="363" width="627" height="244" rx="17" fill="#FAFDFF" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="401" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">04 / CARDINALITY</text>
+<text x="45" y="437" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >One-to-many multiplies rows</text>
+<text x="45" y="467" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >NATURAL JOIN depends on schema</text>
+<text x="45" y="497" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >CROSS JOIN can explode row count</text>
+<text x="45" y="527" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >UNION may deduplicate</text>
+<text x="45" y="557" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Recursive depth can grow workload</text>
+<rect x="686" y="363" width="647" height="244" rx="17" fill="#FAFDFF" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="704" y="401" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">05 / PRACTICAL USE</text>
+<text x="704" y="437" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Recursive dates + LEFT JOIN</text>
+<text x="704" y="467" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Hierarchy / lineage traversal</text>
+<text x="704" y="497" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >CTE vs subquery readability</text>
+<text x="704" y="527" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Preview each input independently</text>
+<text x="704" y="557" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Validate expected row count</text>
+<rect x="27" y="635" width="1306" height="176" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="673" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">06 / SOURCE FINDINGS</text>
+<text x="45" y="709" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Self-join missing ON · SUM(order_id) named num_orders · UNION performance claim</text>
+<text x="45" y="739" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >NOT IN NULL risk · INTERSECT workaround compares only name · LIMIT replacement scope</text>
+<text x="45" y="769" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >LAG fill only shown for one-row gaps · JOIN/recursive support claims version-sensitive</text>
+<rect x="27" y="838" width="1306" height="111" rx="14" fill="#D8EAF3"/>
+<text x="48" y="872" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#164A64" font-weight="700">RULE: verify keys + cardinality + NULL semantics + recursion depth before running multi-source SQL</text>
+<text x="48" y="905" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#214E66" >Read-only chapter · CROSS JOIN/recursion may be workload-generating · no SQL executed</text>
+</svg>

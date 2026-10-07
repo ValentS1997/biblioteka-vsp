@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1940" viewBox="0 0 1600 1940" role="img" aria-label="Подробная шпаргалка главы 9 SQL: joins set operations CTE">
+<rect width="1600" height="1940" fill="#EEF4F8"/>
+<text x="30" y="57" font-family="DejaVu Sans,Arial,sans-serif" font-size="30" fill="#073E60" font-weight="700">SQL · ГЛАВА 9 / НЕСКОЛЬКО ТАБЛИЦ И ЗАПРОСОВ</text>
+<text x="32" y="89" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#526F82" >Элис Жао · 4-е изд. · PDF 273–303 · RAG p0273:c01–p0303:c01</text>
+<rect x="27" y="117" width="500" height="230" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="155" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">01 / INNER JOIN [274–280]</text>
+<text x="45" y="191" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >JOIN defaults to INNER in source</text>
+<text x="45" y="221" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >ON defines match condition</text>
+<text x="45" y="251" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Multiple JOIN blocks supported</text>
+<text x="45" y="281" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Multiple keys via AND</text>
+<text x="45" y="311" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >One-to-many duplicates output rows</text>
+<rect x="550" y="117" width="500" height="230" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="568" y="155" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">02 / OUTER JOIN [281–282]</text>
+<text x="568" y="191" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >LEFT preserves left rows</text>
+<text x="568" y="221" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >RIGHT preserves right rows</text>
+<text x="568" y="251" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >FULL preserves both sides</text>
+<text x="568" y="281" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Missing side becomes NULL</text>
+<text x="568" y="311" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Support varies by product/version</text>
+<rect x="1073" y="117" width="500" height="230" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="1091" y="155" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">03 / USING / NATURAL [283–284]</text>
+<text x="1091" y="191" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >USING for same-name equijoin key</text>
+<text x="1091" y="221" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >NATURAL uses all same-name columns</text>
+<text x="1091" y="251" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Output merges repeated join columns</text>
+<text x="1091" y="281" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Schema drift can alter NATURAL JOIN</text>
+<text x="1091" y="311" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Source warns against production use</text>
+<rect x="27" y="375" width="758" height="260" rx="17" fill="#FAFDFF" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="413" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">04 / CROSS &amp; SELF JOIN [285–287]</text>
+<text x="45" y="449" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >CROSS = all row combinations</text>
+<text x="45" y="479" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Old comma syntax shown as equivalent</text>
+<text x="45" y="509" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Self join compares table to itself</text>
+<text x="45" y="539" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Mirrored pairs can be filtered</text>
+<text x="45" y="569" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Collation affects name ordering</text>
+<text x="45" y="599" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Cardinality must be bounded</text>
+<rect x="812" y="375" width="761" height="260" rx="17" fill="#FAFDFF" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="830" y="413" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">05 / UNION FAMILY [287–294]</text>
+<text x="830" y="449" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >UNION → combine + deduplicate</text>
+<text x="830" y="479" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >UNION ALL → keep duplicates</text>
+<text x="830" y="509" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >EXCEPT/MINUS → difference</text>
+<text x="830" y="539" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >INTERSECT → common rows</text>
+<text x="830" y="569" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Parentheses recommended for precedence</text>
+<text x="830" y="599" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Workarounds may not be equivalent</text>
+<rect x="27" y="663" width="758" height="280" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="701" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">06 / NON-RECURSIVE CTE [294–297]</text>
+<text x="45" y="737" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >WITH name AS (SELECT ...)</text>
+<text x="45" y="767" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Reference CTE later by name</text>
+<text x="45" y="797" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Can reference same CTE repeatedly</text>
+<text x="45" y="827" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Can define multiple CTEs</text>
+<text x="45" y="857" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Often clearer than repeated subqueries</text>
+<text x="45" y="887" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Top-N syntax differs by RDBMS</text>
+<rect x="812" y="663" width="761" height="280" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="830" y="701" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">07 / RECURSIVE CTE [295–303]</text>
+<text x="830" y="737" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Anchor SELECT</text>
+<text x="830" y="767" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >UNION ALL</text>
+<text x="830" y="797" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Recursive member references CTE</text>
+<text x="830" y="827" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Termination predicate</text>
+<text x="830" y="857" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Generate date sequences</text>
+<text x="830" y="887" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Traverse parent-child hierarchy</text>
+<rect x="27" y="971" width="758" height="260" rx="17" fill="#FAFDFF" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="1009" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">08 / DATE GAP FILL [298–301]</text>
+<text x="45" y="1045" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Generate complete date series</text>
+<text x="45" y="1075" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >LEFT JOIN stock_prices</text>
+<text x="45" y="1105" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Missing dates become NULL</text>
+<text x="45" y="1135" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >COALESCE + LAG shown for isolated gaps</text>
+<text x="45" y="1165" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Consecutive gaps not demonstrated</text>
+<text x="45" y="1195" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Syntax differs by RDBMS</text>
+<rect x="812" y="971" width="761" height="260" rx="17" fill="#FAFDFF" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="830" y="1009" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">09 / HIERARCHY [301–303]</text>
+<text x="830" y="1045" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Roots: parent_id IS NULL</text>
+<text x="830" y="1075" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Recursive join child to parent</text>
+<text x="830" y="1105" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Build lineage string</text>
+<text x="830" y="1135" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Multiple parents create multiple paths</text>
+<text x="830" y="1165" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Cycles/depth not bounded in source</text>
+<text x="830" y="1195" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Operational guard: [Needs confirmation]</text>
+<rect x="27" y="1259" width="1546" height="250" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="1297" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">10 / SOURCE FINDINGS</text>
+<text x="45" y="1333" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >F-01 self-join INNER JOIN lacks ON · F-02 SUM(order_id) alias num_orders</text>
+<text x="45" y="1363" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >F-03 UNION hidden-sort performance claim · F-04 NOT IN NULL risk</text>
+<text x="45" y="1393" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >F-05 INTERSECT workaround checks fewer columns · F-06 precedence version-sensitive</text>
+<text x="45" y="1423" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >F-07 LIMIT replacement not shown as full equivalent query · F-08 one-step LAG limitation</text>
+<text x="45" y="1453" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >F-09 JOIN support · F-10 recursive syntax · F-11 table-wrap extraction risk</text>
+<rect x="27" y="1537" width="1546" height="230" rx="17" fill="#FAFDFF" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="1575" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">11 / ACCEPTANCE</text>
+<text x="45" y="1611" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Join keys and relationship known</text>
+<text x="45" y="1641" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Expected cardinality bounded</text>
+<text x="45" y="1671" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >No unintended Cartesian product</text>
+<text x="45" y="1701" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Set-operation columns/NULL semantics verified</text>
+<text x="45" y="1731" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Recursive termination/depth known</text>
+<text x="45" y="1761" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Output row count reconciled before production</text>
+<rect x="27" y="1798" width="1546" height="109" rx="18" fill="#D9EAF4"/>
+<text x="48" y="1835" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#104A67" font-weight="700">RAG_ONLY / READ-ONLY ANALYSIS</text>
+<text x="48" y="1870" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#28526A" >No SQL executed. Source inconsistencies preserved; source/RAG/reading remain unchanged.</text>
+</svg>
