@@ -1,0 +1,88 @@
+schema: biblioteka-vsp/rag-ingestion-acceptance/v1
+book_id: computer-networks-olifer-7e-ru-2026
+status: ACCEPTED
+source_sha256: 16f4b02985f65c602c6268620878cbacd692a61fd5898ca811b3d1a332e3f84d
+corpus_generation_id: 08d350bc22d24a1b1a61fe5d295baa093c3f9fbc97cf9ae0a5904d81cd5f3daf
+index_generation_id: 1bb819e9024819bd8ca55f6d77246ad398c7efa0ed33593fafb1cc03fba161e3
+checks:
+- id: source_hash_matches
+  status: PASS
+  evidence:
+    recorded: 16f4b02985f65c602c6268620878cbacd692a61fd5898ca811b3d1a332e3f84d
+    actual: 16f4b02985f65c602c6268620878cbacd692a61fd5898ca811b3d1a332e3f84d
+- id: manifest_book_id_matches
+  status: PASS
+  evidence: computer-networks-olifer-7e-ru-2026
+- id: manifest_source_matches
+  status: PASS
+  evidence:
+    path: source/book.pdf
+    format: pdf
+    sha256: 16f4b02985f65c602c6268620878cbacd692a61fd5898ca811b3d1a332e3f84d
+    pdf_pages: 1106
+- id: generation_metadata_present
+  status: PASS
+  evidence:
+    ingestion:
+      pipeline_version: '1.0'
+      normalization_policy_id: text-normalization-v2
+      chunking_policy_id: source-unit-char-window-v1
+      retrieval_policy_id: deterministic-lexical-shards-v2
+    generation:
+      corpus_generation_id: 08d350bc22d24a1b1a61fe5d295baa093c3f9fbc97cf9ae0a5904d81cd5f3daf
+      index_generation_id: 1bb819e9024819bd8ca55f6d77246ad398c7efa0ed33593fafb1cc03fba161e3
+- id: generation_ids_recompute
+  status: PASS
+  evidence:
+    corpus_expected: 08d350bc22d24a1b1a61fe5d295baa093c3f9fbc97cf9ae0a5904d81cd5f3daf
+    corpus_actual: 08d350bc22d24a1b1a61fe5d295baa093c3f9fbc97cf9ae0a5904d81cd5f3daf
+    index_expected: 1bb819e9024819bd8ca55f6d77246ad398c7efa0ed33593fafb1cc03fba161e3
+    index_actual: 1bb819e9024819bd8ca55f6d77246ad398c7efa0ed33593fafb1cc03fba161e3
+- id: chunks_addressable_unique
+  status: PASS
+  evidence: 1139
+- id: chunk_uids_unique
+  status: PASS
+  evidence: 1139
+- id: all_chunk_provenance_and_hashes_resolve
+  status: PASS
+  evidence: 1139 chunks
+- id: source_unit_coverage_complete
+  status: PASS
+  evidence:
+    source_units: 1106
+    units_with_chunks: 1102
+    blank_units:
+    - 1
+    - 553
+    - 889
+    - 1106
+- id: manifest_chunk_counts_match
+  status: PASS
+  evidence:
+    manifest: 1139
+    actual: 1139
+- id: search_index_generation_matches
+  status: PASS
+  evidence:
+    corpus_generation_id: 08d350bc22d24a1b1a61fe5d295baa093c3f9fbc97cf9ae0a5904d81cd5f3daf
+    index_generation_id: 1bb819e9024819bd8ca55f6d77246ad398c7efa0ed33593fafb1cc03fba161e3
+- id: deterministic_retrieval_samples_pass
+  status: PASS
+  evidence:
+  - chunk_id: computer-networks-olifer-7e-ru-2026:p0002:c01
+    ok: true
+    evidence: exact term 'компьютерньiе' -> computer-networks-olifer-7e-ru-2026:p0002:c01
+      via комп.json
+  - chunk_id: computer-networks-olifer-7e-ru-2026:p0543:c01
+    ok: true
+    evidence: key 'конф' contains computer-networks-olifer-7e-ru-2026:p0543:c01 via
+      конф.json
+  - chunk_id: computer-networks-olifer-7e-ru-2026:p1105:c01
+    ok: true
+    evidence: key 'подг' contains computer-networks-olifer-7e-ru-2026:p1105:c01 via
+      подг.json
+- id: negative_exact_term_behavior_pass
+  status: PASS
+  evidence: synthetic shard absent
+failed_checks: []

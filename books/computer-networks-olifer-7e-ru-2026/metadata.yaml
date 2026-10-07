@@ -1,0 +1,55 @@
+schema: biblioteka-vsp/book/v1
+
+id: computer-networks-olifer-7e-ru-2026
+title: "Компьютерные сети. Принципы, технологии, протоколы"
+
+edition:
+  number: 7
+  language: ru
+  publisher: "Питер"
+  publication_year: 2026
+  publication_pages: 1104
+
+authors:
+  - "Виктор Олифер"
+  - "Наталья Олифер"
+
+isbn:
+  russian_edition: "978-5-4461-4566-9"
+
+source:
+  canonical_path: "source/book.pdf"
+  format: pdf
+  original_name: "Компьютерные_сети_Принципы,_технологии,_протоколы_7_е_издание_Наталья.pdf"
+  expected_sha256: "16f4b02985f65c602c6268620878cbacd692a61fd5898ca811b3d1a332e3f84d"
+  expected_size_bytes: 165833952
+  source_pdf_pages: 1106
+  text_layer: "unclassified_extractable_pdf_text"
+  repository_access: private
+  storage: "Git LFS"
+  upload_status: "VERIFIED_GIT_LFS_AVAILABLE"
+  upload_commit: "f41936d911053c69637332dd2c4b967397f413bd"
+  lawful_access_attested_by_user: "[Needs confirmation]"
+  ownership_category: "[Needs confirmation]"
+  physical_copy: true
+  license: "all rights reserved"
+  redistribution_permission: "[Needs confirmation]"
+
+rag:
+  scope: full_book
+  build_script: "../../../scripts/build_book_rag.py"
+  manifest: "rag/manifest.yaml"
+  text: "rag/text.md"
+  chunks: "rag/chunks.jsonl"
+  status: "READY_WITH_KNOWN_LIMITATIONS"
+  generated_commit: "ba927978ad53ab1281ac8ab650b59dc99eba763c"
+  workflow_run_id: 37634280739
+  acceptance: "rag/acceptance.yaml"
+  acceptance_status: "ACCEPTED"
+
+reading:
+  progress: "reading/progress.yaml"
+  journal: "reading/journal.md"
+  status: planned
+  started: null
+  completed: null
