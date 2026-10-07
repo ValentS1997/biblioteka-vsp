@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1460" height="1180" viewBox="0 0 1460 1180">
+  <defs>
+    <style>
+      .title{font:700 34px sans-serif;fill:#0f172a}.h{font:700 18px sans-serif;fill:#0f172a}
+      .t{font:14px sans-serif;fill:#1e293b}.s{font:12px sans-serif;fill:#475569}
+      .b{fill:#f8fafc;stroke:#475569;stroke-width:1.8}.blue{fill:#dbeafe;stroke:#1d4ed8;stroke-width:1.8}
+      .green{fill:#dcfce7;stroke:#15803d;stroke-width:1.8}.amber{fill:#fef3c7;stroke:#a16207;stroke-width:1.8}
+      .red{fill:#fee2e2;stroke:#b91c1c;stroke-width:1.8}
+    </style>
+  </defs>
+  <rect width="1460" height="1180" fill="#fff"/>
+  <text x="45" y="55" class="title">Chapter 8 — detailed multiprocessor map</text>
+  <text x="45" y="82" class="s">RAG · PDF 576–658 · boundary verified</text>
+
+  <rect x="55" y="150" width="350" height="210" rx="13" class="amber"/>
+  <text x="230" y="188" text-anchor="middle" class="h">Shared-memory multiprocessor</text>
+  <text x="80" y="225" class="t">UMA / NUMA</text>
+  <text x="80" y="252" class="t">per-CPU OS · master/slave · SMP</text>
+  <text x="80" y="279" class="t">TSL / atomic lock protocols</text>
+  <text x="80" y="306" class="t">affinity · space · gang scheduling</text>
+
+  <rect x="555" y="150" width="350" height="210" rx="13" class="green"/>
+  <text x="730" y="188" text-anchor="middle" class="h">Multicomputer</text>
+  <text x="580" y="225" class="t">private memory per node</text>
+  <text x="580" y="252" class="t">send / receive · low-copy path</text>
+  <text x="580" y="279" class="t">RPC + marshalling</text>
+  <text x="580" y="306" class="t">DSM · scheduling · load balancing</text>
+
+  <rect x="1055" y="150" width="350" height="210" rx="13" class="red"/>
+  <text x="1230" y="188" text-anchor="middle" class="h">Distributed system</text>
+  <text x="1080" y="225" class="t">independent full computers</text>
+  <text x="1080" y="252" class="t">LAN/WAN · TCP/IP</text>
+  <text x="1080" y="279" class="t">middleware gives one model</text>
+  <text x="1080" y="306" class="t">heterogeneity remains underneath</text>
+
+  <rect x="40" y="470" width="300" height="220" rx="13" class="b"/>
+  <text x="190" y="508" text-anchor="middle" class="h">Lock scalability</text>
+  <text x="65" y="545" class="t">naive TSL → cache-line bouncing</text>
+  <text x="65" y="572" class="t">read before TSL</text>
+  <text x="65" y="599" class="t">binary exponential backoff</text>
+  <text x="65" y="626" class="s">spin if wait &lt; context-switch cost</text>
+
+  <rect x="370" y="470" width="300" height="220" rx="13" class="blue"/>
+  <text x="520" y="508" text-anchor="middle" class="h">Remote communication</text>
+  <text x="395" y="545" class="t">copy count controls latency</text>
+  <text x="395" y="572" class="t">RPC hides send/receive</text>
+  <text x="395" y="599" class="t">pointers/globals break locality illusion</text>
+  <text x="395" y="626" class="s">remote syscall state must have an owner</text>
+
+  <rect x="700" y="470" width="340" height="220" rx="13" class="green"/>
+  <text x="870" y="508" text-anchor="middle" class="h">DSM consistency</text>
+  <text x="725" y="545" class="t">remote reference → page fault</text>
+  <text x="725" y="572" class="t">page moves / replicas created</text>
+  <text x="725" y="599" class="t">write → invalidate/update copies</text>
+  <text x="725" y="626" class="s">false sharing can dominate traffic</text>
+
+  <rect x="1070" y="470" width="350" height="220" rx="13" class="amber"/>
+  <text x="1245" y="508" text-anchor="middle" class="h">Load placement</text>
+  <text x="1095" y="545" class="t">sender probes underload</text>
+  <text x="1095" y="572" class="t">receiver probes for work</text>
+  <text x="1095" y="599" class="t">hybrid + history</text>
+  <text x="1095" y="626" class="s">probe overhead depends on load regime</text>
+
+  <rect x="110" y="800" width="360" height="190" rx="13" class="red"/>
+  <text x="290" y="838" text-anchor="middle" class="h">Distributed files</text>
+  <text x="135" y="875" class="t">upload/download vs remote access</text>
+  <text x="135" y="902" class="t">location transparency / independence</text>
+  <text x="135" y="929" class="t">sequential vs session semantics</text>
+
+  <rect x="550" y="800" width="360" height="190" rx="13" class="blue"/>
+  <text x="730" y="838" text-anchor="middle" class="h">Object middleware</text>
+  <text x="575" y="875" class="t">CORBA · ORB · IDL</text>
+  <text x="575" y="902" class="t">methods hide representation/location</text>
+  <text x="575" y="929" class="s">remote object cost remains real</text>
+
+  <rect x="990" y="800" width="360" height="190" rx="13" class="green"/>
+  <text x="1170" y="838" text-anchor="middle" class="h">Interaction middleware</text>
+  <text x="1015" y="875" class="t">Linda out / in / read / eval</text>
+  <text x="1015" y="902" class="t">tuple matching + blocking</text>
+  <text x="1015" y="929" class="t">publish / subscribe topics</text>
+
+  <text x="45" y="1125" class="s">Scaling failures move from lock/coherence → copy/message/page movement → network/middleware semantics.</text>
+</svg>

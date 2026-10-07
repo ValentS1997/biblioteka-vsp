@@ -14,3 +14,4 @@ chapter-analysis readiness passes.
 - [Глава 5 — Ввод и вывод информации](chapters/chapter-05-input-output/README.md)
 - [Глава 6 — Взаимоблокировка](chapters/chapter-06-deadlock/README.md)
 - [Глава 7 — Виртуализация и облако](chapters/chapter-07-virtualization-cloud/README.md)
+- [Глава 8 — Многопроцессорные системы](chapters/chapter-08-multiprocessor-systems/README.md)
