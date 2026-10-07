@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 820">
+  <title>Глава 3 — Устройства</title>
+  <rect x="0" y="0" width="1600" height="820" rx="16" fill="#f2f6fb" />
+  <rect x="0" y="0" width="1600" height="135" rx="16" fill="#1a304c" />
+  <text x="48" y="58" font-family="Arial,sans-serif" font-size="38" font-weight="700" fill="#ffffff">Глава 3 — Устройства Linux</text>
+  <text x="48" y="104" font-family="Arial,sans-serif" font-size="23" font-weight="400" fill="#d4e7ff">/dev • sysfs • devtmpfs • udev • SCSI</text>
+  <rect x="48" y="165" width="741" height="264" rx="16" fill="#ffffff" />
+  <text x="72" y="214" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#1c639b">DEV NODES</text>
+  <text x="72" y="271" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">/dev: b / c / p / s</text>
+  <text x="72" y="313" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">Block / character / IPC</text>
+  <text x="72" y="355" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">Major и minor</text>
+  <rect x="811" y="165" width="741" height="264" rx="16" fill="#ffffff" />
+  <text x="835" y="214" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#1c639b">SYSFS</text>
+  <text x="835" y="271" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">/sys/devices: топология</text>
+  <text x="835" y="313" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">/sys/block: блочные устройства</text>
+  <text x="835" y="355" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">Атрибуты оборудования</text>
+  <rect x="48" y="449" width="741" height="264" rx="16" fill="#ffffff" />
+  <text x="72" y="498" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#1c639b">UDEV</text>
+  <text x="72" y="555" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">devtmpfs: узлы ядра</text>
+  <text x="72" y="597" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">uevent -&gt; udevd rules</text>
+  <text x="72" y="639" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">Права и /dev/disk/by-id</text>
+  <rect x="811" y="449" width="741" height="264" rx="16" fill="#ffffff" />
+  <text x="835" y="498" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#1c639b">OBSERVE</text>
+  <text x="835" y="555" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">ls /dev; lsscsi</text>
+  <text x="835" y="597" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">udevadm info / monitor</text>
+  <text x="835" y="639" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">nvme list; journalctl -k</text>
+  <text x="48" y="780" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#24384d">Уорд • глава 3 • PDF 79–101 • RAG p0079:c01–p0101:c01</text>
+</svg>

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1120">
+  <title>Глава 3 — Устройства</title>
+  <rect x="0" y="0" width="1800" height="1120" rx="16" fill="#f2f6fb" />
+  <rect x="0" y="0" width="1800" height="135" rx="16" fill="#1a304c" />
+  <text x="48" y="58" font-family="Arial,sans-serif" font-size="38" font-weight="700" fill="#ffffff">Глава 3 — Устройства Linux</text>
+  <text x="48" y="104" font-family="Arial,sans-serif" font-size="23" font-weight="400" fill="#d4e7ff">/dev • sysfs • devtmpfs • udev • SCSI</text>
+  <rect x="48" y="165" width="553" height="250" rx="16" fill="#ffffff" />
+  <text x="72" y="214" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#1c639b">DEV NODES</text>
+  <text x="72" y="271" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">/dev: b / c / p / s</text>
+  <text x="72" y="313" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">Block / character / IPC</text>
+  <text x="72" y="355" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">Major и minor</text>
+  <rect x="623" y="165" width="553" height="250" rx="16" fill="#ffffff" />
+  <text x="647" y="214" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#1c639b">SYSFS</text>
+  <text x="647" y="271" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">/sys/devices: топология</text>
+  <text x="647" y="313" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">/sys/block: блочные устройства</text>
+  <text x="647" y="355" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">Атрибуты оборудования</text>
+  <rect x="1198" y="165" width="553" height="250" rx="16" fill="#ffffff" />
+  <text x="1222" y="214" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#1c639b">UDEV</text>
+  <text x="1222" y="271" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">devtmpfs: узлы ядра</text>
+  <text x="1222" y="313" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">uevent -&gt; udevd rules</text>
+  <text x="1222" y="355" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">Права и /dev/disk/by-id</text>
+  <rect x="48" y="435" width="553" height="250" rx="16" fill="#ffffff" />
+  <text x="72" y="484" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#1c639b">OBSERVE</text>
+  <text x="72" y="541" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">ls /dev; lsscsi</text>
+  <text x="72" y="583" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">udevadm info / monitor</text>
+  <text x="72" y="625" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">nvme list; journalctl -k</text>
+  <rect x="623" y="435" width="553" height="250" rx="16" fill="#ffffff" />
+  <text x="647" y="484" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#1c639b">SCSI STACK</text>
+  <text x="647" y="541" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">Upper: sd / sr</text>
+  <text x="647" y="583" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">Middle: сообщения</text>
+  <text x="647" y="625" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">Lower: USB / libata</text>
+  <rect x="1198" y="435" width="553" height="250" rx="16" fill="#ffffff" />
+  <text x="1222" y="484" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#1c639b">SAFETY</text>
+  <text x="1222" y="541" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">dd: риск записи</text>
+  <text x="1222" y="583" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">mknod: привилегии</text>
+  <text x="1222" y="625" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">Rollback: Needs confirmation</text>
+  <rect x="48" y="740" width="1704" height="248" rx="16" fill="#fbe9e5" />
+  <text x="72" y="790" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#a04836">CHECK / ROLLBACK</text>
+  <text x="72" y="841" font-family="Arial,sans-serif" font-size="23" font-weight="400" fill="#24384d">Сначала установить реальный путь и атрибуты устройства.</text>
+  <text x="72" y="890" font-family="Arial,sans-serif" font-size="22" font-weight="400" fill="#24384d">Изменения диска/udev требуют отдельной проверки и отката.</text>
+  <text x="72" y="934" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#24384d">Схема построена по RAG; не копия рисунков 3.1–3.3.</text>
+  <text x="48" y="1060" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#24384d">Уорд • глава 3 • PDF 79–101 • RAG p0079:c01–p0101:c01</text>
+</svg>
