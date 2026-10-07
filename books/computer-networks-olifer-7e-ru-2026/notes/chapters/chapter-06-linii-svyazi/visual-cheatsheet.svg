@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="960" viewBox="0 0 1500 960">
+<rect width="1500" height="960" fill="#f8fafb"/>
+<text x="50" y="58" font-family="Arial,DejaVu Sans,sans-serif" font-size="34" font-weight="700" fill="#183247">Глава 6 · Линии связи</text>
+<text x="50" y="92" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#52697a">RAG p0183:c01–p0214:c01 · PDF 183–214 · printed 182–213 · 32 chunks</text>
+
+<rect x="60" y="135" width="420" height="215" rx="18" fill="#e8eff5" stroke="#b9cbd8"/>
+<text x="88" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#234b64">1 · Medium + signal</text>
+<text x="88" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">DTE → DCE → copper / fiber</text>
+<text x="88" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">amplitude · frequency · phase</text>
+<text x="88" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">Fourier spectrum / harmonics</text>
+<text x="88" y="325" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#5a7180">signal spectrum must fit line behavior</text>
+
+<rect x="540" y="135" width="420" height="215" rx="18" fill="#eef4e8" stroke="#c4d4b9"/>
+<text x="568" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#365b31">2 · Impairments</text>
+<text x="568" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">attenuation · bandwidth</text>
+<text x="568" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">noise / SNR · NEXT / FEXT</text>
+<text x="568" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">BER · fiber dispersion</text>
+<text x="568" y="325" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#63755d">link budget checks receiver margin</text>
+
+<rect x="1020" y="135" width="420" height="215" rx="18" fill="#f8efe2" stroke="#ddc9aa"/>
+<text x="1048" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#78532e">3 · Capacity</text>
+<text x="1048" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">bandwidth Hz ≠ bit/s</text>
+<text x="1048" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">baud ≠ bit rate</text>
+<text x="1048" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">coding + states + SNR matter</text>
+<text x="1048" y="325" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#806d55">Shannon / Nyquist = theoretical bounds</text>
+
+<path d="M480 240 H540 M960 240 H1020" stroke="#718798" stroke-width="4" marker-end="url(#a)"/>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#718798"/></marker></defs>
+
+<rect x="100" y="420" width="1300" height="230" rx="18" fill="#eee8f6" stroke="#c9bad9"/>
+<text x="130" y="465" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#593f73">4 · Media choices</text>
+<text x="130" y="510" font-family="Arial,DejaVu Sans,sans-serif" font-size="21" fill="#624f74">UTP/STP → twisting + shielding · coax → concentric conductor + shield</text>
+<text x="130" y="552" font-family="Arial,DejaVu Sans,sans-serif" font-size="21" fill="#624f74">MMF → easier coupling / shorter reach · SMF → low attenuation / long reach</text>
+<text x="130" y="594" font-family="Arial,DejaVu Sans,sans-serif" font-size="21" fill="#624f74">Fiber impairments: attenuation · chromatic dispersion · PMD · nonlinear effects</text>
+
+<rect x="180" y="710" width="1140" height="150" rx="18" fill="#e5edf7" stroke="#bdcce0"/>
+<text x="210" y="755" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#2b4e78">Structured cabling</text>
+<text x="210" y="800" font-family="Arial,DejaVu Sans,sans-serif" font-size="21" fill="#3c5878">horizontal → vertical → campus · standard cables/connectors/panels</text>
+<text x="210" y="837" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#5c7290">Operational value: regular, extensible infrastructure instead of ad-hoc recabling.</text>
+
+<text x="50" y="920" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#63798a">No executable CLI in chapter · attenuation sign convention and OCR/formula findings recorded separately</text>
+</svg>

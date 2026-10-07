@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1450" viewBox="0 0 1800 1450">
+<rect width="1800" height="1450" fill="#f8fafb"/>
+<text x="55" y="58" font-family="Arial,DejaVu Sans,sans-serif" font-size="36" font-weight="700" fill="#173246">Глава 6 · Линии связи</text>
+<text x="55" y="94" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#536b7d">Олифер, 7-е изд. · RAG p0183:c01–p0214:c01 · PDF 183–214 · printed 182–213</text>
+
+<rect x="55" y="135" width="820" height="285" rx="18" fill="#eaf0f5" stroke="#b9cbd8"/>
+<text x="82" y="180" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#234b64">1 · What is the physical line?</text>
+<text x="82" y="223" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">Link → adjacent nodes · Channel → portion of link capacity · Circuit → end-to-end path</text>
+<text x="82" y="261" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">DTE creates/consumes data · DCE terminates line and performs PHY signaling</text>
+<text x="82" y="299" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">Guided media → copper / fiber · Unguided media → radio (covered later in book)</text>
+<text x="82" y="337" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">Analog line → amplification/FDM example · Digital line → regeneration/TDM example</text>
+<text x="82" y="380" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#5d7381">Physical link can include intermediate amplifiers / regenerators / primary-network equipment</text>
+
+<rect x="925" y="135" width="820" height="285" rx="18" fill="#eef4e8" stroke="#c3d4b8"/>
+<text x="952" y="180" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#365b31">2 · Signal and spectrum</text>
+<text x="952" y="223" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">Sinusoid parameters → amplitude · period/frequency · phase · wavelength</text>
+<text x="952" y="261" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">Fourier → periodic signal as sum of harmonics</text>
+<text x="952" y="299" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">Significant harmonics define practical spectrum width</text>
+<text x="952" y="337" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">Line frequency response changes amplitude/phase by frequency</text>
+<text x="952" y="380" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#65775e">Spectrum view lets engineer predict waveform distortion through a medium</text>
+
+<rect x="55" y="465" width="820" height="310" rx="18" fill="#f8efe2" stroke="#ddc9aa"/>
+<text x="82" y="510" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#78532e">3 · Power, attenuation, noise</text>
+<text x="82" y="553" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">Attenuation → change of signal power across line</text>
+<text x="82" y="591" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">dB → ratio · dBm → absolute power referenced to fixed level</text>
+<text x="82" y="629" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">Link budget → transmitter level − losses + gains vs receiver sensitivity</text>
+<text x="82" y="667" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">Noise/SNR + NEXT/FEXT + BER describe recognition risk</text>
+<text x="82" y="705" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">Source attenuation sign convention is not fully consistent → state convention explicitly</text>
+<text x="82" y="743" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#806d55">Do not copy OCR-damaged power-unit examples literally</text>
+
+<rect x="925" y="465" width="820" height="310" rx="18" fill="#eee8f6" stroke="#c9bad9"/>
+<text x="952" y="510" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#593f73">4 · Bandwidth and capacity</text>
+<text x="952" y="553" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">Bandwidth → frequency interval in Hz with acceptable attenuation</text>
+<text x="952" y="591" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">Capacity → maximum bit/s for line + chosen physical coding/protocol</text>
+<text x="952" y="629" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">Baud → signal-state changes per second · not automatically bit/s</text>
+<text x="952" y="667" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">More states can carry more bits/symbol, but noise limits distinguishability</text>
+<text x="952" y="705" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">Shannon → bandwidth + SNR · Nyquist → bandwidth + signal states</text>
+<text x="952" y="743" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#756486">Theoretical limit ≠ negotiated production PHY rate</text>
+
+<rect x="55" y="820" width="820" height="300" rx="18" fill="#e5edf7" stroke="#bdcce0"/>
+<text x="82" y="865" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#2b4e78">5 · Copper media</text>
+<text x="82" y="908" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">Twisted pair → twisting reduces external/mutual interference</text>
+<text x="82" y="946" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">STP adds electromagnetic shielding · UTP relies primarily on twisting</text>
+<text x="82" y="984" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">Cable category constrains frequency/crosstalk characteristics for standards</text>
+<text x="82" y="1022" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">Coax → center conductor + dielectric + outer conductor/shield</text>
+<text x="82" y="1060" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">Twinax example → two internal conductors for short high-rate links</text>
+<text x="82" y="1098" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#5c7290">Real deployment limits require exact cable/standard revision</text>
+
+<rect x="925" y="820" width="820" height="300" rx="18" fill="#f4ece7" stroke="#dbc6b9"/>
+<text x="952" y="865" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#714b38">6 · Fiber media</text>
+<text x="952" y="908" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">SMF → small core · low attenuation · long/high-rate links</text>
+<text x="952" y="946" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">MMF → wider core · easier coupling · modal effects</text>
+<text x="952" y="984" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">LED / laser sources depend on fiber/use case</text>
+<text x="952" y="1022" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Impairments → attenuation · chromatic dispersion · PMD · nonlinear effects</text>
+<text x="952" y="1060" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Optical links avoid most external EM interference, not all physical limits</text>
+
+<rect x="55" y="1165" width="1690" height="190" rx="16" fill="#fff3dd" stroke="#dfca9b"/>
+<text x="82" y="1208" font-family="Arial,DejaVu Sans,sans-serif" font-size="24" font-weight="700" fill="#785f2d">7 · Structured cabling as operational architecture</text>
+<text x="82" y="1248" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6c5c3a">Horizontal subsystem → floor/user outlets · Vertical subsystem → floor closets to building room</text>
+<text x="82" y="1285" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6c5c3a">Campus subsystem → building interconnect · standard panels/connectors make moves/adds/changes predictable</text>
+<text x="82" y="1322" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#6c5c3a">No executable CLI is supplied by the chapter; physical rollback must preserve original patching/media.</text>
+<text x="55" y="1415" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#607789">Chapter 7 starts at p0215:c01 · reading state unchanged · source extraction findings recorded separately.</text>
+</svg>
