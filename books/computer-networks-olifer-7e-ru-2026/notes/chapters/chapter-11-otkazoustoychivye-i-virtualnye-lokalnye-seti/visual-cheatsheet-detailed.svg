@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1450" viewBox="0 0 1800 1450">
+<rect width="1800" height="1450" fill="#f8fafb"/>
+<text x="55" y="58" font-family="Arial,DejaVu Sans,sans-serif" font-size="36" font-weight="700" fill="#173246">Глава 11 · Отказоустойчивые и виртуальные локальные сети</text>
+<text x="55" y="94" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#536b7d">Олифер, 7-е изд. · RAG p0326:c01–p0350:c01 · PDF 326–350 · printed 325–349</text>
+
+<rect x="55" y="135" width="820" height="305" rx="18" fill="#eaf0f5" stroke="#b9cbd8"/>
+<text x="82" y="180" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#234b64">1 · STP: make redundancy loop-free</text>
+<text x="82" y="223" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">Elect root bridge → lowest bridge ID in source algorithm</text>
+<text x="82" y="261" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">Each non-root switch → choose root port with minimum path cost</text>
+<text x="82" y="299" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">Each segment → choose designated bridge/port toward root</text>
+<text x="82" y="337" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">All other user-data paths are blocked/discarding; BPDU still controls topology</text>
+<text x="82" y="375" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">Link failure → rebuild active spanning tree</text>
+<text x="82" y="413" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#5d7381">Classic timer values are source snapshots, not current platform defaults</text>
+
+<rect x="925" y="135" width="820" height="305" rx="18" fill="#eef4e8" stroke="#c3d4b8"/>
+<text x="952" y="180" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#365b31">2 · RSTP: faster state transition</text>
+<text x="952" y="223" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">Recognize point-to-point, shared and edge links</text>
+<text x="952" y="261" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">Edge port can move directly to forwarding in source model</text>
+<text x="952" y="299" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">Listening phase removed; learning/forwarding path shortened</text>
+<text x="952" y="337" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">Alternative port backs up root port · backup port backs designated role on shared media</text>
+<text x="952" y="375" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">Source reduces failure detection from 10 HELLO intervals to 3</text>
+
+<rect x="55" y="485" width="820" height="300" rx="18" fill="#f8efe2" stroke="#ddc9aa"/>
+<text x="82" y="530" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#78532e">3 · LAG: use parallel links instead of blocking them</text>
+<text x="82" y="573" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">Several physical point-to-point links → one logical aggregator port</text>
+<text x="82" y="611" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">All members can carry traffic → capacity + redundancy</text>
+<text x="82" y="649" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">LAS distributes/collects frames across LAG members</text>
+<text x="82" y="687" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">LACP forms/monitors dynamic membership</text>
+<text x="82" y="725" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">Upper protocols and STP see the aggregate as a single link</text>
+
+<rect x="925" y="485" width="820" height="300" rx="18" fill="#eee8f6" stroke="#c9bad9"/>
+<text x="952" y="530" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#593f73">4 · VLAN: logical L2 / broadcast isolation</text>
+<text x="952" y="573" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">One physical switched network → several isolated L2 groups</text>
+<text x="952" y="611" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">802.1Q tag → EtherType + TCI with priority / CFI / VID in source terminology</text>
+<text x="952" y="649" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">Access port → end host / typically untagged</text>
+<text x="952" y="687" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">Trunk → inter-switch / multiple tagged VLANs</text>
+<text x="952" y="725" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">MAC learning and forwarding are evaluated within VLAN context</text>
+
+<rect x="55" y="830" width="820" height="300" rx="18" fill="#e5edf7" stroke="#bdcce0"/>
+<text x="82" y="875" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#2b4e78">5 · VLAN automation and MSTP</text>
+<text x="82" y="918" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">VTP → Cisco-specific VLAN database propagation</text>
+<text x="82" y="956" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">GVRP/GARP → older IEEE registration model</text>
+<text x="82" y="994" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">MVRP/MRP → source-described replacement with less control traffic</text>
+<text x="82" y="1032" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">MSTP → several RSTP-based trees, VLAN groups mapped to different roots</text>
+<text x="82" y="1070" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#5c7290">Goal: retain loop freedom while using more physical resources</text>
+
+<rect x="925" y="830" width="820" height="300" rx="18" fill="#f4ece7" stroke="#dbc6b9"/>
+<text x="952" y="875" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#714b38">6 · Where pure Layer 2 stops scaling</text>
+<text x="952" y="918" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Tree topology leaves some redundant paths unused</text>
+<text x="952" y="956" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Broadcast isolation requires VLAN boundaries</text>
+<text x="952" y="994" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Complex packet-aware filtering is awkward at pure L2</text>
+<text x="952" y="1032" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Flat MAC addressing is less flexible for large heterogeneous networks</text>
+<text x="952" y="1070" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Inter-VLAN / heterogeneous interconnection motivates Layer 3 routing</text>
+
+<rect x="55" y="1175" width="1690" height="180" rx="16" fill="#fff3dd" stroke="#dfca9b"/>
+<text x="82" y="1218" font-family="Arial,DejaVu Sans,sans-serif" font-size="24" font-weight="700" fill="#785f2d">Operational reading rule</text>
+<text x="82" y="1258" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6c5c3a">Redundancy is not one feature: STP blocks paths, LAG bundles paths, VLAN isolates traffic, MSTP assigns different trees.</text>
+<text x="82" y="1295" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6c5c3a">Troubleshoot in that order before blaming routing: topology → tree roles → aggregate state → VLAN tagging → MSTP mapping.</text>
+<text x="82" y="1332" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#6c5c3a">No vendor CLI is supplied by the chapter.</text>
+<text x="55" y="1415" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#607789">Chapter 12 starts at p0351:c01 · reading state unchanged · source findings recorded separately.</text>
+</svg>
