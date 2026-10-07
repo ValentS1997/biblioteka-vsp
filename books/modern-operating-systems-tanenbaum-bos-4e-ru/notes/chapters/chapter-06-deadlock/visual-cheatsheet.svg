@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="860" viewBox="0 0 1200 860">
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+    <style>
+      .title{font:700 34px sans-serif;fill:#0f172a}.h{font:700 19px sans-serif;fill:#0f172a}
+      .t{font:14px sans-serif;fill:#1e293b}.s{font:12px sans-serif;fill:#475569}
+      .b{fill:#f8fafc;stroke:#475569;stroke-width:2;rx:14}.blue{fill:#dbeafe;stroke:#1d4ed8;stroke-width:2;rx:14}
+      .green{fill:#dcfce7;stroke:#15803d;stroke-width:2;rx:14}.amber{fill:#fef3c7;stroke:#a16207;stroke-width:2;rx:14}
+      .red{fill:#fee2e2;stroke:#b91c1c;stroke-width:2;rx:14}.ln{stroke:#475569;stroke-width:2;marker-end:url(#a)}
+    </style>
+  </defs>
+  <rect width="1200" height="860" fill="#fff"/>
+  <text x="45" y="55" class="title">Глава 6 — Взаимоблокировка</text>
+  <text x="45" y="82" class="s">RAG-grounded · PDF 488–526 · 39 chunks</text>
+
+  <rect x="420" y="115" width="360" height="92" class="red"/>
+  <text x="600" y="150" text-anchor="middle" class="h">No forward progress</text>
+  <text x="600" y="179" text-anchor="middle" class="t">owners + waiters + dependency structure</text>
+
+  <rect x="50" y="290" width="310" height="160" class="b"/>
+  <text x="205" y="325" text-anchor="middle" class="h">Prove the state</text>
+  <text x="205" y="357" text-anchor="middle" class="t">graph cycle · or E/A/C/R matrix</text>
+  <text x="205" y="385" text-anchor="middle" class="t">unsafe ≠ already deadlocked</text>
+  <text x="205" y="415" text-anchor="middle" class="s">blocked ≠ livelock ≠ starvation</text>
+
+  <rect x="445" y="290" width="310" height="160" class="amber"/>
+  <text x="600" y="325" text-anchor="middle" class="h">Four Coffman conditions</text>
+  <text x="600" y="357" text-anchor="middle" class="t">mutual exclusion · hold/wait</text>
+  <text x="600" y="385" text-anchor="middle" class="t">no preemption · circular wait</text>
+  <text x="600" y="415" text-anchor="middle" class="s">break any one → prevent deadlock class</text>
+
+  <rect x="840" y="290" width="310" height="160" class="green"/>
+  <text x="995" y="325" text-anchor="middle" class="h">Choose strategy</text>
+  <text x="995" y="357" text-anchor="middle" class="t">ignore · detect/recover</text>
+  <text x="995" y="385" text-anchor="middle" class="t">avoid · prevent</text>
+  <text x="995" y="415" text-anchor="middle" class="s">banker needs future max demand</text>
+
+  <line x1="505" y1="207" x2="280" y2="290" class="ln"/>
+  <line x1="600" y1="207" x2="600" y2="290" class="ln"/>
+  <line x1="695" y1="207" x2="920" y2="290" class="ln"/>
+
+  <rect x="50" y="570" width="310" height="160" class="blue"/>
+  <text x="205" y="605" text-anchor="middle" class="h">Recovery</text>
+  <text x="205" y="637" text-anchor="middle" class="t">preempt · rollback · terminate</text>
+  <text x="205" y="665" text-anchor="middle" class="s">least destructive viable action</text>
+  <text x="205" y="693" text-anchor="middle" class="s">verify resources are accounted for</text>
+
+  <rect x="445" y="570" width="310" height="160" class="red"/>
+  <text x="600" y="605" text-anchor="middle" class="h">Livelock</text>
+  <text x="600" y="637" text-anchor="middle" class="t">retrying, active, no useful progress</text>
+  <text x="600" y="665" text-anchor="middle" class="s">fixed symmetric retry can synchronize forever</text>
+
+  <rect x="840" y="570" width="310" height="160" class="amber"/>
+  <text x="995" y="605" text-anchor="middle" class="h">Starvation</text>
+  <text x="995" y="637" text-anchor="middle" class="t">others progress; one waits indefinitely</text>
+  <text x="995" y="665" text-anchor="middle" class="s">FIFO fixes the chapter's example</text>
+
+  <text x="45" y="805" class="s">Operational rule: prove dependency state first; recovery without proof can destroy or duplicate work.</text>
+</svg>

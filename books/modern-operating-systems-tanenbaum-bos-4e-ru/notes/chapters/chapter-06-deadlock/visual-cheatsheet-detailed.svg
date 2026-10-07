@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1460" height="1180" viewBox="0 0 1460 1180">
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+    <style>
+      .title{font:700 34px sans-serif;fill:#0f172a}.h{font:700 18px sans-serif;fill:#0f172a}
+      .t{font:14px sans-serif;fill:#1e293b}.s{font:12px sans-serif;fill:#475569}
+      .b{fill:#f8fafc;stroke:#475569;stroke-width:1.8;rx:13}.blue{fill:#dbeafe;stroke:#1d4ed8;stroke-width:1.8;rx:13}
+      .green{fill:#dcfce7;stroke:#15803d;stroke-width:1.8;rx:13}.amber{fill:#fef3c7;stroke:#a16207;stroke-width:1.8;rx:13}
+      .red{fill:#fee2e2;stroke:#b91c1c;stroke-width:1.8;rx:13}.ln{stroke:#475569;stroke-width:1.7;marker-end:url(#a)}
+    </style>
+  </defs>
+  <rect width="1460" height="1180" fill="#fff"/>
+  <text x="45" y="55" class="title">Глава 6 — подробная карта deadlock</text>
+  <text x="45" y="82" class="s">RAG · PDF 488–526 · boundary verified</text>
+
+  <rect x="535" y="110" width="390" height="90" class="red"/>
+  <text x="730" y="145" text-anchor="middle" class="h">Loss of progress</text>
+  <text x="730" y="174" text-anchor="middle" class="t">capture owners · waiters · requested resources/events</text>
+
+  <rect x="55" y="270" width="350" height="205" class="b"/>
+  <text x="230" y="305" text-anchor="middle" class="h">Resource model</text>
+  <text x="80" y="342" class="t">preemptable vs nonpreemptable</text>
+  <text x="80" y="369" class="t">request → use → release</text>
+  <text x="80" y="396" class="t">one instance: graph cycle test</text>
+  <text x="80" y="423" class="t">multi-instance: E / A / C / R</text>
+
+  <rect x="555" y="270" width="350" height="205" class="amber"/>
+  <text x="730" y="305" text-anchor="middle" class="h">Coffman conditions</text>
+  <text x="580" y="342" class="t">1 mutual exclusion</text>
+  <text x="580" y="369" class="t">2 hold and wait</text>
+  <text x="580" y="396" class="t">3 no preemption</text>
+  <text x="580" y="423" class="t">4 circular wait</text>
+
+  <rect x="1055" y="270" width="350" height="205" class="green"/>
+  <text x="1230" y="305" text-anchor="middle" class="h">Strategy</text>
+  <text x="1080" y="342" class="t">ignore rare failures</text>
+  <text x="1080" y="369" class="t">detect + recover</text>
+  <text x="1080" y="396" class="t">avoid unsafe states</text>
+  <text x="1080" y="423" class="t">prevent one condition</text>
+
+  <line x1="620" y1="200" x2="315" y2="270" class="ln"/>
+  <line x1="730" y1="200" x2="730" y2="270" class="ln"/>
+  <line x1="840" y1="200" x2="1145" y2="270" class="ln"/>
+
+  <rect x="40" y="570" width="300" height="220" class="blue"/>
+  <text x="190" y="605" text-anchor="middle" class="h">Detection</text>
+  <text x="65" y="642" class="t">graph: cycle for one-instance model</text>
+  <text x="65" y="669" class="t">matrix: find Ri ≤ A</text>
+  <text x="65" y="696" class="t">finish Pi → A = A + Ci</text>
+  <text x="65" y="723" class="s">unmarked set after convergence = deadlocked</text>
+
+  <rect x="370" y="570" width="300" height="220" class="red"/>
+  <text x="520" y="605" text-anchor="middle" class="h">Recovery</text>
+  <text x="395" y="642" class="t">preempt when safe</text>
+  <text x="395" y="669" class="t">rollback checkpoint</text>
+  <text x="395" y="696" class="t">terminate victim</text>
+  <text x="395" y="723" class="s">lost/duplicated work is a correctness risk</text>
+
+  <rect x="700" y="570" width="340" height="220" class="amber"/>
+  <text x="870" y="605" text-anchor="middle" class="h">Avoidance / banker</text>
+  <text x="725" y="642" class="t">tentatively grant request</text>
+  <text x="725" y="669" class="t">prove safe completion sequence</text>
+  <text x="725" y="696" class="t">grant only if state remains safe</text>
+  <text x="725" y="723" class="s">practical limit: max future demand often unknown</text>
+
+  <rect x="1070" y="570" width="350" height="220" class="green"/>
+  <text x="1245" y="605" text-anchor="middle" class="h">Prevention</text>
+  <text x="1095" y="642" class="t">spool / virtualize exclusive resource</text>
+  <text x="1095" y="669" class="t">request complete resource set</text>
+  <text x="1095" y="696" class="t">preempt where possible</text>
+  <text x="1095" y="723" class="t">global resource ordering</text>
+
+  <line x1="340" y1="680" x2="370" y2="680" class="ln"/>
+  <line x1="670" y1="680" x2="700" y2="680" class="ln"/>
+  <line x1="1040" y1="680" x2="1070" y2="680" class="ln"/>
+
+  <rect x="110" y="900" width="360" height="190" class="b"/>
+  <text x="290" y="935" text-anchor="middle" class="h">Communication deadlock</text>
+  <text x="135" y="972" class="t">wait for messages/events, not ownership cycle</text>
+  <text x="135" y="999" class="t">timeout can trigger retry/recovery</text>
+  <text x="135" y="1026" class="s">duplicate effects must be handled</text>
+
+  <rect x="550" y="900" width="360" height="190" class="red"/>
+  <text x="730" y="935" text-anchor="middle" class="h">Livelock</text>
+  <text x="575" y="972" class="t">processes run and react</text>
+  <text x="575" y="999" class="t">symmetric retry keeps them synchronized</text>
+  <text x="575" y="1026" class="s">activity exists; useful progress does not</text>
+
+  <rect x="990" y="900" width="360" height="190" class="amber"/>
+  <text x="1170" y="935" text-anchor="middle" class="h">Starvation</text>
+  <text x="1015" y="972" class="t">system continues serving others</text>
+  <text x="1015" y="999" class="t">one waiter can be postponed forever</text>
+  <text x="1015" y="1026" class="s">FIFO provides fairness in the chapter example</text>
+
+  <text x="45" y="1140" class="s">Acceptance: prove the dependency, recover minimally, then verify forward progress and resource accounting.</text>
+</svg>
