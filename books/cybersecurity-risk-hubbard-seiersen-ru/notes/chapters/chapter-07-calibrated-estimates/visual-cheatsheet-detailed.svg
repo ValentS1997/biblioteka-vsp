@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1240" viewBox="0 0 1600 1240" role="img" aria-labelledby="title desc">
+<title id="title">Глава 7 — подробная визуальная схема калибровки вероятностей</title>
+<desc id="desc">Упражнение, проверка равноценной ставкой, методы устранения чрезмерной уверенности и данные обучения/Giga experiment.</desc>
+<rect x="0" y="0" width="1600" height="1240" rx="0" fill="#0b1829" stroke="#0b1829" stroke-width="1.5"/>
+<text x="56" y="48" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#7fcaf4" font-weight="bold">BIBLIOTEKA-VSP / CHAPTER 07 / CYBER RISK</text>
+<text x="56" y="100" font-family="DejaVu Sans,Arial,sans-serif" font-size="34" fill="#fafcff" font-weight="bold">Калибровка: confidence должна соответствовать observed frequency</text>
+<text x="56" y="138" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#bcd2e3" font-weight="normal">Навык оценивается на сериях прогнозов и улучшается повторением с обратной связью</text>
+<text x="56" y="190" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#88d0f8" font-weight="bold">I · Упражнение</text>
+<rect x="56" y="209" width="475" height="164" rx="14" fill="#183149" stroke="#8dcdf1" stroke-width="1.5"/>
+<rect x="70" y="226" width="6" height="34" rx="3" fill="#8dcdf1" stroke="#8dcdf1" stroke-width="1.5"/>
+<text x="93" y="252" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">10 диапазонов</text>
+<text x="76" y="291" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Указать 90%-ные границы</text>
+<text x="76" y="319" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Ожидается ≈9/10 попаданий</text>
+<text x="76" y="347" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Question text missing in RAG</text>
+<rect x="562" y="209" width="475" height="164" rx="14" fill="#183149" stroke="#91d6bd" stroke-width="1.5"/>
+<rect x="576" y="226" width="6" height="34" rx="3" fill="#91d6bd" stroke="#91d6bd" stroke-width="1.5"/>
+<text x="599" y="252" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">10 binary questions</text>
+<text x="582" y="291" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Верно / неверно</text>
+<text x="582" y="319" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Confidence 50–100%</text>
+<text x="582" y="347" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Expected correct = Σ confidence</text>
+<rect x="1068" y="209" width="476" height="164" rx="14" fill="#183149" stroke="#e7c18c" stroke-width="1.5"/>
+<rect x="1082" y="226" width="6" height="34" rx="3" fill="#e7c18c" stroke="#e7c18c" stroke-width="1.5"/>
+<text x="1105" y="252" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Equivalent bet</text>
+<text x="1088" y="291" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Сравнить свою ставку</text>
+<text x="1088" y="319" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">с объективной ставкой</text>
+<text x="1088" y="347" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">той же вероятности</text>
+<text x="56" y="428" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#88d0f8" font-weight="bold">II · Коррекция overconfidence</text>
+<rect x="56" y="447" width="475" height="164" rx="14" fill="#183149" stroke="#8dcdf1" stroke-width="1.5"/>
+<rect x="70" y="464" width="6" height="34" rx="3" fill="#8dcdf1" stroke="#8dcdf1" stroke-width="1.5"/>
+<text x="93" y="490" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Repeat + feedback</text>
+<text x="76" y="529" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Ответ → outcome → feedback</text>
+<text x="76" y="557" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Повторять цикл</text>
+<text x="76" y="585" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Оценивать calibration curve</text>
+<rect x="562" y="447" width="475" height="164" rx="14" fill="#183149" stroke="#efbd9b" stroke-width="1.5"/>
+<rect x="576" y="464" width="6" height="34" rx="3" fill="#efbd9b" stroke="#efbd9b" stroke-width="1.5"/>
+<text x="599" y="490" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Challenge estimate</text>
+<text x="582" y="529" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Аргументы против оценки</text>
+<text x="582" y="557" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Каждая граница отдельно</text>
+<text x="582" y="585" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">95% one-sided confidence</text>
+<rect x="1068" y="447" width="476" height="164" rx="14" fill="#183149" stroke="#b7b4ef" stroke-width="1.5"/>
+<rect x="1082" y="464" width="6" height="34" rx="3" fill="#b7b4ef" stroke="#b7b4ef" stroke-width="1.5"/>
+<text x="1105" y="490" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Reverse anchoring</text>
+<text x="1088" y="529" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Начать с огромного диапазона</text>
+<text x="1088" y="557" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Исключать абсурдные значения</text>
+<text x="1088" y="585" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Финал проверить ставкой</text>
+<text x="56" y="666" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#88d0f8" font-weight="bold">III · Данные, приведённые авторами</text>
+<rect x="56" y="687" width="1488" height="190" rx="14" fill="#183149" stroke="#8dd9bd" stroke-width="1.5"/>
+<text x="82" y="727" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#f8fbff" font-weight="bold">1000+ участников training data</text>
+<text x="82" y="765" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#d1e6f1" font-weight="normal">После 5-го упражнения: 80% — ideal calibration; 10% — improvement; 10% — no improvement</text>
+<text x="82" y="807" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#d1e6f1" font-weight="normal">Giga 1997: 16 trained analysts vs 16 IT directors, 20 future IT forecasts</text>
+<text x="82" y="845" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#d1e6f1" font-weight="normal">Авторы сообщают: trained group близка к calibrated line; control group заметно overconfident</text>
+<text x="56" y="932" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#88d0f8" font-weight="bold">IV · Терминология вероятности</text>
+<rect x="56" y="951" width="713" height="164" rx="14" fill="#183149" stroke="#8dcdf1" stroke-width="1.5"/>
+<rect x="70" y="968" width="6" height="34" rx="3" fill="#8dcdf1" stroke="#8dcdf1" stroke-width="1.5"/>
+<text x="93" y="994" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Subjective / Bayesian reading</text>
+<text x="76" y="1033" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">90%-ный interval выражает состояние uncertainty</text>
+<text x="76" y="1061" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Авторы трактуют его как 90% probability of containment</text>
+<text x="76" y="1089" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Используется для decision analysis</text>
+<rect x="791" y="951" width="753" height="164" rx="14" fill="#183149" stroke="#e7c18c" stroke-width="1.5"/>
+<rect x="805" y="968" width="6" height="34" rx="3" fill="#e7c18c" stroke="#e7c18c" stroke-width="1.5"/>
+<text x="828" y="994" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Frequentist caveat</text>
+<text x="811" y="1033" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Источник признаёт другую интерпретацию interval</text>
+<text x="811" y="1061" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Артефакт не разрешает философский спор</text>
+<text x="811" y="1089" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Термины сохраняются как в книге</text>
+<rect x="56" y="1150" width="1488" height="48" rx="14" fill="#2c2a38" stroke="#9a889f" stroke-width="1.5"/>
+<text x="82" y="1181" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#f0dce8" font-weight="normal">SOURCE BOUNDARY: табл. 7.2/7.3 и рис. 7.1–7.3 не представлены полностью как multimodal RAG objects</text>
+<text x="56" y="1224" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" fill="#90aec4" font-weight="normal">RAG e0031:c01–c03 / e0032:c01–c09 / e0033:c01–c04 · EPUB spine 31–33</text>
+</svg>

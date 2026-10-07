@@ -66,3 +66,4 @@ Canonical readiness command:
 - [Глава 4 — Самое важное измерение в области кибербезопасности](notes/chapters/chapter-04-most-important-measurement/README.md) — EPUB spine 21–23, chapter artifacts v1.7 + explicit summary; reading remains `planned`.
 - [Глава 5 — Матрицы риска, факторы лжи и другие препятствия](notes/chapters/chapter-05-risk-matrices-fallacies/README.md) — EPUB spine 24–26; artifacts v1.7 + explicit conclusion summary; reading remains `planned`.
 - [Глава 6 — Разложение на составляющие](notes/chapters/chapter-06-decomposition/README.md) — EPUB spine 28–30; artifacts v1.7 + explicit conclusion summary; reading remains `planned`.
+- [Глава 7 — Калиброванные оценки: что вам известно уже сейчас?](notes/chapters/chapter-07-calibrated-estimates/README.md) — EPUB spine 31–33; artifacts v1.7 + calibration exercise; reading remains `planned`.

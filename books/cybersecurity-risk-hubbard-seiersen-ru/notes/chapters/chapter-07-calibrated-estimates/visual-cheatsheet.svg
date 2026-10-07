@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="840" viewBox="0 0 1200 840" role="img" aria-labelledby="t d">
+<title id="t">Глава 7 — калиброванные оценки</title>
+<desc id="d">Компактная схема субъективной вероятности, равноценной ставки, обратной связи и проверки калибровки.</desc>
+<rect x="0" y="0" width="1200" height="840" rx="0" fill="#0c1929" stroke="#0c1929" stroke-width="1.5"/>
+<text x="52" y="48" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#82d0f7" font-weight="bold">BIBLIOTEKA-VSP / CYBER RISK</text>
+<text x="52" y="96" font-family="DejaVu Sans,Arial,sans-serif" font-size="32" fill="#fbfdff" font-weight="bold">Глава 7 · Калиброванные оценки</text>
+<text x="52" y="132" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#b9d1e2" font-weight="normal">Субъективную вероятность можно проверять и улучшать</text>
+<text x="52" y="182" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#82d0f7" font-weight="bold">Два вида оценки</text>
+<rect x="52" y="200" width="521" height="164" rx="14" fill="#183149" stroke="#8dcdf1" stroke-width="1.5"/>
+<rect x="66" y="217" width="6" height="34" rx="3" fill="#8dcdf1" stroke="#8dcdf1" stroke-width="1.5"/>
+<text x="89" y="243" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Бинарное событие</text>
+<text x="72" y="282" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">P(событие) за явный период</text>
+<text x="72" y="310" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">50–100% confidence</text>
+<text x="72" y="338" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Проверять по серии исходов</text>
+<rect x="626" y="200" width="522" height="164" rx="14" fill="#183149" stroke="#91d6bd" stroke-width="1.5"/>
+<rect x="640" y="217" width="6" height="34" rx="3" fill="#91d6bd" stroke="#91d6bd" stroke-width="1.5"/>
+<text x="663" y="243" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Диапазон величины</text>
+<text x="646" y="282" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Например, 90%-ный interval</text>
+<text x="646" y="310" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Проверять coverage</text>
+<text x="646" y="338" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Один исход не доказывает skill</text>
+<text x="592" y="395" font-family="DejaVu Sans,Arial,sans-serif" font-size="34" fill="#7ccdf4" font-weight="bold">↓</text>
+<rect x="164" y="414" width="872" height="96" rx="14" fill="#213d55" stroke="#77cff6" stroke-width="1.5"/>
+<text x="225" y="454" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" fill="#f8fbff" font-weight="bold">Equivalent bet → feedback → repeat</text>
+<text x="225" y="485" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#d0e6f3" font-weight="normal">Заявленная уверенность должна совпадать с частотой результата</text>
+<text x="592" y="548" font-family="DejaVu Sans,Arial,sans-serif" font-size="34" fill="#7ccdf4" font-weight="bold">↓</text>
+<rect x="52" y="570" width="342" height="164" rx="14" fill="#183149" stroke="#efbd9b" stroke-width="1.5"/>
+<rect x="66" y="587" width="6" height="34" rx="3" fill="#efbd9b" stroke="#efbd9b" stroke-width="1.5"/>
+<text x="89" y="613" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Counterarguments</text>
+<text x="72" y="652" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Искать причины,</text>
+<text x="72" y="680" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">почему исходная оценка</text>
+<text x="72" y="708" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">может быть неверна</text>
+<rect x="429" y="570" width="342" height="164" rx="14" fill="#183149" stroke="#e7c18c" stroke-width="1.5"/>
+<rect x="443" y="587" width="6" height="34" rx="3" fill="#e7c18c" stroke="#e7c18c" stroke-width="1.5"/>
+<text x="466" y="613" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Bound tests</text>
+<text x="449" y="652" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">90% interval →</text>
+<text x="449" y="680" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">по 95% уверенности</text>
+<text x="449" y="708" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">для каждой границы</text>
+<rect x="806" y="570" width="342" height="164" rx="14" fill="#183149" stroke="#b7b4ef" stroke-width="1.5"/>
+<rect x="820" y="587" width="6" height="34" rx="3" fill="#b7b4ef" stroke="#b7b4ef" stroke-width="1.5"/>
+<text x="843" y="613" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Absurdity test</text>
+<text x="826" y="652" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Начать очень широко</text>
+<text x="826" y="680" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">и исключать явно</text>
+<text x="826" y="708" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">неправдоподобное</text>
+<rect x="52" y="753" width="1096" height="49" rx="14" fill="#2c2a38" stroke="#9c8ba4" stroke-width="1.5"/>
+<text x="74" y="784" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#eadce8" font-weight="normal">Boundary: тексты вопросов табл. 7.2 не извлечены; review questions не реконструируются</text>
+<text x="52" y="827" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" fill="#91aec4" font-weight="normal">RAG: e0031–e0033 · EPUB spine 31–33 · OPS/ch1-29.xhtml — OPS/ch1-31.xhtml</text>
+</svg>
