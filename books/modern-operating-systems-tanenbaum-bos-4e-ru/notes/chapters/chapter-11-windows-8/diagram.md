@@ -1,1 +1,50 @@
-# Chapter 11 conceptual / diagnostic flow\n\n```mermaid\nflowchart TD\n    A[Application] --> API[Win32 / WinRT]\n    API --> NAT[Native NT services]\n\n    NAT --> OM[Object Manager]\n    NAT --> PM[Process / Thread Manager]\n    NAT --> MM[Memory Manager]\n    NAT --> IO[I/O Manager]\n    NAT --> SRM[Security Reference Monitor]\n\n    OM --> H[Handles + object namespace]\n    PM --> SCH[Kernel scheduler]\n    SCH --> PRI[base/current priority + boosts]\n    PRI --> NUMA[ideal processor / NUMA]\n\n    MM --> VAD[VAD + page tables]\n    VAD --> WS[working sets]\n    WS --> PFN[PFN lists]\n    MM --> CM[Cache Manager]\n\n    IO --> IRP[IRP]\n    IRP --> DS[device/filter stack]\n    DS --> NTFS[NTFS]\n    NTFS --> MFT[MFT + attributes + streams]\n\n    SRM --> TOK[access token]\n    SRM --> SD[security descriptor]\n    TOK --> ACL[SID / groups / privileges / integrity]\n    SD --> ACL\n\n    NAT --> K[kernel]\n    K --> HAL[HAL]\n    HAL --> HW[hardware]\n    HV[Hyper-V optional] --> HW\n```\n\n## Diagnostic boundary\n\n```text\nprocess ≠ scheduled entity\nhandle ≠ pointer\nreserve ≠ commit\nsoft fault ≠ storage I/O\nfile ≠ one byte stream\nDACL allow ≠ integrity-level allow\nhibernate ≠ shutdown\n```\n
+# Chapter 11 conceptual / diagnostic flow
+
+```mermaid
+flowchart TD
+    A[Application] --> API[Win32 / WinRT]
+    API --> NAT[Native NT services]
+
+    NAT --> OM[Object Manager]
+    NAT --> PM[Process / Thread Manager]
+    NAT --> MM[Memory Manager]
+    NAT --> IO[I/O Manager]
+    NAT --> SRM[Security Reference Monitor]
+
+    OM --> H[Handles + object namespace]
+    PM --> SCH[Kernel scheduler]
+    SCH --> PRI[base/current priority + boosts]
+    PRI --> NUMA[ideal processor / NUMA]
+
+    MM --> VAD[VAD + page tables]
+    VAD --> WS[working sets]
+    WS --> PFN[PFN lists]
+    MM --> CM[Cache Manager]
+
+    IO --> IRP[IRP]
+    IRP --> DS[device/filter stack]
+    DS --> NTFS[NTFS]
+    NTFS --> MFT[MFT + attributes + streams]
+
+    SRM --> TOK[access token]
+    SRM --> SD[security descriptor]
+    TOK --> ACL[SID / groups / privileges / integrity]
+    SD --> ACL
+
+    NAT --> K[kernel]
+    K --> HAL[HAL]
+    HAL --> HW[hardware]
+    HV[Hyper-V optional] --> HW
+```
+
+## Diagnostic boundary
+
+```text
+process ≠ scheduled entity
+handle ≠ pointer
+reserve ≠ commit
+soft fault ≠ storage I/O
+file ≠ one byte stream
+DACL allow ≠ integrity-level allow
+hibernate ≠ shutdown
+```
