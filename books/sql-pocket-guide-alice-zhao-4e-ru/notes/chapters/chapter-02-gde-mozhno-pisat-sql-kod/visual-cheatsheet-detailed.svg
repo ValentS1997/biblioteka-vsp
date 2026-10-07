@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1700" viewBox="0 0 1500 1700" role="img" aria-label="Подробный конспект главы 2: консоли, GUI, Python R, примеры, ограничения">
+<rect width="1500" height="1700" fill="#EFF5F9"/>
+<text x="30" y="55" font-size="31" fill="#063A58" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">SQL · ГЛАВА 2 / ГДЕ МОЖНО ПИСАТЬ SQL-КОД</text>
+<text x="32" y="86" font-size="16" fill="#536D80" font-family="DejaVu Sans,Arial,sans-serif" >Элис Жао, 4-е изд. · PDF 33–54 · адресуемые RAG chunks p0033:c01–p0054:c01</text>
+<g>
+<rect x="28" y="112" width="464" height="214" rx="16" fill="#FFF" stroke="#C2D3DF" stroke-width="1.5"/>
+<text x="45" y="148" font-size="20" fill="#155170" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">1 / КОНСОЛЬ РСУБД [33–40]</text>
+<text x="46" y="186" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >SQLite, MySQL, Oracle, PostgreSQL, SQL Server</text>
+<text x="46" y="215" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >Сама СУБД: текстовое приглашение и код</text>
+<text x="46" y="244" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >Пример теста: CREATE / INSERT / SELECT</text>
+<text x="46" y="273" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >Команды клиента отличаются по продукту</text>
+<text x="46" y="302" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >Права и целевая БД — [Needs confirmation]</text>
+</g>
+<g>
+<rect x="518" y="112" width="464" height="214" rx="16" fill="#FFF" stroke="#C2D3DF" stroke-width="1.5"/>
+<text x="535" y="148" font-size="20" fill="#155170" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">2 / GUI [40–43]</text>
+<text x="536" y="186" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >DB Browser / Workbench / SQL Developer</text>
+<text x="536" y="215" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >pgAdmin / SSMS / DBeaver</text>
+<text x="536" y="244" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >Инструмент работает через драйвер БД</text>
+<text x="536" y="273" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >Варианты: создать БД, открыть .db,</text>
+<text x="536" y="302" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >подключиться к локальной/удалённой БД</text>
+</g>
+<g>
+<rect x="1008" y="112" width="464" height="214" rx="16" fill="#FFF" stroke="#C2D3DF" stroke-width="1.5"/>
+<text x="1025" y="148" font-size="20" fill="#155170" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">3 / PYTHON И R [44–54]</text>
+<text x="1026" y="186" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >Установить подходящий драйвер</text>
+<text x="1026" y="215" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >Создать соединение с БД</text>
+<text x="1026" y="244" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >Выполнить SQL внутри Python/R</text>
+<text x="1026" y="273" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >Обработать результат без CSV</text>
+<text x="1026" y="302" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >После анализа закрыть соединение</text>
+</g>
+<g>
+<rect x="28" y="352" width="464" height="238" rx="16" fill="#F9FCFF" stroke="#C2D3DF" stroke-width="1.5"/>
+<text x="45" y="388" font-size="20" fill="#155170" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">SQLITE И MYSQL [35–37]</text>
+<text x="46" y="426" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >SQLite: sqlite3 или sqlite3 my_new_db.db</text>
+<text x="46" y="455" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >SQLite: .databases / .tables / .quit</text>
+<text x="46" y="484" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >CREATE TABLE, INSERT → изменяют БД</text>
+<text x="46" y="513" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >SELECT * FROM test LIMIT 1; → чтение</text>
+<text x="46" y="542" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >MySQL: show databases; / show tables;</text>
+<text x="46" y="571" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >MySQL: connect another_db; / quit</text>
+</g>
+<g>
+<rect x="518" y="352" width="464" height="238" rx="16" fill="#F9FCFF" stroke="#C2D3DF" stroke-width="1.5"/>
+<text x="535" y="388" font-size="20" fill="#155170" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">ORACLE И POSTGRESQL [37–39]</text>
+<text x="536" y="426" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >Oracle: SELECT * FROM global_name;</text>
+<text x="536" y="455" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >Oracle: all_tables / user_tables</text>
+<text x="536" y="484" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >Oracle: ROWNUM &lt;= 1 (пример книги)</text>
+<text x="536" y="513" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >PostgreSQL: \l / \c / \d / \q</text>
+<text x="536" y="542" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >PostgreSQL: SELECT ... LIMIT 1;</text>
+<text x="536" y="571" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >Проверка прав и версии не проводилась</text>
+</g>
+<g>
+<rect x="1008" y="352" width="464" height="238" rx="16" fill="#F9FCFF" stroke="#C2D3DF" stroke-width="1.5"/>
+<text x="1025" y="388" font-size="20" fill="#155170" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">SQL SERVER [39–40]</text>
+<text x="1026" y="426" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >CREATE TABLE и INSERT → изменение</text>
+<text x="1026" y="455" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >SELECT TOP 1 * FROM test; → чтение</text>
+<text x="1026" y="484" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >go отправляет консольный блок на выполнение</text>
+<text x="1026" y="513" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >SELECT name FROM master.sys.databases;</text>
+<text x="1026" y="542" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >USE another_db; → смена контекста БД</text>
+<text x="1026" y="571" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >Результат не проверялся</text>
+</g>
+<g>
+<rect x="28" y="616" width="704" height="238" rx="16" fill="#FFF" stroke="#C2D3DF" stroke-width="1.5"/>
+<text x="45" y="652" font-size="20" fill="#155170" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">СЕТЕВОЕ ПОДКЛЮЧЕНИЕ [42–43]</text>
+<text x="46" y="690" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >Host: localhost / удалённый DB_HOST</text>
+<text x="46" y="719" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >Port: зависит от РСУБД и среды</text>
+<text x="46" y="748" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >MySQL 3306    Oracle 1521    PostgreSQL 5432</text>
+<text x="46" y="777" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >SQL Server 1433 (все значения из книги)</text>
+<text x="46" y="806" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >Database / Username / Password</text>
+<text x="46" y="835" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >SQLite: путь к .db вместо этих полей</text>
+</g>
+<g>
+<rect x="758" y="616" width="714" height="238" rx="16" fill="#FFF" stroke="#C2D3DF" stroke-width="1.5"/>
+<text x="775" y="652" font-size="20" fill="#155170" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">GUI И ДРАЙВЕРЫ [40–42]</text>
+<text x="776" y="690" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >SQLite → DB Browser for SQLite</text>
+<text x="776" y="719" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >MySQL → MySQL Workbench</text>
+<text x="776" y="748" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >Oracle → Oracle SQL Developer</text>
+<text x="776" y="777" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >PostgreSQL → pgAdmin</text>
+<text x="776" y="806" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >SQL Server → SQL Server Management Studio</text>
+<text x="776" y="835" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >Все пять → DBeaver (по книге)</text>
+</g>
+<g>
+<rect x="28" y="880" width="704" height="250" rx="16" fill="#F9FCFF" stroke="#C2D3DF" stroke-width="1.5"/>
+<text x="45" y="916" font-size="20" fill="#155170" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">PYTHON [45–50]</text>
+<text x="46" y="954" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >pip: mysql-connector-python / cx_Oracle</text>
+<text x="46" y="983" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >psycopg2 / pyodbc (все: установка)</text>
+<text x="46" y="1012" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >sqlite3: встроен в Python 3 по книге</text>
+<text x="46" y="1041" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >cursor.execute(SELECT ...) → fetchall()</text>
+<text x="46" y="1070" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >pandas: read_sql(SELECT ..., conn)</text>
+<text x="46" y="1099" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >cursor.close(); conn.close()</text>
+</g>
+<g>
+<rect x="758" y="880" width="714" height="250" rx="16" fill="#F9FCFF" stroke="#C2D3DF" stroke-width="1.5"/>
+<text x="775" y="916" font-size="20" fill="#155170" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">R И DBI [51–54]</text>
+<text x="776" y="954" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >install.packages: RSQLite, RMySQL,</text>
+<text x="776" y="983" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >RPostgres, odbc; отдельно ROracle</text>
+<text x="776" y="1012" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >dbConnect(...) → открыть соединение</text>
+<text x="776" y="1041" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >dbListTables(con) / dbReadTable(con, test)</text>
+<text x="776" y="1070" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >dbGetQuery(con, SELECT ...) → чтение</text>
+<text x="776" y="1099" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >dbDisconnect(con) → закрыть соединение</text>
+</g>
+<g>
+<rect x="28" y="1156" width="704" height="258" rx="16" fill="#FFF" stroke="#C2D3DF" stroke-width="1.5"/>
+<text x="45" y="1192" font-size="20" fill="#155170" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">ДВА АНАЛИТИЧЕСКИХ ЦИКЛА [44]</text>
+<text x="46" y="1230" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >ОДНОКРАТНО:</text>
+<text x="46" y="1259" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >SQL в клиенте → CSV → импорт Python/R</text>
+<text x="46" y="1288" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >→ продолжить анализ</text>
+<text x="46" y="1317" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >ПОВТОРЯЕМО:</text>
+<text x="46" y="1346" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >Python/R → драйвер → SQL → результат</text>
+<text x="46" y="1375" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >→ анализ / доработка запроса / закрыть БД</text>
+</g>
+<g>
+<rect x="758" y="1156" width="714" height="258" rx="16" fill="#FFF" stroke="#C2D3DF" stroke-width="1.5"/>
+<text x="775" y="1192" font-size="20" fill="#155170" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">РИСКИ И ПРОВЕРКА [36–54]</text>
+<text x="776" y="1230" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >READ-ONLY: SELECT / SHOW / каталог</text>
+<text x="776" y="1259" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >STATE-CHANGING: CREATE / INSERT</text>
+<text x="776" y="1288" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >Установка: pip / conda / brew / R packages</text>
+<text x="776" y="1317" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >Не подставлять реальные пароли в код</text>
+<text x="776" y="1346" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >Версии API/драйверов: [Needs confirmation]</text>
+<text x="776" y="1375" font-size="15" fill="#284455" font-family="DejaVu Sans,Arial,sans-serif" >Rollback изменений: [Needs confirmation]</text>
+</g>
+<rect x="28" y="1441" width="1444" height="218" rx="17" fill="#DDEDF6"/>
+<text x="49" y="1480" font-size="19" fill="#10496B" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">ПРОВЕРЯЕМАЯ ГРАНИЦА SOURCE / RAG-ONLY</text>
+<text x="49" y="1518" font-size="16" fill="#244961" font-family="DejaVu Sans,Arial,sans-serif" >1. Фрагменты подтверждены p0033:c01–p0054:c01; установка, подключение и SQL не выполнялись.</text>
+<text x="49" y="1552" font-size="16" fill="#244961" font-family="DejaVu Sans,Arial,sans-serif" >2. IP из текста на PDF 43 некорректен; реальный адрес не реконструирован и не подставлен.</text>
+<text x="49" y="1586" font-size="16" fill="#244961" font-family="DejaVu Sans,Arial,sans-serif" >3. PDF 54 содержит разрыв имени функции R; текстовая и кодовая формы учтены отдельно.</text>
+<text x="49" y="1620" font-size="16" fill="#244961" font-family="DejaVu Sans,Arial,sans-serif" >4. Рис. 2.1 отсутствует как графический RAG-объект; визуализация концептуальная.</text>
+</svg>
