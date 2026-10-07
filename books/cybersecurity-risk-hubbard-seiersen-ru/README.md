@@ -61,3 +61,4 @@ Canonical readiness command:
 ## Chapter analysis
 
 - [Глава 1 — Самая нужная «заплатка» в кибербезопасности](notes/chapters/chapter-01-most-important-cybersecurity-patch/README.md) — EPUB spine 13–14; chapter-artifact-collection v1.7; source-grounded review. Reading remains `planned`.
+- [Глава 2 — Руководство по измерениям для сферы кибербезопасности](notes/chapters/chapter-02-measurement-guide-cybersecurity/README.md) — EPUB spine 15–17, контракт v1.7. Reading: `planned`.
