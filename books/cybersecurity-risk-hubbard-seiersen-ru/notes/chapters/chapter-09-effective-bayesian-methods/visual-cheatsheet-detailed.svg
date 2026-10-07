@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1250" viewBox="0 0 1600 1250" role="img" aria-labelledby="title desc">
+<title id="title">Глава 9 — подробная схема продвинутых байесовских методов</title>
+<desc id="desc">Beta distribution, log-odds, lens model, EVPI и эмпирические условные вероятности с ограничениями источника.</desc>
+<rect x="0" y="0" width="1600" height="1250" rx="0" fill="#0b1829" stroke="#0b1829" stroke-width="1.5"/>
+<text x="56" y="48" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#7fcaf4" font-weight="bold">BIBLIOTEKA-VSP / CHAPTER 09 / CYBER RISK</text>
+<text x="56" y="100" font-family="DejaVu Sans,Arial,sans-serif" font-size="34" fill="#fafcff" font-weight="bold">От малых выборок к экономически полезным измерениям</text>
+<text x="56" y="138" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#bcd2e3" font-weight="normal">Глава объединяет Bayes, expert judgment, empirical data и decision economics</text>
+<text x="56" y="190" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#88d0f8" font-weight="bold">I · Beta distribution</text>
+<rect x="56" y="209" width="475" height="164" rx="14" fill="#183149" stroke="#8dcdf1" stroke-width="1.5"/>
+<rect x="70" y="226" width="6" height="34" rx="3" fill="#8dcdf1" stroke="#8dcdf1" stroke-width="1.5"/>
+<text x="93" y="252" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Prior</text>
+<text x="76" y="291" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Beta(α,β)</text>
+<text x="76" y="319" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Source non-informative: α=1, β=1</text>
+<text x="76" y="347" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Expert prior also possible</text>
+<rect x="562" y="209" width="475" height="164" rx="14" fill="#183149" stroke="#91d6bd" stroke-width="1.5"/>
+<rect x="576" y="226" width="6" height="34" rx="3" fill="#91d6bd" stroke="#91d6bd" stroke-width="1.5"/>
+<text x="599" y="252" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Observed sample</text>
+<text x="582" y="291" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Hit → α+1</text>
+<text x="582" y="319" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Miss → β+1</text>
+<text x="582" y="347" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Small n still updates uncertainty</text>
+<rect x="1068" y="209" width="476" height="164" rx="14" fill="#183149" stroke="#e7c18c" stroke-width="1.5"/>
+<rect x="1082" y="226" width="6" height="34" rx="3" fill="#e7c18c" stroke="#e7c18c" stroke-width="1.5"/>
+<text x="1105" y="252" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Posterior</text>
+<text x="1088" y="291" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Distribution, not point estimate</text>
+<text x="1088" y="319" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">90% range remains explicit</text>
+<text x="1088" y="347" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Can update continuously</text>
+<text x="56" y="428" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#88d0f8" font-weight="bold">II · Several conditions</text>
+<rect x="56" y="447" width="475" height="164" rx="14" fill="#183149" stroke="#8dcdf1" stroke-width="1.5"/>
+<rect x="70" y="464" width="6" height="34" rx="3" fill="#8dcdf1" stroke="#8dcdf1" stroke-width="1.5"/>
+<text x="93" y="490" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">LOSH</text>
+<text x="76" y="529" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Baseline + conditional effects</text>
+<text x="76" y="557" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Add deltas in log-odds space</text>
+<text x="76" y="585" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Fast, but correlation-sensitive</text>
+<rect x="562" y="447" width="475" height="164" rx="14" fill="#183149" stroke="#b7b4ef" stroke-width="1.5"/>
+<rect x="576" y="464" width="6" height="34" rx="3" fill="#b7b4ef" stroke="#b7b4ef" stroke-width="1.5"/>
+<text x="599" y="490" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Lens model</text>
+<text x="582" y="529" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">≤10 factors</text>
+<text x="582" y="557" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">30–50 scenarios / expert</text>
+<text x="582" y="585" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Average judgments → logistic regression</text>
+<rect x="1068" y="447" width="476" height="164" rx="14" fill="#183149" stroke="#efbd9b" stroke-width="1.5"/>
+<rect x="1082" y="464" width="6" height="34" rx="3" fill="#efbd9b" stroke="#efbd9b" stroke-width="1.5"/>
+<text x="1105" y="490" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Correlation neglect</text>
+<text x="1088" y="529" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Correlated signals can double-count</text>
+<text x="1088" y="557" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Drop/reduce one factor</text>
+<text x="1088" y="585" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Stress extreme combinations</text>
+<text x="56" y="666" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#88d0f8" font-weight="bold">III · Decision value of more data</text>
+<rect x="56" y="687" width="1488" height="185" rx="14" fill="#183149" stroke="#8dd9bd" stroke-width="1.5"/>
+<text x="82" y="727" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#f8fbff" font-weight="bold">EOL = chance of wrong decision × economic consequence</text>
+<text x="82" y="766" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#d1e6f1" font-weight="normal">EVPI = upper bound on expected value of eliminating the uncertainty</text>
+<text x="82" y="807" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#d1e6f1" font-weight="normal">High uncertainty alone is not enough: measurement matters only if it can change a consequential decision</text>
+<text x="82" y="844" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#d1e6f1" font-weight="normal">Then collect targeted evidence and update the model</text>
+<text x="56" y="927" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#88d0f8" font-weight="bold">IV · Empirical conditionals and source boundaries</text>
+<rect x="56" y="946" width="713" height="164" rx="14" fill="#183149" stroke="#91d6bd" stroke-width="1.5"/>
+<rect x="70" y="963" width="6" height="34" rx="3" fill="#91d6bd" stroke="#91d6bd" stroke-width="1.5"/>
+<text x="93" y="989" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Empirical P(Y|X)</text>
+<text x="76" y="1028" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Binary historical table</text>
+<text x="76" y="1056" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">COUNTIFS / COUNTIF</text>
+<text x="76" y="1084" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Can combine with beta + LOSH</text>
+<rect x="791" y="946" width="753" height="164" rx="14" fill="#183149" stroke="#efbd9b" stroke-width="1.5"/>
+<rect x="805" y="963" width="6" height="34" rx="3" fill="#efbd9b" stroke="#efbd9b" stroke-width="1.5"/>
+<text x="828" y="989" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Source integrity</text>
+<text x="811" y="1028" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">LOSH sign/parenthesis mismatch</text>
+<text x="811" y="1056" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">X=Нет prose vs B=1 Excel criterion</text>
+<text x="811" y="1084" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Figures/tables/spreadsheets incomplete</text>
+<rect x="56" y="1149" width="1488" height="48" rx="14" fill="#2c2a38" stroke="#9a889f" stroke-width="1.5"/>
+<text x="82" y="1180" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#f0dce8" font-weight="normal">Acceptance: explicit prior, valid sample denominator, no double counting, reproducible update, decision-linked EVPI</text>
+<text x="56" y="1234" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" fill="#90aec4" font-weight="normal">RAG e0036:c01 / e0037:c01–c07 / e0038:c01–c08 / e0039:c01–c05 · EPUB spine 36–39</text>
+</svg>
