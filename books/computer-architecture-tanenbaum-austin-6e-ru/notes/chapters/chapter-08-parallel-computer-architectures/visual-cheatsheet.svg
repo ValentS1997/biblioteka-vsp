@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 820">
+<rect width="1400" height="820" fill="#f4f6f8"/>
+<rect width="1400" height="110" fill="#1e293b"/>
+<text x="45" y="50" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="white">ГЛАВА 8 · ПАРАЛЛЕЛЬНЫЕ АРХИТЕКТУРЫ</text>
+<text x="45" y="86" font-family="Arial,sans-serif" font-size="19" fill="#dbe5ef">ILP • threads • multicore • UMA/NUMA • messages • scalability</text>
+<g font-family="Arial,sans-serif" fill="#243447">
+<rect x="40" y="145" width="410" height="230" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="65" y="190" font-size="22" font-weight="700" fill="#365f91">ON-CHIP</text>
+<text x="65" y="235" font-size="18">superscalar / VLIW</text>
+<text x="65" y="270" font-size="18">fine / coarse / SMT</text>
+<text x="65" y="305" font-size="18">multicore</text>
+<text x="65" y="340" font-size="18">hide stalls / fill issue slots</text>
+
+<rect x="495" y="145" width="410" height="230" rx="14" fill="white" stroke="#2d7d63" stroke-width="2"/>
+<text x="520" y="190" font-size="22" font-weight="700" fill="#2d7d63">COPROCESSORS</text>
+<text x="520" y="235" font-size="18">network processors</text>
+<text x="520" y="270" font-size="18">GPU / Fermi SIMD</text>
+<text x="520" y="305" font-size="18">cryptoprocessors</text>
+<text x="520" y="340" font-size="18">specialize expensive work</text>
+
+<rect x="950" y="145" width="410" height="230" rx="14" fill="white" stroke="#7656a5" stroke-width="2"/>
+<text x="975" y="190" font-size="22" font-weight="700" fill="#7656a5">SHARED MEMORY</text>
+<text x="975" y="235" font-size="18">UMA • NUMA • COMA</text>
+<text x="975" y="270" font-size="18">consistency contract</text>
+<text x="975" y="305" font-size="18">MESI / snooping / directory</text>
+<text x="975" y="340" font-size="18">bus • crossbar • omega</text>
+
+<rect x="40" y="415" width="410" height="230" rx="14" fill="white" stroke="#b15d45" stroke-width="2"/>
+<text x="65" y="460" font-size="22" font-weight="700" fill="#b15d45">MULTICOMPUTERS</text>
+<text x="65" y="505" font-size="18">private node memory</text>
+<text x="65" y="540" font-size="18">send / receive</text>
+<text x="65" y="575" font-size="18">MPP • clusters • MPI</text>
+<text x="65" y="610" font-size="18">topology shapes latency/bandwidth</text>
+
+<rect x="495" y="415" width="410" height="230" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="520" y="460" font-size="22" font-weight="700" fill="#365f91">PERFORMANCE</text>
+<text x="520" y="505" font-size="18">latency • bisection bandwidth</text>
+<text x="520" y="540" font-size="18">speedup • scalability</text>
+<text x="520" y="575" font-size="18">Amdahl: S∞ = 1/f</text>
+<text x="520" y="610" font-size="18">serial work sets hard limit</text>
+
+<rect x="950" y="415" width="410" height="230" rx="14" fill="white" stroke="#2d7d63" stroke-width="2"/>
+<text x="975" y="460" font-size="22" font-weight="700" fill="#2d7d63">DISTRIBUTED</text>
+<text x="975" y="505" font-size="18">loosely coupled resources</text>
+<text x="975" y="540" font-size="18">policy • security • discovery</text>
+<text x="975" y="575" font-size="18">cross-organization sharing</text>
+<text x="975" y="610" font-size="18">coordination dominates hardware</text>
+
+<rect x="40" y="685" width="1320" height="90" rx="14" fill="#e8eef5" stroke="#9aa9ba"/>
+<text x="65" y="725" font-size="19" font-weight="700">CORE RULE</text>
+<text x="65" y="757" font-size="18">More processors help only when parallel work exceeds communication, synchronization, contention and serial overhead.</text>
+</g>
+</svg>
