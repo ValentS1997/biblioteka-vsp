@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 820">
+<rect width="1400" height="820" fill="#f4f6f8"/><rect width="1400" height="110" fill="#1e293b"/>
+<text x="45" y="50" font-family="Arial" font-size="32" font-weight="700" fill="white">APPENDIX A · BINARY NUMBERS</text>
+<text x="45" y="86" font-family="Arial" font-size="19" fill="#dbe5ef">finite precision • radix conversion • signed representation • overflow</text>
+<g font-family="Arial" fill="#243447">
+<rect x="40" y="145" width="410" height="220" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="65" y="190" font-size="22" font-weight="700" fill="#365f91">POSITIONAL</text>
+<text x="65" y="235" font-size="18">value = Σ digit × radix^position</text><text x="65" y="270" font-size="18">octal = 3 bits/digit</text><text x="65" y="305" font-size="18">hex = 4 bits/digit</text>
+<rect x="495" y="145" width="410" height="220" rx="14" fill="white" stroke="#2d7d63" stroke-width="2"/>
+<text x="520" y="190" font-size="22" font-weight="700" fill="#2d7d63">TWO'S COMPLEMENT</text>
+<text x="520" y="235" font-size="18">negate = invert + 1</text><text x="520" y="270" font-size="18">range = -2^(n-1)..2^(n-1)-1</text><text x="520" y="305" font-size="18">discard carry out</text>
+<rect x="950" y="145" width="410" height="220" rx="14" fill="white" stroke="#7656a5" stroke-width="2"/>
+<text x="975" y="190" font-size="22" font-weight="700" fill="#7656a5">ONES' COMPLEMENT</text>
+<text x="975" y="235" font-size="18">negate = invert</text><text x="975" y="270" font-size="18">+0 and -0</text><text x="975" y="305" font-size="18">end-around carry</text>
+<rect x="40" y="405" width="640" height="230" rx="14" fill="white" stroke="#b15d45" stroke-width="2"/>
+<text x="65" y="450" font-size="22" font-weight="700" fill="#b15d45">OVERFLOW</text>
+<text x="65" y="495" font-size="18">same-sign operands + opposite-sign result</text><text x="65" y="530" font-size="18">= signed overflow</text>
+<rect x="720" y="405" width="640" height="230" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="745" y="450" font-size="22" font-weight="700" fill="#365f91">FINITE PRECISION</text>
+<text x="745" y="495" font-size="18">intermediate overflow breaks algebraic identities</text><text x="745" y="530" font-size="18">width is part of the numeric contract</text>
+<rect x="40" y="685" width="1320" height="90" rx="14" fill="#e8eef5" stroke="#9aa9ba"/>
+<text x="65" y="725" font-size="19" font-weight="700">CORE RULE</text><text x="65" y="757" font-size="18">A bit pattern has meaning only together with radix, width and signed representation.</text>
+</g></svg>

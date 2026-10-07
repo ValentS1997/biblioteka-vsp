@@ -69,3 +69,22 @@ Canonical readiness command:
 - [Глава 8 — Параллельные компьютерные архитектуры](notes/chapters/chapter-08-parallel-computer-architectures/README.md) — RAG-grounded analysis; PDF 590–698.
 
 - [Глава 9 — Библиография](notes/chapters/chapter-09-bibliography/README.md) — RAG-grounded bibliography map; PDF pages 699–707.
+
+## Appendix artifacts
+
+- [Приложение А — Двоичные числа](notes/appendices/appendix-a-binary-numbers/README.md) — RAG-grounded analysis; PDF pages 708–719; review 16/16.
+- [Приложение Б — Числа с плавающей точкой](notes/appendices/appendix-b-floating-point/README.md) — RAG-grounded analysis; PDF pages 720–728; review 10/10.
+- [Приложение В — Программирование на языке ассемблера](notes/appendices/appendix-c-assembly-programming/README.md) — RAG-grounded analysis; PDF pages 729–790; review 9/9.
+
+Canonical appendix index: [notes/appendices/README.md](notes/appendices/README.md).
+
+## Book completion
+
+Book analysis/work was closed on **2026-10-07**.
+
+- All 9 numbered chapters have canonical artifacts.
+- All 3 instructional appendices have canonical artifacts.
+- Instructional source content ends at `p0790:c01`.
+- `p0791:c01` starts the alphabetical index; later pages are index/publisher back matter, not another chapter or appendix.
+- Canonical source and RAG remain unchanged and available for future retrieval.
+- Reading state remains `planned`: this book was bootstrapped with reading activation disabled, and analysis/work closure is not treated as evidence that reading was completed.

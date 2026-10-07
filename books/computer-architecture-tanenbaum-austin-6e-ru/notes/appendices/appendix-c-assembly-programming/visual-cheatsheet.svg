@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 820">
+<rect width="1400" height="820" fill="#f4f6f8"/><rect width="1400" height="110" fill="#1e293b"/>
+<text x="45" y="50" font-family="Arial" font-size="32" font-weight="700" fill="white">APPENDIX C · 8088 ASSEMBLY</text>
+<text x="45" y="86" font-family="Arial" font-size="19" fill="#dbe5ef">segments • addressing • calls • syscalls • as88 • t88</text>
+<g font-family="Arial" fill="#243447">
+<rect x="40" y="145" width="410" height="220" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="65" y="190" font-size="22" font-weight="700" fill="#365f91">ADDRESS</text><text x="65" y="235" font-size="18">physical = segment×16 + offset</text><text x="65" y="270" font-size="18">CS:IP • DS:data • SS:SP/BP</text>
+<rect x="495" y="145" width="410" height="220" rx="14" fill="white" stroke="#2d7d63" stroke-width="2"/>
+<text x="520" y="190" font-size="22" font-weight="700" fill="#2d7d63">ADDRESSING</text><text x="520" y="235" font-size="18">register • immediate • direct</text><text x="520" y="270" font-size="18">indirect • indexed • displacement</text>
+<rect x="950" y="145" width="410" height="220" rx="14" fill="white" stroke="#7656a5" stroke-width="2"/>
+<text x="975" y="190" font-size="22" font-weight="700" fill="#7656a5">CALL FRAME</text><text x="975" y="235" font-size="18">reverse args → CALL</text><text x="975" y="270" font-size="18">BP+4 = arg1 • locals negative</text>
+<rect x="40" y="405" width="640" height="230" rx="14" fill="white" stroke="#b15d45" stroke-width="2"/>
+<text x="65" y="450" font-size="22" font-weight="700" fill="#b15d45">AS88</text><text x="65" y="495" font-size="18">.TEXT • .DATA • .BSS</text><text x="65" y="530" font-size="18">symbols → two passes → load/object files</text>
+<rect x="720" y="405" width="640" height="230" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="745" y="450" font-size="22" font-weight="700" fill="#365f91">T88 TRACER</text><text x="745" y="495" font-size="18">single-step • breakpoints • stack</text><text x="745" y="530" font-size="18">registers • memory • source • I/O</text>
+<rect x="40" y="685" width="1320" height="90" rx="14" fill="#e8eef5" stroke="#9aa9ba"/>
+<text x="65" y="725" font-size="19" font-weight="700">CORE RULE</text><text x="65" y="757" font-size="18">Assembly makes the ISA visible: addresses, registers, stack frames and control flow become explicit program state.</text>
+</g></svg>
