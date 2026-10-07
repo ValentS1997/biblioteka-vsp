@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100">
+<rect width="1600" height="1100" fill="#f4f6f8"/>
+<rect width="1600" height="120" fill="#1e293b"/>
+<text x="45" y="52" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="white">ГЛАВА 5 · ISA КАК ГРАНИЦА SOFTWARE / HARDWARE</text>
+<text x="45" y="88" font-family="Arial,sans-serif" font-size="19" fill="#dbe5ef">memory model • registers • encoding • addressing • control transfer • I/O • IA-64</text>
+<g font-family="Arial,sans-serif" fill="#243447">
+
+<rect x="40" y="150" width="480" height="210" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="65" y="192" font-size="21" font-weight="700" fill="#365f91">01 · MEMORY / REGISTERS</text>
+<text x="65" y="235" font-size="17">byte addressing • word size • alignment</text>
+<text x="65" y="266" font-size="17">endianness • unified/separate spaces</text>
+<text x="65" y="297" font-size="17">GPRs reduce memory traffic</text>
+<text x="65" y="328" font-size="17">PC • SP • FP • PSW/flags</text>
+
+<rect x="560" y="150" width="480" height="210" rx="14" fill="white" stroke="#2d7d63" stroke-width="2"/>
+<text x="585" y="192" font-size="21" font-weight="700" fill="#2d7d63">02 · INSTRUCTION FORMAT</text>
+<text x="585" y="235" font-size="17">opcode competes with operand fields</text>
+<text x="585" y="266" font-size="17">expanded opcodes reuse escape space</text>
+<text x="585" y="297" font-size="17">fixed length → easier decode</text>
+<text x="585" y="328" font-size="17">variable length → code-density trade-off</text>
+
+<rect x="1080" y="150" width="480" height="210" rx="14" fill="white" stroke="#7656a5" stroke-width="2"/>
+<text x="1105" y="192" font-size="21" font-weight="700" fill="#7656a5">03 · ADDRESSING</text>
+<text x="1105" y="235" font-size="17">immediate / direct / register</text>
+<text x="1105" y="266" font-size="17">register-indirect / indexed</text>
+<text x="1105" y="297" font-size="17">base + index + displacement</text>
+<text x="1105" y="328" font-size="17">PC-relative / stack</text>
+
+<rect x="40" y="395" width="480" height="210" rx="14" fill="white" stroke="#b15d45" stroke-width="2"/>
+<text x="65" y="437" font-size="21" font-weight="700" fill="#b15d45">04 · OPERATIONS</text>
+<text x="65" y="480" font-size="17">move / load / store</text>
+<text x="65" y="511" font-size="17">arithmetic / logic / shifts</text>
+<text x="65" y="542" font-size="17">compare → condition state</text>
+<text x="65" y="573" font-size="17">branch / call / return / loop</text>
+
+<rect x="560" y="395" width="480" height="210" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="585" y="437" font-size="21" font-weight="700" fill="#365f91">05 · PROCEDURES</text>
+<text x="585" y="480" font-size="17">save return address</text>
+<text x="585" y="511" font-size="17">build frame / allocate locals</text>
+<text x="585" y="542" font-size="17">recursion → one frame per call</text>
+<text x="585" y="573" font-size="17">epilogue restores caller state</text>
+
+<rect x="1080" y="395" width="480" height="210" rx="14" fill="white" stroke="#2d7d63" stroke-width="2"/>
+<text x="1105" y="437" font-size="21" font-weight="700" fill="#2d7d63">06 · I/O / INTERRUPTS</text>
+<text x="1105" y="480" font-size="17">polling → interrupt → DMA</text>
+<text x="1105" y="511" font-size="17">device identifies interrupt source</text>
+<text x="1105" y="542" font-size="17">ISR saves/restores transparent state</text>
+<text x="1105" y="573" font-size="17">priority allows urgent preemption</text>
+
+<rect x="40" y="640" width="480" height="210" rx="14" fill="white" stroke="#7656a5" stroke-width="2"/>
+<text x="65" y="682" font-size="21" font-weight="700" fill="#7656a5">07 · x86 / CORE i7</text>
+<text x="65" y="725" font-size="17">historical variable-length CISC</text>
+<text x="65" y="756" font-size="17">prefixes + irregular addressing</text>
+<text x="65" y="787" font-size="17">compatibility dominates design</text>
+<text x="65" y="818" font-size="17">implementation complexity hidden by ISA</text>
+
+<rect x="560" y="640" width="480" height="210" rx="14" fill="white" stroke="#b15d45" stroke-width="2"/>
+<text x="585" y="682" font-size="21" font-weight="700" fill="#b15d45">08 · ARM / AVR</text>
+<text x="585" y="725" font-size="17">ARM: load/store, register-heavy RISC</text>
+<text x="585" y="756" font-size="17">predicated ARM instruction forms</text>
+<text x="585" y="787" font-size="17">AVR: small embedded encoding</text>
+<text x="585" y="818" font-size="17">cost / code density shape ISA</text>
+
+<rect x="1080" y="640" width="480" height="210" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="1105" y="682" font-size="21" font-weight="700" fill="#365f91">09 · IA-64 / EPIC</text>
+<text x="1105" y="725" font-size="17">compiler schedules parallel groups</text>
+<text x="1105" y="756" font-size="17">many registers reduce memory traffic</text>
+<text x="1105" y="787" font-size="17">predication reduces branches</text>
+<text x="1105" y="818" font-size="17">speculative loads hide latency</text>
+
+<rect x="40" y="890" width="1520" height="150" rx="14" fill="#e8eef5" stroke="#9aa9ba"/>
+<text x="65" y="935" font-size="21" font-weight="700">DESIGN EQUATION</text>
+<text x="65" y="973" font-size="18">clear compiler target + efficient implementation + useful code density + stable compatibility</text>
+<text x="65" y="1005" font-size="18">→ durable instruction-set architecture</text>
+</g>
+</svg>
