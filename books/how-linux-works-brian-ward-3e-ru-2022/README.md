@@ -51,3 +51,4 @@ Canonical readiness command:
 - [Глава 1 — Общая картина](notes/chapters/chapter-01-big-picture/README.md)
 - [Глава 2 — Основные команды и иерархия каталогов](notes/chapters/chapter-02-basic-commands-and-directory-hierarchy/README.md)
 - [Глава 3 — Устройства](notes/chapters/chapter-03-devices/README.md)
+- [Глава 4 — Диски и файловые системы](notes/chapters/chapter-04-disks-and-filesystems/README.md) — RAG-only, PDF/печатные с. 102–155.
