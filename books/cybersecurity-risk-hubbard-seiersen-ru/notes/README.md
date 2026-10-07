@@ -14,3 +14,4 @@ Chapter artifacts are created only after book-level chapter-analysis readiness i
 - [Глава 6 — Разложение на составляющие](chapters/chapter-06-decomposition/README.md) — RAG-grounded, EPUB spine 28–30; reading progress не изменён.
 - [Глава 7 — Калиброванные оценки: что вам известно уже сейчас?](chapters/chapter-07-calibrated-estimates/README.md) — RAG-grounded, EPUB spine 31–33; source exercise preserved with extraction limits.
 - [Глава 8 — Уменьшение неопределенности с помощью байесовских методов](chapters/chapter-08-bayesian-uncertainty/README.md) — RAG-grounded, EPUB spine 34–35; reading progress не изменён.
+- [Глава 9 — Эффективные методы на основе формулы Байеса](chapters/chapter-09-effective-bayesian-methods/README.md) — RAG-grounded, EPUB spine 36–39; reading progress не изменён.
