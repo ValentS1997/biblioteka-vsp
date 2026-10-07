@@ -2,13 +2,14 @@ schema: biblioteka-vsp/book/v1
 
 id: modern-operating-systems-tanenbaum-bos-4e-ru
 title: "Современные операционные системы"
+original_title: "Modern Operating Systems"
 
 edition:
   number: 4
   language: ru
-  publisher: "[Needs confirmation]"
-  publication_year: "[Needs confirmation]"
-  publication_pages: "[Needs confirmation]"
+  publisher: "ООО Издательство «Питер»"
+  publication_year: 2015
+  publication_pages: 1120
 
 authors:
   - "Эндрю С. Таненбаум"
@@ -20,8 +21,8 @@ translators:
   - "Н. Вильчинский"
 
 isbn:
-  russian_edition: "[Needs confirmation]"
-  original_edition: "[Needs confirmation]"
+  russian_edition: "978-5-496-01395-6"
+  original_edition: "978-0133591620"
 
 source:
   canonical_path: "source/book.pdf"
@@ -39,7 +40,7 @@ source:
   lawful_access_attested_by_user: "[Needs confirmation]"
   ownership_category: "[Needs confirmation]"
   physical_copy: "[Needs confirmation]"
-  license: "[Needs confirmation]"
+  license: "all rights reserved"
   redistribution_permission: "[Needs confirmation]"
 
 rag:
@@ -52,6 +53,7 @@ rag:
   generated_commit: "be63c2baf2f979f14171ddb3a5338af8497b9fc3"
 
 reading:
-  status: "[Needs confirmation]"
-  started: null
-  completed: null
+  progress: "reading/progress.yaml"
+  status: completed
+  started: "[Needs confirmation]"
+  completed: "2026-10-08"
