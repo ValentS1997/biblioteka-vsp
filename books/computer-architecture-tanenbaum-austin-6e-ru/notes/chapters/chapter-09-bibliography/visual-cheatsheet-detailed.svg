@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100">
+<rect width="1600" height="1100" fill="#f4f6f8"/>
+<rect width="1600" height="120" fill="#1e293b"/>
+<text x="45" y="52" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="white">ГЛАВА 9 · БИБЛИОГРАФИЯ КАК КАРТА ПРОИСХОЖДЕНИЯ ЗНАНИЙ</text>
+<text x="45" y="88" font-family="Arial,sans-serif" font-size="19" fill="#dbe5ef">699–707 • 153 entries • alphabetical reference index</text>
+<g font-family="Arial,sans-serif" fill="#243447">
+
+<rect x="40" y="150" width="480" height="210" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="65" y="192" font-size="21" font-weight="700" fill="#365f91">01 · BOUNDARY</text>
+<text x="65" y="235" font-size="17">start: p0699:c01</text>
+<text x="65" y="266" font-size="17">end: p0707:c01</text>
+<text x="65" y="297" font-size="17">entry range: 1–153</text>
+<text x="65" y="328" font-size="17">p0708 starts Appendix A</text>
+
+<rect x="560" y="150" width="480" height="210" rx="14" fill="white" stroke="#2d7d63" stroke-width="2"/>
+<text x="585" y="192" font-size="21" font-weight="700" fill="#2d7d63">02 · PURPOSE</text>
+<text x="585" y="235" font-size="17">resolve references from chapters 1–8</text>
+<text x="585" y="266" font-size="17">preserve author/title/venue/year</text>
+<text x="585" y="297" font-size="17">support deeper source navigation</text>
+<text x="585" y="328" font-size="17">not an instructional narrative</text>
+
+<rect x="1080" y="150" width="480" height="210" rx="14" fill="white" stroke="#7656a5" stroke-width="2"/>
+<text x="1105" y="192" font-size="21" font-weight="700" fill="#7656a5">03 · CPU / ISA</text>
+<text x="1105" y="235" font-size="17">RISC • VLIW / EPIC</text>
+<text x="1105" y="266" font-size="17">branch prediction</text>
+<text x="1105" y="297" font-size="17">Itanium • processor history</text>
+<text x="1105" y="328" font-size="17">multithreading / stream processing</text>
+
+<rect x="40" y="395" width="480" height="210" rx="14" fill="white" stroke="#b15d45" stroke-width="2"/>
+<text x="65" y="437" font-size="21" font-weight="700" fill="#b15d45">04 · OS / MEMORY</text>
+<text x="65" y="480" font-size="17">MULTICS • UNIX • Windows</text>
+<text x="65" y="511" font-size="17">working set / virtual memory</text>
+<text x="65" y="542" font-size="17">filesystems / storage</text>
+<text x="65" y="573" font-size="17">synchronization foundations</text>
+
+<rect x="560" y="395" width="480" height="210" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="585" y="437" font-size="21" font-weight="700" fill="#365f91">05 · PARALLEL SYSTEMS</text>
+<text x="585" y="480" font-size="17">memory consistency / cache coherence</text>
+<text x="585" y="511" font-size="17">NUMA / COMA / DSM</text>
+<text x="585" y="542" font-size="17">MPI / PVM / clusters</text>
+<text x="585" y="573" font-size="17">BlueGene / Red Storm / grids</text>
+
+<rect x="1080" y="395" width="480" height="210" rx="14" fill="white" stroke="#2d7d63" stroke-width="2"/>
+<text x="1105" y="437" font-size="21" font-weight="700" fill="#2d7d63">06 · I/O / SECURITY</text>
+<text x="1105" y="480" font-size="17">PCI / PCI Express / USB</text>
+<text x="1105" y="511" font-size="17">network processors / interconnects</text>
+<text x="1105" y="542" font-size="17">RAID / storage architecture</text>
+<text x="1105" y="573" font-size="17">security / cryptoprocessors</text>
+
+<rect x="40" y="640" width="480" height="210" rx="14" fill="white" stroke="#7656a5" stroke-width="2"/>
+<text x="65" y="682" font-size="21" font-weight="700" fill="#7656a5">07 · TRUST BOUNDARY</text>
+<text x="65" y="725" font-size="17">bibliography says what was cited</text>
+<text x="65" y="756" font-size="17">it does not validate external content</text>
+<text x="65" y="787" font-size="17">no DOI/URL invented</text>
+<text x="65" y="818" font-size="17">no external updates in rag_only mode</text>
+
+<rect x="560" y="640" width="480" height="210" rx="14" fill="white" stroke="#b15d45" stroke-width="2"/>
+<text x="585" y="682" font-size="21" font-weight="700" fill="#b15d45">08 · SOURCE QUALITY</text>
+<text x="585" y="725" font-size="17">OCR/extraction spelling can drift</text>
+<text x="585" y="756" font-size="17">punctuation/spacing can be malformed</text>
+<text x="585" y="787" font-size="17">preserve variants; record findings</text>
+<text x="585" y="818" font-size="17">never silently repair from memory</text>
+
+<rect x="1080" y="640" width="480" height="210" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="1105" y="682" font-size="21" font-weight="700" fill="#365f91">09 · CHAPTER EXCEPTION</text>
+<text x="1105" y="725" font-size="17">summary.md: not applicable</text>
+<text x="1105" y="756" font-size="17">review questions: not applicable</text>
+<text x="1105" y="787" font-size="17">review answers: not applicable</text>
+<text x="1105" y="818" font-size="17">commands: explicit N/A content</text>
+
+<rect x="40" y="890" width="1520" height="150" rx="14" fill="#e8eef5" stroke="#9aa9ba"/>
+<text x="65" y="935" font-size="21" font-weight="700">WORKFLOW</text>
+<text x="65" y="973" font-size="18">chapter claim → citation → chapter 9 entry → external source → separate verification</text>
+<text x="65" y="1005" font-size="18">The bibliography is a locator layer between textbook explanation and primary/deeper sources.</text>
+</g>
+</svg>

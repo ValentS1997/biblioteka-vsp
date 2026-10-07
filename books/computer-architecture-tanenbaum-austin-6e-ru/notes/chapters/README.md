@@ -12,3 +12,4 @@ Chapter-level artifacts are created only after book readiness is `READY` and a c
 | [6. Уровень операционной системы](chapter-06-operating-system-machine-level/README.md) | PDF 475–554; `p0475:c01`–`p0554:c01` | RAG_GROUNDED | README, cheatsheet, commands, diagram, 2×SVG, summary, 40 review questions/answers, source findings |
 | [7. Уровень ассемблера](chapter-07-assembly-language-level/README.md) | PDF 555–589; `p0555:c01`–`p0589:c01` | RAG_GROUNDED | README, cheatsheet, commands, diagram, 2×SVG, summary, 26 review questions/answers, source findings |
 | [8. Параллельные компьютерные архитектуры](chapter-08-parallel-computer-architectures/README.md) | PDF 590–698; `p0590:c01`–`p0698:c01` | RAG_GROUNDED | 10 chapter artifacts; 33 review questions/answers |
+| [9. Библиография](chapter-09-bibliography/README.md) | PDF 699–707; `p0699:c01`–`p0707:c01` | RAG_GROUNDED | README, cheatsheet, commands (N/A), diagram, 2×SVG, source findings; no summary/review section |
