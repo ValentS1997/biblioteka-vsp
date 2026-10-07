@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 1 — Общая картина</title>
+  <desc id="desc">Три уровня Linux и четыре функции ядра; UID, группы и root.</desc>
+  <rect x="0" y="0" width="1600" height="900" fill="#f1f6fc" rx="0" />
+  <rect x="0" y="0" width="1600" height="133" fill="#172941" rx="0" />
+  <text x="54" y="55" fill="#ffffff" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="37" font-weight="750">Глава 1 — Общая картина</text>
+  <text x="54" y="99" fill="#d7e7ff" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="21" font-weight="400">Объекты • уровни • границы привилегий</text>
+  <rect x="48" y="166" width="460" height="228" fill="#ffffff" rx="18" stroke="#22688a" stroke-width="2" />
+  <rect x="48" y="166" width="460" height="10" fill="#22688a" rx="5" />
+  <text x="72" y="217" fill="#22688a" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700">USER SPACE</text>
+  <text x="72" y="262" fill="#21344a" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" font-weight="400">Приложения, службы, процессы</text>
+  <text x="72" y="301" fill="#21344a" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" font-weight="400">Режим: ограниченный доступ</text>
+  <text x="72" y="340" fill="#21344a" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" font-weight="400">Обращение к ядру: syscalls</text>
+  <rect x="572" y="166" width="460" height="228" fill="#ffffff" rx="18" stroke="#66529b" stroke-width="2" />
+  <rect x="572" y="166" width="460" height="10" fill="#66529b" rx="5" />
+  <text x="596" y="217" fill="#66529b" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700">KERNEL</text>
+  <text x="596" y="262" fill="#21344a" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" font-weight="400">Управляет CPU и памятью</text>
+  <text x="596" y="301" fill="#21344a" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" font-weight="400">Связывает процессы и устройства</text>
+  <text x="596" y="340" fill="#21344a" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" font-weight="400">Kernel mode: широкий доступ</text>
+  <rect x="1096" y="166" width="456" height="228" fill="#ffffff" rx="18" stroke="#277452" stroke-width="2" />
+  <rect x="1096" y="166" width="456" height="10" fill="#277452" rx="5" />
+  <text x="1120" y="217" fill="#277452" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700">HARDWARE</text>
+  <text x="1120" y="262" fill="#21344a" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" font-weight="400">CPU, оперативная память</text>
+  <text x="1120" y="301" fill="#21344a" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" font-weight="400">Диски и сетевые интерфейсы</text>
+  <text x="1120" y="340" fill="#21344a" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" font-weight="400">Физический уровень</text>
+  <text x="522" y="292" fill="#334969" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="42" font-weight="700">↔</text>
+  <text x="1044" y="292" fill="#334969" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="42" font-weight="700">↔</text>
+  <text x="52" y="447" fill="#1b3656" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="27" font-weight="700">ЧЕТЫРЕ ОБЛАСТИ РАБОТЫ ЯДРА</text>
+  <rect x="48" y="474" width="358" height="246" fill="#ffffff" rx="18" stroke="#22688a" stroke-width="2" />
+  <rect x="48" y="474" width="358" height="10" fill="#22688a" rx="5" />
+  <text x="72" y="525" fill="#22688a" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700">01 · ПРОЦЕССЫ</text>
+  <text x="72" y="570" fill="#21344a" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" font-weight="400">Планирование и квант</text>
+  <text x="72" y="609" fill="#21344a" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" font-weight="400">Переключение контекста</text>
+  <text x="72" y="648" fill="#21344a" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" font-weight="400">Сохранить / выбрать / вернуть</text>
+  <rect x="430" y="474" width="358" height="246" fill="#ffffff" rx="18" stroke="#66529b" stroke-width="2" />
+  <rect x="430" y="474" width="358" height="10" fill="#66529b" rx="5" />
+  <text x="454" y="525" fill="#66529b" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700">02 · ПАМЯТЬ</text>
+  <text x="454" y="570" fill="#21344a" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" font-weight="400">Изоляция областей</text>
+  <text x="454" y="609" fill="#21344a" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" font-weight="400">Виртуальные адреса и MMU</text>
+  <text x="454" y="648" fill="#21344a" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" font-weight="400">Таблицы страниц</text>
+  <rect x="812" y="474" width="358" height="246" fill="#ffffff" rx="18" stroke="#277452" stroke-width="2" />
+  <rect x="812" y="474" width="358" height="10" fill="#277452" rx="5" />
+  <text x="836" y="525" fill="#277452" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700">03 · ДРАЙВЕРЫ</text>
+  <text x="836" y="570" fill="#21344a" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" font-weight="400">Посредник к устройствам</text>
+  <text x="836" y="609" fill="#21344a" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" font-weight="400">Единый интерфейс</text>
+  <text x="836" y="648" fill="#21344a" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" font-weight="400">Различия оборудования</text>
+  <rect x="1194" y="474" width="358" height="246" fill="#ffffff" rx="18" stroke="#a8662a" stroke-width="2" />
+  <rect x="1194" y="474" width="358" height="10" fill="#a8662a" rx="5" />
+  <text x="1218" y="525" fill="#a8662a" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700">04 · SYSCALLS</text>
+  <text x="1218" y="570" fill="#21344a" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" font-weight="400">Процесс запрашивает ядро</text>
+  <text x="1218" y="609" fill="#21344a" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" font-weight="400">fork(): создаёт процесс</text>
+  <text x="1218" y="648" fill="#21344a" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="19" font-weight="400">exec(): заменяет программу</text>
+  <rect x="48" y="754" width="1504" height="80" fill="#e0eaf5" rx="14" />
+  <text x="75" y="786" fill="#243851" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="21" font-weight="750">ГРАНИЦЫ:</text>
+  <text x="75" y="816" fill="#21344a" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="20" font-weight="400">UID — процессы/файлы  •  groups — общий доступ  •  root не означает kernel mode</text>
+  <text x="52" y="871" fill="#5a6d81" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400">Уорд · глава 1 · PDF/печатные с. 28–38 · RAG p0028:c01–p0038:c01 · схема составлена по тексту</text>
+</svg>
