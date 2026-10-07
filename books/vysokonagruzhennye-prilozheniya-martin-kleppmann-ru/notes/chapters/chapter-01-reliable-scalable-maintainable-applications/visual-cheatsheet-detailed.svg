@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1050" viewBox="0 0 1400 1050">
+  <rect width="1400" height="1050" fill="#f8fafc"/>
+  <text x="60" y="65" fill="#0f172a" font-family="sans-serif" font-size="34" font-weight="700">Глава 1 — Надежные, масштабируемые и удобные в сопровождении приложения</text>
+  <text x="60" y="102" fill="#475569" font-family="sans-serif" font-size="18">Canonical RAG · PDF 23–51 · source SHA 495e75f185c758a8…</text>
+
+  <rect x="60" y="140" width="1280" height="120" rx="18" fill="#e2e8f0"/>
+  <text x="90" y="185" fill="#0f172a" font-family="sans-serif" font-size="24" font-weight="700">1.1 Информационная система = композиция компонентов</text>
+  <text x="90" y="220" fill="#334155" font-family="sans-serif" font-size="18">DB · cache · search index · stream processing · batch processing → код приложения → сервис/API</text>
+  <text x="90" y="247" fill="#334155" font-family="sans-serif" font-size="18">Нет одного универсального инструмента: архитектура зависит от требований и паттернов доступа.</text>
+
+  <rect x="60" y="290" width="400" height="530" rx="18" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="90" y="335" fill="#075985" font-family="sans-serif" font-size="27" font-weight="700">1.2 Reliability</text>
+  <text x="90" y="375" fill="#0f172a" font-family="sans-serif" font-size="20" font-weight="700">fault ≠ failure</text>
+  <text x="90" y="410" fill="#334155" font-family="sans-serif" font-size="17">Fault: сбой компонента.</text>
+  <text x="90" y="438" fill="#334155" font-family="sans-serif" font-size="17">Failure: сервис перестал выполнять обещание.</text>
+  <text x="90" y="485" fill="#0f172a" font-family="sans-serif" font-size="19" font-weight="700">Причины</text>
+  <text x="90" y="518" fill="#334155" font-family="sans-serif" font-size="17">• hardware: диски, RAM, питание, сеть</text>
+  <text x="90" y="548" fill="#334155" font-family="sans-serif" font-size="17">• software: bad input, resource exhaustion</text>
+  <text x="90" y="578" fill="#334155" font-family="sans-serif" font-size="17">• dependencies / cascading failures</text>
+  <text x="90" y="608" fill="#334155" font-family="sans-serif" font-size="17">• human configuration errors</text>
+  <text x="90" y="655" fill="#0f172a" font-family="sans-serif" font-size="19" font-weight="700">Методы</text>
+  <text x="90" y="688" fill="#334155" font-family="sans-serif" font-size="17">isolation · testing · restart</text>
+  <text x="90" y="718" fill="#334155" font-family="sans-serif" font-size="17">monitoring · self-checks · sandbox</text>
+  <text x="90" y="748" fill="#334155" font-family="sans-serif" font-size="17">gradual rollout · quick rollback</text>
+  <text x="90" y="790" fill="#075985" font-family="sans-serif" font-size="17">Chaos Monkey: intentional faults as testing</text>
+
+  <rect x="500" y="290" width="400" height="530" rx="18" fill="#f3e8ff" stroke="#7e22ce" stroke-width="2"/>
+  <text x="530" y="335" fill="#6b21a8" font-family="sans-serif" font-size="27" font-weight="700">1.3 Scalability</text>
+  <text x="530" y="375" fill="#0f172a" font-family="sans-serif" font-size="20" font-weight="700">Сначала описать нагрузку</text>
+  <text x="530" y="410" fill="#334155" font-family="sans-serif" font-size="17">requests/sec · read/write ratio · users</text>
+  <text x="530" y="440" fill="#334155" font-family="sans-serif" font-size="17">cache hit rate · fan-out · data volume</text>
+  <text x="530" y="485" fill="#0f172a" font-family="sans-serif" font-size="19" font-weight="700">Потом измерить performance</text>
+  <text x="530" y="518" fill="#334155" font-family="sans-serif" font-size="17">batch: throughput / job time</text>
+  <text x="530" y="548" fill="#334155" font-family="sans-serif" font-size="17">online: response time from client</text>
+  <text x="530" y="578" fill="#334155" font-family="sans-serif" font-size="17">p50 · p95 · p99 · p999</text>
+  <text x="530" y="608" fill="#334155" font-family="sans-serif" font-size="17">tail latency + head-of-line blocking</text>
+  <text x="530" y="655" fill="#0f172a" font-family="sans-serif" font-size="19" font-weight="700">Scale strategy</text>
+  <text x="530" y="688" fill="#334155" font-family="sans-serif" font-size="17">vertical ↔ horizontal ↔ hybrid</text>
+  <text x="530" y="718" fill="#334155" font-family="sans-serif" font-size="17">auto-scaling ↔ manual scaling</text>
+  <text x="530" y="748" fill="#334155" font-family="sans-serif" font-size="17">stateful systems сложнее распределять</text>
+  <text x="530" y="790" fill="#6b21a8" font-family="sans-serif" font-size="17">Twitter: fan-out drives architecture</text>
+
+  <rect x="940" y="290" width="400" height="530" rx="18" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+  <text x="970" y="335" fill="#166534" font-family="sans-serif" font-size="27" font-weight="700">1.4 Maintainability</text>
+  <text x="970" y="382" fill="#0f172a" font-family="sans-serif" font-size="20" font-weight="700">Operability</text>
+  <text x="970" y="414" fill="#334155" font-family="sans-serif" font-size="17">monitoring · automation hooks</text>
+  <text x="970" y="444" fill="#334155" font-family="sans-serif" font-size="17">docs · predictable operational model</text>
+  <text x="970" y="474" fill="#334155" font-family="sans-serif" font-size="17">sane defaults + manual control</text>
+  <text x="970" y="525" fill="#0f172a" font-family="sans-serif" font-size="20" font-weight="700">Simplicity</text>
+  <text x="970" y="557" fill="#334155" font-family="sans-serif" font-size="17">reduce incidental complexity</text>
+  <text x="970" y="587" fill="#334155" font-family="sans-serif" font-size="17">good abstractions hide implementation</text>
+  <text x="970" y="637" fill="#0f172a" font-family="sans-serif" font-size="20" font-weight="700">Evolvability</text>
+  <text x="970" y="669" fill="#334155" font-family="sans-serif" font-size="17">requirements will change</text>
+  <text x="970" y="699" fill="#334155" font-family="sans-serif" font-size="17">adapt architecture safely</text>
+  <text x="970" y="729" fill="#334155" font-family="sans-serif" font-size="17">simplicity makes change easier</text>
+  <text x="970" y="790" fill="#166534" font-family="sans-serif" font-size="17">No silver bullet: keep all three in design</text>
+
+  <rect x="60" y="855" width="1280" height="135" rx="18" fill="#0f172a"/>
+  <text x="90" y="900" fill="#f8fafc" font-family="sans-serif" font-size="23" font-weight="700">Operational loop</text>
+  <text x="90" y="942" fill="#cbd5e1" font-family="sans-serif" font-size="20">baseline → define fault/load/change model → measure → controlled change → same measurement → keep / rollback</text>
+  <text x="90" y="975" fill="#94a3b8" font-family="sans-serif" font-size="16">Figure 1.1 is not reconstructed: PDF 26 has a text-extraction defect in canonical RAG.</text>
+</svg>
