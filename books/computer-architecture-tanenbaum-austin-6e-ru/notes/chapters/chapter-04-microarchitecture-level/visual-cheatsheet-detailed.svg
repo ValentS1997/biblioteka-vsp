@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100">
+<rect width="1600" height="1100" fill="#f4f6f8"/>
+<rect width="1600" height="120" fill="#1e293b"/>
+<text x="45" y="52" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="white">ГЛАВА 4 · ISA SEMANTICS → MICROARCHITECTURE</text>
+<text x="45" y="88" font-family="Arial,sans-serif" font-size="19" fill="#dbe5ef">control store • IFU • pipeline • cache • prediction • renaming • speculation</text>
+<g font-family="Arial,sans-serif" fill="#243447">
+<rect x="40" y="150" width="480" height="210" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="65" y="192" font-size="21" font-weight="700" fill="#365f91">DATAPATH / CONTROL</text>
+<text x="65" y="235" font-size="17">H + B bus → ALU → shifter → C bus</text>
+<text x="65" y="266" font-size="17">MAR/MDR = words; PC/MBR = bytes</text>
+<text x="65" y="297" font-size="17">control store holds microinstructions</text>
+<text x="65" y="328" font-size="17">JAM/JMPC choose next microaddress</text>
+
+<rect x="560" y="150" width="480" height="210" rx="14" fill="white" stroke="#2d7d63" stroke-width="2"/>
+<text x="585" y="192" font-size="21" font-weight="700" fill="#2d7d63">IJVM / MIC-1</text>
+<text x="585" y="235" font-size="17">stack-oriented bytecode</text>
+<text x="585" y="266" font-size="17">Main1 fetch/decode dispatch</text>
+<text x="585" y="297" font-size="17">MAL mirrors physical datapath limits</text>
+<text x="585" y="328" font-size="17">simple hardware, longer paths</text>
+
+<rect x="1080" y="150" width="480" height="210" rx="14" fill="white" stroke="#7656a5" stroke-width="2"/>
+<text x="1105" y="192" font-size="21" font-weight="700" fill="#7656a5">MIC-2 / IFU</text>
+<text x="1105" y="235" font-size="17">prefetch 4-byte words</text>
+<text x="1105" y="266" font-size="17">MBR1 = byte; MBR2 = 2 bytes</text>
+<text x="1105" y="297" font-size="17">dedicated PC / IMAR increment</text>
+<text x="1105" y="328" font-size="17">remove repeated fetch overhead</text>
+
+<rect x="40" y="395" width="480" height="210" rx="14" fill="white" stroke="#b15d45" stroke-width="2"/>
+<text x="65" y="437" font-size="21" font-weight="700" fill="#b15d45">MIC-3 / MIC-4</text>
+<text x="65" y="480" font-size="17">pipeline shortens each stage</text>
+<text x="65" y="511" font-size="17">Mic-4 adds decode + micro-op queue</text>
+<text x="65" y="542" font-size="17">more parallelism / hardware complexity</text>
+<text x="65" y="573" font-size="17">control branches can stall pipeline</text>
+
+<rect x="560" y="395" width="480" height="210" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="585" y="437" font-size="21" font-weight="700" fill="#365f91">CACHE HIERARCHY</text>
+<text x="585" y="480" font-size="17">L1-I + L1-D → parallel bandwidth</text>
+<text x="585" y="511" font-size="17">L2 / L3 increase capacity</text>
+<text x="585" y="542" font-size="17">direct / set associative mappings</text>
+<text x="585" y="573" font-size="17">replacement + write policy matter</text>
+
+<rect x="1080" y="395" width="480" height="210" rx="14" fill="white" stroke="#2d7d63" stroke-width="2"/>
+<text x="1105" y="437" font-size="21" font-weight="700" fill="#2d7d63">BRANCH PREDICTION</text>
+<text x="1105" y="480" font-size="17">predict direction + target early</text>
+<text x="1105" y="511" font-size="17">2-bit FSM resists one anomaly</text>
+<text x="1105" y="542" font-size="17">mispredict → flush / recover</text>
+<text x="1105" y="573" font-size="17">deeper pipeline → larger penalty</text>
+
+<rect x="40" y="640" width="480" height="210" rx="14" fill="white" stroke="#7656a5" stroke-width="2"/>
+<text x="65" y="682" font-size="21" font-weight="700" fill="#7656a5">OUT-OF-ORDER</text>
+<text x="65" y="725" font-size="17">skip blocked work, issue ready work</text>
+<text x="65" y="756" font-size="17">scoreboard tracks dependencies</text>
+<text x="65" y="787" font-size="17">RAW must wait</text>
+<text x="65" y="818" font-size="17">WAR / WAW can be renamed</text>
+
+<rect x="560" y="640" width="480" height="210" rx="14" fill="white" stroke="#b15d45" stroke-width="2"/>
+<text x="585" y="682" font-size="21" font-weight="700" fill="#b15d45">REGISTER RENAMING</text>
+<text x="585" y="725" font-size="17">architectural name → physical register</text>
+<text x="585" y="756" font-size="17">hidden registers remove false conflicts</text>
+<text x="585" y="787" font-size="17">results may execute out of order</text>
+<text x="585" y="818" font-size="17">commit restores architectural ordering</text>
+
+<rect x="1080" y="640" width="480" height="210" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="1105" y="682" font-size="21" font-weight="700" fill="#365f91">SPECULATION</text>
+<text x="1105" y="725" font-size="17">move useful work before certainty</text>
+<text x="1105" y="756" font-size="17">temporary state / poison mechanisms</text>
+<text x="1105" y="787" font-size="17">do not expose irreversible effects early</text>
+<text x="1105" y="818" font-size="17">wrong path → discard safely</text>
+
+<rect x="40" y="890" width="1520" height="150" rx="14" fill="#e8eef5" stroke="#9aa9ba"/>
+<text x="65" y="935" font-size="21" font-weight="700">DESIGN TRADE-OFF</text>
+<text x="65" y="973" font-size="18">fewer cycles • shorter cycle • more overlap</text>
+<text x="65" y="1005" font-size="18">versus hardware cost • power • complexity • recovery overhead • compatibility</text>
+</g>
+</svg>
