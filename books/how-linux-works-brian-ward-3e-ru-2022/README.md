@@ -58,3 +58,4 @@ Canonical readiness command:
 - [Глава 8 — Процессы и использование ресурсов](notes/chapters/chapter-08-processes-and-resources/README.md) — RAG-only, PDF/печатные с. 244–269.
 - [Глава 9 — Сеть и ее конфигурация](notes/chapters/chapter-09-networking-and-configuration/README.md) — RAG-only, PDF/печатные с. 270–319.
 - [Глава 10 — Сетевые приложения и службы](notes/chapters/chapter-10-network-applications-and-services/README.md) — RAG-only, PDF/печатные с. 320–343.
+- [Глава 11 — Сценарии оболочки](notes/chapters/chapter-11-shell-scripts/README.md) — RAG-only, PDF/печатные с. 344–367.
