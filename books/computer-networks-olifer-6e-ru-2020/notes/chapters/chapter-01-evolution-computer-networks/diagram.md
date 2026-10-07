@@ -37,7 +37,7 @@ flowchart TD
     X --> Y
     Y --> Z[Дальнейшее изменение сетевых технологий и архитектуры]
 
-    G -.-> AA[PDF page 36: RAG gap]
+    P -.-> AA[PDF page 36: RAG gap]
     AA -.-> Q
 ```
 
