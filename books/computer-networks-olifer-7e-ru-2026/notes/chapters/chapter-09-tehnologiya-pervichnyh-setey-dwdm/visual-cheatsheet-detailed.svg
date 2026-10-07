@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1450" viewBox="0 0 1800 1450">
+<rect width="1800" height="1450" fill="#f8fafb"/>
+<text x="55" y="58" font-family="Arial,DejaVu Sans,sans-serif" font-size="36" font-weight="700" fill="#173246">Глава 9 · Технология первичных сетей DWDM</text>
+<text x="55" y="94" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#536b7d">Олифер, 7-е изд. · RAG p0268:c01–p0281:c01 · PDF 268–281 · printed 267–280</text>
+
+<rect x="55" y="135" width="820" height="300" rx="18" fill="#eaf0f5" stroke="#b9cbd8"/>
+<text x="82" y="180" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#234b64">1 · DWDM = many spectral channels in one fiber</text>
+<text x="82" y="223" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">Each modulated optical channel occupies a finite frequency spectrum</text>
+<text x="82" y="261" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">“Wavelength” refers to the central wavelength of that spectral channel</text>
+<text x="82" y="299" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">Multiplexing is a form of FDM implemented in optical domain</text>
+<text x="82" y="337" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">Dispersion · interference · diffraction · reflection enable optical devices</text>
+<text x="82" y="375" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#5d7381">These physical effects can be either impairments or useful mechanisms depending on design</text>
+
+<rect x="925" y="135" width="820" height="300" rx="18" fill="#eef4e8" stroke="#c3d4b8"/>
+<text x="952" y="180" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#365b31">2 · Frequency-grid engineering</text>
+<text x="952" y="223" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">CWDM → coarse spacing · DWDM → dense spacing</text>
+<text x="952" y="261" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">Fixed grid → equal slots around defined center frequencies</text>
+<text x="952" y="299" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">Flexible grid → slot widths vary by required bandwidth</text>
+<text x="952" y="337" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">Narrow spacing improves spectral efficiency but increases filtering/modulation requirements</text>
+<text x="952" y="375" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#65775e">Exact grid numbers remain source/standard-revision snapshots</text>
+
+<rect x="55" y="480" width="820" height="305" rx="18" fill="#f8efe2" stroke="#ddc9aa"/>
+<text x="82" y="525" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#78532e">3 · Terminal line components</text>
+<text x="82" y="568" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">Transponder → client wavelength ↔ assigned DWDM wavelength via O-E-O</text>
+<text x="82" y="606" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">Optical M/D → combine/split coloured channels into/from colourless composite</text>
+<text x="82" y="644" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">Thin-film filters → simple wavelength selection, cumulative attenuation limits scaling</text>
+<text x="82" y="682" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">Diffraction/waveguide structures → source presents better scaling to many wavelengths</text>
+<text x="82" y="720" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">OADM → fixed wavelength add/drop without changing remaining channel set</text>
+<text x="82" y="758" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#806d55">Same wavelength cannot collide on one composite output</text>
+
+<rect x="925" y="480" width="820" height="305" rx="18" fill="#eee8f6" stroke="#c9bad9"/>
+<text x="952" y="525" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#593f73">4 · Reach: power and dispersion</text>
+<text x="952" y="568" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">EDFA → erbium-doped optical amplification around source-described band</text>
+<text x="952" y="606" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">Raman → distributed optical amplification example with broader source-described band</text>
+<text x="952" y="644" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">Amplifier boosts optical signal; regenerator restores digital waveform/timing</text>
+<text x="952" y="682" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">Chromatic and polarization-mode dispersion can constrain reach/rate</text>
+<text x="952" y="720" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">Compensation may be fiber/device based or receiver-DSP based</text>
+<text x="952" y="758" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#756486">Exact power/gain/dispersion budget requires system-specific data</text>
+
+<rect x="55" y="830" width="820" height="300" rx="18" fill="#e5edf7" stroke="#bdcce0"/>
+<text x="82" y="875" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#2b4e78">5 · Mesh and optical cross-connect</text>
+<text x="82" y="918" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">OXC → arbitrary spectral-channel switching among network directions</text>
+<text x="82" y="956" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">Optoelectronic OXC → intermediate electrical processing</text>
+<text x="82" y="994" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">Photonic OXC / lambda router → fully optical switching path</text>
+<text x="82" y="1032" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">Number of line “directions” describes immediate optical adjacency</text>
+<text x="82" y="1070" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">Mesh improves path flexibility and fault-tolerance options</text>
+
+<rect x="925" y="830" width="820" height="300" rx="18" fill="#f4ece7" stroke="#dbc6b9"/>
+<text x="952" y="875" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#714b38">6 · ROADM + WSS</text>
+<text x="952" y="918" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">ROADM → remotely modify optical switching state</text>
+<text x="952" y="956" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">WSS → choose required wavelength from each ingress composite and combine output</text>
+<text x="952" y="994" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Power splitter distributes incoming composites to WSS blocks</text>
+<text x="952" y="1032" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">MEMS mirrors are one source-described physical switching implementation</text>
+<text x="952" y="1070" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Reconfigurable ≠ automatically colorless and directionless</text>
+
+<rect x="55" y="1175" width="1690" height="180" rx="16" fill="#fff3dd" stroke="#dfca9b"/>
+<text x="82" y="1218" font-family="Arial,DejaVu Sans,sans-serif" font-size="24" font-weight="700" fill="#785f2d">Operational reading rule</text>
+<text x="82" y="1258" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6c5c3a">Trace wavelength continuity and optical resource state first: transponder → grid slot → add/drop → amplifier/dispersion → WSS/ROADM → destination.</text>
+<text x="82" y="1295" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6c5c3a">Do not confuse optical amplifier with regenerator; do not assume every ROADM is colorless/directionless.</text>
+<text x="82" y="1332" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#6c5c3a">No executable CLI is supplied by the chapter.</text>
+<text x="55" y="1415" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#607789">Questions to Part II start at p0282:c01 · reading state unchanged · source findings recorded separately.</text>
+</svg>

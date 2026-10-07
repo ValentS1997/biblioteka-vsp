@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="960" viewBox="0 0 1500 960">
+<rect width="1500" height="960" fill="#f8fafb"/>
+<text x="50" y="58" font-family="Arial,DejaVu Sans,sans-serif" font-size="34" font-weight="700" fill="#183247">Глава 9 · Технология первичных сетей DWDM</text>
+<text x="50" y="92" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#52697a">RAG p0268:c01–p0281:c01 · PDF 268–281 · printed 267–280 · 15 chunks</text>
+
+<rect x="55" y="135" width="420" height="215" rx="18" fill="#e8eff5" stroke="#b9cbd8"/>
+<text x="83" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#234b64">1 · Spectral resource</text>
+<text x="83" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">many channels in one fiber</text>
+<text x="83" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">fixed / flexible frequency grid</text>
+<text x="83" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">spectral channel ≈ “wavelength”</text>
+<text x="83" y="325" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#5a7180">DWDM is optical FDM</text>
+
+<rect x="540" y="135" width="420" height="215" rx="18" fill="#eef4e8" stroke="#c4d4b9"/>
+<text x="568" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#365b31">2 · Line components</text>
+<text x="568" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">transponder · mux/demux</text>
+<text x="568" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">OADM · EDFA / Raman</text>
+<text x="568" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">dispersion compensation</text>
+<text x="568" y="325" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#63755d">amplification ≠ regeneration</text>
+
+<rect x="1025" y="135" width="420" height="215" rx="18" fill="#f8efe2" stroke="#ddc9aa"/>
+<text x="1053" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#78532e">3 · Optical switching</text>
+<text x="1053" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">OXC → mesh</text>
+<text x="1053" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">ROADM → remote reconfiguration</text>
+<text x="1053" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">WSS → select + route wavelengths</text>
+
+<path d="M475 242 H540 M960 242 H1025" stroke="#718798" stroke-width="4" marker-end="url(#a)"/>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#718798"/></marker></defs>
+
+<rect x="95" y="420" width="620" height="215" rx="18" fill="#eee8f6" stroke="#c9bad9"/>
+<text x="125" y="465" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#593f73">Optical-domain rule</text>
+<text x="125" y="510" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">mux / demux / amplify / switch light directly</text>
+<text x="125" y="550" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">transponder itself may perform O-E-O</text>
+<text x="125" y="590" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#756486">avoid the false “DWDM never becomes electrical” rule</text>
+
+<rect x="785" y="420" width="620" height="215" rx="18" fill="#e5edf7" stroke="#bdcce0"/>
+<text x="815" y="465" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#2b4e78">ROADM flexibility</text>
+<text x="815" y="510" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">reconfigurable → remote table change</text>
+<text x="815" y="550" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">colorless → any wavelength on client port</text>
+<text x="815" y="590" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#5c7290">directionless → any line direction; not every ROADM has both</text>
+
+<rect x="180" y="700" width="1140" height="150" rx="18" fill="#fff3dd" stroke="#dfca9b"/>
+<text x="210" y="745" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#785f2d">Troubleshooting path</text>
+<text x="210" y="790" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6c5c3a">client/transponder → slot/wavelength → mux/OADM → power/dispersion → ROADM/WSS → destination</text>
+<text x="210" y="827" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#6c5c3a">No executable CLI in chapter; optical thresholds are platform-specific.</text>
+
+<text x="50" y="920" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#63798a">Questions to Part II start at p0282:c01 and are outside chapter-9 boundary.</text>
+</svg>
