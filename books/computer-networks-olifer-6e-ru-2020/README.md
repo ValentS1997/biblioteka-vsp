@@ -61,3 +61,4 @@ Canonical readiness command:
 
 - [Глава 1. Эволюция компьютерных сетей](notes/chapters/chapter-01-evolution-computer-networks/) — `RAG_GROUNDED`.
 - [Глава 2](notes/chapters/chapter-02-general-network-principles/) — `RAG_GROUNDED`.
+- [Глава 3. Коммутация каналов и пакетов](notes/chapters/chapter-03-circuit-and-packet-switching/) — `RAG_GROUNDED`.
