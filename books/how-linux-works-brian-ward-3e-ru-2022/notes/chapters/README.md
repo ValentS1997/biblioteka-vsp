@@ -16,3 +16,4 @@
 - [Глава 14 — Краткий обзор рабочего стола Linux. Вывод на печать](chapter-14-linux-desktop-and-printing/README.md) — PDF/печатные страницы 402–418, RAG chunks p0402:c01–p0418:c01.
 - [Глава 15 — Инструменты разработки](chapter-15-development-tools/README.md) — PDF/печатные страницы 419–441, RAG chunks p0419:c01–p0441:c01.
 - [Глава 16 — Компиляция программ из исходного кода на языке C](chapter-16-building-c-programs-from-source/README.md) — PDF/печатные страницы 442–457, RAG chunks p0442:c01–p0457:c01.
+- [Глава 17 — Виртуализация](chapter-17-virtualization/README.md) — PDF/печатные страницы 458–477, RAG chunks p0458:c01–p0477:c01.

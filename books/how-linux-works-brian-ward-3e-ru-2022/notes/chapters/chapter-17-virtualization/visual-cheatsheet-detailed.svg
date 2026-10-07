@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1310" role="img" aria-labelledby="title desc">
+<title id="title">Глава 17 — Подробная карта виртуализации</title>
+<desc id="desc">Detailed map of VMs, hypervisors, containers, Docker images, namespaces, overlay filesystems, networking, orchestration, risks and Python venv.</desc>
+<rect x="0" y="0" width="1800" height="1310" rx="16" fill="#f1f6fb"/>
+<rect x="0" y="0" width="1800" height="132" rx="16" fill="#172a42"/>
+<text x="52" y="57" font-family="DejaVu Sans,Arial,sans-serif" font-size="36" font-weight="700" fill="#ffffff">ГЛАВА 17 · ПОЛНАЯ КАРТА ВИРТУАЛИЗАЦИИ</text>
+<text x="52" y="100" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#d5e8fb">VM • hypervisors • containers • namespaces • overlay • network • orchestration • venv</text>
+
+<rect x="43" y="163" width="548" height="247" rx="16" fill="#ffffff" stroke="#286e9d" stroke-width="2"/>
+<rect x="43" y="163" width="548" height="9" rx="16" fill="#286e9d"/>
+<text x="66" y="211" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#286e9d">01 · ISOLATION BOUNDARY</text>
+<text x="66" y="261" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">Full OS → virtual machine</text>
+<text x="66" y="295" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">Processes/shared kernel → container</text>
+<text x="66" y="329" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">App dependencies → runtime env</text>
+<text x="66" y="363" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">Different layers solve different conflicts</text>
+
+<rect x="626" y="163" width="548" height="247" rx="16" fill="#ffffff" stroke="#247d61" stroke-width="2"/>
+<rect x="626" y="163" width="548" height="9" rx="16" fill="#247d61"/>
+<text x="649" y="211" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#247d61">02 · HYPERVISORS</text>
+<text x="649" y="261" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">Type 2 runs in host OS</text>
+<text x="649" y="295" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">Type 1 is dedicated to VMs</text>
+<text x="649" y="329" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">Host manages hypervisor</text>
+<text x="649" y="363" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">Guest runs its own OS/kernel</text>
+
+<rect x="1209" y="163" width="548" height="247" rx="16" fill="#ffffff" stroke="#7256a3" stroke-width="2"/>
+<rect x="1209" y="163" width="548" height="9" rx="16" fill="#7256a3"/>
+<text x="1232" y="211" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#7256a3">03 · VIRTUAL HARDWARE</text>
+<text x="1232" y="261" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">Virtual devices expose normal interfaces</text>
+<text x="1232" y="295" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">Paravirtualization shortcuts emulation</text>
+<text x="1232" y="329" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">VT-x / AMD-V assist CPU virtualization</text>
+<text x="1232" y="363" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">Guest still sees devices as ordinary devices</text>
+
+<rect x="43" y="445" width="548" height="247" rx="16" fill="#ffffff" stroke="#286e9d" stroke-width="2"/>
+<rect x="43" y="445" width="548" height="9" rx="16" fill="#286e9d"/>
+<text x="66" y="493" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#286e9d">04 · CONTAINER PRIMITIVES</text>
+<text x="66" y="543" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">One underlying Linux kernel</text>
+<text x="66" y="577" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">cgroups constrain resources</text>
+<text x="66" y="611" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">PID/net namespaces isolate views</text>
+<text x="66" y="645" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">Devices/filesystem are separately scoped</text>
+
+<rect x="626" y="445" width="548" height="247" rx="16" fill="#ffffff" stroke="#247d61" stroke-width="2"/>
+<rect x="626" y="445" width="548" height="9" rx="16" fill="#247d61"/>
+<text x="649" y="493" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#247d61">05 · DOCKER IMAGE BUILD</text>
+<text x="649" y="543" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">FROM selects base image</text>
+<text x="649" y="577" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">RUN changes image during build</text>
+<text x="649" y="611" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">CMD defines runtime command</text>
+<text x="649" y="645" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">Specific tags reduce version drift</text>
+
+<rect x="1209" y="445" width="548" height="247" rx="16" fill="#ffffff" stroke="#7256a3" stroke-width="2"/>
+<rect x="1209" y="445" width="548" height="9" rx="16" fill="#7256a3"/>
+<text x="1232" y="493" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#7256a3">06 · PID / OVERLAY / NETWORK</text>
+<text x="1232" y="543" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">Container PID 1 is namespaced</text>
+<text x="1232" y="577" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">Overlay = lower + upper + work</text>
+<text x="1232" y="611" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">Bridge connects private container net</text>
+<text x="1232" y="645" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">NAT links it to external network</text>
+
+<rect x="43" y="727" width="548" height="247" rx="16" fill="#ffffff" stroke="#286e9d" stroke-width="2"/>
+<rect x="43" y="727" width="548" height="9" rx="16" fill="#286e9d"/>
+<text x="66" y="775" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#286e9d">07 · LIFECYCLE / CLEANUP</text>
+<text x="66" y="825" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">ps vs ps -a: running vs all</text>
+<text x="66" y="859" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">Old containers/images accumulate</text>
+<text x="66" y="893" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">rm / rmi perform cleanup</text>
+<text x="66" y="927" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">Persistence wording conflicts in source</text>
+
+<rect x="626" y="727" width="548" height="247" rx="16" fill="#ffffff" stroke="#247d61" stroke-width="2"/>
+<rect x="626" y="727" width="548" height="9" rx="16" fill="#247d61"/>
+<text x="649" y="775" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#247d61">08 · LXC / KUBERNETES</text>
+<text x="649" y="825" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">LXC exposes more manual control</text>
+<text x="649" y="859" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">LXD adds management + REST API</text>
+<text x="649" y="893" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">Kubernetes manages many containers</text>
+<text x="649" y="927" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">Scheduling/network/update work remains</text>
+
+<rect x="1209" y="727" width="548" height="247" rx="16" fill="#ffffff" stroke="#b45d42" stroke-width="2"/>
+<rect x="1209" y="727" width="548" height="9" rx="16" fill="#b45d42"/>
+<text x="1232" y="775" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#b45d42">09 · OPERATIONAL RISKS</text>
+<text x="1232" y="825" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">Host CPU/storage remain finite</text>
+<text x="1232" y="859" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">Plan persistent data + logs</text>
+<text x="1232" y="893" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">Version tags affect reproducibility</text>
+<text x="1232" y="927" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#223a50">Base-image trust is a security boundary</text>
+
+<rect x="43" y="1025" width="1714" height="176" rx="16" fill="#ffece7" stroke="#c77357" stroke-width="2"/>
+<text x="70" y="1067" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" font-weight="700" fill="#983f2d">RUNTIME VIRTUALIZATION / ACCEPTANCE</text>
+<text x="70" y="1107" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#223a50">Python venv isolates application packages inside one system; it does not create a VM or container.</text>
+<text x="70" y="1145" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#223a50">Verify image/container inventory and inspect PID/filesystem views before interpreting isolation behavior.</text>
+<text x="70" y="1182" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#223a50">Source mismatches: Docker/Podman replacement wording, container persistence, test-env vs test-venv → see source-findings.md.</text>
+<text x="47" y="1277" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#55687d">Источник: Уорд · глава 17 · PDF/печатные с. 458–477 · RAG p0458:c01–p0477:c01 · source-grounded</text>
+</svg>

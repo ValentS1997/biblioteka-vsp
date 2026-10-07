@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Глава 17 — Виртуализация</title>
+<desc id="desc">Compact map of virtual machines, containers, Docker internals, orchestration and runtime environments.</desc>
+<rect x="0" y="0" width="1600" height="900" rx="16" fill="#f2f6fb"/>
+<rect x="0" y="0" width="1600" height="132" fill="#182b43"/>
+<text x="48" y="57" font-family="DejaVu Sans,Arial,sans-serif" font-size="34" font-weight="700" fill="#ffffff">ГЛАВА 17 · ВИРТУАЛИЗАЦИЯ</text>
+<text x="48" y="100" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#d4e7fb">VM • containers • namespaces • overlay • orchestration • venv</text>
+
+<rect x="45" y="160" width="486" height="242" rx="16" fill="#ffffff" stroke="#286f9d" stroke-width="2"/>
+<rect x="45" y="160" width="486" height="9" rx="5" fill="#286f9d"/>
+<text x="68" y="208" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="700" fill="#286f9d">01 · VIRTUAL MACHINES</text>
+<text x="68" y="259" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#22394f">Full guest OS + kernel</text>
+<text x="68" y="294" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#22394f">Type 1 / Type 2 hypervisors</text>
+<text x="68" y="329" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#22394f">Virtual / paravirtual devices</text>
+<text x="68" y="364" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#22394f">Isolation costs a full OS</text>
+
+<rect x="555" y="160" width="486" height="242" rx="16" fill="#ffffff" stroke="#247d61" stroke-width="2"/>
+<rect x="555" y="160" width="486" height="9" rx="5" fill="#247d61"/>
+<text x="578" y="208" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="700" fill="#247d61">02 · CONTAINERS</text>
+<text x="578" y="259" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#22394f">One host Linux kernel</text>
+<text x="578" y="294" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#22394f">cgroups + PID/net namespaces</text>
+<text x="578" y="329" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#22394f">Filesystem/device isolation</text>
+<text x="578" y="364" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#22394f">Docker / Podman / LXC</text>
+
+<rect x="1065" y="160" width="486" height="242" rx="16" fill="#ffffff" stroke="#7256a3" stroke-width="2"/>
+<rect x="1065" y="160" width="486" height="9" rx="5" fill="#7256a3"/>
+<text x="1088" y="208" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="700" fill="#7256a3">03 · DOCKER MODEL</text>
+<text x="1088" y="259" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#22394f">Image ≠ running container</text>
+<text x="1088" y="294" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#22394f">FROM → RUN → CMD</text>
+<text x="1088" y="329" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#22394f">Overlay layers store changes</text>
+<text x="1088" y="364" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#22394f">Bridge + netns + NAT</text>
+
+<rect x="45" y="438" width="486" height="242" rx="16" fill="#ffffff" stroke="#286f9d" stroke-width="2"/>
+<rect x="45" y="438" width="486" height="9" rx="5" fill="#286f9d"/>
+<text x="68" y="486" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="700" fill="#286f9d">04 · LIFECYCLE</text>
+<text x="68" y="537" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#22394f">docker ps / ps -a</text>
+<text x="68" y="572" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#22394f">docker images inventory</text>
+<text x="68" y="607" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#22394f">rm / rmi cleanup</text>
+<text x="68" y="642" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#22394f">Pin versions; watch resources</text>
+
+<rect x="555" y="438" width="486" height="242" rx="16" fill="#ffffff" stroke="#247d61" stroke-width="2"/>
+<rect x="555" y="438" width="486" height="9" rx="5" fill="#247d61"/>
+<text x="578" y="486" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="700" fill="#247d61">05 · ORCHESTRATION</text>
+<text x="578" y="537" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#22394f">LXC = lower-level flexibility</text>
+<text x="578" y="572" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#22394f">LXD adds management</text>
+<text x="578" y="607" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#22394f">Kubernetes coordinates many</text>
+<text x="578" y="642" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#22394f">run / monitor / restart / network</text>
+
+<rect x="1065" y="438" width="486" height="242" rx="16" fill="#ffffff" stroke="#b45d42" stroke-width="2"/>
+<rect x="1065" y="438" width="486" height="9" rx="5" fill="#b45d42"/>
+<text x="1088" y="486" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="700" fill="#b45d42">06 · RUNTIME ENV</text>
+<text x="1088" y="537" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#22394f">Python venv isolates packages</text>
+<text x="1088" y="572" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#22394f">VIRTUAL_ENV marks environment</text>
+<text x="1088" y="607" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#22394f">deactivate exits environment</text>
+<text x="1088" y="642" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#22394f">Source path mismatch recorded</text>
+
+<rect x="45" y="733" width="1510" height="104" rx="16" fill="#ffeae4" stroke="#bb6449" stroke-width="2"/>
+<text x="70" y="774" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="700" fill="#963e2d">OPERATOR RULE: choose the isolation boundary first; then inspect lifecycle, data, resources, versions and trust.</text>
+<text x="70" y="811" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#22394f">Current Docker/Podman/Kubernetes behavior beyond the 2022 source → [Needs confirmation].</text>
+<text x="48" y="878" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#56697e">Уорд · глава 17 · PDF/печатные с. 458–477 · RAG p0458:c01–p0477:c01 · source-grounded</text>
+</svg>
