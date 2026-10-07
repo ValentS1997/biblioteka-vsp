@@ -24,14 +24,15 @@ source:
   expected_sha256: "16f4b02985f65c602c6268620878cbacd692a61fd5898ca811b3d1a332e3f84d"
   expected_size_bytes: 165833952
   source_pdf_pages: 1106
-  text_layer: "[Needs confirmation]"
-  repository_access: public
+  text_layer: "unclassified_extractable_pdf_text"
+  repository_access: private
   storage: "Git LFS"
-  upload_status: "PENDING_GIT_LFS_UPLOAD"
+  upload_status: "VERIFIED_GIT_LFS_AVAILABLE"
+  upload_commit: "f41936d911053c69637332dd2c4b967397f413bd"
   lawful_access_attested_by_user: "[Needs confirmation]"
   ownership_category: "[Needs confirmation]"
   physical_copy: true
-  license: "[Needs confirmation]"
+  license: "all rights reserved"
   redistribution_permission: "[Needs confirmation]"
 
 rag:
@@ -40,7 +41,11 @@ rag:
   manifest: "rag/manifest.yaml"
   text: "rag/text.md"
   chunks: "rag/chunks.jsonl"
-  status: "PENDING_SOURCE_INGEST"
+  status: "READY_WITH_KNOWN_LIMITATIONS"
+  generated_commit: "ba927978ad53ab1281ac8ab650b59dc99eba763c"
+  workflow_run_id: 37634280739
+  acceptance: "rag/acceptance.yaml"
+  acceptance_status: "ACCEPTED"
 
 reading:
   progress: "reading/progress.yaml"

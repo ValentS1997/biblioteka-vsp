@@ -19,9 +19,9 @@ Book ID: `computer-networks-olifer-7e-ru-2026`
 - Expected size: `165833952 bytes`
 - PDF pages: `1106`
 - Storage: Git LFS
-- Upload status: `PENDING_GIT_LFS_UPLOAD`
+- Upload status: `VERIFIED_GIT_LFS_AVAILABLE`
 
-The attached PDF is the exact source candidate for this book. It is not considered canonical-ready until the real Git LFS object is available from GitHub checkout and the checksum matches `source/SHA256`.
+GitHub Actions successfully checked out the real Git LFS object. The canonical PDF checksum matches `source/SHA256` and the registered expected SHA-256.
 
 ## Reading state
 
@@ -29,4 +29,15 @@ Reading status is `planned`. A reading start date has not been explicitly confir
 
 ## RAG / chapter analysis
 
-Full-book RAG and strict ingestion acceptance are pending the canonical Git LFS source. Chapter analysis remains blocked until BOOK-READINESS returns `READY`.
+Full-book RAG is built and strict ingestion acceptance is `ACCEPTED`.
+
+Verified generation:
+
+- source units: `1106` PDF pages;
+- blank source units after deterministic boilerplate suppression: `1, 553, 889, 1106`;
+- addressable chunks: `1139`;
+- normalization policy: `text-normalization-v2`;
+- corpus generation: `08d350bc22d24a1b1a61fe5d295baa093c3f9fbc97cf9ae0a5904d81cd5f3daf`;
+- index generation: `1bb819e9024819bd8ca55f6d77246ad398c7efa0ed33593fafb1cc03fba161e3`.
+
+Chapter-analysis readiness is pending the final repository readiness check on this branch.
