@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="970" viewBox="0 0 1320 970" role="img" aria-label="Глава 4 SQL. Компактная визуальная шпаргалка">
+<rect width="1320" height="970" fill="#EEF4F8"/>
+<text x="30" y="52" font-size="29" fill="#063957" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">ГЛАВА 4 · ОСНОВЫ РАБОТЫ С ЗАПРОСАМИ</text>
+<text x="32" y="82" font-size="16" fill="#506D81" font-family="DejaVu Sans, Arial, sans-serif" >Элис Жао · PDF 70–104 · RAG p0070:c01–p0104:c01</text>
+<rect x="27" y="110" width="404" height="224" rx="17" fill="#FFFFFF" stroke="#B9CDDE" stroke-width="1.5"/>
+<text x="45" y="147" font-size="20" fill="#0D4765" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">01 / SELECT · FROM</text>
+<text x="45" y="183" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >SELECT: поля, *, выражения, функции</text>
+<text x="45" y="213" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >AS: временное имя результата</text>
+<text x="45" y="243" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >FROM: источник таблиц/представлений</text>
+<text x="45" y="273" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >JOIN: связь через ON</text>
+<text x="45" y="303" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >CTE / подзапрос: сложный источник</text>
+<rect x="458" y="110" width="404" height="224" rx="17" fill="#FFFFFF" stroke="#B9CDDE" stroke-width="1.5"/>
+<text x="476" y="147" font-size="20" fill="#0D4765" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">02 / WHERE · DISTINCT</text>
+<text x="476" y="183" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >WHERE фильтрует строки</text>
+<text x="476" y="213" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >AND / IS NULL / IN (SELECT...)</text>
+<text x="476" y="243" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >DISTINCT устраняет дубли</text>
+<text x="476" y="273" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >COUNT(DISTINCT...) считает значения</text>
+<text x="476" y="303" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >Не путать строки и сущности</text>
+<rect x="889" y="110" width="404" height="224" rx="17" fill="#FFFFFF" stroke="#B9CDDE" stroke-width="1.5"/>
+<text x="907" y="147" font-size="20" fill="#0D4765" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">03 / GROUP BY · HAVING</text>
+<text x="907" y="183" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >GROUP BY: группы строк</text>
+<text x="907" y="213" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >COUNT(*): количество строк в группе</text>
+<text x="907" y="243" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >HAVING: фильтр агрегатов</text>
+<text x="907" y="273" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >WHERE — до группировки</text>
+<text x="907" y="303" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >COUNT(*) не всегда = уникальные ID</text>
+<rect x="27" y="358" width="620" height="254" rx="17" fill="#F9FCFF" stroke="#B9CDDE" stroke-width="1.5"/>
+<text x="45" y="395" font-size="20" fill="#0D4765" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">04 / ПОДЗАПРОСЫ</text>
+<text x="45" y="431" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >SELECT: одно значение (0–1 строка, 1 столбец)</text>
+<text x="45" y="461" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >FROM: производная таблица с алиасом</text>
+<text x="45" y="491" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >WITH: именованная таблица / CTE</text>
+<text x="45" y="521" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >WHERE: IN-подзапрос / альтернатива JOIN</text>
+<text x="45" y="551" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >Correlated query: возможная нагрузка</text>
+<text x="45" y="581" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >Ускорение JOIN: [Needs confirmation]</text>
+<rect x="674" y="358" width="619" height="254" rx="17" fill="#F9FCFF" stroke="#B9CDDE" stroke-width="1.5"/>
+<text x="692" y="395" font-size="20" fill="#0D4765" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">05 / ORDER BY И LIMIT</text>
+<text x="692" y="431" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >ORDER BY: порядок результата</text>
+<text x="692" y="461" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >ASC / DESC; несколько полей / позиций</text>
+<text x="692" y="491" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >Без ORDER BY порядок не гарантирован</text>
+<text x="692" y="521" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >LIMIT 3: MySQL, PostgreSQL, SQLite</text>
+<text x="692" y="551" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >Oracle: ROWNUM &lt;= 3</text>
+<text x="692" y="581" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >SQL Server: TOP 3</text>
+<rect x="27" y="638" width="1266" height="169" rx="17" fill="#FFFFFF" stroke="#B9CDDE" stroke-width="1.5"/>
+<text x="45" y="675" font-size="20" fill="#0D4765" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">06 / READ-ONLY ≠ ZERO WORKLOAD</text>
+<text x="45" y="711" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >SELECT не меняет данные, но JOIN/COUNT/подзапросы могут быть дорогими.</text>
+<text x="45" y="741" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >Проверить таблицы, права, целевую СУБД и нагрузку: [Needs confirmation].</text>
+<text x="45" y="771" font-size="15" fill="#25435A" font-family="DejaVu Sans, Arial, sans-serif" >В тексте есть расхождения waterfall/waterfalls и COALESCE/LEFT JOIN.</text>
+<rect x="27" y="834" width="1266" height="105" rx="13" fill="#D8EAF3"/>
+<text x="48" y="868" font-size="15" fill="#1B4B62" font-family="DejaVu Sans, Arial, sans-serif" >Source findings: MAX(stop) как «число остановок» также не обоснован условиями RAG.</text>
+<text x="48" y="895" font-size="15" fill="#1B4B62" font-family="DejaVu Sans, Arial, sans-serif" >Код не выполнялся · Никаких изменений БД · source/RAG не редактировались.</text>
+<text x="48" y="922" font-size="14" fill="#315E74" font-family="DejaVu Sans, Arial, sans-serif" >Контракт: BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.7</text>
+</svg>
