@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1450" height="1120" viewBox="0 0 1450 1120">
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+    <style>
+      .title{font:700 34px sans-serif;fill:#0f172a}.h{font:700 18px sans-serif;fill:#0f172a}
+      .t{font:14px sans-serif;fill:#1e293b}.s{font:12px sans-serif;fill:#475569}
+      .b{fill:#f8fafc;stroke:#475569;stroke-width:1.8;rx:13}.blue{fill:#dbeafe;stroke:#1d4ed8;stroke-width:1.8;rx:13}
+      .green{fill:#dcfce7;stroke:#15803d;stroke-width:1.8;rx:13}.amber{fill:#fef3c7;stroke:#a16207;stroke-width:1.8;rx:13}
+      .red{fill:#fee2e2;stroke:#b91c1c;stroke-width:1.8;rx:13}.ln{stroke:#475569;stroke-width:1.7;marker-end:url(#a)}
+    </style>
+  </defs>
+  <rect width="1450" height="1120" fill="#fff"/>
+  <text x="45" y="55" class="title">Глава 4 — подробная карта файловой системы</text>
+  <text x="45" y="82" class="s">Источник: RAG · PDF 301–379 · boundary verified</text>
+
+  <rect x="535" y="115" width="380" height="90" class="blue"/>
+  <text x="725" y="150" text-anchor="middle" class="h">Pathname / file descriptor</text>
+  <text x="725" y="178" text-anchor="middle" class="t">open → read/write/seek → close</text>
+
+  <rect x="65" y="270" width="360" height="185" class="b"/>
+  <text x="245" y="305" text-anchor="middle" class="h">Directories and links</text>
+  <text x="90" y="340" class="t">absolute / relative paths</text>
+  <text x="90" y="367" class="t">directory entry resolves name → metadata</text>
+  <text x="90" y="394" class="t">hard link → same i-node</text>
+  <text x="90" y="421" class="t">symbolic link → pathname in separate object</text>
+
+  <rect x="545" y="270" width="360" height="185" class="green"/>
+  <text x="725" y="305" text-anchor="middle" class="h">File block mapping</text>
+  <text x="570" y="340" class="t">contiguous: fast, growth constrained</text>
+  <text x="570" y="367" class="t">linked: easy growth, slow random access</text>
+  <text x="570" y="394" class="t">FAT: chain in memory, table scales with disk</text>
+  <text x="570" y="421" class="t">i-node: indexed metadata for active files</text>
+
+  <rect x="1025" y="270" width="360" height="185" class="amber"/>
+  <text x="1205" y="305" text-anchor="middle" class="h">VFS layer</text>
+  <text x="1050" y="340" class="t">upper: standard file operations</text>
+  <text x="1050" y="367" class="t">lower: filesystem-specific function vectors</text>
+  <text x="1050" y="394" class="t">superblock · v-node · directory objects</text>
+  <text x="1050" y="421" class="s">local disks and remote FS share one interface</text>
+
+  <line x1="625" y1="205" x2="330" y2="270" class="ln"/>
+  <line x1="725" y1="205" x2="725" y2="270" class="ln"/>
+  <line x1="825" y1="205" x2="1120" y2="270" class="ln"/>
+
+  <rect x="45" y="540" width="265" height="205" class="b"/>
+  <text x="177" y="575" text-anchor="middle" class="h">Free space</text>
+  <text x="70" y="610" class="t">bitmap: one bit per block</text>
+  <text x="70" y="637" class="t">free list: addresses / runs</text>
+  <text x="70" y="664" class="t">block size trades space vs I/O</text>
+  <text x="70" y="691" class="s">quotas limit blocks and file counts</text>
+
+  <rect x="335" y="540" width="300" height="205" class="red"/>
+  <text x="485" y="575" text-anchor="middle" class="h">Crash consistency</text>
+  <text x="360" y="610" class="t">journal intent before metadata action</text>
+  <text x="360" y="637" class="t">repair: lost blocks / duplicate free blocks</text>
+  <text x="360" y="664" class="t">duplicate data refs / bad link counts</text>
+  <text x="360" y="691" class="s">idempotent recovery actions are preferred</text>
+
+  <rect x="660" y="540" width="330" height="205" class="blue"/>
+  <text x="825" y="575" text-anchor="middle" class="h">Backup / restore</text>
+  <text x="685" y="610" class="t">physical: block-oriented, simple/fast</text>
+  <text x="685" y="637" class="t">logical: selective + incremental restore</text>
+  <text x="685" y="664" class="t">preserve links and sparse holes</text>
+  <text x="685" y="691" class="s">live changes require a stable snapshot-like view</text>
+
+  <rect x="1015" y="540" width="390" height="205" class="green"/>
+  <text x="1210" y="575" text-anchor="middle" class="h">Performance</text>
+  <text x="1040" y="610" class="t">block cache / exact LRU possible</text>
+  <text x="1040" y="637" class="t">dirty metadata needs durability policy</text>
+  <text x="1040" y="664" class="t">read-ahead only for sequential access</text>
+  <text x="1040" y="691" class="t">place related blocks nearby on rotating disks</text>
+
+  <line x1="310" y1="642" x2="335" y2="642" class="ln"/>
+  <line x1="635" y1="642" x2="660" y2="642" class="ln"/>
+  <line x1="990" y1="642" x2="1015" y2="642" class="ln"/>
+
+  <rect x="80" y="845" width="360" height="175" class="amber"/>
+  <text x="260" y="880" text-anchor="middle" class="h">Log-structured FS</text>
+  <text x="105" y="915" class="t">buffer small writes in memory</text>
+  <text x="105" y="942" class="t">append large segments to log</text>
+  <text x="105" y="969" class="s">cleaner reclaims obsolete segments</text>
+
+  <rect x="545" y="845" width="360" height="175" class="b"/>
+  <text x="725" y="880" text-anchor="middle" class="h">Examples</text>
+  <text x="570" y="915" class="t">MS-DOS/FAT: allocation table chains</text>
+  <text x="570" y="942" class="t">UNIX V7: directory entries + i-nodes</text>
+  <text x="570" y="969" class="t">ISO 9660 / optical: read-only-oriented layout</text>
+
+  <rect x="1010" y="845" width="360" height="175" class="red"/>
+  <text x="1190" y="880" text-anchor="middle" class="h">Media-specific boundary</text>
+  <text x="1035" y="915" class="t">rotating disk: seek/locality/fragmentation matter</text>
+  <text x="1035" y="942" class="t">SSD: no head movement</text>
+  <text x="1035" y="969" class="s">chapter: SSD defragmentation adds wear, no gain</text>
+
+  <line x1="485" y1="745" x2="260" y2="845" class="ln"/>
+  <line x1="825" y1="745" x2="725" y2="845" class="ln"/>
+  <line x1="1210" y1="745" x2="1190" y2="845" class="ln"/>
+
+  <text x="45" y="1070" class="s">Operational boundary: repair structure, restore data, and optimize performance are separate actions.</text>
+</svg>
