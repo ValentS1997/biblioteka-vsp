@@ -13,3 +13,4 @@ Canonical chapter-level learning and operational artifacts.
 | 7 | [Виртуализация и облако](chapter-07-virtualization-cloud/README.md) | RAG_GROUNDED | PDF pages 527–575 |
 | 8 | [Многопроцессорные системы](chapter-08-multiprocessor-systems/README.md) | RAG_GROUNDED | PDF pages 576–658 |
 | 9 | [Безопасность](chapter-09-security/README.md) | RAG_GROUNDED | PDF pages 659–783 |
+| 10 | [Изучение конкретных примеров: Unix, Linux и Android](chapter-10-unix-linux-android/README.md) | RAG_GROUNDED | PDF pages 784–930 |
