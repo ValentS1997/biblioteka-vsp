@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="840" viewBox="0 0 1500 840" role="img" aria-labelledby="title desc">
+<title id="title">Глава 6 — service enumeration</title>
+<desc id="desc">Компактная RAG-grounded схема RPC/RMI, SMB, SNMP, SMTP и web enumeration с defensive controls.</desc>
+<rect width="1500" height="840" fill="#eef5f8"/>
+<rect width="1500" height="170" fill="#173349"/>
+<text x="42" y="74" font-family="DejaVu Sans,Arial,sans-serif" font-size="41" fill="#fff" font-weight="700">Глава 6 · Перечисление сервисов</text>
+<text x="42" y="122" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" fill="#d4e9f0" font-weight="400">PDF 140–168 · 32 RAG chunks · application-level evidence</text>
+<rect x="35" y="205" width="340" height="330" rx="16" fill="#fff" stroke="#cbdde5" stroke-width="2"/>
+<text x="60" y="250" font-family="DejaVu Sans,Arial,sans-serif" font-size="29" fill="#267587" font-weight="700">RPC / RMI</text>
+<text x="60" y="300" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#28465a" font-weight="400">Programs / registry</text>
+<text x="60" y="342" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#28465a" font-weight="400">Dynamic ports</text>
+<text x="60" y="384" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#28465a" font-weight="400">Object metadata</text>
+<text x="60" y="426" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#28465a" font-weight="400">Registration ≠ exploit</text>
+<text x="60" y="486" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#8b5b3c" font-weight="700">Evidence first</text>
+<rect x="395" y="205" width="340" height="330" rx="16" fill="#fff" stroke="#cbdde5" stroke-width="2"/>
+<text x="420" y="250" font-family="DejaVu Sans,Arial,sans-serif" font-size="29" fill="#4a6ea5" font-weight="700">SMB / NetBIOS</text>
+<text x="420" y="300" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#28465a" font-weight="400">Names / versions</text>
+<text x="420" y="342" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#28465a" font-weight="400">Shares / users</text>
+<text x="420" y="384" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#28465a" font-weight="400">Auth-dependent</text>
+<text x="420" y="426" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#28465a" font-weight="400">Disable legacy exposure</text>
+<text x="420" y="486" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#8b5b3c" font-weight="700">Restrict reachability</text>
+<rect x="755" y="205" width="340" height="330" rx="16" fill="#fff" stroke="#cbdde5" stroke-width="2"/>
+<text x="780" y="250" font-family="DejaVu Sans,Arial,sans-serif" font-size="29" fill="#6b6c92" font-weight="700">SNMP / SMTP</text>
+<text x="780" y="300" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#28465a" font-weight="400">MIB / OID metadata</text>
+<text x="780" y="342" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#28465a" font-weight="400">Mail capabilities</text>
+<text x="780" y="384" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#28465a" font-weight="400">Identity leakage risk</text>
+<text x="780" y="426" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#28465a" font-weight="400">Auth + encryption</text>
+<text x="780" y="486" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#8b5b3c" font-weight="700">Limit information</text>
+<rect x="1115" y="205" width="350" height="330" rx="16" fill="#fff" stroke="#cbdde5" stroke-width="2"/>
+<text x="1140" y="250" font-family="DejaVu Sans,Arial,sans-serif" font-size="29" fill="#967046" font-weight="700">Web / CMS</text>
+<text x="1140" y="300" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#28465a" font-weight="400">Directories / versions</text>
+<text x="1140" y="342" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#28465a" font-weight="400">Themes / plugins</text>
+<text x="1140" y="384" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#28465a" font-weight="400">Active HTTP requests</text>
+<text x="1140" y="426" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#28465a" font-weight="400">Access control</text>
+<text x="1140" y="486" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#8b5b3c" font-weight="700">Disable listing</text>
+<rect x="35" y="570" width="1430" height="170" rx="17" fill="#dfeef3" stroke="#bdd8e3" stroke-width="2"/>
+<text x="62" y="617" font-family="DejaVu Sans,Arial,sans-serif" font-size="29" fill="#19364a" font-weight="700">Operational boundary</text>
+<text x="62" y="660" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#28465a" font-weight="400">Enumeration output is metadata evidence, not automatic vulnerability proof or permission for credential testing.</text>
+<text x="62" y="700" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#8b5b3c" font-weight="700">Target, credentials, rate, lockout policy and recovery: [Needs confirmation]</text>
+<text x="45" y="804" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#526e7e" font-weight="400">Source summary: p0168:c01+c02 · next chapter begins p.169 · reading not activated</text>
+</svg>

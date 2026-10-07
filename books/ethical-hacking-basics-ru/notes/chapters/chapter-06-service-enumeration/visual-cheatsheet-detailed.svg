@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="1480" viewBox="0 0 1680 1480" role="img" aria-labelledby="title desc">
+<title id="title">Глава 6 — подробная памятка по service enumeration</title>
+<desc id="desc">RPC/RMI, SMB, SNMP, SMTP и web enumeration, interpretation, evidence quality and defensive countermeasures.</desc>
+<rect width="1680" height="1480" fill="#eef5f8"/>
+<rect width="1680" height="170" fill="#173349"/>
+<text x="48" y="72" font-family="DejaVu Sans,Arial,sans-serif" font-size="40" fill="#fff" font-weight="700">Глава 6 | Service enumeration → evidence → defense</text>
+<text x="50" y="122" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" fill="#d4e9f0" font-weight="400">А. В. Чумилин · PDF pp. 140–168 · 29 страниц / 32 RAG chunks</text>
+<rect x="38" y="205" width="510" height="430" rx="16" fill="#fff" stroke="#cbdde5" stroke-width="2"/>
+<text x="65" y="250" font-family="DejaVu Sans,Arial,sans-serif" font-size="29" fill="#267587" font-weight="700">6.1 · RPC / RMI / SMB</text>
+<text x="65" y="298" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">Service/version → protocol details</text>
+<text x="65" y="340" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">RPC: registered programs / ports</text>
+<text x="65" y="382" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">RMI: registry / object metadata</text>
+<text x="65" y="424" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">SMB: host / workgroup / version</text>
+<text x="65" y="466" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">Shares / users depend on auth</text>
+<text x="65" y="508" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">NetBIOS / Samba tooling</text>
+<text x="65" y="550" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">Legacy exposure increases leakage</text>
+<text x="65" y="592" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">Registration ≠ vulnerability</text>
+<rect x="585" y="205" width="510" height="430" rx="16" fill="#fff" stroke="#cbdde5" stroke-width="2"/>
+<text x="612" y="250" font-family="DejaVu Sans,Arial,sans-serif" font-size="29" fill="#4a6ea5" font-weight="700">6.2 · SNMP / SMTP</text>
+<text x="612" y="298" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">SNMP: MIB / OID / interfaces</text>
+<text x="612" y="340" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">Community data may be sensitive</text>
+<text x="612" y="382" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">Source prefers v3 + auth + crypto</text>
+<text x="612" y="424" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">SMTP: banner / capability behavior</text>
+<text x="612" y="466" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">Address/user leakage varies</text>
+<text x="612" y="508" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">Reduce exposed information</text>
+<text x="612" y="550" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">Prevent open relay</text>
+<text x="612" y="592" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">Restrict service reachability</text>
+<rect x="1132" y="205" width="510" height="430" rx="16" fill="#fff" stroke="#cbdde5" stroke-width="2"/>
+<text x="1158" y="250" font-family="DejaVu Sans,Arial,sans-serif" font-size="29" fill="#95633e" font-weight="700">6.2 · Web / CMS</text>
+<text x="1158" y="298" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">Directory/path enumeration</text>
+<text x="1158" y="340" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">CMS/version/theme/plugin metadata</text>
+<text x="1158" y="382" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">HTTP requests are active workload</text>
+<text x="1158" y="424" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">Individual passive detection ≠ scan</text>
+<text x="1158" y="466" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">Reduce headers / errors</text>
+<text x="1158" y="508" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">Strong access control</text>
+<text x="1158" y="550" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">Disable directory listing</text>
+<text x="1158" y="592" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">Keep sensitive files inaccessible</text>
+<rect x="38" y="675" width="780" height="325" rx="16" fill="#fff" stroke="#cbdde5" stroke-width="2"/>
+<text x="65" y="723" font-family="DejaVu Sans,Arial,sans-serif" font-size="29" fill="#267587" font-weight="700">Interpretation</text>
+<text x="65" y="769" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#28465a" font-weight="400">service/version ≠ patch truth</text>
+<text x="65" y="810" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#28465a" font-weight="400">share/user absence may be auth-limited</text>
+<text x="65" y="851" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#28465a" font-weight="400">registration ≠ exploitability</text>
+<text x="65" y="892" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#28465a" font-weight="400">historical examples ≠ 2026 state</text>
+<text x="65" y="933" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#28465a" font-weight="400">tool output needs provenance</text>
+<rect x="855" y="675" width="787" height="325" rx="16" fill="#fff" stroke="#cbdde5" stroke-width="2"/>
+<text x="882" y="723" font-family="DejaVu Sans,Arial,sans-serif" font-size="29" fill="#4a6ea5" font-weight="700">Acceptance / safety</text>
+<text x="882" y="769" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#28465a" font-weight="400">Authorized service + protocol scope</text>
+<text x="882" y="810" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#28465a" font-weight="400">Rate / identity handling defined</text>
+<text x="882" y="851" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#28465a" font-weight="400">No credential testing without scope</text>
+<text x="882" y="892" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#28465a" font-weight="400">No lockout / availability impact</text>
+<text x="882" y="933" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#28465a" font-weight="400">Evidence stored with timestamp</text>
+<rect x="38" y="1040" width="1604" height="310" rx="17" fill="#dfeef3" stroke="#bdd8e3" stroke-width="2"/>
+<text x="67" y="1087" font-family="DejaVu Sans,Arial,sans-serif" font-size="30" fill="#19364a" font-weight="700">Source findings / caveats</text>
+<text x="68" y="1133" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">F-01 · p147 BaRMIe console output contains embedded extraction markup.</text>
+<text x="68" y="1178" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">F-02 · SNMPv2/v2c wording is not fully normalized inside the chapter.</text>
+<text x="68" y="1223" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">F-03 · p166 WPScan output includes unusable release date 0001-01-01.</text>
+<text x="68" y="1268" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#28465a" font-weight="400">F-04 · Internal “Passive Detection” labels do not make the overall HTTP scan passive.</text>
+<text x="68" y="1313" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#8b5b3c" font-weight="700">Target, authorization, credentials, rate and recovery: [Needs confirmation]</text>
+<text x="49" y="1440" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#526e7e" font-weight="400">RAG-only · p0140:c01–p0168:c02 · no enumeration executed · reading not activated</text>
+</svg>
