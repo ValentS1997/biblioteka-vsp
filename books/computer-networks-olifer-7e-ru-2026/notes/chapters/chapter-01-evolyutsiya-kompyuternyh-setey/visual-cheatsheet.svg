@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820">
+<rect width="1400" height="820" fill="#f7f9fb"/>
+<text x="50" y="58" font-family="Arial,DejaVu Sans,sans-serif" font-size="34" font-weight="700" fill="#183247">Глава 1 · Эволюция компьютерных сетей</text>
+<text x="50" y="92" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#52697a">RAG: p0028:c01–p0045:c01 · PDF 28–45 · printed 27–44</text>
+
+<rect x="50" y="135" width="300" height="150" rx="16" fill="#e7eef4" stroke="#b8cad8"/>
+<text x="75" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="24" font-weight="700" fill="#234b64">Два корня</text>
+<text x="75" y="216" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#304f63">Вычислительная техника</text>
+<text x="75" y="246" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#304f63">+ телекоммуникации</text>
+
+<rect x="390" y="135" width="300" height="150" rx="16" fill="#eef4e8" stroke="#c4d4b9"/>
+<text x="415" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="24" font-weight="700" fill="#365b31">WAN → LAN</text>
+<text x="415" y="216" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#466449">Удалённые связи раньше</text>
+<text x="415" y="246" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#466449">локальных сетей</text>
+
+<rect x="730" y="135" width="300" height="150" rx="16" fill="#f8efe2" stroke="#ddc9aa"/>
+<text x="755" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="24" font-weight="700" fill="#78532e">Packet switching</text>
+<text x="755" y="216" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#6b573c">Bursty data делит канал</text>
+<text x="755" y="246" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#6b573c">эффективнее</text>
+
+<rect x="1070" y="135" width="280" height="150" rx="16" fill="#eee8f7" stroke="#c7b9d8"/>
+<text x="1095" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="24" font-weight="700" fill="#5a3f75">Стандартизация</text>
+<text x="1095" y="216" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#634f75">Ethernet и другие LAN</text>
+<text x="1095" y="246" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#634f75">технологии</text>
+
+<path d="M350 210 H390 M690 210 H730 M1030 210 H1070" stroke="#718798" stroke-width="4" marker-end="url(#a)"/>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#718798"/></marker></defs>
+
+<rect x="120" y="355" width="520" height="175" rx="18" fill="#e4f0f2" stroke="#b3d0d6"/>
+<text x="150" y="399" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#245e6b">Конвергенция</text>
+<text x="150" y="438" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#345f69">Оптика · цифровая передача · IP · Ethernet</text>
+<text x="150" y="472" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#345f69">LAN/WAN и telecom/computer сети сближаются</text>
+<text x="150" y="506" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#345f69">Интернет становится multiservice environment</text>
+
+<rect x="760" y="355" width="520" height="175" rx="18" fill="#f4ece7" stroke="#d9c5b8"/>
+<text x="790" y="399" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#714b38">Новые требования</text>
+<text x="790" y="438" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b5649">Mobile · video · IoT · cloud</text>
+<text x="790" y="472" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b5649">→ latency · reliability · throughput</text>
+<text x="790" y="506" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b5649">→ сеть снова меняет архитектуру</text>
+
+<path d="M640 442 H760" stroke="#718798" stroke-width="4" marker-end="url(#a)"/>
+
+<rect x="220" y="605" width="960" height="125" rx="18" fill="#dfe8f4" stroke="#b8c8dc"/>
+<text x="250" y="650" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#274b72">Следующий слой: AI-assisted network operations</text>
+<text x="250" y="692" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#3a5777">Поиск проблем · прогноз трафика · оптимизация · security analysis — source claims главы</text>
+<text x="50" y="785" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#63798a">Source findings: OCR/footer contamination сохранены отдельно; SVG — новая схема по текстовому RAG.</text>
+</svg>
