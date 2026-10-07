@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1100" viewBox="0 0 1400 1100">
+<rect width="1400" height="1100" fill="#f8fafc"/>
+<text x="55" y="65" fill="#0f172a" font-family="sans-serif" font-size="34" font-weight="700">Глава 4 — Кодирование и эволюция</text>
+<text x="55" y="102" fill="#475569" font-family="sans-serif" font-size="18">Canonical RAG · PDF 143–178 · source SHA 495e75f185c758a8…</text>
+
+<rect x="55" y="140" width="1290" height="110" rx="18" fill="#e2e8f0"/>
+<text x="85" y="184" fill="#0f172a" font-family="sans-serif" font-size="23" font-weight="700">Core contract</text>
+<text x="85" y="220" fill="#334155" font-family="sans-serif" font-size="18">Backward: new code reads old data · Forward: old code reads new data</text>
+
+<rect x="55" y="285" width="400" height="465" rx="18" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+<text x="85" y="330" fill="#075985" font-family="sans-serif" font-size="26" font-weight="700">4.1 Encoding formats</text>
+<text x="85" y="370" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Text</text>
+<text x="85" y="400" fill="#334155" font-family="sans-serif" font-size="16">JSON · XML · CSV</text>
+<text x="85" y="430" fill="#334155" font-family="sans-serif" font-size="16">portable, but type/binary ambiguities</text>
+<text x="85" y="475" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Thrift / Protobuf</text>
+<text x="85" y="505" fill="#334155" font-family="sans-serif" font-size="16">schema + numeric field tags</text>
+<text x="85" y="535" fill="#334155" font-family="sans-serif" font-size="16">do not change/reuse tags</text>
+<text x="85" y="580" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Avro</text>
+<text x="85" y="610" fill="#334155" font-family="sans-serif" font-size="16">writer schema ↔ reader schema</text>
+<text x="85" y="640" fill="#334155" font-family="sans-serif" font-size="16">field matching · defaults · aliases</text>
+<text x="85" y="690" fill="#075985" font-family="sans-serif" font-size="16">Schema = docs + compatibility gate</text>
+
+<rect x="500" y="285" width="400" height="465" rx="18" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="530" y="330" fill="#92400e" font-family="sans-serif" font-size="26" font-weight="700">4.2 Data through DB/API</text>
+<text x="530" y="370" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Database</text>
+<text x="530" y="400" fill="#334155" font-family="sans-serif" font-size="16">data lifetime &gt; code lifetime</text>
+<text x="530" y="430" fill="#334155" font-family="sans-serif" font-size="16">preserve unknown fields</text>
+<text x="530" y="475" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">REST / RPC</text>
+<text x="530" y="505" fill="#334155" font-family="sans-serif" font-size="16">client/server evolve independently</text>
+<text x="530" y="535" fill="#334155" font-family="sans-serif" font-size="16">timeout: result may be unknown</text>
+<text x="530" y="565" fill="#334155" font-family="sans-serif" font-size="16">retry may duplicate an action</text>
+<text x="530" y="610" fill="#334155" font-family="sans-serif" font-size="16">remote call ≠ local function call</text>
+<text x="530" y="690" fill="#92400e" font-family="sans-serif" font-size="16">Version API contracts deliberately</text>
+
+<rect x="945" y="285" width="400" height="465" rx="18" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="975" y="330" fill="#166534" font-family="sans-serif" font-size="26" font-weight="700">Messaging &amp; rollout</text>
+<text x="975" y="370" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Message brokers</text>
+<text x="975" y="400" fill="#334155" font-family="sans-serif" font-size="16">buffer unavailable consumers</text>
+<text x="975" y="430" fill="#334155" font-family="sans-serif" font-size="16">decouple sender and receiver</text>
+<text x="975" y="475" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Actors</text>
+<text x="975" y="505" fill="#334155" font-family="sans-serif" font-size="16">local state + async messages</text>
+<text x="975" y="535" fill="#334155" font-family="sans-serif" font-size="16">cross-node messages are encoded</text>
+<text x="975" y="580" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Rolling upgrade</text>
+<text x="975" y="610" fill="#334155" font-family="sans-serif" font-size="16">old/new nodes coexist</text>
+<text x="975" y="640" fill="#334155" font-family="sans-serif" font-size="16">compatibility enables small releases</text>
+<text x="975" y="690" fill="#166534" font-family="sans-serif" font-size="16">Deploy order must respect contracts</text>
+
+<rect x="55" y="790" width="1290" height="220" rx="18" fill="#0f172a"/>
+<text x="85" y="835" fill="#f8fafc" font-family="sans-serif" font-size="23" font-weight="700">Verification loop</text>
+<text x="85" y="875" fill="#cbd5e1" font-family="sans-serif" font-size="18">1. Define writer/reader versions and schema/API/message delta.</text>
+<text x="85" y="910" fill="#cbd5e1" font-family="sans-serif" font-size="18">2. Test old → new and new → old directions separately.</text>
+<text x="85" y="945" fill="#cbd5e1" font-family="sans-serif" font-size="18">3. Stage rollout; verify unknown-field preservation, decode success and retry behavior.</text>
+<text x="85" y="980" fill="#cbd5e1" font-family="sans-serif" font-size="18">4. Expand only when compatibility acceptance checks pass.</text>
+
+<text x="280" y="1070" fill="#0f172a" font-family="sans-serif" font-size="22" font-weight="700">Evolvability = versioned data contracts that survive independent deployment</text>
+</svg>
