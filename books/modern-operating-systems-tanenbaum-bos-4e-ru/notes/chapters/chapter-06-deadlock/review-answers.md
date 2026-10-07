@@ -102,28 +102,28 @@ These answers are derived from chapter 6 only. They are not an official publishe
 40. One source-consistent semaphore design for westbound baboons:
 
 ```c
-semaphore mutex = 1;
-semaphore rope = 1;
-int west = 0;
+semaphore west_mutex = 1;  /* protects west_count only */
+semaphore rope = 1;        /* shared between directions */
+int west_count = 0;
 
 westbound() {
-    down(&mutex);
-    west++;
-    if (west == 1)
-        down(&rope);      /* first westbound owns the rope direction */
-    up(&mutex);
+    down(&west_mutex);
+    west_count++;
+    if (west_count == 1)
+        down(&rope);        /* first westbound reserves direction */
+    up(&west_mutex);
 
     cross_west();
 
-    down(&mutex);
-    west--;
-    if (west == 0)
-        up(&rope);        /* last westbound releases rope */
-    up(&mutex);
+    down(&west_mutex);
+    west_count--;
+    if (west_count == 0)
+        up(&rope);          /* last westbound releases rope */
+    up(&west_mutex);
 }
 ```
 
-The opposite direction uses the same `rope` exclusion. This prevents opposite directions from occupying the rope simultaneously. Actual compilation/test result: **[Needs confirmation]**.
+The opposite direction must use its own direction-count mutex while sharing the same `rope` semaphore. This prevents a waiter on `rope` from holding the mutex needed by the opposite direction to leave. Actual compilation/test result: **[Needs confirmation]**.
 
 41. Add a fairness/turnstile rule: once an opposite-direction baboon is waiting, stop admitting new members of the current direction. Let the current group drain; then hand the rope to the waiting direction before reopening admission. The essential acceptance criterion is that continuous arrivals from one side cannot indefinitely postpone an already waiting baboon from the other side. Exact implementation/test result: **[Needs confirmation]**.
 
@@ -147,18 +147,22 @@ The opposite direction uses the same `rope` exclusion. This prevents opposite di
 
 44. Build directed edges `resource→process` for held resources and `process→resource` for pending requests. Run cycle detection/DFS. In the one-instance model, every process on a detected cycle is deadlocked; processes waiting permanently on that cycle may also be unable to finish. Actual implementation/test output: **[Needs confirmation]**.
 
-45. Break symmetry. For example, protect the “start bow” protocol with one semaphore/token so only one participant may become the initiator at a time:
+45. Break symmetry by assigning a deterministic initiator, for example by unique participant ID:
 
 ```c
-semaphore bow_turn = 1;
-
-meet() {
-    down(&bow_turn);
-    bow();
-    wait_for_other_bow();
-    straighten();
-    up(&bow_turn);
+meet(my_id, other_id) {
+    if (my_id < other_id) {
+        bow();
+        signal_bowed();
+        wait_for_other_bow();
+        straighten();
+    } else {
+        wait_for_other_bow();
+        bow();
+        signal_bowed();
+        straighten();
+    }
 }
 ```
 
-The second participant responds while the initiator holds the turn; simultaneous initiation is impossible. The exact executable protocol depends on how the response event is represented — **[Needs confirmation]**.
+Only one side is permitted to initiate; the other side is explicitly the responder, so simultaneous initiation cannot occur. The exact event/signal implementation is **[Needs confirmation]**.
