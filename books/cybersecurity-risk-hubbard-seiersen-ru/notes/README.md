@@ -15,3 +15,4 @@ Chapter artifacts are created only after book-level chapter-analysis readiness i
 - [Глава 7 — Калиброванные оценки: что вам известно уже сейчас?](chapters/chapter-07-calibrated-estimates/README.md) — RAG-grounded, EPUB spine 31–33; source exercise preserved with extraction limits.
 - [Глава 8 — Уменьшение неопределенности с помощью байесовских методов](chapters/chapter-08-bayesian-uncertainty/README.md) — RAG-grounded, EPUB spine 34–35; reading progress не изменён.
 - [Глава 9 — Эффективные методы на основе формулы Байеса](chapters/chapter-09-effective-bayesian-methods/README.md) — RAG-grounded, EPUB spine 36–39; reading progress не изменён.
+- [Глава 10 — На пути к зрелости метрик безопасности](chapters/chapter-10-security-metrics-maturity/README.md) — RAG-grounded, EPUB spine 41–42; includes source R example boundaries.
