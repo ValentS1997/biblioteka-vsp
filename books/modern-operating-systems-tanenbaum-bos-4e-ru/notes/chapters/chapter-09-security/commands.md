@@ -15,7 +15,6 @@ Scope: chapter 9 RAG only, PDF pages 659–783.
 | `rexec machine4 who` | workload-generating | Review example of remote execution trusting a remote UID assertion | Safe only if every asserting kernel is trusted; historical example. |
 | `nmap` | read-only | Mentioned as a port-scanning tool while discussing attack reconnaissance | No operational scan procedure is included here. |
 | `fdisk` | state-changing | Appears in a deliberately flawed malware-recovery exercise | Destructive; do not use as a generic “format disk” instruction. |
-| `out/in/read/eval` | — | Not part of this chapter | Not applicable. |
 
 ## Source defensive API lesson: TOCTOU
 
