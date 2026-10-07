@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="930" viewBox="0 0 1280 930" role="img" aria-label="Глава 2: три места для SQL и безопасное подключение">
+<rect width="1280" height="930" fill="#EEF5F9"/>
+<text x="28" y="52" font-size="30" fill="#0A3B53" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">ГЛАВА 2 · ГДЕ МОЖНО ПИСАТЬ SQL-КОД</text>
+<text x="30" y="83" font-size="16" fill="#4C6175" font-family="DejaVu Sans,Arial,sans-serif" >Элис Жао · PDF 33–54 · RAG p0033:c01 — p0054:c01</text>
+<rect x="26" y="109" width="393" height="220" rx="17" fill="#FFFFFF" stroke="#C1D5E3" stroke-width="1.4"/>
+<text x="46" y="145" font-size="19" fill="#104664" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">01 / Консоль РСУБД</text>
+<text x="46" y="181" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >SQLite / MySQL / Oracle</text>
+<text x="46" y="211" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >PostgreSQL / SQL Server</text>
+<text x="46" y="241" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >CLI: команды и SQL напрямую</text>
+<text x="46" y="271" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >SQLite .db — файловая база</text>
+<text x="46" y="301" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >CREATE, INSERT — меняют данные</text>
+<rect x="443" y="109" width="393" height="220" rx="17" fill="#FFFFFF" stroke="#C1D5E3" stroke-width="1.4"/>
+<text x="463" y="145" font-size="19" fill="#104664" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">02 / GUI-клиент</text>
+<text x="463" y="181" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >DB Browser, Workbench, pgAdmin</text>
+<text x="463" y="211" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >SQL Developer, SSMS, DBeaver</text>
+<text x="463" y="241" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >GUI → драйвер → РСУБД</text>
+<text x="463" y="271" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >Нужно подключение к базе</text>
+<text x="463" y="301" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >Новая БД / .db файл / сервер</text>
+<rect x="860" y="109" width="394" height="220" rx="17" fill="#FFFFFF" stroke="#C1D5E3" stroke-width="1.4"/>
+<text x="880" y="145" font-size="19" fill="#104664" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">03 / Python или R</text>
+<text x="880" y="181" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >Приложение → драйвер → БД</text>
+<text x="880" y="211" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >Python: cursor / pandas</text>
+<text x="880" y="241" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >R: DBI, dbGetQuery</text>
+<text x="880" y="271" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >SQL + обработка результата</text>
+<text x="880" y="301" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >Закрывать соединение</text>
+<rect x="26" y="354" width="602" height="226" rx="17" fill="#FAFDFF" stroke="#C1D5E3" stroke-width="1.4"/>
+<text x="46" y="390" font-size="19" fill="#104664" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">КОНСОЛЬ / КЛЮЧЕВЫЕ ФРАГМЕНТЫ</text>
+<text x="46" y="426" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >SQLite: sqlite3 my_new_db.db</text>
+<text x="46" y="456" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >SQLite: .databases, .tables, .quit</text>
+<text x="46" y="486" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >PostgreSQL: \l, \d, \c, \q</text>
+<text x="46" y="516" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >SQL Server: отдельная команда go</text>
+<text x="46" y="546" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >Примеры из книги — не проверены</text>
+<rect x="652" y="354" width="602" height="226" rx="17" fill="#FAFDFF" stroke="#C1D5E3" stroke-width="1.4"/>
+<text x="672" y="390" font-size="19" fill="#104664" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">СОЕДИНЕНИЕ / ПО КНИГЕ</text>
+<text x="672" y="426" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >Host / Port / Database / User</text>
+<text x="672" y="456" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >Password — только секретный ввод</text>
+<text x="672" y="486" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >SQLite: путь к файлу .db</text>
+<text x="672" y="516" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >MySQL 3306 · Oracle 1521</text>
+<text x="672" y="546" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >PostgreSQL 5432 · SQL Server 1433</text>
+<rect x="26" y="605" width="602" height="207" rx="17" fill="#FFFFFF" stroke="#C1D5E3" stroke-width="1.4"/>
+<text x="46" y="641" font-size="19" fill="#104664" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">READ-ONLY / ИЗМЕНЕНИЕ</text>
+<text x="46" y="677" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >SELECT, SHOW, каталог → просмотр</text>
+<text x="46" y="707" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >CREATE / INSERT → изменение БД</text>
+<text x="46" y="737" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >pip, conda, brew → установка</text>
+<text x="46" y="767" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >Фактические права: [Needs confirmation]</text>
+<rect x="652" y="605" width="602" height="207" rx="17" fill="#FFFFFF" stroke="#C1D5E3" stroke-width="1.4"/>
+<text x="672" y="641" font-size="19" fill="#104664" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">SECURITY / ОГРАНИЧЕНИЯ</text>
+<text x="672" y="677" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >Не переносить пароли из примеров</text>
+<text x="672" y="707" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >Не угадывать реальные host и port</text>
+<text x="672" y="737" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >Не запускать CREATE в production</text>
+<text x="672" y="767" font-size="15" fill="#254258" font-family="DejaVu Sans,Arial,sans-serif" >Rollback: [Needs confirmation]</text>
+<rect x="26" y="838" width="1228" height="63" rx="12" fill="#D7EAF4"/>
+<text x="44" y="861" font-size="15" fill="#18465D" font-family="DejaVu Sans,Arial,sans-serif" >Source-only · Рис. 2.1 не доступен как графический RAG-объект · Примеры не исполнялись.</text>
+<text x="44" y="886" font-size="14" fill="#18465D" font-family="DejaVu Sans,Arial,sans-serif" >Проверка главы: README / cheatsheet / commands / diagram / обе SVG / source-findings.</text>
+</svg>
