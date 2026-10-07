@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+    <style>
+      .title{font:700 34px sans-serif;fill:#0f172a}.h{font:700 21px sans-serif;fill:#0f172a}.t{font:16px sans-serif;fill:#1e293b}.s{font:14px sans-serif;fill:#475569}
+      .box{fill:#f8fafc;stroke:#334155;stroke-width:2;rx:16}.accent{fill:#e0f2fe;stroke:#0369a1;stroke-width:2;rx:16}.line{stroke:#334155;stroke-width:2;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1200" height="760" fill="#ffffff"/>
+  <text x="50" y="58" class="title">Глава 1 — Введение: модель операционной системы</text>
+  <text x="50" y="88" class="s">RAG-grounded · PDF 22–110 · Таненбаум / Бос, 4-е изд.</text>
+
+  <rect x="430" y="125" width="340" height="95" class="accent"/>
+  <text x="600" y="160" text-anchor="middle" class="h">Операционная система</text>
+  <text x="600" y="190" text-anchor="middle" class="t">kernel mode · привилегированный слой</text>
+
+  <rect x="70" y="290" width="420" height="145" class="box"/>
+  <text x="280" y="330" text-anchor="middle" class="h">Расширенная машина</text>
+  <text x="280" y="365" text-anchor="middle" class="t">Скрывает детали оборудования</text>
+  <text x="280" y="392" text-anchor="middle" class="t">Процессы · адресные пространства · файлы</text>
+
+  <rect x="710" y="290" width="420" height="145" class="box"/>
+  <text x="920" y="330" text-anchor="middle" class="h">Менеджер ресурсов</text>
+  <text x="920" y="365" text-anchor="middle" class="t">Распределение + защита</text>
+  <text x="920" y="392" text-anchor="middle" class="t">Время: CPU / принтер · Пространство: RAM / диск</text>
+
+  <line x1="535" y1="220" x2="350" y2="290" class="line"/>
+  <line x1="665" y1="220" x2="850" y2="290" class="line"/>
+
+  <rect x="110" y="520" width="300" height="120" class="box"/>
+  <text x="260" y="555" text-anchor="middle" class="h">User mode</text>
+  <text x="260" y="585" text-anchor="middle" class="t">Приложения · shell · GUI</text>
+  <text x="260" y="612" text-anchor="middle" class="s">ограниченный набор инструкций</text>
+
+  <rect x="450" y="520" width="300" height="120" class="accent"/>
+  <text x="600" y="555" text-anchor="middle" class="h">System call / trap</text>
+  <text x="600" y="585" text-anchor="middle" class="t">контролируемый вход в ядро</text>
+  <text x="600" y="612" text-anchor="middle" class="s">API ≠ обязательно 1:1 kernel call</text>
+
+  <rect x="790" y="520" width="300" height="120" class="box"/>
+  <text x="940" y="555" text-anchor="middle" class="h">Hardware</text>
+  <text x="940" y="585" text-anchor="middle" class="t">CPU · memory · disk · I/O</text>
+  <text x="940" y="612" text-anchor="middle" class="s">controllers · drivers · buses</text>
+
+  <line x1="410" y1="580" x2="450" y2="580" class="line"/>
+  <line x1="750" y1="580" x2="790" y2="580" class="line"/>
+
+  <text x="50" y="710" class="s">Структуры ОС: монолитная · многоуровневая · микроядро · клиент–сервер · виртуальная машина · экзоядро</text>
+</svg>
