@@ -1,3 +1,4 @@
+# Temporary book-branch rebuild trigger; remove after accepted RAG publication.
 name: Build book RAG
 
 on:
