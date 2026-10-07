@@ -73,3 +73,4 @@ Canonical readiness command:
 - [Глава 9 — Безопасность](notes/chapters/chapter-09-security/README.md) — RAG-grounded, PDF source locators 659–783.
 - [Глава 10 — Изучение конкретных примеров: Unix, Linux и Android](notes/chapters/chapter-10-unix-linux-android/README.md) — RAG-grounded, PDF source locators 784–930.
 - [Глава 11 — Изучение конкретных примеров: Windows 8](notes/chapters/chapter-11-windows-8/README.md) — RAG-grounded, PDF source locators 931–1057.
+- [Глава 12 — Разработка операционных систем](notes/chapters/chapter-12-operating-system-design/README.md) — RAG-grounded, PDF source locators 1058–1109.
