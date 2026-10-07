@@ -16,5 +16,7 @@
 
 | 8 | [Уменьшение неопределенности с помощью байесовских методов](chapter-08-bayesian-uncertainty/README.md) | spine 34–35, `OPS/ch1-32.xhtml` → `OPS/ch1-33.xhtml` | README, cheatsheet, commands, diagram, 2×SVG, source-findings |
 
+| 9 | [Эффективные методы на основе формулы Байеса](chapter-09-effective-bayesian-methods/README.md) | spine 36–39, `OPS/ch1-34.xhtml` → `OPS/ch1-37.xhtml` | README, cheatsheet, commands, diagram, 2×SVG, source-findings |
 
-Глава 9 начинается в EPUB spine 36, `OPS/ch1-34.xhtml`; её анализ пока не проводился.
+
+Глава 10 начинается в EPUB spine 41, `OPS/ch1-39.xhtml`; spine 40 — титул части III.

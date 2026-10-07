@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="850" viewBox="0 0 1200 850" role="img" aria-labelledby="t d">
+<title id="t">Глава 9 — эффективные методы на основе формулы Байеса</title>
+<desc id="d">Компактная схема beta distribution, многоусловных моделей, value of information и empirical conditional probabilities.</desc>
+<rect x="0" y="0" width="1200" height="850" rx="0" fill="#0c1929" stroke="#0c1929" stroke-width="1.5"/>
+<text x="52" y="48" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#82d0f7" font-weight="bold">BIBLIOTEKA-VSP / CYBER RISK</text>
+<text x="52" y="96" font-family="DejaVu Sans,Arial,sans-serif" font-size="32" fill="#fbfdff" font-weight="bold">Глава 9 · Эффективные методы Bayes</text>
+<text x="52" y="132" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#b9d1e2" font-weight="normal">Мало данных ≠ нет информации</text>
+<text x="52" y="182" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#82d0f7" font-weight="bold">Четыре рабочих слоя</text>
+<rect x="52" y="200" width="252" height="164" rx="14" fill="#183149" stroke="#8dcdf1" stroke-width="1.5"/>
+<rect x="66" y="217" width="6" height="34" rx="3" fill="#8dcdf1" stroke="#8dcdf1" stroke-width="1.5"/>
+<text x="89" y="243" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Beta</text>
+<text x="72" y="282" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Hits / misses</text>
+<text x="72" y="310" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Prior α,β</text>
+<text x="72" y="338" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Posterior frequency</text>
+<rect x="330" y="200" width="252" height="164" rx="14" fill="#183149" stroke="#91d6bd" stroke-width="1.5"/>
+<rect x="344" y="217" width="6" height="34" rx="3" fill="#91d6bd" stroke="#91d6bd" stroke-width="1.5"/>
+<text x="367" y="243" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">ЛОШ</text>
+<text x="350" y="282" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Много условий</text>
+<text x="350" y="310" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Log-odds deltas</text>
+<text x="350" y="338" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Correlation check</text>
+<rect x="608" y="200" width="252" height="164" rx="14" fill="#183149" stroke="#b7b4ef" stroke-width="1.5"/>
+<rect x="622" y="217" width="6" height="34" rx="3" fill="#b7b4ef" stroke="#b7b4ef" stroke-width="1.5"/>
+<text x="645" y="243" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Lens</text>
+<text x="628" y="282" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">30–50 scenarios</text>
+<text x="628" y="310" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Expert averages</text>
+<text x="628" y="338" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Regression model</text>
+<rect x="886" y="200" width="262" height="164" rx="14" fill="#183149" stroke="#e7c18c" stroke-width="1.5"/>
+<rect x="900" y="217" width="6" height="34" rx="3" fill="#e7c18c" stroke="#e7c18c" stroke-width="1.5"/>
+<text x="923" y="243" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">EVPI</text>
+<text x="906" y="282" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Error × cost</text>
+<text x="906" y="310" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Value of info</text>
+<text x="906" y="338" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Measure selectively</text>
+<text x="592" y="397" font-family="DejaVu Sans,Arial,sans-serif" font-size="34" fill="#7ccdf4" font-weight="bold">↓</text>
+<rect x="164" y="416" width="872" height="96" rx="14" fill="#213d55" stroke="#77cff6" stroke-width="1.5"/>
+<text x="210" y="456" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" fill="#f8fbff" font-weight="bold">Expert priors + small samples + historical data</text>
+<text x="210" y="487" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#d0e6f3" font-weight="normal">→ explicit uncertainty → conditional probabilities → better decisions</text>
+<text x="592" y="550" font-family="DejaVu Sans,Arial,sans-serif" font-size="34" fill="#7ccdf4" font-weight="bold">↓</text>
+<rect x="52" y="572" width="521" height="164" rx="14" fill="#183149" stroke="#89d9bd" stroke-width="1.5"/>
+<rect x="66" y="589" width="6" height="34" rx="3" fill="#89d9bd" stroke="#89d9bd" stroke-width="1.5"/>
+<text x="89" y="615" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Empirical update</text>
+<text x="72" y="654" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">COUNTIFS / COUNTIF</text>
+<text x="72" y="682" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Estimate P(Y|X)</text>
+<text x="72" y="710" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Feed back into model</text>
+<rect x="626" y="572" width="522" height="164" rx="14" fill="#183149" stroke="#efbd9b" stroke-width="1.5"/>
+<rect x="640" y="589" width="6" height="34" rx="3" fill="#efbd9b" stroke="#efbd9b" stroke-width="1.5"/>
+<text x="663" y="615" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Guardrails</text>
+<text x="646" y="654" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Do not double-count signals</text>
+<text x="646" y="682" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Check source formula mismatches</text>
+<text x="646" y="710" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Preserve data provenance</text>
+<rect x="52" y="758" width="1096" height="50" rx="14" fill="#2c2a38" stroke="#9c8ba4" stroke-width="1.5"/>
+<text x="74" y="790" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#eadce8" font-weight="normal">Boundary: external spreadsheets/data not retrieved; source formula conflicts preserved</text>
+<text x="52" y="838" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" fill="#91aec4" font-weight="normal">RAG: e0036–e0039 · EPUB spine 36–39 · OPS/ch1-34.xhtml — OPS/ch1-37.xhtml</text>
+</svg>
