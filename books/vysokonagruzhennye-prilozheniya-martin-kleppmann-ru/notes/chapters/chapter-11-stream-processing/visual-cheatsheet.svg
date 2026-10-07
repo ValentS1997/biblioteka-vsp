@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<rect width="1200" height="800" fill="#0f172a"/>
+<text x="55" y="66" fill="#f8fafc" font-family="sans-serif" font-size="34" font-weight="700">Глава 11 — Потоковая обработка</text>
+<text x="55" y="104" fill="#cbd5e1" font-family="sans-serif" font-size="18">RAG-only · PDF 505–561 · unbounded events → derived state</text>
+
+<rect x="55" y="145" width="335" height="410" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+<text x="85" y="195" fill="#38bdf8" font-family="sans-serif" font-size="26" font-weight="700">Event log</text>
+<text x="85" y="235" fill="#f8fafc" font-family="sans-serif" font-size="18">Producer → broker → consumer</text>
+<text x="85" y="275" fill="#cbd5e1" font-family="sans-serif" font-size="16">AMQP/JMS: ack + remove</text>
+<text x="85" y="309" fill="#cbd5e1" font-family="sans-serif" font-size="16">Log broker: partition + offset</text>
+<text x="85" y="343" fill="#cbd5e1" font-family="sans-serif" font-size="16">replay retained history</text>
+<text x="85" y="392" fill="#f8fafc" font-family="sans-serif" font-size="18">Watch</text>
+<text x="85" y="427" fill="#cbd5e1" font-family="sans-serif" font-size="16">consumer lag</text>
+<text x="85" y="457" fill="#cbd5e1" font-family="sans-serif" font-size="16">retention horizon</text>
+<text x="85" y="487" fill="#cbd5e1" font-family="sans-serif" font-size="16">offset durability</text>
+
+<rect x="432" y="145" width="335" height="410" rx="18" fill="#1e293b" stroke="#a78bfa" stroke-width="3"/>
+<text x="462" y="195" fill="#a78bfa" font-family="sans-serif" font-size="26" font-weight="700">Database streams</text>
+<text x="462" y="235" fill="#f8fafc" font-family="sans-serif" font-size="18">CDC</text>
+<text x="462" y="270" fill="#cbd5e1" font-family="sans-serif" font-size="16">DB change log → derived systems</text>
+<text x="462" y="304" fill="#cbd5e1" font-family="sans-serif" font-size="16">snapshot + log position</text>
+<text x="462" y="338" fill="#cbd5e1" font-family="sans-serif" font-size="16">log compaction</text>
+<text x="462" y="388" fill="#f8fafc" font-family="sans-serif" font-size="18">Event sourcing / CQRS</text>
+<text x="462" y="423" fill="#cbd5e1" font-family="sans-serif" font-size="16">immutable domain events</text>
+<text x="462" y="453" fill="#cbd5e1" font-family="sans-serif" font-size="16">multiple read projections</text>
+<text x="462" y="483" fill="#cbd5e1" font-family="sans-serif" font-size="16">async view lag</text>
+
+<rect x="809" y="145" width="335" height="410" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="3"/>
+<text x="839" y="195" fill="#34d399" font-family="sans-serif" font-size="26" font-weight="700">Processing</text>
+<text x="839" y="235" fill="#f8fafc" font-family="sans-serif" font-size="18">Windows</text>
+<text x="839" y="270" fill="#cbd5e1" font-family="sans-serif" font-size="16">tumbling · hopping · sliding · session</text>
+<text x="839" y="315" fill="#f8fafc" font-family="sans-serif" font-size="18">Joins</text>
+<text x="839" y="350" fill="#cbd5e1" font-family="sans-serif" font-size="16">stream–stream</text>
+<text x="839" y="380" fill="#cbd5e1" font-family="sans-serif" font-size="16">stream–table</text>
+<text x="839" y="410" fill="#cbd5e1" font-family="sans-serif" font-size="16">table–table</text>
+<text x="839" y="455" fill="#f8fafc" font-family="sans-serif" font-size="18">Recovery</text>
+<text x="839" y="490" fill="#cbd5e1" font-family="sans-serif" font-size="16">checkpoint · replay · idempotence</text>
+
+<rect x="55" y="600" width="1089" height="125" rx="18" fill="#111827" stroke="#64748b" stroke-width="2"/>
+<text x="85" y="645" fill="#f8fafc" font-family="sans-serif" font-size="23" font-weight="700">Stream contract</text>
+<text x="85" y="683" fill="#cbd5e1" font-family="sans-serif" font-size="19">event log → ordering/offset/time contract → stateful transform → replay/failure test → derived state</text>
+<text x="265" y="768" fill="#f8fafc" font-family="sans-serif" font-size="21" font-weight="700">Exactly-once only matters end-to-end, including the sink.</text>
+</svg>
