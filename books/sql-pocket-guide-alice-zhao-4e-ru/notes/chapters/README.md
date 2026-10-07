@@ -12,4 +12,6 @@ Book ID: `sql-pocket-guide-alice-zhao-4e-ru`.
 
 | 03 | [Язык SQL](chapter-03-yazyk-sql/README.md) | PDF 55–69; `p0055:c01`–`p0069:c01` | [cheatsheet](chapter-03-yazyk-sql/cheatsheet.md) · [commands](chapter-03-yazyk-sql/commands.md) · [diagram](chapter-03-yazyk-sql/diagram.md) · [compact SVG](chapter-03-yazyk-sql/visual-cheatsheet.svg) · [detailed SVG](chapter-03-yazyk-sql/visual-cheatsheet-detailed.svg) · [summary](chapter-03-yazyk-sql/summary.md) · [source findings](chapter-03-yazyk-sql/source-findings.md) |
 
+| 04 | [Основы работы с запросами](chapter-04-osnovy-raboty-s-zaprosami/README.md) | PDF 70–104; `p0070:c01`–`p0104:c01` | [cheatsheet](chapter-04-osnovy-raboty-s-zaprosami/cheatsheet.md) · [commands](chapter-04-osnovy-raboty-s-zaprosami/commands.md) · [diagram](chapter-04-osnovy-raboty-s-zaprosami/diagram.md) · [compact SVG](chapter-04-osnovy-raboty-s-zaprosami/visual-cheatsheet.svg) · [detailed SVG](chapter-04-osnovy-raboty-s-zaprosami/visual-cheatsheet-detailed.svg) · [source findings](chapter-04-osnovy-raboty-s-zaprosami/source-findings.md) |
+
 Reading status сохраняется независимо от создания chapter artifacts.
