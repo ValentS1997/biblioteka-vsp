@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100">
+<rect width="1600" height="1100" fill="#f4f6f8"/>
+<rect width="1600" height="120" fill="#1e293b"/>
+<text x="45" y="52" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="white">ГЛАВА 8 · ОТ ILP ДО РАСПРЕДЕЛЁННЫХ СИСТЕМ</text>
+<text x="45" y="88" font-family="Arial,sans-serif" font-size="19" fill="#dbe5ef">parallelism • consistency • coherence • interconnect • MPI • Amdahl</text>
+<g font-family="Arial,sans-serif" fill="#243447">
+
+<rect x="40" y="150" width="480" height="210" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="65" y="192" font-size="21" font-weight="700" fill="#365f91">01 · ILP / VLIW</text>
+<text x="65" y="235" font-size="17">superscalar → hardware scheduling</text>
+<text x="65" y="266" font-size="17">VLIW → compiler bundles operations</text>
+<text x="65" y="297" font-size="17">dependencies + units limit issue</text>
+<text x="65" y="328" font-size="17">TriMedia: up to 5 operations</text>
+
+<rect x="560" y="150" width="480" height="210" rx="14" fill="white" stroke="#2d7d63" stroke-width="2"/>
+<text x="585" y="192" font-size="21" font-weight="700" fill="#2d7d63">02 · THREADING / MULTICORE</text>
+<text x="585" y="235" font-size="17">fine-grained hides short stalls</text>
+<text x="585" y="266" font-size="17">coarse-grained switches on long stalls</text>
+<text x="585" y="297" font-size="17">SMT fills free issue slots</text>
+<text x="585" y="328" font-size="17">multicore adds true processors</text>
+
+<rect x="1080" y="150" width="480" height="210" rx="14" fill="white" stroke="#7656a5" stroke-width="2"/>
+<text x="1105" y="192" font-size="21" font-weight="700" fill="#7656a5">03 · COPROCESSORS / GPU</text>
+<text x="1105" y="235" font-size="17">network • graphics • crypto</text>
+<text x="1105" y="266" font-size="17">Fermi: 16 SM × 32 CUDA cores</text>
+<text x="1105" y="297" font-size="17">SIMD works best on same control path</text>
+<text x="1105" y="328" font-size="17">divergence serializes paths</text>
+
+<rect x="40" y="395" width="480" height="210" rx="14" fill="white" stroke="#b15d45" stroke-width="2"/>
+<text x="65" y="437" font-size="21" font-weight="700" fill="#b15d45">04 · CONSISTENCY</text>
+<text x="65" y="480" font-size="17">strict / sequential / processor</text>
+<text x="65" y="511" font-size="17">weak → explicit synchronization</text>
+<text x="65" y="542" font-size="17">acquire / release order critical data</text>
+<text x="65" y="573" font-size="17">software/hardware memory contract</text>
+
+<rect x="560" y="395" width="480" height="210" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="585" y="437" font-size="21" font-weight="700" fill="#365f91">05 · COHERENCE / MESI</text>
+<text x="585" y="480" font-size="17">M: memory stale, one owner</text>
+<text x="585" y="511" font-size="17">E: clean unique copy</text>
+<text x="585" y="542" font-size="17">S: clean shared copies</text>
+<text x="585" y="573" font-size="17">I: invalid</text>
+
+<rect x="1080" y="395" width="480" height="210" rx="14" fill="white" stroke="#2d7d63" stroke-width="2"/>
+<text x="1105" y="437" font-size="21" font-weight="700" fill="#2d7d63">06 · INTERCONNECT</text>
+<text x="1105" y="480" font-size="17">bus → simple / bottleneck</text>
+<text x="1105" y="511" font-size="17">crossbar → nonblocking / expensive</text>
+<text x="1105" y="542" font-size="17">omega → cheap / blocking</text>
+<text x="1105" y="573" font-size="17">topology sets diameter + bandwidth</text>
+
+<rect x="40" y="640" width="480" height="210" rx="14" fill="white" stroke="#7656a5" stroke-width="2"/>
+<text x="65" y="682" font-size="21" font-weight="700" fill="#7656a5">07 · UMA / NUMA / COMA</text>
+<text x="65" y="725" font-size="17">UMA → uniform shared-memory latency</text>
+<text x="65" y="756" font-size="17">NUMA → local faster than remote</text>
+<text x="65" y="787" font-size="17">CC-NUMA → directory coherence</text>
+<text x="65" y="818" font-size="17">COMA → no permanent data home</text>
+
+<rect x="560" y="640" width="480" height="210" rx="14" fill="white" stroke="#b15d45" stroke-width="2"/>
+<text x="585" y="682" font-size="21" font-weight="700" fill="#b15d45">08 · MULTICOMPUTERS</text>
+<text x="585" y="725" font-size="17">private memory per node</text>
+<text x="585" y="756" font-size="17">send / receive replaces remote LOAD</text>
+<text x="585" y="787" font-size="17">MPP • clusters • MPI</text>
+<text x="585" y="818" font-size="17">DSM can emulate shared memory</text>
+
+<rect x="1080" y="640" width="480" height="210" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="1105" y="682" font-size="21" font-weight="700" fill="#365f91">09 · PERFORMANCE</text>
+<text x="1105" y="725" font-size="17">latency • bisection bandwidth</text>
+<text x="1105" y="756" font-size="17">Amdahl: S∞ = 1/f</text>
+<text x="1105" y="787" font-size="17">bus bandwidth / CPU → 0 with scale</text>
+<text x="1105" y="818" font-size="17">replicate + overlap + locality</text>
+
+<rect x="40" y="890" width="1520" height="150" rx="14" fill="#e8eef5" stroke="#9aa9ba"/>
+<text x="65" y="935" font-size="21" font-weight="700">PARALLEL PERFORMANCE EQUATION</text>
+<text x="65" y="973" font-size="18">independent work − serial fraction − communication − synchronization − contention</text>
+<text x="65" y="1005" font-size="18">= useful speedup</text>
+</g>
+</svg>
