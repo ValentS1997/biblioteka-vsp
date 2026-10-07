@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1120" viewBox="0 0 1500 1120">
+<style>
+text{font-family:Arial,sans-serif;fill:#111827}.t{font-size:32px;font-weight:700}.s{font-size:14px;fill:#4b5563}.h{font-size:18px;font-weight:700}.b{font-size:14px}.box{fill:#f9fafb;stroke:#4b5563;stroke-width:2;rx:12}.blue{fill:#eff6ff;stroke:#1d4ed8;stroke-width:2;rx:12}.green{fill:#ecfdf5;stroke:#047857;stroke-width:2;rx:12}.violet{fill:#f5f3ff;stroke:#6d28d9;stroke-width:2;rx:12}.orange{fill:#fff7ed;stroke:#c2410c;stroke-width:2;rx:12}.a{stroke:#374151;stroke-width:2;fill:none;marker-end:url(#m)}
+</style><defs><marker id="m" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#374151"/></marker></defs>
+<text x="50" y="50" class="t">Глава 11 — Событийно-ориентированная пакетная обработка</text>
+<text x="50" y="78" class="s">RAG p0189:c01–p0204:c01 · PDF 189–204</text>
+
+<text x="50" y="125" class="h">A. Stream-composition patterns</text>
+<rect x="55" y="155" width="250" height="135" class="blue"/><text x="85" y="192" class="h">Copier</text><text x="85" y="224" class="b">duplicate one item</text><text x="85" y="254" class="b">into several branches</text>
+<rect x="335" y="155" width="250" height="135" class="green"/><text x="365" y="192" class="h">Filter</text><text x="365" y="224" class="b">predicate</text><text x="365" y="254" class="b">discard non-matches</text>
+<rect x="615" y="155" width="250" height="135" class="violet"/><text x="645" y="192" class="h">Splitter</text><text x="645" y="224" class="b">route items</text><text x="645" y="254" class="b">to one/more subsets</text>
+<rect x="895" y="155" width="250" height="135" class="orange"/><text x="925" y="192" class="h">Sharder</text><text x="925" y="224" class="b">partition equivalent work</text><text x="925" y="254" class="b">fault isolation / locality</text>
+<rect x="1175" y="155" width="250" height="135" class="box"/><text x="1205" y="192" class="h">Merger</text><text x="1205" y="224" class="b">combine sources</text><text x="1205" y="254" class="b">one downstream stream</text>
+
+<text x="50" y="355" class="h">B. User-registration example</text>
+<rect x="70" y="390" width="360" height="155" class="orange"/><text x="100" y="427" class="h">Geographic Sharder</text><text x="100" y="459" class="b">new users → regions</text><text x="100" y="489" class="b">verification mail per shard</text><text x="100" y="519" class="b">partial failure isolation</text>
+<rect x="570" y="390" width="360" height="155" class="blue"/><text x="600" y="427" class="h">Copier after verification</text><text x="600" y="459" class="b">branch 1 → welcome email</text><text x="600" y="489" class="b">branch 2 → notification setup</text>
+<rect x="1070" y="390" width="360" height="155" class="green"/><text x="1100" y="427" class="h">Filter / Splitter</text><text x="1100" y="459" class="b">email subscription</text><text x="1100" y="489" class="b">SMS subscription</text><text x="1100" y="519" class="b">both or neither possible</text>
+<path d="M430,467 L570,467" class="a"/><path d="M930,467 L1070,467" class="a"/>
+
+<text x="50" y="615" class="h">C. Pub/Sub transport plane</text>
+<rect x="90" y="650" width="360" height="145" class="blue"/><text x="120" y="687" class="h">Publisher</text><text x="120" y="719" class="b">stage output</text><text x="120" y="749" class="b">publishes message</text>
+<rect x="570" y="650" width="360" height="145" class="green"/><text x="600" y="687" class="h">Topic</text><text x="600" y="719" class="b">durable queue</text><text x="600" y="749" class="b">replication + partitions</text>
+<rect x="1050" y="650" width="360" height="145" class="violet"/><text x="1080" y="687" class="h">Subscriber</text><text x="1080" y="719" class="b">next processing stage</text><text x="1080" y="749" class="b">consumes events</text>
+<path d="M450,722 L570,722" class="a"/><path d="M930,722 L1050,722" class="a"/>
+
+<text x="50" y="865" class="h">D. Kafka practical boundaries</text>
+<rect x="70" y="900" width="650" height="155" class="box"/><text x="100" y="937" class="h">Source workflow</text><text x="100" y="969" class="b">helm init → incubator repo → Kafka chart</text><text x="100" y="999" class="b">create Photos topics → producer → consumer</text><text x="100" y="1029" class="b">replication factor 3 · partitions 10 in example</text>
+<rect x="780" y="900" width="650" height="155" class="orange"/><text x="810" y="937" class="h">Do not treat as current deployment guide</text><text x="810" y="969" class="b">Tiller/incubator/Kafka 0.11 are historical</text><text x="810" y="999" class="b">topic loop is extraction-sensitive</text><text x="810" y="1029" class="b">modern security/ordering/delivery semantics not verified</text>
+
+<rect x="160" y="1080" width="1180" height="35" class="green"/><text x="190" y="1104" class="b">Core rule: make queue topology explicit, use the right stream transformation, and decouple stages with durable transport.</text>
+</svg>
