@@ -9,3 +9,4 @@ RAG-grounded chapter artifacts for `distributed-systems-patterns-brendan-burns-r
 - [Глава 5 — Реплицированные сервисы с распределением нагрузки](chapter-05-load-balanced-replicated-services/README.md) — `RAG_GROUNDED`, RAG `p0082:c01–p0101:c01`, PDF `82–101`.
 - [Глава 6 — Шардированные сервисы](chapter-06-sharded-services/README.md) — `RAG_GROUNDED`, RAG `p0102:c01–p0121:c01`, PDF `102–121`.
 - [Глава 7 — Паттерн Scatter/Gather](chapter-07-scatter-gather/README.md) — `RAG_GROUNDED`, RAG `p0122:c01–p0133:c01`, PDF `122–133`.
+- [Глава 8 — Функции и событийно-ориентированная обработка](chapter-08-functions-event-driven-processing/README.md) — `RAG_GROUNDED`, RAG `p0134:c01–p0150:c01`, PDF `134–150`.
