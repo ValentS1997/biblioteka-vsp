@@ -63,3 +63,4 @@ Canonical readiness command:
 - [Глава 2](notes/chapters/chapter-02-general-network-principles/) — `RAG_GROUNDED`.
 - [Глава 3. Коммутация каналов и пакетов](notes/chapters/chapter-03-circuit-and-packet-switching/) — `RAG_GROUNDED`.
 - [Глава 4. Стандартизация и классификация сетей](notes/chapters/chapter-04-standardization-and-classification/) — `RAG_GROUNDED`.
+- [Глава 5. Сетевые характеристики и качество обслуживания](notes/chapters/chapter-05-network-characteristics-and-qos/) — `RAG_GROUNDED`.
