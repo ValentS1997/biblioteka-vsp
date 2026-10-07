@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="840" viewBox="0 0 1200 840">
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+    <style>
+      .title{font:700 34px sans-serif;fill:#0f172a}.h{font:700 19px sans-serif;fill:#0f172a}
+      .t{font:14px sans-serif;fill:#1e293b}.s{font:12px sans-serif;fill:#475569}
+      .b{fill:#f8fafc;stroke:#475569;stroke-width:2;rx:14}.blue{fill:#dbeafe;stroke:#1d4ed8;stroke-width:2;rx:14}
+      .green{fill:#dcfce7;stroke:#15803d;stroke-width:2;rx:14}.amber{fill:#fef3c7;stroke:#a16207;stroke-width:2;rx:14}
+      .red{fill:#fee2e2;stroke:#b91c1c;stroke-width:2;rx:14}.ln{stroke:#475569;stroke-width:2;marker-end:url(#a)}
+    </style>
+  </defs>
+  <rect width="1200" height="840" fill="#fff"/>
+  <text x="45" y="55" class="title">Глава 5 — Ввод и вывод информации</text>
+  <text x="45" y="82" class="s">RAG-grounded · PDF 380–487 · 108 chunks</text>
+
+  <rect x="425" y="115" width="350" height="90" class="blue"/>
+  <text x="600" y="150" text-anchor="middle" class="h">Application I/O request</text>
+  <text x="600" y="178" text-anchor="middle" class="t">uniform API hides device-specific mechanics</text>
+
+  <rect x="55" y="290" width="300" height="145" class="b"/>
+  <text x="205" y="325" text-anchor="middle" class="h">Transfer mechanism</text>
+  <text x="205" y="357" text-anchor="middle" class="t">programmed I/O · interrupts · DMA</text>
+  <text x="205" y="385" text-anchor="middle" class="s">CPU cost vs interrupt/bus complexity</text>
+  <text x="205" y="410" text-anchor="middle" class="s">MMIO / port I/O → controller</text>
+
+  <rect x="450" y="290" width="300" height="145" class="green"/>
+  <text x="600" y="325" text-anchor="middle" class="h">I/O software stack</text>
+  <text x="600" y="357" text-anchor="middle" class="t">handler → driver → device-independent</text>
+  <text x="600" y="385" text-anchor="middle" class="t">→ libraries / spooling</text>
+  <text x="600" y="410" text-anchor="middle" class="s">buffering · naming · errors · protection</text>
+
+  <rect x="845" y="290" width="300" height="145" class="amber"/>
+  <text x="995" y="325" text-anchor="middle" class="h">Completion</text>
+  <text x="995" y="357" text-anchor="middle" class="t">precise interrupt state</text>
+  <text x="995" y="385" text-anchor="middle" class="t">wake blocked driver / process</text>
+  <text x="995" y="410" text-anchor="middle" class="s">propagate only unrecovered errors upward</text>
+
+  <line x1="500" y1="205" x2="270" y2="290" class="ln"/>
+  <line x1="600" y1="205" x2="600" y2="290" class="ln"/>
+  <line x1="700" y1="205" x2="930" y2="290" class="ln"/>
+
+  <rect x="55" y="545" width="300" height="155" class="red"/>
+  <text x="205" y="580" text-anchor="middle" class="h">Disks / reliability</text>
+  <text x="205" y="612" text-anchor="middle" class="t">RAID · FCFS/SSF/elevator</text>
+  <text x="205" y="640" text-anchor="middle" class="t">bad blocks · stable storage</text>
+  <text x="205" y="668" text-anchor="middle" class="s">seek/rotation ≠ transfer bandwidth</text>
+
+  <rect x="450" y="545" width="300" height="155" class="blue"/>
+  <text x="600" y="580" text-anchor="middle" class="h">Timers / UI</text>
+  <text x="600" y="612" text-anchor="middle" class="t">clock ticks · alarms · watchdogs</text>
+  <text x="600" y="640" text-anchor="middle" class="t">canonical input · ANSI · X / GUI</text>
+  <text x="600" y="668" text-anchor="middle" class="s">event-driven interaction</text>
+
+  <rect x="845" y="545" width="300" height="155" class="green"/>
+  <text x="995" y="580" text-anchor="middle" class="h">Power</text>
+  <text x="995" y="612" text-anchor="middle" class="t">sleep idle devices</text>
+  <text x="995" y="640" text-anchor="middle" class="t">lower CPU voltage/frequency</text>
+  <text x="995" y="668" text-anchor="middle" class="s">latency/quality ↔ energy trade-off</text>
+
+  <line x1="355" y1="623" x2="450" y2="623" class="ln"/>
+  <line x1="750" y1="623" x2="845" y2="623" class="ln"/>
+
+  <text x="45" y="775" class="s">Troubleshooting boundary: app/API ≠ buffering ≠ driver ≠ interrupt/DMA ≠ controller/bus ≠ physical device.</text>
+</svg>
