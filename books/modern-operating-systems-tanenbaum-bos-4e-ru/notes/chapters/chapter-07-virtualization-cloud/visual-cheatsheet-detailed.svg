@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1460" height="1180" viewBox="0 0 1460 1180">
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+    <style>
+      .title{font:700 34px sans-serif;fill:#0f172a}.h{font:700 18px sans-serif;fill:#0f172a}
+      .t{font:14px sans-serif;fill:#1e293b}.s{font:12px sans-serif;fill:#475569}
+      .b{fill:#f8fafc;stroke:#475569;stroke-width:1.8;rx:13}.blue{fill:#dbeafe;stroke:#1d4ed8;stroke-width:1.8;rx:13}
+      .green{fill:#dcfce7;stroke:#15803d;stroke-width:1.8;rx:13}.amber{fill:#fef3c7;stroke:#a16207;stroke-width:1.8;rx:13}
+      .red{fill:#fee2e2;stroke:#b91c1c;stroke-width:1.8;rx:13}.ln{stroke:#475569;stroke-width:1.7;marker-end:url(#a)}
+    </style>
+  </defs>
+  <rect width="1460" height="1180" fill="#fff"/>
+  <text x="45" y="55" class="title">Глава 7 — подробная карта виртуализации</text>
+  <text x="45" y="82" class="s">RAG · PDF 527–575 · boundary verified</text>
+
+  <rect x="540" y="110" width="380" height="90" class="blue"/>
+  <text x="730" y="145" text-anchor="middle" class="h">Virtual machine</text>
+  <text x="730" y="174" text-anchor="middle" class="t">guest OS + applications expect real hardware semantics</text>
+
+  <rect x="55" y="270" width="350" height="210" class="amber"/>
+  <text x="230" y="305" text-anchor="middle" class="h">CPU path</text>
+  <text x="80" y="342" class="t">ordinary code → direct execution</text>
+  <text x="80" y="369" class="t">sensitive op → trap / VM exit</text>
+  <text x="80" y="396" class="t">old x86 → binary translation</text>
+  <text x="80" y="423" class="t">paravirt → explicit hypercall</text>
+
+  <rect x="555" y="270" width="350" height="210" class="green"/>
+  <text x="730" y="305" text-anchor="middle" class="h">Memory path</text>
+  <text x="580" y="342" class="t">guest virtual → guest physical</text>
+  <text x="580" y="369" class="t">shadow or EPT/nested tables</text>
+  <text x="580" y="396" class="t">→ machine physical</text>
+  <text x="580" y="423" class="s">VM exits expensive; nested walks deeper</text>
+
+  <rect x="1055" y="270" width="350" height="210" class="red"/>
+  <text x="1230" y="305" text-anchor="middle" class="h">I/O path</text>
+  <text x="1080" y="342" class="t">virtual device emulation</text>
+  <text x="1080" y="369" class="t">device domain / host driver</text>
+  <text x="1080" y="396" class="t">I/O MMU remaps DMA + interrupts</text>
+  <text x="1080" y="423" class="t">SR-IOV PF / VF</text>
+
+  <line x1="625" y1="200" x2="315" y2="270" class="ln"/>
+  <line x1="730" y1="200" x2="730" y2="270" class="ln"/>
+  <line x1="835" y1="200" x2="1145" y2="270" class="ln"/>
+
+  <rect x="40" y="585" width="300" height="220" class="b"/>
+  <text x="190" y="620" text-anchor="middle" class="h">Hypervisor models</text>
+  <text x="65" y="657" class="t">Type 1: directly on hardware</text>
+  <text x="65" y="684" class="t">Type 2: host OS services/drivers</text>
+  <text x="65" y="711" class="t">full virtualization vs paravirt</text>
+  <text x="65" y="738" class="s">process virtualization is separate</text>
+
+  <rect x="370" y="585" width="300" height="220" class="green"/>
+  <text x="520" y="620" text-anchor="middle" class="h">Memory reclamation</text>
+  <text x="395" y="657" class="t">overcommitment</text>
+  <text x="395" y="684" class="t">ballooning</text>
+  <text x="395" y="711" class="t">deduplication + copy-on-write</text>
+  <text x="395" y="738" class="s">guest policy chooses valuable pages</text>
+
+  <rect x="700" y="585" width="340" height="220" class="blue"/>
+  <text x="870" y="620" text-anchor="middle" class="h">Cloud service</text>
+  <text x="725" y="657" class="t">on-demand · network access</text>
+  <text x="725" y="684" class="t">resource pooling · elasticity</text>
+  <text x="725" y="711" class="t">measured service</text>
+  <text x="725" y="738" class="s">IaaS / PaaS / SaaS</text>
+
+  <rect x="1070" y="585" width="350" height="220" class="amber"/>
+  <text x="1245" y="620" text-anchor="middle" class="h">Lifecycle</text>
+  <text x="1095" y="657" class="t">pre-copy live migration</text>
+  <text x="1095" y="684" class="t">dirty-page recopy</text>
+  <text x="1095" y="711" class="t">checkpoint + copy-on-write</text>
+  <text x="1095" y="738" class="s">external peer state cannot rewind automatically</text>
+
+  <rect x="110" y="910" width="360" height="190" class="red"/>
+  <text x="290" y="945" text-anchor="middle" class="h">Performance risks</text>
+  <text x="135" y="982" class="t">too many VM exits / traps</text>
+  <text x="135" y="1009" class="t">shadow-page synchronization faults</text>
+  <text x="135" y="1036" class="t">host-mediated I/O / world switches</text>
+
+  <rect x="550" y="910" width="360" height="190" class="green"/>
+  <text x="730" y="945" text-anchor="middle" class="h">Isolation risks</text>
+  <text x="575" y="982" class="t">guest must not alter host/hypervisor</text>
+  <text x="575" y="1009" class="t">DMA limited by I/O MMU mappings</text>
+  <text x="575" y="1036" class="t">device VF/PF ownership separated</text>
+
+  <rect x="990" y="910" width="360" height="190" class="b"/>
+  <text x="1170" y="945" text-anchor="middle" class="h">VMware case study</text>
+  <text x="1015" y="982" class="t">VMM + VMX</text>
+  <text x="1015" y="1009" class="t">direct execution + binary translation</text>
+  <text x="1015" y="1036" class="t">world switch; ESX/ESXi on hardware</text>
+
+  <text x="45" y="1145" class="s">Core rule: preserve equivalence and isolation while minimizing hypervisor intervention on the common path.</text>
+</svg>
