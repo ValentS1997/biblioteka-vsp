@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1120" viewBox="0 0 1500 1120" role="img" aria-labelledby="title desc">
+  <title id="title">Детальная карта главы 1 — Эволюция компьютерных сетей</title>
+  <desc id="desc">RAG-grounded карта исторических этапов, конвергенции и влияния Интернета; отмечен отсутствующий source unit PDF 36.</desc>
+  <rect width="1500" height="1120" fill="#ffffff"/>
+  <text x="60" y="60" font-family="sans-serif" font-size="36" font-weight="700">Эволюция компьютерных сетей — причинная карта</text>
+  <text x="60" y="96" font-family="sans-serif" font-size="18">Глава 1 · PDF 26–40 · printed 25–39 · source mode: rag_only</text>
+
+  <rect x="60" y="135" width="650" height="135" rx="18" fill="#eef2f7" stroke="#27364a" stroke-width="2"/>
+  <text x="90" y="175" font-family="sans-serif" font-size="24" font-weight="700">Корень 1: вычислительная техника</text>
+  <text x="90" y="210" font-family="sans-serif" font-size="18">1950-е: пакетная обработка и мейнфреймы</text>
+  <text x="90" y="238" font-family="sans-serif" font-size="18">1960-е: time sharing и многотерминальные системы</text>
+
+  <rect x="790" y="135" width="650" height="135" rx="18" fill="#eef2f7" stroke="#27364a" stroke-width="2"/>
+  <text x="820" y="175" font-family="sans-serif" font-size="24" font-weight="700">Корень 2: телекоммуникации</text>
+  <text x="820" y="210" font-family="sans-serif" font-size="18">дальний терминальный доступ через телефонные сети</text>
+  <text x="820" y="238" font-family="sans-serif" font-size="18">связи компьютер–компьютер и передача на расстояние</text>
+
+  <path d="M385 270 L385 320" stroke="#27364a" stroke-width="3"/>
+  <path d="M1115 270 L1115 320" stroke="#27364a" stroke-width="3"/>
+
+  <rect x="60" y="320" width="650" height="170" rx="18" fill="#f7f7f7" stroke="#27364a" stroke-width="2"/>
+  <text x="90" y="360" font-family="sans-serif" font-size="24" font-weight="700">Путь к LAN</text>
+  <text x="90" y="395" font-family="sans-serif" font-size="18">БИС и мини-компьютеры распределяют вычислительные ресурсы</text>
+  <text x="90" y="425" font-family="sans-serif" font-size="18">автономные компьютеры → потребность в автоматическом обмене</text>
+  <text x="90" y="455" font-family="sans-serif" font-size="18">нестандартные связи → Ethernet / Arcnet / Token Ring / FDDI</text>
+
+  <rect x="790" y="320" width="650" height="170" rx="18" fill="#f7f7f7" stroke="#27364a" stroke-width="2"/>
+  <text x="820" y="360" font-family="sans-serif" font-size="24" font-weight="700">Путь к WAN</text>
+  <text x="820" y="395" font-family="sans-serif" font-size="18">WAN в изложении главы появляются раньше LAN</text>
+  <text x="820" y="425" font-family="sans-serif" font-size="18">пульсирующий трафик → эффективность packet switching</text>
+  <text x="820" y="455" font-family="sans-serif" font-size="18">X.25 · ARPANET · сетевые ОС</text>
+
+  <path d="M385 490 L570 560" stroke="#27364a" stroke-width="3" fill="none"/>
+  <path d="M1115 490 L930 560" stroke="#27364a" stroke-width="3" fill="none"/>
+
+  <rect x="300" y="550" width="900" height="175" rx="18" fill="#eef2f7" stroke="#27364a" stroke-width="2"/>
+  <text x="340" y="594" font-family="sans-serif" font-size="26" font-weight="700">Конвергенция</text>
+  <text x="340" y="630" font-family="sans-serif" font-size="18">LAN/WAN: оптика и цифровые каналы · IP · расширение услуг · Carrier Ethernet · MAN</text>
+  <text x="340" y="662" font-family="sans-serif" font-size="18">Компьютерные/телеком-сети: пакетная передача голоса · QoS · IP в 3G/4G/5G</text>
+  <text x="340" y="694" font-family="sans-serif" font-size="18">Методы отказоустойчивости также переходят между сетевыми традициями</text>
+
+  <rect x="1240" y="565" width="210" height="130" rx="16" fill="#ffffff" stroke="#27364a" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="1265" y="605" font-family="sans-serif" font-size="18" font-weight="700">RAG gap</text>
+  <text x="1265" y="635" font-family="sans-serif" font-size="16">PDF page 36</text>
+  <text x="1265" y="662" font-family="sans-serif" font-size="16">нет chunk</text>
+
+  <path d="M750 725 L750 780" stroke="#27364a" stroke-width="3"/>
+
+  <rect x="180" y="780" width="1140" height="190" rx="18" fill="#f7f7f7" stroke="#27364a" stroke-width="2"/>
+  <text x="220" y="825" font-family="sans-serif" font-size="26" font-weight="700">Интернет постоянно меняет требования</text>
+  <text x="220" y="862" font-family="sans-serif" font-size="18">Количественный рост: пользователи · хосты · терминальные устройства · трафик</text>
+  <text x="220" y="894" font-family="sans-serif" font-size="18">Качественный рост: новые сервисы · мобильные и встроенные устройства · IoT</text>
+  <text x="220" y="926" font-family="sans-serif" font-size="18">Профиль трафика: от файлов к потоковому видео; облачные вычисления увеличивают сетевой обмен</text>
+  <text x="220" y="958" font-family="sans-serif" font-size="18">Системы реального времени повышают требования к времени реакции и надежности</text>
+
+  <path d="M750 970 L750 1020" stroke="#27364a" stroke-width="3"/>
+
+  <rect x="310" y="1020" width="880" height="70" rx="18" fill="#eef2f7" stroke="#27364a" stroke-width="2"/>
+  <text x="350" y="1063" font-family="sans-serif" font-size="21" font-weight="700">Итог: сеть эволюционирует вместе с вычислениями, каналами, трафиком и сервисами</text>
+</svg>

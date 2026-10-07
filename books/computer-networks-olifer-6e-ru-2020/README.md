@@ -56,3 +56,7 @@ Search-index routing: `shard_prefix_chars=4`; maximum generated shard: `92360 by
 Canonical readiness command:
 
 `python scripts/check_book_readiness.py --book-id computer-networks-olifer-6e-ru-2020 --capability chapter-analysis`
+
+## Chapter artifacts
+
+- [Глава 1. Эволюция компьютерных сетей](notes/chapters/chapter-01-evolution-computer-networks/) — `RAG_GROUNDED`.
