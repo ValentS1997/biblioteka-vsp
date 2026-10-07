@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="1420" viewBox="0 0 1680 1420">
+<rect width="1680" height="1420" fill="#eef5f8"/><rect width="1680" height="170" fill="#173349"/>
+<text x="48" y="72" font-family="DejaVu Sans,Arial" font-size="40" fill="#fff" font-weight="700">Глава 12 | Trust boundary → visibility → containment</text>
+<text x="50" y="122" font-family="DejaVu Sans,Arial" font-size="23" fill="#d4e9f0">Web application attacks, availability, memory corruption, lateral movement and defensible architecture</text>
+<g font-family="DejaVu Sans,Arial">
+<rect x="38" y="205" width="510" height="430" rx="18" fill="#fff" stroke="#cbdde5"/>
+<text x="65" y="250" font-size="29" fill="#267587" font-weight="700">Web application layer</text>
+<text x="65" y="298" font-size="20" fill="#315166">OWASP Top 10:2021</text>
+<text x="65" y="340" font-size="20" fill="#315166">XXE / XSS / SQL injection</text>
+<text x="65" y="382" font-size="20" fill="#315166">Command injection / traversal</text>
+<text x="65" y="424" font-size="20" fill="#315166">Input validation / access control</text>
+<text x="65" y="466" font-size="20" fill="#315166">WAF / ModSecurity as extra layer</text>
+<text x="65" y="508" font-size="20" fill="#8b5b3c">Do not rely on WAF alone</text>
+<rect x="585" y="205" width="510" height="430" rx="18" fill="#fff" stroke="#cbdde5"/>
+<text x="612" y="250" font-size="29" fill="#4a6ea5" font-weight="700">Availability / memory</text>
+<text x="612" y="298" font-size="20" fill="#315166">DDoS / amplification / slow attacks</text>
+<text x="612" y="340" font-size="20" fill="#315166">Buffer overflow / heap spraying</text>
+<text x="612" y="382" font-size="20" fill="#315166">ASLR / stack canary / NX</text>
+<text x="612" y="424" font-size="20" fill="#315166">Crash ≠ code execution</text>
+<text x="612" y="466" font-size="20" fill="#315166">Mitigation ≠ bug fixed</text>
+<text x="612" y="508" font-size="20" fill="#8b5b3c">No offensive sequences reproduced</text>
+<rect x="1132" y="205" width="510" height="430" rx="18" fill="#fff" stroke="#cbdde5"/>
+<text x="1158" y="250" font-size="29" fill="#95633e" font-weight="700">Lateral / resilient architecture</text>
+<text x="1158" y="298" font-size="20" fill="#315166">Recon / identity / credentials</text>
+<text x="1158" y="340" font-size="20" fill="#315166">Segmentation / firewalls / DMZ</text>
+<text x="1158" y="382" font-size="20" fill="#315166">Logs / SIEM / EDR</text>
+<text x="1158" y="424" font-size="20" fill="#315166">Isolation / containment</text>
+<text x="1158" y="466" font-size="20" fill="#315166">Repeatable incident response</text>
+<text x="1158" y="508" font-size="20" fill="#8b5b3c">Visibility after compromise matters</text></g>
+<rect x="38" y="675" width="1604" height="520" rx="18" fill="#dfeef3" stroke="#bdd8e3"/>
+<text x="68" y="725" font-family="DejaVu Sans,Arial" font-size="30" fill="#173349" font-weight="700">Evidence and source caveats</text>
+<text x="68" y="775" font-family="DejaVu Sans,Arial" font-size="21" fill="#315166">1. OWASP list is source-explicit 2021, not a silently current future snapshot.</text>
+<text x="68" y="818" font-family="DejaVu Sans,Arial" font-size="21" fill="#315166">2. CRS 3.2.0 rule uses legacy A1 tag while source also names A03:2021 Injection.</text>
+<text x="68" y="861" font-family="DejaVu Sans,Arial" font-size="21" fill="#315166">3. Historical Smurf/SlowHTTP examples are not current capacity/tool facts.</text>
+<text x="68" y="904" font-family="DejaVu Sans,Arial" font-size="21" fill="#315166">4. ASLR/canary/NX reduce exploitability but do not remove the bug.</text>
+<text x="68" y="947" font-family="DejaVu Sans,Arial" font-size="21" fill="#315166">5. Lateral movement requires identity/network controls plus telemetry and containment.</text>
+<text x="68" y="1005" font-family="DejaVu Sans,Arial" font-size="20" fill="#8b5b3c">F-08: source architecture terms are preserved, not relabeled as Zero Trust.</text>
+<text x="68" y="1048" font-family="DejaVu Sans,Arial" font-size="20" fill="#8b5b3c">F-10: “systems will be compromised” is treated as a resilience design assumption.</text>
+<text x="68" y="1110" font-family="DejaVu Sans,Arial" font-size="20" fill="#315166">Authorized targets, load limits, staging and rollback: [Needs confirmation]</text>
+<text x="49" y="1380" font-family="DejaVu Sans,Arial" font-size="19" fill="#526e7e">RAG-only · p0324:c01–p0349:c02 · p349 ends the book · no offensive test executed</text>
+</svg>
