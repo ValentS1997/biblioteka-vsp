@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="840" viewBox="0 0 1200 840" role="img" aria-labelledby="t d">
+<title id="t">Глава 6 — разложение на составляющие</title>
+<desc id="d">Компактная схема информативного decomposition: понятность, наблюдаемость, полезность, зависимости и проверка симуляцией.</desc>
+<rect x="0" y="0" width="1200" height="840" rx="0" fill="#0c1929" stroke="#0c1929" stroke-width="1.5"/>
+<text x="52" y="48" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#82d0f7" font-weight="bold">BIBLIOTEKA-VSP / CYBER RISK</text>
+<text x="52" y="96" font-family="DejaVu Sans,Arial,sans-serif" font-size="32" fill="#fbfdff" font-weight="bold">Глава 6 · Разложение на составляющие</text>
+<text x="52" y="132" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#b9d1e2" font-weight="normal">Декомпозиция полезна, только если компоненты известны лучше исходной величины</text>
+<text x="52" y="182" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#82d0f7" font-weight="bold">Три фильтра Ховарда</text>
+<rect x="52" y="200" width="342" height="164" rx="14" fill="#183149" stroke="#8dcdf1" stroke-width="1.5"/>
+<rect x="66" y="217" width="6" height="34" rx="3" fill="#8dcdf1" stroke="#8dcdf1" stroke-width="1.5"/>
+<text x="89" y="243" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Понятность</text>
+<text x="72" y="282" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Одинаково ли понимаем</text>
+<text x="72" y="310" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">компонент и единицу</text>
+<text x="72" y="338" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">оценки?</text>
+<rect x="429" y="200" width="342" height="164" rx="14" fill="#183149" stroke="#91d6bd" stroke-width="1.5"/>
+<rect x="443" y="217" width="6" height="34" rx="3" fill="#91d6bd" stroke="#91d6bd" stroke-width="1.5"/>
+<text x="466" y="243" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Наблюдаемость</text>
+<text x="449" y="282" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Что именно увидим,</text>
+<text x="449" y="310" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">когда явление</text>
+<text x="449" y="338" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">проявится?</text>
+<rect x="806" y="200" width="342" height="164" rx="14" fill="#183149" stroke="#e7c18c" stroke-width="1.5"/>
+<rect x="820" y="217" width="6" height="34" rx="3" fill="#e7c18c" stroke="#e7c18c" stroke-width="1.5"/>
+<text x="843" y="243" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Полезность</text>
+<text x="826" y="282" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Изменит ли знание</text>
+<text x="826" y="310" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">компонента решение</text>
+<text x="826" y="338" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">или приоритет?</text>
+<text x="592" y="395" font-family="DejaVu Sans,Arial,sans-serif" font-size="34" fill="#7ccdf4" font-weight="bold">↓</text>
+<rect x="164" y="414" width="872" height="96" rx="14" fill="#213d55" stroke="#77cff6" stroke-width="1.5"/>
+<text x="211" y="454" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" fill="#f8fbff" font-weight="bold">Компоненты → явные зависимости → симуляция</text>
+<text x="211" y="485" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#d0e6f3" font-weight="normal">Сравнить с прямой оценкой и наблюдаемой реальностью</text>
+<text x="592" y="548" font-family="DejaVu Sans,Arial,sans-serif" font-size="34" fill="#7ccdf4" font-weight="bold">↓</text>
+<rect x="52" y="570" width="521" height="164" rx="14" fill="#183149" stroke="#89d9bd" stroke-width="1.5"/>
+<rect x="66" y="587" width="6" height="34" rx="3" fill="#89d9bd" stroke="#89d9bd" stroke-width="1.5"/>
+<text x="89" y="613" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Информативное разложение</text>
+<text x="72" y="652" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Больше фактов, меньше абстракции</text>
+<text x="72" y="680" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Учитывает корреляции</text>
+<text x="72" y="708" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Помогает различать решения</text>
+<rect x="626" y="570" width="522" height="164" rx="14" fill="#183149" stroke="#efb69d" stroke-width="1.5"/>
+<rect x="640" y="587" width="6" height="34" rx="3" fill="#efb69d" stroke="#efb69d" stroke-width="1.5"/>
+<text x="663" y="613" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Неинформативное</text>
+<text x="646" y="652" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">«Суждения о суждениях»</text>
+<text x="646" y="680" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Детализация без данных</text>
+<text x="646" y="708" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Сложнее, но не точнее</text>
+<rect x="52" y="753" width="1096" height="49" rx="14" fill="#2c2a38" stroke="#9c8ba4" stroke-width="1.5"/>
+<text x="74" y="784" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#eadce8" font-weight="normal">Важно: более широкий итоговый диапазон иногда выявляет слишком узкий исходный baseline</text>
+<text x="52" y="827" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" fill="#91aec4" font-weight="normal">RAG: e0028–e0030 · EPUB spine 28–30 · OPS/ch1-26.xhtml — OPS/ch1-28.xhtml</text>
+</svg>
