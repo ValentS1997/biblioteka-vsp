@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="830" viewBox="0 0 1200 830" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 10 — Системы на основе очередей задач</title>
+  <desc id="desc">RAG-grounded compact diagram of source, queue manager, worker Jobs, scaling and Multi-Worker.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #111827; }
+      .title { font-size: 30px; font-weight: 700; }
+      .sub { font-size: 14px; fill: #4b5563; }
+      .h { font-size: 18px; font-weight: 700; }
+      .b { font-size: 15px; }
+      .small { font-size: 13px; fill: #374151; }
+      .blue { fill: #eff6ff; stroke: #1d4ed8; stroke-width: 2; rx: 14; }
+      .green { fill: #ecfdf5; stroke: #047857; stroke-width: 2; rx: 14; }
+      .violet { fill: #f5f3ff; stroke: #6d28d9; stroke-width: 2; rx: 14; }
+      .orange { fill: #fff7ed; stroke: #c2410c; stroke-width: 2; rx: 14; }
+      .box { fill: #f9fafb; stroke: #374151; stroke-width: 2; rx: 14; }
+      .arrow { stroke: #374151; stroke-width: 2.2; fill: none; marker-end: url(#m); }
+    </style>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#374151"/></marker>
+  </defs>
+
+  <text x="45" y="50" class="title">Глава 10 — Системы на основе очередей задач</text>
+  <text x="45" y="78" class="sub">RAG p0173:c01–p0188:c01 · PDF 173–188 · rag_only</text>
+
+  <rect x="60" y="120" width="300" height="120" class="blue"/>
+  <text x="85" y="157" class="h">Source container</text>
+  <text x="85" y="188" class="b">provides work items</text>
+
+  <rect x="450" y="120" width="300" height="120" class="green"/>
+  <text x="475" y="157" class="h">Queue manager</text>
+  <text x="475" y="188" class="b">generic reconciliation logic</text>
+
+  <rect x="840" y="120" width="300" height="120" class="violet"/>
+  <text x="865" y="157" class="h">Worker Jobs</text>
+  <text x="865" y="188" class="b">one-shot processing</text>
+
+  <path d="M360,180 L450,180" class="arrow"/>
+  <path d="M750,180 L840,180" class="arrow"/>
+
+  <rect x="80" y="330" width="310" height="150" class="blue"/>
+  <text x="105" y="367" class="h">Source API</text>
+  <text x="105" y="399" class="b">list items</text>
+  <text x="105" y="429" class="b">get item details</text>
+
+  <rect x="445" y="330" width="310" height="150" class="orange"/>
+  <text x="470" y="367" class="h">Queue stability</text>
+  <text x="470" y="399" class="b">processing / parallelism</text>
+  <text x="470" y="429" class="b">&lt; inter-arrival interval</text>
+
+  <rect x="810" y="330" width="310" height="150" class="green"/>
+  <text x="835" y="367" class="h">Multi-Worker</text>
+  <text x="835" y="399" class="b">one worker interface</text>
+  <text x="835" y="429" class="b">several reusable containers</text>
+
+  <rect x="120" y="570" width="430" height="135" class="box"/>
+  <text x="145" y="607" class="h">Concurrency trade-off</text>
+  <text x="145" y="639" class="b">more workers → faster drain / more resources</text>
+  <text x="145" y="669" class="b">fewer workers → lower cost / more delay</text>
+
+  <rect x="650" y="570" width="430" height="135" class="orange"/>
+  <text x="675" y="607" class="h">Source caution</text>
+  <text x="675" y="639" class="b">API path/port mismatch</text>
+  <text x="675" y="669" class="b">ffmpeg output description mismatch</text>
+
+  <rect x="180" y="755" width="840" height="45" class="green"/>
+  <text x="210" y="784" class="b">Rule: standardize source/worker interfaces, reuse queue manager, bound concurrency, observe backlog.</text>
+
+  <text x="45" y="822" class="small">Current Kubernetes client/API compatibility is outside rag_only scope.</text>
+</svg>
