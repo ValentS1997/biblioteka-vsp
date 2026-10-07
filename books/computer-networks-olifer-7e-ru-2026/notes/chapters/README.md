@@ -9,5 +9,6 @@ Book ID: `computer-networks-olifer-7e-ru-2026`. Индекс ведёт толь
 | 3 — Коммутация каналов и пакетов | 81–107 | 80–106 | [Глава 3](chapter-03-kommutaciya-kanalov-i-paketov/README.md) |
 | 4 — Стандартизация и классификация сетей | 108–130 | 107–129 | [Глава 4](chapter-04-standartizaciya-i-klassifikaciya-setey/README.md) |
 | 5 — Сетевые характеристики и качество обслуживания | 131–177 | 130–176 | [Глава 5](chapter-05-setevye-harakteristiki-i-kachestvo-obsluzhivaniya/README.md) |
+| 6 — Линии связи | 183–214 | 182–213 | [Глава 6](chapter-06-linii-svyazi/README.md) |
 
 Дальнейшие главы: **[Needs confirmation]** до индивидуального анализа. Reading state книги остаётся независимым от RAG.
