@@ -26,3 +26,7 @@
 
 
 Основные главы 1–12 проанализированы. EPUB spine 46 (`OPS/ch1-44.xhtml`) начинает приложения книги.
+
+Приложения и дополнительные материалы объединены в [итоговое заключение книги](../final-conclusion.md): Appendix A — spine 46, guest authors — spine 47, final notes — spine 48.
+
+**Book analysis status:** `ANALYSIS_CLOSED`. Reading state остаётся независимым: `planned`.
