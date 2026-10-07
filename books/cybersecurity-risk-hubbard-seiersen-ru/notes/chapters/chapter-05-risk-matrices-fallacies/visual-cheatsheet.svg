@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="830" viewBox="0 0 1200 830" role="img" aria-labelledby="t d">
+<title id="t">Глава 5 — матрицы риска и ошибки качественных шкал</title>
+<desc id="d">Компактная схема психологии шкал, сжатия диапазона, инверсии приоритетов и заблуждения Exsupero Ursus.</desc>
+<rect x="0" y="0" width="1200" height="830" rx="0" fill="#0c1929" stroke="#0c1929" stroke-width="1.5"/>
+<text x="52" y="48" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#82d0f7" font-weight="bold">BIBLIOTEKA-VSP / CYBER RISK</text>
+<text x="52" y="96" font-family="DejaVu Sans,Arial,sans-serif" font-size="30" fill="#fbfdff" font-weight="bold">Глава 5 · Почему матрица риска может вводить в заблуждение</text>
+<text x="52" y="132" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#b9d1e2" font-weight="normal">Критика авторов: теряются вероятность, величина потерь и проверяемость</text>
+<text x="52" y="180" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#82d0f7" font-weight="bold">Три источника ошибки</text>
+<rect x="52" y="198" width="342" height="164" rx="14" fill="#183149" stroke="#f0bd9a" stroke-width="1.5"/>
+<rect x="66" y="215" width="6" height="34" rx="3" fill="#f0bd9a" stroke="#f0bd9a" stroke-width="1.5"/>
+<text x="89" y="241" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Психология шкал</text>
+<text x="72" y="280" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">«Высоко» значит разное</text>
+<text x="72" y="308" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">для разных людей и</text>
+<text x="72" y="336" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">контекстов.</text>
+<rect x="429" y="198" width="342" height="164" rx="14" fill="#183149" stroke="#91d6bd" stroke-width="1.5"/>
+<rect x="443" y="215" width="6" height="34" rx="3" fill="#91d6bd" stroke="#91d6bd" stroke-width="1.5"/>
+<text x="466" y="241" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Сжатие диапазона</text>
+<text x="449" y="280" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Разные вероятности и</text>
+<text x="449" y="308" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">потери попадают</text>
+<text x="449" y="336" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">в одну категорию.</text>
+<rect x="806" y="198" width="342" height="164" rx="14" fill="#183149" stroke="#b9b6f0" stroke-width="1.5"/>
+<rect x="820" y="215" width="6" height="34" rx="3" fill="#b9b6f0" stroke="#b9b6f0" stroke-width="1.5"/>
+<text x="843" y="241" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Математика рангов</text>
+<text x="826" y="280" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Порядковые баллы</text>
+<text x="826" y="308" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">не становятся величинами</text>
+<text x="826" y="336" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">от сложения/умножения.</text>
+<text x="592" y="392" font-family="DejaVu Sans,Arial,sans-serif" font-size="34" fill="#7ccdf4" font-weight="bold">↓</text>
+<rect x="164" y="411" width="872" height="92" rx="14" fill="#213d55" stroke="#77cff6" stroke-width="1.5"/>
+<text x="211" y="450" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Следствие: возможны потеря информации и инверсия приоритетов</text>
+<text x="211" y="480" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#d0e6f3" font-weight="normal">Видимость простоты ≠ измеренная эффективность решения</text>
+<text x="592" y="541" font-family="DejaVu Sans,Arial,sans-serif" font-size="34" fill="#7ccdf4" font-weight="bold">↓</text>
+<rect x="52" y="562" width="521" height="164" rx="14" fill="#183149" stroke="#e7c58d" stroke-width="1.5"/>
+<rect x="66" y="579" width="6" height="34" rx="3" fill="#e7c58d" stroke="#e7c58d" stroke-width="1.5"/>
+<text x="89" y="605" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Exsupero Ursus</text>
+<text x="72" y="644" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Не сравнивать модель</text>
+<text x="72" y="672" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">с недостижимым идеалом.</text>
+<text x="72" y="700" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Сравнивать реальные альтернативы.</text>
+<rect x="626" y="562" width="522" height="164" rx="14" fill="#183149" stroke="#89d9bd" stroke-width="1.5"/>
+<rect x="640" y="579" width="6" height="34" rx="3" fill="#89d9bd" stroke="#89d9bd" stroke-width="1.5"/>
+<text x="663" y="605" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#f8fbff" font-weight="bold">Проверяемая альтернатива</text>
+<text x="646" y="644" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Вероятность + потери + период</text>
+<text x="646" y="672" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Сравнение прогнозов и исходов</text>
+<text x="646" y="700" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#c9deec" font-weight="normal">Контролируемая миграция</text>
+<rect x="52" y="750" width="1096" height="48" rx="14" fill="#2c2a38" stroke="#9c8ba4" stroke-width="1.5"/>
+<text x="74" y="781" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#eadce8" font-weight="normal">Boundary: регуляторный процесс и локальный risk appetite — [Needs confirmation]</text>
+<text x="52" y="820" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" fill="#91aec4" font-weight="normal">RAG: e0024–e0026 · EPUB spine 24–26 · OPS/ch1-22.xhtml — OPS/ch1-24.xhtml</text>
+</svg>
