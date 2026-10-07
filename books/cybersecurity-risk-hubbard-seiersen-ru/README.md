@@ -57,3 +57,7 @@ Validation status: `READY_WITH_KNOWN_LIMITATIONS`.
 Canonical readiness command:
 
 `python scripts/check_book_readiness.py --book-id cybersecurity-risk-hubbard-seiersen-ru --capability chapter-analysis`
+
+## Chapter analysis
+
+- [Глава 1 — Самая нужная «заплатка» в кибербезопасности](notes/chapters/chapter-01-most-important-cybersecurity-patch/README.md) — EPUB spine 13–14; chapter-artifact-collection v1.7; source-grounded review. Reading remains `planned`.
