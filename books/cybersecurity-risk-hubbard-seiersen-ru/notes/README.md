@@ -7,3 +7,4 @@ Chapter artifacts are created only after book-level chapter-analysis readiness i
 ## Главы
 
 - [Глава 1 — Самая нужная «заплатка» в кибербезопасности](chapters/chapter-01-most-important-cybersecurity-patch/README.md) — RAG-grounded, EPUB spine 13–14; reading status не изменён.
+- [Глава 2 — Руководство по измерениям для сферы кибербезопасности](chapters/chapter-02-measurement-guide-cybersecurity/README.md) — RAG-grounded, EPUB spine 15–17; reading status не изменён.
