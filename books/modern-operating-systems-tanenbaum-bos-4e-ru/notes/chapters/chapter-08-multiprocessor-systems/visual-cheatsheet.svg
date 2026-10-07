@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="860" viewBox="0 0 1200 860">
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+    <style>
+      .title{font:700 34px sans-serif;fill:#0f172a}.h{font:700 19px sans-serif;fill:#0f172a}
+      .t{font:14px sans-serif;fill:#1e293b}.s{font:12px sans-serif;fill:#475569}
+      .b{fill:#f8fafc;stroke:#475569;stroke-width:2;rx:14}.blue{fill:#dbeafe;stroke:#1d4ed8;stroke-width:2;rx:14}
+      .green{fill:#dcfce7;stroke:#15803d;stroke-width:2;rx:14}.amber{fill:#fef3c7;stroke:#a16207;stroke-width:2;rx:14}
+      .red{fill:#fee2e2;stroke:#b91c1c;stroke-width:2;rx:14}.ln{stroke:#475569;stroke-width:2;marker-end:url(#a)}
+    </style>
+  </defs>
+  <rect width="1200" height="860" fill="#fff"/>
+  <text x="45" y="55" class="title">Глава 8 — Многопроцессорные системы</text>
+  <text x="45" y="82" class="s">RAG-grounded · PDF 576–658 · 83 chunks</text>
+
+  <rect x="425" y="115" width="350" height="92" class="blue"/>
+  <text x="600" y="150" text-anchor="middle" class="h">Multiple CPUs / nodes</text>
+  <text x="600" y="178" text-anchor="middle" class="t">first question: is physical memory shared?</text>
+
+  <rect x="50" y="290" width="310" height="170" class="amber"/>
+  <text x="205" y="325" text-anchor="middle" class="h">Multiprocessor / SMP</text>
+  <text x="205" y="357" text-anchor="middle" class="t">shared RAM · UMA / NUMA</text>
+  <text x="205" y="385" text-anchor="middle" class="t">TSL · locks · cache coherence</text>
+  <text x="205" y="415" text-anchor="middle" class="s">affinity · space · gang scheduling</text>
+
+  <rect x="445" y="290" width="310" height="170" class="green"/>
+  <text x="600" y="325" text-anchor="middle" class="h">Multicomputer</text>
+  <text x="600" y="357" text-anchor="middle" class="t">private RAM · message passing</text>
+  <text x="600" y="385" text-anchor="middle" class="t">RPC · DSM · load balancing</text>
+  <text x="600" y="415" text-anchor="middle" class="s">copies and page movement matter</text>
+
+  <rect x="840" y="290" width="310" height="170" class="red"/>
+  <text x="995" y="325" text-anchor="middle" class="h">Distributed system</text>
+  <text x="995" y="357" text-anchor="middle" class="t">complete machines · network</text>
+  <text x="995" y="385" text-anchor="middle" class="t">middleware abstraction</text>
+  <text x="995" y="415" text-anchor="middle" class="s">Web · files · CORBA · Linda</text>
+
+  <line x1="500" y1="207" x2="280" y2="290" class="ln"/>
+  <line x1="600" y1="207" x2="600" y2="290" class="ln"/>
+  <line x1="700" y1="207" x2="920" y2="290" class="ln"/>
+
+  <rect x="50" y="575" width="310" height="165" class="b"/>
+  <text x="205" y="610" text-anchor="middle" class="h">Synchronization</text>
+  <text x="205" y="642" text-anchor="middle" class="t">read-before-TSL · backoff</text>
+  <text x="205" y="670" text-anchor="middle" class="t">spin vs context switch</text>
+  <text x="205" y="698" text-anchor="middle" class="s">protect correctness and bus bandwidth</text>
+
+  <rect x="445" y="575" width="310" height="165" class="blue"/>
+  <text x="600" y="610" text-anchor="middle" class="h">Communication</text>
+  <text x="600" y="642" text-anchor="middle" class="t">send/receive · RPC stubs</text>
+  <text x="600" y="670" text-anchor="middle" class="t">DSM remote page faults</text>
+  <text x="600" y="698" text-anchor="middle" class="s">false sharing creates thrashing</text>
+
+  <rect x="840" y="575" width="310" height="165" class="green"/>
+  <text x="995" y="610" text-anchor="middle" class="h">Abstraction</text>
+  <text x="995" y="642" text-anchor="middle" class="t">middleware hides heterogeneity</text>
+  <text x="995" y="670" text-anchor="middle" class="t">consistency semantics still matter</text>
+  <text x="995" y="698" text-anchor="middle" class="s">location hiding ≠ zero remote cost</text>
+
+  <text x="45" y="810" class="s">Operational rule: classify shared memory vs messages vs middleware before diagnosing scaling or correctness.</text>
+</svg>
