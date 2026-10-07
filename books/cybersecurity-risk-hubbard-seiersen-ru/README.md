@@ -67,3 +67,4 @@ Canonical readiness command:
 - [Глава 5 — Матрицы риска, факторы лжи и другие препятствия](notes/chapters/chapter-05-risk-matrices-fallacies/README.md) — EPUB spine 24–26; artifacts v1.7 + explicit conclusion summary; reading remains `planned`.
 - [Глава 6 — Разложение на составляющие](notes/chapters/chapter-06-decomposition/README.md) — EPUB spine 28–30; artifacts v1.7 + explicit conclusion summary; reading remains `planned`.
 - [Глава 7 — Калиброванные оценки: что вам известно уже сейчас?](notes/chapters/chapter-07-calibrated-estimates/README.md) — EPUB spine 31–33; artifacts v1.7 + calibration exercise; reading remains `planned`.
+- [Глава 8 — Уменьшение неопределенности с помощью байесовских методов](notes/chapters/chapter-08-bayesian-uncertainty/README.md) — EPUB spine 34–35; artifacts v1.7; reading remains `planned`.
