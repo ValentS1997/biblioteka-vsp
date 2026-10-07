@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000">
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+    <style>
+      .title{font:700 34px sans-serif;fill:#0f172a}.h{font:700 19px sans-serif;fill:#0f172a}.t{font:15px sans-serif;fill:#1e293b}.s{font:13px sans-serif;fill:#475569}
+      .b{fill:#f8fafc;stroke:#475569;stroke-width:1.8;rx:14}.k{fill:#dbeafe;stroke:#1d4ed8;stroke-width:2;rx:14}.u{fill:#fef3c7;stroke:#a16207;stroke-width:1.8;rx:14}.hw{fill:#e2e8f0;stroke:#334155;stroke-width:1.8;rx:14}.ln{stroke:#475569;stroke-width:1.8;marker-end:url(#a)}
+    </style>
+  </defs>
+  <rect width="1400" height="1000" fill="#fff"/>
+  <text x="45" y="55" class="title">Глава 1 — подробная карта</text>
+  <text x="45" y="82" class="s">Источник: RAG · PDF pages 22–110 · boundary verified</text>
+
+  <rect x="510" y="115" width="380" height="85" class="u"/>
+  <text x="700" y="148" text-anchor="middle" class="h">Пользовательское пространство</text>
+  <text x="700" y="176" text-anchor="middle" class="t">приложения · shell · GUI · user-space services</text>
+
+  <rect x="500" y="250" width="400" height="95" class="k"/>
+  <text x="700" y="285" text-anchor="middle" class="h">System-call / API boundary</text>
+  <text x="700" y="314" text-anchor="middle" class="t">trap → kernel service → return</text>
+
+  <rect x="500" y="395" width="400" height="110" class="k"/>
+  <text x="700" y="430" text-anchor="middle" class="h">Kernel mode</text>
+  <text x="700" y="458" text-anchor="middle" class="t">привилегированные инструкции · защита · управление</text>
+  <text x="700" y="483" text-anchor="middle" class="s">две роли: абстракции + менеджмент ресурсов</text>
+
+  <rect x="500" y="575" width="400" height="105" class="hw"/>
+  <text x="700" y="610" text-anchor="middle" class="h">Аппаратные ресурсы</text>
+  <text x="700" y="638" text-anchor="middle" class="t">CPU · cache/RAM · disk/SSD · I/O · buses</text>
+  <text x="700" y="661" text-anchor="middle" class="s">controllers ↔ device drivers · interrupts</text>
+
+  <line x1="700" y1="200" x2="700" y2="250" class="ln"/>
+  <line x1="700" y1="345" x2="700" y2="395" class="ln"/>
+  <line x1="700" y1="505" x2="700" y2="575" class="ln"/>
+
+  <rect x="50" y="235" width="360" height="150" class="b"/>
+  <text x="230" y="270" text-anchor="middle" class="h">Абстракции ОС</text>
+  <text x="75" y="305" class="t">• процесс = программа в выполнении + состояние</text>
+  <text x="75" y="332" class="t">• адресное пространство ≠ физическая RAM</text>
+  <text x="75" y="359" class="t">• файлы · каталоги · descriptors · pipes</text>
+
+  <rect x="50" y="430" width="360" height="155" class="b"/>
+  <text x="230" y="465" text-anchor="middle" class="h">Распределение ресурсов</text>
+  <text x="75" y="500" class="t">• во времени: CPU, принтер, устройство</text>
+  <text x="75" y="527" class="t">• в пространстве: память, дисковое место</text>
+  <text x="75" y="554" class="t">• безопасность: права + изоляция</text>
+
+  <rect x="990" y="220" width="360" height="190" class="b"/>
+  <text x="1170" y="255" text-anchor="middle" class="h">POSIX-примеры</text>
+  <text x="1015" y="290" class="t">process: fork · waitpid · execve · exit</text>
+  <text x="1015" y="317" class="t">files: open · read · write · lseek · stat</text>
+  <text x="1015" y="344" class="t">dirs/fs: mkdir · link · unlink · mount</text>
+  <text x="1015" y="371" class="t">misc: chdir · chmod · kill · time</text>
+  <text x="1015" y="397" class="s">Win32 API intentionally differs from kernel syscalls</text>
+
+  <rect x="990" y="455" width="360" height="205" class="b"/>
+  <text x="1170" y="490" text-anchor="middle" class="h">Структуры ОС</text>
+  <text x="1015" y="525" class="t">• монолитная — direct calls, large failure domain</text>
+  <text x="1015" y="552" class="t">• многоуровневая — hierarchy of services</text>
+  <text x="1015" y="579" class="t">• микроядро — minimal privileged core</text>
+  <text x="1015" y="606" class="t">• клиент–сервер — message-based services</text>
+  <text x="1015" y="633" class="t">• VM / exokernel — isolation/resource mapping</text>
+
+  <rect x="50" y="650" width="360" height="195" class="b"/>
+  <text x="230" y="685" text-anchor="middle" class="h">ОС и аппаратная база</text>
+  <text x="75" y="720" class="t">• memory hierarchy + caching</text>
+  <text x="75" y="747" class="t">• MMU / virtual-memory mapping</text>
+  <text x="75" y="774" class="t">• controller + driver</text>
+  <text x="75" y="801" class="t">• polling / interrupts</text>
+  <text x="75" y="828" class="t">• boot firmware → loader → OS → drivers</text>
+
+  <rect x="500" y="745" width="400" height="150" class="b"/>
+  <text x="700" y="780" text-anchor="middle" class="h">Реализация крупной ОС</text>
+  <text x="525" y="815" class="t">C/C++ · pointers · headers · #include / #ifdef</text>
+  <text x="525" y="842" class="t">.c → compiler → .o → linker → executable</text>
+  <text x="525" y="869" class="t">make/Makefile минимизирует перекомпиляцию</text>
+
+  <rect x="990" y="715" width="360" height="180" class="b"/>
+  <text x="1170" y="750" text-anchor="middle" class="h">Куда ведёт глава</text>
+  <text x="1015" y="785" class="t">2: процессы/потоки · 3: память</text>
+  <text x="1015" y="812" class="t">4: файловые системы · 5: I/O</text>
+  <text x="1015" y="839" class="t">6: deadlocks · 7: virtualization</text>
+  <text x="1015" y="866" class="t">8: multiprocessors · 9: security</text>
+
+  <line x1="410" y1="310" x2="500" y2="310" class="ln"/>
+  <line x1="410" y1="505" x2="500" y2="465" class="ln"/>
+  <line x1="900" y1="300" x2="990" y2="300" class="ln"/>
+  <line x1="900" y1="455" x2="990" y2="525" class="ln"/>
+</svg>
