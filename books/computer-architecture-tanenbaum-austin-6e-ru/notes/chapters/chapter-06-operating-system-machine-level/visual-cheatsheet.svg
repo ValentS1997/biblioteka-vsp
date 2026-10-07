@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 820">
+<rect width="1400" height="820" fill="#f4f6f8"/>
+<rect width="1400" height="110" fill="#1e293b"/>
+<text x="45" y="50" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="white">ГЛАВА 6 · УРОВЕНЬ ОПЕРАЦИОННОЙ СИСТЕМЫ</text>
+<text x="45" y="86" font-family="Arial,sans-serif" font-size="19" fill="#dbe5ef">virtual memory • files • processes • synchronization • virtualization</text>
+<g font-family="Arial,sans-serif" fill="#243447">
+<rect x="40" y="145" width="410" height="230" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="65" y="190" font-size="22" font-weight="700" fill="#365f91">VIRTUAL MEMORY</text>
+<text x="65" y="235" font-size="18">virtual page → page table → frame</text>
+<text x="65" y="270" font-size="18">demand paging • working set</text>
+<text x="65" y="305" font-size="18">LRU / FIFO • dirty page</text>
+<text x="65" y="340" font-size="18">thrashing when working set does not fit</text>
+
+<rect x="495" y="145" width="410" height="230" rx="14" fill="white" stroke="#2d7d63" stroke-width="2"/>
+<text x="520" y="190" font-size="22" font-weight="700" fill="#2d7d63">SEGMENTATION / TLB</text>
+<text x="520" y="235" font-size="18">logical variable-size regions</text>
+<text x="520" y="270" font-size="18">protection by segment</text>
+<text x="520" y="305" font-size="18">TLB caches address translations</text>
+<text x="520" y="340" font-size="18">Core i7: selector → descriptor → paging</text>
+
+<rect x="950" y="145" width="410" height="230" rx="14" fill="white" stroke="#7656a5" stroke-width="2"/>
+<text x="975" y="190" font-size="22" font-weight="700" fill="#7656a5">FILES / DIRECTORIES</text>
+<text x="975" y="235" font-size="18">open • read • write • close</text>
+<text x="975" y="270" font-size="18">descriptor/handle → metadata → blocks</text>
+<text x="975" y="305" font-size="18">contiguous vs indexed allocation</text>
+<text x="975" y="340" font-size="18">free list vs bitmap</text>
+
+<rect x="40" y="415" width="410" height="230" rx="14" fill="white" stroke="#b15d45" stroke-width="2"/>
+<text x="65" y="460" font-size="22" font-weight="700" fill="#b15d45">PROCESSES / THREADS</text>
+<text x="65" y="505" font-size="18">process = program + execution state</text>
+<text x="65" y="540" font-size="18">true or time-sliced parallelism</text>
+<text x="65" y="575" font-size="18">shared state creates races</text>
+<text x="65" y="610" font-size="18">threads share address space</text>
+
+<rect x="495" y="415" width="410" height="230" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="520" y="460" font-size="22" font-weight="700" fill="#365f91">SEMAPHORES</text>
+<text x="520" y="505" font-size="18">down: consume or block</text>
+<text x="520" y="540" font-size="18">up: release / increment</text>
+<text x="520" y="575" font-size="18">operations must be atomic</text>
+<text x="520" y="610" font-size="18">producer: available → filled</text>
+
+<rect x="950" y="415" width="410" height="230" rx="14" fill="white" stroke="#2d7d63" stroke-width="2"/>
+<text x="975" y="460" font-size="22" font-weight="700" fill="#2d7d63">HARDWARE VIRTUALIZATION</text>
+<text x="975" y="505" font-size="18">guest OS → hypervisor → hardware</text>
+<text x="975" y="540" font-size="18">CPU state • memory • I/O isolation</text>
+<text x="975" y="575" font-size="18">Core i7 VMX / EPT</text>
+<text x="975" y="610" font-size="18">extra translation/control layer</text>
+
+<rect x="40" y="685" width="1320" height="90" rx="14" fill="#e8eef5" stroke="#9aa9ba"/>
+<text x="65" y="725" font-size="19" font-weight="700">CORE RULE</text>
+<text x="65" y="757" font-size="18">The OS turns low-level hardware into protected virtual abstractions: address spaces, files, processes and synchronization.</text>
+</g>
+</svg>
