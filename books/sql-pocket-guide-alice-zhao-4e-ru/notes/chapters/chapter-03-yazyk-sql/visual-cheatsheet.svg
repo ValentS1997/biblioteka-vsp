@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1250" height="900" viewBox="0 0 1250 900" role="img" aria-label="SQL глава 3 компактная шпаргалка по языку и подъязыкам">
+<rect width="1250" height="900" fill="#EEF5F8"/>
+<text x="28" y="53" fill="#073B5B" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" font-weight="700">ГЛАВА 3 · ЯЗЫК SQL</text>
+<text x="30" y="86" fill="#4F6B7D" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" >Элис Жао · PDF 55–69 · RAG p0055:c01–p0069:c01</text>
+<rect x="24" y="113" width="386" height="225" rx="16" fill="#FFFFFF" stroke="#C2D4DE" stroke-width="1.4"/>
+<text x="42" y="152" fill="#0C4663" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="700">01 / ЧТО ЗНАЧИТ SQL</text>
+<text x="42" y="189" fill="#28495E" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" >SQL = язык специального назначения</text>
+<text x="42" y="220" fill="#28495E" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" >Декларативно: что получить</text>
+<text x="42" y="251" fill="#28495E" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" >Python: как выполнить по шагам</text>
+<text x="42" y="282" fill="#28495E" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" >SQL: SELECT SUM(calories)</text>
+<text x="42" y="313" fill="#28495E" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" >FROM workouts;</text>
+<rect x="432" y="113" width="386" height="225" rx="16" fill="#FFFFFF" stroke="#C2D4DE" stroke-width="1.4"/>
+<text x="450" y="152" fill="#0C4663" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="700">02 / СТАНДАРТ И ДИАЛЕКТ</text>
+<text x="450" y="189" fill="#28495E" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" >ANSI SQL — стандартизованная основа</text>
+<text x="450" y="220" fill="#28495E" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" >У РСУБД есть различия</text>
+<text x="450" y="251" fill="#28495E" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" >Oracle DECODE — частный синтаксис</text>
+<text x="450" y="282" fill="#28495E" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" >CASE — пример из книги</text>
+<text x="450" y="313" fill="#28495E" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" >Полная эквивалентность: проверить</text>
+<rect x="840" y="113" width="386" height="225" rx="16" fill="#FFFFFF" stroke="#C2D4DE" stroke-width="1.4"/>
+<text x="858" y="152" fill="#0C4663" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="700">03 / ТЕРМИНЫ</text>
+<text x="858" y="189" fill="#28495E" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" >Ключевые слова и функции</text>
+<text x="858" y="220" fill="#28495E" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" >Имена таблиц, столбцов и alias</text>
+<text x="858" y="251" fill="#28495E" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" >Statement → clauses</text>
+<text x="858" y="282" fill="#28495E" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" >Expression → значение</text>
+<text x="858" y="313" fill="#28495E" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" >Predicate → TRUE/FALSE/UNKNOWN</text>
+<rect x="24" y="364" width="590" height="235" rx="16" fill="#F8FCFE" stroke="#C2D4DE" stroke-width="1.4"/>
+<text x="42" y="403" fill="#0C4663" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="700">04 / КОД И ПУНКТУАЦИЯ</text>
+<text x="42" y="440" fill="#28495E" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" >COUNT() / YEAR() — функции</text>
+<text x="42" y="471" fill="#28495E" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" >AS num_sales — псевдоним</text>
+<text x="42" y="502" fill="#28495E" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" >NULL: проверка через IS NULL</text>
+<text x="42" y="533" fill="#28495E" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" >&apos;Bob&apos; — строка, двойные кавычки — имя</text>
+<text x="42" y="564" fill="#28495E" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" >-- и /* ... */ — комментарии</text>
+<rect x="636" y="364" width="590" height="235" rx="16" fill="#F8FCFE" stroke="#C2D4DE" stroke-width="1.4"/>
+<text x="654" y="403" fill="#0C4663" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="700">05 / КЛАССЫ SQL</text>
+<text x="654" y="440" fill="#28495E" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" >DQL: SELECT — чтение</text>
+<text x="654" y="471" fill="#28495E" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" >DDL: CREATE / ALTER / DROP</text>
+<text x="654" y="502" fill="#28495E" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" >DML: INSERT / UPDATE / DELETE</text>
+<text x="654" y="533" fill="#28495E" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" >DCL: GRANT / REVOKE</text>
+<text x="654" y="564" fill="#28495E" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" >TCL: COMMIT / ROLLBACK</text>
+<rect x="24" y="628" width="1202" height="135" rx="16" fill="#FFFFFF" stroke="#C2D4DE" stroke-width="1.4"/>
+<text x="42" y="667" fill="#0C4663" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="700">06 / КОНТРОЛЬ ПЕРЕД ЗАПУСКОМ</text>
+<text x="42" y="704" fill="#28495E" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" >Тип РСУБД и версия: [Needs confirmation]   |   права и таблицы: [Needs confirmation]</text>
+<text x="42" y="735" fill="#28495E" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" >DDL/DML/DCL/TCL — изменяющие категории; rollback и разрешение нужны отдельно</text>
+<rect x="24" y="788" width="1202" height="84" rx="12" fill="#DCECF3"/>
+<text x="43" y="820" fill="#24516C" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" >Только адресуемый RAG · Примеры не выполнялись · Издание называет ANSI SQL2016 последним стандартом.</text>
+<text x="43" y="851" fill="#24516C" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" >Статус актуальности стандарта и переносимость кода вне примеров не проверялись.</text>
+</svg>
