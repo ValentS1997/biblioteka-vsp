@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="830" viewBox="0 0 1200 830" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 9 — Выбор владельца</title>
+  <desc id="desc">RAG-grounded компактная схема distributed ownership: CAS, TTL, renewal, version and downstream validation.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #111827; }
+      .title { font-size: 30px; font-weight: 700; }
+      .sub { font-size: 14px; fill: #4b5563; }
+      .h { font-size: 18px; font-weight: 700; }
+      .b { font-size: 15px; }
+      .small { font-size: 13px; fill: #374151; }
+      .blue { fill: #eff6ff; stroke: #1d4ed8; stroke-width: 2; rx: 14; }
+      .green { fill: #ecfdf5; stroke: #047857; stroke-width: 2; rx: 14; }
+      .violet { fill: #f5f3ff; stroke: #6d28d9; stroke-width: 2; rx: 14; }
+      .orange { fill: #fff7ed; stroke: #c2410c; stroke-width: 2; rx: 14; }
+      .box { fill: #f9fafb; stroke: #374151; stroke-width: 2; rx: 14; }
+      .arrow { stroke: #374151; stroke-width: 2.2; fill: none; marker-end: url(#m); }
+    </style>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#374151"/>
+    </marker>
+  </defs>
+
+  <text x="45" y="50" class="title">Глава 9 — Выбор владельца</text>
+  <text x="45" y="78" class="sub">RAG p0151:c01–p0170:c01 · PDF 151–170 · rag_only</text>
+
+  <rect x="60" y="120" width="300" height="120" class="blue"/>
+  <text x="85" y="157" class="h">Replicas</text>
+  <text x="85" y="188" class="b">several candidates</text>
+
+  <rect x="450" y="120" width="300" height="120" class="green"/>
+  <text x="475" y="157" class="h">Coordination store</text>
+  <text x="475" y="188" class="b">CAS + TTL + version</text>
+
+  <rect x="840" y="120" width="300" height="120" class="violet"/>
+  <text x="865" y="157" class="h">One current owner</text>
+  <text x="865" y="188" class="b">exclusive responsibility</text>
+
+  <path d="M360,180 L450,180" class="arrow"/>
+  <path d="M750,180 L840,180" class="arrow"/>
+
+  <rect x="75" y="330" width="310" height="145" class="green"/>
+  <text x="100" y="367" class="h">Acquire</text>
+  <text x="100" y="399" class="b">atomic compare-and-swap</text>
+  <text x="100" y="429" class="b">only one contender wins</text>
+
+  <rect x="445" y="330" width="310" height="145" class="orange"/>
+  <text x="470" y="367" class="h">Lease</text>
+  <text x="470" y="399" class="b">finite TTL</text>
+  <text x="470" y="429" class="b">renew before expiry</text>
+
+  <rect x="815" y="330" width="310" height="145" class="blue"/>
+  <text x="840" y="367" class="h">Version</text>
+  <text x="840" y="399" class="b">conditional release</text>
+  <text x="840" y="429" class="b">reject stale ownership epoch</text>
+
+  <rect x="120" y="570" width="410" height="135" class="orange"/>
+  <text x="145" y="607" class="h">Stale-owner race</text>
+  <text x="145" y="639" class="b">old owner pauses → TTL expires</text>
+  <text x="145" y="669" class="b">new owner acquires → old owner resumes</text>
+
+  <rect x="670" y="570" width="410" height="135" class="box"/>
+  <text x="695" y="607" class="h">Receiver-side safety</text>
+  <text x="695" y="639" class="b">validate current owner + resource version</text>
+  <text x="695" y="669" class="b">reject delayed/stale request</text>
+
+  <path d="M530,637 L670,637" class="arrow"/>
+
+  <rect x="180" y="755" width="840" height="45" class="green"/>
+  <text x="210" y="784" class="b">Rule: CAS → TTL → version-aware release → renewable lease → downstream owner/version validation.</text>
+
+  <text x="45" y="822" class="small">Historical etcd/Helm commands are preserved as source evidence, not silently modernized.</text>
+</svg>
