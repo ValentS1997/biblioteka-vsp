@@ -18,5 +18,7 @@
 
 | 9 | [Эффективные методы на основе формулы Байеса](chapter-09-effective-bayesian-methods/README.md) | spine 36–39, `OPS/ch1-34.xhtml` → `OPS/ch1-37.xhtml` | README, cheatsheet, commands, diagram, 2×SVG, source-findings |
 
+| 10 | [На пути к зрелости метрик безопасности](chapter-10-security-metrics-maturity/README.md) | spine 41–42, `OPS/ch1-39.xhtml` → `OPS/ch1-40.xhtml` | README, cheatsheet, commands, diagram, 2×SVG, source-findings |
 
-Глава 10 начинается в EPUB spine 41, `OPS/ch1-39.xhtml`; spine 40 — титул части III.
+
+Глава 11 начинается в EPUB spine 43, `OPS/ch1-41.xhtml`; её анализ пока не проводился.

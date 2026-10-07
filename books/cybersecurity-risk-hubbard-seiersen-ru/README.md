@@ -69,3 +69,4 @@ Canonical readiness command:
 - [Глава 7 — Калиброванные оценки: что вам известно уже сейчас?](notes/chapters/chapter-07-calibrated-estimates/README.md) — EPUB spine 31–33; artifacts v1.7 + calibration exercise; reading remains `planned`.
 - [Глава 8 — Уменьшение неопределенности с помощью байесовских методов](notes/chapters/chapter-08-bayesian-uncertainty/README.md) — EPUB spine 34–35; artifacts v1.7; reading remains `planned`.
 - [Глава 9 — Эффективные методы на основе формулы Байеса](notes/chapters/chapter-09-effective-bayesian-methods/README.md) — EPUB spine 36–39; artifacts v1.7; reading remains `planned`.
+- [Глава 10 — На пути к зрелости метрик безопасности](notes/chapters/chapter-10-security-metrics-maturity/README.md) — EPUB spine 41–42; artifacts v1.7; reading remains `planned`.
