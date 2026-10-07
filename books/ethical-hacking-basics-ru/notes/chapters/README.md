@@ -15,5 +15,6 @@ Book ID: `ethical-hacking-basics-ru`. Индекс создан для пере�
 | 9 — Перехват пакетов, spoofing и обнаружение | 246–273 | [Глава 9](chapter-09-packet-capture-spoofing-defense/README.md) |
 | 10 — Социальная инженерия, фишинг и физический доступ | 274–297 | [Глава 10](chapter-10-social-engineering-phishing/README.md) |
 | 11 — Wi‑Fi, Bluetooth и мобильные устройства | 298–323 | [Глава 11](chapter-11-wireless-bluetooth-mobile-security/README.md) |
+| 12 — Веб-приложения, DoS, memory corruption и защитная архитектура | 324–349 | [Глава 12](chapter-12-web-dos-memory-lateral-defense/README.md) |
 
 Дальнейшие главы: **[Needs confirmation]** до их индивидуального анализа. Состояние чтения независимо от RAG.

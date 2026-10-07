@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="840" viewBox="0 0 1500 840">
+<rect width="1500" height="840" fill="#eef5f8"/><rect width="1500" height="170" fill="#173349"/>
+<text x="42" y="74" font-family="DejaVu Sans,Arial" font-size="40" fill="#fff" font-weight="700">Глава 12 · Web, DoS, memory, lateral defense</text>
+<text x="42" y="122" font-family="DejaVu Sans,Arial" font-size="24" fill="#d4e9f0">PDF 324–349 · 44 RAG chunks · final chapter of the book</text>
+<g font-family="DejaVu Sans,Arial" fill="#28465a">
+<rect x="35" y="205" width="445" height="330" rx="18" fill="#fff" stroke="#cbdde5"/>
+<text x="60" y="250" font-size="29" fill="#267587" font-weight="700">12.1 Web boundaries</text>
+<text x="60" y="300" font-size="21">OWASP 2021 / access control</text>
+<text x="60" y="342" font-size="21">XXE / XSS / SQL / command injection</text>
+<text x="60" y="384" font-size="21">Validation / WAF / ModSecurity</text>
+<text x="60" y="446" font-size="20" fill="#8b5b3c">WAF ≠ root-cause fix</text>
+<rect x="527" y="205" width="445" height="330" rx="18" fill="#fff" stroke="#cbdde5"/>
+<text x="552" y="250" font-size="29" fill="#4a6ea5" font-weight="700">12.2 Availability / memory</text>
+<text x="552" y="300" font-size="21">DDoS / amplification / slow requests</text>
+<text x="552" y="342" font-size="21">Buffer overflow / heap spraying</text>
+<text x="552" y="384" font-size="21">ASLR / canary / NX concepts</text>
+<text x="552" y="446" font-size="20" fill="#8b5b3c">Mitigation ≠ bug removal</text>
+<rect x="1019" y="205" width="445" height="330" rx="18" fill="#fff" stroke="#cbdde5"/>
+<text x="1044" y="250" font-size="29" fill="#95633e" font-weight="700">Lateral / architecture</text>
+<text x="1044" y="300" font-size="21">Recon / credentials / movement</text>
+<text x="1044" y="342" font-size="21">Segmentation / SIEM / EDR</text>
+<text x="1044" y="384" font-size="21">Detect / contain / recover</text>
+<text x="1044" y="446" font-size="20" fill="#8b5b3c">Assume compromise is possible</text></g>
+<rect x="35" y="575" width="1429" height="150" rx="18" fill="#dfeef3" stroke="#bdd8e3"/>
+<text x="62" y="622" font-family="DejaVu Sans,Arial" font-size="29" fill="#173349" font-weight="700">Operational boundary</text>
+<text x="62" y="664" font-family="DejaVu Sans,Arial" font-size="21" fill="#36576b">Validate trust boundaries with least impact; correlate application, network, identity and endpoint telemetry.</text>
+<text x="62" y="702" font-family="DejaVu Sans,Arial" font-size="20" fill="#8b5b3c">Exploit/DoS/lateral scope, recovery and limits: [Needs confirmation]</text>
+<text x="45" y="804" font-family="DejaVu Sans,Arial" font-size="19" fill="#526e7e">Source: p0324:c01–p0349:c02 · p349 is end of canonical book · reading not activated</text>
+</svg>
