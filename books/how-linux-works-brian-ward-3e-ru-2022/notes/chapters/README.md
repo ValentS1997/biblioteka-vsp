@@ -8,3 +8,4 @@
 - [Глава 6 — Запуск пользовательского пространства](chapter-06-user-space-startup/README.md) — PDF/печатные страницы 176–207, RAG chunks p0176:c01–p0207:c01.
 - [Глава 7 — Настройка системы: журналирование, системное время, пакетные задачи и пользователи](chapter-07-system-configuration-logging-time-jobs-users/README.md) — PDF/печатные страницы 208–243, RAG chunks p0208:c01–p0243:c01.
 - [Глава 8 — Процессы и использование ресурсов](chapter-08-processes-and-resources/README.md) — PDF/печатные страницы 244–269, RAG chunks p0244:c01–p0269:c01.
+- [Глава 9 — Сеть и ее конфигурация](chapter-09-networking-and-configuration/README.md) — PDF/печатные страницы 270–319, RAG chunks p0270:c01–p0319:c01.
