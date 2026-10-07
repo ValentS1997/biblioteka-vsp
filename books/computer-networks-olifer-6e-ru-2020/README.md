@@ -60,3 +60,4 @@ Canonical readiness command:
 ## Chapter artifacts
 
 - [Глава 1. Эволюция компьютерных сетей](notes/chapters/chapter-01-evolution-computer-networks/) — `RAG_GROUNDED`.
+- [Глава 2](notes/chapters/chapter-02-general-network-principles/) — `RAG_GROUNDED`.
