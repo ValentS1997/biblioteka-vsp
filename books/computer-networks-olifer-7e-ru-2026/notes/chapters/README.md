@@ -13,5 +13,6 @@ Book ID: `computer-networks-olifer-7e-ru-2026`. Индекс ведёт толь
 | 7 — Кодирование и мультиплексирование данных | 215–241 | 214–240 | [Глава 7](chapter-07-kodirovanie-i-multipleksirovanie-dannyh/README.md) |
 | 8 — Технология первичных сетей OTN | 242–267 | 241–266 | [Глава 8](chapter-08-tehnologiya-pervichnyh-setey-otn/README.md) |
 | 9 — Технология первичных сетей DWDM | 268–281 | 267–280 | [Глава 9](chapter-09-tehnologiya-pervichnyh-setey-dwdm/README.md) |
+| 10 — Ethernet в локальных сетях | 287–325 | 286–324 | [Глава 10](chapter-10-ethernet-v-lokalnyh-setyah/README.md) |
 
 Дальнейшие главы: **[Needs confirmation]** до индивидуального анализа. Reading state книги остаётся независимым от RAG.
