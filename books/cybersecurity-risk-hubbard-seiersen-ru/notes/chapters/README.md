@@ -14,5 +14,7 @@
 
 | 7 | [Калиброванные оценки: что вам известно уже сейчас?](chapter-07-calibrated-estimates/README.md) | spine 31–33, `OPS/ch1-29.xhtml` → `OPS/ch1-31.xhtml` | README, cheatsheet, commands, diagram, 2×SVG, review questions/answers, source-findings |
 
+| 8 | [Уменьшение неопределенности с помощью байесовских методов](chapter-08-bayesian-uncertainty/README.md) | spine 34–35, `OPS/ch1-32.xhtml` → `OPS/ch1-33.xhtml` | README, cheatsheet, commands, diagram, 2×SVG, source-findings |
 
-Глава 8 начинается в EPUB spine 34, `OPS/ch1-32.xhtml`; её анализ пока не проводился.
+
+Глава 9 начинается в EPUB spine 36, `OPS/ch1-34.xhtml`; её анализ пока не проводился.
