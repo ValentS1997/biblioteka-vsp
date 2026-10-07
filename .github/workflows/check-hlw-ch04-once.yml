@@ -1,0 +1,43 @@
+name: Chapter 4 Artifacts QA Once
+on:
+  push:
+    branches:
+      - chapter/how-linux-works-brian-ward-3e-ru-2022-ch04
+    paths:
+      - .github/workflows/check-hlw-ch04-once.yml
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate chapter 4 artifacts
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from xml.etree import ElementTree as ET
+          b=Path("books/how-linux-works-brian-ward-3e-ru-2022")
+          d=b/"notes/chapters/chapter-04-disks-and-filesystems"
+          names=("README.md","cheatsheet.md","commands.md","diagram.md","summary.md","source-findings.md","visual-cheatsheet.svg","visual-cheatsheet-detailed.svg")
+          for name in names:
+              f=d/name
+              assert f.is_file() and f.stat().st_size>500,name
+              s=f.read_text(encoding="utf-8")
+              assert "p0102:c01" in s and "p0155:c01" in s,name
+              if name.endswith(".svg"):
+                  root=ET.parse(f).getroot()
+                  assert root.tag.endswith("svg")
+                  assert root.attrib.get("viewBox")
+                  assert any(x.tag.endswith("title") for x in root.iter())
+              print("PASS",name,f.stat().st_size)
+          sheet=(d/"cheatsheet.md").read_text(encoding="utf-8")
+          for heading in ("Symptom / problem framing","Baseline / context","Read-only checks","Interpretation","Next action","Modifying action","Verification / acceptance checks","Rollback"):
+              assert heading in sheet, heading
+          for idx in (b/"notes/chapters/README.md",b/"README.md"):
+              assert "chapter-04-disks-and-filesystems/README.md" in idx.read_text(encoding="utf-8")
+          print("PASS chapter 4 artifact collection")
+          PY
