@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100">
+<rect width="1600" height="1100" fill="#f4f6f8"/>
+<rect width="1600" height="120" fill="#1e293b"/>
+<text x="45" y="52" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="white">ГЛАВА 3 · ОТ ЛОГИКИ К ИНТЕРФЕЙСУ</text>
+<text x="45" y="88" font-family="Arial,sans-serif" font-size="19" fill="#dbe5ef">function • state • timing • memory • arbitration • decode</text>
+<g font-family="Arial,sans-serif" fill="#243447">
+
+<rect x="40" y="150" width="480" height="210" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="65" y="192" font-size="21" font-weight="700" fill="#365f91">BOOLEAN / COMBINATIONAL</text>
+<text x="65" y="235" font-size="17">truth table ↔ Boolean expression</text>
+<text x="65" y="266" font-size="17">NAND / NOR → arbitrary functions</text>
+<text x="65" y="297" font-size="17">mux • decoder • comparator • shifter</text>
+<text x="65" y="328" font-size="17">adder • ALU • carry propagation</text>
+
+<rect x="560" y="150" width="480" height="210" rx="14" fill="white" stroke="#2d7d63" stroke-width="2"/>
+<text x="585" y="192" font-size="21" font-weight="700" fill="#2d7d63">STATE / MEMORY</text>
+<text x="585" y="235" font-size="17">latch: level-sensitive</text>
+<text x="585" y="266" font-size="17">flip-flop: edge-sensitive</text>
+<text x="585" y="297" font-size="17">registers → addressable words</text>
+<text x="585" y="328" font-size="17">SRAM • DRAM • ROM • flash</text>
+
+<rect x="1080" y="150" width="480" height="210" rx="14" fill="white" stroke="#7656a5" stroke-width="2"/>
+<text x="1105" y="192" font-size="21" font-weight="700" fill="#7656a5">FPGA</text>
+<text x="1105" y="235" font-size="17">hardware description → synthesis</text>
+<text x="1105" y="266" font-size="17">LUTs + programmable interconnect</text>
+<text x="1105" y="297" font-size="17">rapid change / prototype advantage</text>
+<text x="1105" y="328" font-size="17">ASIC: scale / speed / power advantage</text>
+
+<rect x="40" y="395" width="480" height="210" rx="14" fill="white" stroke="#b15d45" stroke-width="2"/>
+<text x="65" y="437" font-size="21" font-weight="700" fill="#b15d45">BUS TIMING</text>
+<text x="65" y="480" font-size="17">synchronous → global clock contract</text>
+<text x="65" y="511" font-size="17">WAIT extends slow transactions</text>
+<text x="65" y="542" font-size="17">asynchronous → MSYN / SSYN</text>
+<text x="65" y="573" font-size="17">block transfer amortizes overhead</text>
+
+<rect x="560" y="395" width="480" height="210" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="585" y="437" font-size="21" font-weight="700" fill="#365f91">ARBITRATION</text>
+<text x="585" y="480" font-size="17">many masters → one bus owner</text>
+<text x="585" y="511" font-size="17">centralized daisy-chain / priorities</text>
+<text x="585" y="542" font-size="17">decentralized alternatives</text>
+<text x="585" y="573" font-size="17">trade fairness • lines • failure mode</text>
+
+<rect x="1080" y="395" width="480" height="210" rx="14" fill="white" stroke="#2d7d63" stroke-width="2"/>
+<text x="1105" y="437" font-size="21" font-weight="700" fill="#2d7d63">CPU EXAMPLES</text>
+<text x="1105" y="480" font-size="17">Core i7 → performance + compatibility</text>
+<text x="1105" y="511" font-size="17">OMAP4430 → mobile SoC / low power</text>
+<text x="1105" y="542" font-size="17">ATmega168 → low-cost embedded</text>
+<text x="1105" y="573" font-size="17">goal shapes pins / memory / interfaces</text>
+
+<rect x="40" y="640" width="480" height="210" rx="14" fill="white" stroke="#7656a5" stroke-width="2"/>
+<text x="65" y="682" font-size="21" font-weight="700" fill="#7656a5">PCI / PCIe / USB</text>
+<text x="65" y="725" font-size="17">PCI → shared parallel bus</text>
+<text x="65" y="756" font-size="17">PCIe → switched packet stack</text>
+<text x="65" y="787" font-size="17">physical → link → transaction</text>
+<text x="65" y="818" font-size="17">USB → root hub + scheduled frames</text>
+
+<rect x="560" y="640" width="480" height="210" rx="14" fill="white" stroke="#b15d45" stroke-width="2"/>
+<text x="585" y="682" font-size="21" font-weight="700" fill="#b15d45">ADDRESS DECODING</text>
+<text x="585" y="725" font-size="17">memory-mapped I/O</text>
+<text x="585" y="756" font-size="17">full decode → unique device range</text>
+<text x="585" y="787" font-size="17">partial decode → aliases</text>
+<text x="585" y="818" font-size="17">less logic ↔ less expansion room</text>
+
+<rect x="1080" y="640" width="480" height="210" rx="14" fill="white" stroke="#365f91" stroke-width="2"/>
+<text x="1105" y="682" font-size="21" font-weight="700" fill="#365f91">DEBUG ORDER</text>
+<text x="1105" y="725" font-size="17">1. function</text>
+<text x="1105" y="756" font-size="17">2. stored state</text>
+<text x="1105" y="787" font-size="17">3. timing / ownership</text>
+<text x="1105" y="818" font-size="17">4. address selection</text>
+
+<rect x="40" y="890" width="1520" height="150" rx="14" fill="#e8eef5" stroke="#9aa9ba"/>
+<text x="65" y="935" font-size="21" font-weight="700">SYSTEM RULE</text>
+<text x="65" y="973" font-size="18">A correct Boolean value is useful only if it is stored/sampled at the right time, driven by the current owner,</text>
+<text x="65" y="1005" font-size="18">and accepted by exactly the intended memory or I/O device.</text>
+</g>
+</svg>
