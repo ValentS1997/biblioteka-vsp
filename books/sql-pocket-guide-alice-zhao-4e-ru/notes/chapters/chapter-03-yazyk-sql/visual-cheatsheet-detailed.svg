@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1650" viewBox="0 0 1500 1650" role="img" aria-label="Подробная RAG-шпаргалка: глава 3 Язык SQL">
+<rect width="1500" height="1650" fill="#F0F5FA"/>
+<text x="30" y="57" font-size="33" fill="#073B5B" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">ГЛАВА 3 / ЯЗЫК SQL</text>
+<text x="32" y="89" font-size="16" fill="#516B7F" font-family="DejaVu Sans,Arial,sans-serif" >Элис Жао · 4-е изд. · PDF 55–69 · RAG p0055:c01–p0069:c01</text>
+<rect x="27" y="117" width="465" height="229" rx="17" fill="#FFFFFF" stroke="#C7D9E5" stroke-width="1.5"/>
+<text x="45" y="156" font-size="20" fill="#0E4968" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">01 / ДЕКЛАРАТИВНЫЙ SQL [55–56]</text>
+<text x="45" y="194" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >Python: шаги цикла и накопление</text>
+<text x="45" y="223" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >calories = [90, 240, 165]</text>
+<text x="45" y="252" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >SQL: результат без описания шагов</text>
+<text x="45" y="281" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >SELECT SUM(calories) FROM workouts;</text>
+<text x="45" y="310" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >PL/SQL и T-SQL — расширения</text>
+<rect x="518" y="117" width="465" height="229" rx="17" fill="#FFFFFF" stroke="#C7D9E5" stroke-width="1.5"/>
+<text x="536" y="156" font-size="20" fill="#0E4968" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">02 / СТАНДАРТЫ ANSI [57–59]</text>
+<text x="536" y="194" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >ANSI SQL — стандартизованный язык</text>
+<text x="536" y="223" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >ANSI-89 и ANSI-92: примеры JOIN</text>
+<text x="536" y="252" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >РСУБД реализуют стандарты частично</text>
+<text x="536" y="281" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >Oracle DECODE и стандартный CASE</text>
+<text x="536" y="310" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >Версия SQL2016: только по книге</text>
+<rect x="1009" y="117" width="464" height="229" rx="17" fill="#FFFFFF" stroke="#C7D9E5" stroke-width="1.5"/>
+<text x="1027" y="156" font-size="20" fill="#0E4968" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">03 / КЛЮЧЕВЫЕ СЛОВА [60–61]</text>
+<text x="1027" y="194" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >SELECT, FROM, WHERE, GROUP BY</text>
+<text x="1027" y="223" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >COUNT(s.sale_id) — функция</text>
+<text x="1027" y="252" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >YEAR(s.sale_date) — функция даты</text>
+<text x="1027" y="281" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >Функция возвращает результат</text>
+<text x="1027" y="310" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >Применимость зависит от СУБД</text>
+<rect x="27" y="375" width="465" height="258" rx="17" fill="#FAFDFF" stroke="#C7D9E5" stroke-width="1.5"/>
+<text x="45" y="414" font-size="20" fill="#0E4968" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">04 / ИМЕНА И ПСЕВДОНИМЫ [61–63]</text>
+<text x="45" y="452" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >Идентификатор: имя таблицы/колонки</text>
+<text x="45" y="481" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >employee и sales — имена объектов</text>
+<text x="45" y="510" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >e и s — alias таблиц</text>
+<text x="45" y="539" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >AS num_sales — alias столбца</text>
+<text x="45" y="568" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >Псевдоним не переименовывает БД</text>
+<text x="45" y="597" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >Не использовать keyword как имя</text>
+<rect x="518" y="375" width="465" height="258" rx="17" fill="#FAFDFF" stroke="#C7D9E5" stroke-width="1.5"/>
+<text x="536" y="414" font-size="20" fill="#0E4968" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">05 / ОПЕРАТОР И CLAUSES [63–64]</text>
+<text x="536" y="452" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >Оператор: полный SQL-код</text>
+<text x="536" y="481" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >SELECT → список полей/выражений</text>
+<text x="536" y="510" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >FROM → таблицы и JOIN</text>
+<text x="536" y="539" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >WHERE → фильтрация</text>
+<text x="536" y="568" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >GROUP BY → группировка</text>
+<text x="536" y="597" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >Части оператора называют clauses</text>
+<rect x="1009" y="375" width="464" height="258" rx="17" fill="#FAFDFF" stroke="#C7D9E5" stroke-width="1.5"/>
+<text x="1027" y="414" font-size="20" fill="#0E4968" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">06 / ВЫРАЖЕНИЯ [65–66]</text>
+<text x="1027" y="452" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >COUNT(s.sale_id) — выражение</text>
+<text x="1027" y="481" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >s.sale_id + 10 — числовое</text>
+<text x="1027" y="510" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >CURRENT_DATE — дата</text>
+<text x="1027" y="539" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >Предикат: TRUE/FALSE/UNKNOWN</text>
+<text x="1027" y="568" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >NULL = отсутствие значения</text>
+<text x="1027" y="597" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >Проверка: IS NULL, не = NULL</text>
+<rect x="27" y="663" width="710" height="258" rx="17" fill="#FFFFFF" stroke="#C7D9E5" stroke-width="1.5"/>
+<text x="45" y="702" font-size="20" fill="#0E4968" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">07 / КОММЕНТАРИИ И СИНТАКСИС [66–67]</text>
+<text x="45" y="740" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >-- комментарий до конца строки</text>
+<text x="45" y="769" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >/* многострочный комментарий */</text>
+<text x="45" y="798" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >&apos;Bob&apos; — строковый литерал</text>
+<text x="45" y="827" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >&quot;This column&quot; — identifier по книге</text>
+<text x="45" y="856" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >В MySQL цитирование имён отличается</text>
+<text x="45" y="885" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >Отступы/регистр для читаемости</text>
+<rect x="764" y="663" width="709" height="258" rx="17" fill="#FFFFFF" stroke="#C7D9E5" stroke-width="1.5"/>
+<text x="782" y="702" font-size="20" fill="#0E4968" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">08 / ПЯТЬ ПОДЪЯЗЫКОВ [68–69]</text>
+<text x="782" y="740" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >DQL: SELECT — читать</text>
+<text x="782" y="769" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >DDL: CREATE, ALTER, DROP — объекты</text>
+<text x="782" y="798" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >DML: INSERT, UPDATE, DELETE — данные</text>
+<text x="782" y="827" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >DCL: GRANT, REVOKE — доступ</text>
+<text x="782" y="856" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >TCL: COMMIT, ROLLBACK — транзакции</text>
+<text x="782" y="885" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >Все меняющие классы: нужен rollback</text>
+<rect x="27" y="951" width="710" height="230" rx="17" fill="#FAFDFF" stroke="#C7D9E5" stroke-width="1.5"/>
+<text x="45" y="990" font-size="20" fill="#0E4968" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">09 / АВТОРСКИЙ ЗАПРОС [59–65]</text>
+<text x="45" y="1028" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >SELECT e.name, COUNT(s.sale_id)</text>
+<text x="45" y="1057" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >AS num_sales</text>
+<text x="45" y="1086" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >FROM employee e LEFT JOIN sales s</text>
+<text x="45" y="1115" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >WHERE YEAR(s.sale_date) = 2021</text>
+<text x="45" y="1144" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >AND s.closed IS NOT NULL</text>
+<text x="45" y="1173" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >GROUP BY e.name;</text>
+<rect x="764" y="951" width="709" height="230" rx="17" fill="#FAFDFF" stroke="#C7D9E5" stroke-width="1.5"/>
+<text x="782" y="990" font-size="20" fill="#0E4968" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">10 / РАЗЛИЧИЯ ДИАЛЕКТОВ [58–59]</text>
+<text x="782" y="1028" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >DECODE(flag,0,&apos;No&apos;,1,&apos;Yes&apos;)</text>
+<text x="782" y="1057" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >CASE WHEN flag=0 THEN &apos;No&apos;</text>
+<text x="782" y="1086" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >ELSE &apos;Yes&apos; END</text>
+<text x="782" y="1115" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >Эквивалентность вне 0/1 не доказана</text>
+<text x="782" y="1144" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >ANSI-89: FROM customer c, order o</text>
+<text x="782" y="1173" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >ANSI-92: INNER JOIN order o ...</text>
+<rect x="27" y="1212" width="710" height="217" rx="17" fill="#FFFFFF" stroke="#C7D9E5" stroke-width="1.5"/>
+<text x="45" y="1251" font-size="20" fill="#0E4968" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">11 / НА ЧТО ОПИРАТЬСЯ</text>
+<text x="45" y="1289" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >Проверенные источники: chunks 55–69</text>
+<text x="45" y="1318" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >Явное резюме автора: PDF 69</text>
+<text x="45" y="1347" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >Контракты v1.3 → v1.7</text>
+<text x="45" y="1376" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >Функции и имена объектов — по RAG</text>
+<text x="45" y="1405" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >Ничего из внешних SQL-доков</text>
+<rect x="764" y="1212" width="709" height="217" rx="17" fill="#FFFFFF" stroke="#C7D9E5" stroke-width="1.5"/>
+<text x="782" y="1251" font-size="20" fill="#0E4968" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">12 / ЧТО НЕ ПРОВЕРЕНО</text>
+<text x="782" y="1289" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >SQL-движок, версия, таблицы и права</text>
+<text x="782" y="1318" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >Переносимость DECODE/CASE</text>
+<text x="782" y="1347" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >Идентификатор order без кавычек</text>
+<text x="782" y="1376" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >Текущий статус ANSI SQL2016</text>
+<text x="782" y="1405" font-size="15" fill="#254559" font-family="DejaVu Sans,Arial,sans-serif" >DDL/DML/DCL/TCL: не исполнять</text>
+<rect x="27" y="1463" width="1446" height="156" rx="18" fill="#DBECF5"/>
+<text x="48" y="1500" font-size="21" fill="#0D4360" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">ACCEPTANCE / READ-ONLY BOUNDARY</text>
+<text x="48" y="1537" font-size="16" fill="#204E67" font-family="DejaVu Sans,Arial,sans-serif" >RAG-only: факты и все фрагменты — PDF 55–69. Никакие запросы, изменения или тесты не запускались.</text>
+<text x="48" y="1570" font-size="16" fill="#204E67" font-family="DejaVu Sans,Arial,sans-serif" >Утверждения книги о стандартах и переносимости не актуализированы по вебу.</text>
+<text x="48" y="1602" font-size="16" fill="#204E67" font-family="DejaVu Sans,Arial,sans-serif" >Известные ограничения сохранены в source-findings.md. Read-back и GitHub PR — отдельный контроль.</text>
+</svg>
