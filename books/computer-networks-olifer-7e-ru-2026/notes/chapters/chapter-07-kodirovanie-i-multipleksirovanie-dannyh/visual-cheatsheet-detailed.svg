@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1450" viewBox="0 0 1800 1450">
+<rect width="1800" height="1450" fill="#f8fafb"/>
+<text x="55" y="58" font-family="Arial,DejaVu Sans,sans-serif" font-size="36" font-weight="700" fill="#173246">Глава 7 · Кодирование и мультиплексирование данных</text>
+<text x="55" y="94" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#536b7d">Олифер, 7-е изд. · RAG p0215:c01–p0241:c01 · PDF 215–241 · printed 214–240</text>
+
+<rect x="55" y="135" width="820" height="300" rx="18" fill="#eaf0f5" stroke="#b9cbd8"/>
+<text x="82" y="180" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#234b64">1 · Coding criteria</text>
+<text x="82" y="223" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">Discrete/analog information × discrete/analog signal → four conversion classes</text>
+<text x="82" y="261" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">Signal spectrum must fit the line's passband</text>
+<text x="82" y="299" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">Receiver needs timing/self-synchronization</text>
+<text x="82" y="337" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">Noise tolerance and error detection/correction matter</text>
+<text x="82" y="375" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#36566a">Transmitter power is also part of code-selection trade-off</text>
+<text x="82" y="413" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#5d7381">No single line code optimizes all properties simultaneously</text>
+
+<rect x="925" y="135" width="820" height="300" rx="18" fill="#eef4e8" stroke="#c3d4b8"/>
+<text x="952" y="180" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#365b31">2 · Discrete line codes</text>
+<text x="952" y="223" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">NRZ → simple / narrow spectrum, but long-run sync/DC problems</text>
+<text x="952" y="261" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">AMI / NRZI → use transitions/polarity to improve properties</text>
+<text x="952" y="299" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">Manchester → strong self-sync, wider spectrum</text>
+<text x="952" y="337" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">4B/5B / 64B/66B → redundant block coding</text>
+<text x="952" y="375" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#496449">B8ZS / HDB3 / scrambling → avoid problematic zero runs</text>
+
+<rect x="55" y="480" width="820" height="300" rx="18" fill="#f8efe2" stroke="#ddc9aa"/>
+<text x="82" y="525" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#78532e">3 · Analog modulation for data</text>
+<text x="82" y="568" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">ASK → amplitude · FSK → frequency · PSK → phase</text>
+<text x="82" y="606" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">BPSK/QPSK → phase states carry one/multiple bits</text>
+<text x="82" y="644" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">QAM → combine amplitude + phase; constellation states represent bit groups</text>
+<text x="82" y="682" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">I/Q → in-phase + quadrature components implement mod/demod</text>
+<text x="82" y="720" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6b573c">More states improve bits/symbol but require better discrimination under noise</text>
+
+<rect x="925" y="480" width="820" height="300" rx="18" fill="#eee8f6" stroke="#c9bad9"/>
+<text x="952" y="525" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#593f73">4 · Error control</text>
+<text x="952" y="568" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">Parity → cheap, low diagnostic power</text>
+<text x="952" y="606" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">CRC/FCS → stronger frame error detection with low relative overhead</text>
+<text x="952" y="644" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">FEC → enough redundancy to correct without retransmission</text>
+<text x="952" y="682" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">Hamming distance → codeword separation and correction capability</text>
+<text x="952" y="720" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">Convolutional codes → source example for burst-error environments</text>
+
+<rect x="55" y="825" width="820" height="300" rx="18" fill="#e5edf7" stroke="#bdcce0"/>
+<text x="82" y="870" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#2b4e78">5 · Analog information digitization</text>
+<text x="82" y="913" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">Analog→analog → AM/FM shift information into another spectral region</text>
+<text x="82" y="951" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">Analog→digital → sample in time + quantize amplitude</text>
+<text x="82" y="989" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">ADC produces binary samples · DAC reconstructs the waveform</text>
+<text x="82" y="1027" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">Sampling theorem constrains sample rate relative to source spectrum</text>
+<text x="82" y="1065" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">PCM source example → voice sampled at 8 kHz into 7/8-bit values</text>
+
+<rect x="925" y="825" width="820" height="300" rx="18" fill="#f4ece7" stroke="#dbc6b9"/>
+<text x="952" y="870" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="700" fill="#714b38">6 · Multiplexing and switching</text>
+<text x="952" y="913" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">FDM → fixed frequency bands per channel</text>
+<text x="952" y="951" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">WDM/CWDM/DWDM → analogous spectral split in optical domain</text>
+<text x="952" y="989" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Asynchronous TDM → packet-time sharing in source taxonomy</text>
+<text x="952" y="1027" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Synchronous TDM → recurring slot for every flow in each cycle</text>
+<text x="952" y="1065" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Slot position = channel identity; switch reorders slot/byte positions</text>
+
+<rect x="55" y="1170" width="1690" height="180" rx="16" fill="#fff3dd" stroke="#dfca9b"/>
+<text x="82" y="1213" font-family="Arial,DejaVu Sans,sans-serif" font-size="24" font-weight="700" fill="#785f2d">Operational reading rule</text>
+<text x="82" y="1253" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6c5c3a">Do not debug “bandwidth” without identifying line code/modulation, symbol rate, spectrum and clock recovery.</text>
+<text x="82" y="1290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6c5c3a">Do not confuse error detection with correction; do not confuse synchronous time-slot identity with packet addressing.</text>
+<text x="82" y="1327" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#6c5c3a">No executable CLI is supplied by the chapter.</text>
+<text x="55" y="1415" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#607789">Chapter 8 starts at p0242:c01 · reading state unchanged · extraction findings recorded separately.</text>
+</svg>

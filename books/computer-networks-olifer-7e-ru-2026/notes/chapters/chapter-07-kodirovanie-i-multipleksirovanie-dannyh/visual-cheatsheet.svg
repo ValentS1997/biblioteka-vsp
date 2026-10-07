@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="960" viewBox="0 0 1500 960">
+<rect width="1500" height="960" fill="#f8fafb"/>
+<text x="50" y="58" font-family="Arial,DejaVu Sans,sans-serif" font-size="34" font-weight="700" fill="#183247">Глава 7 · Кодирование и мультиплексирование данных</text>
+<text x="50" y="92" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#52697a">RAG p0215:c01–p0241:c01 · PDF 215–241 · printed 214–240 · 27 chunks</text>
+
+<rect x="55" y="135" width="430" height="225" rx="18" fill="#e8eff5" stroke="#b9cbd8"/>
+<text x="83" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#234b64">1 · Line coding</text>
+<text x="83" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">NRZ · AMI · NRZI · Manchester</text>
+<text x="83" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">4B/5B · 64B/66B</text>
+<text x="83" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">B8ZS / HDB3 · scrambling</text>
+<text x="83" y="325" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#5a7180">spectrum + sync + DC + redundancy</text>
+
+<rect x="535" y="135" width="430" height="225" rx="18" fill="#eef4e8" stroke="#c4d4b9"/>
+<text x="563" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#365b31">2 · Modulation</text>
+<text x="563" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">ASK · FSK · PSK</text>
+<text x="563" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">BPSK · QPSK · QAM</text>
+<text x="563" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">I/Q → amplitude + phase states</text>
+<text x="563" y="325" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#63755d">more states → more bits/symbol, less margin</text>
+
+<rect x="1015" y="135" width="430" height="225" rx="18" fill="#f8efe2" stroke="#ddc9aa"/>
+<text x="1043" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#78532e">3 · Error control</text>
+<text x="1043" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">Parity · CRC/FCS → detect</text>
+<text x="1043" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">FEC → correct</text>
+<text x="1043" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">Hamming distance · convolutional</text>
+
+<path d="M485 245 H535 M965 245 H1015" stroke="#718798" stroke-width="4" marker-end="url(#a)"/>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#718798"/></marker></defs>
+
+<rect x="95" y="420" width="620" height="205" rx="18" fill="#eee8f6" stroke="#c9bad9"/>
+<text x="125" y="465" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#593f73">Analog → digital</text>
+<text x="125" y="510" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">sampling + quantization → ADC → PCM</text>
+<text x="125" y="550" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">DAC reconstructs signal at receiver</text>
+<text x="125" y="590" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#756486">sampling condition from Kotelnikov–Nyquist theorem</text>
+
+<rect x="785" y="420" width="620" height="205" rx="18" fill="#e5edf7" stroke="#bdcce0"/>
+<text x="815" y="465" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#2b4e78">Multiplexing</text>
+<text x="815" y="510" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">FDM → frequency · WDM → wavelength</text>
+<text x="815" y="550" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">TDM → time slots</text>
+<text x="815" y="590" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#5c7290">sync TDM: slot position identifies channel</text>
+
+<rect x="180" y="690" width="1140" height="155" rx="18" fill="#fff3dd" stroke="#dfca9b"/>
+<text x="210" y="735" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#785f2d">Design rule</text>
+<text x="210" y="780" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6c5c3a">information → code/modulation → spectrum + sync → error control → multiplex resource → switching</text>
+<text x="210" y="817" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#6c5c3a">No executable CLI in chapter; diagrams are RAG-grounded syntheses.</text>
+
+<text x="50" y="915" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#63798a">Chapter 8 begins at p0242:c01 · reading state unchanged.</text>
+</svg>
