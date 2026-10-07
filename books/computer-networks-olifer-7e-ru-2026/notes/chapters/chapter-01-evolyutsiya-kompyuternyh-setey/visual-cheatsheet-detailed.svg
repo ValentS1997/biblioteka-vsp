@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1220" viewBox="0 0 1700 1220">
+<rect width="1700" height="1220" fill="#f8fafb"/>
+<text x="55" y="58" font-family="Arial,DejaVu Sans,sans-serif" font-size="36" font-weight="700" fill="#173246">Глава 1 · Эволюция компьютерных сетей</text>
+<text x="55" y="94" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#536b7d">Олифер, 7-е изд. · RAG p0028:c01–p0045:c01 · PDF 28–45 · printed 27–44</text>
+
+<rect x="55" y="135" width="500" height="230" rx="18" fill="#eaf0f5" stroke="#b9cbd8"/>
+<text x="82" y="177" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#234b64">1 · Вычислительный корень</text>
+<text x="82" y="219" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#36566a">1950-е: batch processing, mainframe</text>
+<text x="82" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#36566a">1960-е: time-sharing + terminals</text>
+<text x="82" y="291" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#36566a">Интерактивность растёт, compute ещё central</text>
+<text x="82" y="327" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#36566a">p0029–p0030</text>
+
+<rect x="600" y="135" width="500" height="230" rx="18" fill="#eef4e8" stroke="#c3d4b8"/>
+<text x="627" y="177" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#365b31">2 · Первые WAN</text>
+<text x="627" y="219" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">Удалённые terminals → computer-computer</text>
+<text x="627" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">File/mail services, distributed storage</text>
+<text x="627" y="291" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">X.25, ARPANET, network OS</text>
+<text x="627" y="327" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">p0031–p0032</text>
+
+<rect x="1145" y="135" width="500" height="230" rx="18" fill="#f8efe2" stroke="#ddc9aa"/>
+<text x="1172" y="177" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#78532e">3 · Первые LAN</text>
+<text x="1172" y="219" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">Мини-компьютеры → распределённые ресурсы</text>
+<text x="1172" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">Сначала proprietary coupling</text>
+<text x="1172" y="291" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">Затем Ethernet / Arcnet / Token Ring / FDDI</text>
+<text x="1172" y="327" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">p0033–p0035</text>
+
+<rect x="55" y="410" width="760" height="270" rx="18" fill="#e5f0f3" stroke="#b4d0d7"/>
+<text x="82" y="453" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#245d6b">4 · Почему packet switching</text>
+<text x="82" y="497" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#355f69">Computer traffic пульсирует: burst → pause → burst</text>
+<text x="82" y="535" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#355f69">Постоянный составной канал простаивает в паузах</text>
+<text x="82" y="573" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#355f69">Пакеты делят capacity между многими потоками</text>
+<text x="82" y="611" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#355f69">Исторически это связывает WAN и будущие LAN</text>
+<text x="82" y="649" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#52717b">p0031–p0032 · позже packet methods входят и в telecom</text>
+
+<rect x="860" y="410" width="785" height="270" rx="18" fill="#eee8f6" stroke="#c9bad9"/>
+<text x="887" y="453" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#593f73">5 · Конвергенция</text>
+<text x="887" y="497" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">Оптика + цифровая передача уменьшают разрыв LAN/WAN</text>
+<text x="887" y="535" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">IP объединяет heterogeneous subnets</text>
+<text x="887" y="573" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">Ethernet выходит в operator / Carrier Ethernet</text>
+<text x="887" y="611" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">Telecom тоже принимает packet methods и IP</text>
+<text x="887" y="649" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#756486">p0036–p0039</text>
+
+<rect x="55" y="725" width="760" height="285" rx="18" fill="#f4ece7" stroke="#dbc6b9"/>
+<text x="82" y="768" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#714b38">6 · Интернет меняет traffic profile</text>
+<text x="82" y="812" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Users/devices/traffic растут → масштаб</text>
+<text x="82" y="850" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Mobile + embedded → IoT</text>
+<text x="82" y="888" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">File transfer уступает real-time video</text>
+<text x="82" y="926" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">Cloud переносит compute/storage в сеть</text>
+<text x="82" y="964" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6a5649">→ latency / reliability / architecture становятся критичнее</text>
+<text x="82" y="996" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#806b5f">p0039–p0041</text>
+
+<rect x="860" y="725" width="785" height="285" rx="18" fill="#e5edf7" stroke="#bdcce0"/>
+<text x="887" y="768" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#2b4e78">7 · AI-assisted networking</text>
+<text x="887" y="812" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">Virtual assistants: problem detection / remediation guidance</text>
+<text x="887" y="850" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">Network design + traffic growth prediction + optimization</text>
+<text x="887" y="888" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">Security: attack recognition + recommendations</text>
+<text x="887" y="926" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">Source then gives AI history: Turing, expert systems, neural nets</text>
+<text x="887" y="964" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">Claim of full automation is forecast, not measured acceptance fact</text>
+<text x="887" y="996" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#5c7290">p0042–p0045</text>
+
+<rect x="55" y="1055" width="1590" height="105" rx="16" fill="#fff3dd" stroke="#dfca9b"/>
+<text x="82" y="1097" font-family="Arial,DejaVu Sans,sans-serif" font-size="23" font-weight="700" fill="#785f2d">Source boundary</text>
+<text x="82" y="1133" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#6c5c3a">OCR/footer contamination exists; original figures are not multimodal RAG objects. No executable commands, no chapter-end review block.</text>
+<text x="55" y="1195" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#607789">Chapter 2 starts at p0046:c01 · reading state unchanged · SVG is a new RAG-grounded synthesis.</text>
+</svg>
