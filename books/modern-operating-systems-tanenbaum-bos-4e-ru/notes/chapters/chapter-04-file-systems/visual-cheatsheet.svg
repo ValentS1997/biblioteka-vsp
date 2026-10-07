@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820">
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+    <style>
+      .title{font:700 34px sans-serif;fill:#0f172a}.h{font:700 19px sans-serif;fill:#0f172a}
+      .t{font:14px sans-serif;fill:#1e293b}.s{font:12px sans-serif;fill:#475569}
+      .b{fill:#f8fafc;stroke:#475569;stroke-width:2;rx:14}.blue{fill:#dbeafe;stroke:#1d4ed8;stroke-width:2;rx:14}
+      .green{fill:#dcfce7;stroke:#15803d;stroke-width:2;rx:14}.amber{fill:#fef3c7;stroke:#a16207;stroke-width:2;rx:14}
+      .red{fill:#fee2e2;stroke:#b91c1c;stroke-width:2;rx:14}.ln{stroke:#475569;stroke-width:2;marker-end:url(#a)}
+    </style>
+  </defs>
+  <rect width="1200" height="820" fill="#fff"/>
+  <text x="45" y="55" class="title">Глава 4 — Файловые системы</text>
+  <text x="45" y="82" class="s">RAG-grounded · PDF 301–379 · 79 chunks</text>
+
+  <rect x="425" y="120" width="350" height="90" class="blue"/>
+  <text x="600" y="154" text-anchor="middle" class="h">Path → file abstraction</text>
+  <text x="600" y="182" text-anchor="middle" class="t">names · directories · attributes · operations</text>
+
+  <rect x="60" y="295" width="290" height="135" class="b"/>
+  <text x="205" y="330" text-anchor="middle" class="h">Namespace</text>
+  <text x="205" y="360" text-anchor="middle" class="t">absolute / relative paths</text>
+  <text x="205" y="386" text-anchor="middle" class="t">hard links / symbolic links</text>
+  <text x="205" y="412" text-anchor="middle" class="s">directory entry → metadata identity</text>
+
+  <rect x="455" y="295" width="290" height="135" class="green"/>
+  <text x="600" y="330" text-anchor="middle" class="h">Block allocation</text>
+  <text x="600" y="360" text-anchor="middle" class="t">contiguous · linked · FAT · i-node</text>
+  <text x="600" y="386" text-anchor="middle" class="t">free list / bitmap</text>
+  <text x="600" y="412" text-anchor="middle" class="s">mapping logical file blocks to disk blocks</text>
+
+  <rect x="850" y="295" width="290" height="135" class="amber"/>
+  <text x="995" y="330" text-anchor="middle" class="h">VFS</text>
+  <text x="995" y="360" text-anchor="middle" class="t">common POSIX-style upper interface</text>
+  <text x="995" y="386" text-anchor="middle" class="t">dispatch to concrete file systems</text>
+  <text x="995" y="412" text-anchor="middle" class="s">local or remote storage below</text>
+
+  <line x1="500" y1="210" x2="265" y2="295" class="ln"/>
+  <line x1="600" y1="210" x2="600" y2="295" class="ln"/>
+  <line x1="700" y1="210" x2="935" y2="295" class="ln"/>
+
+  <rect x="60" y="535" width="290" height="150" class="red"/>
+  <text x="205" y="570" text-anchor="middle" class="h">Consistency</text>
+  <text x="205" y="600" text-anchor="middle" class="t">lost / duplicate blocks</text>
+  <text x="205" y="627" text-anchor="middle" class="t">link-count mismatches</text>
+  <text x="205" y="654" text-anchor="middle" class="s">journal replay or consistency repair</text>
+
+  <rect x="455" y="535" width="290" height="150" class="blue"/>
+  <text x="600" y="570" text-anchor="middle" class="h">Backup / recovery</text>
+  <text x="600" y="600" text-anchor="middle" class="t">physical · logical · incremental</text>
+  <text x="600" y="627" text-anchor="middle" class="t">active source needs stable view</text>
+  <text x="600" y="654" text-anchor="middle" class="s">backup is not the same as fs repair</text>
+
+  <rect x="850" y="535" width="290" height="150" class="green"/>
+  <text x="995" y="570" text-anchor="middle" class="h">Performance</text>
+  <text x="995" y="600" text-anchor="middle" class="t">cache · read-ahead · locality</text>
+  <text x="995" y="627" text-anchor="middle" class="t">defrag for rotating-disk layout</text>
+  <text x="995" y="654" text-anchor="middle" class="s">chapter: SSD defrag is counterproductive</text>
+
+  <line x1="350" y1="610" x2="455" y2="610" class="ln"/>
+  <line x1="745" y1="610" x2="850" y2="610" class="ln"/>
+
+  <text x="45" y="760" class="s">Operational boundary: namespace ≠ allocation ≠ consistency ≠ durability ≠ backup ≠ performance.</text>
+</svg>
