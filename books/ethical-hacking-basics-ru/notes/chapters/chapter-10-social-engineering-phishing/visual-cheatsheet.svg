@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="840" viewBox="0 0 1500 840">
+<rect width="1500" height="840" fill="#eef5f8"/><rect width="1500" height="170" fill="#173349"/>
+<text x="42" y="74" font-family="DejaVu Sans,Arial" font-size="40" fill="#fff" font-weight="700">Глава 10 · Social engineering / phishing defense</text>
+<text x="42" y="122" font-family="DejaVu Sans,Arial" font-size="24" fill="#d4e9f0">PDF 274–297 · 36 RAG chunks · verify identity, reduce trust-only decisions</text>
+<g font-family="DejaVu Sans,Arial" fill="#28465a">
+<rect x="35" y="205" width="445" height="330" rx="18" fill="#fff" stroke="#cbdde5"/>
+<text x="60" y="250" font-size="29" fill="#267587" font-weight="700">10.1 Influence / pretext</text>
+<text x="60" y="300" font-size="21">Reciprocity / authority / scarcity</text>
+<text x="60" y="342" font-size="21">Pretexting / impersonation</text>
+<text x="60" y="384" font-size="21">Vishing / smishing / phishing</text>
+<text x="60" y="446" font-size="20" fill="#8b5b3c">Influence cue ≠ authentication</text>
+<rect x="527" y="205" width="445" height="330" rx="18" fill="#fff" stroke="#cbdde5"/>
+<text x="552" y="250" font-size="29" fill="#4a6ea5" font-weight="700">Physical / trust abuse</text>
+<text x="552" y="300" font-size="21">Tailgating / baiting</text>
+<text x="552" y="342" font-size="21">Badges / mantraps / biometrics</text>
+<text x="552" y="384" font-size="21">Cloned / compromised identities</text>
+<text x="552" y="446" font-size="20" fill="#8b5b3c">Verify each person/request</text>
+<rect x="1019" y="205" width="445" height="330" rx="18" fill="#fff" stroke="#cbdde5"/>
+<text x="1044" y="250" font-size="29" fill="#95633e" font-weight="700">10.2 Phishing / wireless</text>
+<text x="1044" y="300" font-size="21">Sender / URL / attachment cues</text>
+<text x="1044" y="342" font-size="21">Rogue AP threat concepts</text>
+<text x="1044" y="384" font-size="21">Campaign automation concepts</text>
+<text x="1044" y="446" font-size="20" fill="#8b5b3c">No attack workflow reproduced</text></g>
+<rect x="35" y="575" width="1429" height="150" rx="18" fill="#dfeef3" stroke="#bdd8e3"/>
+<text x="62" y="622" font-family="DejaVu Sans,Arial" font-size="29" fill="#173349" font-weight="700">Defensive rule</text>
+<text x="62" y="664" font-family="DejaVu Sans,Arial" font-size="21" fill="#36576b">High-risk requests need independent verification; awareness is supported by MFA, access controls and reporting.</text>
+<text x="62" y="702" font-family="DejaVu Sans,Arial" font-size="20" fill="#8b5b3c">Campaign scope, legal/HR approval and data handling: [Needs confirmation]</text>
+<text x="45" y="804" font-family="DejaVu Sans,Arial" font-size="19" fill="#526e7e">Source: p0274:c01–p0297:c01 · next chapter p.298 · reading not activated</text>
+</svg>
