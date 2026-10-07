@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="t d">
+<title id="t">Chapter 2 conceptual map</title>
+<desc id="d">RAG-grounded overview of the chapter structure.</desc>
+<rect width="1200" height="760" fill="#ffffff"/>
+<text x="60" y="60" font-family="sans-serif" font-size="34" font-weight="700">Chapter 2 — conceptual map</text>
+<text x="60" y="95" font-family="sans-serif" font-size="18">PDF 41–74 · RAG only · PDF 47 unavailable</text>
+<rect x="90" y="150" width="1020" height="80" rx="14" fill="#eef2f7" stroke="#27364a" stroke-width="2"/>
+<text x="125" y="198" font-family="sans-serif" font-size="22">Shared resources → interfaces and protocols</text>
+<rect x="90" y="270" width="1020" height="80" rx="14" fill="#f7f7f7" stroke="#27364a" stroke-width="2"/>
+<text x="125" y="318" font-family="sans-serif" font-size="22">Network software → physical data transfer</text>
+<rect x="90" y="390" width="1020" height="80" rx="14" fill="#eef2f7" stroke="#27364a" stroke-width="2"/>
+<text x="125" y="438" font-family="sans-serif" font-size="22">Multi-node network → topology and addressing</text>
+<rect x="90" y="510" width="1020" height="110" rx="14" fill="#f7f7f7" stroke="#27364a" stroke-width="2"/>
+<text x="125" y="555" font-family="sans-serif" font-size="22">Transit communication</text>
+<text x="125" y="590" font-family="sans-serif" font-size="18">identify data flows → choose paths → move data → combine/separate flows</text>
+<text x="60" y="700" font-family="sans-serif" font-size="16">Source limits: one missing RAG page; original figures are not multimodal RAG objects.</text>
+</svg>
