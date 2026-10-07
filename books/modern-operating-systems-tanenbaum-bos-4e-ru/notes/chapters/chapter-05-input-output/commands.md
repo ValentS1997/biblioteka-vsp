@@ -5,13 +5,13 @@ Scope: chapter 5 RAG only, PDF pages 380–487.
 | Item | Class | Source-grounded role | Risk / verification / rollback |
 |---|---|---|---|
 | `sort <input >output` | workload-generating | Demonstrates device-independent input/output naming and redirection | Reads `input`, writes `output`. Exact overwrite/rollback semantics are `[Needs confirmation]`. |
-| `IN REG,PORT` / `IN R0,4` | read-only hardware access | Read an I/O-port register into a CPU register | Privileged/architecture-specific. Verify returned status/data. |
-| `OUT PORT,REG` | state-changing hardware access | Write a CPU register value to an I/O control port | May issue device commands/change device state. Rollback `[Needs confirmation]`. |
-| `TEST PORT_4` | read-only polling example | Test a memory-mapped control register while waiting for device readiness | MMIO must not be stale-cached. |
+| `IN REG,PORT` / `IN R0,4` | read-only | Read an I/O-port register into a CPU register | Privileged/architecture-specific. Verify returned status/data. |
+| `OUT PORT,REG` | state-changing | Write a CPU register value to an I/O control port | May issue device commands/change device state. Rollback `[Needs confirmation]`. |
+| `TEST PORT_4` | read-only | Test a memory-mapped control register while waiting for device readiness | MMIO must not be stale-cached. |
 | `open` / `close` | state-changing | Acquire/release an exclusive device represented as a special file | Failed `open` may indicate busy device; ensure ownership is released. |
-| `read` | read-only data operation | Blocking user-facing read can hide asynchronous physical I/O | Verify returned byte/block count and error result. |
-| `write(fd, buffer, nbytes)` | state-changing data operation | User-space library wrapper around an I/O system call | Writes data to target descriptor; rollback depends on target. |
-| `printf` / `scanf` | workload-generating user-space I/O | Format output / parse input before underlying I/O | No device-specific rollback defined. |
+| `read` | read-only | Blocking user-facing read can hide asynchronous physical I/O | Verify returned byte/block count and error result. |
+| `write(fd, buffer, nbytes)` | state-changing | User-space library wrapper around an I/O system call | Writes data to target descriptor; rollback depends on target. |
+| `printf` / `scanf` | workload-generating | Format output / parse input before underlying I/O | No device-specific rollback defined. |
 | `down`, `wait`, `receive` | state-changing | Examples of driver blocking until I/O completion | Changes thread/process state; semantics depend on OS. |
 | `up`, `signal` | state-changing | Examples used by interrupt handlers to wake a blocked driver | Verify intended waiter becomes runnable. |
 | `IRET` | state-changing | Example return-from-interrupt instruction | Architecture-specific; exact state requirements `[Needs confirmation]`. |
