@@ -48,3 +48,18 @@ Validation status: `READY_WITH_KNOWN_LIMITATIONS`.
 Canonical readiness command:
 
 `python scripts/check_book_readiness.py --book-id vysokonagruzhennye-prilozheniya-martin-kleppmann-ru --capability chapter-analysis`
+
+## Book-level synthesis
+
+All 12 numbered chapters have merged chapter-level analysis.
+
+Final synthesis:
+
+- [Book-level synthesis](notes/book-synthesis/README.md)
+- [Knowledge map](notes/book-synthesis/knowledge-map.md)
+- [Operational distillation](notes/book-synthesis/operational-distillation.md)
+- [Place in biblioteka-vsp](notes/book-synthesis/biblioteka-vsp-placement.md)
+- [Visual synthesis](notes/book-synthesis/visual-synthesis.svg)
+
+The synthesis does not change canonical inventory or reading lifecycle state.
+
