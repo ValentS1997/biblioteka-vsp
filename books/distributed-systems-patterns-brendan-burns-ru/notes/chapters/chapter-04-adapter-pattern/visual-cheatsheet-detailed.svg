@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1180" viewBox="0 0 1600 1180" role="img" aria-labelledby="title desc">
+  <title id="title">Глава 4 — Адаптеры: подробная шпаргалка</title>
+  <desc id="desc">RAG-grounded карта Adapter pattern for monitoring, logging and database health checks.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #111827; }
+      .title { font-size: 34px; font-weight: 700; }
+      .sub { font-size: 15px; fill: #4b5563; }
+      .section { font-size: 22px; font-weight: 700; }
+      .h { font-size: 17px; font-weight: 700; }
+      .b { font-size: 14px; }
+      .small { font-size: 12px; fill: #374151; }
+      .box { fill: #f9fafb; stroke: #4b5563; stroke-width: 2; rx: 12; }
+      .blue { fill: #eff6ff; stroke: #1d4ed8; stroke-width: 2; rx: 12; }
+      .green { fill: #ecfdf5; stroke: #047857; stroke-width: 2; rx: 12; }
+      .violet { fill: #f5f3ff; stroke: #6d28d9; stroke-width: 2; rx: 12; }
+      .orange { fill: #fff7ed; stroke: #c2410c; stroke-width: 2; rx: 12; }
+      .arrow { stroke: #374151; stroke-width: 2.2; fill: none; marker-end: url(#m); }
+    </style>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#374151"/>
+    </marker>
+  </defs>
+
+  <text x="50" y="52" class="title">Глава 4 — Адаптеры</text>
+  <text x="50" y="82" class="sub">«Распределенные системы. Паттерны проектирования» · RAG p0064:c01–p0076:c01 · PDF 64–76</text>
+
+  <text x="50" y="125" class="section">A. Core transformation</text>
+
+  <rect x="80" y="155" width="400" height="130" class="orange"/>
+  <text x="110" y="192" class="h">Heterogeneous application</text>
+  <text x="110" y="224" class="b">native metrics · logs · health behavior</text>
+  <text x="110" y="254" class="b">different languages / vendors / conventions</text>
+
+  <rect x="600" y="155" width="400" height="130" class="green"/>
+  <text x="630" y="192" class="h">Adapter container</text>
+  <text x="630" y="224" class="b">translate native interface</text>
+  <text x="630" y="254" class="b">preserve base application image</text>
+
+  <rect x="1120" y="155" width="400" height="130" class="blue"/>
+  <text x="1150" y="192" class="h">Standard infrastructure contract</text>
+  <text x="1150" y="224" class="b">one common monitoring/logging/health view</text>
+  <text x="1150" y="254" class="b">shared tools consume same interface</text>
+
+  <path d="M480,220 L600,220" class="arrow"/>
+  <path d="M1000,220 L1120,220" class="arrow"/>
+
+  <text x="50" y="345" class="section">B. Monitoring Adapter</text>
+
+  <rect x="80" y="375" width="390" height="145" class="violet"/>
+  <text x="105" y="410" class="h">Redis</text>
+  <text x="105" y="442" class="b">native metrics not Prometheus-facing</text>
+  <text x="105" y="472" class="b">application container stays unchanged</text>
+
+  <rect x="605" y="375" width="390" height="145" class="green"/>
+  <text x="630" y="410" class="h">redis_exporter Adapter</text>
+  <text x="630" y="442" class="b">separate reusable container</text>
+  <text x="630" y="472" class="b">translates monitoring interface</text>
+
+  <rect x="1130" y="375" width="390" height="145" class="blue"/>
+  <text x="1155" y="410" class="h">Prometheus</text>
+  <text x="1155" y="442" class="b">expects common metrics interface</text>
+  <text x="1155" y="472" class="b">same monitoring tooling across apps</text>
+
+  <path d="M470,447 L605,447" class="arrow"/>
+  <path d="M995,447 L1130,447" class="arrow"/>
+
+  <text x="50" y="580" class="section">C. Logging Adapter</text>
+
+  <rect x="60" y="615" width="420" height="160" class="violet"/>
+  <text x="85" y="650" class="h">Native sources</text>
+  <text x="85" y="682" class="b">Redis SLOWLOG</text>
+  <text x="85" y="710" class="b">Storm REST API</text>
+  <text x="85" y="738" class="b">files / stdout / stderr formats</text>
+
+  <rect x="590" y="615" width="420" height="160" class="green"/>
+  <text x="615" y="650" class="h">fluentd Adapter</text>
+  <text x="615" y="682" class="b">redis_slowlog or storm plugin</text>
+  <text x="615" y="710" class="b">localhost via shared network namespace</text>
+  <text x="615" y="738" class="b">normalizes operational data</text>
+
+  <rect x="1120" y="615" width="420" height="160" class="blue"/>
+  <text x="1145" y="650" class="h">Common log representation</text>
+  <text x="1145" y="682" class="b">time-ordered/queryable output</text>
+  <text x="1145" y="710" class="b">later troubleshooting</text>
+  <text x="1145" y="738" class="b">shared aggregator interface</text>
+
+  <path d="M480,695 L590,695" class="arrow"/>
+  <path d="M1010,695 L1120,695" class="arrow"/>
+
+  <text x="50" y="835" class="section">D. Health Adapter</text>
+
+  <rect x="70" y="870" width="360" height="150" class="violet"/>
+  <text x="95" y="905" class="h">MySQL container</text>
+  <text x="95" y="937" class="b">base image unchanged</text>
+  <text x="95" y="967" class="b">shared network interface</text>
+
+  <rect x="500" y="870" width="360" height="150" class="green"/>
+  <text x="525" y="905" class="h">Health Adapter</text>
+  <text x="525" y="937" class="b">configured DB diagnostic query</text>
+  <text x="525" y="967" class="b">HTTP success / failure response</text>
+
+  <rect x="930" y="870" width="300" height="150" class="blue"/>
+  <text x="955" y="905" class="h">Orchestrator</text>
+  <text x="955" y="937" class="b">uses health result</text>
+  <text x="955" y="967" class="b">restart on failure in chapter framing</text>
+
+  <rect x="1300" y="870" width="250" height="150" class="orange"/>
+  <text x="1325" y="905" class="h">Risk boundary</text>
+  <text x="1325" y="937" class="b">query adds DB workload</text>
+  <text x="1325" y="967" class="b">bad config can report failure</text>
+
+  <path d="M430,945 L500,945" class="arrow"/>
+  <path d="M860,945 L930,945" class="arrow"/>
+  <path d="M1230,945 L1300,945" class="arrow"/>
+
+  <rect x="190" y="1080" width="1220" height="60" class="box"/>
+  <text x="220" y="1117" class="h">Decision: standardize externally with Adapter when reuse/separate ownership beats maintaining a modified application image</text>
+
+  <text x="50" y="1170" class="small">PDF-extracted YAML/Go formatting is not treated as production copy/paste-safe; exact rollback and current compatibility remain unverified.</text>
+</svg>
