@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="960" viewBox="0 0 1500 960">
+<rect width="1500" height="960" fill="#f8fafb"/>
+<text x="50" y="58" font-family="Arial,DejaVu Sans,sans-serif" font-size="34" font-weight="700" fill="#183247">Глава 8 · Технология первичных сетей OTN</text>
+<text x="50" y="92" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#52697a">RAG p0242:c01–p0267:c01 · PDF 242–267 · printed 241–266 · 30 chunks</text>
+
+<rect x="55" y="135" width="420" height="215" rx="18" fill="#e8eff5" stroke="#b9cbd8"/>
+<text x="83" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#234b64">1 · Transport network</text>
+<text x="83" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">static point-to-point circuits</text>
+<text x="83" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">TM · ADM · DXC · regenerator</text>
+<text x="83" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#35576a">tributary → aggregate ports</text>
+<text x="83" y="325" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#5a7180">provisioned capacity, not packet routing</text>
+
+<rect x="540" y="135" width="420" height="215" rx="18" fill="#eef4e8" stroke="#c4d4b9"/>
+<text x="568" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#365b31">2 · OTN blocks</text>
+<text x="568" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">OPU → client mapping/alignment</text>
+<text x="568" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">ODU → end-to-end + multiplexing</text>
+<text x="568" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#496449">OTU → section + FEC</text>
+<text x="568" y="325" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#63755d">photonic layer → DWDM channel</text>
+
+<rect x="1025" y="135" width="420" height="215" rx="18" fill="#f8efe2" stroke="#ddc9aa"/>
+<text x="1053" y="178" font-family="Arial,DejaVu Sans,sans-serif" font-size="26" font-weight="700" fill="#78532e">3 · Client adaptation</text>
+<text x="1053" y="220" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">sync vs asynchronous mapping</text>
+<text x="1053" y="255" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">GFP-F / GFP-T</text>
+<text x="1053" y="290" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#6b573c">rate alignment + transparency</text>
+
+<path d="M475 242 H540 M960 242 H1025" stroke="#718798" stroke-width="4" marker-end="url(#a)"/>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#718798"/></marker></defs>
+
+<rect x="95" y="420" width="620" height="215" rx="18" fill="#eee8f6" stroke="#c9bad9"/>
+<text x="125" y="465" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#593f73">4 · Multiplexing</text>
+<text x="125" y="510" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">ODU → higher-order OPU</text>
+<text x="125" y="550" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#624f74">tributary slots + PSI</text>
+<text x="125" y="590" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#756486">ODU0/2e/4/Cn/Flex adapt hierarchy to client rates</text>
+
+<rect x="785" y="420" width="620" height="215" rx="18" fill="#e5edf7" stroke="#bdcce0"/>
+<text x="815" y="465" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#2b4e78">5 · Architecture evolution</text>
+<text x="815" y="510" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">transponder → digital wrapper</text>
+<text x="815" y="550" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#3c5878">muxponder → aggregate clients</text>
+<text x="815" y="590" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#5c7290">OTN cross-connect → transit switching</text>
+
+<rect x="180" y="700" width="1140" height="150" rx="18" fill="#fff3dd" stroke="#dfca9b"/>
+<text x="210" y="745" font-family="Arial,DejaVu Sans,sans-serif" font-size="27" font-weight="700" fill="#785f2d">Critical distinction</text>
+<text x="210" y="790" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#6c5c3a">OTN: fixed frame size + variable transmission time · SDH: variable frame size + fixed 125 μs period</text>
+<text x="210" y="827" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#6c5c3a">No executable CLI in chapter; standards/rates are source snapshots.</text>
+
+<text x="50" y="920" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#63798a">Chapter 9 begins at p0268:c01 · reading state unchanged.</text>
+</svg>
