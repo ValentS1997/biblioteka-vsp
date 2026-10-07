@@ -53,3 +53,5 @@ Canonical readiness command:
 ## Chapter artifacts
 
 - [Глава 1 — Введение](notes/chapters/chapter-01-introduction/README.md) — RAG-grounded analysis; PDF pages 20–75.
+
+- [Глава 2 — Организация компьютерных систем](notes/chapters/chapter-02-computer-system-organization/README.md) — RAG-grounded analysis; PDF pages 76–171.
