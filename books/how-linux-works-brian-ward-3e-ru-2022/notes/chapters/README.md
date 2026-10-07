@@ -5,3 +5,4 @@
 - [Глава 3 — Устройства](chapter-03-devices/README.md) — PDF/печатные страницы 79–101; RAG chunks p0079:c01–p0101:c01.
 - [Глава 4 — Диски и файловые системы](chapter-04-disks-and-filesystems/README.md) — PDF/печатные страницы 102–155, RAG chunks p0102:c01–p0155:c01.
 - [Глава 5 — Загрузка ядра Linux](chapter-05-linux-kernel-boot/README.md) — PDF/печатные страницы 156–175, RAG chunks p0156:c01–p0175:c01.
+- [Глава 6 — Запуск пользовательского пространства](chapter-06-user-space-startup/README.md) — PDF/печатные страницы 176–207, RAG chunks p0176:c01–p0207:c01.
