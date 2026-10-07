@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1450" height="1050" viewBox="0 0 1450 1050">
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+    <style>
+      .title{font:700 34px sans-serif;fill:#0f172a}.h{font:700 18px sans-serif;fill:#0f172a}.t{font:14px sans-serif;fill:#1e293b}.s{font:12px sans-serif;fill:#475569}
+      .b{fill:#f8fafc;stroke:#475569;stroke-width:1.8;rx:13}.blue{fill:#dbeafe;stroke:#1d4ed8;stroke-width:1.8;rx:13}.amber{fill:#fef3c7;stroke:#a16207;stroke-width:1.8;rx:13}.green{fill:#dcfce7;stroke:#15803d;stroke-width:1.8;rx:13}.ln{stroke:#475569;stroke-width:1.7;marker-end:url(#a)}
+    </style>
+  </defs>
+  <rect width="1450" height="1050" fill="#fff"/>
+  <text x="45" y="55" class="title">Глава 2 — подробная карта процессов, потоков и синхронизации</text>
+  <text x="45" y="82" class="s">Источник: RAG · PDF 111–213 · boundary verified</text>
+
+  <rect x="535" y="115" width="380" height="90" class="blue"/>
+  <text x="725" y="150" text-anchor="middle" class="h">Процесс</text>
+  <text x="725" y="178" text-anchor="middle" class="t">resource container · address space · process table state</text>
+
+  <rect x="70" y="260" width="360" height="170" class="b"/>
+  <text x="250" y="295" text-anchor="middle" class="h">Process state machine</text>
+  <text x="95" y="330" class="t">Running → blocked: wait / blocking I/O</text>
+  <text x="95" y="357" class="t">Blocked → ready: awaited event occurs</text>
+  <text x="95" y="384" class="t">Running ↔ ready: scheduler/preemption</text>
+  <text x="95" y="411" class="s">Process table saves registers, PC, stack, IDs, files, scheduling data</text>
+
+  <rect x="545" y="260" width="360" height="170" class="blue"/>
+  <text x="725" y="295" text-anchor="middle" class="h">Threads inside one process</text>
+  <text x="570" y="330" class="t">per-thread: PC · registers · stack</text>
+  <text x="570" y="357" class="t">shared: address space · files · process resources</text>
+  <text x="570" y="384" class="t">user-level · kernel-level · hybrid</text>
+  <text x="570" y="411" class="s">blocking semantics depend on implementation level</text>
+
+  <rect x="1020" y="260" width="360" height="170" class="b"/>
+  <text x="1200" y="295" text-anchor="middle" class="h">Pthreads API in chapter</text>
+  <text x="1045" y="330" class="t">create · exit · join · yield</text>
+  <text x="1045" y="357" class="t">mutex init/lock/trylock/unlock/destroy</text>
+  <text x="1045" y="384" class="t">cond wait/signal/broadcast</text>
+  <text x="1045" y="411" class="s">condition signals are not remembered</text>
+
+  <line x1="620" y1="205" x2="350" y2="260" class="ln"/>
+  <line x1="725" y1="205" x2="725" y2="260" class="ln"/>
+  <line x1="830" y1="205" x2="1100" y2="260" class="ln"/>
+
+  <rect x="70" y="500" width="410" height="205" class="amber"/>
+  <text x="275" y="535" text-anchor="middle" class="h">Race → critical section</text>
+  <text x="95" y="570" class="t">1. no simultaneous critical-section entry</text>
+  <text x="95" y="597" class="t">2. no CPU count/speed assumptions</text>
+  <text x="95" y="624" class="t">3. outside process must not block another</text>
+  <text x="95" y="651" class="t">4. no infinite wait to enter</text>
+  <text x="95" y="680" class="s">busy waiting can waste CPU and trigger priority inversion</text>
+
+  <rect x="520" y="500" width="410" height="205" class="green"/>
+  <text x="725" y="535" text-anchor="middle" class="h">Synchronization toolbox</text>
+  <text x="545" y="570" class="t">Semaphore: down/up · event counting</text>
+  <text x="545" y="597" class="t">Mutex + condition: exclusion + predicate wait</text>
+  <text x="545" y="624" class="t">Monitor: language-level protected module</text>
+  <text x="545" y="651" class="t">Messages: send/receive · local or distributed IPC</text>
+  <text x="545" y="678" class="t">Barrier: phase rendezvous · RCU: read-mostly update</text>
+
+  <rect x="970" y="500" width="410" height="205" class="b"/>
+  <text x="1175" y="535" text-anchor="middle" class="h">Classic problems</text>
+  <text x="995" y="570" class="t">producer ↔ consumer</text>
+  <text x="995" y="597" class="t">dining philosophers</text>
+  <text x="995" y="624" class="t">readers ↔ writers</text>
+  <text x="995" y="651" class="s">correct primitives can still be composed incorrectly</text>
+  <text x="995" y="678" class="s">→ deadlock, starvation, lost wakeup</text>
+
+  <line x1="480" y1="600" x2="520" y2="600" class="ln"/>
+  <line x1="930" y1="600" x2="970" y2="600" class="ln"/>
+
+  <rect x="120" y="790" width="350" height="175" class="b"/>
+  <text x="295" y="825" text-anchor="middle" class="h">Batch scheduling</text>
+  <text x="145" y="860" class="t">FCFS</text>
+  <text x="145" y="887" class="t">shortest job first</text>
+  <text x="145" y="914" class="t">shortest remaining time</text>
+  <text x="145" y="941" class="s">goals: throughput · turnaround · CPU utilization</text>
+
+  <rect x="550" y="790" width="350" height="175" class="blue"/>
+  <text x="725" y="825" text-anchor="middle" class="h">Interactive scheduling</text>
+  <text x="575" y="860" class="t">round-robin · priority · multilevel</text>
+  <text x="575" y="887" class="t">aging prediction · guaranteed · lottery</text>
+  <text x="575" y="914" class="t">fair-share scheduling</text>
+  <text x="575" y="941" class="s">goal: fast, proportional response</text>
+
+  <rect x="980" y="790" width="350" height="175" class="green"/>
+  <text x="1155" y="825" text-anchor="middle" class="h">Real-time scheduling</text>
+  <text x="1005" y="860" class="t">hard vs soft deadlines</text>
+  <text x="1005" y="887" class="t">periodic / aperiodic events</text>
+  <text x="1005" y="914" class="t">schedulability: Σ(Ci/Pi) ≤ 1</text>
+  <text x="1005" y="941" class="s">policy may be separated from kernel mechanism</text>
+
+  <line x1="725" y1="705" x2="725" y2="760" class="ln"/>
+  <line x1="725" y1="760" x2="295" y2="790" class="ln"/>
+  <line x1="725" y1="760" x2="725" y2="790" class="ln"/>
+  <line x1="725" y1="760" x2="1155" y2="790" class="ln"/>
+
+  <text x="45" y="1015" class="s">Operational distinction: blocked ≠ ready ≠ spinning ≠ deadlocked/starved.</text>
+</svg>
