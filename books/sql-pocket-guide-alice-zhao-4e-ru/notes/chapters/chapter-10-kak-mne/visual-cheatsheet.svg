@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="980" viewBox="0 0 1360 980" role="img" aria-label="Глава 10 SQL. Практические задачи">
+<rect width="1360" height="980" fill="#EEF4F8"/>
+<text x="30" y="53" font-family="DejaVu Sans,Arial,sans-serif" font-size="30" fill="#083B5A" font-weight="700">ГЛАВА 10 · КАК МНЕ?..</text>
+<text x="32" y="84" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#506D80" >Элис Жао · PDF 304–315 · RAG p0304:c01–p0315:c01</text>
+<rect x="27" y="111" width="407" height="225" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="149" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">01 / DUPLICATES</text>
+<text x="45" y="185" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >DISTINCT → unique combinations</text>
+<text x="45" y="215" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >GROUP BY + HAVING COUNT(*) &gt; 1</text>
+<text x="45" y="245" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >JOIN back → original row ids</text>
+<text x="45" y="275" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >NULL-key case not demonstrated</text>
+<text x="45" y="305" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Business duplicate key must be explicit</text>
+<rect x="477" y="111" width="407" height="225" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="495" y="149" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">02 / MAX PER GROUP</text>
+<text x="495" y="185" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >MAX(date) per employee</text>
+<text x="495" y="215" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >JOIN back for remaining columns</text>
+<text x="495" y="245" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Works for shown sample</text>
+<text x="495" y="275" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Ties may return multiple rows</text>
+<text x="495" y="305" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Deterministic tie-break: unknown</text>
+<rect x="927" y="111" width="406" height="225" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="945" y="149" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">03 / CONCAT + METADATA</text>
+<text x="945" y="185" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >CONCAT / || within row</text>
+<text x="945" y="215" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >GROUP_CONCAT/LISTAGG/etc across rows</text>
+<text x="945" y="245" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >information_schema / all_tab_columns</text>
+<text x="945" y="275" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >SQLite .tables + pragma</text>
+<text x="945" y="305" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Visibility scope: confirm</text>
+<rect x="27" y="363" width="627" height="244" rx="17" fill="#FAFDFF" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="401" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">04 / CROSS-TABLE UPDATE</text>
+<text x="45" y="437" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Dialect-specific UPDATE</text>
+<text x="45" y="467" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Preview matching ids first</text>
+<text x="45" y="497" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Confirm affected row count</text>
+<text x="45" y="527" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Verify before COMMIT</text>
+<text x="45" y="557" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Rollback only if transaction allows</text>
+<rect x="686" y="363" width="647" height="244" rx="17" fill="#FAFDFF" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="704" y="401" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">05 / SOURCE FINDINGS</text>
+<text x="704" y="437" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >NULL duplicate limitation</text>
+<text x="704" y="467" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Max-date tie limitation</text>
+<text x="704" y="497" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >ARRAY_AGG output-shape not shown</text>
+<text x="704" y="527" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Oracle unmatched UPDATE scope</text>
+<text x="704" y="557" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >PostgreSQL/SQLite UPDATE ambiguity</text>
+<rect x="27" y="635" width="1306" height="176" rx="17" fill="#fff" stroke="#BCD0DD" stroke-width="1.5"/>
+<text x="45" y="673" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#0D4866" font-weight="700">06 / FINAL WORDS</text>
+<text x="45" y="709" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >SQL topics in the book are only a subset of the language</text>
+<text x="45" y="739" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Multiple solution approaches exist</text>
+<text x="45" y="769" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#24465A" >Syntax differs across RDBMSs; continued practice and study are required</text>
+<rect x="27" y="838" width="1306" height="111" rx="14" fill="#D8EAF3"/>
+<text x="48" y="872" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#164A64" font-weight="700">RULE: read-only preview first; cross-table UPDATE only with verified scope + transaction + rollback</text>
+<text x="48" y="905" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#214E66" >No SQL executed · source/RAG/reading unchanged · rag_only</text>
+</svg>
