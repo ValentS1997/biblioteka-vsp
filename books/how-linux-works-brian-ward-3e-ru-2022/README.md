@@ -56,3 +56,4 @@ Canonical readiness command:
 - [Глава 6 — Запуск пользовательского пространства](notes/chapters/chapter-06-user-space-startup/README.md) — RAG-only, PDF/печатные с. 176–207.
 - [Глава 7 — Настройка системы: журналирование, системное время, пакетные задачи и пользователи](notes/chapters/chapter-07-system-configuration-logging-time-jobs-users/README.md) — RAG-only, PDF/печатные с. 208–243.
 - [Глава 8 — Процессы и использование ресурсов](notes/chapters/chapter-08-processes-and-resources/README.md) — RAG-only, PDF/печатные с. 244–269.
+- [Глава 9 — Сеть и ее конфигурация](notes/chapters/chapter-09-networking-and-configuration/README.md) — RAG-only, PDF/печатные с. 270–319.
