@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780">
+<rect width="1200" height="780" fill="#0f172a"/>
+<text x="55" y="66" fill="#f8fafc" font-family="sans-serif" font-size="34" font-weight="700">Глава 3 — storage &amp; retrieval</text>
+<text x="55" y="104" fill="#cbd5e1" font-family="sans-serif" font-size="18">RAG-only · PDF 97–141 · OLTP ↔ OLAP</text>
+
+<rect x="55" y="145" width="520" height="410" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+<text x="85" y="195" fill="#38bdf8" font-family="sans-serif" font-size="28" font-weight="700">OLTP</text>
+<text x="85" y="238" fill="#f8fafc" font-family="sans-serif" font-size="19">many small indexed reads/writes</text>
+
+<text x="85" y="292" fill="#a7f3d0" font-family="sans-serif" font-size="21" font-weight="700">Log-structured</text>
+<text x="85" y="326" fill="#cbd5e1" font-family="sans-serif" font-size="17">WAL → MemTable → SSTable → compaction</text>
+<text x="85" y="356" fill="#cbd5e1" font-family="sans-serif" font-size="17">Bloom filter reduces absent-key reads</text>
+<text x="85" y="386" fill="#cbd5e1" font-family="sans-serif" font-size="17">usually strong write throughput</text>
+
+<text x="85" y="438" fill="#f9a8d4" font-family="sans-serif" font-size="21" font-weight="700">B-tree</text>
+<text x="85" y="472" fill="#cbd5e1" font-family="sans-serif" font-size="17">pages · splits · in-place updates</text>
+<text x="85" y="502" fill="#cbd5e1" font-family="sans-serif" font-size="17">WAL + concurrency control</text>
+
+<rect x="625" y="145" width="520" height="410" rx="18" fill="#1e293b" stroke="#a78bfa" stroke-width="3"/>
+<text x="655" y="195" fill="#a78bfa" font-family="sans-serif" font-size="28" font-weight="700">OLAP</text>
+<text x="655" y="238" fill="#f8fafc" font-family="sans-serif" font-size="19">fewer heavy scans / aggregates</text>
+<text x="655" y="292" fill="#cbd5e1" font-family="sans-serif" font-size="18">ETL → data warehouse</text>
+<text x="655" y="326" fill="#cbd5e1" font-family="sans-serif" font-size="18">star / snowflake schemas</text>
+<text x="655" y="360" fill="#cbd5e1" font-family="sans-serif" font-size="18">column-oriented storage</text>
+<text x="655" y="394" fill="#cbd5e1" font-family="sans-serif" font-size="18">compression + sort order</text>
+<text x="655" y="428" fill="#cbd5e1" font-family="sans-serif" font-size="18">vectorized processing</text>
+<text x="655" y="462" fill="#cbd5e1" font-family="sans-serif" font-size="18">materialized views / OLAP cubes</text>
+
+<rect x="55" y="600" width="1090" height="120" rx="18" fill="#111827" stroke="#64748b" stroke-width="2"/>
+<text x="85" y="645" fill="#f8fafc" font-family="sans-serif" font-size="23" font-weight="700">Storage rule</text>
+<text x="85" y="682" fill="#cbd5e1" font-family="sans-serif" font-size="19">Index/read speed ↔ write overhead · benchmark representative workload.</text>
+<text x="250" y="756" fill="#f8fafc" font-family="sans-serif" font-size="21" font-weight="700">workload → storage hypothesis → measure → change → remeasure</text>
+</svg>

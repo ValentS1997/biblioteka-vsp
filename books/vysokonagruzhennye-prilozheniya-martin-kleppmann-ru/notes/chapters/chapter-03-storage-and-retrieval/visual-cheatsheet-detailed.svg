@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1120" viewBox="0 0 1400 1120">
+<rect width="1400" height="1120" fill="#f8fafc"/>
+<text x="55" y="65" fill="#0f172a" font-family="sans-serif" font-size="34" font-weight="700">Глава 3 — Подсистемы хранения и извлечение данных</text>
+<text x="55" y="102" fill="#475569" font-family="sans-serif" font-size="18">Canonical RAG · PDF 97–141 · source SHA 495e75f185c758a8…</text>
+
+<rect x="55" y="140" width="1290" height="110" rx="18" fill="#e2e8f0"/>
+<text x="85" y="184" fill="#0f172a" font-family="sans-serif" font-size="23" font-weight="700">Core trade-off</text>
+<text x="85" y="219" fill="#334155" font-family="sans-serif" font-size="18">Indexes accelerate reads but add write/storage overhead. Storage design must follow workload.</text>
+
+<rect x="55" y="285" width="400" height="510" rx="18" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+<text x="85" y="330" fill="#075985" font-family="sans-serif" font-size="26" font-weight="700">3.1 OLTP storage</text>
+<text x="85" y="372" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Append + index</text>
+<text x="85" y="402" fill="#334155" font-family="sans-serif" font-size="16">db_set append is fast; db_get scan is O(n)</text>
+<text x="85" y="438" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">LSM path</text>
+<text x="85" y="468" fill="#334155" font-family="sans-serif" font-size="16">WAL → MemTable → SSTables</text>
+<text x="85" y="498" fill="#334155" font-family="sans-serif" font-size="16">merge / compaction · Bloom filters</text>
+<text x="85" y="538" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">B-tree path</text>
+<text x="85" y="568" fill="#334155" font-family="sans-serif" font-size="16">fixed pages · splits · in-place updates</text>
+<text x="85" y="598" fill="#334155" font-family="sans-serif" font-size="16">WAL + latches for recovery/concurrency</text>
+<text x="85" y="638" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Other indexes</text>
+<text x="85" y="668" fill="#334155" font-family="sans-serif" font-size="16">secondary · clustered · covering</text>
+<text x="85" y="698" fill="#334155" font-family="sans-serif" font-size="16">multidimensional · full-text · fuzzy</text>
+<text x="85" y="748" fill="#075985" font-family="sans-serif" font-size="16">General rule: benchmark your workload</text>
+
+<rect x="500" y="285" width="400" height="510" rx="18" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+<text x="530" y="330" fill="#92400e" font-family="sans-serif" font-size="26" font-weight="700">3.2 OLTP vs OLAP</text>
+<text x="530" y="372" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">OLTP</text>
+<text x="530" y="402" fill="#334155" font-family="sans-serif" font-size="16">many low-latency queries</text>
+<text x="530" y="432" fill="#334155" font-family="sans-serif" font-size="16">few rows per request · index lookup</text>
+<text x="530" y="472" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">OLAP</text>
+<text x="530" y="502" fill="#334155" font-family="sans-serif" font-size="16">fewer heavy queries</text>
+<text x="530" y="532" fill="#334155" font-family="sans-serif" font-size="16">millions of rows · aggregates</text>
+<text x="530" y="572" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Warehouse</text>
+<text x="530" y="602" fill="#334155" font-family="sans-serif" font-size="16">ETL from OLTP sources</text>
+<text x="530" y="632" fill="#334155" font-family="sans-serif" font-size="16">separate analytical workload</text>
+<text x="530" y="672" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Schema</text>
+<text x="530" y="702" fill="#334155" font-family="sans-serif" font-size="16">fact table + dimensions</text>
+<text x="530" y="732" fill="#334155" font-family="sans-serif" font-size="16">star / snowflake</text>
+
+<rect x="945" y="285" width="400" height="510" rx="18" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="975" y="330" fill="#166534" font-family="sans-serif" font-size="26" font-weight="700">3.3 Column storage</text>
+<text x="975" y="372" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Why</text>
+<text x="975" y="402" fill="#334155" font-family="sans-serif" font-size="16">wide fact tables, few columns/query</text>
+<text x="975" y="432" fill="#334155" font-family="sans-serif" font-size="16">read only needed column files</text>
+<text x="975" y="472" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Compression</text>
+<text x="975" y="502" fill="#334155" font-family="sans-serif" font-size="16">repeated values compress well</text>
+<text x="975" y="532" fill="#334155" font-family="sans-serif" font-size="16">bitmap encoding · SIMD/vectorized</text>
+<text x="975" y="572" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Sort / writes</text>
+<text x="975" y="602" fill="#334155" font-family="sans-serif" font-size="16">sort whole rows by useful columns</text>
+<text x="975" y="632" fill="#334155" font-family="sans-serif" font-size="16">in-memory writes then merge to disk</text>
+<text x="975" y="672" fill="#0f172a" font-family="sans-serif" font-size="18" font-weight="700">Precompute</text>
+<text x="975" y="702" fill="#334155" font-family="sans-serif" font-size="16">materialized views · OLAP cubes</text>
+<text x="975" y="732" fill="#334155" font-family="sans-serif" font-size="16">faster reads ↔ higher update cost</text>
+
+<rect x="55" y="835" width="1290" height="200" rx="18" fill="#0f172a"/>
+<text x="85" y="880" fill="#f8fafc" font-family="sans-serif" font-size="23" font-weight="700">Operational decision loop</text>
+<text x="85" y="920" fill="#cbd5e1" font-family="sans-serif" font-size="18">1. Classify workload: point/range lookup, write-heavy, scan/aggregate.</text>
+<text x="85" y="955" fill="#cbd5e1" font-family="sans-serif" font-size="18">2. Identify bottleneck: seek/random I/O, write throughput, scan bandwidth, CPU, memory.</text>
+<text x="85" y="990" fill="#cbd5e1" font-family="sans-serif" font-size="18">3. Change one index/storage assumption → rerun representative workload → keep or rollback.</text>
+
+<text x="235" y="1090" fill="#0f172a" font-family="sans-serif" font-size="22" font-weight="700">Storage engine choice is a workload decision, not a universal ranking.</text>
+</svg>
