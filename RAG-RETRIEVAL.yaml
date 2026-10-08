@@ -9,7 +9,7 @@ purpose: >-
   Provenance is source-format neutral and supports PDF pages or EPUB spine/XHTML locators.
 
 canonical_repository:
-  repository: ValentS1997/biblioteka-vsp
+  repository: vsp-corp/biblioteka-vsp
   branch: main
   catalog: books/index.yaml
 
