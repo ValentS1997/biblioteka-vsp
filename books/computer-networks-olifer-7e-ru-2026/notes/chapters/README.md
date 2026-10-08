@@ -31,5 +31,6 @@ Book ID: `computer-networks-olifer-7e-ru-2026`. Индекс ведёт толь
 | 25 — Технологии Wi-Fi и Bluetooth | 784–820 | 783–819 | [Глава 25](chapter-25-tehnologii-wi-fi-i-bluetooth/README.md) |
 | 26 — Беспроводные технологии с низким энергопотреблением | 821–843 | 820–842 | [Глава 26](chapter-26-besprovodnye-tehnologii-s-nizkim-energopotrebleniem/README.md) |
 | 27 — Сети дронов | 844–883 | 843–882 | [Глава 27](chapter-27-seti-dronov/README.md) |
+| 28 — Основные понятия и принципы информационной безопасности | 892–924 | 891–923 | [Глава 28](chapter-28-osnovnye-ponyatiya-i-principy-informacionnoj-bezopasnosti/README.md) |
 
-Дальнейшие главы: **28–32** указаны в RAG-оглавлении; их точные границы и артефакты подтверждаются отдельно при индивидуальном анализе. Reading state книги остаётся независимым от RAG.
+Дальнейшие главы: **29–32** указаны в RAG-оглавлении; их точные границы и артефакты подтверждаются отдельно при индивидуальном анализе. Reading state книги остаётся независимым от RAG.
