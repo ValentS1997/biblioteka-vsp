@@ -263,12 +263,13 @@ def render():
         if missing:
             migration_gaps.append((inv, kid, title, ", ".join(missing)))
 
+    lines += [
+        "", "## Migration gaps", "",
+        "Pre-transfer audit завершённых knowledge-проектов: проверяется наличие RAG и study/extract artifacts в текущем `main`.",
+        "",
+    ]
     if migration_gaps:
         lines += [
-            "", "## Migration gaps", "",
-            "Завершённые по пользовательскому статусу проекты, у которых в `main` отсутствует часть ожидаемых knowledge-артефактов. "
-            "Этот раздел является pre-transfer audit и не подменяет сами артефакты.",
-            "",
             "| Инв. № | Knowledge ID | Книга | Отсутствует в main |",
             "|:---:|---|---|---|",
         ]
@@ -277,6 +278,8 @@ def render():
             lines.append(
                 f"| {inv_label} | `{esc(kid)}` | **{esc(title)}** | {esc(missing)} |"
             )
+    else:
+        lines.append("**Не обнаружены.** Все проекты со статусом `completed` имеют RAG и выжимки в текущем checkout.")
 
     lines += [
         "", "## Реестр книг", "",
