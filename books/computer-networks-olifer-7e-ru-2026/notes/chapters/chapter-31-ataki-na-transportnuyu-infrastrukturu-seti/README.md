@@ -1,6 +1,6 @@
 # Глава 31 — Атаки на транспортную инфраструктуру сети
 
-**Artifact state:** RAG_GROUNDED, **INCOMPLETE_V1_7** (diagram.md blocked); review, CI, merge: **[Needs confirmation]**. Наличие заметок не подтверждает чтение книги.
+**Artifact state:** RAG_GROUNDED; complete v1.7 chapter file set. Review, CI and merge: **[Needs confirmation]**. Наличие заметок не подтверждает чтение книги.
 
 ## Источник и точные границы
 
@@ -56,7 +56,7 @@
 
 - [cheatsheet.md](cheatsheet.md) — признаки нарушений, read-only проверка, безопасные границы.
 - [commands.md](commands.md) — имена механизмов/полей/protocol operations **без exploit payload, процедур сканирования и команд настройки**.
-- `diagram.md` — **[Needs confirmation]**: обязательный Mermaid-артефакт v1.7 пока не опубликован; запись в репозиторий дважды отклонена проверкой безопасности инструмента. Две SVG-сводки ниже доступны, но не заменяют этот обязательный файл.
+- [diagram.md](diagram.md) — Mermaid: surfaces TCP/IP/DNS/BGP, политика IPsec SPD/SAD, AH/ESP/IKE.
 - [visual-cheatsheet.svg](visual-cheatsheet.svg) — компактная визуальная сводка.
 - [visual-cheatsheet-detailed.svg](visual-cheatsheet-detailed.svg) — подробная визуальная сводка.
 - [source-findings.md](source-findings.md) — конфликтные количественные/исторические/security claims и проблемы экстракции.
