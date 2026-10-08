@@ -33,5 +33,6 @@ Book ID: `computer-networks-olifer-7e-ru-2026`. Индекс ведёт толь
 | 27 — Сети дронов | 844–883 | 843–882 | [Глава 27](chapter-27-seti-dronov/README.md) |
 | 28 — Основные понятия и принципы информационной безопасности | 892–924 | 891–923 | [Глава 28](chapter-28-osnovnye-ponyatiya-i-principy-informacionnoj-bezopasnosti/README.md) |
 | 29 — Технологии аутентификации, авторизации и управления доступом | 925–954 | 924–953 | [Глава 29](chapter-29-tehnologii-autentifikacii-avtorizacii-i-upravleniya-dostupom/README.md) |
+| 30 — Технологии безопасности на основе анализа трафика | 955–990 | 954–989 | [Глава 30](chapter-30-tehnologii-bezopasnosti-na-osnove-analiza-trafika/README.md) |
 
-Дальнейшие главы: **30–32** указаны в RAG-оглавлении; их точные границы и артефакты подтверждаются отдельно при индивидуальном анализе. Reading state книги остаётся независимым от RAG.
+Дальнейшие главы: **31–32** указаны в RAG-оглавлении; их точные границы и артефакты подтверждаются отдельно при индивидуальном анализе. Reading state книги остаётся независимым от RAG.
