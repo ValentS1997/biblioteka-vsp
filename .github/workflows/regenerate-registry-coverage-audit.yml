@@ -41,7 +41,7 @@ jobs:
 
           grep -q "^## Покрытие knowledge-проектов$" registry/README.md
           grep -q "^## Migration gaps$" registry/README.md
-          grep -q "Проектов завершено (user-confirmed '+')" registry/README.md
+          grep -Fq "Проектов завершено (user-confirmed '+')" registry/README.md
 
       - name: Show migration coverage summary
         shell: bash
