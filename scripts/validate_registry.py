@@ -57,7 +57,27 @@ def main():
     if (reg.get("scope") or {}).get("book_count") != len(books):
         errors.append("V02 scope.book_count does not equal len(books)")
 
-    index_by_id = {b["id"]: b for b in (idx.get("books") or [])}
+    index_books = idx.get("books") or []
+    index_by_id = {b["id"]: b for b in index_books}
+
+    allowed_project_status = {"planned", "in_progress", "completed", "frozen"}
+    for item in index_books:
+        project_status = item.get("project_status")
+        if project_status is not None and project_status not in allowed_project_status:
+            errors.append(
+                f"V16 invalid project_status {project_status!r} for {item.get('id')}"
+            )
+        if project_status == "completed":
+            if item.get("project_status_evidence") != "user_chat_plus":
+                errors.append(
+                    f"V17 completed project lacks user_chat_plus evidence: {item.get('id')}"
+                )
+            confirmed_at = item.get("project_status_confirmed_at")
+            if not isinstance(confirmed_at, str) or len(confirmed_at) != 10:
+                errors.append(
+                    f"V18 completed project lacks YYYY-MM-DD confirmation date: {item.get('id')}"
+                )
+
     kids = [b["knowledge_id"] for b in books if b.get("knowledge_id")]
     for b in books:
         kid = b.get("knowledge_id")
