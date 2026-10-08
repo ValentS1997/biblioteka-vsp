@@ -39,9 +39,19 @@ jobs:
           python scripts/validate_registry.py
           python scripts/generate_registry_readme.py --check
 
-          grep -q "^## Покрытие knowledge-проектов$" registry/README.md
-          grep -q "^## Migration gaps$" registry/README.md
-          grep -Fq "Проектов завершено (user-confirmed '+')" registry/README.md
+          python - <<'PY'
+          from pathlib import Path
+          text = Path("registry/README.md").read_text(encoding="utf-8")
+          required = [
+              "## Покрытие knowledge-проектов",
+              "## Migration gaps",
+              "Проектов завершено (user-confirmed '+')",
+          ]
+          missing = [item for item in required if item not in text]
+          if missing:
+              raise SystemExit(f"generated coverage view missing: {missing}")
+          print("coverage view assertions OK")
+          PY
 
       - name: Show migration coverage summary
         shell: bash
