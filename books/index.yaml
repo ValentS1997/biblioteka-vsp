@@ -1,10 +1,13 @@
 schema: biblioteka-vsp/books/v1
 protocol: biblioteka-vsp/v1
-updated: 2026-10-07
+updated: 2026-10-08
 
 books:
   - id: computer-networks-6e-ru-2023
     title: "Компьютерные сети"
+    project_status: completed
+    project_status_confirmed_at: "2026-10-08"
+    project_status_evidence: "user_chat_plus"
     authors:
       - "Эндрю Таненбаум"
       - "Ник Фимстер"
@@ -26,6 +29,9 @@ books:
 
   - id: unix-linux-system-administration-handbook-5e-ru-2020
     title: "Unix и Linux: руководство системного администратора"
+    project_status: completed
+    project_status_confirmed_at: "2026-10-08"
+    project_status_evidence: "user_chat_plus"
     authors:
       - "Эви Немет"
       - "Гарт Снайдер"
@@ -49,6 +55,9 @@ books:
 
   - id: information-security-grodzensky-ru
     title: "Информационная безопасность: учебное пособие"
+    project_status: completed
+    project_status_confirmed_at: "2026-10-08"
+    project_status_evidence: "user_chat_plus"
     authors:
       - "Яков Сергеевич Гродзенский"
     language: ru
@@ -65,6 +74,9 @@ books:
 
   - id: mama-ya-timlid-ru
     title: "Мама, я тимлид! Практические советы по руководству IT-командой"
+    project_status: completed
+    project_status_confirmed_at: "2026-10-08"
+    project_status_evidence: "user_chat_plus"
     authors:
       - "Марина Перескокова"
     language: ru
@@ -81,6 +93,9 @@ books:
 
   - id: ai-engineering-chip-huyen-ru
     title: "AI-инженерия. Построение приложений с использованием базовых моделей"
+    project_status: completed
+    project_status_confirmed_at: "2026-10-08"
+    project_status_evidence: "user_chat_plus"
     authors:
       - "Чип Хьюен"
     language: ru
@@ -107,6 +122,9 @@ books:
 
   - id: docker-demystified-saibal-ghosh-ru-2023
     title: "Docker без секретов"
+    project_status: completed
+    project_status_confirmed_at: "2026-10-08"
+    project_status_evidence: "user_chat_plus"
     authors:
       - "Сайбал Гош"
     language: ru
@@ -125,6 +143,9 @@ books:
 
   - id: python-crash-course-3e-ru-2024
     title: "Изучаем Python: программирование игр, визуализация данных, веб-приложения. 3-е изд."
+    project_status: completed
+    project_status_confirmed_at: "2026-10-08"
+    project_status_evidence: "user_chat_plus"
     authors:
       - "Эрик Мэтиз"
     language: ru
@@ -143,6 +164,9 @@ books:
 
   - id: kubernetes-in-action-marko-luksa-ru
     title: "Kubernetes в действии"
+    project_status: completed
+    project_status_confirmed_at: "2026-10-08"
+    project_status_evidence: "user_chat_plus"
     authors:
       - "Марко Лукша"
     language: ru
@@ -159,6 +183,9 @@ books:
 
   - id: a-byte-of-python-swaroop-chitlur-ru
     title: "A Byte of Python / Укус Питона"
+    project_status: completed
+    project_status_confirmed_at: "2026-10-08"
+    project_status_evidence: "user_chat_plus"
     authors:
       - "Swaroop Chitlur"
       - "Swaroop C. H."
@@ -176,6 +203,9 @@ books:
 
   - id: rag-generative-ai-denis-rothman-ru
     title: "RAG и генеративный ИИ. Создаем собственные RAG-пайплайны с помощью LlamaIndex, Deep Lake и Pinecone"
+    project_status: completed
+    project_status_confirmed_at: "2026-10-08"
+    project_status_evidence: "user_chat_plus"
     authors:
       - "Дэнис Ротман"
     language: ru
@@ -192,6 +222,9 @@ books:
 
   - id: sql-pocket-guide-alice-zhao-4e-ru
     title: "SQL. Карманный справочник"
+    project_status: completed
+    project_status_confirmed_at: "2026-10-08"
+    project_status_evidence: "user_chat_plus"
     authors:
       - "Элис Жао"
     language: ru
@@ -209,6 +242,9 @@ books:
 
   - id: computer-architecture-tanenbaum-austin-6e-ru
     title: "Архитектура компьютера"
+    project_status: completed
+    project_status_confirmed_at: "2026-10-08"
+    project_status_evidence: "user_chat_plus"
     authors:
       - "Эндрю С. Таненбаум"
       - "Тодд Остин"
@@ -227,6 +263,9 @@ books:
 
   - id: vysokonagruzhennye-prilozheniya-martin-kleppmann-ru
     title: "Высоконагруженные приложения: программирование, масштабирование, поддержка"
+    project_status: completed
+    project_status_confirmed_at: "2026-10-08"
+    project_status_evidence: "user_chat_plus"
     authors:
       - "Мартин Клеппман"
     language: ru
@@ -244,6 +283,9 @@ books:
 
   - id: cybersecurity-risk-hubbard-seiersen-ru
     title: "Как оценить риски в кибербезопасности: лучшие инструменты и практики"
+    project_status: completed
+    project_status_confirmed_at: "2026-10-08"
+    project_status_evidence: "user_chat_plus"
     authors:
       - "Дуглас У. Хаббард"
       - "Ричард Сирсен"
@@ -261,6 +303,9 @@ books:
 
   - id: ethical-hacking-basics-ru
     title: "Основы этичного хакинга"
+    project_status: completed
+    project_status_confirmed_at: "2026-10-08"
+    project_status_evidence: "user_chat_plus"
     authors:
       - "А. В. Чумилин"
     language: ru
@@ -276,6 +321,9 @@ books:
 
   - id: go-basics-chernyshev-ru
     title: "Основы Go"
+    project_status: completed
+    project_status_confirmed_at: "2026-10-08"
+    project_status_evidence: "user_chat_plus"
     authors:
       - "Станислав Андреевич Чернышев"
     language: ru
@@ -293,6 +341,9 @@ books:
 
   - id: distributed-systems-patterns-brendan-burns-ru
     title: "Распределенные системы. Паттерны проектирования"
+    project_status: completed
+    project_status_confirmed_at: "2026-10-08"
+    project_status_evidence: "user_chat_plus"
     authors:
       - "Брендан Бёрнс"
     language: ru
@@ -310,6 +361,9 @@ books:
 
   - id: modern-operating-systems-tanenbaum-bos-4e-ru
     title: "Современные операционные системы"
+    project_status: completed
+    project_status_confirmed_at: "2026-10-08"
+    project_status_evidence: "user_chat_plus"
     authors:
       - "Эндрю С. Таненбаум"
       - "Херберт Бос"
@@ -328,6 +382,9 @@ books:
 
   - id: dynamic-incident-response-joshua-wright-en-2026
     title: "Dynamic Incident Response: A Framework for Security Teams"
+    project_status: completed
+    project_status_confirmed_at: "2026-10-08"
+    project_status_evidence: "user_chat_plus"
     authors:
       - "Joshua Wright"
     language: en
@@ -347,6 +404,9 @@ books:
 
   - id: linux-go-low-level-programming-tsilyurik-ru
     title: "Linux и Go. Эффективное низкоуровневое программирование"
+    project_status: completed
+    project_status_confirmed_at: "2026-10-08"
+    project_status_evidence: "user_chat_plus"
     authors:
       - "Олег Иванович Цилюрик"
     language: ru
@@ -363,6 +423,9 @@ books:
 
   - id: how-linux-works-brian-ward-3e-ru-2022
     title: "Внутреннее устройство Linux"
+    project_status: completed
+    project_status_confirmed_at: "2026-10-08"
+    project_status_evidence: "user_chat_plus"
     authors:
       - "Брайан Уорд"
     language: ru
@@ -382,6 +445,9 @@ books:
 
   - id: computer-networks-olifer-7e-ru-2026
     title: "Компьютерные сети. Принципы, технологии, протоколы"
+    project_status: completed
+    project_status_confirmed_at: "2026-10-08"
+    project_status_evidence: "user_chat_plus"
     authors:
       - "Виктор Олифер"
       - "Наталья Олифер"
