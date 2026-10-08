@@ -1,0 +1,67 @@
+name: Regenerate registry coverage audit
+
+on:
+  push:
+    branches:
+      - migration/registry-coverage-audit
+    paths:
+      - ".github/workflows/regenerate-registry-coverage-audit.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check PyYAML jsonschema
+
+      - name: Regenerate registry
+        run: python scripts/generate_registry_readme.py
+
+      - name: Validate registry and generated view
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/validate_registry.py
+          python scripts/generate_registry_readme.py --check
+
+          grep -q "^## Покрытие knowledge-проектов$" registry/README.md
+          grep -q "^## Migration gaps$" registry/README.md
+          grep -q "Проектов завершено (user-confirmed '+')" registry/README.md
+
+      - name: Show migration coverage summary
+        shell: bash
+        run: |
+          set -euo pipefail
+          sed -n '/^## Покрытие knowledge-проектов$/,/^## Реестр книг$/p' registry/README.md
+          sed -n '/^## Контроль$/,$p' registry/README.md | head -40
+
+      - name: Commit generated registry README
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add registry/README.md
+          if git diff --cached --quiet; then
+            echo "README already current."
+            exit 0
+          fi
+
+          git commit -m "Regenerate registry knowledge coverage view"
+          git push origin "HEAD:migration/registry-coverage-audit"
