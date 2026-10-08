@@ -45,3 +45,7 @@ Chapter-analysis readiness: `READY` under `BIBLIOTEKA-VSP-BOOK-READINESS v1.3`. 
 ## Chapter-level RAG artifacts
 
 [Индекс анализов глав](notes/chapters/README.md) — source-grounded артефакты, независимо от reading state. Анализы глав 18–32 подготовлены в зависимой цепочке PR; наличие артефактов не подтверждает прочтение. Статус main определяется только принятыми изменениями.
+
+## Контрольные вопросы к части VII
+
+[Вопросы 1–50, ответы издательства и source-findings](notes/questions/README.md) — вопросы PDF 1050–1057, издательский ключ PDF 1067–1069. Артефакты part-level, не chapter-specific; статус чтения/проверки знаний пользователя не меняется.
