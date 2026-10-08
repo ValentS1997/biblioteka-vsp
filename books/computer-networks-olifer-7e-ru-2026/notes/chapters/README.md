@@ -35,5 +35,6 @@ Book ID: `computer-networks-olifer-7e-ru-2026`. Индекс ведёт толь
 | 29 — Технологии аутентификации, авторизации и управления доступом | 925–954 | 924–953 | [Глава 29](chapter-29-tehnologii-autentifikacii-avtorizacii-i-upravleniya-dostupom/README.md) |
 | 30 — Технологии безопасности на основе анализа трафика | 955–990 | 954–989 | [Глава 30](chapter-30-tehnologii-bezopasnosti-na-osnove-analiza-trafika/README.md) |
 | 31 — Атаки на транспортную инфраструктуру сети | 991–1022 | 990–1021 | [Глава 31](chapter-31-ataki-na-transportnuyu-infrastrukturu-seti/README.md) |
+| 32 — Безопасность программного кода и сетевых служб | 1023–1049 | 1022–1048 | [Глава 32](chapter-32-bezopasnost-programmnogo-koda-i-setevyh-sluzhb/README.md) |
 
-Дальнейшие главы: **32** указаны в RAG-оглавлении; их точные границы и артефакты подтверждаются отдельно при индивидуальном анализе. Reading state книги остаётся независимым от RAG.
+Главы **18–32** представлены в индексе анализов; публикация зависит от приёмки цепочки PR. Вопросы к части VII начинаются на PDF-странице 1050 и не являются главой 33. Reading state книги остаётся независимым от RAG.
