@@ -41,3 +41,7 @@ Verified generation:
 - index generation: `1bb819e9024819bd8ca55f6d77246ad398c7efa0ed33593fafb1cc03fba161e3`.
 
 Chapter-analysis readiness: `READY` under `BIBLIOTEKA-VSP-BOOK-READINESS v1.3`. Verified by GitHub Actions run `37634874590` after strict RAG acceptance and canonical source provenance checks.
+
+## Chapter-level RAG artifacts
+
+[Индекс анализов глав](notes/chapters/README.md) — source-grounded артефакты, независимо от reading state. Глава 19 добавлена в отдельном PR; наличие артефактов не подтверждает прочтение.

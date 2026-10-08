@@ -22,5 +22,6 @@ Book ID: `computer-networks-olifer-7e-ru-2026`. Индекс ведёт толь
 | 16 — Протоколы маршрутизации и технология SDN | 472–513 | 471–512 | [Глава 16](chapter-16-protokoly-marshrutizacii-i-tehnologiya-sdn/README.md) |
 | 17 — IPv6 как развитие стека TCP/IP | 514–545 | 513–544 | [Глава 17](chapter-17-ipv6-kak-razvitie-steka-tcp-ip/README.md) |
 | 18 — Организация и коммуникационные услуги глобальных сетей | 556–564 | 555–563 | [Глава 18](chapter-18-organizaciya-i-kommunikacionnye-uslugi-globalnyh-setey/README.md) |
+| 19 — Информационные услуги глобальных сетей | 565–607 | 564–606 | [Глава 19](chapter-19-informacionnye-uslugi-globalnyh-setey/README.md) |
 
-Дальнейшие главы: **19–32** указаны в RAG-оглавлении; их точные границы и артефакты подтверждаются отдельно при индивидуальном анализе. Reading state книги остаётся независимым от RAG.
+Дальнейшие главы: **20–32** указаны в RAG-оглавлении; их точные границы и артефакты подтверждаются отдельно при индивидуальном анализе. Reading state книги остаётся независимым от RAG.
