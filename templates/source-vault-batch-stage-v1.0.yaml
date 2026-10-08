@@ -11,7 +11,7 @@ template:
     repeated user-local Git uploads.
 
 scope:
-  repository: "ValentS1997/biblioteka-vsp"
+  repository: "vsp-corp/biblioteka-vsp"
   branch_pattern: "source-vault/<immutable-batch-name>"
   vault_root: "source-vault/"
   canonical_book_state_created: false

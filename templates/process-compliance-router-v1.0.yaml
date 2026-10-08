@@ -13,7 +13,7 @@ router:
     contracts и блокировать дальнейшую работу при критическом process drift.
 
 target:
-  repository: "ValentS1997/biblioteka-vsp"
+  repository: "vsp-corp/biblioteka-vsp"
   canonical_branch: "main"
   working_branch: "[Current branch]"
   book_id: "[Resolve from branch context or repository state]"
@@ -28,7 +28,7 @@ authority:
     - "Existing branch artifacts"
     - "Model knowledge"
 
-  canonical_process_repository: "ValentS1997/biblioteka-vsp"
+  canonical_process_repository: "vsp-corp/biblioteka-vsp"
   reusable_repository: "ValentS1997/Templates-and-YAML-instructions"
 
   conflict_rule: >-
