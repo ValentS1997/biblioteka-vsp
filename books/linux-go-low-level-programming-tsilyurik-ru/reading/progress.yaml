@@ -1,8 +1,14 @@
 schema: biblioteka-vsp/reading/v1
 book_id: linux-go-low-level-programming-tsilyurik-ru
-status: completed
+
+status: planned
 scope: full_book
+
 started: null
-completed: 2026-10-07
+completed: null
 current_page: null
 current_chapter: null
+
+notes:
+  - "2026-10-08: User explicitly confirmed personal reading has not started."
+  - "Previous completed reading status was incorrect; book processing and chapter artifacts are separate from personal reading."
