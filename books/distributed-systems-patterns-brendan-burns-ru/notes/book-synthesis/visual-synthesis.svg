@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1050" viewBox="0 0 1500 1050" role="img" aria-labelledby="title desc">
+  <title id="title">Distributed Systems Patterns — book synthesis</title>
+  <desc id="desc">Book-level map from single-node composition to reusable distributed-system pattern ecosystem.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #111827; }
+      .t { font-size: 32px; font-weight: 700; }
+      .s { font-size: 14px; fill: #4b5563; }
+      .h { font-size: 18px; font-weight: 700; }
+      .b { font-size: 14px; }
+      .blue { fill: #eff6ff; stroke: #1d4ed8; stroke-width: 2; rx: 12; }
+      .green { fill: #ecfdf5; stroke: #047857; stroke-width: 2; rx: 12; }
+      .violet { fill: #f5f3ff; stroke: #6d28d9; stroke-width: 2; rx: 12; }
+      .orange { fill: #fff7ed; stroke: #c2410c; stroke-width: 2; rx: 12; }
+      .box { fill: #f9fafb; stroke: #4b5563; stroke-width: 2; rx: 12; }
+      .a { stroke: #374151; stroke-width: 2; fill: none; marker-end: url(#m); }
+    </style>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#374151"/>
+    </marker>
+  </defs>
+
+  <text x="50" y="50" class="t">«Распределенные системы. Паттерны проектирования» — synthesis</text>
+  <text x="50" y="78" class="s">13 RAG-grounded chapters · inventory 0009 · registry direction: Distributed Systems</text>
+
+  <rect x="60" y="130" width="320" height="165" class="blue"/>
+  <text x="90" y="168" class="h">1. Single-node composition</text>
+  <text x="90" y="200" class="b">Sidecar</text>
+  <text x="90" y="230" class="b">Ambassador</text>
+  <text x="90" y="260" class="b">Adapter</text>
+
+  <rect x="430" y="130" width="320" height="165" class="green"/>
+  <text x="460" y="168" class="h">2. Scale &amp; availability</text>
+  <text x="460" y="200" class="b">Replicated Service</text>
+  <text x="460" y="230" class="b">Sharding</text>
+  <text x="460" y="260" class="b">Scatter/Gather</text>
+
+  <rect x="800" y="130" width="320" height="165" class="violet"/>
+  <text x="830" y="168" class="h">3. Events &amp; authority</text>
+  <text x="830" y="200" class="b">FaaS / Event Pipeline</text>
+  <text x="830" y="230" class="b">Owner Election</text>
+  <text x="830" y="260" class="b">lease + version validation</text>
+
+  <rect x="1170" y="130" width="270" height="165" class="orange"/>
+  <text x="1200" y="168" class="h">4. Batch DAG</text>
+  <text x="1200" y="200" class="b">Task Queue</text>
+  <text x="1200" y="230" class="b">stream patterns</text>
+  <text x="1200" y="260" class="b">Join / Reduce</text>
+
+  <path d="M380,212 L430,212" class="a"/>
+  <path d="M750,212 L800,212" class="a"/>
+  <path d="M1120,212 L1170,212" class="a"/>
+
+  <text x="50" y="365" class="h">Recurring engineering lessons</text>
+
+  <rect x="60" y="400" width="420" height="160" class="box"/>
+  <text x="90" y="438" class="h">Separate responsibility</text>
+  <text x="90" y="470" class="b">cross-cutting behavior outside application binary</text>
+  <text x="90" y="500" class="b">explicit interfaces enable reuse</text>
+  <text x="90" y="530" class="b">architecture intent &gt; vendor/tool syntax</text>
+
+  <rect x="540" y="400" width="420" height="160" class="box"/>
+  <text x="570" y="438" class="h">Choose the correct scale primitive</text>
+  <text x="570" y="470" class="b">replicas ≠ shards ≠ request fan-out</text>
+  <text x="570" y="500" class="b">model failure domains and locality</text>
+  <text x="570" y="530" class="b">watch tail latency and backlog</text>
+
+  <rect x="1020" y="400" width="420" height="160" class="box"/>
+  <text x="1050" y="438" class="h">Coordinate only when semantics require it</text>
+  <text x="1050" y="470" class="b">owner/version authority</text>
+  <text x="1050" y="500" class="b">Merger vs Join vs Reduce</text>
+  <text x="1050" y="530" class="b">coordination always adds cost</text>
+
+  <text x="50" y="635" class="h">Place in biblioteka-vsp</text>
+
+  <rect x="70" y="670" width="390" height="150" class="blue"/>
+  <text x="100" y="708" class="h">Infrastructure foundations</text>
+  <text x="100" y="740" class="b">UNIX/Linux · networks</text>
+  <text x="100" y="770" class="b">Docker · Kubernetes mechanics</text>
+
+  <rect x="555" y="670" width="390" height="150" class="green"/>
+  <text x="585" y="708" class="h">Burns — pattern bridge</text>
+  <text x="585" y="740" class="b">architecture decomposition</text>
+  <text x="585" y="770" class="b">shared distributed vocabulary</text>
+
+  <rect x="1040" y="670" width="390" height="150" class="violet"/>
+  <text x="1070" y="708" class="h">Deeper distributed systems</text>
+  <text x="1070" y="740" class="b">Kleppmann / data-intensive systems</text>
+  <text x="1070" y="770" class="b">transactions · consistency · storage depth</text>
+
+  <path d="M460,745 L555,745" class="a"/>
+  <path d="M945,745 L1040,745" class="a"/>
+
+  <rect x="170" y="900" width="1160" height="90" class="orange"/>
+  <text x="200" y="937" class="h">Durable vs historical</text>
+  <text x="200" y="968" class="b">Pattern semantics remain useful; book-era Kubeless/Helm/etcd/Kafka/Kubernetes snippets require current verification.</text>
+
+  <text x="50" y="1030" class="s">Primary role: Foundational Distributed Systems Patterns / Architecture Bridge</text>
+</svg>
