@@ -44,4 +44,4 @@ Chapter-analysis readiness: `READY` under `BIBLIOTEKA-VSP-BOOK-READINESS v1.3`. 
 
 ## Chapter-level RAG artifacts
 
-[Индекс анализов глав](notes/chapters/README.md) — source-grounded артефакты, независимо от reading state. Анализы глав 18–24 подготовлены в зависимой цепочке PR; наличие артефактов не подтверждает прочтение. Статус main определяется только принятыми изменениями.
+[Индекс анализов глав](notes/chapters/README.md) — source-grounded артефакты, независимо от reading state. Анализы глав 18–25 подготовлены в зависимой цепочке PR; наличие артефактов не подтверждает прочтение. Статус main определяется только принятыми изменениями.
