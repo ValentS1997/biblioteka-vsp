@@ -21,3 +21,7 @@ Chapter artifacts and durable study notes for `computer-networks-olifer-7e-ru-20
 - [Глава 15 — Протоколы транспортного уровня TCP и UDP](chapters/chapter-15-protokoly-transportnogo-urovnya-tcp-i-udp/README.md) — PDF pp. 442–471; printed pp. 441–470; 30 RAG chunks; source-findings + two mandatory SVG summaries; reading state unchanged.
 - [Глава 16 — Протоколы маршрутизации и технология SDN](chapters/chapter-16-protokoly-marshrutizacii-i-tehnologiya-sdn/README.md) — PDF pp. 472–513; printed pp. 471–512; 42 RAG chunks; source-findings + two mandatory SVG summaries; reading state unchanged.
 - [Глава 17 — IPv6 как развитие стека TCP/IP](chapters/chapter-17-ipv6-kak-razvitie-steka-tcp-ip/README.md) — PDF pp. 514–545; printed pp. 513–544; 33 RAG chunks; source-findings + two mandatory SVG summaries; reading state unchanged.
+
+## Вопросы к частям книги
+
+- [Часть VII — безопасность компьютерных сетей: 50 вопросов и ответы издательства](questions/README.md) — PDF pp. 1050–1057 и 1067–1069; source caveats, не chapter-specific.
