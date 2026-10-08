@@ -7,6 +7,18 @@ REGISTRY = ROOT / "registry/books.yaml"
 INDEX = ROOT / "books/index.yaml"
 OUTPUT = ROOT / "registry/README.md"
 
+PRIMARY_EXTRACT_NAMES = {
+    "cheatsheet.md",
+    "summary.md",
+    "commands.md",
+    "diagram.md",
+    "visual-cheatsheet.svg",
+    "visual-cheatsheet-detailed.svg",
+    "final-conclusion.md",
+    "book-summary.md",
+    "synthesis.md",
+}
+
 def y(path):
     return yaml.safe_load(path.read_text(encoding="utf-8"))
 
@@ -34,6 +46,41 @@ def rag_label(m):
         return "—"
     status = ((m.get("validation") or {}).get("status") or "")
     return "Да" if status.startswith("READY") else "⚠️"
+
+def project_label(item):
+    return "Завершено" if item.get("project_status") == "completed" else "[Needs confirmation]"
+
+def extract_info(item):
+    paths = item.get("paths") or {}
+    notes_rel = paths.get("notes")
+    if not notes_rel:
+        return {"has": False, "chapter_count": 0, "artifact_count": 0}
+    notes_root = ROOT / notes_rel
+    if not notes_root.is_dir():
+        return {"has": False, "chapter_count": 0, "artifact_count": 0}
+
+    artifacts = [
+        path for path in notes_root.rglob("*")
+        if path.is_file() and path.name in PRIMARY_EXTRACT_NAMES
+    ]
+    chapter_dirs = set()
+    for path in artifacts:
+        rel = path.relative_to(notes_root)
+        parts = rel.parts
+        if len(parts) >= 3 and parts[0] == "chapters":
+            chapter_dirs.add(parts[1])
+
+    return {
+        "has": bool(artifacts),
+        "chapter_count": len(chapter_dirs),
+        "artifact_count": len(artifacts),
+    }
+
+def extracts_label(info):
+    if not info.get("has"):
+        return "—"
+    chapter_count = int(info.get("chapter_count") or 0)
+    return f"Да ({chapter_count} гл.)" if chapter_count else "Да"
 
 def inventory_number_label(books):
     values = [str(b["inventory_number"]) for b in books]
@@ -88,13 +135,14 @@ def render():
             for h in electronic.get(inv, [])
         )
 
-    progress, rags = {}, {}
+    progress, rags, extracts = {}, {}, {}
     for kid, item in idx_by_id.items():
         paths = item.get("paths") or {}
         if paths.get("reading_progress") and (ROOT / paths["reading_progress"]).is_file():
             progress[kid] = y(ROOT / paths["reading_progress"])
         if paths.get("rag_manifest") and (ROOT / paths["rag_manifest"]).is_file():
             rags[kid] = y(ROOT / paths["rag_manifest"])
+        extracts[kid] = extract_info(item)
 
     inventory_books = tuple(sorted(reg["books"], key=lambda b: b["number"]))
     expected_inventory_count = reg["scope"]["book_count"]
@@ -107,7 +155,7 @@ def render():
 
     lines = [
         "<!-- GENERATED FILE. DO NOT EDIT MANUALLY. -->",
-        "<!-- Source: registry/books.yaml + books/index.yaml + per-book reading/RAG manifests -->",
+        "<!-- Source: registry/books.yaml + books/index.yaml + per-book reading/RAG manifests + notes artifacts -->",
         "",
         "# Реестр библиотеки",
         "",
@@ -116,7 +164,11 @@ def render():
         f"> **{len(inventory_books)} инвентарных книг** · инвентарные номера `{inventory_number_label(inventory_books)}` · **{reg['electronic_holdings']['file_count']} электронный файл** · актуально на `{reg['updated']}`",
     ]
 
-    reverse = {}
+    reverse = {
+        b["knowledge_id"]: b["inventory_number"]
+        for b in inventory_books
+        if b.get("knowledge_id")
+    }
     completed = active = rag_ready = 0
 
     reading_now = []
@@ -170,6 +222,60 @@ def render():
         for inv, title, electronic_label in pdf_needed:
             lines.append(
                 f"| `{inv}` | **{esc(title)}** | {electronic_label} |"
+            )
+
+    knowledge_rows = []
+    for kid, item in idx_by_id.items():
+        inv = reverse.get(kid, "—")
+        project = project_label(item)
+        rg = rag_label(rags.get(kid))
+        ex = extracts_label(extracts.get(kid) or {})
+        sort_inv = int(inv) if inv != "—" and str(inv).isdigit() else 10**9
+        knowledge_rows.append((sort_inv, str(inv), kid, item.get("title", kid), project, rg, ex))
+
+    knowledge_rows.sort(key=lambda row: (row[0], row[3].lower(), row[2]))
+
+    lines += [
+        "", "## Покрытие knowledge-проектов", "",
+        "Показывает состояние артефактов, которые реально находятся в `main`. "
+        "`Проект` — подтверждённый пользователем статус книжного чата; "
+        "`Есть RAG` — derived из `rag/manifest.yaml`; "
+        "`Выжимки` — derived из фактических study artifacts в `notes/`.",
+        "",
+        "| Инв. № | Knowledge ID | Книга | Проект | Есть RAG | Выжимки |",
+        "|:---:|---|---|:---:|:---:|:---:|",
+    ]
+    for _, inv, kid, title, project, rg, ex in knowledge_rows:
+        inv_label = f"`{inv}`" if inv != "—" else "—"
+        lines.append(
+            f"| {inv_label} | `{esc(kid)}` | **{esc(title)}** | {project} | {rg} | {ex} |"
+        )
+
+    migration_gaps = []
+    for _, inv, kid, title, project, rg, ex in knowledge_rows:
+        if project != "Завершено":
+            continue
+        missing = []
+        if rg != "Да":
+            missing.append("RAG")
+        if ex == "—":
+            missing.append("выжимки")
+        if missing:
+            migration_gaps.append((inv, kid, title, ", ".join(missing)))
+
+    if migration_gaps:
+        lines += [
+            "", "## Migration gaps", "",
+            "Завершённые по пользовательскому статусу проекты, у которых в `main` отсутствует часть ожидаемых knowledge-артефактов. "
+            "Этот раздел является pre-transfer audit и не подменяет сами артефакты.",
+            "",
+            "| Инв. № | Knowledge ID | Книга | Отсутствует в main |",
+            "|:---:|---|---|---|",
+        ]
+        for inv, kid, title, missing in migration_gaps:
+            inv_label = f"`{inv}`" if inv != "—" else "—"
+            lines.append(
+                f"| {inv_label} | `{esc(kid)}` | **{esc(title)}** | {esc(missing)} |"
             )
 
     lines += [
@@ -241,6 +347,22 @@ def render():
     knowledge_entries = len(idx_by_id)
     knowledge_without_inventory = len(set(idx_by_id) - set(reverse))
     knowledge_rag_ready = sum(1 for m in rags.values() if rag_label(m) == "Да")
+    project_completed = sum(
+        1 for item in idx_by_id.values()
+        if item.get("project_status") == "completed"
+    )
+    knowledge_with_extracts = sum(
+        1 for info in extracts.values()
+        if info.get("has")
+    )
+    completed_missing_rag = sum(
+        1 for kid, item in idx_by_id.items()
+        if item.get("project_status") == "completed" and rag_label(rags.get(kid)) != "Да"
+    )
+    completed_missing_extracts = sum(
+        1 for kid, item in idx_by_id.items()
+        if item.get("project_status") == "completed" and not (extracts.get(kid) or {}).get("has")
+    )
     lines += [
         "", "## Контроль", "", "| Параметр | Значение |", "|---|---:|",
         f"| Инвентарных книг | **{len(inventory_books)}** |",
@@ -255,6 +377,10 @@ def render():
         f"| В процессе | **{active}** |",
         f"| RAG READY (inventory-linked) | **{rag_ready}** |",
         f"| RAG READY (knowledge total) | **{knowledge_rag_ready}** |",
+        f"| Проектов завершено (user-confirmed '+') | **{project_completed}** |",
+        f"| Knowledge entries с выжимками | **{knowledge_with_extracts}** |",
+        f"| Завершено, но RAG отсутствует в main | **{completed_missing_rag}** |",
+        f"| Завершено, но выжимки отсутствуют в main | **{completed_missing_extracts}** |",
         f"| SHA-256 Excel snapshot | `{src['sha256']}` |",
         f"| Размер Excel snapshot | `{src['size_bytes']} bytes` |",
         "", "README генерируется автоматически. Для изменения статусов правьте только canonical sources.", ""
