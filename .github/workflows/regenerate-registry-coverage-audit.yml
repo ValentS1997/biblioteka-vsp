@@ -6,6 +6,11 @@ on:
       - migration/registry-coverage-audit
     paths:
       - ".github/workflows/regenerate-registry-coverage-audit.yml"
+      - "scripts/generate_registry_readme.py"
+      - "scripts/validate_registry.py"
+      - "books/index.yaml"
+      - "registry/books.yaml"
+      - "registry/ARCHITECTURE.md"
 
 permissions:
   contents: write
