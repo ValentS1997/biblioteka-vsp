@@ -1,6 +1,6 @@
 schema: biblioteka-vsp/books/v1
 protocol: biblioteka-vsp/v1
-updated: 2026-10-08
+updated: 2026-10-13
 
 books:
   - id: computer-networks-6e-ru-2023
@@ -465,3 +465,22 @@ books:
       reading_progress: books/computer-networks-olifer-7e-ru-2026/reading/progress.yaml
       notes: books/computer-networks-olifer-7e-ru-2026/notes/
       diagrams: books/computer-networks-olifer-7e-ru-2026/diagrams/
+
+  - id: kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026
+    title: "Kubernetes. Полное руководство по развертыванию и управлению Kubernetes в облачных и локальных средах. 2-е изд."
+    authors:
+      - "Гиниш Мадаппарамбат"
+      - "Расс МакКендрик"
+    language: ru
+    edition: 2
+    publication_year: 2026
+    isbn: "978-601-12-8674-9"
+    paths:
+      metadata: books/kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026/metadata.yaml
+      source: books/kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026/source/book.pdf
+      rag_manifest: books/kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026/rag/manifest.yaml
+      rag_chunks: books/kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026/rag/chunks/
+      rag_chunk_index: books/kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026/rag/chunk-index.jsonl
+      rag_search_index: books/kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026/rag/search-index/
+      notes: books/kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026/notes/
+      diagrams: books/kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026/diagrams/
