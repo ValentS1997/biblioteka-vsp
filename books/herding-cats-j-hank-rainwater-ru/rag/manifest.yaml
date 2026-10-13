@@ -1,0 +1,82 @@
+schema: biblioteka-vsp/rag/v2
+book_id: herding-cats-j-hank-rainwater-ru
+
+source:
+  path: source/book.pdf
+  format: pdf
+  sha256: 5f11cf93711c9489b25218c701e1027f5ca0354523e2faeb1bb7041ed3b62795
+  pdf_pages: 256
+
+ingestion:
+  pipeline_version: "1.0"
+  normalization_policy_id: "text-normalization-v2"
+  chunking_policy_id: "source-unit-char-window-v1"
+  retrieval_policy_id: "deterministic-lexical-shards-v2"
+
+generation:
+  corpus_generation_id: 324df1052eecdd3318ec13b5b7b7791ebd85f5c65750978e53fde2ce931b8fab
+  index_generation_id: c4edba8a9e0fd867157af468deade3a21183c0301a0cccb799d867ebc11cfe71
+
+extraction:
+  engine: PyMuPDF
+  engine_version: "1.28.2"
+  unit_coordinate_system: source_pdf_1_indexed
+  content_model: unclassified_extractable_pdf_text
+  normalization:
+    - remove_NUL
+    - remove_soft_hyphen_marker
+    - normalize_line_endings
+    - trim_trailing_horizontal_whitespace
+    - suppress_repeated_short_pdf_boilerplate_lines
+
+chunking:
+  scope: per_source_unit
+  source_unit_type: pdf_page
+  target_chars: 4000
+  overlap_chars: 350
+  id_pattern: "<book-slug>:p<source-unit-4d>:c<chunk-2d>"
+
+retrieval:
+  mode: addressable_small_chunks
+  discovery: deterministic_lexical_shards
+  search_index_manifest: rag/search-index/manifest.json
+  search_index_path_pattern: "rag/search-index/<shard>.json"
+  search_scope: rag/chunks/
+  chunk_index: rag/chunk-index.jsonl
+  top_k_max: 3
+  chunk_file_pattern: "rag/chunks/p####-p####/p####-c##.md"
+  bulk_files:
+    - rag/text.md
+    - rag/chunks.jsonl
+  bulk_files_for_query_retrieval: false
+
+statistics:
+  source_units_with_text: 253
+  blank_source_units: 3
+  blank_source_unit_numbers: [1, 2, 256]
+  extracted_characters: 722674
+  suppressed_repeated_boilerplate_lines: 0
+  suppressed_repeated_boilerplate_occurrences: 0
+  chunks: 260
+  retrieval_chunk_files: 260
+  search_index_shards: 2811
+  search_index_max_shard_bytes: 226099
+
+validation:
+  chunk_ids_unique: true
+  retrieval_paths_unique: true
+  retrieval_chunk_count_matches: true
+  search_index_bounded: true
+  source_checksum_computed: true
+  source_checksum_expected_present: true
+  source_checksum_matched_expected: true
+  source_checksum_verified: true
+  full_source_unit_range_processed: true
+  status: READY_WITH_KNOWN_LIMITATIONS
+
+known_limitations:
+  - "The extractor reads the PDF text layer but does not classify native text versus OCR; content_model therefore does not assert OCR origin."
+  - "Recognition/extraction errors already present in the PDF text layer may remain in extracted text."
+  - "PDF page provenance is available for source inspection when visual context matters."
+  - "Images, equations, tables and diagrams are not independently encoded as multimodal RAG objects."
+  - "The deterministic lexical index is prefix-based retrieval, not semantic vector search; use up to three informative query tokens and preserve RAG_MISS on unsupported questions."

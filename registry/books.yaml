@@ -166,6 +166,7 @@ books:
     direction: "Monitoring / Zabbix"
   - number: 21
     inventory_number: "0021"
+    knowledge_id: "herding-cats-j-hank-rainwater-ru"
     title: "Как пасти котов. Наставление для программистов, руководящих другими программистами"
     authors_raw: "Дж. Ханк Рейнвотер"
     translators_editors_raw: "Юрий Гороховский"
@@ -345,11 +346,17 @@ verification_sources:
 electronic_holdings:
   source: "user-provided local file inventory + uploaded file confirmation + verified source-vault promotion"
   observed_date: "2026-10-13"
-  file_count: 23
-  matched_unambiguous: 22
+  file_count: 24
+  matched_unambiguous: 23
   needs_confirmation: 0
   unregistered: 1
   files:
+    - filename: "Dzh_Khank_Reynvoter_-_Kak_pasti_kotov_-_2016.pdf"
+      format: "pdf"
+      match_status: "matched"
+      inventory_numbers: ["0021"]
+      knowledge_id: "herding-cats-j-hank-rainwater-ru"
+      note: "PDF source matched to inventory 0021 by canonical PDF imprint and verified SHA-256; staged in source-vault/2026-10-13-found-books-14."
     - filename: "Современное_системное_администрирование_Управление_надежными_и_устойчивыми.pdf"
       format: "pdf"
       match_status: "matched"
