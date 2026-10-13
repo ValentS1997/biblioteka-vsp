@@ -640,3 +640,21 @@ books:
       rag_search_index: books/bash-idioms-olbing-vossen-ru/rag/search-index/
       notes: books/bash-idioms-olbing-vossen-ru/notes/
       diagrams: books/bash-idioms-olbing-vossen-ru/diagrams/
+
+  - id: business-process-improvement-hbsp-ru
+    title: "Руководство по улучшению бизнес-процессов"
+    authors:
+      - "Harvard Business School Press / коллектив авторов HBSP"
+    language: ru
+    publication_year: 2015
+    isbn: "978-5-9614-4923-5"
+    paths:
+      metadata: books/business-process-improvement-hbsp-ru/metadata.yaml
+      source: books/business-process-improvement-hbsp-ru/source/book.pdf
+      rag_manifest: books/business-process-improvement-hbsp-ru/rag/manifest.yaml
+      rag_chunks: books/business-process-improvement-hbsp-ru/rag/chunks/
+      rag_chunk_index: books/business-process-improvement-hbsp-ru/rag/chunk-index.jsonl
+      rag_search_index: books/business-process-improvement-hbsp-ru/rag/search-index/
+      reading_progress: books/business-process-improvement-hbsp-ru/reading/progress.yaml
+      notes: books/business-process-improvement-hbsp-ru/notes/
+      diagrams: books/business-process-improvement-hbsp-ru/diagrams/

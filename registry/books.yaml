@@ -285,6 +285,7 @@ books:
     direction: "Distributed Systems / Data"
   - number: 36
     inventory_number: "0036"
+    knowledge_id: "business-process-improvement-hbsp-ru"
     title: "Руководство по улучшению бизнес-процессов"
     authors_raw: "Harvard Business School Press / коллектив авторов HBSP"
     translators_editors_raw: "Е. Милицкая; редактор М. Оверченко"
@@ -351,11 +352,17 @@ verification_sources:
 electronic_holdings:
   source: "user-provided local file inventory + uploaded file confirmation + verified source-vault promotion"
   observed_date: "2026-10-13"
-  file_count: 25
-  matched_unambiguous: 24
+  file_count: 26
+  matched_unambiguous: 25
   needs_confirmation: 0
   unregistered: 1
   files:
+    - filename: "Руководство_по_улучшению_бизнес_процессов.pdf"
+      format: "pdf"
+      match_status: "matched"
+      inventory_numbers: ["0036"]
+      knowledge_id: "business-process-improvement-hbsp-ru"
+      note: "2026-10-13 vault-staged PDF promoted as canonical Git LFS source; verified SHA-256 4c75aaaa000434b6fd7aeac337e163327060dcbe084e30a1c9793b923b855172."
     - filename: "Основы_администрирования_информационных_систем_2021_Бобынцев_.pdf"
       format: "pdf"
       match_status: "matched"
