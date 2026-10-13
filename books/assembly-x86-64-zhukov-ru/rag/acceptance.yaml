@@ -1,0 +1,88 @@
+schema: biblioteka-vsp/rag-ingestion-acceptance/v1
+book_id: assembly-x86-64-zhukov-ru
+status: ACCEPTED
+source_sha256: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
+corpus_generation_id: ffdf33f40adc2b4d2a18c20efcf9872966df375c728aad169e6f4c3dd082db93
+index_generation_id: eb894332514f32fb3689b90b1c8c8f533f9bed3d631510f83438a65eebc4e182
+checks:
+- id: source_hash_matches
+  status: PASS
+  evidence:
+    recorded: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
+    actual: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
+- id: manifest_book_id_matches
+  status: PASS
+  evidence: assembly-x86-64-zhukov-ru
+- id: manifest_source_matches
+  status: PASS
+  evidence:
+    path: source/book.pdf
+    format: pdf
+    sha256: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
+    pdf_pages: 399
+- id: generation_metadata_present
+  status: PASS
+  evidence:
+    ingestion:
+      pipeline_version: '1.0'
+      normalization_policy_id: text-normalization-v2
+      chunking_policy_id: source-unit-char-window-v1
+      retrieval_policy_id: deterministic-lexical-shards-v2
+    generation:
+      corpus_generation_id: ffdf33f40adc2b4d2a18c20efcf9872966df375c728aad169e6f4c3dd082db93
+      index_generation_id: eb894332514f32fb3689b90b1c8c8f533f9bed3d631510f83438a65eebc4e182
+- id: generation_ids_recompute
+  status: PASS
+  evidence:
+    corpus_expected: ffdf33f40adc2b4d2a18c20efcf9872966df375c728aad169e6f4c3dd082db93
+    corpus_actual: ffdf33f40adc2b4d2a18c20efcf9872966df375c728aad169e6f4c3dd082db93
+    index_expected: eb894332514f32fb3689b90b1c8c8f533f9bed3d631510f83438a65eebc4e182
+    index_actual: eb894332514f32fb3689b90b1c8c8f533f9bed3d631510f83438a65eebc4e182
+- id: chunks_addressable_unique
+  status: PASS
+  evidence: 398
+- id: chunk_uids_unique
+  status: PASS
+  evidence: 398
+- id: all_chunk_provenance_and_hashes_resolve
+  status: PASS
+  evidence: 398 chunks
+- id: source_unit_coverage_complete
+  status: PASS
+  evidence:
+    source_units: 399
+    units_with_chunks: 393
+    blank_units:
+    - 1
+    - 14
+    - 20
+    - 218
+    - 322
+    - 376
+- id: manifest_chunk_counts_match
+  status: PASS
+  evidence:
+    manifest: 398
+    actual: 398
+- id: search_index_generation_matches
+  status: PASS
+  evidence:
+    corpus_generation_id: ffdf33f40adc2b4d2a18c20efcf9872966df375c728aad169e6f4c3dd082db93
+    index_generation_id: eb894332514f32fb3689b90b1c8c8f533f9bed3d631510f83438a65eebc4e182
+- id: deterministic_retrieval_samples_pass
+  status: PASS
+  evidence:
+  - chunk_id: assembly-x86-64-zhukov-ru:p0002:c01
+    ok: true
+    evidence: key 'пете' contains assembly-x86-64-zhukov-ru:p0002:c01 via пет.json
+  - chunk_id: assembly-x86-64-zhukov-ru:p0198:c01
+    ok: true
+    evidence: exact term 'пользовательскую' -> assembly-x86-64-zhukov-ru:p0198:c01
+      via пол.json
+  - chunk_id: assembly-x86-64-zhukov-ru:p0399:c01
+    ok: true
+    evidence: key 'conf' contains assembly-x86-64-zhukov-ru:p0399:c01 via con.json
+- id: negative_exact_term_behavior_pass
+  status: PASS
+  evidence: synthetic shard absent
+failed_checks: []
