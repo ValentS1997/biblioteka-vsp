@@ -474,6 +474,8 @@ books:
       - "Aaron Skomra"
       - "Goalkicker contributors"
     language: ru
+    publication_year: 2024
+    isbn: "978-5-17-160274-1"
     paths:
       metadata: books/professional-git-ru/metadata.yaml
       source: books/professional-git-ru/source/book.pdf

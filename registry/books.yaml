@@ -153,7 +153,7 @@ books:
     title: "Профессиональная работа с Git"
     authors_raw: "Aaron Critchley; Aaron Skomra; aavrug и др. / Goalkicker contributors"
     translators_editors_raw: "ООО «Интеджер»"
-    summary_short: "Практическая работа с Git: история, ветки, слияния, удалённые репозитории и командные процессы."
+    summary_short: "Git Notes for Professionals на основе материалов Stack Overflow: история Git, ветвление, удалённые репозитории, слияния и подмодули."
     direction: "Git / VCS"
   - number: 20
     inventory_number: "0020"
