@@ -7,9 +7,9 @@ inventory_number: "0024"
 edition:
   number: "[Needs confirmation]"
   language: ru
-  publisher: "[Needs confirmation]"
-  publication_year: "[Needs confirmation]"
-  publication_pages: "[Needs confirmation]"
+  publisher: "Директ-Медиа"
+  publication_year: 2021
+  publication_pages: 200
 
 authors:
   - "Д. О. Бобынцев"
@@ -19,7 +19,7 @@ authors:
   - "Л. А. Лисицын"
 
 isbn:
-  russian_edition: "[Needs confirmation]"
+  russian_edition: "978-5-4499-1674-7"
   original_edition: "[Needs confirmation]"
 
 source:
@@ -28,14 +28,15 @@ source:
   original_name: "Основы_администрирования_информационных_систем_2021_Бобынцев_.pdf"
   expected_sha256: "a5d6a2677d4b0e33a34dec3b7aae8b77f711bb748046d25766becb479f66663f"
   expected_size_bytes: 12547520
-  source_pdf_pages: "[Needs confirmation]"
-  text_layer: "[Needs confirmation]"
+  source_pdf_pages: 201
+  text_layer: "unclassified_extractable_pdf_text"
   repository_access: private
   storage: "Git LFS"
-  upload_status: "LFS_POINTER_REUSED_BINARY_VERIFICATION_PENDING"
+  upload_status: "VERIFIED_GIT_LFS_AVAILABLE"
   source_vault_branch: "source-vault/2026-10-13-found-books-14"
   source_vault_path: "source-vault/objects/a5d6a2677d4b0e33a34dec3b7aae8b77f711bb748046d25766becb479f66663f.pdf"
   source_vault_commit: "1ee2c759ba976c0cba0a18f6207915d76b3e3860"
+  upload_commit: "c08f240d15e28f8c00394ed0de292b0a4811ca22"
   lawful_access_attested_by_user: "[Needs confirmation]"
   ownership_category: "[Needs confirmation]"
   physical_copy: "[Needs confirmation]"
@@ -48,4 +49,6 @@ rag:
   manifest: "rag/manifest.yaml"
   text: "rag/text.md"
   chunks: "rag/chunks.jsonl"
-  status: "PENDING_SOURCE_BINARY_AND_ACCEPTANCE_VERIFICATION"
+  status: "READY_WITH_KNOWN_LIMITATIONS"
+  generated_commit: "e72a4cf0e82deeb94586b0e30a7079c6f763dd17"
+  workflow_run_id: 38392434230

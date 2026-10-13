@@ -1,6 +1,6 @@
 schema: biblioteka-vsp/books/v1
 protocol: biblioteka-vsp/v1
-updated: 2026-10-08
+updated: 2026-10-13
 
 books:
   - id: computer-networks-6e-ru-2023
@@ -465,3 +465,24 @@ books:
       reading_progress: books/computer-networks-olifer-7e-ru-2026/reading/progress.yaml
       notes: books/computer-networks-olifer-7e-ru-2026/notes/
       diagrams: books/computer-networks-olifer-7e-ru-2026/diagrams/
+
+  - id: information-systems-administration-bobyntsev-ru
+    title: "Основы администрирования информационных систем: учебное пособие"
+    authors:
+      - "Д. О. Бобынцев"
+      - "А. Л. Марухленко"
+      - "Л. О. Марухленко"
+      - "С. А. Кужелева"
+      - "Л. А. Лисицын"
+    language: ru
+    publication_year: 2021
+    isbn: "978-5-4499-1674-7"
+    paths:
+      metadata: books/information-systems-administration-bobyntsev-ru/metadata.yaml
+      source: books/information-systems-administration-bobyntsev-ru/source/book.pdf
+      rag_manifest: books/information-systems-administration-bobyntsev-ru/rag/manifest.yaml
+      rag_chunks: books/information-systems-administration-bobyntsev-ru/rag/chunks/
+      rag_chunk_index: books/information-systems-administration-bobyntsev-ru/rag/chunk-index.jsonl
+      rag_search_index: books/information-systems-administration-bobyntsev-ru/rag/search-index/
+      notes: books/information-systems-administration-bobyntsev-ru/notes/
+      diagrams: books/information-systems-administration-bobyntsev-ru/diagrams/

@@ -1,5 +1,5 @@
 schema: "biblioteka-vsp/registry/v2"
-updated: "2026-10-08"
+updated: "2026-10-13"
 
 source:
   file: "registry/reestr_knig_0046.xlsx"
@@ -186,6 +186,7 @@ books:
     direction: "Cyber Risk"
   - number: 24
     inventory_number: "0024"
+    knowledge_id: "information-systems-administration-bobyntsev-ru"
     title: "Основы администрирования информационных систем: учебное пособие"
     authors_raw: "Д. О. Бобынцев; А. Л. Марухленко; Л. О. Марухленко; С. А. Кужелева; Л. А. Лисицын"
     translators_editors_raw: "не требуется, оригинал на русском"
@@ -341,9 +342,9 @@ verification_sources:
 
 electronic_holdings:
   source: "user-provided local file inventory + uploaded file confirmation"
-  observed_date: "2026-10-07"
-  file_count: 22
-  matched_unambiguous: 21
+  observed_date: "2026-10-13"
+  file_count: 23
+  matched_unambiguous: 22
   needs_confirmation: 0
   unregistered: 1
   files:
@@ -422,6 +423,12 @@ electronic_holdings:
       format: "pdf"
       match_status: "matched"
       inventory_numbers: ["0037"]
+    - filename: "Основы_администрирования_информационных_систем_2021_Бобынцев_.pdf"
+      format: "pdf"
+      match_status: "matched"
+      inventory_numbers: ["0024"]
+      knowledge_id: "information-systems-administration-bobyntsev-ru"
+      note: "Source-vault branch 2026-10-13-found-books-14; original LFS object SHA-256 verified in GitHub Actions run 38392434230; PDF page 3 bibliography matches inventory 0024."
     - filename: "Основы этичного хакинга Чумилин А.В.pdf"
       format: "pdf"
       match_status: "matched"
