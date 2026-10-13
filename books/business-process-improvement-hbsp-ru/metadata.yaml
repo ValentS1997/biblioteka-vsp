@@ -2,25 +2,25 @@ schema: biblioteka-vsp/book/v1
 
 id: business-process-improvement-hbsp-ru
 title: "Руководство по улучшению бизнес-процессов"
-original_title: "[Needs confirmation]"
+original_title: "Improving Business Processes: Expert Solutions to Everyday Challenges"
 
 edition:
   number: "[Needs confirmation]"
   language: ru
-  publisher: "[Needs confirmation]"
-  publication_year: "[Needs confirmation]"
-  publication_pages: "[Needs confirmation]"
+  publisher: "Альпина Паблишер"
+  publication_year: 2015
+  publication_pages: 132
 
 authors:
   - "Harvard Business School Press / коллектив авторов HBSP"
 
 translators_editors:
-  - "Е. Милицкая"
+  - "Е. Милицкая (переводчик)"
   - "М. Оверченко (редактор)"
 
 isbn:
-  russian_edition: "[Needs confirmation]"
-  original_edition: "[Needs confirmation]"
+  russian_edition: "978-5-9614-4923-5"
+  original_edition: "978-1-4221-2973-9"
 
 source:
   canonical_path: "source/book.pdf"
@@ -28,23 +28,24 @@ source:
   original_name: "Руководство_по_улучшению_бизнес_процессов.pdf"
   expected_sha256: "4c75aaaa000434b6fd7aeac337e163327060dcbe084e30a1c9793b923b855172"
   expected_size_bytes: 16715531
-  source_pdf_pages: "[Needs confirmation]"
-  text_layer: "[Needs confirmation]"
+  source_pdf_pages: 136
+  text_layer: "unclassified_extractable_pdf_text"
   repository_access: private
   storage: "Git LFS"
-  upload_status: "LFS_POINTER_REUSED_PENDING_CHECKOUT_VERIFICATION"
+  upload_status: "VERIFIED_GIT_LFS_AVAILABLE"
   vault_branch: "source-vault/2026-10-13-found-books-14"
   vault_path: "source-vault/objects/4c75aaaa000434b6fd7aeac337e163327060dcbe084e30a1c9793b923b855172.pdf"
   vault_pointer_git_blob_sha: "4ac8332cf3689ac94710ac82d7b825dce8299754"
   lawful_access_attested_by_user: "[Needs confirmation]"
   ownership_category: "[Needs confirmation]"
   physical_copy: "[Needs confirmation]"
-  license: "[Needs confirmation]"
+  license: "all rights reserved"
   redistribution_permission: "[Needs confirmation]"
+  upload_commit: "2263ad1ec62a5f982d327690cf21cf1d9e1d3cf9"
 
 inventory:
   inventory_number: "0036"
-  mapping_basis: "registry/books.yaml exact title + vault manifest filename, source SHA-256"
+  mapping_basis: "registry/books.yaml exact-title match; PDF pages 1–4 confirm Russian title, publisher and author; LFS SHA matches vault"
 
 rag:
   scope: full_book
@@ -52,7 +53,9 @@ rag:
   manifest: "rag/manifest.yaml"
   text: "rag/text.md"
   chunks: "rag/chunks.jsonl"
-  status: "PENDING_BUILD_AND_ACCEPTANCE"
+  status: "READY_WITH_KNOWN_LIMITATIONS"
+  generated_commit: "625b501049c304eef2a03be0dce9f32e39f3fb65"
+  workflow_run_id: 38394107795
 
 reading:
   progress: "reading/progress.yaml"

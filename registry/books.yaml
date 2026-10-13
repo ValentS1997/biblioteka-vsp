@@ -1,5 +1,5 @@
 schema: "biblioteka-vsp/registry/v2"
-updated: "2026-10-08"
+updated: "2026-10-13"
 
 source:
   file: "registry/reestr_knig_0046.xlsx"
@@ -276,6 +276,7 @@ books:
     direction: "Distributed Systems / Data"
   - number: 36
     inventory_number: "0036"
+    knowledge_id: "business-process-improvement-hbsp-ru"
     title: "Руководство по улучшению бизнес-процессов"
     authors_raw: "Harvard Business School Press / коллектив авторов HBSP"
     translators_editors_raw: "Е. Милицкая; редактор М. Оверченко"
@@ -341,9 +342,9 @@ verification_sources:
 
 electronic_holdings:
   source: "user-provided local file inventory + uploaded file confirmation"
-  observed_date: "2026-10-07"
-  file_count: 22
-  matched_unambiguous: 21
+  observed_date: "2026-10-13"
+  file_count: 23
+  matched_unambiguous: 22
   needs_confirmation: 0
   unregistered: 1
   files:
@@ -440,3 +441,9 @@ electronic_holdings:
       match_status: "matched"
       inventory_numbers: ["0034"]
       knowledge_id: "how-linux-works-brian-ward-3e-ru-2022"
+    - filename: "Руководство_по_улучшению_бизнес_процессов.pdf"
+      format: "pdf"
+      match_status: "matched"
+      inventory_numbers: ["0036"]
+      knowledge_id: "business-process-improvement-hbsp-ru"
+      note: "2026-10-13 vault-staged PDF promoted as canonical Git LFS source; verified SHA-256 4c75aaaa000434b6fd7aeac337e163327060dcbe084e30a1c9793b923b855172."
