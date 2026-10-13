@@ -2,32 +2,41 @@
 
 Book ID: `linux-networks-tsilyurik-ru-2024`. Inventory number: `0039`.
 
-## Bibliographic identity
+## Verified edition identity
 
 - Author: Олег Иванович Цилюрик.
+- Publisher: БХВ-Петербург; bibliographic year: **2024**.
 - ISBN: `978-5-9775-1890-1`.
-- Publisher: БХВ-Петербург; bibliographic year: 2024; printed extent: 304 pages.
-- Book edition number: [Needs confirmation].
-- References: `registry/books.yaml` verification source; bibliographic description from publisher's 2024 PDF preview and public library catalog.
-- Distinction: bibliographic printed pages do not imply the PDF page count. The exact staged PDF must be validated by remote extraction.
+- Publication extent: **304 printed pages**; source file: **305 PDF pages**.
+- Publisher, ISBN, bibliographic year and printed extent verified directly from the canonical PDF's bibliographic page **PDF page 3**, stored in `rag/chunks/p0001-p0100/p0003-c01.md`.
+- Edition number: **[Needs confirmation]**. No first-edition claim.
 
-## Source provenance
+## Canonical source provenance
 
-- Canonical path: `source/book.pdf` (Git LFS).
-- Source SHA-256: `f266b9e3fdcacfac736dd01e0a36a7391648ea2b159a2c291a2b8ca720b372b9`.
-- Source size: 5,969,603 bytes.
-- Staged source branch: `source-vault/2026-10-13-found-books-14`.
-- Staged path: `source-vault/objects/f266b9e3fdcacfac736dd01e0a36a7391648ea2b159a2c291a2b8ca720b372b9.pdf`.
-- Git blob SHA of reused LFS pointer: `1b387b54dd2f26b182d9ba5f59cd82d3fd5940b9`. The source-vault pointer is staging evidence, not the canonical source itself.
-- Actual binary verification: **pending GitHub Actions checkout, SHA-256 and RAG ingestion**.
+- Path: `source/book.pdf` (Git LFS); staged candidate promoted to book-local canonical source.
+- SHA-256: `f266b9e3fdcacfac736dd01e0a36a7391648ea2b159a2c291a2b8ca720b372b9`.
+- Size: **5,969,603 bytes**.
+- Vault branch: `source-vault/2026-10-13-found-books-14`.
+- Vault object: `source-vault/objects/f266b9e3fdcacfac736dd01e0a36a7391648ea2b159a2c291a2b8ca720b372b9.pdf`.
+- Reused Git LFS pointer blob: `1b387b54dd2f26b182d9ba5f59cd82d3fd5940b9`.
+- Actual binary downloaded and verified against the same SHA in **GitHub Actions RAG build run 38401665085**. The source-vault object is staging provenance, not the canonical chapter-analysis source.
 
 ## Full-book RAG
 
-- Pipeline: `.github/workflows/build-book-rag.yml`.
-- Required gate: `BIBLIOTEKA-VSP-RAG-INGESTION-ACCEPTANCE v1.0`.
-- Readiness: `BIBLIOTEKA-VSP-BOOK-READINESS v1.3`.
-- Initial RAG state: **PENDING_BUILD**. Do not claim READY before validated workflow output and read-back.
+- Source units: **305 PDF pages**; **304** with extractable text; blank page: **1**.
+- Extracted text: **706,227 characters**.
+- Addressable chunks: **310**; deterministic lexical search shards: **4,221**.
+- Parser: **PyMuPDF 1.28.2**.
+- Source checksum verified; complete source-unit coverage confirmed.
+- Generation IDs: `corpus=4f4904c70b519f263a84555223687e90bc171b99d2d5c3024d484c19f11da5ac`; `index=b1355d2d8ea929ec484e1980dfdf932f922e2a65f9ce2a761c97e85b47bdc7d7`.
+- Ingestion acceptance: **ACCEPTED**, all required checks PASS in `rag/acceptance.yaml`.
+- Build commit: `a37fb440cfccbc59a280b2f18fbd87dea3df532d`.
+- Limitations: PDF text layer extraction is not OCR-origin classified; imagery, figures, tables and diagrams are not independently indexed; lexical index is not semantic vector search.
 
 ## Reading state
 
-The ingest does not create `reading/progress.yaml`, and does not change any existing personal reading status, dates or progress. Reading status: **[Needs confirmation]**.
+No `reading/progress.yaml` is created, and no reading status, dates or progress values were changed. Status remains **[Needs confirmation]**.
+
+## Chapter readiness
+
+Computed by `python scripts/check_book_readiness.py --book-id linux-networks-tsilyurik-ru-2024 --capability chapter-analysis` (contract v1.3). Normal chapter workflow remains gated on final readiness and required CI PASS.
