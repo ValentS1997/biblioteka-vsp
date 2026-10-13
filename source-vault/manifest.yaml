@@ -1,0 +1,113 @@
+schema_version: "1.0"
+
+source_vault:
+  branch: "source-vault/2026-10-13-found-books-14"
+  created_at_utc: "2026-10-13T08:09:39+00:00"
+  storage: "Git LFS"
+  role: "pre-staged source candidates; not canonical book sources"
+  records:
+    - original_name: "1С_Предприятие_8_3_Практическое_пособие_разработчика_3_е_изд.pdf"
+      extension: "pdf"
+      sha256: "ce8fa0fbf0d8bb38f724ed04f130c2443c1e181eb51edafac692c4786874c923"
+      size_bytes: 24311627
+      vault_path: "source-vault/objects/ce8fa0fbf0d8bb38f724ed04f130c2443c1e181eb51edafac692c4786874c923.pdf"
+      book_id: "[Needs confirmation]"
+      canonical_status: "NOT_PROMOTED"
+    - original_name: "Dzh_Khank_Reynvoter_-_Kak_pasti_kotov_-_2016.pdf"
+      extension: "pdf"
+      sha256: "5f11cf93711c9489b25218c701e1027f5ca0354523e2faeb1bb7041ed3b62795"
+      size_bytes: 20992784
+      vault_path: "source-vault/objects/5f11cf93711c9489b25218c701e1027f5ca0354523e2faeb1bb7041ed3b62795.pdf"
+      book_id: "[Needs confirmation]"
+      canonical_status: "NOT_PROMOTED"
+    - original_name: "Kali_Linux_в_действии_Аудит_безопасности_информационных_систем,.pdf"
+      extension: "pdf"
+      sha256: "fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9"
+      size_bytes: 12911191
+      vault_path: "source-vault/objects/fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9.pdf"
+      book_id: "[Needs confirmation]"
+      canonical_status: "NOT_PROMOTED"
+    - original_name: "Khyuen_Ch_Proektirovanie_sistem_mashinnogo_obuchenia_2023.pdf"
+      extension: "pdf"
+      sha256: "0bcacadb4e1dc2235cb58f975111e1633527217127c5871edb894fe2b8f4c80c"
+      size_bytes: 33138426
+      vault_path: "source-vault/objects/0bcacadb4e1dc2235cb58f975111e1633527217127c5871edb894fe2b8f4c80c.pdf"
+      book_id: "[Needs confirmation]"
+      canonical_status: "NOT_PROMOTED"
+    - original_name: "Kubernetes_Полное_руководство_по_развертыванию_и_управлению_Kubernetes.pdf"
+      extension: "pdf"
+      sha256: "380ccbfc9e0a65cb2e5aa67a671528c15b9ce6eac63ad9aab80b90f91b1e6e65"
+      size_bytes: 20036152
+      vault_path: "source-vault/objects/380ccbfc9e0a65cb2e5aa67a671528c15b9ce6eac63ad9aab80b90f91b1e6e65.pdf"
+      book_id: "[Needs confirmation]"
+      canonical_status: "NOT_PROMOTED"
+    - original_name: "Zabbix_7_Мониторинг_ИТ_инфраструктуры_Натан_Лифтинг,_Брайан_ван.pdf"
+      extension: "pdf"
+      sha256: "07204d885d4bf4c6c2de7c71ae42a4e3ed4cea794169cbe07985552e63875a27"
+      size_bytes: 19047049
+      vault_path: "source-vault/objects/07204d885d4bf4c6c2de7c71ae42a4e3ed4cea794169cbe07985552e63875a27.pdf"
+      book_id: "[Needs confirmation]"
+      canonical_status: "NOT_PROMOTED"
+    - original_name: "Ассемблер_и_программная_модель_процессоров_x86_64_Андрей_Жуков_2024.pdf"
+      extension: "pdf"
+      sha256: "f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2"
+      size_bytes: 4845113
+      vault_path: "source-vault/objects/f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2.pdf"
+      book_id: "[Needs confirmation]"
+      canonical_status: "NOT_PROMOTED"
+    - original_name: "Запускаем_Prometheus_Russian_Edition_Жюльен_Пивотто.pdf"
+      extension: "pdf"
+      sha256: "ab45c7bc9a393b15bc60628dfceaa45db71388fd28e75c5c55ab6eaf5930f787"
+      size_bytes: 15211411
+      vault_path: "source-vault/objects/ab45c7bc9a393b15bc60628dfceaa45db71388fd28e75c5c55ab6eaf5930f787.pdf"
+      book_id: "[Needs confirmation]"
+      canonical_status: "NOT_PROMOTED"
+    - original_name: "Идиомы_bash_Мощные,_гибкие_и_понятные_сценарии_командной_оболочки.pdf"
+      extension: "pdf"
+      sha256: "d957757dacb69de0ba2b2cab5c08e05b1cc6c1007291f3a96098dd5d51246745"
+      size_bytes: 6229591
+      vault_path: "source-vault/objects/d957757dacb69de0ba2b2cab5c08e05b1cc6c1007291f3a96098dd5d51246745.pdf"
+      book_id: "[Needs confirmation]"
+      canonical_status: "NOT_PROMOTED"
+    - original_name: "Основы_администрирования_информационных_систем_2021_Бобынцев_.pdf"
+      extension: "pdf"
+      sha256: "a5d6a2677d4b0e33a34dec3b7aae8b77f711bb748046d25766becb479f66663f"
+      size_bytes: 12547520
+      vault_path: "source-vault/objects/a5d6a2677d4b0e33a34dec3b7aae8b77f711bb748046d25766becb479f66663f.pdf"
+      book_id: "[Needs confirmation]"
+      canonical_status: "NOT_PROMOTED"
+    - original_name: "Профессиональная работа с Git_edited.pdf"
+      extension: "pdf"
+      sha256: "5eb8376c990ff58103fb110ae36467bb407f015bedf45aa2db6dae5678f8b5fb"
+      size_bytes: 5209527
+      vault_path: "source-vault/objects/5eb8376c990ff58103fb110ae36467bb407f015bedf45aa2db6dae5678f8b5fb.pdf"
+      book_id: "[Needs confirmation]"
+      canonical_status: "NOT_PROMOTED"
+    - original_name: "Руководство_по_улучшению_бизнес_процессов.pdf"
+      extension: "pdf"
+      sha256: "4c75aaaa000434b6fd7aeac337e163327060dcbe084e30a1c9793b923b855172"
+      size_bytes: 16715531
+      vault_path: "source-vault/objects/4c75aaaa000434b6fd7aeac337e163327060dcbe084e30a1c9793b923b855172.pdf"
+      book_id: "[Needs confirmation]"
+      canonical_status: "NOT_PROMOTED"
+    - original_name: "Современное_системное_администрирование_Управление_надежными_и_устойчивыми.pdf"
+      extension: "pdf"
+      sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
+      size_bytes: 50140170
+      vault_path: "source-vault/objects/06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790.pdf"
+      book_id: "[Needs confirmation]"
+      canonical_status: "NOT_PROMOTED"
+    - original_name: "Цилюрик_Олег_Сети_Linux_Модели_и_приложения_2024.pdf"
+      extension: "pdf"
+      sha256: "f266b9e3fdcacfac736dd01e0a36a7391648ea2b159a2c291a2b8ca720b372b9"
+      size_bytes: 5969603
+      vault_path: "source-vault/objects/f266b9e3fdcacfac736dd01e0a36a7391648ea2b159a2c291a2b8ca720b372b9.pdf"
+      book_id: "[Needs confirmation]"
+      canonical_status: "NOT_PROMOTED"
+
+policy:
+  canonical_source: false
+  registry_side_effects: false
+  rag_build_side_effects: false
+  promotion_required: true
+  promotion_target: "books/<book_id>/source/book.<ext>"
