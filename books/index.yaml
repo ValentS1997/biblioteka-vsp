@@ -565,3 +565,22 @@ books:
       rag_search_index: books/professional-git-ru/rag/search-index/
       notes: books/professional-git-ru/notes/
       diagrams: books/professional-git-ru/diagrams/
+
+  - id: zabbix-7-monitoring-it-infrastructure-ru
+    title: "Zabbix 7: мониторинг ИТ-инфраструктуры"
+    authors:
+      - "Натан Лифтинг"
+      - "Брайан ван Бэкел"
+    language: ru
+    edition: 3
+    publication_year: 2025
+    isbn: "978-601-08-4700-2"
+    paths:
+      metadata: books/zabbix-7-monitoring-it-infrastructure-ru/metadata.yaml
+      source: books/zabbix-7-monitoring-it-infrastructure-ru/source/book.pdf
+      rag_manifest: books/zabbix-7-monitoring-it-infrastructure-ru/rag/manifest.yaml
+      rag_chunks: books/zabbix-7-monitoring-it-infrastructure-ru/rag/chunks/
+      rag_chunk_index: books/zabbix-7-monitoring-it-infrastructure-ru/rag/chunk-index.jsonl
+      rag_search_index: books/zabbix-7-monitoring-it-infrastructure-ru/rag/search-index/
+      notes: books/zabbix-7-monitoring-it-infrastructure-ru/notes/
+      diagrams: books/zabbix-7-monitoring-it-infrastructure-ru/diagrams/
