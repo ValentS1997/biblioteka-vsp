@@ -512,3 +512,19 @@ books:
       rag_search_index: books/kali-linux-in-action-skabtsov-2e-ru/rag/search-index/
       notes: books/kali-linux-in-action-skabtsov-2e-ru/notes/
       diagrams: books/kali-linux-in-action-skabtsov-2e-ru/diagrams/
+
+  - id: assembly-x86-64-zhukov-ru
+    title: "Ассемблер и программная модель процессоров x86/64"
+    inventory_number: "0017"
+    authors:
+      - "Андрей Владимирович Жуков"
+    language: ru
+    paths:
+      metadata: books/assembly-x86-64-zhukov-ru/metadata.yaml
+      source: books/assembly-x86-64-zhukov-ru/source/book.pdf
+      rag_manifest: books/assembly-x86-64-zhukov-ru/rag/manifest.yaml
+      rag_chunks: books/assembly-x86-64-zhukov-ru/rag/chunks/
+      rag_chunk_index: books/assembly-x86-64-zhukov-ru/rag/chunk-index.jsonl
+      rag_search_index: books/assembly-x86-64-zhukov-ru/rag/search-index/
+      notes: books/assembly-x86-64-zhukov-ru/notes/
+      diagrams: books/assembly-x86-64-zhukov-ru/diagrams/
