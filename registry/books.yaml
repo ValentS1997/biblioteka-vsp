@@ -313,6 +313,11 @@ books:
     direction: "Monitoring / Prometheus"
 
 verification_sources:
+  - inventory_number: "0033"
+    title: "Kubernetes. Полное руководство по развертыванию и управлению Kubernetes в облачных и локальных средах. 2-е изд."
+    checked: "Авторы, 2-е издание, оригинальное название, ISBN и выходные данные"
+    basis: "Canonical PDF, страницы 2–4; проверена привязка к SHA-256 в rag/acceptance.yaml"
+    source_url: "https://www.piter.com/collection/top-2/product/kubernetes-polnoe-rukovodstvo-po-razvertyvaniyu-i-upravleniyu-kubernetes-v-oblachnyh-i-lokalnyh-sredah-2-e-izd"
   - inventory_number: "0036"
     title: "Руководство по улучшению бизнес-процессов"
     checked: "Корпоративный автор; переводчик; редактор"
