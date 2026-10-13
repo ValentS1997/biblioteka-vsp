@@ -1,0 +1,84 @@
+schema: biblioteka-vsp/rag-ingestion-acceptance/v1
+book_id: herding-cats-j-hank-rainwater-ru
+status: ACCEPTED
+source_sha256: 5f11cf93711c9489b25218c701e1027f5ca0354523e2faeb1bb7041ed3b62795
+corpus_generation_id: 324df1052eecdd3318ec13b5b7b7791ebd85f5c65750978e53fde2ce931b8fab
+index_generation_id: c4edba8a9e0fd867157af468deade3a21183c0301a0cccb799d867ebc11cfe71
+checks:
+- id: source_hash_matches
+  status: PASS
+  evidence:
+    recorded: 5f11cf93711c9489b25218c701e1027f5ca0354523e2faeb1bb7041ed3b62795
+    actual: 5f11cf93711c9489b25218c701e1027f5ca0354523e2faeb1bb7041ed3b62795
+- id: manifest_book_id_matches
+  status: PASS
+  evidence: herding-cats-j-hank-rainwater-ru
+- id: manifest_source_matches
+  status: PASS
+  evidence:
+    path: source/book.pdf
+    format: pdf
+    sha256: 5f11cf93711c9489b25218c701e1027f5ca0354523e2faeb1bb7041ed3b62795
+    pdf_pages: 256
+- id: generation_metadata_present
+  status: PASS
+  evidence:
+    ingestion:
+      pipeline_version: '1.0'
+      normalization_policy_id: text-normalization-v2
+      chunking_policy_id: source-unit-char-window-v1
+      retrieval_policy_id: deterministic-lexical-shards-v2
+    generation:
+      corpus_generation_id: 324df1052eecdd3318ec13b5b7b7791ebd85f5c65750978e53fde2ce931b8fab
+      index_generation_id: c4edba8a9e0fd867157af468deade3a21183c0301a0cccb799d867ebc11cfe71
+- id: generation_ids_recompute
+  status: PASS
+  evidence:
+    corpus_expected: 324df1052eecdd3318ec13b5b7b7791ebd85f5c65750978e53fde2ce931b8fab
+    corpus_actual: 324df1052eecdd3318ec13b5b7b7791ebd85f5c65750978e53fde2ce931b8fab
+    index_expected: c4edba8a9e0fd867157af468deade3a21183c0301a0cccb799d867ebc11cfe71
+    index_actual: c4edba8a9e0fd867157af468deade3a21183c0301a0cccb799d867ebc11cfe71
+- id: chunks_addressable_unique
+  status: PASS
+  evidence: 260
+- id: chunk_uids_unique
+  status: PASS
+  evidence: 260
+- id: all_chunk_provenance_and_hashes_resolve
+  status: PASS
+  evidence: 260 chunks
+- id: source_unit_coverage_complete
+  status: PASS
+  evidence:
+    source_units: 256
+    units_with_chunks: 253
+    blank_units:
+    - 1
+    - 2
+    - 256
+- id: manifest_chunk_counts_match
+  status: PASS
+  evidence:
+    manifest: 260
+    actual: 260
+- id: search_index_generation_matches
+  status: PASS
+  evidence:
+    corpus_generation_id: 324df1052eecdd3318ec13b5b7b7791ebd85f5c65750978e53fde2ce931b8fab
+    index_generation_id: c4edba8a9e0fd867157af468deade3a21183c0301a0cccb799d867ebc11cfe71
+- id: deterministic_retrieval_samples_pass
+  status: PASS
+  evidence:
+  - chunk_id: herding-cats-j-hank-rainwater-ru:p0003:c01
+    ok: true
+    evidence: key '2016' contains herding-cats-j-hank-rainwater-ru:p0003:c01 via 201.json
+  - chunk_id: herding-cats-j-hank-rainwater-ru:p0129:c01
+    ok: true
+    evidence: key 'конс' contains herding-cats-j-hank-rainwater-ru:p0129:c01 via кон.json
+  - chunk_id: herding-cats-j-hank-rainwater-ru:p0255:c01
+    ok: true
+    evidence: key 'конс' contains herding-cats-j-hank-rainwater-ru:p0255:c01 via кон.json
+- id: negative_exact_term_behavior_pass
+  status: PASS
+  evidence: synthetic shard absent
+failed_checks: []
