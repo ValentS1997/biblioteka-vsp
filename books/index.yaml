@@ -114,11 +114,22 @@ books:
 
   - id: designing-machine-learning-systems-chip-huyen-ru
     title: "Проектирование систем машинного обучения"
+    inventory_number: "0031"
+    publication_year: 2023
+    isbn: "978-601-271-727-3"
     authors:
       - "Чип Хьюен"
     language: ru
     paths:
+      metadata: books/designing-machine-learning-systems-chip-huyen-ru/metadata.yaml
+      source: books/designing-machine-learning-systems-chip-huyen-ru/source/book.pdf
+      rag_manifest: books/designing-machine-learning-systems-chip-huyen-ru/rag/manifest.yaml
+      rag_chunks: books/designing-machine-learning-systems-chip-huyen-ru/rag/chunks/
+      rag_chunk_index: books/designing-machine-learning-systems-chip-huyen-ru/rag/chunk-index.jsonl
+      rag_search_index: books/designing-machine-learning-systems-chip-huyen-ru/rag/search-index/
       reading_progress: books/designing-machine-learning-systems-chip-huyen-ru/reading/progress.yaml
+      notes: books/designing-machine-learning-systems-chip-huyen-ru/notes/
+      diagrams: books/designing-machine-learning-systems-chip-huyen-ru/diagrams/
 
   - id: docker-demystified-saibal-ghosh-ru-2023
     title: "Docker без секретов"
