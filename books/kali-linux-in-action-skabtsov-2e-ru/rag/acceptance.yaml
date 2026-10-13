@@ -1,0 +1,85 @@
+schema: biblioteka-vsp/rag-ingestion-acceptance/v1
+book_id: kali-linux-in-action-skabtsov-2e-ru
+status: ACCEPTED
+source_sha256: fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9
+corpus_generation_id: d1da666f36faf5cd7dfb587d35ee90c6ca89dfe675519dc8d26179a8b95e24b4
+index_generation_id: 3f84711c5f3ce5a770cbc3b2da3cb0222126cf5af69782dd5e1ffd9ff0ae1141
+checks:
+- id: source_hash_matches
+  status: PASS
+  evidence:
+    recorded: fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9
+    actual: fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9
+- id: manifest_book_id_matches
+  status: PASS
+  evidence: kali-linux-in-action-skabtsov-2e-ru
+- id: manifest_source_matches
+  status: PASS
+  evidence:
+    path: source/book.pdf
+    format: pdf
+    sha256: fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9
+    pdf_pages: 385
+- id: generation_metadata_present
+  status: PASS
+  evidence:
+    ingestion:
+      pipeline_version: '1.0'
+      normalization_policy_id: text-normalization-v2
+      chunking_policy_id: source-unit-char-window-v1
+      retrieval_policy_id: deterministic-lexical-shards-v2
+    generation:
+      corpus_generation_id: d1da666f36faf5cd7dfb587d35ee90c6ca89dfe675519dc8d26179a8b95e24b4
+      index_generation_id: 3f84711c5f3ce5a770cbc3b2da3cb0222126cf5af69782dd5e1ffd9ff0ae1141
+- id: generation_ids_recompute
+  status: PASS
+  evidence:
+    corpus_expected: d1da666f36faf5cd7dfb587d35ee90c6ca89dfe675519dc8d26179a8b95e24b4
+    corpus_actual: d1da666f36faf5cd7dfb587d35ee90c6ca89dfe675519dc8d26179a8b95e24b4
+    index_expected: 3f84711c5f3ce5a770cbc3b2da3cb0222126cf5af69782dd5e1ffd9ff0ae1141
+    index_actual: 3f84711c5f3ce5a770cbc3b2da3cb0222126cf5af69782dd5e1ffd9ff0ae1141
+- id: chunks_addressable_unique
+  status: PASS
+  evidence: 385
+- id: chunk_uids_unique
+  status: PASS
+  evidence: 385
+- id: all_chunk_provenance_and_hashes_resolve
+  status: PASS
+  evidence: 385 chunks
+- id: source_unit_coverage_complete
+  status: PASS
+  evidence:
+    source_units: 385
+    units_with_chunks: 384
+    blank_units:
+    - 1
+- id: manifest_chunk_counts_match
+  status: PASS
+  evidence:
+    manifest: 385
+    actual: 385
+- id: search_index_generation_matches
+  status: PASS
+  evidence:
+    corpus_generation_id: d1da666f36faf5cd7dfb587d35ee90c6ca89dfe675519dc8d26179a8b95e24b4
+    index_generation_id: 3f84711c5f3ce5a770cbc3b2da3cb0222126cf5af69782dd5e1ffd9ff0ae1141
+- id: deterministic_retrieval_samples_pass
+  status: PASS
+  evidence:
+  - chunk_id: kali-linux-in-action-skabtsov-2e-ru:p0002:c01
+    ok: true
+    evidence: exact term 'издание' -> kali-linux-in-action-skabtsov-2e-ru:p0002:c01
+      via изд.json
+  - chunk_id: kali-linux-in-action-skabtsov-2e-ru:p0193:c01
+    ok: true
+    evidence: exact term 'соответствующем' -> kali-linux-in-action-skabtsov-2e-ru:p0193:c01
+      via соо.json
+  - chunk_id: kali-linux-in-action-skabtsov-2e-ru:p0385:c01
+    ok: true
+    evidence: key 'искл' contains kali-linux-in-action-skabtsov-2e-ru:p0385:c01 via
+      иск.json
+- id: negative_exact_term_behavior_pass
+  status: PASS
+  evidence: synthetic shard absent
+failed_checks: []
