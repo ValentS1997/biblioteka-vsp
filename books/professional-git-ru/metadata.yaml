@@ -2,19 +2,26 @@ schema: biblioteka-vsp/book/v1
 
 id: professional-git-ru
 title: "Профессиональная работа с Git"
+original_title: "Git Notes for Professionals"
 inventory_number: "0019"
 
 edition:
   number: "[Needs confirmation]"
   language: ru
-  publisher: "[Needs confirmation]"
-  publication_year: "[Needs confirmation]"
-  publication_pages: "[Needs confirmation]"
+  publisher: "Издательство АСТ"
+  publication_year: 2024
+  publication_pages: 160
 
 authors:
   - "Aaron Critchley"
   - "Aaron Skomra"
-  - "Goalkicker contributors"
+  - "aavrug и др. / Goalkicker contributors"
+
+translators:
+  - "ООО «Интеджер»"
+
+isbn:
+  russian_edition: "978-5-17-160274-1"
 
 source:
   canonical_path: "source/book.pdf"
@@ -22,11 +29,12 @@ source:
   original_name: "Профессиональная работа с Git_edited.pdf"
   expected_sha256: "5eb8376c990ff58103fb110ae36467bb407f015bedf45aa2db6dae5678f8b5fb"
   expected_size_bytes: 5209527
-  source_pdf_pages: "[Needs confirmation]"
-  text_layer: "[Needs confirmation]"
+  source_pdf_pages: 162
+  text_layer: "unclassified_extractable_pdf_text"
   repository_access: private
   storage: "Git LFS"
-  upload_status: "PENDING_BINARY_VERIFICATION"
+  upload_status: "VERIFIED_GIT_LFS_AVAILABLE"
+  upload_commit: "95e8d0a449d85479aadb98f66f599a2d590df8f6"
   vault_branch: "source-vault/2026-10-13-found-books-14"
   vault_path: "source-vault/objects/5eb8376c990ff58103fb110ae36467bb407f015bedf45aa2db6dae5678f8b5fb.pdf"
   vault_git_blob_sha: "ba777e1900e886c685be453afc36c3fa20626bcc"
@@ -42,8 +50,11 @@ rag:
   text: "rag/text.md"
   chunks: "rag/chunks.jsonl"
   acceptance: "rag/acceptance.yaml"
-  status: "PENDING_BUILD"
+  status: "READY_WITH_KNOWN_LIMITATIONS"
+  acceptance_status: "ACCEPTED"
+  generated_commit: "f7f806120ebae9e366b54119943e6d6a2d2c0749"
+  workflow_run_id: 38373665574
 
 reading:
   status: "[Needs confirmation]"
-  note: "No existing reading status or progress was changed during ingest."
+  note: "Reading status and progress were not changed by ingest."
