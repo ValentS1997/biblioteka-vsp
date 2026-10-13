@@ -465,3 +465,21 @@ books:
       reading_progress: books/computer-networks-olifer-7e-ru-2026/reading/progress.yaml
       notes: books/computer-networks-olifer-7e-ru-2026/notes/
       diagrams: books/computer-networks-olifer-7e-ru-2026/diagrams/
+  
+  - id: linux-networks-tsilyurik-ru-2024
+    title: "Сети Linux. Модели и приложения"
+    inventory_number: "0039"
+    authors:
+      - "Олег Иванович Цилюрик"
+    language: ru
+    publication_year: 2024
+    isbn: "978-5-9775-1890-1"
+    paths:
+      metadata: books/linux-networks-tsilyurik-ru-2024/metadata.yaml
+      source: books/linux-networks-tsilyurik-ru-2024/source/book.pdf
+      rag_manifest: books/linux-networks-tsilyurik-ru-2024/rag/manifest.yaml
+      rag_chunks: books/linux-networks-tsilyurik-ru-2024/rag/chunks/
+      rag_chunk_index: books/linux-networks-tsilyurik-ru-2024/rag/chunk-index.jsonl
+      rag_search_index: books/linux-networks-tsilyurik-ru-2024/rag/search-index/
+      notes: books/linux-networks-tsilyurik-ru-2024/notes/
+      diagrams: books/linux-networks-tsilyurik-ru-2024/diagrams/
