@@ -4,17 +4,17 @@ id: kali-linux-in-action-skabtsov-2e-ru
 title: "Kali Linux в действии. Аудит безопасности информационных систем"
 
 edition:
-  number: "[Needs confirmation]"
+  number: 2
   language: ru
-  publisher: "[Needs confirmation]"
-  publication_year: "[Needs confirmation]"
-  publication_pages: "[Needs confirmation]"
+  publisher: "Питер"
+  publication_year: 2024
+  publication_pages: 384
 
 authors:
   - "Никита Скабцов"
 
 isbn:
-  russian_edition: "[Needs confirmation]"
+  russian_edition: "978-5-4461-2154-0"
   original_edition: "[Needs confirmation]"
 
 source:
@@ -22,11 +22,11 @@ source:
   format: pdf
   expected_sha256: "fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9"
   expected_size_bytes: 12911191
-  source_pdf_pages: "[Needs confirmation]"
-  text_layer: "[Needs confirmation]"
+  source_pdf_pages: 385
+  text_layer: "unclassified_extractable_pdf_text"
   repository_access: private
   storage: "Git LFS"
-  upload_status: "LFS_POINTER_REUSED_PENDING_RUNTIME_VERIFICATION"
+  upload_status: "VERIFIED_GIT_LFS_AVAILABLE"
   source_vault_branch: "source-vault/2026-10-13-found-books-14"
   source_vault_path: "source-vault/objects/fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9.pdf"
   lawful_access_attested_by_user: "[Needs confirmation]"
@@ -41,7 +41,9 @@ rag:
   manifest: "rag/manifest.yaml"
   text: "rag/text.md"
   chunks: "rag/chunks.jsonl"
-  status: "PENDING"
+  status: "READY_WITH_KNOWN_LIMITATIONS"
+  generated_commit: "3af1e9e3c676d8efafd2f48ed8546dabf1020fa3"
+  workflow_run_id: 38371070439
 
 reading:
   status: "[Needs confirmation]"

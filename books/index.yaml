@@ -1,6 +1,6 @@
 schema: biblioteka-vsp/books/v1
 protocol: biblioteka-vsp/v1
-updated: 2026-10-08
+updated: 2026-10-13
 
 books:
   - id: computer-networks-6e-ru-2023
@@ -465,3 +465,21 @@ books:
       reading_progress: books/computer-networks-olifer-7e-ru-2026/reading/progress.yaml
       notes: books/computer-networks-olifer-7e-ru-2026/notes/
       diagrams: books/computer-networks-olifer-7e-ru-2026/diagrams/
+
+  - id: kali-linux-in-action-skabtsov-2e-ru
+    title: "Kali Linux в действии. Аудит безопасности информационных систем"
+    authors:
+      - "Никита Скабцов"
+    language: ru
+    edition: 2
+    publication_year: 2024
+    isbn: "978-5-4461-2154-0"
+    paths:
+      metadata: books/kali-linux-in-action-skabtsov-2e-ru/metadata.yaml
+      source: books/kali-linux-in-action-skabtsov-2e-ru/source/book.pdf
+      rag_manifest: books/kali-linux-in-action-skabtsov-2e-ru/rag/manifest.yaml
+      rag_chunks: books/kali-linux-in-action-skabtsov-2e-ru/rag/chunks/
+      rag_chunk_index: books/kali-linux-in-action-skabtsov-2e-ru/rag/chunk-index.jsonl
+      rag_search_index: books/kali-linux-in-action-skabtsov-2e-ru/rag/search-index/
+      notes: books/kali-linux-in-action-skabtsov-2e-ru/notes/
+      diagrams: books/kali-linux-in-action-skabtsov-2e-ru/diagrams/
