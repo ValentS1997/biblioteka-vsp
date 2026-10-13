@@ -1,0 +1,13 @@
+schema: biblioteka-vsp/reading/v1
+book_id: business-process-improvement-hbsp-ru
+
+status: "[Needs confirmation]"
+scope: full_book
+
+started: null
+completed: null
+current_page: null
+current_chapter: null
+
+notes:
+  - "Ingest bootstrap only; user's reading status has not been changed."

@@ -1,0 +1,61 @@
+schema: biblioteka-vsp/book/v1
+
+id: business-process-improvement-hbsp-ru
+title: "Руководство по улучшению бизнес-процессов"
+original_title: "[Needs confirmation]"
+
+edition:
+  number: "[Needs confirmation]"
+  language: ru
+  publisher: "[Needs confirmation]"
+  publication_year: "[Needs confirmation]"
+  publication_pages: "[Needs confirmation]"
+
+authors:
+  - "Harvard Business School Press / коллектив авторов HBSP"
+
+translators_editors:
+  - "Е. Милицкая"
+  - "М. Оверченко (редактор)"
+
+isbn:
+  russian_edition: "[Needs confirmation]"
+  original_edition: "[Needs confirmation]"
+
+source:
+  canonical_path: "source/book.pdf"
+  format: pdf
+  original_name: "Руководство_по_улучшению_бизнес_процессов.pdf"
+  expected_sha256: "4c75aaaa000434b6fd7aeac337e163327060dcbe084e30a1c9793b923b855172"
+  expected_size_bytes: 16715531
+  source_pdf_pages: "[Needs confirmation]"
+  text_layer: "[Needs confirmation]"
+  repository_access: private
+  storage: "Git LFS"
+  upload_status: "LFS_POINTER_REUSED_PENDING_CHECKOUT_VERIFICATION"
+  vault_branch: "source-vault/2026-10-13-found-books-14"
+  vault_path: "source-vault/objects/4c75aaaa000434b6fd7aeac337e163327060dcbe084e30a1c9793b923b855172.pdf"
+  vault_pointer_git_blob_sha: "4ac8332cf3689ac94710ac82d7b825dce8299754"
+  lawful_access_attested_by_user: "[Needs confirmation]"
+  ownership_category: "[Needs confirmation]"
+  physical_copy: "[Needs confirmation]"
+  license: "[Needs confirmation]"
+  redistribution_permission: "[Needs confirmation]"
+
+inventory:
+  inventory_number: "0036"
+  mapping_basis: "registry/books.yaml exact title + vault manifest filename, source SHA-256"
+
+rag:
+  scope: full_book
+  build_script: "../../../scripts/build_book_rag.py"
+  manifest: "rag/manifest.yaml"
+  text: "rag/text.md"
+  chunks: "rag/chunks.jsonl"
+  status: "PENDING_BUILD_AND_ACCEPTANCE"
+
+reading:
+  progress: "reading/progress.yaml"
+  status: "[Needs confirmation]"
+  started: null
+  completed: null
