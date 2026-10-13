@@ -39,9 +39,4 @@ jobs:
       - name: Validate canonical registry
         run: python scripts/validate_registry.py
       - name: Check generated README
-        run: |
-          if ! python scripts/generate_registry_readme.py --check; then
-            python scripts/generate_registry_readme.py
-            git diff -- registry/README.md
-            exit 1
-          fi
+        run: python scripts/generate_registry_readme.py --check
