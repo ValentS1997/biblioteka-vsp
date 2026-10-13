@@ -1,0 +1,85 @@
+schema: biblioteka-vsp/rag-ingestion-acceptance/v1
+book_id: 1c-enterprise-8-3-radchenko-khrustaleva-3e-ru
+status: ACCEPTED
+source_sha256: ce8fa0fbf0d8bb38f724ed04f130c2443c1e181eb51edafac692c4786874c923
+corpus_generation_id: 0d0f868e6571eacbc191e93ef4aa5c007fe1d6f89f7bb29fbe02e141930839e7
+index_generation_id: 0250156b68392c09ac892a5f1eff4daa9243b9f6e283dda48f90626d897dc859
+checks:
+- id: source_hash_matches
+  status: PASS
+  evidence:
+    recorded: ce8fa0fbf0d8bb38f724ed04f130c2443c1e181eb51edafac692c4786874c923
+    actual: ce8fa0fbf0d8bb38f724ed04f130c2443c1e181eb51edafac692c4786874c923
+- id: manifest_book_id_matches
+  status: PASS
+  evidence: 1c-enterprise-8-3-radchenko-khrustaleva-3e-ru
+- id: manifest_source_matches
+  status: PASS
+  evidence:
+    path: source/book.pdf
+    format: pdf
+    sha256: ce8fa0fbf0d8bb38f724ed04f130c2443c1e181eb51edafac692c4786874c923
+    pdf_pages: 983
+- id: generation_metadata_present
+  status: PASS
+  evidence:
+    ingestion:
+      pipeline_version: '1.0'
+      normalization_policy_id: text-normalization-v2
+      chunking_policy_id: source-unit-char-window-v1
+      retrieval_policy_id: deterministic-lexical-shards-v2
+    generation:
+      corpus_generation_id: 0d0f868e6571eacbc191e93ef4aa5c007fe1d6f89f7bb29fbe02e141930839e7
+      index_generation_id: 0250156b68392c09ac892a5f1eff4daa9243b9f6e283dda48f90626d897dc859
+- id: generation_ids_recompute
+  status: PASS
+  evidence:
+    corpus_expected: 0d0f868e6571eacbc191e93ef4aa5c007fe1d6f89f7bb29fbe02e141930839e7
+    corpus_actual: 0d0f868e6571eacbc191e93ef4aa5c007fe1d6f89f7bb29fbe02e141930839e7
+    index_expected: 0250156b68392c09ac892a5f1eff4daa9243b9f6e283dda48f90626d897dc859
+    index_actual: 0250156b68392c09ac892a5f1eff4daa9243b9f6e283dda48f90626d897dc859
+- id: chunks_addressable_unique
+  status: PASS
+  evidence: 995
+- id: chunk_uids_unique
+  status: PASS
+  evidence: 995
+- id: all_chunk_provenance_and_hashes_resolve
+  status: PASS
+  evidence: 995 chunks
+- id: source_unit_coverage_complete
+  status: PASS
+  evidence:
+    source_units: 983
+    units_with_chunks: 982
+    blank_units:
+    - 1
+- id: manifest_chunk_counts_match
+  status: PASS
+  evidence:
+    manifest: 995
+    actual: 995
+- id: search_index_generation_matches
+  status: PASS
+  evidence:
+    corpus_generation_id: 0d0f868e6571eacbc191e93ef4aa5c007fe1d6f89f7bb29fbe02e141930839e7
+    index_generation_id: 0250156b68392c09ac892a5f1eff4daa9243b9f6e283dda48f90626d897dc859
+- id: deterministic_retrieval_samples_pass
+  status: PASS
+  evidence:
+  - chunk_id: 1c-enterprise-8-3-radchenko-khrustaleva-3e-ru:p0002:c01
+    ok: true
+    evidence: exact term 'демонстрационных' -> 1c-enterprise-8-3-radchenko-khrustaleva-3e-ru:p0002:c01
+      via дем.json
+  - chunk_id: 1c-enterprise-8-3-radchenko-khrustaleva-3e-ru:p0499:c01
+    ok: true
+    evidence: key 'вари' contains 1c-enterprise-8-3-radchenko-khrustaleva-3e-ru:p0499:c01
+      via вар.json
+  - chunk_id: 1c-enterprise-8-3-radchenko-khrustaleva-3e-ru:p0983:c01
+    ok: true
+    evidence: exact term 'правообладателей' -> 1c-enterprise-8-3-radchenko-khrustaleva-3e-ru:p0983:c01
+      via пра.json
+- id: negative_exact_term_behavior_pass
+  status: PASS
+  evidence: synthetic shard absent
+failed_checks: []

@@ -1,0 +1,103 @@
+schema: biblioteka-vsp/rag-ingestion-acceptance/v1
+book_id: business-process-improvement-hbsp-ru
+status: ACCEPTED
+source_sha256: 4c75aaaa000434b6fd7aeac337e163327060dcbe084e30a1c9793b923b855172
+corpus_generation_id: 78bb1474d64ccec72798069aa1c563ec7de42603ec5b17a6c23980d60baf682a
+index_generation_id: b4983fe2d1a09dcbc076edd0691af04ae433d7fcbcc420a81ee6e596836f1220
+checks:
+- id: source_hash_matches
+  status: PASS
+  evidence:
+    recorded: 4c75aaaa000434b6fd7aeac337e163327060dcbe084e30a1c9793b923b855172
+    actual: 4c75aaaa000434b6fd7aeac337e163327060dcbe084e30a1c9793b923b855172
+- id: manifest_book_id_matches
+  status: PASS
+  evidence: business-process-improvement-hbsp-ru
+- id: manifest_source_matches
+  status: PASS
+  evidence:
+    path: source/book.pdf
+    format: pdf
+    sha256: 4c75aaaa000434b6fd7aeac337e163327060dcbe084e30a1c9793b923b855172
+    pdf_pages: 136
+- id: generation_metadata_present
+  status: PASS
+  evidence:
+    ingestion:
+      pipeline_version: '1.0'
+      normalization_policy_id: text-normalization-v2
+      chunking_policy_id: source-unit-char-window-v1
+      retrieval_policy_id: deterministic-lexical-shards-v2
+    generation:
+      corpus_generation_id: 78bb1474d64ccec72798069aa1c563ec7de42603ec5b17a6c23980d60baf682a
+      index_generation_id: b4983fe2d1a09dcbc076edd0691af04ae433d7fcbcc420a81ee6e596836f1220
+- id: generation_ids_recompute
+  status: PASS
+  evidence:
+    corpus_expected: 78bb1474d64ccec72798069aa1c563ec7de42603ec5b17a6c23980d60baf682a
+    corpus_actual: 78bb1474d64ccec72798069aa1c563ec7de42603ec5b17a6c23980d60baf682a
+    index_expected: b4983fe2d1a09dcbc076edd0691af04ae433d7fcbcc420a81ee6e596836f1220
+    index_actual: b4983fe2d1a09dcbc076edd0691af04ae433d7fcbcc420a81ee6e596836f1220
+- id: chunks_addressable_unique
+  status: PASS
+  evidence: 117
+- id: chunk_uids_unique
+  status: PASS
+  evidence: 117
+- id: all_chunk_provenance_and_hashes_resolve
+  status: PASS
+  evidence: 117 chunks
+- id: source_unit_coverage_complete
+  status: PASS
+  evidence:
+    source_units: 136
+    units_with_chunks: 117
+    blank_units:
+    - 8
+    - 12
+    - 22
+    - 32
+    - 34
+    - 44
+    - 56
+    - 70
+    - 78
+    - 80
+    - 90
+    - 98
+    - 100
+    - 102
+    - 112
+    - 120
+    - 128
+    - 130
+    - 135
+- id: manifest_chunk_counts_match
+  status: PASS
+  evidence:
+    manifest: 117
+    actual: 117
+- id: search_index_generation_matches
+  status: PASS
+  evidence:
+    corpus_generation_id: 78bb1474d64ccec72798069aa1c563ec7de42603ec5b17a6c23980d60baf682a
+    index_generation_id: b4983fe2d1a09dcbc076edd0691af04ae433d7fcbcc420a81ee6e596836f1220
+- id: deterministic_retrieval_samples_pass
+  status: PASS
+  evidence:
+  - chunk_id: business-process-improvement-hbsp-ru:p0001:c01
+    ok: true
+    evidence: exact term 'руководство' -> business-process-improvement-hbsp-ru:p0001:c01
+      via рук.json
+  - chunk_id: business-process-improvement-hbsp-ru:p0066:c01
+    ok: true
+    evidence: key 'заин' contains business-process-improvement-hbsp-ru:p0066:c01 via
+      заи.json
+  - chunk_id: business-process-improvement-hbsp-ru:p0136:c01
+    ok: true
+    evidence: key 'сове' contains business-process-improvement-hbsp-ru:p0136:c01 via
+      сов.json
+- id: negative_exact_term_behavior_pass
+  status: PASS
+  evidence: synthetic shard absent
+failed_checks: []

@@ -1,5 +1,5 @@
 schema: "biblioteka-vsp/registry/v2"
-updated: "2026-10-08"
+updated: "2026-10-13"
 
 source:
   file: "registry/reestr_knig_0046.xlsx"
@@ -89,6 +89,7 @@ books:
     direction: "AI / RAG"
   - number: 11
     inventory_number: "0011"
+    knowledge_id: "modern-system-administration-jennifer-davis-ru"
     title: "Современное системное администрирование"
     authors_raw: "Дженнифер Дэвис"
     translators_editors_raw: "Владимир Мелькин"
@@ -96,6 +97,7 @@ books:
     direction: "SysAdmin / Operations"
   - number: 12
     inventory_number: "0012"
+    knowledge_id: "kali-linux-in-action-skabtsov-2e-ru"
     title: "Kali Linux в действии. Аудит безопасности информационных систем. 2-е изд."
     authors_raw: "Никита Скабцов"
     translators_editors_raw: "не требуется, оригинал на русском"
@@ -134,6 +136,7 @@ books:
     direction: "Information Security"
   - number: 17
     inventory_number: "0017"
+    knowledge_id: "assembly-x86-64-zhukov-ru"
     title: "Ассемблер и программная модель процессоров x86/64"
     authors_raw: "Андрей Владимирович Жуков"
     translators_editors_raw: "не требуется, оригинал на русском"
@@ -149,20 +152,23 @@ books:
     direction: "Python"
   - number: 19
     inventory_number: "0019"
+    knowledge_id: "professional-git-ru"
     title: "Профессиональная работа с Git"
     authors_raw: "Aaron Critchley; Aaron Skomra; aavrug и др. / Goalkicker contributors"
     translators_editors_raw: "ООО «Интеджер»"
-    summary_short: "Практическая работа с Git: история, ветки, слияния, удалённые репозитории и командные процессы."
+    summary_short: "Git Notes for Professionals на основе материалов Stack Overflow: история Git, ветвление, удалённые репозитории, слияния и подмодули."
     direction: "Git / VCS"
   - number: 20
     inventory_number: "0020"
+    knowledge_id: "zabbix-7-monitoring-it-infrastructure-ru"
     title: "Zabbix 7: мониторинг ИТ-инфраструктуры"
     authors_raw: "Натан Лифтинг; Брайан ван Бэкел"
-    translators_editors_raw: "-оригинал на русском"
+    translators_editors_raw: "А. Ларин (перевод); Ф. Осьминин (научный редактор)"
     summary_short: "Мониторинг IT-инфраструктуры в Zabbix 7: узлы, метрики, триггеры, шаблоны и эксплуатация."
     direction: "Monitoring / Zabbix"
   - number: 21
     inventory_number: "0021"
+    knowledge_id: "herding-cats-j-hank-rainwater-ru"
     title: "Как пасти котов. Наставление для программистов, руководящих другими программистами"
     authors_raw: "Дж. Ханк Рейнвотер"
     translators_editors_raw: "Юрий Гороховский"
@@ -186,6 +192,7 @@ books:
     direction: "Cyber Risk"
   - number: 24
     inventory_number: "0024"
+    knowledge_id: "information-systems-administration-bobyntsev-ru"
     title: "Основы администрирования информационных систем: учебное пособие"
     authors_raw: "Д. О. Бобынцев; А. Л. Марухленко; Л. О. Марухленко; С. А. Кужелева; Л. А. Лисицын"
     translators_editors_raw: "не требуется, оригинал на русском"
@@ -231,6 +238,7 @@ books:
     direction: "AI Engineering"
   - number: 30
     inventory_number: "0030"
+    knowledge_id: "1c-enterprise-8-3-radchenko-khrustaleva-3e-ru"
     title: "1С:Предприятие 8.3. Практическое пособие разработчика. Примеры и типовые приемы. Издание 3"
     authors_raw: "Максим Григорьевич Радченко; Елена Юрьевна Хрусталева"
     translators_editors_raw: "оригинал на русском"
@@ -246,6 +254,7 @@ books:
     direction: "ML Systems"
   - number: 32
     inventory_number: "0032"
+    knowledge_id: "bash-idioms-olbing-vossen-ru"
     title: "Идиомы bash. Мощные, гибкие и понятные сценарии командной оболочки"
     authors_raw: "Карл Олбинг; Джей Пи Фоссен"
     translators_editors_raw: "Л. Киселева"
@@ -253,6 +262,7 @@ books:
     direction: "Bash / Automation"
   - number: 33
     inventory_number: "0033"
+    knowledge_id: "kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026"
     title: "Kubernetes. Полное руководство по развертыванию и управлению Kubernetes в облачных и локальных средах. 2-е изд."
     authors_raw: "Гиниш Мадаппарамбат; Расс МакКендрик"
     translators_editors_raw: "--"
@@ -276,6 +286,7 @@ books:
     direction: "Distributed Systems / Data"
   - number: 36
     inventory_number: "0036"
+    knowledge_id: "business-process-improvement-hbsp-ru"
     title: "Руководство по улучшению бизнес-процессов"
     authors_raw: "Harvard Business School Press / коллектив авторов HBSP"
     translators_editors_raw: "Е. Милицкая; редактор М. Оверченко"
@@ -298,6 +309,7 @@ books:
     direction: "Kanban / Management"
   - number: 39
     inventory_number: "0039"
+    knowledge_id: "linux-networks-tsilyurik-ru-2024"
     title: "Сети Linux. Модели и приложения"
     authors_raw: "Олег Иванович Цилюрик"
     translators_editors_raw: "не требуется, оригинал на русском"
@@ -341,13 +353,43 @@ verification_sources:
 
 
 electronic_holdings:
-  source: "user-provided local file inventory + uploaded file confirmation"
-  observed_date: "2026-10-07"
-  file_count: 22
-  matched_unambiguous: 21
+  source: "user-provided local file inventory + uploaded file confirmation + verified source-vault promotion"
+  observed_date: "2026-10-13"
+  file_count: 27
+  matched_unambiguous: 26
   needs_confirmation: 0
   unregistered: 1
   files:
+    - filename: "Kubernetes_Полное_руководство_по_развертыванию_и_управлению_Kubernetes.pdf"
+      format: "pdf"
+      match_status: "matched"
+      inventory_numbers: ["0033"]
+      knowledge_id: "kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026"
+      note: "Проверено по титульным страницам 2–4 canonical PDF, checksum 380ccbfc9e0a65cb2e5aa67a671528c15b9ce6eac63ad9aab80b90f91b1e6e65; source-vault batch 2026-10-13."
+    - filename: "Руководство_по_улучшению_бизнес_процессов.pdf"
+      format: "pdf"
+      match_status: "matched"
+      inventory_numbers: ["0036"]
+      knowledge_id: "business-process-improvement-hbsp-ru"
+      note: "2026-10-13 vault-staged PDF promoted as canonical Git LFS source; verified SHA-256 4c75aaaa000434b6fd7aeac337e163327060dcbe084e30a1c9793b923b855172."
+    - filename: "Основы_администрирования_информационных_систем_2021_Бобынцев_.pdf"
+      format: "pdf"
+      match_status: "matched"
+      inventory_numbers: ["0024"]
+      knowledge_id: "information-systems-administration-bobyntsev-ru"
+      note: "Source-vault branch 2026-10-13-found-books-14; original LFS object SHA-256 verified in GitHub Actions run 38392434230; PDF page 3 bibliography matches inventory 0024."
+    - filename: "Dzh_Khank_Reynvoter_-_Kak_pasti_kotov_-_2016.pdf"
+      format: "pdf"
+      match_status: "matched"
+      inventory_numbers: ["0021"]
+      knowledge_id: "herding-cats-j-hank-rainwater-ru"
+      note: "PDF source matched to inventory 0021 by canonical PDF imprint and verified SHA-256; staged in source-vault/2026-10-13-found-books-14."
+    - filename: "Современное_системное_администрирование_Управление_надежными_и_устойчивыми.pdf"
+      format: "pdf"
+      match_status: "matched"
+      inventory_numbers: ["0011"]
+      knowledge_id: "modern-system-administration-jennifer-davis-ru"
+      note: "Verified source-vault LFS object 06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790; canonical books/modern-system-administration-jennifer-davis-ru/source/book.pdf."
     - filename: "AI-инженерия. Построение приложений с использовани. Хьюен.pdf"
       format: "pdf"
       match_status: "matched"

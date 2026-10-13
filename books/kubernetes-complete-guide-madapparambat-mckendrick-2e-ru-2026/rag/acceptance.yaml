@@ -1,0 +1,86 @@
+schema: biblioteka-vsp/rag-ingestion-acceptance/v1
+book_id: kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026
+status: ACCEPTED
+source_sha256: 380ccbfc9e0a65cb2e5aa67a671528c15b9ce6eac63ad9aab80b90f91b1e6e65
+corpus_generation_id: 9fa19b3d399c47de2b9feaf303a9b1895b354beaacda6cd44d100908d3c41842
+index_generation_id: 0a62c809aeded557e1ed8c79d306a4770a3fbf55f4f7436a47865879c1d84a44
+checks:
+- id: source_hash_matches
+  status: PASS
+  evidence:
+    recorded: 380ccbfc9e0a65cb2e5aa67a671528c15b9ce6eac63ad9aab80b90f91b1e6e65
+    actual: 380ccbfc9e0a65cb2e5aa67a671528c15b9ce6eac63ad9aab80b90f91b1e6e65
+- id: manifest_book_id_matches
+  status: PASS
+  evidence: kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026
+- id: manifest_source_matches
+  status: PASS
+  evidence:
+    path: source/book.pdf
+    format: pdf
+    sha256: 380ccbfc9e0a65cb2e5aa67a671528c15b9ce6eac63ad9aab80b90f91b1e6e65
+    pdf_pages: 752
+- id: generation_metadata_present
+  status: PASS
+  evidence:
+    ingestion:
+      pipeline_version: '1.0'
+      normalization_policy_id: text-normalization-v2
+      chunking_policy_id: source-unit-char-window-v1
+      retrieval_policy_id: deterministic-lexical-shards-v2
+    generation:
+      corpus_generation_id: 9fa19b3d399c47de2b9feaf303a9b1895b354beaacda6cd44d100908d3c41842
+      index_generation_id: 0a62c809aeded557e1ed8c79d306a4770a3fbf55f4f7436a47865879c1d84a44
+- id: generation_ids_recompute
+  status: PASS
+  evidence:
+    corpus_expected: 9fa19b3d399c47de2b9feaf303a9b1895b354beaacda6cd44d100908d3c41842
+    corpus_actual: 9fa19b3d399c47de2b9feaf303a9b1895b354beaacda6cd44d100908d3c41842
+    index_expected: 0a62c809aeded557e1ed8c79d306a4770a3fbf55f4f7436a47865879c1d84a44
+    index_actual: 0a62c809aeded557e1ed8c79d306a4770a3fbf55f4f7436a47865879c1d84a44
+- id: chunks_addressable_unique
+  status: PASS
+  evidence: 764
+- id: chunk_uids_unique
+  status: PASS
+  evidence: 764
+- id: all_chunk_provenance_and_hashes_resolve
+  status: PASS
+  evidence: 764 chunks
+- id: source_unit_coverage_complete
+  status: PASS
+  evidence:
+    source_units: 752
+    units_with_chunks: 750
+    blank_units:
+    - 1
+    - 750
+- id: manifest_chunk_counts_match
+  status: PASS
+  evidence:
+    manifest: 764
+    actual: 764
+- id: search_index_generation_matches
+  status: PASS
+  evidence:
+    corpus_generation_id: 9fa19b3d399c47de2b9feaf303a9b1895b354beaacda6cd44d100908d3c41842
+    index_generation_id: 0a62c809aeded557e1ed8c79d306a4770a3fbf55f4f7436a47865879c1d84a44
+- id: deterministic_retrieval_samples_pass
+  status: PASS
+  evidence:
+  - chunk_id: kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026:p0002:c01
+    ok: true
+    evidence: exact term 'madapparambath' -> kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026:p0002:c01
+      via mad.json
+  - chunk_id: kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026:p0370:c01
+    ok: true
+    evidence: exact term 'replicationcontroller' -> kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026:p0370:c01
+      via rep.json
+  - chunk_id: kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026:p0752:c01
+    ok: true
+    evidence: exact term 'конфигурирования' -> kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026:p0752:c01
+      via кон.json
+- id: negative_exact_term_behavior_pass
+  status: PASS
+  evidence: synthetic shard absent
+failed_checks: []

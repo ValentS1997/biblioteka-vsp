@@ -1,0 +1,51 @@
+schema: biblioteka-vsp/book/v1
+
+id: linux-networks-tsilyurik-ru-2024
+title: "Сети Linux. Модели и приложения"
+
+edition:
+  number: "[Needs confirmation]"
+  language: ru
+  publisher: "БХВ-Петербург"
+  publication_year: 2024
+  publication_pages: 304
+
+authors:
+  - "Олег Иванович Цилюрик"
+
+isbn:
+  russian_edition: "978-5-9775-1890-1"
+
+source:
+  canonical_path: "source/book.pdf"
+  format: pdf
+  original_name: "Цилюрик_Олег_Сети_Linux_Модели_и_приложения_2024.pdf"
+  expected_sha256: "f266b9e3fdcacfac736dd01e0a36a7391648ea2b159a2c291a2b8ca720b372b9"
+  expected_size_bytes: 5969603
+  source_pdf_pages: 305
+  text_layer: "unclassified_extractable_pdf_text"
+  repository_access: private
+  storage: "Git LFS"
+  upload_status: "VERIFIED_GIT_LFS_AVAILABLE"
+  vault_branch: "source-vault/2026-10-13-found-books-14"
+  vault_path: "source-vault/objects/f266b9e3fdcacfac736dd01e0a36a7391648ea2b159a2c291a2b8ca720b372b9.pdf"
+  lawful_access_attested_by_user: "[Needs confirmation]"
+  ownership_category: "[Needs confirmation]"
+  physical_copy: "[Needs confirmation]"
+  redistribution_permission: "[Needs confirmation]"
+
+rag:
+  scope: full_book
+  build_script: "../../../scripts/build_book_rag.py"
+  manifest: "rag/manifest.yaml"
+  text: "rag/text.md"
+  chunks: "rag/chunks.jsonl"
+  acceptance: "rag/acceptance.yaml"
+  status: "READY_WITH_KNOWN_LIMITATIONS"
+  generated_commit: "a37fb440cfccbc59a280b2f18fbd87dea3df532d"
+  workflow_run_id: 38401665085
+  acceptance_status: "ACCEPTED"
+
+reading:
+  status: "[Needs confirmation]"
+  note: "Ingest does not modify personal reading state."

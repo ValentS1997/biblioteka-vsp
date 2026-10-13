@@ -1,0 +1,87 @@
+schema: biblioteka-vsp/rag-ingestion-acceptance/v1
+book_id: zabbix-7-monitoring-it-infrastructure-ru
+status: ACCEPTED
+source_sha256: 07204d885d4bf4c6c2de7c71ae42a4e3ed4cea794169cbe07985552e63875a27
+corpus_generation_id: 6a5221f8e8a0f88b400905d7334879edff6f5451d9ab7f6e56bb203809018986
+index_generation_id: f94832403a1d4cb3fae72e548eabd0f2bc05e4df05bab7b23f319277fb2204d8
+checks:
+- id: source_hash_matches
+  status: PASS
+  evidence:
+    recorded: 07204d885d4bf4c6c2de7c71ae42a4e3ed4cea794169cbe07985552e63875a27
+    actual: 07204d885d4bf4c6c2de7c71ae42a4e3ed4cea794169cbe07985552e63875a27
+- id: manifest_book_id_matches
+  status: PASS
+  evidence: zabbix-7-monitoring-it-infrastructure-ru
+- id: manifest_source_matches
+  status: PASS
+  evidence:
+    path: source/book.pdf
+    format: pdf
+    sha256: 07204d885d4bf4c6c2de7c71ae42a4e3ed4cea794169cbe07985552e63875a27
+    pdf_pages: 512
+- id: generation_metadata_present
+  status: PASS
+  evidence:
+    ingestion:
+      pipeline_version: '1.0'
+      normalization_policy_id: text-normalization-v2
+      chunking_policy_id: source-unit-char-window-v1
+      retrieval_policy_id: deterministic-lexical-shards-v2
+    generation:
+      corpus_generation_id: 6a5221f8e8a0f88b400905d7334879edff6f5451d9ab7f6e56bb203809018986
+      index_generation_id: f94832403a1d4cb3fae72e548eabd0f2bc05e4df05bab7b23f319277fb2204d8
+- id: generation_ids_recompute
+  status: PASS
+  evidence:
+    corpus_expected: 6a5221f8e8a0f88b400905d7334879edff6f5451d9ab7f6e56bb203809018986
+    corpus_actual: 6a5221f8e8a0f88b400905d7334879edff6f5451d9ab7f6e56bb203809018986
+    index_expected: f94832403a1d4cb3fae72e548eabd0f2bc05e4df05bab7b23f319277fb2204d8
+    index_actual: f94832403a1d4cb3fae72e548eabd0f2bc05e4df05bab7b23f319277fb2204d8
+- id: chunks_addressable_unique
+  status: PASS
+  evidence: 509
+- id: chunk_uids_unique
+  status: PASS
+  evidence: 509
+- id: all_chunk_provenance_and_hashes_resolve
+  status: PASS
+  evidence: 509 chunks
+- id: source_unit_coverage_complete
+  status: PASS
+  evidence:
+    source_units: 512
+    units_with_chunks: 509
+    blank_units:
+    - 2
+    - 3
+    - 511
+- id: manifest_chunk_counts_match
+  status: PASS
+  evidence:
+    manifest: 509
+    actual: 509
+- id: search_index_generation_matches
+  status: PASS
+  evidence:
+    corpus_generation_id: 6a5221f8e8a0f88b400905d7334879edff6f5451d9ab7f6e56bb203809018986
+    index_generation_id: f94832403a1d4cb3fae72e548eabd0f2bc05e4df05bab7b23f319277fb2204d8
+- id: deterministic_retrieval_samples_pass
+  status: PASS
+  evidence:
+  - chunk_id: zabbix-7-monitoring-it-infrastructure-ru:p0001:c01
+    ok: true
+    evidence: exact term 'создателя' -> zabbix-7-monitoring-it-infrastructure-ru:p0001:c01
+      via соз.json
+  - chunk_id: zabbix-7-monitoring-it-infrastructure-ru:p0257:c01
+    ok: true
+    evidence: exact term 'подстановочные' -> zabbix-7-monitoring-it-infrastructure-ru:p0257:c01
+      via под.json
+  - chunk_id: zabbix-7-monitoring-it-infrastructure-ru:p0512:c01
+    ok: true
+    evidence: exact term 'приобретенные' -> zabbix-7-monitoring-it-infrastructure-ru:p0512:c01
+      via при.json
+- id: negative_exact_term_behavior_pass
+  status: PASS
+  evidence: synthetic shard absent
+failed_checks: []

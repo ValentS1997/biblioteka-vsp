@@ -1,0 +1,88 @@
+schema: biblioteka-vsp/rag-ingestion-acceptance/v1
+book_id: designing-machine-learning-systems-chip-huyen-ru
+status: ACCEPTED
+source_sha256: 0bcacadb4e1dc2235cb58f975111e1633527217127c5871edb894fe2b8f4c80c
+corpus_generation_id: ad00f5da241410ece47c35451fca936205365d7cc5bcdc21e0408cca567fd724
+index_generation_id: 10f277482e82f5de52d2a262b4f501ccd622c70bbf1e337ff0c2bbaa374a25b8
+checks:
+- id: source_hash_matches
+  status: PASS
+  evidence:
+    recorded: 0bcacadb4e1dc2235cb58f975111e1633527217127c5871edb894fe2b8f4c80c
+    actual: 0bcacadb4e1dc2235cb58f975111e1633527217127c5871edb894fe2b8f4c80c
+- id: manifest_book_id_matches
+  status: PASS
+  evidence: designing-machine-learning-systems-chip-huyen-ru
+- id: manifest_source_matches
+  status: PASS
+  evidence:
+    path: source/book.pdf
+    format: pdf
+    sha256: 0bcacadb4e1dc2235cb58f975111e1633527217127c5871edb894fe2b8f4c80c
+    pdf_pages: 370
+- id: generation_metadata_present
+  status: PASS
+  evidence:
+    ingestion:
+      pipeline_version: '1.0'
+      normalization_policy_id: text-normalization-v2
+      chunking_policy_id: source-unit-char-window-v1
+      retrieval_policy_id: deterministic-lexical-shards-v2
+    generation:
+      corpus_generation_id: ad00f5da241410ece47c35451fca936205365d7cc5bcdc21e0408cca567fd724
+      index_generation_id: 10f277482e82f5de52d2a262b4f501ccd622c70bbf1e337ff0c2bbaa374a25b8
+- id: generation_ids_recompute
+  status: PASS
+  evidence:
+    corpus_expected: ad00f5da241410ece47c35451fca936205365d7cc5bcdc21e0408cca567fd724
+    corpus_actual: ad00f5da241410ece47c35451fca936205365d7cc5bcdc21e0408cca567fd724
+    index_expected: 10f277482e82f5de52d2a262b4f501ccd622c70bbf1e337ff0c2bbaa374a25b8
+    index_actual: 10f277482e82f5de52d2a262b4f501ccd622c70bbf1e337ff0c2bbaa374a25b8
+- id: chunks_addressable_unique
+  status: PASS
+  evidence: 376
+- id: chunk_uids_unique
+  status: PASS
+  evidence: 376
+- id: all_chunk_provenance_and_hashes_resolve
+  status: PASS
+  evidence: 376 chunks
+- id: source_unit_coverage_complete
+  status: PASS
+  evidence:
+    source_units: 370
+    units_with_chunks: 366
+    blank_units:
+    - 1
+    - 3
+    - 13
+    - 370
+- id: manifest_chunk_counts_match
+  status: PASS
+  evidence:
+    manifest: 376
+    actual: 376
+- id: search_index_generation_matches
+  status: PASS
+  evidence:
+    corpus_generation_id: ad00f5da241410ece47c35451fca936205365d7cc5bcdc21e0408cca567fd724
+    index_generation_id: 10f277482e82f5de52d2a262b4f501ccd622c70bbf1e337ff0c2bbaa374a25b8
+- id: deterministic_retrieval_samples_pass
+  status: PASS
+  evidence:
+  - chunk_id: designing-machine-learning-systems-chip-huyen-ru:p0002:c01
+    ok: true
+    evidence: key 'appl' contains designing-machine-learning-systems-chip-huyen-ru:p0002:c01
+      via app.json
+  - chunk_id: designing-machine-learning-systems-chip-huyen-ru:p0185:c01
+    ok: true
+    evidence: exact term 'гиперпараметрами' -> designing-machine-learning-systems-chip-huyen-ru:p0185:c01
+      via гип.json
+  - chunk_id: designing-machine-learning-systems-chip-huyen-ru:p0369:c01
+    ok: true
+    evidence: exact term 'заметок' -> designing-machine-learning-systems-chip-huyen-ru:p0369:c01
+      via зам.json
+- id: negative_exact_term_behavior_pass
+  status: PASS
+  evidence: synthetic shard absent
+failed_checks: []

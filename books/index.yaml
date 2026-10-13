@@ -114,11 +114,22 @@ books:
 
   - id: designing-machine-learning-systems-chip-huyen-ru
     title: "Проектирование систем машинного обучения"
+    inventory_number: "0031"
+    publication_year: 2023
+    isbn: "978-601-271-727-3"
     authors:
       - "Чип Хьюен"
     language: ru
     paths:
+      metadata: books/designing-machine-learning-systems-chip-huyen-ru/metadata.yaml
+      source: books/designing-machine-learning-systems-chip-huyen-ru/source/book.pdf
+      rag_manifest: books/designing-machine-learning-systems-chip-huyen-ru/rag/manifest.yaml
+      rag_chunks: books/designing-machine-learning-systems-chip-huyen-ru/rag/chunks/
+      rag_chunk_index: books/designing-machine-learning-systems-chip-huyen-ru/rag/chunk-index.jsonl
+      rag_search_index: books/designing-machine-learning-systems-chip-huyen-ru/rag/search-index/
       reading_progress: books/designing-machine-learning-systems-chip-huyen-ru/reading/progress.yaml
+      notes: books/designing-machine-learning-systems-chip-huyen-ru/notes/
+      diagrams: books/designing-machine-learning-systems-chip-huyen-ru/diagrams/
 
   - id: docker-demystified-saibal-ghosh-ru-2023
     title: "Docker без секретов"
@@ -465,6 +476,226 @@ books:
       reading_progress: books/computer-networks-olifer-7e-ru-2026/reading/progress.yaml
       notes: books/computer-networks-olifer-7e-ru-2026/notes/
       diagrams: books/computer-networks-olifer-7e-ru-2026/diagrams/
+
+  - id: modern-system-administration-jennifer-davis-ru
+    title: "Современное системное администрирование"
+    authors:
+      - "Дженнифер Дэвис"
+    language: ru
+    publication_year: 2024
+    isbn: "978-5-9775-1848-2"
+    paths:
+      metadata: books/modern-system-administration-jennifer-davis-ru/metadata.yaml
+      source: books/modern-system-administration-jennifer-davis-ru/source/book.pdf
+      rag_manifest: books/modern-system-administration-jennifer-davis-ru/rag/manifest.yaml
+      rag_chunks: books/modern-system-administration-jennifer-davis-ru/rag/chunks/
+      rag_chunk_index: books/modern-system-administration-jennifer-davis-ru/rag/chunk-index.jsonl
+      rag_search_index: books/modern-system-administration-jennifer-davis-ru/rag/search-index/
+      reading_progress: books/modern-system-administration-jennifer-davis-ru/reading/progress.yaml
+      notes: books/modern-system-administration-jennifer-davis-ru/notes/
+      diagrams: books/modern-system-administration-jennifer-davis-ru/diagrams/
+
+  - id: kali-linux-in-action-skabtsov-2e-ru
+    title: "Kali Linux в действии. Аудит безопасности информационных систем"
+    authors:
+      - "Никита Скабцов"
+    language: ru
+    edition: 2
+    publication_year: 2024
+    isbn: "978-5-4461-2154-0"
+    paths:
+      metadata: books/kali-linux-in-action-skabtsov-2e-ru/metadata.yaml
+      source: books/kali-linux-in-action-skabtsov-2e-ru/source/book.pdf
+      rag_manifest: books/kali-linux-in-action-skabtsov-2e-ru/rag/manifest.yaml
+      rag_chunks: books/kali-linux-in-action-skabtsov-2e-ru/rag/chunks/
+      rag_chunk_index: books/kali-linux-in-action-skabtsov-2e-ru/rag/chunk-index.jsonl
+      rag_search_index: books/kali-linux-in-action-skabtsov-2e-ru/rag/search-index/
+      notes: books/kali-linux-in-action-skabtsov-2e-ru/notes/
+      diagrams: books/kali-linux-in-action-skabtsov-2e-ru/diagrams/
+
+  - id: assembly-x86-64-zhukov-ru
+    title: "Ассемблер и программная модель процессоров x86/64"
+    inventory_number: "0017"
+    authors:
+      - "Андрей Владимирович Жуков"
+    language: ru
+    paths:
+      metadata: books/assembly-x86-64-zhukov-ru/metadata.yaml
+      source: books/assembly-x86-64-zhukov-ru/source/book.pdf
+      rag_manifest: books/assembly-x86-64-zhukov-ru/rag/manifest.yaml
+      rag_chunks: books/assembly-x86-64-zhukov-ru/rag/chunks/
+      rag_chunk_index: books/assembly-x86-64-zhukov-ru/rag/chunk-index.jsonl
+      rag_search_index: books/assembly-x86-64-zhukov-ru/rag/search-index/
+      notes: books/assembly-x86-64-zhukov-ru/notes/
+      diagrams: books/assembly-x86-64-zhukov-ru/diagrams/
+
+  - id: herding-cats-j-hank-rainwater-ru
+    title: "Как пасти котов. Наставление для программистов, руководящих другими программистами"
+    authors:
+      - "Дж. Ханк Рейнвотер"
+    language: ru
+    publication_year: 2016
+    isbn: "978-5-496-01820-3"
+    paths:
+      metadata: books/herding-cats-j-hank-rainwater-ru/metadata.yaml
+      source: books/herding-cats-j-hank-rainwater-ru/source/book.pdf
+      rag_manifest: books/herding-cats-j-hank-rainwater-ru/rag/manifest.yaml
+      rag_chunks: books/herding-cats-j-hank-rainwater-ru/rag/chunks/
+      rag_chunk_index: books/herding-cats-j-hank-rainwater-ru/rag/chunk-index.jsonl
+      rag_search_index: books/herding-cats-j-hank-rainwater-ru/rag/search-index/
+      notes: books/herding-cats-j-hank-rainwater-ru/notes/
+      diagrams: books/herding-cats-j-hank-rainwater-ru/diagrams/
+
+  - id: professional-git-ru
+    title: "Профессиональная работа с Git"
+    inventory_number: "0019"
+    authors:
+      - "Aaron Critchley"
+      - "Aaron Skomra"
+      - "aavrug и др. / Goalkicker contributors"
+    language: ru
+    publication_year: 2024
+    isbn: "978-5-17-160274-1"
+    paths:
+      metadata: books/professional-git-ru/metadata.yaml
+      source: books/professional-git-ru/source/book.pdf
+      rag_manifest: books/professional-git-ru/rag/manifest.yaml
+      rag_chunks: books/professional-git-ru/rag/chunks/
+      rag_chunk_index: books/professional-git-ru/rag/chunk-index.jsonl
+      rag_search_index: books/professional-git-ru/rag/search-index/
+      notes: books/professional-git-ru/notes/
+      diagrams: books/professional-git-ru/diagrams/
+
+  - id: zabbix-7-monitoring-it-infrastructure-ru
+    title: "Zabbix 7: мониторинг ИТ-инфраструктуры"
+    authors:
+      - "Натан Лифтинг"
+      - "Брайан ван Бэкел"
+    language: ru
+    edition: 3
+    publication_year: 2025
+    isbn: "978-601-08-4700-2"
+    paths:
+      metadata: books/zabbix-7-monitoring-it-infrastructure-ru/metadata.yaml
+      source: books/zabbix-7-monitoring-it-infrastructure-ru/source/book.pdf
+      rag_manifest: books/zabbix-7-monitoring-it-infrastructure-ru/rag/manifest.yaml
+      rag_chunks: books/zabbix-7-monitoring-it-infrastructure-ru/rag/chunks/
+      rag_chunk_index: books/zabbix-7-monitoring-it-infrastructure-ru/rag/chunk-index.jsonl
+      rag_search_index: books/zabbix-7-monitoring-it-infrastructure-ru/rag/search-index/
+      notes: books/zabbix-7-monitoring-it-infrastructure-ru/notes/
+      diagrams: books/zabbix-7-monitoring-it-infrastructure-ru/diagrams/
+
+  - id: 1c-enterprise-8-3-radchenko-khrustaleva-3e-ru
+    inventory_number: "0030"
+    title: "1С:Предприятие 8.3. Практическое пособие разработчика. Примеры и типовые приемы. Издание 3"
+    authors:
+      - "Максим Григорьевич Радченко"
+      - "Елена Юрьевна Хрусталева"
+    language: ru
+    edition: 3
+    paths:
+      metadata: books/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru/metadata.yaml
+      source: books/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru/source/book.pdf
+      rag_manifest: books/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru/rag/manifest.yaml
+      rag_chunks: books/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru/rag/chunks/
+      rag_chunk_index: books/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru/rag/chunk-index.jsonl
+      rag_search_index: books/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru/rag/search-index/
+      reading_progress: books/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru/reading/progress.yaml
+      notes: books/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru/notes/
+      diagrams: books/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru/diagrams/
+
+  - id: information-systems-administration-bobyntsev-ru
+    title: "Основы администрирования информационных систем: учебное пособие"
+    authors:
+      - "Д. О. Бобынцев"
+      - "А. Л. Марухленко"
+      - "Л. О. Марухленко"
+      - "С. А. Кужелева"
+      - "Л. А. Лисицын"
+    language: ru
+    publication_year: 2021
+    isbn: "978-5-4499-1674-7"
+    paths:
+      metadata: books/information-systems-administration-bobyntsev-ru/metadata.yaml
+      source: books/information-systems-administration-bobyntsev-ru/source/book.pdf
+      rag_manifest: books/information-systems-administration-bobyntsev-ru/rag/manifest.yaml
+      rag_chunks: books/information-systems-administration-bobyntsev-ru/rag/chunks/
+      rag_chunk_index: books/information-systems-administration-bobyntsev-ru/rag/chunk-index.jsonl
+      rag_search_index: books/information-systems-administration-bobyntsev-ru/rag/search-index/
+      notes: books/information-systems-administration-bobyntsev-ru/notes/
+      diagrams: books/information-systems-administration-bobyntsev-ru/diagrams/
+
+  - id: bash-idioms-olbing-vossen-ru
+    title: "Идиомы bash. Мощные, гибкие и понятные сценарии командной оболочки"
+    authors:
+      - "Карл Олбинг"
+      - "Джей Пи Фоссен"
+    language: ru
+    paths:
+      metadata: books/bash-idioms-olbing-vossen-ru/metadata.yaml
+      source: books/bash-idioms-olbing-vossen-ru/source/book.pdf
+      rag_manifest: books/bash-idioms-olbing-vossen-ru/rag/manifest.yaml
+      rag_chunks: books/bash-idioms-olbing-vossen-ru/rag/chunks/
+      rag_chunk_index: books/bash-idioms-olbing-vossen-ru/rag/chunk-index.jsonl
+      rag_search_index: books/bash-idioms-olbing-vossen-ru/rag/search-index/
+      notes: books/bash-idioms-olbing-vossen-ru/notes/
+      diagrams: books/bash-idioms-olbing-vossen-ru/diagrams/
+
+  - id: business-process-improvement-hbsp-ru
+    title: "Руководство по улучшению бизнес-процессов"
+    authors:
+      - "Harvard Business School Press / коллектив авторов HBSP"
+    language: ru
+    publication_year: 2015
+    isbn: "978-5-9614-4923-5"
+    paths:
+      metadata: books/business-process-improvement-hbsp-ru/metadata.yaml
+      source: books/business-process-improvement-hbsp-ru/source/book.pdf
+      rag_manifest: books/business-process-improvement-hbsp-ru/rag/manifest.yaml
+      rag_chunks: books/business-process-improvement-hbsp-ru/rag/chunks/
+      rag_chunk_index: books/business-process-improvement-hbsp-ru/rag/chunk-index.jsonl
+      rag_search_index: books/business-process-improvement-hbsp-ru/rag/search-index/
+      reading_progress: books/business-process-improvement-hbsp-ru/reading/progress.yaml
+      notes: books/business-process-improvement-hbsp-ru/notes/
+      diagrams: books/business-process-improvement-hbsp-ru/diagrams/
+
+  - id: kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026
+    title: "Kubernetes. Полное руководство по развертыванию и управлению Kubernetes в облачных и локальных средах. 2-е изд."
+    authors:
+      - "Гиниш Мадаппарамбат"
+      - "Расс МакКендрик"
+    language: ru
+    edition: 2
+    publication_year: 2026
+    isbn: "978-601-12-8674-9"
+    paths:
+      metadata: books/kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026/metadata.yaml
+      source: books/kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026/source/book.pdf
+      rag_manifest: books/kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026/rag/manifest.yaml
+      rag_chunks: books/kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026/rag/chunks/
+      rag_chunk_index: books/kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026/rag/chunk-index.jsonl
+      rag_search_index: books/kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026/rag/search-index/
+      notes: books/kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026/notes/
+      diagrams: books/kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026/diagrams/
+
+  - id: linux-networks-tsilyurik-ru-2024
+    title: "Сети Linux. Модели и приложения"
+    inventory_number: "0039"
+    authors:
+      - "Олег Иванович Цилюрик"
+    language: ru
+    publication_year: 2024
+    isbn: "978-5-9775-1890-1"
+    paths:
+      metadata: books/linux-networks-tsilyurik-ru-2024/metadata.yaml
+      source: books/linux-networks-tsilyurik-ru-2024/source/book.pdf
+      rag_manifest: books/linux-networks-tsilyurik-ru-2024/rag/manifest.yaml
+      rag_chunks: books/linux-networks-tsilyurik-ru-2024/rag/chunks/
+      rag_chunk_index: books/linux-networks-tsilyurik-ru-2024/rag/chunk-index.jsonl
+      rag_search_index: books/linux-networks-tsilyurik-ru-2024/rag/search-index/
+      notes: books/linux-networks-tsilyurik-ru-2024/notes/
+      diagrams: books/linux-networks-tsilyurik-ru-2024/diagrams/
+
   - id: prometheus-up-and-running-pivotto-brazil-ru-2023
     title: "Запускаем Prometheus. Мониторинг инфраструктуры и приложений"
     authors:

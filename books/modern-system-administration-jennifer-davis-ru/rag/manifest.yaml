@@ -1,0 +1,82 @@
+schema: biblioteka-vsp/rag/v2
+book_id: modern-system-administration-jennifer-davis-ru
+
+source:
+  path: source/book.pdf
+  format: pdf
+  sha256: 06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790
+  pdf_pages: 291
+
+ingestion:
+  pipeline_version: "1.0"
+  normalization_policy_id: "text-normalization-v2"
+  chunking_policy_id: "source-unit-char-window-v1"
+  retrieval_policy_id: "deterministic-lexical-shards-v2"
+
+generation:
+  corpus_generation_id: 461185df1b3d52ca2effd70504ae83e8797dd25d211f74f40ac6b21748fd4269
+  index_generation_id: c86249d7c289d0051b329a2654ced7780972316d850a5e8d7f4d5d3c6730c6fd
+
+extraction:
+  engine: PyMuPDF
+  engine_version: "1.28.2"
+  unit_coordinate_system: source_pdf_1_indexed
+  content_model: unclassified_extractable_pdf_text
+  normalization:
+    - remove_NUL
+    - remove_soft_hyphen_marker
+    - normalize_line_endings
+    - trim_trailing_horizontal_whitespace
+    - suppress_repeated_short_pdf_boilerplate_lines
+
+chunking:
+  scope: per_source_unit
+  source_unit_type: pdf_page
+  target_chars: 4000
+  overlap_chars: 350
+  id_pattern: "<book-slug>:p<source-unit-4d>:c<chunk-2d>"
+
+retrieval:
+  mode: addressable_small_chunks
+  discovery: deterministic_lexical_shards
+  search_index_manifest: rag/search-index/manifest.json
+  search_index_path_pattern: "rag/search-index/<shard>.json"
+  search_scope: rag/chunks/
+  chunk_index: rag/chunk-index.jsonl
+  top_k_max: 3
+  chunk_file_pattern: "rag/chunks/p####-p####/p####-c##.md"
+  bulk_files:
+    - rag/text.md
+    - rag/chunks.jsonl
+  bulk_files_for_query_retrieval: false
+
+statistics:
+  source_units_with_text: 290
+  blank_source_units: 1
+  blank_source_unit_numbers: [1]
+  extracted_characters: 701299
+  suppressed_repeated_boilerplate_lines: 1
+  suppressed_repeated_boilerplate_occurrences: 290
+  chunks: 296
+  retrieval_chunk_files: 296
+  search_index_shards: 3001
+  search_index_max_shard_bytes: 199627
+
+validation:
+  chunk_ids_unique: true
+  retrieval_paths_unique: true
+  retrieval_chunk_count_matches: true
+  search_index_bounded: true
+  source_checksum_computed: true
+  source_checksum_expected_present: true
+  source_checksum_matched_expected: true
+  source_checksum_verified: true
+  full_source_unit_range_processed: true
+  status: READY_WITH_KNOWN_LIMITATIONS
+
+known_limitations:
+  - "The extractor reads the PDF text layer but does not classify native text versus OCR; content_model therefore does not assert OCR origin."
+  - "Recognition/extraction errors already present in the PDF text layer may remain in extracted text."
+  - "PDF page provenance is available for source inspection when visual context matters."
+  - "Images, equations, tables and diagrams are not independently encoded as multimodal RAG objects."
+  - "The deterministic lexical index is prefix-based retrieval, not semantic vector search; use up to three informative query tokens and preserve RAG_MISS on unsupported questions."
