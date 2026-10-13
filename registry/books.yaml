@@ -192,6 +192,7 @@ books:
     direction: "Cyber Risk"
   - number: 24
     inventory_number: "0024"
+    knowledge_id: "information-systems-administration-bobyntsev-ru"
     title: "Основы администрирования информационных систем: учебное пособие"
     authors_raw: "Д. О. Бобынцев; А. Л. Марухленко; Л. О. Марухленко; С. А. Кужелева; Л. А. Лисицын"
     translators_editors_raw: "не требуется, оригинал на русском"
@@ -349,11 +350,17 @@ verification_sources:
 electronic_holdings:
   source: "user-provided local file inventory + uploaded file confirmation + verified source-vault promotion"
   observed_date: "2026-10-13"
-  file_count: 24
-  matched_unambiguous: 23
+  file_count: 25
+  matched_unambiguous: 24
   needs_confirmation: 0
   unregistered: 1
   files:
+    - filename: "Основы_администрирования_информационных_систем_2021_Бобынцев_.pdf"
+      format: "pdf"
+      match_status: "matched"
+      inventory_numbers: ["0024"]
+      knowledge_id: "information-systems-administration-bobyntsev-ru"
+      note: "Source-vault branch 2026-10-13-found-books-14; original LFS object SHA-256 verified in GitHub Actions run 38392434230; PDF page 3 bibliography matches inventory 0024."
     - filename: "Dzh_Khank_Reynvoter_-_Kak_pasti_kotov_-_2016.pdf"
       format: "pdf"
       match_status: "matched"
