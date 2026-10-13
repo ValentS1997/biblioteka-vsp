@@ -1,0 +1,3 @@
+# Chapter artifacts
+
+Requires BOOK-READINESS v1.3 == READY and CHAPTER-ARTIFACT-COLLECTION v1.7.
