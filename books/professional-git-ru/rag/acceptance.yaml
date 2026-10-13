@@ -1,0 +1,83 @@
+schema: biblioteka-vsp/rag-ingestion-acceptance/v1
+book_id: professional-git-ru
+status: ACCEPTED
+source_sha256: 5eb8376c990ff58103fb110ae36467bb407f015bedf45aa2db6dae5678f8b5fb
+corpus_generation_id: b6f5dc672aed267bea8caa6f0050934a344ad153ae0c1a128cbb5929df622212
+index_generation_id: 113e650e463b17e01cbbf709d2a71bb6d4101b9825b4c19825a0aaed9d4f741a
+checks:
+- id: source_hash_matches
+  status: PASS
+  evidence:
+    recorded: 5eb8376c990ff58103fb110ae36467bb407f015bedf45aa2db6dae5678f8b5fb
+    actual: 5eb8376c990ff58103fb110ae36467bb407f015bedf45aa2db6dae5678f8b5fb
+- id: manifest_book_id_matches
+  status: PASS
+  evidence: professional-git-ru
+- id: manifest_source_matches
+  status: PASS
+  evidence:
+    path: source/book.pdf
+    format: pdf
+    sha256: 5eb8376c990ff58103fb110ae36467bb407f015bedf45aa2db6dae5678f8b5fb
+    pdf_pages: 162
+- id: generation_metadata_present
+  status: PASS
+  evidence:
+    ingestion:
+      pipeline_version: '1.0'
+      normalization_policy_id: text-normalization-v2
+      chunking_policy_id: source-unit-char-window-v1
+      retrieval_policy_id: deterministic-lexical-shards-v2
+    generation:
+      corpus_generation_id: b6f5dc672aed267bea8caa6f0050934a344ad153ae0c1a128cbb5929df622212
+      index_generation_id: 113e650e463b17e01cbbf709d2a71bb6d4101b9825b4c19825a0aaed9d4f741a
+- id: generation_ids_recompute
+  status: PASS
+  evidence:
+    corpus_expected: b6f5dc672aed267bea8caa6f0050934a344ad153ae0c1a128cbb5929df622212
+    corpus_actual: b6f5dc672aed267bea8caa6f0050934a344ad153ae0c1a128cbb5929df622212
+    index_expected: 113e650e463b17e01cbbf709d2a71bb6d4101b9825b4c19825a0aaed9d4f741a
+    index_actual: 113e650e463b17e01cbbf709d2a71bb6d4101b9825b4c19825a0aaed9d4f741a
+- id: chunks_addressable_unique
+  status: PASS
+  evidence: 180
+- id: chunk_uids_unique
+  status: PASS
+  evidence: 180
+- id: all_chunk_provenance_and_hashes_resolve
+  status: PASS
+  evidence: 180 chunks
+- id: source_unit_coverage_complete
+  status: PASS
+  evidence:
+    source_units: 162
+    units_with_chunks: 161
+    blank_units:
+    - 1
+- id: manifest_chunk_counts_match
+  status: PASS
+  evidence:
+    manifest: 180
+    actual: 180
+- id: search_index_generation_matches
+  status: PASS
+  evidence:
+    corpus_generation_id: b6f5dc672aed267bea8caa6f0050934a344ad153ae0c1a128cbb5929df622212
+    index_generation_id: 113e650e463b17e01cbbf709d2a71bb6d4101b9825b4c19825a0aaed9d4f741a
+- id: deterministic_retrieval_samples_pass
+  status: PASS
+  evidence:
+  - chunk_id: professional-git-ru:p0002:c01
+    ok: true
+    evidence: exact term 'программирование' -> professional-git-ru:p0002:c01 via про.json
+  - chunk_id: professional-git-ru:p0080:c01
+    ok: true
+    evidence: key 'восп' contains professional-git-ru:p0080:c01 via вос.json
+  - chunk_id: professional-git-ru:p0162:c01
+    ok: true
+    evidence: exact term 'администрировании' -> professional-git-ru:p0162:c01 via
+      адм.json
+- id: negative_exact_term_behavior_pass
+  status: PASS
+  evidence: synthetic shard absent
+failed_checks: []
