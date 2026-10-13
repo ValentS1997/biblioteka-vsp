@@ -114,6 +114,9 @@ books:
 
   - id: designing-machine-learning-systems-chip-huyen-ru
     title: "Проектирование систем машинного обучения"
+    inventory_number: "0031"
+    publication_year: 2023
+    isbn: "978-601-271-727-3"
     authors:
       - "Чип Хьюен"
     language: ru
