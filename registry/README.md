@@ -158,8 +158,8 @@ Pre-transfer audit завершённых knowledge-проектов: прове
 | Вне inventory | **1** |
 | Прочитано | **4** |
 | В процессе | **1** |
-| RAG READY (inventory-linked) | **22** |
-| RAG READY (knowledge total) | **23** |
+| RAG READY (inventory-linked) | **23** |
+| RAG READY (knowledge total) | **24** |
 | Проектов завершено (user-confirmed '+') | **22** |
 | Knowledge entries с выжимками | **22** |
 | Завершено, но RAG отсутствует в main | **0** |
