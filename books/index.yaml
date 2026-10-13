@@ -1,6 +1,6 @@
 schema: biblioteka-vsp/books/v1
 protocol: biblioteka-vsp/v1
-updated: 2026-10-08
+updated: 2026-10-13
 
 books:
   - id: computer-networks-6e-ru-2023
@@ -465,3 +465,20 @@ books:
       reading_progress: books/computer-networks-olifer-7e-ru-2026/reading/progress.yaml
       notes: books/computer-networks-olifer-7e-ru-2026/notes/
       diagrams: books/computer-networks-olifer-7e-ru-2026/diagrams/
+
+  - id: herding-cats-j-hank-rainwater-ru
+    title: "Как пасти котов. Наставление для программистов, руководящих другими программистами"
+    authors:
+      - "Дж. Ханк Рейнвотер"
+    language: ru
+    publication_year: 2016
+    isbn: "978-5-496-01820-3"
+    paths:
+      metadata: books/herding-cats-j-hank-rainwater-ru/metadata.yaml
+      source: books/herding-cats-j-hank-rainwater-ru/source/book.pdf
+      rag_manifest: books/herding-cats-j-hank-rainwater-ru/rag/manifest.yaml
+      rag_chunks: books/herding-cats-j-hank-rainwater-ru/rag/chunks/
+      rag_chunk_index: books/herding-cats-j-hank-rainwater-ru/rag/chunk-index.jsonl
+      rag_search_index: books/herding-cats-j-hank-rainwater-ru/rag/search-index/
+      notes: books/herding-cats-j-hank-rainwater-ru/notes/
+      diagrams: books/herding-cats-j-hank-rainwater-ru/diagrams/

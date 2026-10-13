@@ -6,9 +6,9 @@ title: "Как пасти котов. Наставление для програ
 edition:
   number: "[Needs confirmation]"
   language: ru
-  publisher: "[Needs confirmation]"
-  publication_year: "[Needs confirmation]"
-  publication_pages: "[Needs confirmation]"
+  publisher: "Питер"
+  publication_year: 2016
+  publication_pages: 256
 
 authors:
   - "Дж. Ханк Рейнвотер"
@@ -17,20 +17,21 @@ translators_editors:
   - "Юрий Гороховский"
 
 isbn:
-  russian_edition: "[Needs confirmation]"
-  original_edition: "[Needs confirmation]"
+  russian_edition: "978-5-496-01820-3"
+  original_edition: "1590590171"
 
 source:
   canonical_path: "source/book.pdf"
   format: pdf
   expected_sha256: "5f11cf93711c9489b25218c701e1027f5ca0354523e2faeb1bb7041ed3b62795"
   expected_size_bytes: 20992784
-  source_unit_count: "[Needs confirmation]"
-  source_pdf_pages: "[Needs confirmation]"
-  text_layer: "[Needs confirmation]"
+  source_unit_count: 256
+  source_pdf_pages: 256
+  text_layer: "unclassified_extractable_pdf_text"
   repository_access: private
   storage: "Git LFS"
-  upload_status: "LFS_POINTER_REUSED_PENDING_CHECKOUT_VERIFICATION"
+  upload_status: "VERIFIED_GIT_LFS_AVAILABLE"
+  upload_commit: "dd960b44b7fb4c3236f8c3754cba96017e8e565e"
   source_vault_branch: "source-vault/2026-10-13-found-books-14"
   source_vault_path: "source-vault/objects/5f11cf93711c9489b25218c701e1027f5ca0354523e2faeb1bb7041ed3b62795.pdf"
   source_original_name: "Dzh_Khank_Reynvoter_-_Kak_pasti_kotov_-_2016.pdf"
@@ -46,7 +47,9 @@ rag:
   manifest: "rag/manifest.yaml"
   text: "rag/text.md"
   chunks: "rag/chunks.jsonl"
-  status: "PENDING_BUILD"
+  status: "READY_WITH_KNOWN_LIMITATIONS"
+  generated_commit: "4d753041f50e5c2cf74c5f3dc5e0a883d98e4037"
+  workflow_run_id: 38373601460
 
 reading:
   status: not_activated
