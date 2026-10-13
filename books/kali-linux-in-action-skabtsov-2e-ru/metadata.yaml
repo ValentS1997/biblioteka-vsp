@@ -1,0 +1,47 @@
+schema: biblioteka-vsp/book/v1
+
+id: kali-linux-in-action-skabtsov-2e-ru
+title: "Kali Linux в действии. Аудит безопасности информационных систем"
+
+edition:
+  number: "[Needs confirmation]"
+  language: ru
+  publisher: "[Needs confirmation]"
+  publication_year: "[Needs confirmation]"
+  publication_pages: "[Needs confirmation]"
+
+authors:
+  - "Никита Скабцов"
+
+isbn:
+  russian_edition: "[Needs confirmation]"
+  original_edition: "[Needs confirmation]"
+
+source:
+  canonical_path: "source/book.pdf"
+  format: pdf
+  expected_sha256: "fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9"
+  expected_size_bytes: 12911191
+  source_pdf_pages: "[Needs confirmation]"
+  text_layer: "[Needs confirmation]"
+  repository_access: private
+  storage: "Git LFS"
+  upload_status: "LFS_POINTER_REUSED_PENDING_RUNTIME_VERIFICATION"
+  source_vault_branch: "source-vault/2026-10-13-found-books-14"
+  source_vault_path: "source-vault/objects/fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9.pdf"
+  lawful_access_attested_by_user: "[Needs confirmation]"
+  ownership_category: "[Needs confirmation]"
+  physical_copy: "[Needs confirmation]"
+  license: "[Needs confirmation]"
+  redistribution_permission: "[Needs confirmation]"
+
+rag:
+  scope: full_book
+  build_script: "../../../scripts/build_book_rag.py"
+  manifest: "rag/manifest.yaml"
+  text: "rag/text.md"
+  chunks: "rag/chunks.jsonl"
+  status: "PENDING"
+
+reading:
+  status: "[Needs confirmation]"
