@@ -61,5 +61,7 @@ provenance:
   pdf_title_page_verification: "CONFIRMED_2ND_EDITION"
   verified_authors: true
   verified_edition: 2
+  verified_on: "2026-10-13"
+  evidence_source: "rag/chunks/p0001-p0100/p0002-c01.md; p0003-c01.md; p0004-c01.md"
   original_work_year: 2024
   bibliographic_authority: "canonical PDF pages 2–4; registry inventory 0033; publisher listing"
