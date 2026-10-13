@@ -465,8 +465,8 @@ books:
       reading_progress: books/computer-networks-olifer-7e-ru-2026/reading/progress.yaml
       notes: books/computer-networks-olifer-7e-ru-2026/notes/
       diagrams: books/computer-networks-olifer-7e-ru-2026/diagrams/
-  
   - id: 1c-enterprise-8-3-radchenko-khrustaleva-3e-ru
+    inventory_number: "0030"
     title: "1С:Предприятие 8.3. Практическое пособие разработчика. Примеры и типовые приемы. Издание 3"
     authors:
       - "Максим Григорьевич Радченко"
