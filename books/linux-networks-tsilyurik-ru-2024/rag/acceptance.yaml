@@ -1,0 +1,83 @@
+schema: biblioteka-vsp/rag-ingestion-acceptance/v1
+book_id: linux-networks-tsilyurik-ru-2024
+status: ACCEPTED
+source_sha256: f266b9e3fdcacfac736dd01e0a36a7391648ea2b159a2c291a2b8ca720b372b9
+corpus_generation_id: 4f4904c70b519f263a84555223687e90bc171b99d2d5c3024d484c19f11da5ac
+index_generation_id: b1355d2d8ea929ec484e1980dfdf932f922e2a65f9ce2a761c97e85b47bdc7d7
+checks:
+- id: source_hash_matches
+  status: PASS
+  evidence:
+    recorded: f266b9e3fdcacfac736dd01e0a36a7391648ea2b159a2c291a2b8ca720b372b9
+    actual: f266b9e3fdcacfac736dd01e0a36a7391648ea2b159a2c291a2b8ca720b372b9
+- id: manifest_book_id_matches
+  status: PASS
+  evidence: linux-networks-tsilyurik-ru-2024
+- id: manifest_source_matches
+  status: PASS
+  evidence:
+    path: source/book.pdf
+    format: pdf
+    sha256: f266b9e3fdcacfac736dd01e0a36a7391648ea2b159a2c291a2b8ca720b372b9
+    pdf_pages: 305
+- id: generation_metadata_present
+  status: PASS
+  evidence:
+    ingestion:
+      pipeline_version: '1.0'
+      normalization_policy_id: text-normalization-v2
+      chunking_policy_id: source-unit-char-window-v1
+      retrieval_policy_id: deterministic-lexical-shards-v2
+    generation:
+      corpus_generation_id: 4f4904c70b519f263a84555223687e90bc171b99d2d5c3024d484c19f11da5ac
+      index_generation_id: b1355d2d8ea929ec484e1980dfdf932f922e2a65f9ce2a761c97e85b47bdc7d7
+- id: generation_ids_recompute
+  status: PASS
+  evidence:
+    corpus_expected: 4f4904c70b519f263a84555223687e90bc171b99d2d5c3024d484c19f11da5ac
+    corpus_actual: 4f4904c70b519f263a84555223687e90bc171b99d2d5c3024d484c19f11da5ac
+    index_expected: b1355d2d8ea929ec484e1980dfdf932f922e2a65f9ce2a761c97e85b47bdc7d7
+    index_actual: b1355d2d8ea929ec484e1980dfdf932f922e2a65f9ce2a761c97e85b47bdc7d7
+- id: chunks_addressable_unique
+  status: PASS
+  evidence: 310
+- id: chunk_uids_unique
+  status: PASS
+  evidence: 310
+- id: all_chunk_provenance_and_hashes_resolve
+  status: PASS
+  evidence: 310 chunks
+- id: source_unit_coverage_complete
+  status: PASS
+  evidence:
+    source_units: 305
+    units_with_chunks: 304
+    blank_units:
+    - 1
+- id: manifest_chunk_counts_match
+  status: PASS
+  evidence:
+    manifest: 310
+    actual: 310
+- id: search_index_generation_matches
+  status: PASS
+  evidence:
+    corpus_generation_id: 4f4904c70b519f263a84555223687e90bc171b99d2d5c3024d484c19f11da5ac
+    index_generation_id: b1355d2d8ea929ec484e1980dfdf932f922e2a65f9ce2a761c97e85b47bdc7d7
+- id: deterministic_retrieval_samples_pass
+  status: PASS
+  evidence:
+  - chunk_id: linux-networks-tsilyurik-ru-2024:p0002:c01
+    ok: true
+    evidence: key 'пете' contains linux-networks-tsilyurik-ru-2024:p0002:c01 via пет.json
+  - chunk_id: linux-networks-tsilyurik-ru-2024:p0152:c01
+    ok: true
+    evidence: exact term 'ретранслирующий' -> linux-networks-tsilyurik-ru-2024:p0152:c01
+      via рет.json
+  - chunk_id: linux-networks-tsilyurik-ru-2024:p0305:c02
+    ok: true
+    evidence: key 'широ' contains linux-networks-tsilyurik-ru-2024:p0305:c02 via шир.json
+- id: negative_exact_term_behavior_pass
+  status: PASS
+  evidence: synthetic shard absent
+failed_checks: []
