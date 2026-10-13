@@ -6,11 +6,15 @@ title: "Ассемблер и программная модель процесс
 edition:
   number: "[Needs confirmation]"
   language: ru
-  publisher: "[Needs confirmation]"
-  publication_year: "[Needs confirmation]"
+  publisher: "БХВ-Петербург"
+  publication_year: 2024
+  publication_pages: 400
 
 authors:
   - "Андрей Владимирович Жуков"
+
+isbn:
+  russian_edition: "978-5-9775-1761-4"
 
 source:
   canonical_path: "source/book.pdf"
@@ -18,11 +22,12 @@ source:
   original_name: "Ассемблер_и_программная_модель_процессоров_x86_64_Андрей_Жуков_2024.pdf"
   expected_sha256: "f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2"
   expected_size_bytes: 4845113
-  source_pdf_pages: "[Needs confirmation]"
-  text_layer: "[Needs confirmation]"
+  source_pdf_pages: 399
+  text_layer: "unclassified_extractable_pdf_text"
   repository_access: private
   storage: "Git LFS"
-  upload_status: "VAULT_LFS_POINTER_REUSED_PENDING_BINARY_VERIFICATION"
+  upload_status: "VERIFIED_GIT_LFS_AVAILABLE"
+  upload_commit: "12ecf4883d77a70e826daad9b607f9ce818b78d1"
   vault_branch: "source-vault/2026-10-13-found-books-14"
   vault_path: "source-vault/objects/f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2.pdf"
   lawful_access_attested_by_user: "[Needs confirmation]"
@@ -37,8 +42,11 @@ rag:
   text: "rag/text.md"
   chunks: "rag/chunks.jsonl"
   acceptance: "rag/acceptance.yaml"
-  status: "PENDING"
+  status: "READY_WITH_KNOWN_LIMITATIONS"
+  generated_commit: "2d9822d32239c67edf87a16c96570f8cbb579c86"
+  workflow_run_id: 38372097362
+  acceptance_status: "ACCEPTED"
 
 reading:
   status: "[Needs confirmation]"
-  note: "Existing reading status not modified during ingest."
+  note: "Reading status and progress have not been changed by ingest."
