@@ -97,6 +97,7 @@ books:
     direction: "SysAdmin / Operations"
   - number: 12
     inventory_number: "0012"
+    knowledge_id: "kali-linux-in-action-skabtsov-2e-ru"
     title: "Kali Linux в действии. Аудит безопасности информационных систем. 2-е изд."
     authors_raw: "Никита Скабцов"
     translators_editors_raw: "не требуется, оригинал на русском"
