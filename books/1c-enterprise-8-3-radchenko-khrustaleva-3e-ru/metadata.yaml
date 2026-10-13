@@ -10,7 +10,7 @@ edition:
   publisher: "[Needs confirmation]"
   publication_year: "[Needs confirmation]"
   publication_pages: "[Needs confirmation]"
-  verification: "[Needs confirmation: check PDF title/imprint]"
+  verification: "PDF text layer page 2 explicitly names the third edition; imprint extraction has OCR/glyph corruption"
 
 authors:
   - "Максим Григорьевич Радченко"
@@ -24,11 +24,11 @@ source:
   format: pdf
   expected_sha256: "ce8fa0fbf0d8bb38f724ed04f130c2443c1e181eb51edafac692c4786874c923"
   expected_size_bytes: 24311627
-  source_pdf_pages: "[Needs confirmation]"
-  text_layer: "[Needs confirmation]"
+  source_pdf_pages: 983
+  text_layer: "unclassified_extractable_pdf_text"
   repository_access: private
   storage: "Git LFS"
-  upload_status: "STAGED_LFS_POINTER_UNVERIFIED"
+  upload_status: "VERIFIED_GIT_LFS_AVAILABLE"
   vault_branch: "source-vault/2026-10-13-found-books-14"
   vault_path: "source-vault/objects/ce8fa0fbf0d8bb38f724ed04f130c2443c1e181eb51edafac692c4786874c923.pdf"
   source_file_identity: "1С_Предприятие_8_3_Практическое_пособие_разработчика_3_е_изд.pdf"
@@ -43,7 +43,9 @@ rag:
   manifest: "rag/manifest.yaml"
   text: "rag/text.md"
   chunks: "rag/chunks.jsonl"
-  status: "PENDING_INGESTION"
+  status: "READY_WITH_KNOWN_LIMITATIONS"
+  generated_commit: "e090af298d6c7d1fbe42444655d98221c607aa4e"
+  workflow_run_id: 38392309161
 
 reading:
   progress: "reading/progress.yaml"
