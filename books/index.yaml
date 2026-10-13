@@ -624,3 +624,19 @@ books:
       rag_search_index: books/information-systems-administration-bobyntsev-ru/rag/search-index/
       notes: books/information-systems-administration-bobyntsev-ru/notes/
       diagrams: books/information-systems-administration-bobyntsev-ru/diagrams/
+
+  - id: bash-idioms-olbing-vossen-ru
+    title: "Идиомы bash. Мощные, гибкие и понятные сценарии командной оболочки"
+    authors:
+      - "Карл Олбинг"
+      - "Джей Пи Фоссен"
+    language: ru
+    paths:
+      metadata: books/bash-idioms-olbing-vossen-ru/metadata.yaml
+      source: books/bash-idioms-olbing-vossen-ru/source/book.pdf
+      rag_manifest: books/bash-idioms-olbing-vossen-ru/rag/manifest.yaml
+      rag_chunks: books/bash-idioms-olbing-vossen-ru/rag/chunks/
+      rag_chunk_index: books/bash-idioms-olbing-vossen-ru/rag/chunk-index.jsonl
+      rag_search_index: books/bash-idioms-olbing-vossen-ru/rag/search-index/
+      notes: books/bash-idioms-olbing-vossen-ru/notes/
+      diagrams: books/bash-idioms-olbing-vossen-ru/diagrams/

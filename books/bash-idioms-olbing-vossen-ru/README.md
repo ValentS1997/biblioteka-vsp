@@ -1,0 +1,32 @@
+# Идиомы bash. Мощные, гибкие и понятные сценарии командной оболочки
+
+- Knowledge ID: `bash-idioms-olbing-vossen-ru`
+- Inventory: `0032`
+- Authors (registry): Карл Олбинг, Джей Пи Фоссен
+- Translator/editor (registry): Л. Киселева
+- Verified Russian edition: Питер, 2023, 208 printed pages, ISBN `978-5-4461-2307-0`
+- Original title from source: `bash Idioms`
+
+## Canonical source
+
+- Path: `source/book.pdf` (Git LFS, pointer reused from pre-staged source vault)
+- Expected SHA-256: `d957757dacb69de0ba2b2cab5c08e05b1cc6c1007291f3a96098dd5d51246745`
+- Expected bytes: `6229591`
+- Vault branch: `source-vault/2026-10-13-found-books-14`
+- The vault candidate is not the canonical source; the copied pointer at `source/book.pdf` is the canonical repository path
+- Real PDF verified by GitHub Actions after Git LFS checkout; SHA-256 matches the declared source
+- PDF pages: 209, including two initial pages without extractable text
+
+## RAG / readiness
+
+Full-book RAG built in GitHub Actions run `38394114002` (commit `af1c0cf00a1f40708228f4a3a07f62a20277c61f`).
+
+- Ingestion acceptance: `ACCEPTED` (strict v1.0)
+- PDF source units: 209 (207 with text, 2 without text)
+- Addressable chunks: 210
+- Retrieval shards: 2157
+- Book readiness v1.3 and CI must pass before PR.
+
+## Reading
+
+Existing reading status is unchanged. No reading progress or dates were set during onboarding.

@@ -1,0 +1,85 @@
+schema: biblioteka-vsp/rag-ingestion-acceptance/v1
+book_id: bash-idioms-olbing-vossen-ru
+status: ACCEPTED
+source_sha256: d957757dacb69de0ba2b2cab5c08e05b1cc6c1007291f3a96098dd5d51246745
+corpus_generation_id: 326e7b7aecc995d4691b5f783c8e6fd044a32205ea5a61fa59ab248935ee34b1
+index_generation_id: ea59dd66dc45d17d7bf029a8b175ec5ab112ee4a172771b0d6a773d21ae38685
+checks:
+- id: source_hash_matches
+  status: PASS
+  evidence:
+    recorded: d957757dacb69de0ba2b2cab5c08e05b1cc6c1007291f3a96098dd5d51246745
+    actual: d957757dacb69de0ba2b2cab5c08e05b1cc6c1007291f3a96098dd5d51246745
+- id: manifest_book_id_matches
+  status: PASS
+  evidence: bash-idioms-olbing-vossen-ru
+- id: manifest_source_matches
+  status: PASS
+  evidence:
+    path: source/book.pdf
+    format: pdf
+    sha256: d957757dacb69de0ba2b2cab5c08e05b1cc6c1007291f3a96098dd5d51246745
+    pdf_pages: 209
+- id: generation_metadata_present
+  status: PASS
+  evidence:
+    ingestion:
+      pipeline_version: '1.0'
+      normalization_policy_id: text-normalization-v2
+      chunking_policy_id: source-unit-char-window-v1
+      retrieval_policy_id: deterministic-lexical-shards-v2
+    generation:
+      corpus_generation_id: 326e7b7aecc995d4691b5f783c8e6fd044a32205ea5a61fa59ab248935ee34b1
+      index_generation_id: ea59dd66dc45d17d7bf029a8b175ec5ab112ee4a172771b0d6a773d21ae38685
+- id: generation_ids_recompute
+  status: PASS
+  evidence:
+    corpus_expected: 326e7b7aecc995d4691b5f783c8e6fd044a32205ea5a61fa59ab248935ee34b1
+    corpus_actual: 326e7b7aecc995d4691b5f783c8e6fd044a32205ea5a61fa59ab248935ee34b1
+    index_expected: ea59dd66dc45d17d7bf029a8b175ec5ab112ee4a172771b0d6a773d21ae38685
+    index_actual: ea59dd66dc45d17d7bf029a8b175ec5ab112ee4a172771b0d6a773d21ae38685
+- id: chunks_addressable_unique
+  status: PASS
+  evidence: 210
+- id: chunk_uids_unique
+  status: PASS
+  evidence: 210
+- id: all_chunk_provenance_and_hashes_resolve
+  status: PASS
+  evidence: 210 chunks
+- id: source_unit_coverage_complete
+  status: PASS
+  evidence:
+    source_units: 209
+    units_with_chunks: 207
+    blank_units:
+    - 1
+    - 2
+- id: manifest_chunk_counts_match
+  status: PASS
+  evidence:
+    manifest: 210
+    actual: 210
+- id: search_index_generation_matches
+  status: PASS
+  evidence:
+    corpus_generation_id: 326e7b7aecc995d4691b5f783c8e6fd044a32205ea5a61fa59ab248935ee34b1
+    index_generation_id: ea59dd66dc45d17d7bf029a8b175ec5ab112ee4a172771b0d6a773d21ae38685
+- id: deterministic_retrieval_samples_pass
+  status: PASS
+  evidence:
+  - chunk_id: bash-idioms-olbing-vossen-ru:p0003:c01
+    ok: true
+    evidence: exact term 'sebastopol' -> bash-idioms-olbing-vossen-ru:p0003:c01 via
+      seb.json
+  - chunk_id: bash-idioms-olbing-vossen-ru:p0105:c01
+    ok: true
+    evidence: key 'подм' contains bash-idioms-olbing-vossen-ru:p0105:c01 via под.json
+  - chunk_id: bash-idioms-olbing-vossen-ru:p0209:c01
+    ok: true
+    evidence: exact term 'полиграфического' -> bash-idioms-olbing-vossen-ru:p0209:c01
+      via пол.json
+- id: negative_exact_term_behavior_pass
+  status: PASS
+  evidence: synthetic shard absent
+failed_checks: []
