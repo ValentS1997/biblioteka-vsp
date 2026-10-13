@@ -317,6 +317,7 @@ books:
     direction: "Linux / Networking"
   - number: 40
     inventory_number: "0040"
+    knowledge_id: "prometheus-up-and-running-pivotto-brazil-ru-2023"
     title: "Запускаем Prometheus. Мониторинг инфраструктуры и приложений"
     authors_raw: "Жюльен Пивотто; Брайан Бразил / Julien Pivotto; Brian Brazil"
     translators_editors_raw: "Александр Киселев"

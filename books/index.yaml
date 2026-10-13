@@ -1,6 +1,6 @@
 schema: biblioteka-vsp/books/v1
 protocol: biblioteka-vsp/v1
-updated: 2026-10-08
+updated: 2026-10-13
 
 books:
   - id: computer-networks-6e-ru-2023
@@ -695,3 +695,21 @@ books:
       rag_search_index: books/linux-networks-tsilyurik-ru-2024/rag/search-index/
       notes: books/linux-networks-tsilyurik-ru-2024/notes/
       diagrams: books/linux-networks-tsilyurik-ru-2024/diagrams/
+
+  - id: prometheus-up-and-running-pivotto-brazil-ru-2023
+    title: "Запускаем Prometheus. Мониторинг инфраструктуры и приложений"
+    authors:
+      - "Жюльен Пивотто"
+      - "Брайан Бразил"
+    language: ru
+    publication_year: 2023
+    isbn: "978-6-01810-341-4"
+    paths:
+      metadata: books/prometheus-up-and-running-pivotto-brazil-ru-2023/metadata.yaml
+      source: books/prometheus-up-and-running-pivotto-brazil-ru-2023/source/book.pdf
+      rag_manifest: books/prometheus-up-and-running-pivotto-brazil-ru-2023/rag/manifest.yaml
+      rag_chunks: books/prometheus-up-and-running-pivotto-brazil-ru-2023/rag/chunks/
+      rag_chunk_index: books/prometheus-up-and-running-pivotto-brazil-ru-2023/rag/chunk-index.jsonl
+      rag_search_index: books/prometheus-up-and-running-pivotto-brazil-ru-2023/rag/search-index/
+      notes: books/prometheus-up-and-running-pivotto-brazil-ru-2023/notes/
+      diagrams: books/prometheus-up-and-running-pivotto-brazil-ru-2023/diagrams/

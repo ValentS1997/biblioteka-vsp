@@ -85,6 +85,7 @@
 | `0036` | `business-process-improvement-hbsp-ru` | **Руководство по улучшению бизнес-процессов** | [Needs confirmation] | Да | — |
 | `0037` | `go-basics-chernyshev-ru` | **Основы Go** | Завершено | Да | Да (8 гл.) |
 | `0039` | `linux-networks-tsilyurik-ru-2024` | **Сети Linux. Модели и приложения** | [Needs confirmation] | Да | — |
+| `0040` | `prometheus-up-and-running-pivotto-brazil-ru-2023` | **Запускаем Prometheus. Мониторинг инфраструктуры и приложений** | [Needs confirmation] | Да | — |
 | — | `dynamic-incident-response-joshua-wright-en-2026` | **Dynamic Incident Response: A Framework for Security Teams** | Завершено | Да | Да (20 гл.) |
 
 ## Migration gaps
@@ -139,7 +140,7 @@ Pre-transfer audit завершённых knowledge-проектов: прове
 | 37 | `0037` | **Основы Go** | — | — | Да | — | PDF | Go от базового синтаксиса до тестирования, файлов, SQLite, конкурентности и сетевого программирования. | Go | Станислав Андреевич Чернышев | не требуется, оригинал на русском |
 | 38 | `0038` | **Канбан Метод. Улучшение системы управления** | — | — | — | — | — | Канбан как метод эволюционного улучшения управления, потока работы и организационных изменений. | Kanban / Management | Майк Барроуз / Mike Burrows | Михаил Витебский; Алексей Капанадзе; редактор Вячеслав Ионов; научный редактор Алексей Пименов |
 | 39 | `0039` | **Сети Linux. Модели и приложения** | — | — | Да | — | — | Сетевой стек Linux, модели взаимодействия и практическое создание сетевых приложений. | Linux / Networking | Олег Иванович Цилюрик | не требуется, оригинал на русском |
-| 40 | `0040` | **Запускаем Prometheus. Мониторинг инфраструктуры и приложений** | — | — | — | — | — | Мониторинг инфраструктуры и приложений в Prometheus: метрики, запросы, экспортёры и оповещения. | Monitoring / Prometheus | Жюльен Пивотто; Брайан Бразил / Julien Pivotto; Brian Brazil | Александр Киселев |
+| 40 | `0040` | **Запускаем Prometheus. Мониторинг инфраструктуры и приложений** | — | — | Да | — | — | Мониторинг инфраструктуры и приложений в Prometheus: метрики, запросы, экспортёры и оповещения. | Monitoring / Prometheus | Жюльен Пивотто; Брайан Бразил / Julien Pivotto; Brian Brazil | Александр Киселев |
 
 ## Связки чтения
 
@@ -156,8 +157,8 @@ Pre-transfer audit завершённых knowledge-проектов: прове
 | Параметр | Значение |
 |---|---:|
 | Инвентарных книг | **39** |
-| Inventory → knowledge mappings | **34** |
-| Knowledge entries всего | **35** |
+| Inventory → knowledge mappings | **35** |
+| Knowledge entries всего | **36** |
 | Knowledge entries без inventory | **1** |
 | Электронных файлов | **27** |
 | Однозначно сопоставлено | **26** |
@@ -165,8 +166,8 @@ Pre-transfer audit завершённых knowledge-проектов: прове
 | Вне inventory | **1** |
 | Прочитано | **4** |
 | В процессе | **1** |
-| RAG READY (inventory-linked) | **34** |
-| RAG READY (knowledge total) | **35** |
+| RAG READY (inventory-linked) | **35** |
+| RAG READY (knowledge total) | **36** |
 | Проектов завершено (user-confirmed '+') | **22** |
 | Knowledge entries с выжимками | **22** |
 | Завершено, но RAG отсутствует в main | **0** |

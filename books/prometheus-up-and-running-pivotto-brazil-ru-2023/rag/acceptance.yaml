@@ -1,0 +1,86 @@
+schema: biblioteka-vsp/rag-ingestion-acceptance/v1
+book_id: prometheus-up-and-running-pivotto-brazil-ru-2023
+status: ACCEPTED
+source_sha256: ab45c7bc9a393b15bc60628dfceaa45db71388fd28e75c5c55ab6eaf5930f787
+corpus_generation_id: 0bced4ab732e16f4a48f829271d5a8fa19fee850c0611cd23d8fc39bfe1f81ca
+index_generation_id: b757b2d0b8c955f8bdd0945a927c87ed63d72da54a9a3fefc037764c49b35b43
+checks:
+- id: source_hash_matches
+  status: PASS
+  evidence:
+    recorded: ab45c7bc9a393b15bc60628dfceaa45db71388fd28e75c5c55ab6eaf5930f787
+    actual: ab45c7bc9a393b15bc60628dfceaa45db71388fd28e75c5c55ab6eaf5930f787
+- id: manifest_book_id_matches
+  status: PASS
+  evidence: prometheus-up-and-running-pivotto-brazil-ru-2023
+- id: manifest_source_matches
+  status: PASS
+  evidence:
+    path: source/book.pdf
+    format: pdf
+    sha256: ab45c7bc9a393b15bc60628dfceaa45db71388fd28e75c5c55ab6eaf5930f787
+    pdf_pages: 393
+- id: generation_metadata_present
+  status: PASS
+  evidence:
+    ingestion:
+      pipeline_version: '1.0'
+      normalization_policy_id: text-normalization-v2
+      chunking_policy_id: source-unit-char-window-v1
+      retrieval_policy_id: deterministic-lexical-shards-v2
+    generation:
+      corpus_generation_id: 0bced4ab732e16f4a48f829271d5a8fa19fee850c0611cd23d8fc39bfe1f81ca
+      index_generation_id: b757b2d0b8c955f8bdd0945a927c87ed63d72da54a9a3fefc037764c49b35b43
+- id: generation_ids_recompute
+  status: PASS
+  evidence:
+    corpus_expected: 0bced4ab732e16f4a48f829271d5a8fa19fee850c0611cd23d8fc39bfe1f81ca
+    corpus_actual: 0bced4ab732e16f4a48f829271d5a8fa19fee850c0611cd23d8fc39bfe1f81ca
+    index_expected: b757b2d0b8c955f8bdd0945a927c87ed63d72da54a9a3fefc037764c49b35b43
+    index_actual: b757b2d0b8c955f8bdd0945a927c87ed63d72da54a9a3fefc037764c49b35b43
+- id: chunks_addressable_unique
+  status: PASS
+  evidence: 396
+- id: chunk_uids_unique
+  status: PASS
+  evidence: 396
+- id: all_chunk_provenance_and_hashes_resolve
+  status: PASS
+  evidence: 396 chunks
+- id: source_unit_coverage_complete
+  status: PASS
+  evidence:
+    source_units: 393
+    units_with_chunks: 391
+    blank_units:
+    - 1
+    - 393
+- id: manifest_chunk_counts_match
+  status: PASS
+  evidence:
+    manifest: 396
+    actual: 396
+- id: search_index_generation_matches
+  status: PASS
+  evidence:
+    corpus_generation_id: 0bced4ab732e16f4a48f829271d5a8fa19fee850c0611cd23d8fc39bfe1f81ca
+    index_generation_id: b757b2d0b8c955f8bdd0945a927c87ed63d72da54a9a3fefc037764c49b35b43
+- id: deterministic_retrieval_samples_pass
+  status: PASS
+  evidence:
+  - chunk_id: prometheus-up-and-running-pivotto-brazil-ru-2023:p0002:c01
+    ok: true
+    evidence: exact term 'infrastructure' -> prometheus-up-and-running-pivotto-brazil-ru-2023:p0002:c01
+      via inf.json
+  - chunk_id: prometheus-up-and-running-pivotto-brazil-ru-2023:p0195:c01
+    ok: true
+    evidence: exact term 'низкоуровневые' -> prometheus-up-and-running-pivotto-brazil-ru-2023:p0195:c01
+      via низ.json
+  - chunk_id: prometheus-up-and-running-pivotto-brazil-ru-2023:p0392:c01
+    ok: true
+    evidence: exact term 'книготорговой' -> prometheus-up-and-running-pivotto-brazil-ru-2023:p0392:c01
+      via кни.json
+- id: negative_exact_term_behavior_pass
+  status: PASS
+  evidence: exact_terms contains synthetic=False
+failed_checks: []
