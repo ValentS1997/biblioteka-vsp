@@ -465,3 +465,21 @@ books:
       reading_progress: books/computer-networks-olifer-7e-ru-2026/reading/progress.yaml
       notes: books/computer-networks-olifer-7e-ru-2026/notes/
       diagrams: books/computer-networks-olifer-7e-ru-2026/diagrams/
+
+  - id: modern-system-administration-jennifer-davis-ru
+    title: "Современное системное администрирование"
+    authors:
+      - "Дженнифер Дэвис"
+    language: ru
+    publication_year: 2024
+    isbn: "978-5-9775-1848-2"
+    paths:
+      metadata: books/modern-system-administration-jennifer-davis-ru/metadata.yaml
+      source: books/modern-system-administration-jennifer-davis-ru/source/book.pdf
+      rag_manifest: books/modern-system-administration-jennifer-davis-ru/rag/manifest.yaml
+      rag_chunks: books/modern-system-administration-jennifer-davis-ru/rag/chunks/
+      rag_chunk_index: books/modern-system-administration-jennifer-davis-ru/rag/chunk-index.jsonl
+      rag_search_index: books/modern-system-administration-jennifer-davis-ru/rag/search-index/
+      reading_progress: books/modern-system-administration-jennifer-davis-ru/reading/progress.yaml
+      notes: books/modern-system-administration-jennifer-davis-ru/notes/
+      diagrams: books/modern-system-administration-jennifer-davis-ru/diagrams/

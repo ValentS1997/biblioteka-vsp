@@ -1,0 +1,13 @@
+schema: biblioteka-vsp/reading/v1
+book_id: modern-system-administration-jennifer-davis-ru
+
+status: "[Needs confirmation]"
+scope: full_book
+
+started: null
+completed: null
+current_page: null
+current_chapter: null
+
+notes:
+  - "Reading state was not supplied or changed by source/RAG onboarding."
