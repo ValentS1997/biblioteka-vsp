@@ -1,0 +1,44 @@
+schema: biblioteka-vsp/book/v1
+
+id: assembly-x86-64-zhukov-ru
+title: "Ассемблер и программная модель процессоров x86/64"
+
+edition:
+  number: "[Needs confirmation]"
+  language: ru
+  publisher: "[Needs confirmation]"
+  publication_year: "[Needs confirmation]"
+
+authors:
+  - "Андрей Владимирович Жуков"
+
+source:
+  canonical_path: "source/book.pdf"
+  format: pdf
+  original_name: "Ассемблер_и_программная_модель_процессоров_x86_64_Андрей_Жуков_2024.pdf"
+  expected_sha256: "f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2"
+  expected_size_bytes: 4845113
+  source_pdf_pages: "[Needs confirmation]"
+  text_layer: "[Needs confirmation]"
+  repository_access: private
+  storage: "Git LFS"
+  upload_status: "VAULT_LFS_POINTER_REUSED_PENDING_BINARY_VERIFICATION"
+  vault_branch: "source-vault/2026-10-13-found-books-14"
+  vault_path: "source-vault/objects/f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2.pdf"
+  lawful_access_attested_by_user: "[Needs confirmation]"
+  ownership_category: "[Needs confirmation]"
+  physical_copy: "[Needs confirmation]"
+  redistribution_permission: "[Needs confirmation]"
+
+rag:
+  scope: full_book
+  build_script: "../../../scripts/build_book_rag.py"
+  manifest: "rag/manifest.yaml"
+  text: "rag/text.md"
+  chunks: "rag/chunks.jsonl"
+  acceptance: "rag/acceptance.yaml"
+  status: "PENDING"
+
+reading:
+  status: "[Needs confirmation]"
+  note: "Existing reading status not modified during ingest."

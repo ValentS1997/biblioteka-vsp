@@ -465,3 +465,19 @@ books:
       reading_progress: books/computer-networks-olifer-7e-ru-2026/reading/progress.yaml
       notes: books/computer-networks-olifer-7e-ru-2026/notes/
       diagrams: books/computer-networks-olifer-7e-ru-2026/diagrams/
+
+  - id: assembly-x86-64-zhukov-ru
+    title: "Ассемблер и программная модель процессоров x86/64"
+    inventory_number: "0017"
+    authors:
+      - "Андрей Владимирович Жуков"
+    language: ru
+    paths:
+      metadata: books/assembly-x86-64-zhukov-ru/metadata.yaml
+      source: books/assembly-x86-64-zhukov-ru/source/book.pdf
+      rag_manifest: books/assembly-x86-64-zhukov-ru/rag/manifest.yaml
+      rag_chunks: books/assembly-x86-64-zhukov-ru/rag/chunks/
+      rag_chunk_index: books/assembly-x86-64-zhukov-ru/rag/chunk-index.jsonl
+      rag_search_index: books/assembly-x86-64-zhukov-ru/rag/search-index/
+      notes: books/assembly-x86-64-zhukov-ru/notes/
+      diagrams: books/assembly-x86-64-zhukov-ru/diagrams/
