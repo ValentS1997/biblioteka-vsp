@@ -156,9 +156,10 @@ books:
     direction: "Git / VCS"
   - number: 20
     inventory_number: "0020"
+    knowledge_id: "zabbix-7-monitoring-it-infrastructure-ru"
     title: "Zabbix 7: мониторинг ИТ-инфраструктуры"
     authors_raw: "Натан Лифтинг; Брайан ван Бэкел"
-    translators_editors_raw: "-оригинал на русском"
+    translators_editors_raw: "А. Ларин (перевод); Ф. Осьминин (научный редактор)"
     summary_short: "Мониторинг IT-инфраструктуры в Zabbix 7: узлы, метрики, триггеры, шаблоны и эксплуатация."
     direction: "Monitoring / Zabbix"
   - number: 21
