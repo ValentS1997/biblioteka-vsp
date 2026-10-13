@@ -1,0 +1,52 @@
+schema: biblioteka-vsp/book/v1
+
+id: assembly-x86-64-zhukov-ru
+title: "Ассемблер и программная модель процессоров x86/64"
+
+edition:
+  number: "[Needs confirmation]"
+  language: ru
+  publisher: "БХВ-Петербург"
+  publication_year: 2024
+  publication_pages: 400
+
+authors:
+  - "Андрей Владимирович Жуков"
+
+isbn:
+  russian_edition: "978-5-9775-1761-4"
+
+source:
+  canonical_path: "source/book.pdf"
+  format: pdf
+  original_name: "Ассемблер_и_программная_модель_процессоров_x86_64_Андрей_Жуков_2024.pdf"
+  expected_sha256: "f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2"
+  expected_size_bytes: 4845113
+  source_pdf_pages: 399
+  text_layer: "unclassified_extractable_pdf_text"
+  repository_access: private
+  storage: "Git LFS"
+  upload_status: "VERIFIED_GIT_LFS_AVAILABLE"
+  upload_commit: "12ecf4883d77a70e826daad9b607f9ce818b78d1"
+  vault_branch: "source-vault/2026-10-13-found-books-14"
+  vault_path: "source-vault/objects/f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2.pdf"
+  lawful_access_attested_by_user: "[Needs confirmation]"
+  ownership_category: "[Needs confirmation]"
+  physical_copy: "[Needs confirmation]"
+  redistribution_permission: "[Needs confirmation]"
+
+rag:
+  scope: full_book
+  build_script: "../../../scripts/build_book_rag.py"
+  manifest: "rag/manifest.yaml"
+  text: "rag/text.md"
+  chunks: "rag/chunks.jsonl"
+  acceptance: "rag/acceptance.yaml"
+  status: "READY_WITH_KNOWN_LIMITATIONS"
+  generated_commit: "2d9822d32239c67edf87a16c96570f8cbb579c86"
+  workflow_run_id: 38372097362
+  acceptance_status: "ACCEPTED"
+
+reading:
+  status: "[Needs confirmation]"
+  note: "Reading status and progress have not been changed by ingest."

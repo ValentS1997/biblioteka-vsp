@@ -136,6 +136,7 @@ books:
     direction: "Information Security"
   - number: 17
     inventory_number: "0017"
+    knowledge_id: "assembly-x86-64-zhukov-ru"
     title: "Ассемблер и программная модель процессоров x86/64"
     authors_raw: "Андрей Владимирович Жуков"
     translators_editors_raw: "не требуется, оригинал на русском"
