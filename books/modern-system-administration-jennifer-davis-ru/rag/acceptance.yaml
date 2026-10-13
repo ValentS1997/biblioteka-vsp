@@ -1,0 +1,85 @@
+schema: biblioteka-vsp/rag-ingestion-acceptance/v1
+book_id: modern-system-administration-jennifer-davis-ru
+status: ACCEPTED
+source_sha256: 06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790
+corpus_generation_id: 461185df1b3d52ca2effd70504ae83e8797dd25d211f74f40ac6b21748fd4269
+index_generation_id: c86249d7c289d0051b329a2654ced7780972316d850a5e8d7f4d5d3c6730c6fd
+checks:
+- id: source_hash_matches
+  status: PASS
+  evidence:
+    recorded: 06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790
+    actual: 06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790
+- id: manifest_book_id_matches
+  status: PASS
+  evidence: modern-system-administration-jennifer-davis-ru
+- id: manifest_source_matches
+  status: PASS
+  evidence:
+    path: source/book.pdf
+    format: pdf
+    sha256: 06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790
+    pdf_pages: 291
+- id: generation_metadata_present
+  status: PASS
+  evidence:
+    ingestion:
+      pipeline_version: '1.0'
+      normalization_policy_id: text-normalization-v2
+      chunking_policy_id: source-unit-char-window-v1
+      retrieval_policy_id: deterministic-lexical-shards-v2
+    generation:
+      corpus_generation_id: 461185df1b3d52ca2effd70504ae83e8797dd25d211f74f40ac6b21748fd4269
+      index_generation_id: c86249d7c289d0051b329a2654ced7780972316d850a5e8d7f4d5d3c6730c6fd
+- id: generation_ids_recompute
+  status: PASS
+  evidence:
+    corpus_expected: 461185df1b3d52ca2effd70504ae83e8797dd25d211f74f40ac6b21748fd4269
+    corpus_actual: 461185df1b3d52ca2effd70504ae83e8797dd25d211f74f40ac6b21748fd4269
+    index_expected: c86249d7c289d0051b329a2654ced7780972316d850a5e8d7f4d5d3c6730c6fd
+    index_actual: c86249d7c289d0051b329a2654ced7780972316d850a5e8d7f4d5d3c6730c6fd
+- id: chunks_addressable_unique
+  status: PASS
+  evidence: 296
+- id: chunk_uids_unique
+  status: PASS
+  evidence: 296
+- id: all_chunk_provenance_and_hashes_resolve
+  status: PASS
+  evidence: 296 chunks
+- id: source_unit_coverage_complete
+  status: PASS
+  evidence:
+    source_units: 291
+    units_with_chunks: 290
+    blank_units:
+    - 1
+- id: manifest_chunk_counts_match
+  status: PASS
+  evidence:
+    manifest: 296
+    actual: 296
+- id: search_index_generation_matches
+  status: PASS
+  evidence:
+    corpus_generation_id: 461185df1b3d52ca2effd70504ae83e8797dd25d211f74f40ac6b21748fd4269
+    index_generation_id: c86249d7c289d0051b329a2654ced7780972316d850a5e8d7f4d5d3c6730c6fd
+- id: deterministic_retrieval_samples_pass
+  status: PASS
+  evidence:
+  - chunk_id: modern-system-administration-jennifer-davis-ru:p0002:c01
+    ok: true
+    evidence: key 'admi' contains modern-system-administration-jennifer-davis-ru:p0002:c01
+      via adm.json
+  - chunk_id: modern-system-administration-jennifer-davis-ru:p0144:c01
+    ok: true
+    evidence: exact term 'последовательный' -> modern-system-administration-jennifer-davis-ru:p0144:c01
+      via пос.json
+  - chunk_id: modern-system-administration-jennifer-davis-ru:p0291:c01
+    ok: true
+    evidence: exact term 'изображенные' -> modern-system-administration-jennifer-davis-ru:p0291:c01
+      via изо.json
+- id: negative_exact_term_behavior_pass
+  status: PASS
+  evidence: synthetic shard absent
+failed_checks: []

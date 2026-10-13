@@ -1,0 +1,56 @@
+schema: biblioteka-vsp/book/v1
+
+id: modern-system-administration-jennifer-davis-ru
+title: "Современное системное администрирование"
+original_title: "Modern System Administration"
+
+edition:
+  language: ru
+  publisher: "БХВ-Петербург"
+  publication_year: 2024
+  publication_pages: 304
+  edition_number: "[Needs confirmation]"
+
+authors:
+  - "Дженнифер Дэвис"
+translators:
+  - "Владимир Мелькин"
+
+isbn:
+  russian_edition: "978-5-9775-1848-2"
+  original_edition: "978-1-492-05521-1"
+
+source:
+  canonical_path: "source/book.pdf"
+  format: pdf
+  expected_sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
+  expected_size_bytes: 50140170
+  source_pdf_pages: 291
+  text_layer: "unclassified_extractable_pdf_text"
+  repository_access: private
+  storage: "Git LFS"
+  upload_status: "VERIFIED_GIT_LFS_AVAILABLE"
+  upload_commit: "693b838707274d0bb39354efe6ce9dfae7184390"
+  original_vault_path: "source-vault/objects/06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790.pdf"
+  original_vault_branch: "source-vault/2026-10-13-found-books-14"
+  lawful_access_attested_by_user: "[Needs confirmation]"
+  ownership_category: "[Needs confirmation]"
+  redistribution_permission: "[Needs confirmation]"
+  license: "all rights reserved"
+
+rag:
+  scope: full_book
+  build_script: "../../../scripts/build_book_rag.py"
+  manifest: "rag/manifest.yaml"
+  text: "rag/text.md"
+  chunks: "rag/chunks.jsonl"
+  status: "READY_WITH_KNOWN_LIMITATIONS"
+  generated_commit: "e7ac4a414a2f91bc2ea7914ff2df6827211803b2"
+  workflow_run_id: 38371047038
+
+reading:
+  progress: "reading/progress.yaml"
+  journal: "reading/journal.md"
+  status: "[Needs confirmation]"
+  started: null
+  completed: null
