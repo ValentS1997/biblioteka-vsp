@@ -545,3 +545,23 @@ books:
       rag_search_index: books/herding-cats-j-hank-rainwater-ru/rag/search-index/
       notes: books/herding-cats-j-hank-rainwater-ru/notes/
       diagrams: books/herding-cats-j-hank-rainwater-ru/diagrams/
+
+  - id: professional-git-ru
+    title: "Профессиональная работа с Git"
+    inventory_number: "0019"
+    authors:
+      - "Aaron Critchley"
+      - "Aaron Skomra"
+      - "aavrug и др. / Goalkicker contributors"
+    language: ru
+    publication_year: 2024
+    isbn: "978-5-17-160274-1"
+    paths:
+      metadata: books/professional-git-ru/metadata.yaml
+      source: books/professional-git-ru/source/book.pdf
+      rag_manifest: books/professional-git-ru/rag/manifest.yaml
+      rag_chunks: books/professional-git-ru/rag/chunks/
+      rag_chunk_index: books/professional-git-ru/rag/chunk-index.jsonl
+      rag_search_index: books/professional-git-ru/rag/search-index/
+      notes: books/professional-git-ru/notes/
+      diagrams: books/professional-git-ru/diagrams/
