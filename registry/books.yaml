@@ -149,6 +149,7 @@ books:
     direction: "Python"
   - number: 19
     inventory_number: "0019"
+    knowledge_id: "professional-git-ru"
     title: "Профессиональная работа с Git"
     authors_raw: "Aaron Critchley; Aaron Skomra; aavrug и др. / Goalkicker contributors"
     translators_editors_raw: "ООО «Интеджер»"
