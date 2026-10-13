@@ -1,5 +1,5 @@
 schema: "biblioteka-vsp/registry/v2"
-updated: "2026-10-08"
+updated: "2026-10-13"
 
 source:
   file: "registry/reestr_knig_0046.xlsx"
@@ -246,6 +246,7 @@ books:
     direction: "ML Systems"
   - number: 32
     inventory_number: "0032"
+    knowledge_id: "bash-idioms-olbing-vossen-ru"
     title: "Идиомы bash. Мощные, гибкие и понятные сценарии командной оболочки"
     authors_raw: "Карл Олбинг; Джей Пи Фоссен"
     translators_editors_raw: "Л. Киселева"

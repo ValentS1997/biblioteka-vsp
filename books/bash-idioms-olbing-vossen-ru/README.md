@@ -4,7 +4,8 @@
 - Inventory: `0032`
 - Authors (registry): Карл Олбинг, Джей Пи Фоссен
 - Translator/editor (registry): Л. Киселева
-- Edition and bibliographic metadata: [Needs confirmation] from the actual PDF
+- Verified Russian edition: Питер, 2023, 208 printed pages, ISBN `978-5-4461-2307-0`
+- Original title from source: `bash Idioms`
 
 ## Canonical source
 
@@ -13,11 +14,18 @@
 - Expected bytes: `6229591`
 - Vault branch: `source-vault/2026-10-13-found-books-14`
 - The vault candidate is not the canonical source; the copied pointer at `source/book.pdf` is the canonical repository path
-- PDF content, edition and actual source bytes require verification in GitHub Actions
+- Real PDF verified by GitHub Actions after Git LFS checkout; SHA-256 matches the declared source
+- PDF pages: 209, including two initial pages without extractable text
 
 ## RAG / readiness
 
-Full-book RAG is built remotely on the ingest branch. The build must pass strict ingestion acceptance v1.0 and book readiness v1.3 before PR.
+Full-book RAG built in GitHub Actions run `38394114002` (commit `af1c0cf00a1f40708228f4a3a07f62a20277c61f`).
+
+- Ingestion acceptance: `ACCEPTED` (strict v1.0)
+- PDF source units: 209 (207 with text, 2 without text)
+- Addressable chunks: 210
+- Retrieval shards: 2157
+- Book readiness v1.3 and CI must pass before PR.
 
 ## Reading
 
