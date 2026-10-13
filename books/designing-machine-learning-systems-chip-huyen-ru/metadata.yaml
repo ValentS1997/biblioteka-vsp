@@ -1,0 +1,49 @@
+schema: biblioteka-vsp/book/v1
+
+id: designing-machine-learning-systems-chip-huyen-ru
+title: "Проектирование систем машинного обучения"
+
+edition:
+  number: "[Needs confirmation]"
+  language: ru
+  publisher: "[Needs confirmation]"
+  publication_year: "[Needs confirmation]"
+  publication_pages: "[Needs confirmation]"
+
+authors:
+  - "Чип Хьюен"
+
+isbn:
+  russian_edition: "[Needs confirmation]"
+
+source:
+  canonical_path: "source/book.pdf"
+  format: pdf
+  original_name: "Khyuen_Ch_Proektirovanie_sistem_mashinnogo_obuchenia_2023.pdf"
+  expected_sha256: "0bcacadb4e1dc2235cb58f975111e1633527217127c5871edb894fe2b8f4c80c"
+  expected_size_bytes: 33138426
+  source_pdf_pages: "[Needs confirmation]"
+  text_layer: "[Needs confirmation]"
+  repository_access: private
+  storage: "Git LFS"
+  upload_status: "PENDING_RUNTIME_VERIFICATION"
+  vault_branch: "source-vault/2026-10-13-found-books-14"
+  vault_path: "source-vault/objects/0bcacadb4e1dc2235cb58f975111e1633527217127c5871edb894fe2b8f4c80c.pdf"
+  lawful_access_attested_by_user: "[Needs confirmation]"
+  ownership_category: "[Needs confirmation]"
+  physical_copy: "[Needs confirmation]"
+  redistribution_permission: "[Needs confirmation]"
+
+rag:
+  scope: full_book
+  build_script: "../../../scripts/build_book_rag.py"
+  manifest: "rag/manifest.yaml"
+  text: "rag/text.md"
+  chunks: "rag/chunks.jsonl"
+  acceptance: "rag/acceptance.yaml"
+  status: "[Needs confirmation]"
+
+reading:
+  progress: "reading/progress.yaml"
+  status: planned
+  note: "The existing reading/progress.yaml remains unchanged by onboarding."
