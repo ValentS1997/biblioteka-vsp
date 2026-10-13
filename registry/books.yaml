@@ -309,6 +309,7 @@ books:
     direction: "Kanban / Management"
   - number: 39
     inventory_number: "0039"
+    knowledge_id: "linux-networks-tsilyurik-ru-2024"
     title: "Сети Linux. Модели и приложения"
     authors_raw: "Олег Иванович Цилюрик"
     translators_editors_raw: "не требуется, оригинал на русском"
