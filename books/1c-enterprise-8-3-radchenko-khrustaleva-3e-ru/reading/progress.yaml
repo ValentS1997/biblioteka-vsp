@@ -1,0 +1,10 @@
+schema: biblioteka-vsp/reading/v1
+book_id: 1c-enterprise-8-3-radchenko-khrustaleva-3e-ru
+status: "[Needs confirmation]"
+scope: full_book
+started: null
+completed: null
+current_page: null
+current_chapter: null
+notes:
+  - "No reading-status transition is authorized by ingest request."

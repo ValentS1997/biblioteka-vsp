@@ -584,3 +584,22 @@ books:
       rag_search_index: books/zabbix-7-monitoring-it-infrastructure-ru/rag/search-index/
       notes: books/zabbix-7-monitoring-it-infrastructure-ru/notes/
       diagrams: books/zabbix-7-monitoring-it-infrastructure-ru/diagrams/
+
+  - id: 1c-enterprise-8-3-radchenko-khrustaleva-3e-ru
+    inventory_number: "0030"
+    title: "1С:Предприятие 8.3. Практическое пособие разработчика. Примеры и типовые приемы. Издание 3"
+    authors:
+      - "Максим Григорьевич Радченко"
+      - "Елена Юрьевна Хрусталева"
+    language: ru
+    edition: 3
+    paths:
+      metadata: books/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru/metadata.yaml
+      source: books/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru/source/book.pdf
+      rag_manifest: books/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru/rag/manifest.yaml
+      rag_chunks: books/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru/rag/chunks/
+      rag_chunk_index: books/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru/rag/chunk-index.jsonl
+      rag_search_index: books/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru/rag/search-index/
+      reading_progress: books/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru/reading/progress.yaml
+      notes: books/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru/notes/
+      diagrams: books/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru/diagrams/
