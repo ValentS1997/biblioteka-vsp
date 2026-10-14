@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="679" viewBox="0 0 1180 679">
+<rect width="1180" height="679" fill="#f4f8fb"/>
+<rect width="1180" height="10" fill="#246885"/>
+<text x="32" y="54" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="28" fill="#183f53">Глава 11 · Deployment и управление версиями</text>
+<text x="32" y="94" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#456b7e">Stateless приложения: репликация, обновления, откаты</text>
+<text x="32" y="125" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#5a8090">RAG-only · PDF 384–419 · Inventory 0033</text>
+<rect x="32" y="150" width="368" height="194" rx="11" fill="#fff" stroke="#c5d8e1"/>
+<rect x="32" y="150" width="368" height="8" fill="#29768c"/>
+<text x="50" y="187" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287790">1</text>
+<text x="50" y="235" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#184253">Deployment</text>
+<text x="50" y="279" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">Реплики через ReplicaSet</text>
+<text x="50" y="315" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">Шаблон Pod и selector</text>
+<rect x="422" y="150" width="368" height="194" rx="11" fill="#fff" stroke="#c5d8e1"/>
+<rect x="422" y="150" width="368" height="8" fill="#29768c"/>
+<text x="440" y="187" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287790">2</text>
+<text x="440" y="235" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#184253">Service</text>
+<text x="440" y="279" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">Готовые Pod как endpoints</text>
+<text x="440" y="315" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">LoadBalancer / ClusterIP</text>
+<rect x="812" y="150" width="368" height="194" rx="11" fill="#fff" stroke="#c5d8e1"/>
+<rect x="812" y="150" width="368" height="8" fill="#29768c"/>
+<text x="830" y="187" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287790">3</text>
+<text x="830" y="235" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#184253">Readiness</text>
+<text x="830" y="279" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">Running не значит Ready</text>
+<text x="830" y="315" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">/ready, failureThreshold 2</text>
+<rect x="32" y="364" width="368" height="194" rx="11" fill="#fff" stroke="#c5d8e1"/>
+<rect x="32" y="364" width="368" height="8" fill="#29768c"/>
+<text x="50" y="401" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287790">4</text>
+<text x="50" y="449" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#184253">RollingUpdate</text>
+<text x="50" y="493" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">maxSurge и maxUnavailable</text>
+<text x="50" y="529" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">Изменение образа и ревизии</text>
+<rect x="422" y="364" width="368" height="194" rx="11" fill="#fff" stroke="#c5d8e1"/>
+<rect x="422" y="364" width="368" height="8" fill="#29768c"/>
+<text x="440" y="401" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287790">5</text>
+<text x="440" y="449" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#184253">Rollback</text>
+<text x="440" y="493" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">rollout status / history</text>
+<text x="440" y="529" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">undo, Git revert</text>
+<rect x="812" y="364" width="368" height="194" rx="11" fill="#fff" stroke="#c5d8e1"/>
+<rect x="812" y="364" width="368" height="8" fill="#29768c"/>
+<text x="830" y="401" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287790">6</text>
+<text x="830" y="449" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#184253">Canary</text>
+<text x="830" y="493" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">Stable и Canary Deploy</text>
+<text x="830" y="529" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">Долю трафика нужно проверить</text>
+<text x="32" y="655" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#587888">Реальный rollout/traffic share не проверен. Действия kubectl могут нарушить доступность.</text>
+</svg>

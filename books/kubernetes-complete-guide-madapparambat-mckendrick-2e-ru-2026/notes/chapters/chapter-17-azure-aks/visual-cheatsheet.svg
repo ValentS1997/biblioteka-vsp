@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1194" height="694" viewBox="0 0 1194 694">
+<rect width="1194" height="694" fill="#f4f8fb"/>
+<rect width="1194" height="10" fill="#276f87"/>
+<text x="32" y="55" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#164058">Глава 17 · Microsoft Azure и AKS</text>
+<text x="32" y="92" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#466879">Ресурсная группа, кластер, Kubernetes и наблюдаемость</text>
+<text x="32" y="125" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#5a798b">RAG-only · PDF 561–586 · inventory 0033</text>
+<rect x="32" y="153" width="370" height="194" rx="12" fill="#fff" stroke="#c6d9e3"/>
+<rect x="32" y="153" width="370" height="8" fill="#2b7890"/>
+<text x="48" y="189" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#2b7890">1</text>
+<text x="48" y="236" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173f52">Azure &amp; AKS</text>
+<text x="48" y="282" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3d6070">Управляемый Kubernetes</text>
+<text x="48" y="325" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3d6070">Subscription и биллинг</text>
+<rect x="425" y="153" width="370" height="194" rx="12" fill="#fff" stroke="#c6d9e3"/>
+<rect x="425" y="153" width="370" height="8" fill="#2b7890"/>
+<text x="441" y="189" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#2b7890">2</text>
+<text x="441" y="236" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173f52">Azure CLI</text>
+<text x="441" y="282" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3d6070">az login / Cloud Shell</text>
+<text x="441" y="325" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3d6070">Проверить подписку</text>
+<rect x="818" y="153" width="370" height="194" rx="12" fill="#fff" stroke="#c6d9e3"/>
+<rect x="818" y="153" width="370" height="8" fill="#2b7890"/>
+<text x="834" y="189" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#2b7890">3</text>
+<text x="834" y="236" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173f52">AKS create</text>
+<text x="834" y="282" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3d6070">Resource Group: eastus</text>
+<text x="834" y="325" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3d6070">2 узла, monitoring</text>
+<rect x="32" y="373" width="370" height="194" rx="12" fill="#fff" stroke="#c6d9e3"/>
+<rect x="32" y="373" width="370" height="8" fill="#2b7890"/>
+<text x="48" y="409" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#2b7890">4</text>
+<text x="48" y="456" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173f52">Guestbook</text>
+<text x="48" y="502" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3d6070">PHP + Redis</text>
+<text x="48" y="545" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3d6070">Публичный HTTP frontend</text>
+<rect x="425" y="373" width="370" height="194" rx="12" fill="#fff" stroke="#c6d9e3"/>
+<rect x="425" y="373" width="370" height="8" fill="#2b7890"/>
+<text x="441" y="409" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#2b7890">5</text>
+<text x="441" y="456" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173f52">Portal</text>
+<text x="441" y="502" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3d6070">Logs, Workloads, Insights</text>
+<text x="441" y="545" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3d6070">Run command может менять кластер</text>
+<rect x="818" y="373" width="370" height="194" rx="12" fill="#fff" stroke="#c6d9e3"/>
+<rect x="818" y="373" width="370" height="8" fill="#2b7890"/>
+<text x="834" y="409" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#2b7890">6</text>
+<text x="834" y="456" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173f52">Teardown</text>
+<text x="834" y="502" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3d6070">az aks delete / group delete</text>
+<text x="834" y="545" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3d6070">Разные области удаления</text>
+<text x="32" y="671" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#597d8b">Данные и цены относятся к книге. Перед удалением всей Resource Group нужен аудит.</text>
+</svg>

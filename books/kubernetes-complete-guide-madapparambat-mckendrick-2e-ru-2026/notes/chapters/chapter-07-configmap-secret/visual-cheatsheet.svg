@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1150" height="650" viewBox="0 0 1150 650">
+<rect width="1150" height="650" fill="#f5f8fb"/>
+<rect width="1150" height="10" fill="#226884"/>
+<text x="36" y="60" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="32" fill="#183e50">Глава 7 · ConfigMap и Secret</text>
+<text x="36" y="99" font-family="DejaVu Sans, sans-serif" font-size="18" fill="#4d6b7a">Конфигурация приложения вне контейнерного образа</text>
+<text x="36" y="126" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#5b8190">RAG-only · PDF 248–280 · inventory 0033</text>
+<rect x="36" y="148" width="343" height="187" rx="12" fill="#ffffff" stroke="#cadae5"/>
+<rect x="36" y="148" width="343" height="8" fill="#26738e"/>
+<text x="56" y="186" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#26738e">1</text>
+<text x="56" y="228" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700" fill="#1a3f52">ConfigMap</text>
+<text x="56" y="265" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#3d5c6c">Несекретные параметры</text>
+<text x="56" y="297" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3d5c6c">data / --from-file</text>
+<rect x="405" y="148" width="343" height="187" rx="12" fill="#ffffff" stroke="#cadae5"/>
+<rect x="405" y="148" width="343" height="8" fill="#26738e"/>
+<text x="425" y="186" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#26738e">2</text>
+<text x="425" y="228" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700" fill="#1a3f52">Secret</text>
+<text x="425" y="265" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#3d5c6c">Чувствительные значения</text>
+<text x="425" y="297" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3d5c6c">Base64 не шифрование</text>
+<rect x="774" y="148" width="343" height="187" rx="12" fill="#ffffff" stroke="#cadae5"/>
+<rect x="774" y="148" width="343" height="8" fill="#26738e"/>
+<text x="794" y="186" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#26738e">3</text>
+<text x="794" y="228" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700" fill="#1a3f52">Env / EnvFrom</text>
+<text x="794" y="265" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#3d5c6c">Один ключ или все</text>
+<text x="794" y="297" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3d5c6c">Переменные контейнера</text>
+<rect x="36" y="358" width="343" height="187" rx="12" fill="#ffffff" stroke="#cadae5"/>
+<rect x="36" y="358" width="343" height="8" fill="#26738e"/>
+<text x="56" y="396" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#26738e">4</text>
+<text x="56" y="438" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700" fill="#1a3f52">Volumes</text>
+<text x="56" y="475" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#3d5c6c">Ключи как файлы</text>
+<text x="56" y="507" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3d5c6c">volumeMounts + volumes</text>
+<rect x="405" y="358" width="343" height="187" rx="12" fill="#ffffff" stroke="#cadae5"/>
+<rect x="405" y="358" width="343" height="8" fill="#26738e"/>
+<text x="425" y="396" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#26738e">5</text>
+<text x="425" y="438" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700" fill="#1a3f52">Security</text>
+<text x="425" y="475" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#3d5c6c">RBAC, KMS, ротация</text>
+<text x="425" y="507" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3d5c6c">Аудит, внешнее хранилище</text>
+<rect x="774" y="358" width="343" height="187" rx="12" fill="#ffffff" stroke="#cadae5"/>
+<rect x="774" y="358" width="343" height="8" fill="#26738e"/>
+<text x="794" y="396" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#26738e">6</text>
+<text x="794" y="438" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700" fill="#1a3f52">FailedMount</text>
+<text x="794" y="475" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#3d5c6c">Отсутствует ConfigMap</text>
+<text x="794" y="507" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3d5c6c">Pod не начинает работу</text>
+<text x="36" y="607" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#5d788a">Не выводить реальные секреты в терминал, Git или журналы CI.</text>
+</svg>

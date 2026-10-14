@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1190" height="955" viewBox="0 0 1190 955">
+<rect width="1190" height="955" fill="#f4f8fa"/>
+<rect width="1190" height="10" fill="#226d85"/>
+<text x="32" y="55" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#163e51">Глава 19 · Планирование Pod в Kubernetes</text>
+<text x="32" y="93" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#446777">Подробно: nodeName, nodeSelector, affinity, taints, kube-scheduler</text>
+<text x="32" y="125" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#5a7787">RAG-only · PDF 641–667 · inventory 0033</text>
+<rect x="32" y="155" width="369" height="218" rx="11" fill="#ffffff" stroke="#ccdbe4"/>
+<rect x="32" y="155" width="369" height="8" fill="#287d96"/>
+<text x="48" y="191" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247c93">1 · p642–644</text>
+<text x="48" y="236" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#143d50">Scheduling pipeline</text>
+<text x="48" y="281" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3a6073">Filter eligible nodes</text>
+<text x="48" y="323" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#476d7c">Score and bind</text>
+<rect x="426" y="155" width="369" height="218" rx="11" fill="#ffffff" stroke="#ccdbe4"/>
+<rect x="426" y="155" width="369" height="8" fill="#287d96"/>
+<text x="442" y="191" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247c93">2 · p644–646</text>
+<text x="442" y="236" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#143d50">Lab baseline</text>
+<text x="442" y="281" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3a6073">3-node minikube</text>
+<text x="442" y="323" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#476d7c">v1.30.0 in initial example</text>
+<rect x="820" y="155" width="369" height="218" rx="11" fill="#ffffff" stroke="#ccdbe4"/>
+<rect x="820" y="155" width="369" height="8" fill="#287d96"/>
+<text x="836" y="191" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247c93">3 · p645–648</text>
+<text x="836" y="236" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#143d50">nodeName</text>
+<text x="836" y="281" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3a6073">All five nginx to m02</text>
+<text x="836" y="323" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#476d7c">Bypasses scheduler</text>
+<rect x="32" y="394" width="369" height="218" rx="11" fill="#ffffff" stroke="#ccdbe4"/>
+<rect x="32" y="394" width="369" height="8" fill="#287d96"/>
+<text x="48" y="430" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247c93">4 · p648–651</text>
+<text x="48" y="475" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#143d50">nodeSelector</text>
+<text x="48" y="520" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3a6073">Two superfast nodes</text>
+<text x="48" y="562" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#476d7c">Missing slow → Pending</text>
+<rect x="426" y="394" width="369" height="218" rx="11" fill="#ffffff" stroke="#ccdbe4"/>
+<rect x="426" y="394" width="369" height="8" fill="#287d96"/>
+<text x="442" y="430" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247c93">5 · p652–656</text>
+<text x="442" y="475" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#143d50">nodeAffinity</text>
+<text x="442" y="520" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3a6073">Hard NotIn extremelyslow</text>
+<text x="442" y="562" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#476d7c">Soft In fast / superfast</text>
+<rect x="820" y="394" width="369" height="218" rx="11" fill="#ffffff" stroke="#ccdbe4"/>
+<rect x="820" y="394" width="369" height="8" fill="#287d96"/>
+<text x="836" y="430" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247c93">6 · p656–659</text>
+<text x="836" y="475" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#143d50">Taint effects</text>
+<text x="836" y="520" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3a6073">NoSchedule / PreferNoSchedule</text>
+<text x="836" y="562" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#476d7c">NoExecute evicts Pod</text>
+<rect x="32" y="633" width="369" height="218" rx="11" fill="#ffffff" stroke="#ccdbe4"/>
+<rect x="32" y="633" width="369" height="8" fill="#287d96"/>
+<text x="48" y="669" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247c93">7 · p660–662</text>
+<text x="48" y="714" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#143d50">Toleration timeout</text>
+<text x="48" y="759" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3a6073">NoExecute 60 seconds</text>
+<text x="48" y="801" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#476d7c">NoSchedule avoids churn</text>
+<rect x="426" y="633" width="369" height="218" rx="11" fill="#ffffff" stroke="#ccdbe4"/>
+<rect x="426" y="633" width="369" height="8" fill="#287d96"/>
+<text x="442" y="669" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247c93">8 · p663</text>
+<text x="442" y="714" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#143d50">Static Pods</text>
+<text x="442" y="759" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3a6073">Kubelet manages files</text>
+<text x="442" y="801" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#476d7c">API mirror Pods</text>
+<rect x="820" y="633" width="369" height="218" rx="11" fill="#ffffff" stroke="#ccdbe4"/>
+<rect x="820" y="633" width="369" height="8" fill="#287d96"/>
+<text x="836" y="669" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247c93">9 · p664–667</text>
+<text x="836" y="714" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#143d50">Scheduler tuning</text>
+<text x="836" y="759" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3a6073">Profiles/NodeRestriction</text>
+<text x="836" y="801" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#476d7c">Config example uncertain</text>
+<text x="32" y="933" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#577888">Не исполнялось. Taint NoExecute может выселять рабочие Pod; rollback требует проверки.</text>
+</svg>

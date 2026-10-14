@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="947" viewBox="0 0 1200 947">
+<rect width="1200" height="947" fill="#f5f8fb"/>
+<rect width="1200" height="12" fill="#226987"/>
+<text x="36" y="57" fill="#163447" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700">Глава 3 · Полная визуальная памятка</text>
+<text x="36" y="95" fill="#486276" font-family="DejaVu Sans, sans-serif" font-size="17">Разработка, диагностика, ограничения и production-варианты</text>
+<text x="36" y="125" fill="#5d7584" font-family="DejaVu Sans, sans-serif" font-size="15">RAG-only · Inventory 0033 · PDF 115–142</text>
+<rect x="36" y="160" width="364" height="224" rx="13" fill="#ffffff" stroke="#cddbe4" stroke-width="1.4"/>
+<rect x="36" y="160" width="364" height="8" rx="4" fill="#226987"/>
+<text x="54" y="195" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700" fill="#226987">01</text>
+<text x="54" y="229" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#1d3b4d">Требования</text>
+<text x="54" y="266" font-size="15" fill="#3a5a6a" font-family="DejaVu Sans, sans-serif">kubectl + Интернет</text>
+<text x="54" y="294" font-size="15" fill="#3a5a6a" font-family="DejaVu Sans, sans-serif">≥2 CPU / 2 ГБ / 20 ГБ</text>
+<text x="54" y="322" font-size="15" fill="#3a5a6a" font-family="DejaVu Sans, sans-serif">PDF 116</text>
+<rect x="418" y="160" width="364" height="224" rx="13" fill="#ffffff" stroke="#cddbe4" stroke-width="1.4"/>
+<rect x="418" y="160" width="364" height="8" rx="4" fill="#2a7a74"/>
+<text x="436" y="195" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700" fill="#2a7a74">02</text>
+<text x="436" y="229" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#1d3b4d">minikube drivers</text>
+<text x="436" y="266" font-size="15" fill="#3a5a6a" font-family="DejaVu Sans, sans-serif">Docker, Podman, VM</text>
+<text x="436" y="294" font-size="15" fill="#3a5a6a" font-family="DejaVu Sans, sans-serif">config set / config view</text>
+<text x="436" y="322" font-size="15" fill="#3a5a6a" font-family="DejaVu Sans, sans-serif">PDF 117–120</text>
+<rect x="800" y="160" width="364" height="224" rx="13" fill="#ffffff" stroke="#cddbe4" stroke-width="1.4"/>
+<rect x="800" y="160" width="364" height="8" rx="4" fill="#526d91"/>
+<text x="818" y="195" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700" fill="#526d91">03</text>
+<text x="818" y="229" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#1d3b4d">Создание minikube</text>
+<text x="818" y="266" font-size="15" fill="#3a5a6a" font-family="DejaVu Sans, sans-serif">start, --driver, --nodes</text>
+<text x="818" y="294" font-size="15" fill="#3a5a6a" font-family="DejaVu Sans, sans-serif">--ha=true, --profile</text>
+<text x="818" y="322" font-size="15" fill="#3a5a6a" font-family="DejaVu Sans, sans-serif">PDF 120–129</text>
+<rect x="36" y="402" width="364" height="224" rx="13" fill="#ffffff" stroke="#cddbe4" stroke-width="1.4"/>
+<rect x="36" y="402" width="364" height="8" rx="4" fill="#226987"/>
+<text x="54" y="437" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700" fill="#226987">04</text>
+<text x="54" y="471" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#1d3b4d">Проверка кластера</text>
+<text x="54" y="508" font-size="15" fill="#3a5a6a" font-family="DejaVu Sans, sans-serif">minikube status, kubectl</text>
+<text x="54" y="536" font-size="15" fill="#3a5a6a" font-family="DejaVu Sans, sans-serif">current-context, get nodes</text>
+<text x="54" y="564" font-size="15" fill="#3a5a6a" font-family="DejaVu Sans, sans-serif">PDF 122–125</text>
+<rect x="418" y="402" width="364" height="224" rx="13" fill="#ffffff" stroke="#cddbe4" stroke-width="1.4"/>
+<rect x="418" y="402" width="364" height="8" rx="4" fill="#2a7a74"/>
+<text x="436" y="437" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700" fill="#2a7a74">05</text>
+<text x="436" y="471" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#1d3b4d">Lifecycle minikube</text>
+<text x="436" y="508" font-size="15" fill="#3a5a6a" font-family="DejaVu Sans, sans-serif">stop ↔ start</text>
+<text x="436" y="536" font-size="15" fill="#3a5a6a" font-family="DejaVu Sans, sans-serif">pause ↔ unpause</text>
+<text x="436" y="564" font-size="15" fill="#3a5a6a" font-family="DejaVu Sans, sans-serif">delete = потеря состояния</text>
+<rect x="800" y="402" width="364" height="224" rx="13" fill="#ffffff" stroke="#cddbe4" stroke-width="1.4"/>
+<rect x="800" y="402" width="364" height="8" rx="4" fill="#526d91"/>
+<text x="818" y="437" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700" fill="#526d91">06</text>
+<text x="818" y="471" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#1d3b4d">kind local nodes</text>
+<text x="818" y="508" font-size="15" fill="#3a5a6a" font-family="DejaVu Sans, sans-serif">create cluster, YAML</text>
+<text x="818" y="536" font-size="15" fill="#3a5a6a" font-family="DejaVu Sans, sans-serif">1 control-plane + 3 workers</text>
+<text x="818" y="564" font-size="15" fill="#3a5a6a" font-family="DejaVu Sans, sans-serif">PDF 129–133</text>
+<rect x="36" y="644" width="364" height="224" rx="13" fill="#ffffff" stroke="#cddbe4" stroke-width="1.4"/>
+<rect x="36" y="644" width="364" height="8" rx="4" fill="#226987"/>
+<text x="54" y="679" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700" fill="#226987">07</text>
+<text x="54" y="713" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#1d3b4d">Диагностика kind</text>
+<text x="54" y="750" font-size="15" fill="#3a5a6a" font-family="DejaVu Sans, sans-serif">get nodes, cluster-info</text>
+<text x="54" y="778" font-size="15" fill="#3a5a6a" font-family="DejaVu Sans, sans-serif">get --raw readyz</text>
+<text x="54" y="806" font-size="15" fill="#3a5a6a" font-family="DejaVu Sans, sans-serif">PDF 133–134</text>
+<rect x="418" y="644" width="364" height="224" rx="13" fill="#ffffff" stroke="#cddbe4" stroke-width="1.4"/>
+<rect x="418" y="644" width="364" height="8" rx="4" fill="#2a7a74"/>
+<text x="436" y="679" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700" fill="#2a7a74">08</text>
+<text x="436" y="713" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#1d3b4d">Другие лаборатории</text>
+<text x="436" y="750" font-size="15" fill="#3a5a6a" font-family="DejaVu Sans, sans-serif">Killercoda: ephemeral</text>
+<text x="436" y="778" font-size="15" fill="#3a5a6a" font-family="DejaVu Sans, sans-serif">без локальной настройки</text>
+<text x="436" y="806" font-size="15" fill="#3a5a6a" font-family="DejaVu Sans, sans-serif">PDF 135</text>
+<rect x="800" y="644" width="364" height="224" rx="13" fill="#ffffff" stroke="#cddbe4" stroke-width="1.4"/>
+<rect x="800" y="644" width="364" height="8" rx="4" fill="#526d91"/>
+<text x="818" y="679" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700" fill="#526d91">09</text>
+<text x="818" y="713" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#1d3b4d">Production пути</text>
+<text x="818" y="750" font-size="15" fill="#3a5a6a" font-family="DejaVu Sans, sans-serif">GKE / AKS / EKS</text>
+<text x="818" y="778" font-size="15" fill="#3a5a6a" font-family="DejaVu Sans, sans-serif">on-prem: kubeadm / IaC</text>
+<text x="818" y="806" font-size="15" fill="#3a5a6a" font-family="DejaVu Sans, sans-serif">PDF 136–141</text>
+<text x="36" y="915" fill="#5b7584" font-family="DejaVu Sans, sans-serif" font-size="14">Удаление кластеров разрушает состояние · команды запуска только для разрешённой лаборатории</text>
+</svg>

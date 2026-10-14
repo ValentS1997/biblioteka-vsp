@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1190" height="936" viewBox="0 0 1190 936">
+<rect width="1190" height="936" fill="#f4f8fb"/>
+<rect width="1190" height="10" fill="#276d86"/>
+<text x="32" y="55" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#193f53">Глава 13 · DaemonSet: Pod на каждом узле</text>
+<text x="32" y="93" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#4a6b7c">Подробная карта: scheduling, Fluentd, rollout, safety</text>
+<text x="32" y="121" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#597b8a">RAG-only · PDF 457–473 · inventory 0033</text>
+<rect x="32" y="144" width="369" height="218" rx="12" fill="white" stroke="#c6d7e0"/>
+<rect x="32" y="144" width="369" height="8" fill="#287c90"/>
+<text x="48" y="180" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287c90">1 · p457–460</text>
+<text x="48" y="223" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1a4053">Что такое DaemonSet</text>
+<text x="48" y="264" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">Один Pod на подходящий узел</text>
+<text x="48" y="298" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">Новые nodes → новые Pod</text>
+<rect x="426" y="144" width="369" height="218" rx="12" fill="white" stroke="#c6d7e0"/>
+<rect x="426" y="144" width="369" height="8" fill="#287c90"/>
+<text x="442" y="180" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287c90">2 · p459–467</text>
+<text x="442" y="223" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1a4053">Планирование</text>
+<text x="442" y="264" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">nodeSelector / affinity</text>
+<text x="442" y="298" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">tolerations и PriorityClass</text>
+<rect x="820" y="144" width="369" height="218" rx="12" fill="white" stroke="#c6d7e0"/>
+<rect x="820" y="144" width="369" height="8" fill="#287c90"/>
+<text x="836" y="180" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287c90">3 · p460–462</text>
+<text x="836" y="223" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1a4053">Наблюдение</text>
+<text x="836" y="264" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">Calico и kube-proxy</text>
+<text x="836" y="298" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">get ds -A, get po -o wide</text>
+<rect x="32" y="382" width="369" height="218" rx="12" fill="white" stroke="#c6d7e0"/>
+<rect x="32" y="382" width="369" height="8" fill="#287c90"/>
+<text x="48" y="418" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287c90">4 · p462–465</text>
+<text x="48" y="461" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1a4053">Fluentd DaemonSet</text>
+<text x="48" y="502" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">hostPath: /var/log</text>
+<text x="48" y="536" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">requests/limits, env</text>
+<rect x="426" y="382" width="369" height="218" rx="12" fill="white" stroke="#c6d7e0"/>
+<rect x="426" y="382" width="369" height="8" fill="#287c90"/>
+<text x="442" y="418" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287c90">5 · p463–469</text>
+<text x="442" y="461" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1a4053">Source mismatch</text>
+<text x="442" y="502" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">YAML: kube-system</text>
+<text x="442" y="536" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">Команды: logging</text>
+<rect x="820" y="382" width="369" height="218" rx="12" fill="white" stroke="#c6d7e0"/>
+<rect x="820" y="382" width="369" height="8" fill="#287c90"/>
+<text x="836" y="418" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287c90">6 · p466–467</text>
+<text x="836" y="461" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1a4053">PriorityClass</text>
+<text x="836" y="502" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">fluentd-priority: 100000</text>
+<text x="836" y="536" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">Риски конкуренции за ресурсы</text>
+<rect x="32" y="620" width="369" height="218" rx="12" fill="white" stroke="#c6d7e0"/>
+<rect x="32" y="620" width="369" height="8" fill="#287c90"/>
+<text x="48" y="656" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287c90">7 · p467–468</text>
+<text x="48" y="699" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1a4053">Обновления</text>
+<text x="48" y="740" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">RollingUpdate / OnDelete</text>
+<text x="48" y="774" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">v4.7 → v4.7.5</text>
+<rect x="426" y="620" width="369" height="218" rx="12" fill="white" stroke="#c6d7e0"/>
+<rect x="426" y="620" width="369" height="8" fill="#287c90"/>
+<text x="442" y="656" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287c90">8 · p469</text>
+<text x="442" y="699" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1a4053">Rollback / удаление</text>
+<text x="442" y="740" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">rollout undo, orphan</text>
+<text x="442" y="774" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">Может нарушить логирование</text>
+<rect x="820" y="620" width="369" height="218" rx="12" fill="white" stroke="#c6d7e0"/>
+<rect x="820" y="620" width="369" height="8" fill="#287c90"/>
+<text x="836" y="656" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287c90">9 · p470–473</text>
+<text x="836" y="699" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1a4053">Сценарии и альтернативы</text>
+<text x="836" y="740" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">CNI, logs, metrics, storage</text>
+<text x="836" y="774" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">sidecar / CronJob / systemd</text>
+<text x="32" y="911" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#597888">Один на подходящий узел · YAML namespace конфликтует с командами · live cluster не проверялся.</text>
+</svg>
