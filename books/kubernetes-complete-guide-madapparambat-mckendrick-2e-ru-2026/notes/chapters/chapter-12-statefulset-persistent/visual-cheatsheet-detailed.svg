@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1170" height="930" viewBox="0 0 1170 930">
+<rect width="1170" height="930" fill="#f3f8fb"/>
+<rect width="1170" height="9" fill="#236b84"/>
+<text x="32" y="52" font-size="29" font-weight="700" font-family="DejaVu Sans, sans-serif" fill="#193f52">Глава 12 · StatefulSet и сохранение состояния</text>
+<text x="32" y="91" font-size="16" font-family="DejaVu Sans, sans-serif" fill="#496b7c">Подробная карта Pod, PVC, DNS, rollout и retention</text>
+<text x="32" y="122" font-size="14" font-family="DejaVu Sans, sans-serif" fill="#608294">RAG-only · PDF 420–456 · inventory 0033</text>
+<rect x="32" y="146" width="362" height="216" rx="12" fill="#ffffff" stroke="#c7d9e2"/>
+<rect x="32" y="146" width="362" height="8" fill="#23748d"/>
+<text x="49" y="182" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#23748d">1 · p420–424</text>
+<text x="49" y="223" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1c4055">Stateful vs stateless</text>
+<text x="49" y="266" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6070">Данные сохраняются в PV</text>
+<text x="49" y="301" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6070">Pod без постоянного IP</text>
+<rect x="416" y="146" width="362" height="216" rx="12" fill="#ffffff" stroke="#c7d9e2"/>
+<rect x="416" y="146" width="362" height="8" fill="#23748d"/>
+<text x="433" y="182" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#23748d">2 · p424–426</text>
+<text x="433" y="223" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1c4055">Stable Pod identity</text>
+<text x="433" y="266" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6070">mysql-stateful-0, -1, -2</text>
+<text x="433" y="301" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6070">Headless DNS / serviceName</text>
+<rect x="800" y="146" width="362" height="216" rx="12" fill="#ffffff" stroke="#c7d9e2"/>
+<rect x="800" y="146" width="362" height="8" fill="#23748d"/>
+<text x="817" y="182" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#23748d">3 · p428–434</text>
+<text x="817" y="223" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1c4055">volumeClaimTemplates</text>
+<text x="817" y="266" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6070">mysql-data per ordinal</text>
+<text x="817" y="301" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6070">1Gi, RWO, StorageClass</text>
+<rect x="32" y="382" width="362" height="216" rx="12" fill="#ffffff" stroke="#c7d9e2"/>
+<rect x="32" y="382" width="362" height="8" fill="#23748d"/>
+<text x="49" y="418" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#23748d">4 · p435–439</text>
+<text x="49" y="459" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1c4055">MySQL persistence</text>
+<text x="49" y="502" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6070">ststest после recreate</text>
+<text x="49" y="537" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6070">Отдельное хранилище Pod</text>
+<rect x="416" y="382" width="362" height="216" rx="12" fill="#ffffff" stroke="#c7d9e2"/>
+<rect x="416" y="382" width="362" height="8" fill="#23748d"/>
+<text x="433" y="418" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#23748d">5 · p439–442</text>
+<text x="433" y="459" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1c4055">OrderedReady / Parallel</text>
+<text x="433" y="502" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6070">Scale 3→4→2</text>
+<text x="433" y="537" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6070">Claims retained in demo</text>
+<rect x="800" y="382" width="362" height="216" rx="12" fill="#ffffff" stroke="#c7d9e2"/>
+<rect x="800" y="382" width="362" height="8" fill="#23748d"/>
+<text x="817" y="418" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#23748d">6 · p442–443</text>
+<text x="817" y="459" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1c4055">Data lifecycle</text>
+<text x="817" y="502" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6070">whenScaled / whenDeleted</text>
+<text x="817" y="537" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6070">delete pvc опасен</text>
+<rect x="32" y="618" width="362" height="216" rx="12" fill="#ffffff" stroke="#c7d9e2"/>
+<rect x="32" y="618" width="362" height="8" fill="#23748d"/>
+<text x="49" y="654" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#23748d">7 · p444–449</text>
+<text x="49" y="695" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1c4055">Update strategies</text>
+<text x="49" y="738" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6070">RollingUpdate / OnDelete</text>
+<text x="49" y="773" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6070">Reverse ordinal 2→1→0</text>
+<rect x="416" y="618" width="362" height="216" rx="12" fill="#ffffff" stroke="#c7d9e2"/>
+<rect x="416" y="618" width="362" height="8" fill="#23748d"/>
+<text x="433" y="654" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#23748d">8 · p449–451</text>
+<text x="433" y="695" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1c4055">Canary partition</text>
+<text x="433" y="738" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6070">3: hold; 2: only -2</text>
+<text x="433" y="773" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6070">0: all replicas upgrade</text>
+<rect x="800" y="618" width="362" height="216" rx="12" fill="#ffffff" stroke="#c7d9e2"/>
+<rect x="800" y="618" width="362" height="8" fill="#23748d"/>
+<text x="817" y="654" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#23748d">9 · p452–456</text>
+<text x="817" y="695" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1c4055">Data-safe rollback</text>
+<text x="817" y="738" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6070">Schema migration required</text>
+<text x="817" y="773" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6070">Backup, probes, monitoring</text>
+<text x="32" y="905" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#597887">StatefulSet не реплицирует БД и не делает backup. Удаление PVC может уничтожить данные.</text>
+</svg>
