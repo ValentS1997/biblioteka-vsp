@@ -1,3 +1,30 @@
 # Chapter notes
 
-No chapter analysis has been run yet.
+Canonical chapter artifacts (RAG-only; process `chapter-artifact-collection-v1.7`).
+
+| Глава | Раздел | Диапазон PDF | Комплект | Состояние |
+| --- | --- | --- | --- | --- |
+| [01](chapter-01-what-is-prometheus/README.md) | Что такое Prometheus? | 18–33 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
+| [02](chapter-02-setup-and-run-prometheus/README.md) | Настройка и запуск Prometheus | 34–52 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
+| [03](chapter-03-instrumentation/README.md) | Инструментирование | 54–75 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
+
+| [04](chapter-04-exporting-metrics/README.md) | Экспортирование метрик | 76–96 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
+| [05](chapter-05-labels/README.md) | Метки | 97–111 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
+| [06](chapter-06-grafana-dashboards/README.md) | Создание дашбордов с Grafana | 112–129 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
+| [07](chapter-07-node-exporter/README.md) | Node Exporter | 131–143 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
+| [08](chapter-08-service-discovery/README.md) | Обнаружение служб | 144–169 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
+| [09](chapter-09-containers-and-kubernetes/README.md) | Контейнеры и Kubernetes | 170–186 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
+| [10](chapter-10-popular-exporters/README.md) | Популярные экспортеры | 187–208 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
+| [11](chapter-11-other-monitoring-systems/README.md) | Работа с другими системами мониторинга | 209–214 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
+| [12](chapter-12-writing-exporters/README.md) | Разработка экспортеров | 215–225 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
+| [13](chapter-13-introduction-to-promql/README.md) | Введение в PromQL | 227–245 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
+| [14](chapter-14-aggregation-operators/README.md) | Операторы агрегирования | 246–257 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
+| [15](chapter-15-binary-operators/README.md) | Двухместные операторы | 258–272 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
+| [16](chapter-16-functions/README.md) | Функции | 273–293 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
+| [17](chapter-17-recording-rules/README.md) | Правила записи | 294–305 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
+| [18](chapter-18-alerting/README.md) | Оповещение | 307–320 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
+| [19](chapter-19-alertmanager/README.md) | Alertmanager | 321–343 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
+| [20](chapter-20-server-side-security/README.md) | Безопасность на стороне сервера | 345–349 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
+| [21](chapter-21-putting-it-all-together/README.md) | Собираем все вместе | 350–374 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
+
+**Reading progress:** не изменяется этими артефактами. Индекс не утверждает, что главы прочитаны.

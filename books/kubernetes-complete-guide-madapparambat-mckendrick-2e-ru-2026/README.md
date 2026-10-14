@@ -35,4 +35,9 @@ No reading status, dates or progress were modified or inferred during source/RAG
 
 ## Chapter analysis
 
+- [Глава 1. Основы Kubernetes](notes/chapters/chapter-01-osnovy-kubernetes/README.md) — RAG-only, PDF 34–70, chapter-artifact-collection v1.7. Статус чтения не изменен.
+- [Глава 2. Архитектура Kubernetes: от образов контейнеров к работающим подам](notes/chapters/chapter-02-architecture-kubernetes/README.md) — RAG-only, PDF 71–114, chapter-artifact-collection v1.7. Статус чтения не изменен.
+- [Глава 3. Установка первого кластера Kubernetes](notes/chapters/chapter-03-first-kubernetes-cluster/README.md) — RAG-only, PDF 115–142, chapter-artifact-collection v1.7. Статус чтения не изменен.
+- [Глава 4. Запуск контейнеров в Kubernetes](notes/chapters/chapter-04-pods-jobs-cronjobs/README.md) — RAG-only, PDF 143–180, chapter-artifact-collection v1.7. Статус чтения не изменен.
+- [Глава 5. Использование многоконтейнерных подов и паттерны проектирования](notes/chapters/chapter-05-multicontainer-pods-patterns/README.md) — RAG-only, PDF 181–217, chapter-artifact-collection v1.7. Статус чтения не изменен.
 - [Глава 6. Пространства имен, квоты и лимиты для реализации мультитенантности в Kubernetes](notes/chapters/chapter-06-namespaces-quotas-limits/README.md) — RAG-only, PDF 218–247, chapter-artifact-collection v1.7. Статус чтения не изменен.
