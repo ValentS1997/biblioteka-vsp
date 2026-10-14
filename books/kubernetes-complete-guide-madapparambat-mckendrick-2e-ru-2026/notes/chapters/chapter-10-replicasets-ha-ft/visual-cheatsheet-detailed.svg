@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1170" height="935" viewBox="0 0 1170 935">
+<rect width="1170" height="935" fill="#f4f8fb"/>
+<rect width="1170" height="10" fill="#1e6a86"/>
+<text x="35" y="52" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="29" fill="#193f52">Глава 10 · Репликация и отказоустойчивость</text>
+<text x="35" y="91" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#426679">Подробная карта: контроллеры, Service, масштабирование и probes</text>
+<text x="35" y="123" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#587a8b">RAG-only · PDF 366–383 · inventory 0033</text>
+<rect x="35" y="145" width="366" height="215" rx="12" fill="#fff" stroke="#c6d6e2"/>
+<rect x="35" y="145" width="366" height="8" rx="3" fill="#267992"/>
+<text x="52" y="180" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#24738a">1 · p367–369</text>
+<text x="52" y="224" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1b4055">HA / Fault Tolerance</text>
+<text x="52" y="266" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">Доступность ≠ количество Pod</text>
+<text x="52" y="302" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">SPOF, failover, Service</text>
+<rect x="421" y="145" width="366" height="215" rx="12" fill="#fff" stroke="#c6d6e2"/>
+<rect x="421" y="145" width="366" height="8" rx="3" fill="#267992"/>
+<text x="438" y="180" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#24738a">2 · p370–371</text>
+<text x="438" y="224" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1b4055">ReplicationController</text>
+<text x="438" y="266" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">Исторический механизм</text>
+<text x="438" y="302" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">Desired/actual feedback loop</text>
+<rect x="807" y="145" width="366" height="215" rx="12" fill="#fff" stroke="#c6d6e2"/>
+<rect x="807" y="145" width="366" height="8" rx="3" fill="#267992"/>
+<text x="824" y="180" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#24738a">3 · p371–374</text>
+<text x="824" y="224" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1b4055">ReplicaSet</text>
+<text x="824" y="266" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">replicas=4, selector, template</text>
+<text x="824" y="302" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">Поддержка набора Pod</text>
+<rect x="35" y="384" width="366" height="215" rx="12" fill="#fff" stroke="#c6d6e2"/>
+<rect x="35" y="384" width="366" height="8" rx="3" fill="#267992"/>
+<text x="52" y="419" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#24738a">4 · p373–376</text>
+<text x="52" y="463" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1b4055">Selectors</text>
+<text x="52" y="505" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">matchLabels / matchExpressions</text>
+<text x="52" y="541" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">Риск adoption bare Pod</text>
+<rect x="421" y="384" width="366" height="215" rx="12" fill="#fff" stroke="#c6d6e2"/>
+<rect x="421" y="384" width="366" height="8" rx="3" fill="#267992"/>
+<text x="438" y="419" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#24738a">5 · p375–376</text>
+<text x="438" y="463" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1b4055">Self healing</text>
+<text x="438" y="505" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">Удалён Pod → создан новый</text>
+<text x="438" y="541" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">Событие SuccessfulCreate</text>
+<rect x="807" y="384" width="366" height="215" rx="12" fill="#fff" stroke="#c6d6e2"/>
+<rect x="807" y="384" width="366" height="8" rx="3" fill="#267992"/>
+<text x="824" y="419" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#24738a">6 · p377–378</text>
+<text x="824" y="463" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1b4055">Node failover</text>
+<text x="824" y="505" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">cordon, drain, delete node</text>
+<text x="824" y="541" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">Только учебный кластер</text>
+<rect x="35" y="623" width="366" height="215" rx="12" fill="#fff" stroke="#c6d6e2"/>
+<rect x="35" y="623" width="366" height="8" rx="3" fill="#267992"/>
+<text x="52" y="658" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#24738a">7 · p378–379</text>
+<text x="52" y="702" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1b4055">Scaling</text>
+<text x="52" y="744" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">4 → 5 → 2 через apply</text>
+<text x="52" y="780" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">scale: императивный вариант</text>
+<rect x="421" y="623" width="366" height="215" rx="12" fill="#fff" stroke="#c6d6e2"/>
+<rect x="421" y="623" width="366" height="8" rx="3" fill="#267992"/>
+<text x="438" y="658" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#24738a">8 · p379–381</text>
+<text x="438" y="702" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1b4055">Liveness</text>
+<text x="438" y="744" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">GET /, период 2 c</text>
+<text x="438" y="780" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">kubelet перезапускает контейнер</text>
+<rect x="807" y="623" width="366" height="215" rx="12" fill="#fff" stroke="#c6d6e2"/>
+<rect x="807" y="623" width="366" height="8" rx="3" fill="#267992"/>
+<text x="824" y="658" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#24738a">9 · p382</text>
+<text x="824" y="702" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1b4055">Delete / orphan</text>
+<text x="824" y="744" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">Каскадное удаление Pod</text>
+<text x="824" y="780" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">orphan: Pod остаются</text>
+<text x="35" y="907" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#587887">delete, drain и exec rm — деструктивны. Без live-тестов и без обещаний HA SLA.</text>
+</svg>

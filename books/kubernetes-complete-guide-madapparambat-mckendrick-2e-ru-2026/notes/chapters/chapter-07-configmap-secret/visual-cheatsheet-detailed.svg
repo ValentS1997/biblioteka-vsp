@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1170" height="925" viewBox="0 0 1170 925">
+<rect width="1170" height="925" fill="#f4f8fb"/>
+<rect width="1170" height="10" fill="#226986"/>
+<text x="35" y="56" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#163d50">Глава 7 · ConfigMap и Secret: подробная карта</text>
+<text x="35" y="92" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#4b6778">RAG-only · PDF 248–280 · inventory 0033 · без раскрытия значений</text>
+<rect x="35" y="124" width="367" height="213" rx="12" fill="#fff" stroke="#c4d6e0"/>
+<rect x="35" y="124" width="367" height="8" rx="4" fill="#247588"/>
+<text x="53" y="158" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247588">1 · p254–260</text>
+<text x="53" y="201" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#173c50">ConfigMap: open data</text>
+<text x="53" y="242" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#355b6b">--from-literal / file</text>
+<text x="53" y="276" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#355b6b">--from-env-file / YAML</text>
+<rect x="421" y="124" width="367" height="213" rx="12" fill="#fff" stroke="#c4d6e0"/>
+<rect x="421" y="124" width="367" height="8" rx="4" fill="#247588"/>
+<text x="439" y="158" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247588">2 · p261–265</text>
+<text x="439" y="201" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#173c50">ConfigMap to Pod</text>
+<text x="439" y="242" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#355b6b">configMapKeyRef; envFrom</text>
+<text x="439" y="276" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#355b6b">volumeMounts + configMap</text>
+<rect x="807" y="124" width="367" height="213" rx="12" fill="#fff" stroke="#c4d6e0"/>
+<rect x="807" y="124" width="367" height="8" rx="4" fill="#247588"/>
+<text x="825" y="158" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247588">3 · p266–268</text>
+<text x="825" y="201" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#173c50">ConfigMap lifecycle</text>
+<text x="825" y="242" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#355b6b">delete, edit, immutable</text>
+<text x="825" y="276" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#355b6b">Missing map → FailedMount</text>
+<rect x="35" y="360" width="367" height="213" rx="12" fill="#fff" stroke="#c4d6e0"/>
+<rect x="35" y="360" width="367" height="8" rx="4" fill="#247588"/>
+<text x="53" y="394" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247588">4 · p270–273</text>
+<text x="53" y="437" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#173c50">Secret: source</text>
+<text x="53" y="478" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#355b6b">create secret generic</text>
+<text x="53" y="512" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#355b6b">data (Base64), stringData</text>
+<rect x="421" y="360" width="367" height="213" rx="12" fill="#fff" stroke="#c4d6e0"/>
+<rect x="421" y="360" width="367" height="8" rx="4" fill="#247588"/>
+<text x="439" y="394" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247588">5 · p275–278</text>
+<text x="439" y="437" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#173c50">Secret in Pod</text>
+<text x="439" y="478" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#355b6b">secretKeyRef; secretRef</text>
+<text x="439" y="512" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#355b6b">secret volume, readOnly</text>
+<rect x="807" y="360" width="367" height="213" rx="12" fill="#fff" stroke="#c4d6e0"/>
+<rect x="807" y="360" width="367" height="8" rx="4" fill="#247588"/>
+<text x="825" y="394" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247588">6 · p277–278</text>
+<text x="825" y="437" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#173c50">Source caveat</text>
+<text x="825" y="478" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#355b6b">Secret volume name / path</text>
+<text x="825" y="512" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#355b6b">inconsistency in examples</text>
+<rect x="35" y="596" width="367" height="213" rx="12" fill="#fff" stroke="#c4d6e0"/>
+<rect x="35" y="596" width="367" height="8" rx="4" fill="#247588"/>
+<text x="53" y="630" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247588">7 · p270–278</text>
+<text x="53" y="673" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#173c50">Sensitive output</text>
+<text x="53" y="714" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#355b6b">get secret -o yaml</text>
+<text x="53" y="748" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#355b6b">exec env / cat risk</text>
+<rect x="421" y="596" width="367" height="213" rx="12" fill="#fff" stroke="#c4d6e0"/>
+<rect x="421" y="596" width="367" height="8" rx="4" fill="#247588"/>
+<text x="439" y="630" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247588">8 · p268–269</text>
+<text x="439" y="673" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#173c50">Real protection</text>
+<text x="439" y="714" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#355b6b">RBAC + KMS / encryption</text>
+<text x="439" y="748" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#355b6b">external secrets + audit</text>
+<rect x="807" y="596" width="367" height="213" rx="12" fill="#fff" stroke="#c4d6e0"/>
+<rect x="807" y="596" width="367" height="8" rx="4" fill="#247588"/>
+<text x="825" y="630" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247588">9 · p254–279</text>
+<text x="825" y="673" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#173c50">Verification</text>
+<text x="825" y="714" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#355b6b">get, describe, Pod state</text>
+<text x="825" y="748" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#355b6b">No plaintext in CI logs</text>
+<text x="35" y="882" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#5d788a">Base64 не шифрует · том и env имеют разные последствия обновления · rollback требует проверки.</text>
+</svg>
