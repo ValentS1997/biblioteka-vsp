@@ -32,3 +32,7 @@ Readiness command:
 ## Reading
 
 No reading status, dates or progress were modified or inferred during source/RAG ingest.
+
+## Chapter analysis
+
+- [Глава 10. Запуск рабочих нагрузок производственного уровня в Kubernetes](notes/chapters/chapter-10-replicasets-ha-ft/README.md) — RAG-only, PDF 366–383, chapter-artifact-collection v1.7. Статус чтения не изменен.
