@@ -116,7 +116,7 @@ class PublicationStatusTests(unittest.TestCase):
             "books/demo/source/book.pdf",
         ]
         self.assertEqual(
-            changed[:2], validator.forbidden_chapter_archives(changed)
+            sorted(changed[:2]), validator.forbidden_chapter_archives(changed)
         )
 
 
