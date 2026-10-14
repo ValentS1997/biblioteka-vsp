@@ -37,7 +37,9 @@ Existing reading status is unchanged. No reading progress or dates were set duri
 - [Глава 2. Язык циклов](notes/chapters/chapter-02-loop-language/README.md) — RAG p0030:c01–p0042:c01 · PDF 30–42 · печатные 29–41, v1.7, RAG-only.
 - [Глава 3. На всякий случай: оператор Case](notes/chapters/chapter-03-case/README.md) — RAG p0043:c01–p0057:c01 · PDF 43–57 · печатные 42–56, v1.7, RAG-only.
 - [Глава 4. Язык переменных](notes/chapters/chapter-04-variables/README.md) — RAG p0058:c01–p0072:c01 · PDF 58–72 · печатные 57–71, v1.7, RAG-only.
+- [Глава 5. Выражения и арифметика](notes/chapters/chapter-05-expressions-arithmetic/README.md) — RAG p0073:c01–p0082:c01 · PDF 73–82 · печатные 72–81, v1.7, RAG-only.
 - [Глава 6. Функции](notes/chapters/chapter-06-functions/README.md) — RAG p0083:c01–p0093:c01 · PDF 83–93 · печатные 82–92, v1.7, RAG-only.
 - [Глава 7. Списки и хеши](notes/chapters/chapter-07-lists-hashes/README.md) — RAG p0094:c01–p0110:c01 · PDF 94–110 · печатные 93–109, v1.7, RAG-only.
 - [Глава 8. Аргументы](notes/chapters/chapter-08-arguments/README.md) — RAG p0111:c01–p0125:c01 · PDF 111–125 · печатные 110–124, v1.7, RAG-only.
+- [Глава 9. Файлы и не только](notes/chapters/chapter-09-files-and-more/README.md) — RAG p0126:c01–p0145:c01 · PDF 126–145 · печатные 125–144, v1.7, RAG-only.
 - [Глава 10. Помимо идиом: работа с bash](notes/chapters/chapter-10-beyond-idioms/README.md) — RAG p0146:c01–p0174:c01 · PDF 146–174 · печатные 145–173, v1.7, RAG-only.
