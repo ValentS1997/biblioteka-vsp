@@ -35,4 +35,17 @@ No reading status, dates or progress were modified or inferred during source/RAG
 
 ## Chapter analysis
 
+- [Глава 1. Основы Kubernetes](notes/chapters/chapter-01-osnovy-kubernetes/README.md) — RAG-only, PDF 34–70, chapter-artifact-collection v1.7. Статус чтения не изменен.
+- [Глава 2. Архитектура Kubernetes: от образов контейнеров к работающим подам](notes/chapters/chapter-02-architecture-kubernetes/README.md) — RAG-only, PDF 71–114, chapter-artifact-collection v1.7. Статус чтения не изменен.
+- [Глава 3. Установка первого кластера Kubernetes](notes/chapters/chapter-03-first-kubernetes-cluster/README.md) — RAG-only, PDF 115–142, chapter-artifact-collection v1.7. Статус чтения не изменен.
+- [Глава 4. Запуск контейнеров в Kubernetes](notes/chapters/chapter-04-pods-jobs-cronjobs/README.md) — RAG-only, PDF 143–180, chapter-artifact-collection v1.7. Статус чтения не изменен.
+- [Глава 5. Использование многоконтейнерных подов и паттерны проектирования](notes/chapters/chapter-05-multicontainer-pods-patterns/README.md) — RAG-only, PDF 181–217, chapter-artifact-collection v1.7. Статус чтения не изменен.
+- [Глава 6. Пространства имен, квоты и лимиты для реализации мультитенантности в Kubernetes](notes/chapters/chapter-06-namespaces-quotas-limits/README.md) — RAG-only, PDF 218–247, chapter-artifact-collection v1.7. Статус чтения не изменен.
+- [Глава 7. ConfigMap и Secret](notes/chapters/chapter-07-configmap-secret/README.md) — RAG-only, PDF 248–280, v1.7. Статус чтения не менялся.
+- [Глава 8. Публикация подов с помощью сервисов](notes/chapters/chapter-08-services-networking-probes/README.md) — RAG-only, PDF 281–325, chapter-artifact-collection v1.7. Статус чтения не изменен.
+- [Глава 9. Постоянное хранилище в Kubernetes](notes/chapters/chapter-09-persistent-storage/README.md) — RAG-only, PDF 326–365, chapter-artifact-collection v1.7. Статус чтения не изменен.
+- [Глава 10. Запуск рабочих нагрузок производственного уровня в Kubernetes](notes/chapters/chapter-10-replicasets-ha-ft/README.md) — RAG-only, PDF 366–383, chapter-artifact-collection v1.7. Статус чтения не изменен.
+- [Глава 11. Использование Deployment для управления рабочими нагрузками без сохранения состояния](notes/chapters/chapter-11-deployment-rollouts/README.md) — RAG-only, PDF 384–419, chapter-artifact-collection v1.7. Статус чтения не изменен.
+- [Глава 12. Объект StatefulSet: развертывание приложений с сохранением состояния](notes/chapters/chapter-12-statefulset-persistent/README.md) — RAG-only, PDF 420–456, chapter-artifact-collection v1.7. Статус чтения не изменен.
+- [Глава 13. Объект DaemonSet: запуск одного пода на каждом узле](notes/chapters/chapter-13-daemonsets/README.md) — RAG-only, PDF 457–473, chapter-artifact-collection v1.7. Статус чтения не изменен.
 - [Глава 14. Работа с Helm-чартами и операторами](notes/chapters/chapter-14-helm-operators-olm/README.md) — RAG-only, PDF 474–514, chapter-artifact-collection v1.7. Статус чтения не изменен.

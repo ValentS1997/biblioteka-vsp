@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="665" viewBox="0 0 1160 665">
+<rect width="1160" height="665" fill="#f4f8fb"/>
+<rect width="1160" height="10" fill="#1e6a86"/>
+<text x="35" y="52" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="29" fill="#193f52">Глава 10 · Репликация и отказоустойчивость</text>
+<text x="35" y="91" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#426679">ReplicaSet и восстановление нагрузки</text>
+<text x="35" y="123" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#587a8b">RAG-only · PDF 366–383 · inventory 0033</text>
+<rect x="35" y="155" width="348" height="190" rx="12" fill="#fff" stroke="#c6d6e2"/>
+<rect x="35" y="155" width="348" height="8" rx="3" fill="#267992"/>
+<text x="52" y="190" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#24738a">1</text>
+<text x="52" y="234" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1b4055">ReplicaSet</text>
+<text x="52" y="276" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">Поддерживает число реплик</text>
+<text x="52" y="312" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">selector + template</text>
+<rect x="408" y="155" width="348" height="190" rx="12" fill="#fff" stroke="#c6d6e2"/>
+<rect x="408" y="155" width="348" height="8" rx="3" fill="#267992"/>
+<text x="425" y="190" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#24738a">2</text>
+<text x="425" y="234" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1b4055">Self healing</text>
+<text x="425" y="276" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">Удалён Pod → новый Pod</text>
+<text x="425" y="312" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">Риск совпадающих меток</text>
+<rect x="781" y="155" width="348" height="190" rx="12" fill="#fff" stroke="#c6d6e2"/>
+<rect x="781" y="155" width="348" height="8" rx="3" fill="#267992"/>
+<text x="798" y="190" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#24738a">3</text>
+<text x="798" y="234" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1b4055">HA/FT</text>
+<text x="798" y="276" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">Service + репликация</text>
+<text x="798" y="312" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">Не означает SLA 100 %</text>
+<rect x="35" y="366" width="348" height="190" rx="12" fill="#fff" stroke="#c6d6e2"/>
+<rect x="35" y="366" width="348" height="8" rx="3" fill="#267992"/>
+<text x="52" y="401" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#24738a">4</text>
+<text x="52" y="445" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1b4055">Node failure</text>
+<text x="52" y="487" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">cordon / drain / delete</text>
+<text x="52" y="523" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">Только учебная среда</text>
+<rect x="408" y="366" width="348" height="190" rx="12" fill="#fff" stroke="#c6d6e2"/>
+<rect x="408" y="366" width="348" height="8" rx="3" fill="#267992"/>
+<text x="425" y="401" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#24738a">5</text>
+<text x="425" y="445" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1b4055">Scaling</text>
+<text x="425" y="487" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">replicas: 4 → 5 → 2</text>
+<text x="425" y="523" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">kubectl apply / scale</text>
+<rect x="781" y="366" width="348" height="190" rx="12" fill="#fff" stroke="#c6d6e2"/>
+<rect x="781" y="366" width="348" height="8" rx="3" fill="#267992"/>
+<text x="798" y="401" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#24738a">6</text>
+<text x="798" y="445" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1b4055">Liveness</text>
+<text x="798" y="487" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">HTTP GET /; событие 403</text>
+<text x="798" y="523" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#365b6d">Restart делает kubelet</text>
+<text x="35" y="637" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#587887">delete, drain и exec rm — деструктивны. Без live-тестов и без обещаний HA SLA.</text>
+</svg>

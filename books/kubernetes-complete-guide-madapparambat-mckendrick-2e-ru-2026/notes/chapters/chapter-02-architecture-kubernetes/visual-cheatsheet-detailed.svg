@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="936" viewBox="0 0 1200 936">
+<rect width="1200" height="936" fill="#f5f8fb"/>
+<rect width="1200" height="12" fill="#226180"/>
+<text x="35" y="60" font-size="31" font-weight="700" font-family="DejaVu Sans, sans-serif" fill="#193648">Глава 2 · Компоненты и границы</text>
+<text x="35" y="95" font-size="17" font-family="DejaVu Sans, sans-serif" fill="#465d6b">Control Plane · workers · kubectl · HA</text>
+<text x="35" y="124" font-size="14" font-family="DejaVu Sans, sans-serif" fill="#667e8b">PDF 71–114 · источник: только RAG · инвентарь 0033</text>
+<rect x="35" y="152" width="364.6666666666667" height="222" rx="13" fill="#ffffff" stroke="#ccdae5"/>
+<rect x="35" y="152" width="364.6666666666667" height="8" rx="4" fill="#226180"/>
+<text x="53" y="187" font-size="15" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#226180">01</text>
+<text x="53" y="218" font-size="20" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#173548">Управляющий слой</text>
+<text x="53" y="249" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#38586b">kube-apiserver, etcd</text>
+<text x="53" y="276" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#38586b">kube-scheduler, controllers</text>
+<text x="53" y="303" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#38586b">стр. 77–90</text>
+<rect x="417.6666666666667" y="152" width="364.6666666666667" height="222" rx="13" fill="#ffffff" stroke="#ccdae5"/>
+<rect x="417.6666666666667" y="152" width="364.6666666666667" height="8" rx="4" fill="#236e75"/>
+<text x="435.6666666666667" y="187" font-size="15" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#236e75">02</text>
+<text x="435.6666666666667" y="218" font-size="20" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#173548">API + хранилище</text>
+<text x="435.6666666666667" y="249" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#38586b">kubectl → API → etcd</text>
+<text x="435.6666666666667" y="276" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#38586b">запись желаемого состояния</text>
+<text x="435.6666666666667" y="303" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#38586b">стр. 79–85, 99–103</text>
+<rect x="800.3333333333334" y="152" width="364.6666666666667" height="222" rx="13" fill="#ffffff" stroke="#ccdae5"/>
+<rect x="800.3333333333334" y="152" width="364.6666666666667" height="8" rx="4" fill="#45628b"/>
+<text x="818.3333333333334" y="187" font-size="15" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#45628b">03</text>
+<text x="818.3333333333334" y="218" font-size="20" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#173548">Планирование Pod</text>
+<text x="818.3333333333334" y="249" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#38586b">Unscheduled → nodeName</text>
+<text x="818.3333333333334" y="276" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#38586b">selector, affinity, taints</text>
+<text x="818.3333333333334" y="303" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#38586b">стр. 86–87</text>
+<rect x="35" y="392" width="364.6666666666667" height="222" rx="13" fill="#ffffff" stroke="#ccdae5"/>
+<rect x="35" y="392" width="364.6666666666667" height="8" rx="4" fill="#226180"/>
+<text x="53" y="427" font-size="15" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#226180">04</text>
+<text x="53" y="458" font-size="20" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#173548">Reconciliation</text>
+<text x="53" y="489" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#38586b">Controller loops</text>
+<text x="53" y="516" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#38586b">replicas, Nodes, StatefulSet</text>
+<text x="53" y="543" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#38586b">стр. 88–89</text>
+<rect x="417.6666666666667" y="392" width="364.6666666666667" height="222" rx="13" fill="#ffffff" stroke="#ccdae5"/>
+<rect x="417.6666666666667" y="392" width="364.6666666666667" height="8" rx="4" fill="#236e75"/>
+<text x="435.6666666666667" y="427" font-size="15" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#236e75">05</text>
+<text x="435.6666666666667" y="458" font-size="20" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#173548">Worker/runtime</text>
+<text x="435.6666666666667" y="489" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#38586b">kubelet, CRI, containerd</text>
+<text x="435.6666666666667" y="516" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#38586b">kube-proxy, сетевой слой</text>
+<text x="435.6666666666667" y="543" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#38586b">стр. 90–96</text>
+<rect x="800.3333333333334" y="392" width="364.6666666666667" height="222" rx="13" fill="#ffffff" stroke="#ccdae5"/>
+<rect x="800.3333333333334" y="392" width="364.6666666666667" height="8" rx="4" fill="#45628b"/>
+<text x="818.3333333333334" y="427" font-size="15" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#45628b">06</text>
+<text x="818.3333333333334" y="458" font-size="20" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#173548">kubectl / YAML</text>
+<text x="818.3333333333334" y="489" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#38586b">config, get, explain, run</text>
+<text x="818.3333333333334" y="516" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#38586b">apiVersion, kind, spec</text>
+<text x="818.3333333333334" y="543" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#38586b">стр. 96–107</text>
+<rect x="35" y="632" width="364.6666666666667" height="222" rx="13" fill="#ffffff" stroke="#ccdae5"/>
+<rect x="35" y="632" width="364.6666666666667" height="8" rx="4" fill="#226180"/>
+<text x="53" y="667" font-size="15" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#226180">07</text>
+<text x="53" y="698" font-size="20" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#173548">Read-only граница</text>
+<text x="53" y="729" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#38586b">version, config view, get</text>
+<text x="53" y="756" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#38586b">explain, echo PATH</text>
+<text x="53" y="783" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#38586b">стр. 97–107</text>
+<rect x="417.6666666666667" y="632" width="364.6666666666667" height="222" rx="13" fill="#ffffff" stroke="#ccdae5"/>
+<rect x="417.6666666666667" y="632" width="364.6666666666667" height="8" rx="4" fill="#236e75"/>
+<text x="435.6666666666667" y="667" font-size="15" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#236e75">08</text>
+<text x="435.6666666666667" y="698" font-size="20" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#173548">Изменение среды</text>
+<text x="435.6666666666667" y="729" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#38586b">kubectl run/create/delete</text>
+<text x="435.6666666666667" y="756" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#38586b">curl, chmod, sudo mv</text>
+<text x="435.6666666666667" y="783" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#38586b">стр. 97–106</text>
+<rect x="800.3333333333334" y="632" width="364.6666666666667" height="222" rx="13" fill="#ffffff" stroke="#ccdae5"/>
+<rect x="800.3333333333334" y="632" width="364.6666666666667" height="8" rx="4" fill="#45628b"/>
+<text x="818.3333333333334" y="667" font-size="15" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#45628b">09</text>
+<text x="818.3333333333334" y="698" font-size="20" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#173548">HA / etcd</text>
+<text x="818.3333333333334" y="729" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#38586b">single node → SPOF</text>
+<text x="818.3333333333334" y="756" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#38586b">multi control plane, Raft</text>
+<text x="818.3333333333334" y="783" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#38586b">стр. 108–113</text>
+<text x="35" y="904" font-size="15" font-family="DejaVu Sans, sans-serif" fill="#657e8c">Не исполняемый runbook. Топология и команды требуют подтверждения в целевой среде.</text>
+</svg>

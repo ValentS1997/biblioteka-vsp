@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1170" height="925" viewBox="0 0 1170 925">
+<rect width="1170" height="925" fill="#f5f8fb"/>
+<rect width="1170" height="10" fill="#226986"/>
+<text x="35" y="55" font-family="DejaVu Sans, sans-serif" font-size="30" font-weight="700" fill="#173e51">Глава 5 · Компоненты и паттерны Pod</text>
+<text x="35" y="92" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#4b6578">Подробная сводка · Kubernetes · RAG PDF 181–217 · 0033</text>
+<rect x="35" y="126" width="367" height="215" rx="12" fill="#fff" stroke="#c4d5e0"/>
+<rect x="35" y="126" width="367" height="8" rx="4" fill="#26778b"/>
+<text x="52" y="161" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#226986">1 · p182–185</text>
+<text x="52" y="206" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700" fill="#173d51">Pod и контейнеры</text>
+<text x="52" y="245" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#35596b">Один узел; общая сеть</text>
+<text x="52" y="280" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#35596b">nginx + debian</text>
+<rect x="421" y="126" width="367" height="215" rx="12" fill="#fff" stroke="#c4d5e0"/>
+<rect x="421" y="126" width="367" height="8" rx="4" fill="#26778b"/>
+<text x="438" y="161" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#226986">2 · p186–187</text>
+<text x="438" y="206" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700" fill="#173d51">Диагностика</text>
+<text x="438" y="245" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#35596b">get pods, describe</text>
+<text x="438" y="280" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#35596b">ErrImagePull / BackOff</text>
+<rect x="807" y="126" width="367" height="215" rx="12" fill="#fff" stroke="#c4d5e0"/>
+<rect x="807" y="126" width="367" height="8" rx="4" fill="#26778b"/>
+<text x="824" y="161" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#226986">3 · p189–198</text>
+<text x="824" y="206" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700" fill="#173d51">Адресный доступ</text>
+<text x="824" y="245" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#35596b">exec -c, logs -c</text>
+<text x="824" y="280" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#35596b">jsonpath, since, tail</text>
+<rect x="35" y="364" width="367" height="215" rx="12" fill="#fff" stroke="#c4d5e0"/>
+<rect x="35" y="364" width="367" height="8" rx="4" fill="#26778b"/>
+<text x="52" y="399" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#226986">4 · p194–197</text>
+<text x="52" y="444" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700" fill="#173d51">Init-контейнеры</text>
+<text x="52" y="483" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#35596b">Старт последовательно</text>
+<text x="52" y="518" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#35596b">Подготовка файлов</text>
+<rect x="421" y="364" width="367" height="215" rx="12" fill="#fff" stroke="#c4d5e0"/>
+<rect x="421" y="364" width="367" height="8" rx="4" fill="#26778b"/>
+<text x="438" y="399" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#226986">5 · p199–206</text>
+<text x="438" y="444" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700" fill="#173d51">Общие тома</text>
+<text x="438" y="483" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#35596b">emptyDir: жизнь Pod</text>
+<text x="438" y="518" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#35596b">hostPath: файлы узла</text>
+<rect x="807" y="364" width="367" height="215" rx="12" fill="#fff" stroke="#c4d5e0"/>
+<rect x="807" y="364" width="367" height="8" rx="4" fill="#26778b"/>
+<text x="824" y="399" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#226986">6 · p206–209</text>
+<text x="824" y="444" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700" fill="#173d51">Ambassador</text>
+<text x="824" y="483" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#35596b">Proxy к внешней БД</text>
+<text x="824" y="518" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#35596b">localhost:3306</text>
+<rect x="35" y="602" width="367" height="215" rx="12" fill="#fff" stroke="#c4d5e0"/>
+<rect x="35" y="602" width="367" height="8" rx="4" fill="#26778b"/>
+<text x="52" y="637" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#226986">7 · p209–212</text>
+<text x="52" y="682" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700" fill="#173d51">Sidecar</text>
+<text x="52" y="721" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#35596b">Fluentd и общий том</text>
+<text x="52" y="756" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#35596b">Сбор логов Nginx</text>
+<rect x="421" y="602" width="367" height="215" rx="12" fill="#fff" stroke="#c4d5e0"/>
+<rect x="421" y="602" width="367" height="8" rx="4" fill="#26778b"/>
+<text x="438" y="637" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#226986">8 · p212–215</text>
+<text x="438" y="682" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700" fill="#173d51">Adapter</text>
+<text x="438" y="721" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#35596b">Преобразование лога</text>
+<text x="438" y="756" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#35596b">Добавляет PROCESSED</text>
+<rect x="807" y="602" width="367" height="215" rx="12" fill="#fff" stroke="#c4d5e0"/>
+<rect x="807" y="602" width="367" height="8" rx="4" fill="#26778b"/>
+<text x="824" y="637" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#226986">9 · p215–216</text>
+<text x="824" y="682" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700" fill="#173d51">Native sidecar</text>
+<text x="824" y="721" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#35596b">initContainers + Always</text>
+<text x="824" y="756" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#35596b">Совместимость: уточнить</text>
+<text x="35" y="884" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#5d788a">Риск: force delete не подтверждает фактическое прекращение Pod; emptyDir теряет данные при удалении.</text>
+</svg>
