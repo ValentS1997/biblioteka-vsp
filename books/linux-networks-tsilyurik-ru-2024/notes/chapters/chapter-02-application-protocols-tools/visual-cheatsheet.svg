@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="630" viewBox="0 0 1100 630">
+<rect x="0" y="0" width="1100" height="630" rx="12" fill="#f2f5fa"/>
+<text x="42" y="55" fill="#123756" font-family="DejaVu Sans, sans-serif" font-size="30" font-weight="700">ЧАСТЬ II · ПРОТОКОЛЫ И ИНСТРУМЕНТЫ</text>
+<text x="44" y="83" fill="#58728c" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">PDF 62–131 · RAG ACCEPTED · эксплуатация сетевых сервисов</text>
+<rect x="43" y="121" width="320" height="208" rx="12" fill="#ffffff"/>
+<rect x="43" y="121" width="320" height="50" rx="12" fill="#dce9f9"/>
+<text x="59" y="152" fill="#1c4b76" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700">ДИАГНОСТИКА</text>
+<text x="59" y="208" fill="#253b53" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">ip / route / netstat</text>
+<text x="59" y="243" fill="#253b53" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">ping · traceroute</text>
+<text x="59" y="278" fill="#253b53" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">tcpdump · nc</text>
+<rect x="391" y="121" width="320" height="208" rx="12" fill="#ffffff"/>
+<rect x="391" y="121" width="320" height="50" rx="12" fill="#dce9f9"/>
+<text x="407" y="152" fill="#1c4b76" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700">СЛУЖБЫ</text>
+<text x="407" y="208" fill="#253b53" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">SSH · DHCP · DNS</text>
+<text x="407" y="243" fill="#253b53" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">systemd · inetd</text>
+<text x="407" y="278" fill="#253b53" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">netfilter · ufw</text>
+<rect x="739" y="121" width="320" height="208" rx="12" fill="#ffffff"/>
+<rect x="739" y="121" width="320" height="50" rx="12" fill="#dce9f9"/>
+<text x="755" y="152" fill="#1c4b76" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700">ПОСРЕДНИКИ</text>
+<text x="755" y="208" fill="#253b53" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">SOCKS / HTTP proxy</text>
+<text x="755" y="243" fill="#253b53" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Dante · socksify</text>
+<text x="755" y="278" fill="#253b53" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">SSH -N -D</text>
+<rect x="43" y="358" width="1016" height="170" rx="12" fill="#e5eef9"/>
+<text x="68" y="396" fill="#173c61" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700">РАБОЧИЙ ЦИКЛ: НАСТРОЙКА → START → STATUS → ТЕСТ</text>
+<text x="68" y="432" fill="#253b53" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Наблюдение (RO) отдельно от сетевых проб (WG) и изменений (SC).</text>
+<text x="68" y="467" fill="#253b53" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Проверять сервис, DNS, firewall, порт и клиента по отдельности.</text>
+<text x="68" y="500" fill="#8a3c42" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="700">Открытый SOCKS без авторизации не публиковать.</text>
+<text x="45" y="571" fill="#526a83" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400">Source findings: DHCP/DNS · ssh -Y · SOCKS 1085/1080</text>
+<text x="45" y="603" fill="#526a83" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400">Схема создана по тексту RAG; рисунки 2.1–2.17 не воспроизводились.</text>
+</svg>

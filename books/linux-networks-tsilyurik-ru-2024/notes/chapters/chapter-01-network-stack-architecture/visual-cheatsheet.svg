@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="620" viewBox="0 0 1080 620">
+<rect x="0" y="0" width="1080" height="620" rx="0" fill="#f1f6fd"/>
+<text x="48" y="60" font-family="DejaVu Sans, sans-serif" font-size="32" font-weight="700" fill="#183454">ЧАСТЬ I · СЕТЕВОЙ СТЕК: АРХИТЕКТУРА</text>
+<text x="50" y="94" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#46627f">Linux · PDF 11–61 · RAG-only · инкапсуляция и адресация</text>
+<rect x="48" y="135" width="282" height="187" rx="16" fill="#ffffff"/>
+<rect x="48" y="135" width="282" height="46" rx="14" fill="#dbeafd"/>
+<text x="64" y="166" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1b4674">КАНАЛ / MAC</text>
+<text x="64" y="218" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#12243a">Ethernet и интерфейс</text>
+<text x="64" y="249" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#12243a">ARP (IPv4) / NDP (IPv6)</text>
+<text x="64" y="280" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#12243a">ip link · ip neigh</text>
+<rect x="399" y="135" width="282" height="187" rx="16" fill="#ffffff"/>
+<rect x="399" y="135" width="282" height="46" rx="14" fill="#dbeafd"/>
+<text x="415" y="166" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1b4674">СЕТЬ / IP</text>
+<text x="415" y="218" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#12243a">IPv4 / IPv6 · префикс</text>
+<text x="415" y="249" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#12243a">Таблица маршрутов ядра</text>
+<text x="415" y="280" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#12243a">ip addr · ip route</text>
+<rect x="750" y="135" width="282" height="187" rx="16" fill="#ffffff"/>
+<rect x="750" y="135" width="282" height="46" rx="14" fill="#dbeafd"/>
+<text x="766" y="166" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1b4674">ТРАНСПОРТ</text>
+<text x="766" y="218" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#12243a">TCP / UDP</text>
+<text x="766" y="249" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#12243a">16-битный порт</text>
+<text x="766" y="280" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#12243a">/etc/services</text>
+<line x1="334" y1="222" x2="389" y2="222" stroke="#597ca5" stroke-width="3" stroke-linecap="round"/>
+<line x1="685" y1="222" x2="740" y2="222" stroke="#597ca5" stroke-width="3" stroke-linecap="round"/>
+<rect x="48" y="351" width="984" height="168" rx="16" fill="#e2edf9"/>
+<text x="70" y="390" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#183454">ПРОВЕРКА: НАБЛЮДЕНИЕ → СОСЕД → МАРШРУТ → СЕРВИС</text>
+<text x="70" y="430" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#12243a">IPv6 link-local: указывать интерфейс (зону %IFACE).</text>
+<text x="70" y="468" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#12243a">После изменения: повторно проверить IP, маршруты и связь.</text>
+<text x="50" y="559" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#385978">Особенности: RFC · сетевой порядок байтов · DNS · lo · altname</text>
+<text x="50" y="591" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="400" fill="#6a4b48">Источник: книга, часть I; не копировать спорные маски и IP-алиасы без проверки.</text>
+</svg>
