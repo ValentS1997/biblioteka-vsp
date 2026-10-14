@@ -1,0 +1,46 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: information-systems-administration-bobyntsev-ru-publication-pr491
+repository: vsp-corp/biblioteka-vsp
+book_id: information-systems-administration-bobyntsev-ru
+task_kind: chapter
+objective: >-
+  Recover and align the existing eight-chapter RAG-backed publication plan with
+  the current accepted chapter and session-recovery contracts; preserve the
+  chapter artifacts, canonical source, RAG and reading state.
+branch: chapter/information-systems-administration-bobyntsev-ru-0024
+initial_base_sha: aa3733b43f6db3627453e4814926e59a9ae3b136
+last_observed_head_sha: cc708e5a8c86c64d3e66cff733c79047de0a48f3
+expected_source_sha256: a5d6a2677d4b0e33a34dec3b7aae8b77f711bb748046d25766becb479f66663f
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite without explicit authorization
+  - no reading-progress mutation without explicit user confirmation
+  - no archive delivery for chapter artifacts
+  - no duplicate branch, plan, PR or chapter Git writes
+  - RAG-only chapter content; chapter analysis only on explicit chapter command
+stage: IN_PROGRESS
+completed_steps:
+  - step: Verified canonical process router v1.2 and session recovery v1.0 in main
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/templates/session-recovery-v1.0.yaml
+  - step: Verified eight numbered chapters using RAG TOC and existing SHA-bound plan
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/information-systems-administration-bobyntsev-ru/rag/chunks/p0001-p0100/p0005-c01.md
+  - step: Verified existing branch files, publication baseline 0/8 and open PR 491
+    evidence_type: pr
+    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/491
+  - step: Verified chapter-notes and SVG push workflow success at branch head
+    evidence_type: ci
+    reference: https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38620194149
+pending_steps:
+  - Update obsolete process router reference from v1.1 to v1.2 in chapter index; read back
+  - Verify latest branch head, PR 491 and chapter-related CI after change
+  - Review branch divergence and PR mergeability without forced update or merge
+  - Await explicit 'Анализ главы 1' command before any chapter-content generation
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/cc708e5a8c86c64d3e66cff733c79047de0a48f3
+first_safe_next_action: >-
+  Re-fetch current branch HEAD and chapter index blob SHA; compare the
+  index's canonical-router reference against main before changing it.
+blocker: Not applicable
+last_observed_at: Not applicable
