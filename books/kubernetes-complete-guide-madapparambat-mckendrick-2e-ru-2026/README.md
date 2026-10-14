@@ -32,3 +32,7 @@ Readiness command:
 ## Reading
 
 No reading status, dates or progress were modified or inferred during source/RAG ingest.
+
+## Chapter analysis
+
+- [Глава 5. Использование многоконтейнерных подов и паттерны проектирования](notes/chapters/chapter-05-multicontainer-pods-patterns/README.md) — RAG-only, PDF 181–217, chapter-artifact-collection v1.7. Статус чтения не изменен.
