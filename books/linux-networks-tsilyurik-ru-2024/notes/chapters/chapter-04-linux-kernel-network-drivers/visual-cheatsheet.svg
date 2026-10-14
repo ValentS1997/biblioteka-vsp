@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<rect x="0" y="0" width="1200" height="760" rx="13" fill="#f4f7fb"/>
+<text x="40" y="58" fill="#173a5f" font-family="DejaVu Sans, sans-serif" font-size="31" font-weight="700">ЧАСТЬ IV · СЕТЕВЫЕ ДРАЙВЕРЫ В ЯДРЕ LINUX</text>
+<text x="43" y="91" fill="#59738c" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">PDF 189–234 · 46 RAG-чанков · модули, sk_buff, протоколы</text>
+<rect x="40" y="134" width="372" height="260" rx="13" fill="#ffffff"/>
+<rect x="40" y="134" width="372" height="56" rx="13" fill="#dfebf9"/>
+<text x="58" y="169" fill="#174b76" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700">МОДУЛЬ ЯДРА</text>
+<text x="58" y="231" fill="#243d58" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Makefile → .ko → modinfo</text>
+<text x="58" y="280" fill="#243d58" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">insmod / modprobe / rmmod</text>
+<text x="58" y="329" fill="#243d58" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">module_init / module_exit</text>
+<rect x="429" y="134" width="372" height="260" rx="13" fill="#ffffff"/>
+<rect x="429" y="134" width="372" height="56" rx="13" fill="#dceee7"/>
+<text x="447" y="169" fill="#174b76" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700">СКВОЗНОЙ ПАКЕТ</text>
+<text x="447" y="231" fill="#243d58" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">sk_buff и net_device</text>
+<text x="447" y="280" fill="#243d58" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">RX: IRQ / softirq / NAPI</text>
+<text x="447" y="329" fill="#243d58" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">TX: ndo_start_xmit</text>
+<rect x="818" y="134" width="372" height="260" rx="13" fill="#ffffff"/>
+<rect x="818" y="134" width="372" height="56" rx="13" fill="#f4e9da"/>
+<text x="836" y="169" fill="#174b76" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700">ИНТЕРФЕЙСЫ И ПРОТОКОЛЫ</text>
+<text x="836" y="231" fill="#243d58" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">alloc_netdev / register_netdev</text>
+<text x="836" y="280" fill="#243d58" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">dev_add_pack / net_protocol</text>
+<text x="836" y="329" fill="#243d58" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">netdev_priv / статистика</text>
+<rect x="42" y="430" width="1116" height="207" rx="13" fill="#e7eef8"/>
+<text x="65" y="473" fill="#163d60" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700">БЕЗОПАСНЫЙ ПОРЯДОК</text>
+<text x="65" y="518" fill="#243d58" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400">Изучить ABI и состояние → проверить ownership skb → стенд VM.</text>
+<text x="65" y="562" fill="#243d58" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400">Сетевой модуль меняет живое ядро; перехват может нарушить сеть.</text>
+<text x="65" y="602" fill="#865060" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400">Проверить dmesg/lsmod/ip link; rollback текущего ядра не подтверждён.</text>
+<text x="43" y="691" fill="#914852" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="700">Риски кода: kfree_skb → skb-&gt;len; dev_queue_xmit → skb; irq/byte.</text>
+<text x="43" y="726" fill="#60778c" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400">SVG по тексту принятого RAG; не иллюстрация из PDF.</text>
+</svg>
