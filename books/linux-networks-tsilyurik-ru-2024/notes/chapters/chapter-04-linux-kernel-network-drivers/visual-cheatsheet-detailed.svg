@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1480" viewBox="0 0 1400 1480">
+<rect x="0" y="0" width="1400" height="1480" rx="10" fill="#f4f7fc"/>
+<text x="40" y="58" font-family="DejaVu Sans, sans-serif" font-size="31" font-weight="700" fill="#183c63">ЧАСТЬ IV · ДРАЙВЕРЫ СЕТЕВЫХ УСТРОЙСТВ</text>
+<text x="42" y="92" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#60778f">PDF 189–234 · 46 адресуемых RAG-чанков · source-only</text>
+<rect x="40" y="118" width="1320" height="98" rx="10" fill="#e3edf9"/>
+<rect x="40" y="118" width="12" height="98" rx="10" fill="#5379a4"/>
+<text x="66" y="146" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#154571">01 · МОДУЛЬ ЯДРА</text>
+<text x="66" y="175" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#26415c">hello_printk.c · Makefile → .ko → modinfo</text>
+<text x="66" y="202" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#576e84">module_init/module_exit; insmod, modprobe, rmmod</text>
+<rect x="40" y="224" width="1320" height="98" rx="10" fill="#ffffff"/>
+<rect x="40" y="224" width="12" height="98" rx="10" fill="#5379a4"/>
+<text x="66" y="252" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#154571">02 · ПАРАМЕТРЫ И ССЫЛКИ</text>
+<text x="66" y="281" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#26415c">module_param / module_param_array; sysfs</text>
+<text x="66" y="308" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#576e84">lsmod refcount: выгрузка зависит от ссылок</text>
+<rect x="40" y="330" width="1320" height="98" rx="10" fill="#e3edf9"/>
+<rect x="40" y="330" width="12" height="98" rx="10" fill="#5379a4"/>
+<text x="66" y="358" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#154571">03 · СЕТЕВЫЕ ДАННЫЕ</text>
+<text x="66" y="387" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#26415c">net_device описывает интерфейс и операции</text>
+<text x="66" y="414" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#576e84">sk_buff несёт данные; lifetime и refs обязательны</text>
+<rect x="40" y="436" width="1320" height="98" rx="10" fill="#ffffff"/>
+<rect x="40" y="436" width="12" height="98" rx="10" fill="#5379a4"/>
+<text x="66" y="464" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#154571">04 · ПРИЁМ RX</text>
+<text x="66" y="493" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#26415c">Адаптер → IRQ / softirq → netif_receive_skb</text>
+<text x="66" y="520" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#576e84">NAPI: первый IRQ → poll по budget → вновь IRQ</text>
+<rect x="40" y="542" width="1320" height="98" rx="10" fill="#e3edf9"/>
+<rect x="40" y="542" width="12" height="98" rx="10" fill="#5379a4"/>
+<text x="66" y="570" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#154571">05 · ПЕРЕДАЧА TX</text>
+<text x="66" y="599" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#26415c">Socket API → sk_buff → ndo_start_xmit</text>
+<text x="66" y="626" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#576e84">dev_queue_xmit / освобождение по завершении</text>
+<rect x="40" y="648" width="1320" height="98" rx="10" fill="#ffffff"/>
+<rect x="40" y="648" width="12" height="98" rx="10" fill="#5379a4"/>
+<text x="66" y="676" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#154571">06 · СВОЙ ИНТЕРФЕЙС</text>
+<text x="66" y="705" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#26415c">alloc_netdev → netdev_ops → register_netdev</text>
+<text x="66" y="732" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#576e84">unregister_netdev + free_netdev при выгрузке</text>
+<rect x="40" y="754" width="1320" height="98" rx="10" fill="#e3edf9"/>
+<rect x="40" y="754" width="12" height="98" rx="10" fill="#5379a4"/>
+<text x="66" y="782" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#154571">07 · ПРИВАТНЫЕ ДАННЫЕ</text>
+<text x="66" y="811" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#26415c">netdev_priv; net_device_stats; RX/TX counters</text>
+<text x="66" y="838" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#576e84">Схема структур зависит от версии ядра</text>
+<rect x="40" y="860" width="1320" height="98" rx="10" fill="#ffffff"/>
+<rect x="40" y="860" width="12" height="98" rx="10" fill="#5379a4"/>
+<text x="66" y="888" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#154571">08 · ВИРТУАЛЬНЫЙ ИНТЕРФЕЙС</text>
+<text x="66" y="917" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#26415c">rx_handler_register над parent; redirect skb</text>
+<text x="66" y="944" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#576e84">Упрощённый вариант может остановить parent</text>
+<rect x="40" y="966" width="1320" height="98" rx="10" fill="#e3edf9"/>
+<rect x="40" y="966" width="12" height="98" rx="10" fill="#5379a4"/>
+<text x="66" y="994" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#154571">09 · ФИЛЬТР ПРОТОКОЛОВ</text>
+<text x="66" y="1023" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#26415c">packet_type + dev_add_pack: Ethernet тип</text>
+<text x="66" y="1050" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#576e84">net_protocol + inet_add_protocol: IP-протокол</text>
+<rect x="40" y="1072" width="1320" height="98" rx="10" fill="#ffffff"/>
+<rect x="40" y="1072" width="12" height="98" rx="10" fill="#5379a4"/>
+<text x="66" y="1100" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#154571">10 · НАБЛЮДЕНИЕ И РИСКИ</text>
+<text x="66" y="1129" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#26415c">RO: uname, lsmod, modinfo, dmesg, ip link</text>
+<text x="66" y="1156" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#576e84">SC: insmod, ifconfig, dev_add_pack, регистрация</text>
+<rect x="40" y="1178" width="1320" height="98" rx="10" fill="#e3edf9"/>
+<rect x="40" y="1178" width="12" height="98" rx="10" fill="#5379a4"/>
+<text x="66" y="1206" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#154571">11 · SOURCE FINDINGS</text>
+<text x="66" y="1235" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#26415c">&amp;byte/irq; kfree_skb→skb; dev_queue_xmit→skb</text>
+<text x="66" y="1262" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#576e84">L2/L3 и скрипт нагрузочного теста: verify source</text>
+<rect x="40" y="1284" width="1320" height="98" rx="10" fill="#ffffff"/>
+<rect x="40" y="1284" width="12" height="98" rx="10" fill="#5379a4"/>
+<text x="66" y="1312" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#154571">12 · ПРИЁМКА / ОТКАТ</text>
+<text x="66" y="1341" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#26415c">Подтвердить интерфейс, счётчики, клиентский обмен</text>
+<text x="66" y="1368" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#576e84">Изолированная VM; rollback: Needs confirmation</text>
+<text x="42" y="1443" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#697d91">SVG составлена по извлечённому тексту RAG, не повторяет изображения первоисточника.</text>
+</svg>
