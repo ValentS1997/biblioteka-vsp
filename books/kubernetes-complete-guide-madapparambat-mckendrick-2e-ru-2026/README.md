@@ -32,3 +32,7 @@ Readiness command:
 ## Reading
 
 No reading status, dates or progress were modified or inferred during source/RAG ingest.
+
+## Chapter analysis
+
+- [Глава 14. Работа с Helm-чартами и операторами](notes/chapters/chapter-14-helm-operators-olm/README.md) — RAG-only, PDF 474–514, chapter-artifact-collection v1.7. Статус чтения не изменен.
