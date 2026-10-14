@@ -44,3 +44,4 @@ No reading status, dates or progress were modified or inferred during source/RAG
 - [Глава 7. ConfigMap и Secret](notes/chapters/chapter-07-configmap-secret/README.md) — RAG-only, PDF 248–280, v1.7. Статус чтения не менялся.
 - [Глава 8. Публикация подов с помощью сервисов](notes/chapters/chapter-08-services-networking-probes/README.md) — RAG-only, PDF 281–325, chapter-artifact-collection v1.7. Статус чтения не изменен.
 - [Глава 9. Постоянное хранилище в Kubernetes](notes/chapters/chapter-09-persistent-storage/README.md) — RAG-only, PDF 326–365, chapter-artifact-collection v1.7. Статус чтения не изменен.
+- [Глава 10. Запуск рабочих нагрузок производственного уровня в Kubernetes](notes/chapters/chapter-10-replicasets-ha-ft/README.md) — RAG-only, PDF 366–383, chapter-artifact-collection v1.7. Статус чтения не изменен.
