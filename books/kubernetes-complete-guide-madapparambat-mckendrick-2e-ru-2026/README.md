@@ -41,3 +41,4 @@ No reading status, dates or progress were modified or inferred during source/RAG
 - [Глава 4. Запуск контейнеров в Kubernetes](notes/chapters/chapter-04-pods-jobs-cronjobs/README.md) — RAG-only, PDF 143–180, chapter-artifact-collection v1.7. Статус чтения не изменен.
 - [Глава 5. Использование многоконтейнерных подов и паттерны проектирования](notes/chapters/chapter-05-multicontainer-pods-patterns/README.md) — RAG-only, PDF 181–217, chapter-artifact-collection v1.7. Статус чтения не изменен.
 - [Глава 6. Пространства имен, квоты и лимиты для реализации мультитенантности в Kubernetes](notes/chapters/chapter-06-namespaces-quotas-limits/README.md) — RAG-only, PDF 218–247, chapter-artifact-collection v1.7. Статус чтения не изменен.
+- [Глава 7. ConfigMap и Secret](notes/chapters/chapter-07-configmap-secret/README.md) — RAG-only, PDF 248–280, v1.7. Статус чтения не менялся.
