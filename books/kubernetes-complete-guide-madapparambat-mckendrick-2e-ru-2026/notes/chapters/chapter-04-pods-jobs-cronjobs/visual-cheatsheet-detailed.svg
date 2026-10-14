@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+<rect width="1200" height="900" fill="#f4f8fb"/>
+<text x="35" y="60" font-size="35" font-family="sans-serif" fill="#193b52">Глава 4: подробная карта объектов Kubernetes</text>
+<text x="35" y="99" font-size="18" font-family="sans-serif" fill="#476778">RAG PDF 143–180 · Pod → Job → CronJob · инвентарь 0033</text>
+<rect x="35" y="128" width="374" height="212" rx="12" fill="#ffffff" stroke="#cad9e3"/>
+<rect x="35" y="128" width="374" height="7" fill="#28718a"/>
+<text x="54" y="165" font-family="sans-serif" font-size="16" fill="#28627c">1. p144–149</text>
+<text x="54" y="209" font-family="sans-serif" font-weight="bold" font-size="26" fill="#173e55">Pod</text>
+<text x="54" y="252" font-family="sans-serif" font-size="18" fill="#3b596b">Один узел, 1+ контейнеров</text>
+<text x="54" y="285" font-family="sans-serif" font-size="18" fill="#3b596b">localhost и общие тома</text>
+<rect x="428" y="128" width="374" height="212" rx="12" fill="#ffffff" stroke="#cad9e3"/>
+<rect x="428" y="128" width="374" height="7" fill="#28718a"/>
+<text x="447" y="165" font-family="sans-serif" font-size="16" fill="#28627c">2. p148–150</text>
+<text x="447" y="209" font-family="sans-serif" font-weight="bold" font-size="26" fill="#173e55">Дизайн</text>
+<text x="447" y="252" font-family="sans-serif" font-size="18" fill="#3b596b">Пересоздаваемые Pod</text>
+<text x="447" y="285" font-family="sans-serif" font-size="18" fill="#3b596b">Состояние — отдельно</text>
+<rect x="821" y="128" width="374" height="212" rx="12" fill="#ffffff" stroke="#cad9e3"/>
+<rect x="821" y="128" width="374" height="7" fill="#28718a"/>
+<text x="840" y="165" font-family="sans-serif" font-size="16" fill="#28627c">3. p150–153</text>
+<text x="840" y="209" font-family="sans-serif" font-weight="bold" font-size="26" fill="#173e55">Создание</text>
+<text x="840" y="252" font-family="sans-serif" font-size="18" fill="#3b596b">run / apply -f YAML</text>
+<text x="840" y="285" font-family="sans-serif" font-size="18" fill="#3b596b">Образ nginx:latest</text>
+<rect x="35" y="362" width="374" height="212" rx="12" fill="#ffffff" stroke="#cad9e3"/>
+<rect x="35" y="362" width="374" height="7" fill="#28718a"/>
+<text x="54" y="399" font-family="sans-serif" font-size="16" fill="#28627c">4. p153–156</text>
+<text x="54" y="443" font-family="sans-serif" font-weight="bold" font-size="26" fill="#173e55">Наблюдение</text>
+<text x="54" y="486" font-family="sans-serif" font-size="18" fill="#3b596b">get / describe / -o wide</text>
+<text x="54" y="519" font-family="sans-serif" font-size="18" fill="#3b596b">Conditions и Events</text>
+<rect x="428" y="362" width="374" height="212" rx="12" fill="#ffffff" stroke="#cad9e3"/>
+<rect x="428" y="362" width="374" height="7" fill="#28718a"/>
+<text x="447" y="399" font-family="sans-serif" font-size="16" fill="#28627c">5. p156–159</text>
+<text x="447" y="443" font-family="sans-serif" font-weight="bold" font-size="26" fill="#173e55">Подключение</text>
+<text x="447" y="486" font-family="sans-serif" font-size="18" fill="#3b596b">port-forward 8080:80</text>
+<text x="447" y="519" font-family="sans-serif" font-size="18" fill="#3b596b">exec и exit</text>
+<rect x="821" y="362" width="374" height="212" rx="12" fill="#ffffff" stroke="#cad9e3"/>
+<rect x="821" y="362" width="374" height="7" fill="#28718a"/>
+<text x="840" y="399" font-family="sans-serif" font-size="16" fill="#28627c">6. p159–165</text>
+<text x="840" y="443" font-family="sans-serif" font-weight="bold" font-size="26" fill="#173e55">Метки</text>
+<text x="840" y="486" font-family="sans-serif" font-size="18" fill="#3b596b">--selector / --show-labels</text>
+<text x="840" y="519" font-family="sans-serif" font-size="18" fill="#3b596b">label / --overwrite</text>
+<rect x="35" y="596" width="374" height="212" rx="12" fill="#ffffff" stroke="#cad9e3"/>
+<rect x="35" y="596" width="374" height="7" fill="#28718a"/>
+<text x="54" y="633" font-family="sans-serif" font-size="16" fill="#28627c">7. p165–171</text>
+<text x="54" y="677" font-family="sans-serif" font-weight="bold" font-size="26" fill="#173e55">Job</text>
+<text x="54" y="720" font-family="sans-serif" font-size="18" fill="#3b596b">restartPolicy, backoffLimit</text>
+<text x="54" y="753" font-family="sans-serif" font-size="18" fill="#3b596b">completions, parallelism</text>
+<rect x="428" y="596" width="374" height="212" rx="12" fill="#ffffff" stroke="#cad9e3"/>
+<rect x="428" y="596" width="374" height="7" fill="#28718a"/>
+<text x="447" y="633" font-family="sans-serif" font-size="16" fill="#28627c">8. p171–173</text>
+<text x="447" y="677" font-family="sans-serif" font-weight="bold" font-size="26" fill="#173e55">Job cleanup</text>
+<text x="447" y="720" font-family="sans-serif" font-size="18" fill="#3b596b">activeDeadlineSeconds</text>
+<text x="447" y="753" font-family="sans-serif" font-size="18" fill="#3b596b">ttlSecondsAfterFinished</text>
+<rect x="821" y="596" width="374" height="212" rx="12" fill="#ffffff" stroke="#cad9e3"/>
+<rect x="821" y="596" width="374" height="7" fill="#28718a"/>
+<text x="840" y="633" font-family="sans-serif" font-size="16" fill="#28627c">9. p173–178</text>
+<text x="840" y="677" font-family="sans-serif" font-weight="bold" font-size="26" fill="#173e55">CronJob</text>
+<text x="840" y="720" font-family="sans-serif" font-size="18" fill="#3b596b">schedule, jobTemplate</text>
+<text x="840" y="753" font-family="sans-serif" font-size="18" fill="#3b596b">history и deadline</text>
+<text x="35" y="862" font-family="sans-serif" font-size="16" fill="#536c7c">Read-only проверки отдельно от изменений; rollback без данных среды не гарантируется.</text>
+</svg>
