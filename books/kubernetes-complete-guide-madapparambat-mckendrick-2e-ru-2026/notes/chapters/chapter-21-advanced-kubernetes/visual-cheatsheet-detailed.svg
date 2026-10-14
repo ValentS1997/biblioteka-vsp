@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1210" height="953" viewBox="0 0 1210 953">
+<rect width="1210" height="953" fill="#f4f9fb"/>
+<rect width="1210" height="10" fill="#236e88"/>
+<text x="32" y="56" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#153e55">Глава 21 · Продвинутые возможности Kubernetes</text>
+<text x="32" y="93" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#456b7b">Подробно: маршрутизация, day-2, защита, troubleshooting</text>
+<text x="32" y="124" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#5b7a88">RAG-only · PDF 705–749 · inventory 0033 · глава 21 из 21</text>
+<rect x="32" y="155" width="374" height="217" rx="12" fill="white" stroke="#cbdce3"/>
+<rect x="32" y="155" width="374" height="8" fill="#297a93"/>
+<text x="49" y="190" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#267a92">1 · p705–716</text>
+<text x="49" y="237" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#194257">Ingress</text>
+<text x="49" y="281" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">ClusterIP behind L7 proxy</text>
+<text x="49" y="323" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">video/shopping/blog routes</text>
+<rect x="431" y="155" width="374" height="217" rx="12" fill="white" stroke="#cbdce3"/>
+<rect x="431" y="155" width="374" height="8" fill="#297a93"/>
+<text x="448" y="190" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#267a92">2 · p710–717</text>
+<text x="448" y="237" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#194257">IngressClass</text>
+<text x="448" y="281" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">nginx default annotation</text>
+<text x="448" y="323" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">Controller required</text>
+<rect x="830" y="155" width="374" height="217" rx="12" fill="white" stroke="#cbdce3"/>
+<rect x="830" y="155" width="374" height="8" fill="#297a93"/>
+<text x="847" y="190" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#267a92">3 · p717–720</text>
+<text x="847" y="237" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#194257">AGIC in AKS</text>
+<text x="847" y="281" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">Azure private Pod IP routing</text>
+<text x="847" y="323" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">CLI cluster names mismatch</text>
+<rect x="32" y="394" width="374" height="217" rx="12" fill="white" stroke="#cbdce3"/>
+<rect x="32" y="394" width="374" height="8" fill="#297a93"/>
+<text x="49" y="429" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#267a92">4 · p720–724</text>
+<text x="49" y="476" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#194257">Gateway API</text>
+<text x="49" y="520" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">GatewayClass / Gateway / Route</text>
+<text x="49" y="562" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">example controller absent</text>
+<rect x="431" y="394" width="374" height="217" rx="12" fill="white" stroke="#cbdce3"/>
+<rect x="431" y="394" width="374" height="8" fill="#297a93"/>
+<text x="448" y="429" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#267a92">5 · p724–727</text>
+<text x="448" y="476" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#194257">Ecosystem</text>
+<text x="448" y="520" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">Knative, Kubeflow, KubeVirt</text>
+<text x="448" y="562" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">Concepts only, no install</text>
+<rect x="830" y="394" width="374" height="217" rx="12" fill="white" stroke="#cbdce3"/>
+<rect x="830" y="394" width="374" height="8" fill="#297a93"/>
+<text x="847" y="429" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#267a92">6 · p727–730</text>
+<text x="847" y="476" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#194257">etcd backup</text>
+<text x="847" y="520" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">snapshot save / status / restore</text>
+<text x="847" y="562" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">Different filenames; high risk</text>
+<rect x="32" y="633" width="374" height="217" rx="12" fill="white" stroke="#cbdce3"/>
+<rect x="32" y="633" width="374" height="8" fill="#297a93"/>
+<text x="49" y="668" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#267a92">7 · p730–734</text>
+<text x="49" y="715" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#194257">Day-2 upgrade</text>
+<text x="49" y="759" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">drain → control → workers</text>
+<text x="49" y="801" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">uncordon, no proven rollback</text>
+<rect x="431" y="633" width="374" height="217" rx="12" fill="white" stroke="#cbdce3"/>
+<rect x="431" y="633" width="374" height="8" fill="#297a93"/>
+<text x="448" y="668" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#267a92">8 · p734–739</text>
+<text x="448" y="715" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#194257">Security</text>
+<text x="448" y="759" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">API, kubelet, RBAC, audit</text>
+<text x="448" y="801" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">TLS + Secrets encryption</text>
+<rect x="830" y="633" width="374" height="217" rx="12" fill="white" stroke="#cbdce3"/>
+<rect x="830" y="633" width="374" height="8" fill="#297a93"/>
+<text x="847" y="668" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#267a92">9 · p739–749</text>
+<text x="847" y="715" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#194257">Troubleshooting</text>
+<text x="847" y="759" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">Events, logs, explain, debug</text>
+<text x="847" y="801" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">Ephemeral Pod mutation</text>
+<text x="32" y="929" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#587b88">Примеры не запускались. AGIC, Gateway и восстановление etcd требуют проверки.</text>
+</svg>

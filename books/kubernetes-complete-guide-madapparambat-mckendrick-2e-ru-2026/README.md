@@ -32,3 +32,7 @@ Readiness command:
 ## Reading
 
 No reading status, dates or progress were modified or inferred during source/RAG ingest.
+
+## Chapter analysis
+
+- [Глава 21. Продвинутые возможности Kubernetes](notes/chapters/chapter-21-advanced-kubernetes/README.md) — RAG-only, PDF 705–749, chapter-artifact-collection v1.7. Последняя глава (21/21). Статус чтения не изменен.

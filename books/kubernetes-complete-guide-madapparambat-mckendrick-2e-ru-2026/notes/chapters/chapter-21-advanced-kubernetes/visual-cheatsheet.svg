@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1210" height="708" viewBox="0 0 1210 708">
+<rect width="1210" height="708" fill="#f4f9fb"/>
+<rect width="1210" height="10" fill="#236e88"/>
+<text x="32" y="56" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#153e55">Глава 21 · Продвинутые возможности Kubernetes</text>
+<text x="32" y="93" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#456b7b">Ingress / Gateway / day-2 / безопасность и диагностика</text>
+<text x="32" y="124" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#5b7a88">RAG-only · PDF 705–749 · inventory 0033 · глава 21 из 21</text>
+<rect x="32" y="155" width="374" height="195" rx="12" fill="white" stroke="#cbdce3"/>
+<rect x="32" y="155" width="374" height="8" fill="#297a93"/>
+<text x="49" y="190" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#267a92">1</text>
+<text x="49" y="237" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#194257">Ingress + IngressClass</text>
+<text x="49" y="281" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">Host/path routing</text>
+<text x="49" y="323" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">HTTP lab, TLS not set</text>
+<rect x="431" y="155" width="374" height="195" rx="12" fill="white" stroke="#cbdce3"/>
+<rect x="431" y="155" width="374" height="8" fill="#297a93"/>
+<text x="448" y="190" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#267a92">2</text>
+<text x="448" y="237" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#194257">AGIC for AKS</text>
+<text x="448" y="281" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">Application Gateway L7</text>
+<text x="448" y="323" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">Source names disagree</text>
+<rect x="830" y="155" width="374" height="195" rx="12" fill="white" stroke="#cbdce3"/>
+<rect x="830" y="155" width="374" height="8" fill="#297a93"/>
+<text x="847" y="190" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#267a92">3</text>
+<text x="847" y="237" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#194257">Gateway API</text>
+<text x="847" y="281" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">GatewayClass → Gateway</text>
+<text x="847" y="323" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">HTTPRoute to backend</text>
+<rect x="32" y="376" width="374" height="195" rx="12" fill="white" stroke="#cbdce3"/>
+<rect x="32" y="376" width="374" height="8" fill="#297a93"/>
+<text x="49" y="411" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#267a92">4</text>
+<text x="49" y="458" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#194257">Day-2 / etcd</text>
+<text x="49" y="502" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">Snapshot + upgrades</text>
+<text x="49" y="544" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">Filename mismatch</text>
+<rect x="431" y="376" width="374" height="195" rx="12" fill="white" stroke="#cbdce3"/>
+<rect x="431" y="376" width="374" height="8" fill="#297a93"/>
+<text x="448" y="411" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#267a92">5</text>
+<text x="448" y="458" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#194257">Security</text>
+<text x="448" y="502" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">RBAC, TLS, audit</text>
+<text x="448" y="544" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">etcd secrets at rest</text>
+<rect x="830" y="376" width="374" height="195" rx="12" fill="white" stroke="#cbdce3"/>
+<rect x="830" y="376" width="374" height="8" fill="#297a93"/>
+<text x="847" y="411" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#267a92">6</text>
+<text x="847" y="458" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#194257">Troubleshooting</text>
+<text x="847" y="502" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">get, describe, logs</text>
+<text x="847" y="544" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6477">exec/cp/debug can mutate</text>
+<text x="32" y="684" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#587b88">Примеры не запускались. AGIC, Gateway и восстановление etcd требуют проверки.</text>
+</svg>
