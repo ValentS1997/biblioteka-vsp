@@ -37,3 +37,4 @@ Existing reading status is unchanged. No reading progress or dates were set duri
 - [Глава 2. Язык циклов](notes/chapters/chapter-02-loop-language/README.md) — RAG p0030:c01–p0042:c01 · PDF 30–42 · печатные 29–41, v1.7, RAG-only.
 - [Глава 3. На всякий случай: оператор Case](notes/chapters/chapter-03-case/README.md) — RAG p0043:c01–p0057:c01 · PDF 43–57 · печатные 42–56, v1.7, RAG-only.
 - [Глава 4. Язык переменных](notes/chapters/chapter-04-variables/README.md) — RAG p0058:c01–p0072:c01 · PDF 58–72 · печатные 57–71, v1.7, RAG-only.
+- [Глава 5. Выражения и арифметика](notes/chapters/chapter-05-expressions-arithmetic/README.md) — RAG p0073:c01–p0082:c01 · PDF 73–82 · печатные 72–81, v1.7, RAG-only.
