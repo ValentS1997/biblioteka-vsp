@@ -11,3 +11,4 @@
 | 05 | Выражения и арифметика | PDF 73–82; печатные 72–81 | [Анализ главы 5](chapter-05-expressions-arithmetic/README.md) |
 | 06 | Функции | PDF 83–93; печатные 82–92 | [Анализ главы 6](chapter-06-functions/README.md) |
 | 07 | Списки и хеши | PDF 94–110; печатные 93–109 | [Анализ главы 7](chapter-07-lists-hashes/README.md) |
+| 08 | Аргументы | PDF 111–125; печатные 110–124 | [Анализ главы 8](chapter-08-arguments/README.md) |
