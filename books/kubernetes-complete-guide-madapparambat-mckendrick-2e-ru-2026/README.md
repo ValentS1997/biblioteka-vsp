@@ -51,3 +51,4 @@ No reading status, dates or progress were modified or inferred during source/RAG
 - [Глава 14. Работа с Helm-чартами и операторами](notes/chapters/chapter-14-helm-operators-olm/README.md) — RAG-only, PDF 474–514, chapter-artifact-collection v1.7. Статус чтения не изменен.
 - [Глава 15. Запуск кластера в Google Cloud Platform с помощью Google Kubernetes Engine](notes/chapters/chapter-15-gcp-gke/README.md) — RAG-only, PDF 515–536, chapter-artifact-collection v1.7. Статус чтения не изменен.
 - [Глава 16. Amazon Web Services и Amazon EKS](notes/chapters/chapter-16-amazon-eks/README.md) — RAG-only, PDF 537–560, chapter-artifact-collection v1.7. Статус чтения не изменен.
+- [Глава 17. Microsoft Azure и Azure Kubernetes Service](notes/chapters/chapter-17-azure-aks/README.md) — RAG-only, PDF 561–586, chapter-artifact-collection v1.7. Статус чтения не изменен.
