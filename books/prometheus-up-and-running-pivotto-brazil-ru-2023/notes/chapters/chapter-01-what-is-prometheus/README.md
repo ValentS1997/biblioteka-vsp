@@ -38,7 +38,7 @@
 - [diagram.md](diagram.md) — Mermaid-схемы архитектуры и выбора телеметрии.
 - [visual-cheatsheet.svg](visual-cheatsheet.svg) — компактная визуальная карта.
 - [visual-cheatsheet-detailed.svg](visual-cheatsheet-detailed.svg) — расширенная визуальная карта.
-- [source-findings.md](source-findings.md) — неполнота представления исходных рисунков в текстовом RAG.
+- [source-findings.md](source-findings.md) — неполнота представления рисунков в RAG и несогласованность числового примера журналирования (PDF 24–25).
 
 ## Источники и ограничения
 
