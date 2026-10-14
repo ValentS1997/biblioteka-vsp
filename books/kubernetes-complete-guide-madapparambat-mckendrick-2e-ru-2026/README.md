@@ -32,3 +32,7 @@ Readiness command:
 ## Reading
 
 No reading status, dates or progress were modified or inferred during source/RAG ingest.
+
+## Chapter analysis
+
+- [Глава 11. Использование Deployment для управления рабочими нагрузками без сохранения состояния](notes/chapters/chapter-11-deployment-rollouts/README.md) — RAG-only, PDF 384–419, chapter-artifact-collection v1.7. Статус чтения не изменен.
