@@ -1,0 +1,42 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: "zabbix-7-monitoring-it-infrastructure-ru-publication-plan-pr495"
+repository: "vsp-corp/biblioteka-vsp"
+book_id: "zabbix-7-monitoring-it-infrastructure-ru"
+task_kind: process
+objective: "Publish RAG-grounded 13-chapter plan and Git chapter index under current canonical contracts."
+branch: "chapter/zabbix-7-0020-publication-plan-20261015"
+initial_base_sha: "aa3733b43f6db3627453e4814926e59a9ae3b136"
+last_observed_head_sha: "5ced9f9c14ad443d734030c77b38ee0be04926a9"
+expected_source_sha256: "07204d885d4bf4c6c2de7c71ae42a4e3ed4cea794169cbe07985552e63875a27"
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite without explicit authorization
+  - no reading-progress mutation without explicit user confirmation
+  - no archive delivery for chapter artifacts
+  - RAG-only chapter content
+stage: IN_PROGRESS
+completed_steps:
+  - step: "Verified thirteen TOC chapter headings and start-page RAG chunks"
+    evidence_type: file-readback
+    reference: "books/zabbix-7-monitoring-it-infrastructure-ru/rag/chunks/p0001-p0100/p0005-c01.md"
+  - step: "Committed RAG-grounded publication plan"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/8def703a26f9595ea852d93925dfb8a668109b30"
+  - step: "Committed chapter publication index"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/ca7ca216f1d44d4e99bc24c33bdce2ec8e3e4acd"
+  - step: "Linked book README and opened PR #495"
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/495"
+  - step: "Initial PR chapter-notes CI successful"
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38623382966"
+pending_steps:
+  - "Align the new plan and index references with current canonical process router v1.2"
+  - "Git read-back and rerun relevant PR CI on final branch head"
+  - "Confirm PR remains open and note main-vs-branch published progress"
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/pull/495"
+first_safe_next_action: "Re-fetch branch HEAD and blob SHAs before updating process contract references."
+blocker: "Not applicable"
+last_observed_at: "Not applicable"
