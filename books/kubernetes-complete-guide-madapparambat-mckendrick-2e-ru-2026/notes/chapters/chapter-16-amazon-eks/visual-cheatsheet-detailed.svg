@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="950" viewBox="0 0 1200 950">
+<rect width="1200" height="950" fill="#f5f9fb"/>
+<rect width="1200" height="9" fill="#23718a"/>
+<text x="32" y="54" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#143e50">Глава 16 · AWS и Amazon EKS</text>
+<text x="32" y="91" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#41687b">Подробно: IAM, eksctl, CloudFormation, Guestbook, эксплуатационные риски</text>
+<text x="32" y="122" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#557889">RAG-only · PDF 537–560 · inventory 0033</text>
+<rect x="32" y="150" width="371" height="219" rx="12" fill="white" stroke="#cedee5"/>
+<rect x="32" y="150" width="371" height="8" rx="3" fill="#27758d"/>
+<text x="48" y="185" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247991">1 · p537–545</text>
+<text x="48" y="233" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173f52">Account / IAM</text>
+<text x="48" y="277" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3c6374">Billing + IAM user</text>
+<text x="48" y="321" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6374">AdministratorAccess опасен</text>
+<rect x="426" y="150" width="371" height="219" rx="12" fill="white" stroke="#cedee5"/>
+<rect x="426" y="150" width="371" height="8" rx="3" fill="#27758d"/>
+<text x="442" y="185" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247991">2 · p541–545</text>
+<text x="442" y="233" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173f52">AWS CLI</text>
+<text x="442" y="277" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3c6374">brew / unzip / choco</text>
+<text x="442" y="321" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6374">aws configure, region</text>
+<rect x="820" y="150" width="371" height="219" rx="12" fill="white" stroke="#cedee5"/>
+<rect x="820" y="150" width="371" height="8" rx="3" fill="#27758d"/>
+<text x="836" y="185" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247991">3 · p545–546</text>
+<text x="836" y="233" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173f52">eksctl</text>
+<text x="836" y="277" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3c6374">CloudFormation automation</text>
+<text x="836" y="321" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6374">version and install</text>
+<rect x="32" y="392" width="371" height="219" rx="12" fill="white" stroke="#cedee5"/>
+<rect x="32" y="392" width="371" height="8" rx="3" fill="#27758d"/>
+<text x="48" y="427" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247991">4 · p547–549</text>
+<text x="48" y="475" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173f52">Cluster creation</text>
+<text x="48" y="519" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3c6374">2 m5.large + managed group</text>
+<text x="48" y="563" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6374">VPC, 2 CloudFormation stacks</text>
+<rect x="426" y="392" width="371" height="219" rx="12" fill="white" stroke="#cedee5"/>
+<rect x="426" y="392" width="371" height="8" rx="3" fill="#27758d"/>
+<text x="442" y="427" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247991">5 · p545–551</text>
+<text x="442" y="475" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173f52">Source mismatch</text>
+<text x="442" y="519" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3c6374">us-west-1 (text)</text>
+<text x="442" y="563" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6374">us-west-2 (CLI + Console)</text>
+<rect x="820" y="392" width="371" height="219" rx="12" fill="white" stroke="#cedee5"/>
+<rect x="820" y="392" width="371" height="8" rx="3" fill="#27758d"/>
+<text x="836" y="427" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247991">6 · p548</text>
+<text x="836" y="475" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173f52">Default exposure</text>
+<text x="836" y="519" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3c6374">public EKS API endpoint</text>
+<text x="836" y="563" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6374">CloudWatch logging off</text>
+<rect x="32" y="634" width="371" height="219" rx="12" fill="white" stroke="#cedee5"/>
+<rect x="32" y="634" width="371" height="8" rx="3" fill="#27758d"/>
+<text x="48" y="669" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247991">7 · p549–551</text>
+<text x="48" y="717" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173f52">Guestbook</text>
+<text x="48" y="761" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3c6374">Redis leader / follower</text>
+<text x="48" y="805" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6374">Frontend external ELB URL</text>
+<rect x="426" y="634" width="371" height="219" rx="12" fill="white" stroke="#cedee5"/>
+<rect x="426" y="634" width="371" height="8" rx="3" fill="#27758d"/>
+<text x="442" y="669" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247991">8 · p551–556</text>
+<text x="442" y="717" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173f52">AWS Console</text>
+<text x="442" y="761" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3c6374">EKS + EC2 + Load Balancer</text>
+<text x="442" y="805" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6374">IAM principal and access</text>
+<rect x="820" y="634" width="371" height="219" rx="12" fill="white" stroke="#cedee5"/>
+<rect x="820" y="634" width="371" height="8" rx="3" fill="#27758d"/>
+<text x="836" y="669" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247991">9 · p557–560</text>
+<text x="836" y="717" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173f52">Teardown / cost</text>
+<text x="836" y="761" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3c6374">eksctl delete cluster</text>
+<text x="836" y="805" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6374">orphan check, historical $213/mo</text>
+<text x="32" y="925" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#557887">Не исполнялось. Учётные данные, EKS/EC2/ELB расходы и destructive cleanup требуют проверки.</text>
+</svg>

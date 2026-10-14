@@ -32,3 +32,7 @@ Readiness command:
 ## Reading
 
 No reading status, dates or progress were modified or inferred during source/RAG ingest.
+
+## Chapter analysis
+
+- [Глава 16. Amazon Web Services и Amazon EKS](notes/chapters/chapter-16-amazon-eks/README.md) — RAG-only, PDF 537–560, chapter-artifact-collection v1.7. Статус чтения не изменен.
