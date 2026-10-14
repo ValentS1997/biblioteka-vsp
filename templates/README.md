@@ -7,7 +7,7 @@ Canonical process and entrypoint templates.
 | Use case | Template | Version |
 |---|---|---:|
 | Start a new book branch for RAG + chapter cheatsheets | [book-branch-bootstrap-v1.4.yaml](book-branch-bootstrap-v1.4.yaml) | 1.4 |
-| Start analysis of one chapter | [chapter-analysis-request-v1.4.yaml](chapter-analysis-request-v1.4.yaml) | 1.3 |
+| Start analysis of one chapter | [chapter-analysis-request-v1.4.yaml](chapter-analysis-request-v1.4.yaml) | 1.4 |
 
 ## Current process contracts
 
