@@ -1,0 +1,119 @@
+schema: biblioteka-vsp/chapter-plan/v1
+book_id: 1c-enterprise-8-3-radchenko-khrustaleva-3e-ru
+source_sha256: ce8fa0fbf0d8bb38f724ed04f130c2443c1e181eb51edafac692c4786874c923
+source_format: pdf
+total_chapters: 28
+toc_evidence: "RAG chunk p0003-c01.md (PDF page 3): numbered lessons 1-28. Opening RAG chunks p0015-c01 through p0877-c01 checked at all 28 TOC start pages."
+chapters:
+  - number: 1
+    title: "Знакомство, создание информационной базы"
+    slug: znakomstvo-sozdanie-informatsionnoy-bazy
+    source_locator: "pdf_page:15; toc_pdf_page:3; printed_start_page:15"
+  - number: 2
+    title: "Подсистемы"
+    slug: podsistemy
+    source_locator: "pdf_page:39; toc_pdf_page:3; printed_start_page:39"
+  - number: 3
+    title: "Справочники"
+    slug: spravochniki
+    source_locator: "pdf_page:55; toc_pdf_page:3; printed_start_page:55"
+  - number: 4
+    title: "Документы"
+    slug: dokumenty
+    source_locator: "pdf_page:121; toc_pdf_page:3; printed_start_page:121"
+  - number: 5
+    title: "Теоретическое"
+    slug: teoreticheskoe
+    source_locator: "pdf_page:155; toc_pdf_page:3; printed_start_page:155"
+  - number: 6
+    title: "Регистры накопления"
+    slug: registry-nakopleniya
+    source_locator: "pdf_page:211; toc_pdf_page:3; printed_start_page:211"
+  - number: 7
+    title: "Простой отчет"
+    slug: prostoy-otchet
+    source_locator: "pdf_page:235; toc_pdf_page:3; printed_start_page:235"
+  - number: 8
+    title: "Макеты. Редактирование макетов"
+    slug: makety-redaktirovanie-maketov
+    source_locator: "pdf_page:249; toc_pdf_page:3; printed_start_page:249"
+  - number: 9
+    title: "Периодические регистры сведений"
+    slug: periodicheskie-registry-svedeniy
+    source_locator: "pdf_page:263; toc_pdf_page:3; printed_start_page:263"
+  - number: 10
+    title: "Перечисления"
+    slug: perechisleniya
+    source_locator: "pdf_page:281; toc_pdf_page:3; printed_start_page:281"
+  - number: 11
+    title: "Проведение документа по нескольким регистрам"
+    slug: provedenie-dokumenta-po-neskolkim-registram
+    source_locator: "pdf_page:295; toc_pdf_page:3; printed_start_page:295"
+  - number: 12
+    title: "Оборотные регистры накопления"
+    slug: oborotnye-registry-nakopleniya
+    source_locator: "pdf_page:315; toc_pdf_page:3; printed_start_page:315"
+  - number: 13
+    title: "Отчеты"
+    slug: otchety
+    source_locator: "pdf_page:327; toc_pdf_page:3; printed_start_page:327"
+  - number: 14
+    title: "Оптимизация проведения документа «Оказание услуги»"
+    slug: optimizatsiya-provedeniya-dokumenta-okazanie-uslugi
+    source_locator: "pdf_page:415; toc_pdf_page:3; printed_start_page:415"
+  - number: 15
+    title: "План видов характеристик"
+    slug: plan-vidov-kharakteristik
+    source_locator: "pdf_page:477; toc_pdf_page:3; printed_start_page:477"
+  - number: 16
+    title: "Бухгалтерский учет"
+    slug: bukhgalterskiy-uchet
+    source_locator: "pdf_page:531; toc_pdf_page:3; printed_start_page:531"
+  - number: 17
+    title: "План видов расчета, регистр расчета"
+    slug: plan-vidov-rascheta-registr-rascheta
+    source_locator: "pdf_page:561; toc_pdf_page:3; printed_start_page:561"
+  - number: 18
+    title: "Использование регистра расчета"
+    slug: ispolzovanie-registra-rascheta
+    source_locator: "pdf_page:583; toc_pdf_page:3; printed_start_page:583"
+  - number: 19
+    title: "Поиск в базе данных"
+    slug: poisk-v-baze-dannykh
+    source_locator: "pdf_page:625; toc_pdf_page:3; printed_start_page:625"
+  - number: 20
+    title: "Выполнение заданий по расписанию"
+    slug: vypolnenie-zadaniy-po-raspisaniyu
+    source_locator: "pdf_page:641; toc_pdf_page:3; printed_start_page:641"
+  - number: 21
+    title: "Редактирование движений в форме документа"
+    slug: redaktirovanie-dvizheniy-v-forme-dokumenta
+    source_locator: "pdf_page:655; toc_pdf_page:3; printed_start_page:655"
+  - number: 22
+    title: "Список пользователей и их роли"
+    slug: spisok-polzovateley-i-ikh-roli
+    source_locator: "pdf_page:665; toc_pdf_page:3; printed_start_page:665"
+  - number: 23
+    title: "Начальная страница и настройка командного интерфейса"
+    slug: nachalnaya-stranitsa-i-nastroyka-komandnogo-interfeysa
+    source_locator: "pdf_page:691; toc_pdf_page:3; printed_start_page:691"
+  - number: 24
+    title: "Обмен данными"
+    slug: obmen-dannymi
+    source_locator: "pdf_page:717; toc_pdf_page:3; printed_start_page:717"
+  - number: 25
+    title: "Функциональные опции"
+    slug: funktsionalnye-optsii
+    source_locator: "pdf_page:787; toc_pdf_page:3; printed_start_page:787"
+  - number: 26
+    title: "Организация подборов, особенности разработки в режиме без использования модальности и ввод данных на основании"
+    slug: organizatsiya-podborov-osobennosti-razrabotki-v-rezhime-bez-ispolzovaniya-modalnosti-i-vvod-dannykh-na-osnovanii
+    source_locator: "pdf_page:805; toc_pdf_page:3; printed_start_page:805"
+  - number: 27
+    title: "Приемы разработки форм"
+    slug: priemy-razrabotki-form
+    source_locator: "pdf_page:829; toc_pdf_page:3; printed_start_page:829"
+  - number: 28
+    title: "Приемы редактирования форм"
+    slug: priemy-redaktirovaniya-form
+    source_locator: "pdf_page:877; toc_pdf_page:3; printed_start_page:877"
