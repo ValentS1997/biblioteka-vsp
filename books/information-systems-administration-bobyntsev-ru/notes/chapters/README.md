@@ -10,7 +10,7 @@
 
 ## Canonical publication process
 
-Use `templates/process-compliance-router-v1.1.yaml`, `templates/chapter-publication-v1.0.yaml`, `templates/chapter-analysis-request-v1.4.yaml` and `templates/chapter-artifact-collection-v1.8.yaml` from `main`. The source of chapter facts is canonical addressable RAG only. Files must be written as individual Git paths on the book branch, not as ZIP/archives or chat attachments. Publication must not modify the reading status.
+Use `templates/process-compliance-router-v1.2.yaml`, `templates/chapter-publication-v1.0.yaml`, `templates/chapter-analysis-request-v1.4.yaml` and `templates/chapter-artifact-collection-v1.8.yaml` from `main`. The source of chapter facts is canonical addressable RAG only. Files must be written as individual Git paths on the book branch, not as ZIP/archives or chat attachments. Publication must not modify the reading status.
 
 ## TOC provenance and source finding
 
