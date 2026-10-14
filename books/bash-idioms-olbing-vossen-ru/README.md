@@ -30,3 +30,7 @@ Full-book RAG built in GitHub Actions run `38394114002` (commit `af1c0cf00a1f407
 ## Reading
 
 Existing reading status is unchanged. No reading progress or dates were set during onboarding.
+
+## Анализ глав
+
+- [Глава 1. Идиома «большого» if](notes/chapters/chapter-01-big-if/README.md) — RAG p0021:c01–p0029:c01 · PDF 21–29 · печатные 20–28, v1.7, RAG-only.
