@@ -95,14 +95,15 @@ RAG readiness и reading progress — разные состояния. Нали�
 Канонические шаблоны и контракты:
 
 - [Templates index](templates/README.md)
-- [Process compliance router v1.0](templates/process-compliance-router-v1.0.yaml)
+- [Process compliance router v1.0](templates/process-compliance-router-v1.1.yaml)
 - [Git execution policy v1.0](templates/git-execution-policy-v1.0.yaml)
-- [New book branch bootstrap v1.3](templates/book-branch-bootstrap-v1.3.yaml)
+- [New book branch bootstrap v1.3](templates/book-branch-bootstrap-v1.4.yaml)
 - [Book onboarding v1.3](templates/book-onboarding-v1.3.yaml)
 - [RAG ingestion acceptance v1.0](templates/rag-ingestion-acceptance-v1.0.yaml)
 - [Book readiness v1.3](templates/book-readiness-v1.3.yaml)
-- [Chapter analysis request v1.3](templates/chapter-analysis-request-v1.3.yaml)
-- [Chapter artifacts v1.7](templates/chapter-artifact-collection-v1.7.yaml)
+- [Chapter analysis request v1.3](templates/chapter-analysis-request-v1.4.yaml)
+- [Chapter artifacts v1.8](templates/chapter-artifact-collection-v1.8.yaml)
+- [Chapter publication: direct Git + progress v1.0](templates/chapter-publication-v1.0.yaml)
 - [Book lifecycle matrix](docs/BOOK-LIFECYCLE.md)
 
 Readiness вычисляется, а не хранится как новый canonical status:
@@ -261,3 +262,20 @@ source:
 Registry/knowledge lifecycle используется в рабочем режиме. Репозиторий
 поддерживает одновременно reading-only и RAG-ready книги; chapter-level RAG
 разрешён только после capability-specific readiness check.
+
+## Публикация глав — только в Git
+
+Каждый книжный чат перед анализом главы показывает число глав по проверенному
+RAG-оглавлению и прогресс публикации (сколько глав уже закоммичено, сколько
+осталось, какие номера опубликованы, ветка и SHA). Неизвестное общее число
+глав явно помечается как `[Needs confirmation]`: нельзя брать знаменатель
+из числа существующих папок. Инструмент проверки:
+`scripts/chapter_publication_status.py --book-id <book_id>`.
+
+Каждая глава публикуется как **отдельные Markdown/SVG-файлы** непосредственно
+в книжную GitHub-ветку с Git read-back, ссылками на commit/PR и проверкой CI.
+ZIP и другие архивы либо ссылка на скачивание вместо Git-записи запрещены.
+Если все файлы текущей главы записать невозможно, ассистент обязан немедленно
+сообщить точные сохранённые Git-пути, недостающие файлы и причину остановки,
+не объявляя главу завершённой. Прогресс создания конспектов не изменяет
+`reading/progress.yaml`.

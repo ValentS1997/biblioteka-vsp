@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="592" viewBox="0 0 1200 592">
+<rect width="1200" height="592" fill="#f5f8fb"/>
+<rect width="1200" height="12" fill="#226180"/>
+<text x="35" y="60" font-size="33" font-weight="700" font-family="DejaVu Sans, sans-serif" fill="#193648">Глава 2 · Архитектура Kubernetes</text>
+<text x="35" y="95" font-size="17" font-family="DejaVu Sans, sans-serif" fill="#465d6b">От API-запроса к работающему Pod</text>
+<text x="35" y="124" font-size="14" font-family="DejaVu Sans, sans-serif" fill="#667e8b">PDF 71–114 · источник: только RAG · инвентарь 0033</text>
+<rect x="35" y="152" width="364.6666666666667" height="170" rx="13" fill="#ffffff" stroke="#ccdae5"/>
+<rect x="35" y="152" width="364.6666666666667" height="8" rx="4" fill="#226180"/>
+<text x="53" y="187" font-size="15" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#226180">01</text>
+<text x="53" y="218" font-size="21" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#173548">kubectl → API</text>
+<text x="53" y="249" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#38586b">HTTP-запросы, kubeconfig</text>
+<text x="53" y="276" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#38586b">authn / authz</text>
+<rect x="417.6666666666667" y="152" width="364.6666666666667" height="170" rx="13" fill="#ffffff" stroke="#ccdae5"/>
+<rect x="417.6666666666667" y="152" width="364.6666666666667" height="8" rx="4" fill="#236e75"/>
+<text x="435.6666666666667" y="187" font-size="15" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#236e75">02</text>
+<text x="435.6666666666667" y="218" font-size="21" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#173548">etcd</text>
+<text x="435.6666666666667" y="249" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#38586b">Кластерное состояние</text>
+<text x="435.6666666666667" y="276" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#38586b">key-value storage</text>
+<rect x="800.3333333333334" y="152" width="364.6666666666667" height="170" rx="13" fill="#ffffff" stroke="#ccdae5"/>
+<rect x="800.3333333333334" y="152" width="364.6666666666667" height="8" rx="4" fill="#45628b"/>
+<text x="818.3333333333334" y="187" font-size="15" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#45628b">03</text>
+<text x="818.3333333333334" y="218" font-size="21" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#173548">scheduler</text>
+<text x="818.3333333333334" y="249" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#38586b">Выбор узла для Pod</text>
+<text x="818.3333333333334" y="276" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#38586b">nodeName</text>
+<rect x="35" y="340" width="364.6666666666667" height="170" rx="13" fill="#ffffff" stroke="#ccdae5"/>
+<rect x="35" y="340" width="364.6666666666667" height="8" rx="4" fill="#226180"/>
+<text x="53" y="375" font-size="15" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#226180">04</text>
+<text x="53" y="406" font-size="21" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#173548">controller manager</text>
+<text x="53" y="437" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#38586b">Reconciliation loops</text>
+<text x="53" y="464" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#38586b">Desired vs actual</text>
+<rect x="417.6666666666667" y="340" width="364.6666666666667" height="170" rx="13" fill="#ffffff" stroke="#ccdae5"/>
+<rect x="417.6666666666667" y="340" width="364.6666666666667" height="8" rx="4" fill="#236e75"/>
+<text x="435.6666666666667" y="375" font-size="15" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#236e75">05</text>
+<text x="435.6666666666667" y="406" font-size="21" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#173548">kubelet + CRI</text>
+<text x="435.6666666666667" y="437" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#38586b">Спецификация → runtime</text>
+<text x="435.6666666666667" y="464" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#38586b">контейнеры на узле</text>
+<rect x="800.3333333333334" y="340" width="364.6666666666667" height="170" rx="13" fill="#ffffff" stroke="#ccdae5"/>
+<rect x="800.3333333333334" y="340" width="364.6666666666667" height="8" rx="4" fill="#45628b"/>
+<text x="818.3333333333334" y="375" font-size="15" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#45628b">06</text>
+<text x="818.3333333333334" y="406" font-size="21" font-family="DejaVu Sans, sans-serif" font-weight="700" fill="#173548">HA control plane</text>
+<text x="818.3333333333334" y="437" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#38586b">Несколько управляющих узлов</text>
+<text x="818.3333333333334" y="464" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#38586b">балансировка API + etcd</text>
+<text x="35" y="560" font-size="15" font-family="DejaVu Sans, sans-serif" fill="#657e8c">Не исполняемый runbook. Топология и команды требуют подтверждения в целевой среде.</text>
+</svg>
