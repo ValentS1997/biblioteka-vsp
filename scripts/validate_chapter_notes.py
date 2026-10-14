@@ -21,6 +21,26 @@ CHAPTER_REQUIRED = (
     "README.md", "cheatsheet.md", "commands.md", "diagram.md",
     "visual-cheatsheet.svg", "visual-cheatsheet-detailed.svg"
 )
+FORBIDDEN_CHAPTER_ARCHIVE_EXTENSIONS = frozenset(
+    {".zip", ".rar", ".7z", ".tar", ".tgz", ".gz", ".bz2", ".xz"}
+)
+
+
+def forbidden_chapter_archives(changed_paths: list[str]) -> list[str]:
+    """Reject new archive substitutes anywhere in per-book notes.
+
+    This runs against the *changed paths*, so historical unrelated notes stay
+    backward-compatible while every new ZIP/archive chapter handoff fails CI.
+    """
+    offenders = []
+    for raw in changed_paths:
+        normalized = raw.replace("\\", "/")
+        parts = normalized.split("/")
+        if (len(parts) >= 4 and parts[0] == "books" and parts[2] == "notes"
+                and Path(parts[-1]).suffix.lower() in FORBIDDEN_CHAPTER_ARCHIVE_EXTENSIONS):
+            offenders.append(normalized)
+    return sorted(set(offenders))
+
 
 
 def check_svg(path: Path, out_dir: Path, issues: list[str]) -> None:
@@ -75,6 +95,41 @@ def check_markdown(path: Path, repo_root: Path, issues: list[str]) -> int:
     return count
 
 
+
+PROMETHEUS_0040 = "prometheus-up-and-running-pivotto-brazil-ru-2023"
+
+
+def check_prometheus_chapter_index(
+    book: Path, chapters: list[Path], issues: list[str]
+) -> None:
+    """Fail closed when the chapter index omits/duplicates chapter collections.
+
+    This is intentionally scoped to inventory 0040. Its index declares a
+    source-findings artifact for each staged chapter, so verify that too.
+    The index must grow monotonically with the 0040 chapter PR chain.
+    """
+    if book.name != PROMETHEUS_0040:
+        return
+    index = book / "notes" / "chapters" / "README.md"
+    if not index.is_file():
+        issues.append(f"{index}: chapter index missing for inventory 0040")
+        return
+    contents = index.read_text(encoding="utf-8")
+    links = re.findall(r"\]\((chapter-\d+-[A-Za-z0-9-]+/README\.md)\)", contents)
+    listed = [value.split("/")[0] for value in links]
+    expected = {folder.name for folder in chapters}
+    if len(set(listed)) != len(listed):
+        issues.append(f"{index}: duplicate chapter index entry")
+    if set(listed) != expected:
+        issues.append(
+            f"{index}: chapter index mismatch; missing={sorted(expected - set(listed))}; "
+            f"stale={sorted(set(listed) - expected)}"
+        )
+    for folder in chapters:
+        if not (folder / "source-findings.md").is_file():
+            issues.append(f"{folder}: inventory 0040 declares source-findings.md but file missing")
+
+
 def validate(book: Path) -> int:
     book = book.resolve()
     repo_root = Path(__file__).resolve().parent.parent
@@ -85,6 +140,7 @@ def validate(book: Path) -> int:
     if not chapters:
         raise SystemExit("No chapter directories found")
     issues: list[str] = []
+    check_prometheus_chapter_index(book, chapters, issues)
     for folder in chapters:
         for name in CHAPTER_REQUIRED:
             if not (folder / name).is_file():
@@ -170,6 +226,11 @@ if __name__ == "__main__":
     if args.changed_paths_file:
         repo_root = Path(__file__).resolve().parent.parent
         changed = Path(args.changed_paths_file).read_text(encoding="utf-8").splitlines()
+        archives = forbidden_chapter_archives(changed)
+        if archives:
+            for path in archives:
+                print(f"ERROR: chapter notes archive is forbidden; publish individual Git files: {path}", file=sys.stderr)
+            sys.exit(1)
         books = select_changed_books(repo_root, changed, Path(args.fallback_book_dir))
         return_code = 0
         for book in books:
