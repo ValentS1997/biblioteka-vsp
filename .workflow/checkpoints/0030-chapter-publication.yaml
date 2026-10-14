@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only chapter publication for inventory 0030 with individually committed Git artifacts and reproducible recovery; no chapter analysis without an explicit request."
 branch: chapter/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru-0030
 initial_base_sha: aa3733b43f6db3627453e4814926e59a9ae3b136
-last_observed_head_sha: a2593db93f9d8e821f6aeef9f935f755fc855fdb
+last_observed_head_sha: 63bbb0dc72a112663984172175d08261be2c5d33
 expected_source_sha256: ce8fa0fbf0d8bb38f724ed04f130c2443c1e181eb51edafac692c4786874c923
 constraints:
   - "no direct main changes"
@@ -15,7 +15,7 @@ constraints:
   - "no reading-progress mutation without explicit user confirmation"
   - "no archive delivery for chapter artifacts"
   - "idempotent read-back before repeated Git writes, PR creation or merge"
-stage: CI_PENDING
+stage: IN_PROGRESS
 completed_steps:
   - step: "Verified 28 numbered lessons from the canonical RAG TOC and opening chunks."
     evidence_type: file-readback
@@ -35,12 +35,14 @@ completed_steps:
   - step: "Migrated book chapter index to PROCESS-COMPLIANCE-ROUTER v1.2 and SESSION-RECOVERY v1.0, linked checkpoint, and verified GitHub read-back."
     evidence_type: commit
     reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/a2593db93f9d8e821f6aeef9f935f755fc855fdb"
+  - step: "Verified latest chapter-notes CI PASS for migrated chapter index."
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38627513322"
 pending_steps:
-  - "Verify latest chapter-notes CI success for index-migration commit a2593db93f9d8e821f6aeef9f935f755fc855fdb; reconcile failures before proceeding."
   - "Inspect any new PRs and current branch HEAD before chapter publication."
   - "When explicitly requested: run BOOK-READINESS v1.3 preflight and start 'Анализ главы 1' under CHAPTER-ANALYSIS-REQUEST v1.4 and CHAPTER-ARTIFACT-COLLECTION v1.8."
   - "Publish each future chapter's six mandatory individual Git files, update index, perform read-back and CI, then advance checkpoint."
-last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/commit/a2593db93f9d8e821f6aeef9f935f755fc855fdb"
-first_safe_next_action: "Read-only: re-fetch branch HEAD, checkpoint, index, PR list and GitHub Actions run 38627513322; update checkpoint only after CI result is verified."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38627513322"
+first_safe_next_action: "Read-only: re-fetch branch HEAD, this checkpoint, book RAG/plan/index and open PR/CI; when chapter analysis is explicitly requested, execute book-readiness preflight before any RAG retrieval or chapter write."
 blocker: "Not applicable"
 last_observed_at: "Not applicable"
