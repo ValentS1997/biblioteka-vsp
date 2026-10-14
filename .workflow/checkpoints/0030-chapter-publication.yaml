@@ -1,0 +1,43 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: 0030-chapter-publication
+repository: vsp-corp/biblioteka-vsp
+book_id: 1c-enterprise-8-3-radchenko-khrustaleva-3e-ru
+task_kind: chapter
+objective: "RAG-only chapter publication for inventory 0030 with individually committed Git artifacts and reproducible recovery; no chapter analysis without an explicit request."
+branch: chapter/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru-0030
+initial_base_sha: aa3733b43f6db3627453e4814926e59a9ae3b136
+last_observed_head_sha: cec4166a736b3a9796641422f454820d8b3a30d0
+expected_source_sha256: ce8fa0fbf0d8bb38f724ed04f130c2443c1e181eb51edafac692c4786874c923
+constraints:
+  - "no direct main changes"
+  - "no force-push"
+  - "no source/RAG rewrite without explicit authorization"
+  - "no reading-progress mutation without explicit user confirmation"
+  - "no archive delivery for chapter artifacts"
+  - "idempotent read-back before repeated Git writes, PR creation or merge"
+stage: IN_PROGRESS
+completed_steps:
+  - step: "Verified 28 numbered lessons from the canonical RAG TOC and opening chunks."
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru/rag/chunks/p0001-p0100/p0003-c01.md"
+  - step: "Published and read back the 28-chapter RAG-backed chapter plan."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/e8ba733672fb0b4a973489491542b3674068656d"
+  - step: "Published and read back chapter index, 0/28 chapters complete."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/cec4166a736b3a9796641422f454820d8b3a30d0"
+  - step: "Previous chapter-notes CI completed successfully at branch HEAD."
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38620912537"
+  - step: "Recovered branch, both commits, files, absence of active PR and unchanged reading status from GitHub."
+    evidence_type: other
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/cec4166a736b3a9796641422f454820d8b3a30d0"
+pending_steps:
+  - "Migrate book chapter index process reference from router v1.1 to canonical router v1.2 and link this checkpoint; verify GitHub read-back."
+  - "Revalidate branch HEAD, current CI and any PR after the migration."
+  - "When explicitly requested: run BOOK-READINESS v1.3 preflight and start 'Анализ главы 1' under CHAPTER-ANALYSIS-REQUEST v1.4 and CHAPTER-ARTIFACT-COLLECTION v1.8."
+  - "Publish each future chapter's six mandatory individual Git files, update index, perform read-back and CI, then advance checkpoint."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38620912537"
+first_safe_next_action: "Read-only: re-fetch working branch ref, checkpoint and chapter index from GitHub, check PR/CI and reconcile HEAD before any write."
+blocker: "Not applicable"
+last_observed_at: "Not applicable"
