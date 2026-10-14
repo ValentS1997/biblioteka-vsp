@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1450" viewBox="0 0 1400 1450">
+<rect x="0" y="0" width="1400" height="1450" rx="13" fill="#f4f7fa"/>
+<text x="42" y="56" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#173957">ЧАСТЬ III · SOCKET PROGRAMMING · ПОДРОБНАЯ КАРТА</text>
+<text x="43" y="91" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#59738c">PDF 132–188 · 57 RAG-чанков · источник: текст книги</text>
+<rect x="40" y="122" width="1320" height="114" rx="13" fill="#e4eef9"/>
+<rect x="40" y="122" width="12" height="114" rx="13" fill="#42749c"/>
+<text x="68" y="153" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#154775">01 · КЛИЕНТ И СЕРВЕР</text>
+<text x="68" y="187" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#304b66">Клиент инициирует запрос, сервер ожидает и обрабатывает</text>
+<text x="68" y="216" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#60768a">Разные API-ветки клиента и сервера</text>
+<rect x="40" y="246" width="1320" height="114" rx="13" fill="#ffffff"/>
+<rect x="40" y="246" width="12" height="114" rx="13" fill="#42749c"/>
+<text x="68" y="277" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#154775">02 · UDP И TCP</text>
+<text x="68" y="311" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#304b66">UDP: сообщения-датаграммы, доставка не гарантирована</text>
+<text x="68" y="340" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#60768a">TCP: поток байтов, части read и write не совпадают</text>
+<rect x="40" y="370" width="1320" height="114" rx="13" fill="#e4eef9"/>
+<rect x="40" y="370" width="12" height="114" rx="13" fill="#42749c"/>
+<text x="68" y="401" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#154775">03 · TCP FRAMING</text>
+<text x="68" y="435" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#304b66">Разделители; префикс с длиной; фиксированная длина</text>
+<text x="68" y="464" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#60768a">Протокол приложения выделяет границы сам</text>
+<rect x="40" y="494" width="1320" height="114" rx="13" fill="#ffffff"/>
+<rect x="40" y="494" width="12" height="114" rx="13" fill="#42749c"/>
+<text x="68" y="525" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#154775">04 · ОСНОВНОЙ API</text>
+<text x="68" y="559" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#304b66">socket → bind → listen → accept; socket → connect</text>
+<text x="68" y="588" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#60768a">sendto/recvfrom; read/write; shutdown/close</text>
+<rect x="40" y="618" width="1320" height="114" rx="13" fill="#e4eef9"/>
+<rect x="40" y="618" width="12" height="114" rx="13" fill="#42749c"/>
+<text x="68" y="649" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#154775">05 · ECHO-КЛИЕНТ/СЕРВЕР</text>
+<text x="68" y="683" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#304b66">localhost 127.0.0.1; TCP/UDP 60000</text>
+<text x="68" y="712" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#60768a">Листинг udpserv.c противоречит роли сервера</text>
+<rect x="40" y="742" width="1320" height="114" rx="13" fill="#ffffff"/>
+<rect x="40" y="742" width="12" height="114" rx="13" fill="#42749c"/>
+<text x="68" y="773" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#154775">06 · МОДЕЛИ СЕРВИСА</text>
+<text x="68" y="807" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#304b66">Последовательный; fork; предварительный fork</text>
+<text x="68" y="836" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#60768a">pthread; пул потоков; очередь обслуживания</text>
+<rect x="40" y="866" width="1320" height="114" rx="13" fill="#e4eef9"/>
+<rect x="40" y="866" width="12" height="114" rx="13" fill="#42749c"/>
+<text x="68" y="897" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#154775">07 · SOCKET ACTIVATION</text>
+<text x="68" y="931" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#304b66">inetd / xinetd / systemd.socket</text>
+<text x="68" y="960" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#60768a">Запущенная служба читает SYSIN и пишет SYSOUT</text>
+<rect x="40" y="990" width="1320" height="114" rx="13" fill="#ffffff"/>
+<rect x="40" y="990" width="12" height="114" rx="13" fill="#42749c"/>
+<text x="68" y="1021" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#154775">08 · NONBLOCKING / MULTIPLEX</text>
+<text x="68" y="1055" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#304b66">O_NONBLOCK; EAGAIN; select/pselect/poll</text>
+<text x="68" y="1084" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#60768a">Готовность I/O не равна сообщению целиком</text>
+<rect x="40" y="1114" width="1320" height="114" rx="13" fill="#e4eef9"/>
+<rect x="40" y="1114" width="12" height="114" rx="13" fill="#42749c"/>
+<text x="68" y="1145" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#154775">09 · SIGIO / AIO / RAW</text>
+<text x="68" y="1179" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#304b66">SIGIO сигнал готовности; AIO завершённой операции</text>
+<text x="68" y="1208" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#60768a">raw socket и libpcap требуют особой осторожности</text>
+<rect x="40" y="1238" width="1320" height="114" rx="13" fill="#ffffff"/>
+<rect x="40" y="1238" width="12" height="114" rx="13" fill="#42749c"/>
+<text x="68" y="1269" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#154775">10 · ПРОВЕРКА И РИСКИ</text>
+<text x="68" y="1303" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#304b66">netstat -a, тестовый клиент, tcpdump с разрешения</text>
+<text x="68" y="1332" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#60768a">Сомнения RAG отмечены; rollback [Needs confirmation]</text>
+<text x="42" y="1395" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#94525e">Source findings: YN/SYN, INADDR_IN/ANY, udpserv.c, fdi/fo[0], rbuf[n], API names.</text>
+<text x="42" y="1425" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#60768a">Текстовая SVG-сводка, не реконструкция оригинальных рисунков. Чтение не изменяется.</text>
+</svg>
