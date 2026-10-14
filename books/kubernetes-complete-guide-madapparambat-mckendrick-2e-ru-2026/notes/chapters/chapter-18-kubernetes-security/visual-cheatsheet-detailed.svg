@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="950" viewBox="0 0 1200 950">
+<rect width="1200" height="950" fill="#f5f8fb"/>
+<rect width="1200" height="10" fill="#246f8b"/>
+<text x="32" y="55" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#154052">Глава 18 · Безопасность Kubernetes</text>
+<text x="32" y="92" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#476979">Подробно: API identity, RBAC, admission, Pod, network, runtime, secrets</text>
+<text x="32" y="127" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#577b8c">RAG-only · PDF 587–640 · inventory 0033</text>
+<rect x="32" y="156" width="370" height="218" rx="13" fill="#ffffff" stroke="#c8dbe4"/>
+<rect x="32" y="156" width="370" height="8" fill="#297993"/>
+<text x="49" y="194" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#257893">1 · p589–592</text>
+<text x="49" y="238" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#194458">Request pipeline</text>
+<text x="49" y="283" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">Authenticate, authorize</text>
+<text x="49" y="321" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">Mutate/validate and audit</text>
+<rect x="427" y="156" width="370" height="218" rx="13" fill="#ffffff" stroke="#c8dbe4"/>
+<rect x="427" y="156" width="370" height="8" fill="#297993"/>
+<text x="444" y="194" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#257893">2 · p593–601</text>
+<text x="444" y="238" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#194458">Token identity</text>
+<text x="444" y="283" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">SA JWT / TokenRequest</text>
+<text x="444" y="321" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">Static file discouraged</text>
+<rect x="822" y="156" width="370" height="218" rx="13" fill="#ffffff" stroke="#c8dbe4"/>
+<rect x="822" y="156" width="370" height="8" fill="#297993"/>
+<text x="839" y="194" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#257893">3 · p602–606</text>
+<text x="839" y="238" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#194458">Certificates</text>
+<text x="839" y="283" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">CSR, CA, approval</text>
+<text x="839" y="321" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">Private key and rotation</text>
+<rect x="32" y="395" width="370" height="218" rx="13" fill="#ffffff" stroke="#c8dbe4"/>
+<rect x="32" y="395" width="370" height="8" fill="#297993"/>
+<text x="49" y="433" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#257893">4 · p606–619</text>
+<text x="49" y="477" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#194458">OIDC and RBAC</text>
+<text x="49" y="522" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">IdP and RoleBinding</text>
+<text x="49" y="560" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">Namespaced vs global</text>
+<rect x="427" y="395" width="370" height="218" rx="13" fill="#ffffff" stroke="#c8dbe4"/>
+<rect x="427" y="395" width="370" height="8" fill="#297993"/>
+<text x="444" y="433" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#257893">5 · p619–623</text>
+<text x="444" y="477" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#194458">Admission policy</text>
+<text x="444" y="522" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">Mutating and validating</text>
+<text x="444" y="560" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">Do not edit API server blindly</text>
+<rect x="822" y="395" width="370" height="218" rx="13" fill="#ffffff" stroke="#c8dbe4"/>
+<rect x="822" y="395" width="370" height="8" fill="#297993"/>
+<text x="839" y="433" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#257893">6 · p623–628</text>
+<text x="839" y="477" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#194458">securityContext</text>
+<text x="839" y="522" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">UID/GID 1000, read-only</text>
+<text x="839" y="560" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">CAP_NET_ADMIN / privileged risks</text>
+<rect x="32" y="634" width="370" height="218" rx="13" fill="#ffffff" stroke="#c8dbe4"/>
+<rect x="32" y="634" width="370" height="8" fill="#297993"/>
+<text x="49" y="672" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#257893">7 · p628–634</text>
+<text x="49" y="716" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#194458">NetworkPolicy</text>
+<text x="49" y="761" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">default deny in web2</text>
+<text x="49" y="799" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">Selector mismatch in source</text>
+<rect x="427" y="634" width="370" height="218" rx="13" fill="#ffffff" stroke="#c8dbe4"/>
+<rect x="427" y="634" width="370" height="8" fill="#297993"/>
+<text x="444" y="672" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#257893">8 · p634–638</text>
+<text x="444" y="716" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#194458">TLS &amp; runtimes</text>
+<text x="444" y="761" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">mTLS, gVisor, Kata</text>
+<text x="444" y="799" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">Handler and trust not tested</text>
+<rect x="822" y="634" width="370" height="218" rx="13" fill="#ffffff" stroke="#c8dbe4"/>
+<rect x="822" y="634" width="370" height="8" fill="#297993"/>
+<text x="839" y="672" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#257893">9 · p638–640</text>
+<text x="839" y="716" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#194458">Registry Secret</text>
+<text x="839" y="761" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">imagePullSecrets</text>
+<text x="839" y="799" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">Encryption at rest not proven</text>
+<text x="32" y="926" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#587986">Учебные команды не выполнялись. Policy selector и Secret encryption требуют проверки.</text>
+</svg>
