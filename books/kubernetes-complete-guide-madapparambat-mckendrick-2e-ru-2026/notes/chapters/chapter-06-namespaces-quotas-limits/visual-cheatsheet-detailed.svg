@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1170" height="925" viewBox="0 0 1170 925">
+<rect width="1170" height="925" fill="#f4f8fb"/>
+<rect width="1170" height="10" fill="#216889"/>
+<text x="35" y="55" font-family="DejaVu Sans, sans-serif" font-size="30" font-weight="700" fill="#163b50">Глава 6 · Подробная карта Namespace и квот</text>
+<text x="35" y="94" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#486778">RAG-only · Kubernetes · PDF 218–247 · inventory 0033</text>
+<rect x="35" y="125" width="367" height="214" rx="12" fill="#ffffff" stroke="#c7d8e2"/>
+<rect x="35" y="125" width="367" height="8" rx="4" fill="#27778d"/>
+<text x="52" y="159" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#27778d">1 · p220–223</text>
+<text x="52" y="203" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#173d51">Namespaces</text>
+<text x="52" y="246" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#37596b">default, kube-system</text>
+<text x="52" y="280" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#37596b">kube-public, node-lease</text>
+<rect x="421" y="125" width="367" height="214" rx="12" fill="#ffffff" stroke="#c7d8e2"/>
+<rect x="421" y="125" width="367" height="8" rx="4" fill="#27778d"/>
+<text x="438" y="159" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#27778d">2 · p226–231</text>
+<text x="438" y="203" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#173d51">Namespace scope</text>
+<text x="438" y="246" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#37596b">-n custom-ns</text>
+<text x="438" y="280" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#37596b">cluster-scoped: Node, PV</text>
+<rect x="807" y="125" width="367" height="214" rx="12" fill="#ffffff" stroke="#c7d8e2"/>
+<rect x="807" y="125" width="367" height="8" rx="4" fill="#27778d"/>
+<text x="824" y="159" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#27778d">3 · p224–225</text>
+<text x="824" y="203" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#173d51">Create / delete</text>
+<text x="824" y="246" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#37596b">create ns, apply YAML</text>
+<text x="824" y="280" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#37596b">delete ns: уничтожение</text>
+<rect x="35" y="363" width="367" height="214" rx="12" fill="#ffffff" stroke="#c7d8e2"/>
+<rect x="35" y="363" width="367" height="8" rx="4" fill="#27778d"/>
+<text x="52" y="397" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#27778d">4 · p228–229</text>
+<text x="52" y="441" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#173d51">kubectl context</text>
+<text x="52" y="484" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#37596b">set-context --current</text>
+<text x="52" y="518" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#37596b">config view --minify</text>
+<rect x="421" y="363" width="367" height="214" rx="12" fill="#ffffff" stroke="#c7d8e2"/>
+<rect x="421" y="363" width="367" height="8" rx="4" fill="#27778d"/>
+<text x="438" y="397" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#27778d">5 · p221–233</text>
+<text x="438" y="441" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#173d51">DNS и security</text>
+<text x="438" y="484" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#37596b">service.namespace.svc</text>
+<text x="438" y="518" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#37596b">RBAC, NetworkPolicy</text>
+<rect x="807" y="363" width="367" height="214" rx="12" fill="#ffffff" stroke="#c7d8e2"/>
+<rect x="807" y="363" width="367" height="8" rx="4" fill="#27778d"/>
+<text x="824" y="397" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#27778d">6 · p234–239</text>
+<text x="824" y="441" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#173d51">Requests</text>
+<text x="824" y="484" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#37596b">CPU: 250m = 1/4</text>
+<text x="824" y="518" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#37596b">Memory: 512Mi; Pending</text>
+<rect x="35" y="601" width="367" height="214" rx="12" fill="#ffffff" stroke="#c7d8e2"/>
+<rect x="35" y="601" width="367" height="8" rx="4" fill="#27778d"/>
+<text x="52" y="635" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#27778d">7 · p236–237</text>
+<text x="52" y="679" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#173d51">Limits</text>
+<text x="52" y="722" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#37596b">CPU: ограничение</text>
+<text x="52" y="756" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#37596b">Memory: риск OOM</text>
+<rect x="421" y="601" width="367" height="214" rx="12" fill="#ffffff" stroke="#c7d8e2"/>
+<rect x="421" y="601" width="367" height="8" rx="4" fill="#27778d"/>
+<text x="438" y="635" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#27778d">8 · p240–244</text>
+<text x="438" y="679" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#173d51">ResourceQuota</text>
+<text x="438" y="722" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#37596b">Hard: requests / limits</text>
+<text x="438" y="756" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#37596b">Used/Hard, Forbidden</text>
+<rect x="807" y="601" width="367" height="214" rx="12" fill="#ffffff" stroke="#c7d8e2"/>
+<rect x="807" y="601" width="367" height="8" rx="4" fill="#27778d"/>
+<text x="824" y="635" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#27778d">9 · p244–246</text>
+<text x="824" y="679" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#173d51">LimitRange</text>
+<text x="824" y="722" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#37596b">default/defaultRequest</text>
+<text x="824" y="756" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#37596b">min/max для Container</text>
+<text x="35" y="886" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#587688">Проверяйте target namespace и context; удаление Namespace разрушает все его ресурсы.</text>
+</svg>
