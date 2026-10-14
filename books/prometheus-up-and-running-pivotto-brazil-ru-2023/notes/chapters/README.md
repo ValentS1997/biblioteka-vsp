@@ -21,5 +21,6 @@ Canonical chapter artifacts (RAG-only; process `chapter-artifact-collection-v1.7
 | [14](chapter-14-aggregation-operators/README.md) | Операторы агрегирования | 246–257 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
 | [15](chapter-15-binary-operators/README.md) | Двухместные операторы | 258–272 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
 | [16](chapter-16-functions/README.md) | Функции | 273–293 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
+| [17](chapter-17-recording-rules/README.md) | Правила записи | 294–305 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
 
 **Reading progress:** не изменяется этими артефактами. Индекс не утверждает, что главы прочитаны.
