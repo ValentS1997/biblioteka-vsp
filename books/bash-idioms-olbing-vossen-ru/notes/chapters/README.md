@@ -11,3 +11,4 @@
 | 06 | Функции | PDF 83–93; печатные 82–92 | [Анализ главы 6](chapter-06-functions/README.md) |
 | 07 | Списки и хеши | PDF 94–110; печатные 93–109 | [Анализ главы 7](chapter-07-lists-hashes/README.md) |
 | 08 | Аргументы | PDF 111–125; печатные 110–124 | [Анализ главы 8](chapter-08-arguments/README.md) |
+| 10 | Помимо идиом: работа с bash | PDF 146–174; печатные 145–173 | [Анализ главы 10](chapter-10-beyond-idioms/README.md) |
