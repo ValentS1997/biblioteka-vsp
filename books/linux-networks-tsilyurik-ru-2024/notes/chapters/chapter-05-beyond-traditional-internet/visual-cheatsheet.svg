@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<rect x="0" y="0" width="1200" height="800" rx="12" fill="#f2f6fb"/>
+<text x="42" y="58" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#143758">ЧАСТЬ V · ЗА ГРАНИЦАМИ ТРАДИЦИЙ ИНТЕРНЕТА</text>
+<text x="43" y="91" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#58728b">PDF 235–302 · 68 RAG-чанков · сети поверх TCP/IP</text>
+<rect x="42" y="132" width="545" height="202" rx="12" fill="#ffffff"/>
+<rect x="42" y="132" width="545" height="50" rx="12" fill="#dfeafd"/>
+<text x="60" y="165" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1b4a72">TOR</text>
+<text x="63" y="226" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#203d59">Три узла / слои маршрутизации</text>
+<text x="63" y="260" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#203d59">SOCKS TCP-прокси</text>
+<text x="63" y="294" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#203d59">Onion-сервис к SSH/HTTP</text>
+<rect x="610" y="132" width="545" height="202" rx="12" fill="#ffffff"/>
+<rect x="610" y="132" width="545" height="50" rx="12" fill="#e0efed"/>
+<text x="628" y="165" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1b4a72">YGGDRASIL</text>
+<text x="631" y="226" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#203d59">Пиры / mesh-топология</text>
+<text x="631" y="260" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#203d59">IPv6 и ключевая адресация</text>
+<text x="631" y="294" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#203d59">TUN / маршруты LAN</text>
+<rect x="42" y="354" width="545" height="202" rx="12" fill="#ffffff"/>
+<rect x="42" y="354" width="545" height="50" rx="12" fill="#dfeafd"/>
+<text x="60" y="387" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1b4a72">I2P</text>
+<text x="63" y="448" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#203d59">Чесночная маршрутизация</text>
+<text x="63" y="482" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#203d59">Туннели server/client</text>
+<text x="63" y="516" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#203d59">Свой SSH через localhost</text>
+<rect x="610" y="354" width="545" height="202" rx="12" fill="#ffffff"/>
+<rect x="610" y="354" width="545" height="50" rx="12" fill="#e0efed"/>
+<text x="628" y="387" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1b4a72">АЛЬТЕРНАТИВНЫЙ DNS</text>
+<text x="631" y="448" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#203d59">EmerDNS / OpenNIC</text>
+<text x="631" y="482" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#203d59">Alfis + блокчейн + DNS</text>
+<text x="631" y="516" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#203d59">Локальный резолвер</text>
+<rect x="42" y="598" width="1113" height="128" rx="12" fill="#e7eef9"/>
+<text x="65" y="636" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#1a456d">БАЗОВЫЙ КОНТУР: НАБЛЮДАТЬ → ПРОВЕРЯТЬ → ИЗМЕНЯТЬ ТОЛЬКО В СТЕНДЕ</text>
+<text x="66" y="671" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#203d59">Tor/Ygg/I2P меняют путь и доступность; DNS — разрешение имён.</text>
+<text x="66" y="704" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="700" fill="#8e4852">Исторические ключи, peer URI, IP и onion-имена не использовать.</text>
+<text x="44" y="767" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#647b92">SVG: только текстовый RAG · Проверка rollback текущей среды: [Needs confirmation].</text>
+</svg>

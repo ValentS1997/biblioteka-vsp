@@ -39,7 +39,7 @@ A supplied PDF or EPUB is not by itself equal to canonical repository ingest.
 All branch work first passes the process-compliance gate:
 
 ```text
-BIBLIOTEKA-VSP-PROCESS-COMPLIANCE-ROUTER v1.0
+BIBLIOTEKA-VSP-PROCESS-COMPLIANCE-ROUTER v1.1
 ```
 
 The router resolves branch type, checks current canonical contract versions,
@@ -49,7 +49,7 @@ critical process drift.
 New RAG/chapter book branch:
 
 ```text
-BIBLIOTEKA-VSP-BOOK-BRANCH-BOOTSTRAP v1.3
+BIBLIOTEKA-VSP-BOOK-BRANCH-BOOTSTRAP v1.4
 ```
 
 Normal chapter command:
@@ -57,7 +57,7 @@ Normal chapter command:
 ```text
 "Анализ главы N"
   ↓
-BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST v1.3
+BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST v1.4
 ```
 
 The entrypoint templates orchestrate the contracts below; they do not duplicate
@@ -84,11 +84,11 @@ Read-only gate:
 ```text
 BIBLIOTEKA-VSP-BOOK-READINESS v1.3
     ↓ READY
-BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.7
+BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.8
 ```
 
 Older accepted chapter templates remain immutable for reproducibility.
-Current chapter work uses CHAPTER-ARTIFACT-COLLECTION v1.7 with
+Current chapter work uses CHAPTER-ARTIFACT-COLLECTION v1.8 with
 BOOK-READINESS v1.3 and explicit source-findings handling.
 
 ## Reading-only books
@@ -146,7 +146,7 @@ rebuild.
 ## New-book flow
 
 ```text
-BOOK-BRANCH-BOOTSTRAP v1.3
+BOOK-BRANCH-BOOTSTRAP v1.4
         ↓
 Inventory / reading
         ↓
@@ -168,9 +168,9 @@ READY
         ↓
 "Анализ главы N"
         ↓
-CHAPTER-ANALYSIS-REQUEST v1.3
+CHAPTER-ANALYSIS-REQUEST v1.4
         ↓
-CHAPTER-ARTIFACT-COLLECTION v1.7
+CHAPTER-ARTIFACT-COLLECTION v1.8
 ```
 
 ## Git execution discipline
@@ -256,3 +256,52 @@ ingestion parser. Chapter artifacts may classify findings as:
 
 The source is not silently corrected. Relevant conflicting variants and their
 provenance are preserved in conditional `source-findings.md`.
+
+
+## Chapter notes validation
+
+The chapter-note validator preserves the single-book entrypoint:
+
+```sh
+python scripts/validate_chapter_notes.py --book-dir books/<book_id>
+```
+
+Repository CI uses `--changed-paths-file` from the PR/push Git diff to
+validate **every book whose notes are changed**: required artifacts, internal
+Markdown links, and SVG rasterization with CairoSVG. When process code changes
+but no chapter notes are touched, the established baseline
+`computer-networks-olifer-7e-ru-2026` is validated. This avoids breaking
+unrelated legacy book collections that predate the current v1.8 chapter
+requirements. Both `--book-dir` (single book, backward compatible) and
+`--all-books` (explicit full repository audit) remain available. The validator
+never mutates source, RAG, notes or reading state.
+
+## Git-first chapter publication and progress (contract v1.0)
+
+Every book chat must report chapter publication progress **at startup** and
+after each chapter. Resolve a source-grounded TOC from canonical RAG and commit
+a `books/<book_id>/notes/chapters/plan.yaml` with `schema:
+biblioteka-vsp/chapter-plan/v1`, `book_id`, RAG `source_sha256`,
+`toc_evidence`, `total_chapters`, and a per-chapter list of `number`,
+`title`, `slug`, and `source_locator`. Do not fabricate chapter counts:
+where no verified TOC is available, show `[Needs confirmation]` and a reason,
+never a false ratio/percentage.
+
+Progress is about **Git chapter publication, not personal reading**. Run
+`python scripts/chapter_publication_status.py --book-id <book_id>` in a checkout
+of the relevant book branch/commit, or verify equivalent individual files via
+GitHub API. Display verified chapter total, completed chapters, remaining
+chapters, next chapter, branch/commit, and percentage only with verified total.
+A complete chapter has all six required individual files in Git. Also update
+the book-level `notes/chapters/README.md` with links and a current progress
+summary.
+
+Per `templates/chapter-publication-v1.0.yaml`, each artifact is published
+directly to a GitHub book branch (not main) as an individual file. ZIP and other
+archive bundles, downloadable sandbox attachments, and chat-only content are
+not substitutes for Git writes. CI rejects newly changed archive files under
+`books/*/notes/**`. When the assistant cannot write all chapter files in the
+current execution, it must explicitly report `CHAPTER_PARTIALLY_PUBLISHED_GIT`
+or `CHAPTER_PUBLICATION_BLOCKED` with actual Git paths/commits, what remains,
+why it is blocked, and the next action. No promise of later background work.
+Historical versions remain available and older chapters need not be rebuilt.
