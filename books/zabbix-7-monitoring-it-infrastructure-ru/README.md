@@ -29,7 +29,7 @@ Book ID: `zabbix-7-monitoring-it-infrastructure-ru` · Inventory: `0020`.
 ## Главы и публикация
 - [RAG-подтверждённый план 13 глав](notes/chapters/plan.yaml) (стартовые страницы и chunk IDs).
 - [Индекс и прогресс публикации](notes/chapters/README.md): учитываются только отдельные Git-файлы, прошедшие проверку.
-- Текущие canonical contracts: `process-compliance-router-v1.1`, `chapter-publication-v1.0`, `chapter-analysis-request-v1.4`, `chapter-artifact-collection-v1.8`.
+- Текущие canonical contracts: `process-compliance-router-v1.2`, `session-recovery-v1.0`, `chapter-publication-v1.0`, `chapter-analysis-request-v1.4`, `chapter-artifact-collection-v1.8`.
 - Анализ главы запускается только командой `Анализ главы N`; чтение и публикация независимы.
 
 ## Reading
