@@ -38,3 +38,4 @@ Existing reading status is unchanged. No reading progress or dates were set duri
 - [Глава 3. На всякий случай: оператор Case](notes/chapters/chapter-03-case/README.md) — RAG p0043:c01–p0057:c01 · PDF 43–57 · печатные 42–56, v1.7, RAG-only.
 - [Глава 4. Язык переменных](notes/chapters/chapter-04-variables/README.md) — RAG p0058:c01–p0072:c01 · PDF 58–72 · печатные 57–71, v1.7, RAG-only.
 - [Глава 6. Функции](notes/chapters/chapter-06-functions/README.md) — RAG p0083:c01–p0093:c01 · PDF 83–93 · печатные 82–92, v1.7, RAG-only.
+- [Глава 7. Списки и хеши](notes/chapters/chapter-07-lists-hashes/README.md) — RAG p0094:c01–p0110:c01 · PDF 94–110 · печатные 93–109, v1.7, RAG-only.
