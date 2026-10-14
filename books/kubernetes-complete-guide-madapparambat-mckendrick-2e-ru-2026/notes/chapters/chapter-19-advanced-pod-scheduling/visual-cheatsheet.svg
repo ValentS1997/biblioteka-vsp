@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1190" height="704" viewBox="0 0 1190 704">
+<rect width="1190" height="704" fill="#f4f8fa"/>
+<rect width="1190" height="10" fill="#226d85"/>
+<text x="32" y="55" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#163e51">Глава 19 · Планирование Pod в Kubernetes</text>
+<text x="32" y="93" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#446777">Размещение Pod: hard/soft rules, taint и toleration</text>
+<text x="32" y="125" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#5a7787">RAG-only · PDF 641–667 · inventory 0033</text>
+<rect x="32" y="155" width="369" height="195" rx="11" fill="#ffffff" stroke="#ccdbe4"/>
+<rect x="32" y="155" width="369" height="8" fill="#287d96"/>
+<text x="48" y="191" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247c93">1</text>
+<text x="48" y="236" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#143d50">kube-scheduler</text>
+<text x="48" y="281" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3a6073">Filter → Score → Bind</text>
+<text x="48" y="323" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#476d7c">Затем запускает kubelet</text>
+<rect x="426" y="155" width="369" height="195" rx="11" fill="#ffffff" stroke="#ccdbe4"/>
+<rect x="426" y="155" width="369" height="8" fill="#287d96"/>
+<text x="442" y="191" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247c93">2</text>
+<text x="442" y="236" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#143d50">nodeName</text>
+<text x="442" y="281" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3a6073">Прямая привязка</text>
+<text x="442" y="323" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#476d7c">Не гибкий способ</text>
+<rect x="820" y="155" width="369" height="195" rx="11" fill="#ffffff" stroke="#ccdbe4"/>
+<rect x="820" y="155" width="369" height="8" fill="#287d96"/>
+<text x="836" y="191" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247c93">3</text>
+<text x="836" y="236" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#143d50">nodeSelector</text>
+<text x="836" y="281" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3a6073">Равенство node labels</text>
+<text x="836" y="323" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#476d7c">Нет совпадения → Pending</text>
+<rect x="32" y="375" width="369" height="195" rx="11" fill="#ffffff" stroke="#ccdbe4"/>
+<rect x="32" y="375" width="369" height="8" fill="#287d96"/>
+<text x="48" y="411" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247c93">4</text>
+<text x="48" y="456" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#143d50">nodeAffinity</text>
+<text x="48" y="501" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3a6073">required и preferred</text>
+<text x="48" y="543" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#476d7c">NotIn / In + weight</text>
+<rect x="426" y="375" width="369" height="195" rx="11" fill="#ffffff" stroke="#ccdbe4"/>
+<rect x="426" y="375" width="369" height="8" fill="#287d96"/>
+<text x="442" y="411" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247c93">5</text>
+<text x="442" y="456" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#143d50">Taints / Tolerations</text>
+<text x="442" y="501" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3a6073">NoExecute и NoSchedule</text>
+<text x="442" y="543" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#476d7c">Допуск на 60 секунд</text>
+<rect x="820" y="375" width="369" height="195" rx="11" fill="#ffffff" stroke="#ccdbe4"/>
+<rect x="820" y="375" width="369" height="8" fill="#287d96"/>
+<text x="836" y="411" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247c93">6</text>
+<text x="836" y="456" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#143d50">Static / Profiles</text>
+<text x="836" y="501" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3a6073">kubelet mirror Pods</text>
+<text x="836" y="543" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#476d7c">Scheduler plugins</text>
+<text x="32" y="682" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#577888">Не исполнялось. Taint NoExecute может выселять рабочие Pod; rollback требует проверки.</text>
+</svg>

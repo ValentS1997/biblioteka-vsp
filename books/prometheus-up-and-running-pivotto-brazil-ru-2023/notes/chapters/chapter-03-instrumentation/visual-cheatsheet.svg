@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1250" height="735" viewBox="0 0 1250 735" role="img" aria-label="Глава 3: типы метрик и цикл прямого инструментирования Prometheus">
+<rect x="0" y="0" width="1250" height="735" fill="#f8fafc"/>
+<text x="42" y="61" font-family="DejaVu Sans,sans-serif" font-size="32" font-weight="bold" fill="#1c3049">Глава 3 · Инструментирование приложений</text>
+<text x="42" y="94" font-family="DejaVu Sans,sans-serif" font-size="17" fill="#55687a">Python prometheus_client · PDF 54–75 · RAG-only</text>
+<rect x="41" y="135" width="272" height="188" rx="16" fill="#e7f0ff" stroke="#93b7e3" stroke-width="2"/>
+<text x="62" y="174" font-family="DejaVu Sans,sans-serif" font-weight="bold" font-size="23" fill="#21518a">Counter</text>
+<text x="62" y="216" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#253d57">События, байты, ошибки</text>
+<text x="62" y="252" font-family="DejaVu Sans Mono,monospace" font-size="18" fill="#21518a">inc() · rate()</text>
+<text x="62" y="286" font-family="DejaVu Sans,sans-serif" font-size="15" fill="#526980">Счётчик не уменьшается</text>
+<rect x="339" y="135" width="272" height="188" rx="16" fill="#e9f8ee" stroke="#96c7a8" stroke-width="2"/>
+<text x="360" y="174" font-family="DejaVu Sans,sans-serif" font-weight="bold" font-size="23" fill="#236347">Gauge</text>
+<text x="360" y="216" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#253d57">Текущее состояние</text>
+<text x="360" y="252" font-family="DejaVu Sans Mono,monospace" font-size="18" fill="#236347">inc · dec · set</text>
+<text x="360" y="286" font-family="DejaVu Sans,sans-serif" font-size="15" fill="#526980">Можно увеличивать и снижать</text>
+<rect x="637" y="135" width="272" height="188" rx="16" fill="#fff4e4" stroke="#dfb786" stroke-width="2"/>
+<text x="658" y="174" font-family="DejaVu Sans,sans-serif" font-weight="bold" font-size="23" fill="#995f21">Summary</text>
+<text x="658" y="216" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#253d57">Время / размер</text>
+<text x="658" y="252" font-family="DejaVu Sans Mono,monospace" font-size="18" fill="#995f21">_sum / _count</text>
+<text x="658" y="286" font-family="DejaVu Sans,sans-serif" font-size="15" fill="#526980">Средняя задержка</text>
+<rect x="935" y="135" width="272" height="188" rx="16" fill="#f2edff" stroke="#bcace3" stroke-width="2"/>
+<text x="956" y="174" font-family="DejaVu Sans,sans-serif" font-weight="bold" font-size="23" fill="#624a9c">Histogram</text>
+<text x="956" y="216" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#253d57">Сегменты распределения</text>
+<text x="956" y="252" font-family="DejaVu Sans Mono,monospace" font-size="18" fill="#624a9c">_bucket · le</text>
+<text x="956" y="286" font-family="DejaVu Sans,sans-serif" font-size="15" fill="#526980">p95 — приближённо</text>
+<rect x="41" y="362" width="1166" height="159" rx="16" fill="#ffffff" stroke="#ccd8e2" stroke-width="2"/>
+<text x="65" y="402" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="bold" fill="#233d58">Поток метрик</text>
+<text x="65" y="445" font-family="DejaVu Sans,sans-serif" font-size="20" fill="#274e70">Код Python → реестр → :8000 /metrics ← Prometheus → PromQL</text>
+<text x="65" y="483" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#536a81">Онлайн RED · очереди USE · batch: время последнего успеха</text>
+<rect x="41" y="548" width="1166" height="145" rx="16" fill="#fff0ef" stroke="#e8b0a9" stroke-width="2"/>
+<text x="65" y="590" font-family="DejaVu Sans,sans-serif" font-size="22" font-weight="bold" fill="#843d37">Ограничения</text>
+<text x="65" y="628" font-family="DejaVu Sans,sans-serif" font-size="17" fill="#574a49">Стабильные имена, единицы измерения, кардинальность, стоимость buckets.</text>
+<text x="65" y="662" font-family="DejaVu Sans,sans-serif" font-size="17" fill="#574a49">Источник содержит расхождения в формулах PDF 59 и 67; см. source-findings.md.</text>
+</svg>

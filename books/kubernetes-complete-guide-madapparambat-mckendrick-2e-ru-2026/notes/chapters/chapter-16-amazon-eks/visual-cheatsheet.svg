@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="695" viewBox="0 0 1200 695">
+<rect width="1200" height="695" fill="#f5f9fb"/>
+<rect width="1200" height="9" fill="#23718a"/>
+<text x="32" y="54" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#143e50">Глава 16 · AWS и Amazon EKS</text>
+<text x="32" y="91" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#41687b">Управляемый кластер, AWS CLI, Kubernetes и ресурсы облака</text>
+<text x="32" y="122" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#557889">RAG-only · PDF 537–560 · inventory 0033</text>
+<rect x="32" y="150" width="371" height="195" rx="12" fill="white" stroke="#cedee5"/>
+<rect x="32" y="150" width="371" height="8" rx="3" fill="#27758d"/>
+<text x="48" y="185" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247991">1</text>
+<text x="48" y="233" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173f52">AWS / EKS</text>
+<text x="48" y="277" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3c6374">Managed control plane</text>
+<text x="48" y="321" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6374">IAM, EC2, VPC, EBS</text>
+<rect x="426" y="150" width="371" height="195" rx="12" fill="white" stroke="#cedee5"/>
+<rect x="426" y="150" width="371" height="8" rx="3" fill="#27758d"/>
+<text x="442" y="185" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247991">2</text>
+<text x="442" y="233" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173f52">CLI</text>
+<text x="442" y="277" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3c6374">aws configure / eksctl</text>
+<text x="442" y="321" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6374">Ключи требуют защиты</text>
+<rect x="820" y="150" width="371" height="195" rx="12" fill="white" stroke="#cedee5"/>
+<rect x="820" y="150" width="371" height="8" rx="3" fill="#27758d"/>
+<text x="836" y="185" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247991">3</text>
+<text x="836" y="233" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173f52">Cluster create</text>
+<text x="836" y="277" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3c6374">eksctl → CloudFormation</text>
+<text x="836" y="321" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6374">2 worker m5.large</text>
+<rect x="32" y="370" width="371" height="195" rx="12" fill="white" stroke="#cedee5"/>
+<rect x="32" y="370" width="371" height="8" rx="3" fill="#27758d"/>
+<text x="48" y="405" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247991">4</text>
+<text x="48" y="453" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173f52">Guestbook</text>
+<text x="48" y="497" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3c6374">Redis + PHP Frontend</text>
+<text x="48" y="541" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6374">AWS external hostname</text>
+<rect x="426" y="370" width="371" height="195" rx="12" fill="white" stroke="#cedee5"/>
+<rect x="426" y="370" width="371" height="8" rx="3" fill="#27758d"/>
+<text x="442" y="405" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247991">5</text>
+<text x="442" y="453" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173f52">AWS Console</text>
+<text x="442" y="497" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3c6374">EKS, EC2, ELB, Stacks</text>
+<text x="442" y="541" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6374">IAM права могут отличаться</text>
+<rect x="820" y="370" width="371" height="195" rx="12" fill="white" stroke="#cedee5"/>
+<rect x="820" y="370" width="371" height="8" rx="3" fill="#27758d"/>
+<text x="836" y="405" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#247991">6</text>
+<text x="836" y="453" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173f52">Cleanup</text>
+<text x="836" y="497" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3c6374">eksctl delete cluster</text>
+<text x="836" y="541" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#3c6374">Проверка ресурсов и счетов</text>
+<text x="32" y="670" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#557887">Не исполнялось. Учётные данные, EKS/EC2/ELB расходы и destructive cleanup требуют проверки.</text>
+</svg>
