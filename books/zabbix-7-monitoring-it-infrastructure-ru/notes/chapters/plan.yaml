@@ -4,6 +4,8 @@ source_sha256: 07204d885d4bf4c6c2de7c71ae42a4e3ed4cea794169cbe07985552e63875a27
 source_format: pdf
 source_locator_type: source_pdf_1_indexed
 corpus_generation_id: 6a5221f8e8a0f88b400905d7334879edff6f5451d9ab7f6e56bb203809018986
+process_router_contract: BIBLIOTEKA-VSP-PROCESS-COMPLIANCE-ROUTER/v1.2
+session_recovery_contract: BIBLIOTEKA-VSP-SESSION-RECOVERY/v1.0
 chapter_publication_contract: BIBLIOTEKA-VSP-CHAPTER-PUBLICATION/v1.0
 toc_evidence: "rag/chunks/p0001-p0100/p0005-c01.md; chunk_id=zabbix-7-monitoring-it-infrastructure-ru:p0005:c01; source_locator=5; thirteen numbered TOC entries, each start independently verified by matching RAG page chunk"
 total_chapters: 13
