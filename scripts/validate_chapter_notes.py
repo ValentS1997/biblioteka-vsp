@@ -106,8 +106,40 @@ def validate(book: Path) -> int:
     return 1 if issues else 0
 
 
+def discover_books_with_chapters(repo_root: Path) -> list[Path]:
+    """Discover only books that actually contain chapter note directories."""
+    books_root = repo_root / "books"
+    if not books_root.is_dir():
+        return []
+    return sorted(
+        book for book in books_root.iterdir()
+        if book.is_dir()
+        and (book / "notes" / "chapters").is_dir()
+        and any(p.is_dir() for p in (book / "notes" / "chapters").glob("chapter-*"))
+    )
+
+
+def validate_all_books(repo_root: Path) -> int:
+    """Validate every book with chapter notes; fail if none or any fails."""
+    books = discover_books_with_chapters(repo_root)
+    if not books:
+        print("ERROR: no books with chapter notes found", file=sys.stderr)
+        return 1
+    failed = 0
+    for book in books:
+        print(f"Validating chapter notes for {book.name}", flush=True)
+        failed += bool(validate(book))
+    print(f"Validated {len(books)} book(s); failed={failed}")
+    return 1 if failed else 0
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--book-dir", required=True)
+    group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument("--book-dir", help="validate one book (backward compatible)")
+    group.add_argument("--all-books", action="store_true",
+                       help="validate every book containing chapter notes")
     args = parser.parse_args()
+    if args.all_books:
+        sys.exit(validate_all_books(Path(__file__).resolve().parent.parent))
     sys.exit(validate(Path(args.book_dir)))

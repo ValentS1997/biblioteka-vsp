@@ -31,4 +31,4 @@ jobs:
       - name: Install SVG rasterizer
         run: python -m pip install --disable-pip-version-check "CairoSVG>=2.7,<3"
       - name: Validate chapter collections, RAG links and render SVGs to PNG
-        run: python scripts/validate_chapter_notes.py --book-dir books/computer-networks-olifer-7e-ru-2026
+        run: python scripts/validate_chapter_notes.py --all-books

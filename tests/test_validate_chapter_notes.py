@@ -1,0 +1,67 @@
+#!/usr/bin/env python3
+"""Discovery and aggregation regressions for chapter-note CI."""
+import importlib.util
+import tempfile
+import unittest
+from pathlib import Path
+from unittest.mock import call, patch
+
+REPO = Path(__file__).resolve().parents[1]
+SPEC = importlib.util.spec_from_file_location(
+    "chapter_notes_validator", REPO / "scripts" / "validate_chapter_notes.py"
+)
+validator = importlib.util.module_from_spec(SPEC)
+assert SPEC.loader is not None
+SPEC.loader.exec_module(validator)
+
+
+class ChapterNotesDiscoveryTests(unittest.TestCase):
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        self.root = Path(self.temp.name)
+        (self.root / "books").mkdir()
+
+    def tearDown(self):
+        self.temp.cleanup()
+
+    def add_chapter(self, book, name="chapter-01-test"):
+        chapter = self.root / "books" / book / "notes" / "chapters" / name
+        chapter.mkdir(parents=True)
+        return chapter
+
+    def test_discovers_only_books_with_chapter_directories(self):
+        self.add_chapter("zeta")
+        self.add_chapter("alpha")
+        (self.root / "books" / "empty" / "notes" / "chapters").mkdir(parents=True)
+        (self.root / "books" / "unrelated").mkdir()
+        self.assertEqual(
+            ["alpha", "zeta"],
+            [p.name for p in validator.discover_books_with_chapters(self.root)],
+        )
+
+    def test_discovery_excludes_matching_regular_files(self):
+        d = self.root / "books" / "fake" / "notes" / "chapters"
+        d.mkdir(parents=True)
+        (d / "chapter-not-a-directory").write_text("x", encoding="utf-8")
+        self.assertEqual([], validator.discover_books_with_chapters(self.root))
+
+    def test_all_books_fails_without_chapters(self):
+        self.assertEqual(1, validator.validate_all_books(self.root))
+
+    def test_all_books_aggregates_failures_without_short_circuiting(self):
+        a = self.add_chapter("alpha").parents[2]
+        z = self.add_chapter("zeta").parents[2]
+        with patch.object(validator, "validate", side_effect=[1, 0]) as check:
+            self.assertEqual(1, validator.validate_all_books(self.root))
+            self.assertEqual([call(a), call(z)], check.call_args_list)
+
+    def test_all_books_passes_when_every_book_passes(self):
+        self.add_chapter("alpha")
+        self.add_chapter("beta")
+        with patch.object(validator, "validate", return_value=0) as check:
+            self.assertEqual(0, validator.validate_all_books(self.root))
+            self.assertEqual(2, check.call_count)
+
+
+if __name__ == "__main__":
+    unittest.main()
