@@ -6,20 +6,21 @@ Canonical process and entrypoint templates.
 
 | Use case | Template | Version |
 |---|---|---:|
-| Start a new book branch for RAG + chapter cheatsheets | [book-branch-bootstrap-v1.3.yaml](book-branch-bootstrap-v1.3.yaml) | 1.3 |
-| Start analysis of one chapter | [chapter-analysis-request-v1.3.yaml](chapter-analysis-request-v1.3.yaml) | 1.3 |
+| Start a new book branch for RAG + chapter cheatsheets | [book-branch-bootstrap-v1.4.yaml](book-branch-bootstrap-v1.4.yaml) | 1.4 |
+| Start analysis of one chapter | [chapter-analysis-request-v1.4.yaml](chapter-analysis-request-v1.4.yaml) | 1.3 |
 
 ## Current process contracts
 
 | Responsibility | Template | Version |
 |---|---|---:|
-| Branch/process compliance router | [process-compliance-router-v1.0.yaml](process-compliance-router-v1.0.yaml) | 1.0 |
+| Branch/process compliance router | [process-compliance-router-v1.1.yaml](process-compliance-router-v1.1.yaml) | 1.1 |
 | Git execution / local-exception policy | [git-execution-policy-v1.0.yaml](git-execution-policy-v1.0.yaml) | 1.0 |
 | Optional one-shot preload of many future PDF/EPUB LFS objects | [source-vault-batch-stage-v1.0.yaml](source-vault-batch-stage-v1.0.yaml) | 1.0 |
 | One-time book source/RAG preparation | [book-onboarding-v1.3.yaml](book-onboarding-v1.3.yaml) | 1.3 |
 | Strict acceptance of new/rebuilt RAG generations | [rag-ingestion-acceptance-v1.0.yaml](rag-ingestion-acceptance-v1.0.yaml) | 1.0 |
 | Read-only chapter-analysis readiness gate | [book-readiness-v1.3.yaml](book-readiness-v1.3.yaml) | 1.3 |
-| Chapter artifact production | [chapter-artifact-collection-v1.7.yaml](chapter-artifact-collection-v1.7.yaml) | 1.7 |
+| Chapter direct Git publication and progress | [chapter-publication-v1.0.yaml](chapter-publication-v1.0.yaml) | 1.0 |
+| Chapter artifact production | [chapter-artifact-collection-v1.8.yaml](chapter-artifact-collection-v1.8.yaml) | 1.8 |
 
 ## Git execution rule
 
@@ -48,11 +49,11 @@ to GitHub tools.
 ## Normal flow
 
 ```text
-PROCESS-COMPLIANCE-ROUTER v1.0
+PROCESS-COMPLIANCE-ROUTER v1.1
   ↓
 New book branch
   ↓
-BOOK-BRANCH-BOOTSTRAP v1.3
+BOOK-BRANCH-BOOTSTRAP v1.4
   ↓
 BOOK-READINESS v1.3
   ├─ READY ──────────────────────────────┐
@@ -66,9 +67,9 @@ BOOK-READINESS v1.3
                                         ↓
                                   "Анализ главы N"
                                         ↓
-                          CHAPTER-ANALYSIS-REQUEST v1.3
+                          CHAPTER-ANALYSIS-REQUEST v1.4
                                         ↓
-                     CHAPTER-ARTIFACT-COLLECTION v1.7
+                     CHAPTER-ARTIFACT-COLLECTION v1.8
 ```
 
 ## Compatibility
@@ -112,3 +113,23 @@ RAG-INGESTION-ACCEPTANCE v1.0
 Existing legacy RAG remains valid under the compatibility path until its next
 controlled rebuild. Rebuild by the current pipeline makes strict acceptance
 mandatory.
+
+## Chapter publication is Git-first (no ZIP fallback)
+
+From every book-chat startup and before each chapter analysis, show the total
+number of numbered chapters **grounded in the book's canonical RAG TOC** (or
+`[Needs confirmation]` with the reason), the chapter numbers published in Git,
+and the completed/remaining progression. Prefer a verified,
+source-SHA-bound `books/<book_id>/notes/chapters/plan.yaml`.
+
+The reference report is
+`python scripts/chapter_publication_status.py --book-id <book_id>`;
+it counts only chapter directories whose six required files are in Git HEAD,
+not drafts or ZIP archives. Do not infer the book total from note directories.
+Keep `notes/chapters/README.md` links/progress in sync after each commit.
+
+Chapter output must be individual files in a book branch, with GitHub read-back,
+commit/PR links and CI. ZIP/RAR/7z/tar or sandbox/download-only handoffs do
+**not** satisfy a chapter request. If files cannot all be published now, report
+the completed Git paths, missing paths and explicit blocker as PARTIAL/BLOCKED;
+never claim the chapter was fully delivered.
