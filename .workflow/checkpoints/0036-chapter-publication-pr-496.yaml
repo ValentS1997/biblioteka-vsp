@@ -1,0 +1,40 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: 0036-chapter-publication-pr-496
+repository: vsp-corp/biblioteka-vsp
+book_id: business-process-improvement-hbsp-ru
+task_kind: chapter
+objective: "Publish RAG-grounded numbered stages as individual Git files with reviewable PR and CI."
+branch: chapter/0036-business-process-publication-20261015
+initial_base_sha: aa3733b43f6db3627453e4814926e59a9ae3b136
+last_observed_head_sha: ce7dec3bfcf5995e53b8d063b394d65afccf1080
+expected_source_sha256: 4c75aaaa000434b6fd7aeac337e163327060dcbe084e30a1c9793b923b855172
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite without explicit authorization
+  - no reading-progress mutation without explicit user confirmation
+  - no archive delivery for chapter artifacts
+  - avoid duplicate file writes, commits or PRs
+stage: IN_PROGRESS
+completed_steps:
+  - step: "Verified canonical chapter plan, 6 numbered stages, committed."
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/ce7dec3bfcf5995e53b8d063b394d65afccf1080/books/business-process-improvement-hbsp-ru/notes/chapters/plan.yaml"
+  - step: "Stage 1 six mandatory chapter files and source-findings.md committed and read back."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/ce7dec3bfcf5995e53b8d063b394d65afccf1080"
+  - step: "Stage 1 Git chapter index updated; draft PR 496 opened."
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/496"
+  - step: "Stage 1 chapter-notes SVG CI passed for branch HEAD."
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38623571188"
+pending_steps:
+  - "RAG-only analyze numbered stage 2 (PDF pages 43-54) and commit six mandatory files plus conditional artifacts as individual Git paths, each with read-back."
+  - "Update chapter README index after stage 2 and recompute source-verified Git publication progress."
+  - "Repeat bounded units for stages 3-6 only when explicitly continuing the task; verify individual paths and CI."
+  - "Reconcile branch with advancing main (observed 25 behind) without force-push; rerun checks and review draft PR 496 before any merge."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38623571188"
+first_safe_next_action: "Read latest main and branch HEAD, checkpoint file, PR 496 and current stage-2 Git directory; verify no prior write before starting."
+blocker: "Not applicable; branch/main divergence requires reconciliation before merge."
+last_observed_at: "Not applicable"
