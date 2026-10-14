@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1210" height="952" viewBox="0 0 1210 952">
+<rect width="1210" height="952" fill="#f5f9fc"/>
+<rect width="1210" height="10" fill="#236d88"/>
+<text x="32" y="56" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#154056">Глава 20 · Масштабирование Pod и Node</text>
+<text x="32" y="94" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426779">Подробно: ресурсы, VPA, HPA, CA, KEDA и Karpenter</text>
+<text x="32" y="127" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#597b8b">RAG-only · PDF 668–704 · inventory 0033</text>
+<rect x="32" y="156" width="373" height="217" rx="12" fill="#fff" stroke="#c9dce5"/>
+<rect x="32" y="156" width="373" height="8" fill="#267892"/>
+<text x="48" y="192" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#267892">1 · p669–673</text>
+<text x="48" y="236" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#153e54">Resource budgeting</text>
+<text x="48" y="282" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#456979">100m/50Mi request</text>
+<text x="48" y="324" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#456979">200m/60Mi limit</text>
+<rect x="431" y="156" width="373" height="217" rx="12" fill="#fff" stroke="#c9dce5"/>
+<rect x="431" y="156" width="373" height="8" fill="#267892"/>
+<text x="447" y="192" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#267892">2 · p672–673</text>
+<text x="447" y="236" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#153e54">Capacity failure</text>
+<text x="447" y="282" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#456979">New request 2000m</text>
+<text x="447" y="324" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#456979">Pending, taint + insufficient CPU</text>
+<rect x="830" y="156" width="373" height="217" rx="12" fill="#fff" stroke="#c9dce5"/>
+<rect x="830" y="156" width="373" height="8" fill="#267892"/>
+<text x="846" y="192" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#267892">3 · p674–678</text>
+<text x="846" y="236" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#153e54">VPA components</text>
+<text x="846" y="282" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#456979">Recommender, Updater</text>
+<text x="846" y="324" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#456979">Admission + separate CRD</text>
+<rect x="32" y="395" width="373" height="217" rx="12" fill="#fff" stroke="#c9dce5"/>
+<rect x="32" y="395" width="373" height="8" fill="#267892"/>
+<text x="48" y="431" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#267892">4 · p678–683</text>
+<text x="48" y="475" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#153e54">Hamster VPA</text>
+<text x="48" y="521" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#456979">Off: recommended 587m</text>
+<text x="48" y="563" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#456979">Auto: recreate Pods</text>
+<rect x="431" y="395" width="373" height="217" rx="12" fill="#fff" stroke="#c9dce5"/>
+<rect x="431" y="395" width="373" height="8" fill="#267892"/>
+<text x="447" y="431" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#267892">5 · p683–689</text>
+<text x="447" y="475" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#153e54">Todo HPA</text>
+<text x="447" y="521" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#456979">Metrics Server and CPU request</text>
+<text x="447" y="563" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#456979">min1, max5, target80%</text>
+<rect x="830" y="395" width="373" height="217" rx="12" fill="#fff" stroke="#c9dce5"/>
+<rect x="830" y="395" width="373" height="8" fill="#267892"/>
+<text x="846" y="431" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#267892">6 · p689–690</text>
+<text x="846" y="475" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#153e54">Load response</text>
+<text x="846" y="521" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#456979">hey -z 4m -c 25</text>
+<text x="846" y="563" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#456979">1 → 3 replicas observed</text>
+<rect x="32" y="634" width="373" height="217" rx="12" fill="#fff" stroke="#c9dce5"/>
+<rect x="32" y="634" width="373" height="8" fill="#267892"/>
+<text x="48" y="670" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#267892">7 · p691–696</text>
+<text x="48" y="714" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#153e54">Cluster Autoscaler</text>
+<text x="48" y="760" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#456979">Node pool 2–10</text>
+<text x="48" y="802" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#456979">Couples with HPA</text>
+<rect x="431" y="634" width="373" height="217" rx="12" fill="#fff" stroke="#c9dce5"/>
+<rect x="431" y="634" width="373" height="8" fill="#267892"/>
+<text x="447" y="670" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#267892">8 · p697–700</text>
+<text x="447" y="714" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#153e54">Elastic hamster demo</text>
+<text x="447" y="760" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#456979">25 Pods at 500m</text>
+<text x="447" y="802" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#456979">10 nodes then 2; YAML risks</text>
+<rect x="830" y="634" width="373" height="217" rx="12" fill="#fff" stroke="#c9dce5"/>
+<rect x="830" y="634" width="373" height="8" fill="#267892"/>
+<text x="846" y="670" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#267892">9 · p701–704</text>
+<text x="846" y="714" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#153e54">Alternatives</text>
+<text x="846" y="760" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#456979">KEDA event-driven scaling</text>
+<text x="846" y="802" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#456979">Karpenter node provisioning</text>
+<text x="32" y="928" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#587d89">Источник содержит несовпадения YAML/RBAC; биллинг и масштабирование не проверены живым запуском.</text>
+</svg>

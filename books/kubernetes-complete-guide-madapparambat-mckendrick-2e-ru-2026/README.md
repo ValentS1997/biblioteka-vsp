@@ -32,3 +32,7 @@ Readiness command:
 ## Reading
 
 No reading status, dates or progress were modified or inferred during source/RAG ingest.
+
+## Chapter analysis
+
+- [Глава 20. Автоматическое масштабирование подов и узлов в Kubernetes](notes/chapters/chapter-20-pod-node-autoscaling/README.md) — RAG-only, PDF 668–704, chapter-artifact-collection v1.7. Статус чтения не изменен.
