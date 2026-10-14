@@ -133,13 +133,47 @@ def validate_all_books(repo_root: Path) -> int:
     return 1 if failed else 0
 
 
+
+def select_changed_books(
+    repo_root: Path, changed_paths: list[str], fallback_book: Path
+) -> list[Path]:
+    """Validate every chapter book touched in a PR/push; keep prior CI baseline.
+
+    Legacy collections unrelated to a change are not automatically migrated.
+    An opt-in --all-books command remains available for repository-wide audits.
+    """
+    active = {book.name: book for book in discover_books_with_chapters(repo_root)}
+    selected: set[str] = set()
+    for path in changed_paths:
+        parts = path.replace("\\", "/").split("/")
+        if len(parts) >= 4 and parts[0] == "books" and parts[2] == "notes":
+            if parts[1] in active:
+                selected.add(parts[1])
+    if selected:
+        return [active[name] for name in sorted(selected)]
+    return [(repo_root / fallback_book).resolve()]
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--book-dir", help="validate one book (backward compatible)")
     group.add_argument("--all-books", action="store_true",
-                       help="validate every book containing chapter notes")
+                       help="audit all books (including legacy collections)")
+    group.add_argument("--changed-paths-file",
+                       help="Git diff path list; validate every touched book with chapters")
+    parser.add_argument("--fallback-book-dir",
+                        default="books/computer-networks-olifer-7e-ru-2026")
     args = parser.parse_args()
     if args.all_books:
         sys.exit(validate_all_books(Path(__file__).resolve().parent.parent))
+    if args.changed_paths_file:
+        repo_root = Path(__file__).resolve().parent.parent
+        changed = Path(args.changed_paths_file).read_text(encoding="utf-8").splitlines()
+        books = select_changed_books(repo_root, changed, Path(args.fallback_book_dir))
+        return_code = 0
+        for book in books:
+            print(f"Validating chapter notes for {book.name}", flush=True)
+            return_code |= validate(book)
+        sys.exit(return_code)
     sys.exit(validate(Path(args.book_dir)))

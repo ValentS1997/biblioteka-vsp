@@ -45,6 +45,41 @@ class ChapterNotesDiscoveryTests(unittest.TestCase):
         (d / "chapter-not-a-directory").write_text("x", encoding="utf-8")
         self.assertEqual([], validator.discover_books_with_chapters(self.root))
 
+
+    def test_selects_only_touched_chapter_books(self):
+        self.add_chapter("alpha")
+        zeta = self.add_chapter("zeta").parents[2]
+        selected = validator.select_changed_books(
+            self.root,
+            [
+                "books/zeta/notes/chapters/chapter-01-test/README.md",
+                "books/zeta/notes/README.md",
+                "books/alpha/reading/progress.yaml",
+                "docs/BOOK-LIFECYCLE.md",
+            ],
+            Path("books/alpha"),
+        )
+        self.assertEqual([zeta], selected)
+
+    def test_selects_all_touched_books_deterministically(self):
+        alpha = self.add_chapter("alpha").parents[2]
+        zeta = self.add_chapter("zeta").parents[2]
+        paths = ["books/zeta/notes/README.md", "books/alpha/notes/chapters/README.md"]
+        self.assertEqual(
+            [alpha, zeta],
+            validator.select_changed_books(self.root, paths, Path("books/unused")),
+        )
+
+    def test_keeps_single_book_fallback_when_no_chapters_touched(self):
+        self.add_chapter("zeta")
+        fallback = self.root / "books" / "zeta"
+        self.assertEqual(
+            [fallback],
+            validator.select_changed_books(
+                self.root, ["scripts/validate_chapter_notes.py"], Path("books/zeta")
+            ),
+        )
+
     def test_all_books_fails_without_chapters(self):
         self.assertEqual(1, validator.validate_all_books(self.root))
 

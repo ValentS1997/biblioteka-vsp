@@ -266,10 +266,12 @@ The chapter-note validator preserves the single-book entrypoint:
 python scripts/validate_chapter_notes.py --book-dir books/<book_id>
 ```
 
-In repository CI, `validate-chapter-notes.yml` instead uses
-`python scripts/validate_chapter_notes.py --all-books` to discover **all**
-`books/*/notes/chapters/chapter-*` directories and validate each book's
-required files, internal Markdown links and SVG rasterization with CairoSVG.
-The job fails if no chapter directories are found or any book fails. It does
-not modify book content, canonical source, RAG or reading state. This is
-backward compatible with existing single-book validation.
+Repository CI uses `--changed-paths-file` from the PR/push Git diff to
+validate **every book whose notes are changed**: required artifacts, internal
+Markdown links, and SVG rasterization with CairoSVG. When process code changes
+but no chapter notes are touched, the established baseline
+`computer-networks-olifer-7e-ru-2026` is validated. This avoids breaking
+unrelated legacy book collections that predate the current v1.7 chapter
+requirements. Both `--book-dir` (single book, backward compatible) and
+`--all-books` (explicit full repository audit) remain available. The validator
+never mutates source, RAG, notes or reading state.
