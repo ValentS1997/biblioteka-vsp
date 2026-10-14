@@ -36,3 +36,4 @@ No reading status, dates or progress were modified or inferred during source/RAG
 ## Chapter analysis
 
 - [Глава 1. Основы Kubernetes](notes/chapters/chapter-01-osnovy-kubernetes/README.md) — RAG-only, PDF 34–70, chapter-artifact-collection v1.7. Статус чтения не изменен.
+- [Глава 2. Архитектура Kubernetes: от образов контейнеров к работающим подам](notes/chapters/chapter-02-architecture-kubernetes/README.md) — RAG-only, PDF 71–114, chapter-artifact-collection v1.7. Статус чтения не изменен.
