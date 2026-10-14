@@ -54,3 +54,4 @@ No reading status, dates or progress were modified or inferred during source/RAG
 - [Глава 17. Microsoft Azure и Azure Kubernetes Service](notes/chapters/chapter-17-azure-aks/README.md) — RAG-only, PDF 561–586, chapter-artifact-collection v1.7. Статус чтения не изменен.
 - [Глава 18. Безопасность в системе Kubernetes](notes/chapters/chapter-18-kubernetes-security/README.md) — RAG-only, PDF 587–640, chapter-artifact-collection v1.7. Статус чтения не изменен.
 - [Глава 19. Продвинутые методы планирования подов](notes/chapters/chapter-19-advanced-pod-scheduling/README.md) — RAG-only, PDF 641–667, chapter-artifact-collection v1.7. Статус чтения не изменен.
+- [Глава 20. Автоматическое масштабирование подов и узлов в Kubernetes](notes/chapters/chapter-20-pod-node-autoscaling/README.md) — RAG-only, PDF 668–704, chapter-artifact-collection v1.7. Статус чтения не изменен.
