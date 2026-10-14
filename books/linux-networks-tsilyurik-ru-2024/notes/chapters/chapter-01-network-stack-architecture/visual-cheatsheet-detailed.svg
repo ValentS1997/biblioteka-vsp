@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000">
+<rect x="0" y="0" width="1200" height="1000" rx="0" fill="#f1f6fd"/>
+<text x="44" y="62" font-family="DejaVu Sans, sans-serif" font-size="31" font-weight="700" fill="#183454">СЕТИ LINUX · ЧАСТЬ I · ПОДРОБНАЯ КАРТА</text>
+<text x="46" y="93" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#4a6580">Источник: RAG, PDF 11–61 | номера издания: [Needs confirmation]</text>
+<rect x="44" y="124" width="1112" height="125" rx="16" fill="#e5effb"/>
+<rect x="44" y="124" width="10" height="125" rx="0" fill="#4a77a9"/>
+<text x="66" y="154" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#194c78">1. МОДЕЛЬ И ИНКАПСУЛЯЦИЯ</text>
+<text x="67" y="182" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#243c56">Уровни OSI; прикладной обмен поверх TCP/UDP и IP.</text>
+<text x="67" y="203" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#243c56">MAC-уровень и сетевой IP решают разные задачи.</text>
+<text x="67" y="224" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#243c56">Поля шире байта: htonl/htons и ntohl/ntohs.</text>
+<rect x="44" y="268" width="1112" height="125" rx="16" fill="#ffffff"/>
+<rect x="44" y="268" width="10" height="125" rx="0" fill="#4a77a9"/>
+<text x="66" y="298" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#194c78">2. АДРЕСАЦИЯ И СОСЕДИ</text>
+<text x="67" y="326" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#243c56">MAC — взаимодействие в LAN; IPv4: ARP; IPv6: NDP.</text>
+<text x="67" y="347" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#243c56">IPv4: адрес + маска/CIDR; private IPv4 + NAT.</text>
+<text x="67" y="368" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#243c56">IPv6: 128 бит; ::-сокращение; link-local + %интерфейс.</text>
+<rect x="44" y="412" width="1112" height="125" rx="16" fill="#e5effb"/>
+<rect x="44" y="412" width="10" height="125" rx="0" fill="#4a77a9"/>
+<text x="66" y="442" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#194c78">3. ИНТЕРФЕЙСЫ И РАЗРЕШЕНИЕ ИМЁН</text>
+<text x="67" y="470" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#243c56">ip link / ip addr; физические и логические интерфейсы.</text>
+<text x="67" y="491" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#243c56">lo: локальный TCP/IP без физического канала.</text>
+<text x="67" y="512" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#243c56">DNS: host / dig / nslookup; inet_pton / getaddrinfo.</text>
+<rect x="44" y="556" width="1112" height="125" rx="16" fill="#ffffff"/>
+<rect x="44" y="556" width="10" height="125" rx="0" fill="#4a77a9"/>
+<text x="66" y="586" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#194c78">4. ТАБЛИЦЫ МАРШРУТИЗАЦИИ</text>
+<text x="67" y="614" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#243c56">Таблица — свойство хоста, не конкретного IP-адреса.</text>
+<text x="67" y="635" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#243c56">IPv4: ip route show; IPv6: ip -6 route show.</text>
+<text x="67" y="656" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#243c56">Маршрут по умолчанию; проверять после изменений.</text>
+<rect x="44" y="700" width="1112" height="125" rx="16" fill="#e5effb"/>
+<rect x="44" y="700" width="10" height="125" rx="0" fill="#4a77a9"/>
+<text x="66" y="730" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#194c78">5. ИЗМЕНЕНИЯ ПОД КОНТРОЛЕМ</text>
+<text x="67" y="758" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#243c56">MAC, адрес/алиас, маршрут, основное имя и altname.</text>
+<text x="67" y="779" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#243c56">Сначала зафиксировать baseline; затем точечная правка.</text>
+<text x="67" y="800" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#243c56">Повторить ip addr, route и проверку достижимости.</text>
+<rect x="44" y="844" width="1112" height="125" rx="16" fill="#ffffff"/>
+<rect x="44" y="844" width="10" height="125" rx="0" fill="#4a77a9"/>
+<text x="66" y="874" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#194c78">6. КАК ЧИТАТЬ ИСТОЧНИК</text>
+<text x="67" y="902" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#243c56">TCP/UDP-порты: 0–1023, 1024–49151, 49152–65535.</text>
+<text x="67" y="923" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#243c56">ping / DNS / telnet / nmap порождают трафик.</text>
+<text x="67" y="944" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#243c56">В RAG есть расхождения масок, алиаса и уровней.</text>
+</svg>

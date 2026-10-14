@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="720" viewBox="0 0 1320 720" role="img" aria-label="Глава 1: обзор архитектуры и границы применения Prometheus">
+<rect width="1320" height="720" fill="#0c1627"/><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#89adca"/></marker></defs>
+<text x="58" y="65" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#f1f5fd">Глава 1 · Что такое Prometheus?</text>
+<text x="58" y="103" font-family="Arial,sans-serif" font-size="20" fill="#b4c7dd">Мониторинг состояния сервисов через агрегированные метрики (RAG PDF 18–33)</text>
+<g font-family="Arial,sans-serif">
+<rect x="55" y="148" width="320" height="130" rx="15" fill="#17243a" stroke="#5fd2c7" stroke-width="2"/>
+<text x="77" y="184" font-size="24" font-weight="700" fill="#ecf3ff">Источники метрик</text><text x="77" y="216" font-size="18" fill="#c3d3e8">Свои приложения + библиотеки</text>
+<text x="77" y="239" font-size="18" fill="#c3d3e8">Стороннее ПО + exporters</text>
+<rect x="499" y="148" width="322" height="130" rx="15" fill="#17243a" stroke="#5eabff" stroke-width="2"/>
+<text x="521" y="184" font-size="24" font-weight="700" fill="#ecf3ff">Prometheus</text><text x="521" y="216" font-size="18" fill="#c3d3e8">Service discovery → HTTP pull</text>
+<text x="521" y="239" font-size="18" fill="#c3d3e8">Локальное хранение временных рядов</text>
+<rect x="945" y="148" width="320" height="130" rx="15" fill="#17243a" stroke="#f2c26b" stroke-width="2"/>
+<text x="967" y="184" font-size="24" font-weight="700" fill="#ecf3ff">Запросы и правила</text><text x="967" y="216" font-size="18" fill="#c3d3e8">PromQL → дашборды</text>
+<text x="967" y="239" font-size="18" fill="#c3d3e8">Alerts → Alertmanager</text>
+<path d="M375 213 L496 213" stroke="#89adca" stroke-width="3" fill="none" marker-end="url(#arrow)"/><text x="435.5" y="204" fill="#aec7e0" font-size="17" text-anchor="middle">pull</text><path d="M821 213 L942 213" stroke="#89adca" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<rect x="55" y="336" width="580" height="146" rx="15" fill="#17243a" stroke="#5fd2c7" stroke-width="2"/>
+<text x="77" y="372" font-size="24" font-weight="700" fill="#ecf3ff">Сильные стороны</text><text x="77" y="404" font-size="18" fill="#c3d3e8">Тренды и агрегаты • метки и группировка</text>
+<text x="77" y="427" font-size="18" fill="#c3d3e8">Диагностика деградаций • оповещения</text>
+<rect x="690" y="336" width="575" height="146" rx="15" fill="#17243a" stroke="#ec8893" stroke-width="2"/>
+<text x="712" y="372" font-size="24" font-weight="700" fill="#ecf3ff">Границы модели</text><text x="712" y="404" font-size="18" fill="#c3d3e8">Не журналы и не отдельные события</text>
+<text x="712" y="427" font-size="18" fill="#c3d3e8">Избегать высокой кардинальности и PII</text>
+<text x="58" y="545" font-size="24" font-weight="700" fill="#f1f5fd">Выбор телеметрии по вопросу</text>
+<rect x="55" y="574" width="280" height="94" rx="15" fill="#17243a" stroke="#5fd2c7" stroke-width="2"/>
+<text x="77" y="610" font-size="22" font-weight="700" fill="#ecf3ff">Метрики</text><text x="77" y="642" font-size="18" fill="#c3d3e8">Общее состояние</text>
+<rect x="367" y="574" width="280" height="94" rx="15" fill="#17243a" stroke="#b59dff" stroke-width="2"/>
+<text x="389" y="610" font-size="22" font-weight="700" fill="#ecf3ff">Журналы</text><text x="389" y="642" font-size="18" fill="#c3d3e8">Отдельные события</text>
+<rect x="679" y="574" width="280" height="94" rx="15" fill="#17243a" stroke="#f2c26b" stroke-width="2"/>
+<text x="701" y="610" font-size="22" font-weight="700" fill="#ecf3ff">Трассировки</text><text x="701" y="642" font-size="18" fill="#c3d3e8">Путь запроса</text>
+<rect x="991" y="574" width="274" height="94" rx="15" fill="#17243a" stroke="#ec8893" stroke-width="2"/>
+<text x="1013" y="610" font-size="22" font-weight="700" fill="#ecf3ff">Профилирование</text><text x="1013" y="642" font-size="18" fill="#c3d3e8">CPU / функции</text>
+</g><text x="58" y="700" font-family="Arial,sans-serif" font-size="14" fill="#889bb0">RAG-only · p0018:c01–p0033:c01 · схемы реконструированы по тексту, не копируют рисунки книги</text>
+</svg>
