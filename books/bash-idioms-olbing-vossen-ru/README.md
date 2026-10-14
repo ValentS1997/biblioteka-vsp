@@ -42,3 +42,10 @@ Existing reading status is unchanged. No reading progress or dates were set duri
 - [Глава 8. Аргументы](notes/chapters/chapter-08-arguments/README.md) — RAG p0111:c01–p0125:c01 · PDF 111–125 · печатные 110–124, v1.7, RAG-only.
 - [Глава 10. Помимо идиом: работа с bash](notes/chapters/chapter-10-beyond-idioms/README.md) — RAG p0146:c01–p0174:c01 · PDF 146–174 · печатные 145–173, v1.7, RAG-only.
 - [Глава 11. Разработка своего руководства по стилю](notes/chapters/chapter-11-style-guide/README.md) — RAG p0175:c01–p0192:c01 · PDF 175–192 · печатные 174–191, v1.7, RAG-only.
+
+## Приложения
+
+- [Приложение «Руководство по стилю»](notes/appendices/appendix-style-guide/README.md) — отдельный RAG-only анализ, PDF 193–202, печатные 192–201, чанки `p0193:c01–p0202:c01`, v1.7 (адаптация к приложению).
+- [Индекс приложений](notes/appendices/README.md).
+
+Приложение **не нумеруется как глава 12**; reading status не изменялся.
