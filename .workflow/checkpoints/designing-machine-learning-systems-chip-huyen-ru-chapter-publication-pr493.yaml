@@ -1,0 +1,48 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: designing-machine-learning-systems-chip-huyen-ru-chapter-publication-pr493
+repository: vsp-corp/biblioteka-vsp
+book_id: designing-machine-learning-systems-chip-huyen-ru
+task_kind: chapter
+objective: "Recover verified chapter 01 Git publication and complete PR #493 review/merge/post-merge checks without duplicating artifacts."
+branch: chapter/0031-designing-ml-systems-ch01-20261015
+initial_base_sha: aa3733b43f6db3627453e4814926e59a9ae3b136
+last_observed_head_sha: 1e8a183d5626b7c5d510d66de3d78eb8ee8b275f
+observed_main_sha: ce1b08db2314926c0e39168afd9d670592dc6a22
+expected_source_sha256: 0bcacadb4e1dc2235cb58f975111e1633527217127c5871edb894fe2b8f4c80c
+constraints:
+  - "no direct main changes"
+  - "no force-push"
+  - "no source/RAG rewrite without explicit authorization"
+  - "no reading-progress mutation without explicit user confirmation"
+  - "no archive delivery for chapter artifacts"
+  - "no duplicate file commits or PRs"
+  - "retain planned and paired reading with ai-engineering-chip-huyen-ru"
+stage: IN_PROGRESS
+completed_steps:
+  - step: "Chapter plan with exactly 11 numbered RAG-sourced chapters and chapter 01 eight individually committed artifacts plus chapter index."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/3a8515dbe67c563d71cd8edb5eab9e4c8a562310"
+  - step: "Preserve source-native chapter-end summary in separate Git file."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/1e8a183d5626b7c5d510d66de3d78eb8ee8b275f"
+  - step: "Open PR #493; read-back confirms all ten paths, six mandatory chapter files, plan, index; reading/progress.yaml blob unchanged."
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/493"
+  - step: "Chapter notes, RAG links and SVG rendering: push CI PASS for chapter content HEAD before checkpoint."
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38622235461"
+  - step: "Chapter notes, RAG links and SVG rendering: PR CI PASS for chapter content HEAD before checkpoint."
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38622248012"
+  - step: "Current PR is open and mergeable clean, no submitted reviews and no review comments."
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/493"
+pending_steps:
+  - "Verify push and PR CI for HEAD after checkpoint commit; confirm no conflicts and review state."
+  - "Await review/approval and merge PR #493 according to Git governance; never infer consent to merge from checkpoint creation."
+  - "After PR merge, verify main has chapter plan, index and all mandatory chapter 01 files and readiness remains valid."
+  - "Treat analysis of chapter 02 as a separate explicitly invoked chapter task, not a replay of chapter 01."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38622248012"
+first_safe_next_action: "Read-only: fetch branch ref, PR #493 current head/base/reviews, check CI and main chapter files; reconcile against this checkpoint before any write or merge."
+blocker: "Not applicable for recovery; PR #493 requires review/merge decision. No submitted PR reviews as observed."
+last_observed_at: "Not applicable"
