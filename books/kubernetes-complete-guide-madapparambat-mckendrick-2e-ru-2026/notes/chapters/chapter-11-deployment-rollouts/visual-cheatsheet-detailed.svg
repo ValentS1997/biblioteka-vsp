@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="939" viewBox="0 0 1180 939">
+<rect width="1180" height="939" fill="#f4f8fb"/>
+<rect width="1180" height="10" fill="#246885"/>
+<text x="32" y="54" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="28" fill="#183f53">Глава 11 · Deployment и управление версиями</text>
+<text x="32" y="94" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#456b7e">Подробный конспект: Service, readiness, rollout, revisions, canary</text>
+<text x="32" y="125" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#5a8090">RAG-only · PDF 384–419 · Inventory 0033</text>
+<rect x="32" y="150" width="368" height="218" rx="11" fill="#fff" stroke="#c5d8e1"/>
+<rect x="32" y="150" width="368" height="8" fill="#29768c"/>
+<text x="50" y="187" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287790">1 · p384–391</text>
+<text x="50" y="235" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#184253">Deployment architecture</text>
+<text x="50" y="279" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">Deployment → ReplicaSet</text>
+<text x="50" y="315" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">template, replicas, hash</text>
+<rect x="422" y="150" width="368" height="218" rx="11" fill="#fff" stroke="#c5d8e1"/>
+<rect x="422" y="150" width="368" height="8" fill="#29768c"/>
+<text x="440" y="187" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287790">2 · p392–396</text>
+<text x="440" y="235" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#184253">Service publishing</text>
+<text x="440" y="279" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">LoadBalancer, ClusterIP</text>
+<text x="440" y="315" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">labels / endpoints</text>
+<rect x="812" y="150" width="368" height="218" rx="11" fill="#fff" stroke="#c5d8e1"/>
+<rect x="812" y="150" width="368" height="8" fill="#29768c"/>
+<text x="830" y="187" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287790">3 · p397–402</text>
+<text x="830" y="235" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#184253">Readiness failure</text>
+<text x="830" y="279" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">rm ready → HTTP 404</text>
+<text x="830" y="315" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">Pod Running, NotReady</text>
+<rect x="32" y="388" width="368" height="218" rx="11" fill="#fff" stroke="#c5d8e1"/>
+<rect x="32" y="388" width="368" height="8" fill="#29768c"/>
+<text x="50" y="425" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287790">4 · p402–404</text>
+<text x="50" y="473" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#184253">Scaling</text>
+<text x="50" y="517" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">3 → 10 → 2 replicas</text>
+<text x="50" y="553" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">apply / scale / events</text>
+<rect x="422" y="388" width="368" height="218" rx="11" fill="#fff" stroke="#c5d8e1"/>
+<rect x="422" y="388" width="368" height="8" fill="#29768c"/>
+<text x="440" y="425" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287790">5 · p404–407</text>
+<text x="440" y="473" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#184253">Recreate vs Rolling</text>
+<text x="440" y="517" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">Recreate вызывает простой</text>
+<text x="440" y="553" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">maxSurge / maxUnavailable</text>
+<rect x="812" y="388" width="368" height="218" rx="11" fill="#fff" stroke="#c5d8e1"/>
+<rect x="812" y="388" width="368" height="8" fill="#29768c"/>
+<text x="830" y="425" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287790">6 · p406–409</text>
+<text x="830" y="473" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#184253">Image rollout</text>
+<text x="830" y="517" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">nginx 1.17 → 1.18</text>
+<text x="830" y="553" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">RS old=0, new=3</text>
+<rect x="32" y="626" width="368" height="218" rx="11" fill="#fff" stroke="#c5d8e1"/>
+<rect x="32" y="626" width="368" height="8" fill="#29768c"/>
+<text x="50" y="663" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287790">7 · p409–411</text>
+<text x="50" y="711" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#184253">Rollback</text>
+<text x="50" y="755" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">history, undo, pause</text>
+<text x="50" y="791" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">GitOps preference</text>
+<rect x="422" y="626" width="368" height="218" rx="11" fill="#fff" stroke="#c5d8e1"/>
+<rect x="422" y="626" width="368" height="8" fill="#29768c"/>
+<text x="440" y="663" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287790">8 · p412–413</text>
+<text x="440" y="711" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#184253">Canary</text>
+<text x="440" y="755" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">Stable 3 + Canary 1</text>
+<text x="440" y="791" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">Service selects both</text>
+<rect x="812" y="626" width="368" height="218" rx="11" fill="#fff" stroke="#c5d8e1"/>
+<rect x="812" y="626" width="368" height="8" fill="#29768c"/>
+<text x="830" y="663" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287790">9 · p414–419</text>
+<text x="830" y="711" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#184253">Best practices</text>
+<text x="830" y="755" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">Probe tuning, image tags</text>
+<text x="830" y="791" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426579">RBAC, resources, HPA</text>
+<text x="32" y="915" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#587888">Реальный rollout/traffic share не проверен. Действия kubectl могут нарушить доступность.</text>
+</svg>
