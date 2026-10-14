@@ -1,0 +1,113 @@
+schema: biblioteka-vsp/chapter-plan/v1
+book_id: modern-system-administration-jennifer-davis-ru
+source_sha256: 06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790
+source_format: pdf
+total_chapters: 21
+toc_evidence: "Canonical RAG TOC: books/modern-system-administration-jennifer-davis-ru/rag/chunks/p0001-p0100/p0005-c01.md through p0010-c02.md (PDF TOC pages 5-10), verified numbered chapters 1-21. source_locator points to the TOC, NOT to a verified PDF chapter-start page; chapter boundaries must be separately verified against chapter RAG."
+chapter_boundary_policy: "Each source_locator is an exact RAG TOC locator; printed_start_page is from TOC only. Do not equate printed pages with PDF page indices. Resolve exact chapter boundary during chapter analysis."
+chapters:
+  - number: 1
+    title: "Закономерности и взаимосвязи"
+    slug: "patterns-and-connections"
+    source_locator: "pdf_toc_page:5; rag_chunk:modern-system-administration-jennifer-davis-ru:p0005:c01; printed_start_page:31"
+    printed_start_page: 31
+  - number: 2
+    title: "Вычислительные среды"
+    slug: "compute-environments"
+    source_locator: "pdf_toc_page:5; rag_chunk:modern-system-administration-jennifer-davis-ru:p0005:c02; printed_start_page:40"
+    printed_start_page: 40
+  - number: 3
+    title: "Хранилище"
+    slug: "storage"
+    source_locator: "pdf_toc_page:6; rag_chunk:modern-system-administration-jennifer-davis-ru:p0006:c01; printed_start_page:51"
+    printed_start_page: 51
+  - number: 4
+    title: "Сеть"
+    slug: "network"
+    source_locator: "pdf_toc_page:6; rag_chunk:modern-system-administration-jennifer-davis-ru:p0006:c01; printed_start_page:66"
+    printed_start_page: 66
+  - number: 5
+    title: "Набор инструментов сисадмина"
+    slug: "sysadmin-toolkit"
+    source_locator: "pdf_toc_page:6; rag_chunk:modern-system-administration-jennifer-davis-ru:p0006:c02; printed_start_page:77"
+    printed_start_page: 77
+  - number: 6
+    title: "Контроль версий"
+    slug: "version-control"
+    source_locator: "pdf_toc_page:7; rag_chunk:modern-system-administration-jennifer-davis-ru:p0007:c01; printed_start_page:87"
+    printed_start_page: 87
+  - number: 7
+    title: "Тестирование"
+    slug: "testing"
+    source_locator: "pdf_toc_page:7; rag_chunk:modern-system-administration-jennifer-davis-ru:p0007:c01; printed_start_page:93"
+    printed_start_page: 93
+  - number: 8
+    title: "Безопасность инфраструктуры"
+    slug: "infrastructure-security"
+    source_locator: "pdf_toc_page:7; rag_chunk:modern-system-administration-jennifer-davis-ru:p0007:c01; printed_start_page:104"
+    printed_start_page: 104
+  - number: 9
+    title: "Документация"
+    slug: "documentation"
+    source_locator: "pdf_toc_page:7; rag_chunk:modern-system-administration-jennifer-davis-ru:p0007:c01; printed_start_page:113"
+    printed_start_page: 113
+  - number: 10
+    title: "Презентации"
+    slug: "presentations"
+    source_locator: "pdf_toc_page:7; rag_chunk:modern-system-administration-jennifer-davis-ru:p0007:c02; printed_start_page:120"
+    printed_start_page: 120
+  - number: 11
+    title: "Разработка сценариев инфраструктуры"
+    slug: "infrastructure-scripting"
+    source_locator: "pdf_toc_page:8; rag_chunk:modern-system-administration-jennifer-davis-ru:p0008:c01; printed_start_page:141"
+    printed_start_page: 141
+  - number: 12
+    title: "Управление инфраструктурой"
+    slug: "infrastructure-management"
+    source_locator: "pdf_toc_page:8; rag_chunk:modern-system-administration-jennifer-davis-ru:p0008:c01; printed_start_page:151"
+    printed_start_page: 151
+  - number: 13
+    title: "Обеспечение безопасности инфраструктуры"
+    slug: "securing-infrastructure"
+    source_locator: "pdf_toc_page:8; rag_chunk:modern-system-administration-jennifer-davis-ru:p0008:c01; printed_start_page:163"
+    printed_start_page: 163
+  - number: 14
+    title: "Теоретические аспекты мониторинга"
+    slug: "monitoring-concepts"
+    source_locator: "pdf_toc_page:9; rag_chunk:modern-system-administration-jennifer-davis-ru:p0009:c01; printed_start_page:181"
+    printed_start_page: 181
+  - number: 15
+    title: "Мониторинг вычислительной инфраструктуры и программного обеспечения на практике"
+    slug: "monitoring-infrastructure-software"
+    source_locator: "pdf_toc_page:9; rag_chunk:modern-system-administration-jennifer-davis-ru:p0009:c01; printed_start_page:190"
+    printed_start_page: 190
+  - number: 16
+    title: "Управление данными мониторинга"
+    slug: "monitoring-data-management"
+    source_locator: "pdf_toc_page:9; rag_chunk:modern-system-administration-jennifer-davis-ru:p0009:c01; printed_start_page:203"
+    printed_start_page: 203
+  - number: 17
+    title: "Мониторинг вашей работы"
+    slug: "monitoring-your-work"
+    source_locator: "pdf_toc_page:9; rag_chunk:modern-system-administration-jennifer-davis-ru:p0009:c02; printed_start_page:211"
+    printed_start_page: 211
+  - number: 18
+    title: "Управление мощностями"
+    slug: "capacity-management"
+    source_locator: "pdf_toc_page:10; rag_chunk:modern-system-administration-jennifer-davis-ru:p0010:c01; printed_start_page:223"
+    printed_start_page: 223
+  - number: 19
+    title: "Создание надежной дежурной службы"
+    slug: "reliable-oncall"
+    source_locator: "pdf_toc_page:10; rag_chunk:modern-system-administration-jennifer-davis-ru:p0010:c01; printed_start_page:236"
+    printed_start_page: 236
+  - number: 20
+    title: "Управление инцидентами"
+    slug: "incident-management"
+    source_locator: "pdf_toc_page:10; rag_chunk:modern-system-administration-jennifer-davis-ru:p0010:c01; printed_start_page:251"
+    printed_start_page: 251
+  - number: 21
+    title: "Руководство устойчивыми командами"
+    slug: "resilient-teams"
+    source_locator: "pdf_toc_page:10; rag_chunk:modern-system-administration-jennifer-davis-ru:p0010:c02; printed_start_page:266"
+    printed_start_page: 266
