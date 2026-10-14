@@ -14,5 +14,6 @@ Canonical chapter artifacts (RAG-only; process `chapter-artifact-collection-v1.7
 | [07](chapter-07-node-exporter/README.md) | Node Exporter | 131–143 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
 | [08](chapter-08-service-discovery/README.md) | Обнаружение служб | 144–169 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
 | [09](chapter-09-containers-and-kubernetes/README.md) | Контейнеры и Kubernetes | 170–186 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
+| [10](chapter-10-popular-exporters/README.md) | Популярные экспортеры | 187–208 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
 
 **Reading progress:** не изменяется этими артефактами. Индекс не утверждает, что главы прочитаны.
