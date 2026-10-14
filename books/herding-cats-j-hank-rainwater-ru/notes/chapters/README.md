@@ -5,16 +5,15 @@ Book ID: `herding-cats-j-hank-rainwater-ru` · Inventory: `0021`
 ## Статус Git-публикации
 
 - По адресуемому RAG подтверждено **10 глав**.
-- Полных наборов артефактов в Git: **0/10 (0%)** на момент создания плана.
-- Следующая неопубликованная глава: **1 — «Как привыкнуть к роли руководителя»**.
-- План и точные границы: [plan.yaml](plan.yaml).
-- Отдельные главы считаются опубликованными только после Git-коммита и read-back шести обязательных файлов.
-- Ветка публикации: `chapter/herding-cats-j-hank-rainwater-ru-0021`. Главы в этой ветке не считаются опубликованными в `main` до merge.
+- На момент создания этого индекса: **1/10 (10%)** полных комплектов индивидуальных Git-файлов в ветке публикации, **при условии успешного read-back всех файлов главы 1 и CI**.
+- Опубликованные в ветке: [Глава 1 — Как привыкнуть к роли руководителя](chapter-01-kak-privyknut-k-roli-rukovoditelya/README.md).
+- Следующая неопубликованная глава: **2 — «Как руководить собой»**.
+- Подтверждённый RAG-план глав: [plan.yaml](plan.yaml).
+- Publication branch: `chapter/herding-cats-j-hank-rainwater-ru-0021`; публикация в `main` возможна только после PR merge.
 
-## Источники и ограничения
+## Provenance
+`rag/chunks/p0001-p0100/p0005-c01.md` (PDF p. 5; оглавление, дефект извлечения), `p0020-c01.md`, `p0021-c01.md`, `p0022-c01.md` (PDF p. 20–22; читаемые названия всех десяти глав). Source SHA-256: `5f11cf93711c9489b25218c701e1027f5ca0354523e2faeb1bb7041ed3b62795`.
 
-Основа: `rag/chunks/p0001-p0100/p0005-c01.md` (PDF p. 5, повреждение извлечённого текста оглавления), `p0020-c01.md`, `p0021-c01.md`, `p0022-c01.md` (PDF p. 20–22; названия десяти глав читаемы). Source SHA-256: `5f11cf93711c9489b25218c701e1027f5ca0354523e2faeb1bb7041ed3b62795`.
+Canonical: `process-compliance-router-v1.1`, `chapter-publication-v1.0`, `chapter-analysis-request-v1.4`, `chapter-artifact-collection-v1.8`.
 
-Canonical contracts: `process-compliance-router-v1.1`, `chapter-publication-v1.0`, `chapter-analysis-request-v1.4`, `chapter-artifact-collection-v1.8`.
-
-**Ни один комплект главы ещё не опубликован.** Список опубликованных глав пока пуст. Статус чтения независим и не изменяется.
+**Важно:** наличие списка файлов в Git само по себе не подтверждает CI PASS. Reading status не меняется.
