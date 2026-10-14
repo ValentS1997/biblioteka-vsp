@@ -1,0 +1,98 @@
+schema: biblioteka-vsp/chapter-plan/v1
+book_id: assembly-x86-64-zhukov-ru
+source_sha256: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
+source_format: pdf
+source_unit_type: pdf_page
+total_chapters: 21
+toc_evidence: >-
+  Canonical RAG table of contents: rag/chunks/p0001-p0100/p0004-c01.md
+  (chapters 1-4), p0005-c01.md (5-6), p0005-c02.md (7-8),
+  p0006-c02.md (9-10), p0007-c01.md (11-15), p0007-c02.md (16-17),
+  p0008-c01.md (18-21). RAG preface p0011-c01.md explicitly
+  corroborates the three parts and chapter ranges 1-12, 13-18, 19-21.
+  Start pages independently checked against chapter-heading RAG chunks.
+chapters:
+  - number: 1
+    title: "Установка программ"
+    slug: ustanovka-programm
+    source_locator: "15"
+  - number: 2
+    title: "Программирование данных"
+    slug: programmirovanie-dannyh
+    source_locator: "21"
+  - number: 3
+    title: "Данные, имена и типы"
+    slug: dannye-imena-i-tipy
+    source_locator: "31"
+  - number: 4
+    title: "Способы адресации"
+    slug: sposoby-adresatsii
+    source_locator: "57"
+  - number: 5
+    title: "Система команд i8086"
+    slug: sistema-komand-i8086
+    source_locator: "69"
+  - number: 6
+    title: "Программирование циклов"
+    slug: programmirovanie-tsiklov
+    source_locator: "85"
+  - number: 7
+    title: "Примеры программ"
+    slug: primery-programm
+    source_locator: "93"
+  - number: 8
+    title: "Математический сопроцессор"
+    slug: matematicheskiy-soprotsessor
+    source_locator: "111"
+  - number: 9
+    title: "Сегменты"
+    slug: segmenty
+    source_locator: "149"
+  - number: 10
+    title: "Исключения"
+    slug: isklyucheniya
+    source_locator: "177"
+  - number: 11
+    title: "Внешние прерывания"
+    slug: vneshnie-preryvaniya
+    source_locator: "197"
+  - number: 12
+    title: "32-битовые данные и адреса"
+    slug: 32-bitovye-dannye-i-adresa
+    source_locator: "205"
+  - number: 13
+    title: "Код в защищенном режиме"
+    slug: kod-v-zashchishchennom-rezhime
+    source_locator: "219"
+  - number: 14
+    title: "Данные и стек"
+    slug: dannye-i-stek
+    source_locator: "235"
+  - number: 15
+    title: "Исключения и прерывания"
+    slug: isklyucheniya-i-preryvaniya
+    source_locator: "253"
+  - number: 16
+    title: "LDT и TSS"
+    slug: ldt-i-tss
+    source_locator: "269"
+  - number: 17
+    title: "Преобразование адресов"
+    slug: preobrazovanie-adresov
+    source_locator: "287"
+  - number: 18
+    title: "Привилегии"
+    slug: privilegii
+    source_locator: "307"
+  - number: 19
+    title: "Переход в режим совместимости"
+    slug: perehod-v-rezhim-sovmestimosti
+    source_locator: "323"
+  - number: 20
+    title: "Переход в 64-битовый режим"
+    slug: perehod-v-64-bitovyy-rezhim
+    source_locator: "331"
+  - number: 21
+    title: "Особенности 64-битового режима"
+    slug: osobennosti-64-bitovogo-rezhima
+    source_locator: "341"
