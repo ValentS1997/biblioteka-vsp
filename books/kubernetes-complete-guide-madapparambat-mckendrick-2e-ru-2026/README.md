@@ -55,3 +55,4 @@ No reading status, dates or progress were modified or inferred during source/RAG
 - [Глава 18. Безопасность в системе Kubernetes](notes/chapters/chapter-18-kubernetes-security/README.md) — RAG-only, PDF 587–640, chapter-artifact-collection v1.7. Статус чтения не изменен.
 - [Глава 19. Продвинутые методы планирования подов](notes/chapters/chapter-19-advanced-pod-scheduling/README.md) — RAG-only, PDF 641–667, chapter-artifact-collection v1.7. Статус чтения не изменен.
 - [Глава 20. Автоматическое масштабирование подов и узлов в Kubernetes](notes/chapters/chapter-20-pod-node-autoscaling/README.md) — RAG-only, PDF 668–704, chapter-artifact-collection v1.7. Статус чтения не изменен.
+- [Глава 21. Продвинутые возможности Kubernetes](notes/chapters/chapter-21-advanced-kubernetes/README.md) — RAG-only, PDF 705–749, chapter-artifact-collection v1.7. Последняя глава (21/21). Статус чтения не изменен.
