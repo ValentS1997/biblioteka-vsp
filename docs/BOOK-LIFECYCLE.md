@@ -39,7 +39,7 @@ A supplied PDF or EPUB is not by itself equal to canonical repository ingest.
 All branch work first passes the process-compliance gate:
 
 ```text
-BIBLIOTEKA-VSP-PROCESS-COMPLIANCE-ROUTER v1.1
+BIBLIOTEKA-VSP-PROCESS-COMPLIANCE-ROUTER v1.2
 ```
 
 The router resolves branch type, checks current canonical contract versions,
@@ -305,3 +305,32 @@ current execution, it must explicitly report `CHAPTER_PARTIALLY_PUBLISHED_GIT`
 or `CHAPTER_PUBLICATION_BLOCKED` with actual Git paths/commits, what remains,
 why it is blocked, and the next action. No promise of later background work.
 Historical versions remain available and older chapters need not be rebuilt.
+
+## Session interruption / repeated reset recovery
+
+ChatGPT discussion-length failures and vanished intermediate reasoning are
+not repository state. The project cannot change ChatGPT's conversation
+limits. Every multi-step mutation uses
+`templates/session-recovery-v1.0.yaml` and the process router v1.2.
+
+Create an idempotent Git checkpoint in the **working branch** at
+`.workflow/checkpoints/<task-key>.yaml`, with an unambiguous task ID, current
+verified branch/ref, planned and completed steps, evidence commit/PR/CI links
+and first read-only resume action. Keep it small and free of secrets/chat text.
+Update it at confirmed milestones, not on unsupported assumptions. Before
+merging a finished feature PR, retain final evidence in the PR and remove
+the transient checkpoint if appropriate; after merge Git/PR remains truth.
+
+After `Ковальски, проверка после обрыва связи` (or equivalent), resolve the
+task from GitHub: read latest main and task-branch refs, inspect checkpoint,
+compare **actual files** to reported work, inspect PR state and CI, and only
+then resume the first uncompleted safe operation. A timed-out GitHub action
+has UNKNOWN outcome until verified. Do not rerun a commit, build, PR or merge
+blindly. Repeated resets repeat the read-only reconstruction rather than
+replaying mutations. If unique task identity or evidence cannot be recovered,
+return `RECOVERY_BLOCKED` with one precise missing item. Never promise
+background work or recovery of hidden chain-of-thought.
+
+For chapters, the `chapter-publication-v1.0` Git-only/no-ZIP rules and
+source-grounded chapter totals remain mandatory. Checkpoint progress does
+not imply personal reading progress or RAG correctness.
