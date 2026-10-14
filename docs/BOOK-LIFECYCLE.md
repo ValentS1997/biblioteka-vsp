@@ -256,3 +256,22 @@ ingestion parser. Chapter artifacts may classify findings as:
 
 The source is not silently corrected. Relevant conflicting variants and their
 provenance are preserved in conditional `source-findings.md`.
+
+
+## Chapter notes validation
+
+The chapter-note validator preserves the single-book entrypoint:
+
+```sh
+python scripts/validate_chapter_notes.py --book-dir books/<book_id>
+```
+
+Repository CI uses `--changed-paths-file` from the PR/push Git diff to
+validate **every book whose notes are changed**: required artifacts, internal
+Markdown links, and SVG rasterization with CairoSVG. When process code changes
+but no chapter notes are touched, the established baseline
+`computer-networks-olifer-7e-ru-2026` is validated. This avoids breaking
+unrelated legacy book collections that predate the current v1.7 chapter
+requirements. Both `--book-dir` (single book, backward compatible) and
+`--all-books` (explicit full repository audit) remain available. The validator
+never mutates source, RAG, notes or reading state.
