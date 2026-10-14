@@ -1,0 +1,120 @@
+schema_version: "1.0"
+
+template:
+  id: "BIBLIOTEKA-VSP-CHAPTER-PUBLICATION"
+  version: "1.0"
+  type: "chapter_publication"
+  status: "ACCEPTED"
+  purpose: >-
+    Require direct publication of each chapter's individual files to a GitHub
+    book branch, with verified book chapter totals and visible commit-backed
+    publication progress. Archives are never an acceptable chapter handoff.
+
+repository:
+  canonical: "vsp-corp/biblioteka-vsp"
+  canonical_branch: "main"
+  publication_target: "books/<book_id>/notes/chapters/"
+  method_order:
+    - "GitHub connector/API: create/update individual files and Git commit on book branch."
+    - "Repository-native automation: commit the same individual files on book branch if permitted."
+    - "Other authorized GitHub repository operation with individual paths and verifiable commit."
+  local_git_default_allowed: false
+  direct_main_allowed: false
+  force_push_allowed: false
+
+startup:
+  mandatory_on:
+    - "Opening or resuming a book chat."
+    - "Starting any 'Анализ главы N' request."
+    - "Reporting completion/partial completion of chapter artifacts."
+  actions:
+    - "Read current book branch, main, book_id, RAG manifest and book chapter index from GitHub."
+    - "Resolve numbered chapter list and total from canonical RAG-backed table of contents (PDF or EPUB source locators)."
+    - "Reuse a verified books/<book_id>/notes/chapters/plan.yaml when its RAG source SHA matches; otherwise verify/rebuild it in a book branch."
+    - "Count complete chapter directories from committed individual files only, using scripts/chapter_publication_status.py or equivalent GitHub read-back."
+    - "Distinguish committed in working branch from merged into main; never count ZIP uploads, drafted text or uncommitted local files."
+  chapter_plan:
+    path: "books/<book_id>/notes/chapters/plan.yaml"
+    schema: "biblioteka-vsp/chapter-plan/v1"
+    required:
+      - "book_id"
+      - "source_sha256"
+      - "chapters"
+    chapter_fields:
+      - "number"
+      - "title"
+      - "slug"
+      - "source_locator"
+    total_rule: "total_chapters equals the number of unique, source-verified numbered chapters in chapters; no frontmatter, appendices or parts without explicit source evidence."
+    provenance_rule: "Record precise TOC/index RAG chunk or source locator evidence; never infer total from PDF page count, RAG chunk count, available note folders, or model memory."
+    unknown_rule: >-
+      If the authoritative TOC cannot be reliably reconstructed, report
+      total_chapters: "[Needs confirmation]" and why. Do not present any
+      numeric percentage or silently assume the current published count is
+      the book total. A chapter with a verified boundary may proceed.
+  visible_report:
+    required_fields:
+      - "book_title"
+      - "book_id"
+      - "branch"
+      - "source_toc_evidence_or_unknown_reason"
+      - "total_chapters"
+      - "git_published_chapters"
+      - "remaining_chapters_or_unknown"
+      - "progress_ratio_and_percent_when_total_verified"
+      - "completed_chapter_numbers"
+      - "next_unpublished_chapter"
+      - "latest_verified_commit_or_no_publication"
+    sample: "Глав по RAG: 12; опубликовано в Git: 3/12 (25%); осталось: 9; следующий: 4; branch: chapter/<book-id>; commit: <SHA>."
+    on_each_chapter: "Recompute and display the same progress after GitHub write/read-back and checks."
+
+publication:
+  artifact_template: "templates/chapter-artifact-collection-v1.8.yaml"
+  required_individual_files:
+    - "README.md"
+    - "cheatsheet.md"
+    - "commands.md"
+    - "diagram.md"
+    - "visual-cheatsheet.svg"
+    - "visual-cheatsheet-detailed.svg"
+  conditional_files: "As specified by chapter-artifact-collection v1.8."
+  mandatory_actions:
+    - "Create or update each required chapter artifact as its own Git path in the book branch."
+    - "Update books/<book_id>/notes/chapters/README.md with links and progress to committed completed chapters."
+    - "Read back each individual file from GitHub and verify the commit SHA/branch."
+    - "Run chapter-notes validation/CI and report the exact result. Create/use PR according to Git governance; do not claim main publication before merge."
+  forbidden_delivery:
+    - "ZIP, RAR, 7z, tar, tgz, gz or any archive as the result of chapter work."
+    - "Sandbox/download link, attachment or chat-only text as a replacement for a Git commit."
+    - "A single archive in Git instead of the individual chapter paths."
+    - "Claim of completed chapter without the six required files present in Git."
+    - "Changing reading/progress.yaml merely because artifacts are published."
+  constraints:
+    - "Do not bypass GitHub limits by replacing individual files with archives."
+    - "Do not commit to main directly or force-push."
+    - "Do not upload chapter files to source-vault."
+    - "No automatic ZIP fallback, even on large chapters or tool errors."
+
+partial_or_blocked:
+  rule: >-
+    If the current turn cannot publish every required file with GitHub
+    read-back and CI, say this explicitly in the current response. Report
+    exactly what was committed, what is missing, verified commit/PR URLs,
+    error/reason, and an actionable next step. Do not silently hand off a ZIP.
+  statuses:
+    - "CHAPTER_PUBLISHED_GIT_VERIFIED"
+    - "CHAPTER_PARTIALLY_PUBLISHED_GIT"
+    - "CHAPTER_PUBLICATION_BLOCKED"
+  prohibit:
+    - "Hiding upload failures."
+    - "Promising asynchronous/background publication without an actual scheduled tool."
+    - "Labelling an archive-only delivery as accepted."
+
+acceptance_criteria:
+  - "Startup displays verified total or explicit unknown and Git-backed progress."
+  - "Every chapter artifact is a separate committed Git file."
+  - "Each published chapter is linked from the book's chapter index."
+  - "Git read-back and validation are reported."
+  - "Archive-only delivery never satisfies completion."
+  - "Incomplete publication is honestly marked PARTIAL/BLOCKED with exact missing work."
+  - "Reading state remains independent."
