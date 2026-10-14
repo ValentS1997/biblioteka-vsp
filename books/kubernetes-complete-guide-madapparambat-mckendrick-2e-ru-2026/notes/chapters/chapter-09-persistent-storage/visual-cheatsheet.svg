@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="650" viewBox="0 0 1160 650">
+<rect width="1160" height="650" fill="#f5f8fb"/>
+<rect width="1160" height="10" fill="#216983"/>
+<text x="35" y="55" font-size="30" font-weight="700" font-family="DejaVu Sans, sans-serif" fill="#1b4055">Глава 9 · Постоянное хранилище Kubernetes</text>
+<text x="35" y="94" font-size="17" font-family="DejaVu Sans, sans-serif" fill="#466577">PV → PVC → Pod · static/dynamic provisioning</text>
+<text x="35" y="121" font-size="14" font-family="DejaVu Sans, sans-serif" fill="#597787">RAG-only · PDF 326–365 · inventory 0033</text>
+<rect x="35" y="150" width="350" height="183" rx="12" stroke="#c6d6e1" fill="white"/>
+<rect x="35" y="150" width="350" height="8" rx="3" fill="#2c7890"/>
+<text x="53" y="187" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#2c7890">1</text>
+<text x="53" y="229" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1a3e52">PersistentVolume</text>
+<text x="53" y="270" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385a6b">Cluster-scoped ресурс</text>
+<text x="53" y="302" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385a6b">Указатель на хранилище</text>
+<rect x="409" y="150" width="350" height="183" rx="12" stroke="#c6d6e1" fill="white"/>
+<rect x="409" y="150" width="350" height="8" rx="3" fill="#2c7890"/>
+<text x="427" y="187" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#2c7890">2</text>
+<text x="427" y="229" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1a3e52">PersistentVolumeClaim</text>
+<text x="427" y="270" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385a6b">Claim в namespace Pod</text>
+<text x="427" y="302" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385a6b">Bound → PV</text>
+<rect x="783" y="150" width="350" height="183" rx="12" stroke="#c6d6e1" fill="white"/>
+<rect x="783" y="150" width="350" height="8" rx="3" fill="#2c7890"/>
+<text x="801" y="187" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#2c7890">3</text>
+<text x="801" y="229" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1a3e52">StorageClass / CSI</text>
+<text x="801" y="270" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385a6b">Автоматически выделяет PV</text>
+<text x="801" y="302" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385a6b">Драйвер и provisioner</text>
+<rect x="35" y="360" width="350" height="183" rx="12" stroke="#c6d6e1" fill="white"/>
+<rect x="35" y="360" width="350" height="8" rx="3" fill="#2c7890"/>
+<text x="53" y="397" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#2c7890">4</text>
+<text x="53" y="439" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1a3e52">Access modes</text>
+<text x="53" y="480" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385a6b">RWO / ROX / RWX</text>
+<text x="53" y="512" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385a6b">ReadWriteOncePod</text>
+<rect x="409" y="360" width="350" height="183" rx="12" stroke="#c6d6e1" fill="white"/>
+<rect x="409" y="360" width="350" height="8" rx="3" fill="#2c7890"/>
+<text x="427" y="397" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#2c7890">5</text>
+<text x="427" y="439" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1a3e52">Reclaim policy</text>
+<text x="427" y="480" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385a6b">Retain / Delete / Recycle</text>
+<text x="427" y="512" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385a6b">Риск удаления данных</text>
+<rect x="783" y="360" width="350" height="183" rx="12" stroke="#c6d6e1" fill="white"/>
+<rect x="783" y="360" width="350" height="8" rx="3" fill="#2c7890"/>
+<text x="801" y="397" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#2c7890">6</text>
+<text x="801" y="439" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#1a3e52">Advanced</text>
+<text x="801" y="480" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385a6b">Clone, snapshot, expand</text>
+<text x="801" y="512" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385a6b">Нужна поддержка CSI</text>
+<text x="35" y="615" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#58798a">Удаление PVC при Delete может удалить базовый том. Нужны backup и проверка драйвера.</text>
+</svg>
