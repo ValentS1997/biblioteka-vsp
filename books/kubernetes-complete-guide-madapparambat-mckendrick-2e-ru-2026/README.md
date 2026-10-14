@@ -32,3 +32,7 @@ Readiness command:
 ## Reading
 
 No reading status, dates or progress were modified or inferred during source/RAG ingest.
+
+## Chapter analysis
+
+- [Глава 13. Объект DaemonSet: запуск одного пода на каждом узле](notes/chapters/chapter-13-daemonsets/README.md) — RAG-only, PDF 457–473, chapter-artifact-collection v1.7. Статус чтения не изменен.

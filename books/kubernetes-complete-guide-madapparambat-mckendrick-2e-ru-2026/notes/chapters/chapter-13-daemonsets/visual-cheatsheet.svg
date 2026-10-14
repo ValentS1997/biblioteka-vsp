@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1190" height="670" viewBox="0 0 1190 670">
+<rect width="1190" height="670" fill="#f4f8fb"/>
+<rect width="1190" height="10" fill="#276d86"/>
+<text x="32" y="55" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#193f53">Глава 13 · DaemonSet: Pod на каждом узле</text>
+<text x="32" y="93" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#4a6b7c">Управление узловыми агентами, планированием и обновлениями</text>
+<text x="32" y="121" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#597b8a">RAG-only · PDF 457–473 · inventory 0033</text>
+<rect x="32" y="148" width="369" height="188" rx="12" fill="white" stroke="#c6d7e0"/>
+<rect x="32" y="148" width="369" height="8" fill="#287c90"/>
+<text x="48" y="184" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287c90">1</text>
+<text x="48" y="227" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1a4053">DaemonSet</text>
+<text x="48" y="268" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">Один Pod на eligible node</text>
+<text x="48" y="302" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">replicas не задаются</text>
+<rect x="426" y="148" width="369" height="188" rx="12" fill="white" stroke="#c6d7e0"/>
+<rect x="426" y="148" width="369" height="8" fill="#287c90"/>
+<text x="442" y="184" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287c90">2</text>
+<text x="442" y="227" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1a4053">Планирование</text>
+<text x="442" y="268" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">nodeSelector / affinity</text>
+<text x="442" y="302" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">tolerations / resources</text>
+<rect x="820" y="148" width="369" height="188" rx="12" fill="white" stroke="#c6d7e0"/>
+<rect x="820" y="148" width="369" height="8" fill="#287c90"/>
+<text x="836" y="184" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287c90">3</text>
+<text x="836" y="227" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1a4053">Аудит</text>
+<text x="836" y="268" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">get daemonsets -A</text>
+<text x="836" y="302" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">DESIRED / READY / NODE</text>
+<rect x="32" y="361" width="369" height="188" rx="12" fill="white" stroke="#c6d7e0"/>
+<rect x="32" y="361" width="369" height="8" fill="#287c90"/>
+<text x="48" y="397" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287c90">4</text>
+<text x="48" y="440" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1a4053">Fluentd</text>
+<text x="48" y="481" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">hostPath: /var/log</text>
+<text x="48" y="515" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">логирование по узлам</text>
+<rect x="426" y="361" width="369" height="188" rx="12" fill="white" stroke="#c6d7e0"/>
+<rect x="426" y="361" width="369" height="8" fill="#287c90"/>
+<text x="442" y="397" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287c90">5</text>
+<text x="442" y="440" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1a4053">Rollout</text>
+<text x="442" y="481" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">RollingUpdate / OnDelete</text>
+<text x="442" y="515" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">status и undo</text>
+<rect x="820" y="361" width="369" height="188" rx="12" fill="white" stroke="#c6d7e0"/>
+<rect x="820" y="361" width="369" height="8" fill="#287c90"/>
+<text x="836" y="397" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#287c90">6</text>
+<text x="836" y="440" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="21" fill="#1a4053">Важный дефект</text>
+<text x="836" y="481" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">kube-system ≠ logging</text>
+<text x="836" y="515" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3e6072">source YAML / CLI conflict</text>
+<text x="32" y="645" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#597888">Один на подходящий узел · YAML namespace конфликтует с командами · live cluster не проверялся.</text>
+</svg>
