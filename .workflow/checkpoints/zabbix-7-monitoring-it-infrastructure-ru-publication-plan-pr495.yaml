@@ -6,7 +6,7 @@ task_kind: process
 objective: "Publish RAG-grounded 13-chapter plan and Git chapter index under current canonical contracts."
 branch: "chapter/zabbix-7-0020-publication-plan-20261015"
 initial_base_sha: "aa3733b43f6db3627453e4814926e59a9ae3b136"
-last_observed_head_sha: "5ced9f9c14ad443d734030c77b38ee0be04926a9"
+last_observed_head_sha: "757d5b0015ba113f9a6626eb8ef5877102c10b19"
 expected_source_sha256: "07204d885d4bf4c6c2de7c71ae42a4e3ed4cea794169cbe07985552e63875a27"
 constraints:
   - no direct main changes
@@ -15,7 +15,7 @@ constraints:
   - no reading-progress mutation without explicit user confirmation
   - no archive delivery for chapter artifacts
   - RAG-only chapter content
-stage: IN_PROGRESS
+stage: CI_PENDING
 completed_steps:
   - step: "Verified thirteen TOC chapter headings and start-page RAG chunks"
     evidence_type: file-readback
@@ -32,11 +32,13 @@ completed_steps:
   - step: "Initial PR chapter-notes CI successful"
     evidence_type: ci
     reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38623382966"
+  - step: "Aligned book plan, index and README with new canonical router v1.2 and SESSION-RECOVERY v1.0"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/757d5b0015ba113f9a6626eb8ef5877102c10b19"
 pending_steps:
-  - "Align the new plan and index references with current canonical process router v1.2"
-  - "Git read-back and rerun relevant PR CI on final branch head"
-  - "Confirm PR remains open and note main-vs-branch published progress"
+  - "Verify final-HEAD PR #495 chapter-notes CI; last observed run 38623822808"
+  - "Review/merge PR #495 after all required checks; main currently has no published chapters"
 last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/pull/495"
-first_safe_next_action: "Re-fetch branch HEAD and blob SHAs before updating process contract references."
+first_safe_next_action: "Read GitHub PR #495 head/CI and branch checkpoint before any further Git mutation."
 blocker: "Not applicable"
 last_observed_at: "Not applicable"
