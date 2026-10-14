@@ -8,6 +8,7 @@
 | 02 | Язык циклов | PDF 30–42; печатные 29–41 | [Анализ главы 2](chapter-02-loop-language/README.md) |
 | 03 | На всякий случай: оператор Case | PDF 43–57; печатные 42–56 | [Анализ главы 3](chapter-03-case/README.md) |
 | 04 | Язык переменных | PDF 58–72; печатные 57–71 | [Анализ главы 4](chapter-04-variables/README.md) |
+| 05 | Выражения и арифметика | PDF 73–82; печатные 72–81 | [Анализ главы 5](chapter-05-expressions-arithmetic/README.md) |
 | 06 | Функции | PDF 83–93; печатные 82–92 | [Анализ главы 6](chapter-06-functions/README.md) |
 | 07 | Списки и хеши | PDF 94–110; печатные 93–109 | [Анализ главы 7](chapter-07-lists-hashes/README.md) |
 | 08 | Аргументы | PDF 111–125; печатные 110–124 | [Анализ главы 8](chapter-08-arguments/README.md) |

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1590" viewBox="0 0 1400 1590">
+<rect x="0" y="0" width="1400" height="1590" rx="10" fill="#f3f6fb"/>
+<text x="40" y="57" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#173959">ЧАСТЬ V · АЛЬТЕРНАТИВНЫЕ СЕТИ · ПОДРОБНАЯ КАРТА</text>
+<text x="41" y="92" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#54738d">PDF 235–302 · 68 адресуемых RAG-чанков · источник: текст книги</text>
+<rect x="40" y="117" width="1320" height="101" rx="10" fill="#e5eef9"/>
+<rect x="40" y="117" width="12" height="101" rx="10" fill="#557fa8"/>
+<text x="67" y="145" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#144873">01 · МОТИВАЦИЯ</text>
+<text x="67" y="178" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#244361">Приватность / децентрализация / живучесть / упрощение</text>
+<text x="67" y="205" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#60748a">Надсистемы используют существующий транспорт Интернета</text>
+<rect x="40" y="226" width="1320" height="101" rx="10" fill="#ffffff"/>
+<rect x="40" y="226" width="12" height="101" rx="10" fill="#557fa8"/>
+<text x="67" y="254" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#144873">02 · TOR · SOCKS</text>
+<text x="67" y="287" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#244361">TCP-приложение → локальный proxy 9050 → Tor relay цепь</text>
+<text x="67" y="314" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#60748a">Прямой и proxy curl дают разные пути в стенде автора</text>
+<rect x="40" y="335" width="1320" height="101" rx="10" fill="#e5eef9"/>
+<rect x="40" y="335" width="12" height="101" rx="10" fill="#557fa8"/>
+<text x="67" y="363" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#144873">03 · TOR · ONION</text>
+<text x="67" y="396" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#244361">HiddenServiceDir/Port → локальный SSH или веб-сервер</text>
+<text x="67" y="423" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#60748a">Публикация адреса увеличивает доступность из сети Tor</text>
+<rect x="40" y="444" width="1320" height="101" rx="10" fill="#ffffff"/>
+<rect x="40" y="444" width="12" height="101" rx="10" fill="#557fa8"/>
+<text x="67" y="472" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#144873">04 · YGGDRASIL · АРХИТЕКТУРА</text>
+<text x="67" y="505" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#244361">IPv6 overlay, пиры, динамическая mesh-маршрутизация</text>
+<text x="67" y="532" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#60748a">Пара ключей и overlay-адрес, TUN-интерфейс</text>
+<rect x="40" y="553" width="1320" height="101" rx="10" fill="#e5eef9"/>
+<rect x="40" y="553" width="12" height="101" rx="10" fill="#557fa8"/>
+<text x="67" y="581" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#144873">05 · YGGDRASIL · ПИРЫ</text>
+<text x="67" y="614" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#244361">Список пиров; peer_checker; yggdrasilctl getPeers</text>
+<text x="67" y="641" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#60748a">Не копировать peer endpoints / приватные ключи книги</text>
+<rect x="40" y="662" width="1320" height="101" rx="10" fill="#ffffff"/>
+<rect x="40" y="662" width="12" height="101" rx="10" fill="#557fa8"/>
+<text x="67" y="690" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#144873">06 · YGGDRASIL · LAN/ROUTING</text>
+<text x="67" y="723" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#244361">IPv6 адрес/маршрут/forwarding через свой router</text>
+<text x="67" y="750" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#60748a">Тест ping -6, iperf на разрешённом стенде</text>
+<rect x="40" y="771" width="1320" height="101" rx="10" fill="#e5eef9"/>
+<rect x="40" y="771" width="12" height="101" rx="10" fill="#557fa8"/>
+<text x="67" y="799" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#144873">07 · I2P · i2pd</text>
+<text x="67" y="832" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#244361">Чесночная маршрутизация и собственные туннели</text>
+<text x="67" y="859" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#60748a">Server SSH tunnel + client tunnel на localhost:2222</text>
+<rect x="40" y="880" width="1320" height="101" rx="10" fill="#ffffff"/>
+<rect x="40" y="880" width="12" height="101" rx="10" fill="#557fa8"/>
+<text x="67" y="908" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#144873">08 · EMERDNS</text>
+<text x="67" y="941" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#244361">Кошелёк EmerCoin содержит распределённые DNS-записи</text>
+<text x="67" y="968" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#60748a">DNS-запрос требует настроенного локального резолвера</text>
+<rect x="40" y="989" width="1320" height="101" rx="10" fill="#e5eef9"/>
+<rect x="40" y="989" width="12" height="101" rx="10" fill="#557fa8"/>
+<text x="67" y="1017" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#144873">09 · ALFIS</text>
+<text x="67" y="1050" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#244361">Blockchain/SQLite + P2P + DNS/upstream fallback</text>
+<text x="67" y="1077" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#60748a">Местный слушатель 127.0.0.4:53 в авторском опыте</text>
+<rect x="40" y="1098" width="1320" height="101" rx="10" fill="#ffffff"/>
+<rect x="40" y="1098" width="12" height="101" rx="10" fill="#557fa8"/>
+<text x="67" y="1126" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#144873">10 · ДОСТУП ЗА NAT</text>
+<text x="67" y="1159" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#244361">Локальный LAN-хост доступен через onion/IPv6/I2P</text>
+<text x="67" y="1186" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#60748a">SSH и nginx раскрывают только санкционированные службы</text>
+<rect x="40" y="1207" width="1320" height="101" rx="10" fill="#e5eef9"/>
+<rect x="40" y="1207" width="12" height="101" rx="10" fill="#557fa8"/>
+<text x="67" y="1235" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#144873">11 · ОПЕРАЦИОННЫЙ КОНТУР</text>
+<text x="67" y="1268" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#244361">RO: systemctl, netstat, ip, getPeers, forwarding</text>
+<text x="67" y="1295" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#60748a">WG: curl, ping, iperf; SC: torrc/Peers/DNS/sysctl</text>
+<rect x="40" y="1316" width="1320" height="101" rx="10" fill="#ffffff"/>
+<rect x="40" y="1316" width="12" height="101" rx="10" fill="#557fa8"/>
+<text x="67" y="1344" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#144873">12 · ВЕРИФИКАЦИЯ И ОТКАТ</text>
+<text x="67" y="1377" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#244361">Проверить listener, путь, клиент, DNS и права</text>
+<text x="67" y="1404" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#60748a">Полный rollback/актуальные релизы: Needs confirmation</text>
+<rect x="40" y="1425" width="1320" height="101" rx="10" fill="#e5eef9"/>
+<rect x="40" y="1425" width="12" height="101" rx="10" fill="#557fa8"/>
+<text x="67" y="1453" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#144873">13 · НЕСООТВЕТСТВИЯ И РИСКИ</text>
+<text x="67" y="1486" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#244361">/etc/yggdrasil.conf vs .../yggdrasil.conf; DSN/DNS</text>
+<text x="67" y="1513" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#60748a">Временные значения, конфигурации, публичные адреса</text>
+<text x="43" y="1571" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#60768b">SVG создана по RAG; рисунки 5.1–5.17 и вывод всей книги (PDF 303) сюда не включены.</text>
+</svg>
