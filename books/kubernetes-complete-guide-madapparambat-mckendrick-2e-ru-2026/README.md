@@ -32,3 +32,7 @@ Readiness command:
 ## Reading
 
 No reading status, dates or progress were modified or inferred during source/RAG ingest.
+
+## Chapter analysis
+
+- [Глава 4. Запуск контейнеров в Kubernetes](notes/chapters/chapter-04-pods-jobs-cronjobs/README.md) — RAG-only, PDF 143–180, chapter-artifact-collection v1.7. Статус чтения не изменен.
