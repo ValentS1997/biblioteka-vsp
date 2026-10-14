@@ -21,6 +21,26 @@ CHAPTER_REQUIRED = (
     "README.md", "cheatsheet.md", "commands.md", "diagram.md",
     "visual-cheatsheet.svg", "visual-cheatsheet-detailed.svg"
 )
+FORBIDDEN_CHAPTER_ARCHIVE_EXTENSIONS = frozenset(
+    {".zip", ".rar", ".7z", ".tar", ".tgz", ".gz", ".bz2", ".xz"}
+)
+
+
+def forbidden_chapter_archives(changed_paths: list[str]) -> list[str]:
+    """Reject new archive substitutes anywhere in per-book notes.
+
+    This runs against the *changed paths*, so historical unrelated notes stay
+    backward-compatible while every new ZIP/archive chapter handoff fails CI.
+    """
+    offenders = []
+    for raw in changed_paths:
+        normalized = raw.replace("\\", "/")
+        parts = normalized.split("/")
+        if (len(parts) >= 4 and parts[0] == "books" and parts[2] == "notes"
+                and Path(parts[-1]).suffix.lower() in FORBIDDEN_CHAPTER_ARCHIVE_EXTENSIONS):
+            offenders.append(normalized)
+    return sorted(set(offenders))
+
 
 
 def check_svg(path: Path, out_dir: Path, issues: list[str]) -> None:
@@ -170,6 +190,11 @@ if __name__ == "__main__":
     if args.changed_paths_file:
         repo_root = Path(__file__).resolve().parent.parent
         changed = Path(args.changed_paths_file).read_text(encoding="utf-8").splitlines()
+        archives = forbidden_chapter_archives(changed)
+        if archives:
+            for path in archives:
+                print(f"ERROR: chapter notes archive is forbidden; publish individual Git files: {path}", file=sys.stderr)
+            sys.exit(1)
         books = select_changed_books(repo_root, changed, Path(args.fallback_book_dir))
         return_code = 0
         for book in books:

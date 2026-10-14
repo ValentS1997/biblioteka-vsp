@@ -108,6 +108,39 @@ class TemplateContractTests(unittest.TestCase):
             target = load(ROOT / rel_path)
             self.assertEqual("ACCEPTED", (target.get("template") or {}).get("status"))
 
+    def test_current_direct_git_chapter_publication_contracts(self):
+        policy = self.assert_template(
+            "chapter-publication-v1.0.yaml",
+            "BIBLIOTEKA-VSP-CHAPTER-PUBLICATION", "1.0",
+        )
+        self.assertTrue(policy["startup"]["mandatory_on"])
+        self.assertIn("zip", " ".join(policy["publication"]["forbidden_delivery"]).lower())
+        self.assertFalse(policy["repository"]["direct_main_allowed"])
+        self.assertEqual(6, len(policy["publication"]["required_individual_files"]))
+
+        current = (
+            ("book-branch-bootstrap-v1.4.yaml", "BIBLIOTEKA-VSP-BOOK-BRANCH-BOOTSTRAP", "1.4"),
+            ("chapter-analysis-request-v1.4.yaml", "BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST", "1.4"),
+            ("chapter-artifact-collection-v1.8.yaml", "BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION", "1.8"),
+        )
+        for path, template_id, version in current:
+            doc = self.assert_template(path, template_id, version)
+            ref = doc.get("contracts", {}).get("chapter_publication") or doc.get("artifact_collection", {}).get("chapter_publication_contract")
+            self.assertEqual("templates/chapter-publication-v1.0.yaml", ref["path"])
+        router = load(TEMPLATES / "process-compliance-router-v1.1.yaml")
+        self.assertEqual("1.1", router["router"]["version"])
+        expected = {
+            "book_branch_bootstrap": ("1.4", "templates/book-branch-bootstrap-v1.4.yaml"),
+            "chapter_analysis_request": ("1.4", "templates/chapter-analysis-request-v1.4.yaml"),
+            "chapter_artifact_collection": ("1.8", "templates/chapter-artifact-collection-v1.8.yaml"),
+            "chapter_publication": ("1.0", "templates/chapter-publication-v1.0.yaml"),
+        }
+        for key, (version, path) in expected.items():
+            ref = router["current_contracts"][key]
+            self.assertEqual(version, str(ref["version"]))
+            self.assertEqual(path, ref["canonical_path"])
+        self.assertTrue(router["routes"]["CHAPTER_ROUTE"]["publication"]["forbid_archive_substitute"])
+
     def test_remote_git_policy_is_current(self):
         policy = self.assert_template(
             "git-execution-policy-v1.0.yaml",
