@@ -32,3 +32,7 @@ Readiness command:
 ## Reading
 
 No reading status, dates or progress were modified or inferred during source/RAG ingest.
+
+## Chapter analysis
+
+- [Глава 1. Основы Kubernetes](notes/chapters/chapter-01-osnovy-kubernetes/README.md) — RAG-only, PDF 34–70, chapter-artifact-collection v1.7. Статус чтения не изменен.
