@@ -32,3 +32,7 @@ Readiness command:
 ## Reading
 
 No reading status, dates or progress were modified or inferred during source/RAG ingest.
+
+## Chapter analysis
+
+- [Глава 2. Архитектура Kubernetes: от образов контейнеров к работающим подам](notes/chapters/chapter-02-architecture-kubernetes/README.md) — RAG-only, PDF 71–114, chapter-artifact-collection v1.7. Статус чтения не изменен.
