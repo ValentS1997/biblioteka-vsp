@@ -32,3 +32,7 @@ Readiness command:
 ## Reading
 
 No reading status, dates or progress were modified or inferred during source/RAG ingest.
+
+## Chapter analysis
+
+- [Глава 9. Постоянное хранилище в Kubernetes](notes/chapters/chapter-09-persistent-storage/README.md) — RAG-only, PDF 326–365, chapter-artifact-collection v1.7. Статус чтения не изменен.
