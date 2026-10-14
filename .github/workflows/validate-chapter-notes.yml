@@ -57,7 +57,7 @@ jobs:
           set -euo pipefail
           book="books/prometheus-up-and-running-pivotto-brazil-ru-2023"
           echo "Explicit chapter validation target: $book"
-          if find "$book/notes/chapters" -maxdepth 1 -mindepth 1 -type d -name 'chapter-*' | grep -q .; then
+          if [ -n "$(find "$book/notes/chapters" -maxdepth 1 -mindepth 1 -type d -name 'chapter-*' -print -quit)" ]; then
             python scripts/validate_chapter_notes.py --book-dir "$book"
             python scripts/check_book_readiness.py --book-id prometheus-up-and-running-pivotto-brazil-ru-2023 --capability chapter-analysis
           else
