@@ -32,3 +32,7 @@ Readiness command:
 ## Reading
 
 No reading status, dates or progress were modified or inferred during source/RAG ingest.
+
+## Chapter analysis
+
+- [Глава 18. Безопасность в системе Kubernetes](notes/chapters/chapter-18-kubernetes-security/README.md) — RAG-only, PDF 587–640, chapter-artifact-collection v1.7. Статус чтения не изменен.
