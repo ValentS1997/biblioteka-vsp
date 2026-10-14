@@ -47,3 +47,4 @@ No reading status, dates or progress were modified or inferred during source/RAG
 - [Глава 10. Запуск рабочих нагрузок производственного уровня в Kubernetes](notes/chapters/chapter-10-replicasets-ha-ft/README.md) — RAG-only, PDF 366–383, chapter-artifact-collection v1.7. Статус чтения не изменен.
 - [Глава 11. Использование Deployment для управления рабочими нагрузками без сохранения состояния](notes/chapters/chapter-11-deployment-rollouts/README.md) — RAG-only, PDF 384–419, chapter-artifact-collection v1.7. Статус чтения не изменен.
 - [Глава 12. Объект StatefulSet: развертывание приложений с сохранением состояния](notes/chapters/chapter-12-statefulset-persistent/README.md) — RAG-only, PDF 420–456, chapter-artifact-collection v1.7. Статус чтения не изменен.
+- [Глава 13. Объект DaemonSet: запуск одного пода на каждом узле](notes/chapters/chapter-13-daemonsets/README.md) — RAG-only, PDF 457–473, chapter-artifact-collection v1.7. Статус чтения не изменен.
