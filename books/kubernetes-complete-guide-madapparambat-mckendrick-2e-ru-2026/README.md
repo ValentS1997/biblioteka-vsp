@@ -32,3 +32,7 @@ Readiness command:
 ## Reading
 
 No reading status, dates or progress were modified or inferred during source/RAG ingest.
+
+## Chapter analysis
+
+- [Глава 7. ConfigMap и Secret](notes/chapters/chapter-07-configmap-secret/README.md) — RAG-only, PDF 248–280, v1.7. Статус чтения не менялся.
