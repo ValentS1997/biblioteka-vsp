@@ -1,0 +1,567 @@
+schema_version: "1.2"
+
+router:
+  id: "BIBLIOTEKA-VSP-PROCESS-COMPLIANCE-ROUTER"
+  version: "1.2"
+  type: "branch_process_router"
+  status: "ACCEPTED"
+  language: "ru"
+
+  purpose: >-
+    Вводить существующую или новую рабочую ветку biblioteka-vsp
+    в актуальный технический процесс, проверять соответствие canonical
+    contracts и блокировать дальнейшую работу при критическом process drift.
+
+target:
+  repository: "vsp-corp/biblioteka-vsp"
+  canonical_branch: "main"
+  working_branch: "[Current branch]"
+  book_id: "[Resolve from branch context or repository state]"
+  branch_purpose: "[Resolve from current branch context]"
+
+authority:
+  priority:
+    - "Current explicit user instruction"
+    - "Verified biblioteka-vsp/main state"
+    - "Canonical ACCEPTED contracts in biblioteka-vsp/main"
+    - "Reusable copies in Templates-and-YAML-instructions"
+    - "Existing branch artifacts"
+    - "Model knowledge"
+
+  canonical_process_repository: "vsp-corp/biblioteka-vsp"
+  reusable_repository: "ValentS1997/Templates-and-YAML-instructions"
+
+  conflict_rule: >-
+    При расхождении reusable template, старого branch context или
+    существующих артефактов с biblioteka-vsp/main приоритет всегда у
+    текущего verified canonical process.
+
+current_contracts:
+  new_book_bootstrap:
+    id: "BIBLIOTEKA-VSP-NEW-BOOK-BOOTSTRAP"
+    version: "1.5"
+    reusable_path: "BIBLIOTEKA-VSP-NEW-BOOK-BOOTSTRAP.yaml"
+
+  book_branch_bootstrap:
+    id: "BIBLIOTEKA-VSP-BOOK-BRANCH-BOOTSTRAP"
+    version: "1.4"
+    canonical_path: "templates/book-branch-bootstrap-v1.4.yaml"
+
+  book_onboarding:
+    id: "BIBLIOTEKA-VSP-BOOK-ONBOARDING"
+    version: "1.3"
+    canonical_path: "templates/book-onboarding-v1.3.yaml"
+
+  rag_ingestion_acceptance:
+    id: "BIBLIOTEKA-VSP-RAG-INGESTION-ACCEPTANCE"
+    version: "1.0"
+    canonical_path: "templates/rag-ingestion-acceptance-v1.0.yaml"
+
+  book_readiness:
+    id: "BIBLIOTEKA-VSP-BOOK-READINESS"
+    version: "1.3"
+    canonical_path: "templates/book-readiness-v1.3.yaml"
+
+  chapter_analysis_request:
+    id: "BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST"
+    version: "1.4"
+    canonical_path: "templates/chapter-analysis-request-v1.4.yaml"
+
+  chapter_artifact_collection:
+    id: "BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION"
+    version: "1.8"
+    canonical_path: "templates/chapter-artifact-collection-v1.8.yaml"
+
+  chapter_publication:
+    id: "BIBLIOTEKA-VSP-CHAPTER-PUBLICATION"
+    version: "1.0"
+    canonical_path: "templates/chapter-publication-v1.0.yaml"
+
+  session_recovery:
+    id: "BIBLIOTEKA-VSP-SESSION-RECOVERY"
+    version: "1.0"
+    canonical_path: "templates/session-recovery-v1.0.yaml"
+
+  git_execution:
+    id: "BIBLIOTEKA-VSP-GIT-EXECUTION-POLICY"
+    version: "1.0"
+    canonical_path: "templates/git-execution-policy-v1.0.yaml"
+
+process_mode:
+  fail_closed: true
+  strict_compliance: true
+  auto_migrate_safe_process_drift: true
+  destructive_auto_migration: false
+  force_push_allowed: false
+  silent_source_rewrite_allowed: false
+  silent_rag_rebuild_allowed: false
+  silent_contract_downgrade_allowed: false
+
+unknown_policy:
+  value: "[Needs confirmation]"
+  rules:
+    - "Unknown remains unknown."
+    - "Do not reconstruct missing process state from memory."
+    - "Do not infer readiness from reading status."
+    - "Do not infer RAG validity from manifest existence alone."
+    - "Do not infer canonical source validity from electronic holding."
+
+startup:
+  mandatory: true
+
+  read_only_checks:
+    - "Read current biblioteka-vsp/main contracts listed in current_contracts."
+    - "Resolve current branch HEAD."
+    - "Resolve branch purpose."
+    - "Resolve book_id when branch is book-scoped."
+    - "Inspect current branch files and process references."
+    - "For book branch, report verified total chapters and Git-published progress (or explicit unknown with reason)."
+    - "Inspect relevant open PR and CI state."
+    - "Inspect a verified Git-backed checkpoint for multi-step tasks; never rely solely on old chat context."
+    - "When recovering after a chat reset, inspect actual Git commits/files/PRs before retrying any operation."
+    - "Detect legacy contract versions."
+    - "Detect generated artifacts created under superseded RAG generation."
+    - "Detect uncommitted/unfinished process migration."
+    - "Detect temporary one-shot workflows left in branch."
+    - "Detect direct source edits or provenance inconsistencies."
+
+classification:
+  branch_types:
+
+    new_book:
+      match:
+        - "book source onboarding"
+        - "new books/<book_id>"
+        - "RAG creation"
+      route: "NEW_BOOK_ROUTE"
+
+    existing_book_process_update:
+      match:
+        - "existing book branch"
+        - "old process/template versions"
+        - "process compliance request"
+      route: "PROCESS_MIGRATION_ROUTE"
+
+    rag_rebuild:
+      match:
+        - "rebuild RAG"
+        - "reindex"
+        - "rechunk"
+        - "parser/chunking/index change"
+      route: "RAG_REBUILD_ROUTE"
+
+    interrupted_session:
+      match:
+        - "Ковальски, проверка после обрыва связи"
+        - "возобнови после обрыва"
+        - "продолжи с последней контрольной точки"
+        - "проверка после ресета"
+      route: "RECOVERY_ROUTE"
+
+    chapter_work:
+      match:
+        - "\"Анализ главы N\""
+        - "chapter artifacts"
+      route: "CHAPTER_ROUTE"
+
+    translation:
+      match:
+        - "translation"
+        - "перевод"
+      route: "TRANSLATION_ROUTE"
+
+    process_development:
+      match:
+        - "templates/"
+        - "scripts/build_book_rag.py"
+        - "scripts/check_book_readiness.py"
+        - "scripts/validate_rag_ingestion.py"
+        - ".github/workflows/"
+        - "docs/BOOK-LIFECYCLE.md"
+      route: "PROCESS_DEVELOPMENT_ROUTE"
+
+routes:
+
+  RECOVERY_ROUTE:
+    contract: "BIBLIOTEKA-VSP-SESSION-RECOVERY v1.0"
+    precedence: "Before resuming ANY interrupted chapter, RAG, registry, process or batch merge work."
+    first_action: "Read-only GitHub reconstruction and comparison with the branch checkpoint."
+    never_assume: "An interrupted remote operation either failed or succeeded without GitHub read-back."
+    recovery_success: "RECOVERED_FROM_GIT or ALREADY_COMPLETE_VERIFIED"
+    recovery_blocked: "RECOVERY_BLOCKED; report missing evidence and one minimal next action."
+    no_duplicate_mutations: true
+    preserve_reading_and_source: true
+
+  NEW_BOOK_ROUTE:
+    sequence:
+      - "BIBLIOTEKA-VSP-BOOK-BRANCH-BOOTSTRAP v1.4"
+      - "BIBLIOTEKA-VSP-BOOK-ONBOARDING v1.3"
+      - "canonical source + SHA verification"
+      - "full-book RAG build"
+      - "BIBLIOTEKA-VSP-RAG-INGESTION-ACCEPTANCE v1.0"
+      - "BIBLIOTEKA-VSP-BOOK-READINESS v1.3"
+
+    success:
+      status: "READY_FOR_CHAPTER_ANALYSIS"
+
+  PROCESS_MIGRATION_ROUTE:
+    rule: >-
+      Не перестраивать существующий RAG только ради изменения версии
+      процесса. Сначала определить, требуется ли migration metadata/process
+      или реальный controlled rebuild.
+
+    checks:
+      - "current canonical source unchanged"
+      - "source/SHA256 consistent"
+      - "existing RAG remains readable"
+      - "existing readiness status"
+      - "contract references"
+      - "chapter template references"
+      - "legacy/current generation type"
+
+    legacy_rag:
+      generation_metadata_absent: true
+      action: "KEEP_VALID_UNTIL_CONTROLLED_REBUILD"
+      strict_acceptance_required_immediately: false
+
+    current_generation_rag:
+      generation_metadata_present: true
+      required:
+        - "rag/acceptance.yaml"
+        - "status == ACCEPTED"
+        - "source_sha256 binding"
+        - "corpus_generation_id binding"
+        - "index_generation_id binding"
+
+    process_updates:
+      required:
+        - "Update stale template references."
+        - "Update stale documentation references."
+        - "Remove obsolete one-shot workflows."
+        - "Do not rewrite canonical source."
+        - "Do not mass-rebuild RAG without explicit reason."
+
+  RAG_REBUILD_ROUTE:
+    preconditions:
+      - "Canonical source SHA confirmed."
+      - "Current generation IDs recorded when present."
+      - "Reason for rebuild explicitly identified."
+      - "Git branch/commit rollback point exists."
+
+    build:
+      derived_state_only: true
+
+    required_outputs:
+      - "rag/manifest.yaml"
+      - "rag/text.md"
+      - "rag/chunks.jsonl"
+      - "rag/chunk-index.jsonl"
+      - "rag/chunks/"
+      - "rag/search-index/"
+      - "rag/acceptance.yaml"
+
+    mandatory_acceptance:
+      contract: "BIBLIOTEKA-VSP-RAG-INGESTION-ACCEPTANCE v1.0"
+
+    publish_rule: >-
+      Generated RAG must not be committed/promoted by the normal workflow
+      unless acceptance status is ACCEPTED.
+
+    compare:
+      - "source_sha256"
+      - "corpus_generation_id"
+      - "index_generation_id"
+      - "source-unit coverage"
+      - "chunk count"
+      - "retrieval acceptance"
+
+  CHAPTER_ROUTE:
+    continuity:
+      contract: "BIBLIOTEKA-VSP-SESSION-RECOVERY v1.0"
+      checkpoint: "Before extended chapter artifact writes and after each Git-verified unit."
+      interrupted_write: "Re-fetch GitHub files/ref and verify before retrying."
+      incomplete: "Report committed paths, exact missing paths, branch SHA and next action."
+    startup:
+      required: true
+      contract: "BIBLIOTEKA-VSP-CHAPTER-PUBLICATION v1.0"
+      output: "Source-verified chapter total + committed chapter progress + current branch/commit, or explicit unknown with reason."
+    publication:
+      target: "individual Git chapter files on book branch"
+      forbid_archive_substitute: true
+      partial_output: "Report committed paths, missing files and exact blockers; never claim complete."
+    preflight:
+      contract: "BIBLIOTEKA-VSP-BOOK-READINESS v1.3"
+      required_status: "READY"
+
+    delegate:
+      request: "BIBLIOTEKA-VSP-CHAPTER-ANALYSIS-REQUEST v1.4"
+      artifacts: "BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.8"
+
+    source_mode: "rag_only"
+
+    forbidden:
+      - "direct canonical-source fallback"
+      - "web fallback for book content"
+      - "model-memory gap filling"
+
+    source_findings:
+      classifications:
+        - "[Source contradiction]"
+        - "[Source code mismatch]"
+        - "[Source wording/code mismatch]"
+        - "[Source extraction issue]"
+        - "[Needs confirmation]"
+
+      conditional_artifact:
+        file: "source-findings.md"
+
+      rule: "Never silently correct the source."
+
+  TRANSLATION_ROUTE:
+    rule: >-
+      Translation is derived state and must never replace canonical source
+      or canonical source-language RAG.
+
+    required:
+      - "canonical source verified"
+      - "canonical RAG READY"
+      - "BOOK-READINESS v1.3 == READY"
+      - "translation-specific contract applied"
+
+    source_truth: "canonical source-language RAG"
+
+  PROCESS_DEVELOPMENT_ROUTE:
+    continuity:
+      contract: "BIBLIOTEKA-VSP-SESSION-RECOVERY v1.0"
+      checkpoint: "Feature-branch Git checkpoint for multi-step process changes and CI."
+    rule: >-
+      Process/template changes require isolated branch, tests, CI and
+      backward-compatibility analysis before merge.
+
+    mandatory:
+      - "Identify current canonical versions."
+      - "Create new version instead of mutating accepted historical contract when semantic behavior changes."
+      - "Update implementation code where contract requires enforcement."
+      - "Update tests."
+      - "Update CI path triggers."
+      - "Update README/docs lifecycle."
+      - "Update reusable repository after canonical merge."
+      - "Verify exact reusable/canonical contract match."
+
+    compatibility:
+      existing_books: "must remain usable unless migration is explicitly approved"
+      existing_rag: "no automatic mass rebuild"
+
+compliance_checks:
+
+  process_versions:
+    required:
+      book_branch_bootstrap: "1.4"
+      book_onboarding: "1.3"
+      rag_ingestion_acceptance: "1.0"
+      book_readiness: "1.3"
+      chapter_analysis_request: "1.4"
+      chapter_artifact_collection: "1.8"
+      chapter_publication: "1.0"
+
+  source:
+    canonical_path:
+      - "books/<book_id>/source/book.pdf"
+      - "books/<book_id>/source/book.epub"
+    sha256_required: true
+    source_vault_is_canonical: false
+
+  rag:
+    legacy:
+      allowed: true
+      forced_rebuild: false
+
+    new_or_rebuilt:
+      generation_metadata_required: true
+      acceptance_required: true
+      required_identity:
+        - "corpus_generation_id"
+        - "index_generation_id"
+
+      chunks_required:
+        - "chunk_id"
+        - "chunk_uid"
+        - "text_sha256"
+        - "source_sha256"
+        - "source_locator"
+        - "chunking_policy_id"
+
+  continuity:
+    session_recovery: "1.0"
+    checkpoint_for_multi_step_work: true
+    recover_remote_state_before_retry: true
+    no_duplicate_commits_or_prs: true
+
+  git:
+    remote_first: true
+    local_git_exception_only: true
+    no_force_push: true
+    PR_required_for_process_changes: true
+
+blocking_conditions:
+  critical:
+    - "canonical source SHA mismatch"
+    - "new/rebuilt RAG without ACCEPTED acceptance.yaml"
+    - "acceptance generation mismatch"
+    - "book readiness BLOCKED"
+    - "chapter work using obsolete contract"
+    - "archive/ZIP used as chapter completion or download-only handoff"
+    - "claimed chapter completion without Git commit and individual artifact read-back"
+    - "source silently corrected"
+    - "generated RAG published after acceptance failure"
+    - "required CI failure"
+    - "blindly replaying ambiguous or interrupted remote writes without GitHub read-back"
+    - "claiming recovery from inaccessible model reasoning without Git evidence"
+    - "unknown critical provenance"
+    - "attempt to use source-vault as canonical book source"
+
+  behavior:
+    status: "PROCESS_COMPLIANCE_BLOCKED"
+    stop_mutating_work: true
+    report:
+      - "failed check"
+      - "verified evidence"
+      - "risk"
+      - "exact remediation"
+      - "rollback point"
+      - "next checkpoint"
+      - "verified Git HEAD and first safe read-only recovery action"
+
+non_blocking_findings:
+  examples:
+    - "legacy RAG without generation metadata"
+    - "historical accepted template file remains in repository"
+    - "old chapter artifacts created under previous accepted process"
+
+  behavior:
+    status: "COMPATIBILITY_ACCEPTED"
+    rule: >-
+      Do not create unnecessary migration work when the current compatibility
+      contract explicitly permits the legacy state.
+
+workflow:
+  - step: 1
+    name: "READ_CANONICAL_PROCESS"
+    type: "read-only"
+
+  - step: 2
+    name: "CLASSIFY_BRANCH"
+    type: "read-only"
+
+  - step: 3
+    name: "AUDIT_PROCESS_COMPLIANCE"
+    type: "read-only"
+
+  - step: 4
+    name: "REPORT_DELTA"
+    type: "read-only"
+    output:
+      - "verified compliant state"
+      - "process drift"
+      - "legacy-compatible state"
+      - "blocking violations"
+
+  - step: 5
+    name: "REMEDIATE_SAFE_PROCESS_DRIFT"
+    type: "state-changing"
+    only_when:
+      - "change is deterministic"
+      - "canonical source is unaffected"
+      - "rollback exists"
+
+  - step: 6
+    name: "RUN_ROUTE_SPECIFIC_VALIDATION"
+    type: "read-only"
+
+  - step: 7
+    name: "RUN_CI"
+    type: "read-only"
+
+  - step: 8
+    name: "READ_BACK"
+    type: "read-only"
+
+  - step: 9
+    name: "MERGE"
+    type: "state-changing"
+    only_when:
+      - "all mandatory checks PASS"
+      - "required CI PASS"
+      - "HEAD reverified"
+
+  - step: 10
+    name: "POST_MERGE_VERIFICATION"
+    type: "read-only"
+
+terminal_states:
+
+  compliant:
+    status: "PROCESS_COMPLIANT"
+    meaning: >-
+      Ветка соответствует текущему technical process либо использует явно
+      разрешённый backward-compatible legacy state.
+
+  blocked:
+    status: "PROCESS_COMPLIANCE_BLOCKED"
+
+  migrated:
+    status: "PROCESS_MIGRATED_AND_COMPLIANT"
+
+report_format:
+  compact: true
+
+  required_fields:
+    branch: "[resolved]"
+    branch_type: "[resolved]"
+    book_id: "[resolved or Not applicable]"
+
+    canonical_contracts:
+      status: "PASS | FAIL"
+
+    source:
+      status: "PASS | FAIL | Not applicable"
+
+    rag:
+      generation: "legacy | current | Not applicable"
+      acceptance: "ACCEPTED | BLOCKED | legacy-compatible | Not applicable"
+
+    readiness:
+      status: "READY | BLOCKED | Not applicable"
+
+    chapter_contract:
+      status: "CURRENT | LEGACY | Not applicable"
+
+    ci:
+      status: "PASS | FAIL | [Needs confirmation]"
+
+    overall:
+      status: >-
+        PROCESS_COMPLIANT |
+        PROCESS_MIGRATED_AND_COMPLIANT |
+        PROCESS_COMPLIANCE_BLOCKED
+
+    recovery:
+      status: "Not applicable | CHECKPOINTED_IN_PROGRESS | RECOVERED_FROM_GIT | ALREADY_COMPLETE_VERIFIED | RECOVERY_BLOCKED"
+      checkpoint: "[Verified Git path/commit or Not applicable]"
+    next_action: "[exactly one next action]"
+
+instruction_to_assistant: >-
+  Используй этот YAML как маршрутизатор и compliance gate для текущей ветки.
+  Сначала прочитай актуальные canonical contracts из biblioteka-vsp/main.
+  Не считай старый контекст authoritative. Не перестраивай legacy RAG без
+  технической необходимости. Любой новый/rebuilt RAG обязан пройти
+  BIBLIOTEKA-VSP-RAG-INGESTION-ACCEPTANCE v1.0. Любая chapter-работа обязана
+  использовать BOOK-READINESS v1.3 -> CHAPTER-ANALYSIS-REQUEST v1.4 ->
+  CHAPTER-ARTIFACT-COLLECTION v1.8. При критическом несоответствии останови
+  state-changing работу, верни PROCESS_COMPLIANCE_BLOCKED и устрани process
+  drift до продолжения основной задачи. Для всех многошаговых задач и
+  восстановления после обрыва применяй SESSION-RECOVERY v1.0:
+  Git-verified checkpoint, ограниченные единицы работы, read-back каждого
+  завершённого этапа и read-only реконструкция перед повторной записью.
+  На команду «Ковальски, проверка после обрыва связи» сначала проверь GitHub
+  refs/files/PR/CI; не повторяй операции вслепую и не обещай фоновое выполнение.

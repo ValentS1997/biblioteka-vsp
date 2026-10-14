@@ -13,7 +13,8 @@ Canonical process and entrypoint templates.
 
 | Responsibility | Template | Version |
 |---|---|---:|
-| Branch/process compliance router | [process-compliance-router-v1.1.yaml](process-compliance-router-v1.1.yaml) | 1.1 |
+| Branch/process compliance router | [process-compliance-router-v1.2.yaml](process-compliance-router-v1.2.yaml) | 1.2 |
+| Interrupted-chat recovery / durable Git checkpoint | [session-recovery-v1.0.yaml](session-recovery-v1.0.yaml) | 1.0 |
 | Git execution / local-exception policy | [git-execution-policy-v1.0.yaml](git-execution-policy-v1.0.yaml) | 1.0 |
 | Optional one-shot preload of many future PDF/EPUB LFS objects | [source-vault-batch-stage-v1.0.yaml](source-vault-batch-stage-v1.0.yaml) | 1.0 |
 | One-time book source/RAG preparation | [book-onboarding-v1.3.yaml](book-onboarding-v1.3.yaml) | 1.3 |
@@ -49,7 +50,7 @@ to GitHub tools.
 ## Normal flow
 
 ```text
-PROCESS-COMPLIANCE-ROUTER v1.1
+PROCESS-COMPLIANCE-ROUTER v1.2
   ↓
 New book branch
   ↓
@@ -133,3 +134,25 @@ commit/PR links and CI. ZIP/RAR/7z/tar or sandbox/download-only handoffs do
 **not** satisfy a chapter request. If files cannot all be published now, report
 the completed Git paths, missing paths and explicit blocker as PARTIAL/BLOCKED;
 never claim the chapter was fully delivered.
+
+## Resuming after a chat disconnect (Git checkpoint, not model memory)
+
+The canonical [session recovery contract](session-recovery-v1.0.yaml) applies
+to multi-step book/RAG/chapter/registry/PR/process work. Record a brief,
+technical checkpoint at `.workflow/checkpoints/<task-key>.yaml` in a
+**non-main** branch and commit it before/after verified milestones. Store task
+identity, confirmed branch/HEAD, completed work with GitHub evidence,
+pending work and the first safe read-only action. Never store chat transcripts,
+secrets or hidden model reasoning.
+
+On **«Ковальски, проверка после обрыва связи»** re-fetch GitHub branch
+state, files, PR and CI before retrying anything. A tool timeout is an
+**unknown** remote outcome, not evidence that the write failed. Avoid
+duplicate files/PRs, force pushes and blind retries. If continuation cannot
+be grounded in GitHub, explicitly return `RECOVERY_BLOCKED` and the smallest
+missing piece of evidence.
+
+The protocol cannot prevent ChatGPT message/thread limits. It instead
+preserves recoverable repository state between chats. Finish each bounded
+work unit with commit/read-back and an honest progress report; never claim
+background execution will continue after the chat ends.
