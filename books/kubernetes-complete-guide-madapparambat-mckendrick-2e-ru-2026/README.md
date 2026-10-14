@@ -43,3 +43,4 @@ No reading status, dates or progress were modified or inferred during source/RAG
 - [Глава 6. Пространства имен, квоты и лимиты для реализации мультитенантности в Kubernetes](notes/chapters/chapter-06-namespaces-quotas-limits/README.md) — RAG-only, PDF 218–247, chapter-artifact-collection v1.7. Статус чтения не изменен.
 - [Глава 7. ConfigMap и Secret](notes/chapters/chapter-07-configmap-secret/README.md) — RAG-only, PDF 248–280, v1.7. Статус чтения не менялся.
 - [Глава 8. Публикация подов с помощью сервисов](notes/chapters/chapter-08-services-networking-probes/README.md) — RAG-only, PDF 281–325, chapter-artifact-collection v1.7. Статус чтения не изменен.
+- [Глава 9. Постоянное хранилище в Kubernetes](notes/chapters/chapter-09-persistent-storage/README.md) — RAG-only, PDF 326–365, chapter-artifact-collection v1.7. Статус чтения не изменен.
