@@ -1,0 +1,43 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: chapter-assembly-x86-64-zhukov-ru-pr-487
+repository: vsp-corp/biblioteka-vsp
+book_id: assembly-x86-64-zhukov-ru
+task_kind: chapter
+objective: "Complete PR #487 for RAG-grounded chapter 1 and publication plan, then verify main."
+branch: chapter/assembly-x86-64-zhukov-ru-publication
+initial_base_sha: db1a15268894ad4295c4991bcf8ae99d48e54e20
+last_observed_head_sha: aad617c3c76c0c5892051e68fffb788c6b1283dd
+expected_source_sha256: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite without explicit authorization
+  - no reading-progress mutation without explicit user confirmation
+  - no archive delivery for chapter artifacts
+stage: IN_PROGRESS
+completed_steps:
+  - step: "Verify canonical process v1.2 and recovery v1.0 on main"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/templates/session-recovery-v1.0.yaml"
+  - step: "Verify chapter plan: 21 entries, source SHA consistent"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/aad617c3c76c0c5892051e68fffb788c6b1283dd/books/assembly-x86-64-zhukov-ru/notes/chapters/plan.yaml"
+  - step: "Read back six required files for chapter 1"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/tree/aad617c3c76c0c5892051e68fffb788c6b1283dd/books/assembly-x86-64-zhukov-ru/notes/chapters/chapter-01-ustanovka-programm"
+  - step: "Verify PR 487 open and mergeable without conflicts"
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/487"
+  - step: "Verify push and PR CI completed successfully on original head"
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38617567361"
+pending_steps:
+  - "Reverify HEAD and PR checks after checkpoint commit; do not assume old CI covers a new commit."
+  - "Remove transient checkpoint before merging, retaining evidence in PR description and git history."
+  - "Verify merge eligibility and all mandatory checks against the final PR head."
+  - "Merge PR #487 only if required checks pass; verify final main files and readiness."
+  - "Do not begin chapter 2 without a separately initiated chapter analysis."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/pull/487"
+first_safe_next_action: "Read-only fetch of branch SHA, PR #487 and latest CI, and reconcile checkpoint before any new write."
+blocker: "Not applicable"
+last_observed_at: "Not applicable"
