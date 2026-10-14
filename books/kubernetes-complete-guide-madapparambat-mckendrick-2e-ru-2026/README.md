@@ -32,3 +32,7 @@ Readiness command:
 ## Reading
 
 No reading status, dates or progress were modified or inferred during source/RAG ingest.
+
+## Chapter analysis
+
+- [Глава 12. Объект StatefulSet: развертывание приложений с сохранением состояния](notes/chapters/chapter-12-statefulset-persistent/README.md) — RAG-only, PDF 420–456, chapter-artifact-collection v1.7. Статус чтения не изменен.
