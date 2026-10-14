@@ -40,3 +40,4 @@ Existing reading status is unchanged. No reading progress or dates were set duri
 - [Глава 6. Функции](notes/chapters/chapter-06-functions/README.md) — RAG p0083:c01–p0093:c01 · PDF 83–93 · печатные 82–92, v1.7, RAG-only.
 - [Глава 7. Списки и хеши](notes/chapters/chapter-07-lists-hashes/README.md) — RAG p0094:c01–p0110:c01 · PDF 94–110 · печатные 93–109, v1.7, RAG-only.
 - [Глава 8. Аргументы](notes/chapters/chapter-08-arguments/README.md) — RAG p0111:c01–p0125:c01 · PDF 111–125 · печатные 110–124, v1.7, RAG-only.
+- [Глава 10. Помимо идиом: работа с bash](notes/chapters/chapter-10-beyond-idioms/README.md) — RAG p0146:c01–p0174:c01 · PDF 146–174 · печатные 145–173, v1.7, RAG-only.
