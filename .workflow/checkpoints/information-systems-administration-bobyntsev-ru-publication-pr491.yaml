@@ -9,7 +9,7 @@ objective: >-
   chapter artifacts, canonical source, RAG and reading state.
 branch: chapter/information-systems-administration-bobyntsev-ru-0024
 initial_base_sha: aa3733b43f6db3627453e4814926e59a9ae3b136
-last_observed_head_sha: cc708e5a8c86c64d3e66cff733c79047de0a48f3
+last_observed_head_sha: 35ac5bcce9041306c5b91704c13e3486f8fe096d
 expected_source_sha256: a5d6a2677d4b0e33a34dec3b7aae8b77f711bb748046d25766becb479f66663f
 constraints:
   - no direct main changes
@@ -19,7 +19,7 @@ constraints:
   - no archive delivery for chapter artifacts
   - no duplicate branch, plan, PR or chapter Git writes
   - RAG-only chapter content; chapter analysis only on explicit chapter command
-stage: IN_PROGRESS
+stage: CI_PENDING
 completed_steps:
   - step: Verified canonical process router v1.2 and session recovery v1.0 in main
     evidence_type: file-readback
@@ -33,14 +33,16 @@ completed_steps:
   - step: Verified chapter-notes and SVG push workflow success at branch head
     evidence_type: ci
     reference: https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38620194149
+  - step: Aligned chapter index reference to canonical process router v1.2; GitHub read-back verified
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/35ac5bcce9041306c5b91704c13e3486f8fe096d
 pending_steps:
-  - Update obsolete process router reference from v1.1 to v1.2 in chapter index; read back
-  - Verify latest branch head, PR 491 and chapter-related CI after change
-  - Review branch divergence and PR mergeability without forced update or merge
+  - Verify GitHub Actions chapter-note/SVG CI against final branch HEAD
+  - Recheck PR 491, main divergence and merge readiness without forced update or merge
   - Await explicit 'Анализ главы 1' command before any chapter-content generation
-last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/cc708e5a8c86c64d3e66cff733c79047de0a48f3
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/35ac5bcce9041306c5b91704c13e3486f8fe096d
 first_safe_next_action: >-
-  Re-fetch current branch HEAD and chapter index blob SHA; compare the
-  index's canonical-router reference against main before changing it.
+  Re-fetch branch HEAD, PR 491 and associated GitHub Actions runs; reconcile
+  outcomes before resuming any mutation.
 blocker: Not applicable
 last_observed_at: Not applicable
