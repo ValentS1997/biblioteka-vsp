@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="1190" viewBox="0 0 1240 1190">
+<rect x="0" y="0" width="1240" height="1190" rx="12" fill="#f2f5fa"/>
+<text x="41" y="58" fill="#123756" font-family="DejaVu Sans, sans-serif" font-size="30" font-weight="700">СЕТИ LINUX · ЧАСТЬ II · ОПЕРАЦИОННАЯ КАРТА</text>
+<text x="43" y="88" fill="#59738b" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">PDF 62–131 · источник: адресуемый принятый RAG</text>
+<rect x="40" y="120" width="1160" height="119" rx="12" fill="#e2edf9"/>
+<rect x="40" y="120" width="12" height="119" rx="12" fill="#4476a7"/>
+<text x="65" y="151" fill="#174975" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700">01 · НАБЛЮДЕНИЕ</text>
+<text x="65" y="183" fill="#253b53" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">ip link / route -n / netstat; sockstat связывает сокеты и процессы</text>
+<text x="65" y="212" fill="#52677f" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">ping, traceroute и tcpdump производят трафик</text>
+<rect x="40" y="249" width="1160" height="119" rx="12" fill="#ffffff"/>
+<rect x="40" y="249" width="12" height="119" rx="12" fill="#4476a7"/>
+<text x="65" y="280" fill="#174975" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700">02 · SSH И ПЕРЕДАЧА ФАЙЛОВ</text>
+<text x="65" y="312" fill="#253b53" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">ssh; разовое исполнение команд; X11 (-X); Midnight Commander</text>
+<text x="65" y="341" fill="#52677f" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">sftp / scp копируют файлы и могут менять данные</text>
+<rect x="40" y="378" width="1160" height="119" rx="12" fill="#e2edf9"/>
+<rect x="40" y="378" width="12" height="119" rx="12" fill="#4476a7"/>
+<text x="65" y="409" fill="#174975" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700">03 · DHCP</text>
+<text x="65" y="441" fill="#253b53" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Аренда IP: subnet/range, gateway, DNS, lease-time</text>
+<text x="65" y="470" fill="#52677f" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">isc-dhcp-server: dhcpd -t -cf ... до запуска</text>
+<rect x="40" y="507" width="1160" height="119" rx="12" fill="#ffffff"/>
+<rect x="40" y="507" width="12" height="119" rx="12" fill="#4476a7"/>
+<text x="65" y="538" fill="#174975" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700">04 · DNS И КЕШИРОВАНИЕ</text>
+<text x="65" y="570" fill="#253b53" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">/etc/resolv.conf; bind, dnsmasq и systemd-resolved</text>
+<text x="65" y="599" fill="#52677f" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">после выбора резолвера измерить его DNS-ответ</text>
+<rect x="40" y="636" width="1160" height="119" rx="12" fill="#e2edf9"/>
+<rect x="40" y="636" width="12" height="119" rx="12" fill="#4476a7"/>
+<text x="65" y="667" fill="#174975" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700">05 · NETFILTER И UFW</text>
+<text x="65" y="699" fill="#253b53" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">INPUT / OUTPUT / FORWARD; iptables и ufw</text>
+<text x="65" y="728" fill="#52677f" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">ufw enable может оборвать существующий SSH</text>
+<rect x="40" y="765" width="1160" height="119" rx="12" fill="#ffffff"/>
+<rect x="40" y="765" width="12" height="119" rx="12" fill="#4476a7"/>
+<text x="65" y="796" fill="#174975" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700">06 · СЕРВИС ПО ЗАПРОСУ</text>
+<text x="65" y="828" fill="#253b53" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">inetd / xinetd: запуск дочернего сервера</text>
+<text x="65" y="857" fill="#52677f" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">systemd.socket: слушатель → экземпляр service</text>
+<rect x="40" y="894" width="1160" height="119" rx="12" fill="#e2edf9"/>
+<rect x="40" y="894" width="12" height="119" rx="12" fill="#4476a7"/>
+<text x="65" y="925" fill="#174975" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700">07 · SOCKS И SSH-ТУННЕЛЬ</text>
+<text x="65" y="957" fill="#253b53" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">danted / socksify / ssh -N -D; путь запроса через прокси</text>
+<text x="65" y="986" fill="#52677f" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">open proxy без аутентификации — опасен</text>
+<rect x="40" y="1023" width="1160" height="119" rx="12" fill="#ffffff"/>
+<rect x="40" y="1023" width="12" height="119" rx="12" fill="#4476a7"/>
+<text x="65" y="1054" fill="#174975" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700">08 · ПОДТВЕРЖДЕНИЕ И ОТКАТ</text>
+<text x="65" y="1086" fill="#253b53" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">baseline → настройка → status → клиентский тест</text>
+<text x="65" y="1115" fill="#52677f" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">rollback без рецепта в источнике: [Needs confirmation]</text>
+<text x="42" y="1176" fill="#8b4b50" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400">Расхождения: DHCP/DNS, SSH -Y, 1085/1080; решения не выдумываются.</text>
+</svg>
