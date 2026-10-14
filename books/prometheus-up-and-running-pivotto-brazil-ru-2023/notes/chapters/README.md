@@ -18,5 +18,6 @@ Canonical chapter artifacts (RAG-only; process `chapter-artifact-collection-v1.7
 | [11](chapter-11-other-monitoring-systems/README.md) | Работа с другими системами мониторинга | 209–214 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
 | [12](chapter-12-writing-exporters/README.md) | Разработка экспортеров | 215–225 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
 | [13](chapter-13-introduction-to-promql/README.md) | Введение в PromQL | 227–245 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
+| [14](chapter-14-aggregation-operators/README.md) | Операторы агрегирования | 246–257 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
 
 **Reading progress:** не изменяется этими артефактами. Индекс не утверждает, что главы прочитаны.
