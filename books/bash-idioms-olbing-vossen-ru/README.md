@@ -35,3 +35,4 @@ Existing reading status is unchanged. No reading progress or dates were set duri
 
 - [Глава 1. Идиома «большого» if](notes/chapters/chapter-01-big-if/README.md) — RAG p0021:c01–p0029:c01 · PDF 21–29 · печатные 20–28, v1.7, RAG-only.
 - [Глава 2. Язык циклов](notes/chapters/chapter-02-loop-language/README.md) — RAG p0030:c01–p0042:c01 · PDF 30–42 · печатные 29–41, v1.7, RAG-only.
+- [Глава 3. На всякий случай: оператор Case](notes/chapters/chapter-03-case/README.md) — RAG p0043:c01–p0057:c01 · PDF 43–57 · печатные 42–56, v1.7, RAG-only.
