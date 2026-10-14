@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1170" height="925" viewBox="0 0 1170 925">
+<rect width="1170" height="925" fill="#f4f8fb"/>
+<rect width="1170" height="10" fill="#246987"/>
+<text x="36" y="55" font-family="DejaVu Sans, sans-serif" font-weight="700" font-size="30" fill="#163d53">Глава 8 · Подробная карта Service и probes</text>
+<text x="36" y="93" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#4c6879">RAG-only · PDF 281–325 · 45 source chunks · inventory 0033</text>
+<rect x="35" y="124" width="367" height="215" rx="12" fill="white" stroke="#c6d7e2"/>
+<rect x="35" y="124" width="367" height="8" rx="4" fill="#27758c"/>
+<text x="53" y="159" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#26758a">1 · p282–291</text>
+<text x="53" y="201" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#1b4257">Network model</text>
+<text x="53" y="242" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385c6e">CNI и динамический Pod IP</text>
+<text x="53" y="276" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385c6e">Service DNS + labels</text>
+<rect x="420" y="124" width="367" height="215" rx="12" fill="white" stroke="#c6d7e2"/>
+<rect x="420" y="124" width="367" height="8" rx="4" fill="#27758c"/>
+<text x="438" y="159" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#26758a">2 · p291–297</text>
+<text x="438" y="201" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#1b4257">Discovery / debug</text>
+<text x="438" y="242" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385c6e">nslookup и curl из Pod</text>
+<text x="438" y="276" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385c6e">k8sutils → Service</text>
+<rect x="805" y="124" width="367" height="215" rx="12" fill="white" stroke="#c6d7e2"/>
+<rect x="805" y="124" width="367" height="8" rx="4" fill="#27758c"/>
+<text x="823" y="159" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#26758a">3 · p299–305</text>
+<text x="823" y="201" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#1b4257">NodePort</text>
+<text x="823" y="242" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385c6e">nodePort: 30001</text>
+<text x="823" y="276" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385c6e">port 80, targetPort 80</text>
+<rect x="35" y="361" width="367" height="215" rx="12" fill="white" stroke="#c6d7e2"/>
+<rect x="35" y="361" width="367" height="8" rx="4" fill="#27758c"/>
+<text x="53" y="396" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#26758a">4 · p306–310</text>
+<text x="53" y="438" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#1b4257">ClusterIP</text>
+<text x="53" y="479" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385c6e">Внутренний Service VIP</text>
+<text x="53" y="513" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385c6e">selector: run=...</text>
+<rect x="420" y="361" width="367" height="215" rx="12" fill="white" stroke="#c6d7e2"/>
+<rect x="420" y="361" width="367" height="8" rx="4" fill="#27758c"/>
+<text x="438" y="396" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#26758a">5 · p311–312</text>
+<text x="438" y="438" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#1b4257">Headless</text>
+<text x="438" y="479" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385c6e">clusterIP: None</text>
+<text x="438" y="513" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385c6e">DNS endpoints, без VIP</text>
+<rect x="805" y="361" width="367" height="215" rx="12" fill="white" stroke="#c6d7e2"/>
+<rect x="805" y="361" width="367" height="8" rx="4" fill="#27758c"/>
+<text x="823" y="396" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#26758a">6 · p312–314</text>
+<text x="823" y="438" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#1b4257">LoadBalancer</text>
+<text x="823" y="479" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385c6e">Cloud provider + costs</text>
+<text x="823" y="513" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385c6e">loadBalancerClass</text>
+<rect x="35" y="598" width="367" height="215" rx="12" fill="white" stroke="#c6d7e2"/>
+<rect x="35" y="598" width="367" height="8" rx="4" fill="#27758c"/>
+<text x="53" y="633" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#26758a">7 · p314–316</text>
+<text x="53" y="675" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#1b4257">ExternalName</text>
+<text x="53" y="716" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385c6e">Alias к внешнему DNS</text>
+<text x="53" y="750" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385c6e">Не прокси до Pod</text>
+<rect x="420" y="598" width="367" height="215" rx="12" fill="white" stroke="#c6d7e2"/>
+<rect x="420" y="598" width="367" height="8" rx="4" fill="#27758c"/>
+<text x="438" y="633" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#26758a">8 · p316–322</text>
+<text x="438" y="675" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#1b4257">Readiness / Liveness</text>
+<text x="438" y="716" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385c6e">Gate трафика / restart</text>
+<text x="438" y="750" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385c6e">HTTP, TCP, exec</text>
+<rect x="805" y="598" width="367" height="215" rx="12" fill="white" stroke="#c6d7e2"/>
+<rect x="805" y="598" width="367" height="8" rx="4" fill="#27758c"/>
+<text x="823" y="633" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#26758a">9 · p323–324</text>
+<text x="823" y="675" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" fill="#1b4257">Startup</text>
+<text x="823" y="716" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385c6e">Время медленного старта</text>
+<text x="823" y="750" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#385c6e">failureThreshold × period</text>
+<text x="36" y="887" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#607d8e">Сначала проверить labels, endpoints и probes; не публиковать наружу без допуска.</text>
+</svg>
