@@ -1,10 +1,12 @@
 # Анализ глав — 1С:Предприятие 8.3 (3-е издание, инв. №0030)
 
-**Canonical contracts:** PROCESS-COMPLIANCE-ROUTER v1.1; CHAPTER-PUBLICATION v1.0; CHAPTER-ANALYSIS-REQUEST v1.4; CHAPTER-ARTIFACT-COLLECTION v1.8. Перед анализом главы требуется BOOK-READINESS v1.3 == READY.
+**Canonical contracts:** PROCESS-COMPLIANCE-ROUTER v1.2; CHAPTER-PUBLICATION v1.0; CHAPTER-ANALYSIS-REQUEST v1.4; CHAPTER-ARTIFACT-COLLECTION v1.8. Перед анализом главы требуется BOOK-READINESS v1.3 == READY.
 
 **Источник состава книги:** [RAG-оглавление, PDF-страница 3](../../rag/chunks/p0001-p0100/p0003-c01.md); 28 нумерованных занятий. Начальные заголовки всех 28 занятий дополнительно сверены с их адресуемыми RAG-чанками. Source SHA-256: `ce8fa0fbf0d8bb38f724ed04f130c2443c1e181eb51edafac692c4786874c923`.
 
 [План публикации 28 занятий](plan.yaml).
+
+**Восстановление после обрыва:** SESSION-RECOVERY v1.0; [Git checkpoint](../../../../.workflow/checkpoints/0030-chapter-publication.yaml). Перед любой повторной записью сверять GitHub branch HEAD, уже созданные файлы, PR и CI; продолжать с первой незавершённой операции.
 
 **Опубликовано в Git:** 0/28 (0%). **Осталось:** 28. **Следующее неопубликованное занятие:** 1 — «Знакомство, создание информационной базы».
 
