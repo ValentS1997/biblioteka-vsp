@@ -10,5 +10,6 @@ Canonical chapter artifacts (RAG-only; process `chapter-artifact-collection-v1.7
 
 | [04](chapter-04-exporting-metrics/README.md) | Экспортирование метрик | 76–96 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
 | [05](chapter-05-labels/README.md) | Метки | 97–111 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
+| [06](chapter-06-grafana-dashboards/README.md) | Создание дашбордов с Grafana | 112–129 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
 
 **Reading progress:** не изменяется этими артефактами. Индекс не утверждает, что главы прочитаны.
