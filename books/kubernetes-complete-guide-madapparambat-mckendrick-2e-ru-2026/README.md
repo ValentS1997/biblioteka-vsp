@@ -32,3 +32,7 @@ Readiness command:
 ## Reading
 
 No reading status, dates or progress were modified or inferred during source/RAG ingest.
+
+## Chapter analysis
+
+- [Глава 19. Продвинутые методы планирования подов](notes/chapters/chapter-19-advanced-pod-scheduling/README.md) — RAG-only, PDF 641–667, chapter-artifact-collection v1.7. Статус чтения не изменен.
