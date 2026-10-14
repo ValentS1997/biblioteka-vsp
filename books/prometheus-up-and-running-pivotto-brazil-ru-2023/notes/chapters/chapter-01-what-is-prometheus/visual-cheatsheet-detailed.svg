@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1080" viewBox="0 0 1440 1080" role="img" aria-label="Подробная схема главы 1: источники, сбор, хранение, использование и ограничения">
+<rect width="1440" height="1080" fill="#0c1627"/><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#89adca"/></marker></defs>
+<text x="50" y="58" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#f1f5fd">Глава 1 · Prometheus: механизм и границы</text>
+<text x="50" y="92" font-family="Arial,sans-serif" font-size="19" fill="#b4c7dd">Источник: книга 0040, RAG PDF 18–33 · концептуальная реконструкция, не оригинальный рисунок</text>
+<g font-family="Arial,sans-serif">
+<text x="52" y="140" font-size="23" font-weight="700" fill="#b4c7dd">1 · ПОЛУЧЕНИЕ МЕТРИК</text>
+<rect x="50" y="163" width="365" height="124" rx="15" fill="#17243a" stroke="#5fd2c7" stroke-width="2"/>
+<text x="72" y="199" font-size="23" font-weight="700" fill="#ecf3ff">Прямое инструментирование</text><text x="72" y="231" font-size="18" fill="#c3d3e8">Клиентская библиотека</text>
+<text x="72" y="254" font-size="18" fill="#c3d3e8">Метрики приложения по HTTP</text>
+<rect x="50" y="303" width="365" height="124" rx="15" fill="#17243a" stroke="#5fd2c7" stroke-width="2"/>
+<text x="72" y="339" font-size="23" font-weight="700" fill="#ecf3ff">Exporter</text><text x="72" y="371" font-size="18" fill="#c3d3e8">Читает сторонние форматы</text>
+<text x="72" y="394" font-size="18" fill="#c3d3e8">Преобразует в формат Prometheus</text>
+<rect x="462" y="163" width="366" height="124" rx="15" fill="#17243a" stroke="#5eabff" stroke-width="2"/>
+<text x="484" y="199" font-size="23" font-weight="700" fill="#ecf3ff">Service discovery</text><text x="484" y="231" font-size="18" fill="#c3d3e8">Kubernetes, EC2, Consul</text>
+<text x="484" y="254" font-size="18" fill="#c3d3e8">Цели и сопоставление меток</text>
+<rect x="462" y="303" width="366" height="124" rx="15" fill="#17243a" stroke="#5eabff" stroke-width="2"/>
+<text x="484" y="339" font-size="23" font-weight="700" fill="#ecf3ff">Prometheus server</text><text x="484" y="371" font-size="18" fill="#c3d3e8">HTTP pull (часто 10–60 секунд)</text>
+<text x="484" y="394" font-size="18" fill="#c3d3e8">Успешность и длительность сбора</text>
+<path d="M415 225 L459 342" stroke="#89adca" stroke-width="3" fill="none" marker-end="url(#arrow)"/><path d="M415 365 L459 365" stroke="#89adca" stroke-width="3" fill="none" marker-end="url(#arrow)"/><path d="M645 287 L645 299" stroke="#89adca" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<rect x="878" y="224" width="512" height="144" rx="15" fill="#17243a" stroke="#f2c26b" stroke-width="2"/>
+<text x="900" y="260" font-size="24" font-weight="700" fill="#ecf3ff">Локальное хранение</text><text x="900" y="292" font-size="18" fill="#c3d3e8">Временные ряды: имя метрики + метки</text>
+<text x="900" y="315" font-size="18" fill="#c3d3e8">Без встроенного кластерного хранилища</text>
+<text x="900" y="338" font-size="18" fill="#c3d3e8">Возможен remote read / remote write</text>
+<path d="M828 366 L875 294" stroke="#89adca" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<text x="52" y="480" font-size="23" font-weight="700" fill="#b4c7dd">2 · ПРИМЕНЕНИЕ ДАННЫХ</text>
+<rect x="50" y="505" width="402" height="152" rx="15" fill="#17243a" stroke="#5fd2c7" stroke-width="2"/>
+<text x="72" y="541" font-size="24" font-weight="700" fill="#ecf3ff">PromQL и дашборды</text><text x="72" y="573" font-size="18" fill="#c3d3e8">Исследование и агрегация по меткам</text>
+<text x="72" y="596" font-size="18" fill="#c3d3e8">Expression browser, Grafana</text>
+<text x="72" y="619" font-size="18" fill="#c3d3e8">Планирование по тенденциям</text>
+<rect x="519" y="505" width="402" height="152" rx="15" fill="#17243a" stroke="#f2c26b" stroke-width="2"/>
+<text x="541" y="541" font-size="24" font-weight="700" fill="#ecf3ff">Правила Prometheus</text><text x="541" y="573" font-size="18" fill="#c3d3e8">Recording rules: вычисление/запись</text>
+<text x="541" y="596" font-size="18" fill="#c3d3e8">Alerting rules: условия уведомлений</text>
+<text x="541" y="619" font-size="18" fill="#c3d3e8">Регулярная оценка PromQL</text>
+<rect x="990" y="505" width="400" height="152" rx="15" fill="#17243a" stroke="#ec8893" stroke-width="2"/>
+<text x="1012" y="541" font-size="24" font-weight="700" fill="#ecf3ff">Alertmanager</text><text x="1012" y="573" font-size="18" fill="#c3d3e8">Группировка и маршрутизация</text>
+<text x="1012" y="596" font-size="18" fill="#c3d3e8">Временное подавление уведомлений</text>
+<text x="1012" y="619" font-size="18" fill="#c3d3e8">Email / chat / PagerDuty</text>
+<path d="M878 368 L247 502" stroke="#89adca" stroke-width="3" fill="none" marker-end="url(#arrow)"/><path d="M1134 368 L718 502" stroke="#89adca" stroke-width="3" fill="none" marker-end="url(#arrow)"/><path d="M921 581 L987 581" stroke="#89adca" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<text x="52" y="710" font-size="23" font-weight="700" fill="#b4c7dd">3 · ЗАДАЧИ И ОГРАНИЧЕНИЯ ТЕЛЕМЕТРИИ</text>
+<rect x="50" y="733" width="314" height="128" rx="15" fill="#17243a" stroke="#5fd2c7" stroke-width="2"/>
+<text x="72" y="769" font-size="23" font-weight="700" fill="#ecf3ff">Метрики</text><text x="72" y="801" font-size="18" fill="#c3d3e8">Агрегаты и поведение во времени</text>
+<text x="72" y="824" font-size="18" fill="#c3d3e8">Не контекст отдельного события</text>
+<rect x="392" y="733" width="315" height="128" rx="15" fill="#17243a" stroke="#b59dff" stroke-width="2"/>
+<text x="414" y="769" font-size="23" font-weight="700" fill="#ecf3ff">Журналы</text><text x="414" y="801" font-size="18" fill="#c3d3e8">Конкретные события и контекст</text>
+<text x="414" y="824" font-size="18" fill="#c3d3e8">Стоимость передачи/хранения</text>
+<rect x="735" y="733" width="315" height="128" rx="15" fill="#17243a" stroke="#f2c26b" stroke-width="2"/>
+<text x="757" y="769" font-size="23" font-weight="700" fill="#ecf3ff">Трассировки</text><text x="757" y="801" font-size="18" fill="#c3d3e8">Пути запросов между сервисами</text>
+<text x="757" y="824" font-size="18" fill="#c3d3e8">Выборка, нагрузка</text>
+<rect x="1078" y="733" width="312" height="128" rx="15" fill="#17243a" stroke="#ec8893" stroke-width="2"/>
+<text x="1100" y="769" font-size="23" font-weight="700" fill="#ecf3ff">Профилирование</text><text x="1100" y="801" font-size="18" fill="#c3d3e8">Узкие места функций / CPU</text>
+<text x="1100" y="824" font-size="18" fill="#c3d3e8">Накладные расходы</text>
+<rect x="50" y="902" width="1340" height="110" rx="13" fill="#26243a" stroke="#ec8893" stroke-width="2"/>
+<text x="72" y="936" font-size="22" font-weight="700" fill="#ffe2e6">Важно: не считать метрики универсальным источником истины</text>
+<text x="72" y="965" font-size="18" fill="#e2d7e2">Высокая кардинальность (например, email в метке) → рост временных рядов и риск PII.</text>
+<text x="72" y="992" font-size="18" fill="#e2d7e2">Непригодны для точного учёта отдельных событий, финансов и биллинга; rollback конфигурации: [Needs confirmation].</text>
+</g><text x="50" y="1051" font-family="Arial,sans-serif" font-size="16" fill="#889bb0">Provenance: p0019:c01, p0020:c01, p0023:c01–p0033:c01 · рисунки 1.1/1.2 не представлены мультимодально</text>
+</svg>

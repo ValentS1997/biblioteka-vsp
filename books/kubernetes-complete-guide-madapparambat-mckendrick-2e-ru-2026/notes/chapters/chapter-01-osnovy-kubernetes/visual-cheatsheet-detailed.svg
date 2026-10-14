@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1015" viewBox="0 0 1200 1015">
+<rect width="1200" height="1015" fill="#f7fafc"/>
+<rect width="1200" height="12" fill="#1d698a"/>
+<text x="38" y="61" font-family="DejaVu Sans, sans-serif" font-size="33" font-weight="700" fill="#16354a">Глава 1 · Подробная карта</text>
+<text x="38" y="95" font-family="DejaVu Sans, sans-serif" font-size="17" fill="#476578">Понятия · operational boundaries · источники PDF 34–70</text>
+<text x="38" y="124" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#668091">RAG: PDF 34–70 · inventory 0033 · глава 01</text>
+<rect x="38" y="150" width="364" height="245" rx="13" fill="#ffffff" stroke="#ccdae3" stroke-width="1.4"/>
+<rect x="38" y="150" width="364" height="9" rx="4" fill="#1d698a"/>
+<text x="57" y="187" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700" fill="#1d698a">01</text>
+<text x="57" y="217" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173447">DevOps / CI-CD</text>
+<text x="57" y="252" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3b5769">Междисциплинарные команды</text>
+<text x="57" y="280" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3b5769">Частая доставка изменений</text>
+<text x="57" y="308" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3b5769">стр. 35–39</text>
+<rect x="418" y="150" width="364" height="245" rx="13" fill="#ffffff" stroke="#ccdae3" stroke-width="1.4"/>
+<rect x="418" y="150" width="364" height="9" rx="4" fill="#317781"/>
+<text x="437" y="187" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700" fill="#1d698a">02</text>
+<text x="437" y="217" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173447">Облачная среда</text>
+<text x="437" y="252" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3b5769">Программируемые ресурсы</text>
+<text x="437" y="280" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3b5769">Не обязательна для K8s</text>
+<text x="437" y="308" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3b5769">стр. 39–43</text>
+<rect x="798" y="150" width="364" height="245" rx="13" fill="#ffffff" stroke="#ccdae3" stroke-width="1.4"/>
+<rect x="798" y="150" width="364" height="9" rx="4" fill="#586d91"/>
+<text x="817" y="187" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700" fill="#1d698a">03</text>
+<text x="817" y="217" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173447">Монолит vs сервисы</text>
+<text x="817" y="252" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3b5769">Простота vs независимость</text>
+<text x="817" y="280" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3b5769">Отдельные жизненные циклы</text>
+<text x="817" y="308" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3b5769">стр. 43–48</text>
+<rect x="38" y="415" width="364" height="245" rx="13" fill="#ffffff" stroke="#ccdae3" stroke-width="1.4"/>
+<rect x="38" y="415" width="364" height="9" rx="4" fill="#1d698a"/>
+<text x="57" y="452" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700" fill="#1d698a">04</text>
+<text x="57" y="482" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173447">Контейнеры</text>
+<text x="57" y="517" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3b5769">Ядро хоста и изоляция</text>
+<text x="57" y="545" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3b5769">Образ, экземпляр, реестр</text>
+<text x="57" y="573" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3b5769">стр. 49–54</text>
+<rect x="418" y="415" width="364" height="245" rx="13" fill="#ffffff" stroke="#ccdae3" stroke-width="1.4"/>
+<rect x="418" y="415" width="364" height="9" rx="4" fill="#317781"/>
+<text x="437" y="452" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700" fill="#1d698a">05</text>
+<text x="437" y="482" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173447">Dockerfile / Compose</text>
+<text x="437" y="517" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3b5769">FROM, RUN, CMD, EXPOSE</text>
+<text x="437" y="545" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3b5769">Compose: сервисы и тома</text>
+<text x="437" y="573" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3b5769">стр. 54–56</text>
+<rect x="798" y="415" width="364" height="245" rx="13" fill="#ffffff" stroke="#ccdae3" stroke-width="1.4"/>
+<rect x="798" y="415" width="364" height="9" rx="4" fill="#586d91"/>
+<text x="817" y="452" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700" fill="#1d698a">06</text>
+<text x="817" y="482" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173447">Kubernetes / KubeVirt</text>
+<text x="817" y="517" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3b5769">Кластерная оркестрация</text>
+<text x="817" y="545" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3b5769">ВМ через KubeVirt API</text>
+<text x="817" y="573" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3b5769">стр. 57–58</text>
+<rect x="38" y="680" width="364" height="245" rx="13" fill="#ffffff" stroke="#ccdae3" stroke-width="1.4"/>
+<rect x="38" y="680" width="364" height="9" rx="4" fill="#1d698a"/>
+<text x="57" y="717" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700" fill="#1d698a">07</text>
+<text x="57" y="747" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173447">Production-контроль</text>
+<text x="57" y="782" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3b5769">Доступность и rollout</text>
+<text x="57" y="810" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3b5769">Rollback и scaling</text>
+<text x="57" y="838" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3b5769">стр. 63–67</text>
+<rect x="418" y="680" width="364" height="245" rx="13" fill="#ffffff" stroke="#ccdae3" stroke-width="1.4"/>
+<rect x="418" y="680" width="364" height="9" rx="4" fill="#317781"/>
+<text x="437" y="717" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700" fill="#1d698a">08</text>
+<text x="437" y="747" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173447">Security / state</text>
+<text x="437" y="782" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3b5769">Network policy, RBAC</text>
+<text x="437" y="810" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3b5769">PV, PVC, ресурсы</text>
+<text x="437" y="838" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3b5769">стр. 67–69</text>
+<rect x="798" y="680" width="364" height="245" rx="13" fill="#ffffff" stroke="#ccdae3" stroke-width="1.4"/>
+<rect x="798" y="680" width="364" height="9" rx="4" fill="#586d91"/>
+<text x="817" y="717" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700" fill="#1d698a">09</text>
+<text x="817" y="747" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#173447">Применимость</text>
+<text x="817" y="782" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3b5769">Без контейнеров не нужен</text>
+<text x="817" y="810" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3b5769">Малый масштаб: проще стек</text>
+<text x="817" y="838" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#3b5769">стр. 69</text>
+<text x="38" y="981" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#5a7180">Source truth: chapter RAG only · overview, not executable runbook</text>
+</svg>
