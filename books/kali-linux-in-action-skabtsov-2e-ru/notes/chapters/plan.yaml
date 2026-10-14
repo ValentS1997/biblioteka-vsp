@@ -1,0 +1,75 @@
+schema: biblioteka-vsp/chapter-plan/v1
+book_id: kali-linux-in-action-skabtsov-2e-ru
+source_sha256: fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9
+source_format: pdf
+total_chapters: 17
+toc_evidence: "RAG TOC chunks p0004-c01, p0005-c01 and p0006-c01 (PDF pp. 4-6); numbered headings 01-17; each PDF chapter opening independently checked against its starting chunk."
+chapters:
+  - number: 1
+    title: "Общие сведения об аудите информационных систем"
+    slug: obshchie-svedeniya-ob-audite-informatsionnyh-sistem
+    source_locator: "pdf_page:10; toc_pdf_page:4; printed_start_page:9"
+  - number: 2
+    title: "Методология"
+    slug: metodologiya
+    source_locator: "pdf_page:19; toc_pdf_page:4; printed_start_page:18"
+  - number: 3
+    title: "Сбор открытой информации о цели"
+    slug: sbor-otkrytoy-informatsii-o-tseli
+    source_locator: "pdf_page:29; toc_pdf_page:4; printed_start_page:28"
+  - number: 4
+    title: "Активный сбор данных"
+    slug: aktivnyy-sbor-dannyh
+    source_locator: "pdf_page:111; toc_pdf_page:4; printed_start_page:110"
+  - number: 5
+    title: "Отчеты"
+    slug: otchety
+    source_locator: "pdf_page:155; toc_pdf_page:4; printed_start_page:154"
+  - number: 6
+    title: "Поиск уязвимостей"
+    slug: poisk-uyazvimostey
+    source_locator: "pdf_page:185; toc_pdf_page:5; printed_start_page:184"
+  - number: 7
+    title: "Атаки на веб-приложения"
+    slug: ataki-na-veb-prilozheniya
+    source_locator: "pdf_page:207; toc_pdf_page:5; printed_start_page:206"
+  - number: 8
+    title: "Социальная инженерия"
+    slug: sotsialnaya-inzheneriya
+    source_locator: "pdf_page:242; toc_pdf_page:5; printed_start_page:241"
+  - number: 9
+    title: "Взлом паролей"
+    slug: vzlom-paroley
+    source_locator: "pdf_page:258; toc_pdf_page:5; printed_start_page:257"
+  - number: 10
+    title: "Перехват информации"
+    slug: perehvat-informatsii
+    source_locator: "pdf_page:272; toc_pdf_page:5; printed_start_page:271"
+  - number: 11
+    title: "Передача файлов"
+    slug: peredacha-faylov
+    source_locator: "pdf_page:287; toc_pdf_page:6; printed_start_page:286"
+  - number: 12
+    title: "Закрепление в системе"
+    slug: zakreplenie-v-sisteme
+    source_locator: "pdf_page:293; toc_pdf_page:6; printed_start_page:292"
+  - number: 13
+    title: "Сокрытие следов"
+    slug: sokrytie-sledov
+    source_locator: "pdf_page:302; toc_pdf_page:6; printed_start_page:301"
+  - number: 14
+    title: "Metasploit Fremework"
+    slug: metasploit-fremework
+    source_locator: "pdf_page:308; toc_pdf_page:6; printed_start_page:307"
+  - number: 15
+    title: "Переполнение буфера"
+    slug: perepolnenie-bufera
+    source_locator: "pdf_page:332; toc_pdf_page:6; printed_start_page:331"
+  - number: 16
+    title: "Сохранение анонимности"
+    slug: sohranenie-anonimnosti
+    source_locator: "pdf_page:361; toc_pdf_page:6; printed_start_page:360"
+  - number: 17
+    title: "Тесты на проникновение: обобщение"
+    slug: testy-na-proniknovenie-obobshchenie
+    source_locator: "pdf_page:375; toc_pdf_page:6; printed_start_page:374"
