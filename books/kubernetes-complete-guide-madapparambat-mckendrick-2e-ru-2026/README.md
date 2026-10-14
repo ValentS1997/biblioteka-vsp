@@ -49,3 +49,4 @@ No reading status, dates or progress were modified or inferred during source/RAG
 - [Глава 12. Объект StatefulSet: развертывание приложений с сохранением состояния](notes/chapters/chapter-12-statefulset-persistent/README.md) — RAG-only, PDF 420–456, chapter-artifact-collection v1.7. Статус чтения не изменен.
 - [Глава 13. Объект DaemonSet: запуск одного пода на каждом узле](notes/chapters/chapter-13-daemonsets/README.md) — RAG-only, PDF 457–473, chapter-artifact-collection v1.7. Статус чтения не изменен.
 - [Глава 14. Работа с Helm-чартами и операторами](notes/chapters/chapter-14-helm-operators-olm/README.md) — RAG-only, PDF 474–514, chapter-artifact-collection v1.7. Статус чтения не изменен.
+- [Глава 15. Запуск кластера в Google Cloud Platform с помощью Google Kubernetes Engine](notes/chapters/chapter-15-gcp-gke/README.md) — RAG-only, PDF 515–536, chapter-artifact-collection v1.7. Статус чтения не изменен.

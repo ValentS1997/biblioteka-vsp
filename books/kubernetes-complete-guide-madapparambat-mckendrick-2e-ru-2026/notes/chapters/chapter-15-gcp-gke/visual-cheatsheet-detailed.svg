@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="950" viewBox="0 0 1200 950">
+<rect width="1200" height="950" fill="#f4f8fb"/>
+<rect width="1200" height="10" fill="#226b87"/>
+<text x="32" y="53" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#173e52">Глава 15 · GCP и Google Kubernetes Engine</text>
+<text x="32" y="92" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#426578">Подробно: аккаунт, CLI, Guestbook, multi-zone и расходы</text>
+<text x="32" y="124" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#547889">RAG-only · PDF 515–536 · inventory 0033</text>
+<rect x="32" y="151" width="371" height="219" rx="12" fill="white" stroke="#cad9e2"/>
+<rect x="32" y="151" width="371" height="8" rx="3" fill="#27768e"/>
+<text x="49" y="187" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#27768e">1 · p515–519</text>
+<text x="49" y="235" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#163e52">Account / Project</text>
+<text x="49" y="281" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#375f72">GCP billing и IAM</text>
+<text x="49" y="322" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#375f72">Credits устаревшая оценка</text>
+<rect x="427" y="151" width="371" height="219" rx="12" fill="white" stroke="#cad9e2"/>
+<rect x="427" y="151" width="371" height="8" rx="3" fill="#27768e"/>
+<text x="444" y="187" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#27768e">2 · p519–523</text>
+<text x="444" y="235" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#163e52">Cloud CLI</text>
+<text x="444" y="281" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#375f72">macOS/Windows/Linux</text>
+<text x="444" y="322" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#375f72">gcloud init + Cloud Shell</text>
+<rect x="822" y="151" width="371" height="219" rx="12" fill="white" stroke="#cad9e2"/>
+<rect x="822" y="151" width="371" height="8" rx="3" fill="#27768e"/>
+<text x="839" y="187" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#27768e">3 · p524–526</text>
+<text x="839" y="235" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#163e52">Zonal create</text>
+<text x="839" y="281" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#375f72">--num-nodes=2, --zone</text>
+<text x="839" y="322" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#375f72">Enable API и auth plugin</text>
+<rect x="32" y="393" width="371" height="219" rx="12" fill="white" stroke="#cad9e2"/>
+<rect x="32" y="393" width="371" height="8" rx="3" fill="#27768e"/>
+<text x="49" y="429" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#27768e">4 · p525–527</text>
+<text x="49" y="477" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#163e52">Client context</text>
+<text x="49" y="523" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#375f72">get-credentials</text>
+<text x="49" y="564" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#375f72">kubectl get nodes</text>
+<rect x="427" y="393" width="371" height="219" rx="12" fill="white" stroke="#cad9e2"/>
+<rect x="427" y="393" width="371" height="8" rx="3" fill="#27768e"/>
+<text x="444" y="429" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#27768e">5 · p527–528</text>
+<text x="444" y="477" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#163e52">Guestbook</text>
+<text x="444" y="523" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#375f72">PHP + Redis leader/follower</text>
+<text x="444" y="564" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#375f72">6 manifest URLs</text>
+<rect x="822" y="393" width="371" height="219" rx="12" fill="white" stroke="#cad9e2"/>
+<rect x="822" y="393" width="371" height="8" rx="3" fill="#27768e"/>
+<text x="839" y="429" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#27768e">6 · p528–532</text>
+<text x="839" y="477" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#163e52">Cloud Console</text>
+<text x="839" y="523" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#375f72">Workloads / Services</text>
+<text x="839" y="564" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#375f72">Storage / Backup for GKE</text>
+<rect x="32" y="635" width="371" height="219" rx="12" fill="white" stroke="#cad9e2"/>
+<rect x="32" y="635" width="371" height="8" rx="3" fill="#27768e"/>
+<text x="49" y="671" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#27768e">7 · p533</text>
+<text x="49" y="719" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#163e52">Zonal cleanup</text>
+<text x="49" y="765" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#375f72">delete frontend Service</text>
+<text x="49" y="806" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#375f72">delete zonal cluster</text>
+<rect x="427" y="635" width="371" height="219" rx="12" fill="white" stroke="#cad9e2"/>
+<rect x="427" y="635" width="371" height="8" rx="3" fill="#27768e"/>
+<text x="444" y="671" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#27768e">8 · p533–535</text>
+<text x="444" y="719" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#163e52">Regional topology</text>
+<text x="444" y="765" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#375f72">2 nodes x 3 = 6</text>
+<text x="444" y="806" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#375f72">4 zones: 8 nodes</text>
+<rect x="822" y="635" width="371" height="219" rx="12" fill="white" stroke="#cad9e2"/>
+<rect x="822" y="635" width="371" height="8" rx="3" fill="#27768e"/>
+<text x="839" y="671" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#27768e">9 · p515,535</text>
+<text x="839" y="719" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#163e52">Cost and limitations</text>
+<text x="839" y="765" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#375f72">$55 / $347 historic</text>
+<text x="839" y="806" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#375f72">Charges and backup uncertain</text>
+<text x="32" y="924" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#577887">Облачные расходы реальны. Исторические цены не актуальная оферта. Удаление кластера разрушительно.</text>
+</svg>
