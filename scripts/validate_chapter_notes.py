@@ -95,6 +95,41 @@ def check_markdown(path: Path, repo_root: Path, issues: list[str]) -> int:
     return count
 
 
+
+PROMETHEUS_0040 = "prometheus-up-and-running-pivotto-brazil-ru-2023"
+
+
+def check_prometheus_chapter_index(
+    book: Path, chapters: list[Path], issues: list[str]
+) -> None:
+    """Fail closed when the chapter index omits/duplicates chapter collections.
+
+    This is intentionally scoped to inventory 0040. Its index declares a
+    source-findings artifact for each staged chapter, so verify that too.
+    The index must grow monotonically with the 0040 chapter PR chain.
+    """
+    if book.name != PROMETHEUS_0040:
+        return
+    index = book / "notes" / "chapters" / "README.md"
+    if not index.is_file():
+        issues.append(f"{index}: chapter index missing for inventory 0040")
+        return
+    contents = index.read_text(encoding="utf-8")
+    links = re.findall(r"\]\((chapter-\d+-[A-Za-z0-9-]+/README\.md)\)", contents)
+    listed = [value.split("/")[0] for value in links]
+    expected = {folder.name for folder in chapters}
+    if len(set(listed)) != len(listed):
+        issues.append(f"{index}: duplicate chapter index entry")
+    if set(listed) != expected:
+        issues.append(
+            f"{index}: chapter index mismatch; missing={sorted(expected - set(listed))}; "
+            f"stale={sorted(set(listed) - expected)}"
+        )
+    for folder in chapters:
+        if not (folder / "source-findings.md").is_file():
+            issues.append(f"{folder}: inventory 0040 declares source-findings.md but file missing")
+
+
 def validate(book: Path) -> int:
     book = book.resolve()
     repo_root = Path(__file__).resolve().parent.parent
@@ -105,6 +140,7 @@ def validate(book: Path) -> int:
     if not chapters:
         raise SystemExit("No chapter directories found")
     issues: list[str] = []
+    check_prometheus_chapter_index(book, chapters, issues)
     for folder in chapters:
         for name in CHAPTER_REQUIRED:
             if not (folder / name).is_file():
