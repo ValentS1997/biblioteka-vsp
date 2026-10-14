@@ -15,6 +15,6 @@
 
 ## Правила публикации
 
-Применять `templates/process-compliance-router-v1.1.yaml`, `templates/chapter-publication-v1.0.yaml`, `templates/chapter-analysis-request-v1.4.yaml`, `templates/chapter-artifact-collection-v1.8.yaml` и `templates/git-execution-policy-v1.0.yaml`.
+Применять `templates/process-compliance-router-v1.2.yaml`, `templates/chapter-publication-v1.0.yaml`, `templates/chapter-analysis-request-v1.4.yaml`, `templates/chapter-artifact-collection-v1.8.yaml` `templates/git-execution-policy-v1.0.yaml` и `templates/session-recovery-v1.0.yaml`.
 
 Одна глава считается опубликованной только после Git-коммита и обратной проверки всех шести файлов: `README.md`, `cheatsheet.md`, `commands.md`, `diagram.md`, `visual-cheatsheet.svg`, `visual-cheatsheet-detailed.svg`. Условные артефакты — по главе и шаблону v1.8. До первой опубликованной главы список ссылок на завершённые главы пуст. ZIP/архив не заменяет Git-публикацию. Статус чтения не изменять.
