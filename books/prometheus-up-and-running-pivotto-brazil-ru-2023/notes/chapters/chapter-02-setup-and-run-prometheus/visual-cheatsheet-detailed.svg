@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1150" viewBox="0 0 1600 1150" role="img" aria-label="Подробная карта главы 2: шаги установки Prometheus, Node Exporter, PromQL и Alertmanager">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#315d83"/></marker></defs>
+<rect width="1600" height="1150" fill="#f8fafc"/>
+<text x="52" y="64" font-family="DejaVu Sans,sans-serif" font-size="34" font-weight="bold" fill="#162d45">Глава 2 · От первого scrape до e-mail оповещения</text>
+<text x="52" y="99" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#536b80">RAG: p0034:c01–p0052:c01 · PDF 34–52 · издание Books.kz, 2023 · пример Linux/amd64</text>
+<rect x="50" y="140" width="475" height="260" rx="18" fill="#eaf3fe" stroke="#7caee3" stroke-width="2"/>
+<text x="77" y="180" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="bold" fill="#245a85">1 · Prometheus :9090</text>
+<text x="77" y="227" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#1e3953">prometheus.yml · scrape_interval: 10s</text>
+<text x="77" y="261" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#1e3953">job: prometheus → localhost:9090</text>
+<text x="77" y="295" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#1e3953">Targets: UP, /metrics открыт</text>
+<text x="77" y="329" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#1e3953">Expression Browser: up, Graph</text>
+<text x="77" y="364" font-family="DejaVu Sans,sans-serif" font-size="16" fill="#536b80">PDF 34–40 · версия книги 2.37.0</text>
+<rect x="563" y="140" width="475" height="260" rx="18" fill="#e6f6ed" stroke="#77ba94" stroke-width="2"/>
+<text x="590" y="180" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="bold" fill="#226a48">2 · Node Exporter :9100</text>
+<text x="590" y="227" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#1e3953">CPU · RAM · сеть · ФС · диски</text>
+<text x="590" y="261" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#1e3953">job: node → localhost:9100</text>
+<text x="590" y="295" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#1e3953">После reload: две цели UP</text>
+<text x="590" y="329" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#1e3953">/metrics, процесс vs. система</text>
+<text x="590" y="364" font-family="DejaVu Sans,sans-serif" font-size="16" fill="#536b80">PDF 42–46 · версия книги 1.3.1</text>
+<rect x="1076" y="140" width="475" height="260" rx="18" fill="#fff3e6" stroke="#dbb37c" stroke-width="2"/>
+<text x="1103" y="180" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="bold" fill="#9b5f1d">3 · Правило и Alertmanager</text>
+<text x="1103" y="227" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#1e3953">evaluation_interval: 10s</text>
+<text x="1103" y="261" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#1e3953">InstanceDown · up == 0</text>
+<text x="1103" y="295" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#1e3953">for: 1m · Alertmanager :9093</text>
+<text x="1103" y="329" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#1e3953">SMTP localhost:25 · e-mail</text>
+<text x="1103" y="364" font-family="DejaVu Sans,sans-serif" font-size="16" fill="#536b80">PDF 46–52 · версия книги 0.24.0</text>
+<path d="M525 255 H562" stroke="#315d83" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M1039 255 H1075" stroke="#315d83" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="50" y="438" width="1501" height="248" rx="18" fill="white" stroke="#c8d6e1" stroke-width="2"/>
+<text x="80" y="482" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="bold" fill="#20374d">PromQL: наблюдение и интерпретация</text>
+<text x="80" y="527" font-family="DejaVu Sans Mono,monospace" font-size="19" fill="#245a85">up</text>
+<text x="495" y="527" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#20374d">1 — успешный scrape; 0 — сбой</text>
+<text x="80" y="568" font-family="DejaVu Sans Mono,monospace" font-size="18" fill="#245a85">process_resident_memory_bytes</text>
+<text x="495" y="568" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#20374d">RAM отдельного процесса; фильтр {job="node"}</text>
+<text x="80" y="609" font-family="DejaVu Sans Mono,monospace" font-size="17" fill="#245a85">rate(prometheus_tsdb_head_samples_appended_total[1m])</text>
+<text x="850" y="609" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#20374d">скорость счётчика / сек</text>
+<text x="80" y="649" font-family="DejaVu Sans Mono,monospace" font-size="17" fill="#245a85">rate(node_network_receive_bytes_total[1m])</text>
+<text x="850" y="649" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#20374d">сеть, байты / сек</text>
+<rect x="50" y="730" width="1501" height="233" rx="18" fill="#ecf6ff" stroke="#9dc6e3" stroke-width="2"/>
+<text x="80" y="775" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="bold" fill="#204f7b">Учебный сценарий DOWN → alert → уведомление</text>
+<rect x="83" y="811" width="255" height="94" rx="13" fill="#ffffff" stroke="#9fc6e2"/>
+<text x="101" y="848" font-family="DejaVu Sans,sans-serif" font-size="18" font-weight="bold" fill="#24445f">Ctrl+C: Node Exporter</text>
+<text x="101" y="880" font-family="DejaVu Sans,sans-serif" font-size="16" fill="#536b80">Остановлен в лаборатории</text>
+<rect x="388" y="811" width="255" height="94" rx="13" fill="#ffffff" stroke="#9fc6e2"/>
+<text x="412" y="848" font-family="DejaVu Sans,sans-serif" font-size="19" font-weight="bold" fill="#24445f">Targets: DOWN</text>
+<text x="412" y="880" font-family="DejaVu Sans,sans-serif" font-size="17" fill="#536b80">up == 0, Error</text>
+<rect x="693" y="811" width="255" height="94" rx="13" fill="#ffffff" stroke="#9fc6e2"/>
+<text x="717" y="848" font-family="DejaVu Sans,sans-serif" font-size="19" font-weight="bold" fill="#24445f">InstanceDown</text>
+<text x="717" y="880" font-family="DejaVu Sans,sans-serif" font-size="17" fill="#536b80">for: 1m, alert</text>
+<rect x="998" y="811" width="255" height="94" rx="13" fill="#ffffff" stroke="#9fc6e2"/>
+<text x="1022" y="848" font-family="DejaVu Sans,sans-serif" font-size="19" font-weight="bold" fill="#24445f">Alertmanager</text>
+<text x="1022" y="880" font-family="DejaVu Sans,sans-serif" font-size="17" fill="#536b80">группирует и шлёт</text>
+<rect x="1303" y="811" width="210" height="94" rx="13" fill="#ffffff" stroke="#9fc6e2"/>
+<text x="1327" y="848" font-family="DejaVu Sans,sans-serif" font-size="19" font-weight="bold" fill="#24445f">SMTP / e-mail</text>
+<text x="1327" y="880" font-family="DejaVu Sans,sans-serif" font-size="16" fill="#536b80">если настроено</text>
+<path d="M338 858 H387 M643 858 H692 M948 858 H997 M1253 858 H1302" stroke="#315d83" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="50" y="1001" width="1501" height="105" rx="16" fill="#fff0ed" stroke="#dca29d" stroke-width="2"/>
+<text x="80" y="1040" font-family="DejaVu Sans,sans-serif" font-size="21" font-weight="bold" fill="#8d3a36">Контроль безопасности и ограничений источника</text>
+<text x="80" y="1074" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#4f4545">Локальный стенд. В выводе отключён TLS; открытый SMTP только предполагается; картинки PDF в RAG не извлечены.</text>
+</svg>
