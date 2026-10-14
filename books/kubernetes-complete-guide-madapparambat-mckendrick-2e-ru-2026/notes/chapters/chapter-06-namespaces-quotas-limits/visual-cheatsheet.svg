@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1150" height="650" viewBox="0 0 1150 650">
+<rect width="1150" height="650" fill="#f5f8fb"/>
+<rect width="1150" height="10" fill="#216889"/>
+<text x="36" y="57" font-family="DejaVu Sans, sans-serif" font-size="33" font-weight="700" fill="#183d53">Глава 6 · Namespace, квоты и лимиты</text>
+<text x="36" y="98" font-family="DejaVu Sans, sans-serif" font-size="18" fill="#446879">Kubernetes: логическое разделение и бюджет ресурсов</text>
+<text x="36" y="127" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#628195">RAG-only · PDF 218–247 · inventory 0033</text>
+<rect x="36" y="156" width="340" height="190" rx="12" fill="#ffffff" stroke="#c5d7e1"/>
+<text x="54" y="197" font-size="24" fill="#216889" font-family="DejaVu Sans, sans-serif" font-weight="700">Namespace</text>
+<text x="54" y="238" font-size="17" fill="#33586a" font-family="DejaVu Sans, sans-serif">Область имен и объектов</text>
+<text x="54" y="270" font-size="17" fill="#33586a" font-family="DejaVu Sans, sans-serif">default, custom-ns</text>
+<text x="54" y="302" font-size="17" fill="#33586a" font-family="DejaVu Sans, sans-serif">Логическая изоляция</text>
+<rect x="405" y="156" width="340" height="190" rx="12" fill="#ffffff" stroke="#c5d7e1"/>
+<text x="423" y="197" font-size="24" fill="#216889" font-family="DejaVu Sans, sans-serif" font-weight="700">ResourceQuota</text>
+<text x="423" y="238" font-size="17" fill="#33586a" font-family="DejaVu Sans, sans-serif">Общий бюджет Namespace</text>
+<text x="423" y="270" font-size="17" fill="#33586a" font-family="DejaVu Sans, sans-serif">CPU, память, объекты</text>
+<text x="423" y="302" font-size="17" fill="#33586a" font-family="DejaVu Sans, sans-serif">Forbidden при превышении</text>
+<rect x="774" y="156" width="340" height="190" rx="12" fill="#ffffff" stroke="#c5d7e1"/>
+<text x="792" y="197" font-size="24" fill="#216889" font-family="DejaVu Sans, sans-serif" font-weight="700">LimitRange</text>
+<text x="792" y="238" font-size="17" fill="#33586a" font-family="DejaVu Sans, sans-serif">Границы контейнера</text>
+<text x="792" y="270" font-size="17" fill="#33586a" font-family="DejaVu Sans, sans-serif">default и defaultRequest</text>
+<text x="792" y="302" font-size="17" fill="#33586a" font-family="DejaVu Sans, sans-serif">min / max</text>
+<rect x="36" y="371" width="340" height="190" rx="12" fill="#ffffff" stroke="#c5d7e1"/>
+<text x="54" y="412" font-size="24" fill="#216889" font-family="DejaVu Sans, sans-serif" font-weight="700">Requests</text>
+<text x="54" y="453" font-size="17" fill="#33586a" font-family="DejaVu Sans, sans-serif">250m = 0,25 ядра</text>
+<text x="54" y="485" font-size="17" fill="#33586a" font-family="DejaVu Sans, sans-serif">512Mi = память</text>
+<text x="54" y="517" font-size="17" fill="#33586a" font-family="DejaVu Sans, sans-serif">Недостаток → Pending</text>
+<rect x="405" y="371" width="340" height="190" rx="12" fill="#ffffff" stroke="#c5d7e1"/>
+<text x="423" y="412" font-size="24" fill="#216889" font-family="DejaVu Sans, sans-serif" font-weight="700">Limits</text>
+<text x="423" y="453" font-size="17" fill="#33586a" font-family="DejaVu Sans, sans-serif">CPU → снижение скорости</text>
+<text x="423" y="485" font-size="17" fill="#33586a" font-family="DejaVu Sans, sans-serif">Memory → риск остановки</text>
+<text x="423" y="517" font-size="17" fill="#33586a" font-family="DejaVu Sans, sans-serif">Ресурс контейнера</text>
+<rect x="774" y="371" width="340" height="190" rx="12" fill="#ffffff" stroke="#c5d7e1"/>
+<text x="792" y="412" font-size="24" fill="#216889" font-family="DejaVu Sans, sans-serif" font-weight="700">Safety</text>
+<text x="792" y="453" font-size="17" fill="#33586a" font-family="DejaVu Sans, sans-serif">-n + правильный context</text>
+<text x="792" y="485" font-size="17" fill="#33586a" font-family="DejaVu Sans, sans-serif">RBAC и NetworkPolicy</text>
+<text x="792" y="517" font-size="17" fill="#33586a" font-family="DejaVu Sans, sans-serif">delete ns уничтожает данные</text>
+<text x="36" y="610" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#587b8b">Все операции из главы; реальный кластер не проверен, rollback требует подтверждения.</text>
+</svg>

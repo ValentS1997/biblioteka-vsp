@@ -32,3 +32,7 @@ Readiness command:
 ## Reading
 
 No reading status, dates or progress were modified or inferred during source/RAG ingest.
+
+## Chapter analysis
+
+- [Глава 6. Пространства имен, квоты и лимиты для реализации мультитенантности в Kubernetes](notes/chapters/chapter-06-namespaces-quotas-limits/README.md) — RAG-only, PDF 218–247, chapter-artifact-collection v1.7. Статус чтения не изменен.
