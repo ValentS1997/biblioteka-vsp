@@ -32,3 +32,7 @@ Readiness command:
 ## Reading
 
 No reading status, dates or progress were modified or inferred during source/RAG ingest.
+
+## Chapter analysis
+
+- [Глава 15. Запуск кластера в Google Cloud Platform с помощью Google Kubernetes Engine](notes/chapters/chapter-15-gcp-gke/README.md) — RAG-only, PDF 515–536, chapter-artifact-collection v1.7. Статус чтения не изменен.
