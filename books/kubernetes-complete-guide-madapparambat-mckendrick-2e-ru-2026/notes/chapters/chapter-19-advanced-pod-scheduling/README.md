@@ -72,6 +72,10 @@
 - [NodeRestriction p0665](../../../rag/chunks/p0601-p0700/p0665-c01.md)
 - [Scheduler config mismatch and summary p0666](../../../rag/chunks/p0601-p0700/p0666-c01.md)
 
+## CI acceptance boundary
+
+Подготовка этой коллекции не является доказательством успешного запуска kubectl, планировщика, автоматического выселения на другом кластере или совместимости исторического KubeSchedulerConfiguration. Проверка репозитория относится к структуре артефактов, RAG-ссылкам и SVG, не к живому планированию.
+
 ## Operational boundary
 
 Материал из книги, не рабочий runbook без валидации: имена узлов, версии k8s, политики и доступность scheduler, реальные taints, cluster ownership, uptime, rollback **[Needs confirmation]**. Не запускались kubectl/minikube; не изменены PDF/LFS, RAG, registry, metadata, даты/статус чтения.
