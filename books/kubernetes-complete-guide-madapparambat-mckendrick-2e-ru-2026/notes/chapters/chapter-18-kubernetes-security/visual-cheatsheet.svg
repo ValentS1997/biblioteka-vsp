@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="704" viewBox="0 0 1200 704">
+<rect width="1200" height="704" fill="#f5f8fb"/>
+<rect width="1200" height="10" fill="#246f8b"/>
+<text x="32" y="55" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" fill="#154052">Глава 18 · Безопасность Kubernetes</text>
+<text x="32" y="92" font-family="DejaVu Sans, sans-serif" font-size="16" fill="#476979">Защита API, рабочей нагрузки и сетевых взаимодействий</text>
+<text x="32" y="127" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#577b8c">RAG-only · PDF 587–640 · inventory 0033</text>
+<rect x="32" y="156" width="370" height="196" rx="13" fill="#ffffff" stroke="#c8dbe4"/>
+<rect x="32" y="156" width="370" height="8" fill="#297993"/>
+<text x="49" y="194" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#257893">1</text>
+<text x="49" y="238" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#194458">API security</text>
+<text x="49" y="283" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">Auth → RBAC → Admission</text>
+<text x="49" y="321" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">Audit requests</text>
+<rect x="427" y="156" width="370" height="196" rx="13" fill="#ffffff" stroke="#c8dbe4"/>
+<rect x="427" y="156" width="370" height="8" fill="#297993"/>
+<text x="444" y="194" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#257893">2</text>
+<text x="444" y="238" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#194458">Identity</text>
+<text x="444" y="283" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">ServiceAccount, X.509</text>
+<text x="444" y="321" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">OIDC and bootstrap</text>
+<rect x="822" y="156" width="370" height="196" rx="13" fill="#ffffff" stroke="#c8dbe4"/>
+<rect x="822" y="156" width="370" height="8" fill="#297993"/>
+<text x="839" y="194" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#257893">3</text>
+<text x="839" y="238" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#194458">RBAC demo</text>
+<text x="839" y="283" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">403 → PodList → 403</text>
+<text x="839" y="321" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">Least privilege</text>
+<rect x="32" y="375" width="370" height="196" rx="13" fill="#ffffff" stroke="#c8dbe4"/>
+<rect x="32" y="375" width="370" height="8" fill="#297993"/>
+<text x="49" y="413" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#257893">4</text>
+<text x="49" y="457" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#194458">Workload security</text>
+<text x="49" y="502" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">non-root and read-only</text>
+<text x="49" y="540" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">No privileged by default</text>
+<rect x="427" y="375" width="370" height="196" rx="13" fill="#ffffff" stroke="#c8dbe4"/>
+<rect x="427" y="375" width="370" height="8" fill="#297993"/>
+<text x="444" y="413" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#257893">5</text>
+<text x="444" y="457" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#194458">NetworkPolicy</text>
+<text x="444" y="502" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">Calico, default deny</text>
+<text x="444" y="540" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">Source YAML has mismatch</text>
+<rect x="822" y="375" width="370" height="196" rx="13" fill="#ffffff" stroke="#c8dbe4"/>
+<rect x="822" y="375" width="370" height="8" fill="#297993"/>
+<text x="839" y="413" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#257893">6</text>
+<text x="839" y="457" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#194458">Runtime &amp; registry</text>
+<text x="839" y="502" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">mTLS, Kata, gVisor</text>
+<text x="839" y="540" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#43677a">imagePullSecrets risks</text>
+<text x="32" y="680" font-family="DejaVu Sans, sans-serif" font-size="14" fill="#587986">Учебные команды не выполнялись. Policy selector и Secret encryption требуют проверки.</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="600" viewBox="0 0 1100 600">
+<rect width="1100" height="600" fill="#f4f7fb"/>
+<text x="45" y="70" font-size="35" font-family="sans-serif" fill="#173c55">Глава 4: Pod, Job и CronJob</text>
+<text x="45" y="108" font-size="18" font-family="sans-serif" fill="#486276">Компактная карта · RAG PDF 143–180</text>
+<rect x="45" y="140" width="490" height="175" rx="12" fill="#ffffff" stroke="#b9cfdb"/>
+<text x="70" y="185" font-size="27" fill="#17617f" font-family="sans-serif">Pod</text>
+<text x="70" y="225" font-size="19" fill="#264b61" font-family="sans-serif">1+ контейнеров на одном узле</text>
+<text x="70" y="259" font-size="19" fill="#264b61" font-family="sans-serif">Общая сеть, localhost, тома</text>
+<rect x="560" y="140" width="490" height="175" rx="12" fill="#ffffff" stroke="#b9cfdb"/>
+<text x="585" y="185" font-size="27" fill="#17617f" font-family="sans-serif">CRUD и доступ</text>
+<text x="585" y="225" font-size="19" fill="#264b61" font-family="sans-serif">run, apply, get, describe, delete</text>
+<text x="585" y="259" font-size="19" fill="#264b61" font-family="sans-serif">port-forward и exec</text>
+<rect x="45" y="334" width="490" height="175" rx="12" fill="#ffffff" stroke="#b9cfdb"/>
+<text x="70" y="379" font-size="27" fill="#17617f" font-family="sans-serif">Job</text>
+<text x="70" y="419" font-size="19" fill="#264b61" font-family="sans-serif">Конечная задача, управление Pod</text>
+<text x="70" y="453" font-size="19" fill="#264b61" font-family="sans-serif">Повторы, completions, parallelism</text>
+<rect x="560" y="334" width="490" height="175" rx="12" fill="#ffffff" stroke="#b9cfdb"/>
+<text x="585" y="379" font-size="27" fill="#17617f" font-family="sans-serif">CronJob</text>
+<text x="585" y="419" font-size="19" fill="#264b61" font-family="sans-serif">Расписание → Job → Pod</text>
+<text x="585" y="453" font-size="19" fill="#264b61" font-family="sans-serif">History, startingDeadlineSeconds</text>
+<text x="45" y="558" font-size="16" fill="#526f7f" font-family="sans-serif">Labels выбирают объекты; annotations добавляют контекст.</text>
+</svg>
