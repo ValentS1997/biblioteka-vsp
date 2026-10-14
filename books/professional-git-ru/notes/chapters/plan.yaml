@@ -4,7 +4,7 @@ source_sha256: 5eb8376c990ff58103fb110ae36467bb407f015bedf45aa2db6dae5678f8b5fb
 source_format: pdf
 total_chapters: 61
 toc_evidence: "RAG books/professional-git-ru/rag/text.md, PDF pages 4–9 (addressable TOC chunks rag/chunks/p0001-p0100/p0004-c01.md through p0009-c01.md); numbered chapters 1–61, each start PDF page corroborated by a chapter heading on that page."
-source_note: "Titles reproduce extracted RAG TOC wording including possible PDF text-layer/OCR defects; cross-check chapter body before creating chapter artifacts. source_locator is the 1-based chapter-start PDF page, not a printed page number."
+source_note: "Chapter titles use the extracted TOC, with explicitly recorded PDF text-layer fixes only when corroborated by chapter headings in the RAG. Original extracted variants are retained in toc_raw_title. Unresolved OCR wording (e.g. chapter 42) is preserved pending chapter review. source_locator is the 1-based chapter-start PDF page, not a printed page number."
 chapters:
   - number: 1
     title: "Начало работы с Git"
@@ -67,13 +67,17 @@ chapters:
     slug: rev-list
     source_locator: "pdf_page:0080"
   - number: 16
-    title: "Объедm1ение"
-    slug: obedm1enie
+    title: "Объединение"
+    slug: obedinenie
     source_locator: "pdf_page:0080"
+    toc_raw_title: "Объедm1ение"
+    title_evidence: "RAG rag/text.md PDF page 80 chapter heading"
   - number: 17
-    title: "Команда cherтy-pick"
-    slug: komanda-cherty-pick
+    title: "Команда cherry-pick"
+    slug: komanda-cherry-pick
     source_locator: "pdf_page:0084"
+    toc_raw_title: "Команда cherтy-pick"
+    title_evidence: "RAG rag/text.md PDF page 84 chapter heading"
   - number: 18
     title: "Восстановление"
     slug: vosstanovlenie
@@ -107,9 +111,11 @@ chapters:
     slug: klonirovanie-repozitoriev
     source_locator: "pdf_page:0102"
   - number: 26
-    title: "Пряташ.е"
-    slug: pryatash-e
+    title: "Прятанье"
+    slug: pryatane
     source_locator: "pdf_page:0103"
+    toc_raw_title: "Пряташ.е"
+    title_evidence: "RAG rag/text.md PDF page 103 chapter heading"
   - number: 27
     title: "Поддеревья"
     slug: podderevya
@@ -127,9 +133,11 @@ chapters:
     slug: vnutrennie-komponenty
     source_locator: "pdf_page:0113"
   - number: 31
-    title: "Плаrин git-tfs"
-    slug: plarin-git-tfs
+    title: "Плагин git-tfs"
+    slug: plagin-git-tfs
     source_locator: "pdf_page:0117"
+    toc_raw_title: "Плаrин git-tfs"
+    title_evidence: "RAG rag/text.md PDF page 117 chapter heading"
   - number: 32
     title: "Пустые каталоги в Git"
     slug: pustye-katalogi-v-git
@@ -143,9 +151,11 @@ chapters:
     slug: arhiv
     source_locator: "pdf_page:0120"
   - number: 35
-    title: "Переписывание истории с помощью команды filter-hranch"
-    slug: perepisyvanie-istorii-s-pomoschyu-komandy-filter-hranch
+    title: "Переписывание истории с помощью команды filter-branch"
+    slug: perepisyvanie-istorii-s-pomoschyu-komandy-filter-branch
     source_locator: "pdf_page:0122"
+    toc_raw_title: "Переписывание истории с помощью команды filter-hranch"
+    title_evidence: "RAG rag/text.md PDF page 122 chapter heading"
   - number: 36
     title: "Переход на Git"
     slug: perehod-na-git
@@ -187,9 +197,11 @@ chapters:
     slug: rabota-s-udalennymi-obektami-git-remote
     source_locator: "pdf_page:0136"
   - number: 46
-    title: "Храюшище крупных файлов Git Large File Storage (LFS)"
-    slug: hrayushische-krupnyh-faylov-git-large-file-storage-lfs
+    title: "Хранилище крупных файлов Git Large File Storage (LFS)"
+    slug: hranilische-krupnyh-faylov-git-large-file-storage-lfs
     source_locator: "pdf_page:0139"
+    toc_raw_title: "Храюшище крупных файлов Git Large File Storage (LFS)"
+    title_evidence: "RAG rag/text.md PDF page 139 chapter heading"
   - number: 47
     title: "Команда git patch"
     slug: komanda-git-patch
@@ -207,9 +219,11 @@ chapters:
     slug: graficheskie-klienty-git
     source_locator: "pdf_page:0145"
   - number: 51
-    title: "Rеflоg - восстановление коммитов, не отображаемых в журнале Git"
+    title: "Reflog - восстановление коммитов, не отображаемых в журнале Git"
     slug: reflog-vosstanovlenie-kommitov-ne-otobrazhaemyh-v-zhurnale-git
     source_locator: "pdf_page:0148"
+    toc_raw_title: "Rеflоg - восстановление коммитов, не отображаемых в журнале Git"
+    title_evidence: "RAG rag/text.md PDF page 148 chapter heading"
   - number: 52
     title: "TortoiseGit"
     slug: tortoisegit
