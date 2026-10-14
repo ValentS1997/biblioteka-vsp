@@ -8,7 +8,7 @@ Book ID: `zabbix-7-monitoring-it-infrastructure-ru`; инвентарный но
 - Каждая начальная PDF-страница дополнительно сопоставлена с адресуемым RAG-чанком начала соответствующей главы.
 - SHA-256 источника: `07204d885d4bf4c6c2de7c71ae42a4e3ed4cea794169cbe07985552e63875a27`.
 - Канонический план: [plan.yaml](plan.yaml).
-- Контракты: `process-compliance-router-v1.1`, `chapter-publication-v1.0`, `chapter-analysis-request-v1.4`, `chapter-artifact-collection-v1.8`.
+- Контракты: `process-compliance-router-v1.2`, `session-recovery-v1.0`, `chapter-publication-v1.0`, `chapter-analysis-request-v1.4`, `chapter-artifact-collection-v1.8`.
 
 ## Прогресс публикации в текущей книжной ветке
 
