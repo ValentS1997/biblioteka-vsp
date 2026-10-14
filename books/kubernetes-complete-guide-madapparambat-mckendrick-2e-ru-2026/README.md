@@ -32,3 +32,7 @@ Readiness command:
 ## Reading
 
 No reading status, dates or progress were modified or inferred during source/RAG ingest.
+
+## Chapter analysis
+
+- [Глава 8. Публикация подов с помощью сервисов](notes/chapters/chapter-08-services-networking-probes/README.md) — RAG-only, PDF 281–325, chapter-artifact-collection v1.7. Статус чтения не изменен.
