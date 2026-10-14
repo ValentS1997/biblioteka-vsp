@@ -98,5 +98,49 @@ class ChapterNotesDiscoveryTests(unittest.TestCase):
             self.assertEqual(2, check.call_count)
 
 
+
+class Prometheus0040IndexTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.book = Path(self.tmp.name) / "prometheus-up-and-running-pivotto-brazil-ru-2023"
+        self.chapters = self.book / "notes" / "chapters"
+        self.chapters.mkdir(parents=True)
+        self.chapter = self.chapters / "chapter-01-test"
+        self.chapter.mkdir()
+        (self.chapter / "source-findings.md").write_text("findings", encoding="utf-8")
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def write_index(self, content):
+        (self.chapters / "README.md").write_text(content, encoding="utf-8")
+
+    def check(self):
+        issues = []
+        validator.check_prometheus_chapter_index(self.book, [self.chapter], issues)
+        return issues
+
+    def test_valid_index_and_findings(self):
+        self.write_index("[01](chapter-01-test/README.md)")
+        self.assertEqual([], self.check())
+
+    def test_missing_index_entry_fails(self):
+        self.write_index("# No links")
+        self.assertTrue(any("chapter index mismatch" in issue for issue in self.check()))
+
+    def test_duplicate_index_entry_fails(self):
+        self.write_index("[01](chapter-01-test/README.md) [01](chapter-01-test/README.md)")
+        self.assertTrue(any("duplicate chapter index entry" in issue for issue in self.check()))
+
+    def test_missing_findings_fails(self):
+        self.write_index("[01](chapter-01-test/README.md)")
+        (self.chapter / "source-findings.md").unlink()
+        self.assertTrue(any("source-findings.md" in issue for issue in self.check()))
+
+    def test_no_index_fails(self):
+        self.assertTrue(any("index missing" in issue for issue in self.check()))
+
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1280" viewBox="0 0 1600 1280" role="img" aria-label="Подробный конспект главы 3: Counter Gauge Summary Histogram, PromQL, RED USE, именование и ограничения">
+<rect width="1600" height="1280" fill="#f7f9fc"/>
+<text x="52" y="66" font-family="DejaVu Sans,sans-serif" font-size="34" font-weight="bold" fill="#1a3048">Глава 3 · Прямое инструментирование</text>
+<text x="52" y="104" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#526a80">Книга 0040 · RAG p0054:c01–p0075:c01 · Python 3 / prometheus_client</text>
+<rect x="51" y="142" width="1500" height="155" rx="17" fill="#e7f2ff" stroke="#94bcdf" stroke-width="2"/>
+<text x="80" y="182" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="bold" fill="#21588a">Экспорт и сбор</text>
+<text x="80" y="226" font-family="DejaVu Sans,sans-serif" font-size="20" fill="#24425c">Обработчик Hello World :8001 → метрика в реестре Python → :8000 /metrics</text>
+<text x="80" y="263" font-family="DejaVu Sans,sans-serif" font-size="20" fill="#24425c">Prometheus: scrape localhost:8000 раз в 10s → запросы в Expression Browser :9090</text>
+<rect x="51" y="334" width="720" height="218" rx="15" fill="#ecf8ee" stroke="#a0caaa" stroke-width="2"/>
+<text x="79" y="377" font-family="DejaVu Sans,sans-serif" font-size="24" font-weight="bold" fill="#206b41">Counter · накопление</text>
+<text x="79" y="414" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#25435a">hello_worlds_total · REQUESTS.inc()</text>
+<text x="79" y="447" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#25435a">Исключения: count_exceptions()</text>
+<text x="79" y="480" font-family="DejaVu Sans Mono,monospace" font-size="18" fill="#226149">rate(hello_worlds_total[1m])</text>
+<text x="79" y="518" font-family="DejaVu Sans,sans-serif" font-size="17" fill="#536c60">Только неотрицательное приращение</text>
+<rect x="831" y="334" width="720" height="218" rx="15" fill="#edf4ff" stroke="#a0bce0" stroke-width="2"/>
+<text x="859" y="377" font-family="DejaVu Sans,sans-serif" font-size="24" font-weight="bold" fill="#235786">Gauge · состояние</text>
+<text x="859" y="414" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#25435a">hello_worlds_inprogress · inc/dec</text>
+<text x="859" y="447" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#25435a">hello_world_last_time_seconds</text>
+<text x="859" y="480" font-family="DejaVu Sans Mono,monospace" font-size="18" fill="#235786">time() - hello_world_last_time_seconds</text>
+<text x="859" y="518" font-family="DejaVu Sans,sans-serif" font-size="17" fill="#53687d">track_inprogress(), set_function() — потокобезопасность</text>
+<rect x="51" y="588" width="720" height="213" rx="15" fill="#fff3e5" stroke="#e0ba8d" stroke-width="2"/>
+<text x="79" y="630" font-family="DejaVu Sans,sans-serif" font-size="24" font-weight="bold" fill="#955a22">Summary · среднее</text>
+<text x="79" y="667" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#25435a">LATENCY.observe() / @LATENCY.time()</text>
+<text x="79" y="700" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#25435a">latency_seconds_sum и latency_seconds_count</text>
+<text x="79" y="733" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#25435a">mean = rate(_sum) / rate(_count)</text>
+<text x="79" y="767" font-family="DejaVu Sans,sans-serif" font-size="17" fill="#79634e">Квантили Python Summary здесь не поддерживает</text>
+<rect x="831" y="588" width="720" height="213" rx="15" fill="#f2eeff" stroke="#baabe4" stroke-width="2"/>
+<text x="859" y="630" font-family="DejaVu Sans,sans-serif" font-size="24" font-weight="bold" fill="#664aa4">Histogram · распределение</text>
+<text x="859" y="667" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#25435a">latency_seconds_bucket{le="0.5"}</text>
+<text x="859" y="700" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#25435a">Кумулятивные сегменты, обязательно +Inf</text>
+<text x="859" y="733" font-family="DejaVu Sans Mono,monospace" font-size="16" fill="#664aa4">histogram_quantile(0.95, rate(bucket[1m]))</text>
+<text x="859" y="767" font-family="DejaVu Sans,sans-serif" font-size="17" fill="#72628e">Приближённые квантили; buckets стоят серий</text>
+<rect x="51" y="835" width="1500" height="189" rx="17" fill="#ffffff" stroke="#cad6e1" stroke-width="2"/>
+<text x="80" y="876" font-family="DejaVu Sans,sans-serif" font-size="24" font-weight="bold" fill="#233e58">Где инструментировать?</text>
+<text x="80" y="917" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#294c65">Онлайн-служба: RED → запросы, ошибки, задержка (включая неудачные)</text>
+<text x="80" y="952" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#294c65">Очередь / worker pool: USE → utilization, saturation, errors</text>
+<text x="80" y="987" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#294c65">Batch: время выполнения, этапы, время последнего успешного запуска</text>
+<rect x="51" y="1058" width="1500" height="171" rx="17" fill="#fff0ed" stroke="#e4a9a3" stroke-width="2"/>
+<text x="80" y="1099" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="bold" fill="#853e37">Контроль качества и ограничения</text>
+<text x="80" y="1136" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#5b4b48">Имена: snake_case, стабильный префикс и единицы, _total у счётчика. Не раздувать кардинальность.</text>
+<text x="80" y="1170" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#5b4b48">Тест: REGISTRY.get_sample_value() до/после. Ошибки RAG PDF 59 и 67 сохранены отдельно.</text>
+<text x="80" y="1202" font-family="DejaVu Sans,sans-serif" font-size="17" fill="#5b4b48">Нет подтверждённого production rollback и текущей совместимости библиотек: [Needs confirmation].</text>
+</svg>
