@@ -1,0 +1,33 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: kali-linux-in-action-skabtsov-2e-ru-pr488-postmerge-index
+repository: vsp-corp/biblioteka-vsp
+book_id: kali-linux-in-action-skabtsov-2e-ru
+task_kind: chapter
+objective: "Correct stale post-merge chapter index after PR #488"
+branch: chapter/kali-linux-in-action-skabtsov-2e-ru-0012-postmerge-index
+initial_base_sha: 09efa847b5697ed5a99a22f0aac3a3410092aa74
+last_observed_head_sha: 09efa847b5697ed5a99a22f0aac3a3410092aa74
+expected_source_sha256: fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite without explicit authorization
+  - no reading-progress mutation without explicit user confirmation
+  - no archive delivery for chapter artifacts
+stage: PLANNED
+completed_steps:
+  - step: "Recovered PR #488 merged state and confirmed all chapter 02 files exist in main."
+    evidence_type: pr
+    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/488
+  - step: "Read back main at the post-merge commit."
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/09efa847b5697ed5a99a22f0aac3a3410092aa74
+pending_steps:
+  - "Update chapters/README.md to reflect both chapters merged and 2/17."
+  - "Read back updated file and feature HEAD."
+  - "Validate chapter notes CI and create PR after PASS."
+  - "Remove transient checkpoint before merge; verify final CI; merge PR and read main back."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/09efa847b5697ed5a99a22f0aac3a3410092aa74
+first_safe_next_action: "Re-fetch HEAD and chapters/README.md from GitHub before any replacement."
+blocker: Not applicable
+last_observed_at: Not applicable
