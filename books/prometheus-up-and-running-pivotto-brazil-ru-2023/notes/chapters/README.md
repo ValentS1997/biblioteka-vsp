@@ -25,5 +25,6 @@ Canonical chapter artifacts (RAG-only; process `chapter-artifact-collection-v1.7
 | [18](chapter-18-alerting/README.md) | Оповещение | 307–320 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
 | [19](chapter-19-alertmanager/README.md) | Alertmanager | 321–343 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
 | [20](chapter-20-server-side-security/README.md) | Безопасность на стороне сервера | 345–349 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
+| [21](chapter-21-putting-it-all-together/README.md) | Собираем все вместе | 350–374 | README, cheatsheet, commands, diagram, compact SVG, detailed SVG, source-findings | RAG_GROUNDED |
 
 **Reading progress:** не изменяется этими артефактами. Индекс не утверждает, что главы прочитаны.
