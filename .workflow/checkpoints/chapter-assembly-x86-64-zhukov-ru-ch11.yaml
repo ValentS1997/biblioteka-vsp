@@ -1,0 +1,34 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: chapter-assembly-x86-64-zhukov-ru-ch11
+repository: vsp-corp/biblioteka-vsp
+book_id: assembly-x86-64-zhukov-ru
+task_kind: chapter
+objective: "RAG-only chapter 11 external interrupts analysis and gated Git publication"
+branch: chapter/assembly-x86-64-zhukov-ru-ch11
+initial_base_sha: 34e8130f63c635d3780d32696bb7810bf7dcf368
+last_observed_head_sha: 34e8130f63c635d3780d32696bb7810bf7dcf368
+expected_source_sha256: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
+constraints:
+  - no direct main changes
+  - no source or RAG rewrite
+  - no reading-status mutation
+  - no force-push or ZIP fallback
+stage: IN_PROGRESS
+completed_steps:
+  - step: "Contracts ACCEPTED and canonical RAG SHA matches chapter plan"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/34e8130f63c635d3780d32696bb7810bf7dcf368/books/assembly-x86-64-zhukov-ru/rag/acceptance.yaml"
+  - step: "Chapter 11 RAG PDF p197-204 read from two shards, chapter 12 starts p205; main 10/21"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/34e8130f63c635d3780d32696bb7810bf7dcf368/books/assembly-x86-64-zhukov-ru/notes/chapters/plan.yaml"
+pending_steps:
+  - "Create six mandatory chapter files as separate Git objects and read back"
+  - "Create conditional review questions, review answers and source findings"
+  - "Update index to 11/21 in chapter branch"
+  - "Check main drift and validation PASS, PR only after PASS"
+  - "PR CI PASS, remove checkpoint, final HEAD CI PASS, merge clean"
+  - "Postmerge main read-back and CI"
+first_safe_next_action: "Re-read GitHub live branch/checkpoint, files and PR/checks before retrying writes"
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/blob/34e8130f63c635d3780d32696bb7810bf7dcf368/books/assembly-x86-64-zhukov-ru/notes/chapters/plan.yaml"
+blocker: "Not applicable"
+last_observed_at: "Not applicable"
