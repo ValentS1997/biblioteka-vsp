@@ -5,7 +5,7 @@
 ## Доказанные границы и provenance
 
 - Источник: только принятый книжный RAG (`rag/acceptance.yaml: ACCEPTED`); оригинальный PDF не используется как альтернативный источник.
-- **PDF source pages: 20–58** включительно; следующая глава начинается на 59. Оглавление: [p0006]( ../../../rag/chunks/p0001-p0100/p0006-c01.md ); заголовки: [p0020](../../../rag/chunks/p0001-p0100/p0020-c01.md), [p0059](../../../rag/chunks/p0001-p0100/p0059-c01.md).
+- **PDF source pages: 20–58** включительно; следующая глава начинается на 59. Оглавление: [p0006](../../../rag/chunks/p0001-p0100/p0006-c01.md); заголовки: [p0020](../../../rag/chunks/p0001-p0100/p0020-c01.md), [p0059](../../../rag/chunks/p0001-p0100/p0059-c01.md).
 - Chunk IDs: `zabbix-7-monitoring-it-infrastructure-ru:p0020:c01` … `zabbix-7-monitoring-it-infrastructure-ru:p0058:c01`; тип локатора: `source_pdf_1_indexed`.
 - Источник SHA-256: `07204d885d4bf4c6c2de7c71ae42a4e3ed4cea794169cbe07985552e63875a27`.
 - Генерация RAG: `6a5221f8e8a0f88b400905d7334879edff6f5451d9ab7f6e56bb203809018986`.
