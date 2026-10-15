@@ -1,0 +1,34 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: "zabbix-7-0020-ch02-20261015"
+repository: "vsp-corp/biblioteka-vsp"
+book_id: "zabbix-7-monitoring-it-infrastructure-ru"
+task_kind: chapter
+objective: "RAG-only analysis and individual Git publication of Zabbix chapter 2 under artifact contract v1.8."
+branch: "chapter/zabbix-7-0020-ch02-users-roles-authentication-20261015"
+initial_base_sha: "f105f8aa8bee5a3cef5b9196fb6c1b66b8c645eb"
+last_observed_head_sha: "f105f8aa8bee5a3cef5b9196fb6c1b66b8c645eb"
+expected_source_sha256: "07204d885d4bf4c6c2de7c71ae42a4e3ed4cea794169cbe07985552e63875a27"
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite without explicit authorization
+  - no reading-progress mutation without explicit user confirmation
+  - no archive delivery for chapter artifacts
+  - RAG-only; no external research
+stage: IN_PROGRESS
+completed_steps:
+  - step: "Verified accepted RAG, chapter-plan and existing chapter-1 Git publication; 1/13 in main."
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/zabbix-7-monitoring-it-infrastructure-ru/notes/chapters/plan.yaml"
+  - step: "Verified prior book readiness CI success (run 38374073431)"
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38374073431"
+pending_steps:
+  - "Retrieve chapter 2 source PDF pages 59-92 (addressable RAG only), verify chapter 3 boundary at 93"
+  - "Create all six mandatory chapter files separately in Git and conditional findings if needed"
+  - "Verify individual Git files, update index to 2/13, run branch and PR CI"
+  - "Retire checkpoint before merge and verify CI on final head, then post-merge readback/CI"
+last_verified_evidence: "f105f8aa8bee5a3cef5b9196fb6c1b66b8c645eb"
+first_safe_next_action: "Read the current branch HEAD and addressable chapter RAG chunks before any duplicate mutation."
+blocker: "Not applicable"
+last_observed_at: "Not applicable"
