@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="690" viewBox="0 0 1120 690" role="img" aria-label="Глава 10: таблица векторов, кадр INT и IRET, trap fault и отладочные исключения">
+<rect width="1120" height="690" fill="#f8fafc"/><g font-family="DejaVu Sans,sans-serif">
+<text x="36" y="55" font-size="31" font-weight="bold" fill="#19354c">Глава 10 · Исключения</text>
+<text x="36" y="87" font-size="17" fill="#61788b">Реальный режим · таблица векторов IVT · синхронные события</text>
+<rect x="36" y="116" width="1048" height="96" rx="15" fill="#deebff" stroke="#5e81b4" stroke-width="2"/>
+<text x="56" y="151" font-size="23" font-weight="bold" fill="#224f76">IVT = 256 × 4 байта · адрес вектора n: 4 × n</text>
+<text x="56" y="184" font-size="18" fill="#305670">INT 20h → 80h   ·   INT 21h → 84h   ·   INT 80h → 200h</text>
+<rect x="36" y="241" width="324" height="161" rx="14" fill="#e4f0ff" stroke="#6588c0" stroke-width="2"/>
+<rect x="398" y="241" width="324" height="161" rx="14" fill="#e3f7eb" stroke="#519c76" stroke-width="2"/>
+<rect x="760" y="241" width="324" height="161" rx="14" fill="#efeaff" stroke="#8d77c3" stroke-width="2"/>
+<g fill="#254b6b" font-size="20" font-weight="bold"><text x="54" y="277">Вход INT n</text><text x="416" y="277">ISR и возврат</text><text x="778" y="277">Trap vs Fault</text></g>
+<g font-size="17" fill="#2c455a"><text x="54" y="311">Сохранить FLAGS, CS, IP</text><text x="54" y="342">Прочитать IVT[n]</text><text x="54" y="373">Загрузить новые CS:IP</text>
+<text x="416" y="311">IRET возвращает все три</text><text x="416" y="342">Chain: JMP или PUSHF/CALL</text><text x="416" y="373">Старый вектор сохранить</text>
+<text x="778" y="311">INTO → 4, при OF=1</text><text x="778" y="342">BOUND → 5, текущий IP</text><text x="778" y="373">GP → 13, предел сегмента</text></g>
+<rect x="36" y="427" width="1048" height="103" rx="14" fill="#e9effd" stroke="#778cb4" stroke-width="2"/>
+<text x="56" y="458" font-size="20" font-weight="bold" fill="#24517a">Отладочные исключения</text>
+<text x="56" y="489" font-size="17" fill="#294e6b">INT 3 — одна ячейка кода · вектор 1 при T=1 после каждой инструкции</text>
+<text x="56" y="516" font-size="16" fill="#294e6b">В NASM: [X] — содержимое, X — адрес; .BSS / RESW резервируют память</text>
+<rect x="36" y="555" width="1048" height="84" rx="14" fill="#fff1e7" stroke="#c9855a" stroke-width="2"/>
+<text x="56" y="587" font-size="20" font-weight="bold" fill="#944d2b">Осторожно: IVT — системная память по линейному адресу 0</text>
+<text x="56" y="617" font-size="16" fill="#7e4a2d">Подмена вектора, GP и деление на ноль не запускались; работать только в изоляции</text>
+<text x="36" y="671" font-size="14" fill="#677d90">RAG PDF 177–196 · inventory 0017 · оригинальные рисунки не реконструируются</text>
+</g></svg>
