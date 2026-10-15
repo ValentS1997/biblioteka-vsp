@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 510" width="1100" height="510" role="img" aria-label="Глава 2 - введение в проектирование ML-систем"><rect width="1100" height="510" fill="#0f172a"/>
+<text x="40" y="56" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#f8fafc">ГЛАВА 2 · ПРОЕКТИРОВАНИЕ ML-СИСТЕМ</text>
+<text x="40" y="94" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">От бизнес-цели к итерациям и измеримой пользе</text>
+<rect x="38" y="122" width="330" height="274" rx="13" fill="#1f2937" stroke="#475569"/>
+<rect x="385" y="122" width="330" height="274" rx="13" fill="#1f2937" stroke="#475569"/>
+<rect x="732" y="122" width="330" height="274" rx="13" fill="#1f2937" stroke="#475569"/>
+<text x="58" y="163" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#93c5fd">ЗАЧЕМ?</text>
+<text x="58" y="210" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Бизнес-показатель</text>
+<text x="58" y="252" font-family="Arial,sans-serif" font-size="17" font-weight="400" fill="#e2e8f0">ML-цели ≠ бизнес-эффект</text>
+<text x="58" y="294" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Проверка экспериментом</text>
+<text x="405" y="163" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#93c5fd">ЧТО ТРЕБУЕТСЯ?</text>
+<text x="405" y="210" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Надёжность</text>
+<text x="405" y="249" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Масштабируемость</text>
+<text x="405" y="288" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Обслуживаемость</text>
+<text x="405" y="327" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Адаптивность</text>
+<text x="752" y="163" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#93c5fd">КАК РАБОТАТЬ?</text>
+<text x="752" y="210" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Скопинг и данные</text>
+<text x="752" y="249" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Постановка ML-задачи</text>
+<text x="752" y="288" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Обучение и развёртывание</text>
+<text x="752" y="327" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Мониторинг → итерация</text>
+<text x="40" y="440" font-family="Arial,sans-serif" font-size="16" font-weight="400" fill="#94a3b8">RAG: p0047–p0055 · p0056–p0062 · p0063–p0066 · PDF 47–67</text>
+<text x="40" y="476" font-family="Arial,sans-serif" font-size="15" font-weight="400" fill="#fca5a5">Код Python из книги: дефект извлечения, не выполнять без проверки.</text>
+</svg>
