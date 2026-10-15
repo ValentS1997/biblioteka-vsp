@@ -1,0 +1,44 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: "0011-modern-system-administration-chapter-15"
+repository: "vsp-corp/biblioteka-vsp"
+book_id: modern-system-administration-jennifer-davis-ru
+task_kind: chapter
+objective: "RAG-only chapter 15 Monitoring Computing Infrastructure and Software, independent Git artifacts and gated publication"
+branch: "chapters/0011-modern-system-administration-chapter-15"
+initial_base_sha: "7af0fb36efd158c67314886fa937f19c833422e3"
+last_observed_head_sha: "ec306e0dcc37319903dff8aa1def73029f94a1a1"
+expected_source_sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source PDF or RAG changes
+  - no reading-progress changes
+  - no archive or ZIP substitution
+  - chapter 14 dependency must be resolved before chapter 15 main publication
+  - no PR before branch CI PASS
+  - no merge before independent PR CI PASS
+stage: CI_PENDING
+completed_steps:
+  - step: "Verified canonical main index 13/21 and chapter 14 pending main publication"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/7af0fb36efd158c67314886fa937f19c833422e3/books/modern-system-administration-jennifer-davis-ru/notes/chapters/README.md"
+  - step: "Verified canonical chapter 15 PDF 182–194 (print 190–202), chapter 16 starts PDF 195"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/modern-system-administration-jennifer-davis-ru/rag/chunks/p0101-p0200/p0195-c01.md"
+  - step: "Eight independent source-only chapter files committed and Git read-back verified"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/dc21444c56e72bd34d18b857f0f5140150d232f6"
+  - step: "Book chapter index updated on branch without inflating published main chapters"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/ec306e0dcc37319903dff8aa1def73029f94a1a1"
+pending_steps:
+  - "Verify exact branch HEAD and Validate chapter notes and SVG CI PASS"
+  - "Verify chapter 14 main publication and reconcile index/branch before chapter 15 PR"
+  - "Open PR only after branch CI PASS and chapter 14 dependency resolution"
+  - "Require independent PR CI PASS before merge"
+  - "After merge read back 8 chapter files from canonical main"
+  - "Set main progress to 15/21 and checkpoint COMPLETE in separate CI-gated PR"
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/commit/ec306e0dcc37319903dff8aa1def73029f94a1a1"
+first_safe_next_action: "Check chapter 15 exact branch CI and chapter 14 merge; no PR until both gates are satisfied"
+blocker: "Chapter 14 still absent from canonical main; chapter 15 branch CI PASS not verified"
+last_observed_at: "[Needs confirmation]"
