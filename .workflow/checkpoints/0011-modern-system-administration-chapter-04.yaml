@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only analysis and individual Git publication of chapter 4 Network using canonical chapter artifact collection v1.8"
 branch: chapters/0011-modern-system-administration-chapter-04
 initial_base_sha: 8fb79e098055558a2ce377fa095531c1532f9bb4
-last_observed_head_sha: 8fb79e098055558a2ce377fa095531c1532f9bb4
+last_observed_head_sha: 1ae6e23a3dbde6b6a01e1411ce62c0c2f88e580d
 expected_source_sha256: 06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790
 constraints:
   - "no direct main changes"
@@ -14,7 +14,7 @@ constraints:
   - "no source/RAG rewrite without explicit authorization"
   - "no reading-progress mutation without explicit user confirmation"
   - "no archive delivery for chapter artifacts"
-stage: IN_PROGRESS
+stage: CI_PENDING
 completed_steps:
   - step: "Read-only recovery; verified main has chapters 1-3, 21 source-grounded total, no chapter 4"
     evidence_type: file-readback
@@ -25,13 +25,17 @@ completed_steps:
   - step: "Verified canonical RAG ingestion acceptance and source SHA binding"
     evidence_type: file-readback
     reference: https://github.com/vsp-corp/biblioteka-vsp/blob/8fb79e098055558a2ce377fa095531c1532f9bb4/books/modern-system-administration-jennifer-davis-ru/rag/acceptance.yaml
+  - step: "Committed and Git-read-back verified 6 mandatory chapter 4 files, plus summary.md and source-findings.md"
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/3fa2e3465260dd85c5950cd333e0c3fc29307945
+  - step: "Updated branch chapter index to 4/21 (main remains 3/21), verified Git read-back"
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/1ae6e23a3dbde6b6a01e1411ce62c0c2f88e580d
 pending_steps:
-  - "Create and Git-read-back six mandatory independent chapter files"
-  - "Create source-grounded conditional chapter summary and findings if needed"
-  - "Update chapter README publication index on feature branch"
-  - "Validate chapter notes/SVG, publish PR after CI PASS, merge only after PR CI PASS"
+  - "Validate chapter notes and SVG on the book branch, then confirm PR CI"
+  - "Create PR and merge only after mandatory CI PASS"
   - "Verify main publication and final checkpoint"
-last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/8fb79e098055558a2ce377fa095531c1532f9bb4
-first_safe_next_action: "Read branch HEAD and chapter-04-network directory before creating chapter artifacts"
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/1ae6e23a3dbde6b6a01e1411ce62c0c2f88e580d
+first_safe_next_action: "Read branch HEAD, chapter 4 individual file tree and CI results before PR"
 blocker: "Not applicable"
 last_observed_at: "Not applicable"
