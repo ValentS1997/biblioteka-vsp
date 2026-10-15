@@ -1,15 +1,15 @@
 # Глава за главой — Kali Linux в действии (2-е издание)
 
-**Источник:** canonical Git LFS PDF SHA-256 `fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9`, RAG `ACCEPTED`. Всего **17 нумерованных глав** по [каноническому плану](plan.yaml).
+**Источник:** canonical Git LFS PDF SHA-256 `fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9`, RAG `ACCEPTED`; [канонический план](plan.yaml): **17 нумерованных глав**.
 
-**Прогресс данного зависимого Git-дерева:** **14/17 (82,4%)**, осталось **3**. Следующая глава — **15 «Переполнение буфера»**. У всех 14 опубликованных каталогов есть шесть обязательных раздельных файлов.
+**Опубликовано в этой зависимой Git-ветке:** **15/17 (88,2%)**, осталось **2**. Следующая — **16 «Сохранение анонимности»**. Все 15 глав представлены каталогами с шестью обязательными индивидуальными файлами.
 
-**В `main` при создании ветки:** **2/17 (11,8%)**. Главы 03–14 существуют в ещё не объединённой stacked PR-цепочке. Это прогресс **Git-публикации**, а не чтения книги.
+**В `main` при создании ветки:** **2/17 (11,8%)**. Главы 03–15 существуют в цепочке не объединённых PR. Этот индекс отражает **публикацию Git**, не статус чтения книги.
 
 | № | Глава | Состояние публикации |
 |---|---|---|
-| [01](chapter-01-obshchie-svedeniya-ob-audite-informatsionnyh-sistem/README.md) | Общие сведения об аудите информационных систем | 6 файлов, PR #485 merged |
-| [02](chapter-02-metodologiya/README.md) | Методология | 6 файлов, PR #488 merged |
+| [01](chapter-01-obshchie-svedeniya-ob-audite-informatsionnyh-sistem/README.md) | Общие сведения об аудите информационных систем | PR #485 merged |
+| [02](chapter-02-metodologiya/README.md) | Методология | PR #488 merged |
 | [03](chapter-03-sbor-otkrytoy-informatsii-o-tseli/README.md) | Сбор открытой информации о цели | PR #549 OPEN |
 | [04](chapter-04-aktivnyy-sbor-dannyh/README.md) | Активный сбор данных | PR #551 OPEN |
 | [05](chapter-05-otchety/README.md) | Отчеты | PR #553 OPEN |
@@ -21,6 +21,7 @@
 | [11](chapter-11-peredacha-faylov/README.md) | Передача файлов | PR #588 OPEN |
 | [12](chapter-12-zakreplenie-v-sisteme/README.md) | Закрепление в системе | PR #590 OPEN |
 | [13](chapter-13-sokrytie-sledov/README.md) | Сокрытие следов | PR #592 OPEN |
-| [14](chapter-14-metasploit-fremework/README.md) | Metasploit Fremework | Шесть файлов + source findings в текущей ветке |
+| [14](chapter-14-metasploit-fremework/README.md) | Metasploit Fremework | PR #594 OPEN |
+| [15](chapter-15-perepolnenie-bufera/README.md) | Переполнение буфера | Шесть файлов + findings, текущая ветка |
 
-Главы **15–17** ещё не опубликованы. Чтение не менялось.
+Главы **16–17** ещё не опубликованы. Чтение не менялось.
