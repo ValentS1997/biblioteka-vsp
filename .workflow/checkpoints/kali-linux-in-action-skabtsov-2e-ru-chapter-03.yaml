@@ -1,0 +1,33 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: kali-linux-in-action-skabtsov-2e-ru-chapter-03
+repository: vsp-corp/biblioteka-vsp
+book_id: kali-linux-in-action-skabtsov-2e-ru
+task_kind: chapter
+objective: "RAG-only analysis and direct Git publication of chapter 03"
+branch: chapter/kali-linux-in-action-skabtsov-2e-ru-0012-ch03
+initial_base_sha: 4f4f761607467d20748596de2efc5f67476a85c4
+last_observed_head_sha: 4f4f761607467d20748596de2efc5f67476a85c4
+expected_source_sha256: fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite without explicit authorization
+  - no reading-progress mutation without explicit user confirmation
+  - no archive delivery for chapter artifacts
+stage: PLANNED
+completed_steps:
+  - step: "Verified 17-chapter RAG-backed plan, 2 chapters published in main, and source/acceptance identity."
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/4f4f761607467d20748596de2efc5f67476a85c4/books/kali-linux-in-action-skabtsov-2e-ru/notes/chapters/plan.yaml
+  - step: "Verified chapter 03 begins at RAG p0029:c01 and chapter 04 at p0111:c01."
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/4f4f761607467d20748596de2efc5f67476a85c4/books/kali-linux-in-action-skabtsov-2e-ru/rag/chunks/p0001-p0100/p0029-c01.md
+pending_steps:
+  - "Retrieve representative chapter 03 addressable RAG chunks and locate review and summary sections."
+  - "Write six mandatory individual Git artifacts and applicable conditional files."
+  - "Update chapter index; read back all files; check CI."
+  - "Mark terminal checkpoint and create PR after PASS; do not merge without repository governance."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/4f4f761607467d20748596de2efc5f67476a85c4
+first_safe_next_action: "Re-fetch branch HEAD and chapter-03 existing files before committing; then read relevant RAG chunks."
+blocker: Not applicable
+last_observed_at: Not applicable
