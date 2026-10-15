@@ -1,0 +1,30 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: herding-cats-j-hank-rainwater-ru-chapter-09
+repository: vsp-corp/biblioteka-vsp
+book_id: herding-cats-j-hank-rainwater-ru
+task_kind: chapter
+objective: Analyze chapter 09 with RAG-only PDF 193-204 and publish Git-native chapter collection.
+branch: chapter/herding-cats-j-hank-rainwater-ru-0021-ch09
+initial_base_sha: db27ebfac5df52c96aaa0daef96156b4810ace51
+last_observed_head_sha: db27ebfac5df52c96aaa0daef96156b4810ace51
+expected_source_sha256: 5f11cf93711c9489b25218c701e1027f5ca0354523e2faeb1bb7041ed3b62795
+constraints:
+  - no direct main edits
+  - no force push
+  - no source or RAG rewrite
+  - preserve reading status
+  - no ZIP; individual Git files
+stage: IN_PROGRESS
+completed_steps:
+  - step: Main chapters 1-8 Git verified, chapter 9 plan and RAG ACCEPTED 13 checks verified; new feature branch created.
+    evidence_type: commit
+    reference: db27ebfac5df52c96aaa0daef96156b4810ace51
+pending_steps:
+  - Inspect RAG 193-204 and 205 chapter boundary; determine conditional artifacts.
+  - Create chapter 09 artifacts individually and read back.
+  - Update index, run branch CI, retire checkpoint after PASS.
+  - PR after branch PASS, merge after PR CI PASS, verify postmerge CI.
+last_verified_evidence: db27ebfac5df52c96aaa0daef96156b4810ace51
+first_safe_next_action: Read chapter 09 RAG.
+blocker: Not applicable
+last_observed_at: Not applicable
