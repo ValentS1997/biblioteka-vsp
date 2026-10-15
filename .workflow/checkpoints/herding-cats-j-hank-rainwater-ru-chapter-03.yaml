@@ -6,7 +6,7 @@ task_kind: chapter
 objective: Publish chapter 03 RAG-only artifacts from PDF pages 63 through 80.
 branch: chapter/herding-cats-j-hank-rainwater-ru-0021-ch03
 initial_base_sha: 4f4f761607467d20748596de2efc5f67476a85c4
-last_observed_head_sha: 4f4f761607467d20748596de2efc5f67476a85c4
+last_observed_head_sha: eb45d693fd5c57037bf25825b54837f219b0e7dc
 expected_source_sha256: 5f11cf93711c9489b25218c701e1027f5ca0354523e2faeb1bb7041ed3b62795
 constraints:
   - no direct main changes
@@ -14,17 +14,16 @@ constraints:
   - preserve canonical source and RAG
   - preserve reading status
   - individual Git files only
-stage: IN_PROGRESS
+stage: PARTIAL
 completed_steps:
   - step: Verified RAG acceptance and 2 of 10 chapters in main.
     evidence_type: commit
     reference: 4f4f761607467d20748596de2efc5f67476a85c4
 pending_steps:
-  - Read chapter RAG chunks.
-  - Commit and read back chapter artifacts.
+  - Finish remaining chapter artifacts with individual read-back.
   - Verify CI and PR.
   - Verify merge and main publication.
-last_verified_evidence: 4f4f761607467d20748596de2efc5f67476a85c4
-first_safe_next_action: Check branch files and HEAD, then source RAG pages 63-80.
-blocker: Not applicable
+last_verified_evidence: eb45d693fd5c57037bf25825b54837f219b0e7dc
+first_safe_next_action: Inspect chapter directory at GitHub HEAD and add missing individual files only.
+blocker: None; write per-file to prevent duplicate on interrupted requests.
 last_observed_at: Not applicable
