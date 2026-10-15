@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only chapter 5 study artifacts published individually in Git, CI/PR gates"
 branch: chapter/assembly-x86-64-zhukov-ru-ch05
 initial_base_sha: 7af0fb36efd158c67314886fa937f19c833422e3
-last_observed_head_sha: 7af0fb36efd158c67314886fa937f19c833422e3
+last_observed_head_sha: 3eda28f32ef90891ebca2791f2872a116a8b5c0a
 expected_source_sha256: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
 constraints:
   - no direct main changes
@@ -25,8 +25,10 @@ completed_steps:
   - step: "Chapter 5 source boundary PDF 69-84, chapter 6 begins PDF 85"
     evidence_type: file-readback
     reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/7af0fb36efd158c67314886fa937f19c833422e3/books/assembly-x86-64-zhukov-ru/rag/chunks/p0001-p0100/p0069-c01.md"
+  - step: "Six required individual files committed and read back (README/cheatsheet/commands/diagram/two SVG)"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/tree/3eda28f32ef90891ebca2791f2872a116a8b5c0a/books/assembly-x86-64-zhukov-ru/notes/chapters/chapter-05-sistema-komand-i8086"
 pending_steps:
-  - "Create six mandatory individual files chapter-05-sistema-komand-i8086 and verify read-back"
   - "Publish conditional RAG-only exercises, grounded answers, source-findings"
   - "Update chapter index progress to 5/21 on branch"
   - "Read-back Git, run CI, create PR only after success"
