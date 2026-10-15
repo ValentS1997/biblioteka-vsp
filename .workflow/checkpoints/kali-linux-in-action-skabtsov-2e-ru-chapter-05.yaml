@@ -3,10 +3,10 @@ task_key: kali-linux-in-action-skabtsov-2e-ru-chapter-05
 repository: vsp-corp/biblioteka-vsp
 book_id: kali-linux-in-action-skabtsov-2e-ru
 task_kind: chapter
-objective: "RAG-only chapter 05 reporting artifacts and stacked PR"
+objective: "RAG-only chapter 05 reporting artifacts, stacked PR #553"
 branch: chapter/kali-linux-in-action-skabtsov-2e-ru-0012-ch05
 initial_base_sha: 3d679d4bc3f36a613f0a00feb1004d68c2acd1cc
-last_observed_head_sha: 4814833a2092b01e248baa6b1f5c5af961d6e3a7
+last_observed_head_sha: d81ef3d19a059d5d8c6ea4d28c4658e7a99b8a3c
 expected_source_sha256: fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9
 constraints:
   - no direct main changes
@@ -16,18 +16,23 @@ constraints:
   - no archive delivery for chapter artifacts
 stage: CI_PENDING
 completed_steps:
-  - step: "Verified RAG ACCEPTED and chapter 05 boundary PDF pages 155-184, next chapter 185."
+  - step: "Verified 17-chapter RAG TOC, source SHA and chapter 05 PDF pages 155-184."
     evidence_type: file-readback
     reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/kali-linux-in-action-skabtsov-2e-ru/notes/chapters/plan.yaml
-  - step: "Committed and read back 6 mandatory individual chapter files, conditional source-findings, and chapter index (8 files)."
+  - step: "Committed and read back all eight individual chapter 05 artifact and index files."
     evidence_type: commit
     reference: https://github.com/vsp-corp/biblioteka-vsp/commit/4814833a2092b01e248baa6b1f5c5af961d6e3a7
+  - step: "Push validation completed SUCCESS on chapter-05 artifact commit."
+    evidence_type: ci
+    reference: https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38755359250
+  - step: "Opened stacked PR #553 against chapter-04 branch after push CI PASS."
+    evidence_type: pr
+    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/553
 pending_steps:
-  - "Check GitHub Actions push CI run 38755359250 is completed SUCCESS."
-  - "Confirm current chapter 04 base ref and create stacked PR only after CI PASS."
-  - "Verify PR CI at exact final branch HEAD and changed paths."
-  - "Merge under governance after PR #549 and PR #551 are resolved; remove transient checkpoint before final merge."
-last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/4814833a2092b01e248baa6b1f5c5af961d6e3a7
-first_safe_next_action: "Re-fetch feature head and CI before any retry; do not recreate the 8 already committed chapter files."
+  - "Verify PR #553 CI SUCCESS for exact final HEAD, PR mergeability and changed paths."
+  - "Review and integrate ancestor PR #549 then #551; reconcile bases and remove temporary checkpoints before terminal merges."
+  - "Verify main chapter count after final merges, keep reading status unchanged."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/pull/553
+first_safe_next_action: "Re-fetch current branch HEAD, PR #553, PR #551, PR #549 and latest CI; do not repeat already-completed publication."
 blocker: Not applicable
 last_observed_at: Not applicable
