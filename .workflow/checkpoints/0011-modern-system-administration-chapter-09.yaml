@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only chapter 9 Documentation analysis and direct individual Git publication"
 branch: "chapters/0011-modern-system-administration-chapter-09"
 initial_base_sha: "39834669872b3d88532afadfc9f5dcbe2942931f"
-last_observed_head_sha: "39834669872b3d88532afadfc9f5dcbe2942931f"
+last_observed_head_sha: "a6656f6113211738aa56980ffdb942b9ed2527ba"
 expected_source_sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
 constraints:
   - no direct main changes
@@ -14,7 +14,7 @@ constraints:
   - no source/RAG rewrite
   - no reading-progress mutation
   - no ZIP or archives
-stage: PLANNED
+stage: CI_PENDING
 completed_steps:
   - step: "Verified main progress 8/21, ACCEPTED canonical RAG and consistent source hash"
     evidence_type: file-readback
@@ -22,10 +22,16 @@ completed_steps:
   - step: "Verified chapter 9 boundaries RAG PDF 109-115, PDF 116 starts chapter 10"
     evidence_type: file-readback
     reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/39834669872b3d88532afadfc9f5dcbe2942931f/books/modern-system-administration-jennifer-davis-ru/rag/chunks/p0101-p0200/p0116-c01.md"
+  - step: "Eight individual chapter files committed and independently read back"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/1c8782b8e49dc0f6b7bf393e4c1a1afb33406a0d"
+  - step: "Book index updated and independently read back: branch 9/21"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/a6656f6113211738aa56980ffdb942b9ed2527ba"
 pending_steps:
-  - "Commit and read back individual mandatory chapter artifacts"
-  - "Commit and read back conditional summary and source-findings"
-  - "Update and read back book chapter index, branch 9/21"
+
+
+
   - "Verify CI, PR CI and merge after PASS"
   - "Read main; finalize checkpoint and index in follow-up PR"
 last_verified_evidence: "39834669872b3d88532afadfc9f5dcbe2942931f"
