@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1100" viewBox="0 0 1500 1100" role="img" aria-labelledby="title desc">
+<title id="title">Глава 10. Подробная памятка</title>
+<desc id="desc">Шесть тем главы 10 по RAG страниц 205–227: работа распределённых групп, языковое взаимодействие, методологии, технологии, экономика, развитие руководителя.</desc>
+<rect width="1500" height="1100" fill="#f8fafc"/>
+<rect x="25" y="24" width="1450" height="120" rx="16" fill="#173a50"/>
+<text x="52" y="74" font-family="Arial,sans-serif" font-size="35" font-weight="bold" fill="#ffffff">Глава 10 · Слова без песни</text>
+<text x="52" y="118" font-family="Arial,sans-serif" font-size="21" fill="#e2eef7">Шесть направлений в итоговом разделе «Финал»</text>
+<g font-family="Arial,sans-serif" fill="#17394e" font-size="20">
+<rect x="25" y="166" width="700" height="217" rx="14" fill="#e0edf6"/>
+<text x="51" y="210" font-size="25" font-weight="bold">1. Распределённые группы · 206–210</text>
+<text x="51" y="256">Баланс сосредоточенности и сотрудничества</text>
+<text x="51" y="298">Согласованные интерфейсы и результаты</text>
+<text x="51" y="341" font-size="18">Проверка работы требует взаимного доверия</text>
+<rect x="750" y="166" width="725" height="217" rx="14" fill="#e0edf6"/>
+<text x="776" y="210" font-size="25" font-weight="bold">2. Культурное взаимодействие · 210–212</text>
+<text x="776" y="256">Простой язык и подтверждение понимания</text>
+<text x="776" y="298">Индивидуальные потребности сотрудников</text>
+<text x="776" y="341" font-size="18">Оговорки к авторскому частному случаю</text>
+<rect x="25" y="405" width="700" height="217" rx="14" fill="#e0edf6"/>
+<text x="51" y="449" font-size="25" font-weight="bold">3. Методологии разработки · 213–221</text>
+<text x="51" y="495">Программная инженерия и MSF</text>
+<text x="51" y="537">XP, Agile, проектное мастерство</text>
+<text x="51" y="580" font-size="18">Практика проверяет выбор процесса</text>
+<rect x="750" y="405" width="725" height="217" rx="14" fill="#e0edf6"/>
+<text x="776" y="449" font-size="25" font-weight="bold">4. Технологические тенденции · 221–223</text>
+<text x="776" y="495">Отделять реальные изменения от шума</text>
+<text x="776" y="537">Исследования, прототипы, образование</text>
+<text x="776" y="580" font-size="18">Формировать обоснованную техстратегию</text>
+<rect x="25" y="644" width="700" height="217" rx="14" fill="#e0edf6"/>
+<text x="51" y="688" font-size="25" font-weight="bold">5. Экономическая устойчивость · 223–224</text>
+<text x="51" y="734">Знать стоимость оборудования и услуг</text>
+<text x="51" y="776">Сопоставлять смету с результатом</text>
+<text x="51" y="819" font-size="18">Проверять допущения о прибыльности</text>
+<rect x="750" y="644" width="725" height="217" rx="14" fill="#e0edf6"/>
+<text x="776" y="688" font-size="25" font-weight="bold">6. Развитие лидера · 224–226</text>
+<text x="776" y="734">Исследования вместо самоизоляции</text>
+<text x="776" y="776">Управление, стратегия, общение с людьми</text>
+<text x="776" y="819" font-size="18">Поддерживать профессиональные знания</text>
+<rect x="25" y="887" width="1450" height="115" rx="14" fill="#d9eaf4"/>
+<text x="51" y="932" font-size="26" font-weight="bold">Итог p. 227 · Разные задачи требуют разных решений</text>
+<text x="51" y="977" font-size="20">Развитие технологий, процесса и людей — непрерывная ответственность</text>
+</g>
+<text x="32" y="1059" font-family="Arial,sans-serif" font-size="17" fill="#506779">RAG p0205-c01–p0227-c01 · Редакционный конспект, p. 228 — послесловие</text>
+</svg>
