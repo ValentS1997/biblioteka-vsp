@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="1100" viewBox="0 0 1360 1100" role="img" aria-label="Глава 4 Обучающие данные — RAG детальная схема"><rect width="1360" height="1100" fill="#0f172a"/>
+<text x="42" y="61" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#f8fafc">ГЛАВА 4 · КАЧЕСТВО ОБУЧАЮЩИХ ДАННЫХ</text>
+<text x="42" y="99" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#94a3b8">PDF 99–135 · RAG-only · происхождение и границы в README</text>
+<rect x="40" y="129" width="618" height="253" rx="16" fill="#1f2937" stroke="#475569"/>
+<rect x="690" y="129" width="630" height="253" rx="16" fill="#1f2937" stroke="#475569"/>
+<text x="64" y="172" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#93c5fd">ОТБОР И РЕПРЕЗЕНТАТИВНОСТЬ</text>
+<text x="64" y="220" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Удобство выборки → selection bias</text>
+<text x="64" y="258" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Stratified / weighted / reservoir</text>
+<text x="64" y="296" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Редкие классы нужно учитывать</text>
+<text x="64" y="347" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#a5b4fc">p0100–p0105</text>
+<text x="715" y="172" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#93c5fd">ИСТОЧНИКИ МЕТОК</text>
+<text x="715" y="220" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Ручные: цена, сроки, разногласия</text>
+<text x="715" y="258" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Natural: delayed feedback, implicit label</text>
+<text x="715" y="296" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Weak / semi / transfer / active learning</text>
+<text x="715" y="347" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#a5b4fc">p0106–p0118</text>
+<rect x="40" y="410" width="1280" height="267" rx="16" fill="#1f2937" stroke="#475569"/>
+<text x="64" y="455" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#93c5fd">РЕДКИЕ КЛАССЫ И АСИММЕТРИЧНЫЕ ОШИБКИ</text>
+<text x="64" y="503" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#e2e8f0">Одинаковая accuracy не означает одинаковый recall редкого класса.</text>
+<text x="64" y="544" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#e2e8f0">Метрики: precision, recall, F1, ROC и Precision–Recall.</text>
+<text x="64" y="585" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#e2e8f0">Train-only: oversampling / undersampling; cost / class / focal loss.</text>
+<text x="64" y="636" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#a5b4fc">Не оценивать на ресемплированных обучающих данных · p0119–p0129</text>
+<rect x="40" y="710" width="1280" height="288" rx="16" fill="#1f2937" stroke="#475569"/>
+<text x="64" y="755" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#93c5fd">АУГМЕНТАЦИЯ И КОНТРОЛЬ</text>
+<text x="64" y="805" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Сохраняющие метку преобразования изображений / текста</text>
+<text x="64" y="850" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Возмущения для проверки уязвимости; шаблоны и синтез данных</text>
+<text x="64" y="895" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Оценивать качество меток и источников на контрольной выборке</text>
+<text x="64" y="948" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#fca5a5">p0129–p0133 · исходные формулы в RAG местами повреждены</text>
+<text x="42" y="1060" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#cbd5e1">Read-only анализ · Конкретные числовые PASS, pipeline и rollback: [Needs confirmation]</text>
+</svg>
