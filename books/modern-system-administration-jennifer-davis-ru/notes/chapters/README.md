@@ -6,14 +6,14 @@
 
 ## Git publication progress
 
-- Опубликовано полных наборов артефактов в `main`: **5 / 21 (23.8%)**.
+- Полных наборов артефактов в этой книжной ветке: **6 / 21 (28.6%)**; подтверждённая основа в `main` до слияния: **5 / 21 (23.8%)**.
 - Глава 4 слита из `chapters/0011-modern-system-administration-chapter-04` через [PR #508](https://github.com/vsp-corp/biblioteka-vsp/pull/508), merge commit [`aa87563`](https://github.com/vsp-corp/biblioteka-vsp/commit/aa875633f8b32b96af5a5b5342e9de8b7ca96350).
-- Осталось: **16**.
-- Следующая неопубликованная глава: **6 — Контроль версий**.
+- Осталось в книжной ветке: **15**.
+- Следующая неопубликованная глава: **7 — Тестирование**.
 - Учёт публикации: только отдельные committed Git files; ZIP и подготовленные вне Git тексты не учитываются.
 - Recovery evidence: [chapter 3 checkpoint](../../../../.workflow/checkpoints/0011-modern-system-administration-chapter-03.yaml) — `COMPLETE`; слияние PR #503 и #504, финальные CI PASS.
 - Публикация в `main`: PR [#489](https://github.com/vsp-corp/biblioteka-vsp/pull/489) слит; merge commit [`781200b`](https://github.com/vsp-corp/biblioteka-vsp/commit/781200b791f0ce111a6659b330d537adb49289be).
-- **Текущее состояние `main`: 5 / 21 (23.8%).** Глава 3 через [PR #503](https://github.com/vsp-corp/biblioteka-vsp/pull/503), глава 4 через [PR #508](https://github.com/vsp-corp/biblioteka-vsp/pull/508), глава 5 через [PR #512](https://github.com/vsp-corp/biblioteka-vsp/pull/512), merge commit [`a153eed`](https://github.com/vsp-corp/biblioteka-vsp/commit/a153eed050e88f65c9462052ba7378cd90fcc317).
+- **В рабочей ветке: 6 / 21 (28.6%); исходная основа `main`: 5 / 21 (23.8%).** Глава 3 через [PR #503](https://github.com/vsp-corp/biblioteka-vsp/pull/503), глава 4 через [PR #508](https://github.com/vsp-corp/biblioteka-vsp/pull/508), глава 5 через [PR #512](https://github.com/vsp-corp/biblioteka-vsp/pull/512), merge commit [`a153eed`](https://github.com/vsp-corp/biblioteka-vsp/commit/a153eed050e88f65c9462052ba7378cd90fcc317).
 
 ## Реестр глав
 
@@ -24,7 +24,7 @@
 | 3 | [Хранилище](chapter-03-storage/README.md) | Опубликована в `main`: 6 обязательных + 2 условных Git-файла |
 | 4 | [Сеть](chapter-04-network/README.md) | Опубликована в `main`: 6 обязательных + 2 условных Git-файла; PR #508, CI PASS |
 | 5 | [Набор инструментов сисадмина](chapter-05-sysadmin-toolkit/README.md) | Опубликована в `main`: 6 обязательных + 2 условных Git-файла; PR #512, CI PASS |
-| 6 | Контроль версий | Не опубликована |
+| 6 | [Контроль версий](chapter-06-version-control/README.md) | Опубликована в книжной ветке: 6 обязательных + 2 условных Git-файла; read-back выполнен |
 | 7 | Тестирование | Не опубликована |
 | 8 | Безопасность инфраструктуры | Не опубликована |
 | 9 | Документация | Не опубликована |
@@ -66,3 +66,7 @@
 ## Свидетельство публикации главы 5 (`main`)
 
 Глава 5 «Набор инструментов сисадмина»: RAG PDF **73–82** (печатные с. **77–86**); PDF 83 — начало главы 6. В ветке `chapters/0011-modern-system-administration-chapter-05` созданы и отдельно прочитаны из Git восемь путей `chapter-05-sysadmin-toolkit/`: `README.md`, `cheatsheet.md`, `commands.md`, `diagram.md`, `visual-cheatsheet.svg`, `visual-cheatsheet-detailed.svg`, `summary.md`, `source-findings.md`. Пример Bash из текстового слоя PDF 75–76 содержит [Source extraction issue] и не выдаётся за рабочую команду. Глава 5 **слита в `main` через PR #512**, merge commit `a153eed050e88f65c9462052ba7378cd90fcc317`; PR CI `Validate chapter notes and SVG` PASS ([run 38706997942](https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38706997942)). Все восемь отдельных файлов проверены в `main`. Git-публикация: **5/21 (23,8%)**. Статус чтения не менялся.
+
+## Свидетельство публикации главы 6 (книжная ветка)
+
+Глава 6 «Контроль версий»: RAG PDF **83–88**, печатные **87–92**; на PDF 89 начинается глава 7 «Тестирование». В ветке `chapters/0011-modern-system-administration-chapter-06` по отдельности созданы и прочитаны из Git восемь файлов `chapter-06-version-control/`: `README.md`, `cheatsheet.md`, `commands.md`, `diagram.md`, `visual-cheatsheet.svg`, `visual-cheatsheet-detailed.svg`, `summary.md`, `source-findings.md`. Детали CLI отсутствуют в RAG — они не добавлены из модельной памяти. Зафиксированы проблемы извлечения терминов mono/multi и колонтитулов без переписывания источника. **Прогресс ветки: 6/21 (28,6%)**. Публикация в `main` считается подтверждённой только после слияния PR и Git read-back. Статус чтения не менялся.
