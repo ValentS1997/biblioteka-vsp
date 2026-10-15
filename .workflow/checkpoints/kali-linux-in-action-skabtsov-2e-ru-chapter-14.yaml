@@ -1,0 +1,31 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: kali-linux-in-action-skabtsov-2e-ru-chapter-14
+repository: vsp-corp/biblioteka-vsp
+book_id: kali-linux-in-action-skabtsov-2e-ru
+task_kind: chapter
+objective: "RAG-only chapter 14 Metasploit Framework defensive module analysis and individual artifact publication"
+branch: chapter/kali-linux-in-action-skabtsov-2e-ru-0012-ch14
+initial_base_sha: 9e8e6db5581213a3997b275541ae0be85547f6a3
+last_observed_head_sha: 9e8e6db5581213a3997b275541ae0be85547f6a3
+expected_source_sha256: fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9
+constraints:
+  - no direct main changes
+  - no force push
+  - no source/RAG/reading-status mutation
+  - no ZIP archive for chapter artifacts
+  - no runnable exploit, credential guessing, payload generation or evasion workflow
+stage: PLANNED
+completed_steps:
+  - step: "Verified source RAG ACCEPTED, chapter 14 PDF 308-331 and next chapter 15 starts at 332; 17 chapters total."
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/kali-linux-in-action-skabtsov-2e-ru/rag/chunks/p0301-p0400/p0308-c01.md
+  - step: "Verified immediate predecessor PR #592 OPEN and branch head exactly matches."
+    evidence_type: pr
+    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/592
+pending_steps:
+  - "Commit six mandatory individual files, conditional source findings and updated chapter index, then verify Git read-back."
+  - "Check push CI SUCCESS before creating PR stacked on chapter 13."
+  - "Verify PR CI on exact latest head, reconcile ancestor PRs before any merge."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/9e8e6db5581213a3997b275541ae0be85547f6a3
+first_safe_next_action: "Read current feature branch head and chapter-14 directory before writing."
+blocker: "Integration into main deferred pending ancestor PRs, starting at #549."
