@@ -16,6 +16,7 @@ Book ID: `herding-cats-j-hank-rainwater-ru` · Inventory: `0021`.
 - **Следующая глава** — 8 «Восход лидера», PDF p. 167–192.
 
 ## RAG provenance
+Глава 7: `p0147-c01`–`p0166-c01`, PDF p. 147–166; source findings: `chapter-07-zakat-lidera/source-findings.md`.
 Глава 6: `p0124-c01`…`p0146-c01` в `rag/chunks/p0101-p0200/`; следующая начинается `p0147-c01`. Канонический source SHA-256: `5f11cf93711c9489b25218c701e1027f5ca0354523e2faeb1bb7041ed3b62795`; RAG acceptance `ACCEPTED`. Проблемы кодировки и ограничения примеров — `chapter-06-filosofiya-i-metody-tekhnicheskogo-lidera/source-findings.md`.
 
 Canonical: `process-compliance-router-v1.2`, `session-recovery-v1.0`, `chapter-analysis-request-v1.4`, `chapter-artifact-collection-v1.8`, `chapter-publication-v1.0`. Отдельные Git-файлы, без ZIP. Читательский статус не меняется.
