@@ -10,6 +10,7 @@
 - Глава 4 слита из `chapters/0011-modern-system-administration-chapter-04` через [PR #508](https://github.com/vsp-corp/biblioteka-vsp/pull/508), merge commit [`aa87563`](https://github.com/vsp-corp/biblioteka-vsp/commit/aa875633f8b32b96af5a5b5342e9de8b7ca96350).
 - Осталось неопубликованными в `main`: **6**.
 - Следующая неопубликованная глава: **16 — Управление данными мониторинга**.
+- Глава 16 подготовлена на ветке `chapters/0011-modern-system-administration-chapter-16` на основе canonical RAG PDF 195–202; **в `main` до merge опубликовано 15/21**.
 - Глава 15 опубликована через [PR #560](https://github.com/vsp-corp/biblioteka-vsp/pull/560) на базе уже опубликованной главы 14. Восемь исходных Git blob SHA сохранены и проверены в `main`.
 - Учёт публикации: только отдельные committed Git files; ZIP и подготовленные вне Git тексты не учитываются.
 - Recovery evidence: [chapter 3 checkpoint](../../../../.workflow/checkpoints/0011-modern-system-administration-chapter-03.yaml) — `COMPLETE`; слияние PR #503 и #504, финальные CI PASS.
@@ -35,7 +36,7 @@
 | 13 | [Обеспечение безопасности инфраструктуры](chapter-13-securing-infrastructure/README.md) | Опубликована в `main`: 6 обязательных + 2 условных Git-файла; PR #543, CI PASS |
 | 14 | [Теоретические аспекты мониторинга](chapter-14-monitoring-theory/README.md) | Опубликована в `main`: 6 обязательных + 2 условных Git-файла; PR #556, CI PASS, 8 отдельных read-back |
 | 15 | [Мониторинг вычислительной инфраструктуры и программного обеспечения на практике](chapter-15-monitoring-computing-and-software/README.md) | Опубликована в `main`: 6 обязательных + 2 условных Git-файла; PR #560, CI PASS, 8 read-back |
-| 16 | Управление данными мониторинга | Не опубликована |
+| 16 | [Управление данными мониторинга](chapter-16-monitoring-data-management/README.md) | Подготовлена в отдельной ветке: 6 обязательных + 2 условных Git-файла; публикация после CI/PR PASS |
 | 17 | Мониторинг вашей работы | Не опубликована |
 | 18 | Управление мощностями | Не опубликована |
 | 19 | Создание надежной дежурной службы | Не опубликована |
@@ -107,3 +108,7 @@ RAG PDF **173–181** (печатные **181–189**), PDF 182 начинает
 ## Глава 15 — публикация в `main`
 
 Canonical RAG PDF **182–194** (печатные **190–202**); PDF 195 начинает главу 16. Из первичной ветки главы 15 переиспользованы точные Git blob SHA восьми проверенных отдельных артефактов: `README.md`, `cheatsheet.md`, `commands.md`, `diagram.md`, `visual-cheatsheet.svg`, `visual-cheatsheet-detailed.svg`, `summary.md`, `source-findings.md` в `chapter-15-monitoring-computing-and-software/`. Содержимое не переписано. Новая ветка создана от канонического `main` с главой 14 (merge PR #557). **Глава 15 слита в `main` через PR #560**, merge commit `cc28197e84d8db6aa67058bc4ecc26d2784942d0`; branch CI PASS [run 38763287370](https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38763287370), independent PR CI PASS [run 38763439929](https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38763439929). Восемь файлов самостоятельно прочитаны из `main` и совпали по blob SHA. **Текущий прогресс 15/21 (71.4%), осталось 6, следующая глава 16**. Нет изменений PDF, RAG или статуса чтения.
+
+## Глава 16 — подготовлена в отдельной ветке (публикация ожидает CI)
+
+Canonical RAG PDF **195–202**, печатные **203–210**, PDF 203 начинает главу 17. В независимой главной ветке главы 16 созданы отдельные файлы: `README.md`, `cheatsheet.md`, `commands.md`, `diagram.md`, `visual-cheatsheet.svg`, `visual-cheatsheet-detailed.svg`, `summary.md`, `source-findings.md` в каталоге `chapter-16-monitoring-data-management/`. Ошибки извлечения системного логгера и числового примера документированы без исправления по памяти. **Main остаётся 15/21** до публикационного PR; чтение, PDF и RAG не изменены.

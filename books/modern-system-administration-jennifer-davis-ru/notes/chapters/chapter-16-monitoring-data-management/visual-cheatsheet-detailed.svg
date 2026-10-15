@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1500" viewBox="0 0 1600 1500" role="img" aria-labelledby="title desc">
+<title id="title">Глава 16 — Подробная карта управления данными мониторинга</title>
+<desc id="desc">Развёрнутая карта семантики gauge и counter, журналов, трассировки, компромиссов надёжности, ротации и postmortem feedback по RAG PDF 195–202.</desc>
+<rect width="1600" height="1500" fill="#0d1d30"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="56" y="74" font-size="40" font-weight="bold" fill="#f2f8ff">Глава 16 · Данные мониторинга</text>
+<text x="56" y="114" font-size="22" fill="#bad6e9">Неизменяемая история · разумная стоимость · объяснимость событий</text>
+<rect x="56" y="153" width="1488" height="149" rx="16" fill="#1e5062"/>
+<text x="86" y="199" font-size="28" font-weight="bold" fill="#f1ffff">1 · Задай рамки (PDF 195–196, 199)</text>
+<text x="86" y="240" font-size="21" fill="#e0f5f8">Что расследовать? Пиковый дневной объём, срок хранения, real-time?</text>
+<text x="86" y="273" font-size="21" fill="#e0f5f8">Неизменяемость записей · доступность в нужный момент</text>
+<text x="56" y="355" font-size="28" font-weight="bold" fill="#f2f9ff">2 · Три типа данных: разная глубина и цена</text>
+<rect x="56" y="381" width="469" height="193" rx="14" fill="#2b415e"/>
+<text x="82" y="428" font-size="28" font-weight="bold" fill="#f3f9ff">Метрики · PDF 196</text>
+<text x="82" y="468" font-size="21" fill="#e2edfb">Gauge: значение сейчас</text>
+<text x="82" y="502" font-size="21" fill="#e2edfb">Counter: сумма со сбросом</text>
+<text x="82" y="539" font-size="19" fill="#c4d8ed">Компактность ↔ контекст</text>
+<rect x="565" y="381" width="469" height="193" rx="14" fill="#24525e"/>
+<text x="593" y="428" font-size="28" font-weight="bold" fill="#f4ffff">Журналы · PDF 197–198</text>
+<text x="593" y="468" font-size="21" fill="#def3f7">Добавляемые записи событий</text>
+<text x="593" y="502" font-size="21" fill="#def3f7">Единые поля · UTC · точность</text>
+<text x="593" y="539" font-size="19" fill="#c7e8ec">Структура облегчает поиск</text>
+<rect x="1074" y="381" width="470" height="193" rx="14" fill="#3c455c"/>
+<text x="1101" y="428" font-size="28" font-weight="bold" fill="#f2f9ff">Трассы · PDF 198–199</text>
+<text x="1101" y="468" font-size="21" fill="#e4edfa">strace · tcpdump</text>
+<text x="1101" y="502" font-size="21" fill="#e4edfa">OpenTelemetry: span → trace</text>
+<text x="1101" y="539" font-size="19" fill="#c7d9ec">Максимум контекста / событие</text>
+<rect x="56" y="617" width="1488" height="204" rx="14" fill="#2d4258"/>
+<text x="85" y="663" font-size="29" font-weight="bold" fill="#f4faff">3 · Компромиссы данных (PDF 196, 199)</text>
+<text x="85" y="707" font-size="22" fill="#d9eafa">Ранняя агрегация → потеря диагностической точности</text>
+<text x="85" y="744" font-size="22" fill="#d9eafa">Поздняя агрегация → большой поток через сеть</text>
+<text x="85" y="781" font-size="22" fill="#d9eafa">Надёжная доставка RELP → возможны затраты и дубли</text>
+<text x="56" y="877" font-size="28" font-weight="bold" fill="#f3f9ff">4 · Хранение и извлечение (PDF 200)</text>
+<rect x="56" y="906" width="722" height="169" rx="14" fill="#235266"/>
+<text x="86" y="954" font-size="27" font-weight="bold" fill="#f1ffff">Retention и ротация</text>
+<text x="86" y="995" font-size="21" fill="#ddf4f9">Возраст · лимит размера · свободный диск</text>
+<text x="86" y="1033" font-size="20" fill="#c5e4ec">Риск заполнения и записи в старый лог</text>
+<rect x="818" y="906" width="726" height="169" rx="14" fill="#2c475c"/>
+<text x="848" y="954" font-size="27" font-weight="bold" fill="#f2faff">Поиск и расследование</text>
+<text x="848" y="995" font-size="21" fill="#dceaf9">grep для текста; поиск по индексным полям</text>
+<text x="848" y="1033" font-size="20" fill="#c8dcef">Запрос событий до ошибки или рестарта</text>
+<text x="56" y="1132" font-size="28" font-weight="bold" fill="#f2f9ff">5 · Управление ростом и доступом (PDF 201–202)</text>
+<rect x="56" y="1161" width="1488" height="206" rx="15" fill="#28564d" stroke="#87dfb8" stroke-width="2"/>
+<text x="87" y="1212" font-size="26" font-weight="bold" fill="#effff7">Post-incident review — обратная связь конвейеру телеметрии</text>
+<text x="87" y="1256" font-size="22" fill="#e0fff1">Какие данные помогли? Чего не хватило? Что больше не ценно?</text>
+<text x="87" y="1301" font-size="22" fill="#e0fff1">Пересмотри стоимость, sampling, права и правила хранения</text>
+<text x="87" y="1336" font-size="20" fill="#c7f0dd">Конфиденциальная информация не должна быть общедоступна</text>
+<text x="56" y="1452" font-size="17" fill="#afc8da">Источник: canonical RAG PDF 195–202. Реальные команды, пороги и rollback — [Needs confirmation].</text>
+</g></svg>
