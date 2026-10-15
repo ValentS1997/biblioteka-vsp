@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-label="Глава 5 Zabbix 7: шаблоны, SNMP, макросы, LLD и вложенность">
+<rect width="1440" height="900" fill="#f3f7fc"/>
+<text x="48" y="67" fill="#10243f" font-family="DejaVu Sans, sans-serif" font-size="39" font-weight="700">ZABBIX 7  /  ГЛАВА 05</text>
+<text x="48" y="108" fill="#506480" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="400">Один шаблон → много хостов → воспроизводимый мониторинг</text>
+<rect x="42" y="140" width="1355" height="328" rx="16" fill="#fff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="76" y="182" fill="#155e75" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700">1  ОСНОВА ШАБЛОНА</text>
+<rect x="75" y="215" width="395" height="210" rx="16" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1.5"/>
+<text x="96" y="253" fill="#075985" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700">Custom Linux by SNMP</text>
+<text x="96" y="287" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Template group + имя</text>
+<text x="96" y="318" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Tags: class:os, target:linux</text>
+<text x="96" y="349" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Item: sysName / числовой OID</text>
+<text x="96" y="380" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Trigger: change + scope</text>
+<rect x="521" y="215" width="395" height="210" rx="16" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.5"/>
+<text x="542" y="253" fill="#3730a3" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700">Макросы</text>
+<text x="542" y="287" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">User macro: {$...}</text>
+<text x="542" y="318" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Template prefix: lar-</text>
+<text x="542" y="349" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Host override: dev-</text>
+<text x="542" y="380" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Built-in: {HOST.HOST}</text>
+<rect x="966" y="215" width="397" height="210" rx="16" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+<text x="986" y="253" fill="#166534" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700">Связанные хосты</text>
+<text x="986" y="287" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Host получает template items</text>
+<text x="986" y="318" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">У каждого свои значения</text>
+<text x="986" y="349" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Latest data → проверить sysName</text>
+<text x="986" y="380" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Problems → проверить tags</text>
+<rect x="42" y="491" width="663" height="298" rx="16" fill="#fff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="74" y="535" fill="#155e75" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700">2  LLD ПО SNMP</text>
+<text x="74" y="575" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Discovery rule → JSON / SNMPINDEX</text>
+<text x="74" y="610" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">{#IFNAME}: lo, ens192</text>
+<text x="74" y="645" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Item prototypes → статусы интерфейсов</text>
+<text x="74" y="680" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Trigger prototypes → события по интерфейсу</text>
+<text x="74" y="715" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Delete lost resources: Immediately = риск</text>
+<text x="74" y="750" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">При исчезновении удаляется и история</text>
+<rect x="725" y="491" width="672" height="298" rx="16" fill="#fff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="758" y="535" fill="#155e75" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700">3  ВЛОЖЕННОСТЬ И КОНТРОЛЬ</text>
+<text x="758" y="575" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Родитель: Custom Linux by SNMP</text>
+<text x="758" y="610" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Вложенный: Custom Linux uptime by SNMP</text>
+<text x="758" y="645" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Host получает System Uptime item</text>
+<text x="758" y="680" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Проверить SNMP, OID и Latest data</text>
+<text x="758" y="715" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Часть OID из p222 несовместима с p223</text>
+<text x="758" y="750" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Полный rollback: Needs confirmation</text>
+<text x="45" y="845" fill="#475569" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400">RAG PDF 197–228 · SHA-256 07204d88…e63875a27 · source-findings.md: OID, статусы, LLD retention</text>
+</svg>
