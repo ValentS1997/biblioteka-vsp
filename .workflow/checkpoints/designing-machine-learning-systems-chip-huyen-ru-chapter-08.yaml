@@ -1,0 +1,38 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: designing-machine-learning-systems-chip-huyen-ru-chapter-08
+repository: vsp-corp/biblioteka-vsp
+book_id: designing-machine-learning-systems-chip-huyen-ru
+task_kind: chapter
+objective: "Canonical RAG-only chapter 08 'Сдвиги в распределении данных и мониторинг': publish individual chapter artifacts and open stacked PR only after complete CI PASS."
+branch: chapter/0031-designing-ml-systems-ch08-20261015
+parent_branch: chapter/0031-designing-ml-systems-ch07-20261015
+initial_base_sha: 769ad093ef6b50ace51360f6fec4899b176c6849
+last_observed_head_sha: 769ad093ef6b50ace51360f6fec4899b176c6849
+expected_source_sha256: 0bcacadb4e1dc2235cb58f975111e1633527217127c5871edb894fe2b8f4c80c
+constraints:
+  - "no direct main changes"
+  - "no force-push or automatic merges"
+  - "no source/RAG rewrite or non-RAG chapter claims"
+  - "no reading-progress mutation without explicit request"
+  - "no archives or duplicate PR"
+stage: PLANNED
+completed_steps:
+  - step: "Read-only verified 7 ACCEPTED process contracts, canonical source SHA and book RAG acceptance ACCEPTED, 11 chapters and 7/11 on predecessor branch; main 0/11."
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/designing-machine-learning-systems-chip-huyen-ru/rag/acceptance.yaml"
+  - step: "Verified chapter 08 canonical PDF pp233-268 from TOC p0010-c01, opening p0233-c01 and next chapter p0269-c01; previous PR #522 and dependencies #516 #511 #507 #502 #499 #493 open."
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/522"
+  - step: "Created new chapter 08 branch based on exact previous chapter 07 head 769ad093ef6b50ace51360f6fec4899b176c6849."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/769ad093ef6b50ace51360f6fec4899b176c6849"
+pending_steps:
+  - "Read all canonical chapter 08 RAG chunks and identify native Итоги, questions and extraction anomalies."
+  - "Publish six mandatory and conditional chapter files as separate Git paths; update chapter index 8/11."
+  - "Read back every Git path; verify source provenance, RAG-only content, unchanged plan and reading; push CI PASS."
+  - "Open precisely one stacked PR against chapter 07 after CI PASS; verify diff, PR CI and final HEAD."
+  - "Update checkpoint with PR and CI links; do not merge."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/pull/522"
+first_safe_next_action: "Read-only inspect chapter 08 branch HEAD, checkpoint, artifacts, existing PRs and CI before resuming any write."
+blocker: "Not applicable"
+last_observed_at: "Not applicable"
