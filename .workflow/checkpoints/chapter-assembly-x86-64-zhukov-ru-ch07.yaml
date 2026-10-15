@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "Chapter 7 RAG-only analysis and direct publication of chapter files with Git read-back, CI and PR"
 branch: chapter/assembly-x86-64-zhukov-ru-ch07
 initial_base_sha: 305b1b89c778603b1d58632c64fdfff5114ad202
-last_observed_head_sha: 7a6badc8b63f336b9d0021bb1c554bf58c5d6a06
+last_observed_head_sha: 0edb5b80543d4c3ed794c937db03148b5e7b1eaa
 expected_source_sha256: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
 constraints:
   - no direct main changes
@@ -14,7 +14,7 @@ constraints:
   - no source or RAG rewrite
   - no reading-status mutation
   - no archive substitution
-stage: IN_PROGRESS
+stage: CI_PENDING
 completed_steps:
   - step: "Read current canonical contracts, verified RAG manifest READY_WITH_KNOWN_LIMITATIONS and acceptance ACCEPTED"
     evidence_type: file-readback
@@ -25,9 +25,13 @@ completed_steps:
   - step: "Six mandatory individual artifacts committed and Git-readback verified"
     evidence_type: file-readback
     reference: "https://github.com/vsp-corp/biblioteka-vsp/tree/7a6badc8b63f336b9d0021bb1c554bf58c5d6a06/books/assembly-x86-64-zhukov-ru/notes/chapters/chapter-07-primery-programm"
+  - step: "Nine individual chapter files, book index 7/21, Git read-backs verified"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/tree/0edb5b80543d4c3ed794c937db03148b5e7b1eaa/books/assembly-x86-64-zhukov-ru/notes/chapters/chapter-07-primery-programm"
+  - step: "No concurrent modifications to current book or canonical contracts after main advanced"
+    evidence_type: git-compare
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/compare/305b1b89c778603b1d58632c64fdfff5114ad202...main"
 pending_steps:
-  - "Commit conditional questions, answers, source findings, explicitly no invented chapter-end summary"
-  - "Update index to 7/21 on book branch"
   - "Compare main drift, verify CI and open PR only after PASS"
   - "PR CI PASS, close transient checkpoint, final HEAD CI PASS and merge"
   - "Read back main nine chapter files/index and postmerge CI"
