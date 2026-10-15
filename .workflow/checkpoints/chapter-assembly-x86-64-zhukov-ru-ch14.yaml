@@ -6,14 +6,14 @@ task_kind: chapter
 objective: "RAG-only chapter 14 data and stack analysis with gated Git publication"
 branch: chapter/assembly-x86-64-zhukov-ru-ch14
 initial_base_sha: f5cc18874ca32bd6dc233aab27c829f33c7b49c0
-last_observed_head_sha: f5cc18874ca32bd6dc233aab27c829f33c7b49c0
+last_observed_head_sha: bab0d6d48d8fc664b106eb6307a3b4c1c2b60d65
 expected_source_sha256: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
 constraints:
   - no direct main changes
   - no source or RAG rewrite
   - no reading-status mutation
   - no force-push or ZIP substitution
-stage: IN_PROGRESS
+stage: CI_PENDING
 completed_steps:
   - step: "Chapter 13 PR 593 merged into main; canonical RAG acceptance and contracts confirmed"
     evidence_type: github-pr
@@ -22,9 +22,6 @@ completed_steps:
     evidence_type: file-readback
     reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/f5cc18874ca32bd6dc233aab27c829f33c7b49c0/books/assembly-x86-64-zhukov-ru/notes/chapters/plan.yaml"
 pending_steps:
-  - "Six mandatory files, separate Git readbacks"
-  - "Review questions and answers and source findings"
-  - "Update index to 14/21"
   - "Branch CI PASS, create PR only after PASS"
   - "PR CI PASS, remove checkpoint, final-head CI PASS, merge"
   - "Postmerge Git readback and CI PASS"
