@@ -1,0 +1,38 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: kali-linux-in-action-skabtsov-2e-ru-chapter-13
+repository: vsp-corp/biblioteka-vsp
+book_id: kali-linux-in-action-skabtsov-2e-ru
+task_kind: chapter
+objective: "RAG-only chapter 13 evidence-integrity analysis and Git publication in stacked PR #592"
+branch: chapter/kali-linux-in-action-skabtsov-2e-ru-0012-ch13
+initial_base_sha: 7532be073241e2b6743bca470acdaf3a58506d97
+last_observed_head_sha: e38c1ba126941edff496a6ba44be9cd8549b652a
+expected_source_sha256: fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9
+constraints:
+  - no direct main changes
+  - no force push
+  - no source/RAG mutation
+  - no reading progress mutation
+  - no ZIP chapter handoff
+  - no executable log deletion, tampering or file hiding workflows
+stage: COMPLETE
+completed_steps:
+  - step: "Verified accepted RAG, chapter 13 PDF pages 302-307, chapter 14 starts 308, total 17 chapters."
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/kali-linux-in-action-skabtsov-2e-ru/rag/chunks/p0301-p0400/p0302-c01.md
+  - step: "Committed and individually read back six mandatory chapter 13 artifacts, source-findings with 13 findings and updated index; eight paths PASS."
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/be3fbecbbb1e1a04f13e2975fd9834915253ce37
+  - step: "Push CI for chapter artifact commit completed SUCCESS."
+    evidence_type: ci
+    reference: https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38789086792
+  - step: "Opened PR #592 against chapter 12 branch after push CI PASS, diff contains only chapter 13, index and checkpoint."
+    evidence_type: pr
+    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/592
+pending_steps:
+  - "Verify PR #592 CI SUCCESS against exact final branch head, mergeability and expected changed paths."
+  - "Reconcile and integrate ancestor PR chain #549 #551 #553 #558 #567 #572 #577 #584 #588 #590 before main integration."
+  - "Remove transient checkpoints before terminal merge if required and confirm main chapter count."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/pull/592
+first_safe_next_action: "Re-read PR #592, branch head, checkpoint and latest PR CI; do not recreate eight committed files."
+blocker: "Main integration deferred pending ancestors; PR #549 previously mergeable false."
