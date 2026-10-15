@@ -7,8 +7,9 @@
 ## Git publication progress
 
 - Опубликовано полных наборов артефактов в `main`: **3 / 21 (14.3%)**.
-- Осталось: **18**.
-- Следующая глава: **4 — Сеть**.
+- Готово в книжной ветке `chapters/0011-modern-system-administration-chapter-04`: **4 / 21 (19.0%)**; глава 4 ещё не слита в `main`.
+- Осталось: **17** в книжной ветке; **18** в `main` до слияния.
+- Следующая неопубликованная в книжной ветке глава: **5 — Набор инструментов сисадмина**; в `main` следующая глава 4.
 - Учёт публикации: только отдельные committed Git files; ZIP и подготовленные вне Git тексты не учитываются.
 - Recovery evidence: [chapter 3 checkpoint](../../../../.workflow/checkpoints/0011-modern-system-administration-chapter-03.yaml) — `COMPLETE`; слияние PR #503 и #504, финальные CI PASS.
 - Публикация в `main`: PR [#489](https://github.com/vsp-corp/biblioteka-vsp/pull/489) слит; merge commit [`781200b`](https://github.com/vsp-corp/biblioteka-vsp/commit/781200b791f0ce111a6659b330d537adb49289be).
@@ -21,7 +22,7 @@
 | 1 | [Закономерности и взаимосвязи](chapter-01-patterns-and-interconnections/README.md) | Опубликована в `main`: 6 обязательных + 2 условных Git-файла |
 | 2 | [Вычислительные среды](chapter-02-computing-environments/README.md) | Опубликована в `main`: 6 обязательных + 2 условных Git-файла |
 | 3 | [Хранилище](chapter-03-storage/README.md) | Опубликована в `main`: 6 обязательных + 2 условных Git-файла |
-| 4 | Сеть | Не опубликована |
+| 4 | [Сеть](chapter-04-network/README.md) | Подготовлена в книжной ветке: 6 обязательных + 2 условных Git-файла; ожидает PR/CI и merge |
 | 5 | Набор инструментов сисадмина | Не опубликована |
 | 6 | Контроль версий | Не опубликована |
 | 7 | Тестирование | Не опубликована |
@@ -57,3 +58,7 @@
 ## Свидетельство публикации главы 3 (`main`)
 
 В ветке `chapters/0011-modern-system-administration-chapter-03` восемь отдельных Git-файлов `chapter-03-storage/` прочитаны обратно после коммитов: `README.md`, `cheatsheet.md`, `commands.md`, `diagram.md`, `visual-cheatsheet.svg`, `visual-cheatsheet-detailed.svg`, `summary.md`, `source-findings.md`. Границы подтверждены RAG PDF **48–62** (печатные 51–65), PDF 63 начинает главу 4. Историческая таблица Amazon EBS и проблемы извлечения обозначены отдельно. **Глава 3 слита в `main` через PR #503; всего опубликовано 3/21.** Статус чтения не менялся.
+
+## Свидетельство подготовки главы 4 (только книжная ветка)
+
+Глава 4 «Сеть»: RAG PDF **63–71**, печатные с. **66–74**; PDF 72 — титул части II, PDF 73 — начало главы 5. В ветке `chapters/0011-modern-system-administration-chapter-04` независимо записаны и прочитаны из Git: `README.md`, `cheatsheet.md`, `commands.md`, `diagram.md`, `visual-cheatsheet.svg`, `visual-cheatsheet-detailed.svg`, `summary.md`, `source-findings.md`. Источник и RAG не изменялись. Условные обзорные вопросы отсутствуют. До слияния PR в `main` публикация главы 4 **не подтверждена**. Статус чтения не менялся.

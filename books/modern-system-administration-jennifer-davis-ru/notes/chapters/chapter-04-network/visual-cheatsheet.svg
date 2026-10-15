@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1250" height="720" viewBox="0 0 1250 720" role="img" aria-labelledby="title desc">
+<title id="title">Глава 4. Сеть — компактная визуальная шпаргалка</title>
+<desc id="desc">Ключевые метрики сети, путь запроса, балансировка, SDN, CDN и принцип проверки изменения.</desc>
+<rect width="1250" height="720" fill="#ffffff"/>
+<rect x="0" y="0" width="1250" height="116" fill="#173a52"/>
+<text x="38" y="48" font-family="Arial,DejaVu Sans,sans-serif" font-size="34" font-weight="700" fill="#ffffff">ГЛАВА 4 / СЕТЬ</text>
+<text x="38" y="84" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#cfeaf0">Путь трафика, требования к отклику и управление политиками</text>
+<rect x="38" y="139" width="1172" height="115" rx="14" fill="#e9f5fa" stroke="#b4d3e1"/>
+<text x="60" y="177" font-family="Arial,DejaVu Sans,sans-serif" font-size="23" font-weight="700" fill="#173a52">ПУТЬ ЗАПРОСА</text>
+<text x="60" y="212" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#173a52">Клиент → CDN / PoP → балансировщик → ВМ → приложение → ответ</text>
+<rect x="38" y="278" width="561" height="153" rx="14" fill="#f8fafb" stroke="#d4e1e7"/>
+<rect x="38" y="278" width="7" height="153" rx="3" fill="#187e89"/>
+<text x="60" y="314" font-family="Arial,DejaVu Sans,sans-serif" font-size="22" font-weight="700" fill="#173a52">1 / ЧТО ИЗМЕРЯТЬ</text>
+<text x="60" y="348" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#173a52">Пропускная способность • задержка</text>
+<text x="60" y="379" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#173a52">Джиттер • доступность • путь трафика</text>
+<rect x="622" y="278" width="588" height="153" rx="14" fill="#f8fafb" stroke="#d4e1e7"/>
+<rect x="622" y="278" width="7" height="153" rx="3" fill="#2a639f"/>
+<text x="644" y="314" font-family="Arial,DejaVu Sans,sans-serif" font-size="22" font-weight="700" fill="#173a52">2 / ГДЕ РЕШАТЬ ЗАДАЧУ</text>
+<text x="644" y="348" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#173a52">L4 / L7: распределение запросов</text>
+<text x="644" y="379" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#173a52">SDN: политика • CDN: кеш рядом с клиентом</text>
+<rect x="38" y="455" width="1172" height="138" rx="14" fill="#f0f8f2" stroke="#b5d6bd"/>
+<text x="60" y="494" font-family="Arial,DejaVu Sans,sans-serif" font-size="23" font-weight="700" fill="#245a39">3 / КОНТРОЛЬ ИЗМЕНЕНИЙ</text>
+<text x="60" y="531" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#173a52">Базовые измерения → точечное действие → повторные измерения</text>
+<text x="60" y="562" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#173a52">Полная очистка CDN-кеша может вызвать каскад запросов.</text>
+<text x="38" y="638" font-family="Arial,DejaVu Sans,sans-serif" font-size="17" fill="#4d6474">RAG-only: PDF 63–71 (печатные 66–74) • chunks p0063-c01 … p0071-c01</text>
+<text x="38" y="669" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" fill="#4d6474">CLI, фактические пороги, точные политики и rollback — [Needs confirmation].</text>
+</svg>
