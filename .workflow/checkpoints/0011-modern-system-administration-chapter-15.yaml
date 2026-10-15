@@ -1,0 +1,41 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: "0011-modern-system-administration-chapter-15"
+repository: "vsp-corp/biblioteka-vsp"
+book_id: modern-system-administration-jennifer-davis-ru
+task_kind: chapter
+objective: "RAG-only chapter 15 monitoring practice, CI-gated release after chapter 14 publication"
+branch: "chapters/0011-modern-system-administration-chapter-15-post14"
+initial_base_sha: "d012dbd7e75bdc46851c3e3a038fd43284d296c1"
+last_observed_head_sha: "d012dbd7e75bdc46851c3e3a038fd43284d296c1"
+expected_source_sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite
+  - no reading-progress mutation
+  - no ZIP
+  - PR only after exact HEAD branch CI PASS
+  - merge only after independent PR CI PASS
+stage: CI_PENDING
+completed_steps:
+  - step: "Verified chapter 14 completed and published in main 14/21 through PR #556 and follow-up PR #557"
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/557"
+  - step: "Verified chapter 15 RAG PDF 182–194 (printed 190–202); chapter 16 begins PDF 195"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/modern-system-administration-jennifer-davis-ru/rag/chunks/p0101-p0200/p0195-c01.md"
+  - step: "Eight original independent chapter Git artifacts verified and retained by exact blob SHA"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/dc21444c56e72bd34d18b857f0f5140150d232f6"
+  - step: "Prepared new publication branch from main after chapter 14 finalization and reconciled index, without rewriting chapter content"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/d012dbd7e75bdc46851c3e3a038fd43284d296c1"
+pending_steps:
+  - "Verify 8 Git read-backs and exact HEAD chapter CI PASS"
+  - "Open PR after branch CI PASS"
+  - "Verify independent PR CI PASS and merge with expected head SHA"
+  - "Read back 8 files from main and finalize 15/21 plus COMPLETE checkpoint via separate PR"
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/commit/d012dbd7e75bdc46851c3e3a038fd43284d296c1"
+first_safe_next_action: "Check exact branch head, changed-file set and branch CI PASS"
+blocker: "Exact branch CI not yet verified"
+last_observed_at: "[Needs confirmation]"
