@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only chapter 12: database tuning, separate Git artifacts, indexed publication after CI PASS."
 branch: "chapter/zabbix-7-0020-ch12-database-tuning-20261015"
 initial_base_sha: "17025c3d2b3b909c7b8fbaf58e90cefb53341756"
-last_observed_head_sha: "17025c3d2b3b909c7b8fbaf58e90cefb53341756"
+last_observed_head_sha: "f71bb7fbfdb06ba5dd32fae9f9a5285e6dd2d634"
 expected_source_sha256: "07204d885d4bf4c6c2de7c71ae42a4e3ed4cea794169cbe07985552e63875a27"
 constraints:
   - no direct main writes
@@ -15,7 +15,7 @@ constraints:
   - no reading status change
   - no ZIP/archive delivery
   - rag_only: never fill RAG gaps with PDF direct/web/model knowledge
-stage: IN_PROGRESS
+stage: CI_PENDING
 completed_steps:
   - step: "Checked main chapter index 11/13; chapter 12 unpublised, chapter 13 starts at PDF page 490."
     evidence_type: file-readback
@@ -23,13 +23,17 @@ completed_steps:
   - step: "Checked accepted RAG/source SHA, reading unchanged and canonical templates."
     evidence_type: other
     reference: "17025c3d2b3b909c7b8fbaf58e90cefb53341756"
+  - step: "Read all 25 chapter RAG pages and p0490 boundary; committed seven independent files with source findings; directory readback PASS."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/7d30475b21ccbe9c8bfed3c54733ef2d3e3fcdad"
+  - step: "Updated book index 12/13 (92.3%)."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/f71bb7fbfdb06ba5dd32fae9f9a5285e6dd2d634"
 pending_steps:
-  - "Read RAG page chunks p0465-p0489, verify p0490 boundary and findings"
-  - "Commit individual six mandatory chapter files and conditional findings"
-  - "Update index to 12/13 and verify Git readback"
+  - "Run full branch and PR CI and check exact SHA"
   - "Require branch and PR CI PASS; retire checkpoint before merge"
   - "Merge only after final exact-head CI PASS and verify main/postmerge CI"
-last_verified_evidence: "17025c3d2b3b909c7b8fbaf58e90cefb53341756"
-first_safe_next_action: "Inspect exact branch head and chapter-12 files before any repeat write."
+last_verified_evidence: "f71bb7fbfdb06ba5dd32fae9f9a5285e6dd2d634"
+first_safe_next_action: "Check exact branch head, latest CI, PR state and unchanged reading/source before any further mutation."
 blocker: "Not applicable"
 last_observed_at: "Not applicable"
