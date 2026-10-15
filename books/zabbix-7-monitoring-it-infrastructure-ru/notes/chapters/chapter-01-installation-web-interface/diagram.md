@@ -9,7 +9,7 @@ flowchart LR
   UI["Пользователь → браузер"] --> WEB["NGINX + PHP frontend"]
   WEB --> DB[("MariaDB / MySQL")]
   SV["Zabbix server"] --> DB
-  SV -. "проверка состояния и функции интерфейса" .-> WEB
+  WEB -. "проверка состояния и функции интерфейса" .-> SV
   WEB --> CONFIG["Настройка хостов, шаблонов, панелей"]
 ```
 
