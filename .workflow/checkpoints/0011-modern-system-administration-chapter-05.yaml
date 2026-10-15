@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only analysis and individual Git publication of chapter 5, Nabor instrumentov sisadmina"
 branch: "chapters/0011-modern-system-administration-chapter-05"
 initial_base_sha: "75dd7771186a3a8e498de38889cf0bd4380b6b94"
-last_observed_head_sha: "0dabae4239ba5189bfde8144e3ba9c409a573fa5"
+last_observed_head_sha: "c6b961f67b60f988d92d6ab35f87c4aacd6df668"
 expected_source_sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
 constraints:
   - "no direct main changes"
@@ -25,10 +25,13 @@ completed_steps:
   - step: "Four text artifacts committed as individual paths and independently read back"
     evidence_type: commit
     reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/0dabae4239ba5189bfde8144e3ba9c409a573fa5"
+  - step: "All eight chapter artifact files committed individually and read back by exact branch"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/c6b961f67b60f988d92d6ab35f87c4aacd6df668"
 pending_steps:
-  - "Commit and read back two SVG files separately"
-  - "Commit chapter-end summary.md and source-findings.md as source-grounded conditional files"
-  - "Read back all eight paths from GitHub and verify provenance"
+
+
+
   - "Update book chapter index; inspect CI"
   - "Open PR for review when complete and checks pass"
 last_verified_evidence: "75dd7771186a3a8e498de38889cf0bd4380b6b94"
