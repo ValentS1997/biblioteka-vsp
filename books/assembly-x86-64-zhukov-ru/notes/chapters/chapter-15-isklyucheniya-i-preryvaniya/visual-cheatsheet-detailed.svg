@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1060" viewBox="0 0 1200 1060" role="img" aria-label="Подробная визуальная шпаргалка главы 15: IDT, коды ошибок, прерывания PIC, IF и IOPL">
+<rect width="1200" height="1060" fill="#f8fafc"/><g font-family="DejaVu Sans,sans-serif" fill="#17364f">
+<text x="35" y="57" font-size="30" font-weight="bold">Глава 15 · Protected-mode interrupts</text>
+<text x="35" y="89" font-size="17">RAG PDF 253–268 · листинги 15.1–15.7</text>
+<rect x="35" y="115" width="540" height="214" rx="14" fill="#dbeafe"/>
+<rect x="625" y="115" width="540" height="214" rx="14" fill="#dcfce7"/>
+<text x="55" y="157" font-size="23">01 · IDT / IDTR</text>
+<text x="55" y="204" font-size="18">8-байтные вентили; selector:offset</text>
+<text x="55" y="249" font-size="18">max_int=39 → 40 × 8 = 320</text>
+<text x="55" y="292" font-size="18">IDTR.limit = 0x13F</text>
+<text x="645" y="157" font-size="23">02 · Тип Gate и IF</text>
+<text x="645" y="204" font-size="18">Trap 8Fh → IF сохраняется</text>
+<text x="645" y="249" font-size="18">Interrupt 8Eh → IF=0</text>
+<text x="645" y="292" font-size="18">Тип не меняет fault IP</text>
+<rect x="35" y="359" width="540" height="214" rx="14" fill="#e0e7ff"/>
+<rect x="625" y="359" width="540" height="214" rx="14" fill="#e4f6ef"/>
+<text x="55" y="401" font-size="23">03 · Fault и код ошибки</text>
+<text x="55" y="448" font-size="18">Вектор 40 → offset 0x140</text>
+<text x="55" y="493" font-size="18">#GP 13 → DWORD 0x142</text>
+<text x="55" y="536" font-size="18">Error + EIP + CS + EFLAGS</text>
+<text x="645" y="401" font-size="23">04 · Внешние IRQ</text>
+<text x="645" y="448" font-size="18">IRQ0 вектор 8 конфликтует с #DF</text>
+<text x="645" y="493" font-size="18">Переназначение → 32..39</text>
+<text x="645" y="536" font-size="18">IRQ: EOI; клавиатура: ещё ACK</text>
+<rect x="35" y="603" width="540" height="214" rx="14" fill="#ede9fe"/>
+<rect x="625" y="603" width="540" height="214" rx="14" fill="#fae8ff"/>
+<text x="55" y="645" font-size="23">05 · Семь листингов</text>
+<text x="55" y="692" font-size="18">15.1–15.2: IDT, exceptions</text>
+<text x="55" y="737" font-size="18">15.3–15.5: таймер и PIC</text>
+<text x="55" y="780" font-size="18">15.6–15.7: EFLAGS / IOPL</text>
+<text x="645" y="645" font-size="23">06 · Флаги и привилегии</text>
+<text x="645" y="692" font-size="18">IF — бит 9 = 0x200</text>
+<text x="645" y="737" font-size="18">IOPL — биты 12 и 13</text>
+<text x="645" y="780" font-size="18">CPL=0: эффект IOPL не заметен</text>
+<rect x="35" y="848" width="1130" height="133" rx="14" fill="#ffedd5"/>
+<text x="55" y="891" font-size="22">Ограничения источника</text>
+<text x="55" y="927" font-size="18">В p.258 разнится ESP: 0xF010 → 0xFF00 против изменения 0x10.</text>
+<text x="55" y="955" font-size="18">Примеры с #GP и PIC не запускались; точные дампы требуют проверки.</text>
+<text x="35" y="1028" font-size="14">Аналитическая схема, не снимок Bochs. Source SHA f65a7ec…d2c</text>
+</g></svg>
