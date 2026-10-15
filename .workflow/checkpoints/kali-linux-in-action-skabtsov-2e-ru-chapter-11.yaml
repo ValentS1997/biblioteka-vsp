@@ -3,10 +3,10 @@ task_key: kali-linux-in-action-skabtsov-2e-ru-chapter-11
 repository: vsp-corp/biblioteka-vsp
 book_id: kali-linux-in-action-skabtsov-2e-ru
 task_kind: chapter
-objective: "RAG-only chapter 11 individual files and stacked publication"
+objective: "RAG-only chapter 11 individual file publication in stacked PR #588"
 branch: chapter/kali-linux-in-action-skabtsov-2e-ru-0012-ch11
 initial_base_sha: 84dd904c41d756256abddf29109b5683f6668532
-last_observed_head_sha: d111e8c0ee4b93e6a092d65e8144d0094ec61d54
+last_observed_head_sha: f42bcab556557308ae90196dc16c28cbef68013f
 expected_source_sha256: fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9
 constraints:
   - no direct main changes
@@ -14,19 +14,25 @@ constraints:
   - no source/RAG mutation
   - no reading status mutation
   - no ZIP chapter handoff
-  - no executable post-compromise payload delivery workflows
-stage: CI_PENDING
+  - no executable post-compromise payload delivery
+stage: COMPLETE
 completed_steps:
-  - step: "Verified chapter 11 RAG PDF 287-292; next chapter 12 at PDF 293; 17 total chapters."
+  - step: "Verified accepted RAG PDF 287-292, chapter 12 at 293, 17 chapters."
     evidence_type: file-readback
     reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/kali-linux-in-action-skabtsov-2e-ru/rag/chunks/p0201-p0300/p0287-c01.md
-  - step: "Committed six individual mandatory files, source-findings and chapter index; Git read-back PASS on all 8."
+  - step: "Committed and individually read back six mandatory files, source-findings and chapter index."
     evidence_type: commit
     reference: https://github.com/vsp-corp/biblioteka-vsp/commit/d111e8c0ee4b93e6a092d65e8144d0094ec61d54
+  - step: "Push CI completed SUCCESS for artifact commit."
+    evidence_type: ci
+    reference: https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38784191506
+  - step: "Opened stacked PR #588 against chapter 10 only after push CI PASS; compare diff limited to chapter 11, index, checkpoint."
+    evidence_type: pr
+    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/588
 pending_steps:
-  - "Verify push CI run 38784191506 SUCCESS on artifact commit."
-  - "Open stacked PR against chapter 10 branch after CI PASS; compare exact changed paths."
-  - "Verify final PR CI, branch HEAD and checkpoint; do not merge until ancestor PRs reconcile."
-last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/d111e8c0ee4b93e6a092d65e8144d0094ec61d54
-first_safe_next_action: "Read branch head and latest CI, do not repeat completed artifact commit."
-blocker: "Main integration awaits upstream PR #549 conflict and descendant merges."
+  - "Verify PR #588 final HEAD and PR-triggered CI SUCCESS."
+  - "Reconcile and integrate ancestor PRs #549 #551 #553 #558 #567 #572 #577 #584 before main integration."
+  - "Remove transient checkpoint before merge under process governance, verify main publication counts."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/pull/588
+first_safe_next_action: "Re-read live PR #588, exact HEAD, checkpoint and CI; do not recreate committed artifacts."
+blocker: "Main integration pending upstream PR #549 conflict and stacked ancestors."
