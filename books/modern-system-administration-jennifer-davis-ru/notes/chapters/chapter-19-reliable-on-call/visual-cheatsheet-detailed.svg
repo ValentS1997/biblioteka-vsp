@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="1590" viewBox="0 0 1680 1590" role="img" aria-labelledby="title desc">
+<title id="title">Глава 19 — Подробная карта надежного дежурства</title>
+<desc id="desc">Подготовка, ротация, triage, эскалация, журнал, передача смены, команда и метрики нагрузки из canonical RAG PDF 226–240.</desc>
+<rect width="1680" height="1590" fill="#102039"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="56" y="72" font-size="39" font-weight="bold" fill="#f2f9ff">Глава 19 · Устойчивая дежурная служба</text>
+<text x="56" y="112" font-size="23" fill="#c4dced">Реагирование на сбои без постоянной перегрузки людей</text>
+<text x="56" y="174" font-size="29" font-weight="bold" fill="#f1f9ff">1 · Политика и подготовка (PDF 228–232)</text>
+<rect x="56" y="201" width="1568" height="180" rx="16" fill="#244965"/>
+<text x="86" y="248" font-size="25" font-weight="bold" fill="#f3faff">Компенсация · приоритеты · эскалация · длительность · подмена</text>
+<text x="86" y="292" font-size="21" fill="#e1edf9">За несколько недель: shadowing, знания, контакты, доступ к сервисам</text>
+<text x="86" y="330" font-size="21" fill="#e1edf9">За неделю: статусы задач, тест сигналов, подстраховка и план отдыха</text>
+<text x="56" y="437" font-size="29" font-weight="bold" fill="#f1f9ff">2 · Цикл оповещения (PDF 227, 233)</text>
+<rect x="56" y="465" width="488" height="187" rx="15" fill="#374a65"/>
+<text x="86" y="513" font-size="27" font-weight="bold" fill="#f4faff">Подтверди</text>
+<text x="86" y="552" font-size="21" fill="#e3effa">Сигнал получен</text>
+<text x="86" y="592" font-size="21" fill="#cedfec">Избегай дублей</text>
+<rect x="597" y="465" width="488" height="187" rx="15" fill="#265965"/>
+<text x="626" y="513" font-size="27" font-weight="bold" fill="#f3ffff">Триаж</text>
+<text x="626" y="552" font-size="21" fill="#e0f4f7">Влияние и срочность</text>
+<text x="626" y="592" font-size="21" fill="#cae9ed">Пользователи · риск данных</text>
+<rect x="1137" y="465" width="487" height="187" rx="15" fill="#2e574b"/>
+<text x="1167" y="513" font-size="27" font-weight="bold" fill="#f4fff7">Устрани / передай</text>
+<text x="1167" y="552" font-size="21" fill="#e1f6e9">Эскалация при нужде</text>
+<text x="1167" y="592" font-size="21" fill="#cde9dc">Запиши историю</text>
+<text x="56" y="710" font-size="29" font-weight="bold" fill="#f1f9ff">3 · Между оповещениями и в конце смены (PDF 233–235)</text>
+<rect x="56" y="736" width="1568" height="168" rx="16" fill="#304763"/>
+<text x="86" y="787" font-size="25" font-weight="bold" fill="#f4faff">Улучшай документацию и мониторинг вместо бесконечного переключения</text>
+<text x="86" y="830" font-size="21" fill="#dfeafa">Handoff: открытые вопросы, инциденты, невидимые сигналы, ручная работа</text>
+<text x="86" y="866" font-size="21" fill="#dfeafa">После смены: обновить знания, пересмотреть шум и запланировать улучшения</text>
+<text x="56" y="966" font-size="29" font-weight="bold" fill="#f1f9ff">4 · Мониторинг человека и службы (PDF 237–239)</text>
+<rect x="56" y="992" width="756" height="214" rx="16" fill="#20566a"/>
+<text x="85" y="1042" font-size="25" font-weight="bold" fill="#f3ffff">Процесс и качество сигналов</text>
+<text x="85" y="1088" font-size="21" fill="#dff4f8">Часы дежурства и активных вызовов</text>
+<text x="85" y="1127" font-size="21" fill="#dff4f8">Частота, действенность, повторы</text>
+<text x="85" y="1165" font-size="20" fill="#cde8ee">Пропуски и незавершенная работа</text>
+<rect x="868" y="992" width="756" height="214" rx="16" fill="#315b4f"/>
+<text x="897" y="1042" font-size="25" font-weight="bold" fill="#f4fff8">Нагрузка и устойчивость людей</text>
+<text x="897" y="1088" font-size="21" fill="#e1f8ea">Прерывания сна и личных планов</text>
+<text x="897" y="1127" font-size="21" fill="#e1f8ea">Время на восстановление и подмену</text>
+<text x="897" y="1165" font-size="20" fill="#cdebdc">Обучение, эксперты и обмен опытом</text>
+<rect x="56" y="1261" width="1568" height="184" rx="16" fill="#2c544d" stroke="#87ddb4" stroke-width="2"/>
+<text x="86" y="1313" font-size="26" font-weight="bold" fill="#f4fff8">5 · Командная обратная связь — оповещения, ретроспектива, границы</text>
+<text x="86" y="1354" font-size="21" fill="#e1f7eb">Глобальные команды: передача между регионами (Крис Деверс, PDF 235–236)</text>
+<text x="86" y="1393" font-size="20" fill="#cdeada">Забота о здоровье — часть архитектуры процесса, а не личная «роскошь»</text>
+<text x="56" y="1544" font-size="17" fill="#afc9dc">Canonical RAG PDF 226–240. Числа времени ответа и компенсации — только примеры книги.</text>
+</g></svg>

@@ -10,6 +10,7 @@
 - Глава 4 слита из `chapters/0011-modern-system-administration-chapter-04` через [PR #508](https://github.com/vsp-corp/biblioteka-vsp/pull/508), merge commit [`aa87563`](https://github.com/vsp-corp/biblioteka-vsp/commit/aa875633f8b32b96af5a5b5342e9de8b7ca96350).
 - Осталось неопубликованными в `main`: **3**.
 - Следующая неопубликованная глава: **19 — Создание надежной дежурной службы**.
+- Глава 19 подготовлена на отдельной ветке `chapters/0011-modern-system-administration-chapter-19` по canonical RAG PDF 226–240; **в `main` до merge опубликовано 18/21**.
 - Глава 18 опубликована через [PR #571](https://github.com/vsp-corp/biblioteka-vsp/pull/571), canonical RAG PDF 213–225; восемь файлов независимо проверены в `main`.
 - Глава 17 опубликована через [PR #566](https://github.com/vsp-corp/biblioteka-vsp/pull/566) (canonical RAG PDF 203–211); все восемь файлов независимо проверены в `main`.
 - Глава 16 опубликована через [PR #563](https://github.com/vsp-corp/biblioteka-vsp/pull/563) с RAG-only PDF 195–202; все восемь файлов независимо проверены в `main`.
@@ -41,7 +42,7 @@
 | 16 | [Управление данными мониторинга](chapter-16-monitoring-data-management/README.md) | Опубликована в `main`: 6 обязательных + 2 условных Git-файла; PR #563, CI PASS, все 8 файлов read-back |
 | 17 | [Мониторинг вашей работы](chapter-17-monitoring-your-work/README.md) | Опубликована в `main`: 6 обязательных + 2 условных Git-файла; PR #566, CI PASS, 8 файлов read-back |
 | 18 | [Управление мощностями](chapter-18-capacity-management/README.md) | Опубликована в `main`: 6 обязательных + 2 условных Git-файла; PR #571, CI PASS, 8 файлов read-back |
-| 19 | Создание надежной дежурной службы | Не опубликована |
+| 19 | [Создание надежной дежурной службы](chapter-19-reliable-on-call/README.md) | Подготовлена в отдельной ветке: 6 обязательных + 2 условных Git-файла, CI/PR ожидаются |
 | 20 | Управление инцидентами | Не опубликована |
 | 21 | Руководство устойчивыми командами | Не опубликована |
 
@@ -122,3 +123,7 @@ Canonical RAG **PDF 203–211**, печатные **211–219**, PDF 212 отк�
 ## Глава 18 — опубликована в `main`
 
 Canonical RAG **PDF 213–225**, печатные **223–235**; PDF 226 — глава 19. В ветке главы 18 подготовлены отдельно закоммиченные файлы `chapter-18-capacity-management/`: `README.md`, `cheatsheet.md`, `commands.md`, `diagram.md`, `visual-cheatsheet.svg`, `visual-cheatsheet-detailed.svg`, `summary.md`, `source-findings.md`. Различены проектная, производственная и эффективная мощности; отражены физический/облачный/serverless жизненный цикл, SLO-решения, lead/lag/match и ограничения провайдеров. Оригинальные рисунки 18.1–18.6 не реконструированы по памяти. **Глава 18 опубликована через PR #571**, merge commit `4ac4969b5abc04ebfc3b6112d35d1ffd10466c4e`. [Branch CI PASS](https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38770608989) и [независимый PR CI PASS](https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38770761406) на исходном HEAD `66a509cfba7953ff666f4729e4991ffeeb420539`. Восемь артефактов независимо прочитаны из `main`. **Прогресс: 18/21 (85.7%), осталось 3, следующая глава — 19**. PDF, RAG и статус чтения не изменялись.
+
+## Глава 19 — подготовлена в отдельной ветке (ожидает CI/PR)
+
+Canonical RAG PDF **226–240**, печатные **236–250**; PDF 241 открывает главу 20. Отдельные Git-файлы в `chapter-19-reliable-on-call/`: `README.md`, `cheatsheet.md`, `commands.md`, `diagram.md`, `visual-cheatsheet.svg`, `visual-cheatsheet-detailed.svg`, `summary.md`, `source-findings.md`. Описаны triage, политика и подготовка, передача смены и мониторинг нагрузки на людей. **Прогресс `main` до merge: 18/21**. PDF/RAG и статус чтения не менялись.
