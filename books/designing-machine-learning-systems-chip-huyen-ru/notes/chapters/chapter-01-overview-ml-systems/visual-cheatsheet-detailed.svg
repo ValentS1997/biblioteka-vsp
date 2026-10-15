@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1260 766" width="1260" height="766" role="img" aria-label="Обзор ML-систем"><rect width="1260" height="766" fill="#111827"/>
+<text x="43" y="62" fill="#f8fafc" font-family="Arial, sans-serif" font-weight="700" font-size="32">ГЛАВА 1 · СИСТЕМНЫЙ ВЗГЛЯД НА ML</text>
+<text x="43" y="96" fill="#94a3b8" font-family="Arial, sans-serif" font-weight="400" font-size="19">Русское издание 2023 · RAG PDF 24–46</text>
+<rect x="40" y="127" width="563" height="242" rx="16" fill="#1f2937" stroke="#475569"/>
+<rect x="628" y="127" width="592" height="242" rx="16" fill="#1f2937" stroke="#475569"/>
+<text x="62" y="169" fill="#93c5fd" font-family="Arial, sans-serif" font-weight="700" font-size="24">РЕШЕНИЕ О ПРИМЕНИМОСТИ</text>
+<text x="62" y="210" fill="#e2e8f0" font-family="Arial, sans-serif" font-weight="400" font-size="19">1 · Нужен прогноз по сложной закономерности?</text>
+<text x="62" y="249" fill="#e2e8f0" font-family="Arial, sans-serif" font-weight="400" font-size="19">2 · Доступны ли данные и похожие новые случаи?</text>
+<text x="62" y="288" fill="#e2e8f0" font-family="Arial, sans-serif" font-weight="400" font-size="19">3 · Допустимы ли цена ошибки и экономические затраты?</text>
+<text x="62" y="334" fill="#a5b4fc" font-family="Arial, sans-serif" font-weight="400" font-size="16">p0026–p0031</text>
+<text x="648" y="169" fill="#93c5fd" font-family="Arial, sans-serif" font-weight="700" font-size="23">ИССЛЕДОВАНИЕ ↔ ПРОИЗВОДСТВО</text>
+<text x="648" y="210" fill="#e2e8f0" font-family="Arial, sans-serif" font-weight="400" font-size="19">Benchmark ↔ требования разных участников</text>
+<text x="648" y="249" fill="#e2e8f0" font-family="Arial, sans-serif" font-weight="400" font-size="19">Throughput ↔ latency и стоимость вывода</text>
+<text x="648" y="288" fill="#e2e8f0" font-family="Arial, sans-serif" font-weight="400" font-size="19">Статичные данные ↔ изменчивые данные</text>
+<text x="648" y="334" fill="#a5b4fc" font-family="Arial, sans-serif" font-weight="400" font-size="16">Объективность и интерпретируемость · p0035–p0043</text>
+<rect x="40" y="389" width="1180" height="253" rx="16" fill="#1f2937" stroke="#475569"/>
+<text x="62" y="432" fill="#93c5fd" font-family="Arial, sans-serif" font-weight="700" font-size="25">ЧЕМ ML ОТЛИЧАЕТСЯ ОТ ОБЫЧНОГО ПО</text>
+<text x="62" y="480" fill="#e2e8f0" font-family="Arial, sans-serif" font-weight="400" font-size="20">Проверять и версионировать не только код, но и данные и модель.</text>
+<text x="62" y="520" fill="#e2e8f0" font-family="Arial, sans-serif" font-weight="400" font-size="20">Оценивать распределение задержки: p50, p90, p95, p99, а также throughput.</text>
+<text x="62" y="561" fill="#e2e8f0" font-family="Arial, sans-serif" font-weight="400" font-size="20">Продумывать мониторинг, обслуживание и инфраструктуру.</text>
+<text x="62" y="607" fill="#a5b4fc" font-family="Arial, sans-serif" font-weight="400" font-size="16">Источники: p0038–p0044 · Итоги: p0045-c01</text>
+<text x="43" y="700" fill="#e2e8f0" font-family="Arial, sans-serif" font-weight="700" font-size="19">РЕЗУЛЬТАТ: ML не универсален; цель, данные и эксплуатация рассматриваются вместе.</text>
+<text x="43" y="738" fill="#94a3b8" font-family="Arial, sans-serif" font-weight="400" font-size="15">Схема — RAG-обоснованный конспект, не воспроизведение рисунков книги.</text>
+</svg>

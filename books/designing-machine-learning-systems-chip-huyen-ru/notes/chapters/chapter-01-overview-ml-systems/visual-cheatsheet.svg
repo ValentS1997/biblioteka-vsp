@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 490" width="1120" height="490" role="img" aria-label="Обзор ML-систем"><rect width="1120" height="490" fill="#111827"/>
+<text x="40" y="61" fill="#f8fafc" font-family="Arial, sans-serif" font-weight="700" font-size="31">ГЛАВА 1 · ОБЗОР ML-СИСТЕМ</text>
+<text x="40" y="94" fill="#e2e8f0" font-family="Arial, sans-serif" font-weight="400" font-size="20">Алгоритм — только часть работающей ML-системы</text>
+<rect x="36" y="121" width="335" height="245" rx="16" fill="#1f2937" stroke="#475569"/>
+<rect x="392" y="121" width="336" height="245" rx="16" fill="#1f2937" stroke="#475569"/>
+<rect x="749" y="121" width="335" height="245" rx="16" fill="#1f2937" stroke="#475569"/>
+<text x="54" y="166" fill="#93c5fd" font-family="Arial, sans-serif" font-weight="700" font-size="24">ПРИМЕНИМОСТЬ</text>
+<text x="54" y="206" fill="#e2e8f0" font-family="Arial, sans-serif" font-weight="400" font-size="19">Сложные паттерны и данные</text>
+<text x="54" y="241" fill="#e2e8f0" font-family="Arial, sans-serif" font-weight="400" font-size="19">Повторяемость и масштаб</text>
+<text x="54" y="276" fill="#e2e8f0" font-family="Arial, sans-serif" font-weight="400" font-size="19">Цена ошибки и этика</text>
+<text x="54" y="312" fill="#e2e8f0" font-family="Arial, sans-serif" font-weight="400" font-size="19">ML или обычные правила?</text>
+<text x="410" y="166" fill="#93c5fd" font-family="Arial, sans-serif" font-weight="700" font-size="24">ПРОИЗВОДСТВО</text>
+<text x="410" y="206" fill="#e2e8f0" font-family="Arial, sans-serif" font-weight="400" font-size="19">Разные цели команд</text>
+<text x="410" y="241" fill="#e2e8f0" font-family="Arial, sans-serif" font-weight="400" font-size="19">Latency и throughput</text>
+<text x="410" y="276" fill="#e2e8f0" font-family="Arial, sans-serif" font-weight="400" font-size="19">Изменчивые данные</text>
+<text x="410" y="312" fill="#e2e8f0" font-family="Arial, sans-serif" font-weight="400" font-size="19">Fairness, объяснимость</text>
+<text x="767" y="166" fill="#93c5fd" font-family="Arial, sans-serif" font-weight="700" font-size="23">СИСТЕМНЫЙ ПОДХОД</text>
+<text x="767" y="206" fill="#e2e8f0" font-family="Arial, sans-serif" font-weight="400" font-size="19">Код + данные + модель</text>
+<text x="767" y="241" fill="#e2e8f0" font-family="Arial, sans-serif" font-weight="400" font-size="19">Инфраструктура</text>
+<text x="767" y="276" fill="#e2e8f0" font-family="Arial, sans-serif" font-weight="400" font-size="19">Мониторинг и обновление</text>
+<text x="767" y="312" fill="#e2e8f0" font-family="Arial, sans-serif" font-weight="400" font-size="19">Качество в эксплуатации</text>
+<text x="40" y="417" fill="#cbd5e1" font-family="Arial, sans-serif" font-weight="400" font-size="17">RAG: PDF 24–45 · p0024, p0026–p0031, p0035, p0038–p0045</text>
+</svg>

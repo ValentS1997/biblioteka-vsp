@@ -1,0 +1,52 @@
+schema: biblioteka-vsp/chapter-plan/v1
+book_id: designing-machine-learning-systems-chip-huyen-ru
+source_sha256: 0bcacadb4e1dc2235cb58f975111e1633527217127c5871edb894fe2b8f4c80c
+source_format: pdf
+total_chapters: 11
+toc_evidence: "Canonical RAG TOC: chunks p0006-c01–p0012-c01, PDF pp. 6–12; numbered chapters 1–11. Each heading independently verified against first-page RAG chunks at PDF pp. 24, 47, 68, 99, 136, 162, 202, 233, 269, 297 and 335."
+locator_note: "pdf_page is 1-indexed in canonical PDF; printed_start_page follows source TOC; PDF and printed page numbers differ by one for these chapters. End ranges stop before following chapter or conclusion (conclusion at PDF p. 359)."
+chapters:
+  - number: 1
+    title: "Обзор ML-систем"
+    slug: overview-ml-systems
+    source_locator: "pdf_page:24-46; toc_pdf_page:6; toc_chunk:p0006-c01; printed_start_page:23; opening_chunk:p0024-c01"
+  - number: 2
+    title: "Введение в проектирование ML-систем"
+    slug: introduction-to-ml-system-design
+    source_locator: "pdf_page:47-67; toc_pdf_page:6; toc_chunk:p0006-c01; printed_start_page:46; opening_chunk:p0047-c01"
+  - number: 3
+    title: "Основы проектирования баз данных"
+    slug: database-design-basics
+    source_locator: "pdf_page:68-98; toc_pdf_page:7; toc_chunk:p0007-c01; printed_start_page:67; opening_chunk:p0068-c01"
+  - number: 4
+    title: "Обучающие данные"
+    slug: training-data
+    source_locator: "pdf_page:99-135; toc_pdf_page:7; toc_chunk:p0007-c02; printed_start_page:98; opening_chunk:p0099-c01"
+  - number: 5
+    title: "Конструирование признаков"
+    slug: feature-engineering
+    source_locator: "pdf_page:136-161; toc_pdf_page:8; toc_chunk:p0008-c01; printed_start_page:135; opening_chunk:p0136-c01"
+  - number: 6
+    title: "Разработка модели и ее автономная оценка"
+    slug: model-development-and-offline-evaluation
+    source_locator: "pdf_page:162-201; toc_pdf_page:8; toc_chunk:p0008-c02; printed_start_page:161; opening_chunk:p0162-c01"
+  - number: 7
+    title: "Развертывание модели и совершенствование ее сервиса прогнозирования"
+    slug: model-deployment-and-prediction-service
+    source_locator: "pdf_page:202-232; toc_pdf_page:9; toc_chunk:p0009-c02; printed_start_page:201; opening_chunk:p0202-c01"
+  - number: 8
+    title: "Сдвиги в распределении данных и мониторинг"
+    slug: data-distribution-shifts-and-monitoring
+    source_locator: "pdf_page:233-268; toc_pdf_page:10; toc_chunk:p0010-c01; printed_start_page:232; opening_chunk:p0233-c01"
+  - number: 9
+    title: "Непрерывное обучение и тестирование в производстве"
+    slug: continual-learning-and-production-testing
+    source_locator: "pdf_page:269-296; toc_pdf_page:10; toc_chunk:p0010-c02; printed_start_page:268; opening_chunk:p0269-c01"
+  - number: 10
+    title: "Инфраструктура и инструменты для MLOps"
+    slug: mlops-infrastructure-and-tools
+    source_locator: "pdf_page:297-334; toc_pdf_page:11; toc_chunk:p0011-c01; printed_start_page:296; opening_chunk:p0297-c01"
+  - number: 11
+    title: "Человеческая сторона машинного обучения"
+    slug: human-side-of-machine-learning
+    source_locator: "pdf_page:335-358; toc_pdf_page:11; toc_chunk:p0011-c02; printed_start_page:334; opening_chunk:p0335-c01"
