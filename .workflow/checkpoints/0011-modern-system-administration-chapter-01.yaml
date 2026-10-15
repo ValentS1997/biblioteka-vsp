@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only chapter 1 analysis and direct Git publication of individual chapter artifacts under v1.8"
 branch: chapters/0011-modern-system-administration
 initial_base_sha: a3d17475268be38aa6bddba2d2029e3b4ba3205b
-last_observed_head_sha: 9cd10926132e4a515e78f4f7df992abc04c8eded
+last_observed_head_sha: 80ef1629aba39842ff1e9460c51bbd1758b32175
 expected_source_sha256: 06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790
 constraints:
   - "no direct main changes"
@@ -14,7 +14,7 @@ constraints:
   - "no source/RAG rewrite without explicit authorization"
   - "no reading-progress mutation without explicit user confirmation"
   - "no archive delivery for chapter artifacts"
-stage: PARTIAL
+stage: CI_PENDING
 completed_steps:
   - step: "Recovered active branch and existing chapter plan; no chapter-01 files existed"
     evidence_type: file-readback
@@ -28,10 +28,11 @@ completed_steps:
   - step: "Committed and individually read back README, cheatsheet, commands and diagram for chapter 1"
     evidence_type: commit
     reference: https://github.com/vsp-corp/biblioteka-vsp/commit/9cd10926132e4a515e78f4f7df992abc04c8eded
+  - step: "Published both SVG visual summaries, chapter-end summary, source-findings and updated book index; all individually read back"
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/80ef1629aba39842ff1e9460c51bbd1758b32175
 pending_steps:
-  - "Commit and read back mandatory compact and detailed SVG files for chapter 1."
-  - "Commit chapter-end summary and source-findings from RAG evidence, and update book-level chapter index."
-  - "Read-back all files; verify chapter-notes CI at final branch HEAD and publication progress; update this checkpoint."
+  - "Read-back final committed chapter directory and review branch/PR CI; verify progress 1/21, then mark publication terminal."
 last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/pull/489
 first_safe_next_action: "Read branch HEAD and check chapter-01 directory before any attempted create_file; verify no duplicate writes."
 blocker: "Not applicable"
