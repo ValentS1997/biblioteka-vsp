@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1170" height="608" viewBox="0 0 1170 608" role="img" aria-label="Глава 8: drift, диагностика и мониторинг"><rect width="1170" height="608" fill="#0f172a"/>
+<text x="35" y="59" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#f8fafc">ГЛАВА 8 · DATA DISTRIBUTION SHIFTS</text>
+<text x="35" y="98" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Видимый дрейф не всегда означает проблему модели</text>
+<rect x="33" y="137" width="356" height="323" rx="14" fill="#1f2937" stroke="#475569"/>
+<rect x="406" y="137" width="356" height="323" rx="14" fill="#1f2937" stroke="#475569"/>
+<rect x="779" y="137" width="356" height="323" rx="14" fill="#1f2937" stroke="#475569"/>
+<text x="54" y="180" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#93c5fd">ПРИЧИНЫ СБОЕВ</text>
+<text x="54" y="223" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Software / deployment</text>
+<text x="54" y="266" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Train vs production data</text>
+<text x="54" y="309" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Edge cases</text>
+<text x="54" y="352" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Feedback loops</text>
+<text x="428" y="180" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#93c5fd">ТИПЫ СДВИГОВ</text>
+<text x="428" y="223" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Covariate shift</text>
+<text x="428" y="266" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Label shift</text>
+<text x="428" y="309" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Concept drift</text>
+<text x="428" y="352" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Schema / combined shifts</text>
+<text x="801" y="180" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#93c5fd">НАБЛЮДЕНИЕ</text>
+<text x="801" y="223" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Quality + operational</text>
+<text x="801" y="266" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Rolling vs cumulative</text>
+<text x="801" y="309" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">KS / MMD и window</text>
+<text x="801" y="352" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Logs, dashboards, alerts</text>
+<text x="35" y="519" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#cbd5e1">RAG PDF 233–268 · «Итоги»: p0266–p0267</text>
+<text x="35" y="558" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#fca5a5">Мониторинг обнаруживает, но не исправляет модель</text>
+</svg>
