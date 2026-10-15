@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1120" width="1500" height="1120" role="img" aria-labelledby="title desc">
+<title id="title">Глава 6 — подробная карта контроля версий</title>
+<desc id="desc">Системы контроля версий, преимущества контроля конфигураций, компромиссы между монорепозиторием и несколькими репозиториями; источник RAG PDF 83–88.</desc>
+<rect width="1500" height="1120" fill="#0c1627"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="54" y="70" font-size="38" font-weight="bold" fill="#f2f8ff">Глава 6 · Контроль версий для инфраструктуры</text>
+<text x="54" y="105" font-size="20" fill="#b4d0e4">От практики отслеживания изменений — к воспроизводимости и совместному обслуживанию</text>
+<rect x="52" y="143" width="1396" height="119" rx="16" fill="#173c52" stroke="#68c6df" stroke-width="2"/>
+<text x="83" y="186" font-size="29" font-weight="bold" fill="#effdff">1 · Что помещать под контроль версий (PDF 83–84)</text>
+<text x="83" y="222" font-size="20" fill="#d2edf8">Исходный код, конфигурации, инфраструктурные скрипты, артефакты сборки и образы</text>
+<rect x="52" y="292" width="675" height="189" rx="15" fill="#20334f"/>
+<text x="78" y="336" font-size="27" font-weight="bold" fill="#ecf5ff">2 · Различай уровни (PDF 84)</text>
+<text x="78" y="373" font-size="20" fill="#d7e6f6">• Метод — управление изменениями данных</text>
+<text x="78" y="405" font-size="20" fill="#d7e6f6">• СКВ — Git (distributed), SVN (centralized)</text>
+<text x="78" y="437" font-size="20" fill="#d7e6f6">• Сервис — облачный либо самоуправляемый</text>
+<rect x="771" y="292" width="677" height="189" rx="15" fill="#224750"/>
+<text x="797" y="336" font-size="27" font-weight="bold" fill="#f0ffff">3 · Получай выгоды (PDF 85–86)</text>
+<text x="797" y="373" font-size="20" fill="#d8f5f3">• История, версии, кто изменил и когда</text>
+<text x="797" y="405" font-size="20" fill="#d8f5f3">• Доступ, разрешение конфликтов, аудит</text>
+<text x="797" y="437" font-size="20" fill="#d8f5f3">• Воспроизводимость, обучение и видимость</text>
+<text x="54" y="538" font-size="29" font-weight="bold" fill="#f2f8ff">4 · Выбор структуры инфраструктурных проектов (PDF 86–87)</text>
+<rect x="52" y="563" width="675" height="261" rx="15" fill="#2b3954"/>
+<text x="78" y="605" font-size="26" font-weight="bold" fill="#f2f6ff">Монорепозиторий</text>
+<text x="78" y="646" font-size="19" fill="#dfe9f9">+ Код и скрипты ищутся в одном месте</text>
+<text x="78" y="681" font-size="19" fill="#dfe9f9">+ Общее управление зависимостями</text>
+<text x="78" y="716" font-size="19" fill="#dfe9f9">− Большие проекты замедляют сборки</text>
+<text x="78" y="751" font-size="19" fill="#dfe9f9">− Версии пакетов и владение могут спорить</text>
+<text x="78" y="786" font-size="18" fill="#dfe9f9">Принятые правила команды обязательны</text>
+<rect x="771" y="563" width="677" height="261" rx="15" fill="#30404d"/>
+<text x="797" y="605" font-size="26" font-weight="bold" fill="#f2f6ff">Несколько репозиториев</text>
+<text x="797" y="646" font-size="19" fill="#dfe9f9">+ Свой жизненный цикл и версии проекта</text>
+<text x="797" y="681" font-size="19" fill="#dfe9f9">+ Меньше взаимовлияния сборок</text>
+<text x="797" y="716" font-size="19" fill="#dfe9f9">− Сложнее найти нужный скрипт</text>
+<text x="797" y="751" font-size="19" fill="#dfe9f9">− Дублирование и связи зависимостей</text>
+<text x="797" y="786" font-size="18" fill="#dfe9f9">Объясняй выбор структуры в документах</text>
+<rect x="52" y="853" width="1396" height="100" rx="15" fill="#26564c" stroke="#6ce3ba"/>
+<text x="82" y="895" font-size="27" font-weight="bold" fill="#f4fffa">5 · Результат (PDF 88)</text>
+<text x="82" y="927" font-size="20" fill="#dcfff0">Управляемые изменения, история решений, доступ и сотрудничество при развитии систем</text>
+<rect x="52" y="981" width="1396" height="91" rx="14" fill="#473c35" stroke="#e9b57b"/>
+<text x="81" y="1019" font-size="22" font-weight="bold" fill="#fff0da">Ограничение главы</text>
+<text x="81" y="1050" font-size="19" fill="#fce6d2">Точные CLI-команды, политика релизов и практический rollback — [Needs confirmation].</text>
+<text x="54" y="1104" font-size="16" fill="#9fbace">Источник: canonical RAG PDF 83–88. Печатные страницы 87–92. Без внешнего обогащения.</text>
+</g></svg>
