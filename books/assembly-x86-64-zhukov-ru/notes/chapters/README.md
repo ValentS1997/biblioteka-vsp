@@ -5,8 +5,8 @@ Book ID: `assembly-x86-64-zhukov-ru`. Canonical RAG source SHA-256: `f65a7ec8814
 ## План и прогресс публикации
 
 - [RAG-verified план: 21 глава](plan.yaml). Основание: оглавление (RAG PDF p. 4–8), самостоятельные заголовки глав в RAG-чанках и предисловие PDF p. 11.
-- **В текущей chapter-ветке:** 7/21 (33,3%); осталось 14, следующая — №8 «Математический сопроцессор».
-- **В `main` на начало работы над главой 7:** 6/21. До merge главы 7 в `main` опубликованы первые шесть глав; сверять HEAD независимо.
+- **В текущей chapter-ветке:** 8/21 (38,1%); осталось 13, следующая — №9 «Сегменты».
+- **В `main` на начало работы над главой 8:** 7/21. До merge главы 8 в `main` опубликованы первые семь глав; сверять HEAD независимо.
 
 ## Опубликованные главы (отдельные Git-файлы)
 
@@ -23,6 +23,8 @@ Book ID: `assembly-x86-64-zhukov-ru`. Canonical RAG source SHA-256: `f65a7ec8814
 6. [Глава 6. Программирование циклов](chapter-06-programmirovanie-tsiklov/README.md) — [шпаргалка](chapter-06-programmirovanie-tsiklov/cheatsheet.md), [команды](chapter-06-programmirovanie-tsiklov/commands.md), [диаграмма](chapter-06-programmirovanie-tsiklov/diagram.md), [краткая SVG](chapter-06-programmirovanie-tsiklov/visual-cheatsheet.svg), [подробная SVG](chapter-06-programmirovanie-tsiklov/visual-cheatsheet-detailed.svg), [задания](chapter-06-programmirovanie-tsiklov/review-questions.md), [разборы](chapter-06-programmirovanie-tsiklov/review-answers.md), [source findings](chapter-06-programmirovanie-tsiklov/source-findings.md).
 
 7. [Глава 7. Примеры программ](chapter-07-primery-programm/README.md) — [шпаргалка](chapter-07-primery-programm/cheatsheet.md), [команды](chapter-07-primery-programm/commands.md), [диаграмма](chapter-07-primery-programm/diagram.md), [краткая SVG](chapter-07-primery-programm/visual-cheatsheet.svg), [подробная SVG](chapter-07-primery-programm/visual-cheatsheet-detailed.svg), [задания](chapter-07-primery-programm/review-questions.md), [разборы](chapter-07-primery-programm/review-answers.md), [source findings](chapter-07-primery-programm/source-findings.md).
+
+8. [Глава 8. Математический сопроцессор](chapter-08-matematicheskiy-soprotsessor/README.md) — [шпаргалка](chapter-08-matematicheskiy-soprotsessor/cheatsheet.md), [команды](chapter-08-matematicheskiy-soprotsessor/commands.md), [диаграмма](chapter-08-matematicheskiy-soprotsessor/diagram.md), [краткая SVG](chapter-08-matematicheskiy-soprotsessor/visual-cheatsheet.svg), [подробная SVG](chapter-08-matematicheskiy-soprotsessor/visual-cheatsheet-detailed.svg), [задания](chapter-08-matematicheskiy-soprotsessor/review-questions.md), [разборы](chapter-08-matematicheskiy-soprotsessor/review-answers.md), [source findings](chapter-08-matematicheskiy-soprotsessor/source-findings.md).
 
 ## Политика
 

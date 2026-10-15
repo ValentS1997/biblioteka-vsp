@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="680" viewBox="0 0 1120 680" role="img" aria-label="Компактная памятка главы 8: стек FPU, форматы, сравнения, исключения">
+<rect width="1120" height="680" fill="#f8fafc"/>
+<g font-family="DejaVu Sans,sans-serif">
+<text x="36" y="56" font-size="31" font-weight="bold" fill="#153047">Глава 8 · Математический сопроцессор</text>
+<text x="36" y="88" font-size="17" fill="#5a7287">FPU · стек 8 регистров · собственные SW/CW · real 32/64/80 бит</text>
+<g stroke-width="2">
+<rect x="36" y="124" width="323" height="143" rx="14" fill="#e3efff" stroke="#5e84bd"/>
+<rect x="398" y="124" width="323" height="143" rx="14" fill="#e8f8f0" stroke="#399773"/>
+<rect x="760" y="124" width="323" height="143" rx="14" fill="#eee9ff" stroke="#8772bf"/>
+<rect x="36" y="297" width="323" height="146" rx="14" fill="#e7f2ff" stroke="#5e84bd"/>
+<rect x="398" y="297" width="323" height="146" rx="14" fill="#e9f7ee" stroke="#399773"/>
+<rect x="760" y="297" width="323" height="146" rx="14" fill="#f2edff" stroke="#8772bf"/>
+</g>
+<g font-size="19" font-weight="bold" fill="#22476d">
+<text x="54" y="156">Стек ST(0)–ST(7)</text><text x="416" y="156">Загрузка / выгрузка</text><text x="778" y="156">Постфиксная запись</text>
+<text x="54" y="329">Сравнение</text><text x="416" y="329">SW и CW</text><text x="778" y="329">Математика</text>
+</g>
+<g font-size="16" fill="#2c455b">
+<text x="54" y="190">FLD / FSTP / FXCH</text><text x="54" y="220">ST меняется по кольцу</text><text x="54" y="245">FSTP 0 удаляет вершину</text>
+<text x="416" y="190">FLD real; FILD integer</text><text x="416" y="220">DD / DQ / DT</text><text x="416" y="245">FLD 2.0 не равно FLD 2</text>
+<text x="778" y="190">aa*bb*-π*</text><text x="778" y="220">Глубина максимум 3</text><text x="778" y="245">FSUB/FDIV: порядок важен</text>
+<text x="54" y="363">FTST / FCOM</text><text x="54" y="391">C3/C2/C0 → Z/E/C</text><text x="54" y="419">FSTSW AX; SAHF</text>
+<text x="416" y="363">SW: PE, UE, ZE, IE ...</text><text x="416" y="391">CW: RC / PC / маски</text><text x="416" y="419">FINIT / FCLEX / FLDCW</text>
+<text x="778" y="363">FSQRT, FSINCOS</text><text x="778" y="391">FYL2X, F2XM1</text><text x="778" y="419">FSCALE; SAVE / RESTORE</text>
+</g>
+<rect x="36" y="481" width="1047" height="122" rx="14" fill="#fff1e7" stroke="#cf8a58" stroke-width="2"/>
+<text x="56" y="517" font-size="22" font-weight="bold" fill="#945027">Проверка перед исполнением</text>
+<text x="56" y="548" font-size="16" fill="#7d492b">Тип данных · глубина стека · порядок операндов · округление · флаги и исключения</text>
+<text x="56" y="574" font-size="16" fill="#7d492b">В примере FSAVE [0] затрагивается PSP; не запускать без изолированной среды</text>
+<text x="36" y="648" font-size="14" fill="#687d8e">Источник: RAG PDF 111–148, inventory 0017 · без фактического исполнения A86/D86</text>
+</g></svg>
