@@ -1,0 +1,40 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: "0011-modern-system-administration-chapter-17"
+repository: "vsp-corp/biblioteka-vsp"
+book_id: modern-system-administration-jennifer-davis-ru
+task_kind: chapter
+objective: "RAG-only chapter 17 Monitoring Your Work, eight independent Git artifacts, CI-gated publication"
+branch: "chapters/0011-modern-system-administration-chapter-17"
+initial_base_sha: "305b1b89c778603b1d58632c64fdfff5114ad202"
+last_observed_head_sha: "305b1b89c778603b1d58632c64fdfff5114ad202"
+expected_source_sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
+constraints:
+  - no direct main changes
+  - no force-push
+  - no PDF or RAG modifications
+  - no reading-progress changes
+  - no archive or ZIP substitution
+  - no PR before exact HEAD branch CI PASS
+  - no merge before independent PR CI PASS
+stage: CI_PENDING
+completed_steps:
+  - step: "Verified main publication index 16/21 and chapter 16 COMPLETE checkpoint"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/.workflow/checkpoints/0011-modern-system-administration-chapter-16.yaml"
+  - step: "Verified chapter 17 RAG PDF 203–211 (printed 211–219), PDF 212 part V, PDF 213 chapter 18"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/modern-system-administration-jennifer-davis-ru/rag/chunks/p0201-p0300/p0213-c01.md"
+  - step: "Created eight RAG-grounded Git artifacts and chapter index link on isolated branch"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/tree/chapters/0011-modern-system-administration-chapter-17/books/modern-system-administration-jennifer-davis-ru/notes/chapters/chapter-17-monitoring-your-work"
+pending_steps:
+  - "Read back eight independent files and check chapter index / source scope"
+  - "Confirm CI PASS on exact chapter branch head"
+  - "Open chapter PR only after exact HEAD CI PASS"
+  - "Confirm independent PR-triggered CI PASS and merge only with head SHA lease"
+  - "Independently read back eight published files in main"
+  - "Finalize main 17/21 index and checkpoint COMPLETE in a separate CI-gated PR"
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/commit/305b1b89c778603b1d58632c64fdfff5114ad202"
+first_safe_next_action: "Check changed files, Git readbacks and exact head CI"
+blocker: "Branch CI PASS not yet verified"
+last_observed_at: "[Needs confirmation]"

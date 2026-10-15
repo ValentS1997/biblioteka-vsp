@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1450" viewBox="0 0 1600 1450" role="img" aria-labelledby="title desc">
+<title id="title">Глава 17 — Подробная карта мониторинга собственной работы</title>
+<desc id="desc">Визуализация текущего процесса, карточки, WIP, метрики, ограничения потока, карьера и ETTO по RAG PDF 203–211.</desc>
+<rect width="1600" height="1450" fill="#0f2033"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="56" y="72" font-size="39" font-weight="bold" fill="#f2f9ff">Глава 17 · Мониторинг вашей работы</text>
+<text x="56" y="109" font-size="22" fill="#bdd5e7">Видимость полезного труда, командных зависимостей и роста</text>
+<rect x="56" y="145" width="1488" height="155" rx="15" fill="#1d4c63"/>
+<text x="85" y="190" font-size="28" font-weight="bold" fill="#f2ffff">1 · Что измеряем? (PDF 203–205)</text>
+<text x="85" y="230" font-size="21" fill="#dbf4f7">Ценность результата · координация · предотвращение авралов</text>
+<text x="85" y="268" font-size="21" fill="#dbf4f7">Разнообразие работы, интерес, обучение и профессиональная устойчивость</text>
+<text x="56" y="357" font-size="28" font-weight="bold" fill="#f4f9ff">2 · Построй реальный канбан-поток (PDF 205–207)</text>
+<rect x="56" y="386" width="458" height="144" rx="14" fill="#35485e"/>
+<text x="84" y="438" font-size="27" font-weight="bold" fill="#f4f9ff">Запланировано</text>
+<text x="84" y="480" font-size="21" fill="#d8e6f4">Карточки и категории</text>
+<rect x="570" y="386" width="459" height="144" rx="14" fill="#255763"/>
+<text x="598" y="438" font-size="27" font-weight="bold" fill="#f2ffff">В работе</text>
+<text x="598" y="480" font-size="21" fill="#d7f2f6">Ограничение WIP</text>
+<rect x="1085" y="386" width="459" height="144" rx="14" fill="#325849"/>
+<text x="1113" y="438" font-size="27" font-weight="bold" fill="#f4fff6">Готово</text>
+<text x="1113" y="480" font-size="21" fill="#e0f4e7">Результат</text>
+<text x="56" y="599" font-size="28" font-weight="bold" fill="#f4f9ff">3 · Мера работы — поток и ограничения (PDF 207–210)</text>
+<rect x="56" y="632" width="717" height="197" rx="14" fill="#2f455e"/>
+<text x="87" y="679" font-size="28" font-weight="bold" fill="#f4f9ff">Основные измерения</text>
+<text x="87" y="717" font-size="21" fill="#dceaf7">Время выполнения задачи</text>
+<text x="87" y="749" font-size="21" fill="#dceaf7">WIP — одновременно незавершённые</text>
+<text x="87" y="781" font-size="21" fill="#dceaf7">Throughput — выполнено за период</text>
+<text x="87" y="809" font-size="19" fill="#bcd7eb">Формула в табл. 17.3 требует проверки</text>
+<rect x="815" y="632" width="729" height="197" rx="14" fill="#284e5d"/>
+<text x="846" y="679" font-size="28" font-weight="bold" fill="#f4ffff">Интерпретация</text>
+<text x="846" y="717" font-size="21" fill="#dcedf4">Блокировки и ожидания чужих решений</text>
+<text x="846" y="749" font-size="21" fill="#dcedf4">Вариабельность сроков по типам задач</text>
+<text x="846" y="781" font-size="21" fill="#dcedf4">Частые переключения контекста</text>
+<text x="846" y="809" font-size="19" fill="#c6e2e9">Оценка объёма приблизительна</text>
+<rect x="56" y="872" width="1488" height="160" rx="14" fill="#3a455a"/>
+<text x="86" y="923" font-size="28" font-weight="bold" fill="#f4f9ff">4 · Выбери платформу по рабочему процессу (PDF 208–209)</text>
+<text x="86" y="966" font-size="21" fill="#dce8f8">Бюджет · существующие инструменты · API · категории · отчёты</text>
+<text x="86" y="1001" font-size="20" fill="#cbdced">Можно начать с ручного учёта; продукт не должен диктовать процессы</text>
+<rect x="56" y="1078" width="1488" height="231" rx="15" fill="#2c574e" stroke="#83ddb7" stroke-width="2"/>
+<text x="85" y="1125" font-size="28" font-weight="bold" fill="#f4fff8">5 · Устойчивость и ETTO (PDF 209–211)</text>
+<text x="85" y="1170" font-size="21" fill="#e0f9eb">Эффективность ↔ тщательность · избегать «героических» авралов</text>
+<text x="85" y="1208" font-size="21" fill="#e0f9eb">Отслеживать время обучения и интересные/тяжёлые задачи</text>
+<text x="85" y="1246" font-size="21" fill="#e0f9eb">Согласовывать приоритеты и изменения с людьми, а не навязывать их</text>
+<text x="85" y="1280" font-size="19" fill="#caebdb">В заключении: совместная доска выявляет зависимости между командами</text>
+<text x="56" y="1415" font-size="17" fill="#b0c8db">Canonical RAG PDF 203–211. Размеры из OCR табл. 17.1–17.2 не нормализованы. Это новая иллюстрация.</text>
+</g></svg>
