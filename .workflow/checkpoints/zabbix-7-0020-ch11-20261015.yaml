@@ -1,0 +1,15 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: "zabbix-7-0020-ch11-20261015"
+repository: "vsp-corp/biblioteka-vsp"
+task_kind: chapter
+book_id: "zabbix-7-monitoring-it-infrastructure-ru"
+branch: "chapter/zabbix-7-0020-ch11-maintenance-20261015"
+stage: IN_PROGRESS
+completed_steps:
+  - step: "Checked main; chapter 11 pages 434-464; accepted RAG."
+    evidence_type: other
+    reference: "cf5e36c3a06bf9545d7b6736c4ac663dea9ac071"
+pending_steps:
+  - "Write chapter files, update index, run CI, open PR, verify merge."
+first_safe_next_action: "Inspect chapter file paths before further writes."
+blocker: "Not applicable"
