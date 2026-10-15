@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only chapter 11 external interrupts analysis and gated Git publication"
 branch: chapter/assembly-x86-64-zhukov-ru-ch11
 initial_base_sha: 34e8130f63c635d3780d32696bb7810bf7dcf368
-last_observed_head_sha: 34e8130f63c635d3780d32696bb7810bf7dcf368
+last_observed_head_sha: 757ae90933c64e63d52e5b46fc25ab9c465d6d1c
 expected_source_sha256: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
 constraints:
   - no direct main changes
@@ -21,8 +21,10 @@ completed_steps:
   - step: "Chapter 11 RAG PDF p197-204 read from two shards, chapter 12 starts p205; main 10/21"
     evidence_type: file-readback
     reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/34e8130f63c635d3780d32696bb7810bf7dcf368/books/assembly-x86-64-zhukov-ru/notes/chapters/plan.yaml"
+  - step: "Six chapter 11 mandatory files committed individually and Git-readback verified"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/tree/757ae90933c64e63d52e5b46fc25ab9c465d6d1c/books/assembly-x86-64-zhukov-ru/notes/chapters/chapter-11-vneshnie-preryvaniya"
 pending_steps:
-  - "Create six mandatory chapter files as separate Git objects and read back"
   - "Create conditional review questions, review answers and source findings"
   - "Update index to 11/21 in chapter branch"
   - "Check main drift and validation PASS, PR only after PASS"
