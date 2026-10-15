@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650" role="img" aria-label="Краткая памятка по системе команд i8086">
+<rect width="1100" height="650" fill="#f8fafc"/><g font-family="DejaVu Sans,sans-serif">
+<text x="34" y="56" font-size="31" font-weight="bold" fill="#142a43">Глава 5 · Система команд i8086</text>
+<text x="34" y="88" font-size="17" fill="#607085">a86 / d86 · операнды → флаги → переход → строковые команды</text>
+<g stroke-width="2"><rect x="32" y="124" width="330" height="131" rx="14" fill="#e1edff" stroke="#5883c2"/><rect x="386" y="124" width="330" height="131" rx="14" fill="#e4f7ed" stroke="#379271"/><rect x="740" y="124" width="330" height="131" rx="14" fill="#eee8ff" stroke="#8773c1"/>
+<rect x="32" y="285" width="330" height="137" rx="14" fill="#e9f3ff" stroke="#5883c2"/><rect x="386" y="285" width="330" height="137" rx="14" fill="#e3f7ed" stroke="#379271"/><rect x="740" y="285" width="330" height="137" rx="14" fill="#f0ebff" stroke="#8773c1"/></g>
+<g font-size="20" font-weight="bold" fill="#1d4770"><text x="49" y="156">01 · Пересылка</text><text x="403" y="156">02 · Арифметика</text><text x="757" y="156">03 · Логика/сдвиг</text>
+<text x="49" y="317">04 · Стек</text><text x="403" y="317">05 · Переход</text><text x="757" y="317">06 · Строки</text></g>
+<g font-size="16" fill="#263d52"><text x="49" y="188">mov · lea · xchg · xlat</text><text x="49" y="219">Значение или адрес?</text>
+<text x="403" y="188">add · mul · div · adc</text><text x="403" y="219">Знак, перенос, результат</text>
+<text x="757" y="188">and · or · xor · sar</text><text x="757" y="219">Маски, сдвиги, флаги</text>
+<text x="49" y="349">push · pop · call · ret</text><text x="49" y="381">SP; последним вошёл — первым вышел</text>
+<text x="403" y="349">jmp · jz · ja · jl · loop</text><text x="403" y="381">IP и условия Z/CX</text>
+<text x="757" y="349">lods · stos · scas · movs</text><text x="757" y="381">SI/DI · D · CX · REP</text></g>
+<rect x="32" y="455" width="1038" height="123" rx="13" fill="#fff0e5" stroke="#ce8752" stroke-width="2"/>
+<text x="53" y="487" font-size="21" font-weight="bold" fill="#8e421b">Два правила безопасного исследования</text>
+<text x="53" y="518" font-size="17" fill="#77452b">JMP/CALL могут обойти INT 3 буфера: исследовать только в exa2.8 с m1–m7.</text>
+<text x="53" y="547" font-size="17" fill="#77452b">INC/DEC не меняют C; REPNE SCASB при CX=0 может завершиться совпадением.</text>
+<text x="34" y="613" font-size="14" fill="#657b8f">Источник: RAG p0069:c01–p0084:c01 · PDF 69–84 · SHA f65a7ec…d2c</text>
+</g></svg>
