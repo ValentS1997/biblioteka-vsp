@@ -10,6 +10,7 @@
 - Глава 4 слита из `chapters/0011-modern-system-administration-chapter-04` через [PR #508](https://github.com/vsp-corp/biblioteka-vsp/pull/508), merge commit [`aa87563`](https://github.com/vsp-corp/biblioteka-vsp/commit/aa875633f8b32b96af5a5b5342e9de8b7ca96350).
 - Осталось неопубликованными в `main`: **1**.
 - Следующая неопубликованная глава: **21 — Руководство устойчивыми командами**.
+- Глава 21 подготовлена в ветке `chapters/0011-modern-system-administration-chapter-21` из canonical RAG PDF 256–271; до merge в `main` опубликовано **20/21**.
 - Глава 20 опубликована через [PR #580](https://github.com/vsp-corp/biblioteka-vsp/pull/580) по canonical RAG PDF 241–255; все восемь файлов независимо проверены в `main`.
 - Глава 19 опубликована через [PR #575](https://github.com/vsp-corp/biblioteka-vsp/pull/575) по canonical RAG PDF 226–240. Восемь файлов независимо прочитаны в `main`.
 - Глава 18 опубликована через [PR #571](https://github.com/vsp-corp/biblioteka-vsp/pull/571), canonical RAG PDF 213–225; восемь файлов независимо проверены в `main`.
@@ -45,7 +46,7 @@
 | 18 | [Управление мощностями](chapter-18-capacity-management/README.md) | Опубликована в `main`: 6 обязательных + 2 условных Git-файла; PR #571, CI PASS, 8 файлов read-back |
 | 19 | [Создание надежной дежурной службы](chapter-19-reliable-on-call/README.md) | Опубликована в `main`: 6 обязательных + 2 условных Git-файла; PR #575, CI PASS, восемь read-back |
 | 20 | [Управление инцидентами](chapter-20-incident-management/README.md) | Опубликована в `main`: 6 обязательных + 2 условных Git-файла; PR #580, CI PASS, 8 файлов read-back |
-| 21 | Руководство устойчивыми командами | Не опубликована |
+| 21 | [Руководство устойчивыми командами](chapter-21-resilient-teams/README.md) | Подготовлена в отдельной ветке: 6 обязательных + 2 условных Git-файла, ожидает CI/PR |
 
 Глава считается опубликованной только при наличии и read-back всех шести файлов: `README.md`, `cheatsheet.md`, `commands.md`, `diagram.md`, `visual-cheatsheet.svg`, `visual-cheatsheet-detailed.svg`. Условные артефакты добавляются по RAG chapter content.
 
@@ -132,3 +133,7 @@ Canonical RAG PDF **226–240**, печатные **236–250**; PDF 241 отк�
 ## Глава 20 — опубликована в `main`
 
 Canonical RAG **PDF 241–255**, печатные **251–265**; PDF 256 открывает главу 21. Отдельные Git-файлы в `chapter-20-incident-management/`: `README.md`, `cheatsheet.md`, `commands.md`, `diagram.md`, `visual-cheatsheet.svg`, `visual-cheatsheet-detailed.svg`, `summary.md`, `source-findings.md`. Рассмотрены подготовка, роли IC/SME/коммуникации/протоколирования, оценка severity, принятие решений, проверка стабилизации, работа без обвинений, отчеты и обучение. Рисунки 20.1/20.2 не восстанавливались по памяти. **Глава 20 опубликована через PR #580**, merge commit `1b41788477370e3e47f11bcfaad90b4511e50bbf`. [Branch CI PASS](https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38779553411), [независимый PR CI PASS](https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38779708243) на исходном HEAD `008d0d76ad17b3209498a99c47a00f3a98e01fca`. Восемь артефактов индивидуально проверены в `main`. **Прогресс: 20/21 (95.2%), осталась 1 глава — №21**. PDF, RAG и статус чтения не изменены.
+
+## Глава 21 — подготовлена на отдельной ветке (ожидает CI/PR)
+
+Canonical RAG **PDF 256–271**, печатные **266–281**. PDF 272 начинает отдельное заключение всей книги и не включается. В `chapter-21-resilient-teams/` восемь самостоятельных Git-файлов: `README.md`, `cheatsheet.md`, `commands.md`, `diagram.md`, `visual-cheatsheet.svg`, `visual-cheatsheet-detailed.svg`, `summary.md`, `source-findings.md`. Главные темы: коллективная ответственность, on-call и восстановление, мониторинг команды, каталог услуг, описание работ, документация, бюджет и культура обучения. Оригинал рис. 21.1 не реконструирован. **До merge: 20/21**, PDF/RAG/статус чтения не меняются.
