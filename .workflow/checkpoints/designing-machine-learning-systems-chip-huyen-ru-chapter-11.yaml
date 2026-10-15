@@ -7,7 +7,7 @@ objective: "Analyze chapter 11 Человеческая сторона маши�
 branch: chapter/0031-designing-ml-systems-ch11-20261015
 parent_branch: chapter/0031-designing-ml-systems-ch10-20261015
 initial_base_sha: 482ec4045b3794b78cf8ad4cb746ce797df99051
-last_observed_head_sha: b67de0f8a195a9bd8be7dc6005b6de93f6bb7d3e
+last_observed_head_sha: b30691df323789e9f692daa4119080cfd7db630c
 expected_source_sha256: 0bcacadb4e1dc2235cb58f975111e1633527217127c5871edb894fe2b8f4c80c
 constraints:
   - "RAG-only, no direct PDF or external information in chapter artifacts"
@@ -15,7 +15,7 @@ constraints:
   - "no source or RAG corpus edits"
   - "no modification of reading/progress.yaml"
   - "separate individual Git files, no archives; no duplicate PR"
-stage: CI_PENDING
+stage: IN_PROGRESS
 completed_steps:
   - step: "Source RAG acceptance ACCEPTED and source checksum confirmed, chapter plan eleven numbered chapters, current source chapter 11 p0335-p0358, separate book conclusion starts p0359."
     evidence_type: file-readback
@@ -32,10 +32,16 @@ completed_steps:
   - step: "Complete chapter 11 push CI: RAG links, both SVG PNG rendering, Prometheus inventory 0040 and regression tests PASS."
     evidence_type: ci
     reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38729767220"
+  - step: "Opened one stacked PR #536 against chapter 10 #533, exactly ten expected paths (eight chapter artifacts, index and checkpoint), no upstream chapter duplicates."
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/536"
+  - step: "PR #536 validation on previous exact HEAD: changed collections, RAG links, two SVG PNG renderings and regression tests PASS."
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38729979367"
 pending_steps:
-  - "Read-only confirm no chapter 11 PR, then open one stacked PR against chapter 10; verify exactly ten paths and PR CI PASS."
-  - "Update checkpoint with PR and CI links; verify final checkpoint HEAD CI, clean PR mergeability, unchanged reading. Do not merge."
-last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38729767220"
-first_safe_next_action: "Read-only inspect latest chapter 11 branch SHA, checkpoint, artifacts and PR list before any write. Avoid duplicate PR or files."
+  - "Read-only verify final checkpoint-only HEAD CI and PR #536 clean mergeability, unchanged reading/progress.yaml."
+  - "After parent stacked PRs merge in order, retarget and rerun validation before merge; no automatic merges."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38729979367"
+first_safe_next_action: "Read-only verify exact chapter 11 branch HEAD, checkpoint, #536, upstream #533 and CI; avoid duplicate changes, leave reading planned."
 blocker: "Not applicable"
 last_observed_at: "Not applicable"
