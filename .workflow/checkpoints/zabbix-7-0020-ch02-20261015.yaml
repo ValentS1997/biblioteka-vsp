@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only analysis and individual Git publication of Zabbix chapter 2 under artifact contract v1.8."
 branch: "chapter/zabbix-7-0020-ch02-users-roles-authentication-20261015"
 initial_base_sha: "f105f8aa8bee5a3cef5b9196fb6c1b66b8c645eb"
-last_observed_head_sha: "f105f8aa8bee5a3cef5b9196fb6c1b66b8c645eb"
+last_observed_head_sha: "fcfc6d0cb2ffd280e48ac8b53c54546299ab5f49"
 expected_source_sha256: "07204d885d4bf4c6c2de7c71ae42a4e3ed4cea794169cbe07985552e63875a27"
 constraints:
   - no direct main changes
@@ -15,7 +15,7 @@ constraints:
   - no reading-progress mutation without explicit user confirmation
   - no archive delivery for chapter artifacts
   - RAG-only; no external research
-stage: IN_PROGRESS
+stage: CI_PENDING
 completed_steps:
   - step: "Verified accepted RAG, chapter-plan and existing chapter-1 Git publication; 1/13 in main."
     evidence_type: file-readback
@@ -23,12 +23,16 @@ completed_steps:
   - step: "Verified prior book readiness CI success (run 38374073431)"
     evidence_type: ci
     reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38374073431"
+  - step: "Committed seven individual Git chapter files; read-back confirmed six required artifacts and source-findings.md"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/b4b8cb81eea8a5b40ab30680716f844c95f951a1"
+  - step: "Published index progress 2/13 in feature branch"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/fcfc6d0cb2ffd280e48ac8b53c54546299ab5f49"
 pending_steps:
-  - "Retrieve chapter 2 source PDF pages 59-92 (addressable RAG only), verify chapter 3 boundary at 93"
-  - "Create all six mandatory chapter files separately in Git and conditional findings if needed"
-  - "Verify individual Git files, update index to 2/13, run branch and PR CI"
+  - "Check final branch CI at current HEAD; open PR after PASS"
   - "Retire checkpoint before merge and verify CI on final head, then post-merge readback/CI"
 last_verified_evidence: "f105f8aa8bee5a3cef5b9196fb6c1b66b8c645eb"
-first_safe_next_action: "Read the current branch HEAD and addressable chapter RAG chunks before any duplicate mutation."
+first_safe_next_action: "Read exact branch SHA and CI before any further mutation."
 blocker: "Not applicable"
 last_observed_at: "Not applicable"
