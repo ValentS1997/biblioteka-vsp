@@ -3,29 +3,30 @@ task_key: kali-linux-in-action-skabtsov-2e-ru-chapter-14
 repository: vsp-corp/biblioteka-vsp
 book_id: kali-linux-in-action-skabtsov-2e-ru
 task_kind: chapter
-objective: "RAG-only chapter 14 Metasploit Framework defensive module analysis and individual artifact publication"
+objective: "RAG-only chapter 14 Metasploit module analysis and stacked Git publication"
 branch: chapter/kali-linux-in-action-skabtsov-2e-ru-0012-ch14
 initial_base_sha: 9e8e6db5581213a3997b275541ae0be85547f6a3
-last_observed_head_sha: 9e8e6db5581213a3997b275541ae0be85547f6a3
+last_observed_head_sha: 597ae3ccd7dbb66065db0d0a3c29e09dd2e4af9e
 expected_source_sha256: fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9
 constraints:
   - no direct main changes
   - no force push
-  - no source/RAG/reading-status mutation
-  - no ZIP archive for chapter artifacts
-  - no runnable exploit, credential guessing, payload generation or evasion workflow
-stage: PLANNED
+  - no source/RAG mutation
+  - no reading progress mutation
+  - no ZIP chapter handoff
+  - no runnable exploit, credential guessing, payload generation, AV evasion or post-compromise workflows
+stage: CI_PENDING
 completed_steps:
-  - step: "Verified source RAG ACCEPTED, chapter 14 PDF 308-331 and next chapter 15 starts at 332; 17 chapters total."
+  - step: "Verified accepted source RAG, chapter 14 PDF 308-331 and next chapter 15 at PDF 332, total 17 chapters."
     evidence_type: file-readback
     reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/kali-linux-in-action-skabtsov-2e-ru/rag/chunks/p0301-p0400/p0308-c01.md
-  - step: "Verified immediate predecessor PR #592 OPEN and branch head exactly matches."
-    evidence_type: pr
-    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/592
+  - step: "Committed and individually read back six mandatory artifacts, source-findings with 15 findings and updated index, eight Git paths total."
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/597ae3ccd7dbb66065db0d0a3c29e09dd2e4af9e
 pending_steps:
-  - "Commit six mandatory individual files, conditional source findings and updated chapter index, then verify Git read-back."
-  - "Check push CI SUCCESS before creating PR stacked on chapter 13."
-  - "Verify PR CI on exact latest head, reconcile ancestor PRs before any merge."
-last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/9e8e6db5581213a3997b275541ae0be85547f6a3
-first_safe_next_action: "Read current feature branch head and chapter-14 directory before writing."
-blocker: "Integration into main deferred pending ancestor PRs, starting at #549."
+  - "Verify push CI 38790973719 SUCCESS on artifact commit."
+  - "Open stacked PR against chapter 13 only after CI PASS, compare exact changed paths."
+  - "Verify PR CI on exact latest feature HEAD, log COMPLETE checkpoint and defer integration until ancestors reconcile."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/597ae3ccd7dbb66065db0d0a3c29e09dd2e4af9e
+first_safe_next_action: "Recheck current HEAD, artifact readback and push CI; avoid repeating commit."
+blocker: "Main integration deferred until ancestors; PR #549 currently mergeable false."
