@@ -1,0 +1,33 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: kali-linux-in-action-skabtsov-2e-ru-chapter-09
+repository: vsp-corp/biblioteka-vsp
+book_id: kali-linux-in-action-skabtsov-2e-ru
+task_kind: chapter
+objective: "RAG-only chapter 09 individual Git artifacts and stacked PR"
+branch: chapter/kali-linux-in-action-skabtsov-2e-ru-0012-ch09
+initial_base_sha: 33a0e14e7048e54ed6b9fe6508f51d3734113c0e
+last_observed_head_sha: 67307490485d10002c40013a345b1a9f3e3beabc
+expected_source_sha256: fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite without explicit authorization
+  - no reading-progress mutation without explicit user confirmation
+  - no archive delivery for chapter artifacts
+  - no executable credential-extraction or network password-guessing playbooks
+stage: CI_PENDING
+completed_steps:
+  - step: "Verified RAG ACCEPTED and chapter 09 PDF pages 258-271, next chapter at 272, book 17 chapters."
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/kali-linux-in-action-skabtsov-2e-ru/rag/chunks/p0201-p0300/p0258-c01.md
+  - step: "Published six mandatory individual chapter 09 files, source-findings and index; all eight paths individually read back."
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/67307490485d10002c40013a345b1a9f3e3beabc
+pending_steps:
+  - "Verify push CI run 38777636910 completed SUCCESS for artifact commit."
+  - "Open stacked PR against chapter 08 branch only after CI PASS and inspect expected diff."
+  - "Verify PR-triggered CI for current exact HEAD; leave PR unmerged until ancestor PRs reconcile."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/67307490485d10002c40013a345b1a9f3e3beabc
+first_safe_next_action: "Read latest branch head, checkpoint and CI. Do not recreate eight committed artifacts."
+blocker: Not applicable
+last_observed_at: Not applicable
