@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1240" viewBox="0 0 1500 1240" role="img" aria-labelledby="t d">
+<title id="t">Глава 13 — Подробная карта обеспечения безопасности инфраструктуры</title>
+<desc id="d">Схема рисков по жизненному циклу, IAM, секретов, вычислительной среды, сетевого нулевого доверия и десяти рекомендаций IaC на основе RAG PDF 157–171.</desc>
+<rect width="1500" height="1240" fill="#0d1b2d"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="54" y="71" font-size="39" font-weight="bold" fill="#f1f8ff">Глава 13 · Обеспечение безопасности инфраструктуры</text>
+<text x="54" y="110" font-size="21" fill="#bed3e6">Многослойная защита без неявного доверия к внутренней среде</text>
+<rect x="54" y="143" width="1392" height="128" rx="14" fill="#174755" stroke="#78dfd0" stroke-width="2"/>
+<text x="82" y="186" font-size="27" font-weight="bold" fill="#f2ffff">1 · Ищи входы для атак на всех этапах (PDF 157–159)</text>
+<text x="82" y="223" font-size="20" fill="#ddf7f2">Репозиторий → ресурсы сборки → платформа → артефакты → production</text>
+<text x="82" y="253" font-size="18" fill="#d3eceb">Компрометация credentials · ошибки конфигурации · устаревшие пакеты и ОС</text>
+<text x="54" y="313" font-size="28" font-weight="bold" fill="#eff8ff">2 · Четыре направления защиты</text>
+<rect x="54" y="339" width="676" height="178" rx="14" fill="#283b55"/>
+<text x="81" y="381" font-size="26" font-weight="bold" fill="#f2f9ff">IAM (PDF 159–162)</text>
+<text x="81" y="415" font-size="19" fill="#e0ebfa">Аутентификация · авторизация · аудит</text>
+<text x="81" y="446" font-size="19" fill="#e0ebfa">MFA · least privilege · отдельные сервисные роли</text>
+<text x="81" y="480" font-size="18" fill="#bcd1ed">Выдача и отзыв доступа, проверка API</text>
+<rect x="770" y="339" width="676" height="178" rx="14" fill="#284a54"/>
+<text x="797" y="381" font-size="26" font-weight="bold" fill="#f3ffff">Секреты (PDF 162–165)</text>
+<text x="797" y="415" font-size="19" fill="#dbf5f3">Хранение отдельно от кода · отзыв · ротация</text>
+<text x="797" y="446" font-size="19" fill="#dbf5f3">Шифрование · изоляция · контроль доступа</text>
+<text x="797" y="480" font-size="18" fill="#b7e3df">Аудит утечек через журналы и сообщения</text>
+<rect x="54" y="537" width="676" height="177" rx="14" fill="#303f56"/>
+<text x="81" y="579" font-size="26" font-weight="bold" fill="#f2f8ff">Вычисления (PDF 165–167)</text>
+<text x="81" y="613" font-size="19" fill="#e0ebf9">Укрепление ОС, ПО и контейнерных образов</text>
+<text x="81" y="644" font-size="19" fill="#e0ebf9">CIS/STIG с обоснованием исключений</text>
+<text x="81" y="680" font-size="18" fill="#bfd1e7">Тестирование патчей и зависимостей</text>
+<rect x="770" y="537" width="676" height="177" rx="14" fill="#314754"/>
+<text x="797" y="579" font-size="26" font-weight="bold" fill="#f4fbff">Сеть (PDF 167–169)</text>
+<text x="797" y="613" font-size="19" fill="#dfeefa">Нет доверия лишь из-за местоположения</text>
+<text x="797" y="644" font-size="19" fill="#dfeefa">Доступ после проверки сущности и прав</text>
+<text x="797" y="680" font-size="18" fill="#c4d7e9">Описывать и ограничивать разрешённые потоки</text>
+<rect x="54" y="744" width="1392" height="180" rx="14" fill="#2b4057"/>
+<text x="82" y="788" font-size="27" font-weight="bold" fill="#f2f8ff">3 · Систематизируй 10 рекомендаций (PDF 169–170)</text>
+<text x="82" y="825" font-size="20" fill="#e1eafb">1–4: права автоматизации, безопасные и неповторяемые учётные данные, минимум доступа</text>
+<text x="82" y="860" font-size="20" fill="#e1eafb">5–7: целостность ресурсов, разделение рабочих нагрузок, политики и шифрование в IaC</text>
+<text x="82" y="895" font-size="20" fill="#e1eafb">8–10: статическая проверка Checkov, поиск секретов Gitleaks, аудит политик</text>
+<rect x="54" y="953" width="1392" height="180" rx="14" fill="#29594f" stroke="#7ee0b9"/>
+<text x="82" y="998" font-size="27" font-weight="bold" fill="#f2fff8">4 · Проверяй и улучшай постепенно (PDF 170–171)</text>
+<text x="82" y="1035" font-size="20" fill="#e1fff1">Тестируй реальный доступ и поведение сервиса, а не один факт запуска сканера</text>
+<text x="82" y="1069" font-size="20" fill="#e1fff1">Сохраняй журналы и решения, выделяй достижимые этапы командной работы</text>
+<text x="82" y="1102" font-size="18" fill="#d0f4e5">Исполняемый Terraform и инструкции rollback — [Needs confirmation]</text>
+<text x="54" y="1199" font-size="16" fill="#aec8d9">Источник: canonical RAG PDF 157–171. Рис. 13.1 не воспроизведён дословно.</text>
+</g></svg>
