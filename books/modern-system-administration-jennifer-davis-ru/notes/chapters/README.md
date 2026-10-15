@@ -6,14 +6,14 @@
 
 ## Git publication progress
 
-- Опубликовано полных наборов артефактов в `main`: **9 / 21 (42.9%)**.
+- Полных наборов артефактов в книжной ветке: **10 / 21 (47.6%)**; исходный проверенный `main`: **9 / 21 (42.9%)**.
 - Глава 4 слита из `chapters/0011-modern-system-administration-chapter-04` через [PR #508](https://github.com/vsp-corp/biblioteka-vsp/pull/508), merge commit [`aa87563`](https://github.com/vsp-corp/biblioteka-vsp/commit/aa875633f8b32b96af5a5b5342e9de8b7ca96350).
-- Осталось: **12**.
-- Следующая неопубликованная глава: **10 — Презентации**.
+- Осталось в книжной ветке: **11**.
+- Следующая неопубликованная глава: **11 — Разработка сценариев инфраструктуры**.
 - Учёт публикации: только отдельные committed Git files; ZIP и подготовленные вне Git тексты не учитываются.
 - Recovery evidence: [chapter 3 checkpoint](../../../../.workflow/checkpoints/0011-modern-system-administration-chapter-03.yaml) — `COMPLETE`; слияние PR #503 и #504, финальные CI PASS.
 - Публикация в `main`: PR [#489](https://github.com/vsp-corp/biblioteka-vsp/pull/489) слит; merge commit [`781200b`](https://github.com/vsp-corp/biblioteka-vsp/commit/781200b791f0ce111a6659b330d537adb49289be).
-- **Текущее состояние `main`: 9 / 21 (42.9%).** Глава 9 слита через [PR #527](https://github.com/vsp-corp/biblioteka-vsp/pull/527), merge commit [`bdbcb32`](https://github.com/vsp-corp/biblioteka-vsp/commit/bdbcb3250179350f658102379f03cd2831037ceb). Глава 8 через [PR #523](https://github.com/vsp-corp/biblioteka-vsp/pull/523), merge commit [`99f6755`](https://github.com/vsp-corp/biblioteka-vsp/commit/99f6755d0a4237dd32fc645fc9a637d2c4425772). Глава 7 через [PR #519](https://github.com/vsp-corp/biblioteka-vsp/pull/519), merge commit [`b48f0ec`](https://github.com/vsp-corp/biblioteka-vsp/commit/b48f0ec569a2ca280f38392aa416572c9daaf722). Глава 3 через [PR #503](https://github.com/vsp-corp/biblioteka-vsp/pull/503), глава 4 через [PR #508](https://github.com/vsp-corp/biblioteka-vsp/pull/508), глава 5 через [PR #512](https://github.com/vsp-corp/biblioteka-vsp/pull/512), merge commit [`a153eed`](https://github.com/vsp-corp/biblioteka-vsp/commit/a153eed050e88f65c9462052ba7378cd90fcc317).
+- **Проверенный прогресс книжной ветки: 10 / 21 (47.6%); исходный `main`: 9 / 21 (42.9%).** Глава 9 слита через [PR #527](https://github.com/vsp-corp/biblioteka-vsp/pull/527), merge commit [`bdbcb32`](https://github.com/vsp-corp/biblioteka-vsp/commit/bdbcb3250179350f658102379f03cd2831037ceb). Глава 8 через [PR #523](https://github.com/vsp-corp/biblioteka-vsp/pull/523), merge commit [`99f6755`](https://github.com/vsp-corp/biblioteka-vsp/commit/99f6755d0a4237dd32fc645fc9a637d2c4425772). Глава 7 через [PR #519](https://github.com/vsp-corp/biblioteka-vsp/pull/519), merge commit [`b48f0ec`](https://github.com/vsp-corp/biblioteka-vsp/commit/b48f0ec569a2ca280f38392aa416572c9daaf722). Глава 3 через [PR #503](https://github.com/vsp-corp/biblioteka-vsp/pull/503), глава 4 через [PR #508](https://github.com/vsp-corp/biblioteka-vsp/pull/508), глава 5 через [PR #512](https://github.com/vsp-corp/biblioteka-vsp/pull/512), merge commit [`a153eed`](https://github.com/vsp-corp/biblioteka-vsp/commit/a153eed050e88f65c9462052ba7378cd90fcc317).
 
 ## Реестр глав
 
@@ -28,7 +28,7 @@
 | 7 | [Тестирование](chapter-07-testing/README.md) | Опубликована в `main`: 6 обязательных + 2 условных Git-файла; PR #519, CI PASS |
 | 8 | [Безопасность инфраструктуры](chapter-08-infrastructure-security/README.md) | Опубликована в `main`: 6 обязательных + 2 условных Git-файла; PR #523, CI PASS |
 | 9 | [Документация](chapter-09-documentation/README.md) | Опубликована в `main`: 6 обязательных + 2 условных Git-файла; PR #527, CI PASS |
-| 10 | Презентации | Не опубликована |
+| 10 | [Презентации](chapter-10-presentations/README.md) | В книжной ветке: 6 обязательных + 4 условных индивидуальных Git-файла; read-back выполнен |
 | 11 | Разработка сценариев инфраструктуры | Не опубликована |
 | 12 | Управление инфраструктурой | Не опубликована |
 | 13 | Обеспечение безопасности инфраструктуры | Не опубликована |
@@ -82,3 +82,7 @@
 ## Свидетельство публикации главы 9 (`main`)
 
 Глава 9 «Документация»: RAG **PDF 109–115** (печатные **113–119**); глава 10 начинается на PDF 116. В ветке `chapters/0011-modern-system-administration-chapter-09` отдельно записаны и прочитаны из Git восемь файлов `chapter-09-documentation/`: `README.md`, `cheatsheet.md`, `commands.md`, `diagram.md`, `visual-cheatsheet.svg`, `visual-cheatsheet-detailed.svg`, `summary.md`, `source-findings.md`. Замечания о недоступных графических деталях рис. 9.1–9.3 сохранены без восстановления из внешних знаний. **Глава 9 слита в `main` через [PR #527](https://github.com/vsp-corp/biblioteka-vsp/pull/527)**; merge commit `bdbcb3250179350f658102379f03cd2831037ceb`. PR CI `Validate chapter notes and SVG` PASS ([run 38724137117](https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38724137117)). Все восемь отдельных файлов прочитаны из `main`. **Общий прогресс: 9/21 (42,9%)**. Статус чтения не менялся.
+
+## Публикация главы 10 в книжной ветке
+
+Глава 10 «Презентации»: RAG **PDF 116–133**, печатные **120–137**. PDF 134 — вступление части III, PDF 135 — глава 11. В ветке `chapters/0011-modern-system-administration-chapter-10` созданы и по отдельности прочитаны из Git **десять** файлов `chapter-10-presentations/`: `README.md`, `cheatsheet.md`, `commands.md`, `diagram.md`, `visual-cheatsheet.svg`, `visual-cheatsheet-detailed.svg`, `summary.md`, `review-questions.md`, `review-answers.md`, `source-findings.md`. Шесть вопросов заключения сохранены с ответами на основе RAG; неполнота графических данных и чисел отмечена, без догадок. **Прогресс ветки: 10/21 (47,6%)**. Слияние и обновление показателя `main` только после PR CI PASS. Статус чтения не менялся.

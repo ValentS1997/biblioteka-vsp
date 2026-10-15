@@ -1,0 +1,37 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: "0011-modern-system-administration-chapter-10"
+repository: "vsp-corp/biblioteka-vsp"
+book_id: modern-system-administration-jennifer-davis-ru
+task_kind: chapter
+objective: "RAG-only chapter 10 Presentations analysis and direct publication of individual Git artifacts"
+branch: "chapters/0011-modern-system-administration-chapter-10"
+initial_base_sha: "abd3e549066e50bc2edfd99694a08e326de7e2ad"
+last_observed_head_sha: "ced09bb14dbc762b68dfcde76a28aa09e86634d4"
+expected_source_sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite
+  - no reading-progress mutation
+  - no archives
+stage: CI_PENDING
+completed_steps:
+  - step: "Verified main 9/21, 21 chapter plan, RAG ACCEPTED, source and source checksum"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/abd3e549066e50bc2edfd99694a08e326de7e2ad/books/modern-system-administration-jennifer-davis-ru/notes/chapters/plan.yaml"
+  - step: "Chapter 10 verified PDF 116-133, printed 120-137; PDF 134 begins Part III, PDF 135 chapter 11"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/abd3e549066e50bc2edfd99694a08e326de7e2ad/books/modern-system-administration-jennifer-davis-ru/rag/chunks/p0101-p0200/p0135-c01.md"
+  - step: "Ten individual chapter files independently Git read-back verified"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/830f7284d9c55cff9fa2d49ac25d4ba2e2836d07"
+  - step: "Book index committed on branch; 10/21 and chapter 11 next"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/ced09bb14dbc762b68dfcde76a28aa09e86634d4"
+pending_steps:
+  - "Check CI, open PR, verify PR CI and merge only after PASS"
+  - "Verify main, finalize canonical publication index and recovery checkpoint via separate PR"
+last_verified_evidence: "abd3e549066e50bc2edfd99694a08e326de7e2ad"
+first_safe_next_action: "Read Git branch and checkpoint to discover completed writes before retry"
+blocker: "Not applicable"
+last_observed_at: "Not applicable"
