@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="690" viewBox="0 0 1120 690" role="img" aria-label="Краткая визуальная шпаргалка главы 9: сегментная адресация, сегментные регистры, EXE секции">
+<rect width="1120" height="690" fill="#f8fafc"/><g font-family="DejaVu Sans,sans-serif">
+<text x="36" y="54" font-size="31" font-weight="bold" fill="#172f45">Глава 9 · Сегменты</text>
+<text x="36" y="86" font-size="17" fill="#61778b">16-битный сегмент и смещение → линейный адрес в реальном режиме</text>
+<rect x="36" y="117" width="1048" height="91" rx="14" fill="#ddeaff" stroke="#4f7cb5" stroke-width="2"/>
+<text x="58" y="154" font-size="23" font-weight="bold" fill="#24527e">Линейный адрес = SEG × 16 + OFFSET</text>
+<text x="58" y="187" font-size="18" fill="#285375">06312:0107 → 063227   •   0b800:0c80 → 0b8c80   •   0b8c8:0000 → 0b8c80</text>
+<rect x="36" y="236" width="320" height="161" rx="13" fill="#e3efff" stroke="#6184b8" stroke-width="2"/>
+<rect x="399" y="236" width="320" height="161" rx="13" fill="#e4f7ed" stroke="#559b76" stroke-width="2"/>
+<rect x="761" y="236" width="323" height="161" rx="13" fill="#f0eaff" stroke="#8b76c4" stroke-width="2"/>
+<g font-size="20" fill="#24496d" font-weight="bold"><text x="55" y="271">CS:IP — команды</text><text x="418" y="271">DS — обычные данные</text><text x="780" y="271">SS — стек и BP</text></g>
+<g font-size="17" fill="#2c495e"><text x="55" y="304">Дальний JMP: меняет CS</text><text x="55" y="335">Символы в SYM смещаются</text><text x="55" y="366">IP при запуске COM = 0100</text><text x="418" y="304">BX/SI/DI; строка DS:SI</text><text x="418" y="335">ES:DI — приемник строк</text><text x="418" y="366">Префикс меняет сегмент</text><text x="780" y="304">PUSH/POP/CALL/RET</text><text x="780" y="335">SS:SP переносить вместе</text><text x="780" y="366">CLI/STI в опыте</text></g>
+<rect x="36" y="423" width="1048" height="107" rx="13" fill="#e9f1ff" stroke="#6988b8" stroke-width="2"/>
+<text x="56" y="455" font-size="20" font-weight="bold" fill="#24537b">OBJ/EXE: секции и связи</text>
+<text x="56" y="485" font-size="17" fill="#284b69">SEGMENT → PUBLIC / EXTRN → A86 +O → WARPLINK /MX → EXE → Relocation</text>
+<text x="56" y="510" font-size="16" fill="#284b69">Для перехода между секциями кода: CALL FAR и RETF</text>
+<rect x="36" y="550" width="1048" height="88" rx="13" fill="#fff1e7" stroke="#cd885c" stroke-width="2"/>
+<text x="56" y="580" font-size="19" font-weight="bold" fill="#934e2b">Опасные опыты — только в изолированном DOS-эмуляторе</text>
+<text x="56" y="609" font-size="16" fill="#7c462b">Запись в PSP, видео-B8000, SS:SP, TSR и переход по вектору 0:0</text>
+<text x="36" y="669" font-size="14" fill="#677c8d">RAG PDF 149–176 · inventory 0017 · новое аналитическое изображение, не оригинал рис. 9.1</text>
+</g></svg>
