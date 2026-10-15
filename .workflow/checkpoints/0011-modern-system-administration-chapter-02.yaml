@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only chapter 2 analysis and direct Git publication of individual chapter artifacts under v1.8"
 branch: chapters/0011-modern-system-administration
 initial_base_sha: e3de7ca8cc61ad88fc2e4b3a873060c2b5bd2be0
-last_observed_head_sha: 089dd79e3f18d0e3035bb9d3260ee2a4ebb3b5e2
+last_observed_head_sha: e97e3f3b3d6cd7906997ffc16ad0768cfa07f4ed
 expected_source_sha256: 06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790
 constraints:
   - "no direct main changes"
@@ -14,7 +14,7 @@ constraints:
   - "no source/RAG rewrite without explicit authorization"
   - "no reading-progress mutation without explicit user confirmation"
   - "no archive delivery for chapter artifacts"
-stage: CI_PENDING
+stage: COMPLETE
 completed_steps:
   - step: "Recovered current branch; chapter 1 full Git collection and existing 21-chapter plan verified"
     evidence_type: file-readback
@@ -37,10 +37,12 @@ completed_steps:
   - step: "Updated and read back chapter index to 2/21, next chapter 3; main still 0/21"
     evidence_type: commit
     reference: https://github.com/vsp-corp/biblioteka-vsp/commit/089dd79e3f18d0e3035bb9d3260ee2a4ebb3b5e2
+  - step: "Verified final chapter-02 checkpoint head chapter notes and SVG CI PASS"
+    evidence_type: ci
+    reference: https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38690350853
 pending_steps:
-  - "Verify latest-head push and PR #489 chapter notes/SVG CI PASS, then report final state."
   - "PR #489 merge is separate and requires repository governance; do not count book-branch files as main publication."
-last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/089dd79e3f18d0e3035bb9d3260ee2a4ebb3b5e2
-first_safe_next_action: "Re-fetch branch HEAD and latest CI for new checkpoint commit before claiming validated publication."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38690350853
+first_safe_next_action: "Read current branch HEAD, chapter index and PR #489 before next chapter or merge; do not repeat chapter 2 writes."
 blocker: "Not applicable"
 last_observed_at: "Not applicable"
