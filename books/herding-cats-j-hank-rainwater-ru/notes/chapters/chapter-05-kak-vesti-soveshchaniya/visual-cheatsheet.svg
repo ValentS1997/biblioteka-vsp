@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="730" viewBox="0 0 1240 730" role="img" aria-labelledby="title desc">
+<title id="title">Глава 5 — Как вести совещания</title>
+<desc id="desc">Краткий RAG-обзор: подготовка, шесть форматов, консенсус и последующие действия по PDF p. 107–123.</desc>
+<rect width="1240" height="730" fill="#f8fafc"/>
+<rect x="30" y="26" width="1180" height="105" rx="14" fill="#18364c"/>
+<text x="52" y="72" font-size="32" font-family="Arial,sans-serif" font-weight="bold" fill="#fff">Глава 5 · Как вести совещания</text>
+<text x="52" y="109" font-size="20" font-family="Arial,sans-serif" fill="#d6e8f6">Цель: консенсус и план действий · p. 122–123</text>
+<g font-family="Arial,sans-serif" font-size="19" fill="#16344b">
+<rect x="30" y="158" width="570" height="138" rx="12" fill="#e2edf6"/>
+<text x="50" y="193" font-size="23" font-weight="bold">1. Еженедельные · p. 107–110</text>
+<text x="50" y="229">Сделано → план → препятствия</text>
+<text x="50" y="265">Письменные задачи и результат</text>
+<rect x="640" y="158" width="570" height="138" rx="12" fill="#e2edf6"/>
+<text x="660" y="193" font-size="23" font-weight="bold">2. Проектные · p. 110–115</text>
+<text x="660" y="229">Синтез идей, а не победа в споре</text>
+<text x="660" y="265">Протокол решений и влияния</text>
+<rect x="30" y="314" width="570" height="138" rx="12" fill="#e2edf6"/>
+<text x="50" y="349" font-size="23" font-weight="bold">3. Один на один · p. 116–117</text>
+<text x="50" y="385">Обсудить затруднения</text>
+<text x="50" y="421">Согласовать следующие действия</text>
+<rect x="640" y="314" width="570" height="138" rx="12" fill="#e2edf6"/>
+<text x="660" y="349" font-size="23" font-weight="bold">4. Между отделами · p. 117–119</text>
+<text x="660" y="385">Согласовать бизнес и технику</text>
+<text x="660" y="421">Не обвинять свою команду</text>
+<rect x="30" y="470" width="570" height="138" rx="12" fill="#e2edf6"/>
+<text x="50" y="505" font-size="23" font-weight="bold">5. Ретроспективы · p. 119–120</text>
+<text x="50" y="541">Безопасность и уроки проекта</text>
+<text x="50" y="577">Семь вопросов по завершении</text>
+<rect x="640" y="470" width="570" height="138" rx="12" fill="#e2edf6"/>
+<text x="660" y="505" font-size="23" font-weight="bold">6. Телеконференции · p. 120–121</text>
+<text x="660" y="541">Повестка и материалы заранее</text>
+<text x="660" y="577">Не путать молчание с согласием</text>
+</g>
+<text x="35" y="663" font-family="Arial,sans-serif" font-size="18" fill="#3e5870">Итог любой встречи: решение, ответственность и действия, отражённые в протоколе.</text>
+<text x="35" y="699" font-family="Arial,sans-serif" font-size="15" fill="#5b7183">RAG-only · PDF p. 107–123 · Авторские временные нормы не универсальны</text>
+</svg>
