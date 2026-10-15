@@ -6,14 +6,14 @@
 
 ## Git publication progress
 
-- Опубликовано полных наборов артефактов в `main`: **4 / 21 (19.0%)**.
+- Полных наборов артефактов в этой книжной ветке: **5 / 21 (23.8%)**. В `main` на исходном commit `75dd777` было **4 / 21 (19.0%)**.
 - Глава 4 слита из `chapters/0011-modern-system-administration-chapter-04` через [PR #508](https://github.com/vsp-corp/biblioteka-vsp/pull/508), merge commit [`aa87563`](https://github.com/vsp-corp/biblioteka-vsp/commit/aa875633f8b32b96af5a5b5342e9de8b7ca96350).
-- Осталось: **17**.
-- Следующая глава: **5 — Набор инструментов сисадмина**.
+- Осталось в рабочей ветке: **16**.
+- Следующая неопубликованная глава: **6 — Контроль версий**.
 - Учёт публикации: только отдельные committed Git files; ZIP и подготовленные вне Git тексты не учитываются.
 - Recovery evidence: [chapter 3 checkpoint](../../../../.workflow/checkpoints/0011-modern-system-administration-chapter-03.yaml) — `COMPLETE`; слияние PR #503 и #504, финальные CI PASS.
 - Публикация в `main`: PR [#489](https://github.com/vsp-corp/biblioteka-vsp/pull/489) слит; merge commit [`781200b`](https://github.com/vsp-corp/biblioteka-vsp/commit/781200b791f0ce111a6659b330d537adb49289be).
-- **Текущее состояние `main`: 4 / 21 (19.0%).** Глава 3 через [PR #503](https://github.com/vsp-corp/biblioteka-vsp/pull/503), глава 4 через [PR #508](https://github.com/vsp-corp/biblioteka-vsp/pull/508).
+- **Зафиксированное исходное состояние `main`: 4 / 21 (19.0%).** В этой ветке завершена также глава 5; статус слияния проверяется отдельно. Глава 3 через [PR #503](https://github.com/vsp-corp/biblioteka-vsp/pull/503), глава 4 через [PR #508](https://github.com/vsp-corp/biblioteka-vsp/pull/508).
 
 ## Реестр глав
 
@@ -23,7 +23,7 @@
 | 2 | [Вычислительные среды](chapter-02-computing-environments/README.md) | Опубликована в `main`: 6 обязательных + 2 условных Git-файла |
 | 3 | [Хранилище](chapter-03-storage/README.md) | Опубликована в `main`: 6 обязательных + 2 условных Git-файла |
 | 4 | [Сеть](chapter-04-network/README.md) | Опубликована в `main`: 6 обязательных + 2 условных Git-файла; PR #508, CI PASS |
-| 5 | Набор инструментов сисадмина | Не опубликована |
+| 5 | [Набор инструментов сисадмина](chapter-05-sysadmin-toolkit/README.md) | 6 обязательных + 2 условных отдельных Git-файла в книжной ветке; опубликованы после Git read-back |
 | 6 | Контроль версий | Не опубликована |
 | 7 | Тестирование | Не опубликована |
 | 8 | Безопасность инфраструктуры | Не опубликована |
@@ -62,3 +62,7 @@
 ## Свидетельство публикации главы 4 (`main`)
 
 Глава 4 «Сеть»: RAG PDF **63–71**, печатные с. **66–74**; PDF 72 — титул части II, PDF 73 — начало главы 5. В ветке `chapters/0011-modern-system-administration-chapter-04` независимо записаны и прочитаны из Git: `README.md`, `cheatsheet.md`, `commands.md`, `diagram.md`, `visual-cheatsheet.svg`, `visual-cheatsheet-detailed.svg`, `summary.md`, `source-findings.md`. Источник и RAG не изменялись. Условные обзорные вопросы отсутствуют. Глава 4 **слита в `main` через PR #508**; merge commit `aa875633f8b32b96af5a5b5342e9de8b7ca96350`; PR CI `Validate chapter notes and SVG`: PASS ([run 38702483089](https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38702483089)). Все 8 путей независимо проверены в `main`. Статус чтения не менялся.
+
+## Свидетельство публикации главы 5 (ветка)
+
+Глава 5 «Набор инструментов сисадмина»: RAG PDF **73–82** (печатные с. **77–86**); PDF 83 — начало главы 6. В ветке `chapters/0011-modern-system-administration-chapter-05` созданы и отдельно прочитаны из Git восемь путей `chapter-05-sysadmin-toolkit/`: `README.md`, `cheatsheet.md`, `commands.md`, `diagram.md`, `visual-cheatsheet.svg`, `visual-cheatsheet-detailed.svg`, `summary.md`, `source-findings.md`. Пример Bash из текстового слоя PDF 75–76 содержит [Source extraction issue] и не выдаётся за рабочую команду. Доля полной Git-публикации в этой ветке — **5/21 (23,8%)**; перенос в main определяется фактическим PR/merge. Статус чтения не менялся.

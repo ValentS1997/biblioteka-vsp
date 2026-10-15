@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="720" viewBox="0 0 1120 720" role="img" aria-labelledby="title desc">
+<title id="title">Глава 5 — Цифровой инструментарий сисадмина</title>
+<desc id="desc">Изолированная среда; редактор, языки, библиотеки и утилиты; проверка изменений и совместная работа. По RAG PDF 73-82.</desc>
+<rect width="1120" height="720" fill="#0b1524"/>
+<text x="50" y="73" font-family="Arial,DejaVu Sans,sans-serif" font-size="38" font-weight="bold" fill="#f5f9ff">Набор инструментов сисадмина</text>
+<text x="50" y="112" font-family="Arial,DejaVu Sans,sans-serif" font-size="22" fill="#a7c0d9">Глава 5 · Изолируй эксперименты · Упрощай совместную работу</text>
+<rect x="50" y="150" width="1020" height="112" rx="16" fill="#143c51" stroke="#60c7cf" stroke-width="2"/>
+<text x="77" y="195" font-family="Arial,DejaVu Sans,sans-serif" font-size="28" font-weight="bold" fill="#f6ffff">1. Отдельная среда разработки</text>
+<text x="77" y="232" font-family="Arial,DejaVu Sans,sans-serif" font-size="19" fill="#d6f4f5">Реалистичные эксперименты без риска для production</text>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<rect x="50" y="296" width="490" height="124" rx="14" fill="#1d3150"/>
+<text x="75" y="336" font-size="26" font-weight="bold" fill="#e8f3ff">2. Редактор</text>
+<text x="75" y="370" font-size="18" fill="#d3e1f2">Линтер · автозавершение · стиль · Git</text>
+<rect x="580" y="296" width="490" height="124" rx="14" fill="#243650"/>
+<text x="605" y="336" font-size="26" font-weight="bold" fill="#e8f3ff">3. Языки и зависимости</text>
+<text x="605" y="370" font-size="18" fill="#d3e1f2">Навыки команды · совместимость · версии</text>
+<rect x="50" y="443" width="1020" height="104" rx="14" fill="#26364c"/>
+<text x="75" y="483" font-size="26" font-weight="bold" fill="#f2f7ff">4. Утилиты — по задаче</text>
+<text x="75" y="517" font-size="19" fill="#d6e4f4">Ag · ShellCheck · curl · jq · Docker · gh · tmux · tree · dotfiles</text>
+<rect x="50" y="571" width="1020" height="86" rx="14" fill="#28534d" stroke="#77e4b6"/>
+<text x="75" y="608" font-size="26" font-weight="bold" fill="#f2fff9">5. Проверяй, документируй, делись</text>
+<text x="75" y="638" font-size="18" fill="#e2fff3">Повторяемая среда и меньшая когнитивная нагрузка</text>
+</g>
+<text x="50" y="694" font-family="Arial,DejaVu Sans,sans-serif" font-size="15" fill="#adc4d9">Источник: RAG, PDF 73–82 (печатные с. 77–86). Универсальных команд развёртывания нет.</text>
+</svg>
