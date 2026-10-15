@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1330" viewBox="0 0 1500 1330" role="img" aria-labelledby="t d">
+<title id="t">Глава 14 — Подробная карта теоретических аспектов мониторинга</title>
+<desc id="d">Развёрнутая текстовая визуальная карта целей, наблюдаемости, элементов мониторинга, пяти шагов, SLI SLO, границ конфиденциальности и двухпетлевого обучения. RAG PDF 173–181.</desc>
+<rect width="1500" height="1330" fill="#0d1d30"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="53" y="72" font-size="40" font-weight="bold" fill="#f1f8ff">Глава 14 · Теоретические аспекты мониторинга</text>
+<text x="53" y="111" font-size="22" fill="#b9d4e9">Не количество метрик, а пригодность информации для конкретных решений</text>
+<rect x="53" y="145" width="1394" height="149" rx="15" fill="#19445a"/>
+<text x="83" y="185" font-size="29" font-weight="bold" fill="#f0faff">1 · Зачем? (PDF 173–174)</text>
+<text x="83" y="226" font-size="21" fill="#e1f5ff">Обнаружение проблем · улучшение процессов · снижение рисков</text>
+<text x="83" y="259" font-size="21" fill="#e1f5ff">Baseline · бюджетирование · управление мощностями</text>
+<text x="53" y="347" font-size="27" font-weight="bold" fill="#f3faff">2 · Термины и исходные элементы (PDF 175–177)</text>
+<rect x="53" y="373" width="673" height="168" rx="13" fill="#293f59"/>
+<text x="81" y="414" font-size="26" font-weight="bold" fill="#f5fbff">Мониторинг</text>
+<text x="81" y="449" font-size="20" fill="#dceafb">Многоэтапный процесс изучения событий</text>
+<text x="81" y="483" font-size="19" fill="#dceafb">События → мониторы → данные</text>
+<text x="81" y="514" font-size="18" fill="#c2d7eb">Фиксированные / гибкие · узкие / широкие</text>
+<rect x="766" y="373" width="681" height="168" rx="13" fill="#26545c"/>
+<text x="795" y="414" font-size="26" font-weight="bold" fill="#f5ffff">Наблюдаемость</text>
+<text x="795" y="449" font-size="20" fill="#d9f5f4">Свойство системы: объяснимость из выходов</text>
+<text x="795" y="483" font-size="19" fill="#d9f5f4">Не все системы требуют полной детализации</text>
+<text x="795" y="514" font-size="18" fill="#bee6e4">Уточните общие термины внутри команды</text>
+<text x="53" y="595" font-size="27" font-weight="bold" fill="#f1f8ff">3 · Мониторинг первого уровня (PDF 177–180)</text>
+<rect x="53" y="620" width="1394" height="276" rx="14" fill="#293d56"/>
+<text x="81" y="658" font-size="23" font-weight="bold" fill="#f1faff">01 · Обнаружение — произошло событие или отсутствует ожидаемое?</text>
+<text x="81" y="704" font-size="23" fill="#d8e8f7">02 · Сбор — отправка, запрос, диагностика; риск нагрузки и потери событий</text>
+<text x="81" y="749" font-size="23" fill="#d8e8f7">03 · Сокращение — фильтрация, агрегация; компромисс цена / детализация</text>
+<text x="81" y="794" font-size="23" fill="#d8e8f7">04 · Анализ — доступность, задержка, пропускная способность, устойчивость</text>
+<text x="81" y="839" font-size="23" fill="#d8e8f7">05 · Представление — дашборды, оповещения, решения команды</text>
+<text x="53" y="951" font-size="27" font-weight="bold" fill="#f3faff">4 · Сигналы качества и ограничения</text>
+<rect x="53" y="977" width="673" height="154" rx="13" fill="#1c5363"/>
+<text x="82" y="1020" font-size="26" font-weight="bold" fill="#f4ffff">SLI → достижимые SLO</text>
+<text x="82" y="1056" font-size="20" fill="#daf6f7">Обслуживание, надёжность, зависимости</text>
+<text x="82" y="1091" font-size="19" fill="#bfe7eb">Сеть и DNS влияют на достижимость</text>
+<rect x="766" y="977" width="681" height="154" rx="13" fill="#4c3f4b"/>
+<text x="795" y="1020" font-size="26" font-weight="bold" fill="#f8f4ff">Цена и риски наблюдения</text>
+<text x="795" y="1056" font-size="20" fill="#ece1f3">Очереди · нагрузка опросов · пропуски</text>
+<text x="795" y="1091" font-size="19" fill="#e2d2eb">Приватность и согласие на сбор</text>
+<rect x="53" y="1170" width="1394" height="106" rx="15" fill="#295b4b" stroke="#84deae" stroke-width="2"/>
+<text x="83" y="1214" font-size="27" font-weight="bold" fill="#f4fff8">5 · Мониторинг второго уровня (PDF 180–181)</text>
+<text x="83" y="1251" font-size="21" fill="#e3ffed">Двойная петля: данные → решения → пересмотр предпосылок и процессов</text>
+<text x="53" y="1310" font-size="16" fill="#abc8db">Источник: canonical RAG PDF 173–181. Пороги, конфигурации и rollback — [Needs confirmation].</text>
+</g></svg>

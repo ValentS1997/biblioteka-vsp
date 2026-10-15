@@ -1,0 +1,42 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: "0011-modern-system-administration-chapter-14"
+repository: "vsp-corp/biblioteka-vsp"
+book_id: modern-system-administration-jennifer-davis-ru
+task_kind: chapter
+objective: "Canonical RAG-only chapter 14 Monitoring Theory: 8 independent Git artifacts, CI-gated publication"
+branch: "chapters/0011-modern-system-administration-chapter-14"
+initial_base_sha: "[Needs confirmation]"
+last_observed_head_sha: "58409aa87aca867d414c32a3f650244c26e19375"
+expected_source_sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source PDF or RAG changes
+  - no reading-progress mutation
+  - no ZIP/archive substitution for files
+  - no PR before confirmed branch CI PASS
+  - no merge before separate PR CI PASS
+stage: CI_PENDING
+completed_steps:
+  - step: "Verified existing main chapter index 13/21, RAG acceptance and chapter 13 COMPLETE checkpoint"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/.workflow/checkpoints/0011-modern-system-administration-chapter-13.yaml"
+  - step: "Verified chapter 14 RAG PDF 173–181, print 181–189, and chapter 15 begins PDF 182"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/modern-system-administration-jennifer-davis-ru/rag/chunks/p0101-p0200/p0182-c01.md"
+  - step: "Eight individual RAG-only chapter artifacts committed and independently read back from branch"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/040660e9488ebea0015e10537c0aafbf41e2071a"
+  - step: "Book index updated to branch 14/21 while main remains 13/21"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/58409aa87aca867d414c32a3f650244c26e19375"
+pending_steps:
+  - "Verify final chapter branch CI Validate chapter notes and SVG is PASS for exact HEAD including checkpoint"
+  - "Only after branch CI PASS, open chapter 14 PR"
+  - "Require independent PR CI PASS before merge"
+  - "After merge read back all 8 chapter artifacts from main"
+  - "Finalize canonical main index 14/21 and checkpoint COMPLETE in separate CI-gated PR"
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/commit/58409aa87aca867d414c32a3f650244c26e19375"
+first_safe_next_action: "Check exact branch HEAD and CI; do not open PR until PASS"
+blocker: "Branch workflow conclusion not yet verified"
+last_observed_at: "[Needs confirmation]"
