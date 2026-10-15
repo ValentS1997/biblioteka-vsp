@@ -46,3 +46,7 @@
 - [Source findings](source-findings.md)
 
 **Граница применимости:** глава концептуальная; она не задаёт готовый стек мониторинга, команды развёртывания, конкретные значения SLO, процедуры изменения production или rollback. Всё это — **[Needs confirmation]**. Рис. 14.1 не реконструирован как оригинальная иллюстрация.
+
+## Recovery checkpoint и CI-gate
+
+Фиксация промежуточной работы: [chapter 14 checkpoint](../../../../../.workflow/checkpoints/0011-modern-system-administration-chapter-14.yaml). При публикации требуется отдельный CI PASS на точном HEAD, затем PR CI PASS; до этого статус главы — только подготовлена в ветке, не опубликована в `main`.
