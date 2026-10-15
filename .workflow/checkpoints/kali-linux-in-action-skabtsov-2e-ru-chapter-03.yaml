@@ -3,10 +3,10 @@ task_key: kali-linux-in-action-skabtsov-2e-ru-chapter-03
 repository: vsp-corp/biblioteka-vsp
 book_id: kali-linux-in-action-skabtsov-2e-ru
 task_kind: chapter
-objective: "RAG-only chapter 03 analysis, individual file publication and PR"
+objective: "RAG-only chapter 03 analysis and individual Git publication"
 branch: chapter/kali-linux-in-action-skabtsov-2e-ru-0012-ch03
 initial_base_sha: 4f4f761607467d20748596de2efc5f67476a85c4
-last_observed_head_sha: 279907378d57fbfd0eccf64df521685011929fd4
+last_observed_head_sha: 999b6311b56a4bddb156a46bac0a0e35771cb8b4
 expected_source_sha256: fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9
 constraints:
   - no direct main changes
@@ -14,22 +14,22 @@ constraints:
   - no source/RAG rewrite without explicit authorization
   - no reading-progress mutation without explicit user confirmation
   - no archive delivery for chapter artifacts
-stage: IN_PROGRESS
+stage: CI_PENDING
 completed_steps:
-  - step: "Verified source-aligned 17-chapter plan and 2/17 committed progress on main."
+  - step: "Verified RAG TOC: 17 numbered chapters, source SHA and accepted ingestion."
     evidence_type: file-readback
     reference: https://github.com/vsp-corp/biblioteka-vsp/blob/4f4f761607467d20748596de2efc5f67476a85c4/books/kali-linux-in-action-skabtsov-2e-ru/notes/chapters/plan.yaml
-  - step: "Verified chapter 03 boundary PDF pages 29-110, next chapter starts at 111, from addressable RAG."
+  - step: "Verified PDF chapter 03 pages 29-110 and chapter 04 starts PDF page 111."
     evidence_type: file-readback
     reference: https://github.com/vsp-corp/biblioteka-vsp/blob/4f4f761607467d20748596de2efc5f67476a85c4/books/kali-linux-in-action-skabtsov-2e-ru/rag/chunks/p0001-p0100/p0029-c01.md
-  - step: "Retrieved RAG chunks spanning chapter sections, including commands, OSINT limitations, dark-web section and source defects."
-    evidence_type: other
-    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/4f4f761607467d20748596de2efc5f67476a85c4/books/kali-linux-in-action-skabtsov-2e-ru/rag/manifest.yaml
+  - step: "Committed and read back 6 mandatory individual chapter files, source-findings.md and chapter index (8 files)."
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/999b6311b56a4bddb156a46bac0a0e35771cb8b4
 pending_steps:
-  - "Commit 6 mandatory chapter files, conditional source-findings and updated chapter index as individual Git paths."
-  - "Read back each file, verify chapter and source/RAG integrity, and check CI."
-  - "Record final checkpoint, open chapter PR only after successful validation; do not merge without governance."
-last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/279907378d57fbfd0eccf64df521685011929fd4
-first_safe_next_action: "Check branch HEAD and all expected chapter files for writes before retrying publication."
+  - "Verify push CI run 38746507981 is SUCCESS."
+  - "Create PR to main only after CI PASS; verify chapter PR files and PR CI."
+  - "Record final verified PR/CI state in checkpoint; retain it on branch while PR is open."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/999b6311b56a4bddb156a46bac0a0e35771cb8b4
+first_safe_next_action: "Re-fetch chapter branch HEAD, checkpoint, 8 chapter paths and CI before retrying any publication."
 blocker: Not applicable
 last_observed_at: Not applicable
