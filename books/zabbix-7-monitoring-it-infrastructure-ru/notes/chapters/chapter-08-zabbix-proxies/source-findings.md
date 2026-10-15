@@ -54,7 +54,7 @@
 ## 9. [Source wording/code mismatch] Путь Zabbix Agent 2 на Windows
 
 - В главе 8 [p0361](../../../rag/chunks/p0301-p0400/p0361-c01.md) фигурирует `C:\Program Files\Zabbix agent\zabbix_agent2` без прежнего `.conf`.
-- В предыдущей главе 7 [p0292](../../../rag/chunks/p0301-p0400/p0292-c01.md) фигурирует `C:\Program Files\Zabbix Agent 2\zabbix_agent2.conf`; оба источниковых пути имеют различия в имени каталога и расширении файла.
+- В предыдущей главе 7 [p0292](../../../rag/chunks/p0201-p0300/p0292-c01.md) фигурирует `C:\Program Files\Zabbix Agent 2\zabbix_agent2.conf`; оба источниковых пути имеют различия в имени каталога и расширении файла.
 - **Решение:** не переносить путь p361 как гарантированный Windows config путь; фактический путь программы/config и stop/start агента = `[Needs confirmation]`.
 
 ## 10. [Needs confirmation] Скриншотные поля и режимы proxy HA
