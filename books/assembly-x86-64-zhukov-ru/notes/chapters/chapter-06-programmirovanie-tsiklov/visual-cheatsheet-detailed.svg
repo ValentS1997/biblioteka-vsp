@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="1020" viewBox="0 0 1320 1020" role="img" aria-label="Подробная визуальная шпаргалка главы 6: циклы, флаги, счетчики и табличный подсчёт">
+<rect width="1320" height="1020" fill="#f8fafc"/><g font-family="DejaVu Sans,sans-serif">
+<text x="36" y="56" font-size="29" font-weight="bold" fill="#152b41">Глава 6 · Поиск и подсчёт в циклах i8086</text>
+<text x="36" y="84" font-size="16" fill="#5c7387">Точная область RAG: PDF с. 85–92 · примеры find_1 … find_6 и cnt_1 / cnt_2</text>
+<g stroke-width="2"><rect x="36" y="118" width="598" height="182" rx="14" fill="#e3eeff" stroke="#547ebc"/><rect x="686" y="118" width="598" height="182" rx="14" fill="#e5f6ec" stroke="#3b956f"/>
+<rect x="36" y="332" width="598" height="182" rx="14" fill="#eaf2ff" stroke="#547ebc"/><rect x="686" y="332" width="598" height="182" rx="14" fill="#e6f8ed" stroke="#3b956f"/>
+<rect x="36" y="545" width="598" height="182" rx="14" fill="#eee9ff" stroke="#8574c4"/><rect x="686" y="545" width="598" height="182" rx="14" fill="#efeaff" stroke="#8574c4"/></g>
+<g font-size="21" font-weight="bold" fill="#1b4a70"><text x="55" y="154">01 · Find_1: поиск байта</text><text x="705" y="154">02 · Find_2–4: слова и SCAS</text>
+<text x="55" y="368">03 · Find_5: отношение Greater</text><text x="705" y="368">04 · CNT_1: сравнение границ</text>
+<text x="55" y="581">05 · CNT_2: таблица 256 байтов</text><text x="705" y="581">06 · Проверка состояний</text></g>
+<g font-size="16" fill="#274158">
+<text x="55" y="192">CX=size; SI=array-1</text><text x="55" y="222">INC SI → CMP b[SI],7 → LOOPNE</text><text x="55" y="252">JNE miss: решение по Z, не CX</text><text x="55" y="282">INC после CMP — намеренный дефект 6.2</text>
+<text x="705" y="192">DW → CX=size/2; шаг два байта</text><text x="705" y="222">DI=array; AX=7; CLD; SCASW</text><text x="705" y="252">REPNE SCASW совмещает цикл</text><text x="705" y="282">JNE miss после REPNE (6.5)</text>
+<text x="55" y="405">CMP b[SI], X → JG found</text><text x="55" y="435">LOOP l1 для оставшихся элементов</text><text x="55" y="465">Нет LOOPNG и REPNG в источнике</text><text x="55" y="493">Листинг 6.7: SCASB и неясный DI/AL</text>
+<text x="705" y="405">LODSB → AL</text><text x="705" y="435">CMP AL,10 / JB skip</text><text x="705" y="465">CMP AL,99 / JA skip</text><text x="705" y="493">INC DX; MOV AX,DX в конце</text>
+<text x="55" y="618">MAP: 0 на 0–9, 1 на 10–99</text><text x="55" y="648">0 на 100–255, всего 256 байтов</text><text x="55" y="678">BX=MAP; LODSB; XLAT; ADD DX,AX</text><text x="55" y="708">AH должен быть нулём до сложения</text>
+<text x="705" y="618">Случай 1: найдено последним (Z=1, CX=0)</text><text x="705" y="648">Случай 2: искомого нет (Z=0)</text><text x="705" y="678">Случай 3: найдено первым (CX не ноль)</text><text x="705" y="708">Тесты диапазона: 9,10,99,100</text></g>
+<rect x="36" y="759" width="1248" height="157" rx="14" fill="#fff1e7" stroke="#d78b54" stroke-width="2"/>
+<text x="56" y="795" font-size="22" font-weight="bold" fill="#91451f">Контроль источника и безопасности</text>
+<text x="56" y="826" font-size="16" fill="#77472b">6.2: INC SI после CMP перезаписывает Z; нарушение порядка — часть учебного примера.</text>
+<text x="56" y="855" font-size="16" fill="#77472b">6.7: в исходном фрагменте LEA SI,array, хотя SCASB требует DI/AL — source finding.</text>
+<text x="56" y="884" font-size="16" fill="#77472b">Изменение тестового массива в d86 меняет данные; восстановление не описано.</text>
+<text x="36" y="983" font-size="14" fill="#657b8b">Provenance: p0085:c01–p0092:c01 · SHA f65a7ec…d2c · аналитическая схема без запуска A86</text></g></svg>

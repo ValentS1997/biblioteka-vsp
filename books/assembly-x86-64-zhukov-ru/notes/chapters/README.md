@@ -5,8 +5,8 @@ Book ID: `assembly-x86-64-zhukov-ru`. Canonical RAG source SHA-256: `f65a7ec8814
 ## План и прогресс публикации
 
 - [RAG-verified план: 21 глава](plan.yaml). Основание: оглавление (RAG PDF p. 4–8), самостоятельные заголовки глав в RAG-чанках и предисловие PDF p. 11.
-- **В текущей chapter-ветке:** 5/21 (23,8%); осталось 16, следующая — №6 «Программирование циклов».
-- **В `main` на начало работы над главой 5:** 4/21. До merge главы 5 в `main` опубликованы первые четыре главы; сверять HEAD независимо.
+- **В текущей chapter-ветке:** 6/21 (28,6%); осталось 15, следующая — №7 «Примеры программ».
+- **В `main` на начало работы над главой 6:** 5/21. До merge главы 6 в `main` опубликованы первые пять глав; сверять HEAD независимо.
 
 ## Опубликованные главы (отдельные Git-файлы)
 
@@ -19,6 +19,8 @@ Book ID: `assembly-x86-64-zhukov-ru`. Canonical RAG source SHA-256: `f65a7ec8814
 4. [Глава 4. Способы адресации](chapter-04-sposoby-adresatsii/README.md) — [шпаргалка](chapter-04-sposoby-adresatsii/cheatsheet.md), [команды](chapter-04-sposoby-adresatsii/commands.md), [диаграмма](chapter-04-sposoby-adresatsii/diagram.md), [компактная SVG](chapter-04-sposoby-adresatsii/visual-cheatsheet.svg), [подробная SVG](chapter-04-sposoby-adresatsii/visual-cheatsheet-detailed.svg), [задания](chapter-04-sposoby-adresatsii/review-questions.md), [ответы](chapter-04-sposoby-adresatsii/review-answers.md), [source findings](chapter-04-sposoby-adresatsii/source-findings.md).
 
 5. [Глава 5. Система команд i8086](chapter-05-sistema-komand-i8086/README.md) — [шпаргалка](chapter-05-sistema-komand-i8086/cheatsheet.md), [команды](chapter-05-sistema-komand-i8086/commands.md), [диаграмма](chapter-05-sistema-komand-i8086/diagram.md), [компактная SVG](chapter-05-sistema-komand-i8086/visual-cheatsheet.svg), [подробная SVG](chapter-05-sistema-komand-i8086/visual-cheatsheet-detailed.svg), [задания](chapter-05-sistema-komand-i8086/review-questions.md), [разбор](chapter-05-sistema-komand-i8086/review-answers.md), [расхождения](chapter-05-sistema-komand-i8086/source-findings.md).
+
+6. [Глава 6. Программирование циклов](chapter-06-programmirovanie-tsiklov/README.md) — [шпаргалка](chapter-06-programmirovanie-tsiklov/cheatsheet.md), [команды](chapter-06-programmirovanie-tsiklov/commands.md), [диаграмма](chapter-06-programmirovanie-tsiklov/diagram.md), [краткая SVG](chapter-06-programmirovanie-tsiklov/visual-cheatsheet.svg), [подробная SVG](chapter-06-programmirovanie-tsiklov/visual-cheatsheet-detailed.svg), [задания](chapter-06-programmirovanie-tsiklov/review-questions.md), [разборы](chapter-06-programmirovanie-tsiklov/review-answers.md), [source findings](chapter-06-programmirovanie-tsiklov/source-findings.md).
 
 ## Политика
 
