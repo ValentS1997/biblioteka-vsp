@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="595" viewBox="0 0 1180 595" role="img" aria-label="Глава 7: режимы прогнозирования, сжатие и среда запуска"><rect width="1180" height="595" fill="#0f172a"/>
+<text x="35" y="56" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#f8fafc">ГЛАВА 7 · ML PREDICTION SERVICE</text>
+<text x="35" y="98" font-family="Arial,sans-serif" font-size="20" font-weight="400" fill="#e2e8f0">Актуальность · latency · качество · обслуживание</text>
+<rect x="35" y="135" width="355" height="320" rx="16" fill="#1f2937" stroke="#475569"/>
+<rect x="412" y="135" width="355" height="320" rx="16" fill="#1f2937" stroke="#475569"/>
+<rect x="789" y="135" width="355" height="320" rx="16" fill="#1f2937" stroke="#475569"/>
+<text x="55" y="177" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#93c5fd">РЕЖИМ ВЫВОДА</text>
+<text x="55" y="225" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Batch: прогноз заранее</text>
+<text x="55" y="272" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Online: прогноз по запросу</text>
+<text x="55" y="319" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Batch + streaming features</text>
+<text x="55" y="367" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Проверить train-serving skew</text>
+<text x="432" y="177" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#93c5fd">КОМПРЕССИЯ</text>
+<text x="432" y="225" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Low-rank и distillation</text>
+<text x="432" y="272" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Pruning и quantization</text>
+<text x="432" y="319" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Проверка accuracy и latency</text>
+<text x="432" y="367" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">IR / fusion / TVM</text>
+<text x="809" y="177" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#93c5fd">ГДЕ ИСПОЛНЯТЬ</text>
+<text x="809" y="225" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Cloud: сеть и расходы</text>
+<text x="809" y="272" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Edge: RAM и батарея</text>
+<text x="809" y="319" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Browser: WASM</text>
+<text x="809" y="367" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Privacy и совместимость</text>
+<text x="35" y="514" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#cbd5e1">RAG PDF 202–232 · Итоги: p0229–p0230</text>
+<text x="35" y="555" font-family="Arial,sans-serif" font-size="17" font-weight="400" fill="#fca5a5">Повреждённые примеры API: source-findings.md</text>
+</svg>
