@@ -6,7 +6,7 @@ task_kind: chapter
 objective: RAG-only chapter 05 analysis and Git publication, PDF pages 107-123.
 branch: chapter/herding-cats-j-hank-rainwater-ru-0021-ch05
 initial_base_sha: 7af0fb36efd158c67314886fa937f19c833422e3
-last_observed_head_sha: 7af0fb36efd158c67314886fa937f19c833422e3
+last_observed_head_sha: bc7cf0d35ff1e5d4892a38f6cf2461759a3cee60
 expected_source_sha256: 5f11cf93711c9489b25218c701e1027f5ca0354523e2faeb1bb7041ed3b62795
 constraints:
   - no direct main changes
@@ -14,7 +14,7 @@ constraints:
   - no source/RAG rewrite
   - preserve reading status
   - individual Git files only
-stage: IN_PROGRESS
+stage: CI_PENDING
 completed_steps:
   - step: Verified 3 of 10 chapters in main and chapter 04 unfinished separately.
     evidence_type: commit
@@ -23,11 +23,11 @@ completed_steps:
     evidence_type: other
     reference: https://github.com/vsp-corp/biblioteka-vsp/blob/7af0fb36efd158c67314886fa937f19c833422e3/books/herding-cats-j-hank-rainwater-ru/notes/chapters/plan.yaml
 pending_steps:
-  - Publish all chapter-05 individual files and update book chapter index with source-grounded claims.
+  - Verify ten separate chapter files and chapter index readback at latest head.
   - Verify Git readbacks and branch CI.
   - Create PR only after branch CI PASS and merge only after PR CI PASS.
   - Verify all artifacts, book metadata, and CI in main.
-last_verified_evidence: 7af0fb36efd158c67314886fa937f19c833422e3
-first_safe_next_action: Read branch HEAD and checkpoint before writing source-grounded chapter files.
+last_verified_evidence: bc7cf0d35ff1e5d4892a38f6cf2461759a3cee60
+first_safe_next_action: Check latest branch CI on current head, files and checkpoint; retire checkpoint only after CI PASS.
 blocker: Not applicable
 last_observed_at: Not applicable
