@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1210" height="624" viewBox="0 0 1210 624" role="img" aria-label="Глава 10: уровни MLOps-инфраструктуры и решения"><rect width="1210" height="624" fill="#0f172a"/>
+<text x="38" y="60" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#f8fafc">ГЛАВА 10 · MLOPS INFRASTRUCTURE</text>
+<text x="38" y="102" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Воспроизводимость, разработка, процессы и платформенные компоненты</text>
+<rect x="38" y="144" width="355" height="333" rx="15" fill="#1f2937" stroke="#475569"/>
+<rect x="427" y="144" width="355" height="333" rx="15" fill="#1f2937" stroke="#475569"/>
+<rect x="816" y="144" width="355" height="333" rx="15" fill="#1f2937" stroke="#475569"/>
+<text x="58" y="189" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#93c5fd">РЕСУРСЫ</text>
+<text x="58" y="231" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Storage / CPU / GPU</text>
+<text x="58" y="273" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Cloud vs on-premises</text>
+<text x="58" y="315" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Cost и resource quotas</text>
+<text x="58" y="358" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Development: IDE / CI</text>
+<text x="448" y="189" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#93c5fd">WORKFLOWS</text>
+<text x="448" y="231" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Docker image / container</text>
+<text x="448" y="273" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Cron → scheduler → DAG</text>
+<text x="448" y="315" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Orchestrator: placement</text>
+<text x="448" y="358" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Airflow / Argo / Metaflow</text>
+<text x="837" y="189" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#93c5fd">ML-ПЛАТФОРМА</text>
+<text x="837" y="231" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Model serving</text>
+<text x="837" y="273" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Registry + provenance</text>
+<text x="837" y="315" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Feature store + parity</text>
+<text x="837" y="358" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Build vs buy</text>
+<text x="38" y="532" font-family="Arial,sans-serif" font-size="17" font-weight="400" fill="#cbd5e1">RAG PDF 297–334 · раздел «Итоги»: p0332–p0333</text>
+<text x="38" y="578" font-family="Arial,sans-serif" font-size="17" font-weight="400" fill="#fca5a5">Повреждённые кодовые примеры нельзя исполнять: source-findings.md</text>
+</svg>
