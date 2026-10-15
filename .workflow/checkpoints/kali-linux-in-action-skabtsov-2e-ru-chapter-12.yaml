@@ -1,0 +1,32 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: kali-linux-in-action-skabtsov-2e-ru-chapter-12
+repository: vsp-corp/biblioteka-vsp
+book_id: kali-linux-in-action-skabtsov-2e-ru
+task_kind: chapter
+objective: "RAG-only chapter 12 persistence and SSH tunneling defensive analysis, individual artifacts, stacked PR"
+branch: chapter/kali-linux-in-action-skabtsov-2e-ru-0012-ch12
+initial_base_sha: 62dfccd8132c70651238f14eaea5f7f37c779e58
+last_observed_head_sha: 62dfccd8132c70651238f14eaea5f7f37c779e58
+expected_source_sha256: fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9
+constraints:
+  - no direct main changes
+  - no force push
+  - no source/RAG mutation
+  - no reading status mutation
+  - no archive delivery for chapter artifacts
+  - no actionable persistence, reverse-shell or firewall-bypass playbooks
+stage: PLANNED
+completed_steps:
+  - step: "Verified RAG ACCEPTED; chapter 12 PDF 293-301, chapter 13 starts 302; 17 chapter plan."
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/kali-linux-in-action-skabtsov-2e-ru/rag/chunks/p0201-p0300/p0293-c01.md
+  - step: "Verified open predecessor PR #588 and matching exact HEAD; upstream stacked PR chain remains open."
+    evidence_type: pr
+    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/588
+pending_steps:
+  - "Commit six mandatory chapter files, conditional source findings and index, then individual file read-back."
+  - "Verify push CI SUCCESS, create stacked PR against chapter 11 only after PASS."
+  - "Check PR CI SUCCESS for latest exact HEAD; no direct main integration."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/62dfccd8132c70651238f14eaea5f7f37c779e58
+first_safe_next_action: "Re-read feature branch head and check chapter-12 directory absence before any retry."
+blocker: "Main integration depends on ancestor stacked PRs starting at #549."
