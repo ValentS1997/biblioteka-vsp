@@ -1,0 +1,38 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: kali-linux-in-action-skabtsov-2e-ru-chapter-03
+repository: vsp-corp/biblioteka-vsp
+book_id: kali-linux-in-action-skabtsov-2e-ru
+task_kind: chapter
+objective: "RAG-only chapter 03 analysis and Git artifact publication"
+branch: chapter/kali-linux-in-action-skabtsov-2e-ru-0012-ch03
+initial_base_sha: 4f4f761607467d20748596de2efc5f67476a85c4
+last_observed_head_sha: 547d36ad87da5147fa73c8f862b51a93b358e4df
+expected_source_sha256: fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite without explicit authorization
+  - no reading-progress mutation without explicit user confirmation
+  - no archive delivery for chapter artifacts
+stage: CI_PENDING
+completed_steps:
+  - step: "17 RAG-verified numbered chapters; PDF chapter 03 pages 29-110; generation acceptance ACCEPTED."
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/4f4f761607467d20748596de2efc5f67476a85c4/books/kali-linux-in-action-skabtsov-2e-ru/notes/chapters/plan.yaml
+  - step: "Committed and read back six mandatory individual files, source-findings and book chapter index."
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/999b6311b56a4bddb156a46bac0a0e35771cb8b4
+  - step: "Push CI successful at chapter artifact commit."
+    evidence_type: ci
+    reference: https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38746507981
+  - step: "Opened chapter 03 PR to main after artifact CI PASS."
+    evidence_type: pr
+    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/549
+pending_steps:
+  - "Verify PR-triggered CI of latest branch HEAD and all expected artifact paths."
+  - "PR review and merge under repo governance; remove transient checkpoint before merge when appropriate."
+  - "After merge, count chapter directories in main and verify 3/17."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/pull/549
+first_safe_next_action: "Read live PR #549 state, current branch head, chapter index, checkpoint, and latest PR CI before retrying any operation."
+blocker: Not applicable
+last_observed_at: Not applicable
