@@ -3,10 +3,10 @@ task_key: kali-linux-in-action-skabtsov-2e-ru-chapter-16
 repository: vsp-corp/biblioteka-vsp
 book_id: kali-linux-in-action-skabtsov-2e-ru
 task_kind: chapter
-objective: "RAG-only chapter 16 anonymity and privacy risk analysis and stacked PR"
+objective: "RAG-only chapter 16 anonymity and privacy defensive artifacts in stacked PR #598"
 branch: chapter/kali-linux-in-action-skabtsov-2e-ru-0012-ch16
 initial_base_sha: 3c45f7db5029745903e83e6e783a41b24c8d05e1
-last_observed_head_sha: 2fff10114403ab5184b4d4ce54b57c4b3f456159
+last_observed_head_sha: 45a210e50607c60486f315c43bafa19895d203f9
 expected_source_sha256: fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9
 constraints:
   - no direct main changes
@@ -14,19 +14,25 @@ constraints:
   - no source/RAG mutation
   - no reading progress mutation
   - no ZIP chapter artifacts
-  - no active deanonymization, evasion, impersonation or unauthorized access chains
-stage: CI_PENDING
+  - no active deanonymization, evasion, impersonation or unauthorized access workflows
+stage: COMPLETE
 completed_steps:
-  - step: "Verified canonical accepted source RAG, chapter 16 PDF 361-374 and chapter 17 starts 375, total 17 chapters."
+  - step: "Verified canonical source RAG ACCEPTED, chapter 16 PDF 361-374, chapter 17 starts 375, total 17 chapters."
     evidence_type: file-readback
     reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/kali-linux-in-action-skabtsov-2e-ru/rag/chunks/p0301-p0400/p0361-c01.md
-  - step: "Committed and Git read-back verified six mandatory artifacts, source-findings with 21 entries and index, eight individual files."
+  - step: "Committed and individually read back six mandatory files, source-findings with 21 entries and chapter index; eight files PASS."
     evidence_type: commit
     reference: https://github.com/vsp-corp/biblioteka-vsp/commit/2fff10114403ab5184b4d4ce54b57c4b3f456159
+  - step: "Push CI SUCCESS on exact chapter artifact commit."
+    evidence_type: ci
+    reference: https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38796249684
+  - step: "Opened stacked PR #598 against chapter 15 after push CI PASS, diff exactly chapter 16, index, checkpoint."
+    evidence_type: pr
+    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/598
 pending_steps:
-  - "Verify push CI 38796249684 SUCCESS for chapter artifact commit."
-  - "Create stacked PR against chapter 15 only after CI PASS and compare exact nine changed paths."
-  - "Verify PR CI SUCCESS on latest HEAD; do not merge until ancestors are integrated."
-last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/2fff10114403ab5184b4d4ce54b57c4b3f456159
-first_safe_next_action: "Read branch HEAD and current push CI, do not recreate eight verified files."
-blocker: "Main integration deferred pending ancestor PRs."
+  - "Verify PR #598 CI SUCCESS on exact latest head, mergeability and nine expected paths."
+  - "Reconcile and integrate ancestor PRs #549 #551 #553 #558 #567 #572 #577 #584 #588 #590 #592 #594 #596 before main integration."
+  - "Remove transient checkpoints before terminal merge per governance and verify main chapter progress."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/pull/598
+first_safe_next_action: "Re-read PR #598, feature branch HEAD and exact-head PR CI; do not recreate individual files."
+blocker: "Main integration deferred pending open predecessor PRs."
