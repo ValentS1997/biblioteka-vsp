@@ -7,7 +7,7 @@ objective: "Analyze chapter 06 'Разработка модели и ее авт
 branch: chapter/0031-designing-ml-systems-ch06-20261015
 parent_branch: chapter/0031-designing-ml-systems-ch05-20261015
 initial_base_sha: 55a75485fdf33b92967a7d28b9e784e26d3cc609
-last_observed_head_sha: 55a75485fdf33b92967a7d28b9e784e26d3cc609
+last_observed_head_sha: 87b2d2f3ae5f5d862b2432f49ad90196e8b706d2
 expected_source_sha256: 0bcacadb4e1dc2235cb58f975111e1633527217127c5871edb894fe2b8f4c80c
 constraints:
   - "no direct main changes"
@@ -15,7 +15,7 @@ constraints:
   - "no source/RAG rewrite or non-RAG content in book artifacts"
   - "no reading-progress mutation without explicit user confirmation"
   - "no archive delivery and no duplicate PR"
-stage: PLANNED
+stage: CI_PENDING
 completed_steps:
   - step: "Read-only verification: chapter plan source SHA matches ACCEPTED RAG, eleven source-verified chapters, parent has 5/11 individual Git chapter collections; main 0/11."
     evidence_type: file-readback
@@ -26,13 +26,17 @@ completed_steps:
   - step: "Previous chapter PR #511 open, chained to #507, #502, #499 and #493; branch created from exact chapter 05 SHA."
     evidence_type: pr
     reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/511"
+  - step: "Committed 8 distinct chapter 06 files and chapter index 6/11; all Git blob read-back PASS; native p0199-c01 summary exact; original plan and reading SHA unchanged."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/87b2d2f3ae5f5d862b2432f49ad90196e8b706d2"
+  - step: "Push CI validates changed RAG links, both SVG PNG renderings and regression tests: PASS."
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38710562506"
 pending_steps:
-  - "Read detailed RAG evidence for all main chapter sections; isolate extraction defects and exact native summary end; do not access PDF directly."
-  - "Publish 6 mandatory files, source-native summary and findings when justified as distinct Git paths; update chapter index to 6/11."
-  - "Read back each Git blob, unchanged chapter plan/reading and exact native summary; verify push CI PASS."
-  - "Open single stacked PR against chapter 05 branch only after PASS; verify diff, PR CI and final HEAD."
+  - "Read-only verify chapter 06 branch, PR list, and checkpoint commit CI; create exactly one stacked PR against chapter 05 branch."
+  - "Verify PR head/base, exact diff, PR CI, record PR and CI in checkpoint, and validate final checkpoint HEAD."
   - "Update recovery checkpoint and report exact status, no merge until dependency chain approved."
-last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/pull/511"
-first_safe_next_action: "Read-only compare branch HEAD, checkpoint, chapter 06 file list, index, PR list and CI, then resume first unfinished step; no blind replay."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38710562506"
+first_safe_next_action: "Read-only check latest branch HEAD, chapter 06 files, checkpoint, CI and PR list; do not create a second PR or repeat artifact commits."
 blocker: "Not applicable"
 last_observed_at: "Not applicable"
