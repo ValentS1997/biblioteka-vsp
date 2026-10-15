@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1130" height="972" viewBox="0 0 1130 972" role="img" aria-label="Глава 8: подробная карта drift и ML-мониторинга"><rect width="1130" height="972" fill="#0f172a"/>
+<text x="40" y="59" font-family="Arial,sans-serif" font-size="28" fill="#f8fafc">ГЛАВА 8 · СДВИГИ РАСПРЕДЕЛЕНИЙ И МОНИТОРИНГ</text>
+<text x="40" y="96" font-family="Arial,sans-serif" font-size="18" fill="#e2e8f0">Канонический RAG · PDF 233–268 · исходный SHA в README</text>
+<rect x="40" y="120" width="1050" height="169" rx="15" fill="#1f2937" stroke="#475569"/>
+<rect x="40" y="311" width="1050" height="169" rx="15" fill="#1f2937" stroke="#475569"/>
+<rect x="40" y="502" width="1050" height="169" rx="15" fill="#1f2937" stroke="#475569"/>
+<rect x="40" y="693" width="1050" height="169" rx="15" fill="#1f2937" stroke="#475569"/>
+<text x="63" y="162" font-family="Arial,sans-serif" font-size="23" fill="#93c5fd">1. ПРИЧИНЫ СБОЕВ</text>
+<text x="63" y="206" font-family="Arial,sans-serif" font-size="20" fill="#e2e8f0">Software failures; edge cases; feedback loops</text>
+<text x="63" y="253" font-family="Arial,sans-serif" font-size="16" fill="#a5b4fc">p0234–p0243</text>
+<text x="63" y="353" font-family="Arial,sans-serif" font-size="23" fill="#93c5fd">2. КЛАССИФИКАЦИЯ СДВИГОВ</text>
+<text x="63" y="397" font-family="Arial,sans-serif" font-size="19" fill="#e2e8f0">Covariate / label / concept drift / schema changes</text>
+<text x="63" y="444" font-family="Arial,sans-serif" font-size="16" fill="#a5b4fc">p0243–p0248 · формулы повреждены в RAG</text>
+<text x="63" y="544" font-family="Arial,sans-serif" font-size="23" fill="#93c5fd">3. ОБНАРУЖЕНИЕ</text>
+<text x="63" y="588" font-family="Arial,sans-serif" font-size="20" fill="#e2e8f0">Train vs production, KS / MMD, rolling windows</text>
+<text x="63" y="635" font-family="Arial,sans-serif" font-size="16" fill="#a5b4fc">p0248–p0253 · проверять сезонность</text>
+<text x="63" y="735" font-family="Arial,sans-serif" font-size="23" fill="#93c5fd">4. НАБЛЮДАЕМОСТЬ И РЕАКЦИЯ</text>
+<text x="63" y="779" font-family="Arial,sans-serif" font-size="20" fill="#e2e8f0">Metrics, labels, predictions, features, logs, alerts</text>
+<text x="63" y="826" font-family="Arial,sans-serif" font-size="16" fill="#a5b4fc">p0255–p0267 · мониторинг не исправляет модель</text>
+<text x="40" y="921" font-family="Arial,sans-serif" font-size="17" fill="#fca5a5">SLO, owners, dataset, retraining и rollback: [Needs confirmation]</text>
+</svg>
