@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1580" height="1450" viewBox="0 0 1580 1450" role="img" aria-labelledby="title desc">
+<title id="title">Глава 15 — Подробная карта практического мониторинга</title>
+<desc id="desc">Результаты, инвентаризация, RED USE, очереди, SLI SLO, оповещения, технические ограничения платформ и процесс итеративного улучшения из RAG PDF 182–194.</desc>
+<rect width="1580" height="1450" fill="#0d1c2e"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="55" y="76" font-size="39" font-weight="bold" fill="#f1f8ff">Глава 15 · Практический мониторинг инфраструктуры</text>
+<text x="55" y="116" font-size="22" fill="#b9d1e7">Ценность пользовательского результата важнее готового списка метрик</text>
+<rect x="55" y="155" width="1470" height="153" rx="15" fill="#1b4b5e"/>
+<text x="83" y="201" font-size="28" font-weight="bold" fill="#f1ffff">1 · Определи outcome и scope (PDF 182–185)</text>
+<text x="83" y="241" font-size="21" fill="#daf2fa">Какая проблема мешает клиенту или команде? Какие выходы мониторинга нужны?</text>
+<text x="83" y="275" font-size="21" fill="#daf2fa">Документируй текущую систему · начинай с небольших обратимых шагов</text>
+<text x="55" y="364" font-size="28" font-weight="bold" fill="#eff8ff">2 · Выбирай сигналы под объект (PDF 185–188)</text>
+<rect x="55" y="393" width="713" height="177" rx="14" fill="#283f5d"/>
+<text x="84" y="436" font-size="29" font-weight="bold" fill="#f5fbff">RED — сервис / пользователь</text>
+<text x="84" y="477" font-size="22" fill="#dceaff">Rate · запросы за единицу времени</text>
+<text x="84" y="512" font-size="22" fill="#dceaff">Errors · неуспешные запросы</text>
+<text x="84" y="547" font-size="22" fill="#dceaff">Duration · длительность обработки</text>
+<rect x="808" y="393" width="717" height="177" rx="14" fill="#22525b"/>
+<text x="838" y="436" font-size="29" font-weight="bold" fill="#f5ffff">USE — инфраструктурные ресурсы</text>
+<text x="838" y="477" font-size="22" fill="#d9f3f2">Utilization · полезная загрузка</text>
+<text x="838" y="512" font-size="22" fill="#d9f3f2">Saturation · накопленная работа / очередь</text>
+<text x="838" y="547" font-size="22" fill="#d9f3f2">Errors · ошибки ресурса</text>
+<rect x="55" y="606" width="1470" height="174" rx="14" fill="#2b3f57"/>
+<text x="83" y="651" font-size="28" font-weight="bold" fill="#f1faff">3 · Инвентаризация и покрытие (PDF 186–188)</text>
+<text x="83" y="694" font-size="22" fill="#dceaf9">ОС и версии · ACL и сеть · запросы · БД и репликация · backup и очереди</text>
+<text x="83" y="731" font-size="22" fill="#dceaf9">API · кеши · балансировщики · serverless · смысл дублирующих мониторов</text>
+<text x="55" y="838" font-size="28" font-weight="bold" fill="#f1f9ff">4 · Надёжность с точки зрения клиента (PDF 188–190)</text>
+<rect x="55" y="864" width="713" height="174" rx="14" fill="#244b64"/>
+<text x="84" y="908" font-size="28" font-weight="bold" fill="#f5fbff">SLI → SLO</text>
+<text x="84" y="948" font-size="21" fill="#dbecff">Успешность и быстрота клиентского действия</text>
+<text x="84" y="983" font-size="21" fill="#dbecff">SLO должен быть достижимым и осмысленным</text>
+<text x="84" y="1015" font-size="19" fill="#c5deed">99% быстрее 1 с — пример книги, не норматив</text>
+<rect x="808" y="864" width="717" height="174" rx="14" fill="#345248"/>
+<text x="838" y="908" font-size="28" font-weight="bold" fill="#f6fff7">Оповещать о важном</text>
+<text x="838" y="948" font-size="21" fill="#e4f9e6">Понятное влияние на пользователя</text>
+<text x="838" y="983" font-size="21" fill="#e4f9e6">Убрать дубли и alert fatigue</text>
+<text x="838" y="1015" font-size="19" fill="#cee9d7">Сбор сигнала ≠ обязательное уведомление</text>
+<text x="55" y="1098" font-size="28" font-weight="bold" fill="#f2f9ff">5 · Выбор и проверка инструментов (PDF 190–193)</text>
+<rect x="55" y="1124" width="1470" height="174" rx="14" fill="#374052"/>
+<text x="83" y="1167" font-size="22" fill="#e9f1ff">Назначение и coverage · хранение сырых данных · интеграции · расширяемость</text>
+<text x="83" y="1203" font-size="22" fill="#e9f1ff">Разрешение выборки · NTP и корреляция событий · privacy · стоимость</text>
+<text x="83" y="1241" font-size="21" fill="#d4e0ef">Один продукт не обязан закрывать все этапы мониторинга</text>
+<rect x="55" y="1325" width="1470" height="77" rx="14" fill="#2b594f" stroke="#80dfb4" stroke-width="2"/>
+<text x="84" y="1373" font-size="26" font-weight="bold" fill="#f2fff7">6 · Проверяй outcome и улучшай небольшими шагами (PDF 194)</text>
+<text x="55" y="1431" font-size="16" fill="#abc3d7">RAG PDF 182–194. Это новая схема по тексту; оригинал рис. 15.1 не восстановлен.</text>
+</g></svg>
