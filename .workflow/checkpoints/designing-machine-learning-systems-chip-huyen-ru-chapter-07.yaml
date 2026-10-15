@@ -1,0 +1,38 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: designing-machine-learning-systems-chip-huyen-ru-chapter-07
+repository: vsp-corp/biblioteka-vsp
+book_id: designing-machine-learning-systems-chip-huyen-ru
+task_kind: chapter
+objective: "Canonical RAG-only chapter 07 'Развертывание модели и совершенствование ее сервиса прогнозирования': publish individual chapter artifacts and open stacked PR only after CI PASS."
+branch: chapter/0031-designing-ml-systems-ch07-20261015
+parent_branch: chapter/0031-designing-ml-systems-ch06-20261015
+initial_base_sha: 7468d9e055ff20e72e9713db4eef4a850a7aac1c
+last_observed_head_sha: 7468d9e055ff20e72e9713db4eef4a850a7aac1c
+expected_source_sha256: 0bcacadb4e1dc2235cb58f975111e1633527217127c5871edb894fe2b8f4c80c
+constraints:
+  - "no direct main changes"
+  - "no force-push or automatic merges"
+  - "no source/RAG rewrite, silent source fixes or external content"
+  - "no reading-progress mutation"
+  - "no archives and no duplicate Git commits or PR"
+stage: PLANNED
+completed_steps:
+  - step: "Read-only verified canonical process 7 ACCEPTED contracts, book RAG acceptance ACCEPTED, matching source SHA, 11 TOC chapters, parent branch Git 6/11, main 0/11."
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/chapter/0031-designing-ml-systems-ch07-20261015/books/designing-machine-learning-systems-chip-huyen-ru/notes/chapters/plan.yaml"
+  - step: "Verified chapter 07 PDF pp202-232 from TOC p0009-c02 and headings p0202-c01 and p0233-c01; confirmed upstream stacked PR #516 -> #511 -> #507 -> #502 -> #499 -> #493 open."
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/516"
+  - step: "Created chapter 07 branch from exact parent HEAD 7468d9e055ff20e72e9713db4eef4a850a7aac1c."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/7468d9e055ff20e72e9713db4eef4a850a7aac1c"
+pending_steps:
+  - "Read RAG p0202-p0232; locate exact 'Итоги', exercises/questions, source extraction findings."
+  - "Publish 6 mandatory and conditional chapter files as individual paths; update index to 7/11."
+  - "GitHub readback all chapter paths, compare source-native summary, verify unchanged plan/reading, await push CI PASS."
+  - "Open single stacked PR against chapter 06 branch after PASS, validate PR diff and PR CI."
+  - "Update checkpoint and verify final HEAD CI; no automatic merge."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/pull/516"
+first_safe_next_action: "Read-only inspect chapter 07 branch HEAD, checkpoint, chapter paths, parent PR chain and CI before any resumed writes."
+blocker: "Not applicable"
+last_observed_at: "Not applicable"
