@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="725" viewBox="0 0 1200 725" role="img" aria-labelledby="title desc">
+<title id="title">Глава 1 — закономерности и взаимосвязи, компактная памятка</title>
+<desc id="desc">Схема архитектурных вариантов, их компромиссов и пяти уровней сети по RAG главы 1 книги Дженнифер Дэвис</desc>
+<rect width="1200" height="725" fill="#f8fafc"/>
+<text x="44" y="66" font-family="DejaVu Sans, Arial, sans-serif" font-size="35" font-weight="700" fill="#102a43">Глава 1 · Закономерности и взаимосвязи</text>
+<text x="44" y="99" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" fill="#486581">Свойства системы определяются компонентами и связями между ними</text>
+<rect x="40" y="126" rx="15" width="1120" height="63" fill="#e0f2fe" stroke="#93c5fd"/>
+<text x="67" y="164" font-family="DejaVu Sans, Arial, sans-serif" font-size="21" font-weight="700" fill="#075985">Требования → выбор архитектуры → анализ взаимодействий</text>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<rect x="40" y="216" width="350" height="215" rx="14" fill="#ffffff" stroke="#a3b8cd" stroke-width="2"/>
+<rect x="424" y="216" width="350" height="215" rx="14" fill="#ffffff" stroke="#a3b8cd" stroke-width="2"/>
+<rect x="808" y="216" width="352" height="215" rx="14" fill="#ffffff" stroke="#a3b8cd" stroke-width="2"/>
+<text x="58" y="254" font-size="22" font-weight="700" fill="#0f172a">Многоуровневая</text>
+<text x="442" y="254" font-size="22" font-weight="700" fill="#0f172a">Микросервисы</text>
+<text x="826" y="254" font-size="22" font-weight="700" fill="#0f172a">Событийная</text>
+<text x="58" y="294" font-size="18" fill="#334155">Функциональные слои</text>
+<text x="58" y="326" font-size="18" fill="#334155">Запросы между слоями</text>
+<text x="58" y="374" font-size="17" fill="#0369a1">Сопровождение: высокое*</text>
+<text x="58" y="402" font-size="17" fill="#475569">Масштабирование: среднее*</text>
+<text x="442" y="294" font-size="18" fill="#334155">Автономные сервисы</text>
+<text x="442" y="326" font-size="18" fill="#334155">Независимое развертывание</text>
+<text x="442" y="374" font-size="17" fill="#0369a1">Масштабирование: высокое*</text>
+<text x="442" y="402" font-size="17" fill="#475569">Сопровождение: низкое*</text>
+<text x="826" y="294" font-size="18" fill="#334155">Издатель → брокер</text>
+<text x="826" y="326" font-size="18" fill="#334155">→ потребитель</text>
+<text x="826" y="374" font-size="17" fill="#0369a1">Pub/sub: доставка</text>
+<text x="826" y="402" font-size="17" fill="#475569">Журнал: воспроизведение</text>
+<text x="44" y="460" font-size="16" fill="#64748b">* Качественные оценки из таблицы 1.1 книги, не универсальные SLA</text>
+<text x="44" y="504" font-size="22" font-weight="700" fill="#0f172a">Пять уровней взаимодействия (таблица 1.2)</text>
+</g>
+<g font-family="DejaVu Sans, Arial, sans-serif" font-size="20" text-anchor="middle" font-weight="600">
+<rect x="41" y="525" rx="9" width="213" height="70" fill="#dbeafe"/><text x="147" y="568" fill="#1e40af">Приложения</text>
+<rect x="267" y="525" rx="9" width="213" height="70" fill="#d1fae5"/><text x="373" y="568" fill="#065f46">Транспорт</text>
+<rect x="493" y="525" rx="9" width="213" height="70" fill="#fef3c7"/><text x="599" y="568" fill="#92400e">Сеть</text>
+<rect x="719" y="525" rx="9" width="213" height="70" fill="#fce7f3"/><text x="825" y="568" fill="#9d174d">Канал</text>
+<rect x="945" y="525" rx="9" width="213" height="70" fill="#ede9fe"/><text x="1051" y="568" fill="#5b21b6">Физическая</text>
+</g>
+<g stroke="#64748b" stroke-width="3" fill="none"><path d="M254 560h13"/><path d="M480 560h13"/><path d="M706 560h13"/><path d="M932 560h13"/></g>
+<text x="44" y="633" font-family="DejaVu Sans, Arial, sans-serif" font-size="18" fill="#334155">Граница главы: PDF 28–36 (печатные 31–39). Протокольные оговорки: source-findings.md.</text>
+<text x="44" y="668" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" fill="#64748b">Источник: RAG p0028:c01–p0036:c01 · Режим RAG-only · Диаграмма составлена по тексту главы</text>
+</svg>
