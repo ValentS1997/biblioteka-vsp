@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="770" viewBox="0 0 1180 770" role="img" aria-labelledby="t d">
+<title id="t">Глава 10 — Презентации: краткая карта</title>
+<desc id="d">Концептуальный обзор работы с аудиторией, типом истории, формой данных, тремя видами панелей и критериями эффективности по RAG PDF 116–133.</desc>
+<rect width="1180" height="770" fill="#101c30"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="46" y="71" font-size="41" font-weight="bold" fill="#f1f8ff">Глава 10 · Презентации</text>
+<text x="46" y="111" font-size="22" fill="#b6d2e7">Данные → история → контекст → решение</text>
+<rect x="46" y="148" width="1087" height="101" rx="14" fill="#174451" stroke="#73d9d0" stroke-width="2"/>
+<text x="74" y="191" font-size="28" font-weight="bold" fill="#f4ffff">1 · Сначала аудитория и её вопрос</text>
+<text x="74" y="226" font-size="20" fill="#d6f6f1">Команда, руководство и клиент ожидают разную глубину</text>
+<rect x="46" y="286" width="518" height="159" rx="14" fill="#263854"/>
+<text x="74" y="326" font-size="27" font-weight="bold" fill="#f1f7ff">2 · Выбери историю</text>
+<text x="74" y="363" font-size="19" fill="#dceafa">Фактоид · взаимодействие · изменение</text>
+<text x="74" y="397" font-size="19" fill="#dceafa">Сравнение · персонализация</text>
+<text x="74" y="425" font-size="17" fill="#bbd1ed">Корреляция не доказывает причину</text>
+<rect x="602" y="286" width="531" height="159" rx="14" fill="#284954"/>
+<text x="630" y="326" font-size="27" font-weight="bold" fill="#f2ffff">3 · Выбери форму</text>
+<text x="630" y="363" font-size="19" fill="#def6f6">Таблица · столбцы · линии · области</text>
+<text x="630" y="397" font-size="19" fill="#def6f6">Тепловая · flame · древовидная карта</text>
+<text x="630" y="426" font-size="17" fill="#b4dadd">Цвет — не единственный сигнал</text>
+<rect x="46" y="478" width="1087" height="100" rx="14" fill="#303d56"/>
+<text x="74" y="518" font-size="27" font-weight="bold" fill="#f3f8ff">4 · Один набор данных — три панели</text>
+<text x="74" y="550" font-size="19" fill="#dce9f8">Эксплуатация: задачи · менеджер: прогноз · клиент: доступность</text>
+<rect x="46" y="611" width="1087" height="108" rx="14" fill="#2b594e" stroke="#73e4b5"/>
+<text x="74" y="653" font-size="27" font-weight="bold" fill="#f3fff9">5 · Проверь пригодность к решению</text>
+<text x="74" y="685" font-size="19" fill="#e0fff0">Подписи, источник, аннотации, отсутствие перегруза</text>
+<text x="46" y="750" font-size="15" fill="#abc5d9">Источник: RAG PDF 116–133. Новая схема по прозе, не реконструкция рис. 10.1–10.8.</text>
+</g></svg>
