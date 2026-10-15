@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only chapter 2 analysis and individual Git publication, PR after CI."
 branch: chapter/assembly-x86-64-zhukov-ru-ch02
 initial_base_sha: eaa60680dcb375fee2d779c98ccc8c399e94f4e2
-last_observed_head_sha: 234ead42c85356554863fc78bcfecb43b65ded88
+last_observed_head_sha: 6865930b7d8b78646cb4a954b00bbaa3ede2feb4
 expected_source_sha256: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
 constraints:
   - no direct main changes
@@ -14,7 +14,7 @@ constraints:
   - no source/RAG rewrite without explicit authorization
   - no reading-progress mutation without explicit user confirmation
   - no archive delivery for chapter artifacts
-stage: IN_PROGRESS
+stage: CI_PENDING
 completed_steps:
   - step: "Confirm canonical RAG acceptance and publication progress: 1 of 21 on main"
     evidence_type: file-readback
@@ -28,10 +28,11 @@ completed_steps:
   - step: "Conditional exercises, grounded answers and source mismatch register individually committed and read back"
     evidence_type: file-readback
     reference: "https://github.com/vsp-corp/biblioteka-vsp/tree/234ead42c85356554863fc78bcfecb43b65ded88/books/assembly-x86-64-zhukov-ru/notes/chapters/chapter-02-programmirovanie-dannyh"
+  - step: "Nine separate chapter-2 artifacts, chapter index and 2/21 branch progress all verified by GitHub read-back"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/tree/6865930b7d8b78646cb4a954b00bbaa3ede2feb4/books/assembly-x86-64-zhukov-ru/notes/chapters/chapter-02-programmirovanie-dannyh"
 pending_steps:
-  - "Publish remaining two mandatory SVG files in chapter-02-programmirovanie-dannyh/"
-  - "Update book chapter README with chapter 2 and progress 2/21."
-  - "Read back every committed chapter file, verify CI and create or reuse PR."
+  - "Validate GitHub CI on final chapter contents, then create or reuse PR."
   - "Remove transient checkpoint only after verified PR/CI evidence; do not merge without required gates."
 last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/blob/eaa60680dcb375fee2d779c98ccc8c399e94f4e2/books/assembly-x86-64-zhukov-ru/notes/chapters/plan.yaml"
 first_safe_next_action: "Read current branch HEAD and list chapter-02 files before each new write; resume only missing file paths."
