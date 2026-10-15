@@ -1,0 +1,33 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: "zabbix-7-0020-ch13-20261015"
+repository: "vsp-corp/biblioteka-vsp"
+book_id: "zabbix-7-monitoring-it-infrastructure-ru"
+task_kind: chapter
+objective: "RAG-only chapter 13 analysis, six mandatory individual files plus source findings, index, CI and PR."
+branch: "chapter/zabbix-7-0020-ch13-cloud-monitoring-20261015"
+initial_base_sha: "8469208a1ae555ac4fceb636c35b3e08dc6667ce"
+last_observed_head_sha: "8469208a1ae555ac4fceb636c35b3e08dc6667ce"
+expected_source_sha256: "07204d885d4bf4c6c2de7c71ae42a4e3ed4cea794169cbe07985552e63875a27"
+constraints:
+  - no direct main writes
+  - no source, RAG or reading state changes
+  - source-policy RAG-only, no direct PDF or external facts
+  - no ZIP; individual files
+  - merge only after exact-head PASS, postmerge verification
+stage: IN_PROGRESS
+completed_steps:
+  - step: "Verified accepted RAG, SHA, all required accepted contracts and chapter index at 12/13."
+    evidence_type: other
+    reference: "8469208a1ae555ac4fceb636c35b3e08dc6667ce"
+  - step: "Verified last chapter starts p0490, ends p0510; p0512 is unrelated advertisement and p0511 lacks text."
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/zabbix-7-monitoring-it-infrastructure-ru/rag/chunks/p0501-p0600/p0510-c01.md"
+pending_steps:
+  - "Commit chapter-13 mandatory README, cheatsheet, commands, diagram, two SVG and conditional findings"
+  - "Update index to 13/13 and verify files, CI and PR"
+  - "Retire checkpoint, validate exact final head CI and merge after PASS"
+  - "Verify main artifacts, source unchanged, reading unchanged, postmerge CI PASS"
+last_verified_evidence: "8469208a1ae555ac4fceb636c35b3e08dc6667ce"
+first_safe_next_action: "Verify branch and chapter-13 directory before any duplicate write."
+blocker: "Not applicable"
+last_observed_at: "Not applicable"
