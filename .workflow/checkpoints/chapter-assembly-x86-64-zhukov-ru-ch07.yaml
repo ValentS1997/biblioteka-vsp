@@ -1,0 +1,35 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: chapter-assembly-x86-64-zhukov-ru-ch07
+repository: vsp-corp/biblioteka-vsp
+book_id: assembly-x86-64-zhukov-ru
+task_kind: chapter
+objective: "Chapter 7 RAG-only analysis and direct publication of chapter files with Git read-back, CI and PR"
+branch: chapter/assembly-x86-64-zhukov-ru-ch07
+initial_base_sha: 305b1b89c778603b1d58632c64fdfff5114ad202
+last_observed_head_sha: 305b1b89c778603b1d58632c64fdfff5114ad202
+expected_source_sha256: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source or RAG rewrite
+  - no reading-status mutation
+  - no archive substitution
+stage: IN_PROGRESS
+completed_steps:
+  - step: "Read current canonical contracts, verified RAG manifest READY_WITH_KNOWN_LIMITATIONS and acceptance ACCEPTED"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/305b1b89c778603b1d58632c64fdfff5114ad202/books/assembly-x86-64-zhukov-ru/rag/acceptance.yaml"
+  - step: "Verify 21 chapters, initial publication 6/21, PDF p93-110 and chapter 8 PDF p111"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/305b1b89c778603b1d58632c64fdfff5114ad202/books/assembly-x86-64-zhukov-ru/notes/chapters/plan.yaml"
+pending_steps:
+  - "Commit six mandatory individual chapter files, read back all files"
+  - "Commit conditional questions, answers, source findings, explicitly no invented chapter-end summary"
+  - "Update index to 7/21 on book branch"
+  - "Compare main drift, verify CI and open PR only after PASS"
+  - "PR CI PASS, close transient checkpoint, final HEAD CI PASS and merge"
+  - "Read back main nine chapter files/index and postmerge CI"
+first_safe_next_action: "Read branch SHA, checkpoint, chapter 7 file tree, matching PR and CI to resume first unfinished operation"
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/blob/305b1b89c778603b1d58632c64fdfff5114ad202/books/assembly-x86-64-zhukov-ru/notes/chapters/plan.yaml"
+blocker: "Not applicable"
+last_observed_at: "Not applicable"
