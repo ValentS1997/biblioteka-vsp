@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only analysis and publication of chapter 6"
 branch: "chapters/0011-modern-system-administration-chapter-06"
 initial_base_sha: "88ca62987dda8ea5ea5e6433c484a9f259762658"
-last_observed_head_sha: "9a110f905b4a4e6b3209bd495511e141c6034366"
+last_observed_head_sha: "a343f841f8a00d82e1fb3fe3d4d1e3e8b1977c21"
 expected_source_sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
 constraints:
   - no direct main changes
@@ -14,7 +14,7 @@ constraints:
   - no source/RAG rewrite
   - preserve reading-progress
   - no ZIP/archive delivery
-stage: IN_PROGRESS
+stage: CI_PENDING
 completed_steps:
   - step: "Read canonical 21-chapter plan, prior Git progress 5 of 21 and source-bound RAG PDF 83-88"
     evidence_type: file-readback
@@ -25,9 +25,12 @@ completed_steps:
   - step: "All eight chapter 6 Git artifact files committed and independently verified"
     evidence_type: commit
     reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/9a110f905b4a4e6b3209bd495511e141c6034366"
+  - step: "Chapter index published as an individual Git file; branch progress 6 of 21"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/a343f841f8a00d82e1fb3fe3d4d1e3e8b1977c21"
 pending_steps:
 
-  - "Read back chapter files; update index"
+
   - "Run CI and PR checks"
   - "Merge after PASS, verify main and refresh checkpoint"
 last_verified_evidence: "88ca62987dda8ea5ea5e6433c484a9f259762658"
