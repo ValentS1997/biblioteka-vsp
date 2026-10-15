@@ -1,0 +1,35 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: 0011-modern-system-administration-chapter-01
+repository: vsp-corp/biblioteka-vsp
+book_id: modern-system-administration-jennifer-davis-ru
+task_kind: chapter
+objective: "RAG-only chapter 1 analysis and direct Git publication of individual chapter artifacts under v1.8"
+branch: chapters/0011-modern-system-administration
+initial_base_sha: a3d17475268be38aa6bddba2d2029e3b4ba3205b
+last_observed_head_sha: d2fde600b0a843d6a0ca7b52bdc4e40306e27d77
+expected_source_sha256: 06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790
+constraints:
+  - "no direct main changes"
+  - "no force-push"
+  - "no source/RAG rewrite without explicit authorization"
+  - "no reading-progress mutation without explicit user confirmation"
+  - "no archive delivery for chapter artifacts"
+stage: IN_PROGRESS
+completed_steps:
+  - step: "Recovered active branch and existing chapter plan; no chapter-01 files existed"
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/tree/chapters/0011-modern-system-administration/books/modern-system-administration-jennifer-davis-ru/notes/chapters
+  - step: "Verified RAG chapter 1 boundary PDF pages 28-36, next chapter begins PDF page 37"
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/modern-system-administration-jennifer-davis-ru/rag/chunks/p0001-p0100/p0036-c01.md
+  - step: "Confirmed current RAG ACCEPTED and chapter plan 21 chapters"
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/modern-system-administration-jennifer-davis-ru/rag/acceptance.yaml
+pending_steps:
+  - "Commit each chapter-01 mandatory file individually: README, cheatsheet, commands, diagram, compact SVG, detailed SVG."
+  - "Commit chapter-end summary and source-findings from RAG evidence, and update book-level chapter index."
+  - "Read-back all files; verify chapter-notes CI at final branch HEAD and publication progress; update this checkpoint."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/pull/489
+first_safe_next_action: "Read branch HEAD and check chapter-01 directory before any attempted create_file; verify no duplicate writes."
+blocker: "Not applicable"
+last_observed_at: "Not applicable"
