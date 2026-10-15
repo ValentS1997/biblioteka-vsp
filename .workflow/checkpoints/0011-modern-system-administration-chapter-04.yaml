@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only analysis and individual Git publication of chapter 4 Network using canonical chapter artifact collection v1.8"
 branch: chapters/0011-modern-system-administration-chapter-04
 initial_base_sha: 8fb79e098055558a2ce377fa095531c1532f9bb4
-last_observed_head_sha: 51df68a50eeefc35167fe5af65bb064e07597785
+last_observed_head_sha: a6815bb545e65ef6051785cb826f53beff6f4642
 expected_source_sha256: 06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790
 constraints:
   - "no direct main changes"
@@ -14,7 +14,7 @@ constraints:
   - "no source/RAG rewrite without explicit authorization"
   - "no reading-progress mutation without explicit user confirmation"
   - "no archive delivery for chapter artifacts"
-stage: IN_PROGRESS
+stage: COMPLETE
 completed_steps:
   - step: "Read-only recovery; verified main has chapters 1-3, 21 source-grounded total, no chapter 4"
     evidence_type: file-readback
@@ -34,10 +34,15 @@ completed_steps:
   - step: "GitHub Actions PASS for chapter 4 eight files and updated index"
     evidence_type: ci
     reference: https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38702280339
+  - step: "PR #508 merged; eight chapter 4 files verified in main"
+    evidence_type: pr
+    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/508
+  - step: "Post-merge index reconciliation to 4/21 committed and read back on isolated branch"
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/a6815bb545e65ef6051785cb826f53beff6f4642
 pending_steps:
-  - "Open PR for chapter 4 and verify pull_request CI before merge"
-  - "Verify main publication and final checkpoint"
-last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38702280339
-first_safe_next_action: "Read branch HEAD and search open PRs before opening PR"
+  - "Reconcile the already-committed post-merge index through a separate PR with CI; chapter files themselves are already published in main"
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/pull/508
+first_safe_next_action: "Inspect post-merge reconciliation branch HEAD/CI and PR before any retry; chapter 4 main publication already verified"
 blocker: "Not applicable"
 last_observed_at: "Not applicable"
