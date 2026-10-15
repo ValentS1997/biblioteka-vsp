@@ -3,10 +3,10 @@ task_key: kali-linux-in-action-skabtsov-2e-ru-chapter-08
 repository: vsp-corp/biblioteka-vsp
 book_id: kali-linux-in-action-skabtsov-2e-ru
 task_kind: chapter
-objective: "RAG-only analysis of chapter 08 social engineering; individual Git publication and stacked PR"
+objective: "RAG-only chapter 08 individual file publication and stacked PR"
 branch: chapter/kali-linux-in-action-skabtsov-2e-ru-0012-ch08
 initial_base_sha: e1f2a1115e5464b7457721f95de6d59b25884661
-last_observed_head_sha: e1f2a1115e5464b7457721f95de6d59b25884661
+last_observed_head_sha: bfe75767a27d682bd9f08a08980bead7ca273500
 expected_source_sha256: fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9
 constraints:
   - no direct main changes
@@ -15,19 +15,19 @@ constraints:
   - no reading-progress mutation without explicit user confirmation
   - no archive delivery for chapter artifacts
   - no executable phishing or credential-harvesting playbooks
-stage: PLANNED
+stage: CI_PENDING
 completed_steps:
-  - step: "Read and verified chapter 08 PDF 242-257, chapter 09 starts 258; 17 chapter RAG plan ACCEPTED."
+  - step: "Verified RAG ACCEPTED, 17-chapter TOC, chapter 08 PDF pages 242-257; chapter 09 begins 258."
     evidence_type: file-readback
     reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/kali-linux-in-action-skabtsov-2e-ru/rag/chunks/p0201-p0300/p0242-c01.md
-  - step: "Verified PR chain #549 #551 #553 #558 #567 remains OPEN; main published 2/17."
-    evidence_type: pr
-    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/567
+  - step: "Committed six mandatory individual chapter 08 files, source-findings.md and updated chapter index; read-back PASS on eight paths."
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/bfe75767a27d682bd9f08a08980bead7ca273500
 pending_steps:
-  - "Publish 6 individual chapter files, source-findings and updated index after branch check."
-  - "Read back all files and verify CI."
-  - "Open stacked PR against chapter 07 only after PASS; recheck PR CI and current HEAD."
-last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/e1f2a1115e5464b7457721f95de6d59b25884661
-first_safe_next_action: "Check live chapter 08 branch and absence/presence of chapter paths before any Git write."
+  - "Verify push CI run 38770907911 completed SUCCESS on artifact commit."
+  - "Create stacked PR against chapter 07 branch only after PASS; compare expected changed paths."
+  - "Verify PR CI on final HEAD, record complete checkpoint and leave open until ancestor PRs are integrated."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/bfe75767a27d682bd9f08a08980bead7ca273500
+first_safe_next_action: "Re-fetch chapter 08 branch head, checkpoint and CI before any retry; do not recreate already committed chapter artifacts."
 blocker: Not applicable
 last_observed_at: Not applicable
