@@ -7,7 +7,7 @@ objective: "Canonical RAG-only chapter 08 'Сдвиги в распределе�
 branch: chapter/0031-designing-ml-systems-ch08-20261015
 parent_branch: chapter/0031-designing-ml-systems-ch07-20261015
 initial_base_sha: 769ad093ef6b50ace51360f6fec4899b176c6849
-last_observed_head_sha: 773588db0196f7f51f8610ebb27e7873819915d7
+last_observed_head_sha: 039366f82171aee3c0efabf977e90b7babdbfcf3
 expected_source_sha256: 0bcacadb4e1dc2235cb58f975111e1633527217127c5871edb894fe2b8f4c80c
 constraints:
   - "no direct main changes"
@@ -15,7 +15,7 @@ constraints:
   - "no source/RAG rewrite or non-RAG chapter claims"
   - "no reading-progress mutation without explicit request"
   - "no archives or duplicate PR"
-stage: CI_PENDING
+stage: IN_PROGRESS
 completed_steps:
   - step: "Read-only verified 7 ACCEPTED process contracts, canonical source SHA and book RAG acceptance ACCEPTED, 11 chapters and 7/11 on predecessor branch; main 0/11."
     evidence_type: file-readback
@@ -35,11 +35,17 @@ completed_steps:
   - step: "Native Итоги located in source p0266-c01 and p0267-c01; summary.md explicitly marked as a source-grounded paraphrase; math extraction anomalies documented."
     evidence_type: file-readback
     reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/chapter/0031-designing-ml-systems-ch08-20261015/books/designing-machine-learning-systems-chip-huyen-ru/notes/chapters/chapter-08-data-distribution-shifts-and-monitoring/summary.md"
+  - step: "Created stacked PR #524 against chapter 07 branch, diff exactly 10 expected paths (8 chapter files, index and checkpoint), no prior chapter duplicates."
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/524"
+  - step: "PR #524: chapter RAG references, SVG rasterization and validator regression all PASS."
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38721261826"
 pending_steps:
-  - "Verify no existing chapter 08 PR; open exactly one stacked PR against chapter 07, inspect changed paths and confirm PR CI PASS."
-  - "Update final checkpoint with PR and CI, verify exact final HEAD and reading status. Do not merge."
+  - "Read-only verify CI for checkpoint-only final HEAD, PR #524 head/base/mergeability, upstream PR chain and reading status."
+  - "After ancestor PRs merge sequentially, retarget PR #524 and revalidate before merging; no automatic merges."
   - "Update checkpoint with PR and CI links; do not merge."
-last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38721058102"
-first_safe_next_action: "Read-only inspect chapter 08 branch HEAD, checkpoint, all files, Git PR list and CI. Do not repeat commits or PR."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38721261826"
+first_safe_next_action: "Read-only check final chapter 08 branch HEAD, PR #524 and upstream stack, CI and checkpoint. No duplicate writes or PR. Reading remains planned."
 blocker: "Not applicable"
 last_observed_at: "Not applicable"
