@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="1100" height="650" role="img" aria-label="Глава 14: сегменты данных и стека, unreal mode, A20 и привилегии">
+<rect width="1100" height="650" fill="#f8fafc"/><g font-family="sans-serif" fill="#19364e">
+<text x="35" y="55" font-size="32">Глава 14. Данные и стек</text><text x="35" y="84" font-size="17">Protected mode · данные · expand-down · unreal mode</text>
+<rect x="35" y="117" width="494" height="154" rx="14" fill="#dbeafe"/><rect x="571" y="117" width="494" height="154" rx="14" fill="#dcfce7"/>
+<text x="55" y="155" font-size="23">Local DS и Flat ES</text><text x="55" y="195" font-size="18">DS: COM base / local limit</text><text x="55" y="233" font-size="18">ES: base 0 / 4 GiB</text>
+<text x="591" y="155" font-size="23">Expand-down E=1</text><text x="591" y="195" font-size="18">offset &gt; limit</text><text x="591" y="233" font-size="18">B=0: FFFF · B=1: FFFFFFFF</text>
+<rect x="35" y="306" width="494" height="152" rx="14" fill="#e0e7ff"/><rect x="571" y="306" width="494" height="152" rx="14" fill="#ede9fe"/>
+<text x="55" y="343" font-size="23">Unreal / A20</text><text x="55" y="386" font-size="18">FS keeps large hidden limit</text><text x="55" y="425" font-size="18">A20: 100000h vs physical 0</text>
+<text x="591" y="343" font-size="23">Privilege rules</text><text x="591" y="386" font-size="18">Data: max(CPL,RPL) &lt;= DPL</text><text x="591" y="425" font-size="18">SS: CPL = DPL = RPL</text>
+<rect x="35" y="495" width="1030" height="101" rx="14" fill="#ffedd5"/><text x="55" y="535" font-size="20">Memory, A20 and SS experiments were not executed.</text><text x="55" y="568" font-size="17">RAG contains a p245 inequality typo: 3 is greater than 2.</text>
+<text x="35" y="633" font-size="14">Canonical RAG PDF 235–252 · 11 source listings · analytical SVG</text></g></svg>
