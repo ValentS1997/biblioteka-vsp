@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="940" viewBox="0 0 1440 940" role="img" aria-label="Глава 9 Zabbix: Slack, Teams, Telegram, Opsgenie, уведомления, permissions и секреты">
+<rect width="1440" height="940" fill="#f2f6fc"/>
+<text x="47" y="73" fill="#142a46" font-family="DejaVu Sans, sans-serif" font-size="38" font-weight="700">ZABBIX 7  /  ГЛАВА 09</text>
+<text x="47" y="112" fill="#52647b" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400">ПРОБЛЕМА → ACTION → MEDIA / SCRIPT → ВНЕШНИЙ СЕРВИС</text>
+<rect x="40" y="149" width="1357" height="302" rx="16" fill="#fff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="72" y="193" fill="#155e75" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700">01  ЧЕТЫРЕ ПУТИ ДОСТАВКИ</text>
+<rect x="72" y="213" width="306" height="203" rx="16" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1.5"/>
+<text x="93" y="251" fill="#075985" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700">Slack</text>
+<text x="93" y="285" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400">Bot + OAuth scopes</text>
+<text x="93" y="314" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400">chat:write, im:write</text>
+<text x="93" y="343" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400">groups:write</text>
+<text x="93" y="372" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400">Media: bot_token</text>
+<rect x="394" y="213" width="310" height="203" rx="16" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.5"/>
+<text x="415" y="251" fill="#3730a3" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700">MS Teams</text>
+<text x="415" y="285" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400">Channel connector</text>
+<text x="415" y="314" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400">Zabbix Webhook URL</text>
+<text x="415" y="343" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400">Media: teams_endpoint</text>
+<text x="415" y="372" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400">UI актуальность: проверить</text>
+<rect x="720" y="213" width="312" height="203" rx="16" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+<text x="741" y="251" fill="#166534" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700">Telegram</text>
+<text x="741" y="285" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400">BotFather: /newbot</text>
+<text x="741" y="314" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400">Token + group ID</text>
+<text x="741" y="343" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400">IDBot: /getgroupid</text>
+<text x="741" y="372" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400">User Media: Send to</text>
+<rect x="1048" y="213" width="316" height="203" rx="16" fill="#fff7ed" stroke="#fdba74" stroke-width="1.5"/>
+<text x="1067" y="251" fill="#9a3412" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700">Opsgenie</text>
+<text x="1067" y="285" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400">API key + OEC package</text>
+<text x="1067" y="314" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400">Server-side Script</text>
+<text x="1067" y="343" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400">Problem / Recovery / Update</text>
+<text x="1067" y="372" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400">actionCommand: RAG_MISS</text>
+<rect x="40" y="474" width="672" height="313" rx="16" fill="#fff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="73" y="518" fill="#155e75" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700">02  ОБЩАЯ ЦЕПОЧКА ZABBIX</text>
+<text x="73" y="559" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Trigger PROBLEM + severity Warning+</text>
+<text x="73" y="594" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Action conditions + Operations</text>
+<text x="73" y="629" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">User group → нужные host groups Read</text>
+<text x="73" y="664" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">User Media + Enabled Media type</text>
+<text x="73" y="699" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Webhook или Opsgenie server Script</text>
+<text x="73" y="734" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Результат: конкретный чат / on-call</text>
+<rect x="734" y="474" width="663" height="313" rx="16" fill="#fff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="764" y="518" fill="#155e75" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700">03  ДВЕ ОПАСНЫЕ УСТАНОВКИ</text>
+<text x="764" y="559" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Super admin ПЕРЕКРЫВАЕТ Read</text>
+<text x="764" y="594" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Action без conditions = все PROBLEM</text>
+<text x="764" y="629" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Секреты: OAuth / URL / token / API key</text>
+<text x="764" y="664" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Opsgenie package и API без live проверки</text>
+<text x="764" y="699" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Точные поля скриншотов: RAG_MISS</text>
+<text x="764" y="734" fill="#203149" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Требуется ограничение прав и получателей</text>
+<text x="45" y="857" fill="#52647b" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400">Accepted RAG-only · PDF 371–411 · SHA256 07204d88…e63875a27</text>
+<text x="45" y="891" fill="#64748b" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400">Source findings: rights escalation, broad actions, historical connectors, credentials, missing script</text>
+</svg>
