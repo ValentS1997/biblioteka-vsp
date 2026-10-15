@@ -6,14 +6,14 @@ task_kind: chapter
 objective: "RAG-only chapter 9 Segments analysis, individual Git files, CI and gated PR publication"
 branch: chapter/assembly-x86-64-zhukov-ru-ch09
 initial_base_sha: 9332d01d699bed97a1ef4bbf2661b4a8348aee7f
-last_observed_head_sha: 1f96724bc3ca5d5138060ef4e7bd078627966efd
+last_observed_head_sha: a187ebc6ff0adf9342a5d228f8f16dc90ce0bed4
 expected_source_sha256: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
 constraints:
   - no direct main changes
   - no source or RAG edits
   - no reading-status mutation
   - no force-push or ZIP fallback
-stage: IN_PROGRESS
+stage: CI_PENDING
 completed_steps:
   - step: "Canonical contracts verified ACCEPTED, RAG acceptance and source hash match"
     evidence_type: file-readback
@@ -24,9 +24,13 @@ completed_steps:
   - step: "Six mandatory individual files with separate commits and Git read-back"
     evidence_type: file-readback
     reference: "https://github.com/vsp-corp/biblioteka-vsp/tree/1f96724bc3ca5d5138060ef4e7bd078627966efd/books/assembly-x86-64-zhukov-ru/notes/chapters/chapter-09-segmenty"
+  - step: "All nine chapter files, book index 9/21 separately committed and Git-readback verified"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/tree/a187ebc6ff0adf9342a5d228f8f16dc90ce0bed4/books/assembly-x86-64-zhukov-ru/notes/chapters/chapter-09-segmenty"
+  - step: "Main advanced only on other book; no concurrent edits to current book or canonical templates"
+    evidence_type: git-compare
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/compare/9332d01d699bed97a1ef4bbf2661b4a8348aee7f...main"
 pending_steps:
-  - "Create review questions, answers, source-findings and verify each"
-  - "Update book index progress 9/21 in branch"
   - "Verify CI PASS and main drift; PR only after PASS"
   - "Check PR CI, remove checkpoint, final HEAD CI PASS then merge"
   - "Postmerge read-back main and CI"
