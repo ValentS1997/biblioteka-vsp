@@ -10,6 +10,7 @@
 - Глава 4 слита из `chapters/0011-modern-system-administration-chapter-04` через [PR #508](https://github.com/vsp-corp/biblioteka-vsp/pull/508), merge commit [`aa87563`](https://github.com/vsp-corp/biblioteka-vsp/commit/aa875633f8b32b96af5a5b5342e9de8b7ca96350).
 - Осталось: **8**.
 - Следующая неопубликованная глава: **14 — Теоретические аспекты мониторинга**.
+- Глава 15 подготовлена **в отдельной независимой ветке**; она **не считается опубликованной**, пока глава 14 и затем глава 15 не пройдут CI/PR и не войдут в `main`. Текущий `main`: 13/21.
 - Учёт публикации: только отдельные committed Git files; ZIP и подготовленные вне Git тексты не учитываются.
 - Recovery evidence: [chapter 3 checkpoint](../../../../.workflow/checkpoints/0011-modern-system-administration-chapter-03.yaml) — `COMPLETE`; слияние PR #503 и #504, финальные CI PASS.
 - Публикация в `main`: PR [#489](https://github.com/vsp-corp/biblioteka-vsp/pull/489) слит; merge commit [`781200b`](https://github.com/vsp-corp/biblioteka-vsp/commit/781200b791f0ce111a6659b330d537adb49289be).
@@ -33,7 +34,7 @@
 | 12 | [Управление инфраструктурой](chapter-12-infrastructure-management/README.md) | Опубликована в `main`: 6 обязательных + 2 условных Git-файла; PR #539, CI PASS |
 | 13 | [Обеспечение безопасности инфраструктуры](chapter-13-securing-infrastructure/README.md) | Опубликована в `main`: 6 обязательных + 2 условных Git-файла; PR #543, CI PASS |
 | 14 | Теоретические аспекты мониторинга | Не опубликована |
-| 15 | Мониторинг вычислительной инфраструктуры и программного обеспечения на практике | Не опубликована |
+| 15 | [Мониторинг вычислительной инфраструктуры и программного обеспечения на практике](chapter-15-monitoring-computing-and-software/README.md) | На отдельной ветке: 6 обязательных + 2 условных Git-файла; Git read-back PASS; **не опубликована в main**, CI/PR pending |
 | 16 | Управление данными мониторинга | Не опубликована |
 | 17 | Мониторинг вашей работы | Не опубликована |
 | 18 | Управление мощностями | Не опубликована |
@@ -98,3 +99,7 @@
 ## Подтверждение публикации главы 13 в `main`
 
 Глава 13 «Обеспечение безопасности инфраструктуры»: canonical RAG **PDF 157–171** (печатные **163–177**), PDF 172 — часть IV, PDF 173 — глава 14. В `chapters/0011-modern-system-administration-chapter-13` опубликованы восемь независимых Git-файлов `chapter-13-securing-infrastructure/`: `README.md`, `cheatsheet.md`, `commands.md`, `diagram.md`, `visual-cheatsheet.svg`, `visual-cheatsheet-detailed.svg`, `summary.md`, `source-findings.md`. Каждый файл прочитан обратно из Git. Повреждения рисунка 13.1 и поля Terraform задокументированы без догадок; исходные десять рекомендаций не представлены как контрольные вопросы. **Глава 13 слита в `main` через PR #543**, merge commit `dac648ecea3f8159897f55886821a5e436d17714`. PR CI `Validate chapter notes and SVG`: PASS ([run 38738829983](https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38738829983)). Все восемь отдельных файлов проверены в `main`. **Итоговый прогресс: 13/21 (61,9%)**. Статус чтения не изменился.
+
+## Подготовка главы 15 (отдельная ветка; не публикация в main)
+
+На ветке `chapters/0011-modern-system-administration-chapter-15` отдельно сохранены и прочитаны из Git восемь файлов каталога `chapter-15-monitoring-computing-and-software/`: `README.md`, `cheatsheet.md`, `commands.md`, `diagram.md`, `visual-cheatsheet.svg`, `visual-cheatsheet-detailed.svg`, `summary.md`, `source-findings.md`. RAG PDF **182–194**, печатные **190–202**; PDF 195 начинает главу 16. Работа проведена строго RAG-only. Источник, RAG, `reading/progress.yaml` не менялись. Официальный прогресс `main`: **13/21**; глава 14 в другой несоединённой ветке. До подтверждённого CI PASS, устранения зависимости от главы 14 и независимого PR CI глава 15 не опубликована.
