@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="640" viewBox="0 0 1120 640" role="img" aria-label="Краткая визуальная памятка главы 4: способы адресации i8086">
+<rect width="1120" height="640" fill="#f8fafc"/>
+<g font-family="DejaVu Sans,sans-serif">
+<text x="34" y="56" font-size="30" font-weight="bold" fill="#0f253b">Глава 4 · Способы адресации</text>
+<text x="34" y="86" font-size="17" fill="#526575">RAG PDF с. 57–68 · регистр → значение → память</text>
+<g stroke-width="2">
+<rect x="34" y="118" width="328" height="132" rx="13" fill="#e0ecff" stroke="#4777bc"/>
+<rect x="396" y="118" width="328" height="132" rx="13" fill="#e3f6ee" stroke="#2f9672"/>
+<rect x="758" y="118" width="328" height="132" rx="13" fill="#ede9ff" stroke="#8170ce"/>
+<rect x="34" y="286" width="328" height="136" rx="13" fill="#edf3ff" stroke="#4777bc"/>
+<rect x="396" y="286" width="328" height="136" rx="13" fill="#e4f7f0" stroke="#2f9672"/>
+<rect x="758" y="286" width="328" height="136" rx="13" fill="#f0ebff" stroke="#8170ce"/>
+</g>
+<g font-size="20" font-weight="bold" fill="#183c67">
+<text x="52" y="151">Регистр</text><text x="414" y="151">Непосредственное</text><text x="776" y="151">Прямая память</text>
+<text x="52" y="320">Косвенная</text><text x="414" y="320">Со смещением</text><text x="776" y="320">База + индекс</text>
+</g>
+<g font-size="17" fill="#23364b">
+<text x="52" y="185">mov dh, cl</text><text x="52" y="214">Значение в регистре</text>
+<text x="414" y="185">add ax, 1</text><text x="414" y="214">Число внутри команды</text>
+<text x="776" y="185">not byte [082]</text><text x="776" y="214">Фиксированный адрес</text>
+<text x="52" y="354">inc b[si]</text><text x="52" y="382">Адрес хранится в si</text>
+<text x="414" y="354">inc [si+area]</text><text x="414" y="382">Индекс + смещение</text>
+<text x="776" y="354">inc b[bx+si]</text><text x="776" y="382">bx/bp + si/di</text>
+</g>
+<rect x="34" y="455" width="1052" height="117" rx="13" fill="#fff2e8" stroke="#d78144" stroke-width="2"/>
+<text x="53" y="487" font-size="21" font-weight="bold" fill="#923f1b">Границы корректности</text>
+<text x="53" y="516" font-size="16" fill="#723a20">Непосредственную константу нельзя изменить · тип памяти должен быть известен.</text>
+<text x="53" y="543" font-size="16" fill="#723a20">Два явно адресуемых операнда памяти запрещены; циклы с jmp l1 без границ опасны.</text>
+<text x="34" y="611" font-size="13" fill="#64788b">Источник: canonical RAG p0057:c01–p0068:c01 · Книга №0017 · chapter collection v1.8</text>
+</g>
+</svg>
