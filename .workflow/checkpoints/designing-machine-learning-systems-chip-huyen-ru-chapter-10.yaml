@@ -7,7 +7,7 @@ objective: "Analyze chapter 10 Инфраструктура и инструме�
 branch: chapter/0031-designing-ml-systems-ch10-20261015
 parent_branch: chapter/0031-designing-ml-systems-ch09-20261015
 initial_base_sha: 5d22f77881b1cbaf31d4169f1e613053d4efa318
-last_observed_head_sha: e9375ffa526bb9cd8b27e5ea630788c8f481d949
+last_observed_head_sha: 29180d4f1b7a9be33f27f7a0de9912e96c848fea
 expected_source_sha256: 0bcacadb4e1dc2235cb58f975111e1633527217127c5871edb894fe2b8f4c80c
 constraints:
   - "only canonical book RAG, no PDF direct or external sources"
@@ -15,7 +15,7 @@ constraints:
   - "no changes to source PDFs or RAG"
   - "reading/progress.yaml remains untouched"
   - "individual Git paths, not archives; no duplicate PR"
-stage: CI_PENDING
+stage: IN_PROGRESS
 completed_steps:
   - step: "Read-only verified 7 ACCEPTED process contracts, canonical RAG ACCEPTED, matching source checksum and chapter plan with 11 numbered chapters. Chapter 09 branch has 9/11; main index only, 0/11."
     evidence_type: file-readback
@@ -35,10 +35,16 @@ completed_steps:
   - step: "Native book Итоги p0332-c01 and p0333-c01 explicitly preserved as a source-grounded analytical synopsis; damaged Dockerfile/Slurm/Airflow/Argo/Metaflow code documented without fixing."
     evidence_type: file-readback
     reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/chapter/0031-designing-ml-systems-ch10-20261015/books/designing-machine-learning-systems-chip-huyen-ru/notes/chapters/chapter-10-mlops-infrastructure-and-tools/summary.md"
+  - step: "Created stacked PR #533 against chapter 09; PR changed files exactly eight chapter 10 files plus chapter index and checkpoint, no ancestors duplicated."
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/533"
+  - step: "PR CI PASS on previous checkpoint HEAD 29180d4f1b7a9be33f27f7a0de9912e96c848fea: RAG references, SVG conversions and chapter validator regression."
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38727271916"
 pending_steps:
-  - "Verify chapter 10 has no existing PR; open exactly one stacked PR against chapter 09 after push PASS and inspect ten expected paths and PR CI."
-  - "Update checkpoint with PR/CI links and verify final HEAD CI, PR clean mergeability, reading status unchanged; no auto merge."
-last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38726960033"
-first_safe_next_action: "Read-only inspect branch HEAD, checkpoint, eight chapter files, chapter index, PR list and CI before resuming; no duplicate PR."
+  - "Verify CI on exact final checkpoint-only HEAD, PR #533 head/base/clean mergeability and unchanged reading; leave PR unmerged."
+  - "After ancestors merge in dependency order, retarget PR #533 to main and rerun checks before any merge. No automatic merge."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38727271916"
+first_safe_next_action: "Read-only verify final chapter 10 branch HEAD, checkpoint, PR #533 and exact-head CI; do not duplicate artifacts or PR. Reading remains planned."
 blocker: "Not applicable"
 last_observed_at: "Not applicable"
