@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1380" height="1110" viewBox="0 0 1380 1110" role="img" aria-label="Глава 6 — подробная схема разработки и автономной оценки ML"><rect width="1380" height="1110" fill="#0f172a"/>
+<text x="40" y="60" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#f8fafc">ГЛАВА 6 · РАЗРАБОТКА И ОЦЕНКА ML-МОДЕЛИ</text>
+<text x="40" y="96" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#94a3b8">Канонический RAG · PDF 162–201 · исходный SHA зафиксирован в README</text>
+<rect x="37" y="127" width="636" height="244" rx="14" fill="#1f2937" stroke="#475569"/>
+<rect x="707" y="127" width="636" height="244" rx="14" fill="#1f2937" stroke="#475569"/>
+<text x="63" y="170" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#93c5fd">ВЫБОР АЛГОРИТМА</text>
+<text x="63" y="217" font-family="Arial,sans-serif" font-size="20" font-weight="400" fill="#e2e8f0">От эвристики к простой ML-модели</text>
+<text x="63" y="257" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Справедливый experimental budget</text>
+<text x="63" y="299" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Trade-offs: FP/FN, speed, cost, explainability</text>
+<text x="63" y="343" font-family="Arial,sans-serif" font-size="16" font-weight="400" fill="#a5b4fc">p0163–p0169; p0187–p0189</text>
+<text x="731" y="170" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#93c5fd">ОБУЧЕНИЕ И КОНТРОЛЬ</text>
+<text x="731" y="217" font-family="Arial,sans-serif" font-size="20" font-weight="400" fill="#e2e8f0">Ансамбли: bagging, boosting, stacking</text>
+<text x="731" y="257" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Tracking + data/code/version/environment</text>
+<text x="731" y="299" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Отладка, distributed parallelism, AutoML</text>
+<text x="731" y="343" font-family="Arial,sans-serif" font-size="16" font-weight="400" fill="#a5b4fc">p0169–p0187</text>
+<rect x="37" y="400" width="1306" height="300" rx="14" fill="#1f2937" stroke="#475569"/>
+<text x="63" y="447" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#93c5fd">ПРЕДПРОДАКШН-ОЦЕНКА (OFFLINE)</text>
+<text x="63" y="495" font-family="Arial,sans-serif" font-size="20" font-weight="400" fill="#e2e8f0">Baseline: случайность, простое правило, эксперт, прежнее решение</text>
+<text x="63" y="540" font-family="Arial,sans-serif" font-size="20" font-weight="400" fill="#e2e8f0">Perturbation: устойчивость к реалистичному шуму</text>
+<text x="63" y="585" font-family="Arial,sans-serif" font-size="20" font-weight="400" fill="#e2e8f0">Invariance и ожидаемые изменения ответа</text>
+<text x="63" y="630" font-family="Arial,sans-serif" font-size="20" font-weight="400" fill="#e2e8f0">Calibration / confidence: вероятности и пороги по примеру</text>
+<text x="63" y="674" font-family="Arial,sans-serif" font-size="16" font-weight="400" fill="#a5b4fc">p0189–p0196</text>
+<rect x="37" y="731" width="1306" height="257" rx="14" fill="#1f2937" stroke="#475569"/>
+<text x="63" y="777" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#93c5fd">СЛАЙСИНГ И ПРИНЯТИЕ РЕШЕНИЙ</text>
+<text x="63" y="825" font-family="Arial,sans-serif" font-size="20" font-weight="400" fill="#e2e8f0">Общий score может маскировать слабые критические группы</text>
+<text x="63" y="870" font-family="Arial,sans-serif" font-size="20" font-weight="400" fill="#e2e8f0">Парадокс Симпсона → нельзя доверять только агрегатам</text>
+<text x="63" y="917" font-family="Arial,sans-serif" font-size="20" font-weight="400" fill="#e2e8f0">Offline оценка не подтверждает результаты после rollout</text>
+<text x="40" y="1052" font-family="Arial,sans-serif" font-size="17" font-weight="400" fill="#fca5a5">PDF p0199: источник «Итоги» · API калибровки и batch-единицы: [Needs confirmation]</text>
+</svg>
