@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only chapter 9 Segments analysis, individual Git files, CI and gated PR publication"
 branch: chapter/assembly-x86-64-zhukov-ru-ch09
 initial_base_sha: 9332d01d699bed97a1ef4bbf2661b4a8348aee7f
-last_observed_head_sha: 9332d01d699bed97a1ef4bbf2661b4a8348aee7f
+last_observed_head_sha: 1f96724bc3ca5d5138060ef4e7bd078627966efd
 expected_source_sha256: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
 constraints:
   - no direct main changes
@@ -21,8 +21,10 @@ completed_steps:
   - step: "Chapter source read via RAG PDF 149-176; chapter 10 starts PDF 177; 8/21 in main"
     evidence_type: file-readback
     reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/9332d01d699bed97a1ef4bbf2661b4a8348aee7f/books/assembly-x86-64-zhukov-ru/notes/chapters/plan.yaml"
+  - step: "Six mandatory individual files with separate commits and Git read-back"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/tree/1f96724bc3ca5d5138060ef4e7bd078627966efd/books/assembly-x86-64-zhukov-ru/notes/chapters/chapter-09-segmenty"
 pending_steps:
-  - "Create six mandatory chapter 9 files as separate Git objects and verify read-back"
   - "Create review questions, answers, source-findings and verify each"
   - "Update book index progress 9/21 in branch"
   - "Verify CI PASS and main drift; PR only after PASS"
