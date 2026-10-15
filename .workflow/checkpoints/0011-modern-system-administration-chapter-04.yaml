@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only analysis and individual Git publication of chapter 4 Network using canonical chapter artifact collection v1.8"
 branch: chapters/0011-modern-system-administration-chapter-04
 initial_base_sha: 8fb79e098055558a2ce377fa095531c1532f9bb4
-last_observed_head_sha: a6815bb545e65ef6051785cb826f53beff6f4642
+last_observed_head_sha: fa62c4d939c67358d010e0aef69e4b273f60b6fd
 expected_source_sha256: 06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790
 constraints:
   - "no direct main changes"
@@ -40,9 +40,11 @@ completed_steps:
   - step: "Post-merge index reconciliation to 4/21 committed and read back on isolated branch"
     evidence_type: commit
     reference: https://github.com/vsp-corp/biblioteka-vsp/commit/a6815bb545e65ef6051785cb826f53beff6f4642
-pending_steps:
-  - "Reconcile the already-committed post-merge index through a separate PR with CI; chapter files themselves are already published in main"
+  - step: "Post-merge index correction submitted as PR #510; current branch Git read-back verified"
+    evidence_type: pr
+    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/510
+pending_steps: []
 last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/pull/508
-first_safe_next_action: "Inspect post-merge reconciliation branch HEAD/CI and PR before any retry; chapter 4 main publication already verified"
+first_safe_next_action: "Read PR #510, its CI and main index after merge; never retry a merge blindly"
 blocker: "Not applicable"
 last_observed_at: "Not applicable"
