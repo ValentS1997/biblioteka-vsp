@@ -1,0 +1,34 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: herding-cats-j-hank-rainwater-ru-chapter-02
+repository: vsp-corp/biblioteka-vsp
+book_id: herding-cats-j-hank-rainwater-ru
+task_kind: chapter
+objective: RAG-only analysis and direct Git publication of chapter 02, PDF p. 46–62.
+branch: chapter/herding-cats-j-hank-rainwater-ru-0021-ch02
+initial_base_sha: eaa60680dcb375fee2d779c98ccc8c399e94f4e2
+last_observed_head_sha: eaa60680dcb375fee2d779c98ccc8c399e94f4e2
+expected_source_sha256: 5f11cf93711c9489b25218c701e1027f5ca0354523e2faeb1bb7041ed3b62795
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite without explicit authorization
+  - no reading-progress mutation without explicit user confirmation
+  - no archive delivery for chapter artifacts
+stage: IN_PROGRESS
+completed_steps:
+  - step: Verify chapter plan and 1/10 main publication; verify RAG source/acceptance.
+    evidence_type: other
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/eaa60680dcb375fee2d779c98ccc8c399e94f4e2/books/herding-cats-j-hank-rainwater-ru/notes/chapters/plan.yaml
+  - step: Create book-scoped chapter-02 feature branch from verified main.
+    evidence_type: commit
+    reference: eaa60680dcb375fee2d779c98ccc8c399e94f4e2
+pending_steps:
+  - Inspect RAG chunks PDF pages 46–62 and classify conditional artifacts.
+  - Create 6 mandatory plus all source-triggered conditional chapter files individually in Git.
+  - GitHub read-back of every path, updated chapter index, and run CI.
+  - Create PR after successful verification; merge only with clean PR/CI.
+  - Verify chapter 02 in main, 2/10 publication; preserve reading state.
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/eaa60680dcb375fee2d779c98ccc8c399e94f4e2
+first_safe_next_action: Verify branch HEAD and inspect chapter-02 RAG chunk boundaries; check file tree before writes.
+blocker: Not applicable
+last_observed_at: Not applicable
