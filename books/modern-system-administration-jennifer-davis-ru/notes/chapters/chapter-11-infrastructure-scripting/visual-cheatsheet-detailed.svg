@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1170" viewBox="0 0 1500 1170" role="img" aria-labelledby="t d">
+<title id="t">Глава 11 — Подробная карта Infrastructure as Code</title>
+<desc id="d">Бизнес-обоснование автоматизации, три подхода к IaC, поэтапное внедрение и проверка функциональности, основанные только на PDF 135–144.</desc>
+<rect width="1500" height="1170" fill="#0c192c"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="54" y="71" font-size="38" font-weight="bold" fill="#eff8ff">Глава 11 · Разработка сценариев инфраструктуры</text>
+<text x="54" y="108" font-size="21" fill="#bed2e8">Инфракод: стандарт, воспроизводимость, изменения под контролем команды</text>
+<rect x="54" y="145" width="1392" height="127" rx="14" fill="#174653" stroke="#77dcd0" stroke-width="2"/>
+<text x="81" y="190" font-size="27" font-weight="bold" fill="#f1ffff">1 · Согласуй пользу от автоматизации (PDF 135–137)</text>
+<text x="81" y="226" font-size="19" fill="#ddf7f1">Согласованность · Масштабируемость · Делегирование полномочий</text>
+<text x="81" y="253" font-size="19" fill="#ddf7f1">Отслеживаемость · Инкультурация · Экспериментирование</text>
+<text x="54" y="320" font-size="28" font-weight="bold" fill="#f1f8ff">2 · Три направления IaC (PDF 138–142)</text>
+<rect x="54" y="344" width="437" height="218" rx="13" fill="#293951"/>
+<text x="79" y="385" font-size="26" font-weight="bold" fill="#f4f8ff">Сборка образов</text>
+<text x="79" y="421" font-size="19" fill="#e0eafa">Обновлённый базовый образ</text>
+<text x="79" y="454" font-size="19" fill="#e0eafa">Стандартные утилиты и ПО</text>
+<text x="79" y="487" font-size="19" fill="#e0eafa">Происхождение пакетов</text>
+<text x="79" y="535" font-size="18" fill="#b5d3ef">Packer · EC2 Image Builder · Buildah</text>
+<rect x="532" y="344" width="437" height="218" rx="13" fill="#274653"/>
+<text x="557" y="385" font-size="26" font-weight="bold" fill="#f0ffff">Предоставление</text>
+<text x="557" y="421" font-size="19" fill="#dff5f5">Вычисления, сети, базы</text>
+<text x="557" y="454" font-size="19" fill="#dff5f5">данных и стеки через API</text>
+<text x="557" y="487" font-size="19" fill="#dff5f5">Мультиоблачность и среды</text>
+<text x="557" y="535" font-size="18" fill="#b9e7e2">Terraform · Pulumi · CloudFormation</text>
+<rect x="1010" y="344" width="436" height="218" rx="13" fill="#303e53"/>
+<text x="1035" y="385" font-size="26" font-weight="bold" fill="#f4faff">Конфигурация</text>
+<text x="1035" y="421" font-size="19" fill="#deebf9">Установка программ</text>
+<text x="1035" y="454" font-size="19" fill="#deebf9">Параметры ОС</text>
+<text x="1035" y="487" font-size="19" fill="#deebf9">Коррекция ручного дрейфа</text>
+<text x="1035" y="535" font-size="18" fill="#bdcce8">CFEngine · Puppet · Chef · Salt · Ansible</text>
+<rect x="54" y="596" width="1392" height="157" rx="14" fill="#2c4056"/>
+<text x="81" y="639" font-size="27" font-weight="bold" fill="#f2f9ff">3 · Внедряй с учётом людей (PDF 143–144)</text>
+<text x="81" y="675" font-size="20" fill="#e0eafa">Новый проект: использовать в подходящих процессах и уточнять рабочий подход</text>
+<text x="81" y="711" font-size="20" fill="#e0eafa">Текущий проект: приоритетный процесс, одна область, постепенное расширение</text>
+<rect x="54" y="782" width="1392" height="163" rx="14" fill="#24505a"/>
+<text x="81" y="824" font-size="27" font-weight="bold" fill="#f1ffff">4 · Контролируй результат (PDF 137, 141)</text>
+<text x="81" y="861" font-size="20" fill="#dbf6f7">Версионность и история решений помогают аудиту и адаптации сотрудников</text>
+<text x="81" y="895" font-size="20" fill="#dbf6f7">Проверяй функциональность: без SPF/DKIM корректный синтаксис DNS не спасает почту</text>
+<rect x="54" y="977" width="1392" height="129" rx="14" fill="#29564a" stroke="#7cddb5"/>
+<text x="81" y="1020" font-size="27" font-weight="bold" fill="#f0fff9">5 · Инструменты могут сочетаться (PDF 143–144)</text>
+<text x="81" y="1057" font-size="20" fill="#dcfff0">Автор рассматривает комбинации Packer, Terraform и Chef</text>
+<text x="81" y="1087" font-size="18" fill="#dcfff0">CLI-команды, версии, пороги и rollback — [Needs confirmation]</text>
+<text x="54" y="1152" font-size="16" fill="#adc5d7">Источник: canonical RAG PDF 135–144. Графика 11.1–11.4 не реконструируется дословно.</text>
+</g></svg>
