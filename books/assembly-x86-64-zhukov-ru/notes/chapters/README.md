@@ -5,8 +5,8 @@ Book ID: `assembly-x86-64-zhukov-ru`. Canonical RAG source SHA-256: `f65a7ec8814
 ## План и прогресс публикации
 
 - [RAG-verified план: 21 глава](plan.yaml). Основание: оглавление (RAG PDF p. 4–8), самостоятельные заголовки глав в RAG-чанках и предисловие PDF p. 11.
-- **В текущей chapter-ветке:** 8/21 (38,1%); осталось 13, следующая — №9 «Сегменты».
-- **В `main` на начало работы над главой 8:** 7/21. До merge главы 8 в `main` опубликованы первые семь глав; сверять HEAD независимо.
+- **В текущей chapter-ветке:** 9/21 (42,9%); осталось 12, следующая — №10 «Исключения».
+- **В `main` на начало работы над главой 9:** 8/21. До merge главы 9 в `main` опубликованы первые восемь глав; сверять HEAD независимо.
 
 ## Опубликованные главы (отдельные Git-файлы)
 
@@ -25,6 +25,8 @@ Book ID: `assembly-x86-64-zhukov-ru`. Canonical RAG source SHA-256: `f65a7ec8814
 7. [Глава 7. Примеры программ](chapter-07-primery-programm/README.md) — [шпаргалка](chapter-07-primery-programm/cheatsheet.md), [команды](chapter-07-primery-programm/commands.md), [диаграмма](chapter-07-primery-programm/diagram.md), [краткая SVG](chapter-07-primery-programm/visual-cheatsheet.svg), [подробная SVG](chapter-07-primery-programm/visual-cheatsheet-detailed.svg), [задания](chapter-07-primery-programm/review-questions.md), [разборы](chapter-07-primery-programm/review-answers.md), [source findings](chapter-07-primery-programm/source-findings.md).
 
 8. [Глава 8. Математический сопроцессор](chapter-08-matematicheskiy-soprotsessor/README.md) — [шпаргалка](chapter-08-matematicheskiy-soprotsessor/cheatsheet.md), [команды](chapter-08-matematicheskiy-soprotsessor/commands.md), [диаграмма](chapter-08-matematicheskiy-soprotsessor/diagram.md), [краткая SVG](chapter-08-matematicheskiy-soprotsessor/visual-cheatsheet.svg), [подробная SVG](chapter-08-matematicheskiy-soprotsessor/visual-cheatsheet-detailed.svg), [задания](chapter-08-matematicheskiy-soprotsessor/review-questions.md), [разборы](chapter-08-matematicheskiy-soprotsessor/review-answers.md), [source findings](chapter-08-matematicheskiy-soprotsessor/source-findings.md).
+
+9. [Глава 9. Сегменты](chapter-09-segmenty/README.md) — [шпаргалка](chapter-09-segmenty/cheatsheet.md), [команды](chapter-09-segmenty/commands.md), [диаграмма](chapter-09-segmenty/diagram.md), [краткая SVG](chapter-09-segmenty/visual-cheatsheet.svg), [подробная SVG](chapter-09-segmenty/visual-cheatsheet-detailed.svg), [задания](chapter-09-segmenty/review-questions.md), [разборы](chapter-09-segmenty/review-answers.md), [source findings](chapter-09-segmenty/source-findings.md).
 
 ## Политика
 

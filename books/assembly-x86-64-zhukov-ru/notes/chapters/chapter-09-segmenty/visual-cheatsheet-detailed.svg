@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="1090" viewBox="0 0 1360 1090" role="img" aria-label="Подробная визуальная памятка главы 9 о сегментной адресации COM и EXE, сегментных префиксах и ограничениях">
+<rect width="1360" height="1090" fill="#f8fafc"/><g font-family="DejaVu Sans,sans-serif">
+<text x="35" y="54" font-size="30" font-weight="bold" fill="#182f47">Глава 9 · Сегментация адресного пространства i80x86</text>
+<text x="35" y="84" font-size="17" fill="#62798b">Канонический RAG PDF 149–176 · листинги 9.1–9.16</text>
+<g stroke-width="2"><rect x="35" y="115" width="625" height="208" rx="14" fill="#e5efff" stroke="#5b7fbb"/>
+<rect x="699" y="115" width="625" height="208" rx="14" fill="#e4f6ee" stroke="#499a75"/>
+<rect x="35" y="353" width="625" height="207" rx="14" fill="#eaf2ff" stroke="#5b7fbb"/>
+<rect x="699" y="353" width="625" height="207" rx="14" fill="#e8f8ef" stroke="#499a75"/>
+<rect x="35" y="589" width="625" height="207" rx="14" fill="#eeeaff" stroke="#8b78c1"/>
+<rect x="699" y="589" width="625" height="207" rx="14" fill="#f1ecff" stroke="#8b78c1"/></g>
+<g font-size="22" font-weight="bold" fill="#214e74"><text x="54" y="152">01 · Линейный адрес</text><text x="718" y="152">02 · Кто задаёт сегмент?</text>
+<text x="54" y="390">03 · Тестовые COM-сегменты</text><text x="718" y="390">04 · EXE, секции, компоновщик</text>
+<text x="54" y="627">05 · Префиксы и стековый кадр</text><text x="718" y="627">06 · Наблюдение / безопасность</text></g>
+<g font-size="17" fill="#2e465d">
+<text x="54" y="190">16-битный номер параграфа × 16</text><text x="54" y="220">Плюс 16-битное смещение EA</text><text x="54" y="250">06312:0107 → 063227</text><text x="54" y="280">0b800:0c80 = 0b8c8:0000</text>
+<text x="718" y="190">Код: CS:IP; данные: DS:BX/SI/DI</text><text x="718" y="220">Стек: SS:SP и SS:BP</text><text x="718" y="250">Строковый источник: DS:SI</text><text x="718" y="280">Строковый приемник: ES:DI</text>
+<text x="54" y="428">COM: PSP 0000–00ff; IP=0100</text><text x="54" y="458">STOSW пишет в B8000 через ES</text><text x="54" y="488">SS:SP переносится согласованно</text><text x="54" y="518">Дальний JMP изменяет CS и IP</text>
+<text x="718" y="428">SEGMENT: C1/C2, D1/D2, STACK</text><text x="718" y="458">A86 +O → OBJ; WARPLINK → EXE</text><text x="718" y="488">PUBLIC / EXTRN связывают модули</text><text x="718" y="518">CALL FAR / RETF между секциями</text>
+<text x="54" y="666">BP обычно использует SS, BX — DS</text><text x="54" y="696">CS: префикс переопределяет чтение</text><text x="54" y="726">ES:DI у STOS/MOVS не заменить</text><text x="54" y="756">ENTER 2; [BP-2], [BP+4/+6], LEAVE</text>
+<text x="718" y="666">Проверить CS, DS, SS, ES, IP и SP</text><text x="718" y="696">Дамп Bochs обновлять через F7</text><text x="718" y="726">PSP / TSR / MCB / вектор 0 рискованны</text><text x="718" y="756">Запуск не выполнялся, rollback неизвестен</text>
+</g>
+<rect x="35" y="830" width="1289" height="172" rx="14" fill="#fff0e6" stroke="#d08a5c" stroke-width="2"/>
+<text x="56" y="865" font-size="23" font-weight="bold" fill="#934e2a">Разбор исходника и контроль результата</text>
+<text x="56" y="900" font-size="17" fill="#7a462a">Четыре авторских итоговых задания, листинги 9.15 и 9.16 требуют анализа адресов и префиксов.</text>
+<text x="56" y="935" font-size="17" fill="#7a462a">В тексте есть расхождение vid_1.com / vid_3.8; см. реестр source findings.</text>
+<text x="56" y="968" font-size="17" fill="#7a462a">Не реконструировать исходные рисунки 9.1–9.4 по текстовому RAG без визуального объекта.</text>
+<text x="35" y="1050" font-size="14" fill="#677c8d">Source SHA f65a7ec…d2c · RAG p0149:c01–p0176:c01 · аналитическая схема, не снимок отладчика</text>
+</g></svg>
