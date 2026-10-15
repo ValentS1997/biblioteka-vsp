@@ -1,0 +1,36 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: kali-linux-in-action-skabtsov-2e-ru-chapter-07
+repository: vsp-corp/biblioteka-vsp
+book_id: kali-linux-in-action-skabtsov-2e-ru
+task_kind: chapter
+objective: "RAG-only chapter 07 web application security analysis and individual Git publication"
+branch: chapter/kali-linux-in-action-skabtsov-2e-ru-0012-ch07
+initial_base_sha: 5ff5b629e6072f23d324473146a75f115f9c5e06
+last_observed_head_sha: 5ff5b629e6072f23d324473146a75f115f9c5e06
+expected_source_sha256: fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite without explicit authorization
+  - no reading-progress mutation without explicit user confirmation
+  - no archive delivery for chapter artifacts
+stage: PLANNED
+completed_steps:
+  - step: "Verified ACCEPTED canonical RAG, source identity and 17 chapters."
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/kali-linux-in-action-skabtsov-2e-ru/notes/chapters/plan.yaml
+  - step: "Verified chapter 07 PDF pages 207-241 and chapter 08 begins PDF page 242 using addressable RAG."
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/kali-linux-in-action-skabtsov-2e-ru/rag/chunks/p0201-p0300/p0207-c01.md
+  - step: "Verified predecessor PR #558 and ancestor PRs #553/#551/#549 still OPEN; selected exact chapter 06 HEAD as branch base."
+    evidence_type: pr
+    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/558
+pending_steps:
+  - "Commit six mandatory individual chapter 07 artifacts, conditional source-findings, and chapter index."
+  - "Read back files and verify push CI."
+  - "Create stacked PR against chapter 06 branch only after CI PASS, then verify PR CI."
+  - "Preserve dependency order and reading status; no automatic merge."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/5ff5b629e6072f23d324473146a75f115f9c5e06
+first_safe_next_action: "Read current branch HEAD and chapter-07 path before retrying writes; Git state is authority."
+blocker: Not applicable
+last_observed_at: Not applicable
