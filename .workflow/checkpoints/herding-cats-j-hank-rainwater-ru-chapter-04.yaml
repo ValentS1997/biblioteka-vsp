@@ -1,0 +1,30 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: herding-cats-j-hank-rainwater-ru-chapter-04
+repository: vsp-corp/biblioteka-vsp
+book_id: herding-cats-j-hank-rainwater-ru
+task_kind: chapter
+objective: Analyze and publish chapter 04 with RAG-only evidence from PDF pages 81-106.
+branch: chapter/herding-cats-j-hank-rainwater-ru-0021-ch04
+initial_base_sha: 7af0fb36efd158c67314886fa937f19c833422e3
+last_observed_head_sha: 7af0fb36efd158c67314886fa937f19c833422e3
+expected_source_sha256: 5f11cf93711c9489b25218c701e1027f5ca0354523e2faeb1bb7041ed3b62795
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source or RAG rewrite
+  - preserve reading status
+  - individual Git files only
+stage: IN_PROGRESS
+completed_steps:
+  - step: Verified 3/10 main publication, 13 RAG acceptance checks, chapter plan and current canonical contracts.
+    evidence_type: commit
+    reference: 7af0fb36efd158c67314886fa937f19c833422e3
+pending_steps:
+  - Read RAG chunks PDF pages 81-106 and assess conditional artifacts.
+  - Publish required and source-triggered individual Git files with readback.
+  - Verify CI and PR; merge only after PASS.
+  - Verify post-merge artifacts in main and reading-status preservation.
+last_verified_evidence: 7af0fb36efd158c67314886fa937f19c833422e3
+first_safe_next_action: Read current branch HEAD and checkpoint; inspect chapter 04 RAG pages 81-106.
+blocker: Not applicable
+last_observed_at: Not applicable
