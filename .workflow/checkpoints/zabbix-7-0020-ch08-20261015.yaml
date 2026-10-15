@@ -1,0 +1,34 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: "zabbix-7-0020-ch08-20261015"
+repository: "vsp-corp/biblioteka-vsp"
+book_id: "zabbix-7-monitoring-it-infrastructure-ru"
+task_kind: chapter
+objective: "RAG-only analysis and Git publication of Zabbix chapter 8 with six required artifacts, findings, index, CI, PR and postmerge verification."
+branch: "chapter/zabbix-7-0020-ch08-zabbix-proxies-20261015"
+initial_base_sha: "dbd7e0649ea07504c163590ccc2be32c33bea8b7"
+last_observed_head_sha: "dbd7e0649ea07504c163590ccc2be32c33bea8b7"
+expected_source_sha256: "07204d885d4bf4c6c2de7c71ae42a4e3ed4cea794169cbe07985552e63875a27"
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite without explicit authorization
+  - no reading-progress mutation without explicit user confirmation
+  - no archive delivery for chapter artifacts
+  - RAG-only; no direct PDF/external source/model memory fill-ins
+stage: IN_PROGRESS
+completed_steps:
+  - step: "Verified main index 7/13, source SHA, RAG accepted, contract templates, previous chapter CI PASS."
+    evidence_type: other
+    reference: "dbd7e0649ea07504c163590ccc2be32c33bea8b7"
+  - step: "Verified chapter 8 bounds 336-370; chapter 9 begins 371. Created separate branch."
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/zabbix-7-monitoring-it-infrastructure-ru/notes/chapters/plan.yaml"
+pending_steps:
+  - "Read source-bound RAG p0336-p0370, track source defects"
+  - "Write individual six chapter artifacts and conditional source-findings"
+  - "Update book chapter index 8/13, verify branch+PR CI"
+  - "Retire checkpoint and verify final-head CI, merge, postmerge readback+CI"
+last_verified_evidence: "dbd7e0649ea07504c163590ccc2be32c33bea8b7"
+first_safe_next_action: "Check branch and chapter-08 directory before writing any missing artifacts."
+blocker: "Not applicable"
+last_observed_at: "Not applicable"
