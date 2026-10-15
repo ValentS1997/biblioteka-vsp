@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1650" height="1470" viewBox="0 0 1650 1470" role="img" aria-label="Подробная визуальная памятка Zabbix глава 9: Slack, Teams, Telegram, Opsgenie и безопасная доставка alert">
+<rect width="1650" height="1470" fill="#f2f6fc"/>
+<rect width="1650" height="128" fill="#172a47"/>
+<text x="48" y="64" font-family="DejaVu Sans, sans-serif" font-size="39" font-weight="700" fill="#ffffff">ZABBIX 7 / ГЛАВА 09</text>
+<text x="48" y="103" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#dbeafe">Внешние сервисы: условия и права → user/media → webhook/script → подтверждение доставки</text>
+<rect x="40" y="151" width="508" height="316" rx="17" fill="#fff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="68" y="197" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700" fill="#155e75">01  SLACK</text>
+<line x1="68" y1="211" x2="522" y2="211" stroke="#cbd5e1" stroke-width="2"/>
+<text x="68" y="254" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">#zabbix-notifications: public/private</text>
+<text x="68" y="285" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">api.slack.com/apps → From scratch</text>
+<text x="68" y="316" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Bot OAuth scopes: chat:write / im:write</text>
+<text x="68" y="347" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Дополнительно groups:write</text>
+<text x="68" y="378" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Install to Workspace + Add App to channel</text>
+<text x="68" y="409" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Zabbix Media type: Slack, bot_token</text>
+<text x="68" y="447" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#64748b">RAG p372–384</text>
+<rect x="572" y="151" width="505" height="316" rx="17" fill="#fff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="599" y="197" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700" fill="#155e75">02  MICROSOFT TEAMS</text>
+<line x1="599" y1="211" x2="1050" y2="211" stroke="#cbd5e1" stroke-width="2"/>
+<text x="599" y="254" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Создать Teams channel</text>
+<text x="599" y="285" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Connectors → Zabbix Webhook</text>
+<text x="599" y="316" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Configure → скопировать endpoint</text>
+<text x="599" y="347" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Zabbix MS Teams: teams_endpoint</text>
+<text x="599" y="378" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">User Media + Trigger Action</text>
+<text x="599" y="409" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Коннектор UI из книги: Needs confirmation</text>
+<text x="599" y="447" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#64748b">RAG p385–393</text>
+<rect x="1097" y="151" width="513" height="316" rx="17" fill="#fff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="1124" y="197" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700" fill="#155e75">03  TELEGRAM</text>
+<line x1="1124" y1="211" x2="1584" y2="211" stroke="#cbd5e1" stroke-width="2"/>
+<text x="1124" y="254" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">New Group + нужные участники</text>
+<text x="1124" y="285" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">@BotFather: /start → /newbot</text>
+<text x="1124" y="316" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Уникальный bot username + token</text>
+<text x="1124" y="347" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Бот в group; IDBot: /getgroupid</text>
+<text x="1124" y="378" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Zabbix Telegram Token + User Send to</text>
+<text x="1124" y="409" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Group ID в книге начинается с -</text>
+<text x="1124" y="447" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#64748b">RAG p393–402</text>
+<rect x="40" y="491" width="759" height="354" rx="17" fill="#fff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="67" y="537" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700" fill="#155e75">04  ПРАВА И ACTION ROUTING</text>
+<line x1="67" y1="553" x2="773" y2="553" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="68" y="577" width="319" height="88" rx="17" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1.6"/>
+<text x="88" y="609" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#075985">Zabbix PROBLEM</text>
+<text x="88" y="639" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#253751">Severity / host / tags</text>
+<rect x="413" y="577" width="360" height="88" rx="17" fill="#f0fdf4" stroke="#86efac" stroke-width="1.6"/>
+<text x="434" y="609" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#166534">Action conditions</text>
+<text x="434" y="639" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#253751">Operations + Media user</text>
+<text x="73" y="715" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">External Services group: Read выбранных hosts</text>
+<text x="73" y="744" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">No access to the frontend для тех. учётной записи</text>
+<text x="73" y="773" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Super admin в книге ПЕРЕКРЫВАЕТ права Read</text>
+<text x="73" y="802" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Action без conditions → ВСЕ проблемы</text>
+<text x="73" y="831" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Warning+ в тексте: media/operation scope проверить</text>
+<rect x="823" y="491" width="787" height="354" rx="17" fill="#fff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="850" y="537" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700" fill="#155e75">05  OPSGENIE: SCRIPT + API</text>
+<line x1="850" y1="553" x2="1585" y2="553" stroke="#cbd5e1" stroke-width="2"/>
+<text x="850" y="600" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Team Consultancy → Integration Zabbix → API Key</text>
+<text x="850" y="631" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Источниковые RPM/DEB: 1.1.6 (не проверены)</text>
+<text x="850" y="662" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Alerts → Scripts: Opsgenie connector</text>
+<text x="850" y="693" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Scope Action operation; Execute on Zabbix server</text>
+<text x="850" y="724" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">actionCommand.txt — НЕ содержится в RAG</text>
+<text x="850" y="755" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Opsgenie action: Problem / Recovery / Update</text>
+<text x="850" y="786" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">config.json: apiKey / command_url / user / password</text>
+<text x="850" y="824" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#64748b">p403–411 · baseUrl EU — источниковый пример</text>
+<rect x="40" y="868" width="761" height="334" rx="17" fill="#fff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="68" y="914" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">06  ОПАСНОСТИ И ЗАЩИТА</text>
+<line x1="68" y1="929" x2="775" y2="929" stroke="#cbd5e1" stroke-width="2"/>
+<text x="68" y="972" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Token, webhook URL, API Key — секреты</text>
+<text x="68" y="1004" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Не помещать credentials в Git, лог и скриншот</text>
+<text x="68" y="1036" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Bot scopes: только согласованные разрешения</text>
+<text x="68" y="1068" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Super admin и отсутствие action conditions — риск</text>
+<text x="68" y="1100" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Внешний OEC script требует проверки происхождения</text>
+<text x="68" y="1132" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Ротация/откат в книге не документированы</text>
+<rect x="823" y="868" width="787" height="334" rx="17" fill="#fff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="850" y="914" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">07  ПРОВЕРКА РЕЗУЛЬТАТА</text>
+<line x1="850" y1="929" x2="1584" y2="929" stroke="#cbd5e1" stroke-width="2"/>
+<text x="850" y="972" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Media Enabled, user media и Host permissions</text>
+<text x="850" y="1004" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Фильтр severity и целевой host/group</text>
+<text x="850" y="1036" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Контролируемая PROBLEM → один нужный канал</text>
+<text x="850" y="1068" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Opsgenie: отдельная проверка Recovery/Update</text>
+<text x="850" y="1100" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Следить за нецелевыми / повторными сообщениями</text>
+<text x="850" y="1132" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#253751">Не восстанавливать UI-only поля из скриншотов</text>
+<line x1="40" y1="1235" x2="1610" y2="1235" stroke="#cbd5e1" stroke-width="2"/>
+<text x="44" y="1281" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#475569">RAG-only PDF 371–411 · source SHA256 07204d88…e63875a27 · 4 source sections</text>
+<text x="44" y="1320" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#64748b">Книга не подтверждает текущий Teams Connector, Opsgenie package или актуальное облачное API</text>
+<text x="44" y="1356" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#64748b">Подробные ссылки и исключения: README.md / source-findings.md · статус чтения не изменён</text>
+</svg>
