@@ -1,0 +1,36 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: kali-linux-in-action-skabtsov-2e-ru-chapter-06
+repository: vsp-corp/biblioteka-vsp
+book_id: kali-linux-in-action-skabtsov-2e-ru
+task_kind: chapter
+objective: "RAG-only chapter 06 vulnerability scanning analysis and individual Git artifact publication"
+branch: chapter/kali-linux-in-action-skabtsov-2e-ru-0012-ch06
+initial_base_sha: 35187b44b05f56aa056d6b6dbfe481f566fad78b
+last_observed_head_sha: 35187b44b05f56aa056d6b6dbfe481f566fad78b
+expected_source_sha256: fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite without explicit authorization
+  - no reading-progress mutation without explicit user confirmation
+  - no archive delivery for chapter artifacts
+stage: PLANNED
+completed_steps:
+  - step: "Verified 17 chapters by canonical RAG plan, full RAG acceptance PASS, main publication 2/17."
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/kali-linux-in-action-skabtsov-2e-ru/notes/chapters/plan.yaml
+  - step: "Verified chapter 06 RAG PDF pages 185-206; chapter 07 begins at PDF 207."
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/kali-linux-in-action-skabtsov-2e-ru/rag/chunks/p0101-p0200/p0185-c01.md
+  - step: "Confirmed ancestor PR #549, #551 and #553 remain open; selected chapter 05 branch head as stacked base."
+    evidence_type: pr
+    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/553
+pending_steps:
+  - "Commit six individual mandatory chapter 06 files, conditional source findings, and updated chapter index."
+  - "Read back each changed file and verify CI."
+  - "Open stacked PR against chapter 05 branch only on successful CI."
+  - "Verify PR CI, keep dependency chain explicit; do not change reading progress."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/35187b44b05f56aa056d6b6dbfe481f566fad78b
+first_safe_next_action: "Check chapter-06 branch head and existing chapter paths before retrying any Git write."
+blocker: Not applicable
+last_observed_at: Not applicable
