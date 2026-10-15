@@ -1,15 +1,24 @@
 schema: biblioteka-vsp/work-checkpoint/v1
 task_key: "zabbix-7-0020-ch11-20261015"
 repository: "vsp-corp/biblioteka-vsp"
-task_kind: chapter
 book_id: "zabbix-7-monitoring-it-infrastructure-ru"
+task_kind: chapter
 branch: "chapter/zabbix-7-0020-ch11-maintenance-20261015"
-stage: IN_PROGRESS
+stage: CI_PENDING
 completed_steps:
-  - step: "Checked main; chapter 11 pages 434-464; accepted RAG."
-    evidence_type: other
-    reference: "cf5e36c3a06bf9545d7b6736c4ac663dea9ac071"
+  - step: "Read 31 accepted RAG pages 434-464 and checked chapter 12 boundary p465."
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/zabbix-7-monitoring-it-infrastructure-ru/notes/chapters/plan.yaml"
+  - step: "Committed seven individual chapter 11 files and verified chapter directory readback."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/f33956b55b2225272174794aa1bf186888b36857"
+  - step: "Updated chapter publication index to 11/13 (84.6%) and next chapter 12."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/fd37b74f633a7b5ff1e7c095c3a66362b526e734"
 pending_steps:
-  - "Write chapter files, update index, run CI, open PR, verify merge."
-first_safe_next_action: "Inspect chapter file paths before further writes."
+  - "Verify CI on branch indexed head; create PR only after PASS."
+  - "Check PR CI, retire checkpoint, check exact final-head CI."
+  - "Merge only on PASS; verify main files, reading unchanged and postmerge CI."
+last_verified_evidence: "fd37b74f633a7b5ff1e7c095c3a66362b526e734"
+first_safe_next_action: "Check current HEAD and CI before PR creation."
 blocker: "Not applicable"
