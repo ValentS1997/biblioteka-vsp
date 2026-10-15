@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1330" height="1100" viewBox="0 0 1330 1100" role="img" aria-label="Глава 9: подробная карта continual learning и production tests"><rect width="1330" height="1100" fill="#0f172a"/>
+<text x="40" y="62" font-family="Arial,sans-serif" font-size="29" fill="#f8fafc">ГЛАВА 9 · НЕПРЕРЫВНОЕ ОБУЧЕНИЕ И ПРОВЕРКА</text>
+<text x="40" y="102" font-family="Arial,sans-serif" font-size="18" fill="#94a3b8">Canonical RAG PDF 269–296 · source checksum в README</text>
+<rect x="36" y="132" width="612" height="253" rx="15" fill="#1f2937" stroke="#475569"/>
+<rect x="671" y="132" width="623" height="253" rx="15" fill="#1f2937" stroke="#475569"/>
+<text x="61" y="178" font-family="Arial,sans-serif" font-size="23" fill="#93c5fd">CHAMPION / CHALLENGER</text>
+<text x="61" y="224" font-family="Arial,sans-serif" font-size="20" fill="#e2e8f0">Не обновлять champion напрямую</text>
+<text x="61" y="268" font-family="Arial,sans-serif" font-size="19" fill="#e2e8f0">Копия + checkpoint + micro-batches</text>
+<text x="61" y="319" font-family="Arial,sans-serif" font-size="17" fill="#a5b4fc">Stateful / stateless · p0270–p0273</text>
+<text x="695" y="178" font-family="Arial,sans-serif" font-size="23" fill="#93c5fd">FRESH DATA / LABELS</text>
+<text x="695" y="224" font-family="Arial,sans-serif" font-size="19" fill="#e2e8f0">Event broker + attribution → labels</text>
+<text x="695" y="268" font-family="Arial,sans-serif" font-size="19" fill="#e2e8f0">Label delay ограничивает retraining</text>
+<text x="695" y="319" font-family="Arial,sans-serif" font-size="17" fill="#a5b4fc">p0275–p0279</text>
+<rect x="36" y="417" width="1258" height="249" rx="15" fill="#1f2937" stroke="#475569"/>
+<text x="61" y="462" font-family="Arial,sans-serif" font-size="24" fill="#93c5fd">STAGES: ОТ РУЧНОГО К НЕПРЕРЫВНОМУ</text>
+<text x="61" y="512" font-family="Arial,sans-serif" font-size="20" fill="#e2e8f0">1. Manual stateless → 2. Automated stateless</text>
+<text x="61" y="559" font-family="Arial,sans-serif" font-size="20" fill="#e2e8f0">3. Automated stateful → 4. Time/quality/volume/drift trigger</text>
+<text x="61" y="618" font-family="Arial,sans-serif" font-size="17" fill="#a5b4fc">p0279–p0285 · cadence определять по ценности свежих данных</text>
+<rect x="36" y="696" width="1258" height="275" rx="15" fill="#1f2937" stroke="#475569"/>
+<text x="61" y="745" font-family="Arial,sans-serif" font-size="24" fill="#93c5fd">ПРОИЗВОДСТВЕННАЯ ОЦЕНКА И ВЫПУСК</text>
+<text x="61" y="795" font-family="Arial,sans-serif" font-size="20" fill="#e2e8f0">Trusted static test + backtesting на свежем holdout</text>
+<text x="61" y="841" font-family="Arial,sans-serif" font-size="20" fill="#e2e8f0">Shadow без воздействия · A/B routing · canary рост трафика</text>
+<text x="61" y="888" font-family="Arial,sans-serif" font-size="20" fill="#e2e8f0">Interleaving rankings · adaptive/contextual bandits</text>
+<text x="61" y="930" font-family="Arial,sans-serif" font-size="17" fill="#a5b4fc">p0285–p0294 · не публиковать кандидата до PASS</text>
+<text x="40" y="1035" font-family="Arial,sans-serif" font-size="17" fill="#fca5a5">Статистические пороги, владельцы, rollout и rollback: [Needs confirmation]</text>
+</svg>
