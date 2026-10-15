@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1650" height="1440" viewBox="0 0 1650 1440" role="img" aria-label="Детальная визуальная памятка главы 13 Zabbix: AWS, Azure, Docker, IAM, LLD, macro и проверка безопасности">
+<rect width="1650" height="1440" fill="#f2f6fc"/>
+<rect width="1650" height="128" fill="#172a47"/>
+<text x="47" y="62" font-family="DejaVu Sans, sans-serif" font-size="39" font-weight="700" fill="#ffffff">ZABBIX 7 / ГЛАВА 13</text>
+<text x="47" y="100" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#dbeafe">Последняя глава: AWS + Azure через HTTP API, Docker через Agent 2</text>
+<rect x="40" y="153" width="506" height="321" rx="16" fill="#fff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="68" y="197" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">01  AWS IAM + РЕГИОН</text>
+<line x1="68" y1="210" x2="518" y2="210" stroke="#cbd5e1" stroke-width="2"/>
+<text x="68" y="251" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">AWS: EC2, RDS, S3 уже существуют</text>
+<text x="68" y="282" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">IAM user + inline policy (JSON = RAG_MISS)</text>
+<text x="68" y="313" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Access key ID + Secret Access Key</text>
+<text x="68" y="344" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Zabbix: AWS by HTTP + Cloud group</text>
+<text x="68" y="375" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">{$AWS.REGION}: отдельный host на region</text>
+<text x="68" y="406" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">CloudWatch — возможная оплата</text>
+<text x="68" y="455" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#64748b">RAG p491–498</text>
+<rect x="566" y="153" width="506" height="321" rx="16" fill="#fff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="593" y="197" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">02  AWS АРХИТЕКТУРА</text>
+<line x1="593" y1="210" x2="1045" y2="210" stroke="#cbd5e1" stroke-width="2"/>
+<text x="593" y="251" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Script Item: JavaScript → AWS API</text>
+<text x="593" y="282" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">API response → JSON → LLD</text>
+<text x="593" y="313" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Три discovery rules (EC2 / RDS / S3)</text>
+<text x="593" y="344" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Host prototypes → новые Zabbix hosts</text>
+<text x="593" y="375" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">EC2 host: AWS EC2 by HTTP template</text>
+<text x="593" y="406" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Проверять реальные values, а не только host</text>
+<text x="593" y="455" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#64748b">RAG p497–498</text>
+<rect x="1091" y="153" width="519" height="321" rx="16" fill="#fff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="1119" y="197" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">03  AZURE IDENTITY</text>
+<line x1="1119" y1="210" x2="1584" y2="210" stroke="#cbd5e1" stroke-width="2"/>
+<text x="1119" y="251" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Enterprise app и App registration</text>
+<text x="1119" y="282" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Client secret Value / expiration</text>
+<text x="1119" y="313" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Subscription IAM → Reader</text>
+<text x="1119" y="344" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Tenant ID и Subscription ID</text>
+<text x="1119" y="375" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Уточнить, что App ID от нужного объекта</text>
+<text x="1119" y="406" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Credential rotation: Needs confirmation</text>
+<text x="1119" y="455" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#a16207">RAG p499–504</text>
+<rect x="40" y="499" width="764" height="332" rx="16" fill="#fff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="68" y="545" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">04  AZURE МАКРОСЫ И LLD</text>
+<line x1="68" y1="559" x2="777" y2="559" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="68" y="586" width="329" height="101" rx="16" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1.6"/>
+<text x="87" y="624" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#075985">Azure by HTTP</text>
+<text x="87" y="652" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#263448">Host group: Cloud</text>
+<rect x="426" y="586" width="350" height="101" rx="16" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.6"/>
+<text x="446" y="624" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#3730a3">4 macros / credentials</text>
+<text x="446" y="652" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#263448">App/Password/Sub/Tenant</text>
+<text x="71" y="729" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">{$AZURE.APP.ID} + {$AZURE.PASSWORD}</text>
+<text x="71" y="759" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">{$AZURE.SUBSCRIPTION.ID} + {$AZURE.TENANT.ID}</text>
+<text x="71" y="789" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Шесть LLD rules → VM/DB host prototypes</text>
+<rect x="825" y="499" width="785" height="332" rx="16" fill="#fff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="852" y="545" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">05  DOCKER AGENT 2</text>
+<line x1="852" y1="559" x2="1585" y2="559" stroke="#cbd5e1" stroke-width="2"/>
+<text x="852" y="602" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">Docker уже запущен на Linux host</text>
+<text x="852" y="634" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">Install Agent 2 (не классический Agent)</text>
+<text x="852" y="666" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">Server=&lt;authorized Zabbix server&gt;</text>
+<text x="852" y="698" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">gpasswd -a zabbix docker — риск привилегий</text>
+<text x="852" y="730" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">systemctl restart zabbix-agent2</text>
+<text x="852" y="762" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">Template Docker by Zabbix agent 2</text>
+<text x="852" y="807" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#a16207">RAG p507–509</text>
+<rect x="40" y="854" width="764" height="347" rx="16" fill="#fff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="68" y="899" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">06  DOCKER ЗАВИСИМЫЕ МЕТРИКИ</text>
+<line x1="68" y1="915" x2="777" y2="915" stroke="#cbd5e1" stroke-width="2"/>
+<text x="68" y="952" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Master: Docker Get info (docker.info)</text>
+<text x="68" y="983" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Dependent items + preprocessing</text>
+<text x="68" y="1014" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">2 LLD: containers и images</text>
+<text x="68" y="1045" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">docker.containers.discovery → {#NAME}</text>
+<text x="68" y="1076" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">docker.container_info → per-container master</text>
+<text x="68" y="1107" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Dependent item prototypes → container stats</text>
+<text x="68" y="1138" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Детали JSONPath из рисунков: RAG_MISS</text>
+<rect x="825" y="854" width="785" height="347" rx="16" fill="#fff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="852" y="899" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">07  ПРИЁМКА И РИСКИ</text>
+<line x1="852" y1="915" x2="1585" y2="915" stroke="#cbd5e1" stroke-width="2"/>
+<text x="852" y="952" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Cloud: IAM scope / subscription / region</text>
+<text x="852" y="983" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">AWS CloudWatch cost до массового опроса</text>
+<text x="852" y="1014" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Azure secret Value хранить в vault</text>
+<text x="852" y="1045" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">No broad IAM roles / no unreviewed Docker group</text>
+<text x="852" y="1076" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Master raw data → JSON → LLD → prototypes</text>
+<text x="852" y="1107" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Latest data и сроки обновления</text>
+<text x="852" y="1138" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Полный rollback отсутствует в источнике</text>
+<line x1="40" y1="1233" x2="1610" y2="1233" stroke="#cbd5e1" stroke-width="2"/>
+<text x="45" y="1274" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#475569">RAG-only · PDF pages 490–510 · source SHA256 07204d88…e63875a27 · final chapter 13/13</text>
+<text x="45" y="1312" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#64748b">Метки: RAG_MISS для IAM JSON / screenshot values / Script JS; Needs confirmation для identities и rollback</text>
+<text x="45" y="1351" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#64748b">Актуальные API, пакеты и cloud quotas не проверялись; reading progress не изменяется</text>
+</svg>
