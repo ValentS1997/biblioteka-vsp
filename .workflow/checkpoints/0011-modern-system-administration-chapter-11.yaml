@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only chapter 11 infrastructure scripting; individual Git chapter artifacts and CI-gated PR"
 branch: "chapters/0011-modern-system-administration-chapter-11"
 initial_base_sha: "cf5e36c3a06bf9545d7b6736c4ac663dea9ac071"
-last_observed_head_sha: "cf5e36c3a06bf9545d7b6736c4ac663dea9ac071"
+last_observed_head_sha: "93881ba7aa0199f888bfd0b7084361342c1560a4"
 expected_source_sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
 constraints:
   - no direct main changes
@@ -14,7 +14,7 @@ constraints:
   - no source/RAG rewrite
   - preserve reading status
   - no archives
-stage: PLANNED
+stage: CI_PENDING
 completed_steps:
   - step: "Verified 10/21 main baseline, complete source RAG and accepted ingestion"
     evidence_type: file-readback
@@ -22,10 +22,13 @@ completed_steps:
   - step: "Verified chapter 11 PDF 135-144, printed 141-150 and chapter 12 beginning PDF 145"
     evidence_type: file-readback
     reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/cf5e36c3a06bf9545d7b6736c4ac663dea9ac071/books/modern-system-administration-jennifer-davis-ru/rag/chunks/p0101-p0200/p0145-c01.md"
+  - step: "Eight individual chapter files committed and read back"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/8b529ca48c49b5b0463b0c9d1fbdd26ae298a53f"
+  - step: "Book index updated to 11/21 on chapter branch and read back"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/93881ba7aa0199f888bfd0b7084361342c1560a4"
 pending_steps:
-  - "Commit and Git read back mandatory six chapter artifacts"
-  - "Commit conditional conclusion and source-findings artifacts"
-  - "Update and Git read back book index (branch 11/21)"
   - "Require CI PASS then create PR, require PR CI PASS before merge"
   - "Verify main, finalize checkpoint and main index in separate PR"
 last_verified_evidence: "cf5e36c3a06bf9545d7b6736c4ac663dea9ac071"
