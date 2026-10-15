@@ -1,0 +1,36 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: designing-machine-learning-systems-chip-huyen-ru-chapter-02
+repository: vsp-corp/biblioteka-vsp
+book_id: designing-machine-learning-systems-chip-huyen-ru
+task_kind: chapter
+objective: "RAG-only chapter 02 analysis and direct individual Git publication under canonical v1.8; stacked on open chapter 01 PR #493."
+branch: chapter/0031-designing-ml-systems-ch02-20261015
+parent_branch: chapter/0031-designing-ml-systems-ch01-20261015
+initial_base_sha: c69ae0a87f2133642d68a15cc009e7255cdeba17
+last_observed_head_sha: c69ae0a87f2133642d68a15cc009e7255cdeba17
+expected_source_sha256: 0bcacadb4e1dc2235cb58f975111e1633527217127c5871edb894fe2b8f4c80c
+constraints:
+  - "no direct main changes"
+  - "no force-push"
+  - "no source/RAG rewrite without explicit authorization"
+  - "no reading-progress mutation without explicit user confirmation"
+  - "no archive delivery for chapter artifacts"
+  - "no duplicate PR or chapter file writes"
+stage: PLANNED
+completed_steps:
+  - step: "Verified 11 numbered chapters and parent branch chapter 01 publication; RAG acceptance ACCEPTED, chapter 02 boundaries PDF 47-67."
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/chapter/0031-designing-ml-systems-ch01-20261015/books/designing-machine-learning-systems-chip-huyen-ru/notes/chapters/plan.yaml"
+  - step: "Verified parent PR #493 remains open and parent head c69ae0a87f2133642d68a15cc009e7255cdeba17; dependent branch created from exact parent SHA."
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/493"
+pending_steps:
+  - "Retrieve only addressable chapter 02 RAG, inspect end summary and source extraction anomalies."
+  - "Commit six chapter 02 individual files, source-derived summary and source-findings where applicable; update chapter index."
+  - "Read back every individual file and index and verify source links."
+  - "Run chapter RAG/SVG validation, inspect CI and open stacked PR against chapter 01 branch after PASS."
+  - "Read back final commit/PR/CI and preserve reading status planned."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/pull/493"
+first_safe_next_action: "Read-only: inspect chapter 02 branch HEAD, this checkpoint and six Git artifact paths; resume only missing file writes."
+blocker: "Not applicable"
+last_observed_at: "Not applicable"
