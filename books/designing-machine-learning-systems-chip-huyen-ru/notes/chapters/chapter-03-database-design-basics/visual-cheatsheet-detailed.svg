@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1360 990" width="1360" height="990" role="img" aria-label="Глава 3 - подробная карта архитектуры данных"><rect x="0" y="0" width="1360" height="990" fill="#0f172a"/>
+<text x="42" y="60" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#f8fafc">ГЛАВА 3 · ОТ ИСТОЧНИКА К ПРИЗНАКАМ ML</text>
+<text x="42" y="96" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#94a3b8">RAG-only · PDF 68–98 · source SHA закреплён в README</text>
+<rect x="36" y="126" width="623" height="249" rx="16" fill="#1f2937" stroke="#475569"/>
+<rect x="686" y="126" width="637" height="249" rx="16" fill="#1f2937" stroke="#475569"/>
+<text x="60" y="168" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#93c5fd">ФОРМАТ И МОДЕЛЬ</text>
+<text x="60" y="210" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Частая запись строк → Row-Major (CSV)</text>
+<text x="60" y="248" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Чтение столбцов → Column-Major (Parquet)</text>
+<text x="60" y="287" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Отношения / документы / графы</text>
+<text x="60" y="335" font-family="Arial,sans-serif" font-size="16" font-weight="400" fill="#a5b4fc">p0072–p0083</text>
+<text x="711" y="168" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#93c5fd">ХРАНЕНИЕ И ОБРАБОТКА</text>
+<text x="711" y="210" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">OLTP: транзакции, доступность, ACID</text>
+<text x="711" y="248" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">OLAP: аналитика, агрегаты, столбцы</text>
+<text x="711" y="287" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">ETL: transform до load · ELT: после load</text>
+<text x="711" y="335" font-family="Arial,sans-serif" font-size="16" font-weight="400" fill="#a5b4fc">p0084–p0089</text>
+<rect x="36" y="395" width="1287" height="266" rx="16" fill="#1f2937" stroke="#475569"/>
+<text x="60" y="435" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#93c5fd">МЕЖСЕРВИСНЫЕ ПОТОКИ</text>
+<text x="60" y="477" font-family="Arial,sans-serif" font-size="20" font-weight="400" fill="#e2e8f0">Через БД: писатель и читатель используют общее хранилище.</text>
+<text x="60" y="519" font-family="Arial,sans-serif" font-size="20" font-weight="400" fill="#e2e8f0">Запросы REST/RPC: синхронность и риск зависимостей при отказе.</text>
+<text x="60" y="561" font-family="Arial,sans-serif" font-size="20" font-weight="400" fill="#e2e8f0">Брокер: публикация событий в темы и очереди; асинхронный обмен.</text>
+<text x="60" y="613" font-family="Arial,sans-serif" font-size="17" font-weight="400" fill="#a5b4fc">p0090–p0094 · пример с водителями, поездками и ценообразованием</text>
+<rect x="36" y="683" width="1287" height="232" rx="16" fill="#1f2937" stroke="#475569"/>
+<text x="60" y="726" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#93c5fd">ПАКЕТЫ И ПОТОКИ ДЛЯ ML</text>
+<text x="60" y="767" font-family="Arial,sans-serif" font-size="20" font-weight="400" fill="#e2e8f0">Статические признаки: редко меняющиеся, пакетные расчёты.</text>
+<text x="60" y="807" font-family="Arial,sans-serif" font-size="20" font-weight="400" fill="#e2e8f0">Динамические признаки: текущие события, потоковое вычисление.</text>
+<text x="60" y="855" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#a5b4fc">Объединять оба типа, если модель использует оба · p0095–p0096</text>
+<text x="42" y="962" font-family="Arial,sans-serif" font-size="16" font-weight="400" fill="#fca5a5">SOURCE LIMITATION: H20 AutoML и JSON-показательные примеры повреждены в RAG; см. source-findings.md</text>
+</svg>
