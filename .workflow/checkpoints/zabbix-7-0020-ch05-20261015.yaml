@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only chapter 5 analysis and individual Git publication of six mandatory artifacts plus conditional findings."
 branch: "chapter/zabbix-7-0020-ch05-custom-templates-20261015"
 initial_base_sha: "75dd7771186a3a8e498de38889cf0bd4380b6b94"
-last_observed_head_sha: "75dd7771186a3a8e498de38889cf0bd4380b6b94"
+last_observed_head_sha: "c109a7178386f524d3b43a47976964e4fd6ff947"
 expected_source_sha256: "07204d885d4bf4c6c2de7c71ae42a4e3ed4cea794169cbe07985552e63875a27"
 constraints:
   - no direct main changes
@@ -15,7 +15,7 @@ constraints:
   - no reading-progress mutation without explicit user confirmation
   - no archive delivery for chapter artifacts
   - rag_only; no direct PDF, model memory or external sources
-stage: IN_PROGRESS
+stage: CI_PENDING
 completed_steps:
   - step: "Read verified main chapter plan: 13 total, chapters 1–4 Git-published, chapter 5 begins PDF page 197; chapter 6 begins 229."
     evidence_type: file-readback
@@ -23,12 +23,16 @@ completed_steps:
   - step: "Verified accepted book RAG, previous readiness and chapter validation CI, created feature branch."
     evidence_type: other
     reference: "75dd7771186a3a8e498de38889cf0bd4380b6b94"
+  - step: "Committed seven chapter files, six mandatory and source-findings; GitHub directory readback PASS."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/c5488e113c7fa8e32f4072fee769c812d0a22716"
+  - step: "Published book index 5/13 (38.5%) on feature branch."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/c109a7178386f524d3b43a47976964e4fd6ff947"
 pending_steps:
-  - "Retrieve source-bound RAG page chunks 197–228 and classify extraction/source defects"
-  - "Commit each of six mandatory chapter files individually plus conditional source-findings"
-  - "Verify Git files and index 5/13, run branch and PR validation"
+  - "Check CI and PR on exact final branch HEAD"
   - "Retire checkpoint before merge; final head and postmerge CI PASS verification"
-last_verified_evidence: "75dd7771186a3a8e498de38889cf0bd4380b6b94"
-first_safe_next_action: "Read actual Git feature branch and chapter-05 directory before any duplicate write."
+last_verified_evidence: "c109a7178386f524d3b43a47976964e4fd6ff947"
+first_safe_next_action: "Read Git HEAD, chapter file tree and latest CI before any next mutation."
 blocker: "Not applicable"
 last_observed_at: "Not applicable"
