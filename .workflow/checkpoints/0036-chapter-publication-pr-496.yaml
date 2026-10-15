@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "Publish RAG-only numbered stages as six individual Git chapter artifacts, with checkpoint and CI."
 branch: chapter/0036-business-process-publication-20261015
 initial_base_sha: aa3733b43f6db3627453e4814926e59a9ae3b136
-last_observed_head_sha: a9df99a74f0436ee173562017a3198b691ff5524
+last_observed_head_sha: 010fbd9b881346dabbb1c9ed8236e0993614a512
 expected_source_sha256: 4c75aaaa000434b6fd7aeac337e163327060dcbe084e30a1c9793b923b855172
 constraints:
   - no direct main changes
@@ -39,11 +39,13 @@ completed_steps:
     evidence_type: pr
     reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/496"
 pending_steps:
-  - "Chapter 3 RAG/Git publication finished. On any resume recheck latest Git HEAD/PR and CI before further mutation."
+  - "Stage 4: RAG boundaries pp. 69-78 verified; commit README.md, cheatsheet.md, commands.md, diagram.md and both SVGs as individual Git files."
+  - "Stage 4 conditional: commit review-questions.md, review-answers.md and source-findings.md for case-study exercise and text-extraction defects."
+  - "Read back all nine chapter 4 files, update index from 3/6 to 4/6, run CI and checkpoint successful result."
   - "For a subsequent explicit chapter analysis, preflight stage 4: first verify chapter-04 directory is absent and its RAG boundaries, then individually publish its files."
   - "Repeat for numbered stages 5 and 6 in bounded verified units; recompute progress after each."
   - "Reconcile the working branch with advancing main, check PR mergeability/readiness and rerun required CI before any merge."
-last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38695579651"
-first_safe_next_action: "Read the working branch and main HEAD, PR 496, checkpoint, new CI results and stage-4 directory before any chapter-4 writes."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38695794057"
+first_safe_next_action: "Read branch HEAD and nine planned chapter 4 file paths before each Git write; resume first missing path, then index and CI."
 blocker: "No chapter-3 content or index blocker; draft PR remains unmerged and main reconciliation is required before merge."
 last_observed_at: "Not applicable"
