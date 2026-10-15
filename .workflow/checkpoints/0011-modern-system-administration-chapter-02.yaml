@@ -14,7 +14,7 @@ constraints:
   - "no source/RAG rewrite without explicit authorization"
   - "no reading-progress mutation without explicit user confirmation"
   - "no archive delivery for chapter artifacts"
-stage: PLANNED
+stage: IN_PROGRESS
 completed_steps:
   - step: "Recovered current branch; chapter 1 full Git collection and existing 21-chapter plan verified"
     evidence_type: file-readback
@@ -25,12 +25,15 @@ completed_steps:
   - step: "Confirmed RAG ACCEPTED, SHA and current canonical publication contracts"
     evidence_type: file-readback
     reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/modern-system-administration-jennifer-davis-ru/rag/acceptance.yaml
+  - step: "Committed and independently read back chapter-02 README, cheatsheet, commands and diagram"
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/366a795d5bb4db92f12b5b3919867e58a52328b0
 pending_steps:
   - "Write and verify each of six mandatory chapter 2 individual files under books/.../notes/chapters/chapter-02-computing-environments."
   - "Publish source-supported chapter-end summary.md and source-findings.md; do not invent exercises."
   - "Update chapter index from 1/21 to 2/21 and read back."
   - "Verify CI on latest head and PR #489; update checkpoint and report exact status."
-last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/e3de7ca8cc61ad88fc2e4b3a873060c2b5bd2be0
-first_safe_next_action: "Read-only fetch current branch HEAD and chapter-02 individual Git paths before writing."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/366a795d5bb4db92f12b5b3919867e58a52328b0
+first_safe_next_action: "Verify chapter-02 markdown files and write two individual SVG summaries; read back each."
 blocker: "Not applicable"
 last_observed_at: "Not applicable"
