@@ -3,10 +3,10 @@ task_key: kali-linux-in-action-skabtsov-2e-ru-chapter-04
 repository: vsp-corp/biblioteka-vsp
 book_id: kali-linux-in-action-skabtsov-2e-ru
 task_kind: chapter
-objective: "RAG-only chapter 04 publication, stacked on pending chapter 03 PR #549"
+objective: "RAG-only publication of chapter 04 stacked on chapter 03 PR #549"
 branch: chapter/kali-linux-in-action-skabtsov-2e-ru-0012-ch04
 initial_base_sha: 8c05850847e14385a48119c2c52ebd84ab256479
-last_observed_head_sha: 8c05850847e14385a48119c2c52ebd84ab256479
+last_observed_head_sha: 6b3d2660658cb3441d44778112124ce510df572b
 expected_source_sha256: fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9
 constraints:
   - no direct main changes
@@ -14,22 +14,22 @@ constraints:
   - no source/RAG rewrite without explicit authorization
   - no reading-progress mutation without explicit user confirmation
   - no archive delivery for chapter artifacts
-stage: PLANNED
+stage: CI_PENDING
 completed_steps:
-  - step: "Verified canonical contracts, RAG ACCEPTED and 17 numbered chapters."
-    evidence_type: file-readback
-    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/kali-linux-in-action-skabtsov-2e-ru/notes/chapters/plan.yaml
-  - step: "Main has 2/17 chapters; PR #549 is OPEN and CI succeeded for its head."
+  - step: "Verified 17 chapter TOC; main 2/17, chapter 03 PR #549 open."
     evidence_type: pr
     reference: https://github.com/vsp-corp/biblioteka-vsp/pull/549
-  - step: "Verified chapter 04 PDF pages 111–154 and chapter 05 starts at 155 via page-specific RAG chunks."
+  - step: "Verified chapter 04 boundaries PDF 111-154 using RAG chunks; chapter 05 begins at 155."
     evidence_type: file-readback
     reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/kali-linux-in-action-skabtsov-2e-ru/rag/chunks/p0101-p0200/p0111-c01.md
+  - step: "Committed six mandatory files, source-findings.md and chapter README index, and read back all eight paths."
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/6b3d2660658cb3441d44778112124ce510df572b
 pending_steps:
-  - "Commit all 6 mandatory chapter 04 artifacts as separate Git files, source-findings.md if needed, and chapter index."
-  - "Read back individual artifacts from branch; verify CI and reconcile current HEAD."
-  - "Open stacked chapter 04 PR against chapter 03 branch only after CI PASS."
-last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/8c05850847e14385a48119c2c52ebd84ab256479
-first_safe_next_action: "Read feature-branch HEAD and chapter-04 directory before any write."
+  - "Confirm CI run 38749941282 passes at artifact commit."
+  - "Open stacked PR chapter 04 against chapter 03 branch after PASS."
+  - "Verify PR CI and HEAD; await chapter 03 merge before final integration into main."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/6b3d2660658cb3441d44778112124ce510df572b
+first_safe_next_action: "Re-fetch current branch head, all eight files, PR #549 and latest CI before retrying any write."
 blocker: Not applicable
 last_observed_at: Not applicable
