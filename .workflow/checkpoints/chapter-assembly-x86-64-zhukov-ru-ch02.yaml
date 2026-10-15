@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only chapter 2 analysis and individual Git publication, PR after CI."
 branch: chapter/assembly-x86-64-zhukov-ru-ch02
 initial_base_sha: eaa60680dcb375fee2d779c98ccc8c399e94f4e2
-last_observed_head_sha: eaa60680dcb375fee2d779c98ccc8c399e94f4e2
+last_observed_head_sha: 3454ce15d14cdd5891eceb021479a66bd62ee958
 expected_source_sha256: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
 constraints:
   - no direct main changes
@@ -22,8 +22,11 @@ completed_steps:
   - step: "Verify chapter 2 boundary, RAG PDF p. 21-30; chapter 3 begins p. 31"
     evidence_type: file-readback
     reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/eaa60680dcb375fee2d779c98ccc8c399e94f4e2/books/assembly-x86-64-zhukov-ru/rag/chunks/p0001-p0100/p0021-c01.md"
+  - step: "Four mandatory chapter-2 files written individually and verified by exact GitHub readback"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/tree/3454ce15d14cdd5891eceb021479a66bd62ee958/books/assembly-x86-64-zhukov-ru/notes/chapters/chapter-02-programmirovanie-dannyh"
 pending_steps:
-  - "Publish six mandatory individual files in books/assembly-x86-64-zhukov-ru/notes/chapters/chapter-02-programmirovanie-dannyh/"
+  - "Publish remaining two mandatory SVG files in chapter-02-programmirovanie-dannyh/"
   - "Publish conditional review-questions.md, review-answers.md, source-findings.md from RAG."
   - "Update book chapter README with chapter 2 and progress 2/21."
   - "Read back every committed chapter file, verify CI and create or reuse PR."
