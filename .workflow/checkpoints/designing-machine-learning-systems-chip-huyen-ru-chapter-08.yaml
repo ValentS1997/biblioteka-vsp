@@ -7,7 +7,7 @@ objective: "Canonical RAG-only chapter 08 'Сдвиги в распределе�
 branch: chapter/0031-designing-ml-systems-ch08-20261015
 parent_branch: chapter/0031-designing-ml-systems-ch07-20261015
 initial_base_sha: 769ad093ef6b50ace51360f6fec4899b176c6849
-last_observed_head_sha: 769ad093ef6b50ace51360f6fec4899b176c6849
+last_observed_head_sha: 773588db0196f7f51f8610ebb27e7873819915d7
 expected_source_sha256: 0bcacadb4e1dc2235cb58f975111e1633527217127c5871edb894fe2b8f4c80c
 constraints:
   - "no direct main changes"
@@ -15,7 +15,7 @@ constraints:
   - "no source/RAG rewrite or non-RAG chapter claims"
   - "no reading-progress mutation without explicit request"
   - "no archives or duplicate PR"
-stage: PLANNED
+stage: CI_PENDING
 completed_steps:
   - step: "Read-only verified 7 ACCEPTED process contracts, canonical source SHA and book RAG acceptance ACCEPTED, 11 chapters and 7/11 on predecessor branch; main 0/11."
     evidence_type: file-readback
@@ -26,13 +26,20 @@ completed_steps:
   - step: "Created new chapter 08 branch based on exact previous chapter 07 head 769ad093ef6b50ace51360f6fec4899b176c6849."
     evidence_type: commit
     reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/769ad093ef6b50ace51360f6fec4899b176c6849"
+  - step: "Committed eight individually addressed chapter 08 Git files; index updated to 8/11 and all file paths read back, original plan and reading/progress SHA unchanged."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/773588db0196f7f51f8610ebb27e7873819915d7"
+  - step: "Full chapter 08 push CI: RAG references, both SVG renderings and validator regression tests PASS."
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38721058102"
+  - step: "Native Итоги located in source p0266-c01 and p0267-c01; summary.md explicitly marked as a source-grounded paraphrase; math extraction anomalies documented."
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/chapter/0031-designing-ml-systems-ch08-20261015/books/designing-machine-learning-systems-chip-huyen-ru/notes/chapters/chapter-08-data-distribution-shifts-and-monitoring/summary.md"
 pending_steps:
-  - "Read all canonical chapter 08 RAG chunks and identify native Итоги, questions and extraction anomalies."
-  - "Publish six mandatory and conditional chapter files as separate Git paths; update chapter index 8/11."
-  - "Read back every Git path; verify source provenance, RAG-only content, unchanged plan and reading; push CI PASS."
-  - "Open precisely one stacked PR against chapter 07 after CI PASS; verify diff, PR CI and final HEAD."
+  - "Verify no existing chapter 08 PR; open exactly one stacked PR against chapter 07, inspect changed paths and confirm PR CI PASS."
+  - "Update final checkpoint with PR and CI, verify exact final HEAD and reading status. Do not merge."
   - "Update checkpoint with PR and CI links; do not merge."
-last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/pull/522"
-first_safe_next_action: "Read-only inspect chapter 08 branch HEAD, checkpoint, artifacts, existing PRs and CI before resuming any write."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38721058102"
+first_safe_next_action: "Read-only inspect chapter 08 branch HEAD, checkpoint, all files, Git PR list and CI. Do not repeat commits or PR."
 blocker: "Not applicable"
 last_observed_at: "Not applicable"
