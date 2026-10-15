@@ -3,10 +3,10 @@ task_key: kali-linux-in-action-skabtsov-2e-ru-chapter-15
 repository: vsp-corp/biblioteka-vsp
 book_id: kali-linux-in-action-skabtsov-2e-ru
 task_kind: chapter
-objective: "RAG-only chapter 15 buffer-overflow defensive analysis, six individual artifacts and stacked PR"
+objective: "RAG-only chapter 15 buffer overflow defensive analysis and stacked PR"
 branch: chapter/kali-linux-in-action-skabtsov-2e-ru-0012-ch15
 initial_base_sha: 5ff9ef3f1200881a3ae4c6a9875e6fc0603ffa4a
-last_observed_head_sha: 5ff9ef3f1200881a3ae4c6a9875e6fc0603ffa4a
+last_observed_head_sha: 97f40b2a69ac6ec2e9f3f176faf817ff8be53adf
 expected_source_sha256: fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9
 constraints:
   - no direct main changes
@@ -14,19 +14,19 @@ constraints:
   - no source/RAG mutation
   - no reading progress mutation
   - no ZIP chapter artifacts
-  - no runnable shellcode, SEH exploit, return-to-libc payload or live service fuzzing recipe
-stage: PLANNED
+  - no executable shellcode, SEH exploit, return-to-libc payload or live fuzzing recipe
+stage: CI_PENDING
 completed_steps:
-  - step: "Verified canonical accepted RAG, chapter 15 PDF 332-360, chapter 16 starts PDF 361, book has 17 numbered chapters."
+  - step: "Verified accepted source RAG chapter 15 PDF 332-360, chapter 16 starts PDF 361, book 17 chapters."
     evidence_type: file-readback
     reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/kali-linux-in-action-skabtsov-2e-ru/rag/chunks/p0301-p0400/p0332-c01.md
-  - step: "Verified chapter 14 PR #594 OPEN and exactly matching branch HEAD."
-    evidence_type: pr
-    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/594
+  - step: "Committed and individually read back six mandatory files, source-findings with 20 findings and chapter index; eight files PASS."
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/97f40b2a69ac6ec2e9f3f176faf817ff8be53adf
 pending_steps:
-  - "Commit and read back six mandatory individual files, conditional source findings and index."
-  - "Verify push CI success before stacked PR on chapter 14."
-  - "Verify final PR exact HEAD CI SUCCESS and mergeability; no merge until ancestor chain resolved."
-last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/5ff9ef3f1200881a3ae4c6a9875e6fc0603ffa4a
-first_safe_next_action: "Recheck branch head and chapter directory absence before repeating any write."
-blocker: "Main integration deferred pending ancestors, PR #549 previously mergeable false."
+  - "Verify push CI 38793633010 completed SUCCESS on chapter artifact commit."
+  - "Create PR stacked on chapter 14 only after push CI PASS, compare exactly nine changed paths."
+  - "Verify PR CI SUCCESS on latest exact HEAD; no merge before ancestors reconcile."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/97f40b2a69ac6ec2e9f3f176faf817ff8be53adf
+first_safe_next_action: "Recheck chapter 15 branch HEAD and push CI; do not recreate verified individual files."
+blocker: "Main integration deferred pending ancestor stacked PRs."
