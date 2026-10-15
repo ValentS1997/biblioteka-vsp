@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="850" viewBox="0 0 1280 850" role="img" aria-labelledby="title desc">
+<title id="title">Глава 7 — Закат лидера</title>
+<desc id="desc">Краткий визуальный конспект четырёх негативных стилей руководства и пути восстановления, PDF 147–166.</desc>
+<rect width="1280" height="850" fill="#f7fafc"/>
+<rect x="28" y="26" width="1224" height="130" rx="16" fill="#19374f"/>
+<text x="54" y="76" font-family="Arial,sans-serif" font-weight="bold" font-size="34" fill="#ffffff">Глава 7 · Закат лидера</text>
+<text x="54" y="117" font-family="Arial,sans-serif" font-size="21" fill="#d8eaf6">Антипаттерны: замечать поведение, исправлять причины</text>
+<g font-family="Arial,sans-serif" fill="#17364b" font-size="20">
+<rect x="28" y="181" width="586" height="172" rx="14" fill="#e1ecf5"/>
+<text x="51" y="221" font-size="25" font-weight="bold">1 · Мелочная опека</text>
+<text x="51" y="264">Контроль вместо делегирования</text>
+<text x="51" y="299">Рецепт: автономия и доверие</text>
+<text x="51" y="331" font-size="17">PDF 150–155</text>
+<rect x="666" y="181" width="586" height="172" rx="14" fill="#e1ecf5"/>
+<text x="689" y="221" font-size="25" font-weight="bold">2 · Неорганизованность</text>
+<text x="689" y="264">Отсрочки и потеря приоритетов</text>
+<text x="689" y="299">Рецепт: решения и самоорганизация</text>
+<text x="689" y="331" font-size="17">PDF 155–158</text>
+<rect x="28" y="374" width="586" height="172" rx="14" fill="#e1ecf5"/>
+<text x="51" y="414" font-size="25" font-weight="bold">3 · Гений не на месте</text>
+<text x="51" y="457">Технология важнее людей</text>
+<text x="51" y="492">Рецепт: сотрудничество и обучение</text>
+<text x="51" y="524" font-size="17">PDF 158–160</text>
+<rect x="666" y="374" width="586" height="172" rx="14" fill="#e1ecf5"/>
+<text x="689" y="414" font-size="25" font-weight="bold">4 · Строительство империй</text>
+<text x="689" y="457">Лояльность выше результатов</text>
+<text x="689" y="492">Рецепт: свобода мнений и команды</text>
+<text x="689" y="524" font-size="17">PDF 160–162</text>
+<rect x="28" y="570" width="1224" height="174" rx="14" fill="#d8e9f4"/>
+<text x="52" y="613" font-size="25" font-weight="bold">Восстановление лидерства · 162–166</text>
+<text x="52" y="657">Признать предел возможностей и ошибки → восстановить отношения</text>
+<text x="52" y="696">→ исправить нарушенные процессы → работать с первопричинами</text>
+</g>
+<text x="34" y="787" font-family="Arial,sans-serif" font-size="18" fill="#526b7e">Основа: RAG p0147-c01–p0166-c01; табл. 7.3 пересказана, ячейки mojibake</text>
+<text x="34" y="821" font-family="Arial,sans-serif" font-size="16" fill="#526b7e">Не диагноз людям и не инструкция по кадровым санкциям.</text>
+</svg>
