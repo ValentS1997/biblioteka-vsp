@@ -3,10 +3,10 @@ task_key: 0036-chapter-publication-pr-496
 repository: vsp-corp/biblioteka-vsp
 book_id: business-process-improvement-hbsp-ru
 task_kind: chapter
-objective: "Publish RAG-grounded numbered stages as individual Git files with reviewable PR and CI."
+objective: "Publish RAG-only numbered stages as six individual Git chapter artifacts, with checkpoint and CI."
 branch: chapter/0036-business-process-publication-20261015
 initial_base_sha: aa3733b43f6db3627453e4814926e59a9ae3b136
-last_observed_head_sha: d00a07d6f769ee33962648ef3112ca3f4b5039be
+last_observed_head_sha: 5e29f370986550016078a53a06118d9a8e2c5288
 expected_source_sha256: 4c75aaaa000434b6fd7aeac337e163327060dcbe084e30a1c9793b923b855172
 constraints:
   - no direct main changes
@@ -14,35 +14,33 @@ constraints:
   - no source/RAG rewrite without explicit authorization
   - no reading-progress mutation without explicit user confirmation
   - no archive delivery for chapter artifacts
-  - no duplicate remote writes or pull requests
-stage: IN_PROGRESS
+  - no duplicate commits, files or pull requests
+stage: CI_PENDING
 completed_steps:
-  - step: "RAG-sourced plan for six numbered stages committed and verified."
+  - step: "RAG-sourced plan with 6 numbered stages and correct source SHA verified."
     evidence_type: file-readback
-    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/c982684fa7262368918e2b11d140b536d3e12968/books/business-process-improvement-hbsp-ru/notes/chapters/plan.yaml"
-  - step: "Stage 1 six mandatory Git files plus source-findings verified; prior SVG CI PASS."
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/5e29f370986550016078a53a06118d9a8e2c5288/books/business-process-improvement-hbsp-ru/notes/chapters/plan.yaml"
+  - step: "Stage 1 six required individual files, plus source-findings, verified; validator CI passed."
     evidence_type: ci
     reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38623571188"
-  - step: "Stage 2 six required files plus source-findings individually committed and read back."
-    evidence_type: commit
-    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/9302781bfd75b9fe8a7cf3a2c86cc7f5a9e08e66"
-  - step: "Chapter README progress updated to 2/6 (33.3%) and Git read-back passed."
-    evidence_type: commit
-    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/c982684fa7262368918e2b11d140b536d3e12968"
-  - step: "Chapter notes, Markdown links, SVG rendering and regression CI passed for index commit."
-    evidence_type: ci
-    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38629624045"
-  - step: "Full chapter validator CI also passed at previous checkpoint HEAD."
+  - step: "Stage 2 six required individual files, plus source-findings, verified; validator CI passed."
     evidence_type: ci
     reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38629683766"
-  - step: "Existing draft PR 496 reused; no duplicate PR created."
+  - step: "Stage 3 six required individual files committed to working branch and GitHub file read-back passed."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/fb27c7932701ec82403a8f26d775e7b011e7ce9a"
+  - step: "Book-level README index updated, stage publication progress 3/6 (50%), and read back."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/5e29f370986550016078a53a06118d9a8e2c5288"
+  - step: "Existing draft PR 496 reused without creating a duplicate."
     evidence_type: pr
     reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/496"
 pending_steps:
-  - "Before further chapter work recheck Git ref, this checkpoint, stage-3 directory and current readiness."
-  - "On continued chapter work analyze and publish numbered stage 3 (PDF pages 55-68) in individual Git files, then stages 4-6 in bounded units."
-  - "Reconcile advancing main (at recovery start branch was 25 commits behind), rerun mandatory CI and review PR 496 before merge."
-last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38629683766"
-first_safe_next_action: "Fetch actual main/branch HEAD, PR 496, checkpoint and stage 3 directory; compare current committed files before any write."
-blocker: "Not applicable for chapters 1-2; stale main base must be reconciled before merge."
+  - "Check chapter-notes and SVG CI run 38695579651 for index commit, then current-checkpoint-head CI and record its final conclusion."
+  - "For a subsequent explicit chapter analysis, preflight stage 4: first verify chapter-04 directory is absent and its RAG boundaries, then individually publish its files."
+  - "Repeat for numbered stages 5 and 6 in bounded verified units; recompute progress after each."
+  - "Reconcile the working branch with advancing main, check PR mergeability/readiness and rerun required CI before any merge."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/commit/5e29f370986550016078a53a06118d9a8e2c5288"
+first_safe_next_action: "Read current working branch HEAD, checkpoint file and CI runs; verify chapter 3 six files and index before any retry or new write."
+blocker: "No chapter-3 Git write blocker; CI still pending and current main has advanced since working branch was created."
 last_observed_at: "Not applicable"
