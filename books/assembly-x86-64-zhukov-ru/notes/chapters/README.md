@@ -5,8 +5,8 @@ Book ID: `assembly-x86-64-zhukov-ru`. Canonical RAG source SHA-256: `f65a7ec8814
 ## План и прогресс публикации
 
 - [RAG-verified план: 21 глава](plan.yaml). Основание: оглавление (RAG PDF p. 4–8), самостоятельные заголовки глав в RAG-чанках и предисловие PDF p. 11.
-- **В текущей chapter-ветке:** 15/21 (71,4%); осталось 6, следующая — №16 «LDT и TSS».
-- **В `main` на начало работы над главой 15:** 14/21. До merge главы 15 в `main` опубликованы первые четырнадцать глав; сверять HEAD независимо.
+- **В текущей chapter-ветке:** 16/21 (76,2%); осталось 5, следующая — №17 «Преобразование адресов».
+- **В `main` на начало работы над главой 16:** 15/21. До merge главы 16 в `main` опубликованы первые пятнадцать глав; сверять HEAD независимо.
 
 ## Опубликованные главы (отдельные Git-файлы)
 
@@ -39,6 +39,8 @@ Book ID: `assembly-x86-64-zhukov-ru`. Canonical RAG source SHA-256: `f65a7ec8814
 14. [Глава 14. Данные и стек](chapter-14-dannye-i-stek/README.md) — [шпаргалка](chapter-14-dannye-i-stek/cheatsheet.md), [команды](chapter-14-dannye-i-stek/commands.md), [диаграмма](chapter-14-dannye-i-stek/diagram.md), [краткая SVG](chapter-14-dannye-i-stek/visual-cheatsheet.svg), [подробная SVG](chapter-14-dannye-i-stek/visual-cheatsheet-detailed.svg), [вопросы](chapter-14-dannye-i-stek/review-questions.md), [разборы](chapter-14-dannye-i-stek/review-answers.md), [source findings](chapter-14-dannye-i-stek/source-findings.md).
 
 15. [Глава 15. Исключения и прерывания](chapter-15-isklyucheniya-i-preryvaniya/README.md) — [шпаргалка](chapter-15-isklyucheniya-i-preryvaniya/cheatsheet.md), [команды](chapter-15-isklyucheniya-i-preryvaniya/commands.md), [диаграмма](chapter-15-isklyucheniya-i-preryvaniya/diagram.md), [краткая SVG](chapter-15-isklyucheniya-i-preryvaniya/visual-cheatsheet.svg), [подробная SVG](chapter-15-isklyucheniya-i-preryvaniya/visual-cheatsheet-detailed.svg), [вопросы](chapter-15-isklyucheniya-i-preryvaniya/review-questions.md), [разборы](chapter-15-isklyucheniya-i-preryvaniya/review-answers.md), [source findings](chapter-15-isklyucheniya-i-preryvaniya/source-findings.md).
+
+16. [Глава 16. LDT и TSS](chapter-16-ldt-i-tss/README.md) — [шпаргалка](chapter-16-ldt-i-tss/cheatsheet.md), [команды](chapter-16-ldt-i-tss/commands.md), [диаграмма](chapter-16-ldt-i-tss/diagram.md), [краткая SVG](chapter-16-ldt-i-tss/visual-cheatsheet.svg), [подробная SVG](chapter-16-ldt-i-tss/visual-cheatsheet-detailed.svg), [вопросы](chapter-16-ldt-i-tss/review-questions.md), [разборы](chapter-16-ldt-i-tss/review-answers.md), [source findings](chapter-16-ldt-i-tss/source-findings.md).
 
 ## Политика
 
