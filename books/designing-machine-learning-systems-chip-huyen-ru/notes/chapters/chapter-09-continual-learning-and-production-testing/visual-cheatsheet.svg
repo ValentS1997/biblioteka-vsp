@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1210" height="606" viewBox="0 0 1210 606" role="img" aria-label="Глава 9: непрерывное обучение и тесты в производстве"><rect width="1210" height="606" fill="#0f172a"/>
+<text x="39" y="57" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#f8fafc">ГЛАВА 9 · CONTINUAL LEARNING / TESTING</text>
+<text x="39" y="100" font-family="Arial,sans-serif" font-size="20" font-weight="400" fill="#e2e8f0">Кандидат обновления ≠ разрешение на production</text>
+<rect x="38" y="136" width="360" height="315" rx="16" fill="#1f2937" stroke="#475569"/>
+<rect x="425" y="136" width="360" height="315" rx="16" fill="#1f2937" stroke="#475569"/>
+<rect x="812" y="136" width="360" height="315" rx="16" fill="#1f2937" stroke="#475569"/>
+<text x="59" y="180" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#93c5fd">ОБНОВЛЕНИЕ</text>
+<text x="59" y="225" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Champion → challenger</text>
+<text x="59" y="267" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Stateless vs stateful</text>
+<text x="59" y="310" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Свежие данные и метки</text>
+<text x="59" y="354" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Micro-batches и checkpoints</text>
+<text x="446" y="180" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#93c5fd">ЧЕТЫРЕ ЭТАПА</text>
+<text x="446" y="225" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Ручное с нуля</text>
+<text x="446" y="267" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Автоматическое с нуля</text>
+<text x="446" y="310" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Автоматическое с состоянием</text>
+<text x="446" y="354" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Сигналы → continual</text>
+<text x="833" y="180" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#93c5fd">ОЦЕНКА</text>
+<text x="833" y="225" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Static + recent backtest</text>
+<text x="833" y="267" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Shadow · A/B · canary</text>
+<text x="833" y="310" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Interleaving · bandits</text>
+<text x="833" y="354" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Отдельное решение о выпуске</text>
+<text x="39" y="509" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#cbd5e1">RAG PDF 269–296 · «Итоги»: p0294–p0295</text>
+<text x="39" y="550" font-family="Arial,sans-serif" font-size="17" font-weight="400" fill="#fca5a5">Statistics/API ambiguities → source-findings.md</text>
+</svg>
