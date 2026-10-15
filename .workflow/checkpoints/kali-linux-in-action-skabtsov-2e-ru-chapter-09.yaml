@@ -1,0 +1,33 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: kali-linux-in-action-skabtsov-2e-ru-chapter-09
+repository: vsp-corp/biblioteka-vsp
+book_id: kali-linux-in-action-skabtsov-2e-ru
+task_kind: chapter
+objective: "RAG-only chapter 09 password attacks analysis, individual artifacts, stacked PR"
+branch: chapter/kali-linux-in-action-skabtsov-2e-ru-0012-ch09
+initial_base_sha: 33a0e14e7048e54ed6b9fe6508f51d3734113c0e
+last_observed_head_sha: 33a0e14e7048e54ed6b9fe6508f51d3734113c0e
+expected_source_sha256: fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite without explicit authorization
+  - no reading-progress mutation without explicit user confirmation
+  - no archive delivery for chapter artifacts
+  - no executable online password-guessing or credential-dumping workflows
+stage: PLANNED
+completed_steps:
+  - step: "RAG ACCEPTED, 17-chapter plan, chapter 09 PDF 258-271, chapter 10 begins PDF 272."
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/kali-linux-in-action-skabtsov-2e-ru/rag/chunks/p0201-p0300/p0258-c01.md
+  - step: "Verified main 2/17; PR #549, #551, #553, #558, #567, #572 OPEN; based on #572 head."
+    evidence_type: pr
+    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/572
+pending_steps:
+  - "Create six mandatory chapter artifacts plus source-findings as necessary and index; read back individual Git files."
+  - "Validate push CI; create stacked PR against chapter 08 branch only after PASS."
+  - "Verify PR CI, recover current refs before continuing; leave PR unmerged."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/33a0e14e7048e54ed6b9fe6508f51d3734113c0e
+first_safe_next_action: "Recheck branch HEAD and chapter-09 path before any write; do not repeat already verified files."
+blocker: Not applicable
+last_observed_at: Not applicable
