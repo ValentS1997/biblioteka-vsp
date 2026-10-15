@@ -1,0 +1,43 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: "0011-modern-system-administration-chapter-08"
+repository: "vsp-corp/biblioteka-vsp"
+book_id: modern-system-administration-jennifer-davis-ru
+task_kind: chapter
+objective: "RAG-only analysis and direct Git publication of chapter 8, Безопасность инфраструктуры"
+branch: "chapters/0011-modern-system-administration-chapter-08"
+initial_base_sha: "dbd7e0649ea07504c163590ccc2be32c33bea8b7"
+last_observed_head_sha: "0287067d7cf22e2e028c127a1ff00c51c69d2842"
+expected_source_sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite
+  - preserve reading status
+  - no archives
+stage: CI_PENDING
+completed_steps:
+  - step: "Verify canonical 21-chapter plan and 7/21 complete on main, RAG accepted and provenance consistent"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/dbd7e0649ea07504c163590ccc2be32c33bea8b7/books/modern-system-administration-jennifer-davis-ru/notes/chapters/plan.yaml"
+  - step: "RAG scope verified PDF 100-108, next chapter PDF 109; printed pages 104-112"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/dbd7e0649ea07504c163590ccc2be32c33bea8b7/books/modern-system-administration-jennifer-davis-ru/rag/chunks/p0101-p0200/p0109-c01.md"
+  - step: "Four chapter text artifacts individually committed and independently read back"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/575871e7eb07732f1e3b1acc4d5b5a6ec122d72d"
+  - step: "All eight individual chapter-08 files committed and each read back from GitHub"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/bf199336507119fa5582d1ef7b84d29677016e01"
+  - step: "Chapter index directly committed and read back: 8/21 on book branch, next chapter 9"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/0287067d7cf22e2e028c127a1ff00c51c69d2842"
+pending_steps:
+
+
+
+  - "PR and CI gate PASS before merging chapter artifacts"
+  - "Verify main, update post-merge progress and complete checkpoint"
+last_verified_evidence: "dbd7e0649ea07504c163590ccc2be32c33bea8b7"
+first_safe_next_action: "Check checkpoint and branch tree before retrying any interrupted writes"
+blocker: "Not applicable"
+last_observed_at: "Not applicable"
