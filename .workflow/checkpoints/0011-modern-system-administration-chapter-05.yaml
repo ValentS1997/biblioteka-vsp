@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only analysis and individual Git publication of chapter 5, Nabor instrumentov sisadmina"
 branch: "chapters/0011-modern-system-administration-chapter-05"
 initial_base_sha: "75dd7771186a3a8e498de38889cf0bd4380b6b94"
-last_observed_head_sha: "75dd7771186a3a8e498de38889cf0bd4380b6b94"
+last_observed_head_sha: "0dabae4239ba5189bfde8144e3ba9c409a573fa5"
 expected_source_sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
 constraints:
   - "no direct main changes"
@@ -14,7 +14,7 @@ constraints:
   - "no source/RAG rewrite without explicit authorization"
   - "no reading-progress mutation without explicit user confirmation"
   - "no archive delivery for chapter artifacts"
-stage: PLANNED
+stage: IN_PROGRESS
 completed_steps:
   - step: "Recovery audit: canonical main chapter plan confirms 21 chapters, main has 4 published"
     evidence_type: file-readback
@@ -22,8 +22,11 @@ completed_steps:
   - step: "Verify chapter 5 RAG boundary PDF 73-82, chapter 6 starts PDF 83"
     evidence_type: file-readback
     reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/75dd7771186a3a8e498de38889cf0bd4380b6b94/books/modern-system-administration-jennifer-davis-ru/rag/chunks/p0001-p0100/p0083-c01.md"
+  - step: "Four text artifacts committed as individual paths and independently read back"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/0dabae4239ba5189bfde8144e3ba9c409a573fa5"
 pending_steps:
-  - "Commit README.md, cheatsheet.md, commands.md, diagram.md, visual-cheatsheet.svg, visual-cheatsheet-detailed.svg as separate files on book branch"
+  - "Commit and read back two SVG files separately"
   - "Commit chapter-end summary.md and source-findings.md as source-grounded conditional files"
   - "Read back all eight paths from GitHub and verify provenance"
   - "Update book chapter index; inspect CI"
