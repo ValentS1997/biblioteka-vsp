@@ -7,7 +7,7 @@ objective: "Analyze chapter 03 from canonical RAG only and publish individual ch
 branch: chapter/0031-designing-ml-systems-ch03-20261015
 parent_branch: chapter/0031-designing-ml-systems-ch02-20261015
 initial_base_sha: 7bfc7a5cf2018400e674d5cba521fd906ef62ad6
-last_observed_head_sha: 7bfc7a5cf2018400e674d5cba521fd906ef62ad6
+last_observed_head_sha: aef5c7e85d4219ff97bc3069aaa51453bd3d5f4d
 expected_source_sha256: 0bcacadb4e1dc2235cb58f975111e1633527217127c5871edb894fe2b8f4c80c
 constraints:
   - "no direct main changes"
@@ -16,7 +16,7 @@ constraints:
   - "no reading-progress mutation without explicit user confirmation"
   - "no archive delivery for chapter artifacts"
   - "no duplicate commits or PRs"
-stage: PLANNED
+stage: CI_PENDING
 completed_steps:
   - step: "Recovered current 11-chapter RAG plan, verified chapters 01-02 complete on parent branch and reading planned; acceptance ACCEPTED and source SHA consistent."
     evidence_type: file-readback
@@ -27,13 +27,17 @@ completed_steps:
   - step: "Created dependent chapter 03 branch from chapter 02 branch at verified head SHA."
     evidence_type: commit
     reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/7bfc7a5cf2018400e674d5cba521fd906ef62ad6"
+  - step: "Published chapter 03 as eight individual Git paths, updated chapter index to 3/11, and read-back verified every file; plan and reading state unchanged."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/aef5c7e85d4219ff97bc3069aaa51453bd3d5f4d"
+  - step: "Chapter notes, canonical RAG reference validation and both SVG renderings: push CI PASS."
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38695701857"
 pending_steps:
-  - "Read minimal necessary chapter 03 RAG chunks including original end summary, code and source ambiguities."
-  - "Commit six mandatory individual files, conditional summary/findings as RAG requires, update index to 3/11."
-  - "GitHub read-back and chapter validator/SVG CI; record result in checkpoint."
-  - "Open one stacked PR against chapter 02 branch only after PASS; verify final PR CI and checkpoint."
+  - "Verify CI/checks for checkpoint-only commit and open precisely one stacked PR against chapter 02 branch."
+  - "Verify final PR head, CI, changed file list, upstream dependency and mergeability; no automatic merge."
   - "Dependency chain #493 -> #499 -> chapter 03 PR; no automatic merge, no chapter 04 implicit task."
-last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/commit/7bfc7a5cf2018400e674d5cba521fd906ef62ad6"
-first_safe_next_action: "Read-only: compare branch HEAD, this checkpoint, chapter-03 directory, index, PRs and CI; then continue first missing step."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38695701857"
+first_safe_next_action: "Read-only: verify chapter 03 branch HEAD and checkpoint, chapter-03 files, CI and PRs. Do not duplicate publication or create a second PR."
 blocker: "Not applicable"
 last_observed_at: "Not applicable"
