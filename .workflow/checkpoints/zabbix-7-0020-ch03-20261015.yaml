@@ -1,0 +1,35 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: "zabbix-7-0020-ch03-20261015"
+repository: "vsp-corp/biblioteka-vsp"
+book_id: "zabbix-7-monitoring-it-infrastructure-ru"
+task_kind: chapter
+objective: "Publish RAG-only chapter 3 analysis as six separate Git artifacts, conditional findings, and chapter index."
+branch: "chapter/zabbix-7-0020-ch03-monitoring-configuration-20261015"
+initial_base_sha: "080a8276e480021ebce5cf63c20f340d1a5e58a9"
+last_observed_head_sha: "080a8276e480021ebce5cf63c20f340d1a5e58a9"
+expected_source_sha256: "07204d885d4bf4c6c2de7c71ae42a4e3ed4cea794169cbe07985552e63875a27"
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite without explicit authorization
+  - no reading-progress mutation without explicit user confirmation
+  - no archive delivery for chapter artifacts
+  - RAG-only; no model-memory or external material for chapter content
+stage: IN_PROGRESS
+completed_steps:
+  - step: "Validated full-book accepted RAG, source SHA and chapter plan; chapter 3 is PDF pages 93-160."
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/zabbix-7-monitoring-it-infrastructure-ru/notes/chapters/plan.yaml"
+  - step: "Resolved prior chapter-2 PR #500, merged after verified CI PASS; main now has 2/13 chapters."
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/500"
+pending_steps:
+  - "Retrieve page-addressable RAG chunks of chapter 3 and identify conditional source findings"
+  - "Publish six required individual Git files and conditional artifacts of chapter 3"
+  - "Read back seven or more Git files; update chapter index to 3/13"
+  - "Validate CI, create PR, retire checkpoint and revalidate final HEAD"
+  - "Merge only after PASS, verify postmerge Git state and CI"
+last_verified_evidence: "080a8276e480021ebce5cf63c20f340d1a5e58a9"
+first_safe_next_action: "Inspect branch HEAD and chapter-3 file tree; continue only uncommitted chapter work."
+blocker: "Not applicable"
+last_observed_at: "Not applicable"
