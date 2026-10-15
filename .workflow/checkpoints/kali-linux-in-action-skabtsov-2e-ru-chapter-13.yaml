@@ -3,30 +3,30 @@ task_key: kali-linux-in-action-skabtsov-2e-ru-chapter-13
 repository: vsp-corp/biblioteka-vsp
 book_id: kali-linux-in-action-skabtsov-2e-ru
 task_kind: chapter
-objective: "RAG-only chapter 13 log integrity and hidden files defensive analysis, individual artifacts, stacked PR"
+objective: "RAG-only chapter 13 log integrity and hidden file defensive publication"
 branch: chapter/kali-linux-in-action-skabtsov-2e-ru-0012-ch13
 initial_base_sha: 7532be073241e2b6743bca470acdaf3a58506d97
-last_observed_head_sha: 7532be073241e2b6743bca470acdaf3a58506d97
+last_observed_head_sha: be3fbecbbb1e1a04f13e2975fd9834915253ce37
 expected_source_sha256: fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9
 constraints:
   - no direct main changes
   - no force push
   - no source/RAG mutation
   - no reading progress mutation
-  - no archive delivery for chapter artifacts
-  - no runnable log tampering, evidence deletion or concealment procedures
-stage: PLANNED
+  - no ZIP chapter handoff
+  - no executable log deletion, tampering or file hiding workflows
+stage: CI_PENDING
 completed_steps:
-  - step: "Verified accepted RAG, chapter 13 PDF 302-307, chapter 14 starts PDF 308; 17 numbered chapters."
+  - step: "Verified RAG ACCEPTED, chapter 13 PDF 302-307 and next chapter 14 begins 308, book 17 chapters."
     evidence_type: file-readback
     reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/kali-linux-in-action-skabtsov-2e-ru/rag/chunks/p0301-p0400/p0302-c01.md
-  - step: "Verified predecessor PR #590 OPEN and matching exact head."
-    evidence_type: pr
-    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/590
+  - step: "Committed six mandatory individual chapter files, source-findings with 13 findings and chapter index; eight GitHub file read-backs PASS."
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/be3fbecbbb1e1a04f13e2975fd9834915253ce37
 pending_steps:
-  - "Commit six mandatory chapter artifacts, conditional findings and updated index; read back individual files."
-  - "Check push CI SUCCESS; only then create stacked PR based on chapter 12."
-  - "Verify exact latest PR CI SUCCESS and mergeability; no main merge."
-last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/7532be073241e2b6743bca470acdaf3a58506d97
-first_safe_next_action: "Re-fetch chapter 13 branch head and verify absence of chapter files before writing."
-blocker: "Main integration blocked until predecessor PR chain reviewed and integrated; PR #549 mergeability false."
+  - "Verify push CI run 38789086792 SUCCESS on artifact commit."
+  - "Create stacked PR against chapter 12 branch only after CI PASS; compare expected changed files."
+  - "Verify PR CI SUCCESS for exact final head; do not merge until ancestors are integrated."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/be3fbecbbb1e1a04f13e2975fd9834915253ce37
+first_safe_next_action: "Read current branch HEAD and push CI, avoid recreating eight verified artifacts."
+blocker: "Main integration deferred pending stacked ancestors and #549 mergeability false."
