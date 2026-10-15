@@ -4,9 +4,9 @@ repository: "vsp-corp/biblioteka-vsp"
 book_id: modern-system-administration-jennifer-davis-ru
 task_kind: chapter
 objective: "RAG-only chapter 10 Presentations analysis and direct publication of individual Git artifacts"
-branch: "chapters/0011-modern-system-administration-chapter-10"
+branch: "docs/0011-chapter10-postmerge-index-20261015"
 initial_base_sha: "abd3e549066e50bc2edfd99694a08e326de7e2ad"
-last_observed_head_sha: "ced09bb14dbc762b68dfcde76a28aa09e86634d4"
+last_observed_head_sha: "495078140e702d715fd59f2795746f54bb4a2442"
 expected_source_sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
 constraints:
   - no direct main changes
@@ -14,7 +14,7 @@ constraints:
   - no source/RAG rewrite
   - no reading-progress mutation
   - no archives
-stage: CI_PENDING
+stage: COMPLETE
 completed_steps:
   - step: "Verified main 9/21, 21 chapter plan, RAG ACCEPTED, source and source checksum"
     evidence_type: file-readback
@@ -28,10 +28,17 @@ completed_steps:
   - step: "Book index committed on branch; 10/21 and chapter 11 next"
     evidence_type: commit
     reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/ced09bb14dbc762b68dfcde76a28aa09e86634d4"
-pending_steps:
-  - "Check CI, open PR, verify PR CI and merge only after PASS"
-  - "Verify main, finalize canonical publication index and recovery checkpoint via separate PR"
-last_verified_evidence: "abd3e549066e50bc2edfd99694a08e326de7e2ad"
-first_safe_next_action: "Read Git branch and checkpoint to discover completed writes before retry"
+  - step: "Chapter 10 PR CI passed on exact publication head"
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38727055203"
+  - step: "PR #532 merged; ten individual chapter files verified on main"
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/532"
+  - step: "Postmerge chapter index reports 10/21 on follow-up Git branch"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/495078140e702d715fd59f2795746f54bb4a2442"
+pending_steps: []
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/commit/27d476c13cafe8c43ba7adbc95e9356f0046f4a1"
+first_safe_next_action: "Verify merged PR for postmerge index, final main and chapter-10 checkpoint before starting chapter 11"
 blocker: "Not applicable"
 last_observed_at: "Not applicable"
