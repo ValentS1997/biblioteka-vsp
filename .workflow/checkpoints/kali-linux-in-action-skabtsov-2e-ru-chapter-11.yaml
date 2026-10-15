@@ -3,30 +3,30 @@ task_key: kali-linux-in-action-skabtsov-2e-ru-chapter-11
 repository: vsp-corp/biblioteka-vsp
 book_id: kali-linux-in-action-skabtsov-2e-ru
 task_kind: chapter
-objective: "RAG-only chapter 11 file transfer analysis, 6 mandatory artifacts and stacked PR"
+objective: "RAG-only chapter 11 individual files and stacked publication"
 branch: chapter/kali-linux-in-action-skabtsov-2e-ru-0012-ch11
 initial_base_sha: 84dd904c41d756256abddf29109b5683f6668532
-last_observed_head_sha: 84dd904c41d756256abddf29109b5683f6668532
+last_observed_head_sha: d111e8c0ee4b93e6a092d65e8144d0094ec61d54
 expected_source_sha256: fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9
 constraints:
   - no direct main changes
   - no force push
   - no source/RAG mutation
-  - no reading progress mutation
-  - no archive delivery for chapter artifacts
-  - no runnable post-compromise shell or payload delivery chains
-stage: PLANNED
+  - no reading status mutation
+  - no ZIP chapter handoff
+  - no executable post-compromise payload delivery workflows
+stage: CI_PENDING
 completed_steps:
-  - step: "Verified accepted RAG; book 17 chapters; chapter 11 PDF pp.287-292 and chapter 12 p.293."
+  - step: "Verified chapter 11 RAG PDF 287-292; next chapter 12 at PDF 293; 17 total chapters."
     evidence_type: file-readback
     reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/kali-linux-in-action-skabtsov-2e-ru/rag/chunks/p0201-p0300/p0287-c01.md
-  - step: "Confirmed parent chapter 10 PR #584 OPEN and exact HEAD match; dependency chain #549..#584."
-    evidence_type: pr
-    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/584
+  - step: "Committed six individual mandatory files, source-findings and chapter index; Git read-back PASS on all 8."
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/d111e8c0ee4b93e6a092d65e8144d0094ec61d54
 pending_steps:
-  - "Commit and read back six individual mandatory chapter files, conditional source-findings and updated chapter index."
-  - "Verify push CI SUCCESS before stacked PR creation."
-  - "Verify PR changed files, PR CI and mergeable state; do not merge."
-first_safe_next_action: "Re-fetch chapter 11 branch head and chapter directory before any Git update."
-last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/84dd904c41d756256abddf29109b5683f6668532
-blocker: "Main integration deferred pending earlier stacked PRs, starting with #549 conflict."
+  - "Verify push CI run 38784191506 SUCCESS on artifact commit."
+  - "Open stacked PR against chapter 10 branch after CI PASS; compare exact changed paths."
+  - "Verify final PR CI, branch HEAD and checkpoint; do not merge until ancestor PRs reconcile."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/d111e8c0ee4b93e6a092d65e8144d0094ec61d54
+first_safe_next_action: "Read branch head and latest CI, do not repeat completed artifact commit."
+blocker: "Main integration awaits upstream PR #549 conflict and descendant merges."
