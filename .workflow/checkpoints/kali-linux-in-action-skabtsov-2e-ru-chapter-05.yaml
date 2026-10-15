@@ -1,0 +1,36 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: kali-linux-in-action-skabtsov-2e-ru-chapter-05
+repository: vsp-corp/biblioteka-vsp
+book_id: kali-linux-in-action-skabtsov-2e-ru
+task_kind: chapter
+objective: "RAG-only analysis and individual Git publication of chapter 05 Отчеты"
+branch: chapter/kali-linux-in-action-skabtsov-2e-ru-0012-ch05
+initial_base_sha: 3d679d4bc3f36a613f0a00feb1004d68c2acd1cc
+last_observed_head_sha: 3d679d4bc3f36a613f0a00feb1004d68c2acd1cc
+expected_source_sha256: fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite without explicit authorization
+  - no reading-progress mutation without explicit user confirmation
+  - no archive delivery for chapter artifacts
+stage: PLANNED
+completed_steps:
+  - step: "Verified 17 numbered chapters, canonical RAG ACCEPTED, and main with two completed chapter folders."
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/kali-linux-in-action-skabtsov-2e-ru/notes/chapters/plan.yaml
+  - step: "Verified chapter 05 RAG PDF page 155 through 184 and chapter 06 starts page 185."
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/kali-linux-in-action-skabtsov-2e-ru/rag/chunks/p0101-p0200/p0155-c01.md
+  - step: "Confirmed pending dependency PR #549 (chapter 03) and #551 (chapter 04), initialized stacked chapter 05 branch on chapter 04 head."
+    evidence_type: pr
+    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/551
+pending_steps:
+  - "Create 6 individual mandatory chapter files plus source-findings.md if source defects found and index."
+  - "Commit to feature branch; read back every Git path and verify source/chapter count."
+  - "Run chapter notes/SVG CI and open stacked PR to chapter 04 branch only after PASS."
+  - "Verify PR CI and final head; defer main integration while dependencies remain open."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/3d679d4bc3f36a613f0a00feb1004d68c2acd1cc
+first_safe_next_action: "Check latest chapter 05 branch head and directory before re-running any Git writes."
+blocker: Not applicable
+last_observed_at: Not applicable
