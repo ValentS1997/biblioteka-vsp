@@ -38,6 +38,8 @@ Book ID: `assembly-x86-64-zhukov-ru`. Canonical RAG source SHA-256: `f65a7ec8814
 
 14. [Глава 14. Данные и стек](chapter-14-dannye-i-stek/README.md) — [шпаргалка](chapter-14-dannye-i-stek/cheatsheet.md), [команды](chapter-14-dannye-i-stek/commands.md), [диаграмма](chapter-14-dannye-i-stek/diagram.md), [краткая SVG](chapter-14-dannye-i-stek/visual-cheatsheet.svg), [подробная SVG](chapter-14-dannye-i-stek/visual-cheatsheet-detailed.svg), [вопросы](chapter-14-dannye-i-stek/review-questions.md), [разборы](chapter-14-dannye-i-stek/review-answers.md), [source findings](chapter-14-dannye-i-stek/source-findings.md).
 
+15. [Глава 15. Исключения и прерывания](chapter-15-isklyucheniya-i-preryvaniya/README.md) — [шпаргалка](chapter-15-isklyucheniya-i-preryvaniya/cheatsheet.md), [команды](chapter-15-isklyucheniya-i-preryvaniya/commands.md), [диаграмма](chapter-15-isklyucheniya-i-preryvaniya/diagram.md), [краткая SVG](chapter-15-isklyucheniya-i-preryvaniya/visual-cheatsheet.svg), [подробная SVG](chapter-15-isklyucheniya-i-preryvaniya/visual-cheatsheet-detailed.svg), [вопросы](chapter-15-isklyucheniya-i-preryvaniya/review-questions.md), [разборы](chapter-15-isklyucheniya-i-preryvaniya/review-answers.md), [source findings](chapter-15-isklyucheniya-i-preryvaniya/source-findings.md).
+
 ## Политика
 
 `rag_only` · `chapter-artifact-collection v1.8` · `chapter-publication v1.0` · `session-recovery v1.0`. Статус чтения независим от публикации и не изменяется. Полнота публикации определяется наличием шести отдельных обязательных файлов в Git, а не архивами или черновиками. Отсутствие merge означает отсутствие новой главы в `main`.
