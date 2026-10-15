@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only analysis and Git publication of chapter 10 exceptions"
 branch: chapter/assembly-x86-64-zhukov-ru-ch10
 initial_base_sha: 4ce6ceed407877d4d0625599223cc762947cdd48
-last_observed_head_sha: 4ce6ceed407877d4d0625599223cc762947cdd48
+last_observed_head_sha: 3b5ee2aba1c7c156a2da2f9ed7833c07bf36e43d
 expected_source_sha256: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
 constraints:
   - no direct main changes
@@ -21,8 +21,10 @@ completed_steps:
   - step: "Chapter 10 RAG PDF p177-196 read, chapter 11 PDF p197; main 9/21"
     evidence_type: file-readback
     reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/4ce6ceed407877d4d0625599223cc762947cdd48/books/assembly-x86-64-zhukov-ru/notes/chapters/plan.yaml"
+  - step: "Six required chapter 10 files individually committed and verified with Git read-back"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/tree/3b5ee2aba1c7c156a2da2f9ed7833c07bf36e43d/books/assembly-x86-64-zhukov-ru/notes/chapters/chapter-10-isklyucheniya"
 pending_steps:
-  - "Six mandatory chapter files: separate Git commits and read-backs"
   - "Source-grounded review questions and answers and source findings as separate files"
   - "Update chapter index 10/21 in chapter branch"
   - "Compare main drift, chapter validation PASS, PR creation"
