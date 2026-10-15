@@ -1,0 +1,35 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: "zabbix-7-0020-ch12-20261015"
+repository: "vsp-corp/biblioteka-vsp"
+book_id: "zabbix-7-monitoring-it-infrastructure-ru"
+task_kind: chapter
+objective: "RAG-only chapter 12: database tuning, separate Git artifacts, indexed publication after CI PASS."
+branch: "chapter/zabbix-7-0020-ch12-database-tuning-20261015"
+initial_base_sha: "17025c3d2b3b909c7b8fbaf58e90cefb53341756"
+last_observed_head_sha: "17025c3d2b3b909c7b8fbaf58e90cefb53341756"
+expected_source_sha256: "07204d885d4bf4c6c2de7c71ae42a4e3ed4cea794169cbe07985552e63875a27"
+constraints:
+  - no direct main writes
+  - no force-push
+  - no source or RAG rewrites
+  - no reading status change
+  - no ZIP/archive delivery
+  - rag_only: never fill RAG gaps with PDF direct/web/model knowledge
+stage: IN_PROGRESS
+completed_steps:
+  - step: "Checked main chapter index 11/13; chapter 12 unpublised, chapter 13 starts at PDF page 490."
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/zabbix-7-monitoring-it-infrastructure-ru/notes/chapters/README.md"
+  - step: "Checked accepted RAG/source SHA, reading unchanged and canonical templates."
+    evidence_type: other
+    reference: "17025c3d2b3b909c7b8fbaf58e90cefb53341756"
+pending_steps:
+  - "Read RAG page chunks p0465-p0489, verify p0490 boundary and findings"
+  - "Commit individual six mandatory chapter files and conditional findings"
+  - "Update index to 12/13 and verify Git readback"
+  - "Require branch and PR CI PASS; retire checkpoint before merge"
+  - "Merge only after final exact-head CI PASS and verify main/postmerge CI"
+last_verified_evidence: "17025c3d2b3b909c7b8fbaf58e90cefb53341756"
+first_safe_next_action: "Inspect exact branch head and chapter-12 files before any repeat write."
+blocker: "Not applicable"
+last_observed_at: "Not applicable"
