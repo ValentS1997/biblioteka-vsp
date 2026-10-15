@@ -5,8 +5,8 @@ Book ID: `assembly-x86-64-zhukov-ru`. Canonical RAG source SHA-256: `f65a7ec8814
 ## План и прогресс публикации
 
 - [RAG-verified план: 21 глава](plan.yaml). Основание: оглавление (RAG PDF p. 4–8), самостоятельные заголовки глав в RAG-чанках и предисловие PDF p. 11.
-- **В текущей chapter-ветке:** 11/21 (52,4%); осталось 10, следующая — №12 «32-битовые данные и адреса».
-- **В `main` на начало работы над главой 11:** 10/21. До merge главы 11 в `main` опубликованы первые десять глав; сверять HEAD независимо.
+- **В текущей chapter-ветке:** 12/21 (57,1%); осталось 9, следующая — №13 «Код в защищенном режиме».
+- **В `main` на начало работы над главой 12:** 11/21. До merge главы 12 в `main` опубликованы первые одиннадцать глав; сверять HEAD независимо.
 
 ## Опубликованные главы (отдельные Git-файлы)
 
@@ -31,6 +31,8 @@ Book ID: `assembly-x86-64-zhukov-ru`. Canonical RAG source SHA-256: `f65a7ec8814
 10. [Глава 10. Исключения](chapter-10-isklyucheniya/README.md) — [шпаргалка](chapter-10-isklyucheniya/cheatsheet.md), [команды](chapter-10-isklyucheniya/commands.md), [диаграмма](chapter-10-isklyucheniya/diagram.md), [краткая SVG](chapter-10-isklyucheniya/visual-cheatsheet.svg), [подробная SVG](chapter-10-isklyucheniya/visual-cheatsheet-detailed.svg), [вопросы](chapter-10-isklyucheniya/review-questions.md), [разборы](chapter-10-isklyucheniya/review-answers.md), [source findings](chapter-10-isklyucheniya/source-findings.md).
 
 11. [Глава 11. Внешние прерывания](chapter-11-vneshnie-preryvaniya/README.md) — [шпаргалка](chapter-11-vneshnie-preryvaniya/cheatsheet.md), [команды](chapter-11-vneshnie-preryvaniya/commands.md), [диаграмма](chapter-11-vneshnie-preryvaniya/diagram.md), [краткая SVG](chapter-11-vneshnie-preryvaniya/visual-cheatsheet.svg), [подробная SVG](chapter-11-vneshnie-preryvaniya/visual-cheatsheet-detailed.svg), [вопросы](chapter-11-vneshnie-preryvaniya/review-questions.md), [разборы](chapter-11-vneshnie-preryvaniya/review-answers.md), [source findings](chapter-11-vneshnie-preryvaniya/source-findings.md).
+
+12. [Глава 12. 32-битовые данные и адреса](chapter-12-32-bitovye-dannye-i-adresa/README.md) — [шпаргалка](chapter-12-32-bitovye-dannye-i-adresa/cheatsheet.md), [команды](chapter-12-32-bitovye-dannye-i-adresa/commands.md), [диаграмма](chapter-12-32-bitovye-dannye-i-adresa/diagram.md), [краткая SVG](chapter-12-32-bitovye-dannye-i-adresa/visual-cheatsheet.svg), [подробная SVG](chapter-12-32-bitovye-dannye-i-adresa/visual-cheatsheet-detailed.svg), [вопросы](chapter-12-32-bitovye-dannye-i-adresa/review-questions.md), [разборы](chapter-12-32-bitovye-dannye-i-adresa/review-answers.md), [source findings](chapter-12-32-bitovye-dannye-i-adresa/source-findings.md).
 
 ## Политика
 
