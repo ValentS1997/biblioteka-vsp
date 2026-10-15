@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1660" height="1570" viewBox="0 0 1660 1570" role="img" aria-labelledby="title desc">
+<title id="title">Глава 20 — Подробная карта управления инцидентами</title>
+<desc id="desc">Подробная карта планирования, IC, SME, severity, делегирования, коммуникации, проверки, разборов и артефактов по RAG PDF 241–255.</desc>
+<rect width="1660" height="1570" fill="#102037"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="56" y="73" font-size="39" font-weight="bold" fill="#f4faff">Глава 20 · Управление инцидентами</text>
+<text x="56" y="115" font-size="22" fill="#c6dcee">Не только восстановить сервис: уменьшить вред и улучшить процесс</text>
+<text x="56" y="172" font-size="29" font-weight="bold" fill="#f3faff">1 · Подготовка (PDF 244–247)</text>
+<rect x="56" y="199" width="1548" height="165" rx="14" fill="#254b66"/>
+<text x="86" y="247" font-size="25" font-weight="bold" fill="#f4faff">Документировать коммуникации и риски · тренировать сотрудничество</text>
+<text x="86" y="289" font-size="21" fill="#e0f0fc">Простые шаблоны · актуальные инструкции · учения · доступ к инструментам</text>
+<text x="86" y="329" font-size="21" fill="#ccdeed">Каналы/треды выбираются командой, без единого обязательного стандарта</text>
+<text x="56" y="419" font-size="29" font-weight="bold" fill="#f3faff">2 · Роли в момент инцидента (PDF 247–248)</text>
+<rect x="56" y="445" width="744" height="159" rx="14" fill="#37506b"/>
+<text x="86" y="491" font-size="26" font-weight="bold" fill="#f4faff">IC + SME</text>
+<text x="86" y="529" font-size="21" fill="#deedfa">Один IC решает и координирует</text>
+<text x="86" y="565" font-size="21" fill="#deedfa">SME исследуют и стабилизируют</text>
+<rect x="860" y="445" width="744" height="159" rx="14" fill="#215967"/>
+<text x="890" y="491" font-size="26" font-weight="bold" fill="#f4ffff">Коммуникация + запись</text>
+<text x="890" y="529" font-size="21" fill="#def5f8">Обновления для разных аудиторий</text>
+<text x="890" y="565" font-size="21" fill="#def5f8">Хронология решений и действий</text>
+<text x="56" y="668" font-size="29" font-weight="bold" fill="#f3faff">3 · Реагирование (PDF 248–250)</text>
+<rect x="56" y="693" width="1548" height="194" rx="14" fill="#31536b"/>
+<text x="86" y="739" font-size="24" font-weight="bold" fill="#f4faff">Severity и влияние → варианты и риски → решение IC</text>
+<text x="86" y="781" font-size="21" fill="#e0eefb">Обсудить серьёзные возражения · делегировать конкретные задачи</text>
+<text x="86" y="821" font-size="21" fill="#e0eefb">Назначить время status-update · разнести ремонт и информирование</text>
+<text x="86" y="855" font-size="21" fill="#e0eefb">Проверить стабилизацию; при сохраняющемся влиянии повторить цикл</text>
+<text x="56" y="946" font-size="29" font-weight="bold" fill="#f3faff">4 · Разбор без обвинений (PDF 250–253)</text>
+<rect x="56" y="970" width="1548" height="187" rx="14" fill="#285968"/>
+<text x="86" y="1016" font-size="25" font-weight="bold" fill="#f4ffff">Факты → возможные причины → противоречия → пересмотр</text>
+<text x="86" y="1059" font-size="21" fill="#dcf3f7">Остерегаться привязки, доступности, подтверждения убеждений и hindsight</text>
+<text x="86" y="1100" font-size="21" fill="#dcf3f7">Incident report: влияние, timeline, графики, логи, уроки, action items</text>
+<text x="56" y="1211" font-size="29" font-weight="bold" fill="#f3faff">5 · Улучшение как результат (PDF 253–255)</text>
+<rect x="56" y="1236" width="1548" height="207" rx="14" fill="#2c554c" stroke="#85dcb1" stroke-width="2"/>
+<text x="86" y="1287" font-size="25" font-weight="bold" fill="#f4fff8">Цели встречи: учиться, улучшать знания и снижать повторный вред</text>
+<text x="86" y="1330" font-size="21" fill="#e0f6e9">Общие знания · обновлённые инструкции · согласованные улучшения</text>
+<text x="86" y="1371" font-size="21" fill="#e0f6e9">MTBF / MTTF / MTTD / MTTR — недостаточны как единственная оценка</text>
+<text x="86" y="1406" font-size="19" fill="#c8ebd9">Численные SLA, CLI и rollback конкретной системы: [Needs confirmation]</text>
+<text x="56" y="1532" font-size="17" fill="#acc9dc">Canonical RAG PDF 241–255 · новые схемы по тексту, не изображения 20.1–20.2</text>
+</g></svg>
