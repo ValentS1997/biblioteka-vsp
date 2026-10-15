@@ -1,0 +1,35 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: chapter-assembly-x86-64-zhukov-ru-ch03
+repository: vsp-corp/biblioteka-vsp
+book_id: assembly-x86-64-zhukov-ru
+task_kind: chapter
+objective: "RAG-only chapter 3 analysis and individual Git publication with CI and PR."
+branch: chapter/assembly-x86-64-zhukov-ru-ch03
+initial_base_sha: 4f4f761607467d20748596de2efc5f67476a85c4
+last_observed_head_sha: 4f4f761607467d20748596de2efc5f67476a85c4
+expected_source_sha256: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite without explicit authorization
+  - no reading-progress mutation without explicit user confirmation
+  - no archive delivery for chapter artifacts
+stage: IN_PROGRESS
+completed_steps:
+  - step: "Verify source SHA and 21-chapter plan; merged 2 of 21 on main"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/4f4f761607467d20748596de2efc5f67476a85c4/books/assembly-x86-64-zhukov-ru/notes/chapters/plan.yaml"
+  - step: "Verify chapter 3 PDF p. 31-56 from canonical RAG addressable text"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/4f4f761607467d20748596de2efc5f67476a85c4/books/assembly-x86-64-zhukov-ru/rag/chunks/p0001-p0100/p0031-c01.md"
+pending_steps:
+  - "Write and read back each of six mandatory chapter 3 files individually."
+  - "Write RAG-grounded conditional exercises, answers, source-findings."
+  - "Update book chapter index and progress to 3 of 21."
+  - "Verify chapter contents, Git compare and CI; create/reuse PR."
+  - "Remove transient checkpoint before merge after readback and successful PR CI; validate final head."
+  - "Merge after all gates PASS and verify main files/post-merge CI."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/blob/4f4f761607467d20748596de2efc5f67476a85c4/books/assembly-x86-64-zhukov-ru/rag/acceptance.yaml"
+first_safe_next_action: "Re-fetch branch HEAD, existing chapter 3 file list, checkpoint and CI before any interrupted remote write retry."
+blocker: "Not applicable"
+last_observed_at: "Not applicable"
