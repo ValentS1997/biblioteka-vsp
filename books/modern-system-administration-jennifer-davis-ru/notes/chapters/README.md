@@ -10,6 +10,7 @@
 - Осталось: **18**.
 - Следующая глава: **4 — Сеть**.
 - Учёт публикации: только отдельные committed Git files; ZIP и подготовленные вне Git тексты не учитываются.
+- Recovery evidence: [chapter 3 checkpoint](../../../../.workflow/checkpoints/0011-modern-system-administration-chapter-03.yaml) — `COMPLETE`; слияние PR #503 и #504, финальные CI PASS.
 - Публикация в `main`: PR [#489](https://github.com/vsp-corp/biblioteka-vsp/pull/489) слит; merge commit [`781200b`](https://github.com/vsp-corp/biblioteka-vsp/commit/781200b791f0ce111a6659b330d537adb49289be).
 - **Текущее состояние `main`: 3 / 21 (14.3%).** Глава 3 опубликована через [PR #503](https://github.com/vsp-corp/biblioteka-vsp/pull/503), merge commit [`71abf50`](https://github.com/vsp-corp/biblioteka-vsp/commit/71abf504101b563d943a3351735c54690016228d).
 
