@@ -1,0 +1,39 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: designing-machine-learning-systems-chip-huyen-ru-chapter-05
+repository: vsp-corp/biblioteka-vsp
+book_id: designing-machine-learning-systems-chip-huyen-ru
+task_kind: chapter
+objective: "RAG-only analysis of chapter 05 'Конструирование признаков' with eight or more separate Git chapter files, branch-index update and stacked PR after chapter validators pass."
+branch: chapter/0031-designing-ml-systems-ch05-20261015
+parent_branch: chapter/0031-designing-ml-systems-ch04-20261015
+initial_base_sha: 1488ca1a62319d15d32b2b1a454fad436d96f3d4
+last_observed_head_sha: 1488ca1a62319d15d32b2b1a454fad436d96f3d4
+expected_source_sha256: 0bcacadb4e1dc2235cb58f975111e1633527217127c5871edb894fe2b8f4c80c
+constraints:
+  - "no direct main changes"
+  - "no force-push"
+  - "no source or RAG rewrite"
+  - "no reading-progress mutation without explicit user confirmation"
+  - "no archive delivery in place of individual files"
+  - "no duplicate PR, commit or chapter file writes"
+stage: PLANNED
+completed_steps:
+  - step: "Read-only reconstruction: 11 source-verified chapters, 4/11 Git-published on parent branch, zero merged into main; parents PR #493, #499, #502, #507 all open."
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/507"
+  - step: "Book RAG acceptance ACCEPTED, source SHA/generation consistent, read-only Chapter 05 start PDF 136, next chapter start PDF 162."
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/designing-machine-learning-systems-chip-huyen-ru/rag/chunks/p0101-p0200/p0136-c01.md"
+  - step: "Created dependent chapter 05 branch from verified chapter 04 head SHA 1488ca1a62319d15d32b2b1a454fad436d96f3d4."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/1488ca1a62319d15d32b2b1a454fad436d96f3d4"
+pending_steps:
+  - "Finish RAG-only chapter source review, identify summary and extraction/wording defects, no direct PDF."
+  - "Write six mandatory individual files, source summary and findings as needed, and update branch chapter index to 5/11."
+  - "Verify GitHub blob read-back, source provenance and full chapter validator CI."
+  - "Open precisely one stacked PR against chapter 04 branch only after PASS; verify PR diff and CI."
+  - "Checkpoint final PR/CI status and preserve reading/progress.yaml unchanged."
+first_safe_next_action: "Read-only check current branch HEAD, chapter-05 files, checkpoint, Git PR and CI; then resume first missing step only."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/pull/507"
+blocker: "Not applicable"
+last_observed_at: "Not applicable"
