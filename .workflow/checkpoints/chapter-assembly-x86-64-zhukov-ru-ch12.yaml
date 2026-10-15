@@ -6,14 +6,14 @@ task_kind: chapter
 objective: "RAG-only chapter 12 32-bit data and addresses, gated Git publication"
 branch: chapter/assembly-x86-64-zhukov-ru-ch12
 initial_base_sha: b4b2dd832707bfc03cb9ddc6fbe1dc30536e96ac
-last_observed_head_sha: b4b2dd832707bfc03cb9ddc6fbe1dc30536e96ac
+last_observed_head_sha: 3751a98585e1db9e41f6fa868c1cd4bec41240df
 expected_source_sha256: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
 constraints:
   - no direct main changes
   - no source or RAG rewrite
   - no reading-status mutation
   - no force-push or ZIP fallback
-stage: IN_PROGRESS
+stage: CI_PENDING
 completed_steps:
   - step: "Canonical contracts and RAG ACCEPTED; source SHA matches plan"
     evidence_type: file-readback
