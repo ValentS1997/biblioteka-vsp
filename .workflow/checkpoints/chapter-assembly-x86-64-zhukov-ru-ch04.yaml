@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only chapter 4 analysis and individual Git publication with PR/CI"
 branch: chapter/assembly-x86-64-zhukov-ru-ch04
 initial_base_sha: 86805e011b6364dbd0f18976e2f5ff89d79b31ad
-last_observed_head_sha: 86805e011b6364dbd0f18976e2f5ff89d79b31ad
+last_observed_head_sha: 0dbafefd411d7c27e66dab39be5e2176c551aa11
 expected_source_sha256: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
 constraints:
   - no direct main changes
@@ -25,8 +25,11 @@ completed_steps:
   - step: "Verify main chapter publication progress 3/21"
     evidence_type: file-readback
     reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/86805e011b6364dbd0f18976e2f5ff89d79b31ad/books/assembly-x86-64-zhukov-ru/notes/chapters/README.md"
+  - step: "Four individual chapter files README, cheatsheet, commands and diagram committed and Git-readback verified"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/tree/0dbafefd411d7c27e66dab39be5e2176c551aa11/books/assembly-x86-64-zhukov-ru/notes/chapters/chapter-04-sposoby-adresatsii"
 pending_steps:
-  - "Create six mandatory independent chapter 4 files and verify each Git read-back"
+  - "Create two mandatory SVG files individually and verify read-back"
   - "Create conditional exercises and grounded answers; source-findings if required"
   - "Update book chapter index and progress to 4/21 in branch"
   - "Git read-back, CI, PR; clean checkpoint before final merge"
