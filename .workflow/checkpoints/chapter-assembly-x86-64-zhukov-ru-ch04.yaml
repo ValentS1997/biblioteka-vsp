@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only chapter 4 analysis and individual Git publication with PR/CI"
 branch: chapter/assembly-x86-64-zhukov-ru-ch04
 initial_base_sha: 86805e011b6364dbd0f18976e2f5ff89d79b31ad
-last_observed_head_sha: cedf91198e6789f67db5e5eca563dafe828a0ea6
+last_observed_head_sha: af6a48f5d85f6fd619e14f354c7750e623e7ce9d
 expected_source_sha256: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
 constraints:
   - no direct main changes
@@ -14,7 +14,7 @@ constraints:
   - no source/RAG rewrite without explicit authorization
   - no reading-progress mutation without explicit user confirmation
   - no archive delivery for chapter artifacts
-stage: IN_PROGRESS
+stage: CI_PENDING
 completed_steps:
   - step: "Verify canonical contracts and RAG acceptance, chapter plan 21"
     evidence_type: file-readback
@@ -31,9 +31,13 @@ completed_steps:
   - step: "Both compact and detailed SVG created and individually verified, all six mandatory files present"
     evidence_type: file-readback
     reference: "https://github.com/vsp-corp/biblioteka-vsp/tree/cedf91198e6789f67db5e5eca563dafe828a0ea6/books/assembly-x86-64-zhukov-ru/notes/chapters/chapter-04-sposoby-adresatsii"
+  - step: "9 individual chapter files and index 4/21 committed and verified by GitHub read-back"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/tree/af6a48f5d85f6fd619e14f354c7750e623e7ce9d/books/assembly-x86-64-zhukov-ru/notes/chapters/chapter-04-sposoby-adresatsii"
+  - step: "Main moved, confirmed no changes to book 0017 or current canonical contracts"
+    evidence_type: git-compare
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/compare/86805e011b6364dbd0f18976e2f5ff89d79b31ad...3a4ac021450e3fcbd5c289aeaacd110d69e2f524"
 pending_steps:
-  - "Create conditional exercises and grounded answers; source-findings if required"
-  - "Update book chapter index and progress to 4/21 in branch"
   - "Git read-back, CI, PR; clean checkpoint before final merge"
   - "Verify final PR HEAD and CI; merge only after PASS; verify main and postmerge CI"
 last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/blob/86805e011b6364dbd0f18976e2f5ff89d79b31ad/books/assembly-x86-64-zhukov-ru/notes/chapters/plan.yaml"
