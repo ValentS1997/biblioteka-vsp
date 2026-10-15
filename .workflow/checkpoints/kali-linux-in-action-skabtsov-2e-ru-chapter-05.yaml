@@ -1,0 +1,38 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: kali-linux-in-action-skabtsov-2e-ru-chapter-05
+repository: vsp-corp/biblioteka-vsp
+book_id: kali-linux-in-action-skabtsov-2e-ru
+task_kind: chapter
+objective: "RAG-only chapter 05 reporting artifacts, stacked PR #553"
+branch: chapter/kali-linux-in-action-skabtsov-2e-ru-0012-ch05
+initial_base_sha: 3d679d4bc3f36a613f0a00feb1004d68c2acd1cc
+last_observed_head_sha: 6ce5261cb8cb38c45ab786ea96aa1865694fd8fd
+expected_source_sha256: fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite without explicit authorization
+  - no reading-progress mutation without explicit user confirmation
+  - no archive delivery for chapter artifacts
+stage: COMPLETE
+completed_steps:
+  - step: "Verified 17-chapter RAG TOC, source SHA and chapter 05 PDF pages 155-184."
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/kali-linux-in-action-skabtsov-2e-ru/notes/chapters/plan.yaml
+  - step: "Committed and read back all eight individual chapter 05 artifact and index files."
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/4814833a2092b01e248baa6b1f5c5af961d6e3a7
+  - step: "Push validation completed SUCCESS on chapter-05 artifact commit."
+    evidence_type: ci
+    reference: https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38755359250
+  - step: "Opened stacked PR #553 against chapter-04 branch after push CI PASS."
+    evidence_type: pr
+    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/553
+pending_steps:
+  - "Verify PR #553 CI SUCCESS for exact final HEAD, PR mergeability and changed paths."
+  - "Review and integrate ancestor PR #549 then #551; reconcile bases and remove temporary checkpoints before terminal merges."
+  - "Verify main chapter count after final merges, keep reading status unchanged."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38755708170
+first_safe_next_action: "Re-fetch current Git branch, PR #553 and final PR CI; integrate only after PRs #549 and #551."
+blocker: Not applicable
+last_observed_at: Not applicable
