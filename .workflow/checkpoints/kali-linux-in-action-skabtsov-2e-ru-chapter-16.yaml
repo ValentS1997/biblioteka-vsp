@@ -1,0 +1,32 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: kali-linux-in-action-skabtsov-2e-ru-chapter-16
+repository: vsp-corp/biblioteka-vsp
+book_id: kali-linux-in-action-skabtsov-2e-ru
+task_kind: chapter
+objective: "RAG-only chapter 16 anonymity and privacy risk analysis, individual files, stacked PR"
+branch: chapter/kali-linux-in-action-skabtsov-2e-ru-0012-ch16
+initial_base_sha: 3c45f7db5029745903e83e6e783a41b24c8d05e1
+last_observed_head_sha: 3c45f7db5029745903e83e6e783a41b24c8d05e1
+expected_source_sha256: fa3cfb6d7dc9af0354a5c908e606626629929ae54b646ca4eaaa11b7868eb1b9
+constraints:
+  - no direct main changes
+  - no force push
+  - no source/RAG mutation
+  - no reading status mutation
+  - no ZIP chapter handoff
+  - no active deanonymization, evasion or unauthorized access chains
+stage: PLANNED
+completed_steps:
+  - step: "Verified canonical accepted RAG chapter 16 PDF 361-374, next chapter 17 begins 375, total 17."
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/kali-linux-in-action-skabtsov-2e-ru/rag/chunks/p0301-p0400/p0361-c01.md
+  - step: "Verified predecessor chapter 15 PR #596 open with matching exact HEAD."
+    evidence_type: pr
+    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/596
+pending_steps:
+  - "Commit and read back six mandatory chapter files, conditional source findings and chapter index."
+  - "Verify push CI SUCCESS and open stacked PR only after PASS."
+  - "Verify PR CI SUCCESS on exact final head; defer merge until ancestors reconciled."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/3c45f7db5029745903e83e6e783a41b24c8d05e1
+first_safe_next_action: "Read branch head and chapter 16 directory absence before any write."
+blocker: "Main integration deferred pending stacked PR ancestor chain; #549 mergeability false at task start."
