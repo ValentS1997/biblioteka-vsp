@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1340" height="990" viewBox="0 0 1340 990" role="img" aria-label="Развёрнутая схема внешних прерываний: PIC, IRQ0, IRQ1, ISR, EOI и Bochs RTC">
+<rect width="1340" height="990" fill="#f8fafc"/><g font-family="DejaVu Sans,sans-serif">
+<text x="34" y="53" font-size="30" font-weight="bold" fill="#173249">Глава 11 · Внешние IRQ в реальном режиме</text>
+<text x="34" y="83" font-size="16" fill="#60778d">PDF 197–204 · пять листингов 11.1–11.5 · исходный контекст BIOS/FreeDOS/Bochs</text>
+<g stroke-width="2">
+<rect x="34" y="110" width="612" height="195" rx="14" fill="#e3efff" stroke="#6389c0"/>
+<rect x="692" y="110" width="613" height="195" rx="14" fill="#e8f6ef" stroke="#4b9d78"/>
+<rect x="34" y="332" width="612" height="195" rx="14" fill="#eaf1ff" stroke="#6389c0"/>
+<rect x="692" y="332" width="613" height="195" rx="14" fill="#e8f7f0" stroke="#4b9d78"/>
+<rect x="34" y="555" width="612" height="190" rx="14" fill="#eee9ff" stroke="#8977bf"/>
+<rect x="692" y="555" width="613" height="190" rx="14" fill="#f1ecff" stroke="#8977bf"/>
+</g>
+<g font-size="21" font-weight="bold" fill="#264b70">
+<text x="53" y="145">01 · От устройства к процессору</text>
+<text x="711" y="145">02 · Системный таймер IRQ0</text>
+<text x="53" y="366">03 · Контроллер PIC</text>
+<text x="711" y="366">04 · Клавиатура IRQ1</text>
+<text x="53" y="590">05 · Стек и сегменты ISR</text>
+<text x="711" y="590">06 · RTC и предел эмуляции</text>
+</g>
+<g font-size="17" fill="#2a475e">
+<text x="53" y="179">Событие устройства → заявка IRQ</text>
+<text x="53" y="211">PIC выбирает по маске и приоритету</text>
+<text x="53" y="242">INTR → CPU → таблица векторов</text>
+<text x="53" y="274">Внешний запрос асинхронен к коду</text>
+<text x="711" y="179">Частота счёта около 1,193 МГц</text>
+<text x="711" y="211">16 бит → период 65536 тактов</text>
+<text x="711" y="242">IRQ0 ≈ 18,2 Гц → вектор 8</text>
+<text x="711" y="274">BIOS затем вызывает вектор 01c</text>
+<text x="53" y="401">Маска IRQ: доступность входа</text>
+<text x="53" y="432">EOI: завершение текущего события</text>
+<text x="53" y="463">CLI/STI: флаг CPU при изменении IVT</text>
+<text x="53" y="494">Это три разных механизма</text>
+<text x="711" y="401">IRQ1 → аппаратный вектор 9</text>
+<text x="711" y="432">Код нажатия не равен ASCII</text>
+<text x="711" y="463">Enter: 01c / 09c; Esc: 01</text>
+<text x="711" y="494">Буфер 256 байтов; автоповтор</text>
+<text x="53" y="626">DS может принадлежать другому модулю</text>
+<text x="53" y="658">CS адресует собственные данные</text>
+<text x="53" y="690">Резидентная ISR использует чужой стек</text>
+<text x="711" y="626">RTC на IRQ8 ведомого PIC</text>
+<text x="711" y="658">Bochs моделирует время с ограничениями</text>
+<text x="711" y="690">Статус 0 не отменяет событий IRQ</text>
+</g>
+<rect x="34" y="779" width="1271" height="135" rx="14" fill="#fff0e7" stroke="#d08a5b" stroke-width="2"/>
+<text x="55" y="815" font-size="22" font-weight="bold" fill="#93502d">Ограничения и безопасный анализ</text>
+<text x="55" y="848" font-size="17" fill="#7a492b">Содержимое IVT и аппаратные регистры в другой VM необходимо измерить отдельно.</text>
+<text x="55" y="881" font-size="17" fill="#7a492b">Замена обработчика / маски может остановить таймер или ввод; команды не запускались.</text>
+<text x="34" y="954" font-size="14" fill="#677d90">Source: canonical RAG p0197:c01–p0204:c01, два шарда · схема создана аналитически</text>
+</g></svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="660" viewBox="0 0 1120 660" role="img" aria-label="Краткая визуальная шпаргалка по IRQ0, IRQ1, таймеру и клавиатуре">
+<rect width="1120" height="660" fill="#f8fafc"/><g font-family="DejaVu Sans,sans-serif">
+<text x="35" y="54" font-size="31" font-weight="bold" fill="#18364e">Глава 11 · Внешние прерывания</text>
+<text x="35" y="85" font-size="17" fill="#61778b">Устройство → IRQ → контроллер PIC → INTR → обработчик → возврат</text>
+<rect x="35" y="115" width="1049" height="86" rx="14" fill="#e4efff" stroke="#6284b9" stroke-width="2"/>
+<text x="56" y="149" font-size="23" font-weight="bold" fill="#28527a">IRQ0 · таймер 1193000 / 65536 ≈ 18,2 события в секунду</text>
+<text x="56" y="177" font-size="18" fill="#33566e">Аппаратный вектор 8 → BIOS → пользовательский вектор 01c</text>
+<rect x="35" y="230" width="505" height="183" rx="14" fill="#e7f6ef" stroke="#5aa383" stroke-width="2"/>
+<rect x="579" y="230" width="505" height="183" rx="14" fill="#efeaff" stroke="#8c7abd" stroke-width="2"/>
+<text x="54" y="265" font-size="21" font-weight="bold" fill="#24664e">PIC и завершение IRQ</text>
+<text x="598" y="265" font-size="21" font-weight="bold" fill="#5b4f8b">IRQ1 · клавиатура · вектор 9</text>
+<g font-size="17" fill="#28465c">
+<text x="54" y="302">Маска разрешает / запрещает запрос</text>
+<text x="54" y="335">EOI подтверждает конец обслуживания</text>
+<text x="54" y="368">CLI/STI защищают замену вектора</text>
+<text x="598" y="302">Скан-коды, а не ASCII</text>
+<text x="598" y="335">Подтверждение устройства и PIC</text>
+<text x="598" y="368">Enter: 1c / 9c; Esc: 01</text>
+</g>
+<rect x="35" y="443" width="1049" height="127" rx="14" fill="#fff1e8" stroke="#cd8a5c" stroke-width="2"/>
+<text x="55" y="478" font-size="22" font-weight="bold" fill="#95502e">Контекст и ограничения</text>
+<text x="55" y="507" font-size="17" fill="#7a4b30">ISR использует сегмент CS для своих данных и стек прерванной программы</text>
+<text x="55" y="537" font-size="17" fill="#7a4b30">RTC в Bochs: события есть, но статус читается как 0 по наблюдению автора</text>
+<text x="35" y="626" font-size="14" fill="#667c90">Canonical RAG PDF 197–204 · inventory 0017 · аналитическая схема, не рис. 11.1</text>
+</g></svg>
