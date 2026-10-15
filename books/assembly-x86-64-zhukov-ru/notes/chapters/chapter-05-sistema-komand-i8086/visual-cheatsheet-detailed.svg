@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="1050" viewBox="0 0 1320 1050" role="img" aria-label="Подробная визуальная схема системы команд i8086 и флагов">
+<rect width="1320" height="1050" fill="#f8fafc"/><g font-family="DejaVu Sans,sans-serif">
+<text x="34" y="56" font-size="30" font-weight="bold" fill="#15283d">Глава 5 · Команды i8086 — подробная карта</text>
+<text x="34" y="86" font-size="17" fill="#5f748a">Учебное исполнение в d86 · RAG PDF 69–84 · листинги 5.1–5.2</text>
+<g stroke-width="2"><rect x="34" y="119" width="598" height="176" rx="14" fill="#e5efff" stroke="#5582c2"/><rect x="684" y="119" width="600" height="176" rx="14" fill="#e4f8ed" stroke="#3a9473"/>
+<rect x="34" y="326" width="598" height="183" rx="14" fill="#eaf1ff" stroke="#5582c2"/><rect x="684" y="326" width="600" height="183" rx="14" fill="#e6f8f0" stroke="#3a9473"/>
+<rect x="34" y="540" width="598" height="188" rx="14" fill="#eee9ff" stroke="#8672c6"/><rect x="684" y="540" width="600" height="188" rx="14" fill="#f0ebff" stroke="#8672c6"/></g>
+<g font-size="22" font-weight="bold" fill="#245072"><text x="53" y="153">01 · Адрес и данные</text><text x="703" y="153">02 · Арифметика и стек</text>
+<text x="53" y="360">03 · Логика и сдвиги</text><text x="703" y="360">04 · Флаги и сравнения</text>
+<text x="53" y="574">05 · JMP / CALL / RET / LOOP</text><text x="703" y="574">06 · Строковые операции</text></g>
+<g font-size="17" fill="#284259"><text x="53" y="186">mov: значение; lea: эффективный адрес</text><text x="53" y="215">d86_buffer: байты инструкции и INT 3</text><text x="53" y="244">xlat: байт по таблице BX и индексу AL</text><text x="53" y="273">EXA1.8: b_1 / b_2 / b_3 / w_1</text>
+<text x="703" y="186">mul/imul и div/idiv: знаковость</text><text x="703" y="215">Байт: результат AX; слово: DX:AX</text><text x="703" y="244">push/pop: вершина SP, шаг два байта</text><text x="703" y="273">cbw/cwd: расширение знака</text>
+<text x="53" y="394">and — выключить; or — включить</text><text x="53" y="423">xor — переключить; not — инвертировать</text><text x="53" y="452">shl/shr/sar; rol/ror</text><text x="53" y="481">CL задаёт число сдвигов</text>
+<text x="703" y="394">CMP/TEST меняют флаги, не результат</text><text x="703" y="423">Z — ноль; C — перенос; O — переполнение</text><text x="703" y="452">JA/JB — без знака; JG/JL — со знаком</text><text x="703" y="481">INC/DEC сохраняют C</text>
+<text x="53" y="608">IP — адрес следующей исполняемой команды</text><text x="53" y="637">CALL хранит возврат в стеке; RET читает</text><text x="53" y="666">LOOP: CX уменьшается до проверки</text><text x="53" y="695">m1–m7: контрольные INT 3 в exa2.8</text>
+<text x="703" y="608">SI — источник; DI — приёмник</text><text x="703" y="637">D = 0: вперед; D = 1: назад</text><text x="703" y="666">REP MOVSB: копирование с CX</text><text x="703" y="695">REPNE SCASB: поиск с флагом Z</text></g>
+<rect x="34" y="760" width="1250" height="180" rx="14" fill="#fff0e6" stroke="#d58b55" stroke-width="2"/>
+<text x="54" y="797" font-size="23" font-weight="bold" fill="#88421e">Контроль рисков и расхождений источника</text>
+<text x="54" y="829" font-size="17" fill="#74452c">Прямой JMP в d86 может обойти буферный INT 3: применять только exa2.8.</text>
+<text x="54" y="861" font-size="17" fill="#74452c">В табл. 5.2 русские значения Greater/Less переставлены относительно примера.</text>
+<text x="54" y="893" font-size="17" fill="#74452c">Текст про DEC и Carry (с. 77) противоречит правилу на с. 81.</text>
+<text x="54" y="921" font-size="15" fill="#885b40">Разбор: source-findings.md; без правки оригинальных RAG-чанков.</text>
+<text x="34" y="1009" font-size="14" fill="#657789">Source: p0069:c01–p0084:c01 · Схема не заменяет реальный прогон a86/d86.</text></g></svg>
