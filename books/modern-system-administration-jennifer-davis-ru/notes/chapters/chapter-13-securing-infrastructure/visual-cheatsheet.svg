@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="830" viewBox="0 0 1180 830" role="img" aria-labelledby="t d">
+<title id="t">Глава 13 — Безопасность инфраструктуры</title>
+<desc id="d">Краткая концептуальная карта точек атак, IAM, секретов, вычислительной среды, zero trust и проверок IaC, на основе RAG PDF 157–171.</desc>
+<rect width="1180" height="830" fill="#102033"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="47" y="74" font-size="39" font-weight="bold" fill="#f3f8ff">Глава 13 · Безопасность инфраструктуры</text>
+<text x="47" y="112" font-size="22" fill="#bed6e7">Защищай каждый ресурс и каждый этап поставки</text>
+<rect x="47" y="148" width="1086" height="111" rx="15" fill="#164651" stroke="#78d9d1" stroke-width="2"/>
+<text x="76" y="191" font-size="27" font-weight="bold" fill="#f2ffff">1 · Оцени путь атаки</text>
+<text x="76" y="225" font-size="19" fill="#ddf7f3">Git → сборка → артефакты → рабочие ресурсы → данные</text>
+<rect x="47" y="290" width="521" height="156" rx="14" fill="#273a54"/>
+<text x="76" y="333" font-size="26" font-weight="bold" fill="#f3f9ff">2 · Идентификация и права</text>
+<text x="76" y="369" font-size="19" fill="#e0eafb">IAM · MFA · минимальные привилегии</text>
+<text x="76" y="403" font-size="18" fill="#c3d8f0">Аутентификация · авторизация · аудит</text>
+<rect x="608" y="290" width="525" height="156" rx="14" fill="#284854"/>
+<text x="637" y="333" font-size="26" font-weight="bold" fill="#f2ffff">3 · Управление секретами</text>
+<text x="637" y="369" font-size="19" fill="#daf4f4">Хранение · ротация · отзыв</text>
+<text x="637" y="403" font-size="18" fill="#b9dfe4">Без секретов в Git и логах</text>
+<rect x="47" y="479" width="521" height="155" rx="14" fill="#313f55"/>
+<text x="76" y="521" font-size="26" font-weight="bold" fill="#f2f8ff">4 · Вычислительная среда</text>
+<text x="76" y="560" font-size="19" fill="#deebf9">Безопасные настройки и исправления</text>
+<text x="76" y="595" font-size="18" fill="#c6d6ec">ОС · пакеты · контейнерные образы</text>
+<rect x="608" y="479" width="525" height="155" rx="14" fill="#2f4655"/>
+<text x="637" y="521" font-size="26" font-weight="bold" fill="#f2faff">5 · Zero trust</text>
+<text x="637" y="560" font-size="19" fill="#deebf9">Нет доверия по местоположению</text>
+<text x="637" y="595" font-size="18" fill="#c7d7e8">Только разрешённые сетевые связи</text>
+<rect x="47" y="663" width="1086" height="112" rx="14" fill="#2a594c" stroke="#7de0b9"/>
+<text x="76" y="704" font-size="26" font-weight="bold" fill="#f3fff8">6 · Автоматизируй проверку политик</text>
+<text x="76" y="741" font-size="19" fill="#e0fff0">IaC · Checkov · Gitleaks · аудит · небольшие этапы</text>
+<text x="47" y="807" font-size="15" fill="#b0cbdc">RAG PDF 157–171. Новая схема по тексту; рис. 13.1 не восстановлен по памяти.</text>
+</g></svg>
