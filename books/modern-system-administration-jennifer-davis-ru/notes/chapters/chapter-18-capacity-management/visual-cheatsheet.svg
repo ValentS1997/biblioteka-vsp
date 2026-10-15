@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="930" viewBox="0 0 1260 930" role="img" aria-labelledby="title desc">
+<title id="title">Глава 18 — Управление мощностями</title>
+<desc id="desc">Компактный обзор трех видов мощности, SLO-проверки, четырех составляющих управления и стратегий расширения по RAG PDF 213–225.</desc>
+<rect width="1260" height="930" fill="#102238"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="48" y="72" font-size="39" font-weight="bold" fill="#f3f9ff">Глава 18 · Управление мощностями</text>
+<text x="48" y="112" font-size="21" fill="#c9dcef">Спрос + SLO + стоимость + ограничения</text>
+<rect x="48" y="156" width="365" height="184" rx="16" fill="#2b4866"/>
+<text x="74" y="205" font-size="28" font-weight="bold" fill="#f3faff">Проектная</text>
+<text x="74" y="250" font-size="42" font-weight="bold" fill="#dcf0ff">1000</text>
+<text x="74" y="293" font-size="20" fill="#d9e9fb">Оценка архитектуры</text>
+<rect x="448" y="156" width="365" height="184" rx="16" fill="#245968"/>
+<text x="475" y="205" font-size="28" font-weight="bold" fill="#f3ffff">Производственная</text>
+<text x="475" y="250" font-size="42" font-weight="bold" fill="#e0fbff">800</text>
+<text x="475" y="293" font-size="20" fill="#d5eef5">Реальные ограничения</text>
+<rect x="848" y="156" width="365" height="184" rx="16" fill="#35584b"/>
+<text x="874" y="205" font-size="28" font-weight="bold" fill="#f4fff8">Эффективная</text>
+<text x="874" y="250" font-size="42" font-weight="bold" fill="#e5fff0">300</text>
+<text x="874" y="293" font-size="20" fill="#d5f1e2">Дополнительные условия</text>
+<text x="48" y="384" font-size="18" fill="#b6cde0">1000/800/300 — только пример одновременных входов из PDF 213–214</text>
+<rect x="48" y="416" width="1165" height="116" rx="15" fill="#315071"/>
+<text x="78" y="465" font-size="28" font-weight="bold" fill="#f4faff">1 · Измерь текущую нагрузку и достижение SLO</text>
+<text x="78" y="499" font-size="21" fill="#e0efff">SLO нарушен? Сначала докажи, что причина в capacity</text>
+<rect x="48" y="562" width="1165" height="120" rx="15" fill="#245965"/>
+<text x="78" y="608" font-size="27" font-weight="bold" fill="#f3ffff">2 · Обоснуй → закупи → управляй → наблюдай</text>
+<text x="78" y="644" font-size="20" fill="#d8f4f5">Весь жизненный цикл ресурсов, включая вывод из эксплуатации</text>
+<rect x="48" y="711" width="1165" height="126" rx="15" fill="#315747" stroke="#7cdeb0" stroke-width="2"/>
+<text x="78" y="758" font-size="27" font-weight="bold" fill="#f4fff8">3 · Lead / Lag / Match: выбери стратегию спроса</text>
+<text x="78" y="795" font-size="21" fill="#e1f7eb">Одно изменение → повторные измерения → документировать</text>
+<text x="48" y="896" font-size="17" fill="#adcadf">Canonical RAG PDF 213–225. Диаграмма по тексту; рисунки книги не реконструированы.</text>
+</g></svg>

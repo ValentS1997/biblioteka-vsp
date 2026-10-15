@@ -1,0 +1,40 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: "0011-modern-system-administration-chapter-18"
+repository: "vsp-corp/biblioteka-vsp"
+book_id: modern-system-administration-jennifer-davis-ru
+task_kind: chapter
+objective: "RAG-only chapter 18 Capacity Management, eight Git artifacts, CI-gated chapter publication"
+branch: "chapters/0011-modern-system-administration-chapter-18"
+initial_base_sha: "e6588332517d3c82c245d25ee8e367356175d20c"
+last_observed_head_sha: "e6588332517d3c82c245d25ee8e367356175d20c"
+expected_source_sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source PDF/RAG modifications
+  - no reading-progress mutation
+  - no ZIP/archive substitution
+  - no PR before exact branch HEAD CI PASS
+  - no merge before independent PR-triggered CI PASS
+stage: CI_PENDING
+completed_steps:
+  - step: "Verified canonical main 17/21 and chapter 17 checkpoint COMPLETE"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/.workflow/checkpoints/0011-modern-system-administration-chapter-17.yaml"
+  - step: "Verified chapter 18 canonical RAG PDF 213–225 and PDF 226 chapter 19 boundary"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/modern-system-administration-jennifer-davis-ru/rag/chunks/p0201-p0300/p0226-c01.md"
+  - step: "Created eight RAG-only chapter 18 Git artifacts and a branch-only index update"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/tree/chapters/0011-modern-system-administration-chapter-18/books/modern-system-administration-jennifer-davis-ru/notes/chapters/chapter-18-capacity-management"
+pending_steps:
+  - "Read back eight individual Git files and verify chapter index"
+  - "Confirm exact HEAD branch CI PASS"
+  - "Open chapter PR only after branch CI PASS"
+  - "Require independent PR-triggered CI PASS and merge with expected SHA"
+  - "After merge read back eight files from canonical main"
+  - "Finalize canonical main progress 18/21 and checkpoint COMPLETE through separate CI-gated PR"
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/commit/e6588332517d3c82c245d25ee8e367356175d20c"
+first_safe_next_action: "Verify branch diff, readbacks and branch CI conclusion"
+blocker: "Final branch CI PASS not yet verified"
+last_observed_at: "[Needs confirmation]"
