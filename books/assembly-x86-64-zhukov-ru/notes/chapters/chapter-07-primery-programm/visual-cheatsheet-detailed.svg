@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="1060" viewBox="0 0 1320 1060" role="img" aria-label="Подробная визуальная схема главы 7: вложенные циклы и стек, вызовы DOS, типы опережающих ссылок, упаковка кодов и упражнения">
+<rect width="1320" height="1060" fill="#f8fafc"/><g font-family="DejaVu Sans,sans-serif">
+<text x="35" y="54" font-size="30" font-weight="bold" fill="#15304c">Глава 7 · Отладка, потоки и двоичные преобразования</text>
+<text x="35" y="84" font-size="16" fill="#62788b">Канонический RAG PDF 93–110 · листинги 7.1–7.10</text>
+<g stroke-width="2">
+<rect x="35" y="112" width="600" height="193" rx="14" fill="#e5efff" stroke="#6383bc"/>
+<rect x="685" y="112" width="600" height="193" rx="14" fill="#e6f5ee" stroke="#4f9d7b"/>
+<rect x="35" y="334" width="600" height="193" rx="14" fill="#eaf2ff" stroke="#6383bc"/>
+<rect x="685" y="334" width="600" height="193" rx="14" fill="#e9f8f1" stroke="#4f9d7b"/>
+<rect x="35" y="557" width="600" height="190" rx="14" fill="#eee9ff" stroke="#8b77bf"/>
+<rect x="685" y="557" width="600" height="190" rx="14" fill="#f1edff" stroke="#8b77bf"/>
+</g>
+<g font-size="22" font-weight="bold" fill="#244e72">
+<text x="53" y="148">01 · Подсчёт битов: 7.1</text><text x="703" y="148">02 · Оптимизация: 7.2</text>
+<text x="53" y="370">03 · Ввод-вывод DOS: 7.3–7.5</text><text x="703" y="370">04 · Ссылки и длины: 7.6–7.8</text>
+<text x="53" y="593">05 · Упаковка тетрад: 7.9–7.10</text><text x="703" y="593">06 · 27 программных заданий</text>
+</g>
+<g font-size="17" fill="#29445d">
+<text x="53" y="184">SI/DI → BUF; CLD; CX=SIZE</text><text x="53" y="214">LODSB; AH=0; PUSH CX; CX=8</text><text x="53" y="244">SHR AL,1; ADC AH,0; LOOP L2</text><text x="53" y="274">POP CX; STOSB; LOOP L1</text>
+<text x="703" y="184">CLC перед первым ADC AH,0</text><text x="703" y="214">SHR AL,1; JNZ L2 до AL=0</text><text x="703" y="244">После выхода ADC AL,0</text><text x="703" y="274">Без вложенного счётного CX</text>
+<text x="53" y="407">STDIN: BX=0, CX=лимит, DX=BUF</text><text x="53" y="437">INT 021 / 03F: C=ошибка, AX=длина</text><text x="53" y="467">MAKE in situ; STDOUT BX=1 / 040</text><text x="53" y="497">04C: завершение с кодом 0 или 1</text>
+<text x="703" y="407">LEA не требует типа элемента BYTE/WORD</text><text x="703" y="437">MOV неизвестного приёмника неоднозначен</text><text x="703" y="467">EXTRN BUF:BYTE сообщает тип заранее</text><text x="703" y="497">JMP локальной метки может быть SHORT</text>
+<text x="53" y="629">Коды 6 и 8 → 01101000</text><text x="53" y="659">SHL AL,4; SHR DL; RCR AL × 4</text><text x="53" y="689">Альтернатива: AH/AL и SHR AX,4</text><text x="53" y="719">Сверка битов в форматах d86 =e1</text>
+<text x="703" y="629">15 заданий: массивы, ASCII, арифметика</text><text x="703" y="659">12 заданий: коды Грея, битовые пакеты</text><text x="703" y="689">RADIX-50, матрицы, спираль, сглаживание</text><text x="703" y="719">Рис. 7.1 не закодирован мультимодально</text>
+</g>
+<rect x="35" y="780" width="1250" height="186" rx="14" fill="#fff1e8" stroke="#d39160" stroke-width="2"/>
+<text x="55" y="818" font-size="24" font-weight="bold" fill="#9b4e27">Границы ответственности и проверки</text>
+<text x="55" y="850" font-size="17" fill="#7d492d">Файл после &gt; создаётся заново или обнуляется. Работать с копиями.</text>
+<text x="55" y="882" font-size="17" fill="#7d492d">Проверять C/AX после DOS 03F и 040; достаточность одного чтения не доказана.</text>
+<text x="55" y="913" font-size="17" fill="#7d492d">Для двух массивов и массива слов проверять кратность входной длины.</text>
+<text x="55" y="942" font-size="16" fill="#7d492d">Табл. 7.1: конфликт '.' в таблице и списке допустимых символов; см. source-findings.</text>
+<text x="35" y="1024" font-size="14" fill="#667b8c">Source: RAG p0093:c01–p0110:c01 · source SHA f65a7ec…d2c · без реального прогона</text>
+</g></svg>
