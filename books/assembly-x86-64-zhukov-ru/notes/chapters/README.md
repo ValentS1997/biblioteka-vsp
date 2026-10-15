@@ -5,8 +5,8 @@ Book ID: `assembly-x86-64-zhukov-ru`. Canonical RAG source SHA-256: `f65a7ec8814
 ## План и прогресс публикации
 
 - [RAG-verified план: 21 глава](plan.yaml). Основание: оглавление (RAG PDF p. 4–8), самостоятельные заголовки глав в RAG-чанках и предисловие PDF p. 11.
-- **В текущей chapter-ветке:** 14/21 (66,7%); осталось 7, следующая — №15 «Исключения и прерывания».
-- **В `main` на начало работы над главой 14:** 13/21. До merge главы 14 в `main` опубликованы первые тринадцать глав; сверять HEAD независимо.
+- **В текущей chapter-ветке:** 15/21 (71,4%); осталось 6, следующая — №16 «LDT и TSS».
+- **В `main` на начало работы над главой 15:** 14/21. До merge главы 15 в `main` опубликованы первые четырнадцать глав; сверять HEAD независимо.
 
 ## Опубликованные главы (отдельные Git-файлы)
 
@@ -37,6 +37,8 @@ Book ID: `assembly-x86-64-zhukov-ru`. Canonical RAG source SHA-256: `f65a7ec8814
 13. [Глава 13. Код в защищенном режиме](chapter-13-kod-v-zashchishchennom-rezhime/README.md) — [шпаргалка](chapter-13-kod-v-zashchishchennom-rezhime/cheatsheet.md), [команды](chapter-13-kod-v-zashchishchennom-rezhime/commands.md), [диаграмма](chapter-13-kod-v-zashchishchennom-rezhime/diagram.md), [краткая SVG](chapter-13-kod-v-zashchishchennom-rezhime/visual-cheatsheet.svg), [подробная SVG](chapter-13-kod-v-zashchishchennom-rezhime/visual-cheatsheet-detailed.svg), [вопросы](chapter-13-kod-v-zashchishchennom-rezhime/review-questions.md), [разборы](chapter-13-kod-v-zashchishchennom-rezhime/review-answers.md), [source findings](chapter-13-kod-v-zashchishchennom-rezhime/source-findings.md).
 
 14. [Глава 14. Данные и стек](chapter-14-dannye-i-stek/README.md) — [шпаргалка](chapter-14-dannye-i-stek/cheatsheet.md), [команды](chapter-14-dannye-i-stek/commands.md), [диаграмма](chapter-14-dannye-i-stek/diagram.md), [краткая SVG](chapter-14-dannye-i-stek/visual-cheatsheet.svg), [подробная SVG](chapter-14-dannye-i-stek/visual-cheatsheet-detailed.svg), [вопросы](chapter-14-dannye-i-stek/review-questions.md), [разборы](chapter-14-dannye-i-stek/review-answers.md), [source findings](chapter-14-dannye-i-stek/source-findings.md).
+
+15. [Глава 15. Исключения и прерывания](chapter-15-isklyucheniya-i-preryvaniya/README.md) — [шпаргалка](chapter-15-isklyucheniya-i-preryvaniya/cheatsheet.md), [команды](chapter-15-isklyucheniya-i-preryvaniya/commands.md), [диаграмма](chapter-15-isklyucheniya-i-preryvaniya/diagram.md), [краткая SVG](chapter-15-isklyucheniya-i-preryvaniya/visual-cheatsheet.svg), [подробная SVG](chapter-15-isklyucheniya-i-preryvaniya/visual-cheatsheet-detailed.svg), [вопросы](chapter-15-isklyucheniya-i-preryvaniya/review-questions.md), [разборы](chapter-15-isklyucheniya-i-preryvaniya/review-answers.md), [source findings](chapter-15-isklyucheniya-i-preryvaniya/source-findings.md).
 
 ## Политика
 
