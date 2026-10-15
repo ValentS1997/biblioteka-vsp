@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="630" viewBox="0 0 1500 630" role="img" aria-labelledby="title desc">
+<title id="title">Этап 3 — Редизайн бизнес-процесса</title>
+<desc id="desc">Компактная схема пяти шагов редизайна по RAG страницам 57–68: идеи, тестирование, оценка последствий, новый дизайн, согласование.</desc>
+<rect width="1500" height="630" rx="24" fill="#f3f6fc"/>
+<rect x="30" y="30" width="1440" height="118" rx="18" fill="#132f52"/>
+<g font-family="DejaVu Sans,Arial,sans-serif">
+<text x="57" y="80" font-size="34" font-weight="700" fill="#ffffff">Этап 3. Редизайн бизнес-процесса</text>
+<text x="57" y="118" font-size="20" fill="#d4e2f4">Пять этапов по RAG · Книга №0036 · PDF 55–68</text>
+<g fill="#ffffff" stroke="#c7d7eb" stroke-width="2">
+<rect x="28" y="195" width="274" height="222" rx="16"/>
+<rect x="322" y="195" width="274" height="222" rx="16"/>
+<rect x="616" y="195" width="274" height="222" rx="16"/>
+<rect x="910" y="195" width="274" height="222" rx="16"/>
+<rect x="1204" y="195" width="268" height="222" rx="16"/>
+</g>
+<g fill="#2565a8"><circle cx="70" cy="237" r="24"/><circle cx="364" cy="237" r="24"/><circle cx="658" cy="237" r="24"/><circle cx="952" cy="237" r="24"/><circle cx="1246" cy="237" r="24"/></g>
+<g fill="#ffffff" font-size="21" text-anchor="middle" font-weight="700"><text x="70" y="244">1</text><text x="364" y="244">2</text><text x="658" y="244">3</text><text x="952" y="244">4</text><text x="1246" y="244">5</text></g>
+<g fill="#163a63" font-size="20" font-weight="700">
+<text x="47" y="287">Предложить идеи</text>
+<text x="341" y="287">Протестировать</text>
+<text x="635" y="287">Оценить влияние</text>
+<text x="929" y="287">Описать дизайн</text>
+<text x="1223" y="287">Согласовать</text>
+</g>
+<g fill="#38526f" font-size="17">
+<text x="47" y="325">Клиентский эффект</text><text x="47" y="354">Время и стоимость</text><text x="47" y="383">Показатели качества</text>
+<text x="341" y="325">Ролевая игра</text><text x="341" y="354">Практика</text><text x="341" y="383">Симуляция</text>
+<text x="635" y="325">Структура и кадры</text><text x="635" y="354">Клиенты</text><text x="635" y="383">Инфраструктура</text>
+<text x="929" y="325">Функциональная</text><text x="929" y="354">схема будущего</text><text x="929" y="383">процесса</text>
+<text x="1223" y="325">Отзывы участников</text><text x="1223" y="354">Корректировки</text><text x="1223" y="383">Поддержка проекта</text>
+</g>
+<g stroke="#2565a8" stroke-width="3" fill="none"><path d="M305 308h13l-7 -6m7 6l-7 6"/><path d="M599 308h13l-7 -6m7 6l-7 6"/><path d="M893 308h13l-7 -6m7 6l-7 6"/><path d="M1187 308h13l-7 -6m7 6l-7 6"/></g>
+<rect x="30" y="451" width="1440" height="128" rx="17" fill="#deebfa"/>
+<text x="53" y="493" font-size="21" font-weight="700" fill="#193d66">Выход: согласованный проект будущего процесса — не внедрение</text>
+<text x="53" y="525" font-size="17" fill="#2d547e">Внимание: увеличение потока для поиска узких мест (p. 68) создаёт нагрузку; безопасные пределы не заданы.</text>
+<text x="53" y="553" font-size="15" fill="#416082">Provenance: business-process-improvement-hbsp-ru:p0057:c01–p0068:c01 · CLI-команд нет</text>
+</g>
+</svg>

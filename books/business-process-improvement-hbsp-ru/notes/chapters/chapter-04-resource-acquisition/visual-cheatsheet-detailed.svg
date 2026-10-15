@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1290" viewBox="0 0 1500 1290" role="img" aria-labelledby="title desc">
+<title id="title">Глава 4 — подробная карта привлечения ресурсов</title>
+<desc id="desc">Классификация шести ресурсов, примеры SalesCo, NewBrand и BigCo, отделы привлечения, практический кейс Линн и границы изменений по RAG.</desc>
+<rect width="1500" height="1290" fill="#f2f6fc"/>
+<rect x="30" y="22" width="1440" height="123" rx="19" fill="#173657"/>
+<g font-family="DejaVu Sans,Arial,sans-serif">
+<text x="58" y="70" font-size="34" font-weight="700" fill="#ffffff">Этап 4. Привлечение необходимых ресурсов</text>
+<text x="58" y="110" font-size="19" fill="#d3e3f5">Подробная RAG-памятка · PDF 69–78 · Книга №0036</text>
+<g fill="#ffffff" stroke="#c8d9e8" stroke-width="2">
+<rect x="30" y="171" width="700" height="341" rx="17"/>
+<rect x="770" y="171" width="700" height="341" rx="17"/>
+<rect x="30" y="543" width="700" height="335" rx="17"/>
+<rect x="770" y="543" width="700" height="335" rx="17"/>
+</g>
+<g fill="#205b92">
+<rect x="30" y="171" width="700" height="62" rx="17"/>
+<rect x="770" y="171" width="700" height="62" rx="17"/>
+<rect x="30" y="543" width="700" height="62" rx="17"/>
+<rect x="770" y="543" width="700" height="62" rx="17"/>
+</g>
+<g font-size="22" font-weight="700" fill="#ffffff">
+<text x="54" y="211">01 · Виды ресурсов · стр. 71–73</text>
+<text x="796" y="211">02 · Способы привлечения · 75–76</text>
+<text x="54" y="582">03 · Примеры из книги · 72–74</text>
+<text x="796" y="582">04 · Кейс Линн · 74–77</text>
+</g>
+<g fill="#27435d" font-size="19">
+<text x="54" y="270">• Люди, новые роли и подрядчики</text>
+<text x="54" y="309">• Новые технологии и оборудование</text>
+<text x="54" y="348">• Помещения для работы и техники</text>
+<text x="54" y="387">• Помощь IT и совместимость систем</text>
+<text x="54" y="426">• Обучение работе по-новому</text>
+<text x="54" y="465">• Новые полномочия и критерии оценки</text>
+<text x="796" y="270">• HR: найм и массовое обучение</text>
+<text x="796" y="309">• IT: программы, поддержка, интеграция</text>
+<text x="796" y="348">• Финансы и закупки: необходимые активы</text>
+<text x="796" y="387">• Простую задачу может объяснить коллега</text>
+<text x="796" y="426">• Масштаб координации зависит от потребности</text>
+<text x="796" y="465">• Итог этапа — ресурсы для запуска готовы</text>
+<text x="54" y="644">• SalesCo: новые сотрудники для территорий</text>
+<text x="54" y="687">• NewBrand: ПО, принтеры, место для них</text>
+<text x="54" y="730">• BigCo: новые модули, IT, обучение</text>
+<text x="54" y="773">• Джо: вероятная помощь HR и IT</text>
+<text x="54" y="821">• Кейсы показывают разные потребности</text>
+<text x="796" y="644">• Меньше времени остаётся для новых визитов</text>
+<text x="796" y="687">• Вопрос: как изменить процесс продаж?</text>
+<text x="796" y="730">• Эксперт: представить идеальный процесс</text>
+<text x="796" y="773">• Совместный мозговой штурм, не одиночное</text>
+<text x="796" y="802">  поспешное решение руководителя</text>
+</g>
+<rect x="30" y="911" width="1440" height="164" rx="17" fill="#dce9f8"/>
+<text x="54" y="953" font-size="23" font-weight="700" fill="#183e67">Решения с воздействием: найм, закупки, интеграция, обучение, полномочия</text>
+<text x="54" y="991" font-size="18" fill="#385c7a">Эффект: ресурсы доступны для будущего процесса. Бюджеты, права и сроки — [Needs confirmation].</text>
+<text x="54" y="1030" font-size="18" fill="#385c7a">Откат/проверки конкретных систем в тексте не установлены; CLI-команд нет.</text>
+<rect x="30" y="1106" width="1440" height="148" rx="17" fill="#e9eff8"/>
+<text x="54" y="1146" font-size="21" font-weight="700" fill="#21486e">Provenance / ограничения источника</text>
+<text x="54" y="1180" font-size="17" fill="#42617e">RAG: business-process-improvement-hbsp-ru:p0071:c01–p0077:c01</text>
+<text x="54" y="1214" font-size="17" fill="#42617e">Заголовки кейса на страницах 74 и 76 повреждены извлечением: см. source-findings.md.</text>
+</g>
+</svg>
