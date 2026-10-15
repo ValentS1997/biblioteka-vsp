@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="880" viewBox="0 0 1240 880" role="img" aria-labelledby="title desc">
+<title id="title">Глава 17 — Мониторинг вашей работы</title>
+<desc id="desc">Компактная карта канбан-потока, WIP и метрик, баланса ETTO и устойчивой работы команды. RAG PDF 203–211.</desc>
+<rect width="1240" height="880" fill="#112237"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="48" y="69" font-size="38" font-weight="bold" fill="#f1f8ff">Глава 17 · Сделать работу видимой</text>
+<text x="48" y="109" font-size="23" fill="#bed5e8">Не количество закрытых задач, а ценность и устойчивый поток</text>
+<rect x="48" y="154" width="1144" height="104" rx="15" fill="#244e63"/>
+<text x="78" y="200" font-size="28" font-weight="bold" fill="#f3ffff">1 · Начни с реального процесса и задач</text>
+<text x="78" y="235" font-size="21" fill="#d8f0f8">Классифицируй работу · обозначь размер, ценность и зависимости</text>
+<rect x="48" y="291" width="337" height="151" rx="14" fill="#344860"/>
+<text x="72" y="348" font-size="29" font-weight="bold" fill="#f3faff">Запланировано</text>
+<text x="72" y="393" font-size="21" fill="#dae7f7">Очередь задач</text>
+<rect x="452" y="291" width="337" height="151" rx="14" fill="#275760"/>
+<text x="477" y="348" font-size="29" font-weight="bold" fill="#f3ffff">В работе</text>
+<text x="477" y="393" font-size="21" fill="#ddf5f8">WIP — ограничивай</text>
+<rect x="856" y="291" width="336" height="151" rx="14" fill="#305847"/>
+<text x="880" y="348" font-size="29" font-weight="bold" fill="#f4fff6">Готово</text>
+<text x="880" y="393" font-size="21" fill="#e1f6e6">Результат работы</text>
+<text x="401" y="381" font-size="32" fill="#eff9ff">→</text>
+<text x="804" y="381" font-size="32" fill="#eff9ff">→</text>
+<rect x="48" y="480" width="1144" height="131" rx="14" fill="#354765"/>
+<text x="77" y="529" font-size="28" font-weight="bold" fill="#f4faff">2 · Наблюдай поток, а не занятость</text>
+<text x="77" y="569" font-size="22" fill="#dfeaf9">Время выполнения · WIP · throughput · блокировки</text>
+<rect x="48" y="646" width="1144" height="143" rx="14" fill="#2c5a50" stroke="#80e3b4" stroke-width="2"/>
+<text x="78" y="697" font-size="28" font-weight="bold" fill="#f5fff8">3 · Улучшай устойчивость</text>
+<text x="78" y="736" font-size="21" fill="#e0fff1">ETTO: тщательность ↔ эффективность · обучение и развитие</text>
+<text x="78" y="769" font-size="20" fill="#d5f5e5">Меняй правила постепенно и вместе с командой</text>
+<text x="48" y="850" font-size="16" fill="#a9c8dc">RAG PDF 203–211 · новая схема по тексту; оригинал рисунка 17.1 не воспроизведён.</text>
+</g></svg>
