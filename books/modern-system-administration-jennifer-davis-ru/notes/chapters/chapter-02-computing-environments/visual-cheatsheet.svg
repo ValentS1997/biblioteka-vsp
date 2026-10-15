@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="782" viewBox="0 0 1200 782" role="img" aria-labelledby="title desc">
+<title id="title">Глава 2 — компактная визуальная памятка</title>
+<desc id="desc">Классификация нагрузки, размещение, модели исполнения и компромиссы</desc>
+<rect width="1200" height="782" fill="#f8fafc"/>
+<text x="40" y="62" font-family="DejaVu Sans,Arial,sans-serif" font-size="36" font-weight="700" fill="#102a43">Глава 2 · Вычислительные среды</text>
+<text x="42" y="101" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="400" fill="#526879">Выбор среды начинается с требований приложения, а не с бренда</text>
+<rect x="40" y="125" width="1120" height="75" rx="14" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1.5"/>
+<text x="70" y="155" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="700" fill="#075985">Нагрузка</text>
+<text x="70" y="184" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="500" fill="#0369a1">CPU-bound   ·   memory-bound   ·   storage-bound</text>
+<rect x="40" y="224" width="535" height="190" rx="14" fill="#ffffff" stroke="#c9d9e7" stroke-width="1.5"/>
+<rect x="625" y="224" width="535" height="190" rx="14" fill="#ffffff" stroke="#c9d9e7" stroke-width="1.5"/>
+<text x="64" y="262" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="700" fill="#0f172a">1. Где размещать?</text>
+<text x="64" y="302" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#243b53">Локально: контроль над железом</text>
+<text x="64" y="333" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#243b53">+ требования регулятора / оборудования</text>
+<text x="64" y="364" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#243b53">− сложность закупки и эксплуатации</text>
+<text x="649" y="262" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="700" fill="#0f172a">2. Какая модель исполнения?</text>
+<text x="649" y="302" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#243b53">Облако: разная степень контроля</text>
+<text x="649" y="333" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#243b53">FaaS / служба приложений / контейнер / VM</text>
+<text x="649" y="364" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="400" fill="#243b53">Разные обязанности по обслуживанию</text>
+<rect x="40" y="442" width="1120" height="155" rx="14" fill="#f1f5f9" stroke="#c9d9e7" stroke-width="1.5"/>
+<text x="65" y="478" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" font-weight="700" fill="#0f172a">Сравните компромиссы</text>
+<text x="65" y="514" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="400" fill="#243b53">Изоляция: контейнер делит ядро хоста; VM имеет гостевое ядро</text>
+<text x="65" y="544" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="400" fill="#243b53">Время старта: контейнеры быстрее VM по сравнению главы</text>
+<text x="65" y="574" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="400" fill="#243b53">Учитывайте переносимость, масштабирование и привязку к платформе</text>
+<rect x="40" y="624" width="1120" height="82" rx="14" fill="#dcfce7" stroke="#86efac" stroke-width="1.5"/>
+<text x="65" y="658" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="700" fill="#166534">Результат: подходящая среда в пределах ограничений и бюджета</text>
+<text x="65" y="688" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="400" fill="#166534">Неизвестные пороги, CLI-команды и rollback: [Needs confirmation]</text>
+<text x="45" y="747" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="400" fill="#64748b">RAG-only · PDF 37–47 · p0037-c01…p0047-c01 · inventory 0011</text>
+</svg>

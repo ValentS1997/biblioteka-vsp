@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="650" viewBox="0 0 1160 650" role="img" aria-labelledby="ttl desc">
+<title id="ttl">Глава 1: адаптация программиста к руководству</title>
+<desc id="desc">Шесть тезисов главы по RAG PDF 26–45.</desc>
+<rect width="1160" height="650" fill="#f8fafc"/>
+<rect x="28" y="26" width="1104" height="108" rx="15" fill="#102a43"/>
+<text x="54" y="73" font-size="29" font-family="Arial,sans-serif" font-weight="700" fill="#fff">Глава 1 · Как привыкнуть к роли руководителя</text>
+<text x="54" y="108" font-size="19" font-family="Arial,sans-serif" fill="#d9e9f1">Главная мысль: технический опыт → адаптация к работе с людьми</text>
+<g font-family="Arial,sans-serif" font-size="20" fill="#16324f">
+<rect x="28" y="158" width="534" height="125" rx="12" fill="#e4eff8"/>
+<text x="50" y="197" font-weight="700">1. Новая роль</text><text x="50" y="226">Меньше личной реализации задач;</text><text x="50" y="252">больше делегирования и ответственности.</text>
+<rect x="598" y="158" width="534" height="125" rx="12" fill="#e4eff8"/>
+<text x="620" y="197" font-weight="700">2. Культура команды</text><text x="620" y="226">Узнавать мотивы и рабочие стили;</text><text x="620" y="252">не сводить людей к стереотипам.</text>
+<rect x="28" y="307" width="534" height="125" rx="12" fill="#e4eff8"/>
+<text x="50" y="346" font-weight="700">3. Общая цель</text><text x="50" y="375">Сочетать сильные стороны разных</text><text x="50" y="401">разработчиков.</text>
+<rect x="598" y="307" width="534" height="125" rx="12" fill="#e4eff8"/>
+<text x="620" y="346" font-weight="700">4. Признание и оплата</text><text x="620" y="375">Справедливость и бережливость;</text><text x="620" y="401">публичная похвала.</text>
+<rect x="28" y="456" width="534" height="125" rx="12" fill="#e4eff8"/>
+<text x="50" y="495" font-weight="700">5. Вначале выслушать</text><text x="50" y="524">Проверять спорные идеи через</text><text x="50" y="550">объяснение и прототип.</text>
+<rect x="598" y="456" width="534" height="125" rx="12" fill="#e4eff8"/>
+<text x="620" y="495" font-weight="700">6. Самосовершенствование</text><text x="620" y="524">Лидерство важнее внешнего</text><text x="620" y="550">имиджа «крутого» специалиста.</text>
+</g><text x="32" y="624" font-size="15" font-family="Arial,sans-serif" fill="#52697d">RAG-only · PDF p. 26–45 · `herding-cats-j-hank-rainwater-ru`</text>
+</svg>

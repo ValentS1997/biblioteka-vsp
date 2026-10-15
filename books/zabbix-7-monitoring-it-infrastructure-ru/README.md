@@ -26,6 +26,12 @@ Book ID: `zabbix-7-monitoring-it-infrastructure-ru` · Inventory: `0020`.
 - Workflow: https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38373632055
 - Limitations documented in `rag/manifest.yaml` (no independent multimodal extraction; lexical, not semantic index).
 
+## Главы и публикация
+- [RAG-подтверждённый план 13 глав](notes/chapters/plan.yaml) (стартовые страницы и chunk IDs).
+- [Индекс и прогресс публикации](notes/chapters/README.md): учитываются только отдельные Git-файлы, прошедшие проверку.
+- Текущие canonical contracts: `process-compliance-router-v1.2`, `session-recovery-v1.0`, `chapter-publication-v1.0`, `chapter-analysis-request-v1.4`, `chapter-artifact-collection-v1.8`.
+- Анализ главы запускается только командой `Анализ главы N`; чтение и публикация независимы.
+
 ## Reading
 No reading status has been changed or inferred. Reading state remains `[Needs confirmation]`.
 

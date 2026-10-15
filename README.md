@@ -95,7 +95,7 @@ RAG readiness и reading progress — разные состояния. Нали�
 Канонические шаблоны и контракты:
 
 - [Templates index](templates/README.md)
-- [Process compliance router v1.0](templates/process-compliance-router-v1.1.yaml)
+- [Process compliance router v1.2](templates/process-compliance-router-v1.2.yaml)
 - [Git execution policy v1.0](templates/git-execution-policy-v1.0.yaml)
 - [New book branch bootstrap v1.3](templates/book-branch-bootstrap-v1.4.yaml)
 - [Book onboarding v1.3](templates/book-onboarding-v1.3.yaml)
@@ -104,6 +104,7 @@ RAG readiness и reading progress — разные состояния. Нали�
 - [Chapter analysis request v1.3](templates/chapter-analysis-request-v1.4.yaml)
 - [Chapter artifacts v1.8](templates/chapter-artifact-collection-v1.8.yaml)
 - [Chapter publication: direct Git + progress v1.0](templates/chapter-publication-v1.0.yaml)
+- [Chat recovery: durable Git checkpoint v1.0](templates/session-recovery-v1.0.yaml)
 - [Book lifecycle matrix](docs/BOOK-LIFECYCLE.md)
 
 Readiness вычисляется, а не хранится как новый canonical status:
@@ -279,3 +280,22 @@ ZIP и другие архивы либо ссылка на скачивание
 сообщить точные сохранённые Git-пути, недостающие файлы и причину остановки,
 не объявляя главу завершённой. Прогресс создания конспектов не изменяет
 `reading/progress.yaml`.
+
+## Восстановление после обрыва обсуждения
+
+Если ChatGPT сообщает о предельной длине обсуждения, прерывается или после
+обновления страницы исчезает промежуточный вывод, используйте команду
+**«Ковальски, проверка после обрыва связи»** — в этом или новом чате проекта.
+
+По `templates/session-recovery-v1.0.yaml` агент сначала восстанавливает
+состояние **по GitHub**: последняя ветка/коммит, технический checkpoint
+`.workflow/checkpoints/<task-key>.yaml`, опубликованные файлы, открытый
+или уже объединённый PR, CI. После проверки продолжает с первой
+незавершённой операции. Действия с неизвестным исходом повторно не запускаются
+до фактического Git read-back. Для многошаговых задач checkpoint обновляется
+на рабочей ветке после подтверждённых этапов. Если GitHub доказательств нет,
+возвращается `RECOVERY_BLOCKED`, без выдуманных результатов.
+
+Это не отменяет ограничение длины чата и не позволяет восстанавливать
+утраченные рассуждения. Git-коммиты, файлы и PR остаются проверяемым
+состоянием. Статусы чтения и сами книги не изменяются из-за обрыва.

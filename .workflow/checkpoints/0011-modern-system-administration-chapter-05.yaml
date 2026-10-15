@@ -1,0 +1,47 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: "0011-modern-system-administration-chapter-05"
+repository: "vsp-corp/biblioteka-vsp"
+book_id: modern-system-administration-jennifer-davis-ru
+task_kind: chapter
+objective: "RAG-only analysis and individual Git publication of chapter 5, Nabor instrumentov sisadmina"
+branch: "chapters/0011-modern-system-administration-chapter-05"
+initial_base_sha: "75dd7771186a3a8e498de38889cf0bd4380b6b94"
+last_observed_head_sha: "440a72ee80da29be3f887d39db2f20bbb90f1eab"
+expected_source_sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
+constraints:
+  - "no direct main changes"
+  - "no force-push"
+  - "no source/RAG rewrite without explicit authorization"
+  - "no reading-progress mutation without explicit user confirmation"
+  - "no archive delivery for chapter artifacts"
+stage: COMPLETE
+completed_steps:
+  - step: "Recovery audit: canonical main chapter plan confirms 21 chapters, main has 4 published"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/75dd7771186a3a8e498de38889cf0bd4380b6b94/books/modern-system-administration-jennifer-davis-ru/notes/chapters/plan.yaml"
+  - step: "Verify chapter 5 RAG boundary PDF 73-82, chapter 6 starts PDF 83"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/75dd7771186a3a8e498de38889cf0bd4380b6b94/books/modern-system-administration-jennifer-davis-ru/rag/chunks/p0001-p0100/p0083-c01.md"
+  - step: "Four text artifacts committed as individual paths and independently read back"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/0dabae4239ba5189bfde8144e3ba9c409a573fa5"
+  - step: "All eight chapter artifact files committed individually and read back by exact branch"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/c6b961f67b60f988d92d6ab35f87c4aacd6df668"
+  - step: "Book chapter index updated, reports 5/21 in branch and links chapter 5"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/e6636aa1d7e3635d461de4257ef5f067cff801ff/books/modern-system-administration-jennifer-davis-ru/notes/chapters/README.md"
+  - step: "PR #512 chapter validation CI PASS"
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38706997942"
+  - step: "PR #512 merged into main; eight individual files independently verified in main"
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/512"
+  - step: "Post-merge chapter publication index corrected to 5/21 in canonical main; committed on follow-up PR branch"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/c3d086d7a48d5ff06ab1f38e8517f1c0bbfa631d"
+pending_steps: []
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/commit/a153eed050e88f65c9462052ba7378cd90fcc317"
+first_safe_next_action: "No pending chapter-05 artifacts; next session verify latest main HEAD and chapter index"
+blocker: "Not applicable"
+last_observed_at: "Not applicable"

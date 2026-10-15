@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1450" height="1060" viewBox="0 0 1450 1060" role="img" aria-labelledby="title desc">
+<title id="title">Глава 5 — подробная карта цифрового инструментария системного администратора</title>
+<desc id="desc">Содержание главы по PDF 73–82: изолированная среда, редактор, языки, библиотеки, утилиты, проверка изменений, риски и ограничения источника.</desc>
+<rect width="1450" height="1060" fill="#0b1524"/>
+<text x="52" y="66" font-family="Arial,DejaVu Sans,sans-serif" font-size="38" font-weight="bold" fill="#f4f9ff">Глава 5: цифровой инструментарий сисадмина</text>
+<text x="52" y="100" font-family="Arial,DejaVu Sans,sans-serif" font-size="20" fill="#b8d0e7">Модель главы: среда → инструменты → эксперимент → общий подход</text>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<rect x="52" y="135" width="1346" height="106" rx="14" fill="#194153" stroke="#76dce6" stroke-width="2"/>
+<text x="76" y="172" font-size="26" font-weight="bold" fill="#f5ffff">1 · Изолируй эксперименты (PDF 73–74)</text>
+<text x="76" y="207" font-size="18" fill="#d8f4f7">Ноутбук, рабочая станция или удалённая изолированная среда; цель — минимизировать риск для production.</text>
+<rect x="52" y="267" width="649" height="177" rx="14" fill="#1c3150"/>
+<text x="75" y="310" font-size="25" font-weight="bold" fill="#f0f7ff">2 · Выбирай редактор (PDF 75–76)</text>
+<text x="75" y="346" font-size="19" fill="#d4e4f4">• ShellCheck / статический анализ</text>
+<text x="75" y="374" font-size="19" fill="#d4e4f4">• Автозавершение и стиль команды</text>
+<text x="75" y="402" font-size="19" fill="#d4e4f4">• Интеграция Git, сотрудничество</text>
+<rect x="749" y="267" width="649" height="177" rx="14" fill="#1e3950"/>
+<text x="772" y="310" font-size="25" font-weight="bold" fill="#f0f7ff">3 · Учитывай языки (PDF 76–79)</text>
+<text x="772" y="346" font-size="19" fill="#d4e4f4">• Bash/PowerShell или Python, C#, Ruby, Go</text>
+<text x="772" y="374" font-size="19" fill="#d4e4f4">• Навыки команды, поддержку и миграции</text>
+<text x="772" y="402" font-size="19" fill="#d4e4f4">• Системную версию языка не заменять</text>
+<rect x="52" y="470" width="649" height="186" rx="14" fill="#283650"/>
+<text x="75" y="514" font-size="25" font-weight="bold" fill="#f0f7ff">4 · Контролируй версии (PDF 79)</text>
+<text x="75" y="552" font-size="18" fill="#d4e4f4">• AWS SDK, PagerDuty API, ChatOps</text>
+<text x="75" y="584" font-size="18" fill="#d4e4f4">• Документируй версии зависимостей</text>
+<text x="75" y="616" font-size="18" fill="#d4e4f4">• Учитывай изменения поведения библиотек</text>
+<rect x="749" y="470" width="649" height="186" rx="14" fill="#2b384b"/>
+<text x="772" y="514" font-size="25" font-weight="bold" fill="#f0f7ff">5 · Дополняй утилитами (PDF 79–81)</text>
+<text x="772" y="552" font-size="18" fill="#d4e4f4">• Ag, tree, jq — поиск и обзор данных</text>
+<text x="772" y="584" font-size="18" fill="#d4e4f4">• curl, HTTPie, gh, Docker, tmux</text>
+<text x="772" y="616" font-size="18" fill="#d4e4f4">• Dotfiles: изучить до применения</text>
+<rect x="52" y="681" width="1346" height="124" rx="14" fill="#26534a" stroke="#6be1a8" stroke-width="2"/>
+<text x="76" y="720" font-size="25" font-weight="bold" fill="#f6fffa">6 · Эксперимент → проверка → командное использование (PDF 74, 82)</text>
+<text x="76" y="755" font-size="19" fill="#e0fff3">Проверь изменения в изолированной среде; учитывай различия с production, особенно аппаратные.</text>
+<text x="76" y="784" font-size="19" fill="#e0fff3">Обсуждай стандарты, делись рабочими инструментами, снижая когнитивную нагрузку.</text>
+<rect x="52" y="832" width="1346" height="156" rx="14" fill="#45332f" stroke="#e5ad79"/>
+<text x="76" y="874" font-size="25" font-weight="bold" fill="#fff0da">Ограничения и риск интерпретации</text>
+<text x="76" y="909" font-size="18" fill="#ffe0be">• Виртуальная копия не гарантирует проверки физических неисправностей (пример LTO, PDF 74).</text>
+<text x="76" y="940" font-size="18" fill="#ffe0be">• Bash-пример на PDF 75–76 повреждён при извлечении: не запускать из RAG без проверки.</text>
+<text x="76" y="969" font-size="18" fill="#ffe0be">• Процедуры запуска, критерии приёмки и rollback конкретной среды: [Needs confirmation].</text>
+</g>
+<text x="52" y="1031" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" fill="#b4cadf">Источник: canonical RAG PDF 73–82; SHA-256 06862ea10e57…d790. Только знания этой главы.</text>
+</svg>

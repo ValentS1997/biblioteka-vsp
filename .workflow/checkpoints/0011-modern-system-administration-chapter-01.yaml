@@ -1,0 +1,45 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: 0011-modern-system-administration-chapter-01
+repository: vsp-corp/biblioteka-vsp
+book_id: modern-system-administration-jennifer-davis-ru
+task_kind: chapter
+objective: "RAG-only chapter 1 analysis and direct Git publication of individual chapter artifacts under v1.8"
+branch: chapters/0011-modern-system-administration
+initial_base_sha: a3d17475268be38aa6bddba2d2029e3b4ba3205b
+last_observed_head_sha: 6ec75ac9a57f0c92c3669b40c5c6969baa133b63
+expected_source_sha256: 06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790
+constraints:
+  - "no direct main changes"
+  - "no force-push"
+  - "no source/RAG rewrite without explicit authorization"
+  - "no reading-progress mutation without explicit user confirmation"
+  - "no archive delivery for chapter artifacts"
+stage: COMPLETE
+completed_steps:
+  - step: "Recovered active branch and existing chapter plan; no chapter-01 files existed"
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/tree/chapters/0011-modern-system-administration/books/modern-system-administration-jennifer-davis-ru/notes/chapters
+  - step: "Verified RAG chapter 1 boundary PDF pages 28-36, next chapter begins PDF page 37"
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/modern-system-administration-jennifer-davis-ru/rag/chunks/p0001-p0100/p0036-c01.md
+  - step: "Confirmed current RAG ACCEPTED and chapter plan 21 chapters"
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/modern-system-administration-jennifer-davis-ru/rag/acceptance.yaml
+  - step: "Committed and individually read back README, cheatsheet, commands and diagram for chapter 1"
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/9cd10926132e4a515e78f4f7df992abc04c8eded
+  - step: "Published both SVG visual summaries, chapter-end summary, source-findings and updated book index; all individually read back"
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/80ef1629aba39842ff1e9460c51bbd1758b32175
+  - step: "Git directory read-back verified all six mandatory and two conditional files; publication index is 1/21"
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/tree/6ec75ac9a57f0c92c3669b40c5c6969baa133b63/books/modern-system-administration-jennifer-davis-ru/notes/chapters/chapter-01-patterns-and-interconnections
+  - step: "Fixed SVG explicit width/height and verified chapter-note CI success on push and PR"
+    evidence_type: ci
+    reference: https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38689115029
+pending_steps:
+  - "PR #489 review/merge remains separate and requires repository governance; main publication remains 0/21 until merge."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/pull/489
+first_safe_next_action: "Read final chapter-01 checkpoint HEAD and PR #489 CI; do not repeat completed writes."
+blocker: "Not applicable; source publication in working branch complete; PR #489 remains open."
+last_observed_at: "Not applicable"

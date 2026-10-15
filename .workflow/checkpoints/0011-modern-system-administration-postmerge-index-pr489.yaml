@@ -1,0 +1,30 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: 0011-modern-system-administration-postmerge-index-pr489
+repository: vsp-corp/biblioteka-vsp
+book_id: modern-system-administration-jennifer-davis-ru
+task_kind: chapter
+objective: "Correct stale pre-merge language in chapter index after verified PR #489 merge; preserve publication count 2/21"
+branch: docs/0011-postmerge-publication-index-20261015
+initial_base_sha: 781200b791f0ce111a6659b330d537adb49289be
+last_observed_head_sha: 0d57f2ecee0eceb21b5953968d9df4c9a25e601d
+expected_source_sha256: 06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790
+constraints:
+  - "no direct main changes"
+  - "no force-push"
+  - "no source/RAG rewrite without explicit authorization"
+  - "no reading-progress mutation without explicit user confirmation"
+  - "no archive delivery for chapter artifacts"
+stage: CI_PENDING
+completed_steps:
+  - step: "PR #489 merged into main; chapter 1 and chapter 2 individual files verified; post-merge CI PASS"
+    evidence_type: ci
+    reference: https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38692640085
+  - step: "Corrected stale pre-merge index wording; verified new blob and branch HEAD"
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/0d57f2ecee0eceb21b5953968d9df4c9a25e601d
+pending_steps:
+  - "Create and validate corrective PR, merge after CI PASS, verify main."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/0d57f2ecee0eceb21b5953968d9df4c9a25e601d
+first_safe_next_action: "Check existing PR for correction branch; otherwise create PR, validate CI and merge only on PASS."
+blocker: "Not applicable"
+last_observed_at: "Not applicable"

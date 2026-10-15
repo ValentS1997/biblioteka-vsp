@@ -1,0 +1,44 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: "0011-modern-system-administration-chapter-06"
+repository: "vsp-corp/biblioteka-vsp"
+book_id: modern-system-administration-jennifer-davis-ru
+task_kind: chapter
+objective: "RAG-only analysis and publication of chapter 6"
+branch: "chapters/0011-modern-system-administration-chapter-06"
+initial_base_sha: "88ca62987dda8ea5ea5e6433c484a9f259762658"
+last_observed_head_sha: "448e6009463f94bfa7e3844e2a7c60995b612907"
+expected_source_sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite
+  - preserve reading-progress
+  - no ZIP/archive delivery
+stage: COMPLETE
+completed_steps:
+  - step: "Read canonical 21-chapter plan, prior Git progress 5 of 21 and source-bound RAG PDF 83-88"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/88ca62987dda8ea5ea5e6433c484a9f259762658/books/modern-system-administration-jennifer-davis-ru/notes/chapters/plan.yaml"
+  - step: "Four independent text chapter files committed and Git read-back verified"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/4751d15e3a0138c198f05ec5c6b64a1f65d4b760"
+  - step: "All eight chapter 6 Git artifact files committed and independently verified"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/9a110f905b4a4e6b3209bd495511e141c6034366"
+  - step: "Chapter index published as an individual Git file; branch progress 6 of 21"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/a343f841f8a00d82e1fb3fe3d4d1e3e8b1977c21"
+  - step: "Chapter 6 PR CI PASS"
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38710519610"
+  - step: "PR #515 merged to main; all eight individual chapter files verified in main"
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/515"
+  - step: "Post-merge index updated to main progress 6/21 on isolated follow-up branch"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/86f12642faa44b783be7957eb522564b7994ee96"
+pending_steps: []
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/commit/536e9b68b7a1ded03463a6afb8fc564aef787166"
+first_safe_next_action: "On next session verify main HEAD, chapter index and merged PR for chapter 6"
+blocker: "Not applicable"
+last_observed_at: "Not applicable"

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-label="Глава 4 Zabbix 7: триггеры, восстановление и маршрутизация уведомлений">
+<rect width="1440" height="900" fill="#f3f7fc"/>
+<text x="48" y="67" font-family="DejaVu Sans, sans-serif" font-size="38" font-weight="700" fill="#142740">ZABBIX 7   /   ГЛАВА 4</text>
+<text x="48" y="105" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" fill="#516480">От метрики к событию, адресному сообщению и контролируемому OK</text>
+<rect x="42" y="144" width="1356" height="318" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="75" y="188" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700" fill="#155e75">01  МОДЕЛЬ ПРИНЯТИЯ РЕШЕНИЯ</text>
+<rect x="74" y="215" width="388" height="158" rx="16" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1.5"/>
+<text x="98" y="255" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#075985">Item → expression</text>
+<text x="98" y="289" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#192d48">Function / host / key</text>
+<text x="98" y="318" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#192d48">Operator / constant / AND-OR</text>
+<text x="98" y="347" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#192d48">Severity и update interval</text>
+<rect x="522" y="215" width="388" height="158" rx="16" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.5"/>
+<text x="548" y="255" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#3730a3">PROBLEM / OK</text>
+<text x="548" y="289" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#192d48">Problem TRUE → событие</text>
+<text x="548" y="318" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#192d48">Recovery при Problem FALSE</text>
+<text x="548" y="347" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#192d48">и Recovery TRUE</text>
+<rect x="970" y="215" width="394" height="158" rx="16" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+<text x="996" y="255" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700" fill="#166534">Проверка выражения</text>
+<text x="996" y="289" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#192d48">Expression constructor / Test</text>
+<text x="996" y="318" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#192d48">trendavg, timeleft, time shift</text>
+<text x="996" y="347" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#192d48">Сверить источник данных</text>
+<text x="77" y="417" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#a16207">SSH-пример: 1=UP / 0=DOWN против PROBLEM при 1 — внутреннее противоречие RAG</text>
+<rect x="42" y="490" width="654" height="306" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="74" y="532" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">02  МАРШРУТ УВЕДОМЛЕНИЯ</text>
+<text x="75" y="574" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#192d48">Trigger → Trigger action (Enabled)</text>
+<text x="75" y="608" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#192d48">Operations: первоначальный PROBLEM</text>
+<text x="75" y="642" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#192d48">Recovery operations: возврат в OK</text>
+<text x="75" y="676" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#192d48">Update operations: изменение события</text>
+<text x="75" y="710" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#192d48">Media type: Email / SMTP</text>
+<text x="75" y="744" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#192d48">User Media: адрес и способ доставки</text>
+<rect x="718" y="490" width="680" height="306" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="750" y="532" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">03  КАЧЕСТВО И РИСКИ</text>
+<text x="750" y="574" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#192d48">Имя: короткое и информативное</text>
+<text x="750" y="608" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#192d48">Теги: component и scope</text>
+<text x="750" y="642" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#192d48">Message templates: убрать лишнее</text>
+<text x="750" y="676" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#192d48">Уровни: Not classified → Disaster</text>
+<text x="750" y="710" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#192d48">iptables DROP/SSH — риск потери доступа</text>
+<text x="750" y="744" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#192d48">SMTP и поля из рисунков: RAG_MISS</text>
+<text x="43" y="841" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#516480">RAG-only · PDF 161–196 · SHA-256 07204d88…e63875a27 · source-findings.md: 0/1 SSH и time-shift</text>
+</svg>

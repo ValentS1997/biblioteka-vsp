@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1250" viewBox="0 0 1600 1250" role="img" aria-label="Подробная схема главы 1 Zabbix 7 по RAG: установка, проверка, HA, виджеты и навигация">
+<rect width="1600" height="1250" fill="#f3f7fc"/>
+<rect width="1600" height="126" fill="#172a47"/>
+<text x="52" y="60" font-family="DejaVu Sans, sans-serif" font-size="37" font-weight="700" fill="#ffffff">ZABBIX 7 / ГЛАВА 01</text>
+<text x="52" y="96" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#cbd5e1">Подробная карта: развертывание, диагностика, HA и работа с интерфейсом</text>
+<rect x="42" y="152" width="495" height="313" rx="18" fill="#fff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="68" y="192" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">01   РАЗВЕРТЫВАНИЕ</text>
+<line x1="68" y1="207" x2="509" y2="207" stroke="#cbd5e1" stroke-width="2"/>
+<text x="68" y="243" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">Linux: Rocky 9 / Ubuntu 22.04</text>
+<text x="68" y="274" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">↓ MariaDB, безопасность и root-пароль</text>
+<text x="68" y="305" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">↓ zabbix DB, SQL-импорт, DB-пользователь</text>
+<text x="68" y="336" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">↓ восстановить log_bin_trust_... = 0</text>
+<text x="68" y="367" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">↓ /etc/zabbix/zabbix_server.conf</text>
+<text x="68" y="398" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">↓ systemctl enable/start zabbix-server</text>
+<text x="68" y="429" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">↓ systemctl status + server.log</text>
+<text x="68" y="435" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#64748b">RAG: p0020–p0024</text>
+<rect x="554" y="152" width="495" height="313" rx="18" fill="#fff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="580" y="192" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">02   FRONTEND</text>
+<line x1="580" y1="207" x2="1021" y2="207" stroke="#cbd5e1" stroke-width="2"/>
+<text x="580" y="243" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">NGINX + PHP  (RHEL / Ubuntu)</text>
+<text x="580" y="274" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">listen 80;   server_name &lt;HOST&gt;</text>
+<text x="580" y="305" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">Проверить доступность 80/443</text>
+<text x="580" y="336" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">Мастер: prerequisites → все OK</text>
+<text x="580" y="367" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">Database host / name / user / password</text>
+<text x="580" y="398" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">Имя сервера + time zone → Finish</text>
+<text x="580" y="429" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">Вход → панель Global view</text>
+<text x="580" y="435" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#64748b">RAG: p0025–p0030</text>
+<rect x="1066" y="152" width="492" height="313" rx="18" fill="#fff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="1092" y="192" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">03   ДИАГНОСТИКА</text>
+<line x1="1092" y1="207" x2="1530" y2="207" stroke="#cbd5e1" stroke-width="2"/>
+<text x="1092" y="243" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">Server не active?</text>
+<text x="1092" y="274" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">→ systemctl status, server.log</text>
+<text x="1092" y="305" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">Не открывается web frontend?</text>
+<text x="1092" y="336" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">→ NGINX-конфиг, порт, адрес</text>
+<text x="1092" y="367" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">Wizard / DB validation не OK?</text>
+<text x="1092" y="398" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">→ доступность и учётная запись БД</text>
+<text x="1092" y="429" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">Не исправлять дефекты команд вслепую</text>
+<text x="1092" y="435" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#64748b">RAG: p0024–p0028, findings</text>
+<rect x="42" y="485" width="1007" height="339" rx="18" fill="#fff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="68" y="527" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">04   ОТКАЗОУСТОЙЧИВОСТЬ: СЕРВЕР И WEB — РАЗНЫЕ УРОВНИ</text>
+<line x1="68" y1="542" x2="1021" y2="542" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="70" y="567" width="287" height="104" rx="18" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+<text x="87" y="601" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#1d4ed8">Zabbix server HA1</text>
+<text x="87" y="631" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#24364c">HANodeName + NodeAddress</text>
+<rect x="396" y="567" width="287" height="104" rx="18" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+<text x="413" y="601" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#1d4ed8">Zabbix server HA2</text>
+<text x="413" y="631" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">Active / passive</text>
+<rect x="723" y="567" width="296" height="104" rx="18" fill="#fef3c7" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="742" y="601" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#92400e">Общая MariaDB</text>
+<text x="742" y="630" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="700" fill="#b45309">Одиночная БД = SPOF</text>
+<text x="75" y="716" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">keepalived: VRRP / VIP для NGINX frontend</text>
+<text x="75" y="742" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">HA1 priority 244 + nginx weight 10 = 254</text>
+<text x="75" y="768" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">HA2 priority 243 + nginx weight 10 = 253</text>
+<text x="75" y="794" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">При отказе nginx на HA1: 244 &lt; 253 → VIP у HA2</text>
+<text x="75" y="803" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#7c3b16">RAG: p0031–p0043  |  DB HA отдельно не реализован в рецепте</text>
+<rect x="1066" y="485" width="492" height="339" rx="18" fill="#fff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="1092" y="527" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">05   КОНТРОЛЬ HA</text>
+<line x1="1092" y1="542" x2="1530" y2="542" stroke="#cbd5e1" stroke-width="2"/>
+<text x="1092" y="581" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#24364c">Reports → System information</text>
+<text x="1092" y="611" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#24364c">High availability cluster:</text>
+<text x="1092" y="641" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#24364c">• HA enabled / delay failover</text>
+<text x="1092" y="671" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#24364c">• список узлов кластера</text>
+<text x="1092" y="701" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#24364c">После запуска: server log</text>
+<text x="1092" y="731" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#24364c">VIP: keepalived / chk_nginx</text>
+<text x="1092" y="761" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#24364c">Failover test: остановка nginx</text>
+<text x="1092" y="791" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#24364c">возврат: systemctl start nginx</text>
+<text x="1092" y="803" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#64748b">RAG: p0040–p0043</text>
+<rect x="42" y="846" width="747" height="312" rx="18" fill="#fff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="68" y="886" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">06   ВИДЖЕТЫ: ЧТО НАБЛЮДАТЬ</text>
+<line x1="68" y1="901" x2="760" y2="901" stroke="#cbd5e1" stroke-width="2"/>
+<text x="68" y="940" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">System information → status, versions, NVPS</text>
+<text x="68" y="971" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">Host availability → available / unavailable / unknown</text>
+<text x="68" y="1002" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">Problems by severity → уровни критичности</text>
+<text x="68" y="1033" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">Problems → время, хост, длительность, теги</text>
+<text x="68" y="1064" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">Graph → более детальный график значений</text>
+<text x="68" y="1095" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#24364c">Top hosts / Item value / Geomap → обзор</text>
+<text x="68" y="1129" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#64748b">RAG: p0044–p0052</text>
+<rect x="808" y="846" width="750" height="312" rx="18" fill="#fff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="834" y="886" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700" fill="#155e75">07   НАВИГАЦИЯ И РАЗДЕЛЕНИЕ ЗАДАЧ</text>
+<line x1="834" y1="901" x2="1529" y2="901" stroke="#cbd5e1" stroke-width="2"/>
+<text x="834" y="940" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#24364c">Monitoring → Problems, Hosts, Latest data</text>
+<text x="834" y="968" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#24364c">Services → Services / SLA / SLA report</text>
+<text x="834" y="996" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#24364c">Inventory → Overview / Hosts</text>
+<text x="834" y="1024" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#24364c">Reports → System information / Audit log</text>
+<text x="834" y="1052" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#24364c">Data collection → Templates / Hosts / Discovery</text>
+<text x="834" y="1080" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#24364c">Alerts → Actions / Media types / Scripts</text>
+<text x="834" y="1108" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#24364c">Users / Administration → права, настройки, Queue</text>
+<text x="834" y="1135" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#64748b">RAG: p0053–p0058</text>
+<line x1="42" y1="1180" x2="1558" y2="1180" stroke="#cbd5e1" stroke-width="2"/>
+<text x="44" y="1214" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#475569">RAG-only  |  PDF 20–58  |  source SHA-256 07204d88…e63875a27  |  команды: source-findings.md (2 несоответствия)</text>
+</svg>
