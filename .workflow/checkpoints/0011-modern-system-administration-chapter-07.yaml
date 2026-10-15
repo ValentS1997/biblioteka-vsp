@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only analysis and Git publication of chapter 7, Тестирование"
 branch: "chapters/0011-modern-system-administration-chapter-07"
 initial_base_sha: "e9748b9e3ce9ddac54f3a0f7a1d6329ff95f62b9"
-last_observed_head_sha: "c04c35b0d4d191d54025523004abc934f4cf5acd"
+last_observed_head_sha: "8161ef5daff4036c82f58a961aa181cc9a2c09c4"
 expected_source_sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
 constraints:
   - "no direct main changes"
@@ -25,9 +25,12 @@ completed_steps:
   - step: "Four separate chapter text artifacts written and each Git-read-back verified"
     evidence_type: commit
     reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/c04c35b0d4d191d54025523004abc934f4cf5acd"
+  - step: "All eight chapter files individually committed and independently read back"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/8161ef5daff4036c82f58a961aa181cc9a2c09c4"
 pending_steps:
 
-  - "Commit two visual SVG summaries and source-supported conditional files separately"
+
   - "Read back all files; update book chapter index"
   - "Validate CI and PR; merge only after PASS"
   - "Verify main and finalize recovery checkpoint"
