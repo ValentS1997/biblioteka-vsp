@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 890" width="1320" height="890" role="img" aria-label="Глава 2 - подробная RAG схема"><rect width="1320" height="890" fill="#0f172a"/>
+<text x="38" y="57" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#f8fafc">ГЛАВА 2 · ОТ БИЗНЕС-ЦЕЛИ ДО ПРОИЗВОДСТВА</text>
+<text x="38" y="92" font-family="Arial,sans-serif" font-size="17" font-weight="400" fill="#94a3b8">PDF 47–67 · RAG-only · 11 глав в книге</text>
+<rect x="38" y="116" width="607" height="218" rx="13" fill="#1f2937" stroke="#475569"/>
+<rect x="665" y="116" width="615" height="218" rx="13" fill="#1f2937" stroke="#475569"/>
+<text x="60" y="158" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#93c5fd">ЦЕЛЬ И СИСТЕМНЫЕ ТРЕБОВАНИЯ</text>
+<text x="60" y="201" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Бизнес-результат → ML-метрика → проверка эффекта</text>
+<text x="60" y="237" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Надежность · масштаб · обслуживаемость</text>
+<text x="60" y="273" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Адаптивность · непрерывная работа</text>
+<text x="60" y="311" font-family="Arial,sans-serif" font-size="15" font-weight="400" fill="#a5b4fc">p0047–p0053</text>
+<text x="685" y="158" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#93c5fd">ПОСТАНОВКА ML-ЗАДАЧИ</text>
+<text x="685" y="201" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Входы, выходы, целевая функция</text>
+<text x="685" y="237" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Классификация / регрессия / multilabel</text>
+<text x="685" y="273" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Альтернативы формулировки: N классов / скоринг</text>
+<text x="685" y="311" font-family="Arial,sans-serif" font-size="15" font-weight="400" fill="#a5b4fc">p0055–p0060</text>
+<rect x="38" y="354" width="1242" height="257" rx="13" fill="#1f2937" stroke="#475569"/>
+<text x="60" y="396" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#93c5fd">ИТЕРАТИВНЫЙ ЦИКЛ ПО КНИГЕ</text>
+<text x="60" y="439" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#e2e8f0">1. Скопинг    →    2. Данные    →    3. Разработка модели</text>
+<text x="60" y="479" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#e2e8f0">4. Развертывание    →    5. Мониторинг и обновление</text>
+<text x="60" y="519" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#e2e8f0">6. Бизнес-анализ    →    возврат к скопингу и метрике</text>
+<text x="60" y="569" font-family="Arial,sans-serif" font-size="17" font-weight="400" fill="#a5b4fc">Пересмотр данных и меток при ошибках · p0053–p0055</text>
+<rect x="38" y="634" width="1242" height="183" rx="13" fill="#1f2937" stroke="#475569"/>
+<text x="60" y="673" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#93c5fd">КОМПРОМИССЫ: НЕ ОДНА МЕТРИКА</text>
+<text x="60" y="710" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Качество и вовлечённость: разные модели позволяют менять веса результатов.</text>
+<text x="60" y="747" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Объём данных ≠ качество; неверные метки могут навредить.</text>
+<text x="60" y="786" font-family="Arial,sans-serif" font-size="16" font-weight="400" fill="#fca5a5">p0061–p0065 · повреждённые формулы/код зафиксированы в source-findings.md</text>
+<text x="39" y="857" font-family="Arial,sans-serif" font-size="16" font-weight="400" fill="#cbd5e1">Итоги: p0065–p0066. Схема — авторский конспект RAG, не восстановление рисунков 2.1–2.8.</text>
+</svg>
