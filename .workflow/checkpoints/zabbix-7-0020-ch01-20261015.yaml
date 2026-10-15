@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only analysis and individual Git publication of chapter 1 with six required v1.8 artifacts and conditional findings."
 branch: "chapter/zabbix-7-0020-ch01-installation-web-interface-20261015"
 initial_base_sha: "a3d17475268be38aa6bddba2d2029e3b4ba3205b"
-last_observed_head_sha: "0c4b7d9dfe66385d11835cb58f59a13c2c2489c9"
+last_observed_head_sha: "0614b2f50c6c2e92a39ebd208aee6f2422ce5e9b"
 expected_source_sha256: "07204d885d4bf4c6c2de7c71ae42a4e3ed4cea794169cbe07985552e63875a27"
 constraints:
   - no direct main changes
@@ -29,11 +29,16 @@ completed_steps:
   - step: "Updated chapter book index to 1/13 (7.7%)"
     evidence_type: commit
     reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/0c4b7d9dfe66385d11835cb58f59a13c2c2489c9"
+  - step: "Opened PR #498 after pre-PR CI PASS; individually verified seven chapter files and 1/13 publication index"
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/498"
+  - step: "Corrected diagram direction and made index wording merge-neutral"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/0614b2f50c6c2e92a39ebd208aee6f2422ce5e9b"
 pending_steps:
-  - "Read back all eight chapter Git paths (seven per-chapter files plus book chapter index) and their links"
-  - "Verify chapter-notes CI and publication progress; open/update PR after validation"
-  - "Retire transient checkpoint before merge; post-merge CI and index verify"
-last_verified_evidence: "0c4b7d9dfe66385d11835cb58f59a13c2c2489c9"
-first_safe_next_action: "Check all eight committed Git chapter/index paths and latest branch CI before any further writes."
+  - "Verify final-head chapter-notes PR #498 CI at the latest SHA and book index progress"
+  - "Retire this transient checkpoint after PR CI PASS; recheck CI on deletion commit before merge; post-merge CI and index verify"
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/pull/498"
+first_safe_next_action: "Read PR #498 HEAD, exact chapter Git paths and latest CI; no duplicate file creation."
 blocker: "Not applicable"
 last_observed_at: "Not applicable"
