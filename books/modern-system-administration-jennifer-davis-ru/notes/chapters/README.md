@@ -6,14 +6,14 @@
 
 ## Git publication progress
 
-- Опубликовано полных наборов артефактов в `main`: **6 / 21 (28.6%)**.
+- Полных наборов артефактов в этой книжной ветке: **7 / 21 (33.3%)**; исходный проверенный `main`: **6 / 21 (28.6%)**.
 - Глава 4 слита из `chapters/0011-modern-system-administration-chapter-04` через [PR #508](https://github.com/vsp-corp/biblioteka-vsp/pull/508), merge commit [`aa87563`](https://github.com/vsp-corp/biblioteka-vsp/commit/aa875633f8b32b96af5a5b5342e9de8b7ca96350).
-- Осталось: **15**.
-- Следующая неопубликованная глава: **7 — Тестирование**.
+- Осталось в книжной ветке: **14**.
+- Следующая неопубликованная глава: **8 — Безопасность инфраструктуры**.
 - Учёт публикации: только отдельные committed Git files; ZIP и подготовленные вне Git тексты не учитываются.
 - Recovery evidence: [chapter 3 checkpoint](../../../../.workflow/checkpoints/0011-modern-system-administration-chapter-03.yaml) — `COMPLETE`; слияние PR #503 и #504, финальные CI PASS.
 - Публикация в `main`: PR [#489](https://github.com/vsp-corp/biblioteka-vsp/pull/489) слит; merge commit [`781200b`](https://github.com/vsp-corp/biblioteka-vsp/commit/781200b791f0ce111a6659b330d537adb49289be).
-- **Текущее состояние `main`: 6 / 21 (28.6%).** Глава 3 через [PR #503](https://github.com/vsp-corp/biblioteka-vsp/pull/503), глава 4 через [PR #508](https://github.com/vsp-corp/biblioteka-vsp/pull/508), глава 5 через [PR #512](https://github.com/vsp-corp/biblioteka-vsp/pull/512), merge commit [`a153eed`](https://github.com/vsp-corp/biblioteka-vsp/commit/a153eed050e88f65c9462052ba7378cd90fcc317).
+- **Проверенный прогресс ветки: 7 / 21 (33.3%); исходный `main`: 6 / 21 (28.6%).** Глава 3 через [PR #503](https://github.com/vsp-corp/biblioteka-vsp/pull/503), глава 4 через [PR #508](https://github.com/vsp-corp/biblioteka-vsp/pull/508), глава 5 через [PR #512](https://github.com/vsp-corp/biblioteka-vsp/pull/512), merge commit [`a153eed`](https://github.com/vsp-corp/biblioteka-vsp/commit/a153eed050e88f65c9462052ba7378cd90fcc317).
 
 ## Реестр глав
 
@@ -25,7 +25,7 @@
 | 4 | [Сеть](chapter-04-network/README.md) | Опубликована в `main`: 6 обязательных + 2 условных Git-файла; PR #508, CI PASS |
 | 5 | [Набор инструментов сисадмина](chapter-05-sysadmin-toolkit/README.md) | Опубликована в `main`: 6 обязательных + 2 условных Git-файла; PR #512, CI PASS |
 | 6 | [Контроль версий](chapter-06-version-control/README.md) | Опубликована в `main`: 6 обязательных + 2 условных Git-файла; PR #515, CI PASS |
-| 7 | Тестирование | Не опубликована |
+| 7 | [Тестирование](chapter-07-testing/README.md) | В книжной ветке: 6 обязательных + 2 условных индивидуальных Git-файла; read-back выполнен |
 | 8 | Безопасность инфраструктуры | Не опубликована |
 | 9 | Документация | Не опубликована |
 | 10 | Презентации | Не опубликована |
@@ -70,3 +70,7 @@
 ## Свидетельство публикации главы 6 (`main`)
 
 Глава 6 «Контроль версий»: RAG PDF **83–88**, печатные **87–92**; на PDF 89 начинается глава 7 «Тестирование». В ветке `chapters/0011-modern-system-administration-chapter-06` по отдельности созданы и прочитаны из Git восемь файлов `chapter-06-version-control/`: `README.md`, `cheatsheet.md`, `commands.md`, `diagram.md`, `visual-cheatsheet.svg`, `visual-cheatsheet-detailed.svg`, `summary.md`, `source-findings.md`. Детали CLI отсутствуют в RAG — они не добавлены из модельной памяти. Зафиксированы проблемы извлечения терминов mono/multi и колонтитулов без переписывания источника. **Глава 6 слита в `main` через [PR #515](https://github.com/vsp-corp/biblioteka-vsp/pull/515)**; merge commit [`536e9b6`](https://github.com/vsp-corp/biblioteka-vsp/commit/536e9b68b7a1ded03463a6afb8fc564aef787166); PR CI `Validate chapter notes and SVG` — PASS ([run 38710519610](https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38710519610)). Все восемь путей сверены в `main`. **Прогресс: 6/21 (28,6%)**. Статус чтения не менялся.
+
+## Свидетельство публикации главы 7 (книжная ветка)
+
+Глава 7 «Тестирование»: подтверждённый RAG **PDF 89–99**, печатные страницы **93–103**; на PDF 100 начинается глава 8. В книжной ветке `chapters/0011-modern-system-administration-chapter-07` созданы и по отдельности прочитаны из Git восемь файлов `chapter-07-testing/`: `README.md`, `cheatsheet.md`, `commands.md`, `diagram.md`, `visual-cheatsheet.svg`, `visual-cheatsheet-detailed.svg`, `summary.md`, `source-findings.md`. Исходный RuboCop-пример с неоднозначной YAML-структурой и рисунки пирамиды зафиксированы в `source-findings.md`; неподтверждённые команды не добавлялись. **Прогресс ветки: 7/21 (33,3%)**. Слияние в `main` подтверждается только Git PR + read-back. Статус чтения не изменён.
