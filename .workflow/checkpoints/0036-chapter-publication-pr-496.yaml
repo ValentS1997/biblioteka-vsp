@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "Publish RAG-only numbered stages as six individual Git chapter artifacts, with checkpoint and CI."
 branch: chapter/0036-business-process-publication-20261015
 initial_base_sha: aa3733b43f6db3627453e4814926e59a9ae3b136
-last_observed_head_sha: 8993a2e8697db9c050be047a0addd0e9fe919175
+last_observed_head_sha: ba104a8733f9642bf68655a15ef13a2f1eda2e38
 expected_source_sha256: 4c75aaaa000434b6fd7aeac337e163327060dcbe084e30a1c9793b923b855172
 constraints:
   - no direct main changes
@@ -53,17 +53,23 @@ completed_steps:
   - step: "Chapter 5 RAG links, SVG rendering and regression validation CI PASS."
     evidence_type: ci
     reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38706695367"
+  - step: "Chapter 6 six required individual files plus source-findings.md committed, all GitHub file read-backs verified."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/4f4b45567f1104ec6c745fbd1cfccab5e3bfadc8"
+  - step: "Chapter index updated to all six RAG-grounded numbered stages (6/6, 100%) and read back."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/ba104a8733f9642bf68655a15ef13a2f1eda2e38"
+  - step: "Chapter 6 Markdown/RAG links, SVG rasterization and chapter-validator regression CI PASS."
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38710198255"
   - step: "Existing draft PR 496 reused without creating a duplicate."
     evidence_type: pr
     reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/496"
 pending_steps:
-  - "Chapter 6 preflight: verified PDF 89–98, main text p0091–p0097, title p0089, next section p0099; chapter directory absent and all seven planned Git files missing."
-  - "Publish chapter 6 README.md, cheatsheet.md, commands.md, diagram.md, both SVG summaries, plus source-findings.md for split tables 5–6; read back each file."
-  - "Update index to 6/6, verify links, run CI, and update this checkpoint for review/merge readiness."
-  - "On explicit chapter 6 request, verify working HEAD, main, PR 496, this checkpoint, chapter-06 directory and chapter boundary before writing."
-  - "Publish chapter 6 by a bounded unit with six Git files, read-back, book index and CI."
-  - "Reconcile the working branch with advancing main, check PR mergeability/readiness and rerun required CI before any merge."
-last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38706843754"
-first_safe_next_action: "Reconcile actual HEAD and chapter 6 paths; publish first absent file, then readback, index, CI, checkpoint."
-blocker: "No chapter-5 artifact or CI blocker. Draft PR 496 unmerged; main reconciliation required before merge."
+  - "All six numbered chapter collections are Git-published in draft PR 496; no more numbered chapter artifacts remain."
+  - "Reconcile latest main with working branch without force-push, resolve any merge conflicts and rerun mandatory CI."
+  - "Verify complete PR diff, chapter links, source/RAG readiness and workflow status before PR merge; do not change reading progress."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38710198255"
+first_safe_next_action: "Re-fetch branch/main HEAD, PR 496 and checkpoint, verify all six collections then reconcile diverged main; no duplicate files or PR."
+blocker: "Chapter artifacts 6/6 and CI PASS; PR 496 remains DRAFT, branch diverged from main (188 behind and 60 ahead at latest comparison), merge not ready."
 last_observed_at: "Not applicable"
