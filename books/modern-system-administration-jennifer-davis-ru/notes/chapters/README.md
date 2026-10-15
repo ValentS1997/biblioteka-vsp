@@ -10,14 +10,14 @@
 - Осталось: **19**.
 - Следующая глава: **3 — Хранилище**.
 - Учёт публикации: только отдельные committed Git files; ZIP и подготовленные вне Git тексты не учитываются.
-- Ветка подготовки: `chapters/0011-modern-system-administration`; слияние с `main` пока не выполнялось.
+- Публикация в `main`: PR [#489](https://github.com/vsp-corp/biblioteka-vsp/pull/489) слит; merge commit [`781200b`](https://github.com/vsp-corp/biblioteka-vsp/commit/781200b791f0ce111a6659b330d537adb49289be).
 
 ## Реестр глав
 
 | № | Название | Публикация |
 |---:|---|---|
-| 1 | [Закономерности и взаимосвязи](chapter-01-patterns-and-interconnections/README.md) | Опубликована в рабочей ветке: 6 обязательных + 2 условных Git-файла |
-| 2 | [Вычислительные среды](chapter-02-computing-environments/README.md) | Опубликована в рабочей ветке: 6 обязательных + 2 условных Git-файла |
+| 1 | [Закономерности и взаимосвязи](chapter-01-patterns-and-interconnections/README.md) | Опубликована в `main`: 6 обязательных + 2 условных Git-файла |
+| 2 | [Вычислительные среды](chapter-02-computing-environments/README.md) | Опубликована в `main`: 6 обязательных + 2 условных Git-файла |
 | 3 | Хранилище | Не опубликована |
 | 4 | Сеть | Не опубликована |
 | 5 | Набор инструментов сисадмина | Не опубликована |
@@ -46,8 +46,8 @@
 
 ## Свидетельство публикации главы 2
 
-В ветке `chapters/0011-modern-system-administration` созданы и независимо прочитаны из Git восемь отдельных файлов `chapter-02-computing-environments/`: `README.md`, `cheatsheet.md`, `commands.md`, `diagram.md`, `visual-cheatsheet.svg`, `visual-cheatsheet-detailed.svg`, `summary.md`, `source-findings.md`. Границы: PDF 37–47; глава 3 начинается на PDF 48. Статус чтения не менялся. Слияние с `main` не выполнялось.
+В ветке `chapters/0011-modern-system-administration` созданы и независимо прочитаны из Git восемь отдельных файлов `chapter-02-computing-environments/`: `README.md`, `cheatsheet.md`, `commands.md`, `diagram.md`, `visual-cheatsheet.svg`, `visual-cheatsheet-detailed.svg`, `summary.md`, `source-findings.md`. Границы: PDF 37–47; глава 3 начинается на PDF 48. Статус чтения не менялся. PR #489 слит в `main`; восемь файлов главы доступны в canonical branch.
 
 ## Свидетельство публикации главы 1
 
-В ветке `chapters/0011-modern-system-administration` созданы и прочитаны из Git отдельно файлы `chapter-01-patterns-and-interconnections/`: `README.md`, `cheatsheet.md`, `commands.md`, `diagram.md`, `visual-cheatsheet.svg`, `visual-cheatsheet-detailed.svg`, `summary.md`, `source-findings.md`. Границы: PDF 28–36; режим RAG-only. Публикация в `main` возникнет только после merge PR. Статус чтения не затронут.
+В ветке `chapters/0011-modern-system-administration` созданы и прочитаны из Git отдельно файлы `chapter-01-patterns-and-interconnections/`: `README.md`, `cheatsheet.md`, `commands.md`, `diagram.md`, `visual-cheatsheet.svg`, `visual-cheatsheet-detailed.svg`, `summary.md`, `source-findings.md`. Границы: PDF 28–36; режим RAG-only. PR #489 слит в `main`; все восемь файлов главы доступны в canonical branch. Статус чтения не затронут.
