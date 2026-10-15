@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only analysis and publication of chapter 6"
 branch: "chapters/0011-modern-system-administration-chapter-06"
 initial_base_sha: "88ca62987dda8ea5ea5e6433c484a9f259762658"
-last_observed_head_sha: "88ca62987dda8ea5ea5e6433c484a9f259762658"
+last_observed_head_sha: "4751d15e3a0138c198f05ec5c6b64a1f65d4b760"
 expected_source_sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
 constraints:
   - no direct main changes
@@ -14,13 +14,16 @@ constraints:
   - no source/RAG rewrite
   - preserve reading-progress
   - no ZIP/archive delivery
-stage: PLANNED
+stage: IN_PROGRESS
 completed_steps:
   - step: "Read canonical 21-chapter plan, prior Git progress 5 of 21 and source-bound RAG PDF 83-88"
     evidence_type: file-readback
     reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/88ca62987dda8ea5ea5e6433c484a9f259762658/books/modern-system-administration-jennifer-davis-ru/notes/chapters/plan.yaml"
+  - step: "Four independent text chapter files committed and Git read-back verified"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/4751d15e3a0138c198f05ec5c6b64a1f65d4b760"
 pending_steps:
-  - "Publish six mandatory and source-supported conditional chapter artifacts individually in Git"
+  - "Publish two SVG summaries and conditional summary/source-findings individually"
   - "Read back chapter files; update index"
   - "Run CI and PR checks"
   - "Merge after PASS, verify main and refresh checkpoint"
