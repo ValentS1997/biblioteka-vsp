@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1330" height="1120" viewBox="0 0 1330 1120" role="img" aria-label="Глава 11: подробная схема UX, организационной структуры и аудита ответственного ИИ"><rect width="1330" height="1120" fill="#0f172a"/>
+<text x="39" y="62" font-family="Arial,sans-serif" font-size="31" fill="#f8fafc" font-weight="700">ГЛАВА 11 · ЛЮДИ, UX И ОТВЕТСТВЕННЫЙ ИИ</text>
+<text x="39" y="102" font-family="Arial,sans-serif" font-size="18" fill="#94a3b8" font-weight="400">Канонический RAG PDF 335–358 · чек-сумма и границы зафиксированы в README</text>
+<rect x="37" y="137" width="1252" height="244" rx="16" fill="#1f2937" stroke="#475569"/>
+<text x="60" y="184" font-family="Arial,sans-serif" font-size="23" fill="#93c5fd" font-weight="700">1. UX: ВЕРОЯТНОСТЬ, ИСПРАВИМОСТЬ, ЗАДЕРЖКА</text>
+<text x="60" y="235" font-family="Arial,sans-serif" font-size="19" fill="#e2e8f0" font-weight="400">Последовательные рекомендации · полезный пользовательский контекст</text>
+<text x="60" y="282" font-family="Arial,sans-serif" font-size="19" fill="#e2e8f0" font-weight="400">Несколько понятных результатов · корректировка человеком (HITL)</text>
+<text x="60" y="329" font-family="Arial,sans-serif" font-size="19" fill="#e2e8f0" font-weight="400">Резервная быстрая модель / кешированный ответ при slow inference</text>
+<text x="60" y="364" font-family="Arial,sans-serif" font-size="16" fill="#a5b4fc" font-weight="400">p0335–p0338</text>
+<rect x="37" y="407" width="1252" height="238" rx="16" fill="#1f2937" stroke="#475569"/>
+<text x="60" y="453" font-family="Arial,sans-serif" font-size="23" fill="#93c5fd" font-weight="700">2. КОМАНДЫ: СМЫСЛ И КОНТЕКСТ УЧАСТНИКОВ</text>
+<text x="60" y="505" font-family="Arial,sans-serif" font-size="19" fill="#e2e8f0" font-weight="400">SME: постановка задачи, данные, признаки, ошибки и UI</text>
+<text x="60" y="550" font-family="Arial,sans-serif" font-size="19" fill="#e2e8f0" font-weight="400">Разделённые функции → коммуникация, handoff и владение</text>
+<text x="60" y="595" font-family="Arial,sans-serif" font-size="19" fill="#e2e8f0" font-weight="400">End-to-end → нужны инструменты и platform abstraction</text>
+<text x="60" y="629" font-family="Arial,sans-serif" font-size="16" fill="#a5b4fc" font-weight="400">p0339–p0342</text>
+<rect x="37" y="672" width="1252" height="325" rx="16" fill="#1f2937" stroke="#475569"/>
+<text x="60" y="718" font-family="Arial,sans-serif" font-size="23" fill="#93c5fd" font-weight="700">3. RESPONSIBLE AI: ОТ ЦЕЛИ ДО РЕШЕНИЯ О ВНЕДРЕНИИ</text>
+<text x="60" y="767" font-family="Arial,sans-serif" font-size="19" fill="#e2e8f0" font-weight="400">Ofqual: цель, групповые оценки, прозрачность и независимый аудит</text>
+<text x="60" y="811" font-family="Arial,sans-serif" font-size="19" fill="#e2e8f0" font-weight="400">Strava: анонимизация не исключает утечек через закономерности</text>
+<text x="60" y="855" font-family="Arial,sans-serif" font-size="19" fill="#e2e8f0" font-weight="400">Данные → разметка → признаки → срезы → модельная карточка</text>
+<text x="60" y="899" font-family="Arial,sans-serif" font-size="19" fill="#e2e8f0" font-weight="400">Проверить privacy/accuracy и compression/fairness trade-offs</text>
+<text x="60" y="943" font-family="Arial,sans-serif" font-size="17" fill="#a5b4fc" font-weight="400">p0343–p0357 · ответственности и ограничения автоматизации</text>
+<text x="39" y="1062" font-family="Arial,sans-serif" font-size="17" fill="#fca5a5" font-weight="400">Внедрять? Даже формальное соответствие не заменяет критического анализа возможного вреда</text>
+</svg>
