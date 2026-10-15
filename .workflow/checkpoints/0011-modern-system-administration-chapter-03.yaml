@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only analysis of chapter 3 Storage; six mandatory individual Git chapter artifacts, source-grounded conditional files and Git publication index, using v1.8"
 branch: chapters/0011-modern-system-administration-chapter-03
 initial_base_sha: ec3a32b600ee9b6d3752b24614c915bd27bf8fb0
-last_observed_head_sha: ec3a32b600ee9b6d3752b24614c915bd27bf8fb0
+last_observed_head_sha: 6c128526631ba9fcde1d89dd8394732e4c49520a
 expected_source_sha256: 06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790
 constraints:
   - "no direct main changes"
@@ -14,7 +14,7 @@ constraints:
   - "no source/RAG rewrite without explicit authorization"
   - "no reading-progress mutation without explicit user confirmation"
   - "no archive delivery for chapter artifacts"
-stage: IN_PROGRESS
+stage: CI_PENDING
 completed_steps:
   - step: "Recovered main and book state; verified 21 chapters, 2 published in main and absence of chapter 3"
     evidence_type: file-readback
@@ -25,14 +25,20 @@ completed_steps:
   - step: "Verified source SHA, current RAG acceptance and canonical chapter publication v1.8"
     evidence_type: file-readback
     reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/modern-system-administration-jennifer-davis-ru/rag/acceptance.yaml
+  - step: "Committed and Git-read-back verified six mandatory chapter 3 artifacts"
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/cd8e2ee2db6ac945c90b65bca97fcd4b4ed8fb5d
+  - step: "Committed and Git-read-back verified chapter 3 summary.md and source-findings.md"
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/4eaf4d82b65bac221f7679067b3a2c59f1e64f61
+  - step: "Updated and read back chapter publication index: 3/21 on branch, main remains 2/21"
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/6c128526631ba9fcde1d89dd8394732e4c49520a
 pending_steps:
-  - "Review RAG detail for pages 48-62, including explicit end summary and conditional source findings."
-  - "Write README.md, cheatsheet.md, commands.md and diagram.md as individual committed Git files and read back."
-  - "Write both mandatory SVG summary files as individual committed Git files and read back."
-  - "Write conditional RAG-grounded files where applicable."
-  - "Update chapter publication index to 3/21 and verify read-back."
-  - "Check chapter notes/SVG CI and publish PR to main only when validation passes."
-last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/ec3a32b600ee9b6d3752b24614c915bd27bf8fb0
-first_safe_next_action: "Read branch HEAD and existing chapter-03-storage files before attempting the next write."
+  - "Verify latest branch HEAD chapter notes/SVG CI PASS; review all mandatory and conditional files."
+  - "Open PR from this book chapter branch to main after CI PASS; verify PR checks."
+  - "Merge only if required checks PASS and head has not moved; verify main afterward."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/6c128526631ba9fcde1d89dd8394732e4c49520a
+first_safe_next_action: "Read current branch HEAD, publication index and Actions runs before retrying PR or merge."
 blocker: "Not applicable"
 last_observed_at: "Not applicable"
