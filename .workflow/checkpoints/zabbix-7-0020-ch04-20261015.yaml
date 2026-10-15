@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only analysis and direct individual Git publication of chapter 4 of Zabbix 7 with SVGs, findings, CI and PR."
 branch: "chapter/zabbix-7-0020-ch04-triggers-alerting-20261015"
 initial_base_sha: "8fb79e098055558a2ce377fa095531c1532f9bb4"
-last_observed_head_sha: "8fb79e098055558a2ce377fa095531c1532f9bb4"
+last_observed_head_sha: "ffeb41bab5cf67361f161143898fbab46963da13"
 expected_source_sha256: "07204d885d4bf4c6c2de7c71ae42a4e3ed4cea794169cbe07985552e63875a27"
 constraints:
   - no direct main changes
@@ -15,7 +15,7 @@ constraints:
   - no reading-progress mutation without explicit user confirmation
   - no archive delivery for chapter artifacts
   - RAG-only; no external sources or model memory
-stage: IN_PROGRESS
+stage: CI_PENDING
 completed_steps:
   - step: "Verified main and book readiness CI, accepted RAG and source-matched thirteen-chapter plan; existing publication 3/13."
     evidence_type: file-readback
@@ -26,11 +26,16 @@ completed_steps:
   - step: "Created dedicated book feature branch from main HEAD."
     evidence_type: other
     reference: "8fb79e098055558a2ce377fa095531c1532f9bb4"
+  - step: "Committed all six required chapter 4 artifacts plus source-findings.md; Git directory read-back confirmed seven individual paths."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/34d2293eb6310199163b07632deba5d568bb7213"
+  - step: "Updated book publication index to 4/13 (30.8%), next unpublished chapter 5."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/ffeb41bab5cf67361f161143898fbab46963da13"
 pending_steps:
-  - "Create all six mandatory chapter-4 artifacts plus source-findings.md as separate Git files"
-  - "Verify Git read-back and chapter index 4/13; run CI and PR checks"
-  - "Retire transient checkpoint before merge; validate new head before merge and verify main afterward"
-last_verified_evidence: "8fb79e098055558a2ce377fa095531c1532f9bb4"
-first_safe_next_action: "Read branch head and current chapter directory before writing any missing files."
+  - "Run chapter-notes validation CI on chapter-4 branch and PR head"
+  - "Retire transient checkpoint after CI PASS, validate new head before merge and verify postmerge main/CI"
+last_verified_evidence: "ffeb41bab5cf67361f161143898fbab46963da13"
+first_safe_next_action: "Check current branch SHA, committed chapter files/index and exact-head CI; no duplicate writes."
 blocker: "Not applicable"
 last_observed_at: "Not applicable"
