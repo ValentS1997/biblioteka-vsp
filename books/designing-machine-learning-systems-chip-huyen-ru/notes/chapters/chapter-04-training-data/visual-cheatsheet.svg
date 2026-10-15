@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-label="Глава 4 Обучающие данные — конвейер качества"><rect width="1200" height="600" fill="#0f172a"/>
+<text x="40" y="62" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#f8fafc">ГЛАВА 4 · ОБУЧАЮЩИЕ ДАННЫЕ</text>
+<text x="40" y="101" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#e2e8f0">От репрезентативной выборки до проверенной метки и устойчивой модели</text>
+<rect x="39" y="139" width="347" height="321" rx="16" fill="#1f2937" stroke="#475569"/>
+<rect x="425" y="139" width="347" height="321" rx="16" fill="#1f2937" stroke="#475569"/>
+<rect x="810" y="139" width="347" height="321" rx="16" fill="#1f2937" stroke="#475569"/>
+<text x="60" y="180" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#93c5fd">СЕМПЛИРОВАНИЕ</text>
+<text x="60" y="225" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Случайная / стратификация</text>
+<text x="60" y="266" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Взвешивание / reservoir</text>
+<text x="60" y="308" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Importance sampling</text>
+<text x="60" y="349" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Риск selection bias</text>
+<text x="446" y="180" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#93c5fd">МЕТКИ</text>
+<text x="446" y="225" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Аннотаторы и lineage</text>
+<text x="446" y="266" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Natural labels / задержка</text>
+<text x="446" y="308" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Weak / semi / transfer</text>
+<text x="446" y="349" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Active learning</text>
+<text x="831" y="180" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#93c5fd">ДИСБАЛАНС</text>
+<text x="831" y="225" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Precision / recall / F1</text>
+<text x="831" y="266" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Resampling только train</text>
+<text x="831" y="308" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Cost / class / focal loss</text>
+<text x="831" y="349" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Аугментация с меткой</text>
+<text x="40" y="512" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#cbd5e1">RAG: p0099–p0133 · PDF 99–135 · исходный раздел «Итоги»: p0133-c01</text>
+<text x="40" y="558" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#fca5a5">Код и формулы с дефектами извлечения: см. source-findings.md</text>
+</svg>
