@@ -1,0 +1,34 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: "0011-modern-system-administration-chapter-08"
+repository: "vsp-corp/biblioteka-vsp"
+book_id: modern-system-administration-jennifer-davis-ru
+task_kind: chapter
+objective: "RAG-only analysis and direct Git publication of chapter 8, Безопасность инфраструктуры"
+branch: "chapters/0011-modern-system-administration-chapter-08"
+initial_base_sha: "dbd7e0649ea07504c163590ccc2be32c33bea8b7"
+last_observed_head_sha: "dbd7e0649ea07504c163590ccc2be32c33bea8b7"
+expected_source_sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite
+  - preserve reading status
+  - no archives
+stage: PLANNED
+completed_steps:
+  - step: "Verify canonical 21-chapter plan and 7/21 complete on main, RAG accepted and provenance consistent"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/dbd7e0649ea07504c163590ccc2be32c33bea8b7/books/modern-system-administration-jennifer-davis-ru/notes/chapters/plan.yaml"
+  - step: "RAG scope verified PDF 100-108, next chapter PDF 109; printed pages 104-112"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/dbd7e0649ea07504c163590ccc2be32c33bea8b7/books/modern-system-administration-jennifer-davis-ru/rag/chunks/p0101-p0200/p0109-c01.md"
+pending_steps:
+  - "Commit and read back 6 mandatory chapter artifacts separately"
+  - "Commit conditional summary and source findings where supported"
+  - "Update and Git read back book chapter index"
+  - "PR and CI gate PASS before merging chapter artifacts"
+  - "Verify main, update post-merge progress and complete checkpoint"
+last_verified_evidence: "dbd7e0649ea07504c163590ccc2be32c33bea8b7"
+first_safe_next_action: "Check checkpoint and branch tree before retrying any interrupted writes"
+blocker: "Not applicable"
+last_observed_at: "Not applicable"
