@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="1610" viewBox="0 0 1680 1610" role="img" aria-labelledby="title desc">
+<title id="title">Глава 21 — Подробная карта устойчивых команд</title>
+<desc id="desc">Подробная карта совместного владения, on-call, мониторинга работы, каталога услуг, документации, обучения и человеческих потребностей по RAG PDF 256–271.</desc>
+<rect width="1680" height="1610" fill="#102039"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="55" y="72" font-size="39" font-weight="bold" fill="#f2f9ff">Глава 21 · Руководство устойчивыми командами</text>
+<text x="55" y="114" font-size="21" fill="#c8dfef">Непрерывное обучение на каждом этапе жизненного цикла</text>
+<text x="55" y="172" font-size="28" font-weight="bold" fill="#f2f9ff">1 · Коллективная ответственность (PDF 256–259)</text>
+<rect x="55" y="196" width="1570" height="167" rx="15" fill="#274b65"/>
+<text x="85" y="244" font-size="24" font-weight="bold" fill="#f4faff">Разработка + эксплуатация + безопасность + сеть + продукт</text>
+<text x="85" y="284" font-size="21" fill="#e3eefb">Разработчики знают продукт; сисадмины — production и зависимости</text>
+<text x="85" y="323" font-size="20" fill="#d1e5f3">No-ops без эксплуатационной экспертизы повышает риски</text>
+<text x="55" y="424" font-size="28" font-weight="bold" fill="#f2f9ff">2 · Устойчивые дежурства (PDF 259–261)</text>
+<rect x="55" y="448" width="1570" height="184" rx="15" fill="#235a68"/>
+<text x="85" y="493" font-size="24" font-weight="bold" fill="#f4ffff">Следить за утомлением, шумом, подменами и справедливостью графика</text>
+<text x="85" y="533" font-size="21" fill="#e3f5f8">Различать измеряемое событие → alert → incident</text>
+<text x="85" y="571" font-size="21" fill="#e3f5f8">Обновлять SLI/SLO-обоснования, поощрять помощь и отдых</text>
+<text x="85" y="607" font-size="19" fill="#cceaf0">Мониторинг условий работы — не персональная слежка</text>
+<text x="55" y="692" font-size="28" font-weight="bold" fill="#f2f9ff">3 · Общая картина работы (PDF 261–267)</text>
+<rect x="55" y="716" width="750" height="201" rx="15" fill="#334e6b"/>
+<text x="85" y="761" font-size="24" font-weight="bold" fill="#f4faff">Цели, задачи, проекты</text>
+<text x="85" y="804" font-size="20" fill="#e1edfa">Каталог услуг и границы этапов</text>
+<text x="85" y="845" font-size="20" fill="#e1edfa">Общая доска и незавершённая работа</text>
+<text x="85" y="880" font-size="19" fill="#cadff1">Ретроспективы и признание вклада</text>
+<rect x="875" y="716" width="750" height="201" rx="15" fill="#2b5a53"/>
+<text x="905" y="761" font-size="24" font-weight="bold" fill="#f4fff8">Реальная стоимость поддержки</text>
+<text x="905" y="804" font-size="20" fill="#e2f7eb">Время на каждый сервис и ручную работу</text>
+<text x="905" y="845" font-size="20" fill="#e2f7eb">Обоснование штата и улучшений</text>
+<text x="905" y="880" font-size="19" fill="#d1ebdc">Человеческие ограничения — не бесплатны</text>
+<text x="55" y="980" font-size="28" font-weight="bold" fill="#f2f9ff">4 · Документация и обучение (PDF 267–269)</text>
+<rect x="55" y="1004" width="1570" height="173" rx="15" fill="#2a5268"/>
+<text x="85" y="1051" font-size="24" font-weight="bold" fill="#f4faff">Включить документацию в Done: версии, тесты, выпуск</text>
+<text x="85" y="1093" font-size="21" fill="#e3f0fa">Бюджет и время · обмен знаниями · учения · время на улучшения</text>
+<text x="85" y="1135" font-size="20" fill="#d2e6f1">Устранить барьеры вместо автоматических обвинений</text>
+<text x="55" y="1233" font-size="28" font-weight="bold" fill="#f2f9ff">5 · Люди — часть системы (PDF 263–264, 269–271)</text>
+<rect x="55" y="1256" width="1570" height="211" rx="15" fill="#30574d" stroke="#90dfba" stroke-width="2"/>
+<text x="85" y="1305" font-size="24" font-weight="bold" fill="#f5fff9">Свобода · интеллектуальный стимул · значимый вклад</text>
+<text x="85" y="1348" font-size="21" fill="#e1f9eb">Позитивные отношения · образование и рост</text>
+<text x="85" y="1390" font-size="20" fill="#d2eedd">Доверие, идеи сотрудников, регулярная обратная связь и поддержка</text>
+<text x="85" y="1431" font-size="19" fill="#c9e8d9">Зависимость от одного носителя знаний — человеческая точка отказа</text>
+<text x="55" y="1572" font-size="17" fill="#acc9dc">Canonical RAG PDF 256–271 · исходный рис. 21.1 не восстанавливался · численные нормы: [Needs confirmation]</text>
+</g></svg>
