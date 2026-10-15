@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1650" height="1420" viewBox="0 0 1650 1420" role="img" aria-label="Подробная карта главы 8 Zabbix: installation, passive active modes, buffering, PSK, proxy group failover, discovery, local and remote monitoring">
+<rect width="1650" height="1420" fill="#f2f6fc"/>
+<rect width="1650" height="126" fill="#172a47"/>
+<text x="47" y="62" font-family="DejaVu Sans, sans-serif" font-size="39" font-weight="700" fill="#ffffff">ZABBIX 7 / ГЛАВА 08</text>
+<text x="47" y="100" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#dbeafe">Прокси-серверы: масштабирование, автономный сбор, PSK и отказоустойчивость</text>
+<rect x="40" y="151" width="505" height="324" rx="16" fill="#fff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="67" y="197" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">01  УСТАНОВКА И DB</text>
+<line x1="67" y1="209" x2="520" y2="209" stroke="#cbd5e1" stroke-width="2"/>
+<text x="67" y="251" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">RHEL / Ubuntu → zabbix-proxy-sqlite3</text>
+<text x="67" y="282" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">ProxyMode: 1 passive / 0 active</text>
+<text x="67" y="313" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Server: Zabbix server / HA список</text>
+<text x="67" y="344" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Hostname: точное имя proxy</text>
+<text x="67" y="375" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">DBName: /tmp/... — учебный пример</text>
+<text x="67" y="406" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">ProxyBufferMode: hybrid / RAM / disk</text>
+<text x="67" y="456" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#64748b">RAG p337–340</text>
+<rect x="566" y="151" width="506" height="324" rx="16" fill="#fff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="592" y="197" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">02  РЕЖИМ СОЕДИНЕНИЯ</text>
+<line x1="592" y1="209" x2="1047" y2="209" stroke="#cbd5e1" stroke-width="2"/>
+<text x="592" y="251" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Passive: server → proxy, TCP 10051</text>
+<text x="592" y="282" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Active: proxy → server, TCP 10051</text>
+<text x="592" y="313" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Passive данные запрашивает server</text>
+<text x="592" y="344" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Active отправляет значения/heartbeat</text>
+<text x="592" y="375" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">UI Administration → Proxies</text>
+<text x="592" y="406" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Last seen(age): не должен быть Never</text>
+<text x="592" y="456" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#64748b">RAG p340–347</text>
+<rect x="1093" y="151" width="517" height="324" rx="16" fill="#fff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="1119" y="197" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">03  ХОСТЫ И OFFLINE</text>
+<line x1="1119" y1="209" x2="1585" y2="209" stroke="#cbd5e1" stroke-width="2"/>
+<text x="1119" y="251" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Monitored by → Proxy для host</text>
+<text x="1119" y="282" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Agent active: ServerActive = proxy</text>
+<text x="1119" y="313" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Proxy собирает values локально</text>
+<text x="1119" y="344" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">ProxyOfflineBuffer: 1 ч по книге</text>
+<text x="1119" y="375" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Memory-only restart → потеря</text>
+<text x="1119" y="406" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">rm SQLite DB → lost unsent metrics</text>
+<text x="1119" y="456" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#b45309">RAG p348–352</text>
+<rect x="40" y="498" width="764" height="328" rx="16" fill="#fff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="67" y="541" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">04  PSK И КОНТРОЛЬ СЕКРЕТОВ</text>
+<line x1="67" y1="553" x2="779" y2="553" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="68" y="578" width="330" height="94" rx="16" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1.6"/>
+<text x="87" y="614" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" fill="#075985">Proxy config: PSK</text>
+<text x="87" y="645" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#263448">Identity + key file</text>
+<rect x="436" y="578" width="340" height="94" rx="16" fill="#f0fdf4" stroke="#86efac" stroke-width="1.6"/>
+<text x="455" y="614" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" fill="#166534">Server UI: Encryption</text>
+<text x="455" y="645" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#263448">Connections to/from proxy</text>
+<text x="72" y="716" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">openssl rand → secret file, no cat/log</text>
+<text x="72" y="746" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">chmod 400/etc/... и Systemctl — source defects</text>
+<text x="72" y="776" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">PSK rotation / safe cutover: Needs confirmation</text>
+<rect x="825" y="498" width="785" height="328" rx="16" fill="#fff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="852" y="541" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">05  PROXY GROUPS / FAILOVER</text>
+<line x1="852" y1="553" x2="1584" y2="553" stroke="#cbd5e1" stroke-width="2"/>
+<text x="852" y="599" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Administration → Proxy groups</text>
+<text x="852" y="631" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Add proxy members (active / passive)</text>
+<text x="852" y="663" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Address for active agents + Proxy group on host</text>
+<text x="852" y="695" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Minimum number of proxies / Failover period</text>
+<text x="852" y="727" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">1 остаточный proxy должен выдержать нагрузку</text>
+<text x="852" y="759" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">SNMP traps: возможно нужна отдельная маршрутизация</text>
+<text x="852" y="805" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#64748b">RAG p355–360</text>
+<rect x="40" y="847" width="764" height="351" rx="16" fill="#fff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="67" y="894" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">06  DISCOVERY ЧЕРЕЗ PROXY</text>
+<line x1="67" y1="908" x2="779" y2="908" stroke="#cbd5e1" stroke-width="2"/>
+<text x="67" y="951" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Data collection → Discovery: Discovery by Proxy</text>
+<text x="67" y="982" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Agent: Server / ServerActive = адреса proxy</text>
+<text x="67" y="1013" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Autoregistration active: ServerActive=proxy</text>
+<text x="67" y="1044" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Учебный рецепт удаляет старые hosts</text>
+<text x="67" y="1075" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Не повторять удаление без backup и roll back</text>
+<text x="67" y="1106" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Проверить создаваемые hosts + monitored by</text>
+<text x="67" y="1137" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Windows config path в книге неоднозначен</text>
+<rect x="825" y="847" width="785" height="351" rx="16" fill="#fff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="852" y="894" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">07  HEALTH И QUEUE</text>
+<line x1="852" y1="908" x2="1584" y2="908" stroke="#cbd5e1" stroke-width="2"/>
+<text x="852" y="951" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Local Agent 2 на proxy + monitored by proxy</text>
+<text x="852" y="982" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Remote Zabbix proxy health: server → proxy</text>
+<text x="852" y="1013" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">StatsAllowedIP: контролируемая область доступа</text>
+<text x="852" y="1044" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Monitoring → Latest data для health metrics</text>
+<text x="852" y="1075" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Administration → Queue → Overview by proxy</text>
+<text x="852" y="1106" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">5 min / &gt;10 min: потенциальный backlog</text>
+<text x="852" y="1137" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#263448">Настройки макросов из рисунка: RAG_MISS</text>
+<line x1="40" y1="1233" x2="1610" y2="1233" stroke="#cbd5e1" stroke-width="2"/>
+<text x="43" y="1279" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#475569">RAG PDF 336–370 · accepted source SHA256 07204d88…e63875a27 · 8 разделов, 7 файлов</text>
+<text x="43" y="1318" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#64748b">Destructive: удаление SQLite DB и обнаруженных hosts; security-sensitive: PSK, SELinux/AppArmor, No encryption</text>
+<text x="43" y="1358" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#64748b">Нет доказанного полного rollback истории, host migration и ротации PSK · status reading unchanged</text>
+</svg>
