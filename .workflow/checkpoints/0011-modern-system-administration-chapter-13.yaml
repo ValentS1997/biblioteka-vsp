@@ -1,0 +1,33 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: "0011-modern-system-administration-chapter-13"
+repository: "vsp-corp/biblioteka-vsp"
+book_id: modern-system-administration-jennifer-davis-ru
+task_kind: chapter
+objective: "Canonical RAG-only chapter 13 Securing Infrastructure and individual Git chapter artifacts, CI-gated"
+branch: "chapters/0011-modern-system-administration-chapter-13"
+initial_base_sha: "8469208a1ae555ac4fceb636c35b3e08dc6667ce"
+last_observed_head_sha: "8469208a1ae555ac4fceb636c35b3e08dc6667ce"
+expected_source_sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
+constraints:
+  - no direct main mutation
+  - no force-push
+  - no changes to source PDF or RAG
+  - no reading-progress mutation
+  - no archives
+stage: PLANNED
+completed_steps:
+  - step: "Verified main 12/21, source SHA-256, accepted RAG and readiness"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/8469208a1ae555ac4fceb636c35b3e08dc6667ce/books/modern-system-administration-jennifer-davis-ru/rag/acceptance.yaml"
+  - step: "Verified chapter 13 RAG PDF 157-171, print 163-177; PDF 172 Part IV, PDF 173 chapter 14"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/8469208a1ae555ac4fceb636c35b3e08dc6667ce/books/modern-system-administration-jennifer-davis-ru/rag/chunks/p0101-p0200/p0173-c01.md"
+pending_steps:
+  - "Create and independently Git readback six required and conditional chapter artifacts"
+  - "Update and readback chapter book index 13/21 in branch"
+  - "Require CI PASS before PR, and PR CI PASS before merge"
+  - "Verify main and finalize book index and checkpoint by follow-up CI-gated PR"
+last_verified_evidence: "8469208a1ae555ac4fceb636c35b3e08dc6667ce"
+first_safe_next_action: "Read branch tree and checkpoint before retrying any interrupted write"
+blocker: "Not applicable"
+last_observed_at: "Not applicable"
