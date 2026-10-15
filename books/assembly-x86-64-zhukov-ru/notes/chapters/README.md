@@ -5,8 +5,8 @@ Book ID: `assembly-x86-64-zhukov-ru`. Canonical RAG source SHA-256: `f65a7ec8814
 ## План и прогресс публикации
 
 - [RAG-verified план: 21 глава](plan.yaml). Основание: оглавление (RAG PDF p. 4–8), самостоятельные заголовки глав в RAG-чанках и предисловие PDF p. 11.
-- **В текущей chapter-ветке:** 10/21 (47,6%); осталось 11, следующая — №11 «Внешние прерывания».
-- **В `main` на начало работы над главой 10:** 9/21. До merge главы 10 в `main` опубликованы первые девять глав; сверять HEAD независимо.
+- **В текущей chapter-ветке:** 11/21 (52,4%); осталось 10, следующая — №12 «32-битовые данные и адреса».
+- **В `main` на начало работы над главой 11:** 10/21. До merge главы 11 в `main` опубликованы первые десять глав; сверять HEAD независимо.
 
 ## Опубликованные главы (отдельные Git-файлы)
 
@@ -29,6 +29,8 @@ Book ID: `assembly-x86-64-zhukov-ru`. Canonical RAG source SHA-256: `f65a7ec8814
 9. [Глава 9. Сегменты](chapter-09-segmenty/README.md) — [шпаргалка](chapter-09-segmenty/cheatsheet.md), [команды](chapter-09-segmenty/commands.md), [диаграмма](chapter-09-segmenty/diagram.md), [краткая SVG](chapter-09-segmenty/visual-cheatsheet.svg), [подробная SVG](chapter-09-segmenty/visual-cheatsheet-detailed.svg), [задания](chapter-09-segmenty/review-questions.md), [разборы](chapter-09-segmenty/review-answers.md), [source findings](chapter-09-segmenty/source-findings.md).
 
 10. [Глава 10. Исключения](chapter-10-isklyucheniya/README.md) — [шпаргалка](chapter-10-isklyucheniya/cheatsheet.md), [команды](chapter-10-isklyucheniya/commands.md), [диаграмма](chapter-10-isklyucheniya/diagram.md), [краткая SVG](chapter-10-isklyucheniya/visual-cheatsheet.svg), [подробная SVG](chapter-10-isklyucheniya/visual-cheatsheet-detailed.svg), [вопросы](chapter-10-isklyucheniya/review-questions.md), [разборы](chapter-10-isklyucheniya/review-answers.md), [source findings](chapter-10-isklyucheniya/source-findings.md).
+
+11. [Глава 11. Внешние прерывания](chapter-11-vneshnie-preryvaniya/README.md) — [шпаргалка](chapter-11-vneshnie-preryvaniya/cheatsheet.md), [команды](chapter-11-vneshnie-preryvaniya/commands.md), [диаграмма](chapter-11-vneshnie-preryvaniya/diagram.md), [краткая SVG](chapter-11-vneshnie-preryvaniya/visual-cheatsheet.svg), [подробная SVG](chapter-11-vneshnie-preryvaniya/visual-cheatsheet-detailed.svg), [вопросы](chapter-11-vneshnie-preryvaniya/review-questions.md), [разборы](chapter-11-vneshnie-preryvaniya/review-answers.md), [source findings](chapter-11-vneshnie-preryvaniya/source-findings.md).
 
 ## Политика
 
