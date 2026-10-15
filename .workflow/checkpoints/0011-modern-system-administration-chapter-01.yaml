@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only chapter 1 analysis and direct Git publication of individual chapter artifacts under v1.8"
 branch: chapters/0011-modern-system-administration
 initial_base_sha: a3d17475268be38aa6bddba2d2029e3b4ba3205b
-last_observed_head_sha: d2fde600b0a843d6a0ca7b52bdc4e40306e27d77
+last_observed_head_sha: 9cd10926132e4a515e78f4f7df992abc04c8eded
 expected_source_sha256: 06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790
 constraints:
   - "no direct main changes"
@@ -14,7 +14,7 @@ constraints:
   - "no source/RAG rewrite without explicit authorization"
   - "no reading-progress mutation without explicit user confirmation"
   - "no archive delivery for chapter artifacts"
-stage: IN_PROGRESS
+stage: PARTIAL
 completed_steps:
   - step: "Recovered active branch and existing chapter plan; no chapter-01 files existed"
     evidence_type: file-readback
@@ -25,8 +25,11 @@ completed_steps:
   - step: "Confirmed current RAG ACCEPTED and chapter plan 21 chapters"
     evidence_type: file-readback
     reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/modern-system-administration-jennifer-davis-ru/rag/acceptance.yaml
+  - step: "Committed and individually read back README, cheatsheet, commands and diagram for chapter 1"
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/9cd10926132e4a515e78f4f7df992abc04c8eded
 pending_steps:
-  - "Commit each chapter-01 mandatory file individually: README, cheatsheet, commands, diagram, compact SVG, detailed SVG."
+  - "Commit and read back mandatory compact and detailed SVG files for chapter 1."
   - "Commit chapter-end summary and source-findings from RAG evidence, and update book-level chapter index."
   - "Read-back all files; verify chapter-notes CI at final branch HEAD and publication progress; update this checkpoint."
 last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/pull/489
