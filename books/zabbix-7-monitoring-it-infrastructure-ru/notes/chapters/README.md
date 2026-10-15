@@ -10,9 +10,9 @@ Book ID: `zabbix-7-monitoring-it-infrastructure-ru`; инвентарный но
 - Канонический план: [plan.yaml](plan.yaml).
 - Контракты: `process-compliance-router-v1.2`, `session-recovery-v1.0`, `chapter-publication-v1.0`, `chapter-analysis-request-v1.4`, `chapter-artifact-collection-v1.8`.
 
-## Прогресс публикации в текущей книжной ветке
+## Прогресс публикации в проверяемой Git-ревизии
 
-**1/13 (7.7%)** — глава 1 опубликована отдельными Git-файлами в этой книжной ветке. Осталось: **12**. Следующая глава: **2**. Опубликованные номера: **[1]**.
+**1/13 (7.7%)** — глава 1 опубликована отдельными Git-файлами. Осталось: **12**. Следующая глава: **2**. Опубликованные номера: **[1]**.
 
 Считаются только главы, содержащие в Git все шесть отдельных файлов: `README.md`, `cheatsheet.md`, `commands.md`, `diagram.md`, `visual-cheatsheet.svg`, `visual-cheatsheet-detailed.svg`. Публикация в ветке и включение в `main` проверяются отдельно.
 
@@ -32,6 +32,6 @@ Book ID: `zabbix-7-monitoring-it-infrastructure-ru`; инвентарный но
 | 12 | Продвинутая настройка СУБД | 465 | Не опубликована |
 | 13 | Мониторинг облачной инфраструктуры | 490 | Не опубликована |
 
-Статус главы 1 подтверждён Git read-back шести обязательных файлов (README.md, cheatsheet.md, commands.md, diagram.md, visual-cheatsheet.svg, visual-cheatsheet-detailed.svg). Дополнительно опубликован source-findings.md. Включение в main требует отдельного слияния PR.
+Статус главы 1 подтверждён Git read-back шести обязательных файлов (README.md, cheatsheet.md, commands.md, diagram.md, visual-cheatsheet.svg, visual-cheatsheet-detailed.svg). Дополнительно опубликован source-findings.md. Состояние включения в `main` определяется GitHub PR и проверяется отдельно.
 
 Границы и названия основаны исключительно на RAG-оглавлении и RAG-чанках начал глав. Текст анализа главы и её шесть артефактов создаются только по запросу `Анализ главы N` и публикуются по отдельным Git-путям, без архивов. Статус чтения не меняется.
