@@ -1,0 +1,34 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: "zabbix-7-0020-ch06-20261015"
+repository: "vsp-corp/biblioteka-vsp"
+book_id: "zabbix-7-monitoring-it-infrastructure-ru"
+task_kind: chapter
+objective: "RAG-only analysis and publication of chapter 6 individually in Git with required diagrams, checks, PR and CI."
+branch: "chapter/zabbix-7-0020-ch06-visualization-inventory-reporting-20261015"
+initial_base_sha: "88ca62987dda8ea5ea5e6433c484a9f259762658"
+last_observed_head_sha: "88ca62987dda8ea5ea5e6433c484a9f259762658"
+expected_source_sha256: "07204d885d4bf4c6c2de7c71ae42a4e3ed4cea794169cbe07985552e63875a27"
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite without explicit authorization
+  - no reading-progress mutation without explicit user confirmation
+  - no archive delivery for chapter artifacts
+  - RAG-only; no external research, direct PDF or model memory as content source
+stage: IN_PROGRESS
+completed_steps:
+  - step: "Read main chapter index: 5/13, chapter 6 starts PDF 229 and chapter 7 starts 291."
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/zabbix-7-monitoring-it-infrastructure-ru/notes/chapters/plan.yaml"
+  - step: "Verified canonical accepted RAG, source SHA and book readiness CI; new branch from verified main."
+    evidence_type: other
+    reference: "88ca62987dda8ea5ea5e6433c484a9f259762658"
+pending_steps:
+  - "Read all RAG p0229-p0290 and classify findings and conditional artifacts"
+  - "Create six required individual Git files and source-findings.md as indicated"
+  - "Validate Git readback/index 6/13 and branch/PR CI, retire checkpoint"
+  - "Merge only after final-head PASS; verify postmerge exact SHA and readback; no reading changes"
+last_verified_evidence: "88ca62987dda8ea5ea5e6433c484a9f259762658"
+first_safe_next_action: "Read current feature head and existing chapter-06 files before repeating writes."
+blocker: "Not applicable"
+last_observed_at: "Not applicable"
