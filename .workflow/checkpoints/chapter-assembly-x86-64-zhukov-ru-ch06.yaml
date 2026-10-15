@@ -1,0 +1,35 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: chapter-assembly-x86-64-zhukov-ru-ch06
+repository: vsp-corp/biblioteka-vsp
+book_id: assembly-x86-64-zhukov-ru
+task_kind: chapter
+objective: "RAG-only chapter 6 analysis and direct publication of individual chapter files in Git"
+branch: chapter/assembly-x86-64-zhukov-ru-ch06
+initial_base_sha: 633ba3b60cdfcc819228076a847065bf6247cab5
+last_observed_head_sha: 633ba3b60cdfcc819228076a847065bf6247cab5
+expected_source_sha256: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite
+  - no reading-status mutation
+  - no archive or ZIP substitute
+stage: IN_PROGRESS
+completed_steps:
+  - step: "Read canonical contracts and verify RAG acceptance/source integrity and publication 5/21"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/633ba3b60cdfcc819228076a847065bf6247cab5/books/assembly-x86-64-zhukov-ru/rag/acceptance.yaml"
+  - step: "Verify chapter 6 PDF p. 85-92, chapter 7 PDF p. 93, plan 21 chapters"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/633ba3b60cdfcc819228076a847065bf6247cab5/books/assembly-x86-64-zhukov-ru/rag/chunks/p0001-p0100/p0085-c01.md"
+pending_steps:
+  - "Commit all six mandatory individual chapter 6 files with Git readback"
+  - "Commit RAG-based review questions/answers and source findings as individual files"
+  - "Update book chapter index to 6/21"
+  - "Verify chapter CI; create PR after PASS"
+  - "After PR CI PASS, remove transient checkpoint; rerun CI on final head and merge after PASS"
+  - "Read back main publication and verify post-merge CI"
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/blob/633ba3b60cdfcc819228076a847065bf6247cab5/books/assembly-x86-64-zhukov-ru/notes/chapters/plan.yaml"
+first_safe_next_action: "Read GitHub branch HEAD, checkpoint, existing files and PR before retrying any interrupted write"
+blocker: "Not applicable"
+last_observed_at: "Not applicable"
