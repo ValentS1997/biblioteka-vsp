@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only analysis and individual Git publication of chapter 1 with six required v1.8 artifacts and conditional findings."
 branch: "chapter/zabbix-7-0020-ch01-installation-web-interface-20261015"
 initial_base_sha: "a3d17475268be38aa6bddba2d2029e3b4ba3205b"
-last_observed_head_sha: "a3d17475268be38aa6bddba2d2029e3b4ba3205b"
+last_observed_head_sha: "0c4b7d9dfe66385d11835cb58f59a13c2c2489c9"
 expected_source_sha256: "07204d885d4bf4c6c2de7c71ae42a4e3ed4cea794169cbe07985552e63875a27"
 constraints:
   - no direct main changes
@@ -15,7 +15,7 @@ constraints:
   - no reading-progress mutation without explicit user confirmation
   - no archive delivery for chapter artifacts
   - RAG-only source, no direct PDF or external research
-stage: IN_PROGRESS
+stage: CI_PENDING
 completed_steps:
   - step: "Verified RAG ACCEPTED and 13-chapter plan; chapter 1 from PDF source-unit 20 to 58, next chapter starts 59"
     evidence_type: file-readback
@@ -23,13 +23,17 @@ completed_steps:
   - step: "Created dedicated Git feature branch from verified main HEAD"
     evidence_type: other
     reference: "a3d17475268be38aa6bddba2d2029e3b4ba3205b"
+  - step: "Committed all six mandatory chapter artifacts and source-findings.md through individual GitHub files"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/e28f417b49f7f2c41cfa9c1d76157b1546b8fff2"
+  - step: "Updated chapter book index to 1/13 (7.7%)"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/0c4b7d9dfe66385d11835cb58f59a13c2c2489c9"
 pending_steps:
-  - "Finish chapter RAG retrieval and classify source defects and optional artifacts"
-  - "Commit each of six required chapter files separately to Git branch"
-  - "Commit conditional source-findings when required"
-  - "Update chapter index and verify full six-file publication and original source SHA"
-  - "Run chapter-notes validation CI; update PR; retire transient checkpoint before merge"
-last_verified_evidence: "a3d17475268be38aa6bddba2d2029e3b4ba3205b"
-first_safe_next_action: "Inspect individual chapter RAG chunks and current Git branch HEAD; do not duplicate committed files."
+  - "Read back all eight chapter Git paths (seven per-chapter files plus book chapter index) and their links"
+  - "Verify chapter-notes CI and publication progress; open/update PR after validation"
+  - "Retire transient checkpoint before merge; post-merge CI and index verify"
+last_verified_evidence: "0c4b7d9dfe66385d11835cb58f59a13c2c2489c9"
+first_safe_next_action: "Check all eight committed Git chapter/index paths and latest branch CI before any further writes."
 blocker: "Not applicable"
 last_observed_at: "Not applicable"
