@@ -6,14 +6,14 @@ task_kind: chapter
 objective: "RAG-only chapter 11 external interrupts analysis and gated Git publication"
 branch: chapter/assembly-x86-64-zhukov-ru-ch11
 initial_base_sha: 34e8130f63c635d3780d32696bb7810bf7dcf368
-last_observed_head_sha: 757ae90933c64e63d52e5b46fc25ab9c465d6d1c
+last_observed_head_sha: a1946c0e4de09d6e8c36e7d409b1fdac0f3ed329
 expected_source_sha256: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
 constraints:
   - no direct main changes
   - no source or RAG rewrite
   - no reading-status mutation
   - no force-push or ZIP fallback
-stage: IN_PROGRESS
+stage: CI_PENDING
 completed_steps:
   - step: "Contracts ACCEPTED and canonical RAG SHA matches chapter plan"
     evidence_type: file-readback
@@ -25,8 +25,6 @@ completed_steps:
     evidence_type: file-readback
     reference: "https://github.com/vsp-corp/biblioteka-vsp/tree/757ae90933c64e63d52e5b46fc25ab9c465d6d1c/books/assembly-x86-64-zhukov-ru/notes/chapters/chapter-11-vneshnie-preryvaniya"
 pending_steps:
-  - "Create conditional review questions, review answers and source findings"
-  - "Update index to 11/21 in chapter branch"
   - "Check main drift and validation PASS, PR only after PASS"
   - "PR CI PASS, remove checkpoint, final HEAD CI PASS, merge clean"
   - "Postmerge main read-back and CI"
