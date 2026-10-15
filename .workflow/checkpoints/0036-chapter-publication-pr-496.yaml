@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "Publish RAG-only numbered stages as six individual Git chapter artifacts, with checkpoint and CI."
 branch: chapter/0036-business-process-publication-20261015
 initial_base_sha: aa3733b43f6db3627453e4814926e59a9ae3b136
-last_observed_head_sha: 6fea75147d72c5487762774e73e44855ec75fa52
+last_observed_head_sha: 8993a2e8697db9c050be047a0addd0e9fe919175
 expected_source_sha256: 4c75aaaa000434b6fd7aeac337e163327060dcbe084e30a1c9793b923b855172
 constraints:
   - no direct main changes
@@ -57,10 +57,13 @@ completed_steps:
     evidence_type: pr
     reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/496"
 pending_steps:
+  - "Chapter 6 preflight: verified PDF 89–98, main text p0091–p0097, title p0089, next section p0099; chapter directory absent and all seven planned Git files missing."
+  - "Publish chapter 6 README.md, cheatsheet.md, commands.md, diagram.md, both SVG summaries, plus source-findings.md for split tables 5–6; read back each file."
+  - "Update index to 6/6, verify links, run CI, and update this checkpoint for review/merge readiness."
   - "On explicit chapter 6 request, verify working HEAD, main, PR 496, this checkpoint, chapter-06 directory and chapter boundary before writing."
   - "Publish chapter 6 by a bounded unit with six Git files, read-back, book index and CI."
   - "Reconcile the working branch with advancing main, check PR mergeability/readiness and rerun required CI before any merge."
-last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38706695367"
-first_safe_next_action: "Re-fetch branch and main HEAD, PR 496, checkpoint and latest CI, then verify chapter 6 target is absent before further writes."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38706843754"
+first_safe_next_action: "Reconcile actual HEAD and chapter 6 paths; publish first absent file, then readback, index, CI, checkpoint."
 blocker: "No chapter-5 artifact or CI blocker. Draft PR 496 unmerged; main reconciliation required before merge."
 last_observed_at: "Not applicable"
