@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only analysis and publication of Zabbix chapter 10 scripts/API in separate Git artifacts with validation and PR."
 branch: "chapter/zabbix-7-0020-ch10-scripts-and-api-20261015"
 initial_base_sha: "abd3e549066e50bc2edfd99694a08e326de7e2ad"
-last_observed_head_sha: "abd3e549066e50bc2edfd99694a08e326de7e2ad"
+last_observed_head_sha: "e15b32da00503ce4395a3e6a7614ce4d00ae5de1"
 expected_source_sha256: "07204d885d4bf4c6c2de7c71ae42a4e3ed4cea794169cbe07985552e63875a27"
 constraints:
   - no direct main changes or force-push
@@ -14,7 +14,7 @@ constraints:
   - no reading status or progress changes
   - no ZIP or archive alternative
   - RAG-only: no external content, direct PDF, or model memory corrections
-stage: IN_PROGRESS
+stage: CI_PENDING
 completed_steps:
   - step: "Verified main 9/13 (including completed chapter 9), RAG accepted, SHA, clean source, reading .gitkeep; chapter 10 PDF 412–433 and 11 begins 434."
     evidence_type: other
@@ -22,12 +22,16 @@ completed_steps:
   - step: "Created isolated chapter 10 branch."
     evidence_type: commit
     reference: "abd3e549066e50bc2edfd99694a08e326de7e2ad"
+  - step: "Read all 22 RAG page chunks, created six mandatory files and source-findings.md, verified directory readback."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/1f142e00771481e5e03a9800731a1d420af75c47"
+  - step: "Updated publication index 10/13 (76.9%)."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/e15b32da00503ce4395a3e6a7614ce4d00ae5de1"
 pending_steps:
-  - "Read all source-bound RAG chunks p0412-p0433 and classify source gaps"
-  - "Write six mandatory separate chapter files plus findings only when needed"
-  - "Index 10/13, GitHub read-back, CI and PR"
+  - "Validate branch full-set CI; create PR only after success and exact-head gate"
   - "Remove checkpoint, final exact-head CI PASS, merge and postmerge verification"
-last_verified_evidence: "abd3e549066e50bc2edfd99694a08e326de7e2ad"
-first_safe_next_action: "Read current branch head, RAG chunks and chapter 10 directory before any repeat writes."
+last_verified_evidence: "e15b32da00503ce4395a3e6a7614ce4d00ae5de1"
+first_safe_next_action: "Check exact branch HEAD, Git file inventory and latest validation CI before continuing."
 blocker: "Not applicable"
 last_observed_at: "Not applicable"
