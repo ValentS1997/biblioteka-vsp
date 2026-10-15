@@ -6,14 +6,14 @@ task_kind: chapter
 objective: "RAG-only analysis of chapter 16 LDT and TSS, gated Git publication"
 branch: chapter/assembly-x86-64-zhukov-ru-ch16
 initial_base_sha: 62b77194b5f9459f90eed60a4dfa665521b08fc8
-last_observed_head_sha: 62b77194b5f9459f90eed60a4dfa665521b08fc8
+last_observed_head_sha: 77890ffb60ed61431c469e96526050f168abdd98
 expected_source_sha256: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
 constraints:
   - no direct main modification
   - no source or rag rewrite
   - no reading-status change
   - no force-push or archive fallback
-stage: IN_PROGRESS
+stage: ARTIFACTS_IN_PROGRESS
 completed_steps:
   - step: "Canonical chapter contracts accepted and RAG acceptance ACCEPTED"
     evidence_type: git-readback
@@ -22,7 +22,6 @@ completed_steps:
     evidence_type: git-readback
     reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/62b77194b5f9459f90eed60a4dfa665521b08fc8/books/assembly-x86-64-zhukov-ru/notes/chapters/plan.yaml"
 pending_steps:
-  - "Commit 6 mandatory chapter files and verify individual Git read-back"
   - "Commit review questions answers and source findings"
   - "Update book chapter index to 16/21"
   - "Main drift/diff/CI PASS; PR only after PASS"
