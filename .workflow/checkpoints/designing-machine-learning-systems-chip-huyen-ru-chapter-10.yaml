@@ -7,7 +7,7 @@ objective: "Analyze chapter 10 Инфраструктура и инструме�
 branch: chapter/0031-designing-ml-systems-ch10-20261015
 parent_branch: chapter/0031-designing-ml-systems-ch09-20261015
 initial_base_sha: 5d22f77881b1cbaf31d4169f1e613053d4efa318
-last_observed_head_sha: 5d22f77881b1cbaf31d4169f1e613053d4efa318
+last_observed_head_sha: e9375ffa526bb9cd8b27e5ea630788c8f481d949
 expected_source_sha256: 0bcacadb4e1dc2235cb58f975111e1633527217127c5871edb894fe2b8f4c80c
 constraints:
   - "only canonical book RAG, no PDF direct or external sources"
@@ -15,7 +15,7 @@ constraints:
   - "no changes to source PDFs or RAG"
   - "reading/progress.yaml remains untouched"
   - "individual Git paths, not archives; no duplicate PR"
-stage: PLANNED
+stage: CI_PENDING
 completed_steps:
   - step: "Read-only verified 7 ACCEPTED process contracts, canonical RAG ACCEPTED, matching source checksum and chapter plan with 11 numbered chapters. Chapter 09 branch has 9/11; main index only, 0/11."
     evidence_type: file-readback
@@ -26,13 +26,19 @@ completed_steps:
   - step: "Created chapter 10 branch from exact parent HEAD 5d22f77881b1cbaf31d4169f1e613053d4efa318; chapter plan PDF p297-334 and next p335, TOC p0011-c01."
     evidence_type: commit
     reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/5d22f77881b1cbaf31d4169f1e613053d4efa318"
+  - step: "Published all 8 individual chapter 10 paths and index 10/11 (90.9%); all readback PASS; chapter plan and reading/progress original Git SHA unchanged."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/e9375ffa526bb9cd8b27e5ea630788c8f481d949"
+  - step: "Full push CI success: chapter references, both SVG image conversions, shared Prometheus 0040 and validator regression."
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38726960033"
+  - step: "Native book Итоги p0332-c01 and p0333-c01 explicitly preserved as a source-grounded analytical synopsis; damaged Dockerfile/Slurm/Airflow/Argo/Metaflow code documented without fixing."
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/chapter/0031-designing-ml-systems-ch10-20261015/books/designing-machine-learning-systems-chip-huyen-ru/notes/chapters/chapter-10-mlops-infrastructure-and-tools/summary.md"
 pending_steps:
-  - "Read all RAG p0297-c01..p0334-c01 and p0335-c01 boundary; find native Итоги and possible review questions, source defects."
-  - "Commit six mandatory files and source-native summary/findings where applicable as distinct paths; update chapter index to 10/11."
-  - "Git read-back all files and original plan/reading SHA, push CI must PASS."
-  - "Open exactly one stacked PR against chapter 09 branch only after push PASS; inspect 10 paths, PR CI."
-  - "Update recovery checkpoint with PR and CI, check final HEAD CI and mergeability. Do not merge."
-last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/pull/529"
-first_safe_next_action: "Read-only inspect branch HEAD and current checkpoint, chapter file list, PR list and CI before resuming."
+  - "Verify chapter 10 has no existing PR; open exactly one stacked PR against chapter 09 after push PASS and inspect ten expected paths and PR CI."
+  - "Update checkpoint with PR/CI links and verify final HEAD CI, PR clean mergeability, reading status unchanged; no auto merge."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38726960033"
+first_safe_next_action: "Read-only inspect branch HEAD, checkpoint, eight chapter files, chapter index, PR list and CI before resuming; no duplicate PR."
 blocker: "Not applicable"
 last_observed_at: "Not applicable"
