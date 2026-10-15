@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only analysis and direct Git publication of chapter 8, Безопасность инфраструктуры"
 branch: "chapters/0011-modern-system-administration-chapter-08"
 initial_base_sha: "dbd7e0649ea07504c163590ccc2be32c33bea8b7"
-last_observed_head_sha: "575871e7eb07732f1e3b1acc4d5b5a6ec122d72d"
+last_observed_head_sha: "bf199336507119fa5582d1ef7b84d29677016e01"
 expected_source_sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
 constraints:
   - no direct main changes
@@ -25,9 +25,12 @@ completed_steps:
   - step: "Four chapter text artifacts individually committed and independently read back"
     evidence_type: commit
     reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/575871e7eb07732f1e3b1acc4d5b5a6ec122d72d"
+  - step: "All eight individual chapter-08 files committed and each read back from GitHub"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/bf199336507119fa5582d1ef7b84d29677016e01"
 pending_steps:
-  - "Commit and read back two mandatory SVG chapter artifacts separately"
-  - "Commit conditional summary and source findings where supported"
+
+
   - "Update and Git read back book chapter index"
   - "PR and CI gate PASS before merging chapter artifacts"
   - "Verify main, update post-merge progress and complete checkpoint"
