@@ -4,7 +4,7 @@
 Источник: `business-process-improvement-hbsp-ru:p0005:c01–p0007:c01` (PDF pp. 5–7).
 Source SHA-256: `4c75aaaa000434b6fd7aeac337e163327060dcbe084e30a1c9793b923b855172`.
 
-**Прогресс в книжной Git-ветке: 4/6 (66.7%).** Осталось 2 нумерованных этапа. Следующий — **этап 5**.
+**Прогресс в книжной Git-ветке: 5/6 (83.3%).** Остался 1 нумерованный этап. Следующий — **этап 6**.
 Это состояние книжной ветки; на `main` этапы публикуются только после merge PR.
 
 | № | Глава | Страницы PDF | Git publication |
@@ -13,7 +13,7 @@ Source SHA-256: `4c75aaaa000434b6fd7aeac337e163327060dcbe084e30a1c9793b923b85517
 | 2 | [Анализ текущего бизнес-процесса](chapter-02-current-business-process-analysis/README.md) | 43–54 | 6 обязательных файлов + source-findings.md, committed |
 | 3 | [Редизайн бизнес-процесса](chapter-03-business-process-redesign/README.md) | 55–68 | 6 обязательных отдельных файлов, committed |
 | 4 | [Привлечение необходимых ресурсов](chapter-04-resource-acquisition/README.md) | 69–78 | 6 обязательных файлов + review-questions.md + review-answers.md + source-findings.md, committed |
-| 5 | Внедрение усовершенствованных бизнес-процессов | 79–88 | Не опубликовано |
+| 5 | [Внедрение усовершенствованных бизнес-процессов](chapter-05-improved-process-implementation/README.md) | 79–88 | 6 обязательных файлов + source-findings.md, committed |
 | 6 | Дальнейшее улучшение бизнес-процессов | 89–98 | Не опубликовано |
 
 **Критерий полной публикации:** каждый этап имеет отдельные `README.md`, `cheatsheet.md`, `commands.md`, `diagram.md`, `visual-cheatsheet.svg`, `visual-cheatsheet-detailed.svg` в Git; условные source-grounded файлы добавляются при необходимости. Архивы и chat-only drafts не учитываются. Reading status не изменяется.
