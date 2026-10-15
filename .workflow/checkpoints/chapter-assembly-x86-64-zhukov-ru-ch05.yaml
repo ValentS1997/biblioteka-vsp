@@ -1,0 +1,38 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: chapter-assembly-x86-64-zhukov-ru-ch05
+repository: vsp-corp/biblioteka-vsp
+book_id: assembly-x86-64-zhukov-ru
+task_kind: chapter
+objective: "RAG-only chapter 5 study artifacts published individually in Git, CI/PR gates"
+branch: chapter/assembly-x86-64-zhukov-ru-ch05
+initial_base_sha: 7af0fb36efd158c67314886fa937f19c833422e3
+last_observed_head_sha: 7af0fb36efd158c67314886fa937f19c833422e3
+expected_source_sha256: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite
+  - no reading-status mutation
+  - no ZIP or archive substitution
+stage: IN_PROGRESS
+completed_steps:
+  - step: "Verified v1.2 process, v1.0 recovery, v1.4 request, v1.8 collection, v1.0 publication and RAG ACCEPTED"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/7af0fb36efd158c67314886fa937f19c833422e3/books/assembly-x86-64-zhukov-ru/rag/acceptance.yaml"
+  - step: "Verified 21 chapters, 4/21 merged in main"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/7af0fb36efd158c67314886fa937f19c833422e3/books/assembly-x86-64-zhukov-ru/notes/chapters/plan.yaml"
+  - step: "Chapter 5 source boundary PDF 69-84, chapter 6 begins PDF 85"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/7af0fb36efd158c67314886fa937f19c833422e3/books/assembly-x86-64-zhukov-ru/rag/chunks/p0001-p0100/p0069-c01.md"
+pending_steps:
+  - "Create six mandatory individual files chapter-05-sistema-komand-i8086 and verify read-back"
+  - "Publish conditional RAG-only exercises, grounded answers, source-findings"
+  - "Update chapter index progress to 5/21 on branch"
+  - "Read-back Git, run CI, create PR only after success"
+  - "Clear transient checkpoint after PR CI PASS and verify final head CI before merge"
+  - "Merge only after PASS; verify main files and post-merge CI"
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/blob/7af0fb36efd158c67314886fa937f19c833422e3/books/assembly-x86-64-zhukov-ru/rag/acceptance.yaml"
+first_safe_next_action: "Fetch branch HEAD, files, checkpoint, PR and CI before retrying any incomplete write"
+blocker: "Not applicable"
+last_observed_at: "Not applicable"
