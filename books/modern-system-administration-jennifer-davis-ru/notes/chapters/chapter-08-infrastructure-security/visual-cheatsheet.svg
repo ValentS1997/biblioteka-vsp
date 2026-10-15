@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="785" viewBox="0 0 1160 785" role="img" aria-labelledby="t d">
+<title id="t">Глава 8 — Безопасность инфраструктуры</title>
+<desc id="d">Карта из пяти элементов: ответственность, угрозы, многоуровневая защита, КЦД и приоритизация проблем; источник RAG PDF 100–108.</desc>
+<rect width="1160" height="785" fill="#101a2b"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="49" y="72" font-size="37" font-weight="bold" fill="#f1f7ff">Безопасность инфраструктуры</text>
+<text x="49" y="109" font-size="22" fill="#bdd2e7">Глава 8 · Совместное управление рисками вместо иллюзии полной защиты</text>
+<rect x="49" y="145" width="1061" height="111" rx="15" fill="#173e4c" stroke="#64cfcb" stroke-width="2"/>
+<text x="78" y="187" font-size="27" font-weight="bold" fill="#f3ffff">1 · Разделяй ответственность</text>
+<text x="78" y="227" font-size="20" fill="#d3f1ee">Провайдер · команды · учётные записи · конечные точки · данные</text>
+<rect x="49" y="289" width="512" height="159" rx="14" fill="#253750"/>
+<text x="75" y="329" font-size="26" font-weight="bold" fill="#f5f9ff">2 · Моделируй угрозы</text>
+<text x="75" y="365" font-size="19" fill="#dce8f8">Активы, точки входа, атакующий</text>
+<text x="75" y="400" font-size="19" fill="#dce8f8">Мотивы, ресурсы, возможности</text>
+<rect x="598" y="289" width="512" height="159" rx="14" fill="#26434e"/>
+<text x="625" y="329" font-size="26" font-weight="bold" fill="#efffff">3 · Защищай послойно</text>
+<text x="625" y="365" font-size="19" fill="#dff5f2">Defense in depth · zero trust</text>
+<text x="625" y="400" font-size="19" fill="#dff5f2">Ограничивай радиус поражения</text>
+<rect x="49" y="479" width="1061" height="105" rx="14" fill="#303951"/>
+<text x="78" y="520" font-size="26" font-weight="bold" fill="#f5faff">4 · Говори языком КЦД</text>
+<text x="78" y="554" font-size="20" fill="#dceafb">Конфиденциальность · целостность · доступность</text>
+<rect x="49" y="613" width="1061" height="112" rx="14" fill="#2b574d" stroke="#70e3b7"/>
+<text x="78" y="655" font-size="26" font-weight="bold" fill="#f0fff8">5 · Различай причины и приоритеты</text>
+<text x="78" y="693" font-size="19" fill="#dcfff0">Ошибка реализации ≠ дефект проектирования; устраняй риск совместно</text>
+<text x="49" y="759" font-size="16" fill="#a7c2d9">Источник: RAG PDF 100–108 (печатные 104–112). Концептуальная схема, не копия рис. 8.1.</text>
+</g></svg>
