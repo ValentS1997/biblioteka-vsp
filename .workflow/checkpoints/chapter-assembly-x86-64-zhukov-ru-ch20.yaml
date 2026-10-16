@@ -1,0 +1,32 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: chapter-assembly-x86-64-zhukov-ru-ch20
+repository: vsp-corp/biblioteka-vsp
+book_id: assembly-x86-64-zhukov-ru
+task_kind: chapter
+objective: "RAG-only chapter 20 transition to 64-bit mode, gated Git publication"
+branch: chapter/assembly-x86-64-zhukov-ru-ch20
+initial_base_sha: 5ff6ad3608454e4086bc79ef9bd39678835d06ad
+last_observed_head_sha: 5ff6ad3608454e4086bc79ef9bd39678835d06ad
+expected_source_sha256: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
+constraints:
+  - no direct main modification
+  - no source or RAG rewrite
+  - no reading-status changes
+  - no force-push and no archive-only fallback
+stage: IN_PROGRESS
+completed_steps:
+  - step: "Canonical workflow contracts ACCEPTED and RAG acceptance ACCEPTED"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/5ff6ad3608454e4086bc79ef9bd39678835d06ad/books/assembly-x86-64-zhukov-ru/rag/acceptance.yaml"
+  - step: "Chapter 20 RAG PDF 331-340 read; chapter 21 starts p341; main verified 19/21"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/5ff6ad3608454e4086bc79ef9bd39678835d06ad/books/assembly-x86-64-zhukov-ru/notes/chapters/plan.yaml"
+pending_steps:
+  - "Publish six mandatory files independently and verify Git read-back"
+  - "Publish review questions, answers and source findings"
+  - "Update chapter index 20/21"
+  - "Validate CI and main drift, PR only after PASS"
+  - "Check PR CI, remove checkpoint, final-head CI, safe merge"
+  - "Git read-back merged chapter artifacts and postmerge CI"
+first_safe_next_action: "Re-read Git branch, checkpoint, chapter files and PR before any retry after disconnection"
+blocker: "Not applicable"
