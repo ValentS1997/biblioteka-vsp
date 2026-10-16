@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">1С:Предприятие 8.3 — Занятие 1</title>
+<desc id="desc">Краткая схема по RAG: платформа и конфигурация; пустая база, Конфигуратор, свойства, отладка.</desc>
+<rect width="1200" height="720" fill="#f8fafc"/>
+<rect x="40" y="34" width="1120" height="115" rx="20" fill="#17345b"/>
+<text x="72" y="78" font-family="DejaVu Sans,Arial,sans-serif" font-size="32" font-weight="bold" fill="white">Занятие 1 · Создание информационной базы</text>
+<text x="72" y="117" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#d7e8fa">RAG: PDF 15–38 · источник p0015–p0038 · 40 минут</text>
+<rect x="42" y="180" width="540" height="170" rx="16" fill="#e3efff" stroke="#a8caeb" stroke-width="2"/>
+<text x="70" y="222" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" font-weight="bold" fill="#17345b">Платформа</text>
+<text x="70" y="258" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#17345b">Обеспечивает работу конфигурации</text>
+<text x="70" y="293" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#17345b">и управление прикладным решением</text>
+<rect x="620" y="180" width="540" height="170" rx="16" fill="#eaf7ed" stroke="#add5ba" stroke-width="2"/>
+<text x="648" y="222" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" font-weight="bold" fill="#23513c">Конфигурация</text>
+<text x="648" y="258" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#23513c">Описание данных, алгоритмов,</text>
+<text x="648" y="293" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#23513c">интерфейса; на основе неё — таблицы БД</text>
+<text x="54" y="396" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" font-weight="bold" fill="#17345b">Практический маршрут</text>
+<g font-family="DejaVu Sans,Arial,sans-serif" font-size="17" fill="#17345b" text-anchor="middle">
+<rect x="42" y="425" width="210" height="100" rx="13" fill="#daeaff"/><text x="147" y="462">Добавить базу</text><text x="147" y="490">без шаблона</text>
+<rect x="270" y="425" width="210" height="100" rx="13" fill="#daeaff"/><text x="375" y="462">Локальный каталог</text><text x="375" y="490">→ Готово</text>
+<rect x="498" y="425" width="210" height="100" rx="13" fill="#daeaff"/><text x="603" y="462">Открыть</text><text x="603" y="490">Конфигуратор</text>
+<rect x="726" y="425" width="210" height="100" rx="13" fill="#daeaff"/><text x="831" y="459">Свойства</text><text x="831" y="489">конфигурации</text>
+<rect x="954" y="425" width="204" height="100" rx="13" fill="#d6efdf"/><text x="1056" y="461">Отладка</text><text x="1056" y="490">→ Проверка</text>
+</g>
+<g fill="none" stroke="#416891" stroke-width="3" stroke-linecap="round"><path d="M253 475h15"/><path d="M481 475h15"/><path d="M709 475h15"/><path d="M937 475h15"/></g>
+<rect x="42" y="554" width="1116" height="118" rx="14" fill="#fff4d9"/>
+<text x="72" y="591" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="bold" fill="#654514">Ожидаемый результат</text>
+<text x="72" y="626" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#654514">Имя «ПособиеДляНачинающих»; после отладки заголовок виден, рабочая область пустая.</text>
+<text x="72" y="653" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" fill="#654514">Подтверждение обновления БД меняет состояние. Откат: [Needs confirmation].</text>
+</svg>
