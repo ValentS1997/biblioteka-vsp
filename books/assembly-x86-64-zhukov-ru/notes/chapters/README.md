@@ -5,8 +5,8 @@ Book ID: `assembly-x86-64-zhukov-ru`. Canonical RAG source SHA-256: `f65a7ec8814
 ## План и прогресс публикации
 
 - [RAG-verified план: 21 глава](plan.yaml). Основание: оглавление (RAG PDF p. 4–8), самостоятельные заголовки глав в RAG-чанках и предисловие PDF p. 11.
-- **В текущей chapter-ветке:** 17/21 (81,0%); осталось 4, следующая — №18 «Привилегии».
-- **В `main` на начало работы над главой 17:** 16/21. До merge главы 17 в `main` опубликованы первые шестнадцать глав; сверять HEAD независимо.
+- **В текущей chapter-ветке:** 18/21 (85,7%); осталось 3, следующая — №19 «Переход в режим совместимости».
+- **В `main` на начало работы над главой 18:** 17/21. До merge главы 18 в `main` опубликованы первые семнадцать глав; сверять HEAD независимо.
 
 ## Опубликованные главы (отдельные Git-файлы)
 
@@ -43,6 +43,8 @@ Book ID: `assembly-x86-64-zhukov-ru`. Canonical RAG source SHA-256: `f65a7ec8814
 16. [Глава 16. LDT и TSS](chapter-16-ldt-i-tss/README.md) — [шпаргалка](chapter-16-ldt-i-tss/cheatsheet.md), [команды](chapter-16-ldt-i-tss/commands.md), [диаграмма](chapter-16-ldt-i-tss/diagram.md), [краткая SVG](chapter-16-ldt-i-tss/visual-cheatsheet.svg), [подробная SVG](chapter-16-ldt-i-tss/visual-cheatsheet-detailed.svg), [вопросы](chapter-16-ldt-i-tss/review-questions.md), [разборы](chapter-16-ldt-i-tss/review-answers.md), [source findings](chapter-16-ldt-i-tss/source-findings.md).
 
 17. [Глава 17. Преобразование адресов](chapter-17-preobrazovanie-adresov/README.md) — [шпаргалка](chapter-17-preobrazovanie-adresov/cheatsheet.md), [команды](chapter-17-preobrazovanie-adresov/commands.md), [диаграмма](chapter-17-preobrazovanie-adresov/diagram.md), [краткая SVG](chapter-17-preobrazovanie-adresov/visual-cheatsheet.svg), [подробная SVG](chapter-17-preobrazovanie-adresov/visual-cheatsheet-detailed.svg), [вопросы](chapter-17-preobrazovanie-adresov/review-questions.md), [разборы](chapter-17-preobrazovanie-adresov/review-answers.md), [source findings](chapter-17-preobrazovanie-adresov/source-findings.md).
+
+18. [Глава 18. Привилегии](chapter-18-privilegii/README.md) — [шпаргалка](chapter-18-privilegii/cheatsheet.md), [команды](chapter-18-privilegii/commands.md), [диаграмма](chapter-18-privilegii/diagram.md), [краткая SVG](chapter-18-privilegii/visual-cheatsheet.svg), [подробная SVG](chapter-18-privilegii/visual-cheatsheet-detailed.svg), [вопросы](chapter-18-privilegii/review-questions.md), [разборы](chapter-18-privilegii/review-answers.md), [source findings](chapter-18-privilegii/source-findings.md).
 
 ## Политика
 
