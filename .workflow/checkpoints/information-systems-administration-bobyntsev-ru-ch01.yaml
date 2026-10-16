@@ -1,0 +1,44 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: information-systems-administration-bobyntsev-ru-ch01
+repository: vsp-corp/biblioteka-vsp
+book_id: information-systems-administration-bobyntsev-ru
+task_kind: chapter
+objective: RAG-only chapter 1 analysis and direct Git publication of all individual canonical artifacts
+branch: chapter/information-systems-administration-bobyntsev-ru-0024
+initial_base_sha: d4daeb21f886ef6251cd37303dd9f68947726977
+last_observed_head_sha: d4daeb21f886ef6251cd37303dd9f68947726977
+expected_source_sha256: a5d6a2677d4b0e33a34dec3b7aae8b77f711bb748046d25766becb479f66663f
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite
+  - no reading-progress mutation
+  - no ZIP or archive publication
+  - individual Git chapter files and read-back mandatory
+stage: PLANNED
+completed_steps:
+  - step: Verified existing branch, PR 491, and 0/8 publication baseline
+    evidence_type: pr
+    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/491
+  - step: Verified source-bound RAG chapter boundary from p0024-c01 through p0050-c01, next chapter starts p0051-c01
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/information-systems-administration-bobyntsev-ru/rag/chunks/p0001-p0100/p0024-c01.md
+  - step: Verified accepted full-book RAG and historical READY evidence in merged PR 416
+    evidence_type: pr
+    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/416
+pending_steps:
+  - Create README.md and read it back
+  - Create cheatsheet.md and read it back
+  - Create commands.md and read it back
+  - Create diagram.md and read it back
+  - Create visual-cheatsheet.svg and read it back
+  - Create visual-cheatsheet-detailed.svg and read it back
+  - Create review-questions.md and read it back
+  - Create review-answers.md and read it back
+  - Create source-findings.md and read it back
+  - Update chapter index and read it back
+  - Validate full chapter publication and CI against final HEAD
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/d4daeb21f886ef6251cd37303dd9f68947726977
+first_safe_next_action: Re-fetch current branch HEAD, checkpoint, chapter 1 paths and PR 491 before any retry
+blocker: Not applicable
+last_observed_at: Not applicable
