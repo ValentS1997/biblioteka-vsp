@@ -1,0 +1,35 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: 0030-chapter-02-podsistemy
+repository: vsp-corp/biblioteka-vsp
+book_id: 1c-enterprise-8-3-radchenko-khrustaleva-3e-ru
+task_kind: chapter
+objective: "RAG-only analysis and direct individual Git publication of chapter 02 Подсистемы, then validated PR merge."
+branch: chapter/0030-ch02-podsistemy-20261016
+initial_base_sha: 451378914f2ac510f78661ee643347c2685971d7
+last_observed_head_sha: 451378914f2ac510f78661ee643347c2685971d7
+expected_source_sha256: ce8fa0fbf0d8bb38f724ed04f130c2443c1e181eb51edafac692c4786874c923
+constraints:
+  - "no direct main changes"
+  - "no force-push"
+  - "no source/RAG rewrite without explicit authorization"
+  - "no reading-progress mutation without explicit user confirmation"
+  - "no archive delivery for chapter artifacts"
+stage: IN_PROGRESS
+completed_steps:
+  - step: "Checked chapter publication state: 1/28 merged in main; chapter 02 not yet present; main HEAD verified."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/451378914f2ac510f78661ee643347c2685971d7"
+  - step: "Read canonical chapter 02 RAG PDF pages 39–54; next lesson starts on PDF page 55."
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru/rag/chunks/p0001-p0100/p0039-c01.md"
+  - step: "Verified accepted RAG source binding and previous readiness-check CI PASS."
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38869098014"
+pending_steps:
+  - "Create six mandatory chapter 02 individual artifacts and conditional review/source findings, with Git read-back and updated chapter index 2/28."
+  - "Verify CI on exact branch and PR HEAD; do not merge failing or unchecked commit."
+  - "Merge PR only after PASS and verify main files, index, unchanged reading status."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/commit/451378914f2ac510f78661ee643347c2685971d7"
+first_safe_next_action: "Read-only: re-fetch branch HEAD, checkpoint, chapter directory, PRs, CI before repeating any write."
+blocker: "Not applicable"
+last_observed_at: "Not applicable"
