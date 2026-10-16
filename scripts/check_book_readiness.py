@@ -14,7 +14,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 INDEX = ROOT / "books" / "index.yaml"
-CHAPTER_TEMPLATE = ROOT / "templates" / "chapter-artifact-collection-v1.7.yaml"
+CHAPTER_TEMPLATE = ROOT / "templates" / "chapter-artifact-collection-v1.8.yaml"
 
 READY_RE = re.compile(r"^READY")
 TOKEN_RE = re.compile(r"[0-9a-zа-я]+", flags=re.IGNORECASE)
@@ -36,7 +36,7 @@ NEXT_ACTIONS = {
     "ADDRESSABLE_CHUNKS_MISSING": "generate addressable rag/chunks files",
     "RETRIEVAL_INDEX_MISSING": "generate rag/search-index including manifest.json",
     "RETRIEVAL_INTEGRITY_FAILED": "repair/rebuild deterministic retrieval artifacts and rerun the smoke test",
-    "CHAPTER_TEMPLATE_MISSING": "install an ACCEPTED BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.7 template",
+    "CHAPTER_TEMPLATE_MISSING": "install an ACCEPTED BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION v1.8 template",
 }
 
 
@@ -479,11 +479,11 @@ def compute_readiness(book_id: str) -> dict[str, Any]:
         chapter_template_ok = bool(
             isinstance(template, dict)
             and template.get("id") == "BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION"
-            and str(template.get("version")) == "1.7"
+            and str(template.get("version")) == "1.8"
             and template.get("status") == "ACCEPTED"
         )
     checks.append(result_check(
-        "chapter_template_available", chapter_template_ok, "ACCEPTED v1.7",
+        "chapter_template_available", chapter_template_ok, "ACCEPTED v1.8",
         chapter_template_ok, template_evidence,
         None if chapter_template_ok else "CHAPTER_TEMPLATE_MISSING",
     ))
