@@ -1,0 +1,37 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: 0030-chapter-03-spravochniki
+repository: vsp-corp/biblioteka-vsp
+book_id: 1c-enterprise-8-3-radchenko-khrustaleva-3e-ru
+task_kind: chapter
+objective: "RAG-only chapter 03 Справочники, individual Git artifacts, CI and PR merge only after PASS."
+branch: chapter/0030-ch03-spravochniki-20261016
+initial_base_sha: 451378914f2ac510f78661ee643347c2685971d7
+last_observed_head_sha: 451378914f2ac510f78661ee643347c2685971d7
+expected_source_sha256: ce8fa0fbf0d8bb38f724ed04f130c2443c1e181eb51edafac692c4786874c923
+constraints:
+  - "no direct main changes"
+  - "no force-push"
+  - "no source/RAG rewrite without explicit authorization"
+  - "no reading-progress mutation without explicit user confirmation"
+  - "no archive delivery for chapter artifacts"
+  - "no bypass of CI on an unverified PR HEAD"
+stage: IN_PROGRESS
+completed_steps:
+  - step: "Recovered main HEAD, RAG acceptance, chapter plan 28 and main-published count 1; chapter 02 PR #609 remains open and blocked."
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/609"
+  - step: "Resolved chapter 03 through RAG: PDF pages 55-120, 66 addressable chunks; chapter 04 begins on p121."
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru/rag/chunks/p0001-p0100/p0055-c01.md"
+  - step: "Read current contracts v1.2/v1.0/v1.4/v1.8 and verified accepted RAG and readiness-v1.8 binding."
+    evidence_type: other
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/templates/chapter-artifact-collection-v1.8.yaml"
+pending_steps:
+  - "Write six mandatory individual files and conditional review questions, RAG-grounded answers and classified source findings."
+  - "Update chapter index for 1 and 3 published in branch: 2/28, remaining 26; next unpublished chapter 2."
+  - "Read back all Git chapter files, index and unchanged reading status; check CI at exact HEAD."
+  - "Open PR, obtain PASS on exact PR HEAD; merge only with PASS, then verify main."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/commit/451378914f2ac510f78661ee643347c2685971d7"
+first_safe_next_action: "Read branch HEAD, checkpoint, chapter-03 folder, PR list, CI and main before writing or retrying."
+blocker: "No task-specific blocker yet; GitHub Actions runner failures recorded on other chapter PRs require current validation."
+last_observed_at: "Not applicable"
