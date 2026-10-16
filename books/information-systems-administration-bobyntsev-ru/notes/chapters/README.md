@@ -3,8 +3,8 @@
 - Book ID: `information-systems-administration-bobyntsev-ru`; inventory: `0024`.
 - RAG status: `ACCEPTED`; source SHA-256: `a5d6a2677d4b0e33a34dec3b7aae8b77f711bb748046d25766becb479f66663f`.
 - Numbered chapters verified against RAG TOC: **8**.
-- Complete chapter directories committed in this branch: **1/8 (12.5%)** (nine individual chapter files verified; chapter-notes/SVG CI PASS at artifact HEAD 5c8182bf).
-- Remaining: **7**; next chapter to analyze: **2 — Администрирование вычислительных сетей**.
+- Complete chapter directories committed in this branch: **2/8 (25%)** (nine individual chapter files verified; chapter-notes/SVG CI PASS at artifact HEAD 5c8182bf).
+- Remaining: **6**; next chapter to analyze: **3 — Доменная модель безопасности в вычислительных сетях**.
 - Chapter artifact link: [Глава 1 — Введение в администрирование информационных систем](chapter-01-vvedenie-v-administrirovanie-informatsionnyh-sistem/README.md). All six required files and three conditional files are committed and read back. [Chapter validation PASS](https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38865448781) for artifact HEAD 5c8182bf; any subsequent Git commit is rechecked separately.
 - Source-verified chapter inventory and PDF locators: [plan.yaml](plan.yaml).
 
@@ -21,4 +21,5 @@ RAG TOC chunks `p0004-c01` and `p0005-c01` (PDF pp. 4–5) enumerate chapters 1�
 ## Published chapters
 
 - [Глава 1 — Введение в администрирование информационных систем](chapter-01-vvedenie-v-administrirovanie-informatsionnyh-sistem/README.md) — RAG PDF p. 24–50, all nine individual Git files verified; [chapter-notes/SVG CI PASS](https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38865448781) for artifact commit 5c8182bf; branch-tip CI tracked separately.
-- Remaining chapters 2–8 have no complete published artifact collection. The next chapter begins only on an explicit chapter-analysis command.
+- [Глава 2 — Администрирование вычислительных сетей](chapter-02-administrirovanie-vychislitelnyh-setey/README.md) — RAG PDF p. 51–85, six mandatory Git artifacts plus review-questions, review-answers and source-findings; **46** questions/answers; all nine individual files read back. Chapter validation CI on this updated branch is pending.
+- Remaining chapters 3–8 have no complete published artifact collection. Next chapter analysis starts only upon explicit user command.
