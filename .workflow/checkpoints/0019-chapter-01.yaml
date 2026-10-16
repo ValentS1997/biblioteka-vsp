@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only analysis and direct individual Git publication of chapter 1, Начало работы с Git."
 branch: chapter/0019-ch01-nachalo-raboty-s-git-20261016
 initial_base_sha: 4d330532125233f2040640dbdb0b0cedebbd6c1e
-last_observed_head_sha: fe1c4853a5cbed2e3a3d362a3a8d1d712198d2e4
+last_observed_head_sha: 8e04f0d26e227129302db7349ed9addbae181faa
 expected_source_sha256: 5eb8376c990ff58103fb110ae36467bb407f015bedf45aa2db6dae5678f8b5fb
 constraints:
   - "no direct main changes"
@@ -15,7 +15,7 @@ constraints:
   - "no source/RAG rewrite"
   - "no reading-progress mutation"
   - "no archive delivery for chapter artifacts"
-stage: CI_PENDING
+stage: COMPLETE
 completed_steps:
   - step: "Verify canonical v1.2/v1.0/v1.4/v1.8 and session recovery v1.0"
     evidence_type: file-readback
@@ -35,9 +35,11 @@ completed_steps:
   - step: "Create stacked chapter PR #606 into publication-plan branch, recheck HEAD and base"
     evidence_type: pr
     reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/606"
+  - step: "PR #606 chapter notes Markdown/SVG validation PASS for exact HEAD 8e04f0d26e227129302db7349ed9addbae181faa"
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38865647582"
 pending_steps:
-  - "Verify individual Git read-back, progress and chapter notes validation CI."
 last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/pull/606"
-first_safe_next_action: "Re-fetch chapter PR #606, branch HEAD and final PR-triggered Validate chapter notes and SVG CI; if PASS, report verified branch publication; no automatic merge."
-blocker: "Not applicable"
+first_safe_next_action: "Re-fetch chapter PR #606, its exact HEAD and CI; after parent PR #492 merges, rebase/retarget stacked PR via safe GitHub workflow before any merge to main."
+blocker: "Not applicable; branch publication is complete, but PR #606 and prerequisite PR #492 remain unmerged."
 last_observed_at: "Not applicable"
