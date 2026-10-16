@@ -1,0 +1,46 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: designing-machine-learning-systems-chip-huyen-ru-chapter-04
+repository: vsp-corp/biblioteka-vsp
+book_id: designing-machine-learning-systems-chip-huyen-ru
+task_kind: chapter
+objective: "Analyze chapter 04 Training Data with canonical RAG only, publish individual chapter artifacts under v1.8, and open stacked chapter PR after validation."
+branch: chapter/0031-designing-ml-systems-ch04-20261015
+parent_branch: chapter/0031-designing-ml-systems-ch03-20261015
+initial_base_sha: 051555c948a5044c3f6a994ec066e2d2b1100cee
+last_observed_head_sha: 8f38e98b3234472f9a502c3641334d4fbb60d08b
+expected_source_sha256: 0bcacadb4e1dc2235cb58f975111e1633527217127c5871edb894fe2b8f4c80c
+constraints:
+  - "no direct main changes"
+  - "no force-push"
+  - "no source/RAG rewrite without explicit authorization"
+  - "no reading-progress mutation without explicit user confirmation"
+  - "no archive delivery for chapter artifacts"
+  - "no duplicate Git file mutations or PR"
+stage: IN_PROGRESS
+completed_steps:
+  - step: "Canonical RAG ACCEPTED, source checksum matches, chapter 04 source boundary PDF 99-135 verified from plan and next chapter opening."
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/chapter/0031-designing-ml-systems-ch03-20261015/books/designing-machine-learning-systems-chip-huyen-ru/notes/chapters/plan.yaml"
+  - step: "Parent branch with three verified chapter collections, PR #502 open atop PR #499 and #493; branch created from exact parent SHA."
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/502"
+  - step: "Committed 8 separate chapter 04 artifacts and index (4/11); GitHub read-back verified each, summary exactly matches RAG; reading progress unchanged."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/69a2597778b56d436824cf122e8de64ffee36a5f"
+  - step: "Push CI: chapter notes RAG reference/SVG validation and regression tests PASS."
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38702064350"
+  - step: "Opened stacked PR #507 against chapter 03 branch; diff is exactly 8 chapter 04 files, chapter index and checkpoint."
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/507"
+  - step: "PR #507 validator of RAG references, SVG rendering and regression checks PASS."
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38702261799"
+pending_steps:
+  - "Verify CI for the final checkpoint-only commit, PR #507 latest HEAD, changed paths and mergeability."
+  - "Review/merge chain PR #493 -> #499 -> #502 -> #507 after approvals; re-target and revalidate whenever base changes; no automatic merges."
+  - "After merges, verify main chapter directories and reading progress, otherwise report only stacked-branch publication."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38702261799"
+first_safe_next_action: "Read-only: fetch branch/checkpoint HEAD, PRs #493/#499/#502/#507, final CI and chapter files. Do not repeat writes or create duplicate PR; await upstream review/merge."
+blocker: "Not applicable"
+last_observed_at: "Not applicable"

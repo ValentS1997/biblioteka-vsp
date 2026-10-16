@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="560" viewBox="0 0 1180 560" role="img" aria-label="Глава 5 - конструирование признаков, утечки, проверка качества"><rect width="1180" height="560" fill="#0f172a"/>
+<text x="38" y="60" font-family="Arial,sans-serif" font-size="28" fill="#f8fafc" font-weight="700">ГЛАВА 5 · КОНСТРУИРОВАНИЕ ПРИЗНАКОВ</text>
+<text x="38" y="99" font-family="Arial,sans-serif" font-size="19" fill="#e2e8f0" font-weight="400">Признаки должны работать на новых данных без информации из будущего</text>
+<rect x="36" y="130" width="348" height="298" rx="14" fill="#1f2937" stroke="#475569"/>
+<rect x="415" y="130" width="348" height="298" rx="14" fill="#1f2937" stroke="#475569"/>
+<rect x="794" y="130" width="348" height="298" rx="14" fill="#1f2937" stroke="#475569"/>
+<text x="56" y="171" font-family="Arial,sans-serif" font-size="23" fill="#93c5fd" font-weight="700">ПРЕОБРАЗОВАНИЯ</text>
+<text x="56" y="215" font-family="Arial,sans-serif" font-size="17" fill="#e2e8f0" font-weight="400">Пропуски: MNAR / MAR / MCAR</text>
+<text x="56" y="254" font-family="Arial,sans-serif" font-size="17" fill="#e2e8f0" font-weight="400">Scale · binning · категории</text>
+<text x="56" y="293" font-family="Arial,sans-serif" font-size="17" fill="#e2e8f0" font-weight="400">Хеширование и коллизии</text>
+<text x="56" y="332" font-family="Arial,sans-serif" font-size="18" fill="#e2e8f0" font-weight="400">Кроссы и эмбеддинги</text>
+<text x="435" y="171" font-family="Arial,sans-serif" font-size="23" fill="#93c5fd" font-weight="700">УТЕЧКИ</text>
+<text x="435" y="215" font-family="Arial,sans-serif" font-size="18" fill="#e2e8f0" font-weight="400">Временное разделение</text>
+<text x="435" y="254" font-family="Arial,sans-serif" font-size="18" fill="#e2e8f0" font-weight="400">Train-only статистика</text>
+<text x="435" y="293" font-family="Arial,sans-serif" font-size="18" fill="#e2e8f0" font-weight="400">Дубли и группы</text>
+<text x="435" y="332" font-family="Arial,sans-serif" font-size="17" fill="#e2e8f0" font-weight="400">Источники и артефакты метки</text>
+<text x="814" y="171" font-family="Arial,sans-serif" font-size="23" fill="#93c5fd" font-weight="700">КАЧЕСТВО</text>
+<text x="814" y="215" font-family="Arial,sans-serif" font-size="17" fill="#e2e8f0" font-weight="400">Важность / ablation / SHAP</text>
+<text x="814" y="254" font-family="Arial,sans-serif" font-size="18" fill="#e2e8f0" font-weight="400">Охват и распределения</text>
+<text x="814" y="293" font-family="Arial,sans-serif" font-size="18" fill="#e2e8f0" font-weight="400">Generalization на unseen</text>
+<text x="814" y="332" font-family="Arial,sans-serif" font-size="17" fill="#e2e8f0" font-weight="400">Память, latency, техдолг</text>
+<text x="38" y="475" font-family="Arial,sans-serif" font-size="16" fill="#cbd5e1" font-weight="400">RAG PDF 136–161 · p0136–p0160 · Итоги: p0159–p0160</text>
+<text x="38" y="518" font-family="Arial,sans-serif" font-size="16" fill="#fca5a5" font-weight="400">Формулы / позиции / хеш-диапазон: source-findings.md; не исправлять догадкой</text>
+</svg>

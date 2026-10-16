@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="656" viewBox="0 0 1160 656" role="img" aria-labelledby="ttl desc">
+<title id="ttl">Глава 2 — Как руководить собой</title>
+<desc id="desc">Шесть основных принципов самоуправления программиста-руководителя по RAG PDF p. 46–62.</desc>
+<rect width="1160" height="656" fill="#f7fafc"/>
+<rect x="24" y="24" width="1112" height="118" rx="15" fill="#13324b"/>
+<text x="52" y="72" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#ffffff">Глава 2 · Как руководить собой</text>
+<text x="52" y="109" font-family="Arial,sans-serif" font-size="19" fill="#d7e5f2">Цель: результат команды + ежедневное улучшение руководителя</text>
+<g fill="#19364e" font-family="Arial,sans-serif" font-size="19">
+<rect x="24" y="166" width="537" height="128" rx="13" fill="#e3eff9"/>
+<text x="46" y="205" font-size="22" font-weight="700">1. «Взгляд в зеркало»</text><text x="46" y="234">Проверяйте сроки, качество,</text><text x="46" y="262">самомнение и привычки (46–47).</text>
+<rect x="599" y="166" width="537" height="128" rx="13" fill="#e3eff9"/>
+<text x="621" y="205" font-size="22" font-weight="700">2. Другое мерило успеха</text><text x="621" y="234">Не личный код, а результаты</text><text x="621" y="262">команды (49, 54–55).</text>
+<rect x="24" y="318" width="537" height="128" rx="13" fill="#e3eff9"/>
+<text x="46" y="357" font-size="22" font-weight="700">3. Цените время</text><text x="46" y="386">Совещания с решениями,</text><text x="46" y="414">план и контроль этапов (50–52).</text>
+<rect x="599" y="318" width="537" height="128" rx="13" fill="#e3eff9"/>
+<text x="621" y="357" font-size="22" font-weight="700">4. Концепция до инструментов</text><text x="621" y="386">Архитектура, делегирование,</text><text x="621" y="414">документация (52–54).</text>
+<rect x="24" y="470" width="537" height="128" rx="13" fill="#e3eff9"/>
+<text x="46" y="509" font-size="22" font-weight="700">5. Учитесь и признавайте слабости</text><text x="46" y="538">Читайте шире своей технологии;</text><text x="46" y="566">не поощряйте свои ошибки (55–57).</text>
+<rect x="599" y="470" width="537" height="128" rx="13" fill="#e3eff9"/>
+<text x="621" y="509" font-size="22" font-weight="700">6. Семь вопросов каждый день</text><text x="621" y="538">Качество, рост, интерес, время,</text><text x="621" y="566">команда, слабости, знания (62).</text>
+</g>
+<text x="30" y="634" font-family="Arial,sans-serif" font-size="16" fill="#4f667c">Источник: RAG p0046-c01…p0062-c01; PDF p. 46–62. Авторские рекомендации.</text>
+</svg>

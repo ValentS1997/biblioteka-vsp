@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="960" viewBox="0 0 1260 960" role="img" aria-labelledby="title desc">
+<title id="title">Глава 21 — Устойчивые команды</title>
+<desc id="desc">Компактная карта коллективной ответственности, устойчивого дежурства, прозрачности труда, документации и обучения по canonical RAG PDF 256–271.</desc>
+<rect width="1260" height="960" fill="#102238"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="50" y="73" font-size="39" font-weight="bold" fill="#f3faff">Глава 21 · Устойчивые команды</text>
+<text x="50" y="114" font-size="22" fill="#c9dced">Люди, знания, процессы и сервисы — одна система</text>
+<rect x="50" y="151" width="1160" height="132" rx="16" fill="#294964"/>
+<text x="79" y="201" font-size="27" font-weight="bold" fill="#f3faff">1 · Совместная ответственность</text>
+<text x="79" y="243" font-size="21" fill="#dfeef9">Разработка + эксплуатация + безопасность + сети + продукт</text>
+<rect x="50" y="322" width="561" height="182" rx="16" fill="#31516f"/>
+<text x="79" y="372" font-size="27" font-weight="bold" fill="#f3faff">2 · Дежурства без истощения</text>
+<text x="79" y="415" font-size="20" fill="#deebf7">Подмены · отдых · поддержка</text>
+<text x="79" y="454" font-size="20" fill="#deebf7">Оповещения и ясные протоколы</text>
+<rect x="647" y="322" width="563" height="182" rx="16" fill="#225b68"/>
+<text x="678" y="372" font-size="27" font-weight="bold" fill="#f3ffff">3 · Видимая работа</text>
+<text x="678" y="415" font-size="20" fill="#dff4f6">Общая доска · поток · нагрузка</text>
+<text x="678" y="454" font-size="20" fill="#dff4f6">Меньше скрытого труда и WIP</text>
+<rect x="50" y="543" width="1160" height="129" rx="16" fill="#2a506a"/>
+<text x="79" y="593" font-size="27" font-weight="bold" fill="#f3faff">4 · Документировать и учиться</text>
+<text x="79" y="634" font-size="20" fill="#dfebfb">Версии и Done · бюджет и время · обмен знаниями · учения</text>
+<rect x="50" y="712" width="1160" height="146" rx="16" fill="#2e5b4d" stroke="#8cdcb6" stroke-width="2"/>
+<text x="79" y="763" font-size="27" font-weight="bold" fill="#f4fff8">5 · Ретроспектива и обратная связь</text>
+<text x="79" y="806" font-size="21" fill="#e2f7eb">Поддержка и доверие вместо героизма и слежки</text>
+<text x="50" y="926" font-size="17" fill="#abc8df">Canonical RAG PDF 256–271 · не воспроизводит оригинальный рисунок 21.1</text>
+</g></svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 680" width="1100" height="680" role="img" aria-label="Глава 21: 64-битные операнды, RIP-relative, FS GS, SYSCALL, TSS IST">
+<rect width="1100" height="680" fill="#f8fafc"/><g font-family="sans-serif" fill="#17354d">
+<text x="34" y="55" font-size="30">Глава 21 · Особенности 64-битового режима</text>
+<text x="34" y="87" font-size="16">Заключительная глава · RAG PDF 341–372</text>
+<rect x="34" y="119" width="495" height="150" rx="14" fill="#dbeafe"/>
+<rect x="566" y="119" width="500" height="150" rx="14" fill="#dcfce7"/>
+<text x="54" y="157" font-size="23">Регистры RAX–R15</text>
+<text x="54" y="202" font-size="18">Запись в EAX обнуляет верх RAX</text>
+<text x="54" y="242" font-size="17">8/16-bit запись сохраняет верх</text>
+<text x="586" y="157" font-size="23">Перемещаемость</text>
+<text x="586" y="202" font-size="18">RIP-relative, signed rel32</text>
+<text x="586" y="242" font-size="17">ABS зависит от размещения</text>
+<rect x="34" y="302" width="322" height="162" rx="14" fill="#e0e7ff"/>
+<rect x="389" y="302" width="323" height="162" rx="14" fill="#e9d5ff"/>
+<rect x="745" y="302" width="321" height="162" rx="14" fill="#fce7f3"/>
+<text x="52" y="341" font-size="22">FS / GS</text>
+<text x="52" y="385" font-size="17">Ненулевая база</text>
+<text x="52" y="426" font-size="17">GDT / MSR / FSGSBASE</text>
+<text x="406" y="341" font-size="22">SYSCALL / SYSRET</text>
+<text x="406" y="385" font-size="17">RCX / R11, STAR</text>
+<text x="406" y="426" font-size="17">CPL 0 → CPL 3</text>
+<text x="761" y="341" font-size="22">TSS / IST / IDT</text>
+<text x="761" y="385" font-size="17">7 alternative stacks</text>
+<text x="761" y="426" font-size="17">64-bit gates: 16 bytes</text>
+<rect x="34" y="503" width="1032" height="104" rx="14" fill="#ffedd5"/>
+<text x="52" y="541" font-size="21">Открытый вопрос источника: Bochs ≠ PC</text>
+<text x="52" y="573" font-size="17">GP13 при возврате из прерывания с CPL=3 — причина не установлена</text>
+<text x="34" y="648" font-size="14">Source-only · 14 листингов · команды не запускались</text>
+</g></svg>

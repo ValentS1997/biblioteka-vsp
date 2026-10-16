@@ -1,0 +1,43 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: "0011-modern-system-administration-chapter-18"
+repository: "vsp-corp/biblioteka-vsp"
+book_id: modern-system-administration-jennifer-davis-ru
+task_kind: chapter
+objective: "RAG-only chapter 18 Capacity Management, eight Git artifacts, CI-gated chapter publication"
+branch: "docs/0011-chapter18-postmerge-index-20261015"
+initial_base_sha: "e6588332517d3c82c245d25ee8e367356175d20c"
+last_observed_head_sha: "4ac4969b5abc04ebfc3b6112d35d1ffd10466c4e"
+expected_source_sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source PDF/RAG modifications
+  - no reading-progress mutation
+  - no ZIP/archive substitution
+  - no PR before exact branch HEAD CI PASS
+  - no merge before independent PR-triggered CI PASS
+stage: COMPLETE
+completed_steps:
+  - step: "Verified canonical main 17/21 and chapter 17 checkpoint COMPLETE"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/.workflow/checkpoints/0011-modern-system-administration-chapter-17.yaml"
+  - step: "Verified chapter 18 canonical RAG PDF 213–225 and PDF 226 chapter 19 boundary"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/modern-system-administration-jennifer-davis-ru/rag/chunks/p0201-p0300/p0226-c01.md"
+  - step: "Created eight RAG-only chapter 18 Git artifacts and a branch-only index update"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/tree/chapters/0011-modern-system-administration-chapter-18/books/modern-system-administration-jennifer-davis-ru/notes/chapters/chapter-18-capacity-management"
+  - step: "Chapter 18 exact branch head 66a509cfba7953ff666f4729e4991ffeeb420539 CI PASS"
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38770608989"
+  - step: "Independent PR #571 workflow CI PASS at identical head"
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38770761406"
+  - step: "PR #571 merged at 4ac4969b5abc04ebfc3b6112d35d1ffd10466c4e, eight individual Git files read back in main"
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/571"
+pending_steps: []
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/commit/4ac4969b5abc04ebfc3b6112d35d1ffd10466c4e"
+first_safe_next_action: "After postmerge CI-gated PR, verify canonical main 18/21 and COMPLETE checkpoint; then analyze chapter 19"
+blocker: "Not applicable"
+last_observed_at: "Not applicable"

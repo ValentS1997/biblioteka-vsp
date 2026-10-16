@@ -1,0 +1,160 @@
+schema_version: "1.0"
+
+template:
+  id: "BIBLIOTEKA-VSP-SESSION-RECOVERY"
+  version: "1.0"
+  type: "git_checkpoint_resume"
+  status: "ACCEPTED"
+  purpose: >-
+    Make repository work recoverable after conversation-length limits, tool
+    interruptions, browser refreshes or repeated assistant failures. GitHub
+    state is the authority; model reasoning and transient chat state are not.
+
+scope:
+  repository: "vsp-corp/biblioteka-vsp"
+  applies_to:
+    - "Every book chat and branch after initialization."
+    - "Chapter artifacts and chapter publication."
+    - "Book/source/RAG ingest and RAG rebuild."
+    - "Registry changes, tests and process/template changes."
+    - "Multi-PR merges, CI/review and other multi-step Git operations."
+  no_background_execution: true
+  does_not_promise:
+    - "Preventing ChatGPT discussion-length limits or platform errors."
+    - "Restoring inaccessible chain-of-thought, uncommitted drafts or a lost tool call."
+    - "Continuing autonomously after a chat ends without a new explicit invocation."
+
+authority:
+  order:
+    - "Latest explicit user task, including non-destructive constraints."
+    - "Current GitHub repository/branch refs, commit trees, PR, CI and actual file content."
+    - "Accepted canonical contracts in current main."
+    - "Verified committed checkpoint and its evidence links."
+    - "Prior assistant messages and chat summaries (informational only)."
+  rule: >-
+    A checkpoint is a recovery index, not proof that work happened. Revalidate
+    its claims against GitHub after each restart. Never reconstruct unknown
+    commit hashes, test results or missing steps from memory.
+
+durable_checkpoint:
+  default_for:
+    - "Any state-changing task involving multiple Git writes or validation phases."
+    - "Long-running RAG, chapter analysis, template changes or batch PR operations."
+    - "Tasks whose state can diverge if the chat stops after a remote mutation."
+  skip_only_if: >-
+    One atomic, verified Git write or read-only task where existing commit/PR
+    evidence fully identifies the next action; still report the exact ref/SHA.
+  location: ".workflow/checkpoints/<task-key>.yaml"
+  storage: "Non-main feature/book branch, committed as a normal text file."
+  task_key: "Deterministic, unique within the branch; use book-id and task/PR identifiers, not timestamps alone."
+  lifecycle:
+    - "Create or verify working branch and checkpoint before extended mutation."
+    - "Commit updated checkpoint after each confirmed milestone or ambiguous remote tool result."
+    - "Read the checkpoint back by exact branch/ref and verify its commit."
+    - "Mark terminal only after remote final verification; remove transient checkpoint before merge when appropriate."
+    - "Preserve final commit/PR/CI evidence in the PR description or user-visible report so recovery remains possible after checkpoint removal."
+  privacy:
+    - "Record only technical task status and public-to-repo evidence."
+    - "Never store credentials, tokens, private user details, full chats, hidden model reasoning or raw tool transcripts."
+    - "Do not store copyrighted source-book passages in checkpoints."
+  fields:
+    schema: "biblioteka-vsp/work-checkpoint/v1"
+    task_key: "[Deterministic ID]"
+    repository: "vsp-corp/biblioteka-vsp"
+    book_id: "[Book ID or Not applicable]"
+    task_kind: "chapter | rag | registry | process | batch_merge | other"
+    objective: "[Short plain-language task definition]"
+    branch: "[Confirmed non-main branch]"
+    initial_base_sha: "[Verified Git commit]"
+    last_observed_head_sha: "[Verified Git commit; not automatically the next mutation precondition]"
+    expected_source_sha256: "[When source-related; otherwise Not applicable]"
+    constraints:
+      - "no direct main changes"
+      - "no force-push"
+      - "no source/RAG rewrite without explicit authorization"
+      - "no reading-progress mutation without explicit user confirmation"
+      - "no archive delivery for chapter artifacts"
+    stage: "PLANNED | IN_PROGRESS | PARTIAL | CI_PENDING | BLOCKED | COMPLETE"
+    completed_steps:
+      - step: "[Completed action]"
+        evidence_type: "commit | file-readback | pr | ci | other"
+        reference: "[Verified GitHub URL or SHA]"
+    pending_steps:
+      - "[Unfinished operation and acceptance check]"
+    last_verified_evidence: "[GitHub URL or SHA, not a claim from chat]"
+    first_safe_next_action: "[Read-only check first on resume]"
+    blocker: "[Reason / Not applicable]"
+    last_observed_at: "[ISO time if independently verified, else Not applicable]"
+  optimistic_concurrency: >-
+    Before writing, re-fetch actual branch HEAD and file blob SHA. Do not
+    overwrite another chat's change or force-push. If HEAD moved, reconcile
+    files/PR before updating checkpoint or chapter material.
+
+execution:
+  strategy: "bounded_verified_units"
+  unit_rules:
+    - "Use one small externally verifiable unit at a time (e.g. one chapter's files, one RAG phase, one PR)."
+    - "For each: preflight -> write -> GitHub read-back -> CI when applicable -> checkpoint -> user-visible status."
+    - "Avoid preparing an entire multi-book/multi-chapter batch solely in transient assistant context."
+    - "Checkpoint before a risky/expensive action; after an in-flight tool error do not assume success or failure."
+    - "When context/tool availability becomes unreliable, stop and disclose the latest confirmed checkpoint instead of promising later background delivery."
+    - "Do not substitute ZIP/sandbox outputs for uncompleted chapter Git writes."
+  progress_reporting:
+    report_after_each_milestone: true
+    required:
+      - "task_key and book_id if applicable"
+      - "confirmed branch and commit SHA"
+      - "completed vs pending units"
+      - "last verified action and PR/CI when relevant"
+      - "the next safe action"
+    unknowns: "Unknown or inaccessible evidence must be reported, not inferred."
+
+recovery_trigger:
+  exact_command: "Ковальски, проверка после обрыва связи"
+  also_match:
+    - "возобнови после обрыва"
+    - "продолжи с последней контрольной точки"
+    - "проверка после ресета"
+  no_resubmission_of_full_task_required_if: "Existing checkpoint or branch/PR uniquely identifies the task."
+  read_only_reconstruction:
+    - "Resolve repository and active book/task from explicit request and GitHub, not stale conversation memory."
+    - "Fetch main HEAD, candidate working branch(es), open/merged PRs and latest CI/check-runs."
+    - "Fetch candidate checkpoint and verify task identity, expected source hash and constraints."
+    - "Compare actual committed files/tree with completed/pending steps; detect writes completed just before interruption."
+    - "Reconcile divergent checkpoint HEAD, missing artifacts, duplicate PRs and concurrent branch changes."
+    - "Distinguish in-progress, merged, failed, pending CI and already complete outcomes."
+    - "Only then resume the first incomplete, safe operation using current expected SHA."
+  interrupted_operation_rule: >-
+    After an error or timeout, assume remote operation outcome is UNKNOWN.
+    Inspect GitHub state before retrying. Never replay a commit, PR, merge,
+    source promotion or RAG build simply because the previous reply was lost.
+  repeated_failure_rule: >-
+    Run the same read-only reconstruction again after subsequent resets;
+    never treat prior failed resumes as successful. Keep task identity stable.
+    If the state is ambiguous, stop with RECOVERY_BLOCKED and request only the
+    minimum missing discriminator (such as the task branch or PR URL).
+  cannot_recover_rule: >-
+    Report RECOVERY_BLOCKED if the state exists only in vanished chat context
+    and there is no verifiable Git evidence. Do not assert lossless recovery.
+
+terminal_states:
+  recovered:
+    status: "RECOVERED_FROM_GIT"
+    meaning: "Evidence reconciled; continue first unfinished safe unit."
+  already_complete:
+    status: "ALREADY_COMPLETE_VERIFIED"
+    meaning: "All requested outputs and required acceptance gates already verified."
+  unresolved:
+    status: "RECOVERY_BLOCKED"
+    meaning: "Not enough verifiable evidence to continue safely."
+  in_progress:
+    status: "CHECKPOINTED_IN_PROGRESS"
+    meaning: "Work partially committed and remaining units explicitly recorded."
+
+acceptance_criteria:
+  - "Long/multi-step work has an authoritative, branch-scoped Git checkpoint or equivalent verified PR state."
+  - "Interrupted operations are re-checked remotely before any retry."
+  - "No output claims that missing reasoning or draft text can be recovered."
+  - "Repeated resets do not duplicate commits/PRs or overwrite competing branch changes."
+  - "Each stage has a verified SHA, clear pending next action and honest user-visible status."
+  - "Read-only recovery never mutates canonical source or reading state."

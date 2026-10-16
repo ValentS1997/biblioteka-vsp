@@ -1,0 +1,77 @@
+schema: biblioteka-vsp/chapter-plan/v1
+book_id: zabbix-7-monitoring-it-infrastructure-ru
+source_sha256: 07204d885d4bf4c6c2de7c71ae42a4e3ed4cea794169cbe07985552e63875a27
+source_format: pdf
+source_locator_type: source_pdf_1_indexed
+corpus_generation_id: 6a5221f8e8a0f88b400905d7334879edff6f5451d9ab7f6e56bb203809018986
+process_router_contract: BIBLIOTEKA-VSP-PROCESS-COMPLIANCE-ROUTER/v1.2
+session_recovery_contract: BIBLIOTEKA-VSP-SESSION-RECOVERY/v1.0
+chapter_publication_contract: BIBLIOTEKA-VSP-CHAPTER-PUBLICATION/v1.0
+toc_evidence: "rag/chunks/p0001-p0100/p0005-c01.md; chunk_id=zabbix-7-monitoring-it-infrastructure-ru:p0005:c01; source_locator=5; thirteen numbered TOC entries, each start independently verified by matching RAG page chunk"
+total_chapters: 13
+chapters:
+  - number: 1
+    title: "Установка Zabbix и начало работы с веб-интерфейсом"
+    slug: installation-web-interface
+    source_locator: "20"
+    rag_start_chunk: "zabbix-7-monitoring-it-infrastructure-ru:p0020:c01"
+  - number: 2
+    title: "Настраиваем пользователей в Zabbix"
+    slug: users-roles-authentication
+    source_locator: "59"
+    rag_start_chunk: "zabbix-7-monitoring-it-infrastructure-ru:p0059:c01"
+  - number: 3
+    title: "Настройка мониторинга в Zabbix"
+    slug: monitoring-configuration
+    source_locator: "93"
+    rag_start_chunk: "zabbix-7-monitoring-it-infrastructure-ru:p0093:c01"
+  - number: 4
+    title: "Работа с триггерами и оповещениями"
+    slug: triggers-alerting
+    source_locator: "161"
+    rag_start_chunk: "zabbix-7-monitoring-it-infrastructure-ru:p0161:c01"
+  - number: 5
+    title: "Создание собственных шаблонов"
+    slug: custom-templates
+    source_locator: "197"
+    rag_start_chunk: "zabbix-7-monitoring-it-infrastructure-ru:p0197:c01"
+  - number: 6
+    title: "Визуализация данных, инвентаризация и отчетность"
+    slug: visualization-inventory-reporting
+    source_locator: "229"
+    rag_start_chunk: "zabbix-7-monitoring-it-infrastructure-ru:p0229:c01"
+  - number: 7
+    title: "Использование службы Discovery в Zabbix"
+    slug: discovery
+    source_locator: "291"
+    rag_start_chunk: "zabbix-7-monitoring-it-infrastructure-ru:p0291:c01"
+  - number: 8
+    title: "Настройка прокси-серверов Zabbix"
+    slug: zabbix-proxies
+    source_locator: "336"
+    rag_start_chunk: "zabbix-7-monitoring-it-infrastructure-ru:p0336:c01"
+  - number: 9
+    title: "Интеграция Zabbix с внешними сервисами"
+    slug: external-service-integration
+    source_locator: "371"
+    rag_start_chunk: "zabbix-7-monitoring-it-infrastructure-ru:p0371:c01"
+  - number: 10
+    title: "Расширение функциональности Zabbix с помощью пользовательских скриптов и API"
+    slug: scripts-and-api
+    source_locator: "412"
+    rag_start_chunk: "zabbix-7-monitoring-it-infrastructure-ru:p0412:c01"
+  - number: 11
+    title: "Поддержка и обслуживание Zabbix"
+    slug: maintenance
+    source_locator: "434"
+    rag_start_chunk: "zabbix-7-monitoring-it-infrastructure-ru:p0434:c01"
+  - number: 12
+    title: "Продвинутая настройка СУБД"
+    slug: database-tuning
+    source_locator: "465"
+    rag_start_chunk: "zabbix-7-monitoring-it-infrastructure-ru:p0465:c01"
+  - number: 13
+    title: "Мониторинг облачной инфраструктуры"
+    slug: cloud-monitoring
+    source_locator: "490"
+    rag_start_chunk: "zabbix-7-monitoring-it-infrastructure-ru:p0490:c01"

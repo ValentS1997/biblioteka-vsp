@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="900" viewBox="0 0 1240 900" role="img" aria-labelledby="title desc">
+<title id="title">Глава 16 — Управление данными мониторинга</title>
+<desc id="desc">Компактная карта метрик, журналов, трассировки, хранения, поиска и безопасности на основе RAG PDF 195–202.</desc>
+<rect width="1240" height="900" fill="#0d2033"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="48" y="71" font-size="39" font-weight="bold" fill="#f1f8ff">Глава 16 · Управление телеметрией</text>
+<text x="48" y="109" font-size="22" fill="#bdd6ea">Сохраняй историю, достаточную для объяснения инцидентов</text>
+<rect x="48" y="147" width="352" height="216" rx="16" fill="#284461"/>
+<text x="72" y="194" font-size="29" font-weight="bold" fill="#f3faff">Метрики</text>
+<text x="72" y="236" font-size="21" fill="#dcecff">Gauge · сейчас</text>
+<text x="72" y="270" font-size="21" fill="#dcecff">Counter · накоплено</text>
+<text x="72" y="310" font-size="19" fill="#bdd9ee">Тенденции · мало</text>
+<text x="72" y="336" font-size="19" fill="#bdd9ee">контекста</text>
+<rect x="444" y="147" width="352" height="216" rx="16" fill="#1f5060"/>
+<text x="468" y="194" font-size="29" font-weight="bold" fill="#f3ffff">Журналы</text>
+<text x="468" y="236" font-size="20" fill="#dcf7f8">Время · поля · событие</text>
+<text x="468" y="270" font-size="20" fill="#dcf7f8">Структура и поиск</text>
+<text x="468" y="310" font-size="19" fill="#c5e6ed">Больше контекста</text>
+<text x="468" y="336" font-size="19" fill="#c5e6ed">и затрат</text>
+<rect x="840" y="147" width="352" height="216" rx="16" fill="#39455b"/>
+<text x="864" y="194" font-size="29" font-weight="bold" fill="#f2f8ff">Трассировка</text>
+<text x="864" y="236" font-size="21" fill="#e0ebff">Span → trace</text>
+<text x="864" y="270" font-size="20" fill="#e0ebff">Путь через системы</text>
+<text x="864" y="310" font-size="19" fill="#cad9ef">Максимум деталей</text>
+<text x="864" y="336" font-size="19" fill="#cad9ef">на событие</text>
+<text x="48" y="427" font-size="28" font-weight="bold" fill="#f3f8ff">Управление жизненным циклом</text>
+<rect x="48" y="456" width="1144" height="126" rx="14" fill="#2a4260"/>
+<text x="78" y="501" font-size="27" font-weight="bold" fill="#f3faff">Объём и пики → retention → ротация → поиск</text>
+<text x="78" y="541" font-size="21" fill="#d8e8fb">Неизменяемость · доступность · стоимость · нужная детализация</text>
+<rect x="48" y="621" width="1144" height="146" rx="14" fill="#25564e" stroke="#7cddbd" stroke-width="2"/>
+<text x="78" y="667" font-size="27" font-weight="bold" fill="#f2fff8">После инцидента: пересмотри пользу данных</text>
+<text x="78" y="705" font-size="21" fill="#e0fff1">Чего не хватило? Что помогло? Что уже лишнее?</text>
+<text x="78" y="738" font-size="21" fill="#e0fff1">Личные данные — доступ только по назначению</text>
+<text x="48" y="858" font-size="17" fill="#adc8dd">Canonical RAG PDF 195–202 · самостоятельная карта, не схема поставщика.</text>
+</g></svg>

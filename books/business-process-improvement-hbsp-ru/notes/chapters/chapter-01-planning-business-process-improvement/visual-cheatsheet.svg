@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 590" width="1320" height="590" role="img" aria-labelledby="title desc">
+<title id="title">Этап 1 — планирование улучшения бизнес-процессов</title>
+<desc id="desc">Пять шагов: выявить симптомы, выбрать процесс, определить рамки и цели, собрать команду, поставить задачу. Источник: RAG страницы 35–42 книги 0036.</desc>
+<rect width="1320" height="590" rx="22" fill="#f4f7fc"/>
+<rect x="30" y="28" width="1260" height="115" rx="18" fill="#142a4a"/>
+<text x="60" y="78" font-family="DejaVu Sans,Arial,sans-serif" font-size="33" fill="#ffffff" font-weight="700">Этап 1. Планирование улучшения бизнес-процессов</text>
+<text x="60" y="116" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#c8d8ef">Пять шагов по RAG · PDF c. 35–42 · книга №0036</text>
+<g font-family="DejaVu Sans,Arial,sans-serif">
+<g fill="#ffffff" stroke="#ccd9ed" stroke-width="2">
+<rect x="36" y="190" width="235" height="212" rx="17"/>
+<rect x="288" y="190" width="235" height="212" rx="17"/>
+<rect x="540" y="190" width="235" height="212" rx="17"/>
+<rect x="792" y="190" width="235" height="212" rx="17"/>
+<rect x="1044" y="190" width="240" height="212" rx="17"/>
+</g>
+<g fill="#2556a0"><circle cx="72" cy="225" r="23"/><circle cx="324" cy="225" r="23"/><circle cx="576" cy="225" r="23"/><circle cx="828" cy="225" r="23"/><circle cx="1080" cy="225" r="23"/></g>
+<g fill="#ffffff" font-weight="700" font-size="19" text-anchor="middle"><text x="72" y="232">1</text><text x="324" y="232">2</text><text x="576" y="232">3</text><text x="828" y="232">4</text><text x="1080" y="232">5</text></g>
+<g fill="#142a4a" font-size="19" font-weight="700">
+<text x="54" y="272">Симптомы</text><text x="306" y="272">Приоритет</text><text x="558" y="272">Рамки и цели</text><text x="810" y="272">Команда</text><text x="1062" y="272">Постановка</text><text x="1062" y="298">задачи</text>
+</g>
+<g fill="#3d506b" font-size="16">
+<text x="54" y="309">Качество, время,</text><text x="54" y="332">ошибки, жалобы,</text><text x="54" y="355">недовольство</text>
+<text x="306" y="309">Матрица 1–5,</text><text x="306" y="332">критерии, итог</text><text x="306" y="355">по процессам</text>
+<text x="558" y="309">Что меняем;</text><text x="558" y="332">измеримый эффект;</text><text x="558" y="355">сроки</text>
+<text x="810" y="309">Менеджер,</text><text x="810" y="332">владелец процесса,</text><text x="810" y="355">пользователи</text>
+<text x="1062" y="330">Правила работы,</text><text x="1062" y="353">связь, отчётность</text>
+</g>
+<g stroke="#2556a0" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M274 293 h11 l-7 -6 m7 6 l-7 6"/>
+<path d="M526 293 h11 l-7 -6 m7 6 l-7 6"/>
+<path d="M778 293 h11 l-7 -6 m7 6 l-7 6"/>
+<path d="M1030 293 h11 l-7 -6 m7 6 l-7 6"/>
+</g>
+<rect x="36" y="447" width="1248" height="100" rx="16" fill="#e2ebf9"/>
+<text x="58" y="484" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="700" fill="#18365e">Результат: согласованный план улучшения процесса, а не внедрение изменений</text>
+<text x="58" y="516" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#385476">Источник: business-process-improvement-hbsp-ru:p0035:c01–p0042:c01 · Команды CLI отсутствуют</text>
+</g>
+</svg>

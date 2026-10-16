@@ -1,0 +1,44 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: "0011-modern-system-administration-chapter-09"
+repository: "vsp-corp/biblioteka-vsp"
+book_id: modern-system-administration-jennifer-davis-ru
+task_kind: chapter
+objective: "RAG-only chapter 9 Documentation analysis and direct individual Git publication"
+branch: "docs/0011-chapter09-postmerge-index-20261015"
+initial_base_sha: "39834669872b3d88532afadfc9f5dcbe2942931f"
+last_observed_head_sha: "f71f187f4cc4c63041d05ae461402720ebf753e4"
+expected_source_sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite
+  - no reading-progress mutation
+  - no ZIP or archives
+stage: COMPLETE
+completed_steps:
+  - step: "Verified main progress 8/21, ACCEPTED canonical RAG and consistent source hash"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/39834669872b3d88532afadfc9f5dcbe2942931f/books/modern-system-administration-jennifer-davis-ru/notes/chapters/plan.yaml"
+  - step: "Verified chapter 9 boundaries RAG PDF 109-115, PDF 116 starts chapter 10"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/39834669872b3d88532afadfc9f5dcbe2942931f/books/modern-system-administration-jennifer-davis-ru/rag/chunks/p0101-p0200/p0116-c01.md"
+  - step: "Eight individual chapter files committed and independently read back"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/1c8782b8e49dc0f6b7bf393e4c1a1afb33406a0d"
+  - step: "Book index updated and independently read back: branch 9/21"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/a6656f6113211738aa56980ffdb942b9ed2527ba"
+  - step: "Chapter 9 independent PR CI PASS"
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38724137117"
+  - step: "PR #527 merged into main and eight individual files verified"
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/527"
+  - step: "Postmerge index now reports 9/21 on follow-up branch"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/f71f187f4cc4c63041d05ae461402720ebf753e4"
+pending_steps: []
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/commit/bdbcb3250179350f658102379f03cd2831037ceb"
+first_safe_next_action: "Verify final merged main, chapter 9 index and checkpoint before starting chapter 10"
+blocker: "Not applicable"
+last_observed_at: "Not applicable"

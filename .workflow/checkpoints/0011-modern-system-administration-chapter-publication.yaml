@@ -1,0 +1,44 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: 0011-modern-system-administration-chapter-publication
+repository: vsp-corp/biblioteka-vsp
+book_id: modern-system-administration-jennifer-davis-ru
+task_kind: chapter
+objective: >-
+  Maintain RAG-verified publication plan and chapter index; publish future
+  chapter artifacts as individual Git files only after chapter-specific request.
+branch: chapters/0011-modern-system-administration
+initial_base_sha: aa3733b43f6db3627453e4814926e59a9ae3b136
+last_observed_head_sha: dbb4d183baefa52df58e940ad5860260aebea731
+expected_source_sha256: 06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790
+constraints:
+  - "no direct main changes"
+  - "no force-push"
+  - "no source/RAG rewrite without explicit authorization"
+  - "no reading-progress mutation without explicit user confirmation"
+  - "no archive delivery for chapter artifacts"
+  - "all chapter artifact files published individually to Git"
+stage: IN_PROGRESS
+completed_steps:
+  - step: "Verified canonical RAG TOC contains 21 numbered chapters"
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/modern-system-administration-jennifer-davis-ru/rag/manifest.yaml
+  - step: "Created and read back source-bound chapter plan (21 chapters)"
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/c948f38b8ce8f152ec28bd92d1eb0a169693c069
+  - step: "Created and read back chapter publication index (0/21)"
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/dbb4d183baefa52df58e940ad5860260aebea731
+  - step: "Verified chapter-plan PR is open and CI passed at observed HEAD"
+    evidence_type: pr
+    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/489
+  - step: "Verified chapter-notes check-run succeeded at observed HEAD"
+    evidence_type: ci
+    reference: https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38619164480
+pending_steps:
+  - "Recheck PR #489 status, current branch HEAD and required CI before review or merge; do not duplicate PR."
+  - "After explicit 'Анализ главы N' request, verify chapter boundary in accepted RAG and readiness before generating artifacts."
+  - "For each chapter commit and read back six mandatory individual files, conditional artifacts and updated chapter index, then checkpoint."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/pull/489
+first_safe_next_action: "Read-only fetch of branch HEAD, PR #489 and check runs before any further write."
+blocker: "Not applicable; chapter-specific analysis has not been requested."
+last_observed_at: "Not applicable"

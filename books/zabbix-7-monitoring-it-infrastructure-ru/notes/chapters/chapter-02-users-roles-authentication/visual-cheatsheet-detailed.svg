@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1250" viewBox="0 0 1600 1250" role="img" aria-label="Подробная схема главы 2 Zabbix: группы, роли, пользователи, Azure AD SAML, LDAP и JIT">
+<rect width="1600" height="1250" fill="#f1f5fc"/>
+<rect width="1600" height="125" fill="#182c4a"/>
+<text x="52" y="63" font-family="DejaVu Sans, sans-serif" font-size="38" font-weight="700" fill="#ffffff">ZABBIX 7 / ГЛАВА 02</text>
+<text x="52" y="98" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#cbd5e1">Группы, роли, внешняя аутентификация и автоматическое предоставление доступа</text>
+<rect x="42" y="151" width="491" height="327" rx="18" fill="#fff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="68" y="195" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">01  ГРУППЫ ПОЛЬЗОВАТЕЛЕЙ</text>
+<line x1="68" y1="207" x2="505" y2="207" stroke="#cbd5e1" stroke-width="2"/>
+<text x="68" y="242" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">Users → User groups → Create</text>
+<text x="68" y="274" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">Networking → Network devices</text>
+<text x="68" y="306" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">Infrastructure → Linux servers</text>
+<text x="68" y="338" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">Buying/Inventory → Read к двум группам</text>
+<text x="68" y="370" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">Scope: host/template groups</text>
+<text x="68" y="402" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">Разрешения: Read или Read-write</text>
+<text x="68" y="443" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#64748b">PDF 59–64</text>
+<rect x="551" y="151" width="491" height="327" rx="18" fill="#fff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="579" y="195" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">02  РОЛИ ПОЛЬЗОВАТЕЛЕЙ</text>
+<line x1="579" y1="207" x2="1013" y2="207" stroke="#cbd5e1" stroke-width="2"/>
+<text x="579" y="242" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">Users → User roles → Create</text>
+<text x="579" y="274" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">User / Admin / Super admin</text>
+<text x="579" y="306" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">UI elements / services / modules</text>
+<text x="579" y="338" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">API и действия — отдельно</text>
+<text x="579" y="370" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">User+ role: тип Admin</text>
+<text x="579" y="402" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">Maintenance + Create/edit maintenance</text>
+<text x="579" y="443" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#64748b">PDF 65–71 • проверять итоговые права</text>
+<rect x="1060" y="151" width="498" height="327" rx="18" fill="#fff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="1086" y="195" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">03  АККАУНТЫ</text>
+<line x1="1086" y1="207" x2="1530" y2="207" stroke="#cbd5e1" stroke-width="2"/>
+<text x="1086" y="242" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">Users → Users → Create</text>
+<text x="1086" y="274" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">Username + user group + Role</text>
+<text x="1086" y="306" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">s_network: Super admin</text>
+<text x="1086" y="338" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">y_network: Admin</text>
+<text x="1086" y="370" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">r_infra: Super admin</text>
+<text x="1086" y="402" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">e_buy: User или User+</text>
+<text x="1086" y="443" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#a16207">PDF 71–77 • Super admin не ограничен</text>
+<rect x="42" y="499" width="1000" height="330" rx="18" fill="#fff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="68" y="542" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">04  SAML / MICROSOFT ENTRA ID</text>
+<line x1="68" y1="554" x2="1013" y2="554" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="67" y="577" width="295" height="97" rx="18" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1.6"/>
+<text x="85" y="612" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#075985">IdP: Azure AD</text>
+<text x="85" y="644" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#263448">Enterprise application</text>
+<rect x="390" y="577" width="295" height="97" rx="18" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.6"/>
+<text x="408" y="612" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#3730a3">SAML-атрибуты</text>
+<text x="408" y="644" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#263448">Entity ID, SSO/SLO, SP</text>
+<rect x="715" y="577" width="296" height="97" rx="18" fill="#f0fdf4" stroke="#86efac" stroke-width="1.6"/>
+<text x="733" y="612" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" fill="#166534">Zabbix frontend</text>
+<text x="733" y="644" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#263448">Users → Authentication</text>
+<text x="75" y="721" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">Без JIT: создать пользователя заранее, внешний IdP проверяет пароль</text>
+<text x="75" y="750" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">С JIT: external groups + attributes → user group + role в Zabbix</text>
+<text x="75" y="779" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">Точные значения из рисунков p82–84 не извлечены: RAG_MISS</text>
+<text x="75" y="807" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#64748b">PDF 77–86 • сертификат IdP хранится в conf/certs/idp.cert</text>
+<rect x="1060" y="499" width="498" height="330" rx="18" fill="#fff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="1086" y="542" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">05  LDAP / JIT</text>
+<line x1="1086" y1="554" x2="1530" y2="554" stroke="#cbd5e1" stroke-width="2"/>
+<text x="1086" y="593" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">OpenLDAP — тестовая среда</text>
+<text x="1086" y="624" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">Перед сменой LDAP default:</text>
+<text x="1086" y="655" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">Admin → группа Internal</text>
+<text x="1086" y="686" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">LDAP settings → server / bind</text>
+<text x="1086" y="717" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">JIT mapping → группы / роли</text>
+<text x="1086" y="748" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">Первый вход → новая запись Zabbix</text>
+<text x="1086" y="799" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#a16207">PDF 87–92 • demo Docker ≠ production</text>
+<rect x="42" y="850" width="746" height="308" rx="18" fill="#fff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="68" y="895" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700" fill="#155e75">06  ПРОВЕРКА РАЗРЕШЕНИЙ</text>
+<line x1="68" y1="907" x2="760" y2="907" stroke="#cbd5e1" stroke-width="2"/>
+<text x="68" y="946" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">1. Scope Read/Read-write к host/template groups</text>
+<text x="68" y="976" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">2. Роль: UI, API, actions, Maintenance</text>
+<text x="68" y="1006" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">3. Внешний вход SAML/LDAP принят корректно</text>
+<text x="68" y="1036" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">4. JIT создаёт правильные user/group/role</text>
+<text x="68" y="1066" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">5. После LDAP доступ Admin через Internal</text>
+<text x="68" y="1096" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">Rollback полной миграции: Needs confirmation</text>
+<rect x="808" y="850" width="750" height="308" rx="18" fill="#fff" stroke="#cbd5e1" stroke-width="1.6"/>
+<text x="834" y="895" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700" fill="#155e75">07  НАХОДКИ И РИСКИ RAG</text>
+<line x1="834" y1="907" x2="1529" y2="907" stroke="#cbd5e1" stroke-width="2"/>
+<text x="834" y="946" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">Super admin: права ко ВСЕМ хостам/шаблонам</text>
+<text x="834" y="976" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">User+: Maintenance может ИЗМЕНЯТЬ состояние</text>
+<text x="834" y="1006" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">Тестовые пароли OpenLDAP нельзя переносить</text>
+<text x="834" y="1036" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">Docker images: пригодность не подтверждена</text>
+<text x="834" y="1066" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">SAML/LDAP setup в рисунках: RAG_MISS</text>
+<text x="834" y="1096" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#263448">Источник не даёт полного плана rollback</text>
+<line x1="42" y1="1182" x2="1558" y2="1182" stroke="#cbd5e1" stroke-width="2"/>
+<text x="44" y="1219" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#475569">RAG-only • PDF 59–92 • SHA-256 07204d88…e63875a27 • chapter-artifact-collection v1.8 • source-findings.md</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480" role="img" aria-label="Глава 1. Установка программ. Bochs и FreeDOS">
+ <rect width="960" height="480" fill="#f8fafc"/>
+ <text x="36" y="54" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="bold" fill="#122236">Глава 1 · Установка программ</text>
+ <text x="36" y="86" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#475569">Bochs 2.7 · FreeDOS · a86/d86 · nasm | RAG PDF с. 15–19</text>
+ <g font-family="DejaVu Sans, sans-serif" font-size="17" text-anchor="middle">
+  <rect x="32" y="131" width="267" height="117" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="166" y="162" fill="#1e3a8a" font-weight="bold">1. Среда Bochs</text>
+  <text x="166" y="191" font-size="14" fill="#1e3a8a">bochs.exe / bochsdbg.exe</text>
+  <text x="166" y="218" font-size="14" fill="#1e3a8a">bochsrc, BIOS, BAT</text>
+  <rect x="347" y="131" width="267" height="117" rx="12" fill="#d1fae5" stroke="#059669" stroke-width="2"/>
+  <text x="481" y="162" fill="#065f46" font-weight="bold">2. Образ FreeDOS</text>
+  <text x="481" y="191" font-size="14" fill="#065f46">disk_c.img + tools</text>
+  <text x="481" y="218" font-size="14" fill="#065f46">C:\ &gt; → VC</text>
+  <rect x="662" y="131" width="267" height="117" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="796" y="162" fill="#5b21b6" font-weight="bold">3. Проверка</text>
+  <text x="796" y="191" font-size="14" fill="#5b21b6">a86, nasm, bitmap</text>
+  <text x="796" y="218" font-size="14" fill="#5b21b6">__debug.bat → GUI</text>
+ </g>
+ <path d="M300 190 H338 M328 184 L338 190 L328 196 M615 190 H653 M643 184 L653 190 L643 196" fill="none" stroke="#334155" stroke-width="3"/>
+ <rect x="32" y="289" width="897" height="114" rx="12" fill="#fff7ed" stroke="#ea580c"/>
+ <text x="53" y="322" font-family="DejaVu Sans, sans-serif" font-weight="bold" font-size="19" fill="#9a3412">Граница безопасности</text>
+ <text x="53" y="350" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#7c2d12">Создать копию disk_c.img до изменений; deltree удаляет каталог рекурсивно.</text>
+ <text x="53" y="375" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#7c2d12">gui_debug — только для bochsdbg.exe, не для общего рабочего bochsrc.</text>
+ <text x="36" y="447" font-family="DejaVu Sans, sans-serif" font-size="12" fill="#64748b">Источник: canonical RAG, p0015:c01–p0019:c01 · book 0017</text>
+</svg>

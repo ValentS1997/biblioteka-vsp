@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1170 550" width="1170" height="550" role="img" aria-label="Глава 3 - основы проектирования баз данных"><rect x="0" y="0" width="1170" height="550" fill="#0f172a"/>
+<text x="36" y="58" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#f8fafc">ГЛАВА 3 · АРХИТЕКТУРА ДАННЫХ ДЛЯ ML</text>
+<text x="36" y="97" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#e2e8f0">Источник → представление → хранение → обмен → признаки</text>
+<rect x="35" y="123" width="352" height="295" rx="16" fill="#1f2937" stroke="#475569"/>
+<rect x="408" y="123" width="352" height="295" rx="16" fill="#1f2937" stroke="#475569"/>
+<rect x="781" y="123" width="352" height="295" rx="16" fill="#1f2937" stroke="#475569"/>
+<text x="53" y="166" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#93c5fd">ПРЕДСТАВЛЕНИЕ</text>
+<text x="53" y="212" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">JSON / CSV / Parquet</text>
+<text x="53" y="254" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Row-Major / Column-Major</text>
+<text x="53" y="296" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Реляционная / документная</text>
+<text x="53" y="336" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">/ графовая модель</text>
+<text x="428" y="166" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#93c5fd">ХРАНЕНИЕ</text>
+<text x="428" y="212" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">OLTP / OLAP</text>
+<text x="428" y="254" font-family="Arial,sans-serif" font-size="17" font-weight="400" fill="#e2e8f0">ACID и аналитические запросы</text>
+<text x="428" y="296" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Схема записи / чтения</text>
+<text x="428" y="338" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">ETL или ELT</text>
+<text x="800" y="166" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#93c5fd">ПОТОК</text>
+<text x="800" y="212" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">БД / REST-RPC / брокер</text>
+<text x="800" y="254" font-family="Arial,sans-serif" font-size="19" font-weight="400" fill="#e2e8f0">Pub-sub / очередь</text>
+<text x="800" y="296" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Batch: статические признаки</text>
+<text x="800" y="338" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Stream: динамические</text>
+<text x="36" y="464" font-family="Arial,sans-serif" font-size="17" font-weight="400" fill="#cbd5e1">RAG: PDF 68–98 · p0068–p0097 · итог: p0096–p0097</text>
+<text x="36" y="508" font-family="Arial,sans-serif" font-size="16" font-weight="400" fill="#fca5a5">H20 AutoML и JSON-фрагменты требуют проверки текстового слоя перед запуском.</text>
+</svg>

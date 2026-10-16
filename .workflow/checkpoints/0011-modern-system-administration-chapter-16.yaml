@@ -1,0 +1,46 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: "0011-modern-system-administration-chapter-16"
+repository: "vsp-corp/biblioteka-vsp"
+book_id: modern-system-administration-jennifer-davis-ru
+task_kind: chapter
+objective: "RAG-only chapter 16 Monitoring Data Management, 8 independent Git artifacts and CI-gated PR"
+branch: "docs/0011-chapter16-postmerge-index-20261015"
+initial_base_sha: "b34d9f05ffab0648256cefc6bfd953f28bfff01b"
+last_observed_head_sha: "3923325c1163c11cc3edc0b4583464e7f8bd3662"
+expected_source_sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
+constraints:
+  - no direct main changes
+  - no source PDF or RAG changes
+  - no reading-progress mutation
+  - no ZIP or archives
+  - no PR without exact-head branch CI PASS
+  - no merge without independent PR CI PASS
+  - no force push
+stage: COMPLETE
+completed_steps:
+  - step: "Verified main index 15/21 and chapter 15 COMPLETE checkpoint"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/.workflow/checkpoints/0011-modern-system-administration-chapter-15.yaml"
+  - step: "Verified chapter 16 RAG PDF 195–202, printed 203–210; PDF 203 begins chapter 17"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/modern-system-administration-jennifer-davis-ru/rag/chunks/p0201-p0300/p0203-c01.md"
+  - step: "Prepared eight chapter 16 artifacts in Git branch, including two SVG and source findings"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/tree/chapters/0011-modern-system-administration-chapter-16/books/modern-system-administration-jennifer-davis-ru/notes/chapters/chapter-16-monitoring-data-management"
+  - step: "Eight separate Git files successfully read back in canonical main after PR #563"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/3923325c1163c11cc3edc0b4583464e7f8bd3662"
+  - step: "Exact branch HEAD 9529107cc0f00fc072810bf6d684fc47b6cb776e CI PASS"
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38766474707"
+  - step: "Independent PR #563 CI PASS and merge, expected head SHA verified"
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/563"
+  - step: "PR #563 independent pull_request workflow completed successfully"
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38766637221"
+pending_steps: []
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/commit/3923325c1163c11cc3edc0b4583464e7f8bd3662"
+first_safe_next_action: "After postmerge finalization PR CI PASS and merge, verify main index 16/21 and checkpoint COMPLETE; proceed to chapter 17"
+blocker: "Not applicable"
+last_observed_at: "Not applicable"

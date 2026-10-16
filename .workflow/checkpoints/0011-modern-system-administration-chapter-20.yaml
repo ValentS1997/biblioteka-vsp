@@ -1,0 +1,43 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: "0011-modern-system-administration-chapter-20"
+repository: "vsp-corp/biblioteka-vsp"
+book_id: modern-system-administration-jennifer-davis-ru
+task_kind: chapter
+objective: "RAG-only chapter 20 incident management, eight Git artifacts, exact-head CI-gated publication"
+branch: "docs/0011-chapter20-postmerge-index-20261015"
+initial_base_sha: "c4c1ca203c57ced29f87351b593ac22f58e365da"
+last_observed_head_sha: "1b41788477370e3e47f11bcfaad90b4511e50bbf"
+expected_source_sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
+constraints:
+  - no direct main commits
+  - no force push
+  - no PDF or RAG modifications
+  - no reading status modifications
+  - no ZIP/archive substitutes
+  - PR only after exact-head branch CI PASS
+  - merge only after independent PR-triggered CI PASS
+stage: COMPLETE
+completed_steps:
+  - step: "Verified canonical main progress 19/21 and chapter 19 COMPLETE"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/.workflow/checkpoints/0011-modern-system-administration-chapter-19.yaml"
+  - step: "Verified chapter 20 canonical RAG PDF 241–255 and PDF 256 chapter 21 boundary"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/modern-system-administration-jennifer-davis-ru/rag/chunks/p0201-p0300/p0256-c01.md"
+  - step: "Prepared eight RAG-only Git chapter 20 artifacts and branch index link"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/tree/chapters/0011-modern-system-administration-chapter-20/books/modern-system-administration-jennifer-davis-ru/notes/chapters/chapter-20-incident-management"
+  - step: "Chapter 20 branch CI PASS at exact head 008d0d76ad17b3209498a99c47a00f3a98e01fca"
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38779553411"
+  - step: "Independent PR-triggered CI PASS at identical head"
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38779708243"
+  - step: "PR #580 merged at 1b41788477370e3e47f11bcfaad90b4511e50bbf; all eight Git files independently read back from main"
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/580"
+pending_steps: []
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/commit/1b41788477370e3e47f11bcfaad90b4511e50bbf"
+first_safe_next_action: "After postmerge PR CI PASS and merge, verify canonical main 20/21 and checkpoint COMPLETE; chapter 21 next"
+blocker: "Not applicable"
+last_observed_at: "Not applicable"

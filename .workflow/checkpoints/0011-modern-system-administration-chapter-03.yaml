@@ -1,0 +1,50 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: 0011-modern-system-administration-chapter-03
+repository: vsp-corp/biblioteka-vsp
+book_id: modern-system-administration-jennifer-davis-ru
+task_kind: chapter
+objective: "RAG-only analysis of chapter 3 Storage; six mandatory individual Git chapter artifacts, source-grounded conditional files and Git publication index, using v1.8"
+branch: chapters/0011-modern-system-administration-chapter-03
+initial_base_sha: ec3a32b600ee9b6d3752b24614c915bd27bf8fb0
+last_observed_head_sha: deb43063908b5cd0c02019d349aed1609c470747
+expected_source_sha256: 06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790
+constraints:
+  - "no direct main changes"
+  - "no force-push"
+  - "no source/RAG rewrite without explicit authorization"
+  - "no reading-progress mutation without explicit user confirmation"
+  - "no archive delivery for chapter artifacts"
+stage: COMPLETE
+completed_steps:
+  - step: "Recovered main and book state; verified 21 chapters, 2 published in main and absence of chapter 3"
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/ec3a32b600ee9b6d3752b24614c915bd27bf8fb0/books/modern-system-administration-jennifer-davis-ru/notes/chapters/README.md
+  - step: "Verified chapter 3 RAG boundary PDF pages 48-62; chapter 4 begins PDF page 63"
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/modern-system-administration-jennifer-davis-ru/rag/chunks/p0001-p0100/p0063-c01.md
+  - step: "Verified source SHA, current RAG acceptance and canonical chapter publication v1.8"
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/modern-system-administration-jennifer-davis-ru/rag/acceptance.yaml
+  - step: "Committed and Git-read-back verified six mandatory chapter 3 artifacts"
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/cd8e2ee2db6ac945c90b65bca97fcd4b4ed8fb5d
+  - step: "Committed and Git-read-back verified chapter 3 summary.md and source-findings.md"
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/4eaf4d82b65bac221f7679067b3a2c59f1e64f61
+  - step: "Updated and read back chapter publication index: 3/21 on branch, main remains 2/21"
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/6c128526631ba9fcde1d89dd8394732e4c49520a
+  - step: "PR #503 completed: chapter 3 eight individual files and index merged to main, CI PASS"
+    evidence_type: pr
+    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/503
+  - step: "PR #504 completed: post-merge index reconciled to main 3/21 and next chapter 4, CI PASS"
+    evidence_type: pr
+    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/504
+  - step: "Post-merge final index CI PASS on main commit deb43063908b5cd0c02019d349aed1609c470747"
+    evidence_type: ci
+    reference: https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38696392164
+pending_steps: []
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/deb43063908b5cd0c02019d349aed1609c470747
+first_safe_next_action: "Read main HEAD, book chapter index, RAG acceptance and chapter 4 publication state before future work."
+blocker: "Not applicable"
+last_observed_at: "Not applicable"

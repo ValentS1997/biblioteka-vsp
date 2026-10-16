@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="780" viewBox="0 0 1180 780" role="img" aria-labelledby="title description">
+<title id="title">Глава 9 — Документация</title>
+<desc id="description">Компактная визуальная карта потребностей аудитории, видов документов, жизненного цикла и пяти критериев качества документации на основе RAG PDF 109–115.</desc>
+<rect width="1180" height="780" fill="#111b2d"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="48" y="74" font-size="40" font-weight="bold" fill="#f3f8ff">Глава 9 · Документация</text>
+<text x="48" y="112" font-size="23" fill="#b5d0e4">Документация — часть системы, а не приложение к ней</text>
+<rect x="48" y="149" width="1084" height="100" rx="15" fill="#164653" stroke="#75dcd1" stroke-width="2"/>
+<text x="76" y="191" font-size="28" font-weight="bold" fill="#f1ffff">1 · Начинай с аудитории</text>
+<text x="76" y="224" font-size="20" fill="#daf8f3">Кто читает? Что знает? Какую задачу решает?</text>
+<rect x="48" y="280" width="520" height="169" rx="14" fill="#243653"/>
+<text x="76" y="323" font-size="27" font-weight="bold" fill="#f5faff">2 · Подбирай форму</text>
+<text x="76" y="359" font-size="20" fill="#dce8f9">Записи решений · вводная информация</text>
+<text x="76" y="392" font-size="20" fill="#dce8f9">Пошаговая задача · справочник</text>
+<text x="76" y="425" font-size="20" fill="#dce8f9">Проектная документация</text>
+<rect x="608" y="280" width="524" height="169" rx="14" fill="#284954"/>
+<text x="635" y="323" font-size="27" font-weight="bold" fill="#f1ffff">3 · Организуй знания</text>
+<text x="635" y="360" font-size="19" fill="#ddf5f6">Повторное использование, роли, версии</text>
+<text x="635" y="393" font-size="19" fill="#ddf5f6">Связи между темами, поиск и структура</text>
+<text x="635" y="425" font-size="19" fill="#ddf5f6">Заголовки как карта документа</text>
+<rect x="48" y="483" width="1084" height="108" rx="14" fill="#323d55"/>
+<text x="76" y="523" font-size="27" font-weight="bold" fill="#f4f8ff">4 · Поддерживай жизненный цикл</text>
+<text x="76" y="560" font-size="19" fill="#e0e9f9">Исследовать → создать → проверить → версия → публикация → обновить / архивировать</text>
+<rect x="48" y="627" width="1084" height="102" rx="14" fill="#28564d" stroke="#73e5b6"/>
+<text x="76" y="668" font-size="27" font-weight="bold" fill="#f0fff7">5 · Проверяй качество</text>
+<text x="76" y="702" font-size="19" fill="#dbfff0">Точность · наличие · доступность · упорядоченность · сопровождаемость</text>
+<text x="48" y="760" font-size="15" fill="#aac6da">Источник: RAG PDF 109–115, печатные 113–119. Сводка по тексту, не оригинальные рисунки.</text>
+</g></svg>

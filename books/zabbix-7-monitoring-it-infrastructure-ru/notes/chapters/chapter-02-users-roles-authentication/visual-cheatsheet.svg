@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="840" viewBox="0 0 1400 840" role="img" aria-label="Zabbix глава 2: группы определяют объекты, роли действия, SAML/LDAP аутентификацию, JIT создание пользователей">
+<defs><marker id="end" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0 0L7 3L0 6Z" fill="#64748b"/></marker></defs>
+<rect width="1400" height="840" fill="#f3f7fe"/>
+<text x="46" y="64" font-family="DejaVu Sans, sans-serif" font-size="37" font-weight="700" fill="#10243f">ZABBIX 7  /  ГЛАВА 2</text>
+<text x="46" y="105" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="400" fill="#4b5f7b">Права пользователя = объекты + роль + способ аутентификации</text>
+<rect x="45" y="140" width="1310" height="321" rx="16" fill="#ffffff" stroke="#d1ddeb" stroke-width="2"/>
+<text x="73" y="183" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">ТРИ НЕЗАВИСИМЫЕ НАСТРОЙКИ</text>
+<rect x="78" y="224" width="350" height="144" rx="16" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="2"/>
+<text x="100" y="266" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700" fill="#075985">1  User groups</text>
+<text x="100" y="301" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#1e293b">Группы хостов / шаблонов</text>
+<text x="100" y="332" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#1e293b">Read / Read-write</text>
+<rect x="522" y="224" width="350" height="144" rx="16" fill="#eef2ff" stroke="#a5b4fc" stroke-width="2"/>
+<text x="545" y="266" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700" fill="#3730a3">2  User roles</text>
+<text x="545" y="301" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#1e293b">UI / API / services / actions</text>
+<text x="545" y="332" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" fill="#1e293b">User · Admin · Super admin</text>
+<rect x="962" y="224" width="358" height="144" rx="16" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+<text x="984" y="266" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#166534">3  Authentication</text>
+<text x="984" y="301" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" fill="#1e293b">Internal / SAML / LDAP</text>
+<text x="984" y="332" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#1e293b">JIT: создание + mapping</text>
+<path d="M436 293 L512 293" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#end)"/>
+<path d="M881 293 L951 293" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#end)"/>
+<text x="77" y="418" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#334155">Проверка: право чтения или изменения конкретного объекта + фактические пункты меню</text>
+<rect x="45" y="483" width="630" height="275" rx="16" fill="#ffffff" stroke="#d1ddeb" stroke-width="2"/>
+<text x="73" y="525" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">ПРИМЕРЫ ДОСТУПА</text>
+<text x="73" y="568" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#1e293b">Networking → Network devices</text>
+<text x="73" y="607" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#1e293b">Infrastructure → Linux servers</text>
+<text x="73" y="646" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" fill="#1e293b">Buying &amp;amp; Inventory → Read к двум группам</text>
+<text x="73" y="707" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="700" fill="#a16207">Super admin: широкий доступ, не только scope группы</text>
+<rect x="694" y="483" width="661" height="275" rx="16" fill="#ffffff" stroke="#d1ddeb" stroke-width="2"/>
+<text x="724" y="525" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#155e75">ВНЕШНИЙ ВХОД</text>
+<text x="724" y="568" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#1e293b">Без JIT → учётная запись Zabbix заранее</text>
+<text x="724" y="607" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#1e293b">С JIT → external group → локальная роль</text>
+<text x="724" y="646" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" fill="#1e293b">LDAP default: сначала Admin → Internal</text>
+<text x="724" y="707" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="700" fill="#a16207">Скриншоты IdP / LDAP полей: RAG_MISS</text>
+<text x="46" y="807" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" fill="#475569">RAG PDF 59–92 • SHA-256 07204d88…e63875a27 • source-findings.md: права Super admin, User+ и тестовый LDAP</text>
+</svg>

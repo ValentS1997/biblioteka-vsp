@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1210" height="626" viewBox="0 0 1210 626" role="img" aria-label="Глава 11: пользовательский опыт, организация команды и ответственный ИИ"><rect width="1210" height="626" fill="#0f172a"/>
+<text x="37" y="59" font-family="Arial,sans-serif" font-size="30" fill="#f8fafc" font-weight="700">ГЛАВА 11 · ЧЕЛОВЕЧЕСКАЯ СТОРОНА ML</text>
+<text x="37" y="99" font-family="Arial,sans-serif" font-size="19" fill="#e2e8f0" font-weight="400">Влияние на людей важнее единственной средней ML-метрики</text>
+<rect x="36" y="141" width="364" height="345" rx="16" fill="#1f2937" stroke="#475569"/>
+<rect x="422" y="141" width="364" height="345" rx="16" fill="#1f2937" stroke="#475569"/>
+<rect x="808" y="141" width="364" height="345" rx="16" fill="#1f2937" stroke="#475569"/>
+<text x="59" y="184" font-family="Arial,sans-serif" font-size="22" fill="#93c5fd" font-weight="700">UX / ПОЛЬЗОВАТЕЛЬ</text>
+<text x="59" y="234" font-family="Arial,sans-serif" font-size="18" fill="#e2e8f0" font-weight="400">Consistency vs accuracy</text>
+<text x="59" y="275" font-family="Arial,sans-serif" font-size="18" fill="#e2e8f0" font-weight="400">«Почти верно» + HITL</text>
+<text x="59" y="317" font-family="Arial,sans-serif" font-size="17" fill="#e2e8f0" font-weight="400">Несколько понятных ответов</text>
+<text x="59" y="360" font-family="Arial,sans-serif" font-size="18" fill="#e2e8f0" font-weight="400">Fast fallback при задержке</text>
+<text x="445" y="184" font-family="Arial,sans-serif" font-size="22" fill="#93c5fd" font-weight="700">КОМАНДА</text>
+<text x="445" y="234" font-family="Arial,sans-serif" font-size="18" fill="#e2e8f0" font-weight="400">SME в жизненном цикле</text>
+<text x="445" y="275" font-family="Arial,sans-serif" font-size="18" fill="#e2e8f0" font-weight="400">Отдельные команды: handoff</text>
+<text x="445" y="317" font-family="Arial,sans-serif" font-size="18" fill="#e2e8f0" font-weight="400">End-to-end: ownership</text>
+<text x="445" y="360" font-family="Arial,sans-serif" font-size="17" fill="#e2e8f0" font-weight="400">Платформа скрывает complexity</text>
+<text x="831" y="184" font-family="Arial,sans-serif" font-size="21" fill="#93c5fd" font-weight="700">ОТВЕТСТВЕННЫЙ ИИ</text>
+<text x="831" y="234" font-family="Arial,sans-serif" font-size="18" fill="#e2e8f0" font-weight="400">Fairness · privacy</text>
+<text x="831" y="275" font-family="Arial,sans-serif" font-size="17" fill="#e2e8f0" font-weight="400">Transparency · accountability</text>
+<text x="831" y="317" font-family="Arial,sans-serif" font-size="18" fill="#e2e8f0" font-weight="400">Ofqual / Strava: уроки</text>
+<text x="831" y="360" font-family="Arial,sans-serif" font-size="17" fill="#e2e8f0" font-weight="400">Slices + model cards + review</text>
+<text x="37" y="547" font-family="Arial,sans-serif" font-size="17" fill="#cbd5e1" font-weight="400">RAG PDF 335–358 · исходные «Итоги»: p0356–p0357</text>
+<text x="37" y="590" font-family="Arial,sans-serif" font-size="17" fill="#fca5a5" font-weight="400">Нельзя заменять критическое мышление формальной проверкой галочек</text>
+</svg>

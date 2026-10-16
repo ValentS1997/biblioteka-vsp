@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="1100" viewBox="0 0 1360 1100" role="img" aria-label="Подробная схема FPU: стек, форматы real, флаги, настройка и вычисления">
+<rect width="1360" height="1100" fill="#f8fafc"/>
+<g font-family="DejaVu Sans,sans-serif">
+<text x="36" y="58" font-size="31" font-weight="bold" fill="#142e45">Глава 8 · Архитектура, вычисления и контроль FPU</text>
+<text x="36" y="89" font-size="16" fill="#64778c">Канонический RAG PDF 111–148 · a86/d86 · сопроцессор i80x87</text>
+<g stroke-width="2">
+<rect x="36" y="119" width="621" height="206" rx="14" fill="#e5efff" stroke="#6083bb"/>
+<rect x="703" y="119" width="621" height="206" rx="14" fill="#e4f7ee" stroke="#4e9f7b"/>
+<rect x="36" y="355" width="621" height="205" rx="14" fill="#eaf2ff" stroke="#6083bb"/>
+<rect x="703" y="355" width="621" height="205" rx="14" fill="#eaf9f2" stroke="#4e9f7b"/>
+<rect x="36" y="590" width="621" height="207" rx="14" fill="#eee9ff" stroke="#8d7bc4"/>
+<rect x="703" y="590" width="621" height="207" rx="14" fill="#f2ecff" stroke="#8d7bc4"/>
+</g>
+<g font-size="22" font-weight="bold" fill="#245273">
+<text x="56" y="155">01 · Стек и адресация</text><text x="723" y="155">02 · Типы и форматы</text>
+<text x="56" y="391">03 · Флаги и сравнение</text><text x="723" y="391">04 · SW/CW и особые ситуации</text>
+<text x="56" y="626">05 · Вычисления и функции</text><text x="723" y="626">06 · Контекст и безопасная отладка</text>
+</g>
+<g font-size="17" fill="#2c445b">
+<text x="56" y="190">8 физических регистров, логические ST(0)–ST(7)</text>
+<text x="56" y="220">FLD помещает вершину; FSTP удаляет</text>
+<text x="56" y="250">FSTP 0 = pop; FLD 0 = копия вершины</text>
+<text x="56" y="280">FADD без операндов: ST(1)+ST(0), pop</text>
+<text x="723" y="190">FLD real: DD=32, DQ=64, DT=80 бит</text>
+<text x="723" y="220">FILD integer: DW/DD/DQ; FBLD BCD DT</text>
+<text x="723" y="250">80 бит: sign 1, exp 15, sgnd 64</text>
+<text x="723" y="280">Denormal, Unnormal, Infinity, NaN</text>
+<text x="56" y="427">FTST / FCOM → C3/C2/C0 в SW</text>
+<text x="56" y="457">000 = больше; 001 = меньше</text>
+<text x="56" y="487">100 = равно; 111 = unordered</text>
+<text x="56" y="517">FSTSW AX; SAHF → CPU Z/E/C</text>
+<text x="723" y="427">SW: IE, DE, ZE, OE, UE, PE, SF, C1</text>
+<text x="723" y="457">CW: RC=near/down/up/chop, PC</text>
+<text x="723" y="487">FINIT: общий сброс; FCLEX: события</text>
+<text x="723" y="517">FSTCW и FLDCW: настройка округления</text>
+<text x="56" y="662">aa*bb*-π*: максимум 3 регистра</text>
+<text x="56" y="692">FSQRT, FSCALE, FXTRACT</text>
+<text x="56" y="722">FSINCOS: COS сверху, SIN ниже</text>
+<text x="56" y="752">FYL2X → SPLIT → F2XM1 + FSCALE</text>
+<text x="723" y="662">FSTENV / FLDENV: окружение</text>
+<text x="723" y="692">FSAVE / FRSTOR: полный контекст</text>
+<text x="723" y="722">FSAVE также сбрасывает FPU</text>
+<text x="723" y="752">Адрес [0] из книги указывает на PSP</text>
+</g>
+<rect x="36" y="830" width="1288" height="181" rx="14" fill="#fff0e6" stroke="#d58c5c" stroke-width="2"/>
+<text x="58" y="866" font-size="22" font-weight="bold" fill="#914720">Эксперименты, границы, source findings</text>
+<text x="58" y="901" font-size="17" fill="#7c482b">Round near: 3.5 → 4; -3.5 → -4; -2.5 → -2. Проверять глубину, RC, SW и результат.</text>
+<text x="58" y="936" font-size="17" fill="#7c482b">RAG p. 138: 0.5 ошибочно соседствует с 2^5=32. P. 137/140: разные границы FYL2XP1.</text>
+<text x="58" y="972" font-size="17" fill="#7c482b">Рисунки источника не реконструируются; 9 заданий автора, результаты требуют D86.</text>
+<text x="36" y="1060" font-size="14" fill="#687e91">Provenance: p0111:c01–p0148:c01 · source SHA f65a7ec…d2c · схема аналитическая</text>
+</g></svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1200" viewBox="0 0 1500 1200" role="img" aria-labelledby="t d">
+<title id="t">Глава 8 — Подробная карта безопасности инфраструктуры</title>
+<desc id="d">Модель снижения рисков по книге: зоны ответственности, противник и векторы атаки, глубокая защита, КЦД, классификация ошибок. Источник RAG PDF 100–108.</desc>
+<rect width="1500" height="1200" fill="#0b1727"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="51" y="72" font-size="39" font-weight="bold" fill="#f2f8ff">Глава 8 · Безопасность инфраструктуры</text>
+<text x="51" y="108" font-size="21" fill="#b5cde4">Снизить риск, уменьшить возможности атаки, защищать активы вместе с командами</text>
+<rect x="51" y="143" width="1398" height="112" rx="15" fill="#16404e" stroke="#69d5d1" stroke-width="2"/>
+<text x="78" y="187" font-size="27" font-weight="bold" fill="#efffff">1 · Разделение ответственности (PDF 101–102)</text>
+<text x="78" y="225" font-size="19" fill="#d4f4f1">IaaS / PaaS / FaaS: провайдер берёт часть задач, но клиент всё равно управляет IAM, конечными точками и данными</text>
+<rect x="51" y="281" width="679" height="205" rx="14" fill="#253550"/>
+<text x="77" y="328" font-size="26" font-weight="bold" fill="#eef6ff">2 · Угроза и противник (PDF 102–104)</text>
+<text x="77" y="365" font-size="19" fill="#dceafa">• Активы и точки входа: сервисы, БД, сети</text>
+<text x="77" y="397" font-size="19" fill="#dceafa">• Кто и зачем атакует: мотивы и цели</text>
+<text x="77" y="429" font-size="19" fill="#dceafa">• Ресурсы: время, деньги, навыки</text>
+<text x="77" y="461" font-size="19" fill="#dceafa">• Окно возможностей до установки патча</text>
+<rect x="771" y="281" width="678" height="205" rx="14" fill="#23434f"/>
+<text x="798" y="328" font-size="26" font-weight="bold" fill="#f2ffff">3 · Инструменты анализа (PDF 103)</text>
+<text x="798" y="365" font-size="19" fill="#d8f5f3">• NIST CVSS Calculator</text>
+<text x="798" y="397" font-size="19" fill="#d8f5f3">• Microsoft Threat Modeling Tool</text>
+<text x="798" y="429" font-size="19" fill="#d8f5f3">• PASTA и OWASP Threat Modeling</text>
+<text x="798" y="461" font-size="19" fill="#d8f5f3">• Согласованные решения, не один «верный» инструмент</text>
+<rect x="51" y="516" width="1398" height="144" rx="15" fill="#2c3852"/>
+<text x="78" y="562" font-size="27" font-weight="bold" fill="#f1f7ff">4 · Архитектура защиты (PDF 105)</text>
+<text x="78" y="600" font-size="20" fill="#dceafa">Межсетевые экраны, подсети с доверенным трафиком, ограниченные привилегии</text>
+<text x="78" y="636" font-size="20" fill="#dceafa">Defense in depth ограничивает ущерб; zero trust исключает безусловное доверие</text>
+<text x="51" y="708" font-size="28" font-weight="bold" fill="#f2f8ff">5 · Требования по триаде КЦД (PDF 106)</text>
+<rect x="51" y="733" width="446" height="126" rx="13" fill="#3b4454"/>
+<text x="75" y="771" font-size="24" font-weight="bold" fill="#eff7ff">Конфиденциальность</text>
+<text x="75" y="806" font-size="18" fill="#d9eafb">Данные доступны только тем,</text>
+<text x="75" y="835" font-size="18" fill="#d9eafb">кто имеет право доступа</text>
+<rect x="527" y="733" width="446" height="126" rx="13" fill="#364b50"/>
+<text x="552" y="771" font-size="24" font-weight="bold" fill="#effffb">Целостность</text>
+<text x="552" y="806" font-size="18" fill="#d9f2ed">Достоверность и право</text>
+<text x="552" y="835" font-size="18" fill="#d9f2ed">изменять данные</text>
+<rect x="1003" y="733" width="446" height="126" rx="13" fill="#3a4b50"/>
+<text x="1027" y="771" font-size="24" font-weight="bold" fill="#effffb">Доступность</text>
+<text x="1027" y="806" font-size="18" fill="#d9f2ed">Доступ уполномоченных</text>
+<text x="1027" y="835" font-size="18" fill="#d9f2ed">пользователей к ресурсам</text>
+<rect x="51" y="890" width="1398" height="139" rx="15" fill="#2d534c" stroke="#72e2ba"/>
+<text x="77" y="934" font-size="27" font-weight="bold" fill="#f1fff8">6 · Классификация и приоритет (PDF 106–108)</text>
+<text x="77" y="972" font-size="20" fill="#defff1">CVE и оценка воздействия; ошибка реализации — исправление кода;</text>
+<text x="77" y="1006" font-size="20" fill="#defff1">дефект проектирования — дорогая архитектурная переработка и зависимости</text>
+<rect x="51" y="1059" width="1398" height="91" rx="14" fill="#493e38" stroke="#e2b37d"/>
+<text x="78" y="1096" font-size="23" font-weight="bold" fill="#fff0d9">Ограничение</text>
+<text x="78" y="1129" font-size="19" fill="#fae4cb">Детали рис. 8.1 извлечены неполно; конкретные CLI-команды, пороги и rollback: [Needs confirmation]</text>
+<text x="51" y="1180" font-size="16" fill="#afc8dc">Источник: canonical RAG PDF 100–108. Это сводка текста, не восстановление оригинальных иллюстраций.</text>
+</g></svg>

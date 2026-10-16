@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="900" viewBox="0 0 1240 900" role="img" aria-labelledby="title desc">
+<title id="title">Глава 15 — Практический мониторинг инфраструктуры и ПО</title>
+<desc id="desc">Краткая RAG-карта результата, RED USE, SLI SLO, инвентаризации и уменьшения лишних оповещений. PDF 182–194.</desc>
+<rect width="1240" height="900" fill="#0e1f33"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="44" y="69" font-size="38" font-weight="bold" fill="#f2f8ff">Глава 15 · Мониторинг на практике</text>
+<text x="44" y="110" font-size="22" fill="#b5d4e9">Сначала желаемый результат, затем подходящие сигналы</text>
+<rect x="44" y="147" width="1152" height="129" rx="16" fill="#1b5360" stroke="#78dcd2" stroke-width="2"/>
+<text x="74" y="190" font-size="27" font-weight="bold" fill="#ecffff">1 · Какую проблему пользователя или команды решаем?</text>
+<text x="74" y="234" font-size="21" fill="#d4f5f5">Небольшой scope · понятный outcome · проверка текущих данных</text>
+<rect x="44" y="306" width="555" height="188" rx="15" fill="#283f5c"/>
+<text x="74" y="353" font-size="31" font-weight="bold" fill="#f4faff">RED · сервисы</text>
+<text x="74" y="399" font-size="24" fill="#e3edff">Rate — запросов / с</text>
+<text x="74" y="433" font-size="24" fill="#e3edff">Errors — ошибки</text>
+<text x="74" y="467" font-size="24" fill="#e3edff">Duration — время ответа</text>
+<rect x="640" y="306" width="556" height="188" rx="15" fill="#24545d"/>
+<text x="669" y="353" font-size="31" font-weight="bold" fill="#f2ffff">USE · ресурсы</text>
+<text x="669" y="399" font-size="23" fill="#d8f7f5">Utilization — загрузка</text>
+<text x="669" y="433" font-size="23" fill="#d8f7f5">Saturation — очередь</text>
+<text x="669" y="467" font-size="23" fill="#d8f7f5">Errors — ошибки</text>
+<rect x="44" y="531" width="1152" height="114" rx="15" fill="#31475f"/>
+<text x="75" y="576" font-size="28" font-weight="bold" fill="#f5faff">2 · SLI → достижимый SLO</text>
+<text x="75" y="612" font-size="21" fill="#dbe9fb">Измеряем пользовательский эффект, а не только CPU, RAM и диск</text>
+<rect x="44" y="677" width="1152" height="128" rx="15" fill="#2b584c" stroke="#83dfaf" stroke-width="2"/>
+<text x="75" y="719" font-size="28" font-weight="bold" fill="#f4fff8">3 · Меньше шума, больше полезных действий</text>
+<text x="75" y="755" font-size="21" fill="#e5fff0">Разделяй мониторинг и оповещения · избегай дублей</text>
+<text x="75" y="785" font-size="21" fill="#e5fff0">Инструмент выбирай по задаче; изменения внедряй постепенно</text>
+<text x="44" y="864" font-size="17" fill="#b0ccdf">Canonical RAG PDF 182–194 · схема по тексту, не реконструкция рис. 15.1</text>
+</g></svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="940" viewBox="0 0 1260 940" role="img" aria-labelledby="title desc">
+<title id="title">Глава 20 — Управление инцидентами</title>
+<desc id="desc">Компактная карта подготовки, ролей IC и SME, реагирования, коммуникаций, проверки и обучения по canonical RAG PDF 241–255.</desc>
+<rect width="1260" height="940" fill="#102238"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="50" y="70" font-size="39" font-weight="bold" fill="#f3faff">Глава 20 · Управление инцидентами</text>
+<text x="50" y="111" font-size="22" fill="#c4dcf0">Цель: минимизировать последствия и учиться на сбоях</text>
+<rect x="50" y="151" width="1160" height="115" rx="14" fill="#284a67"/>
+<text x="78" y="202" font-size="27" font-weight="bold" fill="#f4faff">1 · Подготовка до происшествия</text>
+<text x="78" y="238" font-size="21" fill="#deebfb">Каналы · роли · шаблоны · риски · учения · доступы</text>
+<rect x="50" y="307" width="365" height="176" rx="14" fill="#365070"/>
+<text x="77" y="359" font-size="28" font-weight="bold" fill="#f5faff">IC</text>
+<text x="77" y="404" font-size="21" fill="#dfebf9">Оценивает влияние,</text>
+<text x="77" y="439" font-size="21" fill="#dfebf9">решает, делегирует</text>
+<rect x="447" y="307" width="366" height="176" rx="14" fill="#215865"/>
+<text x="477" y="359" font-size="28" font-weight="bold" fill="#f4ffff">SME</text>
+<text x="477" y="404" font-size="21" fill="#ddf4f7">Техническая работа</text>
+<text x="477" y="439" font-size="21" fill="#ddf4f7">по стабилизации</text>
+<rect x="845" y="307" width="365" height="176" rx="14" fill="#315b4d"/>
+<text x="875" y="359" font-size="27" font-weight="bold" fill="#f4fff8">Коммуникация</text>
+<text x="875" y="404" font-size="21" fill="#e1f7ea">Статус и протокол</text>
+<text x="875" y="439" font-size="21" fill="#e1f7ea">событий и действий</text>
+<rect x="50" y="525" width="1160" height="130" rx="14" fill="#2a4d66"/>
+<text x="78" y="576" font-size="28" font-weight="bold" fill="#f4faff">2 · Проверка результата: влияние осталось?</text>
+<text x="78" y="612" font-size="21" fill="#e1eef8">Да → повторить оценку IC · Нет → разбор и передача знаний</text>
+<rect x="50" y="699" width="1160" height="144" rx="14" fill="#2d574e" stroke="#80d7af" stroke-width="2"/>
+<text x="79" y="751" font-size="27" font-weight="bold" fill="#f4fff8">3 · Без обвинений: факты, контрдоказательства, уроки</text>
+<text x="79" y="794" font-size="21" fill="#dcf5e7">Хронология · влияние · логи · владельцы и сроки улучшений</text>
+<text x="50" y="909" font-size="17" fill="#adc6dc">Canonical RAG PDF 241–255 · иллюстрация по тексту, не копия рис. 20.1/20.2</text>
+</g></svg>

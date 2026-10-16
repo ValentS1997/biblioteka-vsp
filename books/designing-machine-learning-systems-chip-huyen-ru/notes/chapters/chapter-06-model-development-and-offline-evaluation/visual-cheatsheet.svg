@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1210" height="588" viewBox="0 0 1210 588" role="img" aria-label="Глава 6 — выбор модели, разработка и автономная оценка"><rect width="1210" height="588" fill="#0f172a"/>
+<text x="38" y="59" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#f8fafc">ГЛАВА 6 · МОДЕЛЬ И АВТОНОМНАЯ ОЦЕНКА</text>
+<text x="38" y="99" font-family="Arial,sans-serif" font-size="20" font-weight="400" fill="#e2e8f0">Простое сравнение → воспроизводимые эксперименты → проверка устойчивости</text>
+<rect x="35" y="137" width="361" height="314" rx="14" fill="#1f2937" stroke="#475569"/>
+<rect x="424" y="137" width="361" height="314" rx="14" fill="#1f2937" stroke="#475569"/>
+<rect x="813" y="137" width="361" height="314" rx="14" fill="#1f2937" stroke="#475569"/>
+<text x="55" y="182" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#93c5fd">ВЫБОР МОДЕЛИ</text>
+<text x="55" y="226" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Начните с heuristic baseline</text>
+<text x="55" y="268" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Accuracy ≠ utility</text>
+<text x="55" y="310" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">FP/FN · latency · cost</text>
+<text x="55" y="352" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Bagging / boosting / stacking</text>
+<text x="444" y="182" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#93c5fd">РАЗРАБОТКА</text>
+<text x="444" y="226" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Track: данные, код, метрики</text>
+<text x="444" y="268" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Debug: один mini-batch</text>
+<text x="444" y="310" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Data / model parallelism</text>
+<text x="444" y="352" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">AutoML: tune на validation</text>
+<text x="833" y="182" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#93c5fd">ОЦЕНКА</text>
+<text x="833" y="226" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Baseline и perturbation</text>
+<text x="833" y="268" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Invariance / expectation</text>
+<text x="833" y="310" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Calibration / confidence</text>
+<text x="833" y="352" font-family="Arial,sans-serif" font-size="18" font-weight="400" fill="#e2e8f0">Критические slices</text>
+<text x="38" y="499" font-family="Arial,sans-serif" font-size="17" font-weight="400" fill="#cbd5e1">RAG: PDF 162–201 · p0162–p0199 · нативный summary: p0199</text>
+<text x="38" y="542" font-family="Arial,sans-serif" font-size="16" font-weight="400" fill="#fca5a5">Offline PASS не гарантирует production · API-неоднозначности: source-findings.md</text>
+</svg>

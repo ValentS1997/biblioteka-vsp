@@ -1,0 +1,48 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: 0011-modern-system-administration-chapter-02
+repository: vsp-corp/biblioteka-vsp
+book_id: modern-system-administration-jennifer-davis-ru
+task_kind: chapter
+objective: "RAG-only chapter 2 analysis and direct Git publication of individual chapter artifacts under v1.8"
+branch: chapters/0011-modern-system-administration
+initial_base_sha: e3de7ca8cc61ad88fc2e4b3a873060c2b5bd2be0
+last_observed_head_sha: e97e3f3b3d6cd7906997ffc16ad0768cfa07f4ed
+expected_source_sha256: 06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790
+constraints:
+  - "no direct main changes"
+  - "no force-push"
+  - "no source/RAG rewrite without explicit authorization"
+  - "no reading-progress mutation without explicit user confirmation"
+  - "no archive delivery for chapter artifacts"
+stage: COMPLETE
+completed_steps:
+  - step: "Recovered current branch; chapter 1 full Git collection and existing 21-chapter plan verified"
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/tree/e3de7ca8cc61ad88fc2e4b3a873060c2b5bd2be0/books/modern-system-administration-jennifer-davis-ru/notes/chapters
+  - step: "Verified chapter 2 starts PDF 37 and concludes PDF 47; chapter 3 begins PDF 48"
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/modern-system-administration-jennifer-davis-ru/rag/chunks/p0001-p0100/p0048-c01.md
+  - step: "Confirmed RAG ACCEPTED, SHA and current canonical publication contracts"
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/modern-system-administration-jennifer-davis-ru/rag/acceptance.yaml
+  - step: "Committed and independently read back chapter-02 README, cheatsheet, commands and diagram"
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/366a795d5bb4db92f12b5b3919867e58a52328b0
+  - step: "Committed and independently read back two SVG files plus summary.md and source-findings.md"
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/c1ae850b31acf452ce2012a0d9069468c02ad924
+  - step: "Read back all eight chapter-02 individual files and Git directory listing"
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/tree/089dd79e3f18d0e3035bb9d3260ee2a4ebb3b5e2/books/modern-system-administration-jennifer-davis-ru/notes/chapters/chapter-02-computing-environments
+  - step: "Updated and read back chapter index to 2/21, next chapter 3; main still 0/21"
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/089dd79e3f18d0e3035bb9d3260ee2a4ebb3b5e2
+  - step: "Verified final chapter-02 checkpoint head chapter notes and SVG CI PASS"
+    evidence_type: ci
+    reference: https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38690350853
+pending_steps:
+  - "PR #489 merge is separate and requires repository governance; do not count book-branch files as main publication."
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38690350853
+first_safe_next_action: "Read current branch HEAD, chapter index and PR #489 before next chapter or merge; do not repeat chapter 2 writes."
+blocker: "Not applicable"
+last_observed_at: "Not applicable"

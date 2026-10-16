@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="660" viewBox="0 0 1120 660" role="img" aria-label="Глава 15: IDT, Trap Gate, Interrupt Gate, коды ошибок и IRQ">
+<rect width="1120" height="660" fill="#f8fafc"/><g font-family="DejaVu Sans,sans-serif" fill="#17364f">
+<text x="35" y="56" font-size="30" font-weight="bold">Глава 15 · Исключения и прерывания</text>
+<text x="35" y="88" font-size="17">Protected mode · IDT/IDTR · процессор и PIC</text>
+<rect x="35" y="114" width="1050" height="84" rx="14" fill="#dbeafe"/>
+<text x="56" y="147" font-size="24">IDT: 8 байт на Gate · адрес записи = 8 × n</text>
+<text x="56" y="177" font-size="18">IDTR содержит линейную базу и предел таблицы</text>
+<rect x="35" y="226" width="510" height="170" rx="14" fill="#e0e7ff"/>
+<rect x="575" y="226" width="510" height="170" rx="14" fill="#dcfce7"/>
+<text x="54" y="267" font-size="22" font-weight="bold">Trap Gate · 8Fh</text>
+<text x="54" y="311" font-size="19">IF не очищается</text>
+<text x="54" y="354" font-size="18">Fault сохраняет текущий IP</text>
+<text x="595" y="267" font-size="22" font-weight="bold">Interrupt Gate · 8Eh</text>
+<text x="595" y="311" font-size="19">IF автоматически очищается</text>
+<text x="595" y="354" font-size="18">Внешние IRQ требуют EOI</text>
+<rect x="35" y="424" width="510" height="138" rx="14" fill="#ede9fe"/>
+<rect x="575" y="424" width="510" height="138" rx="14" fill="#fae8ff"/>
+<text x="54" y="465" font-size="21">#GP 13: error code 0x142</text>
+<text x="54" y="510" font-size="18">IDT 0..39, вне таблицы n=40</text>
+<text x="595" y="465" font-size="21">PIC: IRQ0..7 → 32..39</text>
+<text x="595" y="510" font-size="18">0..31 оставлены для исключений</text>
+<text x="35" y="614" font-size="17">IOPL и IF — разные поля EFLAGS · CPL=0 в опыте</text>
+<text x="35" y="641" font-size="13">RAG PDF 253–268 · отдельная аналитическая схема · эксперименты не запускались</text>
+</g></svg>

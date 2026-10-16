@@ -141,6 +141,32 @@ class TemplateContractTests(unittest.TestCase):
             self.assertEqual(path, ref["canonical_path"])
         self.assertTrue(router["routes"]["CHAPTER_ROUTE"]["publication"]["forbid_archive_substitute"])
 
+    def test_session_recovery_router_is_current(self):
+        recovery = self.assert_template(
+            "session-recovery-v1.0.yaml",
+            "BIBLIOTEKA-VSP-SESSION-RECOVERY", "1.0",
+        )
+        self.assertFalse(recovery["scope"]["no_background_execution"] is False)
+        self.assertEqual(
+            ".workflow/checkpoints/<task-key>.yaml",
+            recovery["durable_checkpoint"]["location"],
+        )
+        self.assertFalse(recovery["durable_checkpoint"]["privacy"] is None)
+        self.assertIn(
+            "Ковальски, проверка после обрыва связи",
+            recovery["recovery_trigger"]["exact_command"],
+        )
+        self.assertIn(
+            "git", recovery["recovery_trigger"]["interrupted_operation_rule"].lower()
+        )
+        router = load(TEMPLATES / "process-compliance-router-v1.2.yaml")
+        self.assertEqual("1.2", str(router["router"]["version"]))
+        ref = router["current_contracts"]["session_recovery"]
+        self.assertEqual("1.0", str(ref["version"]))
+        self.assertEqual("templates/session-recovery-v1.0.yaml", ref["canonical_path"])
+        self.assertTrue(router["routes"]["RECOVERY_ROUTE"]["no_duplicate_mutations"])
+        self.assertTrue(router["compliance_checks"]["continuity"]["checkpoint_for_multi_step_work"])
+
     def test_remote_git_policy_is_current(self):
         policy = self.assert_template(
             "git-execution-policy-v1.0.yaml",

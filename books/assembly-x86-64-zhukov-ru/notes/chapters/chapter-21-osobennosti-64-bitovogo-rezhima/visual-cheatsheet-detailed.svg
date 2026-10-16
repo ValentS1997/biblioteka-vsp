@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1090" width="1200" height="1090" role="img" aria-label="Подробная сводка главы 21: регистры, rel abs, FS GS, syscall, TSS, IST, IDT">
+<rect width="1200" height="1090" fill="#f8fafc"/><g font-family="sans-serif" fill="#17354d">
+<text x="34" y="54" font-size="30">Глава 21 · 64-bit mode — подробная схема</text>
+<text x="34" y="86" font-size="17">14 листингов · RAG PDF 341–372 · вычисления и наблюдения автора</text>
+<rect x="34" y="121" width="543" height="230" rx="14" fill="#dbeafe"/>
+<rect x="613" y="121" width="553" height="230" rx="14" fill="#dcfce7"/>
+<text x="53" y="163" font-size="24">01 · Регистры и стек</text>
+<text x="53" y="210" font-size="19">RAX–R15, части d / w / b</text>
+<text x="53" y="258" font-size="19">Write 32 → clear upper 32</text>
+<text x="53" y="310" font-size="18">PUSH / POP: 64-bit operands</text>
+<text x="632" y="163" font-size="24">02 · Relative addressing</text>
+<text x="632" y="210" font-size="19">RIP-relative, signed rel32</text>
+<text x="632" y="258" font-size="19">Copy code from 0x300 to 0x400</text>
+<text x="632" y="310" font-size="18">ABS reads old locations</text>
+<rect x="34" y="385" width="543" height="240" rx="14" fill="#e0e7ff"/>
+<rect x="613" y="385" width="553" height="240" rx="14" fill="#ede9fe"/>
+<text x="53" y="429" font-size="24">03 · FS and GS bases</text>
+<text x="53" y="478" font-size="19">Nonzero base exceptions</text>
+<text x="53" y="526" font-size="19">GDT or FS/GS MSR</text>
+<text x="53" y="577" font-size="18">FSGSBASE failure in Bochs setup</text>
+<text x="632" y="429" font-size="24">04 · System calls</text>
+<text x="632" y="478" font-size="19">CSTAR from compatibility</text>
+<text x="632" y="526" font-size="19">LSTAR from 64-bit mode</text>
+<text x="632" y="577" font-size="18">RCX / R11 · STAR · SFMASK</text>
+<rect x="34" y="662" width="543" height="243" rx="14" fill="#fae8ff"/>
+<rect x="613" y="662" width="553" height="243" rx="14" fill="#f3e8ff"/>
+<text x="53" y="706" font-size="24">05 · TSS and IO permissions</text>
+<text x="53" y="754" font-size="19">RSP0–RSP2 for CPL changes</text>
+<text x="53" y="803" font-size="19">IST1–IST7 alternative stacks</text>
+<text x="53" y="854" font-size="18">IOPB restricts port access</text>
+<text x="632" y="706" font-size="24">06 · 64-bit IDT / IRETQ</text>
+<text x="632" y="754" font-size="19">16-byte gate; DPL checks</text>
+<text x="632" y="803" font-size="19">IST=0 or 1–7 selected</text>
+<text x="632" y="854" font-size="18">SS and RSP saved on entry</text>
+<rect x="34" y="944" width="1132" height="93" rx="14" fill="#ffedd5"/>
+<text x="53" y="982" font-size="22">Source uncertainty: Bochs / physical PC disagree on CPL=3</text>
+<text x="53" y="1015" font-size="17">GP13 cause not resolved. Error-code field can contain a return address.</text>
+<text x="34" y="1068" font-size="14">Analytical reconstruction, not original Figures 21.1–21.3 · no execution</text>
+</g></svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1000" viewBox="0 0 1440 1000" role="img" aria-labelledby="ttl desc">
+<title id="ttl">Глава 3 — подробная памятка управления командой</title>
+<desc id="desc">Административный фильтр, задачи, проектное планирование, качество кода, командная работа по RAG p. 63–80.</desc>
+<rect width="1440" height="1000" fill="#f8fafc"/>
+<rect x="24" y="20" width="1392" height="117" rx="15" fill="#15334c"/>
+<text x="53" y="70" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#ffffff">Как вести стаю за собой</text>
+<text x="53" y="112" font-family="Arial,sans-serif" font-size="20" fill="#d4e8f7">Глава 3 · Пять контуров руководства разработчиками · PDF 63–80</text>
+<g font-family="Arial,sans-serif" fill="#1a384f" font-size="20">
+<rect x="24" y="164" width="670" height="197" rx="14" fill="#e2edf6"/>
+<text x="48" y="208" font-size="24" font-weight="700">1. Административный фильтр</text>
+<text x="48" y="247">Бизнес: собрать информацию</text>
+<text x="48" y="282">Спецификация: организовать ожидания</text>
+<text x="48" y="317">Реализация: анализировать детали</text>
+<text x="48" y="344" font-size="17">Таблицы 3.1–3.2, p. 64</text>
+<rect x="730" y="164" width="686" height="197" rx="14" fill="#e2edf6"/>
+<text x="754" y="208" font-size="24" font-weight="700">2. Беречь внимание</text>
+<text x="754" y="247">Письма и просьбы — не всегда приоритет</text>
+<text x="754" y="282">Явные задания, сроки и их пересмотр</text>
+<text x="754" y="317">Проверить условия концентрации</text>
+<text x="754" y="344" font-size="17">p. 65–68; рекомендации автора</text>
+<rect x="24" y="385" width="670" height="211" rx="14" fill="#e2edf6"/>
+<text x="48" y="429" font-size="24" font-weight="700">3. Планировать реальный проект</text>
+<text x="48" y="468">Требования уточняются итеративно</text>
+<text x="48" y="503">План A–F: шесть крупных операций</text>
+<text x="48" y="538">План A–V: обсуждения, тесты, исправления</text>
+<text x="48" y="570" font-size="17">p. 68–72; оценки в таблицах условные</text>
+<rect x="730" y="385" width="686" height="211" rx="14" fill="#e2edf6"/>
+<text x="754" y="429" font-size="24" font-weight="700">4. Обеспечивать качество</text>
+<text x="754" y="468">Периодически проводить обзоры кода</text>
+<text x="754" y="503">Уменьшать связность и сложность</text>
+<text x="754" y="538">Изучать технологии или звать эксперта</text>
+<text x="754" y="570" font-size="17">p. 72–74; исполняемых CLI-команд нет</text>
+<rect x="24" y="620" width="670" height="210" rx="14" fill="#e2edf6"/>
+<text x="48" y="664" font-size="24" font-weight="700">5. Укреплять команду</text>
+<text x="48" y="703">Учитывать навыки и совместную работу</text>
+<text x="48" y="738">Обеспечивать передачу знаний</text>
+<text x="48" y="773">Подготавливать преемника</text>
+<text x="48" y="804" font-size="17">p. 74–79; кейс «Одинокий ферзь» p. 76</text>
+<rect x="730" y="620" width="686" height="210" rx="14" fill="#e2edf6"/>
+<text x="754" y="664" font-size="24" font-weight="700">Границы применимости</text>
+<text x="754" y="703">Кадровые решения: политика и закон</text>
+<text x="754" y="738">Утверждённые KPI: [Needs confirmation]</text>
+<text x="754" y="773">Rollback: [Needs confirmation]</text>
+<text x="754" y="804" font-size="17">Mojibake заголовков: source-findings.md</text>
+<rect x="24" y="854" width="1392" height="90" rx="14" fill="#d7e8f4"/>
+<text x="48" y="892" font-size="24" font-weight="700">Итог p. 80: фокус · проекты · качество · обучение · люди</text>
+<text x="48" y="924" font-size="19">Цель — законченные общие результаты, а не множество незавершённых действий</text>
+</g>
+<text x="32" y="975" font-family="Arial,sans-serif" font-size="16" fill="#526b7d">Источник: RAG p0063-c01–p0080-c01. PDF и внешние источники напрямую не читались.</text>
+</svg>

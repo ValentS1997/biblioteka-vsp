@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="660" viewBox="0 0 1120 660" role="img" aria-label="Краткая карта главы 7: битовые циклы, DOS потоки, опережающие ссылки и упаковка тетрад">
+<rect width="1120" height="660" fill="#f7fafc"/>
+<g font-family="DejaVu Sans,sans-serif">
+<text x="36" y="55" font-size="30" font-weight="bold" fill="#172f47">Глава 7 · Примеры программ</text>
+<text x="36" y="84" font-size="17" fill="#607287">RAG PDF 93–110 · от обработки массива к стандартным потокам</text>
+<rect x="36" y="120" width="510" height="158" rx="15" fill="#e4efff" stroke="#6686bd" stroke-width="2"/>
+<rect x="572" y="120" width="510" height="158" rx="15" fill="#e4f6ed" stroke="#5eac8c" stroke-width="2"/>
+<rect x="36" y="305" width="510" height="158" rx="15" fill="#eee9ff" stroke="#9180c1" stroke-width="2"/>
+<rect x="572" y="305" width="510" height="158" rx="15" fill="#ecf1ff" stroke="#7790c2" stroke-width="2"/>
+<g font-size="21" font-weight="bold" fill="#24476a">
+<text x="56" y="155">7.1–7.2 · Подсчёт единичных битов</text>
+<text x="592" y="155">7.3–7.5 · Потоковая программа</text>
+<text x="56" y="340">7.6–7.8 · Опережающие ссылки</text>
+<text x="592" y="340">7.9–7.10 · Упаковка тетрад</text>
+</g>
+<g font-size="17" fill="#29435b">
+<text x="56" y="189">LODSB → SHR → ADC → STOSB</text>
+<text x="56" y="219">Два LOOP: сохранить и вернуть CX</text>
+<text x="56" y="249">Оптимизация: CLC → JNZ → ADC</text>
+<text x="592" y="189">DOS 03F: читать, BX=0</text>
+<text x="592" y="219">DOS 040: писать, BX=1</text>
+<text x="592" y="249">Проверить C/AX; код возврата 04C</text>
+<text x="56" y="374">LEA: тип byte/word не нужен</text>
+<text x="56" y="404">MOV: возможна неоднозначность</text>
+<text x="56" y="434">EXTRN BUF:BYTE задаёт тип</text>
+<text x="592" y="374">SHL AL,4; SHR DL / RCR AL</text>
+<text x="592" y="404">Две тетрады 6 и 8 → 01101000</text>
+<text x="592" y="434">Вариант: SHR AX,4</text>
+</g>
+<rect x="36" y="496" width="1046" height="103" rx="15" fill="#fff1e8" stroke="#cb885a" stroke-width="2"/>
+<text x="55" y="529" font-size="21" font-weight="bold" fill="#965025">Практические ограничения</text>
+<text x="55" y="558" font-size="16" fill="#825035">Перенаправление &gt; обнуляет файл. Нужны проверки переполнения и длины входа.</text>
+<text x="55" y="581" font-size="16" fill="#825035">Задания: 15 первого уровня и 12 второго — исходная нумерация сохранена.</text>
+<text x="36" y="634" font-size="14" fill="#677d8e">Provenance: p0093:c01–p0100:c01, p0101:c01–p0110:c01 · inventory 0017</text>
+</g></svg>

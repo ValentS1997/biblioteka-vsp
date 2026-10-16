@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1230" viewBox="0 0 1500 1230" role="img" aria-labelledby="t d">
+<title id="t">Подробная карта главы 12 — Управление инфраструктурой</title>
+<desc id="d">Сопоставление IaC, IaD, GitOps, проверок кода и конвейера, четырех типов тестирования инфраструктуры и поэтапного внедрения, источник RAG PDF 145–156.</desc>
+<rect width="1500" height="1230" fill="#0d1b2d"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="54" y="70" font-size="39" font-weight="bold" fill="#f2f8ff">Глава 12 · Управление инфраструктурой</text>
+<text x="54" y="108" font-size="20" fill="#bbd3e7">Устойчивость начинается с общей модели и управляемого процесса изменений</text>
+<rect x="54" y="142" width="1392" height="119" rx="14" fill="#154653" stroke="#74dad0" stroke-width="2"/>
+<text x="82" y="185" font-size="26" font-weight="bold" fill="#f4ffff">1 · Начни с конкретной проблемы (PDF 145, 151–153)</text>
+<text x="82" y="221" font-size="19" fill="#dcf6f3">Выбери измеримый результат, а не проект «автоматизировать всё»</text>
+<text x="82" y="246" font-size="18" fill="#dcf6f3">Обсуди с командой обязанности, единые точки управления и нужные навыки</text>
+<text x="54" y="306" font-size="28" font-weight="bold" fill="#eff8ff">2 · Три совместимых модели (PDF 145–150)</text>
+<rect x="54" y="331" width="438" height="205" rx="14" fill="#2b3d56"/>
+<text x="82" y="374" font-size="27" font-weight="bold" fill="#f3f9ff">IaC — код и процесс</text>
+<text x="82" y="413" font-size="19" fill="#deebf9">Контроль версий и review</text>
+<text x="82" y="448" font-size="19" fill="#deebf9">Тестирование и CI/CD</text>
+<text x="82" y="492" font-size="17" fill="#bdd1ed">Не путать с моделью IaaS</text>
+<rect x="531" y="331" width="438" height="205" rx="14" fill="#274854"/>
+<text x="559" y="374" font-size="27" font-weight="bold" fill="#efffff">IaD — данные</text>
+<text x="559" y="413" font-size="19" fill="#daf5f5">Модель основных ресурсов</text>
+<text x="559" y="448" font-size="19" fill="#daf5f5">Место хранения, метаданные</text>
+<text x="559" y="492" font-size="17" fill="#b6e3dc">История изменения модели</text>
+<rect x="1008" y="331" width="438" height="205" rx="14" fill="#303f56"/>
+<text x="1036" y="374" font-size="27" font-weight="bold" fill="#f4f8ff">GitOps — состояние</text>
+<text x="1036" y="413" font-size="19" fill="#dceaf8">Одобренная конфигурация</text>
+<text x="1036" y="448" font-size="19" fill="#dceaf8">Получение и сверка</text>
+<text x="1036" y="492" font-size="17" fill="#c4d1ea">Декларативно, с версиями</text>
+<rect x="54" y="572" width="1392" height="158" rx="14" fill="#293f54"/>
+<text x="82" y="618" font-size="27" font-weight="bold" fill="#f1f9ff">3 · Конвейер изменения (PDF 147–149)</text>
+<text x="82" y="654" font-size="21" fill="#dcecf9">CI: сборка → тестирование → слияние</text>
+<text x="82" y="687" font-size="21" fill="#dcecf9">Выпуск → развертывание → проверка результата и мониторинг</text>
+<rect x="54" y="760" width="1392" height="195" rx="14" fill="#274852"/>
+<text x="82" y="804" font-size="27" font-weight="bold" fill="#f3ffff">4 · Четыре вида тестов (PDF 154–155)</text>
+<text x="82" y="839" font-size="20" fill="#def6f5">Линтинг: общие версии и разумные правила</text>
+<text x="82" y="870" font-size="20" fill="#def6f5">Модульные: сложные паттерны и детерминированный результат</text>
+<text x="82" y="901" font-size="20" fill="#def6f5">Интеграционные: границы системы, имитация непредсказуемых ответов</text>
+<text x="82" y="932" font-size="20" fill="#def6f5">Сквозные: похожая на production среда, цена и удаление ресурсов</text>
+<rect x="54" y="986" width="1392" height="168" rx="14" fill="#28594b" stroke="#7adfb9"/>
+<text x="82" y="1030" font-size="27" font-weight="bold" fill="#f3fff7">5 · Сопровождение — часть надёжности (PDF 152–156)</text>
+<text x="82" y="1067" font-size="20" fill="#dffff0">Не допускать двух инструментов на одном ресурсе и узких мест по знаниям</text>
+<text x="82" y="1100" font-size="20" fill="#dffff0">Поддерживать тестовую среду, документацию и качество оповещений</text>
+<text x="82" y="1133" font-size="18" fill="#dffff0">Продвигаться небольшими этапами, оценивая реальную пользу</text>
+<text x="54" y="1200" font-size="16" fill="#b1c8dd">Источник: canonical RAG PDF 145–156. Искажённая геометрия рис. 12.1–12.2 не восстановлена.</text>
+</g></svg>

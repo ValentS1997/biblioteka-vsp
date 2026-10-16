@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 760" width="1180" height="760" role="img" aria-labelledby="title desc">
+<title id="title">Глава 6. Контроль версий</title><desc id="desc">Краткая схема практики контроля версий и организации инфраструктурных репозиториев по RAG PDF 83–88.</desc>
+<rect width="1180" height="760" fill="#10192b"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="50" y="74" font-size="40" font-weight="bold" fill="#f2f7ff">Глава 6 · Контроль версий</text>
+<text x="50" y="111" font-size="22" fill="#bfd2e5">Метод управления изменениями инфраструктурных данных</text>
+<rect x="50" y="148" width="1080" height="112" rx="16" fill="#143e53" stroke="#66cddd" stroke-width="2"/>
+<text x="82" y="198" font-size="29" font-weight="bold" fill="#f0ffff">Контролируй не только исходный код</text>
+<text x="82" y="231" font-size="20" fill="#d3eff5">Конфигурации · скрипты · результаты сборки · образы</text>
+<rect x="50" y="295" width="515" height="151" rx="15" fill="#203452"/>
+<text x="76" y="342" font-size="27" font-weight="bold" fill="#edf4ff">Практика и инструменты</text>
+<text x="76" y="379" font-size="21" fill="#d8e6f8">Git / SVN — системы контроля</text>
+<text x="76" y="414" font-size="19" fill="#d8e6f8">GitHub / GitLab — сервисы размещения</text>
+<rect x="615" y="295" width="515" height="151" rx="15" fill="#234251"/>
+<text x="640" y="342" font-size="27" font-weight="bold" fill="#f2ffff">Преимущества</text>
+<text x="640" y="379" font-size="20" fill="#dbf2f7">Версии · авторство · аудит · доступ</text>
+<text x="640" y="412" font-size="20" fill="#dbf2f7">Воспроизводимость · конфликты</text>
+<rect x="50" y="481" width="1080" height="134" rx="15" fill="#2c3650"/>
+<text x="80" y="529" font-size="28" font-weight="bold" fill="#f5f8ff">Структура проектов — компромисс</text>
+<text x="80" y="565" font-size="20" fill="#dce8f7">Монорепозиторий: единый поиск, общий контекст, риск роста</text>
+<text x="80" y="595" font-size="20" fill="#dce8f7">Много репозиториев: отдельные версии, сложнее поиск и связи</text>
+<rect x="50" y="643" width="1080" height="65" rx="12" fill="#2b584f"/>
+<text x="80" y="683" font-size="23" font-weight="bold" fill="#eefff8">Документируй решения и делай изменения видимыми для команды</text>
+<text x="50" y="742" font-size="15" fill="#9fb8cd">Источник: RAG PDF 83–88, печатные 87–92. CLI-процедуры [Needs confirmation].</text>
+</g></svg>

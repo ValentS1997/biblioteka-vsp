@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1180" viewBox="0 0 1500 1180" role="img" aria-labelledby="title description">
+<title id="title">Глава 9 — Подробная карта документации</title>
+<desc id="description">Аудитория, пять видов документации, информационная архитектура, жизненный цикл и пять критериев качества, включая аварийные офлайн-инструкции, из RAG PDF 109–115.</desc>
+<rect width="1500" height="1180" fill="#0c182b"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="53" y="74" font-size="40" font-weight="bold" fill="#f2f8ff">Глава 9 · Документация как часть системы</text>
+<text x="53" y="110" font-size="21" fill="#b6cee2">Документ полезен, когда нужный читатель находит нужные сведения в нужный момент</text>
+<rect x="53" y="148" width="1394" height="116" rx="15" fill="#164653" stroke="#7be0ce" stroke-width="2"/>
+<text x="81" y="190" font-size="27" font-weight="bold" fill="#f3ffff">1 · Выясни потребности аудитории (PDF 109–111)</text>
+<text x="81" y="229" font-size="19" fill="#ddf8f5">Роль · уже известное · желаемое действие · предпочтительный формат · задача · существующие материалы</text>
+<text x="53" y="313" font-size="28" font-weight="bold" fill="#f1f7ff">2 · Выбери нужный тип документа (PDF 111–112)</text>
+<rect x="53" y="337" width="443" height="139" rx="14" fill="#283b54"/>
+<text x="80" y="379" font-size="25" font-weight="bold" fill="#f2f8ff">Запись / решение</text>
+<text x="80" y="415" font-size="19" fill="#e0eafa">Почему сделан выбор?</text>
+<text x="80" y="444" font-size="18" fill="#e0eafa">История, обсуждения, протоколы</text>
+<rect x="527" y="337" width="443" height="139" rx="14" fill="#274452"/>
+<text x="555" y="379" font-size="25" font-weight="bold" fill="#f0ffff">Общая документация</text>
+<text x="555" y="415" font-size="19" fill="#def2f5">Термины, идеи, понятия</text>
+<text x="555" y="444" font-size="18" fill="#def2f5">Для начального контекста</text>
+<rect x="1001" y="337" width="446" height="139" rx="14" fill="#313f53"/>
+<text x="1029" y="379" font-size="25" font-weight="bold" fill="#f2f8ff">Инструкция по задаче</text>
+<text x="1029" y="415" font-size="19" fill="#e2eafa">Пошаговое выполнение</text>
+<text x="1029" y="444" font-size="18" fill="#e2eafa">Что и в каком порядке делать?</text>
+<rect x="53" y="494" width="680" height="123" rx="14" fill="#2a4b55"/>
+<text x="80" y="537" font-size="25" font-weight="bold" fill="#f3ffff">Справочник</text>
+<text x="80" y="571" font-size="19" fill="#e0f3f5">Таблицы и перечни, эксплуатация и поиск неисправностей</text>
+<rect x="766" y="494" width="681" height="123" rx="14" fill="#30405a"/>
+<text x="794" y="537" font-size="25" font-weight="bold" fill="#f2f8ff">Проектная документация</text>
+<text x="794" y="571" font-size="19" fill="#e2eafa">Цели, план, контекст, сроки, необходимые ресурсы</text>
+<rect x="53" y="642" width="1394" height="134" rx="14" fill="#313e54"/>
+<text x="81" y="686" font-size="27" font-weight="bold" fill="#f0f7ff">3 · Информационная архитектура (PDF 112–113)</text>
+<text x="81" y="720" font-size="19" fill="#dceaf9">Повторное использование · управление изменениями · ответственность · связность тем</text>
+<text x="81" y="751" font-size="19" fill="#dceaf9">Небольшим страницам нужны индекс и поиск; длинная страница может загружаться медленно</text>
+<rect x="53" y="797" width="1394" height="124" rx="14" fill="#264853"/>
+<text x="81" y="839" font-size="27" font-weight="bold" fill="#f2ffff">4 · Жизненный цикл документа (PDF 112–113)</text>
+<text x="81" y="877" font-size="19" fill="#e1f4f5">Исследовать → создать / обновить → проверить → присвоить версию → выпустить → получить отзыв</text>
+<text x="81" y="905" font-size="18" fill="#e1f4f5">Обновлять при изменениях системы; признать устаревшим и архивировать при необходимости</text>
+<rect x="53" y="944" width="1394" height="137" rx="14" fill="#285449" stroke="#79deb5"/>
+<text x="81" y="990" font-size="27" font-weight="bold" fill="#f2fff8">5 · Качество документации (PDF 114–115)</text>
+<text x="81" y="1025" font-size="20" fill="#e0fff0">Точность · наличие · доступность · упорядоченность · удобство сопровождения</text>
+<text x="81" y="1054" font-size="18" fill="#e0fff0">При отключении сети или питания нужны доступные аварийные инструкции, в том числе печатные</text>
+<text x="53" y="1140" font-size="16" fill="#aec9db">RAG PDF 109–115; рис. 9.1–9.3 не восстановлены по памяти. Точные команды, SLA и rollback — [Needs confirmation].</text>
+</g></svg>

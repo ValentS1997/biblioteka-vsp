@@ -1,0 +1,44 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: "0011-modern-system-administration-chapter-12"
+repository: "vsp-corp/biblioteka-vsp"
+book_id: modern-system-administration-jennifer-davis-ru
+task_kind: chapter
+objective: "RAG-only chapter 12 Infrastructure Management artifacts via CI-gated Git pull requests"
+branch: "docs/0011-chapter12-postmerge-index-20261015"
+initial_base_sha: "17025c3d2b3b909c7b8fbaf58e90cefb53341756"
+last_observed_head_sha: "44a14ecbfd54fbe449460078f641364795f44823"
+expected_source_sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite
+  - no reading-progress mutation
+  - no ZIP
+stage: COMPLETE
+completed_steps:
+  - step: "Verified main progress 11/21, source SHA256, accepted RAG and readiness"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/17025c3d2b3b909c7b8fbaf58e90cefb53341756/books/modern-system-administration-jennifer-davis-ru/rag/acceptance.yaml"
+  - step: "Chapter 12 boundaries PDF 145–156 (printed 151–162), chapter 13 begins PDF 157"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/17025c3d2b3b909c7b8fbaf58e90cefb53341756/books/modern-system-administration-jennifer-davis-ru/rag/chunks/p0101-p0200/p0157-c01.md"
+  - step: "Eight independent chapter artifacts committed and Git readback verified"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/e772d331de6a192e5b7441828bfc01d1c5d01f42"
+  - step: "Chapter index updated to 12/21 on branch and read back"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/fcaff3989fb696ad069db998d7e0c06d63f18f44"
+  - step: "Chapter 12 independent PR CI PASS"
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38733460215"
+  - step: "PR #539 merged into main and eight individual files independently Git readback"
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/539"
+  - step: "Canonical book index now reports 12/21 on postmerge follow-up branch"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/44a14ecbfd54fbe449460078f641364795f44823"
+pending_steps: []
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/commit/298e0911e261147dbe28735c81dc8f82d5ebd08e"
+first_safe_next_action: "Verify final merged main, chapter 12 index and checkpoint before starting chapter 13"
+blocker: "Not applicable"
+last_observed_at: "Not applicable"

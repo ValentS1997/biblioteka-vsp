@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="960" viewBox="0 0 1260 960" role="img" aria-labelledby="title desc">
+<title id="title">Глава 19 — Устойчивая дежурная служба</title>
+<desc id="desc">Компактная карта подготовки, triage, передачи смены и мониторинга нагрузки на людей. Источник: canonical RAG PDF 226–240.</desc>
+<rect width="1260" height="960" fill="#101f34"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="52" y="71" font-size="39" font-weight="bold" fill="#f3faff">Глава 19 · Надёжное дежурство</text>
+<text x="52" y="113" font-size="22" fill="#c7dbed">Устойчивость систем + устойчивость людей</text>
+<rect x="52" y="157" width="1156" height="135" rx="16" fill="#274b65"/>
+<text x="82" y="207" font-size="28" font-weight="bold" fill="#f1f9ff">До смены: политика и готовность</text>
+<text x="82" y="248" font-size="22" fill="#e0edf9">Маршрут эскалации · тест сигналов · доступ · подмена · отдых</text>
+<rect x="52" y="332" width="360" height="170" rx="16" fill="#36516c"/>
+<text x="77" y="382" font-size="27" font-weight="bold" fill="#f3faff">Подтвердить</text>
+<text x="77" y="423" font-size="21" fill="#dcecf8">Получение alert</text>
+<text x="77" y="463" font-size="19" fill="#cfdfed">Без дублей</text>
+<rect x="449" y="332" width="360" height="170" rx="16" fill="#205967"/>
+<text x="476" y="382" font-size="27" font-weight="bold" fill="#f3ffff">Триаж</text>
+<text x="476" y="423" font-size="21" fill="#e0f5f8">Срочность + влияние</text>
+<text x="476" y="463" font-size="19" fill="#cbe9ec">Риск, пользователи</text>
+<rect x="847" y="332" width="361" height="170" rx="16" fill="#32564d"/>
+<text x="873" y="382" font-size="27" font-weight="bold" fill="#f3fff8">Решить</text>
+<text x="873" y="423" font-size="21" fill="#def6e9">Или эскалировать</text>
+<text x="873" y="463" font-size="19" fill="#c8e8da">Документировать</text>
+<rect x="52" y="542" width="1156" height="133" rx="16" fill="#304966"/>
+<text x="82" y="593" font-size="28" font-weight="bold" fill="#f4faff">Передача смены — часть надёжности</text>
+<text x="82" y="632" font-size="21" fill="#deecfa">Открытые инциденты · ручные действия · риски · знания</text>
+<rect x="52" y="716" width="1156" height="158" rx="16" fill="#29594e" stroke="#88dab3" stroke-width="2"/>
+<text x="82" y="768" font-size="28" font-weight="bold" fill="#f4fff8">Измеряй не только MTTR</text>
+<text x="82" y="805" font-size="21" fill="#dcf7e8">Активные часы · частоту вызовов · прерывания сна и личных дел</text>
+<text x="82" y="839" font-size="20" fill="#cfeedd">Ретроспектива и восстановление после дежурства</text>
+<text x="52" y="928" font-size="17" fill="#a9c4d8">Canonical RAG PDF 226–240; авторская схема, не воспроизведение рис. 19.1.</text>
+</g></svg>

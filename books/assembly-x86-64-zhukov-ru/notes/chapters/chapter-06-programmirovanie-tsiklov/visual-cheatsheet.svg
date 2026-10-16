@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="640" viewBox="0 0 1100 640" role="img" aria-label="Краткая визуальная шпаргалка главы 6: программирование циклов и поиск в массиве">
+<rect width="1100" height="640" fill="#f8fafc"/><g font-family="DejaVu Sans,sans-serif">
+<text x="35" y="55" font-size="30" font-weight="bold" fill="#153047">Глава 6 · Программирование циклов</text>
+<text x="35" y="84" font-size="16" fill="#597084">Массив → элемент → сравнение → флаги → выход</text>
+<g stroke-width="2"><rect x="35" y="112" width="321" height="140" rx="13" fill="#e1edff" stroke="#537dbf"/><rect x="389" y="112" width="321" height="140" rx="13" fill="#e3f8ed" stroke="#32906d"/><rect x="743" y="112" width="321" height="140" rx="13" fill="#efe9ff" stroke="#8271c3"/>
+<rect x="35" y="277" width="321" height="141" rx="13" fill="#e7f1ff" stroke="#537dbf"/><rect x="389" y="277" width="321" height="141" rx="13" fill="#e9f8ef" stroke="#32906d"/><rect x="743" y="277" width="321" height="141" rx="13" fill="#f0ebff" stroke="#8271c3"/></g>
+<g font-size="19" font-weight="bold" fill="#21456e"><text x="53" y="145">Байт: поиск 7</text><text x="407" y="145">Слово: поиск 7</text><text x="761" y="145">SCASW / REPNE</text><text x="53" y="311">Больше X</text><text x="407" y="311">Диапазон 10–99</text><text x="761" y="311">Таблица XLAT</text></g>
+<g font-size="16" fill="#203b52"><text x="53" y="177">CX=size; SI=array-1</text><text x="53" y="206">INC → CMP → LOOPNE</text><text x="407" y="177">CX=size/2; шаг +2</text><text x="407" y="206">CMP w[SI], X</text><text x="761" y="177">DI=array; AX=X; CLD</text><text x="761" y="206">REPNE SCASW; JNE</text><text x="53" y="344">CMP; JG found; LOOP</text><text x="53" y="374">Знаковое сравнение</text><text x="407" y="344">LODSB; JB / JA</text><text x="407" y="374">INC DX; AX=DX</text><text x="761" y="344">Карта 256 байтов</text><text x="761" y="374">XLAT → 0/1 → ADD DX</text></g>
+<rect x="35" y="456" width="1029" height="109" rx="13" fill="#fff0e5" stroke="#cd8652" stroke-width="2"/>
+<text x="55" y="487" font-size="20" font-weight="bold" fill="#984d24">Критичные инварианты</text>
+<text x="55" y="516" font-size="17" fill="#75452a">CX=0 не доказывает отсутствие совпадения; проверяйте Z после последнего CMP.</text>
+<text x="55" y="545" font-size="17" fill="#75452a">INC после CMP перезапишет Z; SCASB требует согласованного DI/AL.</text>
+<text x="35" y="611" font-size="14" fill="#64788a">RAG PDF 85–92 · Листинги 6.1–6.9 · inventory 0017</text></g></svg>

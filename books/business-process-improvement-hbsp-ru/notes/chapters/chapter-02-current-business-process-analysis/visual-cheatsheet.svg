@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 540" width="1320" height="540" role="img" aria-labelledby="title desc">
+<title id="title">Этап 2. Анализ текущего бизнес-процесса</title>
+<desc id="desc">Четыре шага источника: карта процесса, поиск проблем, интервью заинтересованных сторон и анализ чужого опыта.</desc>
+<rect width="1320" height="540" rx="24" fill="#f3f6fa"/>
+<rect x="24" y="24" width="1272" height="107" rx="18" fill="#193653"/>
+<g font-family="DejaVu Sans,Arial,sans-serif">
+<text x="53" y="72" font-size="32" font-weight="bold" fill="#ffffff">Этап 2. Анализ текущего бизнес-процесса</text>
+<text x="53" y="108" font-size="19" fill="#d8e9f7">4 шага из RAG · PDF c. 43–54 · книга №0036</text>
+<g fill="#ffffff" stroke="#c4d6e8" stroke-width="2">
+<rect x="30" y="172" width="298" height="208" rx="14"/>
+<rect x="351" y="172" width="298" height="208" rx="14"/>
+<rect x="672" y="172" width="298" height="208" rx="14"/>
+<rect x="993" y="172" width="297" height="208" rx="14"/>
+</g>
+<g fill="#18558e"><circle cx="68" cy="213" r="24"/><circle cx="389" cy="213" r="24"/><circle cx="710" cy="213" r="24"/><circle cx="1031" cy="213" r="24"/></g>
+<g fill="#ffffff" font-size="20" font-weight="bold" text-anchor="middle"><text x="68" y="220">1</text><text x="389" y="220">2</text><text x="710" y="220">3</text><text x="1031" y="220">4</text></g>
+<g font-size="20" fill="#17324e" font-weight="bold"><text x="49" y="261">Схема процесса</text><text x="370" y="261">Поиск проблем</text><text x="691" y="261">Интервью</text><text x="1012" y="261">Чужой опыт</text></g>
+<g font-size="17" fill="#3b5872">
+<text x="49" y="299">Макро: 2–7 этапов</text><text x="49" y="326">Функциональная:</text><text x="49" y="353">роли и решения</text>
+<text x="370" y="299">Задержки и ошибки</text><text x="370" y="326">Время и расходы</text><text x="370" y="353">Неудовлетворённость</text>
+<text x="691" y="299">Сотрудники и клиенты</text><text x="691" y="326">Ожидания и оценки</text><text x="691" y="353">Идеи улучшения</text>
+<text x="1012" y="299">Конкуренты и аналоги</text><text x="1012" y="326">Отраслевые источники</text><text x="1012" y="353">Образцовые процессы</text>
+</g>
+<g stroke="#18558e" stroke-width="3" fill="none"><path d="M331 278h16l-7 -7m7 7l-7 7"/><path d="M652 278h16l-7 -7m7 7l-7 7"/><path d="M973 278h16l-7 -7m7 7l-7 7"/></g>
+<rect x="30" y="407" width="1260" height="96" rx="15" fill="#dce9f6"/>
+<text x="50" y="446" font-size="20" font-weight="bold" fill="#173f67">Выход: документированное текущее состояние и варианты улучшения</text>
+<text x="50" y="479" font-size="15" fill="#3e5b75">RAG: business-process-improvement-hbsp-ru:p0045:c01–p0054:c01 · Команд CLI нет</text>
+</g>
+</svg>

@@ -24,13 +24,13 @@ class ReadinessTests(unittest.TestCase):
         (self.root / "templates").mkdir()
         module.ROOT = self.root
         module.INDEX = self.root / "books" / "index.yaml"
-        module.CHAPTER_TEMPLATE = self.root / "templates" / "chapter-artifact-collection-v1.7.yaml"
+        module.CHAPTER_TEMPLATE = self.root / "templates" / "chapter-artifact-collection-v1.8.yaml"
         module.CHAPTER_TEMPLATE.write_text(
             yaml.safe_dump(
                 {
                     "template": {
                         "id": "BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION",
-                        "version": "1.7",
+                        "version": "1.8",
                         "status": "ACCEPTED",
                     }
                 },

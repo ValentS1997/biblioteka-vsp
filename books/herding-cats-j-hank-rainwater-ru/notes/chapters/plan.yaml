@@ -1,0 +1,58 @@
+schema: biblioteka-vsp/chapter-plan/v1
+book_id: herding-cats-j-hank-rainwater-ru
+source_sha256: 5f11cf93711c9489b25218c701e1027f5ca0354523e2faeb1bb7041ed3b62795
+source_format: pdf
+total_chapters: 10
+toc_evidence: >-
+  RAG chunks p0005-c01 (PDF page 5, numbered brief contents; mojibake in
+  extracted headings) and p0020-c01, p0021-c01, p0022-c01 (PDF pages 20–22,
+  readable chapter titles in the author's introduction); chapter opening
+  at p0026-c01 and subsequent source pages confirms page-coordinate mapping.
+provenance_note: >-
+  Chapter names below are transcribed from readable RAG introduction on PDF
+  pages 20–22; original brief-contents text at PDF page 5 has a documented
+  extraction issue. Chapter page spans are derived from consecutive numbered
+  chapter starts in the RAG-backed contents, excluding the afterword (page 228),
+  appendices and front matter. Printed page starts and PDF page coordinates
+  were spot-checked using the individual RAG chunks.
+chapters:
+  - number: 1
+    title: "Как привыкнуть к роли руководителя"
+    slug: kak-privyknut-k-roli-rukovoditelya
+    source_locator: "pdf:26-45"
+  - number: 2
+    title: "Как руководить собой"
+    slug: kak-rukovodit-soboy
+    source_locator: "pdf:46-62"
+  - number: 3
+    title: "Как вести стаю за собой"
+    slug: kak-vesti-stayu-za-soboy
+    source_locator: "pdf:63-80"
+  - number: 4
+    title: "Как организовать успех"
+    slug: kak-organizovat-uspekh
+    source_locator: "pdf:81-106"
+  - number: 5
+    title: "Как вести совещания"
+    slug: kak-vesti-soveshchaniya
+    source_locator: "pdf:107-123"
+  - number: 6
+    title: "Философия и методы технического лидера"
+    slug: filosofiya-i-metody-tekhnicheskogo-lidera
+    source_locator: "pdf:124-146"
+  - number: 7
+    title: "Закат лидера"
+    slug: zakat-lidera
+    source_locator: "pdf:147-166"
+  - number: 8
+    title: "Восход лидера"
+    slug: voskhod-lidera
+    source_locator: "pdf:167-192"
+  - number: 9
+    title: "Как ужиться с начальством"
+    slug: kak-uzhitsya-s-nachalstvom
+    source_locator: "pdf:193-204"
+  - number: 10
+    title: "Слова без песни"
+    slug: slova-bez-pesni
+    source_locator: "pdf:205-227"

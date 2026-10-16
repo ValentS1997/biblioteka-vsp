@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="735" viewBox="0 0 1200 735">
+<rect width="1200" height="735" fill="#f8fafc"/>
+<text x="40" y="54" fill="#0f172a" font-size="31" font-weight="700">Глава 03. Сбор открытой информации</text>
+<text x="40" y="87" fill="#475569" font-size="18">OSINT · 2-е издание · PDF 29–110 · RAG-only</text>
+<rect x="39" y="118" width="543" height="150" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/><text x="55" y="149" fill="#0f172a" font-size="20" font-weight="700">1. Согласовать scope</text><text x="55" y="176" fill="#334155" font-size="16">Цель, разрешённые домены и источники</text><text x="55" y="199" fill="#334155" font-size="16">Приватное содержимое и секреты не использовать</text>
+<rect x="618" y="118" width="543" height="150" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/><text x="634" y="149" fill="#0f172a" font-size="20" font-weight="700">2. Собрать открытые данные</text><text x="634" y="176" fill="#334155" font-size="16">Поисковики / архивы / публичные реестры</text><text x="634" y="199" fill="#334155" font-size="16">Индексы Shodan, Censys / код / документы</text>
+<rect x="39" y="283" width="543" height="150" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/><text x="55" y="314" fill="#0f172a" font-size="20" font-weight="700">3. Связать и перепроверить</text><text x="55" y="341" fill="#334155" font-size="16">Актуальность, владелец, дубли и дата</text><text x="55" y="364" fill="#334155" font-size="16">Maltego: смысловые графы, не шум</text>
+<rect x="618" y="283" width="543" height="150" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/><text x="634" y="314" fill="#0f172a" font-size="20" font-weight="700">4. Классифицировать следы</text><text x="634" y="341" fill="#334155" font-size="16">Подтверждённое / историческое / RAG_MISS</text><text x="634" y="364" fill="#334155" font-size="16">Отдельно потенциально активные методы</text>
+<rect x="39" y="458" width="1122" height="180" rx="14" fill="#e2e8f0"/>
+<text x="60" y="495" fill="#0f172a" font-size="24" font-weight="700">Ключевые разграничения</text>
+<text x="60" y="533" fill="#334155" font-size="19">Пассивный ≠ активное сканирование · индекс ≠ актуальный сервис</text>
+<text x="60" y="566" fill="#334155" font-size="19">Deep Web ≠ DarkNet · открытая находка ≠ разрешённый доступ</text>
+<text x="60" y="599" fill="#334155" font-size="17">Любое воздействие: новый scope и оценка риска</text>
+<text x="42" y="696" fill="#64748b" font-size="15">Provenance: chunks p0029:c01–p0110:c01. Командные несоответствия: source-findings.md</text>
+</svg>

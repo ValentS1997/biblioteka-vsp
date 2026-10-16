@@ -1,0 +1,44 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: "0011-modern-system-administration-chapter-11"
+repository: "vsp-corp/biblioteka-vsp"
+book_id: modern-system-administration-jennifer-davis-ru
+task_kind: chapter
+objective: "RAG-only chapter 11 infrastructure scripting; individual Git chapter artifacts and CI-gated PR"
+branch: "docs/0011-chapter11-postmerge-index-20261015"
+initial_base_sha: "cf5e36c3a06bf9545d7b6736c4ac663dea9ac071"
+last_observed_head_sha: "99e933f0b9f0ecef7cf55a3fa6856d418c43b850"
+expected_source_sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite
+  - preserve reading status
+  - no archives
+stage: COMPLETE
+completed_steps:
+  - step: "Verified 10/21 main baseline, complete source RAG and accepted ingestion"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/cf5e36c3a06bf9545d7b6736c4ac663dea9ac071/books/modern-system-administration-jennifer-davis-ru/rag/acceptance.yaml"
+  - step: "Verified chapter 11 PDF 135-144, printed 141-150 and chapter 12 beginning PDF 145"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/cf5e36c3a06bf9545d7b6736c4ac663dea9ac071/books/modern-system-administration-jennifer-davis-ru/rag/chunks/p0101-p0200/p0145-c01.md"
+  - step: "Eight individual chapter files committed and read back"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/8b529ca48c49b5b0463b0c9d1fbdd26ae298a53f"
+  - step: "Book index updated to 11/21 on chapter branch and read back"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/93881ba7aa0199f888bfd0b7084361342c1560a4"
+  - step: "Chapter 11 independent PR CI PASS"
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38729796059"
+  - step: "PR #535 merged to main; eight individual files independently verified"
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/535"
+  - step: "Book publication index updated to 11/21 on postmerge branch"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/99e933f0b9f0ecef7cf55a3fa6856d418c43b850"
+pending_steps: []
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/commit/9b57397ba2295f1d62478b35c33604b86decfa70"
+first_safe_next_action: "Verify chapter 11 final main merge, index and checkpoint before starting chapter 12"
+blocker: "Not applicable"
+last_observed_at: "Not applicable"

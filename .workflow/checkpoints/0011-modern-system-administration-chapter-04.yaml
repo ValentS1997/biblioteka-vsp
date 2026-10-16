@@ -1,0 +1,50 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: 0011-modern-system-administration-chapter-04
+repository: vsp-corp/biblioteka-vsp
+book_id: modern-system-administration-jennifer-davis-ru
+task_kind: chapter
+objective: "RAG-only analysis and individual Git publication of chapter 4 Network using canonical chapter artifact collection v1.8"
+branch: chapters/0011-modern-system-administration-chapter-04
+initial_base_sha: 8fb79e098055558a2ce377fa095531c1532f9bb4
+last_observed_head_sha: fa62c4d939c67358d010e0aef69e4b273f60b6fd
+expected_source_sha256: 06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790
+constraints:
+  - "no direct main changes"
+  - "no force-push"
+  - "no source/RAG rewrite without explicit authorization"
+  - "no reading-progress mutation without explicit user confirmation"
+  - "no archive delivery for chapter artifacts"
+stage: COMPLETE
+completed_steps:
+  - step: "Read-only recovery; verified main has chapters 1-3, 21 source-grounded total, no chapter 4"
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/8fb79e098055558a2ce377fa095531c1532f9bb4/books/modern-system-administration-jennifer-davis-ru/notes/chapters/README.md
+  - step: "Verified RAG chapter 4 boundary PDF pages 63-71, chapter 5 begins PDF 73"
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/8fb79e098055558a2ce377fa095531c1532f9bb4/books/modern-system-administration-jennifer-davis-ru/rag/chunks/p0001-p0100/p0073-c01.md
+  - step: "Verified canonical RAG ingestion acceptance and source SHA binding"
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/8fb79e098055558a2ce377fa095531c1532f9bb4/books/modern-system-administration-jennifer-davis-ru/rag/acceptance.yaml
+  - step: "Committed and Git-read-back verified 6 mandatory chapter 4 files, plus summary.md and source-findings.md"
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/3fa2e3465260dd85c5950cd333e0c3fc29307945
+  - step: "Updated branch chapter index to 4/21 (main remains 3/21), verified Git read-back"
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/1ae6e23a3dbde6b6a01e1411ce62c0c2f88e580d
+  - step: "GitHub Actions PASS for chapter 4 eight files and updated index"
+    evidence_type: ci
+    reference: https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38702280339
+  - step: "PR #508 merged; eight chapter 4 files verified in main"
+    evidence_type: pr
+    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/508
+  - step: "Post-merge index reconciliation to 4/21 committed and read back on isolated branch"
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/a6815bb545e65ef6051785cb826f53beff6f4642
+  - step: "Post-merge index correction submitted as PR #510; current branch Git read-back verified"
+    evidence_type: pr
+    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/510
+pending_steps: []
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/pull/508
+first_safe_next_action: "Read PR #510, its CI and main index after merge; never retry a merge blindly"
+blocker: "Not applicable"
+last_observed_at: "Not applicable"

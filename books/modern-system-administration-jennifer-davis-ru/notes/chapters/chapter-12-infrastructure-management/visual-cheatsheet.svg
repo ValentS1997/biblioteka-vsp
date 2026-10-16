@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="820" viewBox="0 0 1180 820" role="img" aria-labelledby="t d">
+<title id="t">Глава 12 — Управление инфраструктурой</title>
+<desc id="d">Карта моделей IaC, IaD и GitOps, цикла изменений и проверки инфраструктуры по canonical RAG PDF 145–156.</desc>
+<rect width="1180" height="820" fill="#102033"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="46" y="68" font-size="40" font-weight="bold" fill="#f4f8ff">Глава 12 · Управление инфраструктурой</text>
+<text x="46" y="109" font-size="22" fill="#b9d1e5">Управляй изменениями, а не только ресурсами</text>
+<rect x="46" y="149" width="1088" height="97" rx="13" fill="#154453" stroke="#70d9cf" stroke-width="2"/>
+<text x="75" y="191" font-size="27" font-weight="bold" fill="#ecffff">1 · Определи конкретную проблему</text>
+<text x="75" y="225" font-size="20" fill="#ddf6f2">Общая цель команды, малая область, измеримый результат</text>
+<rect x="46" y="276" width="347" height="195" rx="13" fill="#293b56"/>
+<text x="73" y="318" font-size="27" font-weight="bold" fill="#f6f8ff">2 · IaC</text>
+<text x="73" y="355" font-size="19" fill="#e0eafa">Инфракод, версии,</text>
+<text x="73" y="387" font-size="19" fill="#e0eafa">review, CI/CD, тесты</text>
+<text x="73" y="430" font-size="17" fill="#accde8">Практики разработки ПО</text>
+<rect x="416" y="276" width="347" height="195" rx="13" fill="#274957"/>
+<text x="443" y="318" font-size="27" font-weight="bold" fill="#f0ffff">2 · IaD</text>
+<text x="443" y="355" font-size="19" fill="#dff7f6">Ресурсы как данные,</text>
+<text x="443" y="387" font-size="19" fill="#dff7f6">модель и метаданные</text>
+<text x="443" y="430" font-size="17" fill="#afdcd7">Хранение и изменения</text>
+<rect x="786" y="276" width="348" height="195" rx="13" fill="#334357"/>
+<text x="813" y="318" font-size="27" font-weight="bold" fill="#f7faff">2 · GitOps</text>
+<text x="813" y="355" font-size="19" fill="#dfebf8">Декларативность и</text>
+<text x="813" y="387" font-size="19" fill="#dfebf8">согласование состояний</text>
+<text x="813" y="430" font-size="17" fill="#bccde8">По версии 1.0.0 в книге</text>
+<rect x="46" y="509" width="1088" height="111" rx="13" fill="#2a3f56"/>
+<text x="75" y="553" font-size="27" font-weight="bold" fill="#f2f8ff">3 · Цикл доставки</text>
+<text x="75" y="589" font-size="19" fill="#dceaf7">Сборка → тест → слияние → выпуск → развертывание → валидация</text>
+<rect x="46" y="650" width="1088" height="113" rx="13" fill="#28594f" stroke="#76dfb9"/>
+<text x="75" y="696" font-size="27" font-weight="bold" fill="#f2fff9">4 · Проверяй качество и сопровождение</text>
+<text x="75" y="735" font-size="19" fill="#dcfff0">Линтинг · Модульные · Интеграционные · Сквозные тесты</text>
+<text x="46" y="801" font-size="15" fill="#aec8db">RAG PDF 145–156. Схема концептуальная, не копия рисунков 12.1–12.2.</text>
+</g></svg>

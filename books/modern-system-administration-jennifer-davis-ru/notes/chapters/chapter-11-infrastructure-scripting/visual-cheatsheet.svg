@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="790" viewBox="0 0 1180 790" role="img" aria-labelledby="t d">
+<title id="t">Глава 11 — Разработка сценариев инфраструктуры</title>
+<desc id="d">Карта трех подходов к инфраструктуре как коду: создание образов, предоставление ресурсов и настройка инфраструктуры, по RAG PDF 135–144.</desc>
+<rect width="1180" height="790" fill="#111c2e"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="49" y="70" font-size="38" font-weight="bold" fill="#f1f8ff">Глава 11 · Инфраструктура как код</text>
+<text x="49" y="110" font-size="21" fill="#bed1e7">Повторяемое, надёжное и прозрачное управление ресурсами</text>
+<rect x="49" y="149" width="1082" height="105" rx="14" fill="#174452" stroke="#71d6d0" stroke-width="2"/>
+<text x="76" y="191" font-size="27" font-weight="bold" fill="#f2ffff">1 · Сформулируй задачу</text>
+<text x="76" y="226" font-size="19" fill="#daf5ef">Описать ручной процесс, бизнес-цель и проблему</text>
+<rect x="49" y="288" width="347" height="219" rx="13" fill="#283a55"/>
+<text x="74" y="326" font-size="24" font-weight="bold" fill="#f2f7ff">2А · Образы</text>
+<text x="74" y="364" font-size="18" fill="#dfeafb">Стандартная основа ОС</text>
+<text x="74" y="394" font-size="18" fill="#dfeafb">и приложений</text>
+<text x="74" y="440" font-size="19" fill="#b5d2f6">Packer · EC2 Image</text>
+<text x="74" y="470" font-size="19" fill="#b5d2f6">Builder · Buildah</text>
+<rect x="415" y="288" width="347" height="219" rx="13" fill="#284954"/>
+<text x="440" y="326" font-size="24" font-weight="bold" fill="#f2ffff">2Б · Ресурсы</text>
+<text x="440" y="364" font-size="18" fill="#d9f3f3">Вычисления, сети,</text>
+<text x="440" y="394" font-size="18" fill="#d9f3f3">зависимости и стеки</text>
+<text x="440" y="440" font-size="19" fill="#b6ece6">Terraform · Pulumi</text>
+<text x="440" y="470" font-size="19" fill="#b6ece6">Облачные менеджеры</text>
+<rect x="781" y="288" width="350" height="219" rx="13" fill="#344052"/>
+<text x="807" y="326" font-size="24" font-weight="bold" fill="#f4f8ff">2В · Настройки</text>
+<text x="807" y="364" font-size="18" fill="#dfebf7">ПО, параметры ОС</text>
+<text x="807" y="394" font-size="18" fill="#dfebf7">и исправление дрейфа</text>
+<text x="807" y="440" font-size="19" fill="#bdcee8">Puppet · Chef · Salt</text>
+<text x="807" y="470" font-size="19" fill="#bdcee8">CFEngine · Ansible</text>
+<rect x="49" y="542" width="1082" height="97" rx="13" fill="#313d55"/>
+<text x="77" y="583" font-size="26" font-weight="bold" fill="#f3f8ff">3 · Выбирай внедрение под среду</text>
+<text x="77" y="613" font-size="19" fill="#e0e9f7">Новая: подходящие процессы · Текущая: один приоритетный участок</text>
+<rect x="49" y="669" width="1082" height="79" rx="13" fill="#2b584e" stroke="#7ae0b7"/>
+<text x="77" y="704" font-size="24" font-weight="bold" fill="#f2fff8">4 · Проверяй реальную работу сервиса</text>
+<text x="77" y="733" font-size="18" fill="#dbfff0">Корректный синтаксис не гарантирует корректность поведения</text>
+<text x="49" y="778" font-size="15" fill="#abc4d8">Источник: RAG PDF 135–144. Новая концептуальная схема, не копия рис. 11.1–11.4.</text>
+</g></svg>

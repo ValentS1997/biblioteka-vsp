@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="690" viewBox="0 0 1200 690" role="img" aria-labelledby="ttl desc">
+<title id="ttl">Глава 3 — Как вести стаю за собой</title>
+<desc id="desc">Компактная визуальная памятка по пяти принципам руководства командой, RAG p. 63–80.</desc>
+<rect width="1200" height="690" fill="#f7f9fc"/>
+<rect x="24" y="24" width="1152" height="105" rx="16" fill="#18354d"/>
+<text x="48" y="69" font-family="Arial,sans-serif" font-weight="700" font-size="32" fill="#ffffff">Глава 3 · Как вести стаю за собой</text>
+<text x="48" y="106" font-family="Arial,sans-serif" font-size="19" fill="#dae9f5">Лидерство — это согласованные результаты команды</text>
+<g font-family="Arial,sans-serif" fill="#1c3850" font-size="20">
+<rect x="24" y="152" width="554" height="140" rx="14" fill="#e3eef7"/>
+<text x="47" y="194" font-size="24" font-weight="700">1. Фокусировка</text>
+<text x="47" y="230">Приоритеты, защита от сообщений</text>
+<text x="47" y="260">и отвлечений · p. 63–68</text>
+<rect x="622" y="152" width="554" height="140" rx="14" fill="#e3eef7"/>
+<text x="646" y="194" font-size="24" font-weight="700">2. Проектное управление</text>
+<text x="646" y="230">Изменение требований, итерации,</text>
+<text x="646" y="260">проверки · p. 68–72</text>
+<rect x="24" y="310" width="554" height="140" rx="14" fill="#e3eef7"/>
+<text x="47" y="352" font-size="24" font-weight="700">3. Качество кода</text>
+<text x="47" y="388">Обзоры, сопровождаемость,</text>
+<text x="47" y="418">контроль сложности · p. 72–74</text>
+<rect x="622" y="310" width="554" height="140" rx="14" fill="#e3eef7"/>
+<text x="646" y="352" font-size="24" font-weight="700">4. Новые знания</text>
+<text x="646" y="388">Изучать технологии и обращаться</text>
+<text x="646" y="418">к компетентным коллегам · p. 73–74</text>
+<rect x="24" y="468" width="1152" height="140" rx="14" fill="#e3eef7"/>
+<text x="47" y="510" font-size="24" font-weight="700">5. Команда сильнее одиночки</text>
+<text x="47" y="546">Совместимость, передача знаний, адекватное признание и подготовка преемника</text>
+<text x="47" y="577">p. 74–80 · кадровые советы автора не являются обязательной политикой</text>
+</g>
+<text x="30" y="653" font-family="Arial,sans-serif" font-size="17" fill="#4e667a">Источник: RAG p0063-c01–p0080-c01 (PDF 63–80). Дефекты таблиц: source-findings.md.</text>
+</svg>

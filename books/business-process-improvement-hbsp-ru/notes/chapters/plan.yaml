@@ -1,0 +1,37 @@
+schema: biblioteka-vsp/chapter-plan/v1
+book_id: business-process-improvement-hbsp-ru
+source_sha256: 4c75aaaa000434b6fd7aeac337e163327060dcbe084e30a1c9793b923b855172
+source_format: pdf
+total_chapters: 6
+toc_evidence: >-
+  Canonical RAG table of contents: business-process-improvement-hbsp-ru:p0005:c01,
+  business-process-improvement-hbsp-ru:p0006:c01,
+  business-process-improvement-hbsp-ru:p0007:c01 (PDF pp. 5–7);
+  numbered section title boundaries confirmed in RAG at PDF pp. 33, 43, 55, 69, 79, 89;
+  next section begins p. 99. The unnumbered introductory sections on pp. 11–32,
+  expert preface and post-stage reference/test sections are not numbered chapters.
+chapters:
+  - number: 1
+    title: "Этап 1. Планирование улучшения бизнес-процессов"
+    slug: planning-business-process-improvement
+    source_locator: "pdf:33-42"
+  - number: 2
+    title: "Этап 2. Анализ текущего бизнес-процесса"
+    slug: current-business-process-analysis
+    source_locator: "pdf:43-54"
+  - number: 3
+    title: "Этап 3. Редизайн бизнес-процесса"
+    slug: business-process-redesign
+    source_locator: "pdf:55-68"
+  - number: 4
+    title: "Этап 4. Привлечение необходимых ресурсов"
+    slug: resource-acquisition
+    source_locator: "pdf:69-78"
+  - number: 5
+    title: "Этап 5. Внедрение усовершенствованных бизнес-процессов"
+    slug: improved-process-implementation
+    source_locator: "pdf:79-88"
+  - number: 6
+    title: "Этап 6. Дальнейшее улучшение бизнес-процессов"
+    slug: continuous-process-improvement
+    source_locator: "pdf:89-98"

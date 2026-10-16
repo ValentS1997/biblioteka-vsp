@@ -1,0 +1,47 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: "0011-modern-system-administration-chapter-07"
+repository: "vsp-corp/biblioteka-vsp"
+book_id: modern-system-administration-jennifer-davis-ru
+task_kind: chapter
+objective: "RAG-only analysis and Git publication of chapter 7, Тестирование"
+branch: "docs/0011-chapter07-postmerge-index-20261015"
+initial_base_sha: "e9748b9e3ce9ddac54f3a0f7a1d6329ff95f62b9"
+last_observed_head_sha: "c6e16a36197a4a976021f5e711c947ba14a393fe"
+expected_source_sha256: "06862ea10e57ccc70dff6d49b730637c65a550afcd6de75de0f9d4a415b4a790"
+constraints:
+  - "no direct main changes"
+  - "no force-push"
+  - "no source/RAG rewrite"
+  - "preserve reading progress"
+  - "no archives"
+stage: COMPLETE
+completed_steps:
+  - step: "Verified canonical RAG and chapter plan: 21 chapters and 6 complete in main"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/e9748b9e3ce9ddac54f3a0f7a1d6329ff95f62b9/books/modern-system-administration-jennifer-davis-ru/notes/chapters/plan.yaml"
+  - step: "Verified RAG boundaries: PDF 89-99, next chapter starts at PDF 100"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/e9748b9e3ce9ddac54f3a0f7a1d6329ff95f62b9/books/modern-system-administration-jennifer-davis-ru/rag/chunks/p0001-p0100/p0100-c01.md"
+  - step: "Four separate chapter text artifacts written and each Git-read-back verified"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/c04c35b0d4d191d54025523004abc934f4cf5acd"
+  - step: "All eight chapter files individually committed and independently read back"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/8161ef5daff4036c82f58a961aa181cc9a2c09c4"
+  - step: "Book chapter index committed and Git read back: branch total 7/21"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/8ebeda6c8f6adcd5fa792fe8a5767c8b094bdcad"
+  - step: "Chapter 7 independent PR validation CI PASS"
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38718086347"
+  - step: "PR #519 merged and eight individual chapter 7 files verified in main"
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/519"
+  - step: "Post-merge index now reports canonical progress 7/21 in a follow-up Git branch"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/c6e16a36197a4a976021f5e711c947ba14a393fe"
+pending_steps: []
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/commit/b48f0ec569a2ca280f38392aa416572c9daaf722"
+first_safe_next_action: "Re-check PR for postmerge index, final main HEAD, chapter index, and completion before subsequent chapter"
+blocker: "Not applicable"
+last_observed_at: "Not applicable"

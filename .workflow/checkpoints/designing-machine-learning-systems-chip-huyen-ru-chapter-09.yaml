@@ -1,0 +1,50 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: designing-machine-learning-systems-chip-huyen-ru-chapter-09
+repository: vsp-corp/biblioteka-vsp
+book_id: designing-machine-learning-systems-chip-huyen-ru
+task_kind: chapter
+objective: "Analyze chapter 09 Непрерывное обучение и тестирование в производстве strictly from canonical RAG, publish individual chapter artifacts; PR only after complete CI PASS."
+branch: chapter/0031-designing-ml-systems-ch09-20261015
+parent_branch: chapter/0031-designing-ml-systems-ch08-20261015
+initial_base_sha: dbe545b09b5f2229ddc81566231ede78cedf6dd1
+last_observed_head_sha: 5335087a2995c8c5b4bb4ae4c219097c40e05877
+expected_source_sha256: 0bcacadb4e1dc2235cb58f975111e1633527217127c5871edb894fe2b8f4c80c
+constraints:
+  - "RAG-only; no source PDF directly, external web or model-memory extrapolation"
+  - "no writes to main, no force push, no auto merge"
+  - "no source/RAG corpus mutation"
+  - "no reading/progress.yaml change"
+  - "no archives or duplicate PRs"
+stage: IN_PROGRESS
+completed_steps:
+  - step: "Read-only preflight: seven ACCEPTED workflow contracts, canonical RAG ACCEPTED, source SHA match, verified 11 numbered chapters, 8/11 complete on preceding branch and 0/11 in main."
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/chapter/0031-designing-ml-systems-ch09-20261015/books/designing-machine-learning-systems-chip-huyen-ru/notes/chapters/plan.yaml"
+  - step: "Chapter 09 boundary verified against TOC p0010-c02, p0269-c01 and chapter 10 start p0297-c01; PDF p269-296 (printed 268-295). Preceding PR #524 open, dependencies #522 #516 #511 #507 #502 #499 #493 open."
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/524"
+  - step: "New chapter 09 branch created from immutable parent chapter 08 SHA dbe545b09b5f2229ddc81566231ede78cedf6dd1."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/dbe545b09b5f2229ddc81566231ede78cedf6dd1"
+  - step: "Published eight independent chapter 09 Git paths; chapter index now 9/11, all GitHub file readbacks PASS, plan.yaml and reading/progress.yaml blob unchanged."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/28e9ec68b2dd789a5c909680e5f03a3b427ced8b"
+  - step: "Full chapter 09 push CI including RAG links, both SVG renders and regression tests PASS."
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38724369676"
+  - step: "Native Итоги in p0294-c01 and p0295-c01 paraphrased explicitly in summary; p-value and epsilon discrepancies documented in source-findings.md."
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/chapter/0031-designing-ml-systems-ch09-20261015/books/designing-machine-learning-systems-chip-huyen-ru/notes/chapters/chapter-09-continual-learning-and-production-testing/summary.md"
+  - step: "Created stacked PR #529 against chapter08, verified exact ten paths (eight chapter files, index and checkpoint) without upstream chapter duplication."
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/529"
+  - step: "PR #529 chapter RAG references, SVG rasterization and validator regression PASS."
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38724589781"
+pending_steps:
+  - "Read-only verify final checkpoint-only HEAD CI, PR #529 clean mergeability, unchanged reading progress and ancestors."
+  - "After ancestor PRs merge sequentially, retarget and revalidate PR #529 before merge; no automatic merge."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38724589781"
+first_safe_next_action: "Read-only verify final chapter09 branch HEAD, checkpoint, PR #529 and exact-head CI. Avoid duplicate PR/commits; status of reading remains planned."
+blocker: "Not applicable"
+last_observed_at: "Not applicable"

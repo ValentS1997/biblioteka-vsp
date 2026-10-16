@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1090" viewBox="0 0 1500 1090" role="img" aria-labelledby="ttl desc">
+<title id="ttl">Глава 4 — подробная схема организации успеха</title>
+<desc id="desc">Подробное визуальное резюме организационных навыков менеджера по RAG PDF p. 81–106.</desc>
+<rect width="1500" height="1090" fill="#f8fafc"/>
+<rect x="26" y="24" width="1448" height="120" rx="16" fill="#16344d"/>
+<text x="54" y="73" font-family="Arial,sans-serif" font-size="35" font-weight="bold" fill="#ffffff">Как организовать успех · Глава 4</text>
+<text x="54" y="117" font-family="Arial,sans-serif" font-size="21" fill="#d9e8f5">Цепочка: информация → знания → действия → согласованный результат</text>
+<g font-family="Arial,sans-serif" font-size="20" fill="#1a3850">
+<rect x="26" y="167" width="698" height="195" rx="14" fill="#e1edf7"/>
+<text x="53" y="209" font-size="25" font-weight="bold">1. Время для лидерства · 81–82</text>
+<text x="53" y="252">Рутинный порядок освобождает внимание</text>
+<text x="53" y="287">Менеджер обеспечивает текущую работу</text>
+<text x="53" y="322">Лидер формирует будущие результаты</text>
+<rect x="761" y="167" width="713" height="195" rx="14" fill="#e1edf7"/>
+<text x="788" y="209" font-size="25" font-weight="bold">2. Систематизация · 82–86</text>
+<text x="788" y="252">Документы по проектам, датам и типам</text>
+<text x="788" y="287">Входящая папка — временное хранилище</text>
+<text x="788" y="322">Архив завершённых проектов отдельно</text>
+<rect x="26" y="384" width="698" height="195" rx="14" fill="#e1edf7"/>
+<text x="53" y="426" font-size="25" font-weight="bold">3. Модель задачи · 86–90</text>
+<text x="53" y="469">Проект + источник + исполнитель</text>
+<text x="53" y="504">Статус, срок, приоритет и описание</text>
+<text x="53" y="539">Фильтры и отчёты для контроля заданий</text>
+<rect x="761" y="384" width="713" height="195" rx="14" fill="#e1edf7"/>
+<text x="788" y="426" font-size="25" font-weight="bold">4. Контролируемое · 91–97</text>
+<text x="788" y="469">Различать свои действия и внешние силы</text>
+<text x="788" y="504">Классифицировать новые сообщения</text>
+<text x="788" y="539">Уточнять ожидания, снижать переработки</text>
+<rect x="26" y="601" width="698" height="195" rx="14" fill="#e1edf7"/>
+<text x="53" y="643" font-size="25" font-weight="bold">5. Бизнес и проект · 98–101</text>
+<text x="53" y="686">Цель отдела — создание ценного продукта</text>
+<text x="53" y="721">Согласовать описание продукта и проект</text>
+<text x="53" y="756">Учитывать итерации, тесты и ресурсы</text>
+<rect x="761" y="601" width="713" height="195" rx="14" fill="#e1edf7"/>
+<text x="788" y="643" font-size="25" font-weight="bold">6. Управление изменениями · 102–103</text>
+<text x="788" y="686">Архитектура и сопровождение</text>
+<text x="788" y="721">Сеть, пользователь, затронутые отделы</text>
+<text x="788" y="756">Согласовывать последствия заранее</text>
+<rect x="26" y="818" width="698" height="164" rx="14" fill="#e1edf7"/>
+<text x="53" y="860" font-size="25" font-weight="bold">7. Качество и условия · 103–105</text>
+<text x="53" y="902">Независимое тестирование, тестовые среды</text>
+<text x="53" y="940">Время для общения и концентрации</text>
+<rect x="761" y="818" width="713" height="164" rx="14" fill="#d9e9f4"/>
+<text x="788" y="860" font-size="25" font-weight="bold">8. Заключение · 105–106</text>
+<text x="788" y="902">Контроль действий и кооперация отделов</text>
+<text x="788" y="940">Дробить большие задачи на исполнимые</text>
+</g>
+<text x="34" y="1024" font-family="Arial,sans-serif" font-size="18" fill="#425f78">Границы: KPI и rollback [Needs confirmation]; доступы и условия работы требуют политики организации.</text>
+<text x="34" y="1058" font-family="Arial,sans-serif" font-size="16" fill="#586f82">RAG p0081-c01–p0106-c01. Рис. 4.1–4.3 не представлены как отдельные изображения в RAG.</text>
+</svg>
