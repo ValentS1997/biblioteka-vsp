@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only analysis and direct individual Git publication of chapter 2, Просмотр истории версий."
 branch: chapter/0019-ch02-prosmotr-istorii-versiy-20261016
 initial_base_sha: 451378914f2ac510f78661ee643347c2685971d7
-last_observed_head_sha: 451378914f2ac510f78661ee643347c2685971d7
+last_observed_head_sha: 4d5183c16e0bc35d94b1cee7b7cb8440d711d7da
 expected_source_sha256: 5eb8376c990ff58103fb110ae36467bb407f015bedf45aa2db6dae5678f8b5fb
 constraints:
   - "no direct main changes"
@@ -15,7 +15,7 @@ constraints:
   - "no source/RAG rewrites"
   - "no reading-progress mutation"
   - "no archive delivery"
-stage: IN_PROGRESS
+stage: CI_PENDING
 completed_steps:
   - step: "Verify canonical chapter contracts and recovery v1.0 from main"
     evidence_type: file-readback
@@ -26,12 +26,16 @@ completed_steps:
   - step: "Resolve chapter 2 from RAG chunks PDF 16–23 with chapter 3 starting PDF 23"
     evidence_type: file-readback
     reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/professional-git-ru/rag/chunks/p0001-p0100/p0023-c01.md"
+  - step: "Write and read back 7 individual chapter 02 artifacts"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/7d14e7f8d8efc8212041bbe99998523c2e98d3b0"
+  - step: "Update chapter index to 2/61 and preserve links to chapter 01"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/4d5183c16e0bc35d94b1cee7b7cb8440d711d7da"
 pending_steps:
-  - "Commit and individually verify six mandatory chapter artifact files and source-findings.md when warranted."
-  - "Update book-level chapter index from 1/61 to 2/61, preserve chapter 1."
   - "Run chapter-notes SVG/Markdown validation CI and verify exact HEAD."
   - "Open and verify chapter 2 PR against main; report unmerged vs merged status accurately."
-last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/professional-git-ru/rag/acceptance.yaml"
-first_safe_next_action: "Re-fetch branch HEAD, chapter-02 directory, checkpoint and source plan before writing any missing artifact."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/commit/4d5183c16e0bc35d94b1cee7b7cb8440d711d7da"
+first_safe_next_action: "Re-fetch current branch HEAD and open chapter-02 PR; if none, create a PR to main, then check chapter notes SVG/Markdown CI."
 blocker: "Not applicable"
 last_observed_at: "Not applicable"
