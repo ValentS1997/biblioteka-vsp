@@ -3,9 +3,9 @@
 - Book ID: `information-systems-administration-bobyntsev-ru`; inventory: `0024`.
 - RAG status: `ACCEPTED`; source SHA-256: `a5d6a2677d4b0e33a34dec3b7aae8b77f711bb748046d25766becb479f66663f`.
 - Numbered chapters verified against RAG TOC: **8**.
-- Complete chapter directories committed in this branch: **0/8 (0%)**.
-- Remaining: **8**; next unpublished chapter: **1 — Введение в администрирование информационных систем**.
-- Published chapter links: **none yet**. A chapter is published only after the six required individual files are committed, read back from GitHub and validated.
+- Complete chapter directories committed in this branch: **1/8 (12.5%)** (nine individual chapter files read back; publication acceptance subject to CI).
+- Remaining: **7**; next chapter to analyze: **2 — Администрирование вычислительных сетей**.
+- Chapter artifact link: [Глава 1 — Введение в администрирование информационных систем](chapter-01-vvedenie-v-administrirovanie-informatsionnyh-sistem/README.md). All six required files and three conditional files are committed and read back; final CI is required for accepted publication.
 - Source-verified chapter inventory and PDF locators: [plan.yaml](plan.yaml).
 
 ## Canonical publication process
@@ -20,4 +20,5 @@ RAG TOC chunks `p0004-c01` and `p0005-c01` (PDF pp. 4–5) enumerate chapters 1�
 
 ## Published chapters
 
-None. The chapter 1 publication must start with the chapter-readiness gate and RAG-only analysis; until all mandatory artifacts exist in Git, publication progress remains 0/8.
+- [Глава 1 — Введение в администрирование информационных систем](chapter-01-vvedenie-v-administrirovanie-informatsionnyh-sistem/README.md) — RAG PDF p. 24–50, all nine individual Git files verified; awaiting final CI at updated HEAD.
+- Remaining chapters 2–8 have no complete published artifact collection. The next chapter begins only on an explicit chapter-analysis command.
