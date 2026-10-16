@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1100" viewBox="0 0 1500 1100" role="img" aria-labelledby="title desc">
+<title id="title">Занятие 1 — подробная памятка по RAG</title>
+<desc id="desc">Разбор понятий 1С и безопасной последовательности создания учебной информационной базы.</desc>
+<rect width="1500" height="1100" fill="#f7f9fc"/>
+<rect x="36" y="28" width="1428" height="108" rx="18" fill="#17345b"/>
+<text x="70" y="77" font-family="DejaVu Sans,Arial,sans-serif" font-size="35" font-weight="bold" fill="white">Занятие 1 · Знакомство и пустая информационная база</text>
+<text x="70" y="111" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#d9e7f6">Источник: RAG p0015:c01–p0038:c01 · PDF 15–38 · 1С:Предприятие 8.3</text>
+<g font-family="DejaVu Sans,Arial,sans-serif">
+<rect x="36" y="164" width="694" height="242" rx="18" fill="#e5efff"/>
+<text x="66" y="205" font-size="26" font-weight="bold" fill="#183b60">1. Модель системы</text>
+<text x="66" y="249" font-size="21" fill="#183b60">Платформа → управление конфигурацией</text>
+<text x="66" y="286" font-size="21" fill="#183b60">Конфигурация → данные, логика, интерфейс</text>
+<text x="66" y="323" font-size="21" fill="#183b60">Объекты → таблицы информационной базы</text>
+<text x="66" y="371" font-size="17" fill="#375676">RAG p0017–p0020, p0028–p0030</text>
+<rect x="770" y="164" width="694" height="242" rx="18" fill="#e7f6ec"/>
+<text x="800" y="205" font-size="26" font-weight="bold" fill="#22533d">2. Режимы работы</text>
+<text x="800" y="251" font-size="21" fill="#22533d">Конфигуратор: создание и изменение</text>
+<text x="800" y="292" font-size="21" fill="#22533d">1С:Предприятие: работа пользователя</text>
+<text x="800" y="341" font-size="18" fill="#22533d">Цель: новая учебная конфигурация</text>
+<text x="800" y="371" font-size="17" fill="#426e58">RAG p0020–p0021</text>
+<rect x="36" y="431" width="694" height="274" rx="18" fill="#ffffff" stroke="#b8cee5" stroke-width="2"/>
+<text x="66" y="471" font-size="26" font-weight="bold" fill="#17345b">3. Создать пустую базу</text>
+<text x="66" y="516" font-size="21" fill="#17345b">Добавить → Создание новой базы</text>
+<text x="66" y="553" font-size="21" fill="#17345b">Без конфигурации (не из шаблона)</text>
+<text x="66" y="590" font-size="21" fill="#17345b">На данном компьютере → каталог</text>
+<text x="66" y="627" font-size="21" fill="#17345b">Русский → Готово → база в списке</text>
+<text x="66" y="673" font-size="17" fill="#456b8d">RAG p0021–p0024 · изменение состояния</text>
+<rect x="770" y="431" width="694" height="274" rx="18" fill="#ffffff" stroke="#b8cee5" stroke-width="2"/>
+<text x="800" y="471" font-size="26" font-weight="bold" fill="#17345b">4. Изучить Конфигуратор</text>
+<text x="800" y="516" font-size="21" fill="#17345b">Запустить Конфигуратор</text>
+<text x="800" y="553" font-size="21" fill="#17345b">Конфигурация → Открыть</text>
+<text x="800" y="590" font-size="21" fill="#17345b">Дерево: группы и виды объектов</text>
+<text x="800" y="627" font-size="21" fill="#17345b">Объекты: «+», Добавить, контекстное меню</text>
+<text x="800" y="673" font-size="17" fill="#456b8d">RAG p0025–p0032 · добавление меняет состояние</text>
+<rect x="36" y="729" width="694" height="235" rx="18" fill="#e5efff"/>
+<text x="66" y="771" font-size="26" font-weight="bold" fill="#17345b">5. Изменить свойства</text>
+<text x="66" y="815" font-size="21" fill="#17345b">Корень «Конфигурация» → Свойства</text>
+<text x="66" y="855" font-size="21" fill="#17345b">Имя: ПособиеДляНачинающих</text>
+<text x="66" y="900" font-size="19" fill="#17345b">Синоним предлагается автоматически</text>
+<text x="66" y="938" font-size="17" fill="#456b8d">RAG p0033–p0034 · изменение состояния</text>
+<rect x="770" y="729" width="694" height="235" rx="18" fill="#e7f6ec"/>
+<text x="800" y="771" font-size="26" font-weight="bold" fill="#22533d">6. Проверить результат</text>
+<text x="800" y="815" font-size="21" fill="#22533d">Отладка → Начать отладку</text>
+<text x="800" y="855" font-size="21" fill="#22533d">Запрос обновления БД → Да</text>
+<text x="800" y="900" font-size="19" fill="#22533d">Заголовок есть; область пока пустая</text>
+<text x="800" y="938" font-size="17" fill="#426e58">RAG p0035–p0036 · подтверждение меняет БД</text>
+<rect x="36" y="991" width="1428" height="79" rx="14" fill="#fff1d6"/>
+<text x="66" y="1023" font-size="20" font-weight="bold" fill="#714e20">Границы и безопасность</text>
+<text x="66" y="1052" font-size="17" fill="#714e20">Не использовать рабочую базу. Процедура отката в главе не дана: [Needs confirmation]. Контрольные вопросы: p0037:c01.</text>
+</g>
+</svg>

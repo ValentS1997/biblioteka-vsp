@@ -1,0 +1,60 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: 0030-chapter-publication
+repository: vsp-corp/biblioteka-vsp
+book_id: 1c-enterprise-8-3-radchenko-khrustaleva-3e-ru
+task_kind: chapter
+objective: "RAG-only chapter publication for inventory 0030 with individually committed Git artifacts and reproducible recovery; no chapter analysis without an explicit request."
+branch: chapter/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru-0030
+initial_base_sha: aa3733b43f6db3627453e4814926e59a9ae3b136
+last_observed_head_sha: 4e7022ab8104b3749617815d90d3c7a58c55849e
+expected_source_sha256: ce8fa0fbf0d8bb38f724ed04f130c2443c1e181eb51edafac692c4786874c923
+constraints:
+  - "no direct main changes"
+  - "no force-push"
+  - "no source/RAG rewrite without explicit authorization"
+  - "no reading-progress mutation without explicit user confirmation"
+  - "no archive delivery for chapter artifacts"
+  - "idempotent read-back before repeated Git writes, PR creation or merge"
+stage: IN_PROGRESS
+completed_steps:
+  - step: "Verified 28 numbered lessons from the canonical RAG TOC and opening chunks."
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru/rag/chunks/p0001-p0100/p0003-c01.md"
+  - step: "Published and read back the 28-chapter RAG-backed chapter plan."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/e8ba733672fb0b4a973489491542b3674068656d"
+  - step: "Published and read back chapter index, 0/28 chapters complete."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/cec4166a736b3a9796641422f454820d8b3a30d0"
+  - step: "Previous chapter-notes CI completed successfully at branch HEAD."
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38620912537"
+  - step: "Recovered branch, both commits, files, absence of active PR and unchanged reading status from GitHub."
+    evidence_type: other
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/cec4166a736b3a9796641422f454820d8b3a30d0"
+  - step: "Migrated book chapter index to PROCESS-COMPLIANCE-ROUTER v1.2 and SESSION-RECOVERY v1.0, linked checkpoint, and verified GitHub read-back."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/a2593db93f9d8e821f6aeef9f935f755fc855fdb"
+  - step: "Verified latest chapter-notes CI PASS for migrated chapter index."
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38627513322"
+  - step: "Merged readiness process remediation PR #607; book chapter analysis preflight now uses artifact v1.8."
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/607"
+  - step: "Merged current main into chapter branch without force-push."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/22f10ac0d33b534681c4bbd853f584480d59024e"
+  - step: "Published chapter 01 six mandatory and three conditional individually addressable Git files; updated chapter index to 1/28; verified all ten files via GitHub."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/4e7022ab8104b3749617815d90d3c7a58c55849e"
+  - step: "Chapter-notes and SVG validation passed for publication commit."
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38869889748"
+pending_steps:
+  - "Open PR from chapter/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru-0030 to main; validate exact PR HEAD and required CI before merge."
+  - "After merge verify files and publication status in main; chapter 01 is not main-published until verified."
+  - "Future chapters 02–28: RAG-only analysis with v1.8, individual Git files and CI after explicit request."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38869889748"
+first_safe_next_action: "Read-only: re-fetch chapter branch HEAD, all chapter-01 files, open PR list and PR CI; merge only after current HEAD and checks PASS."
+blocker: "Not applicable"
+last_observed_at: "Not applicable"
