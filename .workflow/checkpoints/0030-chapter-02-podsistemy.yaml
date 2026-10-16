@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only analysis and direct individual Git publication of chapter 02 Подсистемы, then validated PR merge."
 branch: chapter/0030-ch02-podsistemy-20261016
 initial_base_sha: 451378914f2ac510f78661ee643347c2685971d7
-last_observed_head_sha: 451378914f2ac510f78661ee643347c2685971d7
+last_observed_head_sha: 5efeec1ede5678be900c0f53cf520f042dfc269a
 expected_source_sha256: ce8fa0fbf0d8bb38f724ed04f130c2443c1e181eb51edafac692c4786874c923
 constraints:
   - "no direct main changes"
@@ -14,7 +14,7 @@ constraints:
   - "no source/RAG rewrite without explicit authorization"
   - "no reading-progress mutation without explicit user confirmation"
   - "no archive delivery for chapter artifacts"
-stage: IN_PROGRESS
+stage: CI_PENDING
 completed_steps:
   - step: "Checked chapter publication state: 1/28 merged in main; chapter 02 not yet present; main HEAD verified."
     evidence_type: commit
@@ -25,8 +25,11 @@ completed_steps:
   - step: "Verified accepted RAG source binding and previous readiness-check CI PASS."
     evidence_type: ci
     reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38869098014"
+  - step: "Prepared chapter 02 separate Markdown and SVG artifacts with RAG references; publication commit read-back and CI pending."
+    evidence_type: other
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru/rag/chunks/p0001-p0100/p0039-c01.md"
 pending_steps:
-  - "Create six mandatory chapter 02 individual artifacts and conditional review/source findings, with Git read-back and updated chapter index 2/28."
+  - "Verify the newly committed chapter 02 files and chapter index from GitHub read-back; then chapter-note CI."
   - "Verify CI on exact branch and PR HEAD; do not merge failing or unchecked commit."
   - "Merge PR only after PASS and verify main files, index, unchanged reading status."
 last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/commit/451378914f2ac510f78661ee643347c2685971d7"

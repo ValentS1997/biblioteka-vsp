@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+<title id="title">Занятие 2 — Подсистемы</title><desc id="desc">Краткая текстовая схема пяти подсистем, порядка разделов и области действия настроек.</desc>
+<rect width="1280" height="760" fill="#f7f9fc"/>
+<rect x="34" y="30" width="1212" height="112" rx="18" fill="#19375a"/>
+<text x="66" y="79" font-family="DejaVu Sans,Arial,sans-serif" font-size="34" font-weight="bold" fill="#fff">1С:Предприятие 8.3 · Занятие 2</text>
+<text x="66" y="115" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" fill="#d9e6f4">Подсистемы — разделы интерфейса · PDF 39–54 · 45 минут</text>
+<text x="48" y="190" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" font-weight="bold" fill="#19375a">Пять подсистем учебной конфигурации</text>
+<g font-family="DejaVu Sans,Arial,sans-serif" font-size="20" text-anchor="middle" fill="#19375a">
+<rect x="35" y="218" width="225" height="116" rx="14" fill="#e1ebfc"/><text x="148" y="266">УчетМатериалов</text><text x="148" y="304" font-size="16">Учет материалов</text>
+<rect x="280" y="218" width="225" height="116" rx="14" fill="#e1ebfc"/><text x="393" y="266">ОказаниеУслуг</text><text x="393" y="304" font-size="16">Оказание услуг</text>
+<rect x="525" y="218" width="225" height="116" rx="14" fill="#e1ebfc"/><text x="638" y="266">Бухгалтерия</text><text x="638" y="304" font-size="16">Бухгалтерия</text>
+<rect x="770" y="218" width="225" height="116" rx="14" fill="#e1ebfc"/><text x="883" y="266">РасчетЗарплаты</text><text x="883" y="304" font-size="16">Расчет зарплаты</text>
+<rect x="1015" y="218" width="230" height="116" rx="14" fill="#dceddf"/><text x="1130" y="266">Предприятие</text><text x="1130" y="304" font-size="16">Административные функции</text>
+</g>
+<rect x="35" y="363" width="1210" height="80" rx="12" fill="#fff1d9"/>
+<text x="66" y="399" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="bold" fill="#705024">«Главное» создаётся платформой и всегда идёт первым</text>
+<text x="66" y="430" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#705024">Содержание остальных разделов пока пустое: прикладные объекты будут добавлены позже.</text>
+<rect x="35" y="468" width="585" height="153" rx="16" fill="#e2f0ff"/>
+<text x="66" y="508" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="bold" fill="#19375a">Конфигуратор</text>
+<text x="66" y="547" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#19375a">Командный интерфейс → Вверх / Вниз</text>
+<text x="66" y="580" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#19375a">Порядок общий для всех пользователей</text>
+<rect x="660" y="468" width="585" height="153" rx="16" fill="#e5f4eb"/>
+<text x="691" y="508" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="bold" fill="#24503d">Режим «1С:Предприятие»</text>
+<text x="691" y="547" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#24503d">Настройки → Настройка панели разделов</text>
+<text x="691" y="580" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#24503d">Порядок только для текущего пользователя</text>
+<rect x="35" y="650" width="1210" height="76" rx="12" fill="#f2e9fc"/>
+<text x="66" y="681" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" fill="#513c70">После занятия: Администрирование → Выгрузить информационную базу…</text>
+<text x="66" y="709" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" fill="#513c70">Схема по текстовому RAG; авторские картинки не восстановлены. Условия безопасной загрузки: [Needs confirmation].</text>
+</svg>
