@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1280" viewBox="0 0 1700 1280" role="img" aria-labelledby="ttl desc">
+<title id="ttl">Глава 2. Просмотр истории версий — подробная RAG-сводка</title>
+<desc id="desc">Четырнадцать разделов по просмотру Git-истории, read-only команды, возможное глобальное изменение псевдонима и отмеченные повреждения текстового слоя.</desc>
+<rect width="1700" height="1280" fill="#f8fafc"/>
+<rect width="1700" height="117" fill="#13263d"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="54" y="53" font-size="38" font-weight="700" fill="#fff">Глава 2 · Просмотр истории версий</text>
+<text x="54" y="91" font-size="20" fill="#d3e3ef">RAG-only · PDF 16–23 · 14 разделов · источник: professional-git-ru</text>
+<rect x="48" y="157" width="782" height="249" rx="16" fill="#fff" stroke="#9dbbd3" stroke-width="2"/>
+<rect x="48" y="157" width="782" height="51" rx="16" fill="#dbeafe"/>
+<text x="72" y="191" font-size="25" font-weight="700" fill="#1e3a8a">A. Базовый журнал и видимость (§§2.1–2.4)</text>
+<text x="72" y="252" font-size="21" fill="#17263c">git log → SHA / автор / дата / сообщение</text>
+<text x="72" y="298" font-size="21" fill="#17263c">git log -2; git log --oneline</text>
+<text x="72" y="344" font-size="21" fill="#17263c">git log --decorate --oneline --graph</text>
+<text x="72" y="382" font-size="18" fill="#64748b">Красивый граф; для выхода из просмотра — q.</text>
+<rect x="865" y="157" width="785" height="249" rx="16" fill="#fff" stroke="#9dbbd3" stroke-width="2"/>
+<rect x="865" y="157" width="785" height="51" rx="16" fill="#dcfce7"/>
+<text x="888" y="191" font-size="25" font-weight="700" fill="#166534">B. Поиск фрагмента и сообщения (§§2.5, 2.7, 2.8)</text>
+<text x="888" y="252" font-size="21" fill="#17263c">git log -S "#define SAMPLES"</text>
+<text x="888" y="298" font-size="21" fill="#17263c">git log -G "#define SAMPLES"</text>
+<text x="888" y="344" font-size="21" fill="#17263c">git log --all --grep "removed file"</text>
+<text x="888" y="382" font-size="21" fill="#17263c">git log -L 1,20:index.html</text>
+<rect x="48" y="438" width="782" height="262" rx="16" fill="#fff" stroke="#9dbbd3" stroke-width="2"/>
+<rect x="48" y="438" width="782" height="51" rx="16" fill="#fef3c7"/>
+<text x="72" y="473" font-size="25" font-weight="700" fill="#92400e">C. Авторы, даты и статистика (§§2.6, 2.9, 2.11)</text>
+<text x="72" y="532" font-size="21" fill="#17263c">git shortlog / git shortlog -s</text>
+<text x="72" y="574" font-size="21" fill="#17263c">shortlog: -n (число), -e (email)</text>
+<text x="72" y="616" font-size="21" fill="#17263c">git log --after / --before / --author</text>
+<text x="72" y="660" font-size="21" fill="#17263c">git log --stat → файлы и строки</text>
+<rect x="865" y="438" width="785" height="262" rx="16" fill="#fff" stroke="#9dbbd3" stroke-width="2"/>
+<rect x="865" y="438" width="785" height="51" rx="16" fill="#ede9fe"/>
+<text x="888" y="473" font-size="25" font-weight="700" fill="#5b21b6">D. Патчи, отдельный коммит, ветви (§§2.10–2.13)</text>
+<text x="888" y="532" font-size="21" fill="#17263c">git log --patch → изменения коммитов</text>
+<text x="888" y="574" font-size="21" fill="#17263c">git show &lt;commit&gt; → выбранный коммит</text>
+<text x="888" y="616" font-size="21" fill="#17263c">git log master..foo → коммиты foo не в master</text>
+<text x="888" y="660" font-size="19" fill="#64748b">§2.10 имеет иной заголовок («Индексация»).</text>
+<rect x="48" y="738" width="782" height="195" rx="16" fill="#eef8ff" stroke="#93c5fd" stroke-width="2"/>
+<text x="72" y="782" font-size="25" font-weight="700" fill="#075985">E. Read-only и проверка результатов</text>
+<text x="72" y="825" font-size="20" fill="#17263c">log / shortlog / show не переписывают историю.</text>
+<text x="72" y="863" font-size="20" fill="#17263c">-2 → максимум 2 коммита; --stat → файлы;</text>
+<text x="72" y="902" font-size="20" fill="#17263c">show → патч и сведения одного коммита.</text>
+<rect x="865" y="738" width="785" height="195" rx="16" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+<text x="888" y="782" font-size="25" font-weight="700" fill="#9a3412">F. Единственное state-changing действие</text>
+<text x="888" y="825" font-size="20" fill="#17263c">git config --global alias.lol "log ..."</text>
+<text x="888" y="863" font-size="20" fill="#17263c">Эффект: глобальный alias; проверка: git lol.</text>
+<text x="888" y="902" font-size="20" fill="#17263c">Откат: [Needs confirmation].</text>
+<rect x="48" y="970" width="1602" height="210" rx="16" fill="#fff1f2" stroke="#fda4af" stroke-width="2"/>
+<text x="72" y="1015" font-size="27" font-weight="700" fill="#9f1239">G. Повреждённые фрагменты источника — не исполнять буквально</text>
+<text x="72" y="1061" font-size="21" fill="#3b2332">• §2.3: цветной --pretty=format имеет порванные параметры и макросы.</text>
+<text x="72" y="1103" font-size="21" fill="#3b2332">• §2.14: «tree = log ...» не сопровождается подтверждённой командой регистрации.</text>
+<text x="72" y="1144" font-size="21" fill="#3b2332">• §2.5: строгое разграничение -S/-G без внешней спецификации — [Needs confirmation].</text>
+<text x="50" y="1232" font-size="18" fill="#64748b">Основание: RAG p0016:c01–p0023:c01 · глава 3 начинается на PDF 23 · чтение книги не отмечалось.</text>
+</g>
+</svg>

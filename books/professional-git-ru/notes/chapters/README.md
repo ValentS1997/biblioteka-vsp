@@ -4,17 +4,22 @@
 
 ## Проверенный план и прогресс
 
-- Всего глав по [RAG-оглавлению](../../rag/text.md) (PDF pages 4–9): **61**; нумерация: 1–61.
-- [Git-backed план глав](plan.yaml) содержит заголовки и PDF-локаторы начала всех 61 главы.
-- Полных глав в этой Git-ревизии: **1/61 (1.64%)**. После слияния PR #606 тот же прогресс будет действовать в `main`.
-- Исторический базовый уровень в `main` перед слиянием PR #606: **0/61 (0%)**.
-- Осталось: **60**; следующая неопубликованная глава: **2 — «Просмотр истории версий»**.
-- Завершена в этой Git-ревизии: **[глава 1 — «Начало работы с Git»](chapter-01-nachalo-raboty-s-git/README.md)**. Шесть обязательных файлов и `source-findings.md` зафиксированы отдельными Git-путями и проверены обратным чтением.
+- Число глав по [RAG-оглавлению](../../rag/text.md) (PDF 4–9): **61**; нумерация 1–61.
+- [Канонический план](plan.yaml) содержит заголовки и точные PDF-локаторы глав и привязан к source SHA-256.
+- Завершено в текущей Git-ревизии: **2/61 (3.28%)**.
+- Базовая ветка `main` на старте главы 2: **1/61 (1.64%)**. Число в `main` становится **2/61** только после merge соответствующего PR и обратной проверки.
+- Осталось по текущей ревизии: **59**.
+- Следующая неопубликованная глава: **3 — «Работа с удаленными репозиториями»**.
 
-Прогресс рассчитывается по зафиксированным Git-файлам, а не по тексту этого README: `python scripts/chapter_publication_status.py --book-id professional-git-ru`. Перед каждой публикацией и после неё требуется повторно вычислить фактический прогресс по выбранной ветке/HEAD.
+## Завершённые главы
+
+1. [Глава 1 — «Начало работы с Git»](chapter-01-nachalo-raboty-s-git/README.md) — PDF 10–16, полный комплект индивидуальных Git-файлов.
+2. [Глава 2 — «Просмотр истории версий»](chapter-02-prosmotr-istorii-versiy/README.md) — PDF 16–23, шесть обязательных файлов и `source-findings.md`, индивидуальная проверка Git read-back.
+
+Прогресс определяется **фактическими Git-файлами на выбранной ветке**, а не только этим текстом; рабочая команда репозитория: `python scripts/chapter_publication_status.py --book-id professional-git-ru`. Прогресс `main` и рабочей ветки нельзя объединять до слияния PR.
 
 ## Правила публикации
 
-Применять `templates/process-compliance-router-v1.2.yaml`, `templates/chapter-publication-v1.0.yaml`, `templates/chapter-analysis-request-v1.4.yaml`, `templates/chapter-artifact-collection-v1.8.yaml`, `templates/git-execution-policy-v1.0.yaml` и `templates/session-recovery-v1.0.yaml`.
+Применяются `templates/process-compliance-router-v1.2.yaml`, `templates/session-recovery-v1.0.yaml`, `templates/chapter-publication-v1.0.yaml`, `templates/chapter-analysis-request-v1.4.yaml`, `templates/chapter-artifact-collection-v1.8.yaml`, `templates/git-execution-policy-v1.0.yaml`.
 
-Одна глава считается опубликованной только после Git-коммита и обратной проверки всех шести файлов: `README.md`, `cheatsheet.md`, `commands.md`, `diagram.md`, `visual-cheatsheet.svg`, `visual-cheatsheet-detailed.svg`. Условные артефакты — по главе и шаблону v1.8. Список ссылок на завершённые главы: [глава 1](chapter-01-nachalo-raboty-s-git/README.md). Подтверждение публикации в `main` требует слияния PR #606 и обратной проверки файлов в основной ветке. ZIP/архив не заменяет Git-публикацию. Статус чтения не изменять.
+Каждая глава считается опубликованной только при наличии индивидуально зафиксированных `README.md`, `cheatsheet.md`, `commands.md`, `diagram.md`, `visual-cheatsheet.svg`, `visual-cheatsheet-detailed.svg`; условные артефакты обязательны при наличии соответствующих разделов/проблем. Требуются Git read-back и CI. ZIP/архивы не принимаются. **Статус чтения не изменять**.

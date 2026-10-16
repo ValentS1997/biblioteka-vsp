@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="780" viewBox="0 0 1300 780" role="img" aria-labelledby="ttl desc">
+<title id="ttl">Глава 2. Просмотр истории версий — компактная RAG-сводка</title>
+<desc id="desc">Набор read-only способов просмотра истории Git: общий журнал, граф, фильтры, авторы, отдельный коммит, статистика и разность ветвей. Один изменяющий шаг: настройка alias.lol.</desc>
+<rect width="1300" height="780" fill="#f8fafc"/>
+<rect width="1300" height="115" fill="#17243b"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="48" y="55" fill="#fff" font-size="35" font-weight="700">Глава 2 · Просмотр истории версий</text>
+<text x="48" y="91" fill="#d8e6fb" font-size="19">professional-git-ru · RAG PDF 16–23 · §§ 2.1–2.14</text>
+<rect x="44" y="152" width="392" height="184" rx="15" fill="#ffffff" stroke="#bed3e5" stroke-width="2"/>
+<rect x="44" y="152" width="392" height="49" rx="15" fill="#dbeafe"/>
+<text x="68" y="186" font-size="22" font-weight="700" fill="#1e40af">Обзор и граф</text>
+<text x="68" y="234" font-size="19" fill="#1e293b">git log · git log -2</text>
+<text x="68" y="269" font-size="19" fill="#1e293b">--oneline · --graph</text>
+<text x="68" y="303" font-size="19" fill="#1e293b">--decorate · --all</text>
+<rect x="455" y="152" width="392" height="184" rx="15" fill="#ffffff" stroke="#bed3e5" stroke-width="2"/>
+<rect x="455" y="152" width="392" height="49" rx="15" fill="#dcfce7"/>
+<text x="479" y="186" font-size="22" font-weight="700" fill="#166534">Поиск и фильтры</text>
+<text x="479" y="234" font-size="19" fill="#1e293b">-S / -G · --grep</text>
+<text x="479" y="269" font-size="19" fill="#1e293b">--after · --before · --author</text>
+<text x="479" y="303" font-size="19" fill="#1e293b">git log -L · shortlog</text>
+<rect x="866" y="152" width="392" height="184" rx="15" fill="#ffffff" stroke="#bed3e5" stroke-width="2"/>
+<rect x="866" y="152" width="392" height="49" rx="15" fill="#fef3c7"/>
+<text x="890" y="186" font-size="22" font-weight="700" fill="#92400e">Детали и ветви</text>
+<text x="890" y="234" font-size="19" fill="#1e293b">git log --patch / --stat</text>
+<text x="890" y="269" font-size="19" fill="#1e293b">git show &lt;commit&gt;</text>
+<text x="890" y="303" font-size="19" fill="#1e293b">git log master..foo</text>
+<rect x="44" y="372" width="598" height="154" rx="15" fill="#eef8ff" stroke="#a5c8eb" stroke-width="2"/>
+<text x="68" y="414" font-size="22" font-weight="700" fill="#075985">Наблюдение без изменения истории</text>
+<text x="68" y="452" font-size="19" fill="#1e293b">git log, shortlog и show — читающие</text>
+<text x="68" y="482" font-size="19" fill="#1e293b">команды. Выйти из log: q.</text>
+<rect x="661" y="372" width="597" height="154" rx="15" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+<text x="685" y="414" font-size="22" font-weight="700" fill="#9a3412">Изменение только настройки</text>
+<text x="685" y="452" font-size="19" fill="#1e293b">git config --global alias.lol ...</text>
+<text x="685" y="482" font-size="19" fill="#1e293b">Проверка: git lol. Откат не описан.</text>
+<rect x="44" y="561" width="1214" height="137" rx="15" fill="#fff5f5" stroke="#fca5a5" stroke-width="2"/>
+<text x="68" y="601" font-size="22" font-weight="700" fill="#991b1b">Ограничения RAG</text>
+<text x="68" y="639" font-size="19" fill="#334155">§2.10 озаглавлен «Индексация», но пример — git log --patch.</text>
+<text x="68" y="670" font-size="19" fill="#334155">Цветовые формулы и tree = log повреждены: source-findings.md.</text>
+<text x="49" y="742" fill="#64748b" font-size="17">Основание: RAG p0016:c01–p0023:c01 · источник PDF 16–23 · статус чтения не изменён</text>
+</g>
+</svg>
