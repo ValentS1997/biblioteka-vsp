@@ -84,10 +84,10 @@ checks:
       source locator/source path/source_sha256/path consistency. Legacy PDF v1
       chunks using pdf_page remain accepted.
   chapter_template_available:
-    source: "templates/chapter-artifact-collection-v1.7.yaml"
+    source: "templates/chapter-artifact-collection-v1.8.yaml"
     required_template_id: "BIBLIOTEKA-VSP-CHAPTER-ARTIFACT-COLLECTION"
     required_status: "ACCEPTED"
-    required_version: "1.7"
+    required_version: "1.8"
 
 failure_model:
   top_level_status: "BLOCKED"
