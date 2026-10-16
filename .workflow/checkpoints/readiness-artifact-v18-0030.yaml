@@ -1,0 +1,30 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: readiness-artifact-v18-0030
+repository: vsp-corp/biblioteka-vsp
+book_id: 1c-enterprise-8-3-radchenko-khrustaleva-3e-ru
+task_kind: process
+objective: "Repair the canonical readiness gate references to chapter artifacts v1.8, run tests and CI, merge process PR, then resume book 0030 chapter 1."
+branch: process/readiness-artifact-v18-0030
+initial_base_sha: faa05e94fb4f64feb47958a4f477595cb43cd0c3
+last_observed_head_sha: faa05e94fb4f64feb47958a4f477595cb43cd0c3
+expected_source_sha256: "Not applicable"
+constraints:
+  - "no direct main changes"
+  - "no force-push"
+  - "no source/RAG rewrite without explicit authorization"
+  - "no reading-progress mutation without explicit user confirmation"
+  - "no archive delivery for chapter artifacts"
+stage: IN_PROGRESS
+completed_steps:
+  - step: "Resolved main HEAD and isolated process branch."
+    evidence_type: other
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/faa05e94fb4f64feb47958a4f477595cb43cd0c3"
+pending_steps:
+  - "Correct stale v1.7 references in readiness template and checker and active readiness test fixture only."
+  - "Verify files and unit tests and GitHub Actions CI."
+  - "Open process PR and merge only with PASS."
+  - "Resume book chapter-01 workflow."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/commit/faa05e94fb4f64feb47958a4f477595cb43cd0c3"
+first_safe_next_action: "Read branch head, checkpoint, three target files and existing PRs before write or retry."
+blocker: "Canonical readiness template check targets outdated chapter-artifact-collection v1.7."
+last_observed_at: "Not applicable"
