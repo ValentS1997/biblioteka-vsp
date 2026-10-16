@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only chapter 20 transition to 64-bit mode, gated Git publication"
 branch: chapter/assembly-x86-64-zhukov-ru-ch20
 initial_base_sha: 5ff6ad3608454e4086bc79ef9bd39678835d06ad
-last_observed_head_sha: 5ff6ad3608454e4086bc79ef9bd39678835d06ad
+last_observed_head_sha: 660e045801f6740ac2e49808377b92838831254f
 expected_source_sha256: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
 constraints:
   - no direct main modification
@@ -21,8 +21,10 @@ completed_steps:
   - step: "Chapter 20 RAG PDF 331-340 read; chapter 21 starts p341; main verified 19/21"
     evidence_type: file-readback
     reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/5ff6ad3608454e4086bc79ef9bd39678835d06ad/books/assembly-x86-64-zhukov-ru/notes/chapters/plan.yaml"
+  - step: "Six mandatory chapter 20 artifacts individually published and verified by Git read-back"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/tree/660e045801f6740ac2e49808377b92838831254f/books/assembly-x86-64-zhukov-ru/notes/chapters/chapter-20-perehod-v-64-bitovyy-rezhim"
 pending_steps:
-  - "Publish six mandatory files independently and verify Git read-back"
   - "Publish review questions, answers and source findings"
   - "Update chapter index 20/21"
   - "Validate CI and main drift, PR only after PASS"
