@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only chapter publication for inventory 0030 with individually committed Git artifacts and reproducible recovery; no chapter analysis without an explicit request."
 branch: chapter/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru-0030
 initial_base_sha: aa3733b43f6db3627453e4814926e59a9ae3b136
-last_observed_head_sha: 71f19e34d1bdddc77ac82075ce1ba458f59157a9
+last_observed_head_sha: 4e7022ab8104b3749617815d90d3c7a58c55849e
 expected_source_sha256: ce8fa0fbf0d8bb38f724ed04f130c2443c1e181eb51edafac692c4786874c923
 constraints:
   - "no direct main changes"
@@ -38,12 +38,23 @@ completed_steps:
   - step: "Verified latest chapter-notes CI PASS for migrated chapter index."
     evidence_type: ci
     reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38627513322"
+  - step: "Merged readiness process remediation PR #607; book chapter analysis preflight now uses artifact v1.8."
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/607"
+  - step: "Merged current main into chapter branch without force-push."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/22f10ac0d33b534681c4bbd853f584480d59024e"
+  - step: "Published chapter 01 six mandatory and three conditional individually addressable Git files; updated chapter index to 1/28; verified all ten files via GitHub."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/4e7022ab8104b3749617815d90d3c7a58c55849e"
+  - step: "Chapter-notes and SVG validation passed for publication commit."
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38869889748"
 pending_steps:
-  - "Inspect any new PRs and current branch HEAD before chapter publication."
-  - "Resolve/check canonical readiness process drift in a separate controlled process-development branch: BOOK-READINESS v1.3 template and scripts/check_book_readiness.py still reference chapter-artifact-collection v1.7, while chapter route requires v1.8; do not silently edit canonical process."
-  - "When explicitly requested: run BOOK-READINESS v1.3 preflight and start 'Анализ главы 1' under CHAPTER-ANALYSIS-REQUEST v1.4 and CHAPTER-ARTIFACT-COLLECTION v1.8."
-  - "Publish each future chapter's six mandatory individual Git files, update index, perform read-back and CI, then advance checkpoint."
-last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38627513322"
-first_safe_next_action: "Read-only: re-fetch branch HEAD, checkpoint, book RAG/plan/index, PR and CI; inspect readiness v1.7/v1.8 drift and resolve it under process governance before future chapter preflight/writes."
-blocker: "Chapter-analysis preflight process drift: main BOOK-READINESS v1.3 and scripts/check_book_readiness.py reference chapter-artifact-collection v1.7 although router v1.2 requires v1.8. Check/migrate before chapter execution."
+  - "Open PR from chapter/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru-0030 to main; validate exact PR HEAD and required CI before merge."
+  - "After merge verify files and publication status in main; chapter 01 is not main-published until verified."
+  - "Future chapters 02–28: RAG-only analysis with v1.8, individual Git files and CI after explicit request."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38869889748"
+first_safe_next_action: "Read-only: re-fetch chapter branch HEAD, all chapter-01 files, open PR list and PR CI; merge only after current HEAD and checks PASS."
+blocker: "Not applicable"
 last_observed_at: "Not applicable"
