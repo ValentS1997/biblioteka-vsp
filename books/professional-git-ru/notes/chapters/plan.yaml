@@ -1,0 +1,266 @@
+schema: biblioteka-vsp/chapter-plan/v1
+book_id: professional-git-ru
+source_sha256: 5eb8376c990ff58103fb110ae36467bb407f015bedf45aa2db6dae5678f8b5fb
+source_format: pdf
+total_chapters: 61
+toc_evidence: "RAG books/professional-git-ru/rag/text.md, PDF pages 4–9 (addressable TOC chunks rag/chunks/p0001-p0100/p0004-c01.md through p0009-c01.md); numbered chapters 1–61, each start PDF page corroborated by a chapter heading on that page."
+source_note: "Chapter titles use the extracted TOC, with explicitly recorded PDF text-layer fixes only when corroborated by chapter headings in the RAG. Original extracted variants are retained in toc_raw_title. Unresolved OCR wording (e.g. chapter 42) is preserved pending chapter review. source_locator is the 1-based chapter-start PDF page, not a printed page number."
+chapters:
+  - number: 1
+    title: "Начало работы с Git"
+    slug: nachalo-raboty-s-git
+    source_locator: "pdf_page:0010"
+  - number: 2
+    title: "Просмотр истории версий"
+    slug: prosmotr-istorii-versiy
+    source_locator: "pdf_page:0016"
+  - number: 3
+    title: "Работа с удаленными репозиториями"
+    slug: rabota-s-udalennymi-repozitoriyami
+    source_locator: "pdf_page:0023"
+  - number: 4
+    title: "Индексация изменений"
+    slug: indeksatsiya-izmeneniy
+    source_locator: "pdf_page:0027"
+  - number: 5
+    title: "Исключение из отслеживания отдельных файлов и папок"
+    slug: isklyuchenie-iz-otslezhivaniya-otdelnyh-faylov-i-papok
+    source_locator: "pdf_page:0030"
+  - number: 6
+    title: "Утилита сравнения (diff)"
+    slug: utilita-sravneniya-diff
+    source_locator: "pdf_page:0040"
+  - number: 7
+    title: "Отмена изменений"
+    slug: otmena-izmeneniy
+    source_locator: "pdf_page:0044"
+  - number: 8
+    title: "Слияние"
+    slug: sliyanie
+    source_locator: "pdf_page:0049"
+  - number: 9
+    title: "Подмодули"
+    slug: podmoduli
+    source_locator: "pdf_page:0050"
+  - number: 10
+    title: "Фиксация изменений"
+    slug: fiksatsiya-izmeneniy
+    source_locator: "pdf_page:0053"
+  - number: 11
+    title: "Псевдонимы"
+    slug: psevdonimy
+    source_locator: "pdf_page:0060"
+  - number: 12
+    title: "Перемещение (команда rebase)"
+    slug: peremeschenie-komanda-rebase
+    source_locator: "pdf_page:0063"
+  - number: 13
+    title: "Конфигурация"
+    slug: konfiguratsiya
+    source_locator: "pdf_page:0071"
+  - number: 14
+    title: "Ветвление"
+    slug: vetvlenie
+    source_locator: "pdf_page:0075"
+  - number: 15
+    title: "Rev-List"
+    slug: rev-list
+    source_locator: "pdf_page:0080"
+  - number: 16
+    title: "Объединение"
+    slug: obedinenie
+    source_locator: "pdf_page:0080"
+    toc_raw_title: "Объедm1ение"
+    title_evidence: "RAG rag/text.md PDF page 80 chapter heading"
+  - number: 17
+    title: "Команда cherry-pick"
+    slug: komanda-cherry-pick
+    source_locator: "pdf_page:0084"
+    toc_raw_title: "Команда cherтy-pick"
+    title_evidence: "RAG rag/text.md PDF page 84 chapter heading"
+  - number: 18
+    title: "Восстановление"
+    slug: vosstanovlenie
+    source_locator: "pdf_page:0086"
+  - number: 19
+    title: "Git Clean"
+    slug: git-clean
+    source_locator: "pdf_page:0088"
+  - number: 20
+    title: "Использование файла .gitattributes"
+    slug: ispolzovanie-fayla-gitattributes
+    source_locator: "pdf_page:0089"
+  - number: 21
+    title: "Сопоставление автора и его электронной почты в файле .mailmap"
+    slug: sopostavlenie-avtora-i-ego-elektronnoy-pochty-v-fayle-mailmap
+    source_locator: "pdf_page:0090"
+  - number: 22
+    title: "Анализ моделей организации рабочего процесса"
+    slug: analiz-modeley-organizatsii-rabochego-protsessa
+    source_locator: "pdf_page:0090"
+  - number: 23
+    title: "Извлечение кода из репозитория. Команда pull"
+    slug: izvlechenie-koda-iz-repozitoriya-komanda-pull
+    source_locator: "pdf_page:0094"
+  - number: 24
+    title: "Перехватчики в Git (Hook)"
+    slug: perehvatchiki-v-git-hook
+    source_locator: "pdf_page:0097"
+  - number: 25
+    title: "Клонирование репозиториев"
+    slug: klonirovanie-repozitoriev
+    source_locator: "pdf_page:0102"
+  - number: 26
+    title: "Прятанье"
+    slug: pryatane
+    source_locator: "pdf_page:0103"
+    toc_raw_title: "Пряташ.е"
+    title_evidence: "RAG rag/text.md PDF page 103 chapter heading"
+  - number: 27
+    title: "Поддеревья"
+    slug: podderevya
+    source_locator: "pdf_page:0109"
+  - number: 28
+    title: "Переименование"
+    slug: pereimenovanie
+    source_locator: "pdf_page:0109"
+  - number: 29
+    title: "Публикация кода"
+    slug: publikatsiya-koda
+    source_locator: "pdf_page:0110"
+  - number: 30
+    title: "Внутренние компоненты"
+    slug: vnutrennie-komponenty
+    source_locator: "pdf_page:0113"
+  - number: 31
+    title: "Плагин git-tfs"
+    slug: plagin-git-tfs
+    source_locator: "pdf_page:0117"
+    toc_raw_title: "Плаrин git-tfs"
+    title_evidence: "RAG rag/text.md PDF page 117 chapter heading"
+  - number: 32
+    title: "Пустые каталоги в Git"
+    slug: pustye-katalogi-v-git
+    source_locator: "pdf_page:0118"
+  - number: 33
+    title: "git-svn"
+    slug: git-svn
+    source_locator: "pdf_page:0118"
+  - number: 34
+    title: "Архив"
+    slug: arhiv
+    source_locator: "pdf_page:0120"
+  - number: 35
+    title: "Переписывание истории с помощью команды filter-branch"
+    slug: perepisyvanie-istorii-s-pomoschyu-komandy-filter-branch
+    source_locator: "pdf_page:0122"
+    toc_raw_title: "Переписывание истории с помощью команды filter-hranch"
+    title_evidence: "RAG rag/text.md PDF page 122 chapter heading"
+  - number: 36
+    title: "Переход на Git"
+    slug: perehod-na-git
+    source_locator: "pdf_page:0123"
+  - number: 37
+    title: "Команда git show"
+    slug: komanda-git-show
+    source_locator: "pdf_page:0126"
+  - number: 38
+    title: "Разрешение конфликтов слияния"
+    slug: razreshenie-konfliktov-sliyaniya
+    source_locator: "pdf_page:0126"
+  - number: 39
+    title: "Команда bundle"
+    slug: komanda-bundle
+    source_locator: "pdf_page:0127"
+  - number: 40
+    title: "Графическое отображение истории коммитов с помощью команды gitk."
+    slug: graficheskoe-otobrazhenie-istorii-kommitov-s-pomoschyu-komandy-gitk
+    source_locator: "pdf_page:0128"
+  - number: 41
+    title: "Поиск коммита, в котором появился баг"
+    slug: poisk-kommita-v-kotorom-poyavilsya-bag
+    source_locator: "pdf_page:0128"
+  - number: 42
+    title: "Применение команды Ыаmе"
+    slug: primenenie-komandy-yame
+    source_locator: "pdf_page:0130"
+  - number: 43
+    title: "Работа с версиями проекта в Git"
+    slug: rabota-s-versiyami-proekta-v-git
+    source_locator: "pdf_page:0131"
+  - number: 44
+    title: "Рабочие деревья"
+    slug: rabochie-derevya
+    source_locator: "pdf_page:0135"
+  - number: 45
+    title: "Работа с удаленными объектами Git Remote"
+    slug: rabota-s-udalennymi-obektami-git-remote
+    source_locator: "pdf_page:0136"
+  - number: 46
+    title: "Хранилище крупных файлов Git Large File Storage (LFS)"
+    slug: hranilische-krupnyh-faylov-git-large-file-storage-lfs
+    source_locator: "pdf_page:0139"
+    toc_raw_title: "Храюшище крупных файлов Git Large File Storage (LFS)"
+    title_evidence: "RAG rag/text.md PDF page 139 chapter heading"
+  - number: 47
+    title: "Команда git patch"
+    slug: komanda-git-patch
+    source_locator: "pdf_page:0140"
+  - number: 48
+    title: "Статистика в Git"
+    slug: statistika-v-git
+    source_locator: "pdf_page:0142"
+  - number: 49
+    title: "Комада git send-email"
+    slug: komada-git-send-email
+    source_locator: "pdf_page:0144"
+  - number: 50
+    title: "Графические клиенты Git"
+    slug: graficheskie-klienty-git
+    source_locator: "pdf_page:0145"
+  - number: 51
+    title: "Reflog - восстановление коммитов, не отображаемых в журнале Git"
+    slug: reflog-vosstanovlenie-kommitov-ne-otobrazhaemyh-v-zhurnale-git
+    source_locator: "pdf_page:0148"
+    toc_raw_title: "Rеflоg - восстановление коммитов, не отображаемых в журнале Git"
+    title_evidence: "RAG rag/text.md PDF page 148 chapter heading"
+  - number: 52
+    title: "TortoiseGit"
+    slug: tortoisegit
+    source_locator: "pdf_page:0148"
+  - number: 53
+    title: "Внешнее слияние и инструменты difftools"
+    slug: vneshnee-sliyanie-i-instrumenty-difftools
+    source_locator: "pdf_page:0151"
+  - number: 54
+    title: "Обновление имени объекта в ссылке"
+    slug: obnovlenie-imeni-obekta-v-ssylke
+    source_locator: "pdf_page:0153"
+  - number: 55
+    title: "Как задать имя ветви в командной оболочке Bash под ОС Ubuntu"
+    slug: kak-zadat-imya-vetvi-v-komandnoy-obolochke-bash-pod-os-ubuntu
+    source_locator: "pdf_page:0154"
+  - number: 56
+    title: "Перехватчики на стороне клиента Git"
+    slug: perehvatchiki-na-storone-klienta-git
+    source_locator: "pdf_page:0154"
+  - number: 57
+    title: "Команда git rerere"
+    slug: komanda-git-rerere
+    source_locator: "pdf_page:0156"
+  - number: 58
+    title: "Переименование репозитория"
+    slug: pereimenovanie-repozitoriya
+    source_locator: "pdf_page:0156"
+  - number: 59
+    title: "Метки Git"
+    slug: metki-git
+    source_locator: "pdf_page:0156"
+  - number: 60
+    title: "Наведение порядка в локальном и удаленном хранилищах"
+    slug: navedenie-poryadka-v-lokalnom-i-udalennom-hranilischah
+    source_locator: "pdf_page:0157"
+  - number: 61
+    title: "Команда diff-tree"
+    slug: komanda-diff-tree
+    source_locator: "pdf_page:0158"
