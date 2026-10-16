@@ -6,14 +6,14 @@ task_kind: chapter
 objective: "Canonical RAG-only chapter 21 analysis and final chapter gated Git publication"
 branch: chapter/assembly-x86-64-zhukov-ru-ch21
 initial_base_sha: ae0b31fed3e092d373b114a61d5a1b5f99f9b36f
-last_observed_head_sha: ae0b31fed3e092d373b114a61d5a1b5f99f9b36f
+last_observed_head_sha: 068b6d64d724a8b6268e950333865ef2febf25e8
 expected_source_sha256: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
 constraints:
   - no direct main changes
   - no source or rag modifications
   - no reading status changes
   - no archive fallback or force push
-stage: IN_PROGRESS
+stage: CI_PENDING
 completed_steps:
   - step: "Canonical contracts ACCEPTED and canonical RAG acceptance ACCEPTED, hashes match"
     evidence_type: file-readback
@@ -25,9 +25,6 @@ completed_steps:
     evidence_type: git
     reference: "https://github.com/vsp-corp/biblioteka-vsp/tree/ae0b31fed3e092d373b114a61d5a1b5f99f9b36f/books/assembly-x86-64-zhukov-ru/notes/chapters"
 pending_steps:
-  - "Create six mandatory artifacts separately with Git readback"
-  - "Create review questions and answers, conditional source findings"
-  - "Update chapter index 21/21 without modifying reading status"
   - "Validate branch CI PASS, then create PR"
   - "PR CI PASS, remove checkpoint, final CI PASS, merge"
   - "Postmerge Git readback and CI"
