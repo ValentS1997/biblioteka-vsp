@@ -6,14 +6,14 @@ task_kind: chapter
 objective: "RAG-only chapter 19 compatibility-mode analysis and gated Git publication"
 branch: chapter/assembly-x86-64-zhukov-ru-ch19
 initial_base_sha: e33b888cd7a01dc6f6b8ed2caef29fa3929f4b64
-last_observed_head_sha: e33b888cd7a01dc6f6b8ed2caef29fa3929f4b64
+last_observed_head_sha: 71ca40e9e0a2bc63149f110ab8173a115b069644
 expected_source_sha256: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
 constraints:
   - no direct main modification
   - no source or RAG modification
   - no reading status change
   - no force push or archive fallback
-stage: IN_PROGRESS
+stage: CI_PENDING
 completed_steps:
   - step: "Main has published chapters 1-18; RAG accepted and contracts checked"
     evidence_type: git-readback
@@ -22,9 +22,6 @@ completed_steps:
     evidence_type: source-readback
     reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/e33b888cd7a01dc6f6b8ed2caef29fa3929f4b64/books/assembly-x86-64-zhukov-ru/notes/chapters/plan.yaml"
 pending_steps:
-  - "Create six mandatory files and verify each by Git read-back"
-  - "Create RAG-grounded review questions/answers and source findings"
-  - "Update chapter index to 19/21"
   - "CI PASS before PR, PR CI PASS, remove checkpoint, final-head CI PASS"
   - "Merge clean and verify main files and post-merge CI"
 first_safe_next_action: "Check actual branch, checkpoint, files, PR and CI from GitHub before retry"
