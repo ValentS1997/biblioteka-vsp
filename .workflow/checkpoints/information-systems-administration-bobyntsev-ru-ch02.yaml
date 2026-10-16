@@ -6,7 +6,7 @@ task_kind: chapter
 objective: RAG-only chapter 2 analysis, individual Git publication, validation and PR 491 update
 branch: chapter/information-systems-administration-bobyntsev-ru-0024
 initial_base_sha: b22800393093b369ca7b4780852cdce25a5c66e8
-last_observed_head_sha: b22800393093b369ca7b4780852cdce25a5c66e8
+last_observed_head_sha: ac2b6a79286f20dd8b051ac8f6645eaf10b36c7b
 expected_source_sha256: a5d6a2677d4b0e33a34dec3b7aae8b77f711bb748046d25766becb479f66663f
 constraints:
   - no direct main changes
@@ -15,7 +15,7 @@ constraints:
   - no reading-progress mutation
   - no ZIP or archive publication
   - individual Git files and read-back mandatory
-stage: PLANNED
+stage: CI_PENDING
 completed_steps:
   - step: Verified branch and open PR 491; chapter 1 publication 1/8 and CI PASS
     evidence_type: pr
@@ -38,7 +38,7 @@ pending_steps:
   - Create and read back source-findings.md
   - Update chapter index to 2/8 only after full Git read-back
   - Verify CI for branch head, update PR 491 and checkpoint
-last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/b22800393093b369ca7b4780852cdce25a5c66e8
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/ac2b6a79286f20dd8b051ac8f6645eaf10b36c7b
 first_safe_next_action: Re-fetch branch HEAD, chapter 2 file paths and current checkpoint before write or retry
 blocker: Not applicable
 last_observed_at: Not applicable
