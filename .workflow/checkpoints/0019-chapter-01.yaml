@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only analysis and direct individual Git publication of chapter 1, Начало работы с Git."
 branch: chapter/0019-ch01-nachalo-raboty-s-git-20261016
 initial_base_sha: 4d330532125233f2040640dbdb0b0cedebbd6c1e
-last_observed_head_sha: bb26d67c9c5a05e49ce76a8deded82f7caf76dae
+last_observed_head_sha: fe1c4853a5cbed2e3a3d362a3a8d1d712198d2e4
 expected_source_sha256: 5eb8376c990ff58103fb110ae36467bb407f015bedf45aa2db6dae5678f8b5fb
 constraints:
   - "no direct main changes"
@@ -32,10 +32,12 @@ completed_steps:
   - step: "Update chapter index and verify chapter 1 out of 61 in branch; main remains at zero"
     evidence_type: commit
     reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/bb26d67c9c5a05e49ce76a8deded82f7caf76dae"
+  - step: "Create stacked chapter PR #606 into publication-plan branch, recheck HEAD and base"
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/606"
 pending_steps:
   - "Verify individual Git read-back, progress and chapter notes validation CI."
-  - "Open stacked PR into chapter/0019-publication-plan-20261015 if validation passes; never claim merged-to-main."
-last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/commit/bb26d67c9c5a05e49ce76a8deded82f7caf76dae"
-first_safe_next_action: "Re-fetch branch HEAD and chapter notes CI results; if PASS, create/reconcile chapter 01 stacked PR with base chapter/0019-publication-plan-20261015."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/pull/606"
+first_safe_next_action: "Re-fetch chapter PR #606, branch HEAD and final PR-triggered Validate chapter notes and SVG CI; if PASS, report verified branch publication; no automatic merge."
 blocker: "Not applicable"
 last_observed_at: "Not applicable"
