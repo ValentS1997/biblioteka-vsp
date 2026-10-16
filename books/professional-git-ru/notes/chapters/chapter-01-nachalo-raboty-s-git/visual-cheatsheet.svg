@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+<title id="title">Глава 1 — Начало работы с Git: компактная RAG-сводка</title>
+<desc id="desc">Git: проверка и установка, автор, локальный репозиторий, состояние, выбор файлов, коммит, удалённый репозиторий, SSH. Источник RAG PDF 10–16.</desc>
+<rect width="1280" height="760" fill="#f8fafc"/>
+<rect x="0" y="0" width="1280" height="106" fill="#16213e"/>
+<text x="52" y="50" font-family="Arial,DejaVu Sans,sans-serif" font-size="32" fill="#ffffff" font-weight="700">Глава 1 · Начало работы с Git</text>
+<text x="52" y="82" font-family="Arial,DejaVu Sans,sans-serif" font-size="18" fill="#d5e3f2">Книга 0019 · RAG PDF 10–16 · §§ 1.1–1.8</text>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<rect x="50" y="144" width="372" height="180" rx="15" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="50" y="144" width="372" height="48" rx="15" fill="#dbeafe"/>
+<text x="72" y="176" font-size="21" font-weight="700" fill="#1e3a8a">1 · Подготовка</text>
+<text x="72" y="218" font-size="18" fill="#17263c">git --version · which git</text>
+<text x="72" y="250" font-size="18" fill="#17263c">Установить Git при необходимости</text>
+<text x="72" y="282" font-size="18" fill="#17263c">Задать user.name и user.email</text>
+<rect x="454" y="144" width="372" height="180" rx="15" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="454" y="144" width="372" height="48" rx="15" fill="#dcfce7"/>
+<text x="476" y="176" font-size="21" font-weight="700" fill="#166534">2 · Локальный репозиторий</text>
+<text x="476" y="218" font-size="18" fill="#17263c">git init → каталог .git</text>
+<text x="476" y="250" font-size="18" fill="#17263c">git status → осмотр файлов</text>
+<text x="476" y="282" font-size="18" fill="#17263c">.gitignore → git add → commit</text>
+<rect x="858" y="144" width="372" height="180" rx="15" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="858" y="144" width="372" height="48" rx="15" fill="#fef3c7"/>
+<text x="880" y="176" font-size="21" font-weight="700" fill="#92400e">3 · Обмен кодом</text>
+<text x="880" y="218" font-size="18" fill="#17263c">git clone &lt;URL&gt; — копия</text>
+<text x="880" y="250" font-size="18" fill="#17263c">origin / upstream — адреса</text>
+<text x="880" y="282" font-size="18" fill="#17263c">git remote -v — проверка</text>
+<path d="M 422 232 L 452 232 M 444 223 L 452 232 L 444 241" stroke="#475569" stroke-width="3" fill="none"/>
+<path d="M 826 232 L 856 232 M 848 223 L 856 232 L 848 241" stroke="#475569" stroke-width="3" fill="none"/>
+<rect x="50" y="360" width="573" height="164" rx="15" fill="#edf2ff" stroke="#c7d2fe" stroke-width="2"/>
+<text x="75" y="399" font-size="23" fill="#3730a3" font-weight="700">Проверки до изменения состояния</text>
+<text x="75" y="436" font-size="19" fill="#24334b">• Проверить каталог и git status</text>
+<text x="75" y="467" font-size="19" fill="#24334b">• Не индексировать секреты и ненужные файлы</text>
+<text x="75" y="498" font-size="19" fill="#24334b">• Проверить URL и права на remote</text>
+<rect x="656" y="360" width="574" height="164" rx="15" fill="#ecfeff" stroke="#a5f3fc" stroke-width="2"/>
+<text x="679" y="399" font-size="23" fill="#155e75" font-weight="700">Инструменты главы</text>
+<text x="679" y="436" font-size="19" fill="#24334b">• git help / --help / -h — справка</text>
+<text x="679" y="467" font-size="19" fill="#24334b">• SSH: ~/.ssh → ssh-keygen → ssh-add</text>
+<text x="679" y="498" font-size="19" fill="#24334b">• Установка: исходники или пакеты</text>
+<rect x="50" y="560" width="1180" height="120" rx="15" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+<text x="76" y="597" font-size="23" fill="#9a3412" font-weight="700">Ограничения источника</text>
+<text x="76" y="631" font-size="19" fill="#431407">В RAG есть искажения команд git add, git init (bare), git clone, git config.</text>
+<text x="76" y="658" font-size="18" fill="#431407">Спорные строки — в source-findings.md; откат и современная актуальность: [Needs confirmation].</text>
+<text x="52" y="721" font-size="16" fill="#64748b">Источник: professional-git-ru:p0010:c01–p0016:c01 · Публикация заметок не меняет статус чтения</text>
+</g>
+</svg>

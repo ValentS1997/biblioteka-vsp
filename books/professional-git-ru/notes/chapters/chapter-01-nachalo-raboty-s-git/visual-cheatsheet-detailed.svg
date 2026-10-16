@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1580" height="1140" viewBox="0 0 1580 1140" role="img" aria-labelledby="title desc">
+<title id="title">Глава 1 — Начало работы с Git: подробная RAG-сводка</title>
+<desc id="desc">Разделы главы 1: создание репозитория, клонирование, remote, автор, помощь, SSH, установка. Стадии наблюдения и изменения раздельны. Источник PDF 10–16.</desc>
+<rect width="1580" height="1140" fill="#f8fafc"/>
+<rect x="0" y="0" width="1580" height="115" fill="#10243a"/>
+<g font-family="Arial,DejaVu Sans,sans-serif">
+<text x="52" y="53" font-size="36" fill="#ffffff" font-weight="700">Глава 1 · Начало работы с Git</text>
+<text x="52" y="88" font-size="20" fill="#c9d7e6">Подробная RAG-сводка · PDF 10–16 · §§ 1.1–1.8 · без внешних источников</text>
+<!-- Column one -->
+<rect x="45" y="150" width="465" height="295" rx="16" fill="#ffffff" stroke="#a8bfce" stroke-width="2"/>
+<rect x="45" y="150" width="465" height="54" rx="16" fill="#e0f2fe"/>
+<text x="67" y="186" font-size="23" font-weight="700" fill="#075985">A. Проверка и автор (§§1.1, 1.4)</text>
+<text x="68" y="244" font-size="21" fill="#16283e">Наблюдение:</text>
+<text x="68" y="273" font-size="18" fill="#16283e">git --version · which git</text>
+<text x="68" y="318" font-size="21" fill="#16283e">Изменение:</text>
+<text x="68" y="348" font-size="17" fill="#16283e">git config --global user.name &lt;NAME&gt;</text>
+<text x="68" y="376" font-size="17" fill="#16283e">git config --global user.email &lt;EMAIL&gt;</text>
+<text x="68" y="411" font-size="17" fill="#64748b">Локальные параметры выше глобальных.</text>
+<rect x="557" y="150" width="465" height="295" rx="16" fill="#ffffff" stroke="#a8bfce" stroke-width="2"/>
+<rect x="557" y="150" width="465" height="54" rx="16" fill="#dcfce7"/>
+<text x="579" y="186" font-size="23" font-weight="700" fill="#166534">B. Первый репозиторий (§1.1)</text>
+<text x="580" y="244" font-size="18" fill="#16283e">git init → служебная .git</text>
+<text x="580" y="282" font-size="18" fill="#16283e">git status → проверить файлы</text>
+<text x="580" y="320" font-size="18" fill="#16283e">.gitignore → исключить нежелательное</text>
+<text x="580" y="358" font-size="18" fill="#16283e">git add &lt;PATH&gt; → индекс</text>
+<text x="580" y="396" font-size="18" fill="#16283e">git commit -m "Initial commit"</text>
+<rect x="1068" y="150" width="465" height="295" rx="16" fill="#ffffff" stroke="#a8bfce" stroke-width="2"/>
+<rect x="1068" y="150" width="465" height="54" rx="16" fill="#fef3c7"/>
+<text x="1090" y="186" font-size="23" font-weight="700" fill="#92400e">C. Clone / совместная работа</text>
+<text x="1091" y="244" font-size="18" fill="#16283e">git clone &lt;URL&gt; → локальная копия</text>
+<text x="1091" y="282" font-size="18" fill="#16283e">git remote add origin &lt;URL&gt;</text>
+<text x="1091" y="320" font-size="18" fill="#16283e">git remote -v → контроль адресов</text>
+<text x="1091" y="358" font-size="18" fill="#16283e">upstream: исходный проект / fork</text>
+<text x="1091" y="396" font-size="17" fill="#64748b">Перед push сверить адрес, права, ветвь.</text>
+<!-- Middle -->
+<rect x="45" y="485" width="725" height="260" rx="16" fill="#ffffff" stroke="#a8bfce" stroke-width="2"/>
+<rect x="45" y="485" width="725" height="53" rx="16" fill="#f1f5f9"/>
+<text x="67" y="521" font-size="24" font-weight="700" fill="#334155">D. Справка, SSH и установка (§§1.6–1.8)</text>
+<text x="68" y="576" font-size="19" fill="#16283e">Справка: git help diff · git status --help · checkout -h</text>
+<text x="68" y="615" font-size="19" fill="#16283e">SSH: ls -al ~/.ssh → ssh-keygen → ssh-agent / ssh-add</text>
+<text x="68" y="654" font-size="19" fill="#16283e">Установка: исходники или системный менеджер пакетов</text>
+<text x="68" y="696" font-size="17" fill="#64748b">yum, apt-get, MacPorts, Homebrew — примеры из источника.</text>
+<rect x="808" y="485" width="725" height="260" rx="16" fill="#ffffff" stroke="#a8bfce" stroke-width="2"/>
+<rect x="808" y="485" width="725" height="53" rx="16" fill="#ede9fe"/>
+<text x="830" y="521" font-size="24" font-weight="700" fill="#5b21b6">E. Классы действий и контроль</text>
+<rect x="834" y="558" width="300" height="48" rx="9" fill="#dcfce7"/>
+<text x="850" y="589" font-size="19" fill="#166534" font-weight="700">READ-ONLY · status / remote -v</text>
+<rect x="1160" y="558" width="342" height="48" rx="9" fill="#fee2e2"/>
+<text x="1177" y="589" font-size="19" fill="#991b1b" font-weight="700">STATE-CHANGING · init / add / commit</text>
+<text x="831" y="650" font-size="19" fill="#16283e">Проверка: git status до и после индексирования;</text>
+<text x="831" y="683" font-size="19" fill="#16283e">git remote -v после настройки адресов.</text>
+<text x="831" y="714" font-size="17" fill="#64748b">Детальная проверка push и общий откат: [Needs confirmation].</text>
+<!-- Bottom provenance -->
+<rect x="45" y="788" width="1488" height="247" rx="16" fill="#fff7ed" stroke="#fb923c" stroke-width="2"/>
+<text x="70" y="831" font-size="26" font-weight="700" fill="#9a3412">F. Недостоверные строки исходного текстового слоя</text>
+<text x="70" y="875" font-size="20" fill="#431407">• «Добавить все»: текст показывает git add без пути — расхождение с описанием (§1.1).</text>
+<text x="70" y="911" font-size="20" fill="#431407">• «Клонировать в текущий каталог»: повторён синтаксис обычного clone (§1.2).</text>
+<text x="70" y="947" font-size="20" fill="#431407">• У bare-init и remove-section есть распознанные дефекты; не исправлять из памяти.</text>
+<text x="70" y="986" font-size="18" fill="#9a3412">Исходные варианты и квалификация: source-findings.md. Версии/установочные сайты исторические.</text>
+<text x="49" y="1091" font-size="18" fill="#475569">Provenance: professional-git-ru:p0010:c01—p0016:c01 · PDF 10–16 · глава 2 начинается на PDF 16.</text>
+<text x="49" y="1121" font-size="17" fill="#64748b">Принцип: проверка → выборочное изменение → повторная проверка. Статус чтения не изменён.</text>
+</g>
+</svg>
