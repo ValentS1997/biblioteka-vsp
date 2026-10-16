@@ -1,13 +1,13 @@
 # Глава 2 — Администрирование вычислительных сетей
 
-Книга: **«Основы администрирования информационных систем: учебное пособие»** (Бобынцев и др., Директ-Медиа, 2021). Inventory: \`0024\`. Book ID: \`information-systems-administration-bobyntsev-ru\`. Издание: [Needs confirmation].
+Книга: **«Основы администрирования информационных систем: учебное пособие»** (Бобынцев и др., Директ-Медиа, 2021). Inventory: `0024`. Book ID: `information-systems-administration-bobyntsev-ru`. Издание: [Needs confirmation].
 
 ## Граница и RAG provenance
 
-- PDF: **p. 51–85** (печатные страницы **50–84**), чанки **p0051-c01 … p0085-c01** в \`rag/chunks/p0001-p0100/\`.
+- PDF: **p. 51–85** (печатные страницы **50–84**), чанки **p0051-c01 … p0085-c01** в `rag/chunks/p0001-p0100/`.
 - Начало: p0051-c01 — заголовки «2. Администрирование вычислительных сетей», «2.1. Сетевое оборудование и топологии вычислительных сетей».
 - Завершение: p0084-c01–p0085-c01 — «Контрольные вопросы», №1–46. Следующая глава «3. Доменная модель безопасности в вычислительных сетях» начинается p0086-c01 (PDF p. 86).
-- Структура главы проверена по RAG TOC p0004-c01 (PDF p. 4); source SHA256: \`a5d6a2677d4b0e33a34dec3b7aae8b77f711bb748046d25766becb479f66663f\`.
+- Структура главы проверена по RAG TOC p0004-c01 (PDF p. 4); source SHA256: `a5d6a2677d4b0e33a34dec3b7aae8b77f711bb748046d25766becb479f66663f`.
 - Режим: **RAG-only**; chapter-analysis-request v1.4, chapter-artifact-collection v1.8, chapter-publication v1.0. Источник/RAG/статус чтения не изменяются.
 
 ## Основная идея
@@ -44,7 +44,7 @@
 ## Артефакты
 
 - [cheatsheet.md](cheatsheet.md) — концептуальная и диагностическая памятка.
-- [commands.md](commands.md) — единственная подтверждённая исполняемая команда главы (\`ping\`) и отдельно перечисленные концептуальные протоколы/инструменты.
+- [commands.md](commands.md) — единственная подтверждённая исполняемая команда главы (`ping`) и отдельно перечисленные концептуальные протоколы/инструменты.
 - [diagram.md](diagram.md) — логика OSI, маршрута и моделей безопасности (Mermaid).
 - [visual-cheatsheet.svg](visual-cheatsheet.svg) и [visual-cheatsheet-detailed.svg](visual-cheatsheet-detailed.svg) — две обязательные визуальные сводки.
 - [review-questions.md](review-questions.md) и [review-answers.md](review-answers.md) — 46 вопросов и ответы на основании RAG (не ключ издателя).
