@@ -1,0 +1,39 @@
+schema: biblioteka-vsp/chapter-plan/v1
+book_id: information-systems-administration-bobyntsev-ru
+source_sha256: a5d6a2677d4b0e33a34dec3b7aae8b77f711bb748046d25766becb479f66663f
+source_format: pdf
+total_chapters: 8
+toc_evidence: "Addressable canonical RAG chunks p0004-c01 (PDF p. 4) and p0005-c01 (PDF p. 5) contain eight numbered chapter headings; each opening is independently confirmed by p0024-c01, p0051-c01, p0086-c01, p0116-c01, p0142-c01, p0145-c01, p0159-c01, p0188-c01."
+chapters:
+  - number: 1
+    title: "Введение в администрирование информационных систем"
+    slug: vvedenie-v-administrirovanie-informatsionnyh-sistem
+    source_locator: "pdf_page:24; toc_pdf_page:4; printed_start_page:23"
+  - number: 2
+    title: "Администрирование вычислительных сетей"
+    slug: administrirovanie-vychislitelnyh-setey
+    source_locator: "pdf_page:51; toc_pdf_page:4; printed_start_page:50"
+  - number: 3
+    title: "Доменная модель безопасности в вычислительных сетях"
+    slug: domennaya-model-bezopasnosti-v-vychislitelnyh-setyah
+    source_locator: "pdf_page:86; toc_pdf_page:4; printed_start_page:85"
+  - number: 4
+    title: "Система доменных имён DNS и служба DHCP"
+    slug: sistema-domennyh-imen-dns-i-sluzhba-dhcp
+    source_locator: "pdf_page:116; toc_pdf_page:5; printed_start_page:115"
+  - number: 5
+    title: "Удалённое администрирование"
+    slug: udalennoe-administrirovanie
+    source_locator: "pdf_page:142; toc_pdf_page:5; printed_start_page:141"
+  - number: 6
+    title: "Администрирование сервера баз данных"
+    slug: administrirovanie-servera-baz-dannyh
+    source_locator: "pdf_page:145; toc_pdf_page:5; printed_start_page:144"
+  - number: 7
+    title: "Веб-службы и сервисы. Администрирование интернет-узлов"
+    slug: veb-sluzhby-i-servisy-administrirovanie-internet-uzlov
+    source_locator: "pdf_page:159; toc_pdf_page:5; printed_start_page:158"
+  - number: 8
+    title: "Виртуализация"
+    slug: virtualizatsiya
+    source_locator: "pdf_page:188; toc_pdf_page:5; printed_start_page:187"

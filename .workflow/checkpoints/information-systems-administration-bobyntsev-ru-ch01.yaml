@@ -1,0 +1,51 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: information-systems-administration-bobyntsev-ru-ch01
+repository: vsp-corp/biblioteka-vsp
+book_id: information-systems-administration-bobyntsev-ru
+task_kind: chapter
+objective: RAG-only chapter 1 analysis and direct Git publication of all individual canonical artifacts
+branch: chapter/information-systems-administration-bobyntsev-ru-0024
+initial_base_sha: d4daeb21f886ef6251cd37303dd9f68947726977
+last_observed_head_sha: 0db50afb326de24dbaee0fc289db969d58e8e544
+expected_source_sha256: a5d6a2677d4b0e33a34dec3b7aae8b77f711bb748046d25766becb479f66663f
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite
+  - no reading-progress mutation
+  - no ZIP or archive publication
+  - individual Git chapter files and read-back mandatory
+stage: COMPLETE
+completed_steps:
+  - step: Verified existing branch, PR 491, and 0/8 publication baseline
+    evidence_type: pr
+    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/491
+  - step: Verified source-bound RAG chapter boundary from p0024-c01 through p0050-c01, next chapter starts p0051-c01
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/information-systems-administration-bobyntsev-ru/rag/chunks/p0001-p0100/p0024-c01.md
+  - step: Verified accepted full-book RAG and historical READY evidence in merged PR 416
+    evidence_type: pr
+    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/416
+  - step: Published and individually read back all six required chapter files
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/573d399311419eb3aafe83ab6a3f84ac16862c26
+  - step: Published and individually read back review-questions, review-answers and source-findings
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/2aa35de6af11f3d4c082bbb31b39d42033ccc248
+  - step: Updated chapter index to one complete collection of eight, with CI pending
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/17e12475727fd6305b4243a41389f54a224be9be
+  - step: GitHub chapter-notes/SVG validation passed for nine individual chapter artifacts
+    evidence_type: ci
+    reference: https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38865448781
+  - step: Chapter index records one of eight chapters and successful artifact validation
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/0db50afb326de24dbaee0fc289db969d58e8e544
+pending_steps:
+  - Validate final branch HEAD after checkpoint metadata commit; do not claim final-head CI PASS without read-back
+  - PR 491 remains open and unmerged; separately review before merging
+  - Analyze chapter 2 only upon a new explicit user command
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38865448781
+first_safe_next_action: Re-fetch branch HEAD, PR 491, file set and final-head CI before any further Git mutation
+blocker: Not applicable
+last_observed_at: Not applicable

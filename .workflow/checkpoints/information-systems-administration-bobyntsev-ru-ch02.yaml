@@ -1,0 +1,42 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: information-systems-administration-bobyntsev-ru-ch02
+repository: vsp-corp/biblioteka-vsp
+book_id: information-systems-administration-bobyntsev-ru
+task_kind: chapter
+objective: RAG-only chapter 2 analysis, individual Git publication, validation and PR 491 update
+branch: chapter/information-systems-administration-bobyntsev-ru-0024
+initial_base_sha: b22800393093b369ca7b4780852cdce25a5c66e8
+last_observed_head_sha: ac2b6a79286f20dd8b051ac8f6645eaf10b36c7b
+expected_source_sha256: a5d6a2677d4b0e33a34dec3b7aae8b77f711bb748046d25766becb479f66663f
+constraints:
+  - no direct main changes
+  - no force-push
+  - no source/RAG rewrite
+  - no reading-progress mutation
+  - no ZIP or archive publication
+  - individual Git files and read-back mandatory
+stage: CI_PENDING
+completed_steps:
+  - step: Verified branch and open PR 491; chapter 1 publication 1/8 and CI PASS
+    evidence_type: pr
+    reference: https://github.com/vsp-corp/biblioteka-vsp/pull/491
+  - step: Confirmed chapter boundary PDF pp 51-85 using RAG p0051-c01 to p0085-c01 and chapter 3 p0086-c01
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/information-systems-administration-bobyntsev-ru/rag/chunks/p0001-p0100/p0085-c01.md
+  - step: Confirmed RAG ACCEPTED and source SHA binding
+    evidence_type: file-readback
+    reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/information-systems-administration-bobyntsev-ru/rag/acceptance.yaml
+  - step: All nine separate chapter 2 files verified, including 46 RAG questions and answers
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/217bf10e4731515412233aeb5e7b450a241862c6
+  - step: Updated chapter index to 2/8 and verified Git read-back
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/ac2b6a79286f20dd8b051ac8f6645eaf10b36c7b
+pending_steps:
+  - Verify chapter-notes and SVG CI at final branch HEAD
+  - Update and verify PR 491 metadata
+  - Chapter 3 only on explicit user command
+last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/ac2b6a79286f20dd8b051ac8f6645eaf10b36c7b
+first_safe_next_action: Re-fetch branch HEAD, chapter 2 file paths and current checkpoint before write or retry
+blocker: Not applicable
+last_observed_at: Not applicable
