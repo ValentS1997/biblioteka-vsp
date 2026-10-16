@@ -6,7 +6,7 @@ task_kind: chapter
 objective: "RAG-only analysis and direct individual Git publication of chapter 1, Начало работы с Git."
 branch: chapter/0019-ch01-nachalo-raboty-s-git-20261016
 initial_base_sha: 4d330532125233f2040640dbdb0b0cedebbd6c1e
-last_observed_head_sha: 4d330532125233f2040640dbdb0b0cedebbd6c1e
+last_observed_head_sha: bb26d67c9c5a05e49ce76a8deded82f7caf76dae
 expected_source_sha256: 5eb8376c990ff58103fb110ae36467bb407f015bedf45aa2db6dae5678f8b5fb
 constraints:
   - "no direct main changes"
@@ -15,7 +15,7 @@ constraints:
   - "no source/RAG rewrite"
   - "no reading-progress mutation"
   - "no archive delivery for chapter artifacts"
-stage: IN_PROGRESS
+stage: CI_PENDING
 completed_steps:
   - step: "Verify canonical v1.2/v1.0/v1.4/v1.8 and session recovery v1.0"
     evidence_type: file-readback
@@ -26,12 +26,16 @@ completed_steps:
   - step: "Verify book source hash and ACCEPTED ingestion; chapter 1 begins PDF 10 and chapter 2 starts PDF 16"
     evidence_type: file-readback
     reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/professional-git-ru/rag/chunks/p0001-p0100/p0010-c01.md"
+  - step: "Commit and individually read back README.md, cheatsheet.md, commands.md, diagram.md, compact and detailed SVG, plus source-findings.md"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/36adea150946dbbb557d13757e69eb5537e6b3be"
+  - step: "Update chapter index and verify chapter 1 out of 61 in branch; main remains at zero"
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/bb26d67c9c5a05e49ce76a8deded82f7caf76dae"
 pending_steps:
-  - "Commit README.md, cheatsheet.md, commands.md, diagram.md, compact and detailed SVG, conditional source-findings.md as separate Git paths."
-  - "Update book-level chapter index after six mandatory files are committed."
   - "Verify individual Git read-back, progress and chapter notes validation CI."
   - "Open stacked PR into chapter/0019-publication-plan-20261015 if validation passes; never claim merged-to-main."
-last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/pull/492"
-first_safe_next_action: "Re-fetch this branch HEAD, chapter directory and chapter plan; write only missing artifact paths."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/commit/bb26d67c9c5a05e49ce76a8deded82f7caf76dae"
+first_safe_next_action: "Re-fetch branch HEAD and chapter notes CI results; if PASS, create/reconcile chapter 01 stacked PR with base chapter/0019-publication-plan-20261015."
 blocker: "Not applicable"
 last_observed_at: "Not applicable"
