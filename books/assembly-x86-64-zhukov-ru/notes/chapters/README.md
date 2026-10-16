@@ -5,8 +5,8 @@ Book ID: `assembly-x86-64-zhukov-ru`. Canonical RAG source SHA-256: `f65a7ec8814
 ## План и прогресс публикации
 
 - [RAG-verified план: 21 глава](plan.yaml). Основание: оглавление (RAG PDF p. 4–8), самостоятельные заголовки глав в RAG-чанках и предисловие PDF p. 11.
-- **В текущей chapter-ветке:** 19/21 (90,5%); осталось 2, следующая — №20 «Переход в 64-битовый режим».
-- **В `main` на начало работы над главой 19:** 18/21. До merge главы 19 в `main` опубликованы первые восемнадцать глав; сверять HEAD независимо.
+- **В текущей chapter-ветке:** 20/21 (95,2%); осталась 1 глава, следующая — №21 «Особенности 64-битового режима».
+- **В `main` на начало работы над главой 20:** 19/21. До merge главы 20 в `main` опубликованы первые девятнадцать глав; сверять HEAD независимо.
 
 ## Опубликованные главы (отдельные Git-файлы)
 
@@ -47,6 +47,8 @@ Book ID: `assembly-x86-64-zhukov-ru`. Canonical RAG source SHA-256: `f65a7ec8814
 18. [Глава 18. Привилегии](chapter-18-privilegii/README.md) — [шпаргалка](chapter-18-privilegii/cheatsheet.md), [команды](chapter-18-privilegii/commands.md), [диаграмма](chapter-18-privilegii/diagram.md), [краткая SVG](chapter-18-privilegii/visual-cheatsheet.svg), [подробная SVG](chapter-18-privilegii/visual-cheatsheet-detailed.svg), [вопросы](chapter-18-privilegii/review-questions.md), [разборы](chapter-18-privilegii/review-answers.md), [source findings](chapter-18-privilegii/source-findings.md).
 
 19. [Глава 19. Переход в режим совместимости](chapter-19-perehod-v-rezhim-sovmestimosti/README.md) — [шпаргалка](chapter-19-perehod-v-rezhim-sovmestimosti/cheatsheet.md), [команды](chapter-19-perehod-v-rezhim-sovmestimosti/commands.md), [диаграмма](chapter-19-perehod-v-rezhim-sovmestimosti/diagram.md), [краткая SVG](chapter-19-perehod-v-rezhim-sovmestimosti/visual-cheatsheet.svg), [подробная SVG](chapter-19-perehod-v-rezhim-sovmestimosti/visual-cheatsheet-detailed.svg), [вопросы](chapter-19-perehod-v-rezhim-sovmestimosti/review-questions.md), [разборы](chapter-19-perehod-v-rezhim-sovmestimosti/review-answers.md), [source findings](chapter-19-perehod-v-rezhim-sovmestimosti/source-findings.md).
+
+20. [Глава 20. Переход в 64-битовый режим](chapter-20-perehod-v-64-bitovyy-rezhim/README.md) — [шпаргалка](chapter-20-perehod-v-64-bitovyy-rezhim/cheatsheet.md), [команды](chapter-20-perehod-v-64-bitovyy-rezhim/commands.md), [диаграмма](chapter-20-perehod-v-64-bitovyy-rezhim/diagram.md), [краткая SVG](chapter-20-perehod-v-64-bitovyy-rezhim/visual-cheatsheet.svg), [подробная SVG](chapter-20-perehod-v-64-bitovyy-rezhim/visual-cheatsheet-detailed.svg), [вопросы](chapter-20-perehod-v-64-bitovyy-rezhim/review-questions.md), [разборы](chapter-20-perehod-v-64-bitovyy-rezhim/review-answers.md), [source findings](chapter-20-perehod-v-64-bitovyy-rezhim/source-findings.md).
 
 ## Политика
 
