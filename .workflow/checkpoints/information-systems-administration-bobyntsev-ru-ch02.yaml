@@ -26,18 +26,16 @@ completed_steps:
   - step: Confirmed RAG ACCEPTED and source SHA binding
     evidence_type: file-readback
     reference: https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/information-systems-administration-bobyntsev-ru/rag/acceptance.yaml
+  - step: All nine separate chapter 2 files verified, including 46 RAG questions and answers
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/217bf10e4731515412233aeb5e7b450a241862c6
+  - step: Updated chapter index to 2/8 and verified Git read-back
+    evidence_type: commit
+    reference: https://github.com/vsp-corp/biblioteka-vsp/commit/ac2b6a79286f20dd8b051ac8f6645eaf10b36c7b
 pending_steps:
-  - Create and read back chapter 2 README.md
-  - Create and read back chapter 2 cheatsheet.md
-  - Create and read back chapter 2 commands.md
-  - Create and read back chapter 2 diagram.md
-  - Create and read back chapter 2 visual-cheatsheet.svg
-  - Create and read back chapter 2 visual-cheatsheet-detailed.svg
-  - Create and read back 46-question review-questions.md
-  - Create and read back RAG-only review-answers.md
-  - Create and read back source-findings.md
-  - Update chapter index to 2/8 only after full Git read-back
-  - Verify CI for branch head, update PR 491 and checkpoint
+  - Verify chapter-notes and SVG CI at final branch HEAD
+  - Update and verify PR 491 metadata
+  - Chapter 3 only on explicit user command
 last_verified_evidence: https://github.com/vsp-corp/biblioteka-vsp/commit/ac2b6a79286f20dd8b051ac8f6645eaf10b36c7b
 first_safe_next_action: Re-fetch branch HEAD, chapter 2 file paths and current checkpoint before write or retry
 blocker: Not applicable
