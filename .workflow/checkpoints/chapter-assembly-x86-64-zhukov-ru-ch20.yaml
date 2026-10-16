@@ -6,14 +6,14 @@ task_kind: chapter
 objective: "RAG-only chapter 20 transition to 64-bit mode, gated Git publication"
 branch: chapter/assembly-x86-64-zhukov-ru-ch20
 initial_base_sha: 5ff6ad3608454e4086bc79ef9bd39678835d06ad
-last_observed_head_sha: 660e045801f6740ac2e49808377b92838831254f
+last_observed_head_sha: b47b5aae6b5346a4e22a513f2b13548cea0d46f6
 expected_source_sha256: f65a7ec88148cb29d7e75d1ce34ef14c3a7ddf8af264ec7abcf9b8a0437220c2
 constraints:
   - no direct main modification
   - no source or RAG rewrite
   - no reading-status changes
   - no force-push and no archive-only fallback
-stage: IN_PROGRESS
+stage: CI_PENDING
 completed_steps:
   - step: "Canonical workflow contracts ACCEPTED and RAG acceptance ACCEPTED"
     evidence_type: file-readback
@@ -24,9 +24,13 @@ completed_steps:
   - step: "Six mandatory chapter 20 artifacts individually published and verified by Git read-back"
     evidence_type: file-readback
     reference: "https://github.com/vsp-corp/biblioteka-vsp/tree/660e045801f6740ac2e49808377b92838831254f/books/assembly-x86-64-zhukov-ru/notes/chapters/chapter-20-perehod-v-64-bitovyy-rezhim"
+  - step: "Nine chapter files and index 20/21 individually Git read-back verified"
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/tree/b47b5aae6b5346a4e22a513f2b13548cea0d46f6/books/assembly-x86-64-zhukov-ru/notes/chapters/chapter-20-perehod-v-64-bitovyy-rezhim"
+  - step: "Main drift zero; diff contains only chapter notes, index, temporary checkpoint"
+    evidence_type: git-compare
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/compare/main...chapter/assembly-x86-64-zhukov-ru-ch20"
 pending_steps:
-  - "Publish review questions, answers and source findings"
-  - "Update chapter index 20/21"
   - "Validate CI and main drift, PR only after PASS"
   - "Check PR CI, remove checkpoint, final-head CI, safe merge"
   - "Git read-back merged chapter artifacts and postmerge CI"
