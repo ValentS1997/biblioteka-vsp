@@ -72,8 +72,8 @@ def extract_info(item):
 
     chapter_index = notes_root / "chapters" / "README.md"
     synthesis_index = notes_root / "book-synthesis" / "README.md"
-    if chapter_dirs and chapter_index.is_file():
-        landing = chapter_index
+    if chapter_dirs:
+        landing = chapter_index if chapter_index.is_file() else notes_root / "chapters"
     elif synthesis_index.is_file() and artifacts:
         landing = synthesis_index
     else:
