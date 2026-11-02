@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - "registry/**"
+      - "books/**/notes/**"
+      - "templates/chapter-publication-v1.0.yaml"
       - "books/index.yaml"
       - "books/*/reading/progress.yaml"
       - "books/*/rag/manifest.yaml"
@@ -13,6 +15,8 @@ on:
   push:
     paths:
       - "registry/**"
+      - "books/**/notes/**"
+      - "templates/chapter-publication-v1.0.yaml"
       - "books/index.yaml"
       - "books/*/reading/progress.yaml"
       - "books/*/rag/manifest.yaml"

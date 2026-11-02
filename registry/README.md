@@ -47,46 +47,46 @@
 
 ## Покрытие knowledge-проектов
 
-Показывает состояние артефактов, которые реально находятся в `main`. `Проект` — подтверждённый пользователем статус книжного чата; `Есть RAG` — derived из `rag/manifest.yaml`; `Выжимки` — derived из фактических study artifacts в `notes/`.
+Показывает состояние артефактов, которые реально находятся в `main`. `Проект` — подтверждённый пользователем статус книжного чата; `Есть RAG` — derived из `rag/manifest.yaml`; `Выжимки` — derived из фактических study artifacts в `notes/`; при наличии материалов значение ведёт к их списку.
 
 | Инв. № | Knowledge ID | Книга | Проект | Есть RAG | Выжимки |
 |:---:|---|---|:---:|:---:|:---:|
-| `0001` | `kubernetes-in-action-marko-luksa-ru` | **Kubernetes в действии** | Завершено | Да | Да (18 гл.) |
-| `0003` | `computer-networks-olifer-7e-ru-2026` | **Компьютерные сети. Принципы, технологии, протоколы** | Завершено | Да | Да (32 гл.) |
-| `0004` | `computer-networks-6e-ru-2023` | **Компьютерные сети** | Завершено | Да | Да (9 гл.) |
-| `0005` | `modern-operating-systems-tanenbaum-bos-4e-ru` | **Современные операционные системы** | Завершено | Да | Да (13 гл.) |
-| `0006` | `computer-architecture-tanenbaum-austin-6e-ru` | **Архитектура компьютера** | Завершено | Да | Да (9 гл.) |
-| `0007` | `unix-linux-system-administration-handbook-5e-ru-2020` | **Unix и Linux: руководство системного администратора** | Завершено | Да | Да (32 гл.) |
-| `0008` | `sql-pocket-guide-alice-zhao-4e-ru` | **SQL. Карманный справочник** | Завершено | Да | Да (10 гл.) |
-| `0009` | `distributed-systems-patterns-brendan-burns-ru` | **Распределенные системы. Паттерны проектирования** | Завершено | Да | Да (13 гл.) |
-| `0010` | `rag-generative-ai-denis-rothman-ru` | **RAG и генеративный ИИ. Создаем собственные RAG-пайплайны с помощью LlamaIndex, Deep Lake и Pinecone** | Завершено | Да | Да (10 гл.) |
-| `0011` | `modern-system-administration-jennifer-davis-ru` | **Современное системное администрирование** | [Needs confirmation] | Да | — |
-| `0012` | `kali-linux-in-action-skabtsov-2e-ru` | **Kali Linux в действии. Аудит безопасности информационных систем** | [Needs confirmation] | Да | — |
-| `0014` | `docker-demystified-saibal-ghosh-ru-2023` | **Docker без секретов** | Завершено | Да | Да (8 гл.) |
-| `0015` | `linux-go-low-level-programming-tsilyurik-ru` | **Linux и Go. Эффективное низкоуровневое программирование** | Завершено | Да | Да (14 гл.) |
-| `0016` | `information-security-grodzensky-ru` | **Информационная безопасность: учебное пособие** | Завершено | Да | Да (16 гл.) |
-| `0017` | `assembly-x86-64-zhukov-ru` | **Ассемблер и программная модель процессоров x86/64** | [Needs confirmation] | Да | — |
-| `0018` | `python-crash-course-3e-ru-2024` | **Изучаем Python: программирование игр, визуализация данных, веб-приложения. 3-е изд.** | Завершено | Да | Да (20 гл.) |
-| `0019` | `professional-git-ru` | **Профессиональная работа с Git** | [Needs confirmation] | Да | — |
-| `0020` | `zabbix-7-monitoring-it-infrastructure-ru` | **Zabbix 7: мониторинг ИТ-инфраструктуры** | [Needs confirmation] | Да | — |
-| `0021` | `herding-cats-j-hank-rainwater-ru` | **Как пасти котов. Наставление для программистов, руководящих другими программистами** | [Needs confirmation] | Да | — |
-| `0022` | `mama-ya-timlid-ru` | **Мама, я тимлид! Практические советы по руководству IT-командой** | Завершено | Да | Да (9 гл.) |
-| `0023` | `cybersecurity-risk-hubbard-seiersen-ru` | **Как оценить риски в кибербезопасности: лучшие инструменты и практики** | Завершено | Да | Да (12 гл.) |
+| `0001` | `kubernetes-in-action-marko-luksa-ru` | **Kubernetes в действии** | Завершено | Да | [Да (18 гл.)](../books/kubernetes-in-action-marko-luksa-ru/notes/chapters/README.md) |
+| `0003` | `computer-networks-olifer-7e-ru-2026` | **Компьютерные сети. Принципы, технологии, протоколы** | Завершено | Да | [Да (32 гл.)](../books/computer-networks-olifer-7e-ru-2026/notes/chapters/README.md) |
+| `0004` | `computer-networks-6e-ru-2023` | **Компьютерные сети** | Завершено | Да | [Да (9 гл.)](../books/computer-networks-6e-ru-2023/notes/chapters/README.md) |
+| `0005` | `modern-operating-systems-tanenbaum-bos-4e-ru` | **Современные операционные системы** | Завершено | Да | [Да (13 гл.)](../books/modern-operating-systems-tanenbaum-bos-4e-ru/notes/chapters/README.md) |
+| `0006` | `computer-architecture-tanenbaum-austin-6e-ru` | **Архитектура компьютера** | Завершено | Да | [Да (9 гл.)](../books/computer-architecture-tanenbaum-austin-6e-ru/notes/chapters/README.md) |
+| `0007` | `unix-linux-system-administration-handbook-5e-ru-2020` | **Unix и Linux: руководство системного администратора** | Завершено | Да | [Да (32 гл.)](../books/unix-linux-system-administration-handbook-5e-ru-2020/notes/chapters/README.md) |
+| `0008` | `sql-pocket-guide-alice-zhao-4e-ru` | **SQL. Карманный справочник** | Завершено | Да | [Да (10 гл.)](../books/sql-pocket-guide-alice-zhao-4e-ru/notes/chapters/README.md) |
+| `0009` | `distributed-systems-patterns-brendan-burns-ru` | **Распределенные системы. Паттерны проектирования** | Завершено | Да | [Да (13 гл.)](../books/distributed-systems-patterns-brendan-burns-ru/notes/chapters/README.md) |
+| `0010` | `rag-generative-ai-denis-rothman-ru` | **RAG и генеративный ИИ. Создаем собственные RAG-пайплайны с помощью LlamaIndex, Deep Lake и Pinecone** | Завершено | Да | [Да (10 гл.)](../books/rag-generative-ai-denis-rothman-ru/notes/chapters/README.md) |
+| `0011` | `modern-system-administration-jennifer-davis-ru` | **Современное системное администрирование** | [Needs confirmation] | Да | [Да (21 гл.)](../books/modern-system-administration-jennifer-davis-ru/notes/chapters/README.md) |
+| `0012` | `kali-linux-in-action-skabtsov-2e-ru` | **Kali Linux в действии. Аудит безопасности информационных систем** | [Needs confirmation] | Да | [Да (17 гл.)](../books/kali-linux-in-action-skabtsov-2e-ru/notes/chapters/README.md) |
+| `0014` | `docker-demystified-saibal-ghosh-ru-2023` | **Docker без секретов** | Завершено | Да | [Да (8 гл.)](../books/docker-demystified-saibal-ghosh-ru-2023/notes/chapters/README.md) |
+| `0015` | `linux-go-low-level-programming-tsilyurik-ru` | **Linux и Go. Эффективное низкоуровневое программирование** | Завершено | Да | [Да (14 гл.)](../books/linux-go-low-level-programming-tsilyurik-ru/notes/chapters/README.md) |
+| `0016` | `information-security-grodzensky-ru` | **Информационная безопасность: учебное пособие** | Завершено | Да | [Да (16 гл.)](../books/information-security-grodzensky-ru/notes/chapters/README.md) |
+| `0017` | `assembly-x86-64-zhukov-ru` | **Ассемблер и программная модель процессоров x86/64** | [Needs confirmation] | Да | [Да (21 гл.)](../books/assembly-x86-64-zhukov-ru/notes/chapters/README.md) |
+| `0018` | `python-crash-course-3e-ru-2024` | **Изучаем Python: программирование игр, визуализация данных, веб-приложения. 3-е изд.** | Завершено | Да | [Да (20 гл.)](../books/python-crash-course-3e-ru-2024/notes/chapters/README.md) |
+| `0019` | `professional-git-ru` | **Профессиональная работа с Git** | [Needs confirmation] | Да | [Да (1 гл.)](../books/professional-git-ru/notes/chapters/README.md) |
+| `0020` | `zabbix-7-monitoring-it-infrastructure-ru` | **Zabbix 7: мониторинг ИТ-инфраструктуры** | [Needs confirmation] | Да | [Да (13 гл.)](../books/zabbix-7-monitoring-it-infrastructure-ru/notes/chapters/README.md) |
+| `0021` | `herding-cats-j-hank-rainwater-ru` | **Как пасти котов. Наставление для программистов, руководящих другими программистами** | [Needs confirmation] | Да | [Да (10 гл.)](../books/herding-cats-j-hank-rainwater-ru/notes/chapters/README.md) |
+| `0022` | `mama-ya-timlid-ru` | **Мама, я тимлид! Практические советы по руководству IT-командой** | Завершено | Да | [Да (9 гл.)](../books/mama-ya-timlid-ru/notes/chapters/README.md) |
+| `0023` | `cybersecurity-risk-hubbard-seiersen-ru` | **Как оценить риски в кибербезопасности: лучшие инструменты и практики** | Завершено | Да | [Да (12 гл.)](../books/cybersecurity-risk-hubbard-seiersen-ru/notes/chapters/README.md) |
 | `0024` | `information-systems-administration-bobyntsev-ru` | **Основы администрирования информационных систем: учебное пособие** | [Needs confirmation] | Да | — |
-| `0026` | `ethical-hacking-basics-ru` | **Основы этичного хакинга** | Завершено | Да | Да (12 гл.) |
-| `0027` | `a-byte-of-python-swaroop-chitlur-ru` | **A Byte of Python / Укус Питона** | Завершено | Да | Да (20 гл.) |
-| `0029` | `ai-engineering-chip-huyen-ru` | **AI-инженерия. Построение приложений с использованием базовых моделей** | Завершено | Да | Да (10 гл.) |
-| `0030` | `1c-enterprise-8-3-radchenko-khrustaleva-3e-ru` | **1С:Предприятие 8.3. Практическое пособие разработчика. Примеры и типовые приемы. Издание 3** | [Needs confirmation] | Да | — |
-| `0031` | `designing-machine-learning-systems-chip-huyen-ru` | **Проектирование систем машинного обучения** | [Needs confirmation] | Да | — |
-| `0032` | `bash-idioms-olbing-vossen-ru` | **Идиомы bash. Мощные, гибкие и понятные сценарии командной оболочки** | [Needs confirmation] | Да | — |
-| `0033` | `kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026` | **Kubernetes. Полное руководство по развертыванию и управлению Kubernetes в облачных и локальных средах. 2-е изд.** | [Needs confirmation] | Да | — |
-| `0034` | `how-linux-works-brian-ward-3e-ru-2022` | **Внутреннее устройство Linux** | Завершено | Да | Да (17 гл.) |
-| `0035` | `vysokonagruzhennye-prilozheniya-martin-kleppmann-ru` | **Высоконагруженные приложения: программирование, масштабирование, поддержка** | Завершено | Да | Да (12 гл.) |
-| `0036` | `business-process-improvement-hbsp-ru` | **Руководство по улучшению бизнес-процессов** | [Needs confirmation] | Да | — |
-| `0037` | `go-basics-chernyshev-ru` | **Основы Go** | Завершено | Да | Да (8 гл.) |
-| `0039` | `linux-networks-tsilyurik-ru-2024` | **Сети Linux. Модели и приложения** | [Needs confirmation] | Да | — |
-| `0040` | `prometheus-up-and-running-pivotto-brazil-ru-2023` | **Запускаем Prometheus. Мониторинг инфраструктуры и приложений** | [Needs confirmation] | Да | — |
-| — | `dynamic-incident-response-joshua-wright-en-2026` | **Dynamic Incident Response: A Framework for Security Teams** | Завершено | Да | Да (20 гл.) |
+| `0026` | `ethical-hacking-basics-ru` | **Основы этичного хакинга** | Завершено | Да | [Да (12 гл.)](../books/ethical-hacking-basics-ru/notes/chapters/README.md) |
+| `0027` | `a-byte-of-python-swaroop-chitlur-ru` | **A Byte of Python / Укус Питона** | Завершено | Да | [Да (20 гл.)](../books/a-byte-of-python-swaroop-chitlur-ru/notes/chapters/README.md) |
+| `0029` | `ai-engineering-chip-huyen-ru` | **AI-инженерия. Построение приложений с использованием базовых моделей** | Завершено | Да | [Да (10 гл.)](../books/ai-engineering-chip-huyen-ru/notes/chapters/README.md) |
+| `0030` | `1c-enterprise-8-3-radchenko-khrustaleva-3e-ru` | **1С:Предприятие 8.3. Практическое пособие разработчика. Примеры и типовые приемы. Издание 3** | [Needs confirmation] | Да | [Да (1 гл.)](../books/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru/notes/chapters/README.md) |
+| `0031` | `designing-machine-learning-systems-chip-huyen-ru` | **Проектирование систем машинного обучения** | [Needs confirmation] | Да | [Да (11 гл.)](../books/designing-machine-learning-systems-chip-huyen-ru/notes/chapters/README.md) |
+| `0032` | `bash-idioms-olbing-vossen-ru` | **Идиомы bash. Мощные, гибкие и понятные сценарии командной оболочки** | [Needs confirmation] | Да | [Да (11 гл.)](../books/bash-idioms-olbing-vossen-ru/notes/chapters/README.md) |
+| `0033` | `kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026` | **Kubernetes. Полное руководство по развертыванию и управлению Kubernetes в облачных и локальных средах. 2-е изд.** | [Needs confirmation] | Да | [Да (21 гл.)](../books/kubernetes-complete-guide-madapparambat-mckendrick-2e-ru-2026/notes/chapters) |
+| `0034` | `how-linux-works-brian-ward-3e-ru-2022` | **Внутреннее устройство Linux** | Завершено | Да | [Да (17 гл.)](../books/how-linux-works-brian-ward-3e-ru-2022/notes/chapters/README.md) |
+| `0035` | `vysokonagruzhennye-prilozheniya-martin-kleppmann-ru` | **Высоконагруженные приложения: программирование, масштабирование, поддержка** | Завершено | Да | [Да (12 гл.)](../books/vysokonagruzhennye-prilozheniya-martin-kleppmann-ru/notes/chapters/README.md) |
+| `0036` | `business-process-improvement-hbsp-ru` | **Руководство по улучшению бизнес-процессов** | [Needs confirmation] | Да | [Да (6 гл.)](../books/business-process-improvement-hbsp-ru/notes/chapters/README.md) |
+| `0037` | `go-basics-chernyshev-ru` | **Основы Go** | Завершено | Да | [Да (8 гл.)](../books/go-basics-chernyshev-ru/notes/chapters/README.md) |
+| `0039` | `linux-networks-tsilyurik-ru-2024` | **Сети Linux. Модели и приложения** | [Needs confirmation] | Да | [Да (5 гл.)](../books/linux-networks-tsilyurik-ru-2024/notes/chapters/README.md) |
+| `0040` | `prometheus-up-and-running-pivotto-brazil-ru-2023` | **Запускаем Prometheus. Мониторинг инфраструктуры и приложений** | [Needs confirmation] | Да | [Да (21 гл.)](../books/prometheus-up-and-running-pivotto-brazil-ru-2023/notes/chapters/README.md) |
+| — | `dynamic-incident-response-joshua-wright-en-2026` | **Dynamic Incident Response: A Framework for Security Teams** | Завершено | Да | [Да (20 гл.)](../books/dynamic-incident-response-joshua-wright-en-2026/notes/chapters/README.md) |
 
 ## Migration gaps
 
@@ -169,7 +169,7 @@ Pre-transfer audit завершённых knowledge-проектов: прове
 | RAG READY (inventory-linked) | **35** |
 | RAG READY (knowledge total) | **36** |
 | Проектов завершено (user-confirmed '+') | **22** |
-| Knowledge entries с выжимками | **22** |
+| Knowledge entries с выжимками | **35** |
 | Завершено, но RAG отсутствует в main | **0** |
 | Завершено, но выжимки отсутствуют в main | **0** |
 | SHA-256 Excel snapshot | `b97daed242dae9eeefd46317c2ca7665d1655b85189068b8a5f24f99a5f5aef2` |

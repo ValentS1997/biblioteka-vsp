@@ -45,6 +45,7 @@ The generated README derives:
 - reading from `reading_progress`;
 - RAG from `rag_manifest`;
 - study/extract coverage from substantive files under the linked `notes/` path;
+- the `Выжимки` link from an existing chapter index (or chapter directory if its index is missing), book synthesis index, or substantive extract file; no link is shown when no extract exists;
 - project completion from `books/index.yaml: project_status`.
 
 `project_status: completed` is a user-confirmed workflow fact and is separate
@@ -77,7 +78,7 @@ python scripts/generate_registry_readme.py
 python scripts/generate_registry_readme.py --check
 ```
 
-`registry/README.md` is generated and non-canonical. Manual status edits are overwritten/detected as stale.
+`registry/README.md` is generated and non-canonical. Manual status or link edits are overwritten/detected as stale. When book notes are published, regenerate and commit the registry in the same branch; the registry validation workflow checks this for changes under `books/**/notes/**`.
 
 ### Full registry table invariant
 
