@@ -81,7 +81,8 @@ publication:
   mandatory_actions:
     - "Create or update each required chapter artifact as its own Git path in the book branch."
     - "Update books/<book_id>/notes/chapters/README.md with links and progress to committed completed chapters."
-    - "Read back each individual file from GitHub and verify the commit SHA/branch."
+    - "Regenerate registry/README.md from the published notes on the same branch and commit its updated Выжимки link; never edit the generated registry by hand."
+    - "Read back each individual file and the registry link from GitHub and verify the commit SHA/branch."
     - "Run chapter-notes validation/CI and report the exact result. Create/use PR according to Git governance; do not claim main publication before merge."
   forbidden_delivery:
     - "ZIP, RAR, 7z, tar, tgz, gz or any archive as the result of chapter work."
@@ -114,6 +115,7 @@ acceptance_criteria:
   - "Startup displays verified total or explicit unknown and Git-backed progress."
   - "Every chapter artifact is a separate committed Git file."
   - "Each published chapter is linked from the book's chapter index."
+  - "The generated registry links to the book's published extracts when they exist."
   - "Git read-back and validation are reported."
   - "Archive-only delivery never satisfies completion."
   - "Incomplete publication is honestly marked PARTIAL/BLOCKED with exact missing work."
