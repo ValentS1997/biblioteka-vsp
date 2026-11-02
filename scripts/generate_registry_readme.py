@@ -70,17 +70,29 @@ def extract_info(item):
         if len(parts) >= 3 and parts[0] == "chapters":
             chapter_dirs.add(parts[1])
 
+    chapter_index = notes_root / "chapters" / "README.md"
+    synthesis_index = notes_root / "book-synthesis" / "README.md"
+    if chapter_dirs and chapter_index.is_file():
+        landing = chapter_index
+    elif synthesis_index.is_file() and artifacts:
+        landing = synthesis_index
+    else:
+        landing = sorted(artifacts)[0] if artifacts else None
+
     return {
         "has": bool(artifacts),
         "chapter_count": len(chapter_dirs),
         "artifact_count": len(artifacts),
+        "landing_path": landing.relative_to(ROOT).as_posix() if landing else None,
     }
 
 def extracts_label(info):
     if not info.get("has"):
         return "—"
     chapter_count = int(info.get("chapter_count") or 0)
-    return f"Да ({chapter_count} гл.)" if chapter_count else "Да"
+    label = f"Да ({chapter_count} гл.)" if chapter_count else "Да"
+    landing_path = info.get("landing_path")
+    return f"[{label}](../{landing_path})" if landing_path else label
 
 def inventory_number_label(books):
     values = [str(b["inventory_number"]) for b in books]
@@ -240,7 +252,8 @@ def render():
         "Показывает состояние артефактов, которые реально находятся в `main`. "
         "`Проект` — подтверждённый пользователем статус книжного чата; "
         "`Есть RAG` — derived из `rag/manifest.yaml`; "
-        "`Выжимки` — derived из фактических study artifacts в `notes/`.",
+        "`Выжимки` — derived из фактических study artifacts в `notes/`; "
+        "при наличии материалов значение ведёт к их списку.",
         "",
         "| Инв. № | Knowledge ID | Книга | Проект | Есть RAG | Выжимки |",
         "|:---:|---|---|:---:|:---:|:---:|",
