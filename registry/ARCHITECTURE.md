@@ -45,7 +45,7 @@ The generated README derives:
 - reading from `reading_progress`;
 - RAG from `rag_manifest`;
 - study/extract coverage from substantive files under the linked `notes/` path;
-- the `Выжимки` link from an existing chapter index, book synthesis index, or substantive extract file; no link is shown when no extract exists;
+- the `Выжимки` link from an existing chapter index (or chapter directory if its index is missing), book synthesis index, or substantive extract file; no link is shown when no extract exists;
 - project completion from `books/index.yaml: project_status`.
 
 `project_status: completed` is a user-confirmed workflow fact and is separate
