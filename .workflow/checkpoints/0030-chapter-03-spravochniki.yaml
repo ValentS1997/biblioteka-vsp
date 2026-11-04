@@ -1,0 +1,45 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: 0030-chapter-03-spravochniki
+repository: vsp-corp/biblioteka-vsp
+book_id: 1c-enterprise-8-3-radchenko-khrustaleva-3e-ru
+task_kind: chapter
+objective: "RAG-only chapter 03 Справочники, individual Git artifacts, CI and PR merge only after PASS."
+branch: chapter/0030-ch03-spravochniki-20261016
+initial_base_sha: 451378914f2ac510f78661ee643347c2685971d7
+last_observed_head_sha: ae207a5c74cb7f8ff351ac29c687da7596344a21
+expected_source_sha256: ce8fa0fbf0d8bb38f724ed04f130c2443c1e181eb51edafac692c4786874c923
+constraints:
+  - "no direct main changes"
+  - "no force-push"
+  - "no source/RAG rewrite without explicit authorization"
+  - "no reading-progress mutation without explicit user confirmation"
+  - "no archive delivery for chapter artifacts"
+  - "no bypass of CI on an unverified PR HEAD"
+stage: BLOCKED
+completed_steps:
+  - step: "Recovered main HEAD, RAG acceptance, chapter plan 28 and main-published count 1; chapter 02 PR #609 remains open and blocked."
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/609"
+  - step: "Resolved chapter 03 through RAG: PDF pages 55-120, 66 addressable chunks; chapter 04 begins on p121."
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru/rag/chunks/p0001-p0100/p0055-c01.md"
+  - step: "Read current contracts v1.2/v1.0/v1.4/v1.8 and verified accepted RAG and readiness-v1.8 binding."
+    evidence_type: other
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/templates/chapter-artifact-collection-v1.8.yaml"
+  - step: "Committed and read back all nine chapter-03 Markdown and SVG individual Git artifacts, including all 24 source review questions and RAG answers."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/e4fc06b7bad3ea049e2f57da5dd1bb129683afc3"
+  - step: "Published all nine chapter-03 artifacts as individual Git files and verified each by GitHub read-back; chapter index 2/28 on branch."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/ae207a5c74cb7f8ff351ac29c687da7596344a21"
+  - step: "Created chapter 03 PR #611; CI run 38879483605 failed on initial and rerun attempts before runner assignment."
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/611"
+pending_steps:
+  - "Resolve GitHub Actions pre-runner failure for PR #611: run 38879483605 attempts 1 and 2 failed (runner_id=0, runner_name empty, steps=[]); check GH Actions annotations and organization billing/runner availability."
+  - "After runner recovery, rerun Validate chapter notes and SVG and obtain PASS at exact current PR HEAD; fix any actual validator defects."
+  - "Only after PASS merge PR #611 and verify nine files, index and unchanged reading status in main."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38879483605"
+first_safe_next_action: "Read-only: verify branch HEAD, PR #611 status, latest GitHub Actions job/annotations and main. Do not merge until CI PASS on exact PR HEAD."
+blocker: "CHAPTER_PUBLICATION_BLOCKED: GitHub Actions PR run 38879483605 failed twice before a runner was assigned; no executed validation steps; cause unverified. Required CI PASS missing."
+last_observed_at: "Not applicable"

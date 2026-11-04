@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1180" viewBox="0 0 1560 1180" role="img" aria-labelledby="title"><title id="title">Подробная визуальная шпаргалка: справочники</title><rect width="1560" height="1180" fill="#f8fafc"/><rect x="32" y="23" width="1496" height="110" rx="15" fill="#18375a"/>
+<text x="65" y="74" fill="#fff" font-family="DejaVu Sans,Arial,sans-serif" font-size="35" font-weight="bold">Занятие 3 · Справочники — подробная карта</text>
+<text x="65" y="111" fill="#dce9f7" font-family="DejaVu Sans,Arial,sans-serif" font-size="20">RAG p0055:c01–p0120:c01 · PDF с. 55–120 · инв. 0030</text>
+<rect x="32" y="163" width="725" height="265" rx="15" fill="#e3eefc"/>
+<text x="58" y="209" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" font-weight="bold">1. Структура</text>
+<text x="58" y="252" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">Элемент: строка основного списка</text>
+<text x="58" y="291" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">Реквизиты: Код, Наименование, другие</text>
+<text x="58" y="330" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">Табличные части: повторяющиеся строки</text>
+<text x="58" y="369" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">Иерархия и справочник-владелец</text>
+<text x="58" y="408" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">Пять видов форм</text>
+<rect x="799" y="163" width="729" height="265" rx="15" fill="#e5f3e9"/>
+<text x="825" y="209" fill="#24533e" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" font-weight="bold">2. Клиенты</text>
+<text x="825" y="252" fill="#24533e" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">Имя: Клиенты · представление: Клиент</text>
+<text x="825" y="291" fill="#24533e" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">Длина кода: 9 · наименование: 50</text>
+<text x="825" y="330" fill="#24533e" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">Синоним Наименования: Ф. И. О.</text>
+<text x="825" y="369" fill="#24533e" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">Подсистемы: Бухгалтерия, ОказаниеУслуг</text>
+<text x="825" y="408" fill="#24533e" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">Клиент: создать — отдельная команда</text>
+<rect x="32" y="454" width="725" height="265" rx="15" fill="#fff"/>
+<text x="58" y="500" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" font-weight="bold">3. Сотрудники</text>
+<text x="58" y="543" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">ТрудоваяДеятельность: табличная часть</text>
+<text x="58" y="582" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">Организация/Должность: строка 100</text>
+<text x="58" y="621" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">Начало/Окончание: Дата без времени</text>
+<text x="58" y="660" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">Подсистемы: Услуги, РасчетЗарплаты</text>
+<text x="58" y="699" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">Деловой: две строки трудового стажа</text>
+<rect x="799" y="454" width="729" height="265" rx="15" fill="#fff"/>
+<text x="825" y="500" fill="#24533e" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" font-weight="bold">4. Номенклатура</text>
+<text x="825" y="543" fill="#24533e" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">Иерархический справочник</text>
+<text x="825" y="582" fill="#24533e" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">Корневые группы: Материалы / Услуги</text>
+<text x="825" y="621" fill="#24533e" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">Вложенные: Радиодетали, Прочее</text>
+<text x="825" y="660" fill="#24533e" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">Телевизоры, Стиральные машины</text>
+<text x="825" y="699" fill="#24533e" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">Еще → Переместить в группу</text>
+<rect x="32" y="745" width="725" height="265" rx="15" fill="#e3eefc"/>
+<text x="58" y="791" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" font-weight="bold">5. Склады</text>
+<text x="58" y="834" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">Представление объекта: Склад</text>
+<text x="58" y="873" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">Подсистемы: Услуги, УчетМатериалов</text>
+<text x="58" y="912" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">Быстрый выбор: выпадающий список</text>
+<text x="58" y="951" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">Основной: предопределённый элемент</text>
+<text x="58" y="990" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">Розничный: обычный элемент</text>
+<rect x="799" y="745" width="729" height="265" rx="15" fill="#e5f3e9"/>
+<text x="825" y="791" fill="#24533e" font-family="DejaVu Sans,Arial,sans-serif" font-size="26" font-weight="bold">6. Конфигурации и проверка</text>
+<text x="825" y="834" fill="#24533e" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">Основная: редактирует разработчик</text>
+<text x="825" y="873" fill="#24533e" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">Конфигурация БД: работает пользователь</text>
+<text x="825" y="912" fill="#24533e" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">Сохранить → Обновить конфигурацию БД</text>
+<text x="825" y="951" fill="#24533e" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">* означает несохранённое изменение</text>
+<text x="825" y="990" fill="#24533e" font-family="DejaVu Sans,Arial,sans-serif" font-size="19">&lt;!&gt; означает отличие от конфигурации БД</text>
+<rect x="32" y="1038" width="1496" height="116" rx="15" fill="#fff0d5"/>
+<text x="66" y="1081" fill="#715024" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="bold">Риск: добавление реквизитов меняет структуру; сеансы пользователей завершают.</text>
+<text x="66" y="1125" fill="#715024" font-family="DejaVu Sans,Arial,sans-serif" font-size="18">Отказоустойчивость и откат записей: [Needs confirmation]. Схемы только по тексту RAG.</text></svg>

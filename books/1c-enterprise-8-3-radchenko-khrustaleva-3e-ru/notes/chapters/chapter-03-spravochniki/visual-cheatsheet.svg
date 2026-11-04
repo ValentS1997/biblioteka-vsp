@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1370" height="810" viewBox="0 0 1370 810" role="img" aria-labelledby="title"><title id="title">Краткая визуальная шпаргалка: справочники</title><rect width="1370" height="810" fill="#f8fafc"/><rect x="30" y="25" width="1310" height="116" rx="15" fill="#18375a"/>
+<text x="63" y="76" fill="#fff" font-family="DejaVu Sans,Arial,sans-serif" font-size="36" font-weight="bold">Занятие 3 · Справочники</text>
+<text x="63" y="112" fill="#dce9f7" font-family="DejaVu Sans,Arial,sans-serif" font-size="20">1С:Предприятие 8.3 · PDF 55–120 · 2 часа 10 минут</text>
+<text x="42" y="188" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="bold">Четыре учебных справочника</text>
+<rect x="30" y="212" width="310" height="145" rx="15" fill="#e3eefc"/>
+<text x="47" y="254" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="bold">Клиенты</text>
+<text x="47" y="293" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="18">Код 9, имя 50</text>
+<text x="47" y="329" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="18">Ф. И. О.</text>
+<rect x="359" y="212" width="310" height="145" rx="15" fill="#e3eefc"/>
+<text x="376" y="254" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="bold">Сотрудники</text>
+<text x="376" y="293" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="18">ТрудоваяДеятельность</text>
+<text x="376" y="329" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="18">4 реквизита</text>
+<rect x="688" y="212" width="310" height="145" rx="15" fill="#e4f2e9"/>
+<text x="705" y="254" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="bold">Номенклатура</text>
+<text x="705" y="293" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="18">Иерархия</text>
+<text x="705" y="329" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="18">Группы и элементы</text>
+<rect x="1017" y="212" width="310" height="145" rx="15" fill="#e4f2e9"/>
+<text x="1034" y="254" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="bold">Склады</text>
+<text x="1034" y="293" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="18">Быстрый выбор</text>
+<text x="1034" y="329" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="18">Основной</text>
+<rect x="30" y="389" width="1310" height="99" rx="15" fill="#fff0d5"/>
+<text x="60" y="429" fill="#715024" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="bold">Справочник: элементы → реквизиты / табличные части / формы</text>
+<text x="60" y="462" fill="#715024" font-family="DejaVu Sans,Arial,sans-serif" font-size="18">Иерархия, владелец и предопределённые элементы задаются свойствами конфигурации.</text>
+<rect x="30" y="515" width="627" height="153" rx="15" fill="#e3eefc"/>
+<text x="58" y="561" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" font-weight="bold">Основная конфигурация</text>
+<text x="58" y="602" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="21">Редактирует разработчик</text>
+<text x="58" y="641" fill="#16385b" font-family="DejaVu Sans,Arial,sans-serif" font-size="18">Сохранить → обновить конфигурацию БД</text>
+<rect x="700" y="515" width="640" height="153" rx="15" fill="#e4f2e9"/>
+<text x="729" y="561" fill="#24533e" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" font-weight="bold">Конфигурация базы данных</text>
+<text x="729" y="602" fill="#24533e" font-family="DejaVu Sans,Arial,sans-serif" font-size="21">Работают пользователи</text>
+<text x="729" y="641" fill="#24533e" font-family="DejaVu Sans,Arial,sans-serif" font-size="18">При смене таблиц нужны завершённые сеансы</text>
+<rect x="30" y="692" width="1310" height="90" rx="15" fill="#eee8f9"/>
+<text x="60" y="732" fill="#583e75" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="bold">Внимание: обновление БД меняет состояние; откат данных [Needs confirmation].</text>
+<text x="60" y="762" fill="#583e75" font-family="DejaVu Sans,Arial,sans-serif" font-size="17">Источник: адресуемые чанки p0055:c01–p0120:c01. Рисунки из PDF не воспроизведены.</text></svg>
