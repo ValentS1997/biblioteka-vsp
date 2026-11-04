@@ -1,0 +1,44 @@
+schema: biblioteka-vsp/work-checkpoint/v1
+task_key: 0030-chapter-02-podsistemy
+repository: vsp-corp/biblioteka-vsp
+book_id: 1c-enterprise-8-3-radchenko-khrustaleva-3e-ru
+task_kind: chapter
+objective: "RAG-only analysis and direct individual Git publication of chapter 02 Подсистемы, then validated PR merge."
+branch: chapter/0030-ch02-podsistemy-20261016
+initial_base_sha: 451378914f2ac510f78661ee643347c2685971d7
+last_observed_head_sha: d77f8250c2957d80082d165f4c84bc29480b7451
+expected_source_sha256: ce8fa0fbf0d8bb38f724ed04f130c2443c1e181eb51edafac692c4786874c923
+constraints:
+  - "no direct main changes"
+  - "no force-push"
+  - "no source/RAG rewrite without explicit authorization"
+  - "no reading-progress mutation without explicit user confirmation"
+  - "no archive delivery for chapter artifacts"
+stage: BLOCKED
+completed_steps:
+  - step: "Checked chapter publication state: 1/28 merged in main; chapter 02 not yet present; main HEAD verified."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/451378914f2ac510f78661ee643347c2685971d7"
+  - step: "Read canonical chapter 02 RAG PDF pages 39–54; next lesson starts on PDF page 55."
+    evidence_type: file-readback
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru/rag/chunks/p0001-p0100/p0039-c01.md"
+  - step: "Verified accepted RAG source binding and previous readiness-check CI PASS."
+    evidence_type: ci
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38869098014"
+  - step: "Prepared chapter 02 separate Markdown and SVG artifacts with RAG references; publication commit read-back and CI pending."
+    evidence_type: other
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/blob/main/books/1c-enterprise-8-3-radchenko-khrustaleva-3e-ru/rag/chunks/p0001-p0100/p0039-c01.md"
+  - step: "Published nine individual chapter-02 Git files, updated chapter index to 2/28; verified each file through GitHub read-back."
+    evidence_type: commit
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/commit/d77f8250c2957d80082d165f4c84bc29480b7451"
+  - step: "Opened chapter-02 PR #609 after read-back; no merge executed."
+    evidence_type: pr
+    reference: "https://github.com/vsp-corp/biblioteka-vsp/pull/609"
+pending_steps:
+  - "Investigate chapter-notes CI failure: push run 38870832119 failed twice; PR run 38871100422 failed without recorded job steps or runner; log retrieval BlobNotFound."
+  - "Re-run checks once execution environment is available or diagnose concrete validation errors if job starts; require CI PASS at exact PR HEAD before merge."
+  - "After PASS, merge PR #609 and verify nine chapter-02 files, index 2/28 and unchanged reading status in main."
+last_verified_evidence: "https://github.com/vsp-corp/biblioteka-vsp/actions/runs/38871100422"
+first_safe_next_action: "Read-only: verify PR #609, current head, runs 38870832119 and 38871100422, job steps and available logs. Do not merge before CI PASS."
+blocker: "GitHub Actions validation failed before recorded job steps (runner_name empty); cause unverified, logs BlobNotFound; required CI PASS missing."
+last_observed_at: "Not applicable"

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1230" viewBox="0 0 1600 1230" role="img" aria-labelledby="title desc">
+<title id="title">Подсистемы — подробная памятка, занятие 2</title><desc id="desc">RAG-схема понятий, пяти учебных подсистем, параметров, картинок, настройки порядка и выгрузки базы.</desc>
+<rect width="1600" height="1230" fill="#f8fafc"/>
+<rect x="36" y="30" width="1528" height="108" rx="18" fill="#17375a"/>
+<text x="70" y="78" font-family="DejaVu Sans,Arial,sans-serif" font-size="36" font-weight="bold" fill="white">Занятие 2 · Подсистемы и интерфейс приложения</text>
+<text x="70" y="115" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" fill="#e2edfa">Источник: RAG p0039:c01–p0054:c01 · PDF 39–54 · 45 минут</text>
+<g font-family="DejaVu Sans,Arial,sans-serif">
+<rect x="36" y="166" width="740" height="265" rx="17" fill="#e5efff"/>
+<text x="68" y="211" font-size="28" font-weight="bold" fill="#17375a">1. Назначение</text>
+<text x="68" y="255" font-size="22" fill="#17375a">Подсистема = функциональная часть</text>
+<text x="68" y="294" font-size="21" fill="#17375a">Верхний уровень → раздел приложения</text>
+<text x="68" y="333" font-size="21" fill="#17375a">Возможны вложенные подсистемы</text>
+<text x="68" y="372" font-size="21" fill="#17375a">Объект может входить в несколько частей</text>
+<text x="68" y="405" font-size="17" fill="#496784">RAG p0040–p0042</text>
+<rect x="820" y="166" width="744" height="265" rx="17" fill="#e6f5ed"/>
+<text x="850" y="211" font-size="28" font-weight="bold" fill="#24513d">2. Пять подсистем</text>
+<text x="850" y="255" font-size="21" fill="#24513d">УчетМатериалов · ОказаниеУслуг</text>
+<text x="850" y="294" font-size="21" fill="#24513d">Бухгалтерия · РасчетЗарплаты</text>
+<text x="850" y="333" font-size="21" fill="#24513d">Предприятие — административная область</text>
+<text x="850" y="372" font-size="20" fill="#24513d">Главное: автоматически, первое</text>
+<text x="850" y="405" font-size="17" fill="#4c745f">RAG p0042, p0049–p0050</text>
+<rect x="36" y="455" width="740" height="306" rx="17" fill="#fff" stroke="#bfd0e2" stroke-width="2"/>
+<text x="68" y="501" font-size="28" font-weight="bold" fill="#17375a">3. Добавить в Конфигураторе</text>
+<text x="68" y="548" font-size="22" fill="#17375a">Общие → Подсистемы → Добавить</text>
+<text x="68" y="586" font-size="20" fill="#17375a">Основные: Имя и Синоним</text>
+<text x="68" y="624" font-size="20" fill="#17375a">Имя: для кода, без пробелов</text>
+<text x="68" y="662" font-size="20" fill="#17375a">Синоним: для надписи пользователю</text>
+<text x="68" y="700" font-size="20" fill="#17375a">F2: открыть выбранный объект</text>
+<text x="68" y="736" font-size="17" fill="#496784">RAG p0042–p0044</text>
+<rect x="820" y="455" width="744" height="306" rx="17" fill="#fff" stroke="#bcd9c9" stroke-width="2"/>
+<text x="850" y="501" font-size="28" font-weight="bold" fill="#24513d">4. Картинка подсистемы</text>
+<text x="850" y="548" font-size="21" fill="#24513d">Картинка → Из конфигурации → Добавить</text>
+<text x="850" y="586" font-size="21" fill="#24513d">«Общая картинка» → Выбрать из файла</text>
+<text x="850" y="624" font-size="21" fill="#24513d">Открыть → ОК → картинка раздела</text>
+<text x="850" y="662" font-size="20" fill="#24513d">Без файла: стандартная картинка</text>
+<text x="850" y="700" font-size="19" fill="#24513d">Исходные файлы: [Needs confirmation]</text>
+<text x="850" y="736" font-size="17" fill="#4c745f">RAG p0045–p0048</text>
+<rect x="36" y="785" width="740" height="282" rx="17" fill="#e5efff"/>
+<text x="68" y="831" font-size="28" font-weight="bold" fill="#17375a">5. Порядок разделов</text>
+<text x="68" y="875" font-size="21" fill="#17375a">Корень конфигурации → Командный интерфейс</text>
+<text x="68" y="914" font-size="21" fill="#17375a">Вверх/Вниз → общий порядок</text>
+<text x="68" y="953" font-size="20" fill="#17375a">Материалы → Услуги → Бухгалтерия</text>
+<text x="68" y="992" font-size="20" fill="#17375a">→ Расчет зарплаты → Предприятие</text>
+<text x="68" y="1040" font-size="17" fill="#496784">RAG p0050–p0052</text>
+<rect x="820" y="785" width="744" height="282" rx="17" fill="#e6f5ed"/>
+<text x="850" y="831" font-size="28" font-weight="bold" fill="#24513d">6. Проверка и сохранение</text>
+<text x="850" y="875" font-size="21" fill="#24513d">Отладка → проверить панель разделов</text>
+<text x="850" y="914" font-size="20" fill="#24513d">Содержание разделов пока пустое</text>
+<text x="850" y="953" font-size="20" fill="#24513d">Настройки разделов у пользователя: локальны</text>
+<text x="850" y="992" font-size="19" fill="#24513d">Администрирование → Выгрузить базу…</text>
+<text x="850" y="1040" font-size="17" fill="#4c745f">RAG p0049–p0053</text>
+<rect x="36" y="1093" width="1528" height="100" rx="14" fill="#fff1d7"/>
+<text x="70" y="1136" font-size="22" font-weight="bold" fill="#725123">Операционная граница</text>
+<text x="70" y="1171" font-size="19" fill="#725123">Загрузка базы меняет данные; безопасные условия и проверка выгрузки: [Needs confirmation].</text>
+</g>
+</svg>
